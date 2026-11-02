@@ -205,6 +205,8 @@ test('turnAfter builds a turn from its stream events in order', () => {
   let turn = turnAfter(NO_TURN, { stage: 'reading' })
   turn = turnAfter(turn, { actions: [{ action: 'win her over', stat: 'Allure', difficulty: 'hard' }], bands: [...BANDS] })
   turn = turnAfter(turn, { roll: { ...ROLL } })
+  // The round loop's events leave the turn as it was.
+  turn = turnAfter(turn, { round: { turn_id: 't1', state: 'writing' } })
   turn = turnAfter(turn, { stage: 'writing' })
   assert.equal(turn.stage, 'writing')
   assert.equal(turn.bands?.length, 5)
