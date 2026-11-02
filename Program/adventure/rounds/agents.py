@@ -114,8 +114,9 @@ def held(snapshot: Snapshot) -> dict:
 # Names and who is here ----------------------------------------------------------------------------------------------
 
 def present(snapshot: Snapshot) -> list[str]:
-    """Who is in the scene, in seat order: the snapshot's list, else every seat."""
-    there = set(snapshot.present) or {seat.key for seat in snapshot.seats}
+    """Who is in the scene, in seat order: the snapshot's list once Gather placed it (even nobody), else every seat."""
+    placed = snapshot.present or snapshot.settings.get('placed')
+    there = set(snapshot.present) if placed else {seat.key for seat in snapshot.seats}
     return [seat.key for seat in snapshot.seats if seat.key in there]
 
 
