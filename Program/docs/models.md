@@ -76,6 +76,21 @@ claude` on Windows). With a folder set, `CLAUDE_CODE_OAUTH_TOKEN` is left out, s
 folder's account. Test connection names the account's email when `claude auth status` reports one, and each
 account queues on its own.
 
+**Accounts found on this PC.** A Claude Code or Codex profile lists the accounts on this computer to pick from
+(`GET /api/models/cli-accounts`, `adventure/providers/cli_accounts.py`), so a `claude2` command needs no typed folder.
+Three places are read as text, never run: wrapper scripts on PATH named like the CLI (`claude2.cmd`,
+`claude-work.ps1`, `codex2`, a shell script), functions and aliases with such names in the PowerShell profiles
+(Documents and OneDrive's Documents, PowerShell 7 and Windows PowerShell) and shell start-up files, and folders in
+the home folder named like the CLI's own (`.claude-account2`, `.codex-work`) that hold a sign-in. Each gives the
+folder it sets as `CLAUDE_CONFIG_DIR` or `CODEX_HOME` (cmd, PowerShell or shell spelling, with `%USERPROFILE%`,
+`$env:…`, `$HOME` and `~` filled in). The usual account is listed when `claude` or `codex` is on PATH. Each account
+says whether it is signed in (and Claude's email) from `claude auth status` or `codex login status`. A profile still
+runs the CLI itself with the folder set, never the wrapper, so its own flags stay out.
+
+Codex profiles take the same two optional settings: a Codex location and a *ChatGPT account folder*, run as
+`CODEX_HOME`, used for replies, Test connection, the model list and the plan's usage. Each Codex account queues
+on its own.
+
 Not copied from the Study: the LM Studio native protocol and its verified background interruption
 (local servers use the OpenAI-compatible API, and background work here yields between streamed
 chunks through the scheduler), versioned profiles and exact retries, and usage and cost summaries.

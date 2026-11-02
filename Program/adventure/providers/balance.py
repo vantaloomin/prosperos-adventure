@@ -148,7 +148,7 @@ async def lookup(config: dict, key: str | None, transport=None, codex=None) -> d
     try:
         async with asyncio.timeout(25 if service == 'codex' else SECONDS):
             if service == 'codex':
-                limits = await codex.usage()
+                limits = await codex.usage(config)
                 items, plan = codex_items(limits), limits.get('planType')
             else:
                 if not key:

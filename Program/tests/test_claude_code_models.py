@@ -154,8 +154,9 @@ def test_the_profile_takes_a_full_cli_location_and_plan_efforts_only():
     for bad in ({'cli_path': 'claude'}, {'reasoning_effort': 'minimal'}, {'temperature': 0.5}):
         with pytest.raises(ValueError):
             ProfileConfig(provider='claude_code', model='opus', **bad)
+    assert ProfileConfig(provider='codex', model='gpt-5.5', cli_path=sys.executable).cli_path == sys.executable
     with pytest.raises(ValueError):
-        ProfileConfig(provider='codex', model='gpt-5.5', cli_path=sys.executable)
+        ProfileConfig(provider='openai', model='gpt-5.5', cli_path=sys.executable)
 
 
 def test_a_cli_location_that_does_not_exist_is_reported(tmp_path):
@@ -187,7 +188,7 @@ def test_each_account_has_its_own_places_and_the_folder_must_be_a_full_path():
     assert resource_for(config()) == ('claude-cli', 2)
     assert resource_for(config(cli_account_dir='/home/me/.claude-second')) == ('claude-cli:/home/me/.claude-second', 2)
     assert ProfileConfig(provider='claude_code', model='sonnet', cli_account_dir=sys.prefix).cli_account_dir == sys.prefix
-    for provider, folder in (('claude_code', 'claude-second'), ('codex', sys.prefix)):
+    for provider, folder in (('claude_code', 'claude-second'), ('openai', sys.prefix)):
         with pytest.raises(ValueError):
             ProfileConfig(provider=provider, model='sonnet', cli_account_dir=folder)
 
