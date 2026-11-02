@@ -71,6 +71,10 @@ def fence(label: str, text: str) -> str:
     return f'{OPEN}in-fiction: {label}{CLOSE}\n{unfenced(text).strip()}\n{OPEN}end: {label}{CLOSE}'
 
 
+# The name adventure/rounds/agents.py looks for.
+fenced = fence
+
+
 @dataclass
 class Part:
     """One section of a context: a heading code writes (never a name or anything else from outside), and a body

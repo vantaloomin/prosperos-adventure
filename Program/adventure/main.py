@@ -11,6 +11,7 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from adventure import (
+    agent_routes,
     authors_note_routes,
     auto_backup,
     local_zone,
@@ -49,6 +50,7 @@ from adventure.providers.vault import SystemVault
 from adventure.ready import Ready, uses_builtin
 from adventure.ready_routes import router as ready_router
 from adventure.recall_routes import router as recall_router
+from adventure.rounds import declare as rounds_agents  # noqa: F401 - registers the agents' steps
 from adventure.routes import router
 from adventure.text_model_routes import router as model_router
 from adventure.world import routes as world_routes
@@ -149,7 +151,8 @@ def create_app(database_path: str | Path | None = None, *, clock=None, vault=Non
     app.add_exception_handler(Exception, unexpected_error)
     for item in (router, model_router, launcher_router, recall_router, hardware_router, ready_router, world_routes.router,
                  image_routes.router, politics_routes.router, story_routes.router, authors_note_routes.router, file_routes.router,
-                 debug_router, worlds_routes.router, calls_router, mix_router, packages_router, gm_router):
+                 debug_router, worlds_routes.router, calls_router, mix_router, packages_router,
+                 agent_routes.router, gm_router):
         app.include_router(item)
     if FRONTEND.exists():
         app.mount('/', StaticFiles(directory=FRONTEND, html=True), name='frontend')

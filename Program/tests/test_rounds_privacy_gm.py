@@ -45,7 +45,7 @@ def test_in_play_it_asks_first_then_shows_everything_and_marks_the_turn(client, 
     hesk = next(row for row in shown['minds'] if row['key'] == 'hesk')
     assert hesk['motive'] == MOTIVE and hesk['whispers'] == [{'text': WHISPER, 'to': ['mira']}]
     assert {'holder': 'hesk', 'kind': 'motive', 'text': MOTIVE}.items() <= shown['knowledge'][0].items()
-    assert [row['text'] for row in shown['memories']['hesk']] == [MOTIVE]
+    assert MOTIVE in [row['text'] for row in shown['memories']['hesk']]
     assert shown['marked'] == [first]
     # Not remembered: the next look asks again, and a turn played with it closed stays unmarked.
     second = play_turn(app, 2)

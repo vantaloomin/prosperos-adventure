@@ -1285,6 +1285,20 @@ CREATE TABLE IF NOT EXISTS character_feelings (
 
 CREATE INDEX IF NOT EXISTS character_feelings_of ON character_feelings (from_key, branch_id, seq);
 
+-- W2 Agent minds (adventure/rounds/agents.py). -----------------------------------------------------------------------
+
+-- How the agents play in this campaign (adventure/rounds/agents.py SETTINGS): the preset that trades depth against
+-- cost and wait, how much they scheme (0 to 3), how fast their loyalties shift, and the session's spend cap in tokens
+-- (0: none). A choice made by the user, so it is not rewound with the story.
+CREATE TABLE IF NOT EXISTS agent_settings (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  preset TEXT NOT NULL DEFAULT 'balanced' CHECK (preset IN ('quick', 'balanced', 'rich')),
+  scheming INTEGER NOT NULL DEFAULT 1 CHECK (scheming BETWEEN 0 AND 3),
+  loyalty TEXT NOT NULL DEFAULT 'steady' CHECK (loyalty IN ('slow', 'steady', 'fast')),
+  session_cap INTEGER NOT NULL DEFAULT 0 CHECK (session_cap >= 0),
+  updated_at TEXT NOT NULL DEFAULT ''
+);
+
 -- W1 Privacy and context builders (adventure/rounds/context.py, adventure/gm.py). ----------------------------------
 
 -- The user's answer to the GM view's warning in Play, remembered for this campaign (adventure/gm.py `open_round`).
