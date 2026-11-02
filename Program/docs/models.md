@@ -143,6 +143,8 @@ only means the prompt is read again, never a failed reply.
 
 ## This computer
 
+Settings > Models shows nothing about the computer unless one of the warnings below applies; then it shows the warning, with a one-press fix when there is one. `GET /api/hardware` still reports the whole picture.
+
 `adventure/hardware.py` reads the graphics cards (NVIDIA through `nvidia-smi`; Apple silicon as shared
 memory, about three quarters usable by the GPU) and system memory, and says what local models fit:
 text models up to about N billion parameters at 4-bit, and whether Krea 2 pictures fit beside one. It
