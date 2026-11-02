@@ -132,3 +132,29 @@ def test_a_program_characters_beat_is_code_only_and_without_agents_it_is_left_al
 async def _second_round(app):
     turn = await engine.begin(app.state, timeline.ROOT, 2)
     await engine.run(turn)
+
+
+def test_a_players_line_with_an_offscreen_agent_brings_one_beat_with_its_lines(client, connected, provider, app,
+                                                                               dealt, monkeypatch):  # noqa: F811
+    from conftest import ok, tell
+    from test_travel import reply
+
+    from adventure.rounds import agents
+
+    async def speak(turn, key, cue):
+        return Declaration(seat=key, lines=[Line('Not my blood, mostly.')])
+    monkeypatch.setattr(agents, 'speak', speak)
+    begin(client)
+    ok(client.put('/api/settings', json={'cutaways': True}))
+    dealt.next = 'beat-knifed'
+    with app.state.database.connect(write=True) as connection:
+        know(connection)
+    seated(app, ('corin', 'Corin Ashby', Mind.AGENT))
+    for n in range(4):
+        reply(provider, 'The shop is quiet.')
+        tell(client, 'I wait.', f'story-000{n}')
+    # Today's telling left the beat to the round, and the Writer was given it to cut away to.
+    assert 'Corin Ashby took a knife in a tavern brawl' in provider.requests[-1]['system']
+    with app.state.database.connect() as connection:
+        rows = connection.execute('SELECT key, lines FROM story_beats').fetchall()
+    assert [(row['key'], decode(row['lines'])) for row in rows] == [('corin', ['Not my blood, mostly.'])]

@@ -13,7 +13,9 @@
 - queue.py: one writer per world, stale commands refused, Cancel at once
 - play.py: Next in Author and Watch, the reply card, re-asking an agent, picking up after a restart
 - steps.py: every module that registers steps, loaded once at startup (add yours there)
-- solo.py: today's single-player turn, run as one step of the loop until its pieces are steps of their own
+- solo.py: a player's line played as a turn of the loop (send, retry)
+- telling.py: today's turn as the loop's steps (Gather, Resolve, Write, Commit)
+- resolve.py: every character's risky acts rolled by code, the one question on ambiguity, the TurnResult and brief
 
 The API is adventure/round_routes.py.
 """
