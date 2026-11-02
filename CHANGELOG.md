@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **One cast page.** "Who are you?" and "How this campaign plays" are one page: the town's people as a grid, tap one to play them and read who they are, or + to make your own; Rules, Tone (As written, Gentler, Harsher) and Begin at the foot. Ironman, an earlier story and how far you can rise sit behind Options; the finer tone, narration and dice choices start from the preset and your last campaign and change in play under Tone and rules.
 - **A quieter start.** The first-run notice is one line over the title art ("Everyone here is AI"), the 18-or-older box, a Safety link and Enter; the rest is on the Safety page. Worlds are one sideways row of key art, most recently played first, with a + tile that opens the world packages. Without a text model, Send reads "Add a model" and opens Settings > Models instead of a banner.
 - **Your Claude and ChatGPT accounts, found for you.** A Claude Code or Codex profile now lists the accounts on this
   PC to pick from: the usual one, plus each second command such as `claude2` (a script on PATH, or a function or

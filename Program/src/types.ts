@@ -448,7 +448,7 @@ export interface StoryIntensity {
 export type DefeatRule = 'as_written' | 'by_aim'
 export type DramaLevel = 'world' | 'quiet' | 'uneasy' | 'eventful' | 'merciless'
 /** A session zero preset (adventure/table.py PRESETS): the tone it sets and the director's hand (null: the world's). */
-export interface TablePreset { id: string; name: string; about: string; hand: StoryHand | null; rules: Pick<TableRules, 'intensity' | 'drama' | 'injury_persistence'> }
+export interface TablePreset { id: string; name: string; hand: StoryHand | null; rules: Pick<TableRules, 'intensity' | 'drama' | 'injury_persistence'> }
 /** The Table (adventure/table.py): this campaign's rules. Tone starts as the world's; what is shown, as you last left it. */
 export interface TableRules {
   intensity: IntensityPreset; drama: DramaLevel; injury_persistence: InjuryPersistence

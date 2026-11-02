@@ -74,7 +74,7 @@ export function Story({ go }: { go: (view: View) => void }) {
       <div className="story-main">
         <StoryHeader story={story.data} change={change} onDraft={(text) => setDraft({ text, at: Date.now() })} />
         {opening === 'title' ? <TitleScreen onBegin={() => setBegun(true)} onNew={toPackages} />
-          : opening === 'start' ? <StoryStart onStarted={update} intensity={story.data.intensity} /> : <>
+          : opening === 'start' ? <StoryStart onStarted={update} place={story.data.scene.city.name} /> : <>
           <StoryStage turn={`${story.data.scene.city.id}/${story.data.scene.place.id}/${story.data.messages.length}`} />
           <StoryLog messages={story.data.messages} pending={story.data.messages.length > since ? null : pending} streamed={streamed} turn={turn} bands={story.data.bands}
             onRetry={() => void run('', () => streamApi('/story/retry/stream', {}, grow, note))}

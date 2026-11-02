@@ -45,8 +45,7 @@ the game holds and the travel map as the character knows it; it names the model 
 
 ## Campaign start
 
-A new story opens on "Who are you?" (`adventure/campaign.py`). The player picks one of the town's premade characters
-(`adventure/world/data/premades/<city>.json`; Kingswood ships three) or makes their own: a name, gender, age, a
+A new story opens on the cast page (`adventure/campaign.py`, `src/features/story/StoryStart.tsx`), titled with the town. The player taps one of the town's premade characters in a grid (`adventure/world/data/premades/<city>.json`; Kingswood ships three), whose lines show under it, or the + tile to make their own: a name, gender, age, a
 few lines about them, and Prospero stats bought from 60 points, each from 4 to 18. Either way the world's persona takes
 on that name and those lines, the stats go on the sheet, and the story opens with "You arrive at …".
 
@@ -54,12 +53,7 @@ The narrator gets the persona in its own layer, "The player's character": their 
 what their stats make them good and poor at (14 and up, 7 and down), in words, never numbers. It is told to voice
 them from what is there and invent nothing about their past.
 
-Session zero follows (`src/features/story/SessionZero.tsx`): one screen, "How this campaign plays", with three preset
-cards (`adventure/table.py` PRESETS: "As the world is written", "Gentler", "Harsher"), the world's own pre-picked so
-Start is one click away. A preset sets the tone and the director's hand; "Fine-tune" shows every rule it set, whether
-the dice show, and what is chosen once for the campaign (how far and fast the character rises, Ironman, an earlier
-story). Under 5E it also has "Foes decide a defeat" (the Table's `defeat`). The ruleset stays on "Who are you?", as it decides how a character is made. `POST /api/story/start` takes
-the rules as `table`; `GET /api/story/start` gives `presets` and `table`, the rules a new campaign would start with.
+Session zero is on the same page (`src/features/story/campaignSession.ts`). Its foot holds Rules (the ruleset, locked once the campaign begins, and on this page because it decides how a character is made), Tone (`adventure/table.py` PRESETS: "As written", "Gentler", "Harsher", the world's own pre-picked so Begin is one click away) and Begin. A preset sets the tone and the director's hand. Options holds what is chosen once for the campaign: how hard the story pushes, how far and fast the character rises, Ironman and an earlier story. The finer tone, the narration format, a 5E defeat and what is shown of the dice start from the preset and the player's last campaign, and change in play under Tone and rules. `POST /api/story/start` takes the rules as `table`; `GET /api/story/start` gives `presets` and `table`, the rules a new campaign would start with.
 
 ## The Table
 
@@ -71,7 +65,7 @@ the campaign begins is kept. A campaign from before the Table keeps the rules it
 `timeline.SAVED`, so going back never undoes one. The Story screen's "Tone and rules" fold sets them
 (`PUT /api/story/table`); `PUT /api/settings` still sets them for the campaign being played too.
 
-**How it's written** (Tone and rules, and session zero's Fine-tune) is the narration format: point of view (close
+**How it's written** (Tone and rules) is the narration format: point of view (close
 third, second or first person), tense (past or present) and length (short, medium or long), the Table's `pov`,
 `tense` and `length`. A new campaign starts in close third person, past tense, short; a story with no campaign start,
 or a campaign from before the format could be chosen, keeps second person and present tense. The next line follows a
@@ -1391,7 +1385,7 @@ free grid of widgets is an optional mode late in Milestone 6.
 | `POST /api/story/messages/{id}/rewrite` | Rewrites `passage` of a narration in new words, with an optional `note`; same dice and facts. Returns the story. |
 | `POST /api/story/messages/{id}/switch` | Switches a rewritten narration to its wording before the rewrite, and back. Returns the story. |
 | `POST /api/story/messages/stream` / `POST /api/story/retry/stream` | The same, streamed as newline-delimited JSON: `{"text": piece}` as the narration is written, then `{"done": {message, reply}}` once the reply is saved, or `{"error", "code", "status"}`. Fact extraction runs after `done`. |
-| `GET /api/story/start` | `{premades, points, range, stat_names, meanings}` for "Who are you?" in the scene's city. |
+| `GET /api/story/start` | `{premades, points, range, stat_names, meanings}` for the cast page in the scene's city. |
 | `POST /api/story/start` `{premade_id}` or `{persona, stats}` | Starts the story as a premade or a made character; 409 once the story has begun, 404 for a premade not in this town, 422 for a missing name or stats outside the point-buy. |
 | `GET /api/story/sheet` | `{stats, stat_names, range, dice}`: the character's Prospero stats and the die each one adds. |
 | `PUT /api/story/sheet` `{stats}` | Changes some or all stats; 422 for an unknown stat or a value outside 1 to 30. |
