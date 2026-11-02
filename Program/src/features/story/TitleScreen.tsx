@@ -22,7 +22,7 @@ function remember(world: string | null) {
 }
 
 /** The title screen before a campaign starts (adventure/world_select.py): one row of worlds, most recently played
- * first, each tile its key art and name, with the pitch sliding up on hover or focus; the tile is the button. The world the story is in begins here; another
+ * first, each tile its key art and name, with the pitch in a card over the art on hover or focus; the tile is the button. The world the story is in begins here; another
  * world switches to the persona's world there, made when they have none, and the page starts afresh in it. The +
  * tile at the end opens the world packages on the Worlds page. With no worlds to show, it steps aside for the start
  * form. */

@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- **World pitches on hover.** Hovering or focusing a world on the title screen slides its pitch up under the name.
+- **World pitches on hover.** Hovering or focusing a world on the title screen floats its pitch over the art in a frosted card above the name, which stays put.
 - **Plainer model settings.** Models, Decisions and Recall are each a heading and an Add button, without the explanations above them. The computer report shows only when a chosen local model won't fit, and the job picker is called Roles.
 - **A calmer play screen.** The scene is one line: the place (tap it to go somewhere else), the time and how you are. The composer is the message box and Send; Ideas, the author's note, stepping out of the story, every panel view and starting a new story are in a menu (the button beside the box, or ⌘K / Ctrl+K). The panel opens on who's here: you first, then the people met at this place, each opening to show more, with who else is around and the weather under them. The Scene, Sheet, Pack, Journal and More tabs are gone. "Characters are AI and can make mistakes" stays under the box.
 - **One cast page.** "Who are you?" and "How this campaign plays" are one page: the town's people as a grid, tap one to play them and read who they are, or + to make your own; Rules, Tone (As written, Gentler, Harsher) and Begin at the foot. Ironman, an earlier story and how far you can rise sit behind Options; the finer tone, narration and dice choices start from the preset and your last campaign and change in play under Tone and rules.
