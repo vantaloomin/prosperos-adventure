@@ -171,5 +171,5 @@ jobs:
         run: ../Mac/install.command --check-only
       - name: Test the checkout scripts
         env:
-          ADVENTURE_DATA_DIR: ${{ runner.temp }}/dungeon-data
+          ADVENTURE_DATA_DIR: ${{ runner.temp }}/adventure-data
         run: /bin/bash --version | head -n 1 && ./scripts/macos/helpers-test.sh

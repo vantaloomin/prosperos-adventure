@@ -42,7 +42,7 @@ $entry = Get-ItemProperty -LiteralPath $uninstallKey
 Check ($entry.DisplayName -eq 'Prospero Adventure') 'registers a per-user uninstall entry'
 Launch
 
-$stale = Join-Path $installed 'app\dungeon\removed_in_this_release.py'
+$stale = Join-Path $installed 'app\adventure\removed_in_this_release.py'
 Set-Content -LiteralPath $stale -Value '# left by an earlier release'
 $database = Join-Path $workspace 'adventure.sqlite3'
 $before = (Get-Item -LiteralPath $database).Length
@@ -52,7 +52,7 @@ Check ((Test-Path -LiteralPath $database) -and (Get-Item -LiteralPath $database)
 Launch
 
 # Restore the newest backup through the installed launcher: the workspace it replaces is set aside.
-$latest = Get-ChildItem -LiteralPath (Join-Path $workspace 'backups') -Filter 'dungeon-*.zip' | Sort-Object Name | Select-Object -Last 1
+$latest = Get-ChildItem -LiteralPath (Join-Path $workspace 'backups') -Filter 'adventure-*.zip' | Sort-Object Name | Select-Object -Last 1
 $restoreOutput = & $env:ComSpec /d /c "`"$(Join-Path $installed 'Prospero Adventure.cmd')`" --restore `"$($latest.FullName)`"" 2>&1 | Out-String
 Write-Host $restoreOutput
 Check ($LASTEXITCODE -eq 0 -and $restoreOutput -match 'Restored') "restores $($latest.Name) with the installed launcher"

@@ -62,7 +62,7 @@ try {
   Check ($page.Content -match 'Prospero Adventure') 'serves the interface'
 
   $runtime = Join-Path $Bundle 'runtime\python.exe'
-  $server = Get-CimInstance Win32_Process -Filter "Name = 'python.exe'" | Where-Object { $_.CommandLine -match 'dungeon\.launch' }
+  $server = Get-CimInstance Win32_Process -Filter "Name = 'python.exe'" | Where-Object { $_.CommandLine -match 'adventure\.launch' }
   Check ($server -and ($server | Select-Object -First 1).ExecutablePath -eq $runtime) "runs on the bundled runtime $runtime"
   # Saved API keys go to Windows Credential Manager through keyring; its backend must load here.
   $vault = & $runtime -I -c 'import keyring; print(type(keyring.get_keyring()).__name__)'

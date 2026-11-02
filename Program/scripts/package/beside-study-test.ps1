@@ -59,7 +59,7 @@ try {
 
   Check (Test-Path -LiteralPath (Join-Path $studyData 'roleplay.sqlite3')) "the Study keeps its database in its own data folder"
   $studyFiles = @(Get-ChildItem -LiteralPath $studyData -Recurse -File | ForEach-Object { $_.Name })
-  Check (-not ($studyFiles | Where-Object { $_ -like 'dungeon*' })) "the Study's data folder holds no Adventure files"
+  Check (-not ($studyFiles | Where-Object { $_ -like 'adventure*' })) "the Study's data folder holds no Adventure files"
   $adventureFiles = @(Get-ChildItem -LiteralPath $workspace -Recurse -File | ForEach-Object { $_.Name })
   Check (-not ($adventureFiles | Where-Object { $_ -like 'roleplay*' })) "Adventure's workspace holds no Study files"
   $probe = "import sqlite3,sys; c=sqlite3.connect('file:'+sys.argv[1]+'?mode=ro', uri=True); " +

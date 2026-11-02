@@ -59,7 +59,7 @@ update_with_git() {
 update_from_zip() {
     [ -w "$CHECKOUT_ROOT" ] || fail "This folder can't be changed (it may be on a read-only disk): $CHECKOUT_ROOT. Copy the whole folder to your Mac, for example into Documents, and run update.command from there."
     local work source before after relative
-    work="$(mktemp -d "${TMPDIR:-/tmp}/dungeon-update.XXXXXX")" || fail 'Could not make a temporary folder.'
+    work="$(mktemp -d "${TMPDIR:-/tmp}/adventure-update.XXXXXX")" || fail 'Could not make a temporary folder.'
     trap 'rm -rf "$work"' EXIT
     if [ -n "$ADVENTURE_UPDATE_ZIP" ]; then
         cp "$ADVENTURE_UPDATE_ZIP" "$work/main.zip" || fail "Could not read $ADVENTURE_UPDATE_ZIP."

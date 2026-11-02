@@ -8,7 +8,7 @@ top of it, milestone by milestone, as set out in [the roadmap](../../docs/roadma
 
 ## Shape
 
-- **Backend:** Python and FastAPI in `dungeon/`, started by `python -m adventure` on http://127.0.0.1:8805.
+- **Backend:** Python and FastAPI in `adventure/`, started by `python -m adventure` on http://127.0.0.1:8805.
   `adventure/main.py` `create_app` wires the routers and keeps the shared services on `app.state`: the database,
   the credential vault, the model provider, the scheduler that queues model work, the embedder, the built-in
   recall and chat models, the launcher for local programs, the hardware check, "Set it up for me", and the

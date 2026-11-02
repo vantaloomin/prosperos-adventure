@@ -6,7 +6,7 @@ The backend is Python 3.12, FastAPI and SQLite; the interface is React 19, TypeS
 Development and CI run on Linux, Windows and macOS, while Windows x64 is the launch target.
 
 The checkout has three folders: `Windows/` and `Mac/` hold only the double-click scripts, and
-`Program/` holds everything else (the `dungeon` Python package, `src/`, `public/`, `tests/`,
+`Program/` holds everything else (the `adventure` Python package, `src/`, `public/`, `tests/`,
 `scripts/`, these docs and the Python and npm manifests). Program is the project root for tools:
 run every command in this guide from `Program/`, where `.venv`, `node_modules` and `dist` live too.
 
@@ -81,7 +81,7 @@ the machine needs neither Python, Node nor Prospero's Study.
 | Part | Contents |
 | --- | --- |
 | `runtime/` | Python 3.12.10 from the python.org NuGet package, pinned by SHA-256, with the locked runtime dependencies as Windows wheels; pip and build headers removed |
-| `app/` | `dungeon/`, the built interface in `dist/`, and `LICENSE` |
+| `app/` | `adventure/`, the built interface in `dist/`, and `LICENSE` |
 | `bundle.json` | Version, schema version, commit and the SHA-256 of every file |
 
 The runtime's `python312._pth` fixes its import paths and the launcher runs it with `-I`, so
@@ -217,7 +217,7 @@ builds a new workspace instead and copies across only the user's settings, model
 
 ### Backups and restore
 
-`POST /api/backups` writes `backups/dungeon-<time>.zip`: the database snapshot with its SHA-256 in
+`POST /api/backups` writes `backups/adventure-<time>.zip`: the database snapshot with its SHA-256 in
 `manifest.json`. Restoring checks the marker, the schema version and the digest before writing anything. Replacing
 a workspace keeps its current settings and connections instead of the backup's (`restore.KEPT_SETTINGS`). With no
 workspace to replace (a new computer), saved keys are dropped, so the user enters them again.
