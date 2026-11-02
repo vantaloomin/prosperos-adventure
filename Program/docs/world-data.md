@@ -51,6 +51,8 @@ are optional, so a setting without money (Oz) or without weather data still work
 default `intensity`: a `preset` (`restrained`, `mature` or `unflinching`) and the narrator's `voice` there (Kingswood:
 unflinching and grim); left out, stories there are unflinching with no voice.
 
+A city may also add to the house rulebook its campaigns start from (`house_rules`, `adventure/rounds/house_rules.py`): entries for `dialogue` rules, forbidden `punctuation` (a mark itself, or `em dash`), outlawed `words`, `phrases` and `names` (on top of the names that read as model-made), and its own `thoughts` style (`quoted-italics`, `italics` or `plain`) and System pane format (`pane_title` with `{title}`, `pane_row` with `{label}` and `{value}`). Players edit the result at the Table.
+
 ## Where the data lives
 
 | Path | Holds |
