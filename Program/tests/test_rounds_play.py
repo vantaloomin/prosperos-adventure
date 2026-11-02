@@ -7,21 +7,24 @@ import pytest
 from conftest import tell
 
 from adventure import timeline
-from adventure.rounds import engine, memory, play, queue, solo, turns
+from adventure.rounds import engine, memory, play, queue, resolve, solo, telling, turns
 from adventure.rounds.contract import Declaration, Mind, Point, State
 
 
 @pytest.fixture
 def steps():
-    """Each test starts from the foundation's own steps (picking seats, the solo turn) and hooks (memory), whatever
-    other parts of the loop registered; everything is put back after it."""
+    """Each test starts from the foundation's own steps (picking seats), today's turn as steps with the party's
+    Resolve, and their hooks (memory, the story, the rolls), whatever other parts of the loop registered; everything
+    is put back after it."""
     before = {state: list(listed) for state, listed in engine.STEPS.items()}
     hooks = list(engine.COMMITS)
     for listed in engine.STEPS.values():
-        listed[:] = [(name, step) for name, step in listed if step in (engine.pick, solo.told)]
+        listed[:] = [(name, step) for name, step in listed if step in (
+            engine.pick, telling.gather, telling.line, telling.write, resolve.ambiguity, resolve.resolve)]
     # Another part may have replaced 'pick' under its name: the foundation's own is put back for these tests.
-    engine.STEPS[State.GATHERING][:] = [('pick', engine.pick)]
-    engine.COMMITS[:] = [(name, hook) for name, hook in engine.COMMITS if hook is engine.committed_memory]
+    engine.STEPS[State.GATHERING][:] = [('pick', engine.pick), ('line', telling.gather)]
+    engine.COMMITS[:] = [(name, hook) for name, hook in engine.COMMITS
+                         if hook in (engine.committed_memory, telling.committed, resolve.kept_rolls)]
     yield
     for state, listed in before.items():
         engine.STEPS[state][:] = listed

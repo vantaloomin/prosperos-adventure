@@ -68,3 +68,26 @@ def test_without_a_party_nothing_changes(app, client):
         state = {'round': 0, 'wants': 'kill', 'foes': [foe()]}
         state, lines, _ = combat.play_round(connection, state, [], [], Dice(95, 0.1))
         assert state['allies'] == [] and lines == ["The bandit hits the player's character: now hurt."]
+
+
+def test_an_agent_allys_declared_move_replaces_the_tactic(app, client):
+    begin(client)
+    with app.state.database.connect(write=True) as connection:
+        companion(connection)
+        # The bandit is worse hurt, so the tactic would go for him; Hesk's agent declared the lookout instead.
+        state = {'round': 0, 'wants': 'kill', 'foes': [foe(wound=2), foe(id='g', name='the lookout')]}
+        state, lines, _ = combat.play_round(connection, state, [], [], Dice(95, 0.9),
+                                            {'hesk': 'I go for the lookout before he runs.'})
+        assert 'Hesk Aldane, fighting beside the character, hits the lookout.' in lines
+        assert state['foes'][1]['wound'] > 0 and state['foes'][0]['wound'] == 2
+
+
+def test_an_agent_ally_who_holds_back_strikes_nobody(app, client):
+    begin(client)
+    with app.state.database.connect(write=True) as connection:
+        companion(connection)
+        state = {'round': 0, 'wants': 'kill', 'foes': [foe()]}
+        state, lines, _ = combat.play_round(connection, state, [], [], Dice(95, 0.9),
+                                            {'hesk': 'I hold back and keep out of it.'})
+        assert 'Hesk Aldane holds back from the fight this round.' in lines
+        assert state['foes'][0]['wound'] == 0
