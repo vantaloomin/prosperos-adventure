@@ -4,6 +4,7 @@ module here, one line each, so nothing depends on which module happened to be im
 """
 from adventure.rounds import (
     converse,  # noqa: F401 - Converse and the reply card
+    corrections,  # noqa: F401 - corrected and struck memories, read through recall (memory.amend)
     declare,  # noqa: F401 - the agents: pick, declare, lies heard, react, feelings
     offpage,  # noqa: F401 - off-page beats in a round with agents, and their commit
     report,  # noqa: F401 - the house rules frozen at Gather, the Reviewer and the scan after the Writer

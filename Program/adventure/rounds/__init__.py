@@ -20,6 +20,7 @@
 - scan.py: the draft scan every Writer post passes before Commit, with the fixes code makes when a rewrite can't
 - reviewer.py: a second reader's notes on the draft, applied or declined by the Writer
 - report.py: the checks at the end of Writing, the turn report and the status line
+- corrections.py: turn-keyed patches to a committed turn, and struck inventions
 
 The API is adventure/round_routes.py.
 """

@@ -12,7 +12,7 @@ with the turn's draft.
 **The turn report** is read from the committed turn itself (its snapshot and draft in round_turns), so it needs no
 table of its own and always matches what was committed: what the user set, each roll and what it produced in plain
 words (with the numbers unless the Table hides rolls), the numbers that changed, the Writer's inventions, the scan
-and Reviewer fixes, off-page beats, open questions, and the decision left to the user. Motives appear only where the
+and Reviewer fixes, the corrections made since, off-page beats, open questions, and the decision left to the user. Motives appear only where the
 mode shows them (Author and Watch) or the GM view is open; in Play the user sees their own character's.
 
 **The status line** is always visible: the turn just played, what is pending, and when off-page beats are next due.
@@ -23,7 +23,7 @@ from dataclasses import fields
 from adventure import beats, table
 from adventure.database import decode, many
 from adventure.narration import prompt as narration_prompt
-from adventure.rounds import agents, engine, house_rules, reviewer, scan, turns
+from adventure.rounds import agents, corrections, engine, house_rules, reviewer, scan, turns
 from adventure.rounds.contract import Mind, Mode, Snapshot, State, TurnResult, plain
 from adventure.rounds.draft import Draft
 from adventure.rounds.house_rules import Rulebook
@@ -163,6 +163,7 @@ def report(connection, turn_id: str, gm_view: bool = False) -> dict:
     numbers = bool(table.rules(connection).get('show_odds'))
     staged, written = draft.extra.get('w5') or {}, draft.extra.get('w4') or {}
     declared = draft.declarations.get(own) if own else None
+    struck = corrections.struck(connection, row['id'])
     return {
         'turn_id': row['id'], 'number': row['number'] + 1, 'mode': row['mode'], 'state': row['state'],
         'marks': decode(row['marks']) or [],
@@ -170,7 +171,9 @@ def report(connection, turn_id: str, gm_view: bool = False) -> dict:
                 if declared else [], 'beats': list(result.brief.beats)},
         'rolls': [roll_line(roll, numbers) for roll in result.rolls],
         'numbers': list(result.brief.math),
-        'inventions': list(written.get('inventions') or []),
+        'inventions': [item | {'struck': (item.get('name') or '').casefold() in struck}
+                       for item in written.get('inventions') or [] if isinstance(item, dict)],
+        'corrections': corrections.of_turn(connection, row['id']),
         'checks': {'scan': staged.get('scan') or {}, 'cut': staged.get('cut') or [],
                    'rewrites': staged.get('rewrites', 0), 'review': staged.get('review') or []},
         'offpage': list(written.get('offpage') or []),

@@ -1,12 +1,15 @@
 """The house rules API (adventure/rounds/house_rules.py): the campaign's rulebook at the Table and its rulings; and each
-round turn's report and the status line (adventure/rounds/report.py)."""
+round turn's report and the status line (adventure/rounds/report.py); corrections to a committed turn and struck
+inventions (adventure/rounds/corrections.py)."""
 from typing import Literal
 
 from fastapi import APIRouter, Request
 from pydantic import Field
 
+from adventure import record, story
+from adventure.errors import DomainError, require
 from adventure.models import Input
-from adventure.rounds import house_rules, report
+from adventure.rounds import corrections, house_rules, report
 
 router = APIRouter(prefix='/api/story')
 
@@ -72,3 +75,45 @@ def turn_report(request: Request, turn_id: str):
 def status_line(request: Request):
     with request.app.state.database.connect() as connection:
         return report.status(connection)
+
+
+class Correction(Input):
+    changes: list[dict] = Field(min_length=1, max_length=40)
+    why: str = Field('', max_length=corrections.MOST_WHY)
+
+
+class Strike(Input):
+    name: str = Field(min_length=1, max_length=120)
+
+
+@router.get('/turns/{turn_id}/corrections')
+def turn_corrections(request: Request, turn_id: str):
+    with request.app.state.database.connect() as connection:
+        corrections.committed_turn(connection, turn_id)
+        return corrections.of_turn(connection, turn_id)
+
+
+@router.post('/turns/{turn_id}/corrections')
+def correct(request: Request, turn_id: str, body: Correction):
+    """A correction is made from the GM view: it can reach what the user's character doesn't know."""
+    database = request.app.state.database
+    with database.connect(write=True) as connection:
+        require(record.gm_view(connection), 'Open the GM view to correct a turn.', 403)
+        return corrections.correct(connection, turn_id, body.changes, body.why, database.now())
+
+
+@router.post('/turns/{turn_id}/inventions/strike')
+async def strike(request: Request, turn_id: str, body: Strike):
+    """Strike one of the Writer's inventions; the passage that used it is rewritten without it when it can be."""
+    database = request.app.state.database
+    with database.connect(write=True) as connection:
+        struck = corrections.strike(connection, turn_id, body.name, database.now())
+    rewritten = False
+    if struck['message_id'] and struck['passage']:
+        try:
+            await story.rewritten(request.app.state, struck['message_id'], struck['passage'],
+                                  f'Take out {body.name}: the user struck it from the story.')
+            rewritten = True
+        except DomainError as failure:
+            struck |= {'not_rewritten': failure.message}
+    return struck | {'rewritten': rewritten}
