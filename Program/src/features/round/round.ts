@@ -147,6 +147,6 @@ export type PresetKey = 'quick' | 'balanced' | 'rich'
 export type Loyalty = 'slow' | 'steady' | 'fast'
 export interface AgentPace {
   preset: PresetKey; scheming: number; loyalty: Loyalty; session_cap: number
-  presets: { key: PresetKey; name: string; estimate: { calls: number; tokens: number } }[]
+  presets: { key: PresetKey; name: string; estimate: { calls: number; tokens: number; seconds?: number } }[]
   spend: { spent: number; held: number; cap: number }; capped: boolean
 }

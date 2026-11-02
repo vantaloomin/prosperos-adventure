@@ -65,9 +65,10 @@ export const PACE_LABELS = {
 
 const rounded = (tokens: number) => tokens >= 1000 ? `${Math.round(tokens / 1000)}k` : String(tokens)
 
-/** A preset's estimate as data: "~14 calls · 9k tokens". */
-export function estimateLine(estimate: { calls: number; tokens: number }): string {
-  return `~${estimate.calls} ${estimate.calls === 1 ? 'call' : 'calls'} · ${rounded(estimate.tokens)} tokens`
+/** A preset's estimate as data: "~43 s · 14 calls", or "~14 calls · 9k tokens" from a backend without the time. */
+export function estimateLine(estimate: { calls: number; tokens: number; seconds?: number }): string {
+  const calls = `${estimate.calls} ${estimate.calls === 1 ? 'call' : 'calls'}`
+  return estimate.seconds ? `~${Math.round(estimate.seconds)} s · ${calls}` : `~${calls} · ${rounded(estimate.tokens)} tokens`
 }
 
 /** "12k of 200k tokens this session", or with no cap "12k tokens this session". */

@@ -105,6 +105,7 @@ test('the table, the reply and the title', () => {
 test('the pace reads plainly', () => {
   assert.equal(estimateLine({ calls: 14, tokens: 9400 }), '~14 calls · 9k tokens')
   assert.equal(estimateLine({ calls: 1, tokens: 600 }), '~1 call · 600 tokens')
+  assert.equal(estimateLine({ calls: 14, tokens: 9400, seconds: 43.4 }), '~43 s · 14 calls')
   assert.equal(spendLine({ spent: 12400, held: 0, cap: 200000 }), '12k of 200k tokens this session')
   assert.equal(spendLine({ spent: 0, held: 0, cap: 0 }), '0 tokens this session')
 })
