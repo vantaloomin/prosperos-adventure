@@ -1086,3 +1086,22 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .story-cast-state { font-size: 0.75rem; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .story-cast-more { margin: 4px 0 8px 52px; display: grid; gap: 8px; font-size: 0.8125rem; color: var(--muted); }
 .story-cast-around { margin-top: 12px; font-size: 0.8125rem; color: var(--faint); }
+/* The round loop (src/features/round/): the timeline above who's here, each character's Thinks or Rules badge, and the
+   reply card in place of the composer while someone waits on the user's answer. */
+.story-cast-row:has(.mind-badge) { grid-template-columns: auto minmax(0, 1fr) auto; }
+.mind-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.75rem; color: var(--faint); }
+.mind-badge.thinks { color: var(--accent); }
+.mind-badge svg, .mind-toggle svg { width: 14px; height: 14px; stroke-width: 1.5; }
+.mind-toggle label > span { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; padding: 8px 12px; }
+.round-timeline { margin-bottom: 12px; }
+.round-timeline ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; }
+.round-timeline li { flex: 1 1 0; min-width: 0; padding: 4px 0 0; border-top: 2px solid var(--border); font-size: 0.75rem; color: var(--faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: border-color 240ms var(--ease), color 240ms var(--ease); }
+.round-timeline li.done { border-top-color: var(--muted); color: var(--muted); }
+.round-timeline li.now { border-top-color: var(--accent); color: var(--text); font-weight: 500; }
+.reply-card { max-width: var(--story-width); width: 100%; margin: 0 auto; padding: 12px 32px 12px; display: grid; gap: 8px; }
+.reply-context { margin: 0; font-size: 0.875rem; color: var(--faint); }
+.reply-line { margin: 0; }
+.reply-form { display: grid; gap: 8px; }
+.reply-form textarea { min-height: 52px; max-height: 40dvh; }
+.reply-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+@media (max-width: 640px) { .reply-card { padding: 8px 12px; } }
