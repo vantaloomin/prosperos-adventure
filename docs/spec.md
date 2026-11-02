@@ -107,7 +107,7 @@ Batch 2, agent minds, decided 2026-11-02 (Vanta's cards):
   page (its seeds), so a betrayal is fair in hindsight.
 - **An agent knows its own knowledge plus the world's public canon.** Its sheet, its memories, what it saw and heard,
   what it believes (lies included), and the world's public lore as common knowledge. Never a hidden truth it hasn't
-  learned. (Since the 2026-11-02 review, "public" means lore tagged public: see "Who sees what".)
+  learned. (Since the 2026-11-02 review, "public" means lore not marked secret: see "Who sees what".)
 - **Agents can talk privately to each other.** Whispers and plots between characters are hidden from the user's
   character and from anyone not party to them, but readable in the GM view.
 - **Personality is the world's cast sheet plus the user's notes.** The world package's sheet (voice, wants, fears,
@@ -116,10 +116,11 @@ Batch 2, agent minds, decided 2026-11-02 (Vanta's cards):
 - **In-turn conversations have a user-set cap.** A setting from 1 to 12 exchanges per turn, default 4, so the user
   trades depth against cost and wait.
 - **When an agent speaks to the user's character mid-turn, the Writer pauses and asks.** The turn waits for a quick
-  reply from the user, then carries on in the same turn. The Writer never answers for the user's character beyond
-  what they declared.
+  reply from the user, then carries on in the same turn. The Writer never answers for the user's character unless
+  the user picks "Let my character answer" on the reply card (added 2026-11-02, see "Waiting and pauses").
 - **Showing hidden motives depends on the mode.** Hidden in Play, so betrayals can surprise the user. Shown by
-  default in Author and Watch, where the user is the audience. The GM view shows everything in any mode.
+  default in Author and Watch, where the user is the audience. The GM view shows everything in any mode, behind a
+  warning in Play (added 2026-11-02, see "Waiting and pauses").
 
 Batch 3, secrets, memory, Author and Watch, decided 2026-11-02 (Vanta's cards):
 
@@ -162,9 +163,23 @@ Batch 4, the Writer, sliders, models, campaigns and the screen, decided 2026-11-
 - **One human per campaign for now.** The turn loop treats a human seat as one more character that declares each
   round, so hotseat or online play can be added later without redesigning it.
 
+Review follow-ups, decided 2026-11-02 (Vanta's cards, after the concurrency, prompts and UX reviews):
+
+- **In Converse, the asking character's own agent writes the question;** the Writer only picks who asks whom.
+- **Untagged world lore counts as public.** Hidden truths and cast secrets count as marked; anything else secret must
+  be marked by the world's author.
+- **Re-asking an agent keeps everyone else's declarations** and redoes reactions, conversation, dice and the write-up
+  for everyone.
+- **The reply card offers Reply, Say nothing, or Let my character answer** (an explicit, one-line opt-in).
+- **Opening the GM view in Play asks first** and marks the turns where it was open.
+- **Switching out of Play asks once whether to reveal missed motives,** defaulting to hidden.
+
+The rest of the reviews' findings were engineering and design fixes that don't change what Vanta decided. They are
+folded into "The turn loop", "Agent output", "Who sees what", "Turn state and persistence" and "Waiting and pauses".
+
 ## Open questions
 
-*None open. 27 questions answered across four batches; the two topics below are still to cover.*
+*None open. 27 questions answered across four batches, plus 6 review follow-ups; the two topics under "Later batches" are still to cover.*
 
 ## The turn loop
 
@@ -191,7 +206,8 @@ leaks, UX). Steps marked *(Dungeon)* are carried over unchanged. The state each 
    what it could see and hear, with lie outcomes applied, and may react once. Private whispers between agents are
    exchanged here, delivered by code only to their audience.
 6. **Converse** `[Conversing ⇄ AwaitingUser]`. The Writer may set up follow-up exchanges between characters, up to the
-   user's cap. *Who writes each question: pending (2026-11-02 review card).* Each answer is added to the in-turn
+   user's cap. The Writer only picks who asks whom; the **asking character's own agent writes the question**, from its
+   own knowledge, so the Writer can't slip a secret into it. Each answer is added to the in-turn
    knowledge of the characters who heard it. If anyone addresses the user's character, the turn waits for the user
    on the reply card (see "Waiting and pauses").
 7. **Resolve** `[Resolving]` *(Dungeon)*. Code first classifies intents into risky kinds where it can (attack, steal,
@@ -239,8 +255,10 @@ don't mention it."** One context builder per reader decides what goes into each 
 | The minds panel | Per mode: "Hesk has decided" in Play; intents, motives and whispers in Author and Watch | |
 | The GM view | Everything | |
 
-**World lore carries a visibility tag:** public, known to listed characters, or GM only. *Default for untagged lore:
-pending (2026-11-02 review card).*
+**World lore carries a visibility tag:** public, known to listed characters, or GM only. **Untagged lore counts as
+public.** A world package's hidden truths and its cast's secrets count as marked GM only (or known to the
+characters they belong to), so they never reach an agent untagged. Anything else secret has to be marked; see
+"Later batches" for Worldsmith's part in catching what wasn't.
 
 **Untrusted text is fenced.** The player's typed action, the Author's nudge, the user's character notes, cast sheets
 from world packages (which may come from other people), character names and other agents' lines all arrive in
@@ -265,8 +283,9 @@ any other reader's context.
 - **Memory follows branches.** Every per-turn write (memories, beliefs, feelings, whispers, motives) is keyed by the
   turn that made it and read through the branch's ancestry, like Dungeon's record. Fading is a read-time function of
   age and importance, never an in-place rewrite of shared rows.
-- **Re-asking an agent.** *What gets redone: pending (2026-11-02 review card).* Either way, it reads the stored
-  snapshot and brings new dice, per the branch rule.
+- **Re-asking an agent.** Everyone else keeps their declaration (step 3); that character's declaration is replaced,
+  and steps 4 onward are redone for everyone, since they responded to the old choice. It reads the stored snapshot
+  and brings new dice, per the branch rule.
 - **World packages are imported, not shared.** Adventure copies a package into its own data folder with a version
   stamp, so it never opens a file Dungeon or Worldsmith may be writing. Campaign state lives in Adventure's own
   database.
@@ -285,7 +304,9 @@ A round can take 20 or more model calls, so waiting is designed, not left blank.
   lit. Each character's row moves through thinking, declared, reacting, done. In Play a row says only "Hesk has
   decided"; in Author and Watch, intents appear as they arrive. The Writer's post streams.
 - **The reply card.** When a character addresses the user's character: who is speaking, their line in full, the last
-  two lines of context, and a text box. *Shortcuts offered: pending (2026-11-02 review card).* If the tab is not in
+  two lines of context, and a text box, plus **Say nothing** and **Let my character answer**. The second is an
+  explicit opt-in for that one line: the Writer answers in character from the user's declared intent, so nothing
+  speaks for the user uninvited. If the tab is not in
   focus, a sound or title badge; the minds panel shows "Mara is waiting for your answer".
 - **Every pause says why and what next.** One banner: "Paused: Hesk betrayed the party. [Continue] [Switch to
   Author]", or "Paused: this session reached its $2.00 cap. [Raise cap] [Stop here]". A dropped optional step and a
@@ -294,7 +315,12 @@ A round can take 20 or more model calls, so waiting is designed, not left blank.
   in the story text.
 - **Author nudges get feedback.** After the turn, a line under the nudge box: "Used: the director moved the storm
   forward" or "Not yet: no character chose to go north." The beat board shows which beats have landed.
-- **The GM view and mode switches guard against spoilers.** *Pending (2026-11-02 review cards).*
+- **The GM view asks first in Play.** Opening it during Play shows a warning ("This shows every secret and motive.
+  Open anyway?") with a remember-for-this-campaign option, and the turns where it was open are marked, so the user
+  knows which surprises they spoiled. No gate in Author or Watch.
+- **Switching out of Play doesn't spoil the past.** On a switch to Author or Watch, the user is asked once whether to
+  see the motives they missed, defaulting to hidden. Turns played in Play keep Play's visibility unless they choose
+  otherwise; new turns show motives as Author and Watch normally do.
 - **Lies read as story.** Beliefs use belief language on sheets and in memories ("Ilsa *believes* the bridge is
   guarded"). An uncovered lie gets a short moment in the prose and a strike-through in memory; a caught tell gets the
   same treatment.
@@ -311,7 +337,7 @@ A round can take 20 or more model calls, so waiting is designed, not left blank.
 ## Later batches (planned)
 
 - Worlds: what Adventure needs from Worldsmith beyond today's package: visibility tags on lore, facts and cast
-  secrets (with a tagging pass), voice anchors on cast sheets (sample lines and verbal habits), and marking which cast
+  secrets, with a check that flags lore that reads like a secret but isn't marked (since untagged counts as public), voice anchors on cast sheets (sample lines and verbal habits), and marking which cast
   members default to agents.
 - First milestone: the smallest playable slice to build first. It should include the round timeline and reply card
   from day one, the per-reader context tests, and a red-team regression set of leak probes for each surface above,
