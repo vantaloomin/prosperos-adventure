@@ -39,6 +39,8 @@ def steps():
     hooks = list(engine.COMMITS)
     for listed in engine.STEPS.values():
         listed[:] = [(name, step) for name, step in listed if step is engine.pick]
+    # Another part may have replaced 'pick' under its name: the foundation's own is put back for these tests.
+    engine.STEPS[State.GATHERING][:] = [('pick', engine.pick)]
     yield
     for state, listed in before.items():
         engine.STEPS[state][:] = listed
@@ -303,3 +305,31 @@ def test_a_new_story_forgets_every_character_and_turn(client):
     with game.database.connect() as connection:
         assert turns.count(connection) == 0
     assert texts(game, 'hesk', Point(timeline.ROOT, 10)) == []
+
+
+def test_a_step_can_ask_to_run_straight_after_another_whichever_comes_first(steps):
+    async def nothing(turn):
+        pass
+    engine.register(State.WRITING, 'checks', nothing, after='write')
+    engine.register(State.WRITING, 'report', nothing)
+    assert [name for name, _ in engine.STEPS[State.WRITING]] == ['checks', 'report']
+    engine.register(State.WRITING, 'write', nothing)
+    engine.register(State.WRITING, 'tidy', nothing, after='write')
+    assert [name for name, _ in engine.STEPS[State.WRITING]] == ['report', 'write', 'checks', 'tidy']
+    engine.unregister(State.WRITING, 'write')
+    assert [name for name, _ in engine.STEPS[State.WRITING]] == ['report', 'checks', 'tidy']
+
+
+def test_a_turn_knows_the_line_it_opens_on(game, steps):
+    database = game.database
+    with database.connect(write=True) as connection:
+        for seq, mode in ((1, 'play'), (2, 'author')):
+            connection.execute("INSERT INTO story_messages (id, seq, role, text, city_id, place_id, created_at, mode) "
+                               "VALUES (?, ?, 'user', ?, 'baltimore', 'p', '', ?)", (f'm{seq}', seq, f'text {seq}', mode))
+
+    async def opened(seq, mode):
+        turn = await engine.begin(game, timeline.ROOT, seq, anchor_id=f'm{seq}', mode=mode)
+        await engine.run(turn)
+        return turn.snapshot.settings
+    assert asyncio.run(opened(1, 'play')) == {'message_id': 'm1', 'said': 'text 1'}
+    assert asyncio.run(opened(2, 'author')) == {'message_id': 'm2', 'nudge': 'text 2'}

@@ -6,8 +6,9 @@ Conversing, Resolving, Writing and Committing. Each state runs the steps registe
 state are saved after every step, and the round timeline hears each change (contract.round_event).
 
 - **Steps are plugged in.** Each part of the loop registers its own (`register`): the agents' Declare and React,
-  Converse, Resolve, the Writer. Registering a name again replaces that step, so a default can be swapped out. With
-  nothing registered a state passes straight through.
+  Converse, Resolve, the Writer. Registering a name again replaces that step, so a default can be swapped out, and
+  `after=` places a step straight after another, whichever module is imported first. With nothing registered a
+  state passes straight through.
 - **Waiting.** A step that calls `turn.draft.wait_for(...)` pauses the turn in AwaitingUser after it returns: the
   reply card goes out (contract.awaiting_event) and `run` returns. `answer` takes the reply and runs the turn on from
   the step that asked, which runs again, finds the answer in `draft.replies` and carries on. Steps that pause must
@@ -16,14 +17,16 @@ state are saved after every step, and the round timeline hears each change (cont
   memory hook here writes each character's in-turn knowledge and feelings (adventure/rounds/memory.py); other parts
   add theirs (the record, the post). Then the turn is committed and changes queued for Idle take effect
   (adventure/rounds/seats.py). A step that fails discards the turn, so nothing half-made is kept.
-- **The snapshot is frozen at Gather.** `begin` builds it from the seats and settings; the Gathering steps may add
-  to it (who is present, the agents picked, the Author's nudge); after Gathering it is saved and read only.
+- **The snapshot is frozen at Gather.** `begin` builds it from the seats and settings, with the line the turn
+  opens on in `settings`: 'message_id', and 'said' (the human's line as typed, in Play) or 'nudge' (the Author's,
+  in Author; empty in Watch). The Gathering steps may add to it (who is present, the agents picked, their own
+  settings in force under their own key); after Gathering it is saved and read only.
 """
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from typing import Any
 
-from adventure.database import decode
+from adventure.database import decode, optional
 from adventure.rounds import memory, seats, turns
 from adventure.rounds.contract import (
     ORDER,
@@ -51,6 +54,8 @@ class Turn:
     snapshot: Snapshot
     draft: Draft
     emit: Callable[[dict], Awaitable[None]] = no_event
+    # Hears the Writer's text as it streams; not saved with the turn.
+    on_text: Callable[[str], Awaitable[None]] | None = None
 
     @property
     def id(self) -> str:
@@ -69,21 +74,54 @@ Step = Callable[[Turn], Awaitable[None]]
 CommitHook = Callable[[Any, Turn], None]
 STEPS: dict[State, list[tuple[str, Step]]] = {state: [] for state in ORDER if state != State.COMMITTING}
 COMMITS: list[tuple[str, CommitHook]] = []
+# (state, name) -> the step it runs straight after.
+AFTER: dict[tuple[State, str], str] = {}
 
 
-def register(state: State, name: str, step: Step):
-    """Run `step` in `state`, after the steps already there; a name registered again replaces its step in place."""
+def register(state: State, name: str, step: Step, after: str | None = None):
+    """Run `step` in `state`, after the steps already there; a name registered again replaces its step in place.
+    With `after`, it runs straight after the step of that name, whichever was registered first (until that one is
+    registered, it runs last)."""
     assert state in STEPS, state
+    AFTER.pop((state, name), None)
+    if after is not None:
+        AFTER[(state, name)] = after
     steps = STEPS[state]
     for index, (existing, _) in enumerate(steps):
         if existing == name:
             steps[index] = (name, step)
-            return
-    steps.append((name, step))
+            break
+    else:
+        steps.append((name, step))
+    steps[:] = ordered(state, steps)
+
+
+def ordered(state: State, steps: list[tuple[str, Step]]) -> list[tuple[str, Step]]:
+    """The steps in registration order, each one asked to come after another moved to just behind it."""
+    names = {name for name, _ in steps}
+    placed = [item for item in steps if AFTER.get((state, item[0])) not in names]
+    waiting = [item for item in steps if item not in placed]
+    while waiting:
+        moved = False
+        for item in list(waiting):
+            target = AFTER[(state, item[0])]
+            spots = [index for index, (name, _) in enumerate(placed) if name == target]
+            if spots:
+                index = spots[0] + 1
+                while index < len(placed) and AFTER.get((state, placed[index][0])) == target:
+                    index += 1
+                placed.insert(index, item)
+                waiting.remove(item)
+                moved = True
+        if not moved:  # steps asking to follow each other in a ring: kept in the order they came
+            placed += waiting
+            break
+    return placed
 
 
 def unregister(state: State, name: str):
-    STEPS[state][:] = [(existing, step) for existing, step in STEPS[state] if existing != name]
+    AFTER.pop((state, name), None)
+    STEPS[state][:] = ordered(state, [(existing, step) for existing, step in STEPS[state] if existing != name])
 
 
 def on_commit(name: str, hook: CommitHook):
@@ -105,23 +143,34 @@ def snapshot_for(connection, row: dict) -> Snapshot:
                     converse_cap=held['converse_cap'])
 
 
+def opening(connection, anchor_id: str | None, mode: str) -> dict:
+    """What the turn opens on, for the steps: the line's id ('message_id'), and its text as the human's typed line
+    in Play ('said') or the Author's nudge ('nudge')."""
+    line = optional(connection, 'SELECT id, text FROM story_messages WHERE id=?', (anchor_id,)) if anchor_id else None
+    if line is None:
+        return {}
+    return {'message_id': line['id'], 'said' if mode == Mode.PLAY else 'nudge': line['text']}
+
+
 async def begin(app, branch_id: str, seq: int, anchor_id: str | None = None, emit=None, mode: str | None = None,
-                reask_of: str | None = None, reask_seat: str | None = None) -> Turn:
+                reask_of: str | None = None, reask_seat: str | None = None, on_text=None) -> Turn:
     """Open a turn at (branch, seq) in the campaign's mode (or `mode`), with its snapshot started and an empty draft."""
     database = app.database
     with database.connect(write=True) as connection:
         mode = mode or seats.settings(connection)['mode']
         row = turns.open_turn(connection, branch_id, seq, mode, database.now(), anchor_id, reask_of, reask_seat)
         snapshot = snapshot_for(connection, row)
+        snapshot.settings |= opening(connection, anchor_id, mode)
         turns.keep(connection, row['id'], plain(snapshot), Draft().data())
-    return Turn(app, row, snapshot, Draft(), emit or no_event)
+    return Turn(app, row, snapshot, Draft(), emit or no_event, on_text)
 
 
-def resumed(app, turn_id: str, emit=None) -> Turn:
+def resumed(app, turn_id: str, emit=None, on_text=None) -> Turn:
     """A turn read back from its row: its snapshot and draft as last saved."""
     with app.database.connect() as connection:
         row = turns.get(connection, turn_id)
-    return Turn(app, row, Snapshot.of(decode(row['snapshot'])), Draft.of(decode(row['draft'])), emit or no_event)
+    return Turn(app, row, Snapshot.of(decode(row['snapshot'])), Draft.of(decode(row['draft'])), emit or no_event,
+                on_text)
 
 
 # Running it ---------------------------------------------------------------------------------------------------------

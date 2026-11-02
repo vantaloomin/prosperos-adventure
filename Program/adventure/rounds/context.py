@@ -418,8 +418,7 @@ def known_facts(snapshot: Snapshot, key: str) -> list[dict]:
     return [fact for fact in (world_data.facts(world) if world else []) if lore.readable(fact, frozenset({key}))]
 
 
-# Registered on import: the app loads this module through adventure/gm.py (and adventure/rounds/steps.py once that
-# lands).
+# Registered on import; the app loads this module through adventure/rounds/steps.py.
 from adventure.rounds import engine  # noqa: E402
 
 engine.register(State.GATHERING, 'privacy', privacy)

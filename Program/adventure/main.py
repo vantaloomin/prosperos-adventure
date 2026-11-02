@@ -50,7 +50,10 @@ from adventure.providers.vault import SystemVault
 from adventure.ready import Ready, uses_builtin
 from adventure.ready_routes import router as ready_router
 from adventure.recall_routes import router as recall_router
-from adventure.rounds import declare as rounds_agents  # noqa: F401 - registers the agents' steps
+from adventure.round_routes import router as round_router
+from adventure.rounds import play as rounds_play
+from adventure.rounds import queue as rounds_queue
+from adventure.rounds import steps as rounds_steps  # noqa: F401 - every step plugged into the round loop
 from adventure.routes import router
 from adventure.text_model_routes import router as model_router
 from adventure.world import routes as world_routes
@@ -100,6 +103,12 @@ async def invalid_request(_request: Request, error: RequestValidationError):
 @asynccontextmanager
 async def lifespan(app):
     tasks = []
+    # A turn the app stopped in the middle of is thrown away; a round turn is played again from its snapshot
+    # (adventure/rounds/play.py recover), one waiting on the reply card keeps waiting.
+    replaying = rounds_play.recover(app.state)
+    if app.state.background and replaying:
+        tasks.append(asyncio.create_task(rounds_queue.play(
+            app.state, lambda: rounds_play.replay(app.state, replaying))))
     if app.state.background:
         # Built-in recall loads its model now, so the first turn does not wait for it; so does the built-in text
         # model while it narrates, and a confirmed download carries on.
@@ -152,7 +161,7 @@ def create_app(database_path: str | Path | None = None, *, clock=None, vault=Non
     for item in (router, model_router, launcher_router, recall_router, hardware_router, ready_router, world_routes.router,
                  image_routes.router, politics_routes.router, story_routes.router, authors_note_routes.router, file_routes.router,
                  debug_router, worlds_routes.router, calls_router, mix_router, packages_router,
-                 agent_routes.router, gm_router):
+                 agent_routes.router, round_router, gm_router):
         app.include_router(item)
     if FRONTEND.exists():
         app.mount('/', StaticFiles(directory=FRONTEND, html=True), name='frontend')

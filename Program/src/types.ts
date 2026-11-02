@@ -266,6 +266,7 @@ export interface BandStep { band: Band; label: string; ceiling: number | null }
 export interface TurnAction { action: string; stat: string; difficulty?: string }
 /** A turn's stages as the stream tells them, before and around the narration (adventure/story.py answer). */
 export type TurnEvent = { stage: 'reading' | 'writing' } | { actions: TurnAction[]; bands?: BandStep[] } | { roll: StoryRoll | HiddenRoll }
+  | { round: { turn_id: string; state: string } }
 /** What a turn under way has shown so far. */
 export interface TurnSoFar { stage: 'reading' | 'writing' | null; actions: TurnAction[]; bands: BandStep[] | null; rolls: (StoryRoll | HiddenRoll)[] }
 /** The persona's Prospero stats (adventure/sheet.py) and the die each one rolls; or their 5E sheet (Srd52Sheet). */

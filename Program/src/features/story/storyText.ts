@@ -364,7 +364,9 @@ export const NO_TURN: TurnSoFar = { stage: null, actions: [], bands: null, rolls
 export function turnAfter(turn: TurnSoFar, event: TurnEvent): TurnSoFar {
   if ('stage' in event) return { ...turn, stage: event.stage }
   if ('actions' in event) return { ...turn, actions: event.actions, bands: event.bands ?? null }
-  return { ...turn, rolls: [...turn.rolls, event.roll] }
+  if ('roll' in event) return { ...turn, rolls: [...turn.rolls, event.roll] }
+  // The round loop's own events (adventure/rounds/contract.py: round, seat, awaiting) are for the round timeline.
+  return turn
 }
 
 export const isShown = (roll: StoryRoll | HiddenRoll): roll is StoryRoll => 'band' in roll
