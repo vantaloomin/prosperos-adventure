@@ -29,6 +29,7 @@ from adventure import (
 from adventure.database import one
 from adventure.errors import require
 from adventure.models import PersonaInput
+from adventure.rounds import context as rounds_context
 from adventure.rules import brp, fate, ironsworn, marvel, narrative, srd52
 
 PREMADES = Path(__file__).parent / 'world' / 'data' / 'premades'
@@ -222,6 +223,8 @@ def begin(database, premade_id: str | None = None, persona: PersonaInput | None 
         story_clock.caught_up(connection, database.clock.now(), False)
         quests.start(connection, city_id, began)
         inventory.give_kit(connection, city_id, premade_id)
+        # Who the character is in the world package, so what that persona knows reaches them (adventure/rounds/context.py).
+        rounds_context.remember_persona(connection, premade_id)
         # A made Percentile character carries their profession's weapons (adventure/combat_brp.py).
         combat_brp.arm(connection, city_id, None if premade_id or ruleset != brp.ID else native)
         # How far and how fast the character can rise (adventure/tiers.py).

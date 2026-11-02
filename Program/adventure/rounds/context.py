@@ -26,12 +26,19 @@ math only when the user's character has it.
 **Outcome visibility.** An outcome or roll in the turn result may carry `visible_to` (seat keys). The Writer in Play
 gets it only when the user's character is among them; one without `visible_to` is seen by everyone present.
 
+**Keys.** Seats are keyed by story_people key ('you' for the human); tags and package facts name characters by their
+world package cast or persona id. The Gathering step maps each seat to its package id (`package_ids`): the human to
+the persona taken at the campaign's start (`story_persona`), a met character to the `notable` or `cast` id on their
+town sheet. A tag may name either key. A character with no package id gets public lore only, and no sheet.
+
 The snapshot needs `settings['world']` and `settings['city']` for sheets, lore and facts; the Gathering step `privacy`
-freezes them (and which seats see the game's numbers). A builder with neither leaves sheets, lore and facts out.
+freezes them, each seat's package id and which seats see the game's numbers. A builder with neither leaves sheets,
+lore and facts out.
 """
 from dataclasses import dataclass, field
 
 from adventure import lore, packages, world_data
+from adventure.database import optional
 from adventure.feelings import AXES
 from adventure.rounds import memory
 from adventure.rounds.contract import KNOWLEDGE_KINDS, Declaration, Knowledge, Mind, Mode, Snapshot, State
@@ -120,6 +127,20 @@ def world_of(snapshot: Snapshot) -> str | None:
     return snapshot.settings.get('world') or None
 
 
+def package_id(snapshot: Snapshot, key: str) -> str | None:
+    """The world package's cast or persona id for a seat (frozen at Gather, `package_ids`); a seat key that is one
+    already (a test, a seat keyed by cast id) stands for itself."""
+    frozen = snapshot.settings.get('package_ids')
+    if isinstance(frozen, dict) and key in frozen:
+        return frozen[key]
+    return key
+
+
+def knowers_of(snapshot: Snapshot, keys) -> frozenset[str]:
+    """The keys tags may name the characters by: each seat key, and its package id."""
+    return frozenset(found for key in keys for found in (key, package_id(snapshot, key)) if found)
+
+
 def sees_numbers(snapshot: Snapshot, key: str | None) -> bool:
     """Whether `key` sees the game's numbers, as frozen at Gather; by the world's flag when Gather did not say."""
     if key is None:
@@ -127,7 +148,7 @@ def sees_numbers(snapshot: Snapshot, key: str | None) -> bool:
     frozen = snapshot.settings.get('game_knowledge')
     if isinstance(frozen, dict) and key in frozen:
         return bool(frozen[key])
-    return world_data.game_knowledge(world_of(snapshot), key)
+    return world_data.game_knowledge(world_of(snapshot), package_id(snapshot, key) or key)
 
 
 def to_whom(snapshot: Snapshot, keys: list[str]) -> str:
@@ -264,8 +285,17 @@ def exchange_lines(snapshot: Snapshot, draft: Draft) -> list[str]:
 
 # An agent -----------------------------------------------------------------------------------------------------------
 
+def faction_lines(connection, snapshot: Snapshot, key: str) -> list[str]:
+    """The faction aims, orders and standing the character knows (adventure/factions.py `known_to`, once W7 adds
+    it); nothing until then."""
+    from adventure import factions
+    known_to = getattr(factions, 'known_to', None)
+    return [str(line) for line in known_to(connection, snapshot, key)] if known_to else []
+
+
 def sheet_lines(snapshot: Snapshot, key: str) -> list[str]:
-    entry = world_data.person(world_of(snapshot), key) or {}
+    found = package_id(snapshot, key)
+    entry = (world_data.person(world_of(snapshot), found) if found else None) or {}
     shown = SHEET + (NUMBERS if sees_numbers(snapshot, key) else ())
     return [f"{name.replace('_', ' ').capitalize()}: {plain(entry[name])}" for name in shown if entry.get(name)]
 
@@ -273,7 +303,7 @@ def sheet_lines(snapshot: Snapshot, key: str) -> list[str]:
 def build_agent(connection, snapshot: Snapshot, draft: Draft, key: str, focus: str = '') -> Context:
     """Everything the character `key` may know this turn, and nothing else."""
     seat = snapshot.seat(key)
-    knowers = frozenset({key})
+    knowers = knowers_of(snapshot, [key])
     context = Context(f'agent:{key}')
     context.add('Who you are', [f'You are {called(snapshot, key)}.', *sheet_lines(snapshot, key)])
     context.add('Notes from the person at the table', [str(seat.notes)[:NOTE_CHARS] if seat else ''])
@@ -282,6 +312,7 @@ def build_agent(connection, snapshot: Snapshot, draft: Draft, key: str, focus: s
     context.add('What you know of the world', [*lore_lines(connection, snapshot, knowers, focus),
                                                *fact_lines(snapshot, knowers)])
     context.add('How you feel', feelings_lines(connection, snapshot, key))
+    context.add('Your factions', faction_lines(connection, snapshot, key))
     context.add('This turn so far', knowledge_lines(snapshot, draft.known_to(key)))
     own = draft.declarations.get(key)
     if own is not None:
@@ -310,7 +341,7 @@ def build_writer(connection, snapshot: Snapshot, draft: Draft, signs=(), scene: 
     play = snapshot.mode == Mode.PLAY
     human = snapshot.human()
     pov = human.key if play and human else None
-    knowers = frozenset({pov} if pov else present(snapshot))
+    knowers = knowers_of(snapshot, [pov] if pov else present(snapshot))
     context = Context(f'writer:{snapshot.mode}')
     context.add('Scene', [scene], fenced=False)
     scene_parts(context, snapshot, draft, private=not play)
@@ -392,13 +423,58 @@ def gm(connection, snapshot: Snapshot, draft: Draft, note: str = '') -> str:
 
 # Gather: freezing what the builders read -----------------------------------------------------------------------------
 
+def chosen_persona(connection) -> str | None:
+    """The package persona the player took at the campaign's start (a premade), None for a character of their own."""
+    row = optional(connection, 'SELECT package_id FROM story_persona WHERE id=1')
+    return row['package_id'] if row else None
+
+
+def remember_persona(connection, premade_id: str | None):
+    """At the campaign's start (adventure/campaign.py `begin`): who the player's character is in the package."""
+    connection.execute('INSERT INTO story_persona (id, package_id) VALUES (1, ?) ON CONFLICT(id) DO UPDATE SET '
+                       'package_id=excluded.package_id', (premade_id,))
+
+
+def cast_of(connection, world: str | None, key: str) -> str | None:
+    """A met character's cast id, through their sheet: a package notable placed in a town carries it as `notable`,
+    a companion living there as `cast` (adventure/world/townsfolk.py). None for townsfolk of the town's own making."""
+    from adventure import story
+    from adventure.world import townsfolk
+    row = optional(connection, 'SELECT city_id FROM story_people WHERE key=?', (key,))
+    if row is None:
+        return None
+    sheet = townsfolk.find(story.city_data(connection, row['city_id']), key) or {}
+    for kept in ('notable', 'cast'):
+        if sheet.get(kept) and world_data.person(world, sheet[kept]):
+            return sheet[kept]
+    return None
+
+
+def package_ids(connection, snapshot: Snapshot, world: str | None) -> dict[str, str | None]:
+    """Each seat's package id: the human's chosen persona, a met character's cast id through their sheet, or the
+    seat key itself when it is one."""
+    from adventure.rounds import seats
+    # The human's seat as chosen, not as picked: in Author and Watch it runs on another mind this turn.
+    human = {seat.key for seat in seats.seats(connection) if seat.mind == Mind.HUMAN}
+    found = {}
+    for seat in snapshot.seats:
+        if seat.mind == Mind.HUMAN or seat.key in human:
+            found[seat.key] = chosen_persona(connection)
+        else:
+            found[seat.key] = cast_of(connection, world, seat.key) or (
+                seat.key if world_data.person(world, seat.key) else None)
+    return found
+
+
 def frozen_settings(connection, snapshot: Snapshot) -> dict:
-    """The story's world and town, and which seats see the game's numbers, as of this turn."""
+    """The story's world and town, each seat's package id, and which seats see the game's numbers, as of this turn."""
     from adventure import story, tiers
     city = story.scene_row(connection)['city_id']
     world = tiers.world_of(city)
-    return {'world': world, 'city': city,
-            'game_knowledge': {seat.key: world_data.game_knowledge(world, seat.key) for seat in snapshot.seats}}
+    ids = package_ids(connection, snapshot, world)
+    return {'world': world, 'city': city, 'package_ids': ids,
+            'game_knowledge': {seat.key: world_data.game_knowledge(world, ids.get(seat.key) or seat.key)
+                               for seat in snapshot.seats}}
 
 
 async def privacy(turn):
@@ -415,7 +491,7 @@ async def privacy(turn):
 
 def known_facts(snapshot: Snapshot, key: str) -> list[dict]:
     world = world_of(snapshot)
-    return [fact for fact in (world_data.facts(world) if world else []) if lore.readable(fact, frozenset({key}))]
+    return [fact for fact in (world_data.facts(world) if world else []) if lore.readable(fact, knowers_of(snapshot, [key]))]
 
 
 # Registered on import; the app loads this module through adventure/rounds/steps.py.

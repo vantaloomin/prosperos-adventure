@@ -1311,3 +1311,10 @@ CREATE TABLE IF NOT EXISTS gm_view_consent (
   remembered INTEGER NOT NULL DEFAULT 0 CHECK (remembered IN (0, 1)),
   created_at TEXT NOT NULL
 );
+
+-- Who the player's character is in the world package: the persona (premade) taken at the campaign's start, NULL for a
+-- character of their own (adventure/rounds/context.py `remember_persona`), so what that persona knows reaches them.
+CREATE TABLE IF NOT EXISTS story_persona (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  package_id TEXT
+);
