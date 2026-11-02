@@ -310,6 +310,8 @@ def test_a_new_story_forgets_every_character_and_turn(client):
 def test_a_step_can_ask_to_run_straight_after_another_whichever_comes_first(steps):
     async def nothing(turn):
         pass
+    # Whatever the app's own parts registered in Writing (today's 'write') is set aside for this test.
+    engine.STEPS[State.WRITING][:] = []
     engine.register(State.WRITING, 'checks', nothing, after='write')
     engine.register(State.WRITING, 'report', nothing)
     assert [name for name, _ in engine.STEPS[State.WRITING]] == ['checks', 'report']
