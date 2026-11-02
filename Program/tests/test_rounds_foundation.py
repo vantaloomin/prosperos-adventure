@@ -128,6 +128,23 @@ def test_bringing_a_memory_back_refreshes_it_on_that_branch_only(game, steps):
         assert memory.recall(connection, 'hesk', Point('b2', 100))[0]['faded'] is True
 
 
+def test_a_change_registered_for_recall_sees_every_memory_before_it_fades(game, steps):
+    play(game, 1, learn=[('hesk', 'witnessed', 'Mara drew a knife at the inn.', 1, 'mara'),
+                         ('hesk', 'heard', 'The bridge is out.', 1, '')])
+
+    def corrected(connection, point, rows):
+        assert point == Point(timeline.ROOT, 100)
+        return [row | {'text': 'Mara drew a dagger at the inn.', 'importance': 3} if 'knife' in row['text'] else row
+                for row in rows if 'bridge' not in row['text']]
+    memory.amend('corrections', corrected)
+    try:
+        with game.database.connect() as connection:
+            assert [(row['text'], row['faded']) for row in memory.recall(connection, 'hesk', Point(timeline.ROOT, 100))] \
+                == [('Mara drew a dagger at the inn.', False)]
+    finally:
+        memory.AMENDS[:] = [(name, change) for name, change in memory.AMENDS if name != 'corrections']
+
+
 def test_feelings_toward_anyone_add_up_within_their_ranges(game, steps):
     with game.database.connect(write=True) as connection:
         # A campaign's starting feelings, seen from every branch.

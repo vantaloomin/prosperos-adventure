@@ -41,6 +41,16 @@ def open_turn(connection, branch_id: str, seq: int, mode: str, now: str, anchor_
     return get(connection, turn_id)
 
 
+def view(row: dict) -> dict:
+    """A turn's state and marks, and the reply card it waits on; what it holds is shown through the readers' own
+    views, never raw here."""
+    draft = decode(row['draft']) or {}
+    waiting = draft.get('awaiting')
+    return {'id': row['id'], 'state': row['state'], 'mode': row['mode'], 'marks': decode(row['marks']) or [],
+            'reask_of': row['reask_of'], 'reask_seat': row['reask_seat'], 'error': row['error'],
+            'awaiting': {key: waiting[key] for key in ('seat', 'speaker', 'line', 'context')} if waiting else None}
+
+
 def set_state(connection, turn_id: str, state: State, now: str = ''):
     connection.execute('UPDATE round_turns SET state=?, committed_at=CASE WHEN ?=? THEN ? ELSE committed_at END '
                        'WHERE id=?', (str(state), str(state), str(State.COMMITTED), now, turn_id))
