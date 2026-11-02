@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { estimateLine, spendLine, hasAgents, liveSummary, modeOf, NO_ROUND, replyBody, roundAfter, roundStarting, seatChanges, seatLine, stepAt, STEPS, titleWhile, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { decidedCount, hasAgents, modeOf, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
 const table = (seats: Seat[], under_way: RoundTable['under_way'] = null): RoundTable => ({
@@ -30,12 +31,18 @@ test('a stream answering the card keeps the turn; any other starts afresh', () =
 })
 
 test('the timeline lights one step at a time', () => {
-  assert.deepEqual(STEPS.map((step) => step.name), ['Declare', 'React', 'Converse', 'Resolve', 'Write'])
+  assert.deepEqual(STEPS.map((step) => STEP_NAMES[step.key]), ['Declare', 'React', 'Talk', 'Roll', 'Write'])
   assert.equal(stepAt(null), -1)
   assert.equal(stepAt('gathering'), 0)
   assert.equal(stepAt('awaiting_user'), 2)
   assert.equal(stepAt('committing'), 4)
   assert.equal(stepAt('idle'), -1)
+  const live = heard({ round: { turn_id: 't1', state: 'declaring' } }, { seat: { key: 'hesk', status: 'declared' } }, { seat: { key: 'mara', status: 'thinking' } }, { seat: { key: 'bren', status: 'fallback' } })
+  assert.equal(stepLine('declaring', live), 'Declaring · 2 of 3')
+  assert.equal(stepLine('awaiting_user', live), 'Waiting for you')
+  assert.equal(stepLine('resolving', live), 'Rolling')
+  assert.equal(stepLine('idle', live), '')
+  assert.deepEqual(decidedCount(live), { decided: 2, of: 3 })
 })
 
 test('the reply card comes from the stream, or from the table after a reload', () => {
@@ -53,13 +60,16 @@ test('the reply card comes from the stream, or from the table after a reload', (
 test('a row says only that a character decided in Play, and what they mean to do in Author and Watch', () => {
   const live = heard({ round: { turn_id: 't1', state: 'reacting' } }, { seat: { key: 'hesk', status: 'declared', intent: 'slips out the back' } },
     { seat: { key: 'ilsa', status: 'reacting' } }, { seat: { key: 'bren', status: 'fallback' } }, { seat: { key: 'mara', status: 'thinking' } })
-  assert.equal(seatLine('hesk', live, 'play', null), 'Decided')
-  assert.equal(seatLine('hesk', live, 'watch', null), 'slips out the back')
-  assert.equal(seatLine('ilsa', live, 'play', null), 'Reacting')
-  assert.equal(seatLine('bren', live, 'play', null), 'Went by the rules this turn')
-  assert.equal(seatLine('mara', live, 'play', null), 'Thinking')
-  assert.equal(seatLine('mara', live, 'play', card), 'Waiting for your answer')
-  assert.equal(seatLine('nobody', live, 'play', null), null)
+  assert.equal(rowText('hesk', live, 'play', null), 'Decided')
+  assert.equal(rowText('hesk', live, 'watch', null), 'slips out the back')
+  assert.equal(rowText('ilsa', live, 'play', null), 'Thinking')
+  assert.equal(rowText('bren', live, 'play', null), 'Went by the rules')
+  assert.equal(rowText('mara', live, 'play', null), 'Thinking')
+  assert.equal(rowText('mara', live, 'play', card), 'Waiting for you')
+  assert.equal(rowText('nobody', live, 'play', null), null)
+  assert.equal(rowStatus('ilsa', live, null), 'thinking')
+  assert.equal(rowStatus('mara', live, card), 'waiting')
+  assert.equal(rowStatus('hesk', live, null), 'decided')
 })
 
 test('the live region sums the turn up', () => {
@@ -68,7 +78,7 @@ test('the live region sums the turn up', () => {
   const live = heard({ round: { turn_id: 't1', state: 'declaring' } }, { seat: { key: 'hesk', status: 'declared' } }, { seat: { key: 'mara', status: 'thinking' } })
   assert.equal(liveSummary(live, seats, null), '1 of 2 characters have decided')
   assert.equal(liveSummary(heard({ seat: { key: 'hesk', status: 'thinking' } }), seats, null), '0 of 1 character has decided')
-  assert.equal(liveSummary(live, seats, card), 'Mara is waiting for your answer')
+  assert.equal(liveSummary(live, seats, card), 'Mara is waiting for you')
 })
 
 test('making a character think seats the user too, once', () => {
@@ -85,14 +95,16 @@ test('the table, the reply and the title', () => {
   assert.equal(modeOf(null), 'play')
   assert.deepEqual(replyBody(card, 'reply', '  At the shrine. ', 't1'), { seat: 'you', kind: 'reply', text: 'At the shrine.', against: 't1' })
   assert.deepEqual(replyBody(card, 'silent', 'ignored', 't1'), { seat: 'you', kind: 'silent', text: '', against: 't1' })
+  assert.equal(replyText('Ada').letAnswer, 'Let Ada answer')
+  assert.equal(replyText('').letAnswer, 'Let your character answer')
   assert.equal(titleWhile(true, 'Adventure'), '(1) Adventure')
   assert.equal(titleWhile(true, '(1) Adventure'), '(1) Adventure')
   assert.equal(titleWhile(false, '(1) Adventure'), 'Adventure')
 })
 
 test('the pace reads plainly', () => {
-  assert.equal(estimateLine({ calls: 14, tokens: 9400 }), 'About 14 calls and 9k tokens a turn')
-  assert.equal(estimateLine({ calls: 1, tokens: 600 }), 'About 1 call and 600 tokens a turn')
+  assert.equal(estimateLine({ calls: 14, tokens: 9400 }), '~14 calls · 9k tokens')
+  assert.equal(estimateLine({ calls: 1, tokens: 600 }), '~1 call · 600 tokens')
   assert.equal(spendLine({ spent: 12400, held: 0, cap: 200000 }), '12k of 200k tokens this session')
   assert.equal(spendLine({ spent: 0, held: 0, cap: 0 }), '0 tokens this session')
 })

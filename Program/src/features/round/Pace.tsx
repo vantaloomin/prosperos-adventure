@@ -3,7 +3,8 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../../api'
 import { Notice } from '../../components/Feedback'
 import { ROUND_KEY, useRoundTable } from './useRound'
-import { estimateLine, LOYALTY, SCHEMING, spendLine, type AgentPace, type RoundTable } from './round'
+import type { AgentPace, RoundTable } from './round'
+import { estimateLine, LOYALTY, PACE_LABELS, PRESET_NAMES, SCHEMING, spendLine } from './roundText'
 
 const PACE_KEY = ['agents']
 
@@ -25,22 +26,22 @@ export function Pace() {
       (failure: unknown) => setError(failure instanceof Error ? failure.message : 'Not changed.'))
   return (
     <section className="settings-section form-stack" aria-labelledby="pace-heading">
-      <h2 id="pace-heading">Pace</h2>
+      <h2 id="pace-heading">{PACE_LABELS.title}</h2>
       <fieldset className="pace-presets">
-        <legend className="visually-hidden">Pace</legend>
+        <legend className="visually-hidden">{PACE_LABELS.title}</legend>
         {pace.data.presets.map((preset) => <label key={preset.key} className="pace-preset">
           <input type="radio" name={name} checked={pace.data.preset === preset.key} onChange={() => void save({ preset: preset.key })} />
-          <span><strong>{preset.name}</strong><small>{estimateLine(preset.estimate)}</small></span>
+          <span><span className="pace-name">{PRESET_NAMES[preset.key]}</span><small>{estimateLine(preset.estimate)}</small></span>
         </label>)}
       </fieldset>
       <details className="pace-advanced">
-        <summary>Advanced</summary>
+        <summary>{PACE_LABELS.advanced}</summary>
         <div className="form-stack">
-          <NumberField label="Thinking characters at once" value={table.data.settings.queued.agent_cap ?? table.data.settings.agent_cap} min={1} max={6} onSave={(value) => void saveTable({ agent_cap: value })} />
-          <NumberField label="Exchanges a turn" value={table.data.settings.queued.converse_cap ?? table.data.settings.converse_cap} min={1} max={12} onSave={(value) => void saveTable({ converse_cap: value })} />
-          <Choice label="Scheming" value={String(pace.data.scheming)} options={SCHEMING.map((label, index) => ({ key: String(index), name: label }))} onSave={(value) => void save({ scheming: Number(value) })} />
-          <Choice label="Loyalties shift" value={pace.data.loyalty} options={LOYALTY} onSave={(value) => void save({ loyalty: value as AgentPace['loyalty'] })} />
-          <NumberField label="Session cap in tokens" value={pace.data.session_cap} min={0} max={100_000_000} step={10_000} placeholder="None" onSave={(value) => void save({ session_cap: value })}
+          <NumberField label={PACE_LABELS.agentCap} value={table.data.settings.queued.agent_cap ?? table.data.settings.agent_cap} min={1} max={6} onSave={(value) => void saveTable({ agent_cap: value })} />
+          <NumberField label={PACE_LABELS.converseCap} value={table.data.settings.queued.converse_cap ?? table.data.settings.converse_cap} min={1} max={12} onSave={(value) => void saveTable({ converse_cap: value })} />
+          <Choice label={PACE_LABELS.scheming} value={String(pace.data.scheming)} options={SCHEMING.map((label, index) => ({ key: String(index), name: label }))} onSave={(value) => void save({ scheming: Number(value) })} />
+          <Choice label={PACE_LABELS.loyalty} value={pace.data.loyalty} options={LOYALTY} onSave={(value) => void save({ loyalty: value as AgentPace['loyalty'] })} />
+          <NumberField label={PACE_LABELS.sessionCap} value={pace.data.session_cap} min={0} max={100_000_000} step={10_000} placeholder={PACE_LABELS.none} onSave={(value) => void save({ session_cap: value })}
             after={<small className="subtle">{spendLine(pace.data.spend)}</small>} />
         </div>
       </details>

@@ -3,7 +3,8 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api, streamApi, type StreamNote } from '../../api'
 import { useWorlds } from '../worlds/useWorlds'
 import { personaName } from '../worlds/worldsText'
-import { NO_ROUND, replyBody, roundAfter, roundStarting, seatChanges, seatName, titleWhile, waitingOn, type CastRound, type Mind, type ReplyKind, type RoundTable } from './round'
+import { NO_ROUND, replyBody, roundAfter, roundStarting, seatChanges, seatName, waitingOn, type CastRound, type Mind, type ReplyKind, type RoundTable } from './round'
+import { titleWhile } from './roundText'
 
 export const ROUND_KEY = ['rounds']
 /** The user's own seat at the table, as the human, in Play. */

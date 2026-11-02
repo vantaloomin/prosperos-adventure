@@ -8,9 +8,10 @@ import { EntityName } from './EntityCard'
 import { StoryGear } from './StoryGear'
 import { peopleHere } from './scene'
 import { aroundText, moneyText, personLine, statusItems } from './storyText'
-import { MindBadge, MindToggle } from '../round/MindBadge'
+import { MindToggle } from '../round/MindToggle'
 import { RoundTimeline } from '../round/RoundTimeline'
-import { hasAgents, liveSummary, modeOf, seatLine, seatOf, type CastRound } from '../round/round'
+import { hasAgents, modeOf, rowStatus, seatOf, type CastRound, type RowStatus } from '../round/round'
+import { liveSummary, rowText, THINKS_NAME } from '../round/roundText'
 
 export type { CastRound }
 
@@ -49,32 +50,32 @@ export function StoryCast({ story, round, onTrade }: { story: Story; round?: Cas
 /** Once anyone at the table thinks for themselves: the round timeline, with its summary for screen readers. */
 function CastTimeline({ round }: { round: CastRound }) {
   if (!hasAgents(round.table)) return null
-  return <RoundTimeline state={round.live.state ?? round.table?.under_way?.state ?? null} summary={liveSummary(round.live, round.table, round.waiting)} />
+  return <RoundTimeline state={round.live.state ?? round.table?.under_way?.state ?? null} live={round.live} summary={liveSummary(round.live, round.table, round.waiting)} />
 }
 
 /** A character here as the round loop sees them: how they're getting on this turn in place of what they're doing, the
- *  Thinks or Rules badge once anyone thinks, and the choice between them when the row is open. */
+ *  accent dot on the portrait of one who thinks for themself, and the Thinks or Rules choice when the row is open. */
 function CastPerson({ person, round, open, onToggle }: { person: StoryPerson; round: CastRound; open: boolean; onToggle: (id: string) => void }) {
   const mind = seatOf(round.table, person.key)?.mind ?? 'program'
-  const now = seatLine(person.key, round.live, modeOf(round.table), round.waiting)
+  const now = rowText(person.key, round.live, modeOf(round.table), round.waiting)
   return (
     <CastRow id={person.key} name={person.name} letter={person.name.charAt(0)} state={now ?? person.doing}
-      badge={hasAgents(round.table) && <MindBadge mind={mind} />} open={open} onToggle={onToggle}>
+      thinks={mind === 'agent'} status={rowStatus(person.key, round.live, round.waiting)} open={open} onToggle={onToggle}>
       <PersonMore person={person} />
       <MindToggle id={person.key} name={person.name} mind={mind} onChange={(next) => round.onMind(person, next)} />
     </CastRow>
   )
 }
 
-interface RowProps { id: string; name: string; letter: string; state: string; badge?: ReactNode; open: boolean; onToggle: (id: string) => void; children: ReactNode }
+/** `thinks` puts the accent dot on the portrait; `status` rings it while the character is thinking or waiting. */
+interface RowProps { id: string; name: string; letter: string; state: string; thinks?: boolean; status?: RowStatus | null; open: boolean; onToggle: (id: string) => void; children: ReactNode }
 
-function CastRow({ id, name, letter, state, badge, open, onToggle, children }: RowProps) {
+function CastRow({ id, name, letter, state, thinks, status, open, onToggle, children }: RowProps) {
   return (
     <li>
       <button type="button" className="story-cast-row" aria-expanded={open} onClick={() => onToggle(id)}>
-        <span className="portrait" aria-hidden="true">{letter}</span>
-        <span className="story-cast-text"><span className="story-cast-name">{name}</span><span className="story-cast-state">{state}</span></span>
-        {badge}
+        <span className="portrait" aria-hidden="true" data-thinks={thinks || undefined} data-status={status ?? undefined}>{letter}</span>
+        <span className="story-cast-text"><span className="story-cast-name">{name}{thinks && <span className="visually-hidden">, {THINKS_NAME}</span>}</span><span className="story-cast-state">{state}</span></span>
       </button>
       {open && <div className="story-cast-more">{children}</div>}
     </li>

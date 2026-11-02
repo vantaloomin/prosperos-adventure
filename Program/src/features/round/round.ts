@@ -60,13 +60,14 @@ export function roundStarting(live: RoundLive): RoundLive {
   return live.state === 'awaiting_user' ? { ...live, awaiting: null } : NO_ROUND
 }
 
-/** The round timeline's steps (docs/spec.md "Waiting and pauses"), each lit by the states it covers. */
-export const STEPS: { name: string; states: RoundState[] }[] = [
-  { name: 'Declare', states: ['gathering', 'declaring'] },
-  { name: 'React', states: ['reacting'] },
-  { name: 'Converse', states: ['conversing', 'awaiting_user'] },
-  { name: 'Resolve', states: ['resolving'] },
-  { name: 'Write', states: ['writing', 'committing'] },
+/** The round timeline's steps (docs/spec.md "The turn loop"), each lit by the states it covers; their names are in
+ *  ./roundText.ts. */
+export const STEPS: { key: 'declare' | 'react' | 'talk' | 'roll' | 'write'; states: RoundState[] }[] = [
+  { key: 'declare', states: ['gathering', 'declaring'] },
+  { key: 'react', states: ['reacting'] },
+  { key: 'talk', states: ['conversing', 'awaiting_user'] },
+  { key: 'roll', states: ['resolving'] },
+  { key: 'write', states: ['writing', 'committing'] },
 ]
 
 /** Which step is lit: -1 before a turn or after it. */
@@ -96,25 +97,22 @@ export const seatOf = (table: RoundTable | null | undefined, key: string) => tab
 /** A seat's name, or the key it was given when it has no seat. */
 export const seatName = (table: RoundTable | null | undefined, key: string) => seatOf(table, key)?.name ?? key
 
-/** A character's row during a turn. In Play only that they decided ("Decided"), never what; in Author and Watch, their
- *  intent once it arrives. The one who spoke to the user's character waits for the answer. */
-export function seatLine(key: string, live: RoundLive, mode: Mode, waiting: Awaiting | null): string | null {
-  if (waiting?.speaker === key) return 'Waiting for your answer'
+/** Where a character's row is this turn: thinking (declaring or reacting), decided, gone by the rules (an agent that
+ *  failed ran on its Program mind), or waiting for the user's answer; null before they have a row. */
+export type RowStatus = 'thinking' | 'decided' | 'fallback' | 'waiting'
+
+export function rowStatus(key: string, live: RoundLive, waiting: Awaiting | null): RowStatus | null {
+  if (waiting?.speaker === key) return 'waiting'
   const row = live.seats[key]
   if (!row) return null
-  if (row.status === 'thinking') return 'Thinking'
-  if (row.status === 'reacting') return 'Reacting'
-  if (row.status === 'fallback') return 'Went by the rules this turn'
-  return mode !== 'play' && row.intent ? row.intent : 'Decided'
+  if (row.status === 'thinking' || row.status === 'reacting') return 'thinking'
+  return row.status === 'fallback' ? 'fallback' : 'decided'
 }
 
-/** The polite live region's summary: "3 of 5 characters have decided", or who is waiting for an answer. */
-export function liveSummary(live: RoundLive, table: RoundTable | null | undefined, waiting: Awaiting | null): string {
-  if (waiting) return `${seatName(table, waiting.speaker)} is waiting for your answer`
+/** How many of the characters with a row have decided, of how many. */
+export function decidedCount(live: RoundLive): { decided: number; of: number } {
   const rows = Object.values(live.seats)
-  if (!rows.length) return ''
-  const decided = rows.filter((row) => row.status !== 'thinking').length
-  return `${decided} of ${rows.length} ${rows.length === 1 ? 'character has' : 'characters have'} decided`
+  return { decided: rows.filter((row) => row.status !== 'thinking').length, of: rows.length }
 }
 
 /** The round loop as the cast list shows it: the turn under way, the table's seats, the reply card if one is up, and
@@ -143,12 +141,6 @@ export function seatChanges(table: RoundTable | null | undefined, person: { key:
   return mind === 'agent' && !human ? [{ key: you.key, body: { name: you.name, mind: 'human' } }, ...changes] : changes
 }
 
-/** The page title while a character waits on the user's answer, so a tab in the background shows it. */
-export function titleWhile(waiting: boolean, title: string): string {
-  const plain = title.replace(/^\(1\) /, '')
-  return waiting ? `(1) ${plain}` : plain
-}
-
 // Pace (adventure/agent_routes.py): the agents' preset with its estimate, the dials, and the session's spend. -----------
 
 export type PresetKey = 'quick' | 'balanced' | 'rich'
@@ -157,19 +149,4 @@ export interface AgentPace {
   preset: PresetKey; scheming: number; loyalty: Loyalty; session_cap: number
   presets: { key: PresetKey; name: string; estimate: { calls: number; tokens: number } }[]
   spend: { spent: number; held: number; cap: number }; capped: boolean
-}
-
-export const SCHEMING = ['Rarely', 'When it serves them', 'Readily', 'Always']
-export const LOYALTY: { key: Loyalty; name: string }[] = [{ key: 'slow', name: 'Slowly' }, { key: 'steady', name: 'Steadily' }, { key: 'fast', name: 'Fast' }]
-
-const rounded = (tokens: number) => tokens >= 1000 ? `${Math.round(tokens / 1000)}k` : String(tokens)
-
-/** "About 14 calls and 9k tokens a turn". */
-export function estimateLine(estimate: { calls: number; tokens: number }): string {
-  return `About ${estimate.calls} ${estimate.calls === 1 ? 'call' : 'calls'} and ${rounded(estimate.tokens)} tokens a turn`
-}
-
-/** "12k of 200k tokens this session", or with no cap "12k tokens this session". */
-export function spendLine(spend: AgentPace['spend']): string {
-  return spend.cap ? `${rounded(spend.spent)} of ${rounded(spend.cap)} tokens this session` : `${rounded(spend.spent)} tokens this session`
 }
