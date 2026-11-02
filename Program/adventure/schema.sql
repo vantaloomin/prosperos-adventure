@@ -297,7 +297,10 @@ CREATE TABLE IF NOT EXISTS story_messages (
   -- A narration's paragraphs with a problem the checks left in them, and its wording before the player's last
   -- rewrite as {text, flags} (adventure/passages.py).
   flags TEXT NOT NULL DEFAULT '[]',
-  previous TEXT
+  previous TEXT,
+  -- The mode a user line was sent in (adventure/rounds/play.py): a player's line in Play, the Author's nudge (or
+  -- nothing) opening a turn in Author or Watch.
+  mode TEXT NOT NULL DEFAULT 'play'
 );
 
 -- Branches of the story (adventure/timeline.py). A branch shows its parent's messages before `fork_seq`, then its

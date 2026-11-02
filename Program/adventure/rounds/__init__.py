@@ -6,4 +6,9 @@
 - turns.py: turns as rows, with their snapshot and draft saved after every step
 - memory.py: each character's memory and feelings, keyed by turn and read through the branch's ancestry
 - seats.py: who sits at the table and how each decides; the mode and caps
+- queue.py: one writer per world, stale commands refused, Cancel at once
+- play.py: Next in Author and Watch, the reply card, re-asking an agent, picking up after a restart
+- solo.py: today's single-player turn, run as one step of the loop until its pieces are steps of their own
+
+The API is adventure/round_routes.py.
 """
