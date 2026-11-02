@@ -20,12 +20,14 @@ state are saved after every step, and the round timeline hears each change (cont
 - **The snapshot is frozen at Gather.** `begin` builds it from the seats and settings, with the line the turn
   opens on in `settings`: 'message_id', and 'said' (the human's line as typed, in Play) or 'nudge' (the Author's,
   in Author; empty in Watch). The Gathering steps may add to it (who is present, the agents picked, their own
-  settings in force under their own key); after Gathering it is saved and read only.
+  settings in force under their own key); after Gathering it is saved and read only. The first, 'present', puts
+  who is in the scene in `snapshot.present`: the seat keys are the characters' `story_people` keys.
 """
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from typing import Any
 
+from adventure import story, story_clock
 from adventure.database import decode, optional
 from adventure.rounds import memory, seats, turns
 from adventure.rounds.contract import (
@@ -256,13 +258,28 @@ def discard(turn: Turn, error: str | None = None):
 
 # The steps the foundation itself provides ---------------------------------------------------------------------------
 
+async def present(turn: Turn):
+    """Who is in the scene as the turn starts: everyone the story puts there (the townsfolk rules, the party) and the
+    human's character, whose scene it is. Seats whose character is elsewhere sit this turn out; 'pick' and the agents
+    read `snapshot.present`."""
+    database = turn.database
+    with database.connect() as connection:
+        view = story.scene(connection, story_clock.now(connection, database.clock))
+    here = [person['sheet']['key'] for person in view['people']]
+    human = turn.snapshot.human()
+    turn.snapshot.present = list(dict.fromkeys(([human.key] if human else []) + here))
+
+
 async def pick(turn: Turn):
     """Who decides how this turn, within the cap. The default: seats in order until the cap is reached; the human
     sits only in Play (in Author and Watch their character runs on its Program mind until the user picks otherwise).
     Agent selection by party, nemesis, promotion and role replaces this ('pick')."""
     agents = 0
+    here = set(turn.snapshot.present)
     for seat in turn.snapshot.seats:
-        if seat.mind == Mind.HUMAN and turn.snapshot.mode != Mode.PLAY:
+        if seat.mind == Mind.AGENT and here and seat.key not in here:
+            seat.mind = Mind.PROGRAM
+        elif seat.mind == Mind.HUMAN and turn.snapshot.mode != Mode.PLAY:
             seat.mind = Mind.PROGRAM
         elif seat.mind == Mind.AGENT:
             agents += 1
@@ -282,5 +299,6 @@ def committed_memory(connection, turn: Turn):
         memory.brought_back(connection, turn.row, item['memory_id'])
 
 
+register(State.GATHERING, 'present', present)
 register(State.GATHERING, 'pick', pick)
 on_commit('memory', committed_memory)

@@ -6,7 +6,7 @@ import json
 import pytest
 from conftest import tell
 
-from adventure import timeline
+from adventure import story, timeline
 from adventure.rounds import engine, memory, play, queue, resolve, solo, telling, turns
 from adventure.rounds.contract import Declaration, Mind, Point, State
 
@@ -116,6 +116,22 @@ def test_with_agents_a_players_line_shows_the_round_and_can_stop_on_the_reply_ca
     assert end['done']['reply']['status'] == 'complete'
     assert [row['id'] for row in rows(client, "SELECT id FROM story_messages WHERE role='narrator'")] == [
         end['done']['reply']['id']]
+
+
+def test_gather_seats_only_who_is_in_the_scene(client, steps, monkeypatch):
+    engine.STEPS[State.GATHERING][:] = [('present', engine.present), ('pick', engine.pick)]
+    scene = story.scene
+    monkeypatch.setattr(story, 'scene', lambda connection, now: scene(connection, now) | {
+        'people': [{'sheet': {'key': 'mara'}}, {'sheet': {'key': 'innkeeper'}}]})
+    seated(client, 'mara', 'elsewhere', human='you')
+    ok(client.put('/api/rounds/settings', json={'mode': 'watch'}))
+    _, end = streamed(client, '/api/rounds/turns/stream', {})
+    snapshot = json.loads(rows(client, 'SELECT snapshot FROM round_turns WHERE id=?', (end['done']['turn']['id'],))[0][
+        'snapshot'])
+    # The human's character is always in their own scene; an agent who is elsewhere sits this turn out.
+    assert snapshot['present'] == ['you', 'mara', 'innkeeper']
+    assert {seat['key']: seat['mind'] for seat in snapshot['seats']} == {
+        'mara': 'agent', 'elsewhere': 'program', 'you': 'program'}
 
 
 def test_one_writer_at_a_time(client):
