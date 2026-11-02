@@ -556,9 +556,11 @@ def foes_move(connection, state: dict, guarded: bool, rng, lines: list[str], fre
     return level
 
 
-def play_round(connection, state: dict, rolls: list[dict], items: list[dict], rng) -> tuple[dict, list[str], str]:
-    """One round: the player's actions, then morale, then each foe. Returns the fight after it, what happened, and how
-    it ended: '' while it goes on, else 'escaped', 'won' or 'dying'."""
+def play_round(connection, state: dict, rolls: list[dict], items: list[dict], rng,
+               moves: dict[str, str] | None = None) -> tuple[dict, list[str], str]:
+    """One round: the player's actions, then the allies' (each agent ally's declared move, in `moves`), then morale,
+    then each foe. Returns the fight after it, what happened, and how it ended: '' while it goes on, else 'escaped',
+    'won' or 'dying'."""
     rng = rng or random.SystemRandom()
     lines, state = [], state | {'round': state['round'] + 1}
     caught = state['round'] == 1 and state.get('surprised')
@@ -572,7 +574,7 @@ def play_round(connection, state: dict, rolls: list[dict], items: list[dict], rn
     # The character's companions fight beside them, on their own (adventure/allies.py).
     allies.join(connection, state)
     if caught != 'player':
-        allies.strike(state, standing, down, rng, lines)
+        allies.strike(state, standing, down, rng, lines, moves)
     morale_rolls(connection, state, rng, lines)
     if not standing(state):
         lines.append('No foe is left standing: the fight is won.')
@@ -674,14 +676,15 @@ def saved_round(connection, message_id: str) -> list[str] | None:
 
 
 def turn(connection, message_id: str, people: list[dict], rolls: list[dict], start: dict | None, items: list[dict],
-         rng, now: str, aftermath=None, spoils=None, said: str = '') -> list[str]:
+         rng, now: str, aftermath=None, spoils=None, said: str = '', moves: dict[str, str] | None = None) -> list[str]:
     """The fight's part of a turn, decided once: start a fight if one begins, play the round, and keep the lines.
     `aftermath(events)` deals with what the round did to the character, [(event, who)]: 'horror' when a fight with
     something dreadful starts, 'kill' when the character kills, 'fled' when a foe gets away from a fight the character
     won, 'maimed' when a hit calls for a lasting injury, and
     the defeat table's outcome; it says what that left (adventure/stress.py). `spoils(foes, wants)` leaves the bodies of a
     fight won, with what they carried (adventure/finds.py). `said` is the line itself: it can yield or pay the foes off
-    (terms), or set a plan that plays on past this round to a turning point."""
+    (terms), or set a plan that plays on past this round to a turning point. `moves` are the agent allies' declared
+    moves for this round (adventure/allies.py); rounds fought on on the player's plan go back to the tactic."""
     if (kept := saved_round(connection, message_id)) is not None:
         return kept
     rng = rng or random.SystemRandom()
@@ -698,7 +701,7 @@ def turn(connection, message_id: str, people: list[dict], rolls: list[dict], sta
         return keep(connection, message_id, freed + settled, None)
     freed += settled
     marked = mark(connection, state)
-    state, lines, ending = play_round(connection, state, rolls, items, rng)
+    state, lines, ending = play_round(connection, state, rolls, items, rng, moves)
     lines = freed + lines + worn(connection, rolls, state, items)
     plan = said if PLAN.search(said) else ''
     state, ending = fight_on(connection, message_id, state, plan, items, rng, now, (marked, ending), lines)

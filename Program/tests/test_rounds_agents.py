@@ -21,10 +21,13 @@ from adventure.rounds import agents, declare, engine, lies_heard, memory, react,
 from adventure.rounds.contract import Mind, Mode, Point, Seat, Snapshot, State, TurnResult
 
 MODEL = {'provider': 'compatible', 'model': 'stub', 'base_url': 'https://models.example/v1'}
+IN_SCENE = declare.in_scene
 
 
 @pytest.fixture
-def game(tmp_path):
+def game(tmp_path, monkeypatch):
+    # Every seat is in the scene unless a test places them (test_who_is_present_comes_from_the_scene...).
+    monkeypatch.setattr(declare, 'in_scene', lambda connection, database, snapshot: None)
     database = Database(tmp_path / 'adventure.sqlite3', FixedClock(START))
     app = SimpleNamespace(database=database, provider=FakeProvider(), vault=MemoryVault(),
                           scheduler=RequestScheduler(), dice=random.Random(7))
@@ -374,3 +377,24 @@ def test_the_agents_settings_api_shows_each_preset_with_its_estimate(client):
     changed = client.put('/api/agents', json={'preset': 'quick', 'loyalty': 'slow', 'session_cap': 50000}).json()
     assert (changed['preset'], changed['loyalty'], changed['spend']['cap']) == ('quick', 'slow', 50000)
     assert client.put('/api/agents', json={'scheming': 4}).status_code == 422
+
+
+def test_who_is_present_comes_from_the_scene_so_an_agent_who_left_does_not_act(game, steps, monkeypatch):
+    seat_up(game, ('you', 'Vanta', Mind.HUMAN), ('mara', 'Mara', Mind.AGENT), ('hesk', 'Hesk', Mind.AGENT))
+    scene = {'people': [{'sheet': {'key': 'mara'}}]}
+    monkeypatch.setattr(declare, 'in_scene', IN_SCENE)
+    monkeypatch.setattr(declare.story, 'scene', lambda connection, now: scene)
+    scripted(game, {'Mara': [{'intent': 'waits by the fire'}, {'change': False}]})
+    turn, state, _ = turn_of(game)
+    assert state == State.COMMITTED
+    assert turn.snapshot.present == ['you', 'mara']
+    # Hesk has left the scene: no call, no declaration, nothing learned about what was said here.
+    assert list(turn.draft.declarations) == ['you', 'mara']
+    assert all(playing(request['system']) == 'Mara' for request in game.provider.requests)
+    assert not turn.draft.known_to('hesk')
+    # Nobody seated is there at all: still nobody acts, rather than everyone.
+    scene['people'] = []
+    with game.database.connect(write=True) as connection:
+        seats.remove_seat(connection, 'you')
+    turn, _, _ = turn_of(game)
+    assert turn.snapshot.present == [] and turn.draft.declarations == {}

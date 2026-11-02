@@ -14,7 +14,7 @@ from pydantic import Field
 from adventure.database import decode
 from adventure.errors import require
 from adventure.models import Input
-from adventure.rounds import play, queue, seats, turns
+from adventure.rounds import overrides, play, queue, seats, turns
 from adventure.rounds.contract import Mind, Mode, plain
 from adventure.story_routes import streamed
 
@@ -132,6 +132,24 @@ async def reask(request: Request, turn_id: str, body: Reask):
     state = request.app.state
     return streamed(state, lambda on_text, on_event: queue.play(
         state, lambda: done(state, play.reask(state, turn_id, body.seat, on_event, on_text)), body.against))
+
+
+class Override(Input):
+    band: Literal['critical_failure', 'failure', 'failure_upside', 'success_cost', 'success', 'critical_success']
+    reason: str = Field(min_length=1, max_length=300)
+
+
+@router.post('/turns/{turn_id}/rolls/{position}/override')
+async def override_roll(request: Request, turn_id: str, position: int, body: Override):
+    """From the GM view: one roll of a turn lands on another band, logged with why (adventure/rounds/overrides.py)."""
+    state = request.app.state
+
+    async def work():
+        with state.database.connect(write=True) as connection:
+            return overrides.override(connection, turn_id, position, body.band, body.reason, state.database.now())
+    logged = await queue.play(state, work)
+    with state.database.connect() as connection:
+        return {'override': logged, 'turn': turn_view(turns.get(connection, turn_id))}
 
 
 @router.post('/turns/{turn_id}/cancel')

@@ -75,6 +75,9 @@ async def reask(app, turn_id: str, seat: str, emit=None, on_text=None) -> dict:
     turn.snapshot = Snapshot.of(plain(snapshot) | {'turn_id': turn.id, 'point': plain(Point(line['branch_id'],
                                                                                             line['seq']))})
     turn.snapshot.settings['message_id'] = line['id']
+    if solo.SOLO in first.extra:
+        # The player's line is told again on the new branch, beside the agent asked again.
+        turn.draft.extra[solo.SOLO] = {'message_id': line['id']}
     for key, declaration in first.declared.items():
         if key != seat:
             turn.draft.declare(declaration)

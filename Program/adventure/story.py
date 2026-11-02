@@ -11,7 +11,10 @@ import asyncio
 import logging
 import re
 import time
+from collections.abc import Awaitable, Callable
+from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone, tzinfo
+from typing import Any
 
 from adventure import (
     appearance,
@@ -992,12 +995,13 @@ def look_turn(state, user: dict, rolls: list[dict]) -> list[str]:
         return lines
 
 
-def in_scene(state, user: dict, rolls: list[dict], travelled: list[str], rested: list[str]) -> tuple[list[str], ...]:
+def in_scene(state, user: dict, rolls: list[dict], travelled: list[str], rested: list[str],
+             moves: dict[str, str] | None = None) -> tuple[list[str], ...]:
     """The turn where the character is: a fight round, the counter, treatment, what is looked into, and what all of
     it (and the road and the rest) did to how the character looks."""
     with state.database.connect() as connection:
         hurt_before = combat.condition(connection)['level']
-    fought = fight_round(state, user, rolls)
+    fought = fight_round(state, user, rolls, moves)
     traded = counter_turn(state, user, rolls)
     tended = treat_turn(state, user, rolls)
     looked = look_turn(state, user, rolls)
@@ -1318,8 +1322,9 @@ def counter_text(lines: list[str]) -> str:
     return '## At the counter (decided by the game)\n' + '\n'.join(f'- {line}' for line in lines) if lines else ''
 
 
-def fight_round(state, user: dict, rolls: list[dict]) -> list[str]:
-    """The fight's part of the turn (adventure/combat.py): a fight the player starts or a danger brings, one round."""
+def fight_round(state, user: dict, rolls: list[dict], moves: dict[str, str] | None = None) -> list[str]:
+    """The fight's part of the turn (adventure/combat.py): a fight the player starts or a danger brings, one round,
+    with each agent ally's declared move (`moves`, adventure/allies.py)."""
     database = state.database
     with database.connect(write=True) as connection:
         view = scene(connection, story_clock.now(connection, database.clock))
@@ -1348,7 +1353,7 @@ def fight_round(state, user: dict, rolls: list[dict]) -> list[str]:
 
         usable = [row for row in inventory.carried(connection, view['city']['id']) if row['condition'] != 'broken']
         fought = combat.turn(connection, user['id'], view['people'], rolls, foe, usable, getattr(state, 'dice', None),
-                             database.now(), aftermath, spoils, user['text'])
+                             database.now(), aftermath, spoils, user['text'], moves)
         delving.fought(connection, combat.fight(connection) is not None, not combat.condition(connection)['dead'])
         return ([sent] if sent else []) + fought
 
@@ -1575,88 +1580,183 @@ async def no_event(_event: dict):
     pass
 
 
+@dataclass
+class Telling:
+    """One player line's turn as today's game plays it, handed from piece to piece: Gather (`gathered`) checks there
+    is a model, finishes the last turn's after-work and sets the time budget; Resolve (`resolved`) rolls the line and
+    runs every code system on it (the road, rest, the town's cards, lives off the page, the director's note, lies,
+    the party, the fight, the counter, treatment, finds, looks); Write (`written`) builds the narrator's packet and
+    tells it; Commit (`committed`) saves the reply and what the telling changed. `answer` runs the four in order, and
+    the round loop calls the same pieces as its steps (adventure/rounds/resolve.py), so both play one way."""
+    state: Any
+    user: dict
+    emit: Callable[[dict], Awaitable[None]]
+    on_text: Callable[[str], Awaitable[None]] | None = None
+    in_story: bool = True
+    config: dict | None = None
+    steps: pace.Steps | None = None
+    rolls: list[dict] = field(default_factory=list)
+    # The agent allies' declared moves this round, by key (adventure/allies.py), from the round's declarations.
+    moves: dict[str, str] = field(default_factory=dict)
+    # Whether Resolve fires the lives off the page (adventure/beats.py), as today's turn does.
+    offpage: bool = True
+    # What Resolve decided, for the narrator: each system's lines, as `prompt` takes them.
+    travelled: list[str] = field(default_factory=list)
+    rested: list[str] = field(default_factory=list)
+    carded: list[str] = field(default_factory=list)
+    meanwhile: list[str] = field(default_factory=list)
+    noted: list[str] = field(default_factory=list)
+    fought: list[str] = field(default_factory=list)
+    traded: list[str] = field(default_factory=list)
+    tended: list[str] = field(default_factory=list)
+    looked: list[str] = field(default_factory=list)
+    packet: dict | None = None
+    text: str = ''
+    error: str | None = None
+    flagged: list[dict] = field(default_factory=list)
+
+
 async def answer(state, user: dict, on_text=None, on_event=None) -> dict:
     """The narrator's reply to the user's message, saved complete or failed with the reason. Fact extraction and the
     summary are left for `state.after_turn`, run once the reply is on screen (adventure/pace.py). `on_event(event)` hears
     the turn's stages as they happen, for the stream: reading the line, the actions and each roll, then writing; with
     the dice hidden, only what was tried and with which stat (adventure/turn.py)."""
-    emit = on_event or no_event
+    telling = await gathered(state, user, on_text, on_event)
+    await resolved(telling)
+    await written(telling)
+    return committed(telling)
+
+
+async def gathered(state, user: dict, on_text=None, on_event=None) -> Telling:
+    """Gather: no model fails the turn before it says it has begun; then the last turn's after-work is finished and
+    this turn's model and time budget are set."""
+    telling = Telling(state, user, on_event or no_event, on_text, not in_character.out_of_character(user['text']))
     database = state.database
-    in_story = not in_character.out_of_character(user['text'])
-    # No model fails the turn before it says it has begun.
     with database.connect() as connection:
         if config_for(connection, JOB) is None:
             raise no_model()
-    if in_story:
-        await emit({'stage': 'reading'})
+    if telling.in_story:
+        await telling.emit({'stage': 'reading'})
     await settled(state)
     with database.connect(write=True) as connection:
         # The narrator's Mix, when it is on, picks this turn's model (adventure/text_models.py reply_config).
-        config = reply_config(connection, JOB)
-        if config is None:
+        telling.config = reply_config(connection, JOB)
+        if telling.config is None:
             raise no_model()
-        steps = pace.Steps(pace.budget_for(connection, config), getattr(state, 'pace_clock', None) or time.monotonic)
-    rolls = await turn_rolls(state, user, steps) if in_story else []
-    if rolls:
-        with database.connect() as connection:
-            shown = dice_shown(connection)
-            ruleset = ruleset_of(connection)
-        await emit({'actions': turn.announced(rolls, shown)} | ({'bands': turn.bands(ruleset)} if shown else {}))
-        for roll in rolls:
-            await emit({'roll': turn.shown(roll) if shown else turn.hidden(roll)})
-    travelled = travel_turn(state, user, rolls) if in_story else []
-    delved = delving.prompt_text(delve_turn(state, user, rolls)) if in_story else ''
-    rested = rest_turn(state, user, rolls) if in_story else []
-    carded = town_turn(state, user) if in_story else []
-    meanwhile = beats_turn(state, user) if in_story else []
-    noted = director_turn(state, user) + recall_turn(state, rolls) + opening_turn(state, user) if in_story else []
-    with database.connect() as connection:
-        noted += [away_text(connection, user['id'])] if in_story else []
+        telling.steps = pace.Steps(pace.budget_for(connection, telling.config),
+                                   getattr(state, 'pace_clock', None) or time.monotonic)
+    return telling
+
+
+async def resolved(telling: Telling):
+    """Resolve: the line's rolls, shown as they land, then every code system on what they decided. An out-of-character
+    line resolves nothing."""
+    if not telling.in_story:
+        return
+    state, user = telling.state, telling.user
+    telling.rolls = rolls = await turn_rolls(state, user, telling.steps)
+    await announce(telling)
+    telling.travelled = travel_turn(state, user, rolls)
+    delved = delving.prompt_text(delve_turn(state, user, rolls))
+    telling.rested = rest_turn(state, user, rolls)
+    telling.carded = town_turn(state, user)
+    # In a round with agents the off-page lives are drawn in Writing instead (adventure/rounds/), with each agent's
+    # own lines.
+    telling.meanwhile = beats_turn(state, user) if telling.offpage else []
+    noted = director_turn(state, user) + recall_turn(state, rolls) + opening_turn(state, user)
+    with state.database.connect() as connection:
+        noted += [away_text(connection, user['id'])]
     noted += [delved, labour.prompt_text(labour_turn(state, user)), lies.prompt_text(lie_turn(state, user)),
               bonds.prompt_text(bond_turn(state, user)), party.prompt_text(party_turn(state, user)),
-              sworn.prompt_text(vow_turn(state, user, rolls)), leaving.prompt_text(leave_turn(state, user))] \
-        if in_story else []
-    fought, traded, tended, looked, looks = (in_scene(state, user, rolls, travelled, rested) if in_story
-                                             else ([], [], [], [], []))
-    noted = noted + looks
+              sworn.prompt_text(vow_turn(state, user, rolls)), leaving.prompt_text(leave_turn(state, user))]
+    telling.fought, telling.traded, telling.tended, telling.looked, looks = in_scene(
+        state, user, rolls, telling.travelled, telling.rested, telling.moves)
+    telling.noted = noted + looks
+
+
+async def announce(telling: Telling):
+    """The actions the line rolls for, then each roll, for the stream (all but the odds while the dice are hidden)."""
+    if not telling.rolls:
+        return
+    with telling.state.database.connect() as connection:
+        shown = dice_shown(connection)
+        ruleset = ruleset_of(connection)
+    await telling.emit({'actions': turn.announced(telling.rolls, shown)}
+                       | ({'bands': turn.bands(ruleset)} if shown else {}))
+    for roll in telling.rolls:
+        await telling.emit({'roll': turn.shown(roll) if shown else turn.hidden(roll)})
+
+
+async def written(telling: Telling):
+    """Write: the narrator's packet from the scene and everything Resolve decided, then the telling itself."""
+    state, user, in_story = telling.state, telling.user, telling.in_story
+    database = state.database
     with database.connect() as connection:
         # The rule text that fits what the turn resolved (adventure/rules/passages.py).
-        ruled = rule_passages.text(ruleset_of(connection), rolls, user['text'], fought, config.get('context_tokens'),
-                              table.rule(connection, 'rule_text') == 'on') if in_story else ''
-        packet = prompt(connection, story_clock.now(connection, database.clock), config, user,
-                        turn.outcomes(rolls) if in_story else None, fought, traded, looked, travelled, rested, tended, carded,
-                        meanwhile, noted, ruled)
-    await emit({'stage': 'writing'})
-    text, error, flagged = await told(state, packet, config, in_story, steps, on_text)
-    status = 'complete' if text and not error else 'failed'
-    error = None if status == 'complete' else error or 'The model returned no story text.'
-    with database.connect(write=True) as connection:
-        connection.execute("DELETE FROM story_messages WHERE reply_to=? AND status='failed'", (user['id'],))
-        if status == 'complete' and in_story:
-            story_people.note_exchange(connection, packet['people'], packet['city_id'], user['text'], text,
-                                       database.now(), packet['day'])
-            feelings.from_rolls(connection, rolls)
-            growth.mark(connection, rolls, user['id'])
-            remembering.refresh(connection, f"{user['text']}\n{text}")
-            # A place of the town named in the story is one the character knows of now (adventure/townmap.py).
-            townmap.heard(connection, city_data(connection, scene_row(connection)['city_id']), text)
-            library.mark_given(connection, packet['library'], user['seq'])
-            lore.remember(connection, packet.get('lore', []), packet.get('line', 0))
-            if reason := scene_break(connection, user, travelled, rested, fought):
-                chapters.mark(connection, reason)
-            # What the line touched in the GM's notebook, and the scene's kind (adventure/director.py).
-            if found := happenings.where(packet['city_id'], scene_row(connection)['place_id']):
-                director.touch(connection, found['world'], f"{user['text']}\n{text}",
-                               director.scene_kind(rolls, fought, packet['people'], noted), user['id'],
-                               database.now())
-                plotting.after_line(connection, text, user['id'])
-        reply = add(connection, database.now(), 'narrator', text, scene_row(connection), reply_to=user['id'],
-                    status=status, error=error,
-                    flags=flagged)
-        pace.save(connection, user['id'], steps)
-    if status == 'complete' and in_story:
-        state.after_turn = After(lambda: afterwards(state, user, reply, packet, steps))
+        ruled = rule_passages.text(ruleset_of(connection), telling.rolls, user['text'], telling.fought,
+                                   telling.config.get('context_tokens'),
+                                   table.rule(connection, 'rule_text') == 'on') if in_story else ''
+        telling.packet = prompt(connection, story_clock.now(connection, database.clock), telling.config, user,
+                                turn.outcomes(telling.rolls) if in_story else None, telling.fought, telling.traded,
+                                telling.looked, telling.travelled, telling.rested, telling.tended, telling.carded,
+                                telling.meanwhile, telling.noted, ruled)
+    await telling.emit({'stage': 'writing'})
+    telling.text, telling.error, telling.flagged = await told(state, telling.packet, telling.config, in_story,
+                                                              telling.steps, telling.on_text)
+
+
+def committed(telling: Telling) -> dict:
+    """Commit: the reply saved complete or failed with the reason, and what a complete telling changed (who was met
+    and how they feel, growth, what was remembered, the town map, lore, a chapter break, the director's notebook).
+    Fact extraction and the summary are left for `state.after_turn`."""
+    with telling.state.database.connect(write=True) as connection:
+        reply = saved_reply(connection, telling)
+    return after_telling(telling, reply)
+
+
+def saved_reply(connection, telling: Telling) -> dict:
+    """Commit's writes, in the caller's transaction (the round loop's Commit runs them with its other hooks)."""
+    database, user = telling.state.database, telling.user
+    status = 'complete' if telling.text and not telling.error else 'failed'
+    error = None if status == 'complete' else telling.error or 'The model returned no story text.'
+    connection.execute("DELETE FROM story_messages WHERE reply_to=? AND status='failed'", (user['id'],))
+    if status == 'complete' and telling.in_story:
+        kept_telling(connection, telling)
+    reply = add(connection, database.now(), 'narrator', telling.text, scene_row(connection), reply_to=user['id'],
+                status=status, error=error, flags=telling.flagged)
+    pace.save(connection, user['id'], telling.steps)
     return reply
+
+
+def after_telling(telling: Telling, reply: dict) -> dict:
+    """Once the reply is kept: fact extraction and the summary wait for `state.after_turn`."""
+    if reply['status'] == 'complete' and telling.in_story:
+        state, user, packet = telling.state, telling.user, telling.packet
+        state.after_turn = After(lambda: afterwards(state, user, reply, packet, telling.steps))
+    return reply
+
+
+def kept_telling(connection, telling: Telling):
+    """What a complete in-story telling changes, in Commit's transaction."""
+    database, user, packet, text, rolls = (telling.state.database, telling.user, telling.packet, telling.text,
+                                           telling.rolls)
+    story_people.note_exchange(connection, packet['people'], packet['city_id'], user['text'], text, database.now(),
+                               packet['day'])
+    feelings.from_rolls(connection, rolls)
+    growth.mark(connection, rolls, user['id'])
+    remembering.refresh(connection, f"{user['text']}\n{text}")
+    # A place of the town named in the story is one the character knows of now (adventure/townmap.py).
+    townmap.heard(connection, city_data(connection, scene_row(connection)['city_id']), text)
+    library.mark_given(connection, packet['library'], user['seq'])
+    lore.remember(connection, packet.get('lore', []), packet.get('line', 0))
+    if reason := scene_break(connection, user, telling.travelled, telling.rested, telling.fought):
+        chapters.mark(connection, reason)
+    # What the line touched in the GM's notebook, and the scene's kind (adventure/director.py).
+    if found := happenings.where(packet['city_id'], scene_row(connection)['place_id']):
+        director.touch(connection, found['world'], f"{user['text']}\n{text}",
+                       director.scene_kind(rolls, telling.fought, packet['people'], telling.noted), user['id'],
+                       database.now())
+        plotting.after_line(connection, text, user['id'])
 
 
 def received(database, text: str, client_id: str, rng=None) -> tuple[dict, dict | None]:

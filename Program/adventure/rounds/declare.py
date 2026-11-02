@@ -1,8 +1,9 @@
 """Who decides this turn, and how each one declares (docs/spec.md "The turn loop" steps 1 and 3; Batch 1: "Agents:
 party members plus key NPCs, up to 6 at once"; Batch 3: "Program characters run on Dungeon's code minds as they are").
 
-- **Gather** (`pick`, replacing the foundation's default under the same name): the agents this turn are the seats
-  the user made agents who are present, up to the cap, picked party first, then nemeses and characters promoted by
+- **Gather** (`pick`, replacing the foundation's default under the same name): who is present comes from the scene
+  (the people at the place, the party and the user's character) unless an earlier step set it; the agents this turn
+  are the seats the user made agents who are present, up to the cap, picked party first, then nemeses and characters promoted by
   hand, then those the turn's line names, ties by seat order. Anyone past the cap runs on their Program mind for the
   turn, and is listed in `snapshot.settings['dropped']`. The human sits only in Play. The agents' settings and the
   story's intensity are frozen into the snapshot (adventure/rounds/agents.py `frozen`).
@@ -18,7 +19,7 @@ Resolve the round's rolls move feelings (adventure/rounds/react.py). The steps a
 import asyncio
 import re
 
-from adventure import combat, party, story_people
+from adventure import combat, party, story, story_clock, story_people
 from adventure.database import many
 from adventure.rounds import agents, lies_heard, react
 from adventure.rounds.contract import Declaration, Line, Mind, Mode, State, seat_event
@@ -49,6 +50,17 @@ def rank(seat, in_party: set[str], nemeses: set[str], said: str) -> tuple[int, i
     return group, seat.order
 
 
+def in_scene(connection, database, snapshot) -> list[str] | None:
+    """Who is in the scene now, by seat: the people at the place and the party (adventure/story.py `scene`), and the
+    user's own character. None before there is a scene: then nobody is placed and every seat counts as present."""
+    try:
+        view = story.scene(connection, story_clock.now(connection, database.clock))
+    except Exception:  # noqa: BLE001 - no scene yet (a new campaign): leave presence open
+        return None
+    there = {person['sheet'].get('key') for person in view['people']} | party.keys(connection)
+    return [seat.key for seat in snapshot.seats if seat.key in there or seat.mind == Mind.HUMAN]
+
+
 async def pick(turn: Turn):
     """The agents this turn, within the cap (see the module docstring)."""
     snapshot = turn.snapshot
@@ -60,6 +72,8 @@ async def pick(turn: Turn):
         in_party = party.keys(connection)
         nemeses = {row['name'].lower() for row in many(connection, "SELECT name FROM story_nemeses WHERE "
                                                                    "status='alive'")}
+        if not snapshot.present and (found := in_scene(connection, turn.database, snapshot)) is not None:
+            snapshot.present, snapshot.settings['placed'] = found, True
     here = set(agents.present(snapshot))
     for seat in snapshot.seats:
         if seat.mind == Mind.HUMAN and snapshot.mode != Mode.PLAY:

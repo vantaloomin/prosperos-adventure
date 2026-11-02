@@ -6,5 +6,5 @@ from adventure.rounds import (
     context,  # noqa: F401 - who sees what: the 'privacy' Gathering step
     converse,  # noqa: F401 - Converse and the reply card
     declare,  # noqa: F401 - the agents: pick, declare, lies heard, react, feelings
-    solo,  # noqa: F401 - today's single-player turn, the 'solo' Resolving step
+    telling,  # noqa: F401 - today's turn as steps, and the party's Resolve (resolve.py)
 )
