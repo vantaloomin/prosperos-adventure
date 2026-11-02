@@ -51,6 +51,7 @@ from adventure.recall_routes import router as recall_router
 from adventure.round_routes import router as round_router
 from adventure.rounds import play as rounds_play
 from adventure.rounds import queue as rounds_queue
+from adventure.rounds import steps as rounds_steps  # noqa: F401 - every step plugged into the round loop
 from adventure.routes import router
 from adventure.text_model_routes import router as model_router
 from adventure.world import routes as world_routes
