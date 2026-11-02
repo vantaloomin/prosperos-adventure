@@ -232,7 +232,11 @@ CREATE TABLE IF NOT EXISTS lore_entries (
   delay INTEGER NOT NULL DEFAULT 0,
   chance INTEGER NOT NULL DEFAULT 100,
   lore_group TEXT NOT NULL DEFAULT '',
-  group_weight INTEGER NOT NULL DEFAULT 100
+  group_weight INTEGER NOT NULL DEFAULT 100,
+  -- Who may read it (adventure/lore.py "Who may read it"): public, known to the character keys in `known_to` (a JSON
+  -- list), or gm (the GM view only).
+  visibility TEXT NOT NULL DEFAULT 'public' CHECK (visibility IN ('public', 'known', 'gm')),
+  known_to TEXT NOT NULL DEFAULT '[]'
 );
 
 CREATE INDEX IF NOT EXISTS lore_entries_book ON lore_entries(book_id, position);

@@ -34,6 +34,7 @@ its reference library, the adult side and the townsfolk mix.
   retry rolls the same. SillyTavern world info brings its own sticky, cooldown, delay, probability and inclusion
   groups; a world package entry can carry the same fields. Each entry's "Timing" fold sets them, and its line says
   where its timer stands ("Resting for 2 more lines").
+- **Lore visibility** (`adventure/lore.py` "Who may read it", `PUT /api/lore/entries/{id}/visibility`): an entry is public, known to the characters listed by key, or GM only. Untagged entries, and every entry from before tags, are public. The narrator reads public entries only; the context builders for agents and the Writer (spec "Who sees what") read what their reader may know. Hidden truths and cast secrets from a world package are never public (docs/packages.md "Who may read what"). The Lore screen does not set the tag yet; a world package's lore can carry it.
 - **Reference library** (`adventure/library.py`): add a long text (text, Markdown, HTML, EPUB or a TiddlyWiki file),
   turn it on or off, delete it, and "Look inside" to search its passages the way the narrator would.
 

@@ -7,7 +7,7 @@ from fastapi import APIRouter, Request
 
 from adventure import library, lore
 from adventure.errors import DomainError
-from adventure.models import LibraryFile, LoreFile, LoreSwitch, LoreTiming, LoreWhen
+from adventure.models import LibraryFile, LoreFile, LoreSwitch, LoreTiming, LoreVisibility, LoreWhen
 
 router = APIRouter(prefix='/api')
 
@@ -50,6 +50,11 @@ def entry_when(request: Request, entry_id: str, body: LoreWhen):
 @router.put('/lore/entries/{entry_id}/timing')
 def entry_timing(request: Request, entry_id: str, body: LoreTiming):
     return lore.set_timing(db(request), entry_id, body.model_dump(exclude_none=True))
+
+
+@router.put('/lore/entries/{entry_id}/visibility')
+def entry_visibility(request: Request, entry_id: str, body: LoreVisibility):
+    return lore.set_visibility(db(request), entry_id, body.visibility, body.known_to)
 
 
 @router.get('/library')
