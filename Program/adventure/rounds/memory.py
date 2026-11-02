@@ -19,6 +19,7 @@ Nothing here decides who learns what: the turn's steps name every holder (advent
 and Commit writes them through `remember` and `feel`.
 """
 import re
+from collections.abc import Callable
 
 from adventure import timeline
 from adventure.database import identifier, many, one
@@ -33,6 +34,10 @@ BIG = re.compile(r'\b(betray\w*|murder\w*|kill\w*|debt|owe[sd]?|sworn|swore|oath
 WORD = re.compile(r"[a-z][a-z'-]{2,}", re.I)
 SMALL = {'the', 'and', 'her', 'his', 'their', 'with', 'from', 'that', 'this', 'you', 'your'}
 START = Point(timeline.ROOT, 0)
+# Changes to what is recalled, by name: each is `amend(connection, point, rows) -> rows`, given the memories
+# visible at `point` before they fade and are ordered (corrections strike or reword them, adventure/rounds/steps.py
+# loads whoever registers one).
+AMENDS: list[tuple[str, Callable]] = []
 
 
 def importance(text: str, given: int = 1) -> int:
@@ -147,12 +152,19 @@ def faded(row: dict, now: int, sharp: set[str]) -> bool:
     return now - row['number'] > limit
 
 
+def amend(name: str, change: Callable):
+    """Pass every recall through `change(connection, point, rows)`; a name registered again replaces its change."""
+    AMENDS[:] = [(existing, held) for existing, held in AMENDS if existing != name] + [(name, change)]
+
+
 def recall(connection, key: str, point: Point, focus: str = '', limit: int = 60) -> list[dict]:
     """What `key` remembers as of `point`, most important first, then what `focus` is about, then the newest; each
     with `faded` set by age, importance and strong feelings."""
     clause, values = where(connection, point)
     rows = many(connection, f'SELECT * FROM character_memories WHERE character_key=? AND {clause} '
                             'ORDER BY seq DESC, rowid DESC', (key, *values))
+    for _, change in list(AMENDS):
+        rows = change(connection, point, rows)
     fresh = freshest(connection, point, [row['id'] for row in rows])
     now = turns_before(connection, point)
     sharp = {other for other, held in feelings(connection, key, point).items()
