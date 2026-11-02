@@ -27,7 +27,7 @@ from dataclasses import dataclass
 
 from adventure import pace, referee, sheet
 from adventure.database import identifier, many
-from adventure.rounds import engine
+from adventure.rounds import engine, reply
 from adventure.rounds.contract import Brief, Declaration, Mind, Mode, Seat, State, TurnResult
 from adventure.rules import ladder, marvel, narrative
 
@@ -150,14 +150,14 @@ async def ambiguity(turn):
     if human is None or turn.snapshot.mode != Mode.PLAY or 'meant' in staged:
         return
     if staged.get('asked'):
-        reply = turn.draft.replies.get(human.key) or {}
-        staged['meant'] = reply.get('text', '') if reply.get('kind') == 'reply' else ''
+        answer = reply.taken(turn, human.key) or {}
+        staged['meant'] = answer.get('text', '') if answer.get('kind') == 'reply' else ''
         return
     said = turn.snapshot.settings.get('said', '')
     asked = question(said, turn.snapshot.seats, turn.snapshot.present, human.key)
     if asked:
         staged['asked'] = asked
-        turn.draft.wait_for(human.key, ASKER, asked, [said])
+        reply.ask(turn, human.key, ASKER, asked, [said])
 
 
 def meant(said: str, turn) -> str:
@@ -209,9 +209,13 @@ def rolled(connection, act: Act, seats: list[Seat], ruleset: str, rng) -> dict:
 # The result and the brief -------------------------------------------------------------------------------------------
 
 def outcome(roll: dict, names: dict[str, str]) -> dict:
+    """One outcome for the Writer and the report. A theft that lands is seen by the thief alone (`visible_to`,
+    adventure/rounds/context.py); everything else is seen by everyone present."""
+    landed = ladder.succeeded(roll['band'])
+    unseen = {'visible_to': [roll['actor']]} if roll['kind'] == 'steal' and landed else {}
     return {'actor': names.get(roll['actor'], roll['actor']), 'action': roll['action'], 'kind': roll['kind'],
             'target': names.get(roll['target'], roll['target']), 'stake': roll['stake'], 'band': roll['band'],
-            'landed': ladder.succeeded(roll['band'])}
+            'landed': landed, 'text': outcome_line(roll, names)} | unseen
 
 
 def outcome_line(roll: dict, names: dict[str, str]) -> str:
@@ -226,7 +230,8 @@ def math_line(roll: dict, names: dict[str, str]) -> str:
     """The arithmetic of one roll, for the report and a System pane; never for the prose."""
     who = names.get(roll['actor'], roll['actor'])
     if roll['ruleset'] == narrative.ID:
-        return f"{who}: {roll['difficulty'].replace('_', ' ')} on its face, so {narrative.VERDICTS[roll['verdict']]}."
+        verdict = narrative.VERDICTS.get(roll.get('verdict')) or ladder.LABELS[roll['band']]
+        return f"{who}: {roll['difficulty'].replace('_', ' ')} on its face, so {verdict}."
     die = f" + d{roll['die']} {roll['bonus']}" if roll.get('die') else ''
     shift = f" - {roll['shift']}" if roll['shift'] > 0 else f" + {-roll['shift']}" if roll['shift'] < 0 else ''
     against = f"; resisted with {roll['opposed']['total']}" if roll.get('opposed') else ''
@@ -237,7 +242,8 @@ def heard_lies(draft, names: dict[str, str]) -> list[str]:
     """The declared lies as they were rolled when heard (adventure/rounds/lies_heard.py), for the brief."""
     lines = []
     for lie in (draft.extra.get('agents') or {}).get('lies', []):
-        caught = 'sees through it' if lie.get('caught') else 'believes it'
+        read = lie.get('read') or ('caught' if lie.get('caught') else 'believed')
+        caught = {'caught': 'sees through it', 'uneasy': 'is uneasy about it'}.get(read, 'believes it')
         lines.append(f"{names.get(lie.get('liar'), lie.get('liar'))} lies to "
                      f"{names.get(lie.get('listener'), lie.get('listener'))} ({lie.get('claim', '')}): the listener "
                      f'{caught}.')

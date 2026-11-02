@@ -1330,3 +1330,18 @@ CREATE TABLE IF NOT EXISTS round_rolls (
 );
 
 CREATE INDEX IF NOT EXISTS round_rolls_of ON round_rolls (message_id);
+
+-- Rolls overridden from the GM view (adventure/rounds/overrides.py): which roll of which turn, from and to which
+-- band, why, and whether the turn was already committed (then the passage is a correction).
+CREATE TABLE IF NOT EXISTS round_overrides (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  position INTEGER NOT NULL,
+  actor TEXT NOT NULL,
+  action TEXT NOT NULL,
+  from_band TEXT NOT NULL,
+  to_band TEXT NOT NULL,
+  reason TEXT NOT NULL,
+  after_commit INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL
+);

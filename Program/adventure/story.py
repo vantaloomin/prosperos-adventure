@@ -1596,6 +1596,8 @@ class Telling:
     rolls: list[dict] = field(default_factory=list)
     # The agent allies' declared moves this round, by key (adventure/allies.py), from the round's declarations.
     moves: dict[str, str] = field(default_factory=dict)
+    # Whether Resolve fires the lives off the page (adventure/beats.py), as today's turn does.
+    offpage: bool = True
     # What Resolve decided, for the narrator: each system's lines, as `prompt` takes them.
     travelled: list[str] = field(default_factory=list)
     rested: list[str] = field(default_factory=list)
@@ -1656,7 +1658,9 @@ async def resolved(telling: Telling):
     delved = delving.prompt_text(delve_turn(state, user, rolls))
     telling.rested = rest_turn(state, user, rolls)
     telling.carded = town_turn(state, user)
-    telling.meanwhile = beats_turn(state, user)
+    # In a round with agents the off-page lives are drawn in Writing instead (adventure/rounds/), with each agent's
+    # own lines.
+    telling.meanwhile = beats_turn(state, user) if telling.offpage else []
     noted = director_turn(state, user) + recall_turn(state, rolls) + opening_turn(state, user)
     with state.database.connect() as connection:
         noted += [away_text(connection, user['id'])]
@@ -1703,18 +1707,29 @@ def committed(telling: Telling) -> dict:
     """Commit: the reply saved complete or failed with the reason, and what a complete telling changed (who was met
     and how they feel, growth, what was remembered, the town map, lore, a chapter break, the director's notebook).
     Fact extraction and the summary are left for `state.after_turn`."""
-    state, user, packet, text = telling.state, telling.user, telling.packet, telling.text
-    database = state.database
-    status = 'complete' if text and not telling.error else 'failed'
+    with telling.state.database.connect(write=True) as connection:
+        reply = saved_reply(connection, telling)
+    return after_telling(telling, reply)
+
+
+def saved_reply(connection, telling: Telling) -> dict:
+    """Commit's writes, in the caller's transaction (the round loop's Commit runs them with its other hooks)."""
+    database, user = telling.state.database, telling.user
+    status = 'complete' if telling.text and not telling.error else 'failed'
     error = None if status == 'complete' else telling.error or 'The model returned no story text.'
-    with database.connect(write=True) as connection:
-        connection.execute("DELETE FROM story_messages WHERE reply_to=? AND status='failed'", (user['id'],))
-        if status == 'complete' and telling.in_story:
-            kept_telling(connection, telling)
-        reply = add(connection, database.now(), 'narrator', text, scene_row(connection), reply_to=user['id'],
-                    status=status, error=error, flags=telling.flagged)
-        pace.save(connection, user['id'], telling.steps)
+    connection.execute("DELETE FROM story_messages WHERE reply_to=? AND status='failed'", (user['id'],))
     if status == 'complete' and telling.in_story:
+        kept_telling(connection, telling)
+    reply = add(connection, database.now(), 'narrator', telling.text, scene_row(connection), reply_to=user['id'],
+                status=status, error=error, flags=telling.flagged)
+    pace.save(connection, user['id'], telling.steps)
+    return reply
+
+
+def after_telling(telling: Telling, reply: dict) -> dict:
+    """Once the reply is kept: fact extraction and the summary wait for `state.after_turn`."""
+    if reply['status'] == 'complete' and telling.in_story:
+        state, user, packet = telling.state, telling.user, telling.packet
         state.after_turn = After(lambda: afterwards(state, user, reply, packet, telling.steps))
     return reply
 
