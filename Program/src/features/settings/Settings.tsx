@@ -13,6 +13,7 @@ import { BuiltinRecall } from './models/BuiltinRecall'
 import { HardwareCheck } from './models/HardwareCheck'
 import { LocalPrograms } from './models/LocalPrograms'
 import { ModelSettings } from './models/ModelSettings'
+import { Pace } from '../round/Pace'
 import type { View } from '../../workspace'
 import { askForDrawer } from '../story/scene'
 import { availableTabs, pickTab, searchSettings, type SettingsMatch, type SettingsTab } from './sections'
@@ -91,7 +92,7 @@ function focusOn(heading: HTMLElement) {
 function TabContent({ tab }: { tab: SettingsTab }) {
   const content: Record<SettingsTab, ReactNode> = {
     general: <><TimezoneSettings /><AppearanceSettings /></>,
-    models: <><HardwareCheck /><ModelSettings /><TurnSpeed /><LocalPrograms /><BuiltinRecall /></>,
+    models: <><HardwareCheck /><Pace /><ModelSettings /><TurnSpeed /><LocalPrograms /><BuiltinRecall /></>,
     images: <ImageSettings />,
     data: <><DataFolder /><Backups /></>,
     developer: <><ModelCalls /><DebugSettings /><PromptSettings /></>,

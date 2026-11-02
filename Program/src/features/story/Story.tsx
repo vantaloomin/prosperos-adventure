@@ -28,6 +28,8 @@ import { useWorldTheme } from './useWorldTheme'
 import { EntityHost } from './EntityCard'
 import { STORY_KEY } from './table'
 import { freshIdeas, withIdea, type Ideas } from './ideas'
+import { ReplyCard } from '../round/ReplyCard'
+import { ROUND_KEY, useRoundPlay } from '../round/useRound'
 
 /** The story: the user's own story around the cities, told by a narrator. */
 export function Story({ go }: { go: (view: View) => void }) {
@@ -47,6 +49,8 @@ export function Story({ go }: { go: (view: View) => void }) {
   // "Start a new story…" from the menu, waiting to be confirmed.
   const [clearing, setClearing] = useState(false)
   const look = useWorldTheme(story.data)
+  // The round loop (src/features/round/): the timeline, the cast list's minds and the reply card.
+  const round = useRoundPlay(setError)
   if (story.isPending) return <Loading label="Opening your story" />
   if (story.isError) return <ErrorNotice error={story.error} />
   const update = (data: StoryData) => client.setQueryData(STORY_KEY, data)
@@ -57,15 +61,16 @@ export function Story({ go }: { go: (view: View) => void }) {
     setPending(text)
     setStreamed('')
     setTurn(NO_TURN)
+    round.start()
     setError('')
     try { await request() } catch (failure) { setError(failure instanceof Error ? failure.message : 'That did not work. Try again.') }
     finally {
-      await Promise.all([client.invalidateQueries({ queryKey: STORY_KEY }), client.invalidateQueries({ queryKey: ['story-journal'] }), client.invalidateQueries({ queryKey: ['story-gear'] }), client.invalidateQueries({ queryKey: ['story-sheet'] }), client.invalidateQueries({ queryKey: ['story-dice-log'] })])
+      await Promise.all([client.invalidateQueries({ queryKey: STORY_KEY }), client.invalidateQueries({ queryKey: ['story-journal'] }), client.invalidateQueries({ queryKey: ['story-gear'] }), client.invalidateQueries({ queryKey: ['story-sheet'] }), client.invalidateQueries({ queryKey: ['story-dice-log'] }), client.invalidateQueries({ queryKey: ROUND_KEY })])
         .finally(() => setPending(null))
     }
   }
   const grow = (piece: string) => setStreamed((before) => before + piece)
-  const note = (event: unknown) => setTurn((before) => turnAfter(before, event as TurnEvent))
+  const note = (event: unknown) => { setTurn((before) => turnAfter(before, event as TurnEvent)); round.hear(event) }
   const send = (text: string) => run(text, () => streamApi('/story/messages/stream', { text, client_id: newId() }, grow, note))
   const change = (request: () => Promise<StoryData>) => run(null, () => request().then(update))
   const draftLine = (text: string) => setDraft({ text, at: Date.now() })
@@ -84,19 +89,25 @@ export function Story({ go }: { go: (view: View) => void }) {
             onSwitch={(id) => change(() => api<StoryData>(`/story/messages/${id}/switch`, {}))}
             onBack={story.data.campaign?.ironman ? undefined : (id) => void run(null, () => api<StoryBack>('/story/back', { message_id: id }).then((data) => { update(data); setDraft({ text: data.draft, at: Date.now() }) }))}
             onBookmark={(id, name) => change(() => api<StoryData>('/story/bookmarks', { message_id: id, name }))} />
-          {error && <div className="story-notice"><Notice tone="error">{error}</Notice></div>}
-          <StoryComposer key={draft.at} busy={pending !== null} draft={draft.text} turn={story.data.messages.length} onSend={(text) => void send(text)}
+          <StoryError error={round.shownError(error)} />
+          {round.waiting ? <ReplyCard waiting={round.waiting.awaiting} speaker={round.speaker} you={round.you} busy={pending !== null}
+            onAnswer={(kind, text) => void run(kind === 'reply' ? text.trim() : '', () => round.answer(kind, text, grow, note))} />
+          : <StoryComposer key={draft.at} busy={pending !== null} draft={draft.text} turn={story.data.messages.length} onSend={(text) => void send(text)}
             commands={menuCommands(story.data)} onNewStory={() => setClearing(true)}
-            onAddModel={story.data.ready ? undefined : () => go('settings/models')} />
+            onAddModel={story.data.ready ? undefined : () => go('settings/models')} />}
         </>}
         <NewStory open={clearing} onClose={() => setClearing(false)} onClear={() => run(null, () => api<StoryData>('/story', undefined, 'DELETE').then((data) => { update(data); setBegun(false) }))} />
       </div>
-      <StoryPanel story={story.data} change={change} onTravel={(name) => setDraft({ text: `I set out for ${name}.`, at: Date.now() })}
+      <StoryPanel story={story.data} change={change} round={round.cast} onTravel={(name) => setDraft({ text: `I set out for ${name}.`, at: Date.now() })}
         onLine={(text) => setDraft({ text, at: Date.now() })}
         onBack={(data) => setDraft({ text: data.draft, at: Date.now() })} />
     </section>
     </EntityHost>
   )
+}
+
+function StoryError({ error }: { error: string }) {
+  return error ? <div className="story-notice"><Notice tone="error">{error}</Notice></div> : null
 }
 
 /** Before a campaign starts: the title screen (./TitleScreen.tsx) until the player begins, then the start form. */
