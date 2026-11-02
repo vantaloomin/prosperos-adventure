@@ -8,6 +8,9 @@ test of one loader) or for data no package holds, the shipped JSON file is read.
 
 Reads are cheap: a package's engine part is read once and again only when the file changes, and each read parses
 its own copy, as reading the file did. `memo` caches a loader's work the same way.
+
+A world's package facts (`facts`: its hidden truths and secrets, each with its visibility tag, adventure/package_lore.py)
+are read the same way, for the context builders to route (adventure/rounds/context.py).
 """
 import functools
 import json
@@ -16,7 +19,7 @@ import sqlite3
 from contextlib import closing
 from pathlib import Path
 
-from adventure import packages
+from adventure import package_lore, packages
 
 _root: Path | None = None
 
@@ -131,3 +134,36 @@ def memo(function):
     wrapper.token = None
     wrapper.cache_clear = cached.cache_clear
     return wrapper
+
+
+def facts(world: str) -> list[dict]:
+    """The world's hidden truths and secrets with their visibility tags (adventure/package_lore.py facts), from the
+    first package of that world in use, else the built-in world's own folder; [] for a world with neither."""
+    for path, stamp in version():
+        if _assets(path, stamp)[0] == world:
+            return [dict(fact) for fact in _facts(path, stamp)]
+    if world in packages.builtin_ids():
+        return [dict(fact) for fact in _shipped_facts(world)]
+    return []
+
+
+@functools.lru_cache(maxsize=32)
+def _facts(path: str, stamp: int) -> tuple[dict, ...]:
+    try:
+        with closing(packages.connect(Path(path))) as connection:
+            sections: dict[str, dict] = {}
+            for row in connection.execute('SELECT section, data FROM entries ORDER BY section, position'):
+                if row['section'] in packages.SECTIONS:
+                    sections.setdefault(row['section'], {packages.SECTIONS[row['section']]: []})[
+                        packages.SECTIONS[row['section']]].append(json.loads(row['data']))
+    except sqlite3.Error:
+        return ()
+    return tuple(package_lore.facts({'sections': sections}))
+
+
+@functools.cache
+def _shipped_facts(world: str) -> tuple[dict, ...]:
+    folder = packages.BUILTIN / world
+    sections = {name: packages.read_json(folder / f'{name}.json') for name in packages.SECTIONS
+                if (folder / f'{name}.json').is_file()}
+    return tuple(package_lore.facts({'sections': sections}))

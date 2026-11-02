@@ -19,6 +19,8 @@ def steps():
     hooks = list(engine.COMMITS)
     for listed in engine.STEPS.values():
         listed[:] = [(name, step) for name, step in listed if step in (engine.pick, solo.told)]
+    # Another part may have replaced 'pick' under its name: the foundation's own is put back for these tests.
+    engine.STEPS[State.GATHERING][:] = [('pick', engine.pick)]
     engine.COMMITS[:] = [(name, hook) for name, hook in engine.COMMITS if hook is engine.committed_memory]
     yield
     for state, listed in before.items():

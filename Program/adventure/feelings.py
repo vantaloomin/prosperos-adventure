@@ -10,8 +10,16 @@ The narrator is told each person's feelings in words, and they make asking them 
 is persuaded one step more easily, a hostile one a step less.
 
 Feelings are game state, branched with the story (story_people is in adventure/timeline.py SAVED).
+
+In rounds every character has the same five tracks toward every other (adventure/rounds/memory.py `feel`, keyed by
+turn), and code moves them from what happened in the round (`between`): a roll one character aims at another moves
+the target's feelings toward the one who acted, by what kind of act it was and how it landed (an attack that lands
+frightens and hurts, a theft noticed costs trust, a plea that works earns some), falling back to the stat as above.
+A lie caught costs trust (adventure/rounds/lies_heard.py). The loyalty dial makes every change slower or faster
+(`scaled`), so a turn against someone is earned over rounds.
 """
 import json
+import math
 import re
 
 from adventure import bonds, record
@@ -161,3 +169,53 @@ def from_answer(connection, answer: str, keys: set[str]):
             if moved:
                 change(connection, item['key'], moved, str(item.get('why') or ''))
 
+
+
+# Between any two characters, in rounds ----------------------------------------------------------------------------
+
+# (kind, landed) -> changes in the target's feelings toward whoever acted. Kinds are Resolve's (adventure/rounds/
+# resolve.py): attack, steal, deceive, persuade, threaten; anything else falls back to BY_ROLL by stat.
+BY_KIND = {
+    ('attack', True): {'fear': 1, 'affection': -2, 'trust': -1},
+    ('attack', False): {'affection': -1, 'trust': -1},
+    ('steal', False): {'trust': -2, 'respect': -1},
+    ('threaten', True): {'fear': 1, 'respect': 1},
+    ('threaten', False): {'respect': -1},
+    ('persuade', True): {'trust': 1, 'respect': 1},
+    ('deceive', False): {'trust': -2},
+}
+# A theft that works or a lie that lands goes unnoticed, so nothing moves.
+UNNOTICED = {('steal', True), ('deceive', True), ('persuade', False)}
+
+
+def scaled(changes: dict, factor: float) -> dict:
+    """Changes moved slower (rounded down) or faster (rounded up) by a factor; a factor of 1 leaves them be."""
+    turn = math.floor if factor < 1 else math.ceil
+    moved = {axis: int(math.copysign(turn(abs(amount) * factor), amount)) for axis, amount in changes.items()}
+    return {axis: amount for axis, amount in moved.items() if amount}
+
+
+def from_roll(roll: dict) -> dict:
+    """How one roll aimed at someone moves their feelings toward whoever made it; critical results count double."""
+    landed = roll.get('band') in SUCCESS
+    kind = roll.get('kind')
+    if (kind, landed) in UNNOTICED:
+        return {}
+    changes = BY_KIND.get((kind, landed)) or BY_ROLL.get((roll.get('stat'), landed)) or {}
+    if roll.get('band') in ('critical_success', 'critical_failure'):
+        changes = {axis: amount * 2 for axis, amount in changes.items()}
+    return dict(changes)
+
+
+def between(rolls: list[dict], factor: float = 1.0, skip: set[str] = frozenset()) -> list[dict]:
+    """The feelings a round's rolls move: [{from, to, changes, why}] for each roll with an actor and a target (seat
+    keys), the target's feelings toward the actor. Targets in `skip` (the user's own character) are left to the user."""
+    moved = []
+    for roll in rolls:
+        actor, target = roll.get('actor'), roll.get('target')
+        if not actor or not target or actor == target or target in skip:
+            continue
+        if changes := scaled(from_roll(roll), factor):
+            moved.append({'from': target, 'to': actor, 'changes': changes,
+                          'why': str(roll.get('action') or '')[:160]})
+    return moved

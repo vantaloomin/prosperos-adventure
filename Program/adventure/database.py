@@ -131,6 +131,10 @@ ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"
                  ('lore_entries', 'chance', 'INTEGER NOT NULL DEFAULT 100'),
                  ('lore_entries', 'lore_group', "TEXT NOT NULL DEFAULT ''"),
                  ('lore_entries', 'group_weight', 'INTEGER NOT NULL DEFAULT 100'),
+                 # Who may read a lore entry (adventure/lore.py "Who may read it"); entries from before are public.
+                 ('lore_entries', 'visibility', "TEXT NOT NULL DEFAULT 'public' CHECK (visibility IN ('public', "
+                                                "'known', 'gm'))"),
+                 ('lore_entries', 'known_to', "TEXT NOT NULL DEFAULT '[]'"),
                  ('story_messages', 'flags', "TEXT NOT NULL DEFAULT '[]'"), ('story_messages', 'previous', 'TEXT'),
                  ('story_rolls', 'threat', 'TEXT'), ('story_wounds', 'rested', 'INTEGER NOT NULL DEFAULT 0'),
                  ('story_wounds', 'treated', 'INTEGER NOT NULL DEFAULT 0'),
