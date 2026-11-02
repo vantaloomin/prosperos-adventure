@@ -182,12 +182,20 @@ Isekai Pipeline PRD follow-ups, decided 2026-11-02 (Vanta's cards; see "Writing 
 - **In Play, the turn post can add beats beyond the user's own character, as nudges.**
 - **Offscreen agents: code rolls the outcome, the character's agent writes their lines.**
 
+Dungeon systems follow-ups, decided 2026-11-02 (Vanta's cards, after comparing Dungeon's plan with this one; see "Dungeon systems in agent play"):
+
+- **Factions feed agents' goals, and a nemesis becomes an agent automatically,** counting toward the cap.
+- **When the party disagrees on where to go, a lead proposes and anyone can split off.** You lead in Play; the party's leader leads in Author and Watch. A character who splits off runs as an off-page thread until they rejoin.
+- **Lore timers and off-page beats count rounds, in every mode,** instead of the player's lines.
+- **The Ideas button stays, in Play and Author.** Play suggests moves for your character; Author suggests nudges. Watch has none.
+- **A book export asks whether to include hidden motives and whispers,** with a switch on the export screen.
+
 The rest of the reviews' findings were engineering and design fixes that don't change what Vanta decided. They are
 folded into "The turn loop", "Agent output", "Who sees what", "Turn state and persistence" and "Waiting and pauses".
 
 ## Open questions
 
-*None open. 27 questions answered across four batches, plus 6 review follow-ups and 5 PRD follow-ups; the two topics under "Later batches" are still to cover.*
+*None open. 27 questions answered across four batches, plus 6 review follow-ups, 5 PRD follow-ups and 5 Dungeon systems follow-ups; the two topics under "Later batches" are still to cover.*
 
 ## The turn loop
 
@@ -198,7 +206,7 @@ leaks, UX). Steps marked *(Dungeon)* are carried over unchanged. The state each 
 1. **Gather** `[Gathering]`. Code takes one frozen **snapshot** of the scene: who is present, the record, every
    character's committed memory and feelings, and the settings in force. Every context this turn is built from that
    snapshot, and it is stored with the turn so a re-ask reads exactly what the original read. Code picks the agents
-   (up to the cap: party first, then characters promoted by hand, then by role in the scene, ties by seat order);
+   (up to the cap: party first, then nemeses and characters promoted by hand, then by role in the scene, ties by seat order);
    the rest are Program characters. The user's seat is a character in Play and none in Author and Watch. In Author,
    the nudge for the turn is taken here.
 2. **The director's note** *(Dungeon)*. The director adds its hidden GM note: scene pressure, a seed to plant, what
@@ -480,6 +488,40 @@ maps to Adventure's Writer plus code. Coverage, epic by epic, is in the table at
 | 10. Keep records readable | Keeping records readable (above); Dungeon's chapters and fading (Batch 3) |
 | 11. Reply to the Director | The turn report (above); the reply card and "nothing decided for your character" (Batch 2) |
 | Non-goals | Held: house rules shape prose without prescribing style; nothing automates the user's own choices in Play; dice are shown to the user unless they choose hidden rolls, never on the page |
+
+## Dungeon systems in agent play
+
+Added 2026-11-02 after comparing Dungeon's requirements and roadmap with this spec. These Dungeon systems came over with the fork; the decisions above say how they work once characters have agents.
+
+### Factions and nemeses
+
+- **Factions give agents goals.** A faction's goals, clocks and agenda run in code as in Dungeon. An agent who belongs to a faction, or owes it something, gets what that character knows of it (its aims, its orders, their standing in it) in its context, weighed with its own wants. What the character doesn't know of the faction stays out, through the same context builders as every other secret.
+- **A nemesis becomes an agent.** When the director promotes a foe to nemesis (Dungeon's rule: one who escaped, was humiliated, lost someone to the party or was spared), that character gets an agent automatically. Its grudge and what it remembers of the party and how they fight are its own memory. It counts toward the agent cap and takes a slot ahead of characters picked by role; if the cap is full, the user is told who dropped to a Program mind. The user can still demote it by hand.
+
+### Travel and splitting the party
+
+- **A lead proposes where the party goes.** In Play that is the user's character. In Author and Watch it is the party's leader (proposed: set on the cast page, by default the first seat), and the Author can nudge the destination like any other beat. Directions, hex searches and journeys from Dungeon's travel and hex crawl take the lead's proposal as their line.
+- **Anyone can refuse and split off.** Agents declare whether they follow in Declare and React, from their feelings and goals. Program characters follow Dungeon's party rules. A character who refuses leaves the scene and runs as an off-page thread (code rolls, the agent writes its lines, as for any offscreen agent) until the party meets them again.
+
+### Timing
+
+- **Lore timers and off-page beats count rounds.** Dungeon counts the player's lines, which Author and Watch don't have. Adventure counts rounds in every mode, so switching modes never changes when lore lingers or rests, or when a beat is due. The count is kept with the timeline (going back rewinds it) and chance rolls stay seeded, as in Dungeon.
+
+### The Ideas button
+
+- **Play:** as in Dungeon. Two or three short moves for the user's character, built only from what that character knows.
+- **Author:** two or three short nudges for the story, built from what the Author's view shows (intents, motives, whispers, the beat board), never from hidden truths nobody in the scene knows.
+- **Watch:** no button.
+- Ideas are never stored or shown to any other model call, as in Dungeon. A sent idea becomes the user's own line or nudge.
+
+### Book export
+
+- **Dungeon's export as a book (Markdown, EPUB or PDF) has a switch for hidden material:** the story only, or the story with each turn's motives and whispers set beside the Writer's post. (Proposed default: story only.) The Writer's posts themselves are exported as written. Hidden truths nobody learned stay out either way; the GM view is the place for those.
+
+### Unchanged, and later
+
+- **Unchanged:** shops and the economy, town maps and interiors, tiers and scaling, and rule passages. Agents' moves go through the same Resolve step and record as the user's, so these work as in Dungeon.
+- **Later, after the first milestone:** art (on request and passive), themes, the phone layout and legacy campaigns. A round already takes many model calls, so passive art waits until costs are measured.
 
 ## Later batches (planned)
 
