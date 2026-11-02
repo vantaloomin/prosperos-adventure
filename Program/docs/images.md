@@ -5,7 +5,7 @@
 Three kinds of image backend can be set up (PRD F5 to F9). Every backend is off until the user sets it up. The
 code is in `adventure/images/`. Since Milestone 0 nothing asks for a picture: the companion's photos and post
 pictures are gone, and the story's own pictures come back in a later milestone (see
-[the roadmap](../../docs/roadmap.md)). The backend setup, checks and content routing below are kept for it.
+[the roadmap](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/roadmap.md)). The backend setup, checks and content routing below are kept for it.
 
 ## Backends (F5, F7 to F9)
 

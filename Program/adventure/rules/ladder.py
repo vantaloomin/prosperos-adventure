@@ -1,4 +1,4 @@
-"""The outcome ladder every ruleset lands on, worst first (docs/requirements.md "Rulesets"), so the narrator, the
+"""The outcome ladder every ruleset lands on, worst first (Dungeon's docs/requirements.md "Rulesets"), so the narrator, the
 record and the screen read a result the same way whatever rolled it."""
 
 BANDS = ('critical_failure', 'failure', 'failure_upside', 'success_cost', 'success', 'critical_success')

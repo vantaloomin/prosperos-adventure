@@ -1,4 +1,4 @@
-"""Ironsworn (docs/requirements.md "Rulesets"; content in adventure/rules/packs/ironsworn, under CC-BY-4.0).
+"""Ironsworn (Dungeon's docs/requirements.md "Rulesets"; content in adventure/rules/packs/ironsworn, under CC-BY-4.0).
 
 - **The sheet.** Five stats (edge, heart, iron, shadow, wits) taking 3, 2, 2, 1 and 1; health, spirit and supply
   from 0 to 5, all at 5 to start; momentum from -6 to 10, starting at 2 and reset to 2; three assets from the pack

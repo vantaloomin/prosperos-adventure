@@ -361,7 +361,7 @@ def economy(chapter):
         'spell_scrolls': render([x for x in secs['Scribing Spell Scrolls'] if x[0] != 'table']),
     }
     eco['magic_item_rules'] = render(secs['Magic Items'])
-    # Wage classes for the affordability guard (docs/requirements.md "Shops and economy"): what a day's
+    # Wage classes for the affordability guard (Dungeon's docs/requirements.md "Shops and economy"): what a day's
     # work earns, from the Hirelings table.
     by = {h['id']: h for h in eco['hirelings']}
     eco['wages'] = [

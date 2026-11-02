@@ -1,4 +1,4 @@
-"""The Referee (docs/requirements.md "Turn loop" and "Referee model"): splits the player's intent into actions and
+"""The Referee (Dungeon's docs/requirements.md "Turn loop" and "Referee model"): splits the player's intent into actions and
 decides, for each, whether it needs a roll, which Prospero stat and how hard it is. Code then rolls.
 
 A text model does it when one is chosen for the Referee job in Settings > Models; it answers in JSON and anything

@@ -1,4 +1,4 @@
-"""Fate's harm (docs/requirements.md "Fate"; Fate Accelerated and Condensed under CC-BY-3.0).
+"""Fate's harm (Dungeon's docs/requirements.md "Fate"; Fate Accelerated and Condensed under CC-BY-3.0).
 
 Under Fate a fight still runs on the shared rounds (adventure/combat.py), but a blow on the character is Fate's:
 - **The attack.** Each foe still standing rolls four Fate dice plus its rating on the ladder (RATING, from how good

@@ -1,4 +1,4 @@
-"""Fate (docs/requirements.md "Fate"), from Fate Accelerated and Fate Condensed under CC-BY-3.0.
+"""Fate (Dungeon's docs/requirements.md "Fate"), from Fate Accelerated and Fate Condensed under CC-BY-3.0.
 
 - **The sheet.** A high concept and a trouble, up to three more aspects, all the player's own words; six approaches
   (Careful, Clever, Flashy, Forceful, Quick, Sneaky) rated +3, +2, +2, +1, +1 and +0; up to three stunts, each a
