@@ -1284,3 +1284,13 @@ CREATE TABLE IF NOT EXISTS character_feelings (
 );
 
 CREATE INDEX IF NOT EXISTS character_feelings_of ON character_feelings (from_key, branch_id, seq);
+
+-- W1 Privacy and context builders (adventure/rounds/context.py, adventure/gm.py). ----------------------------------
+
+-- The user's answer to the GM view's warning in Play, remembered for this campaign (adventure/gm.py `open_round`).
+-- A choice, not story: going back keeps it; a new story forgets it.
+CREATE TABLE IF NOT EXISTS gm_view_consent (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  remembered INTEGER NOT NULL DEFAULT 0 CHECK (remembered IN (0, 1)),
+  created_at TEXT NOT NULL
+);

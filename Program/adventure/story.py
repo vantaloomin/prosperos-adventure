@@ -25,6 +25,7 @@ from adventure import (
     factions,
     feelings,
     finds,
+    gm,
     growth,
     happenings,
     hexes,
@@ -750,6 +751,7 @@ def clear(database) -> dict:
         # Each character's memory and the round loop's turns (adventure/rounds/).
         rounds_memory.clear(connection)
         rounds_turns.clear(connection)
+        gm.forget_consent(connection)
         chapters.clear(connection)
     return story(database)
 

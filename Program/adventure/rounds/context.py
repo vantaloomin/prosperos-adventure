@@ -398,11 +398,13 @@ def frozen_settings(connection, snapshot: Snapshot) -> dict:
 
 
 async def privacy(turn):
-    """Gathering step: freeze what the context builders read, unless something earlier did."""
-    if turn.snapshot.settings.get('city'):
-        return
-    with turn.database.connect() as connection:
-        turn.snapshot.settings |= frozen_settings(connection, turn.snapshot)
+    """Gathering step: freeze what the context builders read, unless something earlier did; and mark a turn played
+    in Play with the GM view open (adventure/gm.py `mark_if_open`)."""
+    from adventure import gm
+    with turn.database.connect(write=True) as connection:
+        gm.mark_if_open(connection, turn.row, turn.snapshot.mode)
+        if not turn.snapshot.settings.get('city'):
+            turn.snapshot.settings |= frozen_settings(connection, turn.snapshot)
 
 
 # Package facts that are a character's own, for code that needs them without a prompt (W2's siding, W7's factions).
@@ -412,7 +414,8 @@ def known_facts(snapshot: Snapshot, key: str) -> list[dict]:
     return [fact for fact in (world_data.facts(world) if world else []) if lore.readable(fact, frozenset({key}))]
 
 
-# Registered when the engine loads (adventure/rounds/engine.py imports this module last).
+# Registered on import: the app loads this module through adventure/gm.py (and adventure/rounds/steps.py once that
+# lands).
 from adventure.rounds import engine  # noqa: E402
 
 engine.register(State.GATHERING, 'privacy', privacy)
