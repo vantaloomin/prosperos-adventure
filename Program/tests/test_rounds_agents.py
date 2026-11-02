@@ -357,7 +357,10 @@ def test_presets_and_dials_are_settings_with_a_plain_estimate(game):
             agents.change(connection, {'scheming': 5}, game.database.now())
     quick, rich = agents.estimate('quick', 4, 4), agents.estimate('rich', 4, 4)
     assert quick['calls'] < rich['calls'] and quick['tokens'] < rich['tokens']
-    assert rich['text'] == f"About {rich['calls']} model calls and {rich['tokens']:,} tokens a turn with 4 agents."
+    assert rich['text'] == (f"About {rich['calls']} model calls, {rich['tokens']:,} tokens and {rich['seconds']} "
+                            'seconds a turn with 4 agents.')
+    # A local model answers one call at a time, so the same turn takes longer.
+    assert quick['seconds'] < rich['seconds'] < agents.estimate('rich', 4, 4, local=True)['seconds']
 
 
 def test_a_character_with_its_own_model_uses_it_over_the_agents_job(game):
