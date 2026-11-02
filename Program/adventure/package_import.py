@@ -6,7 +6,9 @@ The author hands over the world's files (Markdown or text documents, lorebook JS
 `lore` section with no model at all. Every other section (regions, settlements, factions, powers, cast, personas,
 hidden truths, planned beats) is drafted by a model from the documents when the author asks for it, and nothing
 reaches the package until the author has read the section, changed what they want and approved it. Entries with a
-hidden truth are counted on each section, so the author sees what the player must not.
+hidden truth are counted on each section, so the author sees what the player must not. In play, hidden truths and
+cast secrets count as GM only or known to their owner, never public (adventure/package_lore.py "Package facts"); a
+lore entry is public unless tagged, and a tag that cannot be read stops the package from being finished.
 
 A draft is a JSON file in the data folder (package-drafts/<id>.json) until it is finished: then it is checked like
 a world folder (adventure/packages.py validate) and written as the world's package.
@@ -15,7 +17,7 @@ import json
 import re
 from pathlib import Path
 
-from adventure import packages, record
+from adventure import package_lore, packages, record
 from adventure.errors import DomainError, require
 from adventure.imports import lorebooks
 from adventure.text_models import config_for
@@ -42,11 +44,13 @@ GUIDES = {
             'hidden from the player character).',
     'personas': 'Characters a player could play: id, name, concept, look, background.',
     'hidden-truths': 'What is really so that the player character does not know: id, truth, believed (what most '
-                     'people think instead), known_by (a list), surfaces (ways it can come out in play), stakes.',
+                     'people think instead), known_by (a list: the cast id of each person who knows it, or a plain '
+                     'name for a group), surfaces (ways it can come out in play), stakes.',
     'beats': 'Planned story arcs the game steers toward without forcing them: id, name, tier, summary, stages (a '
              'list of short lines, in order).',
-    'lore': 'Public lore entries the narrator reads by keyword: id, title, keywords (a list of words that bring '
-            'it up), text. Nothing hidden from the player character goes here.',
+    'lore': 'Lore entries the narrator reads by keyword: id, title, keywords (a list of words that bring it up), '
+            'text, and visibility only for an entry not everyone knows: "known" with known_to (a list of the cast '
+            'ids who know it), or "gm" when no one in the cast does. Hidden truths go in their own section.',
 }
 DRAFT = """You turn a tabletop world's own documents into one section of a world package. Section: {section}. \
 {guide}
@@ -224,9 +228,10 @@ def contents(draft: dict) -> dict:
 
 
 def checked(found: dict) -> list[str]:
-    """What is wrong with the package: what the validator finds, and names of entries in a section not approved
-    (the validator checks those only when the section is there)."""
-    problems = packages.validate(found)
+    """What is wrong with the package: what the validator finds, names of entries in a section not approved (the
+    validator checks those only when the section is there), and visibility tags that cannot be read
+    (adventure/package_lore.py tag_problems)."""
+    problems = packages.validate(found) + package_lore.tag_problems(found)
     sections = found['sections']
     for section, field, target in packages.REFERENCES:
         if section in sections and target not in sections:

@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Lore that not everyone knows.** A lore entry can be public, known to some characters, or GM only, and the narrator reads only public lore. Untagged lore stays public. A world package's hidden truths and its cast's secrets count as GM only or known to the characters they belong to, never public, and the world importer names any visibility tag it cannot read.
 - **World pitches on hover.** Hovering or focusing a world on the title screen floats its pitch over the art in a frosted card above the name, which stays put.
 - **Plainer model settings.** Models, Decisions and Recall are each a heading and an Add button, without the explanations above them. The computer report shows only when a chosen local model won't fit, and the job picker is called Roles.
 - **A calmer play screen.** The scene is one line: the place (tap it to go somewhere else), the time and how you are. The composer is the message box and Send; Ideas, the author's note, stepping out of the story, every panel view and starting a new story are in a menu (the button beside the box, or ⌘K / Ctrl+K). The panel opens on who's here: you first, then the people met at this place, each opening to show more, with who else is around and the weather under them. The Scene, Sheet, Pack, Journal and More tabs are gone. "Characters are AI and can make mistakes" stays under the box.
