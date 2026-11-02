@@ -27,11 +27,15 @@ custom palette must), is not used. Vallarith ships "Ember and soot", Havenbrooke
 An entry hides a truth when its section is `hidden-truths` or it has a `secret`, `secrets`, `guise`,
 `mortal_life`, `truth` or `hidden` field. The editor will mark those rows.
 
+**Who may read what** (spec "Who sees what"). A lore entry may carry `visibility`: `public`, `known` with `known_to` (a list of the cast or persona ids who know it) or `gm` (the GM view only). An untagged entry is public, and an entry with only `known_to` is known to those listed. A tagged entry hides a truth too, so the editor marks it. A package's hidden truths and its cast's secrets never count as public, whatever they are tagged (`adventure/package_lore.py` "Package facts"): a hidden truth is known to the people its `known_by` names by cast or persona id, and to nobody but the GM when it names only groups or plain words ("the veterans", "gudrun-stoneheart suspects"); a cast member's or persona's secret is known to them; a power's secret is known to the cast member its `guise` names; a faction's secret is GM only. Any entry may add knowers with its own `known_to`, or keep its secret even from its owner with `"visibility": "gm"`. The game reads these facts with their tags (`adventure/world_data.py` `facts`) so that each reader's context holds only what that reader may know.
+
 ## Checks
 
 A folder is checked before it becomes a package. Every entry needs a lowercase kebab-case id that is unique in its
 section, and references have to name an entry that exists: a settlement's `region` and `faction`, and a cast
 member's `faction` and `settlement`. A broken JSON file is named. Nothing is written until the folder passes.
+
+The importer also checks visibility tags before it finishes a package: a tag other than `public`, `known` or `gm`, `known` with nobody in `known_to`, and a `known_to` naming someone who is not in the cast or personas are each named. In play, a tag that still cannot be read counts as GM only, so a typo never leaks a secret.
 
 ## Built-in worlds
 
@@ -51,7 +55,7 @@ school is in its own folder's engine data (`engine/institutions/havenbrooke.json
   world's lore books, "<World> (world package)" (`adventure/package_lore.py`). The narrator reads its entries by
   keyword like any imported lorebook (each keyword also counts without a leading "The" or a note in brackets) (docs/worlds.md "Lore"), and the player can switch entries off on the Lore
   screen. Only entries that hold in the campaign's era come in (the era is `world.json` `starting_place.era`; an
-  entry with no `eras` holds in all). Hidden truths never come in this way. The book is read from the package file,
+  entry with no `eras` holds in all). Hidden truths never come in this way. Each entry keeps its visibility tag; the narrator reads public entries only. The book is read from the package file,
   so an edited or imported world plays as edited. When the lore changes, the next campaign start replaces the book. An entry may also carry timing as its own fields (`sticky`, `cooldown`, `delay`, `chance`, `group`,
   `group_weight`; docs/worlds.md "Lore"), kept within their ranges.
 - **Engine data.** The game reads each town's adventure, items, finds and premades, and each world's travel map,

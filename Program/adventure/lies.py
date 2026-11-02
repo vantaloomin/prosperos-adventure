@@ -11,11 +11,17 @@ ever saying why"), or the hidden truth of an open job they gave. Someone who tru
 TRUSTING or more) tells them the truth. Each person is read once a story day: the rest of the day they keep to the
 lie the character believed, or are known to be lying (story_cards, scene 'lie', card_id the person's key). A near
 miss (failure with an upside) leaves the character uneasy: the narrator shows a small wrong note, no more.
+
+In rounds any speaker can lie, and every lie is declared as one (adventure/rounds/contract.py Deception): the roll is
+the same for every listener it reaches (`insight`: the listener's Mind against how practised the liar is), and how
+it reads (`read`: caught, uneasy or believed) is shared with today's turn. The listener never judges a lie itself;
+adventure/rounds/lies_heard.py stages what each listener makes of it.
 """
 import re
 
 from adventure import combat, feelings, record, sheet
 from adventure.database import decode, encode, many, optional
+from adventure.rules import marvel
 
 ASKED = re.compile(r"\?|\b(ask\w*|question\w*|press\w*|quiz\w*|interrogat\w*|inquir\w*|tell me|what do you know|"
                    r"who (is|was|did)|where (is|was|did)|why (is|was|did|do)|did you|have you|do you know|swear)\b",
@@ -26,6 +32,27 @@ TRUSTING = 3
 SUCCESS = ('success_cost', 'success', 'critical_success')
 # A near miss: the character is not fooled outright, only uneasy.
 UNEASY = ('failure_upside',)
+# A liar this persuasive (Allure) is hard to read, like a city's notable.
+PRACTISED = 15
+
+
+def read(band: str) -> str:
+    """What a listener makes of a lie from their insight roll: caught, uneasy (a near miss) or believed."""
+    return 'caught' if band in SUCCESS else 'uneasy' if band in UNEASY else 'believed'
+
+
+def practised(connection, liar: str, persona: bool = False) -> str:
+    """How hard the liar is to read: hard for a persuasive one (Allure PRACTISED or more), else normal."""
+    allure = sheet.stats(connection, sheet.PERSONA if persona else liar).get('Allure') or 0
+    return 'hard' if allure >= PRACTISED else 'normal'
+
+
+def insight(connection, listener: str, difficulty: str, text: str, rng=None, persona: bool = False) -> dict:
+    """One listener's roll to see through a lie: the player's character in the campaign's ruleset, anyone else on
+    their own Mind (no stat, no die)."""
+    if persona:
+        return sheet.check(connection, 'Mind', difficulty, text, rng)
+    return marvel.roll(sheet.stats(connection, listener).get('Mind'), difficulty, rng)
 
 
 def target(people: list[dict], text: str) -> dict | None:
@@ -71,12 +98,12 @@ def turn(connection, message_id: str, view: dict, text: str, day: str, now: str,
     else:
         result = sheet.check(connection, 'Mind', 'hard' if found.get('notable') else 'normal',
                              f'see through {name}', rng)
-        if result['band'] in SUCCESS:
+        if read(result['band']) == 'caught':
             lines = [f"{name} lies to keep hidden {what}.",
                      f"The player's character sees through it: show the tell plainly (a look away, a story that "
                      f"doesn't hold). {name} sticks to the lie unless pressed hard."]
             record.add(connection, 'fact', name, f"The player's character caught {name} in a lie.", now)
-        elif result['band'] in UNEASY:
+        elif read(result['band']) == 'uneasy':
             lines = [f"{name} lies to keep hidden {what}.",
                      "The player's character can't say what, but something in it doesn't sit right: show a small "
                      'wrong note (a pause, a too-easy answer) without giving the lie away.']
