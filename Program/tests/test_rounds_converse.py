@@ -51,9 +51,12 @@ class Table:
 
 @pytest.fixture
 def table(monkeypatch):
-    """Steps and hooks registered by a test are taken out after it; the agent call and the Writer are stand-ins."""
+    """Only the foundation's Gather and Converse run, steps registered by a test are taken out after it, and the
+    agent call and the Writer are stand-ins."""
     before = {state: list(listed) for state, listed in engine.STEPS.items()}
     hooks = list(engine.COMMITS)
+    for listed in engine.STEPS.values():
+        listed[:] = [(name, step) for name, step in listed if step is engine.pick]
     stand_in = Table()
     monkeypatch.setattr(adventure.rounds, 'agents', SimpleNamespace(speak=stand_in.speak), raising=False)
     monkeypatch.setattr(adventure.rounds, 'lies_heard', SimpleNamespace(heard=stand_in.heard), raising=False)

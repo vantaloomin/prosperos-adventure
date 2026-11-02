@@ -33,9 +33,12 @@ def game(tmp_path):
 
 @pytest.fixture
 def steps():
-    """Steps registered by a test are taken out again after it."""
+    """Only the foundation's own steps run in these tests (other parts' modules may have registered theirs), and
+    steps registered by a test are taken out again after it."""
     before = {state: list(listed) for state, listed in engine.STEPS.items()}
     hooks = list(engine.COMMITS)
+    for listed in engine.STEPS.values():
+        listed[:] = [(name, step) for name, step in listed if step is engine.pick]
     yield
     for state, listed in before.items():
         engine.STEPS[state][:] = listed
