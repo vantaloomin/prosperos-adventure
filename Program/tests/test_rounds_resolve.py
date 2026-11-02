@@ -27,8 +27,12 @@ class Dice:
 
 @pytest.fixture
 def steps():
+    """Only the foundation's pick and Resolve's own steps and hook, whatever else the app registered."""
     before = {state: list(listed) for state, listed in engine.STEPS.items()}
     hooks = list(engine.COMMITS)
+    for listed in engine.STEPS.values():
+        listed[:] = [(name, step) for name, step in listed if step is engine.pick]
+    engine.COMMITS[:] = [(name, hook) for name, hook in engine.COMMITS if hook is engine.committed_memory]
     engine.register(State.RESOLVING, 'ambiguity', resolve.ambiguity)
     engine.register(State.RESOLVING, 'resolve', resolve.resolve)
     engine.on_commit('rolls', resolve.kept_rolls)

@@ -337,9 +337,10 @@ def kept_rolls(connection, turn):
             'INSERT INTO round_rolls (id, turn_id, message_id, position, actor, target, kind, stake, action, stat, '
             'difficulty, die, natural, bonus, shift, total, band, ruleset, against, created_at) VALUES (?, ?, ?, ?, '
             '?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-            (identifier(), turn.id, message_id, position, roll['actor'], roll['target'], roll['kind'], roll['stake'],
-             roll['action'], roll['stat'], roll['difficulty'], roll['die'], roll['natural'], roll['bonus'],
-             roll['shift'], roll['total'], roll['band'], roll['ruleset'],
+            (identifier(), turn.id, message_id, position, roll['actor'], roll.get('target', ''), roll.get('kind') or 'referee',
+             roll.get('stake', ''), roll.get('action', ''), roll.get('stat', ''), roll.get('difficulty', 'normal'),
+             roll.get('die'), roll.get('natural', 0), roll.get('bonus', 0), roll.get('shift', 0), roll.get('total', 0),
+             roll['band'], roll.get('ruleset', marvel.ID),
              roll['opposed']['band'] if roll.get('opposed') else None, now))
 
 
