@@ -9,6 +9,6 @@ class DomainError(Exception):
         super().__init__(message)
 
 
-def require(condition: bool, message: str, status: int = 400) -> None:
+def require(condition: bool, message: str, status: int = 400, code: str = 'request') -> None:
     if not condition:
-        raise DomainError(message, status)
+        raise DomainError(message, status, code)
