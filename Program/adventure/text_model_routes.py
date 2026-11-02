@@ -6,7 +6,7 @@ from fastapi import APIRouter, Request
 
 from adventure import text_models
 from adventure.database import decode
-from adventure.providers import balance
+from adventure.providers import balance, cli_accounts
 from adventure.providers.config import ConnectionProbe, MixUpdate, ProfileCreate, ProfileUpdate, RouteUpdate
 
 router = APIRouter(prefix='/api/models')
@@ -50,6 +50,12 @@ async def discover(body: ConnectionProbe, request: Request):
     """Test an unsaved form: list the service's models without generating anything."""
     key = text_models.probe_key(db(request), request.app.state.vault, body)
     return await request.app.state.provider.check(body.config.model_dump(), key)
+
+
+@router.get('/cli-accounts')
+async def cli_accounts_found():
+    """The Claude Code and Codex accounts on this computer (claude, claude2, codex…), for a profile to pick."""
+    return {'accounts': await cli_accounts.accounts_with_logins()}
 
 
 @router.post('/profiles/{profile_id}/check')

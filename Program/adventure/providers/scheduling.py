@@ -48,7 +48,7 @@ def resource_for(config):
     if config.get('provider') in {'local', 'kobold'} or is_loopback(parts.hostname):
         return 'local-inference', 1
     if config.get('provider') == 'codex':
-        return 'codex-cli', 1
+        return 'codex-cli' + (f":{config['cli_account_dir']}" if config.get('cli_account_dir') else ''), 1
     if config.get('provider') == 'claude_code':
         # Each Claude account has its own plan limits, so its own two places.
         return 'claude-cli' + (f":{config['cli_account_dir']}" if config.get('cli_account_dir') else ''), 2
@@ -160,7 +160,7 @@ class RequestScheduler:
                 self.waiting.remove(lease)
             if lease in self.active:
                 self.active.remove(lease)
-            if lease.work is CONVERSATION and self.limits[resource] == 1 and resource != 'codex-cli':
+            if lease.work is CONVERSATION and self.limits[resource] == 1 and not resource.startswith('codex-cli'):
                 self.held_until[resource] = time.monotonic() + HOLD_AFTER_REPLY
             self.dispatch()
 
