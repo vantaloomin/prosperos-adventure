@@ -1,9 +1,9 @@
 import sys
 
-from dungeon.memory.cache import retained_bytes
-from dungeon.memory.chunks import compile_chunks
-from dungeon.memory.hybrid_recall import hybrid_hits
-from dungeon.memory.retrieval import STOP, Corpus, term_counts
+from adventure.memory.cache import retained_bytes
+from adventure.memory.chunks import compile_chunks
+from adventure.memory.hybrid_recall import hybrid_hits
+from adventure.memory.retrieval import STOP, Corpus, term_counts
 
 
 def chunks(*texts):

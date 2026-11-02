@@ -1,4 +1,4 @@
-"""Rest (dungeon/rest.py): safe and risky nights, precautions, a fight in the dark, time, food and mending."""
+"""Rest (adventure/rest.py): safe and risky nights, precautions, a fight in the dark, time, food and mending."""
 from datetime import datetime
 
 from conftest import narrator as last_narration
@@ -6,7 +6,7 @@ from conftest import tell
 from test_inventory import begin
 from test_travel import Road, clock_at, ok, reply
 
-from dungeon import combat, rest, travel
+from adventure import combat, rest, travel
 
 
 def out_in_the_badlands(client):

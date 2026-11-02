@@ -4,8 +4,8 @@ import json
 import pytest
 from pydantic import ValidationError
 
-from dungeon import interiors, packages
-from dungeon.world.schema import Interior
+from adventure import interiors, packages
+from adventure.world.schema import Interior
 
 SHIPPED = sorted((packages.DATA / 'interiors').glob('*.json'))
 

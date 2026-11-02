@@ -48,7 +48,7 @@ function useOpened<T extends HTMLElement>() {
   return box
 }
 
-/** Talk of the town (dungeon/politics.py): what people in the town argue about, the factions behind each side (the
+/** Talk of the town (adventure/politics.py): what people in the town argue about, the factions behind each side (the
  *  world's powers that hold it first) and where the people the character has met here stand. The game decides all
  *  of it; with the GM view on, anything can be changed. */
 export function StoryPolitics({ where, gm, open }: Props) {

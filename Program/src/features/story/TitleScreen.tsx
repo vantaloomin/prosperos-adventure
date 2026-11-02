@@ -7,7 +7,7 @@ import { enter } from '../worlds/useWorlds'
 import { worldAction } from './titleText'
 
 /** Remembers, for this tab, which world the player went to from the title screen, so arriving there skips it once. */
-const PICKED = 'dungeon-title-picked'
+const PICKED = 'adventure-title-picked'
 
 function picked(): string | null {
   try { return window.sessionStorage.getItem(PICKED) } catch { return null }
@@ -20,7 +20,7 @@ function remember(world: string | null) {
   } catch { /* the title screen shows once more after the switch */ }
 }
 
-/** The title screen before a campaign starts (dungeon/world_select.py): the game's key art, then a card for each
+/** The title screen before a campaign starts (adventure/world_select.py): the game's key art, then a card for each
  * world. The world the story is in begins here; another world switches to the persona's world there, made when
  * they have none, and the page starts afresh in it. With no worlds to show, it steps aside for the start form. */
 export function TitleScreen({ onBegin }: { onBegin: () => void }) {
@@ -49,7 +49,7 @@ export function TitleScreen({ onBegin }: { onBegin: () => void }) {
       <div className="title-hero">
         <img src="/title.webp" alt="" width={1536} height={1024} />
         <div className="title-words">
-          <h2 id="title-heading">Prospero&apos;s Dungeon</h2>
+          <h2 id="title-heading">Prospero&apos;s Adventure</h2>
           <p>Choose a world. The dice decide the rest.</p>
         </div>
       </div>

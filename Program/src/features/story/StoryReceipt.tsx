@@ -6,7 +6,7 @@ const ICONS = { coins: Coins, item: Package, hurt: HeartCrack, injury: Bandage, 
 /** The widget each chip opens (rule 5: each chip opens its widget). */
 const OPENS: Record<ReceiptChip['kind'], Widget> = { coins: 'pack', item: 'pack', hurt: 'sheet', injury: 'sheet', quest: 'journal', learned: 'journal' }
 
-/** The turn receipt (dungeon/receipt.py): what the turn changed, in chips under its narration; each opens the widget
+/** The turn receipt (adventure/receipt.py): what the turn changed, in chips under its narration; each opens the widget
  *  where it shows (the pack, the sheet, the journal) in the side panel. */
 export function TurnReceipt({ chips }: { chips?: ReceiptChip[] }) {
   if (!chips?.length) return null

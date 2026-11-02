@@ -2,7 +2,7 @@ import type { DebugTime } from './types'
 
 /**
  * The app's time, which is the PC's real time unless debug time (Settings > Developer) moved it ahead or
- * made it run faster (dungeon/debug_time.py). Anything comparing against times the server wrote,
+ * made it run faster (adventure/debug_time.py). Anything comparing against times the server wrote,
  * such as what day it is in the story, reads it here.
  */
 let synced = { app: 0, local: 0, speed: 1, active: false }

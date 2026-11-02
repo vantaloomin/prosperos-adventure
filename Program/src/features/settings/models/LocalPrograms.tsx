@@ -23,7 +23,7 @@ const PLACEHOLDERS: Record<LauncherView['system'], Placeholders> = {
   },
 }
 
-/** Settings > Models: start LM Studio, Ollama, KoboldCpp or ComfyUI from here, and optionally with the Dungeon. */
+/** Settings > Models: start LM Studio, Ollama, KoboldCpp or ComfyUI from here, and optionally with Adventure. */
 export function LocalPrograms() {
   const launcher = useLauncher()
   const [error, setError] = useState('')
@@ -34,13 +34,13 @@ export function LocalPrograms() {
   return <section className="settings-section form-stack" aria-labelledby="local-programs-heading">
     <div>
       <h2 id="local-programs-heading">Local programs</h2>
-      <p className="subtle">Start the programs your local models run in, with the address, model and context size set above. They keep running after the Dungeon closes.</p>
+      <p className="subtle">Start the programs your local models run in, with the address, model and context size set above. They keep running after Adventure closes.</p>
     </div>
     <ul className="model-profiles">
       {data.programs.map(item => <ProgramRow key={item.program} item={item} act={act} launcher={launcher} examples={PLACEHOLDERS[data.system] ?? PLACEHOLDERS.windows} />)}
     </ul>
     {error && <Notice tone="error">{error}</Notice>}
-    <Toggle label="Start these when the Dungeon starts" checked={data.auto_launch} onChange={(checked) => void act(() => launcher.setAuto(checked))}
+    <Toggle label="Start these when Adventure starts" checked={data.auto_launch} onChange={(checked) => void act(() => launcher.setAuto(checked))}
       hint={`${order}, each once the one before answers. Off until you turn it on, since it opens other programs.`} />
   </section>
 }
@@ -106,7 +106,7 @@ function LaunchButton({ item, onLaunch }: { item: LocalProgram; onLaunch: () => 
   </button>
 }
 
-/** A launch button beside a profile or image backend that runs in a program the Dungeon can start. */
+/** A launch button beside a profile or image backend that runs in a program Adventure can start. */
 export function LaunchFor({ id }: { id: string }) {
   const launcher = useLauncher()
   const item = programFor(launcher.query.data, id)

@@ -1,9 +1,9 @@
-"""Allies fight beside the character on their own, and foes split their blows (dungeon/allies.py)."""
+"""Allies fight beside the character on their own, and foes split their blows (adventure/allies.py)."""
 from test_bonds import met
 from test_combat import foe, roll
 from test_lies import begin
 
-from dungeon import allies, bonds, combat, party, record
+from adventure import allies, bonds, combat, party, record
 
 NOW = '2026-10-01T12:00:00Z'
 HESK = {'sheet': {'key': 'hesk', 'full': 'Hesk Aldane', 'name': 'Hesk', 'role': 'woodcutter', 'occupation': 'woodcutter'}}

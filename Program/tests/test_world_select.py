@@ -1,5 +1,5 @@
-"""The title screen's worlds (dungeon/world_select.py): each playable world with its key art, and going to one."""
-from dungeon import story, world_select
+"""The title screen's worlds (adventure/world_select.py): each playable world with its key art, and going to one."""
+from adventure import story, world_select
 
 
 def ok(response):

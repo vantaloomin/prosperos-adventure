@@ -40,7 +40,7 @@ function DeleteBook({ name, onDelete }: { name: string; onDelete: () => Promise<
   </>
 }
 
-/** Lorebooks (dungeon/lore.py): what the world knows as fact, entry by entry, and when each comes into the story. */
+/** Lorebooks (adventure/lore.py): what the world knows as fact, entry by entry, and when each comes into the story. */
 export function WorldLore() {
   const lore = useQuery({ queryKey: LORE_KEY, queryFn: () => api<Lore>('/lore') })
   const client = useQueryClient()
@@ -100,7 +100,7 @@ function LoreEntryRow({ entry, choices, off, change }: { entry: LoreEntry; choic
       <EntryHead entry={entry} off={off} />
       <details><summary>Text</summary><p className="story-note">{entry.text}</p></details>
       <Toggle label="On" checked={entry.enabled} disabled={entry.pattern && !entry.enabled}
-        hint={entry.pattern ? 'It finds its moment with a search pattern, which Dungeon does not run.' : undefined}
+        hint={entry.pattern ? 'It finds its moment with a search pattern, which Adventure does not run.' : undefined}
         onChange={(enabled) => void change(`/lore/entries/${entry.id}`, { enabled })} />
       {!entry.always && <WhenPicker when={entry.when} choices={choices} onSave={setWhen} />}
       {!entry.always && <TimingFields timing={entry.timing} onSave={(timing) => change(`/lore/entries/${entry.id}/timing`, timing)} />}
@@ -175,7 +175,7 @@ function WhenPicker({ when, choices, onSave }: { when: WhenChoice[]; choices: Lo
   )
 }
 
-/** The reference library (dungeon/library.py): long texts the narrator draws a few matching passages from each turn. */
+/** The reference library (adventure/library.py): long texts the narrator draws a few matching passages from each turn. */
 export function WorldLibrary() {
   const library = useQuery({ queryKey: LIBRARY_KEY, queryFn: () => api<{ books: LibraryBook[] }>('/library') })
   const client = useQueryClient()

@@ -5,7 +5,7 @@
 $CompanionRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $CheckoutRoot = Split-Path -Parent $CompanionRoot
 $WindowsFolder = Join-Path $CheckoutRoot 'Windows'
-$DungeonAppId = 'prospero-dungeon'
+$AdventureAppId = 'prospero-adventure'
 # npm, Vite and Python write UTF-8; decode their captured output as UTF-8 so symbols such as the
 # build's checkmark render instead of mojibake. A host without a console may refuse; that is fine.
 try { [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding $false } catch { }
@@ -38,11 +38,11 @@ function Get-PortOwner {
     if ($listener) { return [int]$listener.OwningProcess }
 }
 
-function Get-DungeonState {
+function Get-AdventureState {
     # 'running' (this app answers), 'foreign' (another program holds the port) or 'stopped'.
     param([int]$Port)
     $health = Get-CompanionHealth $Port
-    if ($health -and $health.app_id -eq $DungeonAppId) {
+    if ($health -and $health.app_id -eq $AdventureAppId) {
         return @{ State = 'running'; Version = $health.version; ProcessId = Get-PortOwner $Port }
     }
     $owner = Get-PortOwner $Port

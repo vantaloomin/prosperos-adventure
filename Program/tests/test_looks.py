@@ -2,7 +2,7 @@
 import re
 from collections import Counter
 
-from dungeon.world import catalog, dating, looks, townsfolk
+from adventure.world import catalog, dating, looks, townsfolk
 
 
 def test_a_roll_never_pairs_a_height_with_an_implausible_weight():

@@ -1,13 +1,13 @@
 """Wording for the small changes a city goes through. Run `python scripts/world/changes.py` to rewrite the shipped JSON.
 
-`dungeon/world/changes.py` picks when and where a change happens from seeds; this file only says how it reads in
+`adventure/world/changes.py` picks when and where a change happens from seeds; this file only says how it reads in
 each style of setting. Openings name a new place from two word lists (`first` and `second`, joined by a space) for a
 place kind the city already has, so the new place copies an existing one's hours, setting and price level.
 """
 import json
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parents[2] / 'dungeon' / 'world' / 'data' / 'changes.json'
+OUT = Path(__file__).resolve().parents[2] / 'adventure' / 'world' / 'data' / 'changes.json'
 
 
 def opening(first, second, summary):

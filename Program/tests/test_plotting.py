@@ -1,4 +1,4 @@
-"""The director, full (dungeon/plotting.py): seeds and payoffs, adopted details and planned beats."""
+"""The director, full (adventure/plotting.py): seeds and payoffs, adopted details and planned beats."""
 import asyncio
 import json
 
@@ -6,7 +6,7 @@ from conftest import Chunk
 from test_director import NOW, directed, note, start  # noqa: F401, F811 - `directed` is a fixture
 from test_travel import Road, ok
 
-from dungeon import director, plotting, record
+from adventure import director, plotting, record
 
 
 def reply(text):

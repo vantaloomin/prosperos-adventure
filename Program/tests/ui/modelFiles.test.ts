@@ -36,7 +36,7 @@ test('download pages are grouped under the dropdown they fill', () => {
 })
 
 test('the shipped download list links to pages, never to a file download', () => {
-  const links = JSON.parse(readFileSync('dungeon/images/model_links.json', 'utf8')) as ModelLink[]
+  const links = JSON.parse(readFileSync('adventure/images/model_links.json', 'utf8')) as ModelLink[]
   assert.ok(links.length > 0)
   for (const item of links) {
     assert.match(item.url, /^https:\/\/huggingface\.co\/[\w.-]+\/[\w.-]+(\/tree\/main(\/[\w./-]+)?)?$/)
@@ -92,7 +92,7 @@ test('each model family lists only its own loaders, and an unknown family is Kre
 })
 
 test('the settings page and the server agree on the families', () => {
-  const server = readFileSync('dungeon/images/models.py', 'utf8')
+  const server = readFileSync('adventure/images/models.py', 'utf8')
   assert.match(server, new RegExp(`Family = Literal\\[${FAMILY_KEYS.map(key => `'${key}'`).join(', ')}\\]`))
 })
 

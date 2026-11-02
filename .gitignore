@@ -56,7 +56,7 @@ SKILL.md
 # Local companion workspaces, uploads, exports, and database sidecars. Program/.gitignore has the
 # same folders inside Program; these cover a checkout from before the move.
 /data/
-# A portable workspace kept with the app (Settings > Data; dungeon/data_folder.py), and a move in progress.
+# A portable workspace kept with the app (Settings > Data; adventure/data_folder.py), and a move in progress.
 /Data/
 /Data.moving/
 /backups/

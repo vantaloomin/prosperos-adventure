@@ -245,9 +245,9 @@ def legacy(play):
     play.say("I go to the guild factor's office and take the week's tally ledger off the desk while the clerk is out.")
     play.attempt('End the chapter', 'POST', '/api/story/chapters/close', {'title': 'The last skim'})
     content = play.export()
-    play.write(f"- worlds before import: {json.dumps(play.dungeon.call('GET', '/api/worlds'), ensure_ascii=False)[:600]}\n")
+    play.write(f"- worlds before import: {json.dumps(play.adventure.call('GET', '/api/worlds'), ensure_ascii=False)[:600]}\n")
     if content:
-        response = play.dungeon.http.post('/api/worlds/import', content=content)
+        response = play.adventure.http.post('/api/worlds/import', content=content)
         play.write(f'### Import the campaign as a new world: {response.status_code} {response.text[:300]}\n')
         if response.status_code not in (200, 201):
             play.flag(f'Campaign import failed: {response.status_code} {response.text[:200]}')
@@ -258,7 +258,7 @@ def legacy(play):
         play.flag("Could not tell the new world's id from the response.")
         return
     play.attempt('Switch to the new world', 'POST', f'/api/worlds/{new_id}/switch')
-    candidates = play.dungeon.call('GET', '/api/story/start').get('legacy') or []
+    candidates = play.adventure.call('GET', '/api/story/start').get('legacy') or []
     play.write(f'- legacy candidates: {json.dumps(candidates, ensure_ascii=False)[:600]}\n')
     if not candidates:
         play.flag('No legacy characters offered at the start of the new world.')
@@ -273,7 +273,7 @@ def legacy(play):
 def fivee_checks(play):
     """M4: a made 5E character (class, species, background, the standard array, skills): skill checks against DCs,
     a haggle, and the sheet."""
-    choices = play.dungeon.call('GET', '/api/story/start')
+    choices = play.adventure.call('GET', '/api/story/start')
     srd = choices.get('srd52') or {}
     classes = {item['id']: item for item in srd.get('classes') or []}
     if 'rogue' not in classes or not srd.get('backgrounds'):
@@ -333,7 +333,7 @@ def fivee_fight(play):
 def fivee_caster(play):
     """M4: a 5E wizard: cantrips and prepared spells, slots spent and failing when gone, spell attacks in a fight,
     XP for a won fight, and a long rest giving the slots back."""
-    srd = play.dungeon.call('GET', '/api/story/start').get('srd52') or {}
+    srd = play.adventure.call('GET', '/api/story/start').get('srd52') or {}
     background = next((item for item in srd.get('backgrounds') or [] if item['id'] == 'sage'),
                       (srd.get('backgrounds') or [{}])[0])
     wizard = next(item for item in srd.get('classes') or [] if item['id'] == 'wizard')
@@ -384,7 +384,7 @@ def fivee_caster(play):
 def ironsworn(play):
     """M4: an Ironsworn character (3, 2, 2, 1, 1 and three assets): moves read from the words, the action roll with
     momentum, a fight with a thug on health and harm, a day's travel, the Heartwood contract as a vow, and rest."""
-    choices = play.dungeon.call('GET', '/api/story/start').get('ironsworn') or {}
+    choices = play.adventure.call('GET', '/api/story/start').get('ironsworn') or {}
     stats = [stat['id'] for stat in choices.get('stats') or []]
     assets = choices.get('assets') or []
     if len(stats) != 5 or len(assets) < 3:
@@ -424,7 +424,7 @@ def ironsworn(play):
 def percentile(play):
     """M4: a Percentile (BRP) character bought on the start screen: skill rolls named by the words, experience checks
     after a night's rest, a fight with weapon skills and dodge, wounds, First Aid and slow healing."""
-    choices = play.dungeon.call('GET', '/api/story/start').get('brp') or {}
+    choices = play.adventure.call('GET', '/api/story/start').get('brp') or {}
     if not choices.get('professions'):
         play.flag('No Percentile professions offered.')
         return
@@ -471,7 +471,7 @@ def percentile(play):
 def lore(play):
     """M5: a fresh Vallarith campaign carries the world package's lore book, and naming a place pulls in its entry."""
     play.start('agna-holt')
-    books = play.dungeon.call('GET', '/api/lore')
+    books = play.adventure.call('GET', '/api/lore')
     names = [book.get('name') or book.get('title') for book in (books.get('books') if isinstance(books, dict) else books)
              or []]
     play.write(f'- lore books: {names}\n')
@@ -513,7 +513,7 @@ def narrative(play):
 
 def fivee_defeat(play, rule: str):
     """A fragile 5E wizard in the Heartwood until a fight takes them down: under `rule`, how the defeat lands."""
-    srd = play.dungeon.call('GET', '/api/story/start').get('srd52') or {}
+    srd = play.adventure.call('GET', '/api/story/start').get('srd52') or {}
     wizard = next(item for item in srd.get('classes') or [] if item['id'] == 'wizard')
     background = next((item for item in srd.get('backgrounds') or [] if item['id'] == 'sage'), srd['backgrounds'][0])
     ids = {skill['name']: skill['id'] for skill in srd.get('skills') or []}
@@ -592,7 +592,7 @@ def importer(play):
     play.write(f'- draft now: {json.dumps(view, ensure_ascii=False)[:1200]}\n')
     finished = play.attempt('Write the package', 'POST', f'/api/packages/drafts/{draft_id}/finish', {})
     play.write(f'- finished: {json.dumps(finished, ensure_ascii=False)[:600]}\n')
-    listed = play.dungeon.call('GET', '/api/packages')
+    listed = play.adventure.call('GET', '/api/packages')
     names = json.dumps(listed, ensure_ascii=False)
     if 'Saltmarch' not in names:
         play.flag('The imported world is not listed among the packages.')
@@ -649,19 +649,19 @@ def pictures(play):
     for label, kind, subject in (('Picture me', 'portrait', 'player'), ('This place', 'place', ''),
                                  ('The scene', 'scene', ''), ('Someone you met', 'portrait', met),
                                  ('Picture this passage', 'passage', narration)):
-        response = play.dungeon.http.post('/api/story/art', json={'kind': kind, 'subject': subject})
+        response = play.adventure.http.post('/api/story/art', json={'kind': kind, 'subject': subject})
         body = response.text[:300]
         play.write(f'### {label}: {response.status_code} {body}\n')
-        gallery = play.dungeon.call('GET', '/api/story/art').get('art') or []
+        gallery = play.adventure.call('GET', '/api/story/art').get('art') or []
         latest = gallery[0] if gallery else {}
         play.write(f"- gallery newest: {json.dumps(latest, ensure_ascii=False)[:300]}\n")
         said = (body + json.dumps(latest)).lower()
         if 'backend' not in said and 'no image' not in said:
             play.flag(f'{label} without an image backend gave no clear "No image backend" message.')
-    play.dungeon.call('PUT', '/api/settings', {'passive_art': True})
+    play.adventure.call('PUT', '/api/settings', {'passive_art': True})
     play.say('I step out onto the green and watch the crews come in from the stump fields.')
-    play.write(f"- gallery after a turn with passive art: {len(play.dungeon.call('GET', '/api/story/art').get('art') or [])}\n")
-    epub = play.dungeon.http.get('/api/story/export/book', params={'format': 'epub'})
+    play.write(f"- gallery after a turn with passive art: {len(play.adventure.call('GET', '/api/story/art').get('art') or [])}\n")
+    epub = play.adventure.http.get('/api/story/export/book', params={'format': 'epub'})
     play.write(f'### Export the EPUB: {epub.status_code}, {len(epub.content)} bytes\n')
     if epub.status_code != 200:
         play.flag(f'The EPUB export failed with no pictures: {epub.status_code}')
@@ -670,9 +670,9 @@ def pictures(play):
 def havenbrooke(play):
     """M5: a short Havenbrooke start: a premade sophomore in Haven in autumn 2009, the dorm, a class, the coffee
     place, and a drive to Ithaca by car."""
-    play.dungeon.call('PUT', '/api/story/scene', {'city_id': 'haven', 'place_id': 'nexus-housing'})
-    play.dungeon.call('DELETE', '/api/story')
-    premades = play.dungeon.call('GET', '/api/story/start').get('premades') or []
+    play.adventure.call('PUT', '/api/story/scene', {'city_id': 'haven', 'place_id': 'nexus-housing'})
+    play.adventure.call('DELETE', '/api/story')
+    premades = play.adventure.call('GET', '/api/story/start').get('premades') or []
     play.write(f"- premades: {[item.get('name') for item in premades]}\n")
     if not premades:
         play.flag('No Havenbrooke premades offered in Haven.')
@@ -692,7 +692,7 @@ def tone(play):
     """M6: per-category intensity, veils and the voice. Sex off the page, violence mature, torture veiled, a wry
     voice; then a preset resets the categories but keeps the veils and the voice."""
     play.start('agna-holt', table={'levels': {'sex': 0, 'violence': 2}, 'veils': ['torture'], 'voice': 'wry'})
-    rules = play.dungeon.call('GET', '/api/story/table')
+    rules = play.adventure.call('GET', '/api/story/table')
     play.write(f"- table: levels {rules.get('levels')}, veils {rules.get('veils')}, voice {rules.get('voice')}\n")
     play.say('I flirt shamelessly with the keeper, and when she laughs I ask her to come upstairs with me tonight.')
     play.say('We go up to my room together and I take her to bed.')
@@ -700,7 +700,7 @@ def tone(play):
     play.say('I torture him for the name of whoever sent him, breaking his fingers one by one.')
     play.say('I put my knife to his throat and finish it.')
     play.attempt('Pick the Restrained preset', 'PUT', '/api/story/table', {'intensity': 'restrained'})
-    after = play.dungeon.call('GET', '/api/story/table')
+    after = play.adventure.call('GET', '/api/story/table')
     play.write(f"- after the preset: levels {after.get('levels')}, veils {after.get('veils')}, "
                f"voice {after.get('voice')}\n")
     if after.get('levels'):
@@ -745,7 +745,7 @@ def stage(play):
     key = next((person.get('key') for person in present if isinstance(person, dict) and person.get('key')), '')
     if not key:
         play.flag('Nobody in scene.present to ask a portrait of.')
-    response = play.dungeon.http.post('/api/story/art', json={'kind': 'portrait', 'subject': key})
+    response = play.adventure.http.post('/api/story/art', json={'kind': 'portrait', 'subject': key})
     play.write(f'### A portrait of {key or "nobody"} before meeting them: {response.status_code} {response.text[:200]}\n')
     if response.status_code == 404:
         play.flag('A portrait of someone in the scene was refused because they are not met yet.')
@@ -754,9 +754,9 @@ def stage(play):
 def babel(play):
     """M5: a short BABEL start: a premade on Floor Zero, the Concourse under the dome, the market, the guilds and the
     gate onto the Stair."""
-    play.dungeon.call('PUT', '/api/story/scene', {'city_id': 'the-concourse', 'place_id': 'the-plaza'})
-    play.dungeon.call('DELETE', '/api/story')
-    premades = play.dungeon.call('GET', '/api/story/start').get('premades') or []
+    play.adventure.call('PUT', '/api/story/scene', {'city_id': 'the-concourse', 'place_id': 'the-plaza'})
+    play.adventure.call('DELETE', '/api/story')
+    premades = play.adventure.call('GET', '/api/story/start').get('premades') or []
     play.write(f"- premades: {[item.get('name') for item in premades]}\n")
     if not premades:
         play.flag('No BABEL premades offered on the Concourse.')
@@ -772,7 +772,7 @@ def babel(play):
 
 
 def fate_points(play) -> int | None:
-    sheet = play.dungeon.call('GET', '/api/story/sheet')
+    sheet = play.adventure.call('GET', '/api/story/sheet')
     return sheet.get('fate_points', sheet.get('points'))
 
 
@@ -871,8 +871,8 @@ def hex_vallarith(play):
 def hex_woods(play):
     """Havenbrooke's woods: an on-foot crawl of one-mile hexes from Ironroot Woods, a search, back to Haven, and the
     car road still a road from the trailhead."""
-    play.dungeon.call('PUT', '/api/story/scene', {'city_id': 'haven', 'place_id': 'ironroot-woods'})
-    play.dungeon.call('DELETE', '/api/story')
+    play.adventure.call('PUT', '/api/story/scene', {'city_id': 'haven', 'place_id': 'ironroot-woods'})
+    play.adventure.call('DELETE', '/api/story')
     play.start('piper-marsh')
     play.say('I head out north into the woods, off the trail.')
     hex_view(play, 'heading into the woods')
@@ -889,10 +889,10 @@ def hex_woods(play):
 def hamlet(play):
     """Hex crawl: walking toward the nearest hamlet the campaign's seed put near Kingswood, coming upon it, and the
     found hamlet being a place of its own on the Road with its own name and people."""
-    from dungeon import hexes, travel  # the harness runs beside the app's code
+    from adventure import hexes, travel  # the harness runs beside the app's code
     play.start('agna-holt')
     play.say('I set out for Convila.')  # a first journey sets the campaign's seed
-    with play.dungeon.database() as connection:
+    with play.adventure.database() as connection:
         connection.row_factory = __import__('sqlite3').Row
         seed = connection.execute('SELECT seed FROM story_campaign').fetchone()['seed']
     board = hexes.Grid(next(item for item in travel.maps() if hexes.is_hex(item) and hexes.key(item) == 'vallarith'),
@@ -924,7 +924,7 @@ def narration_format(play):
     """How it's written: a new campaign starts in close third person, past tense, short; first person present and
     long at the Table; then second person past, the next line following the change."""
     play.start('agna-holt')
-    rules = play.dungeon.call('GET', '/api/story/table')
+    rules = play.adventure.call('GET', '/api/story/table')
     play.write(f"- format at start: pov {rules.get('pov')}, tense {rules.get('tense')}, length {rules.get('length')}\n")
     if (rules.get('pov'), rules.get('tense'), rules.get('length')) != ('third', 'past', 'short'):
         play.flag(f"A new campaign did not start in third person, past tense, short: {rules}")
@@ -973,14 +973,14 @@ def fence(play):
     till. The goods are marked stolen and the clock set to evening by the test itself."""
     play.start('tobin-pell')
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:
         connection.execute("UPDATE story_inventory SET stolen=1 WHERE item_id IN ('candles', 'gloves')")
     play.write('- candles and gloves marked stolen for the test\n')
     play.move('pell-provisions')
     play.gear()
     play.say('I sell the candles over the counter.')
     play.gear()
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:
         at = connection.execute('SELECT at FROM story_clock WHERE id=1').fetchone()[0]
         connection.execute('UPDATE story_clock SET at=? WHERE id=1', (at[:11] + '20:30:00' + at[19:],))
     play.move('mother-mags')
@@ -1034,7 +1034,7 @@ def spoils(play):
     stolen."""
     play.start('agna-holt')
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:  # the Sawpit fills at night
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:  # the Sawpit fills at night
         at = connection.execute('SELECT at FROM story_clock WHERE id=1').fetchone()[0]
         connection.execute('UPDATE story_clock SET at=? WHERE id=1', (at[:11] + '20:30:00' + at[19:],))
     play.move('the-sawpit')
@@ -1059,7 +1059,7 @@ def mending(play):
     """Wear and repair: a damaged sword mended at the Blackwood smithy for a price, not bought anew."""
     play.start('agna-holt')
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:  # the test's own damage
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:  # the test's own damage
         connection.row_factory = sqlite3.Row
         row = connection.execute("SELECT id, item_id FROM story_inventory WHERE item_id LIKE '%sword%' "
                                  "OR item_id LIKE '%blade%'").fetchone()
@@ -1088,7 +1088,7 @@ def mending(play):
 def town_map(play):
     """The Town widget: Kingswood's street map, looking at a blank building, and walking to it by name."""
     play.start('agna-holt')
-    town = play.dungeon.call('GET', '/api/story/town')['town']
+    town = play.adventure.call('GET', '/api/story/town')['town']
     if not town:
         play.flag('Kingswood has no street map.')
         return
@@ -1101,10 +1101,10 @@ def town_map(play):
     if not blank:
         play.flag('No blank building to look at.')
         return
-    looked = play.dungeon.call('POST', f"/api/story/town/lots/{blank[0]['id']}/look")
+    looked = play.adventure.call('POST', f"/api/story/town/lots/{blank[0]['id']}/look")
     found = looked.get('found') or {}
     play.write(f"- looked at {blank[0]['id']}: {json.dumps(found)[:400]}\n")
-    again = play.dungeon.call('POST', f"/api/story/town/lots/{blank[0]['id']}/look")
+    again = play.adventure.call('POST', f"/api/story/town/lots/{blank[0]['id']}/look")
     if again.get('found') != found:
         play.flag('Looking at the same building twice gave a different answer.')
     name = found.get('name') or (found.get('place') or {}).get('name')
@@ -1127,14 +1127,14 @@ def set_fight(play, spec: dict, zone: str = 'near'):
     encounter dice)."""
     import random
 
-    from dungeon import combat, combat5e, combat_brp, combat_iron  # the harness runs beside the app's code
-    ruleset = (play.dungeon.call('GET', '/api/story/sheet') or {}).get('ruleset')
+    from adventure import combat, combat5e, combat_brp, combat_iron  # the harness runs beside the app's code
+    ruleset = (play.adventure.call('GET', '/api/story/sheet') or {}).get('ruleset')
     made = (combat5e.foes_from(spec, zone, random.Random()) if ruleset == 'srd52' else
             combat_brp.foes_from(spec, zone) if ruleset == 'brp' else
             combat_iron.foes_from(spec, zone) if ruleset == 'ironsworn' else combat.foes_from(spec, zone))
     foes = [foe | ({'ranged': True} if spec.get('ranged') else {}) for foe in made]
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:
         connection.execute('INSERT INTO story_fight (id, round, wants, foes, initiative, bare) VALUES (1, 1, ?, ?, '
                            'NULL, 0)', (spec['wants'], json.dumps(foes)))
     play.write(f"- fight set: {spec['count']} × {spec['name']}, wants {spec['wants']}\n")
@@ -1192,7 +1192,7 @@ def brawler(play):
     off ends it."""
     play.start('tobin-pell')
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:  # the Sawpit fills at night
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:  # the Sawpit fills at night
         at = connection.execute('SELECT at FROM story_clock WHERE id=1').fetchone()[0]
         connection.execute('UPDATE story_clock SET at=? WHERE id=1', (at[:11] + '20:30:00' + at[19:],))
     play.move('the-sawpit')
@@ -1208,7 +1208,7 @@ def ambush(play):
     unawares (Spot the ambush)."""
     play.start('agna-holt')
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:
         at = connection.execute('SELECT at FROM story_clock WHERE id=1').fetchone()[0]
         connection.execute('UPDATE story_clock SET at=? WHERE id=1', (at[:11] + '20:30:00' + at[19:],))
     play.move('the-sawpit')
@@ -1229,7 +1229,7 @@ def ambush(play):
 def set_clock(play, hour: str):
     """Set the story clock to this hour today (the test's own setup, e.g. '20:30')."""
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:
         at = connection.execute('SELECT at FROM story_clock WHERE id=1').fetchone()[0]
         connection.execute('UPDATE story_clock SET at=? WHERE id=1', (at[:11] + hour + ':00' + at[19:],))
     play.clock = None  # the test turned it back, not the story
@@ -1238,7 +1238,7 @@ def set_clock(play, hour: str):
 
 def lie_cards(play):
     """The secret insight rolls on lies so far (no roll card shows them)."""
-    with play.dungeon.database() as connection:
+    with play.adventure.database() as connection:
         for card_id, lines in connection.execute("SELECT card_id, lines FROM story_cards WHERE scene='lie'"):
             play.write(f'- lie read ({card_id}): {lines[:400]}\n')
 
@@ -1330,7 +1330,7 @@ def dice_log(play):
     play.say('I arm-wrestle the biggest logger in the Felled Oak for a round of drinks.')
     play.say('I try to talk the keeper into a free bowl of stew.')
     play.say('I take a seat by the fire.')
-    log = play.dungeon.call('GET', '/api/story/dice-log')
+    log = play.adventure.call('GET', '/api/story/dice-log')
     turns = log.get('turns') or []
     play.write(f"- dice log: shown {log.get('shown')}, {len(turns)} turns, tally {json.dumps(log.get('tally'))}\n")
     for turn in turns:
@@ -1339,7 +1339,7 @@ def dice_log(play):
     if not turns or not rolled:
         play.flag('The dice log shows no rolls after two rolling lines.')
     play.attempt('Hide the dice', 'PUT', '/api/story/table', {'show_odds': False})
-    hidden = play.dungeon.call('GET', '/api/story/dice-log')
+    hidden = play.adventure.call('GET', '/api/story/dice-log')
     play.write(f"- hidden: shown {hidden.get('shown')}, {len(hidden.get('turns') or [])} turns\n")
     if hidden.get('turns'):
         play.flag('The dice log still lists rolls with the dice hidden.')
@@ -1419,7 +1419,7 @@ def party(play):
 def ironsworn_vows(play):
     """Ironsworn progress: an iron vow, a landed roll that names it (Reach a Milestone), a sworn bond on the bonds
     track, and the vow fulfilled with a progress roll."""
-    choices = play.dungeon.call('GET', '/api/story/start').get('ironsworn') or {}
+    choices = play.adventure.call('GET', '/api/story/start').get('ironsworn') or {}
     placed = dict(zip(('iron', 'edge', 'wits', 'heart', 'shadow'), choices.get('array') or [3, 2, 2, 1, 1]))
     by_category = {}
     for asset in choices.get('assets') or []:
@@ -1467,7 +1467,7 @@ def away(play, hours: float):
     """Pretend the player closed the app this many hours ago (the real-time mark, story_real, moved back)."""
     from datetime import datetime, timedelta
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:
         row = connection.execute('SELECT at FROM story_real WHERE id=1').fetchone()
         if row:
             at = datetime.fromisoformat(row[0]) - timedelta(hours=hours)
@@ -1479,14 +1479,14 @@ def away(play, hours: float):
 def real_time(play):
     """Real-time worlds: Havenbrooke keeps moving while the app is closed (time since the last line passes before the
     next, and the narrator hears about the gap); the Table's World clock set to story time stops it."""
-    play.dungeon.call('PUT', '/api/story/scene', {'city_id': 'haven', 'place_id': 'nexus-housing'})
-    play.dungeon.call('DELETE', '/api/story')
-    premades = play.dungeon.call('GET', '/api/story/start').get('premades') or []
+    play.adventure.call('PUT', '/api/story/scene', {'city_id': 'haven', 'place_id': 'nexus-housing'})
+    play.adventure.call('DELETE', '/api/story')
+    premades = play.adventure.call('GET', '/api/story/start').get('premades') or []
     if not premades:
         play.flag('No Havenbrooke premades offered in Haven.')
         return
     play.start(premades[0]['id'])
-    rules = play.dungeon.call('GET', '/api/story/table')
+    rules = play.adventure.call('GET', '/api/story/table')
     play.write(f"- World clock: {rules.get('clock')}\n")
     play.say('I unpack the last of my boxes and put my posters up.')
     before = play.story()['scene']['local_time']
@@ -1512,8 +1512,8 @@ def real_time(play):
 def fivee_start(play, class_id: str, name: str, about: str, scores: dict, levels: int = 2, hurt: int = 0):
     """A 5E character of this class, raised `levels` levels as written (the test's own advance, to reach the
     subclass), and `hurt` hit points down."""
-    from dungeon.rules import srd52  # the harness runs beside the app's code
-    srd = play.dungeon.call('GET', '/api/story/start').get('srd52') or {}
+    from adventure.rules import srd52  # the harness runs beside the app's code
+    srd = play.adventure.call('GET', '/api/story/start').get('srd52') or {}
     chosen = next(item for item in srd.get('classes') or [] if item['id'] == class_id)
     background = (srd.get('backgrounds') or [{}])[0]
     ids = {skill['name']: skill['id'] for skill in srd.get('skills') or []}
@@ -1522,7 +1522,7 @@ def fivee_start(play, class_id: str, name: str, about: str, scores: dict, levels
                build={'class_id': class_id, 'species_id': 'human', 'background_id': background['id'], 'scores': scores,
                       'skills': picks[:chosen['skills']['count']]})
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:
         sheet = json.loads(connection.execute('SELECT data FROM story_sheet WHERE id=1').fetchone()[0])
         for _ in range(levels):
             sheet, gained = srd52.advance(sheet)
@@ -1543,7 +1543,7 @@ def fivee_cleric(play):
     play.move('the-ford')
     set_fight(play, {'name': 'road thug', 'count': 1, 'vitality': 10, 'resolve': 8, 'weapon': 0, 'wants': 'rob'})
     sqlite3 = __import__('sqlite3')
-    with sqlite3.connect(play.dungeon.data_dir / 'dungeon.sqlite3') as connection:  # hurt again, for Healing Word
+    with sqlite3.connect(play.adventure.data_dir / 'adventure.sqlite3') as connection:  # hurt again, for Healing Word
         sheet = json.loads(connection.execute('SELECT data FROM story_sheet WHERE id=1').fetchone()[0])
         sheet['hp'] = max(1, sheet['hp'] - 10)
         connection.execute('UPDATE story_sheet SET data=? WHERE id=1', (json.dumps(sheet),))
@@ -1574,7 +1574,7 @@ def fivee_evoker(play):
 def brp_magic(play):
     """BRP magic: a wizard casts Light out of a fight and Blast 2 in one on power points, never spending the last;
     sleep brings the points back."""
-    choices = play.dungeon.call('GET', '/api/story/start').get('brp') or {}
+    choices = play.adventure.call('GET', '/api/story/start').get('brp') or {}
     professions = [item.get('id') for item in choices.get('professions') or []]
     play.write(f'- professions: {professions}\n')
     if 'wizard' not in professions:
@@ -1602,9 +1602,9 @@ def brp_magic(play):
 def town_quests(play):
     """Town adventures: a BABEL start on the Concourse begins its quests; reaching Hollin mid-campaign begins
     Hollin's (once, deadlines from the arrival); a dangerous place there and a search with its finds."""
-    play.dungeon.call('PUT', '/api/story/scene', {'city_id': 'the-concourse', 'place_id': 'the-plaza'})
-    play.dungeon.call('DELETE', '/api/story')
-    premades = play.dungeon.call('GET', '/api/story/start').get('premades') or []
+    play.adventure.call('PUT', '/api/story/scene', {'city_id': 'the-concourse', 'place_id': 'the-plaza'})
+    play.adventure.call('DELETE', '/api/story')
+    premades = play.adventure.call('GET', '/api/story/start').get('premades') or []
     if not premades:
         play.flag('No BABEL premades offered on the Concourse.')
         return

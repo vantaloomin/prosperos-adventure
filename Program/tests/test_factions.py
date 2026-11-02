@@ -1,4 +1,4 @@
-"""Factions (dungeon/factions.py): clocks on the world clock, the news reaching town, standing, the narrator's view."""
+"""Factions (adventure/factions.py): clocks on the world clock, the news reaching town, standing, the narrator's view."""
 from datetime import datetime, timedelta
 
 import pytest
@@ -7,7 +7,7 @@ from test_happenings import dealt  # noqa: F401 - a fixture
 from test_inventory import begin
 from test_travel import ok, reply
 
-from dungeon import factions
+from adventure import factions
 
 DAY = datetime(1290, 5, 1, 12)
 

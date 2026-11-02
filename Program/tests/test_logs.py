@@ -1,7 +1,7 @@
 import logging
 import logging.config
 
-from dungeon import logs
+from adventure import logs
 
 
 def test_credentials_are_masked():
@@ -23,10 +23,10 @@ def test_log_file_masks_messages_and_tracebacks(tmp_path):
         logger.exception('Request failed')
     for handler in logger.handlers:
         handler.flush()
-    text = (tmp_path / 'logs' / 'dungeon.log').read_text(encoding='utf-8')
+    text = (tmp_path / 'logs' / 'adventure.log').read_text(encoding='utf-8')
     assert 'Request failed' in text and 'RuntimeError' in text
     assert 'SECRET' not in text
-    for name in ('uvicorn', 'uvicorn.error', 'dungeon'):
+    for name in ('uvicorn', 'uvicorn.error', 'adventure'):
         configured = logging.getLogger(name)
         for handler in list(configured.handlers):
             handler.close()
@@ -35,15 +35,15 @@ def test_log_file_masks_messages_and_tracebacks(tmp_path):
 
 
 def test_unexpected_failures_say_what_failed_and_why_in_plain_words():
-    """Testers saw only "Something went wrong in the Dungeon. Please try again" and could not tell what broke."""
+    """Testers saw only "Something went wrong in Adventure. Please try again" and could not tell what broke."""
     import sqlite3
 
-    from dungeon import troubleshoot
-    said = troubleshoot.for_request('GET', '/api/world', ValueError('jpl names careers this city does not offer'), '/x/dungeon.log')
+    from adventure import troubleshoot
+    said = troubleshoot.for_request('GET', '/api/world', ValueError('jpl names careers this city does not offer'), '/x/adventure.log')
     assert said.startswith("Couldn't load the cities. This looks like a bug")
     assert said.endswith('Details: ValueError: jpl names careers this city does not offer')
-    assert '/x/dungeon.log' in said and 'Traceback' not in said
-    assert troubleshoot.area('/api/story/messages') == 'the story' and troubleshoot.area('/api/storyline') == 'the Dungeon'
+    assert '/x/adventure.log' in said and 'Traceback' not in said
+    assert troubleshoot.area('/api/story/messages') == 'the story' and troubleshoot.area('/api/storyline') == 'Adventure'
     locked = troubleshoot.for_request('POST', '/api/story/messages', sqlite3.OperationalError('database is locked'))
     assert locked.startswith("Couldn't finish that in the story. Its data file was busy")
     assert 'read-only' in troubleshoot.reason(sqlite3.OperationalError('attempt to write a readonly database'))

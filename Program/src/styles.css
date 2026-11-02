@@ -963,7 +963,7 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .entity-card-head h2 { margin: 0; }
 .entity-card-head p { margin: 2px 0 0; }
 .entity-card-head > div { flex: 1; min-width: 0; }
-/* A faction's emblem or an item's icon (dungeon/icons.py): drawn on transparent, so it sits on any world's colors. */
+/* A faction's emblem or an item's icon (adventure/icons.py): drawn on transparent, so it sits on any world's colors. */
 .entity-picture { flex: none; width: 72px; height: 72px; object-fit: contain; }
 .entity-card .dialog-body { display: flex; flex-direction: column; gap: 8px; }
 .entity-card .dialog-body p { margin: 0; }
@@ -1023,7 +1023,7 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .notice .hardware-fix, .notice .hardware-after { display: block; margin-top: 8px; }
 
 
-/* Talk of the town (dungeon/politics.py, StoryPolitics.tsx): side shares at the bar's ends, name | view rows. */
+/* Talk of the town (adventure/politics.py, StoryPolitics.tsx): side shares at the bar's ends, name | view rows. */
 .politics-list { list-style: none; padding: 0; margin: 6px 0; display: grid; gap: 12px; }
 .politics-issue p, .politics-detail p { margin: 0; }
 .politics-title .badge { margin-left: 4px; white-space: nowrap; }

@@ -1,4 +1,4 @@
-// Words and numbers for "Set it up for me" (dungeon/ready.py; Iris, v09-appearance-first-launch.md).
+// Words and numbers for "Set it up for me" (adventure/ready.py; Iris, v09-appearance-first-launch.md).
 
 export type ReadyStatus = 'idle' | 'downloading' | 'checking' | 'paused' | 'cancelled' | 'failed' | 'ready'
 export interface ReadyModel { key: string; name: string; quant: string; bits: string; bytes: number; file: string; licence: string; page: string; fits: boolean }

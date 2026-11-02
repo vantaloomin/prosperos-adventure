@@ -1,12 +1,12 @@
-"""Walking an interior (dungeon/delving.py): in, room to room, locks, traps, searching, foes, out; and seeded
+"""Walking an interior (adventure/delving.py): in, room to room, locks, traps, searching, foes, out; and seeded
 interiors for rolled hex sites."""
 import pytest
 from conftest import Chunk, tell
 from test_hexes import out_in_the_wild, site_hexes, vallarith
 from test_inventory import begin
 
-from dungeon import combat, delving, hexes, interiors, timeline
-from dungeon.world.schema import Interior
+from adventure import combat, delving, hexes, interiors, timeline
+from adventure.world.schema import Interior
 
 
 class Dice:

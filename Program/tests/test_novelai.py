@@ -7,10 +7,10 @@ import zipfile
 import httpx
 import pytest
 
-from dungeon.images import tags
-from dungeon.images.adapters import novelai
-from dungeon.images.adapters.base import AdapterError, ImageRequest
-from dungeon.images.adapters.hosted import HostedAdapter
+from adventure.images import tags
+from adventure.images.adapters import novelai
+from adventure.images.adapters.base import AdapterError, ImageRequest
+from adventure.images.adapters.hosted import HostedAdapter
 from tests.test_images import add_backend, ok, png
 
 TOKEN = 'pst-test-token'

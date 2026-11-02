@@ -6,7 +6,7 @@ from conftest import Chunk, tell
 from test_combat import roll
 from test_lies import begin
 
-from dungeon import combat, labour, rest, story, story_clock
+from adventure import combat, labour, rest, story, story_clock
 
 
 def ok(response):

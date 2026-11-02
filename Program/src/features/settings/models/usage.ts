@@ -1,4 +1,4 @@
-// Credits and usage a service reports for free (dungeon/providers/balance.py). Profiles whose service has no
+// Credits and usage a service reports for free (adventure/providers/balance.py). Profiles whose service has no
 // such lookup show nothing at all.
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../../../api'

@@ -1,4 +1,4 @@
-"""Life Cards in play (dungeon/happenings.py): a day in town, a journey and a rest draw from the world's deck."""
+"""Life Cards in play (adventure/happenings.py): a day in town, a journey and a rest draw from the world's deck."""
 import re
 from datetime import date
 
@@ -8,8 +8,8 @@ from test_inventory import begin
 from test_rest import out_in_the_badlands
 from test_travel import Road, ok, reply
 
-from dungeon import happenings, inventory
-from dungeon.life import cards
+from adventure import happenings, inventory
+from adventure.life import cards
 
 
 @pytest.fixture
@@ -109,7 +109,7 @@ def test_every_card_the_game_can_draw_has_every_name_filled(app):
 def test_fate_rumor_quest_and_pursuer_effects_are_applied(client, app):
     from datetime import datetime
 
-    from dungeon import director, record
+    from adventure import director, record
     begin(client)
     now = datetime(2026, 10, 1, 12)
     context = {'npc': {'key': 'pell', 'full': 'Pell Ash'}, 'title': 'a knife in the dark', 'truth': 'Pell was knifed.',
@@ -141,7 +141,7 @@ def test_fate_rumor_quest_and_pursuer_effects_are_applied(client, app):
 
 def test_a_drawn_card_shows_under_the_line_with_its_picture_and_a_veiled_one_shows_its_back(
         client, connected, provider, app, dealt, monkeypatch):
-    from dungeon import world_data
+    from adventure import world_data
     real = world_data.asset
     monkeypatch.setattr(world_data, 'asset', lambda world, name: b'RIFF0000WEBP' if name.startswith('cards/')
                         else real(world, name))
@@ -162,7 +162,7 @@ def test_a_drawn_card_shows_under_the_line_with_its_picture_and_a_veiled_one_sho
 
 
 def test_every_life_card_has_its_picture_and_every_world_its_card_back():
-    from dungeon import world_data
+    from adventure import world_data
     for world in cards.worlds():
         assert world_data.asset(world, 'cards/back.webp'), world
         missing = [item['id'] for item in cards.cards(world) if not world_data.asset(world, f"cards/{item['id']}.webp")]

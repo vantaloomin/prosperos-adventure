@@ -1,9 +1,9 @@
-"""The adult side of life (dungeon/world/intimacy.py): adults only, off by default, in their own prompt only."""
+"""The adult side of life (adventure/world/intimacy.py): adults only, off by default, in their own prompt only."""
 import json
 import re
 from collections import Counter
 
-from dungeon.world import catalog, dating, intimacy, townsfolk
+from adventure.world import catalog, dating, intimacy, townsfolk
 
 # Themes the bank must never touch: anyone under 18, anything without consent, family, animals, real people,
 # and anything illegal or done to someone who can't say yes.

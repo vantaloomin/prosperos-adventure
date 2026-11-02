@@ -1,5 +1,5 @@
-"""Local politics (dungeon/world/politics.py, dungeon/politics.py): issues a town argues about, people's views and the
-factions behind them, all seeded, with the world's powers (dungeon/factions.py) as the town's first factions and the
+"""Local politics (adventure/world/politics.py, adventure/politics.py): issues a town argues about, people's views and the
+factions behind them, all seeded, with the world's powers (adventure/factions.py) as the town's first factions and the
 player's changes on top."""
 from datetime import date, timedelta
 
@@ -8,9 +8,9 @@ from conftest import tell
 from test_inventory import begin
 from test_travel import ok, reply
 
-from dungeon import factions
-from dungeon import politics as town_politics
-from dungeon.world import catalog, politics
+from adventure import factions
+from adventure import politics as town_politics
+from adventure.world import catalog, politics
 
 DAY = date(2026, 12, 10)
 

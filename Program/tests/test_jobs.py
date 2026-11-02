@@ -1,4 +1,4 @@
-"""Jobs from factions' needs (dungeon/jobs.py) and oaths kept as quests (dungeon/quests.py)."""
+"""Jobs from factions' needs (adventure/jobs.py) and oaths kept as quests (adventure/quests.py)."""
 import json
 from datetime import datetime, timedelta
 
@@ -7,7 +7,7 @@ from conftest import tell
 from test_inventory import begin
 from test_travel import Road, ok, reply
 
-from dungeon import factions, inventory, jobs, quests
+from adventure import factions, inventory, jobs, quests
 
 NOW = datetime(1290, 5, 1, 12)
 

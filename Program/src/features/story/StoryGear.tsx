@@ -8,7 +8,7 @@ import { EntityName } from './EntityCard'
 
 const GEAR_KEY = ['story-gear']
 
-/** The character's purse and pack (dungeon/inventory.py), and the shop window where the story is. */
+/** The character's purse and pack (adventure/inventory.py), and the shop window where the story is. */
 export function StoryGear({ onTrade, open }: { onTrade: () => void; open?: boolean }) {
   const client = useQueryClient()
   const gear = useQuery({ queryKey: GEAR_KEY, queryFn: () => api<Gear>('/story/gear') })
@@ -39,7 +39,7 @@ export function StoryGear({ onTrade, open }: { onTrade: () => void; open?: boole
   </>)
 }
 
-/** A thing's picture beside its name (dungeon/icons.py); the name carries the meaning, so the picture is decoration. */
+/** A thing's picture beside its name (adventure/icons.py); the name carries the meaning, so the picture is decoration. */
 export function ThingIcon({ src }: { src?: string | null }) {
   return src ? <img className="story-thing-icon" src={src} alt="" width={32} height={32} loading="lazy" /> : null
 }

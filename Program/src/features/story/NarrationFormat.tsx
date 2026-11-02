@@ -4,7 +4,7 @@ import { LENGTHS, POVS, TENSES } from './storyText'
 
 type Format = Pick<TableRules, 'pov' | 'tense' | 'length'>
 
-/** How the narrator writes the story (dungeon/narration/prompt.py Format), kept at the Table (dungeon/table.py): point
+/** How the narrator writes the story (adventure/narration/prompt.py Format), kept at the Table (adventure/table.py): point
  *  of view, tense and length. Changeable at any time; the next line follows it. */
 export function NarrationFormat({ rules, onChange }: { rules: Format; onChange: (change: Format) => void }) {
   return (<>

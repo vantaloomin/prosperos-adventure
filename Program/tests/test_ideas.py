@@ -1,11 +1,11 @@
-"""Ideas (dungeon/ideas.py): two or three things the character could do now, used once and never kept, from what the
+"""Ideas (adventure/ideas.py): two or three things the character could do now, used once and never kept, from what the
 character knows only."""
 import json
 
 from conftest import tell
 from test_pace import ok, reply
 
-from dungeon import ideas, record
+from adventure import ideas, record
 
 PICKS = ['I ask the cellarman about the zebra-striped barge.', 'I climb onto the quince-stacked roof.',
          'I wait by the marmalade door and watch.']

@@ -1,4 +1,4 @@
-"""Campaign start (dungeon/campaign.py): a premade character or one the player made, then the story opens."""
+"""Campaign start (adventure/campaign.py): a premade character or one the player made, then the story opens."""
 from conftest import Chunk
 
 

@@ -1,8 +1,8 @@
-"""Faction emblems and item icons (dungeon/icons.py): every faction and item of the built-in worlds has its picture,
+"""Faction emblems and item icons (adventure/icons.py): every faction and item of the built-in worlds has its picture,
 and the pack, the counter and the powers carry them."""
 import json
 
-from dungeon import icons, inventory, packages, tiers, world_data
+from adventure import icons, inventory, packages, tiers, world_data
 
 WORLDS = ('vallarith', 'havenbrooke', 'babel')
 

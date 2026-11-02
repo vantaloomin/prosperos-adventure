@@ -1,10 +1,10 @@
-"""What the narrator is reminded of and what the characters still remember (dungeon/remembering.py)."""
+"""What the narrator is reminded of and what the characters still remember (adventure/remembering.py)."""
 import json
 
 from conftest import tell
 from test_travel import Road, ok, reply
 
-from dungeon import record, remembering
+from adventure import record, remembering
 
 NOW = '2026-10-22T00:00:00+00:00'
 

@@ -11,7 +11,7 @@ interface Props {
   open?: boolean
 }
 
-/** The story's chapters and branches (dungeon/chapters.py): the current branch like a table of contents, the tree of
+/** The story's chapters and branches (adventure/chapters.py): the current branch like a table of contents, the tree of
  * every branch, and the bookmarks. In Ironman there is no going back, so the tree only reads. */
 export function StoryChapters({ campaign, change, onBack, open }: Props) {
   const [title, setTitle] = useState('')

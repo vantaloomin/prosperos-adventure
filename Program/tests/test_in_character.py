@@ -1,5 +1,5 @@
 
-from dungeon.in_character import applies, breaks, clean
+from adventure.in_character import applies, breaks, clean
 
 
 def test_ai_denials_are_recognized():

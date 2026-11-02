@@ -19,7 +19,7 @@ const TINTS: Record<string, string> = {
   night: 'linear-gradient(rgba(8, 14, 40, 0.58), rgba(8, 14, 40, 0.66))',
 }
 
-/** Pictures on request (dungeon/art.py): you, someone you met, this place, or the whole scene. Each is built from what
+/** Pictures on request (adventure/art.py): you, someone you met, this place, or the whole scene. Each is built from what
  *  the game tracks and made by the image backends in Settings; one goes out of date when what it shows changes. */
 export function StoryArt({ people, present = [], place, open }: { people: StoryPerson[]; present?: { key: string; label: string }[]; place: { key: string; name: string }; open?: boolean }) {
   const client = useQueryClient()

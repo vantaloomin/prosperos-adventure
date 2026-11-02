@@ -4,7 +4,7 @@ import { ApiError, api } from '../api'
 import { Notice } from './Feedback'
 
 /**
- * A request that failed. When the Dungeon itself hit a bug, its message names the log file, and on the PC
+ * A request that failed. When Adventure itself hit a bug, its message names the log file, and on the PC
  * a button opens the folder holding it, so the user does not have to find the data folder themself.
  */
 export function ErrorNotice({ error, children, action }: { error: Error; children?: ReactNode; action?: ReactNode }) {
@@ -15,7 +15,7 @@ export function ErrorNotice({ error, children, action }: { error: Error; childre
   </Notice>
 }
 
-/** The Dungeon ends an unexpected failure's message with "Details: …" for a bug report (dungeon/troubleshoot.py),
+/** Adventure ends an unexpected failure's message with "Details: …" for a bug report (adventure/troubleshoot.py),
  * shown on its own smaller line so the plain explanation reads first. */
 function splitDetails(text: string): { message: string; details: string } {
   const at = text.lastIndexOf(' Details: ')

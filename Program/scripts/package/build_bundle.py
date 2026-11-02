@@ -6,7 +6,7 @@ and launches without Python, Node or Prospero's Study. Run `npm run build` first
 are fetched with `--platform win_amd64`, so the bundle can be assembled on any host; on Windows
 the bytecode is also precompiled for a faster first launch.
 
-Output in build/package/: ProsperoDungeon-<version>-win-x64.zip and SHA256SUMS.txt.
+Output in build/package/: ProsperoAdventure-<version>-win-x64.zip and SHA256SUMS.txt.
 """
 import argparse
 import hashlib
@@ -22,13 +22,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from dungeon.identity import APP_ID, APP_NAME, SCHEMA_VERSION, VERSION  # noqa: E402
+from adventure.identity import APP_ID, APP_NAME, SCHEMA_VERSION, VERSION  # noqa: E402
 
 PYTHON_VERSION = '3.12.10'
 PYTHON_URL = f'https://api.nuget.org/v3-flatcontainer/python/{PYTHON_VERSION}/python.{PYTHON_VERSION}.nupkg'
 PYTHON_SHA256 = '0eb85c2dfccccf1b17352de4c397f69194035b7d37149eacc16f1147d93de3b8'
-BUNDLE_DIR = 'ProsperoDungeon'
-LAUNCHER = 'Prospero Dungeon.cmd'
+BUNDLE_DIR = 'ProsperoAdventure'
+LAUNCHER = 'Prospero Adventure.cmd'
 MANIFEST = 'bundle.json'
 # Development tools in the lockfile that the installed app never imports.
 DEV_ONLY = {'pytest', 'ruff', 'iniconfig', 'pluggy', 'pygments', 'packaging'}
@@ -39,9 +39,9 @@ RUNTIME_PRUNE = ('include', 'libs', 'Scripts', 'Lib/site-packages/pip', 'Lib/ens
 PTH = 'DLLs\nLib\n.\nLib\\site-packages\n..\\app\nimport site\n'
 LAUNCHER_TEXT = (
     '@echo off\r\n'
-    'rem Starts Prospero Dungeon with its own Python runtime. Keep this window open while you use it.\r\n'
+    'rem Starts Prospero Adventure with its own Python runtime. Keep this window open while you use it.\r\n'
     'setlocal\r\n'
-    '"%~dp0runtime\\python.exe" -I -m dungeon.launch %*\r\n'
+    '"%~dp0runtime\\python.exe" -I -m adventure.launch %*\r\n'
     'exit /b %ERRORLEVEL%\r\n')
 
 
@@ -116,7 +116,7 @@ def install_dependencies(requirements: Path, site_packages: Path):
 
 def copy_app(app: Path):
     ignore = shutil.ignore_patterns('__pycache__', '*.pyc', '*.pyo')
-    shutil.copytree(ROOT / 'dungeon', app / 'dungeon', ignore=ignore)
+    shutil.copytree(ROOT / 'adventure', app / 'adventure', ignore=ignore)
     shutil.copytree(ROOT / 'dist', app / 'dist')
     shutil.copy2(ROOT.parent / 'LICENSE', app / 'LICENSE')
 
@@ -168,7 +168,7 @@ def build(output: Path, cache: Path) -> Path:
     manifest = {'app_id': APP_ID, 'app_name': APP_NAME, 'version': VERSION, 'schema_version': SCHEMA_VERSION,
                 'platform': 'win-x64', 'python': PYTHON_VERSION, 'commit': commit(), 'files': file_list(bundle)}
     (bundle / MANIFEST).write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
-    archive_path = output / f'ProsperoDungeon-{VERSION}-win-x64.zip'
+    archive_path = output / f'ProsperoAdventure-{VERSION}-win-x64.zip'
     write_archive(bundle, archive_path)
     (output / 'SHA256SUMS.txt').write_text(f'{digest(archive_path)}  {archive_path.name}\n', encoding='utf-8')
     print(f'Built {archive_path} ({archive_path.stat().st_size // (1 << 20)} MiB, '

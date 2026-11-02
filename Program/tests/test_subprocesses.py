@@ -4,9 +4,9 @@ import sys
 
 import pytest
 
-from dungeon import subprocesses
-from dungeon.providers import claude_code
-from dungeon.providers.chat import ChatProvider
+from adventure import subprocesses
+from adventure.providers import claude_code
+from adventure.providers.chat import ChatProvider
 
 
 class NoSubprocessLoop(asyncio.SelectorEventLoop):

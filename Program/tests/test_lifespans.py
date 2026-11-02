@@ -1,7 +1,7 @@
-"""Lifespans for elves and other long-lived people (dungeon/world/lifespans.py): a life age beside the real one."""
+"""Lifespans for elves and other long-lived people (adventure/world/lifespans.py): a life age beside the real one."""
 import copy
 
-from dungeon.world import catalog, couples, dating, lifespans, looks, townsfolk, turnover
+from adventure.world import catalog, couples, dating, lifespans, looks, townsfolk, turnover
 
 ELF = {'name': 'Aerin Leafmantle', 'identity': 'Aerin is an elf, 90. A quiet bookbinder. They/them.',
        'personality': 'Patient and dry.', 'timezone': 'UTC', 'home_city': 'baltimore'}

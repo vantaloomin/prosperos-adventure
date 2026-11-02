@@ -1,13 +1,13 @@
-"""Forgiving city loading (dungeon/world/mend.py): user cities and packs load despite small mistakes, new kinds of
+"""Forgiving city loading (adventure/world/mend.py): user cities and packs load despite small mistakes, new kinds of
 places, schools and jobs are kept, and every change is described. Built-in cities stay exact."""
 import copy
 import json
 
 import pytest
 
-from dungeon.world import catalog, generators, mend
-from dungeon.world.custom import template
-from dungeon.world.schema import COLLEGE_TYPES, LOCAL_COLOR_KINDS, PLACE_KINDS, SOURCE_KINDS, TRANSIT_KINDS
+from adventure.world import catalog, generators, mend
+from adventure.world.custom import template
+from adventure.world.schema import COLLEGE_TYPES, LOCAL_COLOR_KINDS, PLACE_KINDS, SOURCE_KINDS, TRANSIT_KINDS
 
 BUILTINS = sorted(key for key, value in catalog.cities().items() if value['origin'] == 'builtin')
 DERIVED = ('data_version', 'builtin', 'origin', 'pack_file')

@@ -388,7 +388,7 @@ wheels = [
 ]
 
 [[package]]
-name = "prospero-dungeon"
+name = "prospero-adventure"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

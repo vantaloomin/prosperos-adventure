@@ -4,8 +4,8 @@ from datetime import datetime
 
 from test_combat import Dice, foe, roll
 
-from dungeon import combat, referee, story_clock
-from dungeon.world import catalog, townsfolk
+from adventure import combat, referee, story_clock
+from adventure.world import catalog, townsfolk
 
 
 def test_tossing_the_purse_rolls_nothing():

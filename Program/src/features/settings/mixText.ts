@@ -1,6 +1,6 @@
 import type { MixValues, TownsfolkMix } from '../../types'
 
-/** Shares as the town would have them, in words, for Worlds > Townsfolk mix (dungeon/world/mix.py). */
+/** Shares as the town would have them, in words, for Worlds > Townsfolk mix (adventure/world/mix.py). */
 
 export const BOLDER_LABELS: Record<string, string> = { '-2': 'Much tamer', '-1': 'Tamer', '0': 'As built', '1': 'Bolder', '2': 'Much bolder' }
 export const DRIVE_LABELS: Record<string, string> = { '-2': 'Much lower', '-1': 'Lower', '0': 'As built', '1': 'Higher', '2': 'Much higher' }

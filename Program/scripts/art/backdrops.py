@@ -1,14 +1,14 @@
-"""Makes the worlds' default backdrops (dungeon/art.py backdrop) with ChatGPT image generation, through the app's own
-Codex adapter (dungeon/images/adapters/codex.py): one image at a time under your `codex login`.
+"""Makes the worlds' default backdrops (adventure/art.py backdrop) with ChatGPT image generation, through the app's own
+Codex adapter (adventure/images/adapters/codex.py): one image at a time under your `codex login`.
 
-Each world lists its backdrops in its package, dungeon/world/packages/<world>/engine/art/<world>.json, with a prompt
+Each world lists its backdrops in its package, adventure/world/packages/<world>/engine/art/<world>.json, with a prompt
 for each and the world's style (`backdrop_style`): painterly for Vallarith and BABEL, photographic for Havenbrooke.
 An image is written to the package's assets/backdrops/<id>.webp at 1200x800; an outdoor backdrop also gets
 <id>-night.webp, made from the day picture so it shows the same place. The full-size PNGs ChatGPT sends are kept in
 Program/.tools/backdrops-raw. Images already there are skipped, so the run can be stopped and started again; delete
 one to have it made again.
 
-`--backend openai` sends the same requests to the OpenAI Images API instead (dungeon/images/adapters/hosted.py), with
+`--backend openai` sends the same requests to the OpenAI Images API instead (adventure/images/adapters/hosted.py), with
 the key in CHATGPT_API_KEY or OPENAI_API_KEY; a night picture goes through /images/edits with the day one attached.
 The key is read from the environment only and never printed.
 
@@ -36,11 +36,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from dungeon.images.adapters.base import AdapterError, ImageRequest  # noqa: E402
-from dungeon.images.adapters.codex import CodexAdapter  # noqa: E402
-from dungeon.images.adapters.hosted import HostedAdapter  # noqa: E402
+from adventure.images.adapters.base import AdapterError, ImageRequest  # noqa: E402
+from adventure.images.adapters.codex import CodexAdapter  # noqa: E402
+from adventure.images.adapters.hosted import HostedAdapter  # noqa: E402
 
-PACKAGES = ROOT / 'dungeon' / 'world' / 'packages'
+PACKAGES = ROOT / 'adventure' / 'world' / 'packages'
 RAW = ROOT / '.tools' / 'backdrops-raw'
 SIZE = (1536, 1024)
 SAVED = (1200, 800)

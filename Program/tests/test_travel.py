@@ -1,10 +1,10 @@
-"""Journeys on the travel map (dungeon/travel.py): fog of war, the way and its time and food, road encounters."""
+"""Journeys on the travel map (adventure/travel.py): fog of war, the way and its time and food, road encounters."""
 from datetime import datetime
 
 from conftest import Chunk, tell
 from test_inventory import begin
 
-from dungeon import travel
+from adventure import travel
 
 
 def ok(response):

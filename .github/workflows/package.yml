@@ -77,7 +77,7 @@ jobs:
           }
       - name: Launch on a machine without Python or Node
         shell: pwsh
-        run: scripts/package/smoke-test.ps1 -Bundle "$env:RUNNER_TEMP\Clean User Apps\ProsperoDungeon"
+        run: scripts/package/smoke-test.ps1 -Bundle "$env:RUNNER_TEMP\Clean User Apps\ProsperoAdventure"
 
   installer:
     needs: bundle
@@ -98,7 +98,7 @@ jobs:
           $download = Join-Path $env:RUNNER_TEMP 'download'
           $zip = Get-ChildItem -LiteralPath $download -Filter '*.zip' | Select-Object -First 1
           Expand-Archive -LiteralPath $zip.FullName -DestinationPath (Join-Path $env:RUNNER_TEMP 'bundle')
-          $source = Join-Path $env:RUNNER_TEMP 'bundle\ProsperoDungeon'
+          $source = Join-Path $env:RUNNER_TEMP 'bundle\ProsperoAdventure'
           $version = (Get-Content -LiteralPath (Join-Path $source 'bundle.json') -Raw | ConvertFrom-Json).version
           $iscc = Join-Path ${env:ProgramFiles(x86)} 'Inno Setup 6\ISCC.exe'
           if (-not (Test-Path -LiteralPath $iscc)) {
@@ -106,7 +106,7 @@ jobs:
             if ($LASTEXITCODE -ne 0) { throw 'Inno Setup could not be installed.' }
           }
           $output = Join-Path $env:RUNNER_TEMP 'release'
-          & $iscc /Q "/DAppVersion=$version" "/DSourceDir=$source" "/DOutputDir=$output" scripts\package\dungeon.iss
+          & $iscc /Q "/DAppVersion=$version" "/DSourceDir=$source" "/DOutputDir=$output" scripts\package\adventure.iss
           if ($LASTEXITCODE -ne 0) { throw 'ISCC failed.' }
           Copy-Item -LiteralPath $zip.FullName -Destination $output
           Get-ChildItem -LiteralPath $output -File | Sort-Object Name | ForEach-Object {
@@ -145,7 +145,7 @@ jobs:
           scripts/package/installer-test.ps1 -Setup $setup.FullName
 
   beside-the-study:
-    # Prospero's Study from its own repository, pinned, running beside the installed Dungeon.
+    # Prospero's Study from its own repository, pinned, running beside the installed Adventure.
     needs: installer
     runs-on: windows-latest
     timeout-minutes: 20
@@ -174,7 +174,7 @@ jobs:
         with:
           name: windows-release
           path: ${{ runner.temp }}\release
-      - name: Run the Dungeon beside the Study
+      - name: Run Adventure beside the Study
         shell: pwsh
         run: |
           $setup = Get-ChildItem -LiteralPath (Join-Path $env:RUNNER_TEMP 'release') -Filter '*-setup.exe' | Select-Object -First 1

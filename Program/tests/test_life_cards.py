@@ -1,11 +1,11 @@
-"""World Life Cards (dungeon/life/cards.py): every shipped deck checks clean, and the filters do what the
+"""World Life Cards (adventure/life/cards.py): every shipped deck checks clean, and the filters do what the
 requirements ask of them ("Intensity and tone", "Off-page beats")."""
 import copy
 
 import pytest
 
-from dungeon.life import cards
-from dungeon.narration import prose
+from adventure.life import cards
+from adventure.narration import prose
 
 OFF = dict.fromkeys(cards.CATEGORIES, 0)
 TOP = cards.PRESETS['unflinching']

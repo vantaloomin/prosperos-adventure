@@ -1,4 +1,4 @@
-"""Launch buttons for local programs (dungeon/launcher.py) and starting them with the Dungeon."""
+"""Launch buttons for local programs (adventure/launcher.py) and starting them with Adventure."""
 import asyncio
 import os
 import time
@@ -7,8 +7,8 @@ from pathlib import Path
 import httpx
 import pytest
 
-from dungeon import local_programs
-from dungeon.errors import DomainError
+from adventure import local_programs
+from adventure.errors import DomainError
 
 
 class FakePrograms:

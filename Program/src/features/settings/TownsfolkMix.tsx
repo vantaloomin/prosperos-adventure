@@ -19,7 +19,7 @@ const BUILDS = new Set(['slender', 'middle', 'heavier'])
 type Change = (key: keyof MixValues, value: number) => void
 
 /** Settings > Developer: the shares the townsfolk are drawn from, what this world's town is made of, and a new world made
- * with changed shares (dungeon/townsfolk_mix.py). Nothing changes here until a new world is made. */
+ * with changed shares (adventure/townsfolk_mix.py). Nothing changes here until a new world is made. */
 export function TownsfolkMix() {
   const query = useQuery({ queryKey: KEY, queryFn: () => api<MixData>('/townsfolk-mix') })
   return (

@@ -33,8 +33,8 @@ function AiNoticeDialog() {
     <dialog ref={dialog} className="dialog ai-notice" aria-labelledby="ai-notice-title" onCancel={(event) => event.preventDefault()}>
       <h2 id="ai-notice-title">Before you start</h2>
       <div className="dialog-body">
-        <p>The narrator and everyone in Prospero&apos;s Dungeon are AI. Everything they say is written by an AI model, not a person, and it can be wrong. They stay in the story, so a line under the message box reminds you.</p>
-        <p>If you ever mention hurting yourself, the app shows a note with places to get help. It never stops the story and nothing is sent anywhere. <a href="https://github.com/vantaloomin/prosperos-dungeon/blob/main/Program/docs/safety.md" target="_blank" rel="noreferrer">How the app handles safety</a></p>
+        <p>The narrator and everyone in Prospero&apos;s Adventure are AI. Everything they say is written by an AI model, not a person, and it can be wrong. They stay in the story, so a line under the message box reminds you.</p>
+        <p>If you ever mention hurting yourself, the app shows a note with places to get help. It never stops the story and nothing is sent anywhere. <a href="https://github.com/vantaloomin/prosperos-adventure/blob/main/Program/docs/safety.md" target="_blank" rel="noreferrer">How the app handles safety</a></p>
         <label className="ai-notice-adult"><input ref={checkbox} type="checkbox" checked={adult} onChange={(event) => setAdult(event.target.checked)} /> I&apos;m 18 or older</label>
         {error && <p className="error-text" role="alert">{error}</p>}
       </div>

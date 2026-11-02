@@ -8,10 +8,10 @@ from pathlib import Path
 import pytest
 from pydantic import ValidationError
 
-from dungeon.errors import DomainError
-from dungeon.world import catalog, custom, generators
-from dungeon.world.check import FOOD
-from dungeon.world.schema import City, Featured
+from adventure.errors import DomainError
+from adventure.world import catalog, custom, generators
+from adventure.world.check import FOOD
+from adventure.world.schema import City, Featured
 
 CITIES = sorted(key for key, value in catalog.cities().items() if value['origin'] == 'builtin')
 DERIVED = ('data_version', 'builtin', 'origin', 'pack_file')
@@ -48,7 +48,7 @@ def test_shipped_json_matches_its_source_script(city_id):
     assert runpy.run_path(str(script))['CITY'] == json.loads(json.dumps(written)), 'Rerun the script.'
 
 
-# The Road and BABEL's floors (dungeon/travel.py) are the ways between towns, not towns: their wild regions have
+# The Road and BABEL's floors (adventure/travel.py) are the ways between towns, not towns: their wild regions have
 # nowhere to eat.
 @pytest.mark.parametrize('city_id', [city for city in CITIES if city not in ('vallarith-road', 'babel-floors')])
 def test_every_neighborhood_has_somewhere_to_eat_or_drink(city_id):
@@ -364,7 +364,7 @@ def test_small_currency_rents_use_the_whole_range():
 
 
 def test_the_world_source_filters_by_time_of_day_and_season():
-    from dungeon.world.source import CatalogWorld
+    from adventure.world.source import CatalogWorld
     world = CatalogWorld()
     evening = world.places('baltimore', ['museum', 'attraction'], day_part='evening')
     assert evening and 'National Aquarium' not in {place.name for place in evening}
@@ -502,7 +502,7 @@ def test_generator_results_do_not_share_cached_data():
 
 
 def test_city_checker(tmp_path, capsys, monkeypatch):
-    from dungeon.world import check
+    from adventure.world import check
 
     good = tmp_path / 'good.json'
     good.write_text(json.dumps(plain(baltimore()) | {'id': 'good-city'}), encoding='utf-8')
@@ -545,7 +545,7 @@ def test_prices_api(client):
 
 
 def test_everyday_places_keep_near_home():
-    from dungeon.world.source import NEAR_KM, CatalogWorld, nearby
+    from adventure.world.source import NEAR_KM, CatalogWorld, nearby
     world = CatalogWorld()
     data = world.find('baltimore')
     close = nearby(data, 'Fells Point, Baltimore')
@@ -639,13 +639,13 @@ def test_a_city_without_work_rules_keeps_its_data_and_one_with_them_reads_them()
 
 
 def test_a_world_set_in_a_retired_city_keeps_it_as_its_own(app, client, monkeypatch):
-    from dungeon.world import retired
+    from adventure.world import retired
     database = app.state.database
     with database.connect(write=True) as connection:
         retired.keep(connection, database.now())  # Nothing here names Haddon Harbor yet.
         assert not connection.execute('SELECT 1 FROM world_cities').fetchone()
     assert client.put('/api/story/scene', json={'city_id': 'haddon-harbor'}).status_code == 200
-    # The tests ship Haddon Harbor as a built-in city; the app retired it (dungeon/world/data/retired).
+    # The tests ship Haddon Harbor as a built-in city; the app retired it (adventure/world/data/retired).
     shipped = catalog.cities()
     monkeypatch.setattr(catalog, 'cities', lambda: {key: city for key, city in shipped.items() if key != 'haddon-harbor'})
     with database.connect(write=True) as connection:

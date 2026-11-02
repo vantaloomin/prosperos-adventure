@@ -1,17 +1,17 @@
-"""BABEL's towns, from Vanta's Mabry Curve archive (dungeon/world/packages/babel): the Concourse (Floor Zero, where
+"""BABEL's towns, from Vanta's Mabry Curve archive (adventure/world/packages/babel): the Concourse (Floor Zero, where
 the arrivals land), Hollin on Varrow (the starter floor, with the Close, the Keep and the Reachwall), the Gilded
 Bazaar (three floors up, where Bri and Chase come down) and the other floors, as the places on the travel map
 between them (babel-floors). Run `python scripts/world/babel_towns.py` to rewrite them."""
 import json
 from pathlib import Path
 
-CITIES = Path(__file__).resolve().parents[2] / 'dungeon' / 'world' / 'data' / 'cities'
+CITIES = Path(__file__).resolve().parents[2] / 'adventure' / 'world' / 'data' / 'cities'
 SRC = 'mabry-curve-2026-10'
 SOURCES = {SRC: {
     'kind': 'curated', 'title': "BABEL written for Prospero's Dungeon from Vanta's Mabry Curve archive",
     'license': "Vanta's own setting; all rights reserved", 'retrieved': '2026-10-22',
     'note': 'Places, people and customs from the Mabry Curve story, hidden files and side cast '
-            '(dungeon/world/packages/babel/sources.md). Names the story does not give are new.'}}
+            '(adventure/world/packages/babel/sources.md). Names the story does not give are new.'}}
 ALL_DAY = ('morning', 'afternoon', 'evening')
 NIGHT = ('evening', 'late')
 EVERY = ('morning', 'afternoon', 'evening', 'late')
@@ -765,7 +765,7 @@ floors = city(
                                             'down the Stair, about half a day a floor.', 'source': SRC}],
     None, [], [], CONCOURSE_NAMES, [], [],
 )
-# The floors are the ways between towns, not a town: no street map (dungeon/townmap.py), and nowhere to live.
+# The floors are the ways between towns, not a town: no street map (adventure/townmap.py), and nowhere to live.
 floors['town_map'] = {'style': 'none'}
 floors['home'] = False
 

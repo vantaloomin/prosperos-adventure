@@ -24,10 +24,10 @@ export function asKindOption(kindYears: number | null, you = false) {
 
 const HUMAN_YEARS = 80
 const ADULT = 18
-/** Past this, a kind is long-lived (dungeon/world/lifespans.py `LONG_LIVED`): an age past 120 can be theirs. */
+/** Past this, a kind is long-lived (adventure/world/lifespans.py `LONG_LIVED`): an age past 120 can be theirs. */
 export const LONG_LIVED = 150
 
-/** Their age in human terms (dungeon/world/lifespans.py `life_age`): childhood at a human pace, then adulthood
+/** Their age in human terms (adventure/world/lifespans.py `life_age`): childhood at a human pace, then adulthood
  * stretched to their lifespan. Null lifespan: they don't age, so it is the age they are. */
 export function lifeAge(real: number, lifespan: number | null) {
   if (lifespan === null || real <= ADULT || lifespan === HUMAN_YEARS) return real

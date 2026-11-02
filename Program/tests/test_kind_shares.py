@@ -1,10 +1,10 @@
-"""People of other kinds in town (dungeon/world/lifespans.py `shares`): a city's `kinds` block says what share of
+"""People of other kinds in town (adventure/world/lifespans.py `shares`): a city's `kinds` block says what share of
 its seeded townsfolk and residents are of each kind, and their names, ages and lines follow."""
 import copy
 from collections import Counter
 
-from dungeon import story
-from dungeon.world import catalog, generators, lifespans, townsfolk
+from adventure import story
+from adventure.world import catalog, generators, lifespans, townsfolk
 
 VULCAN = {'label': 'Vulcan', 'lifespan': 220, 'words': ['vulcan']}
 

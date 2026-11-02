@@ -1,4 +1,4 @@
-"""World packages (dungeon/packages.py): one SQLite file per world, and the folder of Markdown and JSON it round-trips
+"""World packages (adventure/packages.py): one SQLite file per world, and the folder of Markdown and JSON it round-trips
 with."""
 import json
 import shutil
@@ -9,9 +9,9 @@ from test_combat import kingswood
 from test_rulesets import reply
 from test_travel import ok
 
-from dungeon import director, inventory, package_lore, packages, story, world_data
-from dungeon.errors import DomainError
-from dungeon.world import catalog
+from adventure import director, inventory, package_lore, packages, story, world_data
+from adventure.errors import DomainError
+from adventure.world import catalog
 
 
 @pytest.fixture
@@ -157,7 +157,7 @@ def test_with_no_package_in_use_the_shipped_files_are_read():
 
 def test_place_lore_comes_up_on_more_than_its_exact_name(tmp_path):
     # Playtest m5: "Dwarven steel" did not bring up Dun Aldun.
-    from dungeon import lore
+    from adventure import lore
     contents = packages.read(packages.installed(tmp_path, 'vallarith'))
     found = {entry['title']: entry['keywords'] for entry in package_lore.entries(contents, 'post-reform')}
     assert any(lore.mentioned(word, 'a blade of dwarven steel') for word in found['Dun Aldun'])
@@ -165,7 +165,7 @@ def test_place_lore_comes_up_on_more_than_its_exact_name(tmp_path):
 
 
 def test_an_imported_worlds_own_town_loads_and_a_campaign_starts_there(client, folder, app):
-    """A world made in Worldsmith carries its towns' city files in its package; Dungeon only read shipped ones, so
+    """A world made in Worldsmith carries its towns' city files in its package; Adventure only read shipped ones, so
     going to such a world failed with "No world data for city"."""
     town = json.loads((packages.DATA / 'cities' / 'kingswood.json').read_text(encoding='utf-8')) | {
         'id': 'reedby', 'name': 'Reedby'}

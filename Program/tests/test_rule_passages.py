@@ -1,4 +1,4 @@
-"""Rule passages (dungeon/rules/passages.py): the few lines of rule text that fit what the turn resolved, for the
+"""Rule passages (adventure/rules/passages.py): the few lines of rule text that fit what the turn resolved, for the
 narrator to describe the result by; never a change to it."""
 from itertools import cycle
 
@@ -7,9 +7,9 @@ from test_ironsworn import made
 from test_rulesets import reply, start
 from test_travel import ok
 
-from dungeon import record
-from dungeon.narration import prompt
-from dungeon.rules import passages
+from adventure import record
+from adventure.narration import prompt
+from adventure.rules import passages
 
 
 class WeakHit:

@@ -27,7 +27,7 @@ const STATES = { off: 'Off.', starting: 'Loading the model…', ready: 'Running 
 
 type Run = (label: string, work: () => Promise<void>) => Promise<void>
 
-/** Settings > Models: an embedding model the Dungeon runs itself with llama.cpp (dungeon/providers/builtin_recall.py). */
+/** Settings > Models: an embedding model Adventure runs itself with llama.cpp (adventure/providers/builtin_recall.py). */
 export function BuiltinRecall() {
   const client = useQueryClient()
   const query = useQuery({ queryKey: KEY, queryFn: () => api<BuiltinRecallView>('/models/builtin-recall'), refetchInterval: (state) => state.state.data?.state === 'starting' ? 1500 : false, staleTime: 0 })
@@ -48,7 +48,7 @@ export function BuiltinRecall() {
   return <section className="settings-section form-stack" aria-labelledby="recall-heading">
     <div>
       <h2 id="recall-heading">Built-in recall</h2>
-      <p className="subtle">Recall finds related parts of the story even when the words differ. The Dungeon can run a small embedding model for this itself, on this PC's processor, apart from LM Studio, Kobold or Ollama. You download the model file, so you accept its license. While this is on, it does Semantic recall instead of the profile chosen above.</p>
+      <p className="subtle">Recall finds related parts of the story even when the words differ. Adventure can run a small embedding model for this itself, on this PC's processor, apart from LM Studio, Kobold or Ollama. You download the model file, so you accept its license. While this is on, it does Semantic recall instead of the profile chosen above.</p>
     </div>
     <RuntimeStep data={data} busy={busy} run={run} onChange={update} />
     <ModelStep data={data} chosen={chosen} busy={busy} run={run} setPath={setPath} checking={query.isFetching} refresh={() => void query.refetch()} />
@@ -67,7 +67,7 @@ function RuntimeStep({ data, busy, run, onChange }: StepProps & { onChange: (vie
     <h3>1. llama.cpp</h3>
     {runtime.installed && <p className="subtle">llama.cpp {runtime.version} is ready.</p>}
     {!runtime.installed && runtime.available && <div className="form-actions"><button type="button" className="button" onClick={() => void install()} disabled={!!busy}><Download size={15} aria-hidden="true" />{busy === 'install' ? 'Downloading…' : `Download llama.cpp (${runtime.download_mb} MB)`}</button><small>From llama.cpp's official releases, checked against a pinned checksum. MIT license.</small></div>}
-    {!runtime.installed && !runtime.available && <p className="subtle">There is no llama.cpp download for this computer. Set DUNGEON_LLAMA_SERVER to a llama-server you installed.</p>}
+    {!runtime.installed && !runtime.available && <p className="subtle">There is no llama.cpp download for this computer. Set ADVENTURE_LLAMA_SERVER to a llama-server you installed.</p>}
   </div>
 }
 
@@ -82,7 +82,7 @@ function ModelStep({ data, chosen, busy, run, setPath, checking, refresh }: Step
         <br /><span className="subtle">{model.note}</span> <a className="text-button" href={model.page} target="_blank" rel="noreferrer">Get {model.file}</a>
       </li>)}
     </ul>
-    <p className="subtle">Put the file in the Dungeon's models folder, or use one LM Studio already downloaded.</p>
+    <p className="subtle">Put the file in Adventure's models folder, or use one LM Studio already downloaded.</p>
     <div className="form-actions"><button type="button" className="button" onClick={() => void openFolder()} disabled={!!busy}><FolderOpen size={15} aria-hidden="true" />Open models folder</button><small>{shownPath(data.models_folder)}</small></div>
     <Field label="Model file" hint={data.models.length ? 'Embedding models found on this PC.' : 'No embedding model found yet. Choose Another file to type its path.'}>{(id, hint) => (
       <select id={id} aria-describedby={hint} value={listed ? chosen : OTHER} onChange={event => setPath(event.target.value === OTHER ? '' : event.target.value)}>

@@ -7,14 +7,14 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
-from dungeon import story
-from dungeon.authors_note import NOTE_CLOSE
-from dungeon.clock import FixedClock
-from dungeon.identity import CLIENT_HEADER
-from dungeon.main import create_app
-from dungeon.providers.chat import Chunk
-from dungeon.providers.vault import MemoryVault
-from dungeon.world import catalog
+from adventure import story
+from adventure.authors_note import NOTE_CLOSE
+from adventure.clock import FixedClock
+from adventure.identity import CLIENT_HEADER
+from adventure.main import create_app
+from adventure.providers.chat import Chunk
+from adventure.providers.vault import MemoryVault
+from adventure.world import catalog
 
 START = datetime(2026, 10, 5, 12, 0, tzinfo=UTC)
 
@@ -63,45 +63,45 @@ class FakeProvider:
 @pytest.fixture(autouse=True)
 def no_pc_timezone(monkeypatch):
     """Tests run in UTC whatever the machine's zone is; test_local_zone sets one where it needs it."""
-    monkeypatch.setattr('dungeon.local_zone.detect', lambda: None)
+    monkeypatch.setattr('adventure.local_zone.detect', lambda: None)
 
 
 @pytest.fixture(autouse=True)
 def no_graphics_card(monkeypatch):
     """Tests never ask the test machine for its graphics cards (nvidia-smi, PowerShell); tests/test_hardware.py and
     tests/test_image_fit.py hand in the cards they need."""
-    monkeypatch.setattr('dungeon.hardware.find_gpus', lambda memory: ([], 'No graphics card in tests.'))
+    monkeypatch.setattr('adventure.hardware.find_gpus', lambda memory: ([], 'No graphics card in tests.'))
 
 
 @pytest.fixture(autouse=True)
 def no_hold_after_replies(monkeypatch):
     """Background work would wait for the user to pause after each reply; tests/test_scheduling.py checks that."""
-    monkeypatch.setattr('dungeon.providers.scheduling.HOLD_AFTER_REPLY', 0)
+    monkeypatch.setattr('adventure.providers.scheduling.HOLD_AFTER_REPLY', 0)
 
 
 @pytest.fixture(autouse=True)
 def no_life_cards(monkeypatch):
-    """Life Cards drawn into the story (dungeon/happenings.py) factions' clocks moving (dungeon/factions.py) and
-    the director's note (dungeon/director.py) would add events to unrelated tests' turns; tests/test_happenings.py and tests/test_factions.py turn them on."""
-    monkeypatch.setattr('dungeon.happenings.ACTIVE', False)
-    monkeypatch.setattr('dungeon.factions.ACTIVE', False)
-    monkeypatch.setattr('dungeon.director.ACTIVE', False)
+    """Life Cards drawn into the story (adventure/happenings.py) factions' clocks moving (adventure/factions.py) and
+    the director's note (adventure/director.py) would add events to unrelated tests' turns; tests/test_happenings.py and tests/test_factions.py turn them on."""
+    monkeypatch.setattr('adventure.happenings.ACTIVE', False)
+    monkeypatch.setattr('adventure.factions.ACTIVE', False)
+    monkeypatch.setattr('adventure.director.ACTIVE', False)
 
 
 @pytest.fixture(autouse=True)
 def no_turnover(monkeypatch):
-    """Townsfolk moving away and newcomers (dungeon/world/turnover.py) would change who unrelated tests meet as
+    """Townsfolk moving away and newcomers (adventure/world/turnover.py) would change who unrelated tests meet as
     their clocks move on; tests/test_turnover.py turns it on. Each test also starts from the usual town levels."""
-    from dungeon.clock import Clock
-    from dungeon.world import turnover
+    from adventure.clock import Clock
+    from adventure.world import turnover
     monkeypatch.setattr(turnover, 'ACTIVE', False)
     monkeypatch.setattr(turnover, 'STATE', turnover.Levels(Clock()))
 
 
 def pytest_collection_modifyitems(config, items):
-    """DUNGEON_TEST_SHARD=2/3 runs the second third of the tests, picked by test name, so a slow CI runner can
+    """ADVENTURE_TEST_SHARD=2/3 runs the second third of the tests, picked by test name, so a slow CI runner can
     spread one suite over several jobs (.github/workflows/ci.yml)."""
-    shard = os.environ.get('DUNGEON_TEST_SHARD')
+    shard = os.environ.get('ADVENTURE_TEST_SHARD')
     if not shard:
         return
     index, count = (int(part) for part in shard.split('/'))
@@ -124,7 +124,7 @@ def provider():
 
 @pytest.fixture
 def app(tmp_path, clock, provider):
-    return create_app(tmp_path / 'workspace' / 'dungeon.sqlite3', clock=clock, vault=MemoryVault(),
+    return create_app(tmp_path / 'workspace' / 'adventure.sqlite3', clock=clock, vault=MemoryVault(),
                       provider=provider, background=False)
 
 
@@ -143,7 +143,7 @@ def connected(client):
 
 
 def tell(client, text, client_id):
-    """One turn of the story (dungeon/story.py): the user's words and the narrator's reply."""
+    """One turn of the story (adventure/story.py): the user's words and the narrator's reply."""
     response = client.post('/api/story/messages', json={'text': text, 'client_id': client_id})
     assert response.status_code == 200, response.text
     return response.json()
@@ -162,6 +162,6 @@ def ok(response):
 
 def narrator(provider) -> dict:
     """The last request to the narrator, past the Continuity model's questions after the turn."""
-    from dungeon import chapters, record
+    from adventure import chapters, record
     return [request for request in provider.requests if request['system'] != chapters.SUMMARIZE
             and not request['system'].startswith(record.EXTRACT)][-1]

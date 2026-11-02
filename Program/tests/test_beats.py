@@ -1,4 +1,4 @@
-"""Off-page beats and word getting around (dungeon/beats.py)."""
+"""Off-page beats and word getting around (adventure/beats.py)."""
 from datetime import timedelta
 
 import pytest
@@ -6,8 +6,8 @@ from conftest import tell
 from test_inventory import begin
 from test_travel import Road, ok, reply
 
-from dungeon import beats, happenings, record, story, story_clock
-from dungeon.life import cards
+from adventure import beats, happenings, record, story, story_clock
+from adventure.life import cards
 
 UNFLINCHING = {'levels': cards.PRESETS['unflinching'], 'veils': []}
 

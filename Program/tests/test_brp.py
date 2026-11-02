@@ -1,12 +1,12 @@
-"""The Percentile ruleset (dungeon/rules/brp.py, dungeon/combat_brp.py): BRP characters, d100 skill rolls, experience,
+"""The Percentile ruleset (adventure/rules/brp.py, adventure/combat_brp.py): BRP characters, d100 skill rolls, experience,
 fights on the Attack and Defense Matrix, major wounds and slow healing."""
 import pytest
 from conftest import tell
 from test_rulesets import reply, start
 from test_travel import ok
 
-from dungeon import combat, combat_brp, growth, record, sheet
-from dungeon.rules import brp
+from adventure import combat, combat_brp, growth, record, sheet
+from adventure.rules import brp
 
 WARRIOR = {'str': 15, 'con': 14, 'siz': 13, 'int': 10, 'pow': 10, 'dex': 14, 'cha': 10}
 
@@ -42,7 +42,7 @@ def test_a_character_buys_characteristics_and_takes_a_profession_and_a_personali
     assert view['skills']['brawl'] == 75 and view['skills']['sword'] > 15 and max(view['skills'].values()) <= 75
     assert view['skills']['dodge'] >= 28
     # A made warrior carries the broadsword their Sword skill covers (playtest M4b, finding 2).
-    from dungeon import inventory
+    from adventure import inventory
     with app.state.database.connect() as connection:
         assert 'sword' in {row['item_id'] for row in inventory.carried(connection, 'kingswood')}
 

@@ -1,11 +1,11 @@
-"""The turn loop (dungeon/turn.py): the Referee's actions are rolled on the persona's stats before the narrator
+"""The turn loop (adventure/turn.py): the Referee's actions are rolled on the persona's stats before the narrator
 writes, and the narrator is told how each landed."""
 import json
 import random
 
 from conftest import Chunk, tell
 
-from dungeon.rules import marvel
+from adventure.rules import marvel
 
 
 def ok(response):

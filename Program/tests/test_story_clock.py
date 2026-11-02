@@ -1,10 +1,10 @@
-"""The story clock (dungeon/story_clock.py): once a campaign starts, the story keeps its own time."""
+"""The story clock (adventure/story_clock.py): once a campaign starts, the story keeps its own time."""
 from datetime import UTC, datetime, timedelta
 
 from conftest import Chunk
 
-from dungeon import story_clock
-from dungeon.story import local_moment
+from adventure import story_clock
+from adventure.story import local_moment
 
 
 def ok(response):

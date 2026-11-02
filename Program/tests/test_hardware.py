@@ -1,5 +1,5 @@
-from dungeon import hardware
-from dungeon.hardware import Hardware
+from adventure import hardware
+from adventure.hardware import Hardware
 
 
 def card(index, name, memory):

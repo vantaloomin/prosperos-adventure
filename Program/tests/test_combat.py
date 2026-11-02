@@ -1,9 +1,9 @@
-"""Combat v0 (dungeon/combat.py): rounds, wounds, morale, the defeat table and healing."""
+"""Combat v0 (adventure/combat.py): rounds, wounds, morale, the defeat table and healing."""
 import random
 
 from conftest import Chunk, narrator, tell
 
-from dungeon import combat
+from adventure import combat
 
 
 def ok(response):
@@ -89,7 +89,7 @@ def kingswood(client, place):
 def test_attacking_someone_starts_a_brawl_the_narrator_writes(client, connected, provider, app):
     story = kingswood(client, 'felled-oak')
     with app.state.database.connect() as connection:
-        from dungeon import story as story_module
+        from adventure import story as story_module
         view = story_module.scene(connection, story_module.story_clock.now(connection, app.state.database.clock))
     # Someone not yet named is aimed at by their work.
     target = view['people'][0]['sheet']

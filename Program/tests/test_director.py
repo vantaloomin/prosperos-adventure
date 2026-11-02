@@ -1,11 +1,11 @@
-"""The director v0 (dungeon/director.py): arcs and the spine, threads, the hand, the GM note and nemeses."""
+"""The director v0 (adventure/director.py): arcs and the spine, threads, the hand, the GM note and nemeses."""
 from datetime import datetime, timedelta
 
 import pytest
 from conftest import tell
 from test_travel import Road, ok, reply
 
-from dungeon import director, factions, jobs, quests, record, tiers
+from adventure import director, factions, jobs, quests, record, tiers
 
 NOW = datetime(1290, 5, 1, 12)
 

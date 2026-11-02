@@ -1,4 +1,4 @@
-"""The stress track (dungeon/stress.py): Resolve against trauma, conditions past thresholds, easing with rest."""
+"""The stress track (adventure/stress.py): Resolve against trauma, conditions past thresholds, easing with rest."""
 from datetime import datetime
 
 from conftest import tell
@@ -6,7 +6,7 @@ from test_inventory import begin
 from test_rest import out_in_the_badlands
 from test_travel import Road, ok, reply
 
-from dungeon import injuries, stress, travel
+from adventure import injuries, stress, travel
 
 NOW = datetime(1290, 5, 1, 12)
 

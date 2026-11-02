@@ -1,10 +1,10 @@
-"""Town maps (dungeon/townmap.py): a street map laid out from the town's data and the campaign's seed."""
+"""Town maps (adventure/townmap.py): a street map laid out from the town's data and the campaign's seed."""
 import math
 
 import pytest
 
-from dungeon import hexes, townmap
-from dungeon.world import catalog
+from adventure import hexes, townmap
+from adventure.world import catalog
 
 TOWNS = ('kingswood', 'haven', 'hollin', 'the-concourse', 'the-gilded-bazaar', 'haddon-harbor')
 
@@ -152,7 +152,7 @@ def test_what_a_lot_holds_follows_the_seed_and_the_intensity_levels():
 
 
 def test_a_building_looked_at_is_somewhere_the_player_can_walk_to_by_name(client, app):
-    from dungeon import story
+    from adventure import story
     with app.state.database.connect(write=True) as connection:
         connection.execute("INSERT INTO story_campaign (id, seed) VALUES (1, 'walk') ON CONFLICT(id) DO UPDATE SET seed='walk'")
     ok(client.put('/api/story/scene', json={'city_id': 'kingswood', 'place_id': 'pell-provisions'}))
@@ -164,7 +164,7 @@ def test_a_building_looked_at_is_somewhere_the_player_can_walk_to_by_name(client
 
 
 def test_the_narrator_is_told_what_is_on_the_street_outside_and_it_is_kept_on_arrival(client, app):
-    from dungeon import story, story_clock
+    from adventure import story, story_clock
     ok(client.put('/api/story/scene', json={'city_id': 'kingswood', 'place_id': 'pell-provisions'}))
     town = ok(client.get('/api/story/town'))['town']
     nearby = {lot['id'] for lot in town['lots'] if lot['found']}

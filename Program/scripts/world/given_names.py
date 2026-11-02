@@ -1,6 +1,6 @@
 """Popular given names by birth year, common family names by culture, and names that read as invented.
 
-Run `python scripts/world/given_names.py` to rewrite dungeon/world/data/given_names.json from the text files
+Run `python scripts/world/given_names.py` to rewrite adventure/world/data/given_names.json from the text files
 in scripts/world/name_sources/ (format in name_sources/FORMAT.md). The United States lists for 1920–2008 are
 the Social Security Administration's own tables (`fetch_us_names.py` rewrites them); every other list was
 written from general knowledge of each country's published rankings, because the build machine cannot reach
@@ -12,7 +12,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SOURCES = HERE / 'name_sources'
-OUT = HERE.parents[1] / 'dungeon' / 'world' / 'data' / 'given_names.json'
+OUT = HERE.parents[1] / 'adventure' / 'world' / 'data' / 'given_names.json'
 RETRIEVED = '2026-10-05'
 PRESENT_YEAR = 2026
 # The year each era's present day is set in; a city may set its own `names.year`. Eras missing here

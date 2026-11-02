@@ -1,4 +1,4 @@
-/** One editable prompt as GET /api/prompts lists it (dungeon/prompt_library.py). */
+/** One editable prompt as GET /api/prompts lists it (adventure/prompt_library.py). */
 export interface EditablePrompt {
   name: string
   group: string

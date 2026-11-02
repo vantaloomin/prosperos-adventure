@@ -1,10 +1,10 @@
-"""Real-time living worlds (dungeon/story_clock.py caught_up): a world can keep moving while the app is closed."""
+"""Real-time living worlds (adventure/story_clock.py caught_up): a world can keep moving while the app is closed."""
 from datetime import timedelta
 
 from test_lies import begin
 from test_travel import ok
 
-from dungeon import story, story_clock, tiers
+from adventure import story, story_clock, tiers
 
 
 def test_havenbrooke_lives_in_real_time_and_vallarith_on_story_time():

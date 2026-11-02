@@ -2,8 +2,8 @@ import json
 import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-from dungeon import launch
-from dungeon.identity import APP_ID
+from adventure import launch
+from adventure.identity import APP_ID
 
 
 def health_server(body):

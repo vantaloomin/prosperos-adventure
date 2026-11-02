@@ -4,7 +4,7 @@ Exercises the checkout helpers (status, stop, create-shortcut, dev, update) afte
 
 .DESCRIPTION
 Runs each helper through its .bat wrapper where it can, so the wrappers are tested too. Expects
-install.ps1 to have finished and DUNGEON_DATA_DIR to point at a scratch workspace. The update
+install.ps1 to have finished and ADVENTURE_DATA_DIR to point at a scratch workspace. The update
 check rewires this checkout's origin to a local repository, so run it on a throwaway checkout only.
 #>
 $ErrorActionPreference = 'Stop'
@@ -21,9 +21,9 @@ function Invoke-Bat([string]$Name, [string[]]$Arguments) {
   return $LASTEXITCODE
 }
 
-function Wait-State([string]$Expected, [int]$Port = 8785) {
+function Wait-State([string]$Expected, [int]$Port = 8805) {
   foreach ($attempt in 1..120) {
-    if ((Get-DungeonState $Port).State -eq $Expected) { return $true }
+    if ((Get-AdventureState $Port).State -eq $Expected) { return $true }
     Start-Sleep -Milliseconds 250
   }
   return $false
@@ -40,15 +40,15 @@ function Get-Page([string]$Url) {
 $temp = if ($env:RUNNER_TEMP) { $env:RUNNER_TEMP } else { [IO.Path]::GetTempPath() }
 
 # status and stop
-Check ((Invoke-Bat 'status.bat') -eq 1) 'status.bat reports a stopped Dungeon with exit code 1'
+Check ((Invoke-Bat 'status.bat') -eq 1) 'status.bat reports a stopped Adventure with exit code 1'
 Check ((Invoke-Bat 'stop.bat') -eq 0) 'stop.bat with nothing running succeeds and stops nothing'
 # Captured output, as when another program starts it: the server's log lines on stderr must not stop it.
 $app = Start-Process -FilePath 'powershell.exe' -ArgumentList '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', (Join-Path $PSScriptRoot 'launch.ps1'), '-NoBrowser', '-NoPause' -PassThru -RedirectStandardOutput (Join-Path $temp 'launch-out.txt') -RedirectStandardError (Join-Path $temp 'launch-err.txt')
 try {
-  Check (Wait-State 'running') 'launch answers on 8785'
-  Check ((Invoke-Bat 'status.bat') -eq 0) 'status.bat reports the running Dungeon with exit code 0'
-  Check ((Invoke-Bat 'stop.bat') -eq 0) 'stop.bat stops the running Dungeon'
-  Check ((Get-DungeonState 8785).State -eq 'stopped') 'port 8785 is free after stop.bat'
+  Check (Wait-State 'running') 'launch answers on 8805'
+  Check ((Invoke-Bat 'status.bat') -eq 0) 'status.bat reports the running Adventure with exit code 0'
+  Check ((Invoke-Bat 'stop.bat') -eq 0) 'stop.bat stops the running Adventure'
+  Check ((Get-AdventureState 8805).State -eq 'stopped') 'port 8805 is free after stop.bat'
 } finally { if (-not $app.HasExited) { & taskkill.exe /PID $app.Id /T /F | Out-Null } }
 
 # Another program on the port is reported and never stopped.
@@ -65,25 +65,25 @@ try {
 $desktop = Join-Path $temp 'desktop'
 New-Item -ItemType Directory -Force -Path $desktop | Out-Null
 Check ((Invoke-Bat 'create-shortcut.bat' @('-Destination', $desktop)) -eq 0) 'create-shortcut.bat succeeds'
-$link = (New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Prospero Dungeon.lnk'))
+$link = (New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Prospero Adventure.lnk'))
 Check ($link.TargetPath -eq (Join-Path $WindowsFolder 'launch.bat')) 'the shortcut starts this checkout''s launch.bat'
-$other = (New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Prospero Dungeon.lnk'))
+$other = (New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Prospero Adventure.lnk'))
 $other.TargetPath = "$env:SystemRoot\System32\notepad.exe"
 $other.Save()
 Check ((Invoke-Bat 'create-shortcut.bat' @('-Destination', $desktop)) -eq 0) 'create-shortcut.bat succeeds beside an installed app''s shortcut'
-Check ((New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Prospero Dungeon.lnk')).TargetPath -like '*notepad.exe') 'the existing shortcut is left alone'
-Check (Test-Path -LiteralPath (Join-Path $desktop 'Prospero Dungeon (checkout).lnk')) 'the checkout shortcut gets its own name'
+Check ((New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Prospero Adventure.lnk')).TargetPath -like '*notepad.exe') 'the existing shortcut is left alone'
+Check (Test-Path -LiteralPath (Join-Path $desktop 'Prospero Adventure (checkout).lnk')) 'the checkout shortcut gets its own name'
 
 # dev: backend plus Vite, with /api forwarded to the backend
 $dev = Start-Process -FilePath 'powershell.exe' -ArgumentList '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', (Join-Path $PSScriptRoot 'dev.ps1'), '-NoBrowser' -PassThru -RedirectStandardOutput (Join-Path $temp 'dev-out.txt') -RedirectStandardError (Join-Path $temp 'dev-err.txt')
 try {
-  Check (Wait-State 'running') 'dev mode starts the backend on 8785'
+  Check (Wait-State 'running') 'dev mode starts the backend on 8805'
   $page = $null
   foreach ($attempt in 1..120) {
-    try { $page = Get-Page 'http://127.0.0.1:5177/'; break } catch { Start-Sleep -Milliseconds 500 }
+    try { $page = Get-Page 'http://127.0.0.1:5197/'; break } catch { Start-Sleep -Milliseconds 500 }
   }
-  Check ($page -match 'Prospero Dungeon') 'Vite serves the interface on 5177'
-  Check ((Get-Page 'http://127.0.0.1:5177/api/health' | ConvertFrom-Json).app_id -eq $DungeonAppId) 'Vite forwards /api to the backend'
+  Check ($page -match 'Prospero Adventure') 'Vite serves the interface on 5197'
+  Check ((Get-Page 'http://127.0.0.1:5197/api/health' | ConvertFrom-Json).app_id -eq $AdventureAppId) 'Vite forwards /api to the backend'
 } finally { & taskkill.exe /PID $dev.Id /T /F | Out-Null }
 Check (Wait-State 'stopped') 'closing dev mode stops its backend'
 
@@ -140,10 +140,10 @@ $code = $LASTEXITCODE
 $ErrorActionPreference = $previous
 Remove-Item Env:npm_config_loglevel
 Check ($code -eq 0) 'update.ps1 succeeds when called with its error stream redirected'
-$app = Start-Process -FilePath $python -ArgumentList '-m', 'dungeon.launch', '--no-browser' -PassThru -NoNewWindow
+$app = Start-Process -FilePath $python -ArgumentList '-m', 'adventure.launch', '--no-browser' -PassThru -NoNewWindow
 try {
-  Check (Wait-State 'running') 'the Dungeon launches after updating'
-  Check ((Invoke-Bat 'update.bat') -eq 1) 'update.bat refuses while the Dungeon runs'
+  Check (Wait-State 'running') 'Adventure launches after updating'
+  Check ((Invoke-Bat 'update.bat') -eq 1) 'update.bat refuses while Adventure runs'
 } finally { & taskkill.exe /PID $app.Id /T /F | Out-Null }
 Invoke-TestGit @('checkout', '--quiet', '-b', 'elsewhere')
 Check ((Invoke-Bat 'update.bat') -eq 1) 'update.bat refuses a branch other than main'
@@ -151,16 +151,16 @@ Check ((Invoke-Bat 'update.bat') -eq 1) 'update.bat refuses a branch other than 
 # update from a ZIP download: a copy without .git gets main's ZIP (here a local one) copied over it.
 # Files an earlier ZIP update listed and main no longer has are removed; anything else stays.
 $zip = Join-Path $temp 'update-main.zip'
-Invoke-TestGit @('-C', $CheckoutRoot, 'archive', '--format=zip', '--prefix=prosperos-dungeon-main/', '--output', $zip, 'HEAD')
+Invoke-TestGit @('-C', $CheckoutRoot, 'archive', '--format=zip', '--prefix=prosperos-adventure-main/', '--output', $zip, 'HEAD')
 Remove-Item -LiteralPath (Join-Path $WindowsFolder 'README.txt')
 Set-Content -LiteralPath (Join-Path $CheckoutRoot 'stale-from-zip.txt') -Value 'stale'
 Set-Content -LiteralPath (Join-Path $CheckoutRoot 'my-own-file.txt') -Value 'mine'
 Set-Content -LiteralPath (Join-Path $CheckoutRoot '.zip-update-files') -Value 'stale-from-zip.txt'
 $gitAside = "$CheckoutRoot.git-aside"
 Move-Item -LiteralPath (Join-Path $CheckoutRoot '.git') -Destination $gitAside
-$env:DUNGEON_UPDATE_ZIP = $zip
+$env:ADVENTURE_UPDATE_ZIP = $zip
 try { $code = Invoke-Bat 'update.bat' } finally {
-  Remove-Item Env:DUNGEON_UPDATE_ZIP
+  Remove-Item Env:ADVENTURE_UPDATE_ZIP
   Move-Item -LiteralPath $gitAside -Destination (Join-Path $CheckoutRoot '.git')
 }
 Check ($code -eq 0) 'update.bat updates a copy downloaded as a ZIP'

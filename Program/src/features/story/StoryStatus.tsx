@@ -7,7 +7,7 @@ import { moneyText, statusItems } from './storyText'
 const ICONS = { time: Clock, condition: HeartPulse, nerve: Brain, lasting: Bandage, held: Link, coin: Coins }
 
 /** The status strip (requirements "Play screen and widgets"): time, condition, nerve, lasting injuries and coin at a
- *  glance, under the scene line. The purse is the pack's (dungeon/inventory.py), read with it. */
+ *  glance, under the scene line. The purse is the pack's (adventure/inventory.py), read with it. */
 export function StatusStrip({ story }: { story: Story }) {
   const gear = useQuery({ queryKey: ['story-gear'], queryFn: () => api<Gear>('/story/gear'), enabled: !!story.messages.length })
   const coin = gear.data ? moneyText(gear.data.coins, gear.data.currency) : null

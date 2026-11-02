@@ -42,7 +42,7 @@ jobs:
           version = sys.argv[1]
           with open('Program/pyproject.toml', 'rb') as f:
               project = tomllib.load(f)['project']['version']
-          identity = re.search(r"^VERSION = '([^']+)'", open('Program/dungeon/identity.py').read(), re.M).group(1)
+          identity = re.search(r"^VERSION = '([^']+)'", open('Program/adventure/identity.py').read(), re.M).group(1)
           if not version == project == identity:
               sys.exit(f'Version mismatch: package.json {version}, pyproject.toml {project}, identity.py {identity}')
           PY

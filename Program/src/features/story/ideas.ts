@@ -1,4 +1,4 @@
-/** Ideas (dungeon/ideas.py): two or three things the character could do now. Used once: they live only here, in
+/** Ideas (adventure/ideas.py): two or three things the character could do now. Used once: they live only here, in
  * the composer's memory, never in storage, and go when the player sends a line or the story moves on. */
 export type Ideas = { ideas: string[]; turn: number }
 

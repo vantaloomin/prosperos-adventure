@@ -4,8 +4,8 @@ from datetime import datetime
 from conftest import tell
 from test_travel import Road, clock_at, ok, reply
 
-from dungeon import campaign, factions, institutions, packages, tiers, travel
-from dungeon.life import cards
+from adventure import campaign, factions, institutions, packages, tiers, travel
+from adventure.life import cards
 
 
 def begin(client, premade='michael-reeves', place='nexus-housing'):
@@ -82,7 +82,7 @@ def woods() -> dict:
 
 
 def test_the_woods_are_a_hex_crawl_of_mile_hexes_and_the_roads_stay_roads():
-    from dungeon import hexes
+    from adventure import hexes
     roads = next(found for found in travel.maps() if any(node['id'] == 'haven' for node in found['nodes']))
     assert not hexes.is_hex(roads) and hexes.is_hex(woods())
     # Playtest: the woods once walked on the roads map's grid, as both were keyed by the world.
@@ -98,7 +98,7 @@ def test_the_woods_are_a_hex_crawl_of_mile_hexes_and_the_roads_stay_roads():
 
 
 def test_whatever_the_seed_no_lake_shuts_a_trailhead_in():
-    from dungeon import hexes
+    from adventure import hexes
     for seed in ('31', '44', '61', 'fixed'):
         board = hexes.Grid(woods(), seed)
         for place in ('ironroot-trailhead', 'riverwalk-end'):
@@ -128,7 +128,7 @@ def test_from_ironroot_a_walk_goes_into_the_woods_and_a_drive_still_takes_the_ro
 
 
 def test_the_narrator_keeps_to_2009_and_a_later_thing_is_flagged(client, connected, provider, app):
-    # Ported from Companion's Back when (dungeon/world/decades.py).
+    # Ported from Companion's Back when (adventure/world/decades.py).
     from test_pace import Slow
     begin(client)
     app.state.pace_clock = Slow()

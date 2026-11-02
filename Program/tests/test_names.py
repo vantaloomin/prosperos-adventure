@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from dungeon.world import catalog, generators, naming
+from adventure.world import catalog, generators, naming
 
 CITIES = sorted(key for key, value in catalog.cities().items() if value['origin'] == 'builtin')
 SCRIPTS = Path(__file__).parent.parent / 'scripts' / 'world'

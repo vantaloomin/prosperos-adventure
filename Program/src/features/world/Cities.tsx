@@ -14,7 +14,7 @@ import { citiesOfWorld, cityFacts, definitionOf, exportName, groupNotes, matches
 
 const CITIES_KEY = ['cities']
 const BROKEN_KEY = ['broken-cities']
-// `notes` lists what the server mended or added when it loaded a city (dungeon/world/mend.py).
+// `notes` lists what the server mended or added when it loaded a city (adventure/world/mend.py).
 type Feedback = { tone: 'info' | 'error'; text: string; notes?: string[] } | null
 // What the editor is working on: a new city (from the template, a file or a copy) or one of the user's own.
 type Editing = { mode: 'create'; text: string } | { mode: 'update'; id: string; revision: number; text: string }
@@ -89,7 +89,7 @@ export function Cities() {
     setFeedback({ tone: 'info', text: `Opened ${chosen.name}. Check it, change the id if you need to, then save it as one of your cities.` })
     if (file.current) file.current.value = ''
   }
-  // A Marinara world map becomes a city and world lore straight away, with no editor step (dungeon/world/marinara.py).
+  // A Marinara world map becomes a city and world lore straight away, with no editor step (adventure/world/marinara.py).
   const importWorldMap = async (chosen: File) => {
     setEditing(null)
     setFeedback({ tone: 'info', text: `Reading the world map ${chosen.name}…` })
@@ -281,7 +281,7 @@ function CityEditor({ editing, onClose, onSaved }: { editing: Editing; onClose: 
   return (
     <div className="city-editor form-stack">
       <h3>{editing.mode === 'create' ? 'New city' : `Editing ${editing.id}`}</h3>
-      <p className="subtle" id="city-json-hint">A city is a JSON file. Every place, college and employer names its neighborhood. New kinds of places, schools and jobs are welcome, and small slips are mended when you save. <a href="https://github.com/vantaloomin/prosperos-dungeon/blob/main/Program/docs/world-data.md#building-a-city" target="_blank" rel="noreferrer">The guide</a> lists every field.</p>
+      <p className="subtle" id="city-json-hint">A city is a JSON file. Every place, college and employer names its neighborhood. New kinds of places, schools and jobs are welcome, and small slips are mended when you save. <a href="https://github.com/vantaloomin/prosperos-adventure/blob/main/Program/docs/world-data.md#building-a-city" target="_blank" rel="noreferrer">The guide</a> lists every field.</p>
       <label htmlFor="city-json" className="visually-hidden">City definition</label>
       <textarea id="city-json" aria-describedby="city-json-hint" className="city-json" rows={18} spellCheck={false} value={text} onChange={(event) => { setText(event.target.value); setResult(null) }} />
       <div aria-live="polite">{result && <FeedbackNotice feedback={result} />}</div>

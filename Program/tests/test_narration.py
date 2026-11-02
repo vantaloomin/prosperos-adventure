@@ -1,7 +1,7 @@
-"""The narrator's layered prompt and the checks on what it writes (dungeon/narration)."""
+"""The narrator's layered prompt and the checks on what it writes (adventure/narration)."""
 import asyncio
 
-from dungeon.narration import prompt, prose
+from adventure.narration import prompt, prose
 
 
 def test_the_prompt_is_layered_with_the_turn_last():

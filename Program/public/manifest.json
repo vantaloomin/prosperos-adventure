@@ -1,6 +1,6 @@
 {
-  "name": "Prospero Dungeon",
-  "short_name": "Dungeon",
+  "name": "Prospero Adventure",
+  "short_name": "Adventure",
   "description": "A tabletop story game with an AI narrator, running on your computer.",
   "id": "/",
   "start_url": "/",

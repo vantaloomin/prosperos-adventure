@@ -1,10 +1,10 @@
-"""Gear and the shop (dungeon/inventory.py): the purse, the pack, carry slots and Pell's Provisions."""
+"""Gear and the shop (adventure/inventory.py): the purse, the pack, carry slots and Pell's Provisions."""
 from datetime import timedelta
 
 from conftest import Chunk, tell
 
-from dungeon import inventory
-from dungeon.world import catalog
+from adventure import inventory
+from adventure.world import catalog
 
 
 def ok(response):
@@ -262,7 +262,7 @@ def test_life_cards_move_markets(client, app):
 
 
 def test_a_market_card_moves_the_towns_prices(client, app):
-    from dungeon import happenings
+    from adventure import happenings
     begin(client)
     with app.state.database.connect(write=True) as connection:
         lines = happenings.marketed(connection, {'kind': 'market', 'goods': 'medicine', 'shift': 80, 'days': 21},

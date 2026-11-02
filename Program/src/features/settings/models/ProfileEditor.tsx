@@ -120,8 +120,8 @@ function SaveActions({ ready, recall, keyless, typed, canSave, saving, error, on
 const DECIDES: Partial<Record<Provider, string>> = {
   openrouter: 'Jev, TypeSafe’s decision model, through your OpenRouter account. Turn text goes to TypeSafe under its content policy.',
   openai: 'OpenAI’s Decisions API (in beta). Turn text goes to OpenAI under its content policy.',
-  local: 'A model on this computer, such as Qwen3.5 4B in LM Studio, Ollama or llama.cpp. The Dungeon reads the odds of each answer, so the server must return log probabilities.',
-  compatible: 'A model on an OpenAI-compatible service that returns log probabilities. The Dungeon reads the odds of each answer.',
+  local: 'A model on this computer, such as Qwen3.5 4B in LM Studio, Ollama or llama.cpp. Adventure reads the odds of each answer, so the server must return log probabilities.',
+  compatible: 'A model on an OpenAI-compatible service that returns log probabilities. Adventure reads the odds of each answer.',
 }
 
 function ProviderPicker({ selected, choices, onChange, decisions = false }: { selected: Provider; choices: Provider[]; onChange: (provider: Provider) => void; decisions?: boolean }) {

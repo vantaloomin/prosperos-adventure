@@ -1,20 +1,20 @@
-"""Vallarith's factions in play (dungeon/factions.py, docs/story.md "Factions"): the powers with a hand on the travel
-map, from the world package (dungeon/world/packages/vallarith/factions.json), with the clocks they run in the Post-Reform era and what
+"""Vallarith's factions in play (adventure/factions.py, docs/story.md "Factions"): the powers with a hand on the travel
+map, from the world package (adventure/world/packages/vallarith/factions.json), with the clocks they run in the Post-Reform era and what
 happens when each fills. Run `python scripts/world/vallarith_factions.py` to rewrite
-dungeon/world/data/factions/vallarith.json.
+adventure/world/data/factions/vallarith.json.
 """
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / 'dungeon' / 'world' / 'packages' / 'vallarith' / 'factions.json'
-TRAVEL = ROOT / 'dungeon' / 'world' / 'data' / 'travel' / 'vallarith.json'
-OUT = ROOT / 'dungeon' / 'world' / 'data' / 'factions' / 'vallarith.json'
+SOURCE = ROOT / 'adventure' / 'world' / 'packages' / 'vallarith' / 'factions.json'
+TRAVEL = ROOT / 'adventure' / 'world' / 'data' / 'travel' / 'vallarith.json'
+OUT = ROOT / 'adventure' / 'world' / 'data' / 'factions' / 'vallarith.json'
 # Chance in 100 that a clock moves on a given story day.
 PACE = 25
 # Where a faction has a hand beyond what the package says it holds (the Guild runs Kingswood's work).
 HOLDS = {'cyrel-timber-guild': ['kingswood', 'cyrel'], 'brynwyr-high-elves': ['brynwyr', 'kingswood']}
-# Each faction's tier on the shared ladder (dungeon/tiers.py): how far its reach goes, and the trouble it can send.
+# Each faction's tier on the shared ladder (adventure/tiers.py): how far its reach goes, and the trouble it can send.
 TIERS = {'kingdom-of-cyrel': 3, 'kingdom-of-asania': 3, 'cyrel-timber-guild': 2, 'brynwyr-high-elves': 3,
          'unguruk-tribe': 2, 'mossrun-expedition': 2}
 # The clocks each faction runs here, Post-Reform: (name, segments, what happens when it fills).
@@ -49,7 +49,7 @@ CLOCKS = {
 }
 
 
-# The jobs each faction offers in the towns it holds, when it needs something done (dungeon/jobs.py): what the
+# The jobs each faction offers in the towns it holds, when it needs something done (adventure/jobs.py): what the
 # character is asked, what is really going on, what happens if nobody does it, the days given, the pay in day wages,
 # the standing it earns, its tier (1, Local, when not given) and what it leaves behind (ties, for the story director).
 JOBS = {
@@ -157,7 +157,7 @@ def build() -> dict:
             'clocks': [{'id': slug(name), 'name': name, 'segments': segments, 'done': done}
                        for name, segments, done in clocks],
             'jobs': JOBS.get(faction_id, [])})
-    return {'about': 'Built by scripts/world/vallarith_factions.py from dungeon/world/packages/vallarith/factions.json.',
+    return {'about': 'Built by scripts/world/vallarith_factions.py from adventure/world/packages/vallarith/factions.json.',
             'world': 'vallarith', 'pace': PACE, 'factions': result}
 
 

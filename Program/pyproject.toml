@@ -1,5 +1,5 @@
 [project]
-name = "prospero-dungeon"
+name = "prospero-adventure"
 version = "0.1.0"
 requires-python = ">=3.12"
 license = "AGPL-3.0-only"
@@ -11,15 +11,15 @@ dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "httpx>=0.28,<1", "pyda
 dev = ["pytest>=8,<10", "pytest-xdist>=3.8,<4", "ruff>=0.11,<1"]
 
 [tool.setuptools.packages.find]
-include = ["dungeon*"]
+include = ["adventure*"]
 
 [tool.setuptools.package-data]
-dungeon = ["schema.sql", "images/workflows/*.json", "images/model_links.json", "world/data/*.json", "life/decks/*.json", "world/data/cities/*.json", "world/data/retired/*.json", "world/data/kitchen/*.json", "world/data/hobbies/*.json", "world/data/media/*.json", "world/data/rough_patches/*.json", "almanac/data/*.json", "rules/packs/srd52/*.json", "rules/packs/ironsworn/*.json", "rules/packs/brp/*.json", "world/packages/*/*.json", "world/packages/*/*.md", "world/packages/*/canon/*.md", "world/packages/*/assets/*/*", "world/packages/*/assets/*.webp", "world/packages/*/engine/*/*.json"]
+adventure = ["schema.sql", "images/workflows/*.json", "images/model_links.json", "world/data/*.json", "life/decks/*.json", "world/data/cities/*.json", "world/data/retired/*.json", "world/data/kitchen/*.json", "world/data/hobbies/*.json", "world/data/media/*.json", "world/data/rough_patches/*.json", "almanac/data/*.json", "rules/packs/srd52/*.json", "rules/packs/ironsworn/*.json", "rules/packs/brp/*.json", "world/packages/*/*.json", "world/packages/*/*.md", "world/packages/*/canon/*.md", "world/packages/*/assets/*/*", "world/packages/*/assets/*.webp", "world/packages/*/engine/*/*.json"]
 
 [tool.ruff]
 target-version = "py312"
 line-length = 120
-include = ["dungeon/**/*.py", "tests/**/*.py", "scripts/**/*.py"]
+include = ["adventure/**/*.py", "tests/**/*.py", "scripts/**/*.py"]
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I", "C901"]

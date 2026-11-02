@@ -1,9 +1,9 @@
-"""Makes the worlds' default NPC portraits (dungeon/art.py stock_portrait) with ChatGPT image generation, the same way
+"""Makes the worlds' default NPC portraits (adventure/art.py stock_portrait) with ChatGPT image generation, the same way
 scripts/art/backdrops.py makes the backdrops: through the app's Codex adapter under your `codex login`, or with
 `--backend openai` through the OpenAI Images API (key in CHATGPT_API_KEY or OPENAI_API_KEY, read from the environment
 only and never printed).
 
-Each world lists its portraits in its package, dungeon/world/packages/<world>/engine/art/<world>-portraits.json, with
+Each world lists its portraits in its package, adventure/world/packages/<world>/engine/art/<world>-portraits.json, with
 a prompt for each and the world's style (`portrait_style`): painterly for Vallarith and BABEL, photographic for
 Havenbrooke. An image is made at 1024x1536, cut to 3:4 (the stage's portrait shape, keeping the head) and written to
 the package's assets/portraits/<id>.webp at 600x800. The full-size PNGs are kept in Program/.tools/portraits-raw.
@@ -27,9 +27,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from backdrops import KEYS, OPENAI, PACKAGES, ROOT, STOPPING, STREAK, api_key  # noqa: E402
 
-from dungeon.images.adapters.base import AdapterError, ImageRequest  # noqa: E402
-from dungeon.images.adapters.codex import CodexAdapter  # noqa: E402
-from dungeon.images.adapters.hosted import HostedAdapter  # noqa: E402
+from adventure.images.adapters.base import AdapterError, ImageRequest  # noqa: E402
+from adventure.images.adapters.codex import CodexAdapter  # noqa: E402
+from adventure.images.adapters.hosted import HostedAdapter  # noqa: E402
 
 RAW = ROOT / '.tools' / 'portraits-raw'
 SIZE = (1024, 1536)

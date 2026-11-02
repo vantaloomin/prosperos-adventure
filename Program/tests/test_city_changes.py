@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pytest
 
-from dungeon.world import catalog, changes, generators
-from dungeon.world.schema import Place
-from dungeon.world.source import KINDS, CatalogWorld
+from adventure.world import catalog, changes, generators
+from adventure.world.schema import Place
+from adventure.world.source import KINDS, CatalogWorld
 
 CITIES = sorted(key for key, value in catalog.cities().items() if value['origin'] == 'builtin')
 LATER = date(2029, 6, 1)

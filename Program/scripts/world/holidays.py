@@ -10,7 +10,7 @@ import json
 from datetime import date, timedelta
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parents[2] / 'dungeon' / 'world' / 'data' / 'holidays.json'
+OUT = Path(__file__).resolve().parents[2] / 'adventure' / 'world' / 'data' / 'holidays.json'
 MON, TUE, WED, THU, FRI, SAT, SUN = range(7)
 
 

@@ -83,7 +83,7 @@ PACK = {
         'attribution': ATTRIBUTION,
     },
     'changes': [
-        'Converted from the PDF into structured JSON by Prospero\'s Dungeon (scripts/srd52_extract); the text is '
+        'Converted from the PDF into structured JSON by Prospero\'s Adventure (scripts/srd52_extract); the text is '
         'otherwise unchanged apart from the items below.',
         'Removed the publisher\'s game trademark from one sentence in Playing the Game.',
         'Added fields that are not in the source: ids, parsed numbers (prices in copper, weights, dice, saves, '

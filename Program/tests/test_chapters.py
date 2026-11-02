@@ -1,11 +1,11 @@
-"""Chapters, the branch tree, bookmarks, Ironman and the notebook (dungeon/chapters.py)."""
+"""Chapters, the branch tree, bookmarks, Ironman and the notebook (adventure/chapters.py)."""
 import json
 
 from conftest import Chunk, narrator, tell
 from test_inventory import begin
 from test_travel import ok
 
-from dungeon import chapters, combat, record
+from adventure import chapters, combat, record
 
 
 def reply(text):

@@ -1,9 +1,9 @@
-"""Flagged passages and Rewrite (dungeon/passages.py): what the checks leave is flagged, and any passage can be
+"""Flagged passages and Rewrite (adventure/passages.py): what the checks leave is flagged, and any passage can be
 rewritten in new words with the same dice and facts, and switched back."""
 from conftest import tell
 from test_pace import Slow, ok, reply, route
 
-from dungeon import passages, record
+from adventure import passages, record
 
 
 def narration(client):

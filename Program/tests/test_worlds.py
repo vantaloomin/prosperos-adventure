@@ -1,10 +1,10 @@
-"""Worlds and personas (dungeon/worlds.py): more than one life for the user, each in its own world."""
+"""Worlds and personas (adventure/worlds.py): more than one life for the user, each in its own world."""
 import json
 
 import pytest
 from conftest import tell
 
-from dungeon import story, tiers, worlds
+from adventure import story, tiers, worlds
 
 
 def ok(response):
@@ -65,8 +65,8 @@ def test_a_new_persona_has_a_world_of_their_own(client):
 
 
 def test_the_world_the_user_was_in_opens_on_the_next_start(clock, provider, client, app):
-    from dungeon.main import create_app
-    from dungeon.providers.vault import MemoryVault
+    from adventure.main import create_app
+    from adventure.providers.vault import MemoryVault
     made = ok(client.post('/api/worlds', json={}))
     ok(client.post(f"/api/worlds/{made['id']}/switch"))
     again = create_app(app.state.database.home, clock=clock, vault=MemoryVault(), provider=provider, background=False)

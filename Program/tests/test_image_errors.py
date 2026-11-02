@@ -1,5 +1,5 @@
-from dungeon.images import content
-from dungeon.images.adapters.hosted import said
+from adventure.images import content
+from adventure.images.adapters.hosted import said
 
 
 def test_withheld_picture_says_why():

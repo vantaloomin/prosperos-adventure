@@ -1,12 +1,12 @@
-"""Lore in the story: always-on, named lately, or fitting the moment (dungeon/lore.py, dungeon/lore_moments.py)."""
+"""Lore in the story: always-on, named lately, or fitting the moment (adventure/lore.py, adventure/lore_moments.py)."""
 import base64
 import json
 from datetime import datetime
 
 from conftest import Chunk
 
-from dungeon import lore_moments as moments
-from dungeon import story
+from adventure import lore_moments as moments
+from adventure import story
 
 
 def ok(response):

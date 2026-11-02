@@ -6,13 +6,13 @@ and the rest of the game are built on it from Milestone 1 ([the roadmap](../../d
 
 ## Who decides what
 
-The app decides the scene (`dungeon/story.py`):
+The app decides the scene (`adventure/story.py`):
 
 - **Where:** the city and place the user picked under "Go somewhere else…". A new story starts in Kingswood,
   the slice town, at its tavern or another opening place. A line that goes to a place in town by name or kind ("I
   go to the shrine", "I sleep at the bunkhouses") moves there too, before the narrator writes; words that fit two
   places equally move nobody. Moving adds a line to the story ("You arrive at …") that the narrator sees as a note.
-- **When:** the story clock (`dungeon/story_clock.py`), in the city's own timezone. It starts at campaign start
+- **When:** the story clock (`adventure/story_clock.py`), in the city's own timezone. It starts at campaign start
   and moves with what the player does: 5 minutes for talk, 10 for a rolled action, 30 for a walk somewhere, the
   hours they say for "I wait two hours" or "for three hours", a day, morning or evening spent at something (10, 4
   and 3 hours: "I spend the day felling trees"; the day runs only to 19:00, and begun after 18:00 an hour passes),
@@ -31,10 +31,10 @@ The app decides the scene (`dungeon/story.py`):
   residents whose routines bring them there. Each world's town has its own seed (`persona.town_seed`), so the
   same streets hold different people in different worlds.
 
-The narrator model only voices the scene. Its prompt is built in layers (`dungeon/narration/prompt.py`):
+The narrator model only voices the scene. Its prompt is built in layers (`adventure/narration/prompt.py`):
 "The Story narrator" and "The narrator's writing rules" in Settings > Developer ([prompts.md](prompts.md)),
 the narration format (second person, present tense, short turns), the intensity, then a `## Scene` section
-with the facts above. After each reply, `dungeon/narration/prose.py` removes em dashes and asks the model for
+with the facts above. After each reply, `adventure/narration/prose.py` removes em dashes and asks the model for
 one rewrite when the reply has the strongest AI tells (see "Narrator prompting" in the top-level
 docs/requirements.md). The narrator gets the names of the people present, with a rule not to use a name until
 that person gives it. The screen lists them only as the user would see them ("the barista", "a regular").
@@ -45,8 +45,8 @@ the game holds and the travel map as the character knows it; it names the model 
 
 ## Campaign start
 
-A new story opens on "Who are you?" (`dungeon/campaign.py`). The player picks one of the town's premade characters
-(`dungeon/world/data/premades/<city>.json`; Kingswood ships three) or makes their own: a name, gender, age, a
+A new story opens on "Who are you?" (`adventure/campaign.py`). The player picks one of the town's premade characters
+(`adventure/world/data/premades/<city>.json`; Kingswood ships three) or makes their own: a name, gender, age, a
 few lines about them, and Prospero stats bought from 60 points, each from 4 to 18. Either way the world's persona takes
 on that name and those lines, the stats go on the sheet, and the story opens with "You arrive at …".
 
@@ -55,7 +55,7 @@ what their stats make them good and poor at (14 and up, 7 and down), in words, n
 them from what is there and invent nothing about their past.
 
 Session zero follows (`src/features/story/SessionZero.tsx`): one screen, "How this campaign plays", with three preset
-cards (`dungeon/table.py` PRESETS: "As the world is written", "Gentler", "Harsher"), the world's own pre-picked so
+cards (`adventure/table.py` PRESETS: "As the world is written", "Gentler", "Harsher"), the world's own pre-picked so
 Start is one click away. A preset sets the tone and the director's hand; "Fine-tune" shows every rule it set, whether
 the dice show, and what is chosen once for the campaign (how far and fast the character rises, Ironman, an earlier
 story). Under 5E it also has "Foes decide a defeat" (the Table's `defeat`). The ruleset stays on "Who are you?", as it decides how a character is made. `POST /api/story/start` takes
@@ -63,7 +63,7 @@ the rules as `table`; `GET /api/story/start` gives `presets` and `table`, the ru
 
 ## The Table
 
-Each campaign keeps its own rules (`dungeon/table.py`, columns on `story_campaign`), so they no longer follow the
+Each campaign keeps its own rules (`adventure/table.py`, columns on `story_campaign`), so they no longer follow the
 player from world to world the way settings do. Tone (intensity, how eventful, lasting injuries, a 5E defeat) starts as the world's
 at every new campaign; what is shown (the dice, rolling them, townsfolk's adult side, the GM view, meanwhile
 cutaways) starts where the player last left it, which the workspace settings remember. A rule the player sets before
@@ -80,13 +80,13 @@ change (`story.narration_format`).
 ## Rulesets
 
 The campaign's ruleset is picked on the start screen ("Rules") and locked for the whole campaign
-(`story_campaign.ruleset`, `dungeon/sheet.py`). A world names its default; every built-in world plays Prospero for
+(`story_campaign.ruleset`, `adventure/sheet.py`). A world names its default; every built-in world plays Prospero for
 now. Whatever the ruleset, the Referee still names an approach (one of Prospero's six stats) and a difficulty, and
 `sheet.check` rolls the persona's checks the ruleset's way, on the shared outcome ladder. Everyone else (foes,
 healers, townsfolk) keeps Prospero stats for now.
 
-- **Prospero** (`dungeon/rules/marvel.py`): see "Who decides what".
-- **5E via the SRD 5.2.1** (`dungeon/rules/srd52.py`, content in `dungeon/rules/packs/srd52`, CC-BY-4.0; the
+- **Prospero** (`adventure/rules/marvel.py`): see "Who decides what".
+- **5E via the SRD 5.2.1** (`adventure/rules/srd52.py`, content in `adventure/rules/packs/srd52`, CC-BY-4.0; the
   attribution shows on the start screen and the sheet). A character is a class, species and background from the pack,
   the standard array placed on the six abilities with the background's +2 and +1, the background's skills and the
   class's picks, level 1 hit points, and Armor Class from the armour in the class's starting equipment (a Fighter's
@@ -100,7 +100,7 @@ healers, townsfolk) keeps Prospero stats for now.
 
 ### 5E levels and spells
 
-- **XP and levels** (`dungeon/combat5e.py gain`, `srd52.advance`). A won fight gives each beaten foe's XP (down or
+- **XP and levels** (`adventure/combat5e.py gain`, `srd52.advance`). A won fight gives each beaten foe's XP (down or
   broken, from its stat block); a milestone (a town quest done, a rise in standing) gives the level's high encounter
   budget. XP reaching the advancement table's next row is a level, at once: the hit die's fixed average plus
   Constitution in hit points, the class's features for the level, and at an Ability Score Improvement +2 to the
@@ -136,7 +136,7 @@ healers, townsfolk) keeps Prospero stats for now.
 Not yet: choosing spells, the subclass and the ability increase yourself, class features in fights (Rage, Sneak
 Attack, Second Wind), areas (a spell hits one foe) and concentration.
 
-- **Ironsworn** (`dungeon/rules/ironsworn.py`, content in `dungeon/rules/packs/ironsworn`: Datasworn's Ironsworn
+- **Ironsworn** (`adventure/rules/ironsworn.py`, content in `adventure/rules/packs/ironsworn`: Datasworn's Ironsworn
   data, CC-BY-4.0; the attribution shows on the start screen and the sheet). A character places 3, 2, 2, 1 and 1 on
   edge, heart, iron, shadow and wits and chooses three assets (paths, companions, combat talents, rituals); a
   premade leans on the stat its strongest Prospero stat maps to, with assets that fit. Health, spirit and supply start
@@ -152,7 +152,7 @@ Attack, Second Wind), areas (a spell hits one foe) and concentration.
 Supply, spirit and vows under Ironsworn are described below. Not yet: Starforged (its Datasworn package's planet
 images are non-commercial).
 
-- **Narrative** (`dungeon/rules/narrative.py`, `dungeon/judge.py`; requirements "Narrative Only"): no stats and no
+- **Narrative** (`adventure/rules/narrative.py`, `adventure/judge.py`; requirements "Narrative Only"): no stats and no
   dice. The sheet is the character's own About text plus two optional lists, good at and bad at. Each action the
   Referee finds gets a verdict from the judge: No (failure), No, but (failure with an upside), Yes, but (success at a
   cost) or Yes (success), with a one-line reason. The judge is the Referee's own model, else the narrator's, asked
@@ -162,7 +162,7 @@ images are non-commercial).
   answer, the difficulty decides in code: easy Yes, normal Yes, but, hard No, but, harder No. There is no roll card:
   `dice_shown` is off under Narrative whatever the Table says, except in the GM view. No stat growth; milestones give
   nothing (what the character is known for is in the record). Fights use the shared wound levels.
-- **Fate** (`dungeon/rules/fate.py`; requirements "Fate"; Fate Accelerated and Condensed under CC-BY-3.0, the
+- **Fate** (`adventure/rules/fate.py`; requirements "Fate"; Fate Accelerated and Condensed under CC-BY-3.0, the
   Evil Hat attribution on the start screen and the sheet). A character is a high concept, a trouble, up to three
   more aspects and up to three stunts, all in the player's words, and the six approaches (Careful, Clever, Flashy,
   Forceful, Quick, Sneaky) at +3, +2, +2, +1, +1, +0. A premade's high concept is the first sentence of its About,
@@ -175,7 +175,7 @@ images are non-commercial).
   for (the words after "when"). A premade's trouble comes from its About.
   The dice ride in the roll's `skill` ("…, dice +0−+") for the card, which rolls them flat. A night's sleep brings
   Fate points back to the refresh (3) and clears stress; a milestone raises the weakest approach by one, up to +4.
-  A foe's blow is Fate's own (`dungeon/combat_fate.py`): the foe rolls 4dF plus its rating (Average to Good, by
+  A foe's blow is Fate's own (`adventure/combat_fate.py`): the foe rolls 4dF plus its rating (Average to Good, by
   how well it fights) against the character's 4dF plus Quick, or Careful when guarding (+1 for the guard, +1 against
   a shot from far off). The shifts it wins by, plus its weapon, are absorbed as cheaply as code can: one stress box
   (1, 2 or 3 shifts), else the lightest consequences (mild 2, moderate 4, severe 6) with a box if that covers it.
@@ -184,7 +184,7 @@ images are non-commercial).
   marked (stress Grazed, mild Hurt, moderate Wounded, severe Maimed), and a wound from outside a fight marks the
   consequence for its level. Consequences heal with nights of rest: mild 1, moderate 3, severe 7. Foes still take
   the shared wound levels.
-- **Percentile** (`dungeon/rules/brp.py`, content in `dungeon/rules/packs/brp`: the core of Chaosium's Basic
+- **Percentile** (`adventure/rules/brp.py`, content in `adventure/rules/packs/brp`: the core of Chaosium's Basic
   Roleplaying from its ORC Content Document, transcribed for a world before firearms). Vanta's call: the app names
   the ruleset "Percentile", and BRP appears only in the ORC notice and credit on the start screen and the sheet. A
   character buys STR, CON, SIZ, INT, POW, DEX and CHA point-based as written (all at 10, 24 points, DEX, INT and POW
@@ -227,17 +227,17 @@ weapon or a shield, training and research.
 
 ## The turn loop
 
-Each line the user sends is one turn (`dungeon/turn.py`). Code settles what happens before the narrator writes:
+Each line the user sends is one turn (`adventure/turn.py`). Code settles what happens before the narrator writes:
 
-1. **The Referee** (`dungeon/referee.py`) splits the line into the things the character tries, at most four, and
+1. **The Referee** (`adventure/referee.py`) splits the line into the things the character tries, at most four, and
    decides for each whether the outcome is uncertain, which Prospero stat it tests and how hard it is. A text model
    does this only when one is chosen for the **Referee** job in Settings > Models; it answers in JSON and
    anything malformed is dropped. Without one, or when its answer cannot be read, keyword rules decide (each
    sentence naming something risky, at normal difficulty). Talking, looking around and OOC lines roll nothing.
-2. **The roll** (`dungeon/rules/marvel.py`): d100 plus the stat's die, minus the difficulty shift (easy −10,
+2. **The roll** (`adventure/rules/marvel.py`): d100 plus the stat's die, minus the difficulty shift (easy −10,
    normal 0, hard +10, very hard +20, extreme +30). The stat die is d4 below 8, d6 from 8, d8 from 10, d10 from
    12 and d12 from 14. A natural 10 or less is a critical failure; otherwise the total lands on the ladder
-   (`dungeon/rules/ladder.py`): 30 or less fails, 31 to 50 fails with an upside, 51 to 70 succeeds at a cost,
+   (`adventure/rules/ladder.py`): 30 or less fails, 31 to 50 fails with an upside, 51 to 70 succeeds at a cost,
    71 to 89 succeeds, 90 or more is a critical success.
 3. **The narrator** gets each outcome as a fact to honour, never the numbers, and writes the turn.
 
@@ -251,17 +251,17 @@ PC without WebGL gets flat tumbling dice instead, reduced motion shows them land
 
 ### The turn receipt
 
-Under each narration, a row of chips says what the turn changed (`dungeon/receipt.py`,
+Under each narration, a row of chips says what the turn changed (`adventure/receipt.py`,
 `src/features/story/StoryReceipt.tsx`): coins in or out, items gained or lost, being hurt or mending, a lasting
 injury, a quest heard of or ended, and what the character learned about (by subject). Nothing new is stored: each
-player line already saves the game state as it arrives (`dungeon/timeline.py`), so a receipt is that save against the
+player line already saves the game state as it arrives (`adventure/timeline.py`), so a receipt is that save against the
 next line's, or the game as it stands for the latest turn. Facts pulled from the story after the reply show up once
 extraction has run. Only what the player could already see goes in; hidden truth, feelings and standings stay out.
 The 40 latest turns have receipts; `GET /api/story` carries them as `receipt` on the player's lines.
 
 ## The record and the story so far
 
-The record (`dungeon/record.py`, table `record_entries`) is what the game holds true: deaths, items, wounds,
+The record (`adventure/record.py`, table `record_entries`) is what the game holds true: deaths, items, wounds,
 promises, places, secrets, relationships and other facts, each marked as world truth (hidden from the player's
 character), the character's belief, or both. Code records the facts it decides. After each narration the
 **Continuity** model, when one is chosen for that job in Settings > Models, lists the new lasting facts in JSON;
@@ -272,7 +272,7 @@ rest, 40 in all), with hidden truth marked as hidden, and is told never to contr
 **Schema-first.** The Continuity model fills a JSON Schema (`record.schema`): the facts (kind, subject, text and
 truth, each kind and truth from a fixed list), plus a part for each other system's question that turn (quest
 endings, oaths, feelings, dark tracks), every list empty when nothing applies. The backend enforces it where it can
-(`dungeon/providers/requests.py` `structured`): structured output on OpenAI, Anthropic and Gemini,
+(`adventure/providers/requests.py` `structured`): structured output on OpenAI, Anthropic and Gemini,
 `response_format` on OpenRouter and OpenAI-compatible servers (llama.cpp and LM Studio enforce it by grammar),
 `--json-schema` on Claude Code and `--output-schema` on Codex. Kobold gets the prompt alone. A backend that refuses
 the schema, or an answer that still cannot be read, is asked again without it. A weak model that gives no readable
@@ -294,7 +294,7 @@ model for that one fact again from its turn, without redoing the turn. The new f
 logged like a correction.
 
 The journal also shows **the story so far** as the narrator keeps it (the rolling summary). With the GM view on,
-**Behind the story** (`dungeon/gm.py`, `GET /api/story/gm`) shows what the game keeps behind it: every quest with
+**Behind the story** (`adventure/gm.py`, `GET /api/story/gm`) shows what the game keeps behind it: every quest with
 its hidden truth and whether the character knows of it, the director's arcs at their stages with their truths and
 antagonists, its open threads and nemeses, how everyone met feels (each axis set by hand there) and their
 impressions, the factions' standing (set by hand), the dark tracks' points, and the log of corrections to the record.
@@ -306,7 +306,7 @@ narrator gets that summary as "The story so far" in their place. The summary cal
 
 ## Layered recall and forgetting
 
-`dungeon/remembering.py` decides what the narrator is reminded of each turn:
+`adventure/remembering.py` decides what the narrator is reminded of each turn:
 
 - **Layered recall.** The narrator reads the recent turns word for word, the story so far as a summary, and up to 40
   facts from the record: every death and promise first, then the facts about who is present, the place, and
@@ -328,7 +328,7 @@ narrator gets that summary as "The story so far" in their place. The summary cal
 
 ## Chapters and the branch tree
 
-`dungeon/chapters.py` gives the story its structure.
+`adventure/chapters.py` gives the story its structure.
 
 - **Chapters close at scene breaks:** a new place, a journey or a rest, a fight over, a quest done or failed, or the
   player ending one themselves ("End the chapter", with a name if they like). The break waits
@@ -351,11 +351,11 @@ narrator gets that summary as "The story so far" in their place. The summary cal
 
 ## Export and legacy
 
-- **The story as a book** (`dungeon/book.py`, `GET /api/story/export/book?format=md|epub|pdf`, Story > Export): the
+- **The story as a book** (`adventure/book.py`, `GET /api/story/export/book?format=md|epub|pdf`, Story > Export): the
   branch being played, chapter by chapter with their titles, the player's lines set apart (quoted in Markdown,
   in italics in EPUB and PDF). Nothing hidden goes in: no GM notes, record or rolls. The EPUB 3 and the PDF (6 by 9
   inches, in the built-in Helvetica faces) are written with the standard library alone.
-- **The campaign file** (`dungeon/legacy.py`, `GET /api/story/export/campaign`) is a verified Dungeon archive of the
+- **The campaign file** (`adventure/legacy.py`, `GET /api/story/export/campaign`) is a verified Adventure archive of the
   world being played: every branch, save, the record and the settings. "Import a campaign file" on the Worlds page
   (`POST /api/worlds/import`, the file as the body) makes it a new world under the persona that played it (made
   again if this install has none); saved credentials stay behind, as with any restore.
@@ -368,7 +368,7 @@ narrator gets that summary as "The story so far" in their place. The summary cal
 
 ## What is happening
 
-A town's adventure file (`dungeon/world/data/adventures/<city>.json`, `dungeon/quests.py`) lists its quests and its
+A town's adventure file (`adventure/world/data/adventures/<city>.json`, `adventure/quests.py`) lists its quests and its
 dangerous places, and its finds file (`finds/<city>.json`) what is inside things there. Every town ships one:
 - **Kingswood** (Vallarith): "The Heartwood contract" and a hidden one, "The wardens' eyes".
 - **Haven** (Havenbrooke): "Mairead's sealskin", "Recon loops in Ironroot", and the hidden "The Velvet Spire's middle
@@ -396,7 +396,7 @@ dangerous places, and its finds file (`finds/<city>.json`) what is inside things
 
 ## Gear and the shop
 
-Code owns every item and coin (`dungeon/inventory.py`). A town's item file (`dungeon/world/data/items/<city>.json`)
+Code owns every item and coin (`adventure/inventory.py`). A town's item file (`adventure/world/data/items/<city>.json`)
 lists its items with base prices in the city's currency (Kingswood: silver crowns, a logger earning 1 to 2 a day),
 its shops with their starting stock, and each premade's starting kit (plus a default kit for a made character).
 
@@ -429,12 +429,12 @@ its shops with their starting stock, and each premade's starting kit (plus a def
   worth (Pell's: 29.28 cr.). What it sells adds to it, what it buys takes from it, and a restock tops it back up. A
   shop can't buy past its till ("The keeper hasn't the money for that"). Tone and rules > "Shopkeepers' cash runs out"
   (the Table's `shop_cash`, 'finite' or 'unlimited') turns it off.
-- **Stolen goods and fences.** What the character takes from someone's things (`dungeon/finds.py`: a purse or pocket
+- **Stolen goods and fences.** What the character takes from someone's things (`adventure/finds.py`: a purse or pocket
   always, anything at a place someone owns; a body or a place out in the open gives freely) is stolen
   (`story_inventory.stolen`), shown "(stolen)" in the pack and told to the narrator. An honest shop won't buy stolen
   goods or anything illegal; a fence (a shop with `fence`) buys both, and anything else, at its own low rate.
   Kingswood's fence is Mother Mag's (a quarter of the price, 6 cr. in the till); BABEL's is the Fence Rows.
-- **Markets.** A Life Card's market effect (`dungeon/happenings.py`) moves a kind of goods' prices in the town for some
+- **Markets.** A Life Card's market effect (`adventure/happenings.py`) moves a kind of goods' prices in the town for some
   days (`story_markets`: food, drink, medicine, arms, cloth, ley goods or everything), both what shops charge and what
   they pay. The counter and the narrator are told.
 - **Services.** Inns, taverns and bathhouses sell services from the same item files (category `service`, with its
@@ -450,7 +450,7 @@ its shops with their starting stock, and each premade's starting kit (plus a def
   saw. At a shop with nobody behind the counter, a line that buys, sells or haggles is told the shop is shut, and
   selling what the character doesn't carry is no sale.
 - **Wear and repair.** Gear has a condition (`story_inventory.condition`): sound, damaged or broken, shown in the pack
-  and told to the narrator. An attack that fails critically damages the weapon swung, one step (`dungeon/combat.py`
+  and told to the narrator. An attack that fails critically damages the weapon swung, one step (`adventure/combat.py`
   worn: the weapon the line names, else the best carried). A damaged weapon hits a step softer; a broken one is left
   out of the fight. Damaged goods sell for half, broken ones for a fifth. Kingswood's Blackwood smithy sells blades
   and tools, buys them, and repairs (a `repair` service: the worst thing carried, one step a repair, broken before
@@ -461,7 +461,7 @@ Not yet: an opposed roll against the keeper's Resolve, hirelings who travel and 
 
 ## How you look
 
-`dungeon/appearance.py` (requirements "Inventory and equipment": appearance state and visible gear). Code keeps how
+`adventure/appearance.py` (requirements "Inventory and equipment": appearance state and visible gear). Code keeps how
 the character looks, and the narrator gets it every turn ("How the character looks right now"), with "## How the
 character looks" when a line changed it. The pack widget shows it as "How you look".
 
@@ -482,7 +482,7 @@ character looks" when a line changed it. The pack widget shows it as "How you lo
 
 ## Fights
 
-Code runs the fight and the narrator writes it (`dungeon/combat.py`). One line of the player's is one round.
+Code runs the fight and the narrator writes it (`adventure/combat.py`). One line of the player's is one round.
 
 - **Starting.** A fight starts when the player attacks someone in the scene, by name or by what they do ("I punch
   the barkeep"), or when a dangerous place's threat brings a foe (Kingswood's Heartwood: a ley-mad boar, or two
@@ -500,7 +500,7 @@ Code runs the fight and the narrator writes it (`dungeon/combat.py`). One line o
   success with a cost one level, a success two, a critical three), plus one with a sword or felling axe and minus
   one bare-handed. A successful dodge, block or parry makes the foes' attacks hard this round; a successful flight
   ends the fight. Engaged foes roll Vitality to hit back the same way.
-- **Range and areas** (`dungeon/ranges.py`, every ruleset). Each foe stands engaged, near or far. A foe not engaged
+- **Range and areas** (`adventure/ranges.py`, every ruleset). Each foe stands engaged, near or far. A foe not engaged
   spends its turn closing a band (far, near, engaged) unless it fights at range (`ranged` in a danger's foe, which
   may also start `zone: far`, like the Heartwood wardens' bows): then it shoots from where it stands. The
   character's blow reaches a near foe (and engages it) but a far one only closes to near; a shot or throw reaches
@@ -543,7 +543,7 @@ Code runs the fight and the narrator writes it (`dungeon/combat.py`). One line o
 
 ### Allies
 
-`dungeon/allies.py`. The character's companions (see "Your party") fight beside them on their own, in any ruleset:
+`adventure/allies.py`. The character's companions (see "Your party") fight beside them on their own, in any ruleset:
 each round, after the character's move, each ally on their feet goes for the foe worst hurt already, rolling their
 own d100 skill (60 for someone whose work is fighting, 35 otherwise); a hit hurts the foe in the campaign's terms.
 Each foe still standing turns on an ally instead of the character one time in (allies + 1), and lands half the time;
@@ -552,7 +552,7 @@ them under the foes.
 
 ### Fights under 5E
 
-The same fight, on 5E's numbers from the SRD 5.2.1 pack (`dungeon/combat5e.py`):
+The same fight, on 5E's numbers from the SRD 5.2.1 pack (`adventure/combat5e.py`):
 
 - **Foes are SRD stat blocks.** A foe's spec can name its monster (`"srd52": "giant-boar"` on the ley-mad boar), else
   one is read from its name (a bandit or thief is a Bandit, a press-gang thug a Tough, a warden a Scout, a ghoul a
@@ -576,7 +576,7 @@ The same fight, on 5E's numbers from the SRD 5.2.1 pack (`dungeon/combat5e.py`):
   saves; wardens, robbers and brawlers skip them and the defeat table takes what they came for.
 - **A long rest** (a night's sleep) restores every hit point, as written. Lasting injuries still need their own care.
 - The Story screen shows the character's hit points, and the foes' while the dice are shown.
-- **The battle map** (`dungeon/battlemap.py`, the fight card's "Battle map"): the fight on five-foot squares, the
+- **The battle map** (`adventure/battlemap.py`, the fight card's "Battle map"): the fight on five-foot squares, the
   character in the middle. It draws the range bands, which code still decides: each foe in a direction of its own
   (ahead first, then the flanks), engaged 5 ft off, near 20 ft (one move), far 45 ft; companions behind. Distances
   count every square as five feet, diagonals too. Nothing is saved: the same fight draws the same map. The narrator
@@ -584,7 +584,7 @@ The same fight, on 5E's numbers from the SRD 5.2.1 pack (`dungeon/combat5e.py`):
 
 ### Fights under Ironsworn
 
-The same fight on Ironsworn's moves (`dungeon/combat_iron.py`):
+The same fight on Ironsworn's moves (`adventure/combat_iron.py`):
 
 - **Foes are the pack's NPCs**, read from the foe's name (a raider is a Raider, a warden a Hunter, the ley-mad boar
   a Boar), else by how tough the Prospero spec is. Each has its rank, deals harm equal to it, and has a progress track
@@ -611,7 +611,7 @@ effects, healers and medicine, a fight started by an NPC without a danger roll.
 
 ### Fights under Percentile
 
-The same fight on BRP's rules (`dungeon/combat_brp.py`):
+The same fight on BRP's rules (`adventure/combat_brp.py`):
 
 - **Foes are the pack's sample characters and animals**, read from the foe's name (a thug or bandit is a Thug, a
   raider or guard a Viking, a wolf a Wolf), else by how tough the Prospero spec is: hit points, armour, Dodge and their
@@ -636,7 +636,7 @@ The same fight on BRP's rules (`dungeon/combat_brp.py`):
 
 ### Supply, spirit and vows under Ironsworn
 
-`dungeon/sworn.py` keeps Ironsworn's tracks outside a fight:
+`adventure/sworn.py` keeps Ironsworn's tracks outside a fight:
 
 - **Supply.** Ironsworn keeps its abstract Supply track: a day on the road costs a point of supply instead of a food
   from the pack, and with none left the character goes hungry as before. A Life Card's food comes as supply.
@@ -660,14 +660,14 @@ The same fight on BRP's rules (`dungeon/combat_brp.py`):
   it ended, but the vow is not what was sworn). Code spends it: 2 upgrades an asset (its next ability), else 3 buys
   a new asset that fits the character's best stat. Prospero's milestones give Ironsworn nothing; its growth is its
   vows.
-- **Bonds** is a progress track too: each bond forged (dungeon/bonds.py) marks a tick, and the narrator hears the
+- **Bonds** is a progress track too: each bond forged (adventure/bonds.py) marks a tick, and the narrator hears the
   count with the bond. The sheet lists every open vow's progress and the bonds track.
 
 Not yet: journeys as progress tracks, Sojourn, debilities from the suffer moves, Write Your Epilogue.
 
 ## Going back
 
-Every line the player sends is a save point (`dungeon/timeline.py`): the game state as the line arrives (the scene,
+Every line the player sends is a save point (`adventure/timeline.py`): the game state as the line arrives (the scene,
 the people met, the sheet, the record and the summary: the tables in `timeline.SAVED`) is kept in `story_saves`. "Go back here" under any of
 the player's lines starts a new branch from just before it, puts that state back and returns the line to the
 composer to send again. Nothing is rolled until it is sent, so the dice are always new.
@@ -680,10 +680,10 @@ keeps game state adds its tables to `timeline.SAVED`.
 
 ## What is inside
 
-Milestone 1 item 12, decide before describing (`dungeon/finds.py`, requirements "Decide before describing"). When
+Milestone 1 item 12, decide before describing (`adventure/finds.py`, requirements "Decide before describing"). When
 the player's line looks into something unsettled ("I search the chest", "I pick his pockets", "I go through the
 desk"), code rolls what is there before the narrator writes a word, from the town's tables
-(`dungeon/world/data/finds/<city>.json`: chests, drawers, crates, bodies, purses and rooms, each with the words a
+(`adventure/world/data/finds/<city>.json`: chests, drawers, crates, bodies, purses and rooms, each with the words a
 player uses for it, how many draws and a weighted table of catalog items, coins, notes and the odd trap). The
 narrator gets "What is there" and describes only that.
 
@@ -707,7 +707,7 @@ themselves, and other towns' tables.
 
 ## Turn speed
 
-Milestone 1 item 11 (`dungeon/pace.py`, requirements "Turn speed"). A turn can chain the Referee, the narrator,
+Milestone 1 item 11 (`adventure/pace.py`, requirements "Turn speed"). A turn can chain the Referee, the narrator,
 the prose rewrite, a contradiction check, fact extraction and the summary, so each turn has a time budget and
 every step is timed.
 
@@ -727,7 +727,7 @@ every step is timed.
 - **Over budget, the optional steps give way:** the prose rewrite first, then the contradiction check. Dice, the
   record and the em dash fix are never skipped.
 
-- **The dice log** (`dungeon/dice_log.py`, `GET /api/story/dice-log`, the drawer's "Dice log" under More): every
+- **The dice log** (`adventure/dice_log.py`, `GET /api/story/dice-log`, the drawer's "Dice log" under More): every
   roll of the branch being played, turn by turn and newest first (up to 200 turns), each with its line, its rolls
   as the roll cards give them and how long the turn took, and a tally of how many landed. Only while the dice are
   shown; hidden, it returns nothing.
@@ -737,7 +737,7 @@ skipped checks.
 
 ## Journeys
 
-`dungeon/travel.py`, with each world's travel map in `dungeon/world/data/travel/` (Vallarith first): places joined
+`adventure/travel.py`, with each world's travel map in `adventure/world/data/travel/` (Vallarith first): places joined
 by roads, each road with its hours on foot, terrain and danger (none, low, medium, high), and each region's road
 encounters. A place is a whole town (Kingswood: its city and the place one arrives at) or a place on **the Road**
 (`world/data/cities/vallarith-road.json`, built by `scripts/world/vallarith_road.py` from the world package's
@@ -766,7 +766,7 @@ settlements): a gate, an edge or a ruin to arrive at, until that town is built o
 
 ### The hex crawl
 
-`dungeon/hexes.py` (requirements "### Hex crawl"). A travel map is a hex crawl unless it sets `travel: "roads"`, as
+`adventure/hexes.py` (requirements "### Hex crawl"). A travel map is a hex crawl unless it sets `travel: "roads"`, as
 Havenbrooke's (car or bus) and BABEL's (the Stair) do. Vallarith's is.
 
 - **The hexes.** Flat-topped, axial (q, r). Vallarith's authored hexes are `world/data/hexes/vallarith.json`, painted
@@ -778,7 +778,7 @@ Havenbrooke's (car or bus) and BABEL's (the Stair) do. Vallarith's is.
 - **Rivers and lakes.** A hexes file can list `rivers` (each `{id, name, cells, flow}`: its hexes in axial
   coordinates from source to mouth, and the share of the map's biggest river's water each carries) and `lakes`
   (axial hexes, water whatever the terrain rows say); Prospero's Worldsmith's map painter writes both, with the
-  author's `paint` and `painter` settings beside them, which Dungeon ignores. `Grid.cell` gives a hex's `river`
+  author's `paint` and `painter` settings beside them, which Adventure ignores. `Grid.cell` gives a hex's `river`
   (name, flow, the next hex `down`). A step into a river hex off the road fords it (`FORD_HOURS`, an hour for a
   six-mile hex, slowed by weather like the rest of the step) unless it walks along that river's bank; a road crosses
   by a bridge where the river carries at least `BRIDGE_FLOW` of the biggest river's water, else a ford, at the
@@ -828,7 +828,7 @@ Havenbrooke's (car or bus) and BABEL's (the Stair) do. Vallarith's is.
   that walks into a hex with a site the character did not know of stops there ("You come upon …"). Found sites
   (`story_sites`, branched with the story) show on the map and are somewhere to set out for ("I head back to Hatch's
   Tower"), which ends out in the wild at the site. An entry's `intensity` (`{category: level}`, as cards have) leaves
-  it out when the levels in play are lower (dungeon/tone.py), and a found site is kept as it was found (its `site`
+  it out when the levels in play are lower (adventure/tone.py), and a found site is kept as it was found (its `site`
   JSON), so lowering the levels later never changes it. A found hamlet is a place of its own in the wild's Road city
   (`hamlet-<q>-<r>`, added by story.py `city_for` from the found sites, so it is branched too): reaching it puts the
   scene there under its own name (kind `hamlet`), with its own people, who are at home there when not working, while
@@ -853,8 +853,8 @@ Havenbrooke's (car or bus) and BABEL's (the Stair) do. Vallarith's is.
 
 ### Interiors
 
-The inside of a keep, cave or ruin is walked room by room (dungeon/delving.py; requirements "### Interiors"). An
-authored interior (world/data/interiors, dungeon/interiors.py) is entered from its place or travel-map stop; a found
+The inside of a keep, cave or ruin is walked room by room (adventure/delving.py; requirements "### Interiors"). An
+authored interior (world/data/interiors, adventure/interiors.py) is entered from its place or travel-map stop; a found
 hex site with an interior table (world/data/interior_tables/<world>.json: ruins, caves, lairs, barrows) is laid out
 from the campaign seed and the site the first time it is entered, the same every time, keeping the intensity levels
 it was entered at.
@@ -867,7 +867,7 @@ it was entered at.
   character where they were). A trap rolls the first time its passage is walked. A room's hazard rolls the first
   time the character is in it.
 - A room's foes roll each turn the character is in the room to keep out of sight; a failure, or attacking them,
-  starts the fight (dungeon/story.py fight_round). Once a fight begun there is over with the character alive, the
+  starts the fight (adventure/story.py fight_round). Once a fight begun there is over with the character alive, the
   room is cleared.
 - "I search the room": 20 minutes and a Mind roll; a success finds the room's hidden ways out and takes what is
   lying there into the pack, and tells the room's lore.
@@ -879,7 +879,7 @@ it was entered at.
 
 ## Rest
 
-`dungeon/rest.py`. A line that beds down ("I sleep", "we make camp", "I rest for three days", "for a week") is a
+`adventure/rest.py`. A line that beds down ("I sleep", "we make camp", "I rest for three days", "for a week") is a
 rest, decided before the narrator writes it. A journey line is not; a rest with a fight on is refused.
 
 - **Where decides the danger.** A town (a safe place on the travel map, or a city with no map) is safe, unless the
@@ -900,7 +900,7 @@ rest, decided before the narrator writes it. A journey line is not; a rest with 
 
 ## Lasting injuries and treatment
 
-`dungeon/injuries.py`, with the lasting-injury table in `dungeon/rules/injuries.json`. All of it follows the
+`adventure/injuries.py`, with the lasting-injury table in `adventure/rules/injuries.json`. All of it follows the
 **Lasting injuries** setting beside the story (`injury_persistence`): Permanent (the default), Temporary or None.
 
 - **Lasting injuries are rolled.** A foe's hit that leaves the character Maimed (or worse), or a foe's critical hit
@@ -926,7 +926,7 @@ rest, decided before the narrator writes it. A journey line is not; a rest with 
 
 ## Stress
 
-`dungeon/stress.py`. A stress track, 0 to 12, shown beside the condition as "Nerve: shaken" (with the number
+`adventure/stress.py`. A stress track, 0 to 12, shown beside the condition as "Nerve: shaken" (with the number
 when the dice are shown): steady, shaken (1 to 3), strained (to 7), frayed (to 11), breaking (12).
 
 - **Trauma adds to it**, from what code knows happened: the first life the character takes (2), facing something
@@ -943,7 +943,7 @@ when the dice are shown): steady, shaken (1 to 3), strained (to 7), frayed (to 1
 
 ## Life Cards
 
-`dungeon/happenings.py` draws the world's Life Cards (`dungeon/life/cards.py`, `docs/life-cards.md`) into the
+`adventure/happenings.py` draws the world's Life Cards (`adventure/life/cards.py`, `docs/life-cards.md`) into the
 story, with the deck and region from the travel map (`world`, `regions.*.cards`).
 
 - **When.** A day in town draws once, on the first line of the story day spent in a town (not on the Road, not mid
@@ -972,7 +972,7 @@ story, with the deck and region from the travel map (`world`, `regions.*.cards`)
 
 ## Factions
 
-`dungeon/factions.py`, with each world's factions in play in `dungeon/world/data/factions/<world>.json` (Vallarith's
+`adventure/factions.py`, with each world's factions in play in `adventure/world/data/factions/<world>.json` (Vallarith's
 built by `scripts/world/vallarith_factions.py` from the world package: the Kingdom of Cyrel, Asania, the Timber
 Guild, the High Elves of Brynwyr, the Unguruk, the Mossrun expedition), each with goals, the travel-map places it
 holds, rivals, allies and clocks.
@@ -991,7 +991,7 @@ holds, rivals, allies and clocks.
 
 ## Local politics
 
-`dungeon/world/politics.py` (the rules and the banks in `dungeon/world/data/politics.json`) and `dungeon/politics.py`
+`adventure/world/politics.py` (the rules and the banks in `adventure/world/data/politics.json`) and `adventure/politics.py`
 (in play), ported from Prospero's Companion. Every town has a few things people argue about, and factions behind each
 side. No model is involved and nothing seeded is stored: the same town and day always give the same answer.
 
@@ -1023,7 +1023,7 @@ side. No model is involved and nothing seeded is stored: the same town and day a
 
 ## Jobs and oaths
 
-`dungeon/jobs.py` and `dungeon/quests.py`. Besides a town's authored quests, `story_quests` holds quests of their
+`adventure/jobs.py` and `adventure/quests.py`. Besides a town's authored quests, `story_quests` holds quests of their
 own text (`kind` job or oath, with `title`, `hook`, `truth`, `missed`), and for the story director an `arc_id`, a
 `thread_id` and `ties` (the loose ends a quest leaves, `[{kind: npc|clue|item|faction, ref}]`).
 
@@ -1037,7 +1037,7 @@ own text (`kind` job or oath, with `title`, `hook`, `truth`, `missed`), and for 
   none). Broken or let lapse, it costs that person two points of trust and one of respect, and the record keeps it.
   An oath sworn on a quest the character already knows of, named in the line ("I swear an iron vow the Heartwood
   contract will fail"), is that quest, now a vow: the record keeps what was sworn, and no second oath is filed.
-- **Day labour.** `dungeon/labour.py`. A line in a town that spends a stretch working ("I spend the day hauling
+- **Day labour.** `adventure/labour.py`. A line in a town that spends a stretch working ("I spend the day hauling
   logs", "I take an all-day hauling job", "I work the saws for three hours") is paid the town's day wage (the
   `day-wage` price) pro rata, a day being 10 hours and at least an hour counting. Work on the character's own things
   or study earns nothing. The clock has already passed the time; the pay goes into the purse once for the line
@@ -1045,7 +1045,7 @@ own text (`kind` job or oath, with `title`, `hook`, `truth`, `missed`), and for 
 
 ## Institutions
 
-`dungeon/institutions.py`. A school, a guild or an army the character belongs to, from the world's
+`adventure/institutions.py`. A school, a guild or an army the character belongs to, from the world's
 `engine/institutions/<world>.json` (`institutions`: id, name, city_id, faction, default, core, terms, classes,
 demands, attendance_weight).
 
@@ -1074,8 +1074,8 @@ demands, attendance_weight).
 
 ## Art
 
-`dungeon/art.py` (requirements "Art"). Pictures are made only when the player asks, through the image backends in
-Settings (`dungeon/images`), and never hold up the story.
+`adventure/art.py` (requirements "Art"). Pictures are made only when the player asks, through the image backends in
+Settings (`adventure/images`), and never hold up the story.
 
 - **What.** `POST /api/story/art` `{kind, subject}`: a `portrait` of the character (`player`) or of someone met (their
   key), the `place` at this hour and weather, the `scene` (the place, who is there, the latest passage), or a
@@ -1124,7 +1124,7 @@ Settings (`dungeon/images`), and never hold up the story.
   must match theirs (they/them fit any). With no folk or job match a `default` one stands in, and people who fit the
   same entries are spread across them by key. Made once with `scripts/art/portraits.py` (same backends as the
   backdrops; `--backend openai` uses the OpenAI API), at 1024x1536 cut to 3:4. A portrait made of them wins.
-- **Faction emblems and item icons** (`dungeon/icons.py`): each power in the Powers panel and on its card shows its
+- **Faction emblems and item icons** (`adventure/icons.py`): each power in the Powers panel and on its card shows its
   emblem, and each thing in the pack, on the counter and on its card shows its icon, again with no image backend.
   The world's art file lists them (`emblems` by faction id; `icons` by item id, by the ids in an entry's `items`, or
   for a whole `category`), with the images in `assets/emblems` and `assets/icons` (256 pixels square, transparent),
@@ -1135,7 +1135,7 @@ Settings (`dungeon/images`), and never hold up the story.
 
 ## Off-page beats and word getting around
 
-`dungeon/beats.py`. The people the character is connected to keep living while the character is elsewhere: anyone
+`adventure/beats.py`. The people the character is connected to keep living while the character is elsewhere: anyone
 they have met more than once, or who feels strongly about them (a feeling at 2 or more either way), who is not in
 the scene and is not dead.
 
@@ -1159,8 +1159,8 @@ Fates, beats, word and the off-page clock are game state (`timeline.SAVED`); eac
 
 ## Scaling and tiers
 
-`dungeon/tiers.py`. One ladder for every world and ruleset: Local, Regional, Realm, World, Mythic. Each world names
-the track that sets the character's tier (`dungeon/world/data/tiers/<world>.json`); Vallarith's is renown, earned by
+`adventure/tiers.py`. One ladder for every world and ruleset: Local, Regional, Realm, World, Mythic. Each world names
+the track that sets the character's tier (`adventure/world/data/tiers/<world>.json`); Vallarith's is renown, earned by
 work done (4 times the work's tier, doubled for work above the character; oaths earn none).
 
 - **The arc.** The start screen asks how far the character can rise (grounded: Local to Regional; classic: Local to
@@ -1181,14 +1181,14 @@ The track is game state (`story_tier`, in `timeline.SAVED`).
 
 ## Progression
 
-`dungeon/growth.py`, with the dark tracks in `dungeon/rules/dark.json`. Prospero characters grow by use, plus
+`adventure/growth.py`, with the dark tracks in `adventure/rules/dark.json`. Prospero characters grow by use, plus
 milestones (5e and Ironsworn will keep their own growth rules).
 
 - **Use.** A roll of the character's that mattered (one that succeeded, or one with a danger riding on it) marks
   its stat (`story_marks`, once a line however often it is told). After a night's rest code rolls for each marked
   stat, Basic Roleplaying style: over three times the stat on a d100, it rises a point. The marks clear. The sheet
   shows a marked stat with a dot.
-- **Milestones.** A town's own quest done, or a rise in tier (`dungeon/tiers.py`), gives 2 points to the stat used
+- **Milestones.** A town's own quest done, or a rise in tier (`adventure/tiers.py`), gives 2 points to the stat used
   most since the last one. The rise and the boost go in the record, so the narrator knows.
 - **Dark tracks:** corruption, addiction and infamy, 0 to 10, with thresholds at 3, 6 and 9. Every turn the
   Continuity model is also asked whether the character did something that feeds one (a pact with something under
@@ -1201,7 +1201,7 @@ milestones (5e and Ironsworn will keep their own growth rules).
   and the points only with the dice shown. The narrator gets "## What the character is becoming" and shows it
   without naming the track.
 
-- **Bonds** (`dungeon/bonds.py`, `story_bonds`). Someone whose trust and affection both reach 3 is bonded to the
+- **Bonds** (`adventure/bonds.py`, `story_bonds`). Someone whose trust and affection both reach 3 is bonded to the
   character from then on (earned). A line that pledges the character to someone there ("I swear to stand by you,
   Hesk") swears a bond, whatever they feel yet; the narrator gets "## A bond". A bond lasts, but shows as broken
   once its person turns on the character, and lost once they die. The sheet shows the Bonds track in words ("one
@@ -1214,8 +1214,8 @@ Marks, dark tracks and bonds are game state (`timeline.SAVED`).
 
 ## The director
 
-`dungeon/director.py` v0 (requirements "The director"), with each world's arcs for its era in
-`dungeon/world/data/arcs/<world>.json` (Vallarith Post-Reform: the Eight Pieces, entered through the Heartwood
+`adventure/director.py` v0 (requirements "The director"), with each world's arcs for its era in
+`adventure/world/data/arcs/<world>.json` (Vallarith Post-Reform: the Eight Pieces, entered through the Heartwood
 contract; the Long Border, through Bastion's deserters; the Failing Wards, through the Abandoned Keep). Each arc has
 stages, each with its tier, the world's truth, a seed the narrator may plant and the word that reaches a character
 who is not there; the words that tell code play touched it; and its antagonist, with where they work.
@@ -1246,7 +1246,7 @@ who is not there; the words that tell code play touched it; and its antagonist, 
 
 ### The director: seeds, adopted details and planned beats
 
-`dungeon/plotting.py` is the director, full (M3):
+`adventure/plotting.py` is the director, full (M3):
 
 - **Seeds pay off (the Chekhov list, `story_seeds`).** Every seed the note plants is logged with its arc and the
   truth it points to, and a payoff window of 30 lines. After each narration code checks which seeds reached the page
@@ -1271,7 +1271,7 @@ who is not there; the words that tell code play touched it; and its antagonist, 
 
 ## Rewrite
 
-`dungeon/passages.py`. The automatic rewrites still run when there is time; whatever the checks find and do not
+`adventure/passages.py`. The automatic rewrites still run when there is time; whatever the checks find and do not
 fix is flagged for the player instead of lost.
 
 - **Flagged paragraphs.** A strong prose tell the rewrite pass left (or never ran on, over budget), or someone
@@ -1290,7 +1290,7 @@ fix is flagged for the player instead of lost.
 
 ## Rule passages
 
-`dungeon/rules/passages.py`. Each turn under Ironsworn, 5E or Percentile the narrator gets a `## Rules that apply`
+`adventure/rules/passages.py`. Each turn under Ironsworn, 5E or Percentile the narrator gets a `## Rules that apply`
 layer, between the scene and the turn's outcomes: the few lines of the pack's rule text that fit what the turn
 resolved, opened by "How the rules describe what happened. The results above are fixed; use this only to describe
 them." The dice and the bands are already decided; the text only helps the narrator describe a weak hit's cost or
@@ -1310,7 +1310,7 @@ what Grappled stops a creature doing.
 
 ## Ideas
 
-`dungeon/ideas.py`, `src/features/story/ideas.ts`. **Ideas** beside Send asks for two or three things the
+`adventure/ideas.py`, `src/features/story/ideas.ts`. **Ideas** beside Send asks for two or three things the
 character could do now; they show as chips over the composer, and tapping one puts it in the composer (after
 anything already written). Nothing is sent until the player sends.
 
@@ -1326,7 +1326,7 @@ anything already written). Nothing is sent until the player sends.
 
 ## How far the story goes
 
-`dungeon/tone.py` (requirements "Intensity and tone"). The narrator is told how far each category goes on the page:
+`adventure/tone.py` (requirements "Intensity and tone"). The narrator is told how far each category goes on the page:
 violence, sex, horror, cruelty and drugs, each from 0 (off the page: it happens between scenes) through restrained
 (implied) and mature (shown plainly) to 3 (unflinching: explicit, in full).
 
@@ -1403,14 +1403,14 @@ free grid of widgets is an optional mode late in Milestone 6.
 | `GET /api/story/gear` | `{coins, currency, slots: {used, max}, items, shop}`. `shop` is null away from a shop, else `{place_id, open, keeper, stock, offers}`; `offers` maps the character's items to what the shop pays. |
 | `POST /api/story/shop/buy` `{item_id, qty?}` / `POST /api/story/shop/sell` `{inventory_id, qty?}` | Trades at the counter. 404 with no shop here or no such item, 409 when closed, out of stock, too dear, too heavy, or not something the shop buys. |
 | `GET /api/story/table` / `PUT /api/story/table` | This campaign's rules (`intensity`, `drama`, `injury_persistence`, `show_odds`, `roll_dice`, `show_adult_side`, `gm_view`, `cutaways`, `defeat`, `levels`, `veils`, `voice`, `pov`, `tense`, `length`, `politics`); a change to what is shown is remembered for the next campaign. `GET /api/story` carries them as `table`. |
-| `GET /api/story/politics` | Talk of the town where the story is (dungeon/politics.py `widget`): `{level, level_name, city, issues, factions, relations, people}`. `GET /api/story` carries `politics`, whether there is any here. |
+| `GET /api/story/politics` | Talk of the town where the story is (adventure/politics.py `widget`): `{level, level_name, city, issues, factions, relations, people}`. `GET /api/story` carries `politics`, whether there is any here. |
 | `POST /api/story/politics/issues`, `PATCH`/`DELETE /api/story/politics/issues/{id}`, `PUT /api/story/politics/views`, `POST /api/story/politics/factions`, `PATCH`/`DELETE /api/story/politics/factions/{id}`, `PUT /api/story/politics/relations` | The player's changes to the town's talk; each returns it as it now stands. 409 out of town, 422 for a big question settled or staged. |
 | `DELETE /api/story` | Starts a new story: the history, every branch, the record and the people met go, the scene stays. |
 
 ## People you've met
 
 Someone present in the scene is met once their name comes up, either because the narrator voices them giving it
-or because the user uses it (`dungeon/story_people.py`, table `story_people`). Each local day they come up counts
+or because the user uses it (`adventure/story_people.py`, table `story_people`). Each local day they come up counts
 as one meeting. Up to eight sentences of narration that name them are kept as notes. The next time they are in
 the scene, the narrator is told the user has met them, how often and when, along with the latest notes, so they
 remember the user however far back the story has been trimmed. The screen then shows their given name ("Dana,
@@ -1422,7 +1422,7 @@ street). Starting a new story clears the people met too.
 
 ### Your party
 
-`dungeon/party.py`, `story_party`. A line that asks someone along ("come with me, Hesk", "will you join us?") asks
+`adventure/party.py`, `story_party`. A line that asks someone along ("come with me, Hesk", "will you join us?") asks
 the one it names, else the only one there, and they decide for themselves: bonded to the character, or with trust
 and affection adding up to 3 or more, they come; adding up to less than 0, they won't; in between the character's
 Allure is rolled, hard. At most 3 travel with the character. A companion is in every scene with the character, in
@@ -1434,7 +1434,7 @@ drawer's Party widget shows them.
 
 ### Leaving
 
-`dungeon/leaving.py` (requirements "Leaving a scene"). A fight holds the character: the "Go somewhere else" menu
+`adventure/leaving.py` (requirements "Leaving a scene"). A fight holds the character: the "Go somewhere else" menu
 refuses, a line that walks off is no walk, and only a line that flees gets away, on its roll. A prisoner stays held
 until they get free. Outside a fight, someone there with a reason may try to keep the character, decided from their
 feelings, among people met who are not in the party:
@@ -1457,7 +1457,7 @@ feelings, among people met who are not in the party:
 
 ### Secrets and lies
 
-`dungeon/lies.py` (requirements "NPCs keep secrets and lie, and detection is rolled"). When the player's line
+`adventure/lies.py` (requirements "NPCs keep secrets and lie, and detection is rolled"). When the player's line
 questions someone in the scene (a question, "ask", "press", "tell me"; the person named, else the only one there)
 who has something to hide, they lie. Something to hide is a notable's `secret`, wants that keep something hidden
 ("nobody asking questions", "without ever saying why", "looking the other way"), or the hidden truth of an open job
@@ -1473,7 +1473,7 @@ in secret, no roll card: Mind in any ruleset, hard against a notable and normal 
 
 ### How they feel about you
 
-Each person met has five feelings toward the player's character (`dungeon/feelings.py`): trust, affection and
+Each person met has five feelings toward the player's character (`adventure/feelings.py`): trust, affection and
 respect from -5 to 5, fear and desire from 0 to 5. Code moves them:
 
 - A roll whose action names them moves them by its stat and how it landed. Allure that works raises affection and

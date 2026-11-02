@@ -66,7 +66,7 @@ export function reusableKey(profiles: ModelProfile[], config: ProfileConfig, exc
 }
 
 /** The text profile whose saved key an image API on `provider` borrows when it has none of its own
- * (dungeon/images/backends.py text_profile_key): the same provider at its usual address. */
+ * (adventure/images/backends.py text_profile_key): the same provider at its usual address. */
 export function imageKeyFrom(profiles: ModelProfile[], provider: string, baseUrl: string) {
   const text = (provider === 'other' ? 'compatible' : provider) as Provider
   const wanted = (provider === 'other' ? baseUrl : providers[text]?.url ?? '').replace(/\/+$/, '')

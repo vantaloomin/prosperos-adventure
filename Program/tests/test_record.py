@@ -1,8 +1,8 @@
-"""The record and the story so far (dungeon/record.py)."""
+"""The record and the story so far (adventure/record.py)."""
 from conftest import Chunk, tell
 
-from dungeon import record
-from dungeon.errors import DomainError
+from adventure import record
+from adventure.errors import DomainError
 
 
 def ok(response):
@@ -104,8 +104,8 @@ def test_an_older_workspace_keeps_its_facts_under_the_new_name(tmp_path):
     import json
     import sqlite3
 
-    from dungeon import timeline
-    from dungeon.database import rename_tables
+    from adventure import timeline
+    from adventure.database import rename_tables
     connection = sqlite3.connect(tmp_path / 'old.sqlite3')
     connection.execute('CREATE TABLE ledger_entries (id TEXT PRIMARY KEY, subject TEXT)')
     connection.execute("INSERT INTO ledger_entries VALUES ('a', 'Old Tom')")

@@ -1,4 +1,4 @@
-// Art on request (dungeon/art.py): what each picture is of, and where it stands.
+// Art on request (adventure/art.py): what each picture is of, and where it stands.
 import type { StoryArt, StoryPerson } from '../../types'
 
 /** "You", "Fenwick Cutter", "Pell Provisions", "A passage". */

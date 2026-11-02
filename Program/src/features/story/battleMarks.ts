@@ -3,7 +3,7 @@ import type { BattleGrid } from '../../types'
 /** One mark on the battle map: the character, a foe (numbered as the legend numbers it) or a companion. */
 export interface MapMark { x: number; y: number; label: string; kind: 'you' | 'foe' | 'ally'; down: boolean; title: string }
 
-/** The marks to draw and the squares around them (a square of margin on every side), for dungeon/battlemap.py's map. */
+/** The marks to draw and the squares around them (a square of margin on every side), for adventure/battlemap.py's map. */
 export function mapMarks(grid: BattleGrid): { marks: MapMark[]; minX: number; minY: number; width: number; height: number } {
   const marks: MapMark[] = [
     { x: 0, y: 0, label: 'You', kind: 'you', down: false, title: 'You' },

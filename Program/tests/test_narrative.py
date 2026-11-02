@@ -1,13 +1,13 @@
-"""Narrative Only (dungeon/rules/narrative.py, dungeon/judge.py): no stats and no dice; a judge's verdict per action."""
+"""Narrative Only (adventure/rules/narrative.py, adventure/judge.py): no stats and no dice; a judge's verdict per action."""
 import json
 
 from conftest import Chunk, tell
 from test_rulesets import start
 from test_travel import ok
 
-from dungeon import judge, story, story_clock, turn
-from dungeon.rules import narrative
-from dungeon.world import intimacy
+from adventure import judge, story, story_clock, turn
+from adventure.rules import narrative
+from adventure.world import intimacy
 
 
 def judging(provider, verdicts):

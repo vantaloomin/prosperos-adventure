@@ -1,8 +1,8 @@
-"""Day labour is paid the town's day wage (dungeon/labour.py)."""
+"""Day labour is paid the town's day wage (adventure/labour.py)."""
 from conftest import Chunk, tell
 
-from dungeon import happenings, labour, story, story_clock
-from dungeon.world import catalog
+from adventure import happenings, labour, story, story_clock
+from adventure.world import catalog
 
 
 def ok(response):
@@ -31,7 +31,7 @@ def test_a_day_hauling_pays_the_wage_once(client, connected, provider, app):
     provider.replies = [[Chunk('You haul.'), Chunk('', 'stop')]]
     tell(client, 'I spend the day hauling logs for the yard.', 'story-0001')
     assert '## Work for hire (decided by the game)' in provider.requests[-1]['system']
-    # Paid for the day as long as it ran, to the evening (dungeon/story_clock.py day_left).
+    # Paid for the day as long as it ran, to the evening (adventure/story_clock.py day_left).
     line = next(item for item in ok(client.get('/api/story'))['messages'] if item['role'] == 'user')
     with app.state.database.connect() as connection:
         wage = wage * story.line_minutes(connection, line['id']) // labour.DAY_MINUTES

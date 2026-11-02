@@ -1,8 +1,8 @@
-"""How others see a person and how they see themselves (dungeon/world/perception.py)."""
+"""How others see a person and how they see themselves (adventure/world/perception.py)."""
 import re
 from collections import Counter
 
-from dungeon.world import catalog, perception, townsfolk
+from adventure.world import catalog, perception, townsfolk
 
 GENDERED = re.compile(r"\b(he|she|him|her|his|hers|himself|herself|man|woman|men|women|guy|girl|boy|lady|ladies|"
                       r"gentleman|husband|wife|son|daughter|mother|father|brother|sister|mr|mrs|ms)\b", re.I)

@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'scripts' / 'world'))
 import haven  # noqa: E402 - away from Haven shares its money, names, climate and prices
 
-OUT = ROOT / 'dungeon' / 'world' / 'data' / 'cities' / 'havenbrooke-road.json'
+OUT = ROOT / 'adventure' / 'world' / 'data' / 'cities' / 'havenbrooke-road.json'
 SRC = haven.SRC
 ALL_DAY = ('morning', 'afternoon', 'evening', 'late')
 

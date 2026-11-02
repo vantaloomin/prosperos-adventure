@@ -1,4 +1,4 @@
-"""The story as a book, the campaign file and legacy (dungeon/book.py, dungeon/legacy.py)."""
+"""The story as a book, the campaign file and legacy (adventure/book.py, adventure/legacy.py)."""
 import io
 import zipfile
 
@@ -6,8 +6,8 @@ from conftest import Chunk, tell
 from test_inventory import begin
 from test_travel import ok
 
-from dungeon import book, chapters, record
-from dungeon.images import storage
+from adventure import book, chapters, record
+from adventure.images import storage
 
 
 def reply(text):

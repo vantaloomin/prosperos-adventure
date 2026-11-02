@@ -6,15 +6,15 @@
 > companion; the story, its persona and the townsfolk use the engine now, and the sections below that mention a
 > companion describe parts the game will build on again.
 
-The Dungeon ships static facts about cities so that everyday life is assembled from data
+Adventure ships static facts about cities so that everyday life is assembled from data
 and the model only phrases it (PRD W1–W4). A townsperson's day, job, home and the weather are picked by
 deterministic code from these records. The model never has to invent a
 museum, an employer or a neighbourhood, and the same inputs always give the same choice.
 
-The app ships each built-in world's towns, all `setting: original` and written for the Dungeon: **Kingswood**, the
+The app ships each built-in world's towns, all `setting: original` and written for Adventure: **Kingswood**, the
 Post-Reform logging town in Vanta's Vallarith where new stories start (`scripts/world/kingswood.py`), Haven for
 Havenbrooke, and the Concourse, Hollin and the Gilded Bazaar for BABEL. Haddon Harbor, the modern Maine town from
-Companion, is retired (`dungeon/world/data/retired`, `dungeon/world/retired.py`): a world already set there keeps it
+Companion, is retired (`adventure/world/data/retired`, `adventure/world/retired.py`): a world already set there keeps it
 as one of its own cities, and new worlds never see it. Every other city is the user's own or comes from a city pack. Cities can
 be `real`, `fictional` or `original`, in any era.
 
@@ -30,7 +30,7 @@ city of today is Real / Modern, a real or original city in a past era (`victoria
 `other-eras`, since it is real London with Holmes's places added. The summary from `GET /api/world/cities`
 carries the result as `category`.
 
-**Featured cities.** `dungeon/world/data/featured.json` names a release (`"0.8"`), a title, a short note and up
+**Featured cities.** `adventure/world/data/featured.json` names a release (`"0.8"`), a title, a short note and up
 to four city ids, plus `new_cities`, the ones among them that first shipped in that release, and is edited at each
 release. `GET /api/world/featured` returns the ones that load, in that order, with `new` true while the app's
 major.minor version matches the release, and on each city `new` while that holds and it is in `new_cities`.
@@ -57,12 +57,12 @@ unflinching and grim); left out, stories there are unflinching with no voice.
 
 | Path | Holds |
 | --- | --- |
-| `dungeon/world/data/cities/<id>.json` | One city. Validated against `dungeon/world/schema.py` on load and in the tests. |
-| `dungeon/world/data/careers.json` | Careers with sector, schedule pattern, pay band and themes. `adult: true` marks adult work: only chosen for adult companions (drafting, the character form with the adult side on), never rolled for townsfolk, circles or job changes (`catalog.everyday`). |
-| `dungeon/world/data/names.json` | Name banks for residents, written by `scripts/world/names.py`. |
-| `dungeon/world/data/given_names.json` | Popular given names by birth year, family names by culture and names that read as invented, written by `scripts/world/given_names.py` from `scripts/world/name_sources/`. |
-| `dungeon/world/data/holidays.json` | Holiday calendars, written by `scripts/world/holidays.py`. |
-| `dungeon/world/data/hobbies/` | Pastimes: `catalogue.json` (each pastime's words, eras, place, gear and fees) and one milestone bank per kind, checked by `tests/test_hobby_banks.py`. |
+| `adventure/world/data/cities/<id>.json` | One city. Validated against `adventure/world/schema.py` on load and in the tests. |
+| `adventure/world/data/careers.json` | Careers with sector, schedule pattern, pay band and themes. `adult: true` marks adult work: only chosen for adult companions (drafting, the character form with the adult side on), never rolled for townsfolk, circles or job changes (`catalog.everyday`). |
+| `adventure/world/data/names.json` | Name banks for residents, written by `scripts/world/names.py`. |
+| `adventure/world/data/given_names.json` | Popular given names by birth year, family names by culture and names that read as invented, written by `scripts/world/given_names.py` from `scripts/world/name_sources/`. |
+| `adventure/world/data/holidays.json` | Holiday calendars, written by `scripts/world/holidays.py`. |
+| `adventure/world/data/hobbies/` | Pastimes: `catalogue.json` (each pastime's words, eras, place, gear and fees) and one milestone bank per kind, checked by `tests/test_hobby_banks.py`. |
 | `scripts/world/<city>.py` | The source each city's JSON is written from. Edit these, then rerun them. |
 
 Nothing needs the network at run time. Every record names a source in its city's `sources` table
@@ -75,7 +75,7 @@ carry, so an event can record exactly which data it was built from (PRD T7).
 ## Python API (for the life simulation)
 
 ```python
-from dungeon.world import catalog, generators
+from adventure.world import catalog, generators
 
 data = catalog.city('kingswood')            # DomainError 404 for an unknown city
 catalog.resolve('Kingswood')                # {'city': 'kingswood', 'neighborhood': None} or None
@@ -156,7 +156,7 @@ Japanese family name; a relative keeps the shared family name and draws from a c
 women take the feminine form (Kowalska, Ivanova).
 Only family shares a family name. Someone drawn without one (`family` unset) never gets a name listed in
 `avoid` or in the city data's `kin`: only the family name is drawn again, from the same seed, so their given
-name and everyone else's name stay as they were. The life simulation's city (`dungeon/life/network.py`)
+name and everyone else's name stay as they were. The life simulation's city (`adventure/life/network.py`)
 sets `kin` to the companion's family names and their relatives', so townsfolk, residents, newcomers and
 friends of friends never share them; a circle's friends, coworkers and neighbors never share its `family`.
 The world API's own city views (`/api/world/cities/...`) have no companion and show the plain draw.
@@ -176,11 +176,11 @@ line says which). Modern American family names follow the Census Bureau's 2000 s
 model (Elara, Lyra, Kael, Vex, Voss, Thorne…; edit `name_sources/invented.txt`). No popular-name list
 may contain one (validation fails), generators never produce one, and a pattern check also catches
 the coined names a model reaches for that are not listed (Vaeryn, Kaelith, Duskmere, Ravencrest), while
-any word found in a real list (Bronwyn, Mikael) passes.  `dungeon/world/naming.py`
+any word found in a real list (Bronwyn, Mikael) passes.  `adventure/world/naming.py`
 checks model-written text for them: character drafting retries once naming the problem, then swaps
 each one for an ordinary name; a name the user typed (or one in the world data) is always allowed. Chat
 gets a short "names for anyone new" context section of ready-made names for the companion's city and a
-spread of ages (`dungeon/world/newcomers.py`), so the model never has to invent one.
+spread of ages (`adventure/world/newcomers.py`), so the model never has to invent one.
 
 **Kinds and lifespans.** A name group may tie its people to a kind with `"kind": "elf"` (Grandport's `elven`
 group does). Kinds and their average lifespans are in `lifespans.json` (Human 80, Elf 600, Half-elf 180, Doesn't age,
@@ -188,7 +188,7 @@ and the peoples of fantasy worlds below); a city may add a `kinds` block that ch
 (`{"elf": {"lifespan": 750}}`) or adds a kind of its own (`{"cyclops": {"label": "Cyclops", "lifespan": 110,
 "words": ["cyclops"]}}`). A lifespan is a whole number from 40 to 5000, or null for a kind that doesn't age; a bad
 entry, or a group naming an unknown kind, is dropped with a note and the city still loads. Real ages stay as they
-are; rules about how far through life someone is read their life age (`dungeon/world/lifespans.py`): their real
+are; rules about how far through life someone is read their life age (`adventure/world/lifespans.py`): their real
 age through childhood, then adulthood stretched to their kind's lifespan, so an elf of 300 is 48 in human terms and
 is seeded, retires, dates and passes away like it. A city file can only change how long adulthood lasts.
 
@@ -253,7 +253,7 @@ than guess).
 
 **Roads between towns.** `"home": false` marks a city that is somewhere to pass through, not to live: a world's
 Road, Havenbrooke's "away from Haven" or BABEL's tower floors. The pickers for where someone lives (a new persona or
-world, and moving home) leave it out; they pick a world first, then one of its towns (dungeon/worlds.py
+world, and moving home) leave it out; they pick a world first, then one of its towns (adventure/worlds.py
 `somewhere_new`, `somewhere-new:<world>`).
 
 **Notables.** A city may name people who live in it (`notables`), such as a pack's characters: `id`,
@@ -266,7 +266,7 @@ knows of them always includes `about`. A pack's notable placed
 somewhere the city lacks is left out with a note. Notables stay in town for good unless `can_leave` is true, when
 they can move away or retire like anyone else and a newcomer takes over their role.
 
-**The town changes hands** (`dungeon/world/turnover.py`). Each spot a townsperson fills is held by one person
+**The town changes hands** (`adventure/world/turnover.py`). Each spot a townsperson fills is held by one person
 after another: from 19 October 2026 on, people move away, take other jobs, retire (staff, from their sixties) and,
 with People can pass away on, pass away, at seeded yearly chances that follow their age, Life's big turns and Loss.
 A newcomer takes the spot a few weeks later, keyed by the spot's number plus 1000 for each holder before them
@@ -279,8 +279,8 @@ weather.
 
 ### The composer's world source
 
-`dungeon/world/source.py` provides `CatalogWorld`, the default world source the app passes to the
-life engine (`dungeon/life/world.py`). It answers the composer's place kinds (`park`, `cafe`,
+`adventure/world/source.py` provides `CatalogWorld`, the default world source the app passes to the
+life engine (`adventure/life/world.py`). It answers the composer's place kinds (`park`, `cafe`,
 `waterfront`, `college` and so on) from this data, in a stable order. A character's `home_city` may
 be a city id (`baltimore`) or free text that `catalog.resolve` recognises.
 `places(city, kinds, *, day_part=None, day=None)` leaves out places closed at that part of the day
@@ -292,13 +292,13 @@ are that close. Museums, venues, beaches and attractions stay city-wide.
 
 ### City changes
 
-Cities change a little over time (`dungeon/world/changes.py`): a new cafe opens, a restaurant shuts for a
+Cities change a little over time (`adventure/world/changes.py`): a new cafe opens, a restaurant shuts for a
 remodel, road works dig up a neighbourhood's main street, a favourite spot closes for good. Each month a city
 gets at most one change of each kind (opening, closing, renovation, road works), decided by seeds from the city
 id and the month, starting in October 2026 (a city visited on earlier dates, such as London in 1895, looks
 back one year). The same city therefore changes the same way on every run and nothing has to be stored. People
 hear of a change a few days before it happens (two weeks before a closing). Wording and new-place names come
-from `dungeon/world/data/changes.json`, written by `scripts/world/changes.py`, in four styles chosen by era:
+from `adventure/world/data/changes.json`, written by `scripts/world/changes.py`, in four styles chosen by era:
 modern, Victorian (also steampunk), medieval (also fantasy), frontier and Jazz Age. A new place copies the hours,
 setting and price level of one of the city's places of its kind and is tagged `new`.
 
@@ -319,7 +319,7 @@ around your city", with up to six recent, current or coming changes.
 ## HTTP API
 
 Reads are `GET`s and need no workspace header. The [builder](#building-a-city) endpoints write and
-need `x-dungeon-client: workspace`. Every `{id}` may be a built-in city or one of the user's.
+need `x-adventure-client: workspace`. Every `{id}` may be a built-in city or one of the user's.
 
 | Endpoint | Returns |
 | --- | --- |
@@ -365,7 +365,7 @@ new city from the template, open a city file someone shared, copy any city, edit
 | `PUT /api/world/cities/{id}` `{"definition", "expected_revision"}` | Replaces a user city; 409 when the revision is stale |
 | `DELETE /api/world/cities/{id}` | Deletes a user city; 409 while the persona lives in that city |
 
-**Forgiving loading.** User cities and packs are mended before validation (`dungeon/world/mend.py`)
+**Forgiving loading.** User cities and packs are mended before validation (`adventure/world/mend.py`)
 so one slightly wrong word never stops a city loading; built-in cities are not, and their tests keep
 them exact. What it does:
 
@@ -383,7 +383,7 @@ them exact. What it does:
   places are dropped, and a place whose neighbourhood is not in the city (by id or name) is left out.
 
 Each change is a sentence in `import_notes` on the save, check and pack responses (and in
-`python -m dungeon.world.check` output as `adjusted:`), and Settings shows them after a save. The
+`python -m adventure.world.check` output as `adjusted:`), and Settings shows them after a save. The
 saved definition is the mended one. Only a file that is not JSON or lacks a neighbourhood, a place or
 an id still fails.
 
@@ -398,8 +398,8 @@ read-only like built-in cities (copy one to edit it), and can be personal or pri
 others. Pack folders:
 
 - `Program/private-cities/` in the checkout (gitignored, so packs there are never committed)
-- `city-packs/` in the workspace data directory (`%LOCALAPPDATA%\ProsperoDungeon\city-packs` on Windows, `~/Library/Application Support/ProsperoDungeon/city-packs` on macOS)
-- or the folders in `DUNGEON_CITY_PACKS` (separated by `;` on Windows, `:` elsewhere), instead of both
+- `city-packs/` in the workspace data directory (`%LOCALAPPDATA%\ProsperoAdventure\city-packs` on Windows, `~/Library/Application Support/ProsperoAdventure/city-packs` on macOS)
+- or the folders in `ADVENTURE_CITY_PACKS` (separated by `;` on Windows, `:` elsewhere), instead of both
 
 `GET /api/world/packs` lists the folders, the packs loaded and any file that failed validation with
 the reason; `POST /api/world/packs/reload` rereads them without restarting. A pack cannot reuse a
@@ -410,7 +410,7 @@ database) is left out of every list rather than failing them all, and is logged 
 `GET /api/world/broken-cities` returns each one with the reason and its saved definition; Settings >
 Cities shows them with Save as file and Delete.
 
-**Checking a city file.** `python -m dungeon.world.check [FILE_OR_FOLDER ...]` validates files
+**Checking a city file.** `python -m adventure.world.check [FILE_OR_FOLDER ...]` validates files
 exactly as the app loads them (mending all but the built-in cities), and with no arguments checks the built-in cities and every pack
 folder. Errors mean the file will not load. Warnings point out thin spots that make days there
 repetitive: neighbourhoods with fewer than two places or nowhere to eat, no employers or career
@@ -421,7 +421,7 @@ and CI runs it.
 
 **Grandport** (`tests/fixtures/cities/grandport.json`; the app no longer ships it) is set in **Neokosmos**, a world
 by **Oak** (https://quietoak.github.io/NeokosmosWiki/). The Neokosmos wiki is licensed CC BY-NC-SA 4.0;
-Prospero's Dungeon includes Grandport with Oak's permission (given 2026-10-10). The city, its people and
+Prospero's Adventure includes Grandport with Oak's permission (given 2026-10-10). The city, its people and
 its lore are Oak's, not part of the app's AGPL-3.0 code, and are not relicensed by being shipped here.
 Records citing `wiki` come from the wiki; records citing `inferred` were filled in for the app in the
 setting's voice. Oak's characters appear in town as `notables`.
@@ -429,7 +429,7 @@ setting's voice. Oak's characters appear in town as `notables`.
 ## Adding or refreshing a built-in city
 
 1. Copy `scripts/world/kingswood.py`, keep its source records, and fill in the city.
-2. Run it to write `dungeon/world/data/cities/<id>.json`, then `python -m pytest tests/test_world.py`.
+2. Run it to write `adventure/world/data/cities/<id>.json`, then `python -m pytest tests/test_world.py`.
    The tests validate every reference, check every career gets a job and every generated schedule
    is a valid character routine.
 3. Only add places you know are open, and prefer long-running institutions to new openings.

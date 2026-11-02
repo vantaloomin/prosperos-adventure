@@ -1,10 +1,10 @@
-"""The built-in calendar (dungeon/almanac/): observances, seasons, daylight and the chat context section."""
+"""The built-in calendar (adventure/almanac/): observances, seasons, daylight and the chat context section."""
 from datetime import date, datetime, timezone
 from zoneinfo import ZoneInfo
 
-from dungeon.almanac import days, sky
-from dungeon.world import catalog
-from dungeon.world.source import CatalogWorld
+from adventure.almanac import days, sky
+from adventure.world import catalog
+from adventure.world.source import CatalogWorld
 
 EASTERN = ZoneInfo('America/New_York')
 

@@ -4,9 +4,9 @@ import json
 import httpx
 import pytest
 
-from dungeon.errors import DomainError
-from dungeon.providers import chat
-from dungeon.providers.chat import ChatProvider
+from adventure.errors import DomainError
+from adventure.providers import chat
+from adventure.providers.chat import ChatProvider
 
 CONFIG = {'base_url': 'http://127.0.0.1:1234/v1', 'model': 'm', 'max_output_tokens': 100, 'timeout_seconds': 10}
 
@@ -48,7 +48,7 @@ def test_a_rate_limit_is_retried_once(monkeypatch):
 
     async def wait(seconds):
         waits.append(seconds)
-    monkeypatch.setattr('dungeon.providers.chat.asyncio.sleep', wait)
+    monkeypatch.setattr('adventure.providers.chat.asyncio.sleep', wait)
     provider = ChatProvider(httpx.MockTransport(lambda request: answers.pop(0)))
     assert ''.join(chunk.text for chunk in collect(provider)) == 'Hi'
     assert waits == [5.0]

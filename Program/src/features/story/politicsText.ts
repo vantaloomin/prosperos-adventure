@@ -19,7 +19,7 @@ export function viewOptions(issue: Pick<PoliticsIssue, 'sides'>): { value: numbe
   ]
 }
 
-/** "Strongly: Dry", "Leans: Wet" or "Doesn't much care" (matches dungeon/world/politics.py view_label). */
+/** "Strongly: Dry", "Leans: Wet" or "Doesn't much care" (matches adventure/world/politics.py view_label). */
 export function viewLabel(view: number, issue: Pick<PoliticsIssue, 'sides'>): string {
   return viewOptions(issue).find((option) => option.value === view)?.label ?? "Doesn't much care"
 }
@@ -116,7 +116,7 @@ export function outcomeChoices(issue: Pick<PoliticsIssue, 'sides'>): { value: st
   ]
 }
 
-/** The Table's Local politics rule (dungeon/politics.py LEVELS). */
+/** The Table's Local politics rule (adventure/politics.py LEVELS). */
 export const POLITICS_LEVELS: { value: PoliticsLevel; label: string; hint: string }[] = [
   { value: 'off', label: 'Off', hint: 'Nobody argues about local politics.' },
   { value: 'quiet', label: 'Quiet', hint: 'One big question of the day, and a local quarrel now and then.' },

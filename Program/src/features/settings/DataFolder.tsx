@@ -8,7 +8,7 @@ import { shownPath } from '../../paths'
 
 const DATA_FOLDER_KEY = ['data-folder']
 
-// Where the workspace lives, and moving it into the app's own folder (dungeon/data_folder.py).
+// Where the workspace lives, and moving it into the app's own folder (adventure/data_folder.py).
 export function DataFolder() {
   const client = useQueryClient()
   const status = useQuery({ queryKey: DATA_FOLDER_KEY, queryFn: () => api<DataFolderStatus>('/backups/data-folder') })
@@ -37,7 +37,7 @@ export function DataFolder() {
     <section className="settings-section form-stack" aria-labelledby="data-folder-heading">
       <div>
         <h2 id="data-folder-heading">Data folder</h2>
-        <p className="subtle">Everything the Dungeon keeps (your conversations, memories, life, images, logs and backups) is in this folder.</p>
+        <p className="subtle">Everything Adventure keeps (your conversations, memories, life, images, logs and backups) is in this folder.</p>
       </div>
       {status.isError && <Notice tone="error">{status.error.message}</Notice>}
       {error && <Notice tone="error">{error}</Notice>}
@@ -51,13 +51,13 @@ export function DataFolder() {
           {data.notes.map((note) => <Notice key={note}>{note}</Notice>)}
           {data.pending && (
             <Notice action={<button type="button" className="text-button" aria-disabled={busy} onClick={() => void cancel()}>Cancel</button>}>
-              Your data will move to {shownPath(data.target)} the next time the Dungeon starts. Close it and start it again to finish.
+              Your data will move to {shownPath(data.target)} the next time Adventure starts. Close it and start it again to finish.
             </Notice>
           )}
           {!data.portable && !data.pending && (
             <div className="form-stack">
               <h3>Keep data with the app</h3>
-              <p className="subtle">Moving your data into the app folder keeps everything together, for example on an external drive. The Dungeon copies it when it next starts, checks the copy, and leaves the old folder as it was until you delete it.</p>
+              <p className="subtle">Moving your data into the app folder keeps everything together, for example on an external drive. Adventure copies it when it next starts, checks the copy, and leaves the old folder as it was until you delete it.</p>
               {data.reason
                 ? <p className="subtle">{data.reason}</p>
                 : confirming

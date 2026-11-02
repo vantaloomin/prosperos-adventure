@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
     <meta name="theme-color" content="#191816" />
-    <meta name="application-name" content="Prospero Dungeon" />
+    <meta name="application-name" content="Prospero Adventure" />
     <meta name="description" content="A tabletop story game with an AI narrator, running on your computer." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Dungeon" />
+    <meta name="apple-mobile-web-app-title" content="Adventure" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>Prospero Dungeon</title>
+    <title>Prospero Adventure</title>
     <!-- Shown only if the app never starts, as on a browser too old for it; the app replaces it. -->
     <style>
       .boot { opacity: 0; animation: boot-show 0s 6s forwards; margin: 0; padding: 32px 20px; font: 16px/1.5 system-ui, sans-serif; color: #e9e4dc; background: #191816; min-height: 100vh; box-sizing: border-box; }
@@ -22,8 +22,8 @@
     <!-- The last colors and this device's look, before the first paint (settings/useAppColors.ts, deviceLook.ts). -->
     <script>
       try {
-        var root = document.documentElement, colors = JSON.parse(localStorage.getItem('dungeon-colors') || 'null')
-        var look = JSON.parse(localStorage.getItem('dungeon-device-look') || 'null')
+        var root = document.documentElement, colors = JSON.parse(localStorage.getItem('adventure-colors') || 'null')
+        var look = JSON.parse(localStorage.getItem('adventure-device-look') || 'null')
         if (!colors) colors = { scheme: matchMedia('(prefers-color-scheme: light)').matches ? 'paper' : 'ink', styles: {} }
         if (colors.system) colors = matchMedia('(prefers-color-scheme: light)').matches ? { scheme: 'paper', styles: {} } : { scheme: 'ink', styles: {} }
         root.dataset.theme = colors.scheme
@@ -38,7 +38,7 @@
     </script>
   </head>
   <body>
-    <div id="root"><p class="boot">The Dungeon has not started in this browser. Reload the page. If it still does not open, update this browser or try another one.</p></div>
+    <div id="root"><p class="boot">Adventure has not started in this browser. Reload the page. If it still does not open, update this browser or try another one.</p></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

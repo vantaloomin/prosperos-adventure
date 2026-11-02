@@ -1,14 +1,14 @@
-"""Art on request (dungeon/art.py): portraits, places and passages, routed to the image backends."""
+"""Art on request (adventure/art.py): portraits, places and passages, routed to the image backends."""
 import pytest
 from conftest import Chunk, tell
 from fastapi.testclient import TestClient
 from test_images import FakeAdapter, local_comfy, ok, png
 
-from dungeon import art, combat, record
-from dungeon.identity import CLIENT_HEADER
-from dungeon.images.adapters.base import AdapterError
-from dungeon.main import create_app
-from dungeon.providers.vault import MemoryVault
+from adventure import art, combat, record
+from adventure.identity import CLIENT_HEADER
+from adventure.images.adapters.base import AdapterError
+from adventure.main import create_app
+from adventure.providers.vault import MemoryVault
 
 
 @pytest.fixture
@@ -18,7 +18,7 @@ def adapters():
 
 @pytest.fixture
 def app(tmp_path, clock, provider, adapters):
-    return create_app(tmp_path / 'workspace' / 'dungeon.sqlite3', clock=clock, vault=MemoryVault(),
+    return create_app(tmp_path / 'workspace' / 'adventure.sqlite3', clock=clock, vault=MemoryVault(),
                       provider=provider, background=False, image_adapters=adapters)
 
 
@@ -123,7 +123,7 @@ def test_passive_art_pictures_the_place_after_a_turn_once_and_stops_at_the_cap(c
 
 def test_someone_here_in_the_scene_can_be_pictured_before_the_record_has_met_them(client, adapters):
     # Playtest m6a: the first person in the scene was refused as not met.
-    from dungeon import story, story_clock
+    from adventure import story, story_clock
     local_comfy(client)
     with client.app.state.database.connect() as connection:
         view = story.scene(connection, story_clock.now(connection, client.app.state.database.clock))
@@ -136,7 +136,7 @@ def test_someone_here_in_the_scene_can_be_pictured_before_the_record_has_met_the
 
 
 def test_the_stage_shows_the_places_picture_and_portraits_of_who_is_here(client, adapters):
-    from dungeon import story, story_clock
+    from adventure import story, story_clock
     local_comfy(client)
     assert ok(client.get('/api/story/art/stage'))['portraits'] == []
     with client.app.state.database.connect(write=True) as connection:
@@ -162,7 +162,7 @@ def test_the_stage_shows_the_places_picture_and_portraits_of_who_is_here(client,
 def test_every_world_lists_backdrops_that_can_be_picked():
     import json
 
-    from dungeon import packages
+    from adventure import packages
     lots = json.loads((packages.DATA / 'town_lots.json').read_text(encoding='utf-8'))
     for world in ('vallarith', 'havenbrooke', 'babel'):
         entries = art.backdrops(world)
@@ -195,7 +195,7 @@ def test_a_backdrop_is_picked_by_the_place_then_wild_lot_tags_kind_street_defaul
 
 
 def test_with_no_picture_made_the_stage_shows_the_default_backdrop_in_the_hours_light(client, adapters, monkeypatch):
-    from dungeon import world_data
+    from adventure import world_data
     real = world_data.asset
     monkeypatch.setattr(world_data, 'asset', lambda world, name: b'RIFF0000WEBP' if name.startswith('backdrops/')
                         and not name.endswith('-night.webp') else real(world, name))
@@ -212,7 +212,7 @@ def test_with_no_picture_made_the_stage_shows_the_default_backdrop_in_the_hours_
 
 
 def test_a_worlds_assets_are_read_from_its_package(client):
-    from dungeon import packages, world_data
+    from adventure import packages, world_data
     shipped = (packages.BUILTIN / 'vallarith' / 'assets' / 'maps' / 'vallarith.jpg').read_bytes()
     assert world_data.paths() and world_data.asset('vallarith', 'maps/vallarith.jpg') == shipped
     assert world_data.asset('babel', 'maps/vallarith.jpg') is None
@@ -259,7 +259,7 @@ def test_a_stock_portrait_is_picked_by_folk_then_job_then_pronouns_and_age(clien
 
 
 def test_someone_met_with_no_portrait_stands_on_the_stage_in_a_stock_one(client, adapters):
-    from dungeon import story, story_clock
+    from adventure import story, story_clock
     with client.app.state.database.connect(write=True) as connection:
         view = story.scene(connection, story_clock.now(connection, client.app.state.database.clock))
         here = view['people'][0]['sheet']

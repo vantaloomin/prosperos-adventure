@@ -1,7 +1,7 @@
-"""Record model calls (dungeon/model_calls.py): every model request and response, in full, only when turned on."""
+"""Record model calls (adventure/model_calls.py): every model request and response, in full, only when turned on."""
 import json
 
-from dungeon import model_calls
+from adventure import model_calls
 
 
 def recorded(client) -> list[dict]:

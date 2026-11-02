@@ -7,7 +7,7 @@ import { Notice } from '../../components/Feedback'
 const NOTEBOOK_KEY = ['story-notebook']
 type Notes = { notes: NotebookNote[] }
 
-/** The player's own notebook (dungeon/chapters.py): across every branch, and no model ever reads it. */
+/** The player's own notebook (adventure/chapters.py): across every branch, and no model ever reads it. */
 export function StoryNotebook({ open }: { open?: boolean }) {
   const client = useQueryClient()
   const notebook = useQuery({ queryKey: NOTEBOOK_KEY, queryFn: () => api<Notes>('/story/notebook') })

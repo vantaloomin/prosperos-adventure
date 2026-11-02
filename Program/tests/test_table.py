@@ -1,5 +1,5 @@
-"""The Table (dungeon/table.py): each campaign plays by its own rules, which no longer follow the user between worlds."""
-from dungeon import table
+"""The Table (adventure/table.py): each campaign plays by its own rules, which no longer follow the user between worlds."""
+from adventure import table
 
 STATS = {'Mind': 12, 'Allure': 12, 'Resolve': 10, 'Vitality': 10, 'Essence': 8, 'Luck': 8}
 ASH = {'name': 'Ash Ward', 'gender': 'nonbinary', 'age': 30, 'about': 'New in town, and broke.'}
@@ -113,7 +113,7 @@ def test_a_format_chosen_at_session_zero_is_kept(client):
 
 
 def test_the_narrator_is_told_the_format(app):
-    from dungeon import story
+    from adventure import story
     with app.state.database.connect(write=True) as connection:
         assert story.narration_format(connection).pov == 'second'
         table.begin(connection)

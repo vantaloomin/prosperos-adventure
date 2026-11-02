@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { StoryRoll } from '../../types'
 import { diceFaces, tumbleFace, type DieFace } from './storyText'
 
-// The dice only act out a roll the code already made (dungeon/rules/marvel.py): each one tumbles, then lands on its
+// The dice only act out a roll the code already made (adventure/rules/marvel.py): each one tumbles, then lands on its
 // real face, one after another; the strip and the band show once the last has landed.
 const TICK_MS = 70
 const landsAt = (index: number) => 650 + index * 280

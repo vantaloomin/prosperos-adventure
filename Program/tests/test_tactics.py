@@ -1,7 +1,7 @@
-"""Foes fight for what they want (dungeon/combat.py terms, the robbers' demand, captors who take the character whole)."""
+"""Foes fight for what they want (adventure/combat.py terms, the robbers' demand, captors who take the character whole)."""
 from conftest import Chunk, tell
 
-from dungeon import combat, inventory
+from adventure import combat, inventory
 
 NOW = '2026-10-01T12:00:00Z'
 

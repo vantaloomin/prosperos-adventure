@@ -20,18 +20,18 @@ export interface WorkspaceSettings {
   show_odds?: boolean
   /** Dice that tumble on screen and land on each roll, while the dice are shown. */
   roll_dice?: boolean
-  /** Worlds > Adult side of life (dungeon/world/intimacy.py): adults only; off unless turned on. */
+  /** Worlds > Adult side of life (adventure/world/intimacy.py): adults only; off unless turned on. */
   adult_side?: boolean
   /** Hidden values: what townsfolk are like that way, for the user's eyes; off unless turned on. */
   show_adult_side?: boolean
-  /** Seconds a story turn may take before its optional steps give way; 0 is automatic (dungeon/pace.py). */
+  /** Seconds a story turn may take before its optional steps give way; 0 is automatic (adventure/pace.py). */
   turn_budget?: number
-  /** Rewrite a narration that clashes with the record before it is shown; on by default (dungeon/story.py told). */
+  /** Rewrite a narration that clashes with the record before it is shown; on by default (adventure/story.py told). */
   contradiction_check?: boolean
   passive_art?: boolean
-  /** Tokens a turn may send at most; 0 is the model's whole window (dungeon/remembering.py). */
+  /** Tokens a turn may send at most; 0 is the model's whole window (adventure/remembering.py). */
   context_cap?: number
-  /** The GM view of the record: hidden truth shown and editable (dungeon/record.py). */
+  /** The GM view of the record: hidden truth shown and editable (adventure/record.py). */
   gm_view?: boolean
   /** How far the story goes on the page; 'world' follows the world's own preset. */
   intensity?: IntensityPreset
@@ -54,18 +54,18 @@ export interface DataFolderStatus {
 export type AutoBackups = 'off' | 'daily' | 'weekly'
 export interface BackupList {
   backups: BackupEntry[]; pending: { name: string; requested_at: string } | null
-  /** Automatic backups of every world (dungeon/auto_backup.py), and when this world last had one. */
+  /** Automatic backups of every world (adventure/auto_backup.py), and when this world last had one. */
   auto_backups: AutoBackups; last_auto_backup: string | null; auto_backup_count: number
 }
 
 /** `world` is the world package the city is on the travel map of (null for one on its own); `home` false marks a
- * road between towns, not somewhere to live (dungeon/world/schema.py). */
+ * road between towns, not somewhere to live (adventure/world/schema.py). */
 export interface CitySummary {
   id: string; name: string; region: string; country: string; timezone: string; summary: string; era?: string; category?: string
   world?: string | null; world_name?: string | null; home?: boolean
 }
 
-/** Someone's kind and how long they live (dungeon/world/lifespans.py `described`). `own` is the user's pick of
+/** Someone's kind and how long they live (adventure/world/lifespans.py `described`). `own` is the user's pick of
  * How long they live: null as their kind, 0 doesn't age. `years` is what applies (null: they don't age). */
 export interface KindShown {
   kind: string
@@ -188,7 +188,7 @@ export interface ImageJob {
   finished_at: string | null
 }
 
-/** Debug time (Settings > Developer, dungeon/debug_time.py): the app clock moved ahead or running faster. */
+/** Debug time (Settings > Developer, adventure/debug_time.py): the app clock moved ahead or running faster. */
 export interface DebugTime {
   active: boolean
   /** The app's time, and the PC's real time. */
@@ -203,10 +203,10 @@ export interface DebugTime {
   kept?: boolean
 }
 
-/** Story mode (dungeon/story.py): the user's own story with a narrator. */
+/** Story mode (adventure/story.py): the user's own story with a narrator. */
 export interface StoryPlace {
   id: string; name: string; kind: string; neighborhood: string; summary?: string
-  /** Named spots inside, for detail (dungeon/world/inside.py): "the back patio". */
+  /** Named spots inside, for detail (adventure/world/inside.py): "the back patio". */
   spots?: string[]
 }
 export interface StoryScene {
@@ -217,24 +217,24 @@ export interface StoryScene {
   places: StoryPlace[]
   /** Who is around, as the user would see them ("the barista there"); never names they have not been given. */
   around: string[]
-  /** Those same people with their keys, for asking a portrait of someone here (dungeon/art.py). */
+  /** Those same people with their keys, for asking a portrait of someone here (adventure/art.py). */
   present?: { key: string; label: string }[]
 }
 export interface StoryMessage {
   id: string; seq: number; role: 'user' | 'narrator' | 'scene'; text: string; reply_to: string | null
   status: 'complete' | 'failed'; error: string | null; city_id: string; place_id: string; created_at: string
   crisis_help?: boolean
-  /** The turn's rolls (dungeon/turn.py), only while the dice are shown. */
+  /** The turn's rolls (adventure/turn.py), only while the dice are shown. */
   rolls?: StoryRoll[]
-  /** How long the turn took, step by step, and what gave way for time (dungeon/pace.py); with the dice shown. */
+  /** How long the turn took, step by step, and what gave way for time (adventure/pace.py); with the dice shown. */
   pace?: TurnPace | null
   /** A narration's paragraphs with a problem the checks left, each with why, and whether it was rewritten and can
-   *  switch back (dungeon/passages.py). */
+   *  switch back (adventure/passages.py). */
   flags?: StoryFlag[]
   previous?: boolean
-  /** On a player's line: what its turn changed (dungeon/receipt.py), for the recent turns. */
+  /** On a player's line: what its turn changed (adventure/receipt.py), for the recent turns. */
   receipt?: ReceiptChip[]
-  /** On a player's line: the Life Cards the world drew on it (dungeon/happenings.py with_cards). */
+  /** On a player's line: the Life Cards the world drew on it (adventure/happenings.py with_cards). */
   cards?: LifeCardShown[]
 }
 /** A drawn Life Card as the story shows it: title, tone and picture (or the card back), never its hidden truth. */
@@ -242,7 +242,7 @@ export interface LifeCardShown { title: string; tone: 'good' | 'bad' | 'grey'; a
 /** One thing a turn changed: the purse, the pack, the character's condition, a quest, or something learned. */
 export interface ReceiptChip { kind: 'coins' | 'item' | 'hurt' | 'injury' | 'quest' | 'learned'; tone: 'gain' | 'loss' | 'neutral'; text: string }
 export interface StoryFlag { passage: string; why: string[] }
-/** The dice log (dungeon/dice_log.py): every roll of the branch, turn by turn and newest first, with how long each
+/** The dice log (adventure/dice_log.py): every roll of the branch, turn by turn and newest first, with how long each
  *  turn took; empty while the dice are hidden. */
 export interface DiceLog {
   shown: boolean
@@ -251,36 +251,36 @@ export interface DiceLog {
 }
 export interface TurnPace { steps: Record<string, number>; skipped: string[]; budget: number; total: number }
 export type Band = 'critical_failure' | 'failure' | 'failure_upside' | 'success_cost' | 'success' | 'critical_success'
-/** One roll: Prospero's d100 plus the stat die, less the difficulty shift (dungeon/rules/marvel.py); or, under 5E, a d20
- *  plus the skill's bonus against a DC (`target`, dungeon/rules/srd52.py), `skill` naming what it tested. */
+/** One roll: Prospero's d100 plus the stat die, less the difficulty shift (adventure/rules/marvel.py); or, under 5E, a d20
+ *  plus the skill's bonus against a DC (`target`, adventure/rules/srd52.py), `skill` naming what it tested. */
 export interface StoryRoll {
   action: string; stat: string; difficulty: string; die: number | null; natural: number; bonus: number; shift: number
   total: number; band: Band; label: string; ruleset?: Ruleset; target?: number | null; skill?: string | null
 }
 export type Ruleset = 'marvel' | 'srd52' | 'ironsworn' | 'brp' | 'narrative' | 'fate'
-/** A roll while the dice are hidden: what was tried and with which stat, never the odds (dungeon/turn.py hidden). */
+/** A roll while the dice are hidden: what was tried and with which stat, never the odds (adventure/turn.py hidden). */
 export type HiddenRoll = Pick<StoryRoll, 'action' | 'stat'>
-/** One of the ruleset's bands by total, worst first; the top band has no ceiling (dungeon/turn.py bands). */
+/** One of the ruleset's bands by total, worst first; the top band has no ceiling (adventure/turn.py bands). */
 export interface BandStep { band: Band; label: string; ceiling: number | null }
 /** An action a turn rolls for, named before the result; the difficulty only while the dice are shown. */
 export interface TurnAction { action: string; stat: string; difficulty?: string }
-/** A turn's stages as the stream tells them, before and around the narration (dungeon/story.py answer). */
+/** A turn's stages as the stream tells them, before and around the narration (adventure/story.py answer). */
 export type TurnEvent = { stage: 'reading' | 'writing' } | { actions: TurnAction[]; bands?: BandStep[] } | { roll: StoryRoll | HiddenRoll }
 /** What a turn under way has shown so far. */
 export interface TurnSoFar { stage: 'reading' | 'writing' | null; actions: TurnAction[]; bands: BandStep[] | null; rolls: (StoryRoll | HiddenRoll)[] }
-/** The persona's Prospero stats (dungeon/sheet.py) and the die each one rolls; or their 5E sheet (Srd52Sheet). */
-/** A Narrative Only sheet (dungeon/rules/narrative.py): no stats, only what the player says the character is good and bad at. */
+/** The persona's Prospero stats (adventure/sheet.py) and the die each one rolls; or their 5E sheet (Srd52Sheet). */
+/** A Narrative Only sheet (adventure/rules/narrative.py): no stats, only what the player says the character is good and bad at. */
 export interface NarrativeSheet { ruleset: 'narrative'; ruleset_name: string; good_at: string[]; bad_at: string[]; growth?: SheetGrowth }
-/** A Fate sheet (dungeon/rules/fate.py): aspects, approaches, stunts, Fate points, stress and consequences. */
+/** A Fate sheet (adventure/rules/fate.py): aspects, approaches, stunts, Fate points, stress and consequences. */
 export interface FateSheet {
   ruleset: 'fate'; ruleset_name: string; high_concept: string; trouble: string; aspects: string[]; approaches: Record<string, number>
   stunts: string[]; refresh: number; fate_points: number; stress: boolean[]; consequences: Record<string, string>
   ladder: Record<string, string>; attribution: string; growth?: SheetGrowth
 }
-/** What a Fate character is made from (dungeon/campaign.py view). */
+/** What a Fate character is made from (adventure/campaign.py view). */
 export interface FateChoices { hint: string; approaches: string[]; array: number[]; most_aspects: number; most_stunts: number; attribution: string }
 export type Sheet = MarvelSheet | Srd52Sheet | IronswornSheet | BrpSheet | NarrativeSheet | FateSheet
-/** A character under the Percentile ruleset (dungeon/rules/brp.py view): BRP characteristics, skills, hit points. */
+/** A character under the Percentile ruleset (adventure/rules/brp.py view): BRP characteristics, skills, hit points. */
 export interface BrpSheet {
   ruleset: 'brp'; ruleset_name: string; characteristics: Record<string, number>; hp: number; max_hp: number; pp: number; max_pp: number
   names: { profession: string; personality: string }; rolls: Record<string, number>; damage_modifier: string; major_wound: number
@@ -290,13 +290,13 @@ export interface BrpSheet {
   spell_list?: { id: string; name: string; value: number; cost: number; summary: string; checked: boolean }[]; most_level?: number
   major_wounds: { text: string; characteristic: string; lost: number; by: string }[]; attribution: string; growth?: SheetGrowth
 }
-/** What a Percentile character is built from at campaign start (dungeon/campaign.py brp_choices). */
+/** What a Percentile character is built from at campaign start (adventure/campaign.py brp_choices). */
 export interface BrpChoices {
   characteristics: { id: string; name: string; roll: string | null }[]; points: number; start: number; range: [number, number]
   costly: string[]; costly_price: number; professions: { id: string; name: string; skills: string[] }[]
   personalities: { id: string; name: string; about: string }[]; attribution: string
 }
-/** An Ironsworn character (dungeon/rules/ironsworn.py view): five stats, the condition meters, momentum, assets. */
+/** An Ironsworn character (adventure/rules/ironsworn.py view): five stats, the condition meters, momentum, assets. */
 export interface IronswornSheet {
   ruleset: 'ironsworn'; ruleset_name: string; stats: Record<string, number>; health: number; spirit: number; supply: number
   momentum: number; momentum_max: number; momentum_reset: number; debilities: string[]; xp: number
@@ -304,13 +304,13 @@ export interface IronswornSheet {
   progress?: { name: string; rank: string | null; ticks: number; boxes: number; of: number }[]
   asset_list: { id: string; name: string; category: string; abilities: string[] }[]; attribution: string; growth?: SheetGrowth
 }
-/** What an Ironsworn character is built from at campaign start (dungeon/campaign.py ironsworn_choices). */
+/** What an Ironsworn character is built from at campaign start (adventure/campaign.py ironsworn_choices). */
 export interface IronswornChoices {
   stats: { id: string; name: string; about: string }[]; array: number[]; count: number
   assets: { id: string; name: string; category: string; about: string }[]; attribution: string
 }
 export interface MarvelSheet { ruleset: 'marvel'; ruleset_name: string; stats: Record<string, number>; stat_names: string[]; range: [number, number]; dice: Record<string, number | null>; growth?: SheetGrowth }
-/** A 5E character (dungeon/rules/srd52.py view): abilities, proficiency, hit points, Armor Class and every skill. */
+/** A 5E character (adventure/rules/srd52.py view): abilities, proficiency, hit points, Armor Class and every skill. */
 export interface Srd52Sheet {
   ruleset: 'srd52'; ruleset_name: string; level: number; xp: number; abilities: Record<string, number>; modifiers: Record<string, number>
   proficiency: number; max_hp: number; hp: number; ac: number; speed: number; saves: string[]; skills: string[]
@@ -324,7 +324,7 @@ export interface Srd52Spells {
   ability: string; attack: number; dc: number; cantrips: string[]; prepared: { name: string; level: number }[]
   slots: { level: number; left: number; of: number }[]
 }
-/** What a 5E character is built from at campaign start (dungeon/campaign.py srd52_choices). */
+/** What a 5E character is built from at campaign start (adventure/campaign.py srd52_choices). */
 export interface Srd52Choices {
   classes: { id: string; name: string; hit_die: number; primary: string; skills: { count: number; from: string[] } }[]
   species: { id: string; name: string }[]
@@ -332,52 +332,52 @@ export interface Srd52Choices {
   abilities: { id: string; name: string }[]; skills: { id: string; name: string; ability: string }[]
   array: number[]; attribution: string
 }
-/** Someone the user has met in their story (dungeon/story_people.py), with where their rules put them now. */
+/** Someone the user has met in their story (adventure/story_people.py), with where their rules put them now. */
 export interface StoryPerson {
   key: string; name: string; role: string; city: string; meetings: number; last_met_at: string; notes: string[]
   doing: string; place: { id: string; name: string; city_id: string } | null
-  /** How they feel about your character, while the dice are shown (dungeon/feelings.py). */
+  /** How they feel about your character, while the dice are shown (adventure/feelings.py). */
   feelings: string
-  /** How they are bonded to your character, if they are (dungeon/bonds.py). */
+  /** How they are bonded to your character, if they are (adventure/bonds.py). */
   bond?: 'earned' | 'sworn' | null
-  /** Whether they travel with your character (dungeon/party.py). */
+  /** Whether they travel with your character (adventure/party.py). */
   party?: boolean
 }
-/** The character's purse and pack, and the shop window where the story is (dungeon/inventory.py). Money is in hundredths. */
-/** `icon`: the world's picture of the thing (dungeon/icons.py), null when it has none. */
+/** The character's purse and pack, and the shop window where the story is (adventure/inventory.py). Money is in hundredths. */
+/** `icon`: the world's picture of the thing (adventure/icons.py), null when it has none. */
 export interface GearItem { id: string; item_id: string; name: string; category: string; qty: number; slots: number; stolen?: boolean; condition?: 'sound' | 'damaged' | 'broken'; icon?: string | null }
 export interface ShopRow { item_id: string; name: string; category: string; price: number; qty: number; slots: number; icon?: string | null }
 /** `haggled`: today's prices after a haggle, in percent off (negative) or on; 0 without one. */
 /** `fence`: buys stolen goods; `cash`: what the keeper has to buy with (null: unlimited); `market`: prices moved by events. */
 export interface Shop { place_id: string; open: boolean; keeper: string; haggled: number; stock: ShopRow[]; offers: Record<string, number>; fence?: boolean; cash?: number | null; market?: string }
-/** How the character looks (dungeon/appearance.py): cleanliness with its marks, clothes, layers not worn, weapons on show. */
+/** How the character looks (adventure/appearance.py): cleanliness with its marks, clothes, layers not worn, weapons on show. */
 export interface Looks { cleanliness: string; grime: string; marks: string[]; clothes: string; dress: Record<string, string>; on_show: string[] }
 export interface Gear {
   coins: number; currency: { code: string; symbol?: string; name?: string }; slots: { used: number; max: number | null }
   items: GearItem[]; shop: Shop | null
-  /** How the character looks right now (dungeon/appearance.py). */
+  /** How the character looks right now (adventure/appearance.py). */
   looks?: Looks
 }
-/** A character a town ships to play as (dungeon/campaign.py). */
+/** A character a town ships to play as (adventure/campaign.py). */
 export interface Premade { id: string; name: string; gender: PersonaGender; age: number | null; about: string; stats: Record<string, number> }
 /** Campaign start: the town's premades and the point-buy for making your own. */
 export type StoryArc = 'grounded' | 'classic' | 'epic'
 export type StoryPace = 'slow' | 'steady' | 'fast'
 export type StoryHand = 'soft' | 'guiding' | 'firm'
-/** Another world's story that can come into a new campaign as history (dungeon/legacy.py). */
+/** Another world's story that can come into a new campaign as history (adventure/legacy.py). */
 export interface LegacyCandidate { world_id: string; world: string; name: string; dead: boolean; chapters: number }
 export type LegacyRole = 'legend' | 'villain' | 'corpse'
 export interface StoryStart { rulesets?: { id: Ruleset; name: string }[]; ruleset?: Ruleset; srd52?: Srd52Choices; ironsworn?: IronswornChoices; brp?: BrpChoices; narrative?: { hint: string }; fate?: FateChoices; legacy?: LegacyCandidate[]; presets?: TablePreset[]; table?: TableRules; premades: Premade[]; points: number; range: [number, number]; stat_names: string[]; meanings: Record<string, string>; arc?: { arc: StoryArc; pace: StoryPace; hand?: StoryHand } | null }
-/** The character's tier on the shared ladder and its track (dungeon/tiers.py); the numbers only with the dice shown. */
-/** Growth by use and the dark tracks (dungeon/growth.py); points only with the dice shown. */
+/** The character's tier on the shared ladder and its track (adventure/tiers.py); the numbers only with the dice shown. */
+/** Growth by use and the dark tracks (adventure/growth.py); points only with the dice shown. */
 export interface SheetGrowth {
   marked: string[]; dark: { id: string; name: string; word: string; changes: string[]; points?: number; top?: number }[]
-  /** The Bonds track (dungeon/bonds.py); the count only with the dice shown. */
+  /** The Bonds track (adventure/bonds.py); the count only with the dice shown. */
   bonds?: SheetBonds
 }
 export interface SheetBonds { word: string; count?: number; bonds: { key: string; name: string; how: 'earned' | 'sworn'; state: 'whole' | 'broken' | 'lost' }[] }
 export interface StoryTier { tier: string; words: string; track: string; arc: StoryArc; pace: StoryPace; points?: number; next?: number | null }
-/** A fact the game keeps that the player's character knows (dungeon/record.py). */
+/** A fact the game keeps that the player's character knows (adventure/record.py). */
 /** `world` (hidden truth) and `pulled` (a fact the model took from the story) show only in the GM view. */
 export interface JournalEntry { id: string; kind: string; subject: string; text: string; truth: 'world' | 'belief' | 'both'; source: 'code' | 'narrator' | 'player'; pulled?: boolean; faded?: boolean; created_at: string }
 export interface JournalQuest { id: string; title: string; hook: string; status: 'open' | 'done' | 'failed' | 'missed'; outcome: string; left: string; kind?: 'authored' | 'job' | 'oath' | 'coursework' }
@@ -385,11 +385,11 @@ export type ArtKind = 'portrait' | 'place' | 'scene' | 'passage'
 export interface StoryArt { id: string; kind: ArtKind; subject: string; chapter_id: string | null; status: 'queued' | 'running' | 'done' | 'failed' | 'refused'; error: string | null; reference: boolean; url: string | null; width: number | null; height: number | null; created_at: string; stale: boolean }
 export interface InstitutionGrades { average: number; letter: string; gpa: number; attended: number; missed: number }
 export interface JournalInstitution { id: string; name: string; term: string | null; classes: { id: string; name: string }[]; today: { id: string; name: string; at: string; place_id: string | null; soon: boolean }[]; grades: InstitutionGrades | null }
-/** A thread in the director's notebook the character has come across, as they understand it (dungeon/director.py). */
+/** A thread in the director's notebook the character has come across, as they understand it (adventure/director.py). */
 export interface JournalThread { id: string; kind: 'mystery' | 'grudge' | 'lead' | 'promise'; title: string; seen: string }
 export interface Journal { entries: JournalEntry[]; quests: JournalQuest[]; institutions?: JournalInstitution[]; threads?: JournalThread[]; gm?: boolean; summary?: string }
 export type FeelingAxis = 'trust' | 'affection' | 'respect' | 'fear' | 'desire'
-/** The GM view (dungeon/gm.py): what the game keeps behind the story, secrets included. */
+/** The GM view (adventure/gm.py): what the game keeps behind the story, secrets included. */
 export interface GmView {
   quests: { id: string; title: string; status: string; known: boolean; truth: string; kind: string }[]
   people: { key: string; name: string; feelings: Record<FeelingAxis, number>; impressions: string[] }[]
@@ -399,12 +399,12 @@ export interface GmView {
   factions: { faction_id: string; value: number }[]
   dark: { id: string; name: string; word: string; points?: number; top?: number }[]
   corrections: { before: string; after: string | null; subject: string | null; created_at: string }[]
-  /** The director's Chekhov list and each arc's planned beats (dungeon/plotting.py). */
+  /** The director's Chekhov list and each arc's planned beats (adventure/plotting.py). */
   seeds: { id: string; text: string; truth: string; status: 'planted' | 'reached' | 'asked' | 'paid' | 'retired'; arc_id: string | null }[]
   plans: { arc_id: string; stage: number; beats: { id: string; text: string; cut: boolean; used: boolean; source: 'model' | 'world' }[] }[]
 }
-/** One way the story went (dungeon/timeline.py); `playing` is the one on screen. */
-/** A chapter of a branch (dungeon/chapters.py): `open` while it is still being played. */
+/** One way the story went (adventure/timeline.py); `playing` is the one on screen. */
+/** A chapter of a branch (adventure/chapters.py): `open` while it is still being played. */
 export interface StoryChapter { id: string; number: number; title: string; summary: string; hook?: string; open: boolean; turns: number; ended_by: 'place' | 'time' | 'fight' | 'quest' | 'player' | null; branch_id: string; seq: number }
 /** A branch in the tree: where it forked, how it ended if the character died or was lost, and its own chapters. */
 export interface StoryTreeBranch { id: string; parent_id: string | null; fork_seq: number | null; playing: boolean; ending: '' | 'death' | 'lost'; chapters: StoryChapter[] }
@@ -413,7 +413,7 @@ export interface StoryCampaign { chapters: StoryChapter[]; tree: StoryTreeBranch
 export interface NotebookNote { id: string; text: string; created_at: string; updated_at: string }
 export interface StoryBranch { id: string; playing: boolean; turns: number; last_line: string; last_at: string; started_at: string }
 export type Zone = 'engaged' | 'near' | 'far'
-/** The fight and the character's wounds (dungeon/combat.py); a foe's `wound` level (and 5E hit points) only with the dice shown. */
+/** The fight and the character's wounds (adventure/combat.py); a foe's `wound` level (and 5E hit points) only with the dice shown. */
 export interface StoryFight {
   condition: string; dead: boolean; injuries?: string[]; stress?: string
   /** Who holds the character prisoner, if anyone. */
@@ -422,9 +422,9 @@ export interface StoryFight {
   hp?: number; max_hp?: number
   /** `area`: where the character fights from ("the stairs"); each foe's `zone` is its range band. */
   fight: { round: number; area?: string | null; foes: { name: string; state: string; wound: number | null; zone?: Zone | null; hp?: number; max_hp?: number }[]
-    /** Companions fighting beside the character (dungeon/allies.py). */
+    /** Companions fighting beside the character (adventure/allies.py). */
     allies?: { name: string; state: 'unhurt' | 'hurt' | 'down' }[]
-    /** Under 5E, the fight on five-foot squares around the character at 0, 0 (dungeon/battlemap.py). */
+    /** Under 5E, the fight on five-foot squares around the character at 0, 0 (adventure/battlemap.py). */
     grid?: BattleGrid | null } | null
 }
 export interface BattleGrid {
@@ -438,35 +438,35 @@ export interface StoryIntensity {
   preset: Exclude<IntensityPreset, 'world'>; chosen: IntensityPreset; world: Exclude<IntensityPreset, 'world'>; voice: string
   /** Each category's level in play (0 off the page to 3 unflinching), whether any moved off the preset, the veils. */
   levels?: Record<ToneCategory, number>; custom?: boolean; veils?: VeilTopic[]; voice_chosen?: ToneVoice; voice_world?: string
-  /** How eventful the story is (dungeon/happenings.py): the level in play, the player's choice, the world's own. */
+  /** How eventful the story is (adventure/happenings.py): the level in play, the player's choice, the world's own. */
   drama: Exclude<DramaLevel, 'world'>; drama_chosen: DramaLevel; drama_world: Exclude<DramaLevel, 'world'>
-  /** "Meanwhile" cutaways of off-page beats (dungeon/beats.py). */
+  /** "Meanwhile" cutaways of off-page beats (adventure/beats.py). */
   cutaways?: boolean
-  /** A 5E defeat (dungeon/combat.py fall): death saves as written, or what the foes were after. */
+  /** A 5E defeat (adventure/combat.py fall): death saves as written, or what the foes were after. */
   defeat?: DefeatRule; ruleset?: Ruleset
 }
 export type DefeatRule = 'as_written' | 'by_aim'
 export type DramaLevel = 'world' | 'quiet' | 'uneasy' | 'eventful' | 'merciless'
-/** A session zero preset (dungeon/table.py PRESETS): the tone it sets and the director's hand (null: the world's). */
+/** A session zero preset (adventure/table.py PRESETS): the tone it sets and the director's hand (null: the world's). */
 export interface TablePreset { id: string; name: string; about: string; hand: StoryHand | null; rules: Pick<TableRules, 'intensity' | 'drama' | 'injury_persistence'> }
-/** The Table (dungeon/table.py): this campaign's rules. Tone starts as the world's; what is shown, as you last left it. */
+/** The Table (adventure/table.py): this campaign's rules. Tone starts as the world's; what is shown, as you last left it. */
 export interface TableRules {
   intensity: IntensityPreset; drama: DramaLevel; injury_persistence: InjuryPersistence
   show_odds: boolean; roll_dice: boolean; show_adult_side: boolean; gm_view: boolean; cutaways: boolean; defeat?: DefeatRule
-  /** dungeon/tone.py: categories moved off the preset, veiled topics (null: the world's), the narrator's voice. */
+  /** adventure/tone.py: categories moved off the preset, veiled topics (null: the world's), the narrator's voice. */
   levels?: Partial<Record<ToneCategory, number>> | null; veils?: VeilTopic[] | null; voice?: ToneVoice
-  /** The narration format (dungeon/narration/prompt.py Format): point of view, tense and length. */
+  /** The narration format (adventure/narration/prompt.py Format): point of view, tense and length. */
   pov?: NarrationPov; tense?: NarrationTense; length?: NarrationLength
-  /** Whether shopkeepers have finite cash to buy with (dungeon/inventory.py). */
+  /** Whether shopkeepers have finite cash to buy with (adventure/inventory.py). */
   shop_cash?: 'finite' | 'unlimited'
-  /** Whether carrying is limited by slots (dungeon/inventory.py). */
+  /** Whether carrying is limited by slots (adventure/inventory.py). */
   carry_limit?: 'slots' | 'off'
-  /** Whether the narrator gets the rule text that fits the turn (dungeon/rules/passages.py). */
+  /** Whether the narrator gets the rule text that fits the turn (adventure/rules/passages.py). */
   rule_text?: 'on' | 'off'
   leaving?: 'anyone' | 'fights' | 'nobody'
-  /** How much local politics goes on (dungeon/politics.py). */
+  /** How much local politics goes on (adventure/politics.py). */
   politics?: PoliticsLevel
-  /** Story time, or real time while the app is closed too ('world': the world's own; dungeon/story_clock.py). */
+  /** Story time, or real time while the app is closed too ('world': the world's own; adventure/story_clock.py). */
   clock?: 'world' | 'story' | 'real_time'
 }
 export type NarrationPov = 'first' | 'second' | 'third'
@@ -476,19 +476,19 @@ export type ToneCategory = 'violence' | 'sex' | 'horror' | 'cruelty' | 'drugs'
 export type VeilTopic = 'execution' | 'slavery' | 'mutilation' | 'disease' | 'self-harm' | 'addiction' | 'torture' | 'sexual-violence' | 'sacrifice' | 'child-harm'
 export type ToneVoice = 'world' | 'grim' | 'wry' | 'romantic' | 'hopeful' | 'lyrical' | 'plain'
 export interface Story { scene: StoryScene; messages: StoryMessage[]; people: StoryPerson[]; ready: boolean; dice_shown: boolean; bands?: BandStep[] | null; branches: StoryBranch[]; fight: StoryFight; intensity: StoryIntensity; map: StoryMap | null; interior?: StoryInterior | null; injury_persistence: InjuryPersistence; table?: TableRules; factions?: StoryFaction[]; tier?: StoryTier | null; politics?: boolean; campaign?: StoryCampaign; message_id?: string }
-/** A faction the character knows of (dungeon/factions.py): standing in words, with the number when the dice are shown,
- * and its emblem (dungeon/icons.py) when the world has one. */
+/** A faction the character knows of (adventure/factions.py): standing in words, with the number when the dice are shown,
+ * and its emblem (adventure/icons.py) when the world has one. */
 export interface StoryFaction { id: string; name: string; summary: string; standing: string; emblem?: string | null }
 export type InjuryPersistence = 'permanent' | 'temporary' | 'none'
-/** The travel map as far as the character knows it (dungeon/travel.py); positions run 0 to 1 across the world map. */
+/** The travel map as far as the character knows it (adventure/travel.py); positions run 0 to 1 across the world map. */
 export interface StoryMap {
   places: { id: string; name: string; x: number; y: number; visited: boolean; here: boolean }[]
   roads: { from: string; to: string; hours: number; danger: 'none' | 'low' | 'medium' | 'high'; terrain: string }[]
-  /** On a hex crawl (dungeon/hexes.py): the hexes the character has seen, and the hex they believe they are in. */
+  /** On a hex crawl (adventure/hexes.py): the hexes the character has seen, and the hex they believe they are in. */
   hexes?: MapHex[]
   at?: { q: number; r: number; lost: boolean }
 }
-/** The interior the character is inside (dungeon/delving.py view): the rooms they have seen, the passages they know,
+/** The interior the character is inside (adventure/delving.py view): the rooms they have seen, the passages they know,
  * and where they are. A room's `map` is where it was drawn (0 to 1 across and down), when it was. */
 export interface StoryInterior {
   id: string; name: string; style: string
@@ -506,10 +506,10 @@ export interface MapHex {
 /** The story after going back, with the line that was taken back to send again. */
 export interface StoryBack extends Story { draft: string }
 
-/** Record model calls (dungeon/model_calls.py), Settings > Developer. */
+/** Record model calls (adventure/model_calls.py), Settings > Developer. */
 export interface ModelCallLog { recording: boolean; folder: string; keep_days: number; files: number; bytes: number }
 
-/** Worlds and personas (dungeon/worlds.py): the user as someone in particular, and the worlds they live in. */
+/** Worlds and personas (adventure/worlds.py): the user as someone in particular, and the worlds they live in. */
 export interface WorldHome { city_id: string; city: string; region: string; neighbourhood: string; neighbourhood_name: string; set_by: 'app' | 'you' }
 /** The persona form's "Where you live": the cities the persona can live in from this world, and one city's neighbourhoods. */
 export interface HomeChoices { home: WorldHome | null; cities: CitySummary[]; city_id: string; neighbourhoods: { id: string; name: string }[] }
@@ -518,7 +518,7 @@ export interface World {
   active: boolean
   /** The first world holds the others, so it cannot be deleted. */
   first: boolean
-  /** Where the persona lives in this world (dungeon/life/where.py); the app picks it until the user changes it. */
+  /** Where the persona lives in this world (adventure/life/where.py); the app picks it until the user changes it. */
   home: WorldHome | null
 }
 export type PersonaGender = 'woman' | 'man' | 'nonbinary' | ''
@@ -526,12 +526,12 @@ export interface Persona {
   id: string; name: string; gender: PersonaGender; age: number | null; about: string; birthday: string; created_at: string
   /** Kind and How long they live as picked on the Persona page ('' and null: read from About you). */
   kind?: string; lifespan?: number | null
-  /** What applies, the app's pick from their words, and what the pickers offer (dungeon/worlds.py `kind_shown`). */
+  /** What applies, the app's pick from their words, and what the pickers offer (adventure/worlds.py `kind_shown`). */
   kind_shown?: KindShown & KindChoices & { found: string; found_label: string; picked: string }
   active: boolean
   worlds: World[]
 }
-/** A world on the title screen (dungeon/world_select.py): `here` when the story is in it, `yours` when the persona
+/** A world on the title screen (adventure/world_select.py): `here` when the story is in it, `yours` when the persona
  * has a world there already; `art` is its key art's address. */
 export interface TitleWorld { id: string; name: string; genre: string; pitch: string; here: boolean; yours: boolean; art: string | null }
 export interface TitleWorlds { worlds: TitleWorld[]; here: string | null }
@@ -539,7 +539,7 @@ export interface Worlds {
   active_world_id: string; active_persona_id: string; world: World; persona: Persona; personas: Persona[]
 }
 
-/** Worlds > Townsfolk mix (dungeon/world/mix.py): the shares the townsfolk rolls use. */
+/** Worlds > Townsfolk mix (adventure/world/mix.py): the shares the townsfolk rolls use. */
 export interface MixValues {
   nonbinary: number; women: number; height_woman: number; height_man: number
   slender: number; middle: number; heavier: number; beard: number
@@ -559,7 +559,7 @@ export interface TownsfolkMix {
   levels: Record<string, Record<string, number>>; drives: Record<string, Record<string, number>>
   adult_side: boolean; town: MixTown | null
 }
-/** What the story's stage shows (dungeon/art.py stage): the place's picture and portraits of who is here. */
+/** What the story's stage shows (adventure/art.py stage): the place's picture and portraits of who is here. */
 export interface ArtStage {
   /** A made picture of the place, or the world's default backdrop (`default`) in the hour's `light`. */
   background: { url: string; width: number | null; height: number | null; default?: boolean; light?: 'dawn' | 'day' | 'dusk' | 'night' } | null
@@ -567,7 +567,7 @@ export interface ArtStage {
   portraits: { key: string; name: string; url: string; width: number | null; height: number | null; default?: boolean }[]
 }
 
-/** Local politics (dungeon/politics.py): what people in the town argue about, the factions behind each side and where
+/** Local politics (adventure/politics.py): what people in the town argue about, the factions behind each side and where
  * the people the character has met there stand. Views run from 2 (strongly for the first side) to -2 (strongly for
  * the second); `by` says whether the game or the player set it. */
 export type PoliticsLevel = 'off' | 'quiet' | 'true_to_life' | 'lively'
@@ -607,7 +607,7 @@ export interface PoliticsFaction {
   pull: number
   base_pull: number
   change: number
-  /** 'world': one of the world's powers holding the town (dungeon/factions.py); 'era': a town group of its times. */
+  /** 'world': one of the world's powers holding the town (adventure/factions.py); 'era': a town group of its times. */
   origin: 'world' | 'city' | 'era' | 'user'
   power: boolean
   /** The people the character has met who belong. */

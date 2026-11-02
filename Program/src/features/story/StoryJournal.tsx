@@ -10,7 +10,7 @@ import { useTable } from './table'
 
 const JOURNAL_KEY = ['story-journal']
 
-/** What your character knows (dungeon/record.py): facts the game keeps, which you can correct or add to. The GM view
+/** What your character knows (adventure/record.py): facts the game keeps, which you can correct or add to. The GM view
  * shows the whole record, hidden truth included, and can ask the model again for one fact it pulled from the story. */
 export function StoryJournal({ open }: { open?: boolean }) {
   const client = useQueryClient()
@@ -65,7 +65,7 @@ function GoingOn({ institutions, quests, threads }: { institutions: JournalInsti
   </>
 }
 
-/** The schools and guilds your character belongs to (dungeon/institutions.py): the term, grades and today's classes. */
+/** The schools and guilds your character belongs to (adventure/institutions.py): the term, grades and today's classes. */
 function Schools({ institutions }: { institutions: JournalInstitution[] }) {
   return (
     <ul aria-label="School and duties">
@@ -78,7 +78,7 @@ function Schools({ institutions }: { institutions: JournalInstitution[] }) {
   )
 }
 
-/** The quests your character knows of (dungeon/quests.py), with the story time left. */
+/** The quests your character knows of (adventure/quests.py), with the story time left. */
 function Underway({ quests }: { quests: JournalQuest[] }) {
   return (
     <ul aria-label="Underway">
@@ -91,7 +91,7 @@ function Underway({ quests }: { quests: JournalQuest[] }) {
   )
 }
 
-/** The loose ends your character has come across (dungeon/director.py), as they understand them. */
+/** The loose ends your character has come across (adventure/director.py), as they understand them. */
 function Threads({ threads }: { threads: JournalThread[] }) {
   return (
     <ul aria-label="Loose ends">

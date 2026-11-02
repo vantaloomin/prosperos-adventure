@@ -3,7 +3,7 @@
 [Back to the README](../../README.md)
 
 Three kinds of image backend can be set up (PRD F5 to F9). Every backend is off until the user sets it up. The
-code is in `dungeon/images/`. Since Milestone 0 nothing asks for a picture: the companion's photos and post
+code is in `adventure/images/`. Since Milestone 0 nothing asks for a picture: the companion's photos and post
 pictures are gone, and the story's own pictures come back in a later milestone (see
 [the roadmap](../../docs/roadmap.md)). The backend setup, checks and content routing below are kept for it.
 
@@ -87,7 +87,7 @@ pictures are gone, and the story's own pictures come back in a later milestone (
   safe is refused on any server that does not accept NSFW requests (`backends.require_safe_loras`).
   LoRA names go only to the ComfyUI server they belong to.
 - **Where to get models.** Beside the dropdowns is a short list of download pages from
-  `dungeon/images/model_links.json`. Each entry links to the official model page, never straight
+  `adventure/images/model_links.json`. Each entry links to the official model page, never straight
   to a file, with its licence: the Krea 2 Turbo files repackaged for ComfyUI by Comfy-Org (Krea 2
   Community License, not gated), Krea's own Krea 2 Turbo page (gated: accept the licence on Hugging
   Face first), and Comfy-Org's Qwen3-VL text encoder and Qwen Image VAE pages (Apache 2.0; the same
@@ -170,7 +170,7 @@ pictures are gone, and the story's own pictures come back in a later milestone (
 
 ## One graphics card or two
 
-The Dungeon never loads or unloads models: KoboldCPP, LM Studio or Ollama hold the text model and
+Adventure never loads or unloads models: KoboldCPP, LM Studio or Ollama hold the text model and
 ComfyUI holds the picture model, each in its own graphics memory. Local ComfyUI jobs wait while a reply
 is being written and while a LoRA trains, so they never start at the same moment, but both models stay
 loaded. When they don't both fit on one card, ComfyUI runs very slowly from system memory or fails.
@@ -248,7 +248,7 @@ shows the sign-in step and a **Signed in again** button. Display logic that need
 
 ## API
 
-All writes need the `x-dungeon-client: workspace` header.
+All writes need the `x-adventure-client: workspace` header.
 
 | Method and path | Purpose |
 | --- | --- |

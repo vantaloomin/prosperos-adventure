@@ -2,7 +2,7 @@
 import pytest
 from conftest import ok
 
-from dungeon import safety
+from adventure import safety
 
 
 @pytest.mark.parametrize('text', [

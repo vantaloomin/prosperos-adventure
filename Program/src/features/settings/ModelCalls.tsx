@@ -14,7 +14,7 @@ function size(bytes: number): string {
 }
 
 /** Settings > Developer: write every model request and response down in full, to find out why a reply came out
- * strange (dungeon/model_calls.py). Off by default; the files hold the chats word for word. PC only. */
+ * strange (adventure/model_calls.py). Off by default; the files hold the chats word for word. PC only. */
 export function ModelCalls() {
   const client = useQueryClient()
   const log = useQuery({ queryKey: KEY, queryFn: () => api<ModelCallLog>('/model-calls') })

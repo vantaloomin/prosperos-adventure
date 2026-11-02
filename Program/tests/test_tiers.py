@@ -1,4 +1,4 @@
-"""Scaling and tiers (dungeon/tiers.py): the character's tier, the work that comes to them and the world's tiers."""
+"""Scaling and tiers (adventure/tiers.py): the character's tier, the work that comes to them and the world's tiers."""
 from datetime import datetime
 
 import pytest
@@ -6,7 +6,7 @@ from conftest import tell
 from test_inventory import begin
 from test_travel import Road, ok, reply
 
-from dungeon import factions, happenings, jobs, quests, tiers
+from adventure import factions, happenings, jobs, quests, tiers
 
 NOW = datetime(1290, 5, 1, 12)
 

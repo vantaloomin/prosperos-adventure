@@ -1,8 +1,8 @@
-"""Every town's quests, dangers and finds (dungeon/world/data/adventures, finds; dungeon/quests.py, dungeon/finds.py)."""
+"""Every town's quests, dangers and finds (adventure/world/data/adventures, finds; adventure/quests.py, adventure/finds.py)."""
 import pytest
 from test_table import ASH, STATS
 
-from dungeon import combat5e, finds, inventory, packages, quests, world_data
+from adventure import combat5e, finds, inventory, packages, quests, world_data
 
 TOWNS = ['kingswood', 'haven', 'the-concourse', 'hollin', 'the-gilded-bazaar']
 
@@ -44,7 +44,7 @@ def test_a_town_reached_mid_campaign_begins_its_quests_once(client, app):
     assert started.status_code == 200, started.text
     with app.state.database.connect(write=True) as connection:
         assert {quest['id'] for quest in quests.rows(connection, 'open')} >= {'the-name-off-the-roll'}
-        from dungeon import story
+        from adventure import story
         story.place_scene(connection, 'hollin', 'the-green', 'now')
         patch = next(quest for quest in quests.rows(connection, 'open') if quest['id'] == 'the-patch-before-the-cold')
         assert patch['title'] == 'The patch before the cold' and patch['known'] and patch['due_at']

@@ -12,8 +12,8 @@ const BUDGETS: [number, string][] = [[0, 'Automatic (90 seconds on this PC, 30 f
 const CAPS: [number, string][] = [[0, "The model's whole window"], [4000, '4,000 tokens'], [8000, '8,000 tokens'],
   [16000, '16,000 tokens'], [32000, '32,000 tokens'], [64000, '64,000 tokens']]
 
-/** Models > Turn speed (dungeon/pace.py): how long a story turn may take before its optional steps give way, whether a
- * narration that clashes with the record is rewritten, and how much a turn may send (dungeon/remembering.py). */
+/** Models > Turn speed (adventure/pace.py): how long a story turn may take before its optional steps give way, whether a
+ * narration that clashes with the record is rewritten, and how much a turn may send (adventure/remembering.py). */
 export function TurnSpeed() {
   const client = useQueryClient()
   const settings = useWorkspaceSettings()

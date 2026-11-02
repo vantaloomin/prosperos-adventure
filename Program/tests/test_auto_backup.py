@@ -1,7 +1,7 @@
-"""Automatic backups of every world (dungeon/auto_backup.py)."""
+"""Automatic backups of every world (adventure/auto_backup.py)."""
 from datetime import datetime, timedelta
 
-from dungeon import auto_backup
+from adventure import auto_backup
 
 
 def ok(response):
@@ -26,9 +26,9 @@ def test_seven_days_then_four_weeks_are_kept():
 def test_a_world_nobody_opened_is_not_backed_up_again(tmp_path):
     folder = tmp_path / 'backups'
     folder.mkdir()
-    database = tmp_path / 'dungeon.sqlite3'
+    database = tmp_path / 'adventure.sqlite3'
     database.write_bytes(b'')
     later = datetime.now() + timedelta(days=3)
     (folder / f"auto-{later.strftime('%Y%m%dT%H%M%S')}.zip").write_bytes(b'')
     assert not auto_backup.due(database, later + timedelta(days=2), 'daily')
-    assert auto_backup.due(tmp_path / 'other' / 'dungeon.sqlite3', later, 'daily')
+    assert auto_backup.due(tmp_path / 'other' / 'adventure.sqlite3', later, 'daily')

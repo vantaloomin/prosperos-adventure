@@ -1,4 +1,4 @@
-/** The story as a book, and the whole campaign as a file to keep or move (dungeon/book.py, dungeon/legacy.py). A
+/** The story as a book, and the whole campaign as a file to keep or move (adventure/book.py, adventure/legacy.py). A
  * campaign file comes back from the Worlds page as a world of its own. */
 export function StoryExport({ open }: { open?: boolean }) {
   return (

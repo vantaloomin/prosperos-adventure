@@ -1,7 +1,7 @@
-/** Marinara world maps (dungeon/world/marinara.py), read in the page before they are sent.
+/** Marinara world maps (adventure/world/marinara.py), read in the page before they are sent.
  *
  * An export with its artwork can run to hundreds of megabytes, nearly all of it pictures as base64 text that the
- * Dungeon does not import. The file is streamed and every very long string is left empty on the way, so only the
+ * Adventure does not import. The file is streamed and every very long string is left empty on the way, so only the
  * map itself (a few hundred kilobytes) is ever held whole, parsed or sent. */
 
 /** Longer than any place's notes, far shorter than a picture. */

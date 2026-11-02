@@ -1,5 +1,5 @@
-"""Set it up for me (dungeon/ready.py): the model it picks, the confirmed download that resumes, and the built-in
-chat profile it leaves (dungeon/providers/builtin_chat.py)."""
+"""Set it up for me (adventure/ready.py): the model it picks, the confirmed download that resumes, and the built-in
+chat profile it leaves (adventure/providers/builtin_chat.py)."""
 import hashlib
 import time
 from pathlib import Path
@@ -8,13 +8,13 @@ import httpx
 import pytest
 from fastapi.testclient import TestClient
 
-from dungeon import ready
-from dungeon.identity import CLIENT_HEADER
-from dungeon.main import create_app
-from dungeon.providers import builtin_chat, builtin_recall
-from dungeon.providers.chat import ChatProvider
-from dungeon.providers.vault import MemoryVault
-from dungeon.text_models import config_for
+from adventure import ready
+from adventure.identity import CLIENT_HEADER
+from adventure.main import create_app
+from adventure.providers import builtin_chat, builtin_recall
+from adventure.providers.chat import ChatProvider
+from adventure.providers.vault import MemoryVault
+from adventure.text_models import config_for
 from tests.test_builtin_recall import Machine, runtime_zip
 
 MODEL = b'GGUF' + bytes(range(256)) * 40
@@ -136,7 +136,7 @@ async def fast_sleep(seconds):
 @pytest.fixture
 def client(tmp_path, clock, hub):
     transport = httpx.MockTransport(hub.handle)
-    app = create_app(tmp_path / 'workspace' / 'dungeon.sqlite3', clock=clock, vault=MemoryVault(), background=False,
+    app = create_app(tmp_path / 'workspace' / 'adventure.sqlite3', clock=clock, vault=MemoryVault(), background=False,
                      provider=ChatProvider(transport), builtin_spawn=hub.spawn, builtin_transport=transport,
                      hardware=FakeHardware([card('GTX 1650', 4.0)]))
     with TestClient(app, headers={CLIENT_HEADER: 'workspace'}) as test_client:
@@ -262,7 +262,7 @@ def test_the_view_names_the_card_the_drive_and_the_runtime_download(client):
 
 
 def test_saving_the_setup_waits_out_a_reader_that_has_it_open(tmp_path, monkeypatch):
-    from dungeon.providers import builtin_chat
+    from adventure.providers import builtin_chat
     real, turned_away = Path.replace, []
 
     def busy_once(self, target):

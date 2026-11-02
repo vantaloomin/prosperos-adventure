@@ -1,11 +1,11 @@
-"""Lore timing (dungeon/lore.py "Timing"): entries that linger, rest, wait, fire on a chance or come one of a group,
+"""Lore timing (adventure/lore.py "Timing"): entries that linger, rest, wait, fire on a chance or come one of a group,
 counted in story lines, rewound with the story."""
 import base64
 import json
 
 from conftest import Chunk
 
-from dungeon import lore
+from adventure import lore
 
 
 def ok(response):

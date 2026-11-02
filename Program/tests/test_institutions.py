@@ -1,10 +1,10 @@
-"""Institutions (dungeon/institutions.py): terms, the class schedule, demands as quests, and grades."""
+"""Institutions (adventure/institutions.py): terms, the class schedule, demands as quests, and grades."""
 from datetime import date, datetime, timedelta
 
 import pytest
 from test_travel import ok
 
-from dungeon import factions, institutions, quests, record, story_clock, tiers
+from adventure import factions, institutions, quests, record, story_clock, tiers
 
 SCHOOL = {'institutions': [{
     'id': 'kingswood-academy', 'name': 'Kingswood Academy', 'city_id': 'kingswood', 'faction': 'cyrel-timber-guild',

@@ -1,4 +1,4 @@
-"""Every turn is a save point (dungeon/timeline.py): going back starts a branch with the state as it was, and new
+"""Every turn is a save point (adventure/timeline.py): going back starts a branch with the state as it was, and new
 dice; the branch left behind is kept and can be played on."""
 import random
 
@@ -71,7 +71,7 @@ def test_going_back_brings_new_dice_and_keeps_the_old_branch(client, app, provid
 def test_an_older_workspace_gains_the_branch_column(tmp_path):
     import sqlite3
 
-    from dungeon.database import add_columns
+    from adventure.database import add_columns
     path = tmp_path / 'old.sqlite3'
     connection = sqlite3.connect(path)
     connection.execute('CREATE TABLE story_messages (id TEXT PRIMARY KEY, seq INTEGER)')

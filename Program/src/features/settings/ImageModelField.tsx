@@ -34,7 +34,7 @@ const asDiscovered = (list: ImageModelList | null): DiscoveredModel[] =>
 /**
  * An image API's model, picked from the provider's own list once it is fetched (as a text model's Connect does),
  * or typed. A saved backend's key is used when none is typed, for the address it was saved for only
- * (dungeon/images/routes.py).
+ * (adventure/images/routes.py).
  */
 export function ImageModelField({ value, placeholder, onChange, ...connection }: Connection & { value: string; placeholder?: string; onChange: (value: string) => void }) {
   const { current, busy, error, needsAddress, fetchList } = useImageModels(connection)

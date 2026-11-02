@@ -13,7 +13,7 @@ interface TownProps {
   empty?: ReactNode
 }
 
-/** The street map of the town the story is in (dungeon/townmap.py): its neighborhoods, streets, main roads, water
+/** The street map of the town the story is in (adventure/townmap.py): its neighborhoods, streets, main roads, water
  *  and buildings, laid out by code from the town's data and the campaign's seed. Only the places the character knows
  *  of are named: the rest are blank until looked at, passed or heard of. A place on it can be looked at and gone to; going puts the line in the box, or with `onGo` goes now. Zoomed in, the map follows where you are or what
  *  you picked. */

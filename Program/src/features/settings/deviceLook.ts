@@ -13,7 +13,7 @@ export type Layout = 'classic' | 'reader' | 'custom' | 'novel'
 export type Beside = Exclude<Layout, 'reader'>
 /** `stageArt`: the place's picture behind the story and portraits of who is here, when they have been made.
  *  `lastBeside`: the layout with the panel beside the story that Reader goes back to. `worldColors`: the story screen
- *  wears the colors its world ships (dungeon/world_theme.py), when they read well. `panelWidth` and `gridWidth`: how wide
+ *  wears the colors its world ships (adventure/world_theme.py), when they read well. `panelWidth` and `gridWidth`: how wide
  *  the player dragged the panel beside the story, in Classic or Visual novel and in Custom (StoryPanel.tsx PanelResize). */
 export interface DeviceLook { textScale: number; font: ReadingFont; fontEverywhere: boolean; motion: Motion; layout: Layout; lastBeside: Beside; stageArt: boolean; worldColors: boolean; panelWidth: number; gridWidth: number }
 
@@ -23,7 +23,7 @@ export const PANEL_WIDTH = { min: 280, max: 720, default: 360 } as const
 export const GRID_WIDTH = { min: 440, max: 1000, default: 600 } as const
 export const DEFAULT_LOOK: DeviceLook = { textScale: 100, font: 'default', fontEverywhere: false, motion: 'system', layout: 'classic', lastBeside: 'classic', stageArt: true, worldColors: true,
   panelWidth: PANEL_WIDTH.default, gridWidth: GRID_WIDTH.default }
-const KEY = 'dungeon-device-look'
+const KEY = 'adventure-device-look'
 const FONTS: ReadingFont[] = ['default', 'atkinson', 'opendyslexic']
 const MOTIONS: Motion[] = ['system', 'reduce', 'full']
 const LAYOUTS: Layout[] = ['classic', 'reader', 'custom', 'novel']

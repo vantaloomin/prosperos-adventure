@@ -1,8 +1,8 @@
 """Background work waits for the user to pause on a model server that keeps only the last prompt it read."""
 import asyncio
 
-from dungeon.providers import scheduling
-from dungeon.providers.scheduling import CONVERSATION, MAINTENANCE, RequestScheduler
+from adventure.providers import scheduling
+from adventure.providers.scheduling import CONVERSATION, MAINTENANCE, RequestScheduler
 
 LOCAL = {'base_url': 'http://127.0.0.1:1234/v1'}
 ONLINE = {'base_url': 'https://openrouter.ai/api/v1'}

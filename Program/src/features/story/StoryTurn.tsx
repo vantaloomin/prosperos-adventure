@@ -63,7 +63,7 @@ function RollStrip({ bands, total, marker, live }: { bands: BandStep[]; total: n
 }
 
 /** A turn under way before its narration: what the game is doing (reading the line, rolling, writing) and each roll
- *  as it lands, so the wait shows its work (dungeon/story.py answer). The rolls stay once the prose streams. */
+ *  as it lands, so the wait shows its work (adventure/story.py answer). The rolls stay once the prose streams. */
 export function TurnLive({ turn, writing }: { turn: TurnSoFar; writing: boolean }) {
   const rolled = turn.rolls.length >= turn.actions.length
   return (<>

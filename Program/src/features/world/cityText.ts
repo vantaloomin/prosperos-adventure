@@ -12,7 +12,7 @@ export interface CityListing {
   counts: Record<'neighborhoods' | 'places' | 'colleges' | 'employers' | 'annual_events', number>
   builtin: boolean
   origin: 'builtin' | 'pack' | 'user'
-  /** The city's shelf in city lists, decided by the server (dungeon/world/catalog.py `category`). */
+  /** The city's shelf in city lists, decided by the server (adventure/world/catalog.py `category`). */
   category?: string
   aliases?: string[]
   distribution: 'public' | 'private'

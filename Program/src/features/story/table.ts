@@ -4,7 +4,7 @@ import type { Story, TableRules } from '../../types'
 
 export const STORY_KEY = ['story']
 
-/** The Table (dungeon/table.py): this campaign's rules, kept with the campaign so they never follow you to another
+/** The Table (adventure/table.py): this campaign's rules, kept with the campaign so they never follow you to another
  *  world. A new campaign starts in the world's tone and with your last choices for what is shown. Read from the story,
  *  so whatever reloads the story (a new story, another world) reloads the rules with it. */
 export function useTable() {

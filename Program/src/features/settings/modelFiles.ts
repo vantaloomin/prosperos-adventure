@@ -6,7 +6,7 @@ export interface FileSlot {
   same?: string
 }
 
-/** A model family a ComfyUI server can run a built-in workflow for (dungeon/images/adapters/comfyui.py FAMILIES). */
+/** A model family a ComfyUI server can run a built-in workflow for (adventure/images/adapters/comfyui.py FAMILIES). */
 export interface Family {
   label: string
   // Its name in running text and toggle labels; `looks` is what matching files look like.
@@ -21,7 +21,7 @@ export interface Family {
 }
 
 /** Files a reference workflow node loads without naming them (IPAdapter Plus picks its models by preset), for
- * "It needs" (dungeon/images/adapters/comfyui.py PRESET_FILES). */
+ * "It needs" (adventure/images/adapters/comfyui.py PRESET_FILES). */
 export const PRESET_FILES: Record<string, string[]> = {
   IPAdapterUnifiedLoader: ['ip-adapter-plus_sdxl_vit-h.safetensors', 'CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors'],
 }
@@ -129,7 +129,7 @@ export const noChoice = (slots: FileSlot[]): ModelFiles => Object.fromEntries(sl
 export const isChosen = (saved: ModelFiles) => Object.values(saved).some(Boolean)
 
 /** How the file list's heading describes it: the user's files, the smaller model the app picked for this computer's
- * graphics card (dungeon/hardware.py fit_images), or the family's own. */
+ * graphics card (adventure/hardware.py fit_images), or the family's own. */
 export const filesLabel = (saved: ModelFiles, fit: string | null | undefined) =>
   isChosen(saved) ? '(your choice)' : fit ? '(picked for this graphics card)' : '(defaults)'
 

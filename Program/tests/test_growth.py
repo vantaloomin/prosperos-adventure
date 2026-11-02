@@ -1,12 +1,12 @@
-"""Progression (dungeon/growth.py): growth by use and milestones, and the dark tracks."""
+"""Progression (adventure/growth.py): growth by use and milestones, and the dark tracks."""
 from conftest import tell
 from test_feelings import reply as chunks
 from test_feelings import say
 from test_inventory import begin
 from test_travel import Road, ok, reply
 
-from dungeon import growth, quests, record, sheet, tiers
-from dungeon.life import cards
+from adventure import growth, quests, record, sheet, tiers
+from adventure.life import cards
 
 WON = {'actor': sheet.PERSONA, 'stat': 'Vitality', 'band': 'success'}
 

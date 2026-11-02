@@ -1,10 +1,10 @@
-"""Fights under 5E (dungeon/combat5e.py through dungeon/combat.py): SRD foes, attacks on AC, hit points, death saves."""
+"""Fights under 5E (adventure/combat5e.py through adventure/combat.py): SRD foes, attacks on AC, hit points, death saves."""
 from conftest import tell
 from test_combat import Dice, ok, reply
 from test_rulesets import made, start
 
-from dungeon import combat, combat5e, record, sheet
-from dungeon.rules import srd52
+from adventure import combat, combat5e, record, sheet
+from adventure.rules import srd52
 
 
 class Always:
@@ -193,7 +193,7 @@ def test_a_won_fight_and_a_milestone_give_xp_and_levels(client, app):
         state, _, ending = combat.play_round(connection, state, [swing(20)], [{'item_id': 'sword'}], Always(8))
         assert ending == 'won' and combat5e.fight_xp(state) == 25
         assert combat5e.gain(connection, 25, 'the fight won') == ['The character gains 25 XP (the fight won): 25 in all.']
-        from dungeon import growth
+        from adventure import growth
         said = growth.milestone(connection, 'The Heartwood contract', 'now')
         assert 'gains 100 XP (a milestone: The Heartwood contract)' in said
         said = ' '.join(combat5e.gain(connection, 200, 'a test'))

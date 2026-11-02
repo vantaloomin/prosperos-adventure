@@ -2,15 +2,15 @@
 # Updates this copy to the latest main, then reruns install.sh (locked dependencies and a fresh interface
 # build). A Git clone pulls main; a copy downloaded as a ZIP downloads main's ZIP and copies it over.
 . "$(dirname "${BASH_SOURCE[0]}")/common.sh"
-cd "$DUNGEON_ROOT" || exit 1
+cd "$ADVENTURE_ROOT" || exit 1
 
-UPDATE_ZIP_URL='https://github.com/vantaloomin/prosperos-dungeon/archive/refs/heads/main.zip'
+UPDATE_ZIP_URL='https://github.com/vantaloomin/prosperos-adventure/archive/refs/heads/main.zip'
 # The files the last ZIP update copied in, so the next one can remove the ones main no longer has.
 UPDATE_MANIFEST="$CHECKOUT_ROOT/.zip-update-files"
 
 fail() {
     say_error "Update failed: $*"
-    echo "Your Dungeon data was not touched."
+    echo "Your Adventure data was not touched."
     exit 1
 }
 
@@ -61,8 +61,8 @@ update_from_zip() {
     local work source before after relative
     work="$(mktemp -d "${TMPDIR:-/tmp}/dungeon-update.XXXXXX")" || fail 'Could not make a temporary folder.'
     trap 'rm -rf "$work"' EXIT
-    if [ -n "$DUNGEON_UPDATE_ZIP" ]; then
-        cp "$DUNGEON_UPDATE_ZIP" "$work/main.zip" || fail "Could not read $DUNGEON_UPDATE_ZIP."
+    if [ -n "$ADVENTURE_UPDATE_ZIP" ]; then
+        cp "$ADVENTURE_UPDATE_ZIP" "$work/main.zip" || fail "Could not read $ADVENTURE_UPDATE_ZIP."
     else
         echo 'This copy was downloaded as a ZIP, so the latest version is downloaded the same way.'
         curl --fail --location --silent --show-error --output "$work/main.zip" "$UPDATE_ZIP_URL" ||
@@ -72,9 +72,9 @@ update_from_zip() {
     # GitHub puts everything in one folder named after the repository and branch.
     for source in "$work"/unpacked/*; do break; done
     [ -f "$source/Program/pyproject.toml" ] && [ -f "$source/Mac/update.command" ] ||
-        fail 'The downloaded ZIP does not look like Prospero Dungeon. Nothing was changed.'
+        fail 'The downloaded ZIP does not look like Prospero Adventure. Nothing was changed.'
 
-    before="$(program_version "$DUNGEON_ROOT")"
+    before="$(program_version "$ADVENTURE_ROOT")"
     after="$(program_version "$source/Program")"
     (cd "$source" && find . -type f | sed 's|^\./||' | LC_ALL=C sort) > "$work/files"
     # Remove what an earlier ZIP update put here that main no longer has. Only paths from that list are
@@ -87,7 +87,7 @@ update_from_zip() {
     fi
     cp -R "$source/." "$CHECKOUT_ROOT/" || fail 'Copying the new version into this folder failed; see above. Run update.command again to finish.'
     cp "$work/files" "$UPDATE_MANIFEST"
-    chmod +x "$MAC_FOLDER"/*.command "$DUNGEON_ROOT"/scripts/macos/*.sh 2>/dev/null
+    chmod +x "$MAC_FOLDER"/*.command "$ADVENTURE_ROOT"/scripts/macos/*.sh 2>/dev/null
     if [ "$before" = "$after" ]; then
         echo "Copied in the latest main (version $after). Reinstalling to make sure everything matches."
     else
@@ -97,15 +97,15 @@ update_from_zip() {
 
 # Everything runs from this function so bash has read the whole script before a ZIP update replaces it.
 main() {
-    echo 'Prospero Dungeon - update'
-    dungeon_state "$DUNGEON_PORT"
-    [ "$STATE" = running ] && fail 'Prospero Dungeon is running. Close its window (or double-click stop.command), then update again.'
+    echo 'Prospero Adventure - update'
+    adventure_state "$ADVENTURE_PORT"
+    [ "$STATE" = running ] && fail 'Prospero Adventure is running. Close its window (or double-click stop.command), then update again.'
     if [ -e "$CHECKOUT_ROOT/.git" ]; then
         update_with_git
     else
         update_from_zip
     fi
-    /bin/bash "$DUNGEON_ROOT/scripts/macos/install.sh" || fail 'The reinstall failed; see above.'
+    /bin/bash "$ADVENTURE_ROOT/scripts/macos/install.sh" || fail 'The reinstall failed; see above.'
 }
 
 main "$@"; exit

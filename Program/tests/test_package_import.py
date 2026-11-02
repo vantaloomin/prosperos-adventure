@@ -1,4 +1,4 @@
-"""The world importer (dungeon/package_import.py): a world's files made into a package, one reviewed section at a
+"""The world importer (adventure/package_import.py): a world's files made into a package, one reviewed section at a
 time."""
 import json
 
@@ -6,9 +6,9 @@ import pytest
 from test_rulesets import reply
 from test_travel import ok
 
-from dungeon import package_import, packages
-from dungeon.errors import DomainError
-from dungeon.imports import lorebooks
+from adventure import package_import, packages
+from adventure.errors import DomainError
+from adventure.imports import lorebooks
 
 LOREBOOK = {'entries': {'0': {'key': ['Reedby'], 'content': 'A village on stilts in the Fen.', 'comment': 'Reedby'},
                         '1': {'key': ['the Fen'], 'content': 'Grey water and reeds to the horizon.', 'comment': 'The Fen'}}}

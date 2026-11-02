@@ -2,7 +2,7 @@
 
 [Back to the README](../../README.md)
 
-Prospero's Dungeon is a story game with an AI narrator and AI characters who stay in the story. This page says how the app makes clear
+Prospero's Adventure is a story game with an AI narrator and AI characters who stay in the story. This page says how the app makes clear
 that they are AI and what it does when someone may be thinking about hurting themselves. It is published so anyone
 can read the protocol the app follows. Everything here runs on your own computer, with rules rather than a model, and
 nothing is sent anywhere.
@@ -20,7 +20,7 @@ nothing is sent anywhere.
 ## Crisis help
 
 - **What is checked.** Only your own messages in the story. Each one is checked
-  against a list of phrases about suicide and self-harm (`Program/dungeon/safety.py`). The narrator's messages are not
+  against a list of phrases about suicide and self-harm (`Program/adventure/safety.py`). The narrator's messages are not
   checked, and no model is asked.
 - **What happens.** A message that matches gets a note from the app right under it, styled so it is clearly not the
   narrator. It names the 988 Suicide & Crisis Lifeline (call or text **988** in the US), the Crisis Text Line (text
@@ -29,7 +29,7 @@ nothing is sent anywhere.
 - **What doesn't happen.** The message is never blocked or changed, the narrator's reply carries on as usual, and
   nothing about it leaves your computer. There is no setting that turns the note off.
 - **What the narrator is told.** The Story narrator has no rule about self-harm in the fiction:
-  Dungeon's stories are dark fiction for adults with no hard lines beyond adults only, and a character in them may
+  Adventure's stories are dark fiction for adults with no hard lines beyond adults only, and a character in them may
   come to harm. The crisis note is about the real player's own words, so it is code and shows whatever any prompt
   says.
 - **Limits.** A list of phrases misses some ways of saying things and catches some jokes ("this exam makes me want to

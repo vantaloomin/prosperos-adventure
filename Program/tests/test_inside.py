@@ -1,6 +1,6 @@
-"""Spots inside places and homes, used as detail (dungeon/world/inside.py, Hit List #46)."""
-from dungeon.world import catalog, inside
-from dungeon.world.schema import Place
+"""Spots inside places and homes, used as detail (adventure/world/inside.py, Hit List #46)."""
+from adventure.world import catalog, inside
+from adventure.world.schema import Place
 
 
 def test_every_place_kind_gets_a_few_named_spots_that_stay_the_same():

@@ -1,9 +1,9 @@
-"""What the people met feel about the player's character (dungeon/feelings.py)."""
+"""What the people met feel about the player's character (adventure/feelings.py)."""
 from datetime import timedelta
 
 from conftest import Chunk
 
-from dungeon import feelings, story
+from adventure import feelings, story
 
 
 def ok(response):

@@ -16,7 +16,7 @@ export const SCENE_TILE = 'This scene'
 export const DEFAULT_NAME = 'My layout'
 export const MOST_TILES = 12
 export const SIZES: { id: TileSize; label: string }[] = [{ id: 'small', label: 'Small' }, { id: 'wide', label: 'Wide' }, { id: 'tall', label: 'Tall' }]
-const KEY = 'dungeon.story.grids'
+const KEY = 'adventure.story.grids'
 const objectOr = (value: unknown): object => value && typeof value === 'object' ? value : {}
 
 export function tileName(widget: TileWidget): string {

@@ -1,12 +1,12 @@
-"""Bonds, earned by warm feelings or sworn, and the Life Cards that name them (dungeon/bonds.py)."""
+"""Bonds, earned by warm feelings or sworn, and the Life Cards that name them (adventure/bonds.py)."""
 from datetime import date
 
 from conftest import Chunk, tell
 from test_happenings import dealt  # noqa: F401
 from test_lies import begin
 
-from dungeon import bonds, feelings, growth, happenings, story_people
-from dungeon.life import cards
+from adventure import bonds, feelings, growth, happenings, story_people
+from adventure.life import cards
 
 NOW = '2026-10-01T12:00:00Z'
 HESK = {'sheet': {'key': 'hesk', 'full': 'Hesk Aldane', 'name': 'Hesk', 'role': 'woodcutter'}}

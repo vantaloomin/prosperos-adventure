@@ -1,14 +1,14 @@
-"""A reasoning effort the model turns down is swapped for the nearest one it takes (dungeon/providers/efforts.py)."""
+"""A reasoning effort the model turns down is swapped for the nearest one it takes (adventure/providers/efforts.py)."""
 import asyncio
 import json
 
 import httpx
 import pytest
 
-from dungeon import text_models
-from dungeon.errors import DomainError
-from dungeon.providers import chat, efforts
-from dungeon.providers.chat import ChatProvider
+from adventure import text_models
+from adventure.errors import DomainError
+from adventure.providers import chat, efforts
+from adventure.providers.chat import ChatProvider
 
 CONFIG = {'provider': 'openrouter', 'base_url': 'https://openrouter.ai/api/v1', 'model': 'luna', 'max_output_tokens': 100,
           'timeout_seconds': 10, 'reasoning_effort': 'minimal'}

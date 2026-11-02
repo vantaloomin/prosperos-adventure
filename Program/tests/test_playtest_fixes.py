@@ -5,7 +5,7 @@ from datetime import datetime
 from conftest import Chunk, tell
 from test_inventory import begin, begin_when
 
-from dungeon import appearance, finds, inventory, referee, story_clock
+from adventure import appearance, finds, inventory, referee, story_clock
 
 NOW = '2026-10-01T12:00:00Z'
 
@@ -88,7 +88,7 @@ def test_waiting_until_a_time_of_day_waits_that_long():
 
 
 def test_an_empty_tavern_gets_no_invented_patrons():
-    from dungeon import story
+    from adventure import story
     view = {'data': {'name': 'Kingswood', 'summary': 'A logging town.', 'era': 'Post-Reform'},
             'place': {'id': 'sawpit', 'name': 'the Sawpit', 'kind': 'tavern', 'neighborhood': 'the yards',
                       'summary': 'A tavern.'},

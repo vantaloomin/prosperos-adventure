@@ -49,7 +49,7 @@ export function Backups() {
       {result && <Notice tone={result.tone}>{result.text}</Notice>}
       {pending && (
         <Notice action={<button type="button" className="text-button" aria-disabled={busy} onClick={() => void cancel()}>Cancel</button>}>
-          {pending.name} will be restored the next time the Dungeon starts. Close it and start it again to finish.
+          {pending.name} will be restored the next time Adventure starts. Close it and start it again to finish.
         </Notice>
       )}
       <div className="form-actions"><button type="button" className="button" aria-disabled={busy} onClick={() => void backup()}><Archive aria-hidden="true" />Back up now</button></div>
@@ -57,7 +57,7 @@ export function Backups() {
       {list.data && list.data.backups.length > 0 && (
         <div className="form-stack">
           <h3>Restore a backup</h3>
-          <p className="subtle">Restoring replaces this workspace when the Dungeon next starts. The current one is moved aside, not deleted, and anything you deleted since the backup stays deleted. Your current settings and connections stay as they are.</p>
+          <p className="subtle">Restoring replaces this workspace when Adventure next starts. The current one is moved aside, not deleted, and anything you deleted since the backup stays deleted. Your current settings and connections stay as they are.</p>
           <ul className="plain-list">
             {list.data.backups.map((entry) => (
               <li key={entry.name}>
@@ -94,7 +94,7 @@ function AutoBackupsSetting({ list, onSaved }: { list: BackupList | undefined; o
       <select id="auto-backups" value={list.auto_backups} aria-describedby="auto-backups-hint" onChange={(event) => void save(event.target.value as AutoBackups)}>
         {EVERY.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
       </select>
-      <small id="auto-backups-hint">Every world is backed up on its own while the Dungeon runs. The last 7 days and one a week for 4 weeks before are kept. {list.auto_backups !== 'off' && last}</small>
+      <small id="auto-backups-hint">Every world is backed up on its own while Adventure runs. The last 7 days and one a week for 4 weeks before are kept. {list.auto_backups !== 'off' && last}</small>
       {error && <Notice tone="error">{error}</Notice>}
     </div>
   )

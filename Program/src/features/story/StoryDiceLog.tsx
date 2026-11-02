@@ -3,7 +3,7 @@ import { api } from '../../api'
 import type { DiceLog } from '../../types'
 import { paceText, rollText, tallyText } from './storyText'
 
-/** The dice log (dungeon/dice_log.py): every roll of this branch, turn by turn, and how long each turn took. Only
+/** The dice log (adventure/dice_log.py): every roll of this branch, turn by turn, and how long each turn took. Only
  *  while the dice are shown; the story refetches it after each turn. */
 export function StoryDiceLog({ open }: { open?: boolean }) {
   const log = useQuery({ queryKey: ['story-dice-log'], queryFn: () => api<DiceLog>('/story/dice-log') })

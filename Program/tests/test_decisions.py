@@ -1,4 +1,4 @@
-"""Decision models for the Referee (dungeon/providers/decisions.py, dungeon/referee.py): Jev, OpenAI Decisions and
+"""Decision models for the Referee (adventure/providers/decisions.py, adventure/referee.py): Jev, OpenAI Decisions and
 local answer-odds scoring, the profiles that do them and the turn they decide."""
 import asyncio
 import json
@@ -7,9 +7,9 @@ from types import SimpleNamespace
 
 import httpx
 
-from dungeon import referee
-from dungeon.providers.decisions import DecisionProvider
-from dungeon.providers.scheduling import RequestScheduler
+from adventure import referee
+from adventure.providers.decisions import DecisionProvider
+from adventure.providers.scheduling import RequestScheduler
 from tests.test_text_models import LOCAL, add
 
 JEV = {'provider': 'openrouter', 'model': 'typesafe/jev-1.14', 'purpose': 'decisions'}

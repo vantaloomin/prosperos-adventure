@@ -1,11 +1,11 @@
-"""The hex crawl (dungeon/hexes.py): authored hexes, land generated past them from the seed, roads, fog of war."""
+"""The hex crawl (adventure/hexes.py): authored hexes, land generated past them from the seed, roads, fog of war."""
 from datetime import datetime
 
 from conftest import Chunk, tell
 from test_inventory import begin
 from test_travel import Road
 
-from dungeon import hexes, story_clock, travel, turn
+from adventure import hexes, story_clock, travel, turn
 
 
 def ok(response):

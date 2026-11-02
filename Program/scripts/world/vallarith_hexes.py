@@ -1,5 +1,5 @@
-"""Vallarith's authored hexes (requirements "### Hex crawl"; dungeon/hexes.py), painted from the world map
-(dungeon/world/packages/vallarith/assets/maps/vallarith.jpg): each hex's terrain read from the map's colours, its
+"""Vallarith's authored hexes (requirements "### Hex crawl"; adventure/hexes.py), painted from the world map
+(adventure/world/packages/vallarith/assets/maps/vallarith.jpg): each hex's terrain read from the map's colours, its
 region from the nearest region or town on the map, the roads drawn between the travel map's places
 (world/data/travel/vallarith.json), and each place's own hex. Hexes past the map are generated in play.
 
@@ -16,10 +16,10 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
-PACKAGE = ROOT / 'dungeon' / 'world' / 'packages' / 'vallarith'
+PACKAGE = ROOT / 'adventure' / 'world' / 'packages' / 'vallarith'
 MAP = PACKAGE / 'assets' / 'maps' / 'vallarith.jpg'
-TRAVEL = ROOT / 'dungeon' / 'world' / 'data' / 'travel' / 'vallarith.json'
-OUT = ROOT / 'dungeon' / 'world' / 'data' / 'hexes' / 'vallarith.json'
+TRAVEL = ROOT / 'adventure' / 'world' / 'data' / 'travel' / 'vallarith.json'
+OUT = ROOT / 'adventure' / 'world' / 'data' / 'hexes' / 'vallarith.json'
 
 # Pixels between hex centres across the flats: six miles, so the Cyrel road from Kingswood to Eriane is about
 # twelve hexes, as the travel map's twelve hours on the road say.

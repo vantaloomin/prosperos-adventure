@@ -1,4 +1,4 @@
-/** The town map (dungeon/townmap.py) as the Town widget draws it: what the server sends, and the sums for drawing it. */
+/** The town map (adventure/townmap.py) as the Town widget draws it: what the server sends, and the sums for drawing it. */
 
 export type Point = [number, number]
 export interface TownThing { id: string; name: string; kind: string; what?: string; summary?: string }

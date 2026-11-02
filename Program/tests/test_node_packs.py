@@ -5,8 +5,8 @@ import hashlib
 import httpx
 import pytest
 
-from dungeon.errors import DomainError
-from dungeon.images import node_packs
+from adventure.errors import DomainError
+from adventure.images import node_packs
 
 PACK = {'label': 'Test Pack', 'folder': 'comfyui-test', 'source': 'https://example.test/pin/',
         'nodes': ('TestNode',), 'files': {'__init__.py': hashlib.sha256(b'NODES = 1\n').hexdigest(),

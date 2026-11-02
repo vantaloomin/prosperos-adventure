@@ -1,10 +1,10 @@
-"""The story: a narrator for the user's own story around the cities (dungeon/story.py)."""
+"""The story: a narrator for the user's own story around the cities (adventure/story.py)."""
 from datetime import timedelta
 
 from conftest import Chunk
 
-from dungeon import story
-from dungeon.narration import prose
+from adventure import story
+from adventure.narration import prose
 
 
 def connect(client):
@@ -66,7 +66,7 @@ def test_the_narrator_is_given_the_scene(client, clock, provider):
     assert 'You are the narrator of a tabletop roleplaying game for adults' in request['system']
     assert 'Never write:' in request['system'] and 'second person' in request['system']
     assert f"Place: {place['name']}" in request['system'] and 'Weather:' in request['system']
-    # Named spots inside the place are detail for the narrator and the screen (dungeon/world/inside.py).
+    # Named spots inside the place are detail for the narrator and the screen (adventure/world/inside.py).
     spots = moved['scene']['place']['spots']
     assert spots and f"Spots here, for detail only (nobody moves between them): {', '.join(spots)}." in request['system']
     assert all(person['sheet']['full'] in request['system'] for person in people)
@@ -171,7 +171,7 @@ def test_finding_someone_goes_to_where_they_are(client, clock, provider):
 
 
 def test_a_person_line_does_not_say_their_job_twice():
-    from dungeon.world import catalog, townsfolk
+    from adventure.world import catalog, townsfolk
     data = catalog.city('baltimore')
     place = next(item for item in data['places'] if item['kind'] == 'restaurant')
     sheet = next(item for item in townsfolk.at_place(data, place['id']) if item['staff'])

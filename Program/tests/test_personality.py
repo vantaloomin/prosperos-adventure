@@ -1,11 +1,11 @@
-"""Personality sliders (dungeon/world/personality.py): rolled for everyone, the user's words and changes win."""
+"""Personality sliders (adventure/world/personality.py): rolled for everyone, the user's words and changes win."""
 import json
 import re
 from collections import Counter
 
 from test_perception import GENDERED
 
-from dungeon.world import catalog, perception, personality, townsfolk
+from adventure.world import catalog, perception, personality, townsfolk
 
 TRAIT_NAMES = re.compile(r'\b(openness|conscientious\w*|extravers\w*|extrovers\w*|agreeabl\w*|neurotic\w*)\b', re.I)
 

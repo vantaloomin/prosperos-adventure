@@ -1,4 +1,4 @@
-"""The 5E SRD 5.2.1 content pack (dungeon/rules/packs/srd52/): manifest and attribution, ids, cross-references,
+"""The 5E SRD 5.2.1 content pack (adventure/rules/packs/srd52/): manifest and attribution, ids, cross-references,
 monster math, magic item prices and the economy against wages."""
 import json
 import re
@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-PACK = Path(__file__).resolve().parents[1] / 'dungeon' / 'rules' / 'packs' / 'srd52'
+PACK = Path(__file__).resolve().parents[1] / 'adventure' / 'rules' / 'packs' / 'srd52'
 ATTRIBUTION = ('This work includes material from the System Reference Document 5.2.1 ("SRD 5.2.1") by Wizards of '
                'the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative '
                'Commons Attribution 4.0 International License, available at '

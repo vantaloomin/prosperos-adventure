@@ -1,4 +1,4 @@
-/** Lorebooks (dungeon/lore.py) and the reference library (dungeon/library.py), as the Worlds page shows them. */
+/** Lorebooks (adventure/lore.py) and the reference library (adventure/library.py), as the Worlds page shows them. */
 
 export interface WhenChoice { key: string; label: string }
 export interface LoreEntry {

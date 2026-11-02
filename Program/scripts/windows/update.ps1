@@ -6,7 +6,7 @@ $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'common.ps1')
 Set-Location -LiteralPath $CompanionRoot
 
-$UpdateZipUrl = 'https://github.com/vantaloomin/prosperos-dungeon/archive/refs/heads/main.zip'
+$UpdateZipUrl = 'https://github.com/vantaloomin/prosperos-adventure/archive/refs/heads/main.zip'
 # The files the last ZIP update copied in, so the next one can remove the ones main no longer has.
 $UpdateManifest = Join-Path $CheckoutRoot '.zip-update-files'
 
@@ -68,12 +68,12 @@ function Update-WithGit {
 }
 
 function Update-FromZip {
-    $work = Join-Path ([IO.Path]::GetTempPath()) ("dungeon-update-" + [guid]::NewGuid().ToString('N'))
+    $work = Join-Path ([IO.Path]::GetTempPath()) ("adventure-update-" + [guid]::NewGuid().ToString('N'))
     New-Item -ItemType Directory -Path $work | Out-Null
     try {
         $zip = Join-Path $work 'main.zip'
-        if ($env:DUNGEON_UPDATE_ZIP) {
-            Copy-Item -LiteralPath $env:DUNGEON_UPDATE_ZIP -Destination $zip
+        if ($env:ADVENTURE_UPDATE_ZIP) {
+            Copy-Item -LiteralPath $env:ADVENTURE_UPDATE_ZIP -Destination $zip
         } else {
             Write-Host 'This copy was downloaded as a ZIP, so the latest version is downloaded the same way.'
             [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
@@ -90,7 +90,7 @@ function Update-FromZip {
         $source = Get-ChildItem -LiteralPath $unpacked -Directory | Select-Object -First 1
         if (-not $source -or -not (Test-Path -LiteralPath (Join-Path $source.FullName 'Program\pyproject.toml')) -or
             -not (Test-Path -LiteralPath (Join-Path $source.FullName 'Windows\update.bat'))) {
-            throw 'The downloaded ZIP does not look like Prospero Dungeon. Nothing was changed.'
+            throw 'The downloaded ZIP does not look like Prospero Adventure. Nothing was changed.'
         }
         $source = $source.FullName
         $before = Get-ProgramVersion $CompanionRoot
@@ -131,16 +131,16 @@ function Update-FromZip {
 
 $result = 0
 try {
-    Write-Host 'Prospero Dungeon - update'
-    if ((Get-DungeonState 8785).State -eq 'running') {
-        throw 'Prospero Dungeon is running. Close its window (or double-click stop.bat), then update again.'
+    Write-Host 'Prospero Adventure - update'
+    if ((Get-AdventureState 8805).State -eq 'running') {
+        throw 'Prospero Adventure is running. Close its window (or double-click stop.bat), then update again.'
     }
     if (Test-Path -LiteralPath (Join-Path $CheckoutRoot '.git')) { Update-WithGit } else { Update-FromZip }
     & (Join-Path $PSScriptRoot 'install.ps1') -NoPause
     if ($LASTEXITCODE -ne 0) { throw 'The reinstall failed; see above.' }
 } catch {
     Write-Host "Update failed: $($_.Exception.Message)" -ForegroundColor Red
-    Write-Host 'Your Dungeon data was not touched.'
+    Write-Host 'Your Adventure data was not touched.'
     $result = 1
 }
 if (-not $NoPause) { Read-Host 'Press Enter to close' | Out-Null }

@@ -1,12 +1,12 @@
-"""A 5E spell the player's line casts by name (dungeon/sheet.py spell_actions, unprepared; magic-towns pass): cast out
+"""A 5E spell the player's line casts by name (adventure/sheet.py spell_actions, unprepared; magic-towns pass): cast out
 of a fight though the Referee saw nothing uncertain, at the slot the line asks for wherever it says it, and not at all
 when the character has not prepared it. And bedding down mid-fight under Percentile is no feat either."""
 from conftest import tell
 from test_rulesets import reply
 from test_srd52_subclasses import begin
 
-from dungeon import combat, combat5e, combat_brp, record, referee, sheet
-from dungeon.rules import srd52
+from adventure import combat, combat5e, combat_brp, record, referee, sheet
+from adventure.rules import srd52
 
 
 def referee_says(monkeypatch, actions):

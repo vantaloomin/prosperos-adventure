@@ -35,8 +35,8 @@ function bearing(from: { q: number; r: number }, to: { q: number; r: number }): 
   return COMPASS[Math.round(angle / 45) % 8]
 }
 
-/** The travel map as far as your character knows it (dungeon/travel.py): where you are, where you have been, the
- *  places you have heard of and the roads between them. On a hex crawl (dungeon/hexes.py) it is the land around you,
+/** The travel map as far as your character knows it (adventure/travel.py): where you are, where you have been, the
+ *  places you have heard of and the roads between them. On a hex crawl (adventure/hexes.py) it is the land around you,
  *  hex by hex, with the rest still dark. Setting out puts the line in the box to send. */
 export function StoryMap({ map, open, onTravel, onLine }: { map: TravelMap | null; open?: boolean; onTravel: (name: string) => void; onLine?: (text: string) => void }) {
   if (!map?.places.length && !map?.hexes?.length) return null

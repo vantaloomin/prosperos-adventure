@@ -118,7 +118,7 @@ function foundKind(shown: Persona['kind_shown']) {
 
 interface PersonaKindProps { found: { kind: string; label: string; years: number | null }; choices: KindChoices; draft: Draft; age: number | null; span: number | null; set: (change: Partial<Draft>) => void }
 
-/** Kind and How long you live (dungeon/world/lifespans.py), as on the Character page: read from About you until
+/** Kind and How long you live (adventure/world/lifespans.py), as on the Character page: read from About you until
  * the user picks. */
 function PersonaKind({ found, choices, draft, age, span, set }: PersonaKindProps) {
   const life = age === null || span === 80 ? null : lifeAge(age, span)

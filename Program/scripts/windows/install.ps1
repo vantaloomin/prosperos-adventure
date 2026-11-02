@@ -1,4 +1,4 @@
-# Adapted from prosperos-study install.ps1 at bbcbde4: Dungeon name and dependency checks.
+# Adapted from prosperos-study install.ps1 at bbcbde4: Adventure name and dependency checks.
 param([switch]$NoPause, [switch]$CheckOnly, [string]$Desktop = [Environment]::GetFolderPath('Desktop'))
 $ErrorActionPreference = 'Stop'
 # common.ps1 also sets the console to UTF-8 so npm, Vite and Python output renders.
@@ -145,7 +145,7 @@ function Move-FromOldLayout {
     # Desktop shortcuts that create-shortcut.bat made for the old launch.bat.
     $oldLaunch = Join-Path $CheckoutRoot 'launch.bat'
     $shell = New-Object -ComObject WScript.Shell
-    foreach ($link in Get-ChildItem -LiteralPath $Desktop -Filter 'Prospero Dungeon*.lnk' -ErrorAction SilentlyContinue) {
+    foreach ($link in Get-ChildItem -LiteralPath $Desktop -Filter 'Prospero Adventure*.lnk' -ErrorAction SilentlyContinue) {
         $shortcut = $shell.CreateShortcut($link.FullName)
         if ($shortcut.TargetPath -ne $oldLaunch) { continue }
         $shortcut.TargetPath = Join-Path $WindowsFolder 'launch.bat'
@@ -161,7 +161,7 @@ function Move-FromOldLayout {
 
 $result = 0
 try {
-    Write-Host "Prospero Dungeon - dependency setup"
+    Write-Host "Prospero Adventure - dependency setup"
     $runtime = Get-Prerequisites
     if ($CheckOnly) {
         Test-ProjectInstallation (Join-Path $CompanionRoot '.venv\Scripts\python.exe') $runtime.Npm
@@ -169,12 +169,12 @@ try {
         Move-FromOldLayout
         Install-Project $runtime
     }
-    Write-Host 'Ready. Double-click launch.bat in the Windows folder to open Prospero Dungeon.' -ForegroundColor Green
+    Write-Host 'Ready. Double-click launch.bat in the Windows folder to open Prospero Adventure.' -ForegroundColor Green
     Write-Host 'Connect a model in Settings inside the app. Nothing is downloaded until you choose to.'
-    # What this computer can run locally (dungeon/hardware.py). Advice only: it never fails setup.
+    # What this computer can run locally (adventure/hardware.py). Advice only: it never fails setup.
     try {
         Write-Host ''
-        & (Join-Path $CompanionRoot '.venv\Scripts\python.exe') -m dungeon.hardware
+        & (Join-Path $CompanionRoot '.venv\Scripts\python.exe') -m adventure.hardware
     } catch { }
 } catch {
     Write-Host "Setup failed: $($_.Exception.Message)" -ForegroundColor Red

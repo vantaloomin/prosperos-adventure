@@ -11,7 +11,7 @@ import { arrayPlaced, brpCost, skillChoices, skillId, pointsLeft, pointsText, pr
 import { SessionZero } from './SessionZero'
 import { FateBuild, type FateDraft } from './FateBuild'
 
-/** Campaign start (dungeon/campaign.py): play a premade character from this town, or make your own; then session zero
+/** Campaign start (adventure/campaign.py): play a premade character from this town, or make your own; then session zero
  * (./SessionZero.tsx) sets how the campaign plays. The ruleset is picked first, as it decides how a character is made. */
 export function StoryStart({ onStarted, intensity }: { onStarted: (data: StoryData) => void; intensity?: StoryIntensity }) {
   const choices = useQuery({ queryKey: ['story-start'], queryFn: () => api<StartChoices>('/story/start') })
@@ -105,7 +105,7 @@ function builtFor(build: unknown, left: number): boolean {
 }
 
 type RulesKind = 'marvel' | 'srd52' | 'ironsworn' | 'brp' | 'narrative' | 'fate'
-/** Where each ruleset's build goes in the start request (dungeon/story_routes.py StoryStart). */
+/** Where each ruleset's build goes in the start request (adventure/story_routes.py StoryStart). */
 const BODY_KEYS: Record<Exclude<RulesKind, 'marvel'>, string> = { srd52: 'build', ironsworn: 'ironsworn', brp: 'brp', narrative: 'narrative', fate: 'fate' }
 type Narrated = { good_at: string; bad_at: string }
 
@@ -138,7 +138,7 @@ function RulesBuild({ choices, kind, stats, percent, narrated, onStats, onBuild,
   return own[kind]?.() || <MarvelStats choices={choices} stats={stats} onChange={onStats} />
 }
 
-/** Narrative Only (dungeon/rules/narrative.py): no stats to buy; About you is the sheet, and two optional lists sharpen it.
+/** Narrative Only (adventure/rules/narrative.py): no stats to buy; About you is the sheet, and two optional lists sharpen it.
  *  The ruleset's own hint shows under the Rules pick (RulesetPick). */
 function NarrativeBuild({ narrated, onChange }: { narrated: Narrated; onChange: (narrated: Narrated) => void }) {
   return <>
@@ -163,7 +163,7 @@ function percentReady(build: PercentBuild | null, choices: BrpChoices | undefine
   return build && choices && percentLeft(build, choices) >= 0 ? build : null
 }
 
-/** A Percentile character (dungeon/rules/brp.py build): characteristics bought from the points, a profession and a
+/** A Percentile character (adventure/rules/brp.py build): characteristics bought from the points, a profession and a
  * personality; code spreads the skill points. */
 function PercentileBuild({ choices, build, onChange: update }: { choices: BrpChoices; build: PercentBuild; onChange: (build: PercentBuild) => void }) {
   const left = percentLeft(build, choices)
@@ -196,7 +196,7 @@ function PercentileBuild({ choices, build, onChange: update }: { choices: BrpCho
 
 type IronBuild = { stats: Record<string, number>; assets: string[] }
 
-/** An Ironsworn character (dungeon/rules/ironsworn.py build): 3, 2, 2, 1 and 1 on the five stats, three assets. */
+/** An Ironsworn character (adventure/rules/ironsworn.py build): 3, 2, 2, 1 and 1 on the five stats, three assets. */
 function IronswornBuild({ choices, onChange }: { choices: IronswornChoices; onChange: (build: IronBuild | null) => void }) {
   const [stats, setStats] = useState<Record<string, number>>(() => Object.fromEntries(choices.stats.map((stat, index) => [stat.id, choices.array[index]])))
   const [picks, setPicks] = useState<string[]>([])
@@ -234,7 +234,7 @@ function IronswornBuild({ choices, onChange }: { choices: IronswornChoices; onCh
   )
 }
 
-/** The ruleset the campaign is played in (dungeon/sheet.py): chosen now and locked for the whole campaign. */
+/** The ruleset the campaign is played in (adventure/sheet.py): chosen now and locked for the whole campaign. */
 function RulesetPick({ choices, value, onChange }: { choices: StartChoices; value: Ruleset | null; onChange: (value: Ruleset) => void }) {
   if (!choices.rulesets || choices.rulesets.length < 2) return null
   const current = value ?? choices.ruleset ?? 'marvel'
@@ -251,7 +251,7 @@ function RulesetPick({ choices, value, onChange }: { choices: StartChoices; valu
 
 type Build = { class_id: string; species_id: string; background_id: string; scores: Record<string, number>; skills: string[] }
 
-/** A 5E character (dungeon/rules/srd52.py build): class, species and background from the pack, the standard array
+/** A 5E character (adventure/rules/srd52.py build): class, species and background from the pack, the standard array
  * placed on the six abilities (the background then adds +2 and +1), and the class's skills. */
 function Srd52Build({ choices, onChange }: { choices: Srd52Choices; onChange: (build: Build | null) => void }) {
   const [classId, setClassId] = useState(choices.classes[0].id)
@@ -316,7 +316,7 @@ function adultAge(years: number | null): boolean {
   return years === null || (years >= 18 && years <= 120)
 }
 
-/** Prospero's stats bought from the pool of points (dungeon/campaign.py bought). */
+/** Prospero's stats bought from the pool of points (adventure/campaign.py bought). */
 function MarvelStats({ choices, stats, onChange }: { choices: StartChoices; stats: Record<string, number>; onChange: (stats: Record<string, number>) => void }) {
   const [min, max] = choices.range
   const left = pointsLeft(stats, choices.points)

@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 // one chunk rather than a file per icon for each lazily loaded view.
 const VENDOR = ['react', 'react-dom', 'scheduler', '@tanstack/react-query']
 
-// Port 5177 and backend 8785 keep the Dungeon clear of Prospero's Study (5173 and 8765).
+// Port 5197 and backend 8805 keep Adventure clear of Prospero's Study (5173 and 8765).
 export default defineConfig({
   plugins: [react()],
   build: {
@@ -23,8 +23,8 @@ export default defineConfig({
     },
   },
   server: {
-    port: 5177,
+    port: 5197,
     strictPort: true,
-    proxy: { '/api': 'http://127.0.0.1:8785' },
+    proxy: { '/api': 'http://127.0.0.1:8805' },
   },
 })

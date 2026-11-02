@@ -1,6 +1,6 @@
 # Editable prompts
 
-Power users can reword the core prompts the Dungeon sends to their models. In Settings, the
+Power users can reword the core prompts Adventure sends to their models. In Settings, the
 **Show advanced settings** switch under the tab list adds an **Advanced** tab. It is off by default
 and remembered by the browser. Searching Settings for "prompt" finds the tab and turns the switch on.
 
@@ -10,11 +10,11 @@ for comparison.
 
 | Prompt | Used for | Default lives in |
 | --- | --- | --- |
-| The Story narrator | Every narrator turn: who the narrator is and its contract with the game ([story.md](story.md)) | `CORE` in `dungeon/narration/prompt.py` |
-| The narrator's writing rules | After the Story narrator: craft, dialogue rules, phrases never to use; small-context models get `CRAFT_COMPACT` instead | `CRAFT` in `dungeon/narration/prompt.py` |
-| Author's note | The line in front of the user's note ([authors-note.md](authors-note.md)) | `HEADER` in `dungeon/authors_note.py` |
+| The Story narrator | Every narrator turn: who the narrator is and its contract with the game ([story.md](story.md)) | `CORE` in `adventure/narration/prompt.py` |
+| The narrator's writing rules | After the Story narrator: craft, dialogue rules, phrases never to use; small-context models get `CRAFT_COMPACT` instead | `CRAFT` in `adventure/narration/prompt.py` |
+| Author's note | The line in front of the user's note ([authors-note.md](authors-note.md)) | `HEADER` in `adventure/authors_note.py` |
 
-`dungeon/prompt_library.py` is the list. Defaults are read from the constants above when needed,
+`adventure/prompt_library.py` is the list. Defaults are read from the constants above when needed,
 so changing one in code is the new default at once. The constants are written for `str.format`;
 the library shows and fills them in the `{{placeholder}}` form.
 
@@ -34,6 +34,6 @@ Saving is refused, with a message naming the problem, when the wording:
 - writes a placeholder with single braces, such as `{name}`.
 
 Only the wording is editable. These stay code and run whatever a prompt says: the in-character
-sentence filter and retry (`dungeon/in_character.py`), OOC handling, the prose checks
-(`dungeon/narration/prose.py`) and the NSFW check before image generation. The in-character retry
+sentence filter and retry (`adventure/in_character.py`), OOC handling, the prose checks
+(`adventure/narration/prose.py`) and the NSFW check before image generation. The in-character retry
 reminder is not editable.

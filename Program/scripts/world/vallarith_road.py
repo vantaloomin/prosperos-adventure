@@ -1,6 +1,6 @@
 """The Road: every Vallarith travel node that is not yet a whole town, as places of one city, so a journey can end
 anywhere on the travel map (docs/story.md "Journeys"). Kingswood is the only town built out; the rest are a gate
-or an edge to arrive at, described from the world package (dungeon/world/packages/vallarith/settlements.json). When a town is
+or an edge to arrive at, described from the world package (adventure/world/packages/vallarith/settlements.json). When a town is
 built out it gets its own city file and leaves the Road. Run `python scripts/world/vallarith_road.py` to rewrite it.
 """
 import json
@@ -11,8 +11,8 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'scripts' / 'world'))
 import kingswood  # noqa: E402 - the Road shares Kingswood's money, names, climate and calendar
 
-OUT = ROOT / 'dungeon' / 'world' / 'data' / 'cities' / 'vallarith-road.json'
-SETTLEMENTS = ROOT / 'dungeon' / 'world' / 'packages' / 'vallarith' / 'settlements.json'
+OUT = ROOT / 'adventure' / 'world' / 'data' / 'cities' / 'vallarith-road.json'
+SETTLEMENTS = ROOT / 'adventure' / 'world' / 'packages' / 'vallarith' / 'settlements.json'
 SRC = 'curated-2026-10'
 ALL_DAY = ('morning', 'afternoon', 'evening', 'late')
 # A region whose id is also a node's (Brynwyr the realm and Brynwyr the city) gets its own.
@@ -56,7 +56,7 @@ def node_place(settlement: dict, kind: str, arrival: str, spots: list[str]) -> d
             'cuisine': '', 'spots': spots, 'source': SRC}
 
 
-# Out in the wild, off the map's places (dungeon/hexes.py): where a hex crawl leaves the character between towns.
+# Out in the wild, off the map's places (adventure/hexes.py): where a hex crawl leaves the character between towns.
 WILD = {'id': 'the-wilds', 'name': 'the wilds', 'kind': 'trail', 'neighborhood': 'wilds',
         'summary': 'Out in the open country, off the roads and away from any town: the land itself, whatever it is '
                    'where the walking stopped.', 'tags': ['travel', 'wild'], 'cost': 'free', 'setting': 'outdoor',

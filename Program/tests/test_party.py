@@ -1,9 +1,9 @@
-"""The party: people the character asks along decide for themselves, travel with them, and leave (dungeon/party.py)."""
+"""The party: people the character asks along decide for themselves, travel with them, and leave (adventure/party.py)."""
 from conftest import Chunk, tell
 from test_bonds import met
 from test_lies import Dice, begin
 
-from dungeon import bonds, feelings, party, story, story_clock
+from adventure import bonds, feelings, party, story, story_clock
 
 NOW, DAY = '2026-10-01T12:00:00Z', '2026-10-01'
 HESK = {'sheet': {'key': 'hesk', 'full': 'Hesk Aldane', 'name': 'Hesk', 'role': 'woodcutter', 'occupation': ''}}

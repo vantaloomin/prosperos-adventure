@@ -2,14 +2,14 @@
 
 [Back to the README](../../README.md)
 
-Settings > Models picks the text models the Dungeon uses. It is the model selection from
+Settings > Models picks the text models Adventure uses. It is the model selection from
 Prospero's Study (`server/providers/`, `server/profiles.py`, `src/features/models/` at `bbcbde4`),
 copied into this repository and adapted; see [Development](development.md#code-reused-from-prosperos-study).
 
 ## Profiles
 
 A profile is one provider, one model and its settings, plus an API key kept in the OS credential
-vault under the service name `Prospero Dungeon` (never the Study's). Saving a profile never
+vault under the service name `Prospero Adventure` (never the Study's). Saving a profile never
 contacts the service.
 
 One key does every job on its service. A new or keyless profile on the same provider and address as a
@@ -28,8 +28,8 @@ profile for the same provider at its usual address (an "other" image API: a comp
 | OpenRouter | official | `OPENROUTER_API_KEY` or saved | Chat Completions, provider fallbacks off |
 | Google / Gemini | official | `GEMINI_API_KEY` or saved | `streamGenerateContent` |
 | NanoGPT | official (`https://nano-gpt.com/api/v1`) | `NANOGPT_API_KEY` or saved | Chat Completions; also embeddings for a recall profile |
-| OpenAI-compatible API | any HTTPS, or HTTP on loopback | optional; `DUNGEON_API_KEY` | Chat Completions |
-| Local / LM Studio | loopback only | optional; `DUNGEON_API_KEY` | Chat Completions |
+| OpenAI-compatible API | any HTTPS, or HTTP on loopback | optional; `ADVENTURE_API_KEY` | Chat Completions |
+| Local / LM Studio | loopback only | optional; `ADVENTURE_API_KEY` | Chat Completions |
 | Kobold | loopback only | none | native `/generate` |
 | Codex / ChatGPT | none | the Codex CLI's own login | `codex exec` in an empty read-only folder |
 | Claude Code / Claude plan | none | the Claude Code CLI's own login (your Claude plan) | `claude -p` in an empty folder, every tool off |
@@ -52,7 +52,7 @@ it from the vault rather than sending it somewhere new.
 ### Claude Code / Claude plan
 
 Uses the official, unmodified `claude` program the user installed and signed in to themselves, so replies
-draw on their Claude plan (`dungeon/providers/claude_code.py`). The app finds `claude` on PATH, then at
+draw on their Claude plan (`adventure/providers/claude_code.py`). The app finds `claude` on PATH, then at
 `~/.local/bin` (where the native installer puts it), or at the location set in the profile. It never
 installs Claude Code, changes PATH, reads or stores the login (no credential files, tokens or sign-in of
 its own), or passes `--bare` (bare mode ignores the plan login). `ANTHROPIC_API_KEY` is left out of the
@@ -83,7 +83,7 @@ chunks through the scheduler), versioned profiles and exact retries, and usage a
 ### Credits and usage
 
 A profile card shows credits or usage when its service reports them for free, without calling a model
-(`dungeon/providers/balance.py`): OpenRouter (credits left, the key's own limit if it has one, and
+(`adventure/providers/balance.py`): OpenRouter (credits left, the key's own limit if it has one, and
 today's spend), NanoGPT, DeepSeek and Moonshot (account balance), and Codex / ChatGPT (the plan and its
 5-hour and weekly limits from `codex app-server` `account/rateLimits/read`). Other services, and any
 lookup that fails, show nothing. Each card asks once when Settings > Models opens; the answer is kept for
@@ -121,14 +121,14 @@ their own settings under Images.
 Narrator requests are laid out so that the start of each one matches the one before it, which local servers and
 providers reuse instead of reading it again. With a local server this matters most: on a mid-size model a reused
 prompt answers in a moment, where reading it fresh can take many seconds. On a local server
-(`dungeon/providers/scheduling.py`) background work waits until 90 seconds after the last reply, so a quick
+(`adventure/providers/scheduling.py`) background work waits until 90 seconds after the last reply, so a quick
 back-and-forth keeps reusing the story's prompt. With llama.cpp's server started with `--slot-save-path <folder>`,
-the app can also save a prompt's start and put it back later (`dungeon/providers/prompt_cache.py`); a failure there
+the app can also save a prompt's start and put it back later (`adventure/providers/prompt_cache.py`); a failure there
 only means the prompt is read again, never a failed reply.
 
 ## This computer
 
-`dungeon/hardware.py` reads the graphics cards (NVIDIA through `nvidia-smi`; Apple silicon as shared
+`adventure/hardware.py` reads the graphics cards (NVIDIA through `nvidia-smi`; Apple silicon as shared
 memory, about three quarters usable by the GPU) and system memory, and says what local models fit:
 text models up to about N billion parameters at 4-bit, and whether Krea 2 pictures fit beside one. It
 then checks the setup in use and warns when:
@@ -150,7 +150,7 @@ other families roughly (FP8 about 16 GB, otherwise about 24 GB). The scan is kep
 scans now. Other cards (AMD, Intel) are named on Windows but not measured, so nothing is checked.
 
 `install.bat` and `install.command` print the same summary when setup finishes
-(`python -m dungeon.hardware`), and the welcome screen shows it before the first model is set up.
+(`python -m adventure.hardware`), and the welcome screen shows it before the first model is set up.
 
 ## Upgrading from a single connection
 

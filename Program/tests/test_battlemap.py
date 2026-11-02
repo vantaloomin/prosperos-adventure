@@ -1,10 +1,10 @@
-"""The 5E battle map (dungeon/battlemap.py): the range bands drawn on five-foot squares."""
+"""The 5E battle map (adventure/battlemap.py): the range bands drawn on five-foot squares."""
 from test_combat import ok
 from test_combat5e import fighter
 from test_rulesets import start
 from test_table import ASH, STATS
 
-from dungeon import battlemap, combat
+from adventure import battlemap, combat
 
 
 def foe(name, zone, **more):

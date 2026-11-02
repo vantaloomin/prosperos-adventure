@@ -1,5 +1,5 @@
-"""Range bands and named areas in a fight (dungeon/ranges.py, dungeon/combat.py)."""
-from dungeon import combat, quests, ranges
+"""Range bands and named areas in a fight (adventure/ranges.py, adventure/combat.py)."""
+from adventure import combat, quests, ranges
 
 NOW = '2026-10-01T12:00:00Z'
 
@@ -104,7 +104,7 @@ def test_bedding_down_mid_fight_is_no_feat_to_roll(app, client, connected, provi
     from conftest import tell
     from test_rulesets import reply
 
-    from dungeon import record, referee
+    from adventure import record, referee
     begin(client)
     with app.state.database.connect(write=True) as connection:
         combat.save_fight(connection, {'round': 0, 'wants': 'drive_off', 'foes': [foe(zone='far', resolve=100)]})
@@ -124,5 +124,5 @@ def test_a_new_campaign_has_its_world_seed_before_anything_reads_it(app, client)
     # E2E vows pass: the first GET /api/story wrote the seed (townmap.street) while the start still held the lock.
     begin(client)
     with app.state.database.connect() as connection:
-        from dungeon.database import optional
+        from adventure.database import optional
         assert optional(connection, 'SELECT seed FROM story_campaign WHERE id=1')['seed']

@@ -1,7 +1,7 @@
-"""The turn receipt (dungeon/receipt.py): what each turn changed, read from the saves the timeline keeps."""
+"""The turn receipt (adventure/receipt.py): what each turn changed, read from the saves the timeline keeps."""
 from conftest import tell
 
-from dungeon import combat, inventory
+from adventure import combat, inventory
 
 
 def ok(response):

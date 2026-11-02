@@ -12,10 +12,10 @@ uninstalls and checks that the program files are gone while the workspace is kep
 param([Parameter(Mandatory = $true)][string]$Setup)
 $ErrorActionPreference = 'Stop'
 $Setup = (Resolve-Path -LiteralPath $Setup).Path
-$installed = Join-Path $env:LOCALAPPDATA 'Programs\Prospero Dungeon'
-$workspace = Join-Path $env:LOCALAPPDATA 'ProsperoDungeon'
-$shortcut = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Prospero Dungeon.lnk'
-$uninstallKey = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\{82941F85-FF26-49CE-80BA-9B592D72162F}_is1'
+$installed = Join-Path $env:LOCALAPPDATA 'Programs\Prospero Adventure'
+$workspace = Join-Path $env:LOCALAPPDATA 'ProsperoAdventure'
+$shortcut = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Prospero Adventure.lnk'
+$uninstallKey = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\{3F27ECCE-E3AF-4F43-8FCF-0262D666DA39}_is1'
 $smoke = Join-Path $PSScriptRoot 'smoke-test.ps1'
 
 function Check([bool]$condition, [string]$message) {
@@ -24,7 +24,7 @@ function Check([bool]$condition, [string]$message) {
 }
 
 function Install([string]$label) {
-  $log = Join-Path ([System.IO.Path]::GetTempPath()) "dungeon-setup-$label.log"
+  $log = Join-Path ([System.IO.Path]::GetTempPath()) "adventure-setup-$label.log"
   $process = Start-Process -FilePath $Setup -ArgumentList '/VERYSILENT', '/SUPPRESSMSGBOXES', '/NORESTART', '/CURRENTUSER', "/LOG=`"$log`"" -PassThru -Wait
   if ($process.ExitCode -ne 0) { Get-Content -LiteralPath $log -Tail 40; throw "Setup ($label) exited with $($process.ExitCode)." }
 }
@@ -39,12 +39,12 @@ Install 'first'
 Check (Test-Path -LiteralPath (Join-Path $installed 'runtime\python.exe')) "installs per user into $installed"
 Check (Test-Path -LiteralPath $shortcut) 'adds a Start menu shortcut'
 $entry = Get-ItemProperty -LiteralPath $uninstallKey
-Check ($entry.DisplayName -eq 'Prospero Dungeon') 'registers a per-user uninstall entry'
+Check ($entry.DisplayName -eq 'Prospero Adventure') 'registers a per-user uninstall entry'
 Launch
 
 $stale = Join-Path $installed 'app\dungeon\removed_in_this_release.py'
 Set-Content -LiteralPath $stale -Value '# left by an earlier release'
-$database = Join-Path $workspace 'dungeon.sqlite3'
+$database = Join-Path $workspace 'adventure.sqlite3'
 $before = (Get-Item -LiteralPath $database).Length
 Install 'upgrade'
 Check (-not (Test-Path -LiteralPath $stale)) 'an upgrade removes program files the new release does not ship'
@@ -53,7 +53,7 @@ Launch
 
 # Restore the newest backup through the installed launcher: the workspace it replaces is set aside.
 $latest = Get-ChildItem -LiteralPath (Join-Path $workspace 'backups') -Filter 'dungeon-*.zip' | Sort-Object Name | Select-Object -Last 1
-$restoreOutput = & $env:ComSpec /d /c "`"$(Join-Path $installed 'Prospero Dungeon.cmd')`" --restore `"$($latest.FullName)`"" 2>&1 | Out-String
+$restoreOutput = & $env:ComSpec /d /c "`"$(Join-Path $installed 'Prospero Adventure.cmd')`" --restore `"$($latest.FullName)`"" 2>&1 | Out-String
 Write-Host $restoreOutput
 Check ($LASTEXITCODE -eq 0 -and $restoreOutput -match 'Restored') "restores $($latest.Name) with the installed launcher"
 Check (@(Get-ChildItem -LiteralPath $workspace -Directory -Filter 'replaced-*').Count -ge 1) 'the replaced workspace is set aside, not deleted'

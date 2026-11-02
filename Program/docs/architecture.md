@@ -8,16 +8,16 @@ top of it, milestone by milestone, as set out in [the roadmap](../../docs/roadma
 
 ## Shape
 
-- **Backend:** Python and FastAPI in `dungeon/`, started by `python -m dungeon` on http://127.0.0.1:8785.
-  `dungeon/main.py` `create_app` wires the routers and keeps the shared services on `app.state`: the database,
+- **Backend:** Python and FastAPI in `dungeon/`, started by `python -m adventure` on http://127.0.0.1:8805.
+  `adventure/main.py` `create_app` wires the routers and keeps the shared services on `app.state`: the database,
   the credential vault, the model provider, the scheduler that queues model work, the embedder, the built-in
   recall and chat models, the launcher for local programs, the hardware check, "Set it up for me", and the
   image adapters.
 - **Interface:** React, Vite and TypeScript in `src/`. The app opens on the Story; Worlds and Settings load the
   first time they are opened. `src/workspace.ts` names the views the address can hold (`#story`, `#worlds`,
   `#settings/<tab>`).
-- **Storage:** one SQLite database per world, created from `dungeon/schema.sql`. Worlds and personas are listed
-  in a small registry beside them (`dungeon/worlds.py`).
+- **Storage:** one SQLite database per world, created from `adventure/schema.sql`. Worlds and personas are listed
+  in a small registry beside them (`adventure/worlds.py`).
 - **Code decides, the model narrates.** Odds, rolls, draws and the state of the town live in code. The model is
   given the outcome and writes the prose.
 
@@ -37,23 +37,23 @@ top of it, milestone by milestone, as set out in [the roadmap](../../docs/roadma
 | `story_branches`, `story_timeline`, `story_saves` | The story's branches, which one is played, and the game state at each of the player's lines |
 | `character_stats`, `story_rolls` | Prospero stats, and the rolls of each turn |
 | `record_entries`, `record_corrections`, `story_summary` | The record, the player's corrections to it, and the story so far |
-| `story_inventory`, `story_purse`, `story_stock`, `story_trades` | What the character carries, their money, the shops' stock and the trade log (`dungeon/inventory.py`) |
-| `story_finds`, `story_looks` | What is inside things the player looked into, and what each line looked into and took (`dungeon/finds.py`) |
-| `story_messages.flags`, `.previous` | A narration's flagged paragraphs and its wording before the last rewrite (`dungeon/passages.py`) |
-| `story_map`, `story_journeys` | The places on the travel map the character knows, and each line's journey (`dungeon/travel.py`) |
-| `story_injuries`, `story_treatments` | The character's lasting injuries, and each line's treatment (`dungeon/injuries.py`) |
-| `story_clocks`, `story_reputation` | The factions' clocks and the character's standing (`dungeon/factions.py`) |
-| `story_cards` | The Life Cards drawn into the story, by line and scene (`dungeon/happenings.py`) |
-| `story_stress` | The character's stress track and kill count (`dungeon/stress.py`) |
-| `story_rests` | Each line's rest: its nights and what one of them turned up (`dungeon/rest.py`) |
-| `story_turn_steps` | How long each step of a turn took and what gave way for time (`dungeon/pace.py`) |
-| `story_haggles`, `story_counter` | Each shop's haggled prices for the story day, and what happened at the counter on each line (`dungeon/inventory.py`) |
-| `story_wounds`, `story_fight`, `story_rounds` | The character's wound level, the fight under way, and each line's decided round (`dungeon/combat.py`) |
-| `story_clock`, `story_quests` | The story's own time, and its quests with their deadlines (`dungeon/quests.py`) |
+| `story_inventory`, `story_purse`, `story_stock`, `story_trades` | What the character carries, their money, the shops' stock and the trade log (`adventure/inventory.py`) |
+| `story_finds`, `story_looks` | What is inside things the player looked into, and what each line looked into and took (`adventure/finds.py`) |
+| `story_messages.flags`, `.previous` | A narration's flagged paragraphs and its wording before the last rewrite (`adventure/passages.py`) |
+| `story_map`, `story_journeys` | The places on the travel map the character knows, and each line's journey (`adventure/travel.py`) |
+| `story_injuries`, `story_treatments` | The character's lasting injuries, and each line's treatment (`adventure/injuries.py`) |
+| `story_clocks`, `story_reputation` | The factions' clocks and the character's standing (`adventure/factions.py`) |
+| `story_cards` | The Life Cards drawn into the story, by line and scene (`adventure/happenings.py`) |
+| `story_stress` | The character's stress track and kill count (`adventure/stress.py`) |
+| `story_rests` | Each line's rest: its nights and what one of them turned up (`adventure/rest.py`) |
+| `story_turn_steps` | How long each step of a turn took and what gave way for time (`adventure/pace.py`) |
+| `story_haggles`, `story_counter` | Each shop's haggled prices for the story day, and what happened at the counter on each line (`adventure/inventory.py`) |
+| `story_wounds`, `story_fight`, `story_rounds` | The character's wound level, the fight under way, and each line's decided round (`adventure/combat.py`) |
+| `story_clock`, `story_quests` | The story's own time, and its quests with their deadlines (`adventure/quests.py`) |
 | `authors_notes` | The user's note that rides along with every narrator turn |
 | `townsfolk_mix`, `townsfolk_personality`, `birth_dates`, `town_levels` | How the town is generated and how it ages |
 
-A database from before Milestone 0 is not upgraded: Dungeon starts a fresh schema, and `upgrade.py` only handles
+A database from before Milestone 0 is not upgraded: Adventure starts a fresh schema, and `upgrade.py` only handles
 changes made from here on. New tables come from `schema.sql`; a column added to an existing table is listed in
 `database.ADDED_COLUMNS` as well.
 

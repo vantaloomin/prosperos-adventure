@@ -159,7 +159,7 @@ function CampaignFields({ choices, value, onChange }: { choices: StartChoices; v
   </>)
 }
 
-/** An earlier campaign's character, brought in as this world's history (dungeon/legacy.py). */
+/** An earlier campaign's character, brought in as this world's history (adventure/legacy.py). */
 function LegacyPick({ candidates, value, onChange }: { candidates: LegacyCandidate[]; value: Legacy | null; onChange: (value: Legacy | null) => void }) {
   if (!candidates.length) return null
   const line = (item: LegacyCandidate) => `${item.name}, from ${item.world}${item.dead ? ' (died)' : ''}`

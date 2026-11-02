@@ -1,6 +1,6 @@
-"""American wording for the shared banks in American settings (dungeon/world/wording.py)."""
+"""American wording for the shared banks in American settings (adventure/world/wording.py)."""
 
-from dungeon.world import catalog, life_details, perception, townsfolk, wording
+from adventure.world import catalog, life_details, perception, townsfolk, wording
 
 BRITISH = ('neighbour', 'favourite', 'colour', 'realis', 'prize marrow', 'parish vestry', 'parish rolls', 'queue')
 

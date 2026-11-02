@@ -1,10 +1,10 @@
-"""Worlds > Townsfolk mix (dungeon/world/mix.py, dungeon/townsfolk_mix.py): the shares the townsfolk
+"""Worlds > Townsfolk mix (adventure/world/mix.py, adventure/townsfolk_mix.py): the shares the townsfolk
 rolls use, shown, and a new world made with changed ones."""
 from statistics import mean
 
 import pytest
 
-from dungeon.world import catalog, dating, generators, intimacy, mix, townsfolk
+from adventure.world import catalog, dating, generators, intimacy, mix, townsfolk
 
 
 @pytest.fixture(autouse=True)

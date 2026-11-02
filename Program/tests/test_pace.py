@@ -1,9 +1,9 @@
-"""Turn speed (dungeon/pace.py): the budget, timed steps, streaming and extraction after the reply."""
+"""Turn speed (adventure/pace.py): the budget, timed steps, streaming and extraction after the reply."""
 import json
 
 from conftest import Chunk, tell
 
-from dungeon import pace, record
+from adventure import pace, record
 
 
 def ok(response):

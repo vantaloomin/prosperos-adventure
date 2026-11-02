@@ -4,8 +4,8 @@ from pathlib import Path
 import pytest
 from conftest import tell
 
-from dungeon import backup, restore
-from dungeon.errors import DomainError
+from adventure import backup, restore
+from adventure.errors import DomainError
 
 
 def said(connection) -> list[str]:
@@ -41,12 +41,12 @@ def test_a_failed_restore_moves_the_workspace_back(client, app, told, clock, mon
 def test_the_launcher_restores_a_backup_and_exits(client, app, told, monkeypatch, capsys, tmp_path):
     import socket
 
-    from dungeon import launch
+    from adventure import launch
     archive = Path(client.post('/api/backups').json()['path'])
     path = app.state.database.path
     client.close()
-    monkeypatch.setenv('DUNGEON_DATA_DIR', str(path.parent))
-    monkeypatch.delenv('DUNGEON_DB', raising=False)
+    monkeypatch.setenv('ADVENTURE_DATA_DIR', str(path.parent))
+    monkeypatch.delenv('ADVENTURE_DB', raising=False)
     monkeypatch.chdir(tmp_path)
     with socket.socket() as probe:
         probe.bind(('127.0.0.1', 0))
@@ -54,7 +54,7 @@ def test_the_launcher_restores_a_backup_and_exits(client, app, told, monkeypatch
     assert launch.main(['--restore', str(archive.relative_to(tmp_path)), '--port', str(port)]) == 0
     output = capsys.readouterr().out
     assert 'Restored' in output and 'moved to' in output
-    assert list(path.parent.glob('replaced-*/dungeon.sqlite3'))
+    assert list(path.parent.glob('replaced-*/adventure.sqlite3'))
 
 
 def test_a_restore_chosen_in_settings_runs_on_the_next_start(client, app, told, clock):
@@ -95,18 +95,18 @@ def test_a_damaged_backup_cannot_be_chosen(client, app, told):
 def test_the_launcher_restores_the_world_you_are_in(client, app, told, monkeypatch, capsys, tmp_path):
     import socket
 
-    from dungeon import launch
+    from adventure import launch
     made = client.post('/api/worlds', json={}).json()
     assert client.post(f"/api/worlds/{made['id']}/switch").status_code == 200
     archive = Path(client.post('/api/backups').json()['path'])
     first = app.state.database.home
     client.close()
-    monkeypatch.setenv('DUNGEON_DATA_DIR', str(first.parent))
-    monkeypatch.delenv('DUNGEON_DB', raising=False)
+    monkeypatch.setenv('ADVENTURE_DATA_DIR', str(first.parent))
+    monkeypatch.delenv('ADVENTURE_DB', raising=False)
     monkeypatch.chdir(tmp_path)
     with socket.socket() as probe:
         probe.bind(('127.0.0.1', 0))
         port = probe.getsockname()[1]
     assert launch.main(['--restore', str(archive), '--port', str(port)]) == 0
-    assert list((first.parent / made['folder']).glob('replaced-*/dungeon.sqlite3'))
+    assert list((first.parent / made['folder']).glob('replaced-*/adventure.sqlite3'))
     assert not list(first.parent.glob('replaced-*'))

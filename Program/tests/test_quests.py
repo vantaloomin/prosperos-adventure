@@ -1,9 +1,9 @@
-"""Quests and dangers v0 (dungeon/quests.py): deadlines on the story clock, and rolls in dangerous places."""
+"""Quests and dangers v0 (adventure/quests.py): deadlines on the story clock, and rolls in dangerous places."""
 from datetime import datetime, timedelta
 
 from conftest import Chunk, tell
 
-from dungeon import quests, record
+from adventure import quests, record
 
 
 def ok(response):
@@ -23,7 +23,7 @@ def begin_in_kingswood(client, place_id=None):
 
 def test_every_adventure_names_real_places_and_quests_that_can_be_told():
     for path in quests.ADVENTURES.glob('*.json'):
-        from dungeon.world import catalog
+        from adventure.world import catalog
         data, adventure = catalog.city(path.stem), quests.adventure(path.stem)
         places = {place['id'] for place in data['places']}
         for quest in adventure['quests']:

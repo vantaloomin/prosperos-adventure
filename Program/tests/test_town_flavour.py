@@ -7,8 +7,8 @@ from datetime import date
 
 import pytest
 
-from dungeon.world import catalog, generators, mend, townsfolk
-from dungeon.world.schema import HEARSAY_KINDS, LOCAL_COLOR_KINDS, PracticeSpot
+from adventure.world import catalog, generators, mend, townsfolk
+from adventure.world.schema import HEARSAY_KINDS, LOCAL_COLOR_KINDS, PracticeSpot
 
 
 def occupations(data: dict) -> Counter:

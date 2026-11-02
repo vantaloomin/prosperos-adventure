@@ -1,7 +1,7 @@
-"""NPCs lie to keep what they hide, and the character's insight is rolled (dungeon/lies.py)."""
+"""NPCs lie to keep what they hide, and the character's insight is rolled (adventure/lies.py)."""
 from conftest import Chunk, tell
 
-from dungeon import lies, record
+from adventure import lies, record
 
 NOW, DAY = '2026-10-01T12:00:00Z', '2026-10-01'
 

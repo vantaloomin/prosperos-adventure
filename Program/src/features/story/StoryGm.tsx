@@ -17,7 +17,7 @@ const SEED_STATES: Record<string, string> = { planted: 'planted, not yet on the 
 
 interface PlanningProps { seeds: GmView['seeds']; plans: GmView['plans']; arcs: GmView['arcs']; change: (request: () => Promise<GmView>) => Promise<void> }
 
-/** Planning with the director (dungeon/plotting.py): the seeds planted and where each stands, to cash in or retire,
+/** Planning with the director (adventure/plotting.py): the seeds planted and where each stands, to cash in or retire,
  * and each arc's planned beats for its stage, to cut or move up. */
 function Planning({ seeds, plans, arcs, change }: PlanningProps) {
   const title = (arcId: string | null) => arcs.find((arc) => arc.id === arcId)?.title ?? 'No arc'
@@ -47,7 +47,7 @@ function Planning({ seeds, plans, arcs, change }: PlanningProps) {
   </>
 }
 
-/** Behind the story (dungeon/gm.py), while the GM view is on: quests and their truths, how people feel, the
+/** Behind the story (adventure/gm.py), while the GM view is on: quests and their truths, how people feel, the
  * director's arcs, threads and nemeses, the factions, the dark tracks, and every correction made to the record. */
 export function StoryGm() {
   const client = useQueryClient()

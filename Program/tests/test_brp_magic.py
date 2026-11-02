@@ -1,11 +1,11 @@
-"""Magic under BRP (dungeon/rules/brp.py cast, dungeon/combat_brp.py cast): Chapter 4's spells, power points and
+"""Magic under BRP (adventure/rules/brp.py cast, adventure/combat_brp.py cast): Chapter 4's spells, power points and
 levels; a wizard or a priest begins as a magician."""
 from test_brp import Faces, made
 from test_rulesets import start
 from test_travel import ok
 
-from dungeon import combat, combat_brp, sheet
-from dungeon.rules import brp
+from adventure import combat, combat_brp, sheet
+from adventure.rules import brp
 
 MAGE = {'str': 10, 'con': 10, 'siz': 10, 'int': 14, 'pow': 14, 'dex': 10, 'cha': 10}
 

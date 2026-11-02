@@ -3,7 +3,7 @@ import { branchLine } from './storyText'
 
 interface Props { branches: StoryBranch[]; onSwitch: (id: string) => void; open?: boolean }
 
-/** The other ways this story went (dungeon/timeline.py): each one is kept where it was left, to play on. */
+/** The other ways this story went (adventure/timeline.py): each one is kept where it was left, to play on. */
 export function StoryBranches({ branches, onSwitch, open }: Props) {
   const others = branches.filter((branch) => !branch.playing)
   if (!others.length) return null

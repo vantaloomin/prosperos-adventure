@@ -4,14 +4,14 @@ import httpx
 import pytest
 from fastapi.testclient import TestClient
 
-from dungeon import hardware
-from dungeon.database import decode
-from dungeon.hardware import Hardware
-from dungeon.identity import CLIENT_HEADER
-from dungeon.images import backends
-from dungeon.images.adapters.comfyui import ComfyAdapter, built_in, model_file
-from dungeon.main import create_app
-from dungeon.providers.vault import MemoryVault
+from adventure import hardware
+from adventure.database import decode
+from adventure.hardware import Hardware
+from adventure.identity import CLIENT_HEADER
+from adventure.images import backends
+from adventure.images.adapters.comfyui import ComfyAdapter, built_in, model_file
+from adventure.main import create_app
+from adventure.providers.vault import MemoryVault
 from tests.test_images import ComfyStandIn, FakeAdapter, local_comfy, ok
 
 
@@ -120,7 +120,7 @@ class GgufStandIn(ComfyStandIn):
 @pytest.fixture
 def small_card(tmp_path, clock, provider):
     adapters = {'comfyui': ComfyAdapter(httpx.MockTransport(GgufStandIn())), 'codex': FakeAdapter(), 'hosted': FakeAdapter()}
-    app = create_app(tmp_path / 'workspace' / 'dungeon.sqlite3', clock=clock, vault=MemoryVault(), provider=provider,
+    app = create_app(tmp_path / 'workspace' / 'adventure.sqlite3', clock=clock, vault=MemoryVault(), provider=provider,
                      background=False, image_adapters=adapters,
                      hardware=Hardware(scanner=lambda: computer(card('NVIDIA GeForce RTX 3080', 10.0)), device=lambda url: None))
     with TestClient(app, headers={CLIENT_HEADER: 'workspace'}) as test_client:

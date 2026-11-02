@@ -1,7 +1,7 @@
-"""A world's own colors (dungeon/world_theme.py): read from its package's world.json, whole or not at all."""
+"""A world's own colors (adventure/world_theme.py): read from its package's world.json, whole or not at all."""
 from test_travel import ok
 
-from dungeon import world_theme
+from adventure import world_theme
 
 
 def test_a_theme_is_whole_or_none():

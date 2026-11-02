@@ -1,7 +1,7 @@
-"""Surprise and ambushes (dungeon/combat.py surprise): stealth against awareness as a fight begins."""
+"""Surprise and ambushes (adventure/combat.py surprise): stealth against awareness as a fight begins."""
 from conftest import Chunk, tell
 
-from dungeon import combat
+from adventure import combat
 
 
 class Dice:

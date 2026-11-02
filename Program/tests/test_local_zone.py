@@ -2,14 +2,14 @@
 
 from fastapi.testclient import TestClient
 
-from dungeon import local_zone
-from dungeon.identity import CLIENT_HEADER
-from dungeon.main import create_app
-from dungeon.providers.vault import MemoryVault
+from adventure import local_zone
+from adventure.identity import CLIENT_HEADER
+from adventure.main import create_app
+from adventure.providers.vault import MemoryVault
 
 
 def open_app(path, monkeypatch, detected):
-    monkeypatch.setattr('dungeon.local_zone.detect', lambda: detected)
+    monkeypatch.setattr('adventure.local_zone.detect', lambda: detected)
     app = create_app(path, vault=MemoryVault(), background=False)
     return TestClient(app, headers={CLIENT_HEADER: 'workspace'})
 
@@ -21,7 +21,7 @@ def put(client, **values):
 
 
 def test_new_workspace_takes_the_pc_timezone(tmp_path, monkeypatch):
-    with open_app(tmp_path / 'dungeon.sqlite3', monkeypatch, 'America/New_York') as client:
+    with open_app(tmp_path / 'adventure.sqlite3', monkeypatch, 'America/New_York') as client:
         settings = client.get('/api/settings').json()
     assert settings['user_timezone'] == 'America/New_York'
     assert settings['user_timezone_source'] == 'pc'
@@ -55,7 +55,7 @@ def test_unknown_detected_zone_is_refused(client):
 
 
 def test_pc_zone_follows_on_startup_but_a_chosen_one_stays(tmp_path, monkeypatch):
-    path = tmp_path / 'dungeon.sqlite3'
+    path = tmp_path / 'adventure.sqlite3'
     with open_app(path, monkeypatch, 'America/New_York'):
         pass
     with open_app(path, monkeypatch, 'Europe/London') as client:

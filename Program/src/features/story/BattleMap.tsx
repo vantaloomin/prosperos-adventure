@@ -3,7 +3,7 @@ import { mapMarks } from './battleMarks'
 
 const CELL = 18
 
-/** The 5E fight on a grid of five-foot squares (dungeon/battlemap.py): you in the middle, foes numbered as listed. */
+/** The 5E fight on a grid of five-foot squares (adventure/battlemap.py): you in the middle, foes numbered as listed. */
 export function BattleMap({ grid }: { grid: BattleGrid }) {
   const { marks, minX, minY, width, height } = mapMarks(grid)
   return (

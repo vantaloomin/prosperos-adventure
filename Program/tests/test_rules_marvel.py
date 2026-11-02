@@ -1,9 +1,9 @@
-"""Prospero dice (dungeon/rules/marvel.py), checked against rolls from Mabry Curve's roll log."""
+"""Prospero dice (adventure/rules/marvel.py), checked against rolls from Mabry Curve's roll log."""
 import random
 
 import pytest
 
-from dungeon.rules import ladder, marvel
+from adventure.rules import ladder, marvel
 
 
 @pytest.mark.parametrize(('natural', 'total', 'band'), [

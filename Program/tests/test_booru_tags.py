@@ -5,8 +5,8 @@ import json
 
 import httpx
 
-from dungeon.images import backends, tags
-from dungeon.images.adapters.comfyui import FAMILIES, ComfyAdapter, built_in, tag_kind
+from adventure.images import backends, tags
+from adventure.images.adapters.comfyui import FAMILIES, ComfyAdapter, built_in, tag_kind
 from tests.test_images import ComfyStandIn, request_for
 
 LOCAL = {'base_url': 'http://127.0.0.1:8188'}
@@ -89,7 +89,7 @@ def test_tags_are_picked_from_the_family_or_a_workflow_that_loads_a_tag_model():
 
 
 def test_a_story_portrait_prompt_becomes_one_person_in_tags():
-    """Dungeon's art prompts (dungeon/art.py) are short lines, not the photo paragraph; they still say who."""
+    """Adventure's art prompts (adventure/art.py) are short lines, not the photo paragraph; they still say who."""
     prompt, negative = tags.convert('Portrait of Bren (he/him, 34 years old, smith), in Kingswood. A broad man with a '
                                     'burn-scarred forearm. With a warm smile.', 'text, watermark', None, tags.ILLUSTRIOUS)
     assert prompt.startswith(f'{tags.ILLUSTRIOUS}, solo, 1boy, male focus, ') and '1girl' in negative

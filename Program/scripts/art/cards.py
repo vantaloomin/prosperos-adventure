@@ -1,5 +1,5 @@
-"""Makes the art for each world's Life Cards (dungeon/life/cards.py) with the OpenAI Images API, in the world's
-backdrop style (scripts/art/backdrops.py), so a drawn card shows a picture in the story (dungeon/happenings.py shown).
+"""Makes the art for each world's Life Cards (adventure/life/cards.py) with the OpenAI Images API, in the world's
+backdrop style (scripts/art/backdrops.py), so a drawn card shows a picture in the story (adventure/happenings.py shown).
 
 Every card in life/decks/<world>.json gets one, deck cards and d100 table rows alike, plus the world's card back
 (`back`), which stands in for a card with no picture and for a veiled one. The prompt is the card's title and what
@@ -23,9 +23,9 @@ import time
 
 from backdrops import KEYS, OPENAI, PACKAGES, ROOT, STOPPING, STREAK, api_key, manifest
 
-from dungeon.images.adapters.base import AdapterError, ImageRequest
-from dungeon.images.adapters.hosted import HostedAdapter
-from dungeon.life import cards
+from adventure.images.adapters.base import AdapterError, ImageRequest
+from adventure.images.adapters.hosted import HostedAdapter
+from adventure.life import cards
 
 RAW = ROOT / '.tools' / 'cards-raw'
 SIZE = (1024, 1536)

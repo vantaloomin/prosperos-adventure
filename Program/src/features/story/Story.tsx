@@ -34,9 +34,9 @@ export function Story({ go }: { go: (view: View) => void }) {
   const story = useQuery({ queryKey: STORY_KEY, queryFn: () => api<StoryData>('/story') })
   const client = useQueryClient()
   const [pending, setPending] = useState<string | null>(null)
-  // The narration so far while it streams in (dungeon/pace.py).
+  // The narration so far while it streams in (adventure/pace.py).
   const [streamed, setStreamed] = useState('')
-  // The turn's stages and rolls so far, before and around the narration (dungeon/story.py answer).
+  // The turn's stages and rolls so far, before and around the narration (adventure/story.py answer).
   const [turn, setTurn] = useState<TurnSoFar>(NO_TURN)
   const [error, setError] = useState('')
   // How many lines the story had when the turn began: once the saved story has more, the turn is in it.
@@ -145,7 +145,7 @@ interface GoProps extends Omit<SceneProps, 'scene' | 'status'> { scene: StorySce
 
 /** Going somewhere else, on the maps. A place across town is picked on the street map (./StoryTown.tsx) and is a cut.
  *  Another town, a keep or a hex is picked on the travel map (./StoryMap.tsx) and is a journey: it writes "I set out
- *  for…" into the composer, so the road takes its hours and can bring trouble (dungeon/travel.py). A town of this
+ *  for…" into the composer, so the road takes its hours and can bring trouble (adventure/travel.py). A town of this
  *  world that no travel map shows is a cut too; towns of other worlds and the roads between towns are not offered. */
 function GoElsewhere({ scene, map, onDone, onDraft, onMove }: GoProps) {
   const cities = useQuery({ queryKey: ['world-cities'], queryFn: () => api<CitySummary[]>('/world/cities') })
@@ -260,7 +260,7 @@ function StoryLine({ message, bands, onBack, onBookmark, rewrites, draft }: Line
   return <StoryNarration message={message} draft={draft} {...rewrites} />
 }
 
-/** Names this moment to find it again (dungeon/chapters.py bookmarks). */
+/** Names this moment to find it again (adventure/chapters.py bookmarks). */
 function BookmarkButton({ onSave }: { onSave: (name: string) => Promise<void> }) {
   const [name, setName] = useState<string | null>(null)
   if (name === null) return <button type="button" className="text-button" onClick={() => setName('')}><Bookmark aria-hidden="true" />Bookmark</button>

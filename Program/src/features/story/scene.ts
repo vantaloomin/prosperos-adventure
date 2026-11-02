@@ -26,14 +26,14 @@ export function peopleHere(story: Story): StoryPerson[] {
   return story.people.filter((person) => person.party || (person.place?.id === place.id && person.place.city_id === city.id))
 }
 
-/** Who travels with the character (dungeon/party.py). */
+/** Who travels with the character (adventure/party.py). */
 export function partyOf(story: Story): StoryPerson[] {
   return story.people.filter((person) => person.party)
 }
 
 /** The scene panel's widgets, chosen by code from the game state with no model call: a fight shows the fight, a shop
  *  its counter, an interior its rooms map, the road the map, and company the people here. With none of those it shows the journal. `shop` is
- *  whether the pack has a shop window where the story is (dungeon/inventory.py). */
+ *  whether the pack has a shop window where the story is (adventure/inventory.py). */
 export function sceneWidgets(story: Story, shop: boolean): Widget[] {
   const picked: Widget[] = []
   if (story.fight.fight) picked.push('fight')
@@ -73,7 +73,7 @@ export function takeAsked(): Widget | null {
 }
 
 /** The widgets the player pinned to the scene panel: a convenience of this browser, so it is kept here. */
-const PINS = 'dungeon.story.pins'
+const PINS = 'adventure.story.pins'
 
 export function loadPins(): Widget[] {
   try {

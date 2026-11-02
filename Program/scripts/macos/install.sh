@@ -2,7 +2,7 @@
 # Finds or installs Python 3.12+ and Node.js 22.13+, installs the locked dependencies into .venv and
 # builds the interface. The macOS counterpart of install.ps1. --check-only verifies an existing install.
 . "$(dirname "${BASH_SOURCE[0]}")/common.sh"
-cd "$DUNGEON_ROOT" || exit 1
+cd "$ADVENTURE_ROOT" || exit 1
 
 CHECK_ONLY=0
 for argument in "$@"; do
@@ -30,7 +30,7 @@ python_ok() {
 
 find_python() {
     local candidate found
-    for candidate in "$DUNGEON_ROOT/.venv/bin/python" \
+    for candidate in "$ADVENTURE_ROOT/.venv/bin/python" \
         "$(command -v python3.13)" "$(command -v python3.12)" "$(command -v python3.14)" \
         /Library/Frameworks/Python.framework/Versions/3.1[2-9]/bin/python3 \
         /opt/homebrew/bin/python3 /usr/local/bin/python3 "$(command -v python3)"; do
@@ -88,7 +88,7 @@ fi
 npm="$(dirname "$node")/npm"
 [ -x "$npm" ] || fail 'npm is missing beside Node.js. Reinstall Node.js and try again.'
 
-venv_python="$DUNGEON_ROOT/.venv/bin/python"
+venv_python="$ADVENTURE_ROOT/.venv/bin/python"
 
 verify() {
     [ -x "$venv_python" ] || fail 'The project environment is missing. Run install.command first.'
@@ -98,17 +98,17 @@ verify() {
     [ -f dist/index.html ] || fail 'The interface has not been built. Run install.command.'
 }
 
-echo 'Prospero Dungeon - dependency setup'
+echo 'Prospero Adventure - dependency setup'
 # A downloaded ZIP marks every script as quarantined, so each would need its own trip through
 # Privacy & Security. Opening this one was the user's choice; clear the mark on its siblings.
-xattr -d com.apple.quarantine "$MAC_FOLDER"/*.command "$DUNGEON_ROOT"/scripts/macos/*.sh 2>/dev/null
+xattr -d com.apple.quarantine "$MAC_FOLDER"/*.command "$ADVENTURE_ROOT"/scripts/macos/*.sh 2>/dev/null
 if [ "$CHECK_ONLY" = 0 ]; then
     # .venv only holds installed packages, so a broken one is rebuilt. It breaks when the Python it was
     # made from is upgraded or removed (Homebrew moving python3 from 3.12 to 3.13 leaves it without pip
     # or its packages).
     if [ -d .venv ] && ! { python_ok "$venv_python" >/dev/null && "$venv_python" -m pip --version >/dev/null 2>&1; }; then
         say_warn 'The project environment (.venv) is broken or was made by a Python that has since changed. Rebuilding it.'
-        rm -rf .venv || fail "Could not remove $DUNGEON_ROOT/.venv. Delete that folder and run install.command again."
+        rm -rf .venv || fail "Could not remove $ADVENTURE_ROOT/.venv. Delete that folder and run install.command again."
         python="$(find_python)"
         [ -n "$python" ] || fail 'Python 3.12 or newer was not found. Install it from https://www.python.org/downloads/macos/ and run install.command again.'
     fi
@@ -118,8 +118,8 @@ if [ "$CHECK_ONLY" = 0 ]; then
     run "$npm" run build
 fi
 verify
-say_ok 'Ready. Double-click launch.command in the Mac folder to open Prospero Dungeon.'
+say_ok 'Ready. Double-click launch.command in the Mac folder to open Prospero Adventure.'
 echo 'Connect a model in Settings inside the app. Nothing is downloaded until you choose to.'
-# What this computer can run locally (dungeon/hardware.py). Advice only: it never fails setup.
+# What this computer can run locally (adventure/hardware.py). Advice only: it never fails setup.
 echo
-"$venv_python" -m dungeon.hardware || true
+"$venv_python" -m adventure.hardware || true

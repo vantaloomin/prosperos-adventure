@@ -6,10 +6,10 @@ import json
 import httpx
 import pytest
 
-from dungeon import text_models
-from dungeon.errors import DomainError
-from dungeon.providers.chat import ChatProvider
-from dungeon.providers.requests import CACHED, REQUESTS, headers_for, transcript
+from adventure import text_models
+from adventure.errors import DomainError
+from adventure.providers.chat import ChatProvider
+from adventure.providers.requests import CACHED, REQUESTS, headers_for, transcript
 
 LOCAL = {'provider': 'local', 'model': 'local-model'}
 ANTHROPIC = {'provider': 'anthropic', 'model': 'claude-sonnet-5-5', 'max_output_tokens': 1000}
@@ -161,7 +161,7 @@ def test_openai_uses_responses_and_compatible_services_use_chat_completions():
 
 
 def test_nanogpt_is_a_named_provider_with_its_official_address():
-    from dungeon.providers.config import DEFAULT_URLS, NEEDS_KEY, validate_profile_url
+    from adventure.providers.config import DEFAULT_URLS, NEEDS_KEY, validate_profile_url
     assert DEFAULT_URLS['nanogpt'] == 'https://nano-gpt.com/api/v1' and 'nanogpt' in NEEDS_KEY
     validate_profile_url('nanogpt', 'https://nano-gpt.com/api/v1')
     with pytest.raises(ValueError):

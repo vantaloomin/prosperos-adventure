@@ -1,8 +1,8 @@
-"""Makes the worlds' faction emblems and item icons (dungeon/icons.py) with the OpenAI Images API, the same way
+"""Makes the worlds' faction emblems and item icons (adventure/icons.py) with the OpenAI Images API, the same way
 scripts/art/backdrops.py --backend openai makes backdrops, with the key in CHATGPT_API_KEY or OPENAI_API_KEY (read
 from the environment only, never printed).
 
-Each world lists them in its package's art file, dungeon/world/packages/<world>/engine/art/<world>.json: `emblems`
+Each world lists them in its package's art file, adventure/world/packages/<world>/engine/art/<world>.json: `emblems`
 (one per faction id, in the world's `emblem_style`) and `icons` (one per item id, or for several ids in `items`, or a
 whole `category` of items, in the world's `icon_style`). They are made on a transparent background and written to
 the package's assets/emblems/<id>.webp and assets/icons/<id>.webp at 256x256. The PNGs the API sends are kept in
@@ -25,8 +25,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from backdrops import KEYS, OPENAI, PACKAGES, ROOT, STOPPING, STREAK, api_key, manifest, worlds  # noqa: E402
 
-from dungeon.images.adapters.base import AdapterError, ImageRequest  # noqa: E402
-from dungeon.images.adapters.hosted import HostedAdapter  # noqa: E402
+from adventure.images.adapters.base import AdapterError, ImageRequest  # noqa: E402
+from adventure.images.adapters.hosted import HostedAdapter  # noqa: E402
 
 RAW = ROOT / '.tools' / 'icons-raw'
 SIZE = 1024

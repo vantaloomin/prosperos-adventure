@@ -1,4 +1,4 @@
-"""Ironsworn (dungeon/rules/ironsworn.py): the character, moves read from the words, the action roll and momentum."""
+"""Ironsworn (adventure/rules/ironsworn.py): the character, moves read from the words, the action roll and momentum."""
 import random
 from collections import Counter
 
@@ -7,9 +7,9 @@ from conftest import tell
 from test_rulesets import reply, start
 from test_travel import ok
 
-from dungeon import bonds, quests, record, sheet, stress, travel
-from dungeon import sworn as sworn_tracks
-from dungeon.rules import ironsworn
+from adventure import bonds, quests, record, sheet, stress, travel
+from adventure import sworn as sworn_tracks
+from adventure.rules import ironsworn
 
 
 class Dice:
@@ -100,7 +100,7 @@ def test_a_turn_under_ironsworn_rolls_a_move_and_keeps_momentum(client, connecte
 
 # Fights -------------------------------------------------------------------------------------------
 
-from dungeon import combat, combat_iron  # noqa: E402
+from adventure import combat, combat_iron  # noqa: E402
 
 
 class Always:

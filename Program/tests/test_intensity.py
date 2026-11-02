@@ -1,4 +1,4 @@
-"""Intensity v0 (dungeon/story.py intensity): the world's preset, or the player's, shapes the narrator's prompt."""
+"""Intensity v0 (adventure/story.py intensity): the world's preset, or the player's, shapes the narrator's prompt."""
 from conftest import Chunk, tell
 
 
@@ -66,7 +66,7 @@ def test_each_category_has_its_own_level_veils_fade_to_black_and_a_preset_resets
 def test_low_violence_leaves_maiming_out_of_the_lasting_injuries(client, app):
     from datetime import datetime
 
-    from dungeon import injuries, table
+    from adventure import injuries, table
     ok(client.put('/api/story/scene', json={'city_id': 'kingswood', 'place_id': 'felled-oak'}))
     ok(client.delete('/api/story'))
     ok(client.post('/api/story/start', json={'premade_id': 'agna-holt'}))

@@ -1,4 +1,4 @@
-"""How model calls reach their service (dungeon/providers/urls.py `network`): a hosted one through the system's
+"""How model calls reach their service (adventure/providers/urls.py `network`): a hosted one through the system's
 proxy and certificate authorities, one on this computer directly."""
 import asyncio
 import datetime
@@ -10,8 +10,8 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.x509.oid import NameOID
 
-from dungeon.providers import chat, urls
-from dungeon.providers.chat import ChatProvider
+from adventure.providers import chat, urls
+from adventure.providers.chat import ChatProvider
 
 
 def company_ca(path) -> str:

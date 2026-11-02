@@ -1,11 +1,11 @@
-"""The dish banks behind Kitchen and food (dungeon/world/data/kitchen/*.json)."""
+"""The dish banks behind Kitchen and food (adventure/world/data/kitchen/*.json)."""
 import json
 import re
 from pathlib import Path
 
 import pytest
 
-BANKS = Path(__file__).resolve().parents[1] / 'dungeon' / 'world' / 'data' / 'kitchen'
+BANKS = Path(__file__).resolve().parents[1] / 'adventure' / 'world' / 'data' / 'kitchen'
 IDS = ('modern-us', 'modern-uk', 'modern-japan', 'modern-korea', 'modern-world', 'jazz-age-us', 'victorian-uk',
        'medieval', 'old-world', 'frontier-us')
 PROTEINS = {'vegan', 'veg', 'fish', 'shellfish', 'meat', 'pork'}

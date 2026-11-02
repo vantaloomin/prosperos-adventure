@@ -1,4 +1,4 @@
-/** The one author's note of a chat (dungeon/authors_note.py): `story`. */
+/** The one author's note of a chat (adventure/authors_note.py): `story`. */
 export interface AuthorsNoteState { chat: string; text: string; enabled: boolean; updated_at: string | null }
 export const NOTE_LIMIT = 1000
 /** The switch's label says what it does, like every other switch in the app, so it reads true when on or off. */

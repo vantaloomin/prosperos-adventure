@@ -7,7 +7,7 @@ import { CitiesUnavailable } from '../world/CitiesUnavailable'
 
 interface CityPickProps { value: string; onChange: (cityId: string) => void; currentId: string; disabled?: boolean; autoFocus?: boolean }
 
-/** The picker's first option: the app picks a town of this world other than this one (dungeon/worlds.py
+/** The picker's first option: the app picks a town of this world other than this one (adventure/worlds.py
  * SOMEWHERE_NEW); with `:<world>` after it, a town of that world. The form starts on it. */
 export const SOMEWHERE_NEW = 'somewhere-new'
 

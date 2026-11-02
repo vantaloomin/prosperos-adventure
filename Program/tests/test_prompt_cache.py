@@ -1,10 +1,10 @@
-"""Instant replies on local models (dungeon/providers/prompt_cache.py): prompt starts kept and put back."""
+"""Instant replies on local models (adventure/providers/prompt_cache.py): prompt starts kept and put back."""
 import asyncio
 import json
 
 import httpx
 
-from dungeon.providers.chat import ChatProvider
+from adventure.providers.chat import ChatProvider
 
 CONFIG = {'base_url': 'http://127.0.0.1:8080/v1', 'model': 'gemma', 'max_output_tokens': 100, 'timeout_seconds': 10,
           'provider': 'local'}
@@ -67,7 +67,7 @@ def test_a_server_that_cannot_save_is_left_alone():
 
 
 def test_a_server_that_was_not_up_yet_is_asked_again(monkeypatch):
-    from dungeon.providers import prompt_cache
+    from adventure.providers import prompt_cache
     calls, up = [], {'yes': False}
     serving = llama(calls)
 

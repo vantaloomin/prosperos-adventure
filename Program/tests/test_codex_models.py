@@ -2,7 +2,7 @@ import asyncio
 import sys
 import textwrap
 
-from dungeon.providers import codex
+from adventure.providers import codex
 
 FAKE_SERVER = '''
 import json, sys

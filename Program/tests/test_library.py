@@ -1,5 +1,5 @@
 """The reference library: long texts split into passages, the few that fit the story given to the narrator
-(dungeon/library.py, dungeon/library_readers.py). Ported from Prospero's Companion 1.0."""
+(adventure/library.py, adventure/library_readers.py). Ported from Prospero's Companion 1.0."""
 import base64
 import html
 import io
@@ -9,9 +9,9 @@ import zipfile
 import pytest
 from conftest import Chunk
 
-from dungeon import library
-from dungeon.errors import DomainError
-from dungeon.library_readers import read, wikitext
+from adventure import library
+from adventure.errors import DomainError
+from adventure.library_readers import read, wikitext
 
 NOVEL = ('The Lighthouse Keeper\n\n'
          'Chapter 1\n\nThe lighthouse at Gull Point had been dark since the storm of 1998. Nobody in the village '

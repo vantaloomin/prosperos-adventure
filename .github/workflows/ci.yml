@@ -45,12 +45,12 @@ jobs:
           changed=$(git diff --name-only "$BASE...$HEAD")
           printf '%s\n' "$changed"
           shared='^(\.github/workflows/ci\.yml|Program/requirements\.lock\.txt|Program/pyproject\.toml)$'
-          installers='^(Windows/|Mac/|Program/scripts/(windows|macos)/|Program/package(-lock)?\.json$|Program/dungeon/(launch|main)\.py$)'
+          installers='^(Windows/|Mac/|Program/scripts/(windows|macos)/|Program/package(-lock)?\.json$|Program/adventure/(launch|main)\.py$)'
           if grep -Eq "$shared|$installers" <<< "$changed"; then echo installers=true; else echo installers=false; fi >> "$GITHUB_OUTPUT"
 
   backend:
     # Windows runs the suite several times slower than Linux, so its tests are split over three jobs to stay well
-    # inside the time limit (DUNGEON_TEST_SHARD, tests/conftest.py). Now and then a Windows runner is about four
+    # inside the time limit (ADVENTURE_TEST_SHARD, tests/conftest.py). Now and then a Windows runner is about four
     # times slower again (one third of the suite in 28 minutes, the other two in 8), so the limit leaves room for it.
     name: backend (${{ matrix.os }}${{ matrix.shard && format(' {0}', matrix.shard) || '' }})
     strategy:
@@ -82,10 +82,10 @@ jobs:
           TEMP: ${{ runner.temp }}
           TMP: ${{ runner.temp }}
           TMPDIR: ${{ runner.temp }}
-          DUNGEON_TEST_SHARD: ${{ matrix.shard }}
+          ADVENTURE_TEST_SHARD: ${{ matrix.shard }}
         run: python -m pytest -q -n auto --durations=15
       - name: Check city data
-        run: python -m dungeon.world.check
+        run: python -m adventure.world.check
 
   frontend:
     runs-on: ubuntu-latest
@@ -126,26 +126,26 @@ jobs:
       - name: Install with the Windows installer
         shell: pwsh
         run: .\scripts\windows\install.ps1 -NoPause
-      - name: Launch and answer on the Dungeon port
+      - name: Launch and answer on Adventure port
         shell: pwsh
         env:
-          DUNGEON_DATA_DIR: ${{ runner.temp }}\dungeon-data
+          ADVENTURE_DATA_DIR: ${{ runner.temp }}\adventure-data
         run: |
-          $app = Start-Process -FilePath .\.venv\Scripts\python.exe -ArgumentList '-m', 'dungeon.launch', '--no-browser' -PassThru -NoNewWindow
+          $app = Start-Process -FilePath .\.venv\Scripts\python.exe -ArgumentList '-m', 'adventure.launch', '--no-browser' -PassThru -NoNewWindow
           try {
             $health = $null
             foreach ($attempt in 1..60) {
-              try { $health = Invoke-RestMethod -Uri 'http://127.0.0.1:8785/api/health' -TimeoutSec 2; break } catch { Start-Sleep -Milliseconds 500 }
+              try { $health = Invoke-RestMethod -Uri 'http://127.0.0.1:8805/api/health' -TimeoutSec 2; break } catch { Start-Sleep -Milliseconds 500 }
             }
-            if (-not $health -or $health.app_id -ne 'prospero-dungeon') { throw 'The Dungeon did not answer on port 8785.' }
-            $page = Invoke-WebRequest -Uri 'http://127.0.0.1:8785/' -UseBasicParsing
-            if ($page.Content -notmatch 'Prospero Dungeon') { throw 'The interface was not served.' }
+            if (-not $health -or $health.app_id -ne 'prospero-adventure') { throw 'Adventure did not answer on port 8805.' }
+            $page = Invoke-WebRequest -Uri 'http://127.0.0.1:8805/' -UseBasicParsing
+            if ($page.Content -notmatch 'Prospero Adventure') { throw 'The interface was not served.' }
             Write-Host "Launched $($health.app_id) $($health.version) and served the interface."
           } finally { Stop-Process -Id $app.Id -Force }
       - name: Test the checkout helpers
         shell: powershell
         env:
-          DUNGEON_DATA_DIR: ${{ runner.temp }}\dungeon-helpers-data
+          ADVENTURE_DATA_DIR: ${{ runner.temp }}\adventure-helpers-data
         run: .\scripts\windows\helpers-test.ps1
 
   macos-install:
@@ -171,5 +171,5 @@ jobs:
         run: ../Mac/install.command --check-only
       - name: Test the checkout scripts
         env:
-          DUNGEON_DATA_DIR: ${{ runner.temp }}/dungeon-data
+          ADVENTURE_DATA_DIR: ${{ runner.temp }}/dungeon-data
         run: /bin/bash --version | head -n 1 && ./scripts/macos/helpers-test.sh

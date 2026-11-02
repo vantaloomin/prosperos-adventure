@@ -1,8 +1,8 @@
-"""The world editor (dungeon/package_edit.py): a package's entries searched, changed with validation, and undone."""
+"""The world editor (adventure/package_edit.py): a package's entries searched, changed with validation, and undone."""
 import test_packages
 from test_travel import ok
 
-from dungeon import packages
+from adventure import packages
 
 BASE = '/api/packages/vallarith'
 

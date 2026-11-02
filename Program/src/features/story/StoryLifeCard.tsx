@@ -3,7 +3,7 @@ import type { LifeCardShown } from '../../types'
 
 const TONES = { good: 'A good turn', bad: 'A bad turn', grey: 'A mixed turn' }
 
-/** A Life Card the world drew on this line (dungeon/happenings.py with_cards): its picture, title and tone, never
+/** A Life Card the world drew on this line (adventure/happenings.py with_cards): its picture, title and tone, never
  *  its hidden truth. The picture grows on a click; a veiled card shows only the world's card back. */
 export function LifeCard({ card }: { card: LifeCardShown }) {
   const [open, setOpen] = useState(false)

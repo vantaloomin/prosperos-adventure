@@ -24,7 +24,7 @@ type Result = { tone: 'info' | 'error'; text: string } | null
 const failure = (error: unknown, fallback: string) => error instanceof Error ? error.message : fallback
 
 /** Image backends (PRD F3). Everything is off until set up here. The story's pictures (Story, More, Pictures) are made
- *  on request; Passive art adds a few on its own (dungeon/art.py). */
+ *  on request; Passive art adds a few on its own (adventure/art.py). */
 export function ImageSettings() {
   const client = useQueryClient()
   const backends = useQuery({ queryKey: BACKENDS_KEY, queryFn: () => api<{ backends: ImageBackend[] }>('/images/backends') })

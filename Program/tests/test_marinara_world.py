@@ -1,10 +1,10 @@
-"""Bring your Marinara world (dungeon/world/marinara.py): a Marinara Engine world map becomes a city and world lore,
+"""Bring your Marinara world (adventure/world/marinara.py): a Marinara Engine world map becomes a city and world lore,
 with no review step. The sample is small and invented; real exports are private and stay out of the repo."""
 import copy
 
 import pytest
 
-from dungeon.world import catalog, marinara, naming
+from adventure.world import catalog, marinara, naming
 
 TODAY = '2026-10-12'
 

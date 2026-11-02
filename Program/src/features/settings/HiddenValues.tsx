@@ -23,7 +23,7 @@ function useFlags() {
   return { settings: settings.data, save, error }
 }
 
-/** Worlds > Adult side of life (dungeon/world/intimacy.py): off until the user turns it on. */
+/** Worlds > Adult side of life (adventure/world/intimacy.py): off until the user turns it on. */
 export function AdultSideSettings() {
   const { settings, save, error } = useFlags()
   return (

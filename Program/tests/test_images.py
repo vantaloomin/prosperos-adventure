@@ -10,14 +10,14 @@ import httpx
 import pytest
 from fastapi.testclient import TestClient
 
-from dungeon.identity import CLIENT_HEADER
-from dungeon.images import backends, content
-from dungeon.images.adapters.base import AdapterError, ImageRequest, ImageResult
-from dungeon.images.adapters.codex import CodexAdapter
-from dungeon.images.adapters.comfyui import ComfyAdapter
-from dungeon.images.adapters.hosted import HostedAdapter, image_models
-from dungeon.main import create_app
-from dungeon.providers.vault import MemoryVault
+from adventure.identity import CLIENT_HEADER
+from adventure.images import backends, content
+from adventure.images.adapters.base import AdapterError, ImageRequest, ImageResult
+from adventure.images.adapters.codex import CodexAdapter
+from adventure.images.adapters.comfyui import ComfyAdapter
+from adventure.images.adapters.hosted import HostedAdapter, image_models
+from adventure.main import create_app
+from adventure.providers.vault import MemoryVault
 
 
 def png(width=64, height=48) -> bytes:
@@ -42,7 +42,7 @@ class FakeAdapter:
         return ImageResult(outcome, model='fake-model', seed=request.seed)
 
     async def check(self, backend, config, key=None):
-        from dungeon.images.adapters.base import Check
+        from adventure.images.adapters.base import Check
         return Check(True, 'fine')
 
 
@@ -53,7 +53,7 @@ def adapters():
 
 @pytest.fixture
 def app(tmp_path, clock, provider, adapters):
-    return create_app(tmp_path / 'workspace' / 'dungeon.sqlite3', clock=clock, vault=MemoryVault(),
+    return create_app(tmp_path / 'workspace' / 'adventure.sqlite3', clock=clock, vault=MemoryVault(),
                       provider=provider, background=False, image_adapters=adapters)
 
 
@@ -337,7 +337,7 @@ def comfy_client(tmp_path, clock, provider):
         return stand_in(request)
     stand_in = ComfyStandIn()
     adapters = {'comfyui': ComfyAdapter(httpx.MockTransport(handler)), 'codex': FakeAdapter(), 'hosted': FakeAdapter()}
-    app = create_app(tmp_path / 'workspace' / 'dungeon.sqlite3', clock=clock, vault=MemoryVault(),
+    app = create_app(tmp_path / 'workspace' / 'adventure.sqlite3', clock=clock, vault=MemoryVault(),
                      provider=provider, background=False, image_adapters=adapters)
     with TestClient(app, headers={CLIENT_HEADER: 'workspace'}) as test_client:
         yield test_client
@@ -590,7 +590,7 @@ def test_openrouter_uses_its_image_api_for_any_image_model(model):
 @pytest.mark.parametrize(('width', 'height', 'ratio'), [(1024, 1024, '1:1'), (1536, 1024, '3:2'), (1024, 1536, '2:3'),
                                                         (1344, 768, '16:9'), (832, 1040, '4:5')])
 def test_openrouter_sizes_become_the_nearest_aspect_ratio(width, height, ratio):
-    from dungeon.images.adapters.hosted import aspect_ratio
+    from adventure.images.adapters.hosted import aspect_ratio
     assert aspect_ratio(width, height) == ratio
 
 
@@ -612,7 +612,7 @@ def test_hosted_errors_are_typed(response, code):
 
 
 def test_storage_reads_jpeg_and_webp_headers():
-    from dungeon.images import storage
+    from adventure.images import storage
     jpeg = b'\xff\xd8\xff\xe0' + struct.pack('>H', 16) + b'\x00' * 14 + b'\xff\xc0' + struct.pack('>HBHH', 17, 8, 600,
                                                                                                     800)
     assert storage.sniff(jpeg) == ('jpg', 800, 600)
@@ -715,7 +715,7 @@ def test_an_image_api_connection_can_be_edited_in_place(client):
 def test_openrouter_lists_every_image_model_it_has():
     """OpenRouter's `/models` leaves out models that write no text (FLUX, Seedream, Recraft), so the list comes from its
     image list, without the SVG-only vector models a photo cannot show."""
-    from dungeon.images.adapters import hosted
+    from adventure.images.adapters import hosted
     body = {'data': [{'id': 'google/gemini-2.5-flash-image', 'name': 'Gemini 2.5 Flash Image',
                       'architecture': {'input_modalities': ['image', 'text'], 'output_modalities': ['image', 'text']}},
                      {'id': 'black-forest-labs/flux.2-pro', 'name': 'FLUX.2 Pro',

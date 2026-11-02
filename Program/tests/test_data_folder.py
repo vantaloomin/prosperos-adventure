@@ -1,14 +1,14 @@
-"""Keeping the workspace in the app's own folder (dungeon/data_folder.py, identity.portable_dir)."""
+"""Keeping the workspace in the app's own folder (adventure/data_folder.py, identity.portable_dir)."""
 from pathlib import Path
 
 import pytest
 
-from dungeon import data_folder, identity, launch
+from adventure import data_folder, identity, launch
 
 
 @pytest.fixture
 def app_folder(tmp_path, monkeypatch):
-    folder = tmp_path / 'external drive' / 'prosperos-dungeon'
+    folder = tmp_path / 'external drive' / 'prosperos-adventure'
     folder.mkdir(parents=True)
     monkeypatch.setattr(identity, 'APP_FOLDER', folder)
     monkeypatch.delenv(identity.DATA_ENV, raising=False)
@@ -20,7 +20,7 @@ def app_folder(tmp_path, monkeypatch):
 def test_a_data_folder_in_the_app_folder_wins_over_the_default(app_folder, monkeypatch, tmp_path):
     monkeypatch.setenv('XDG_DATA_HOME', str(tmp_path / 'home'))
     monkeypatch.setattr(identity.sys, 'platform', 'linux')
-    assert identity.data_dir() == tmp_path / 'home' / 'prospero-dungeon'
+    assert identity.data_dir() == tmp_path / 'home' / 'prospero-adventure'
     (app_folder / 'Data').mkdir()
     assert identity.data_dir() == app_folder / 'Data'
     monkeypatch.setenv(identity.DATA_ENV, str(tmp_path / 'chosen'))
@@ -44,7 +44,7 @@ def test_a_failed_copy_leaves_everything_where_it_was(client, app, app_folder, m
     client.close()
 
     def broken(source, copy):
-        raise OSError('dungeon.sqlite3 did not copy completely.')
+        raise OSError('adventure.sqlite3 did not copy completely.')
 
     monkeypatch.setattr(data_folder, 'verify', broken)
     told = data_folder.apply_pending(workspace)
@@ -55,7 +55,7 @@ def test_a_failed_copy_leaves_everything_where_it_was(client, app, app_folder, m
 
 @pytest.mark.parametrize('parts', [('OneDrive', 'Apps'), ('OneDrive - Contoso',), ('Dropbox',), ('Library', 'CloudStorage')])
 def test_cloud_synced_folders_are_refused(tmp_path, monkeypatch, parts):
-    folder = tmp_path.joinpath(*parts, 'prosperos-dungeon')
+    folder = tmp_path.joinpath(*parts, 'prosperos-adventure')
     folder.mkdir(parents=True)
     monkeypatch.setattr(identity, 'APP_FOLDER', folder)
     monkeypatch.delenv(identity.DATA_ENV, raising=False)
@@ -69,7 +69,7 @@ def test_a_chosen_folder_or_existing_data_folder_blocks_the_move(app_folder, mon
     (app_folder / 'Data').mkdir()
     assert 'already exists' in data_folder.refusal(workspace)
     monkeypatch.setenv(identity.DATA_ENV, str(workspace))
-    assert 'DUNGEON_DATA_DIR' in data_folder.refusal(workspace)
+    assert 'ADVENTURE_DATA_DIR' in data_folder.refusal(workspace)
 
 
 def test_network_mounts_are_read_from_the_mount_table(monkeypatch):
@@ -86,7 +86,7 @@ def test_the_launcher_moves_before_opening_the_workspace(app_folder, tmp_path, m
     (workspace / 'note.txt').write_text('kept')
     (workspace / data_folder.PENDING).write_text('{}')
     monkeypatch.setenv(identity.DATABASE_ENV, '')
-    monkeypatch.setattr('dungeon.identity.database_path', lambda: workspace / 'dungeon.sqlite3')
+    monkeypatch.setattr('adventure.identity.database_path', lambda: workspace / 'adventure.sqlite3')
     launch.move_chosen_data()
     assert (app_folder / 'Data' / 'note.txt').read_text() == 'kept'
     assert 'Moved your data' in capsys.readouterr().out

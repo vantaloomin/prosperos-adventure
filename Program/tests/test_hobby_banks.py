@@ -1,4 +1,4 @@
-"""The pastimes catalogue and milestone banks (dungeon/world/data/hobbies/): enough specific milestones for every
+"""The pastimes catalogue and milestone banks (adventure/world/data/hobbies/): enough specific milestones for every
 hobby at every level in every era it belongs to, in words that fit the app's rules."""
 import json
 import re
@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-BANKS = Path(__file__).resolve().parents[1] / 'dungeon' / 'world' / 'data' / 'hobbies'
+BANKS = Path(__file__).resolve().parents[1] / 'adventure' / 'world' / 'data' / 'hobbies'
 ERAS = ('modern', 'jazz-age', 'victorian', 'steampunk', 'frontier', 'medieval', 'fantasy')
 LEVELS = range(5)
 # Words that would give the companion a gender, or that the app keeps out of milestones and pictures.

@@ -5,7 +5,7 @@ from datetime import date, datetime, timedelta
 
 import pytest
 
-from dungeon.world import catalog, generators, naming, townsfolk
+from adventure.world import catalog, generators, naming, townsfolk
 
 
 def test_every_place_has_its_own_people_rebuilt_the_same_from_their_key():

@@ -10,7 +10,7 @@ import { IllustrateButton } from './StoryArt'
 
 interface Props {
   message: StoryMessage
-  /** Rewrite a passage in new words, with an optional note; the dice and the record's facts stay (dungeon/passages.py). */
+  /** Rewrite a passage in new words, with an optional note; the dice and the record's facts stay (adventure/passages.py). */
   onRewrite?: (id: string, passage: string, note: string) => Promise<void>
   /** Switch between the wording before the last rewrite and the rewrite. */
   onSwitch?: (id: string) => Promise<void>

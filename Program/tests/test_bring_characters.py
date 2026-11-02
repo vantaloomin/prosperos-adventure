@@ -1,4 +1,4 @@
-"""Bring your characters: character and lorebook files from other apps (dungeon/imports/characters.py)."""
+"""Bring your characters: character and lorebook files from other apps (adventure/imports/characters.py)."""
 import base64
 import io
 import json
@@ -8,8 +8,8 @@ import zlib
 
 import pytest
 
-from dungeon.errors import DomainError
-from dungeon.imports import cards, formats
+from adventure.errors import DomainError
+from adventure.imports import cards, formats
 
 IHDR = struct.pack('>IIBBBBB', 128, 128, 8, 2, 0, 0, 0)
 

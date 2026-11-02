@@ -35,4 +35,4 @@ once.
   saved. 404 for any other name.
 - `PUT /api/authors-notes/story` with `{text, enabled}`: saved as typed (a note of only spaces is saved empty).
 
-Code: `dungeon/authors_note.py`, `src/features/story/AuthorsNote.tsx`.
+Code: `adventure/authors_note.py`, `src/features/story/AuthorsNote.tsx`.

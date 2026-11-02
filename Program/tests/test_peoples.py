@@ -1,11 +1,11 @@
 """The peoples of fantasy worlds (scripts/world/peoples.py): a kind and a naming scheme for each, and towns that mix
-them with their human folk by the share of each kind (a city's `kinds` block, dungeon/world/lifespans.py)."""
+them with their human folk by the share of each kind (a city's `kinds` block, adventure/world/lifespans.py)."""
 import json
 import runpy
 from collections import Counter
 from pathlib import Path
 
-from dungeon.world import catalog, generators, lifespans, naming, townsfolk
+from adventure.world import catalog, generators, lifespans, naming, townsfolk
 
 SCRIPTS = Path(__file__).parent.parent / 'scripts' / 'world'
 PEOPLES = catalog.names()['banks']['peoples']

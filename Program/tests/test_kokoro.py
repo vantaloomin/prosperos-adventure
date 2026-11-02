@@ -1,6 +1,6 @@
-"""The built-in voice keeps its own onnxruntime on Windows 11 and offers a repair (dungeon/voice/kokoro.py).
+"""The built-in voice keeps its own onnxruntime on Windows 11 and offers a repair (adventure/voice/kokoro.py).
 
-Ported from Prospero's Companion #395. Dungeon does not read voice notes yet; the engine is kept for NPC voices.
+Ported from Prospero's Companion #395. Adventure does not read voice notes yet; the engine is kept for NPC voices.
 """
 import hashlib
 import io
@@ -11,7 +11,7 @@ from types import SimpleNamespace
 import httpx
 import pytest
 
-from dungeon.voice import kokoro
+from adventure.voice import kokoro
 
 
 def archive(files: dict[str, bytes]) -> bytes:

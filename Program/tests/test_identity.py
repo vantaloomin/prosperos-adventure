@@ -3,16 +3,16 @@ import sqlite3
 import pytest
 from fastapi.testclient import TestClient
 
-from dungeon import identity
-from dungeon.database import Database, schema_digest
-from dungeon.errors import DomainError
+from adventure import identity
+from adventure.database import Database, schema_digest
+from adventure.errors import DomainError
 
 
 def test_new_workspace_carries_companion_marker(tmp_path):
-    database = Database(tmp_path / 'dungeon.sqlite3')
+    database = Database(tmp_path / 'adventure.sqlite3')
     with database.connect() as connection:
         marker = dict(connection.execute('SELECT key, value FROM app_identity').fetchall())
-    assert marker == {'app_id': 'prospero-dungeon', 'schema_version': str(identity.SCHEMA_VERSION),
+    assert marker == {'app_id': 'prospero-adventure', 'schema_version': str(identity.SCHEMA_VERSION),
                       'schema_digest': schema_digest(), 'app_version': identity.VERSION}
     Database(database.path)  # Reopening its own workspace succeeds.
 
@@ -41,7 +41,7 @@ def test_non_database_file_is_refused(tmp_path):
 def test_data_directory_is_separate_from_the_study(monkeypatch, tmp_path):
     monkeypatch.setenv(identity.DATA_ENV, str(tmp_path / 'custom'))
     monkeypatch.delenv(identity.DATABASE_ENV, raising=False)
-    assert identity.database_path() == tmp_path / 'custom' / 'dungeon.sqlite3'
+    assert identity.database_path() == tmp_path / 'custom' / 'adventure.sqlite3'
     monkeypatch.delenv(identity.DATA_ENV)
     assert 'roleplay' not in str(identity.data_dir()).lower()
     assert identity.DEFAULT_PORT != 8765
@@ -49,8 +49,8 @@ def test_data_directory_is_separate_from_the_study(monkeypatch, tmp_path):
 
 
 @pytest.mark.parametrize(('platform', 'expected'), [
-    ('darwin', ('Library', 'Application Support', 'ProsperoDungeon')),
-    ('linux', ('.local', 'share', 'prospero-dungeon')),
+    ('darwin', ('Library', 'Application Support', 'ProsperoAdventure')),
+    ('linux', ('.local', 'share', 'prospero-adventure')),
 ])
 def test_data_directory_follows_the_platform(monkeypatch, tmp_path, platform, expected):
     monkeypatch.delenv(identity.DATA_ENV, raising=False)
@@ -64,5 +64,5 @@ def test_data_directory_follows_the_platform(monkeypatch, tmp_path, platform, ex
 
 def test_writes_require_the_local_client_header(app):
     with TestClient(app) as client:
-        assert client.get('/api/health').json()['app_id'] == 'prospero-dungeon'
+        assert client.get('/api/health').json()['app_id'] == 'prospero-adventure'
         assert client.post('/api/pause').status_code == 403

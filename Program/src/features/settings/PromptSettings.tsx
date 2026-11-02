@@ -8,7 +8,7 @@ import { SectionPending } from '../../components/SectionPending'
 
 const KEY = ['prompts']
 
-/** Settings > Developer: the core prompts sent to the user's models, each with its default (dungeon/prompt_library.py). */
+/** Settings > Developer: the core prompts sent to the user's models, each with its default (adventure/prompt_library.py). */
 export function PromptSettings() {
   const prompts = useQuery({ queryKey: KEY, queryFn: () => api<EditablePrompt[]>('/prompts') })
   if (!prompts.data) return <SectionPending queries={[prompts]} heading="prompts-heading" title="Prompts" />

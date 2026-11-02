@@ -12,12 +12,12 @@ import httpx
 import pytest
 from fastapi.testclient import TestClient
 
-from dungeon.identity import CLIENT_HEADER
-from dungeon.main import create_app
-from dungeon.providers import builtin_recall
-from dungeon.providers.embeddings import EmbeddingProvider, as_documents, as_query, vector_model
-from dungeon.providers.vault import MemoryVault
-from dungeon.text_models import config_for
+from adventure.identity import CLIENT_HEADER
+from adventure.main import create_app
+from adventure.providers import builtin_recall
+from adventure.providers.embeddings import EmbeddingProvider, as_documents, as_query, vector_model
+from adventure.providers.vault import MemoryVault
+from adventure.text_models import config_for
 
 GEMMA = {'embedding_model': 'builtin:embeddinggemma-2-Q8_0.gguf'}
 
@@ -93,7 +93,7 @@ def machine(monkeypatch):
 @pytest.fixture
 def client(tmp_path, clock, provider, machine):
     transport = httpx.MockTransport(machine.handle)
-    app = create_app(tmp_path / 'workspace' / 'dungeon.sqlite3', clock=clock, vault=MemoryVault(),
+    app = create_app(tmp_path / 'workspace' / 'adventure.sqlite3', clock=clock, vault=MemoryVault(),
                      provider=provider, background=False, embedder=EmbeddingProvider(transport),
                      builtin_spawn=machine.spawn, builtin_transport=transport)
     with TestClient(app, headers={CLIENT_HEADER: 'workspace'}) as test_client:
@@ -210,7 +210,7 @@ def test_the_guard_stops_the_server_when_the_companion_goes_away(tmp_path):
     assert beat.stat().st_mtime == stopped
 
 
-REAL_MODEL = 'DUNGEON_TEST_EMBEDDING_MODEL'
+REAL_MODEL = 'ADVENTURE_TEST_EMBEDDING_MODEL'
 
 
 @pytest.mark.skipif(not (os.environ.get(builtin_recall.SERVER_ENV)

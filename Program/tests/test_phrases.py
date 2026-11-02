@@ -1,6 +1,6 @@
 """The companion is nudged when their last replies keep reaching for the same words."""
 
-from dungeon.memory import phrases
+from adventure.memory import phrases
 
 REPLIES = ['Honestly the ER was a zoo.', 'Ugh, honestly I need a nap.', 'That movie was honestly great!',
            'Christina is coming over, honestly so excited.', 'We could try the new taco place, honestly.',

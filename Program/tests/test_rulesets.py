@@ -1,12 +1,12 @@
-"""Rulesets (dungeon/sheet.py, dungeon/rules/srd52.py): chosen at campaign start and locked; 5E's sheet and checks."""
+"""Rulesets (adventure/sheet.py, adventure/rules/srd52.py): chosen at campaign start and locked; 5E's sheet and checks."""
 import random
 
 import pytest
 from conftest import Chunk, tell
 from test_travel import ok
 
-from dungeon import record, sheet, turn
-from dungeon.rules import srd52
+from adventure import record, sheet, turn
+from adventure.rules import srd52
 
 
 def reply(text):

@@ -1,7 +1,7 @@
-"""Someone with a reason may stop the character leaving, and the Table can turn it off (dungeon/leaving.py)."""
+"""Someone with a reason may stop the character leaving, and the Table can turn it off (adventure/leaving.py)."""
 from conftest import Chunk, ok
 
-from dungeon import combat, leaving, record
+from adventure import combat, leaving, record
 
 NOW = '2026-10-01T12:00:00Z'
 

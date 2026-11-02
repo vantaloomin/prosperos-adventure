@@ -1,7 +1,7 @@
-"""How the character looks (dungeon/appearance.py): cleanliness, clothes, the state of dress and what is on show."""
+"""How the character looks (adventure/appearance.py): cleanliness, clothes, the state of dress and what is on show."""
 from conftest import Chunk, tell
 
-from dungeon import appearance, inventory
+from adventure import appearance, inventory
 
 
 def ok(response):

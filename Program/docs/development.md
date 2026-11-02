@@ -13,18 +13,18 @@ run every command in this guide from `Program/`, where `.venv`, `node_modules` a
 ```sh
 python -m venv .venv
 .venv/bin/python -m pip install -r requirements.lock.txt      # Windows: .\.venv\Scripts\python.exe
-.venv/bin/python -m dungeon                                  # serves http://127.0.0.1:8785
+.venv/bin/python -m adventure                                  # serves http://127.0.0.1:8805
 .venv/bin/python -m ruff check .
 .venv/bin/python -m pytest -q -n auto                         # -n auto spreads tests over every core
 ```
 
-Writes require the `x-dungeon-client: workspace` header, which the local interface sends.
+Writes require the `x-adventure-client: workspace` header, which the local interface sends.
 
 ## Installing on Windows
 
 Double-click `install.bat` in `Windows/` once. It finds Python 3.12+ and Node.js 22.13+ (installing them with
 WinGet if they are missing), creates `.venv`, installs the locked dependencies and builds the
-interface. Then double-click `launch.bat`: it starts the Dungeon on http://127.0.0.1:8785 and
+interface. Then double-click `launch.bat`: it starts Adventure on http://127.0.0.1:8805 and
 opens it in the browser. Keep its window open while using the app; close it or press Ctrl+C to
 stop. Launching again while it runs reuses the running copy, and a port taken by another program
 is never stopped. `scripts/windows/install.ps1 -CheckOnly` verifies an existing installation. CI runs the
@@ -34,17 +34,17 @@ Each `.bat` in `Windows/` runs the PowerShell script of the same name in `script
 `common.ps1` there holds the shared paths and port checks. `update.bat` runs
 `git pull --ff-only origin main` and then `install.ps1`. In a copy without `.git` (a downloaded ZIP)
 it downloads main's ZIP instead, copies it over the folder and records the copied files in
-`.zip-update-files`, so the next ZIP update can remove files main dropped; `DUNGEON_UPDATE_ZIP`
+`.zip-update-files`, so the next ZIP update can remove files main dropped; `ADVENTURE_UPDATE_ZIP`
 points it at a local ZIP for tests. It refuses
-while the Dungeon runs (Windows locks the files a reinstall replaces) or when the checkout is on
-another branch. `status.bat` exits 0 when the Dungeon answers, 1 when nothing does and 2 when
+while Adventure runs (Windows locks the files a reinstall replaces) or when the checkout is on
+another branch. `status.bat` exits 0 when Adventure answers, 1 when nothing does and 2 when
 another program holds the port. `stop.bat` ends the process tree that owns the port, but only after
-the port answers as the Dungeon. `status.bat` and `stop.bat` take `-Port`, like `launch.bat`.
+the port answers as Adventure. `status.bat` and `stop.bat` take `-Port`, like `launch.bat`.
 `create-shortcut.bat -Destination <folder>` writes the shortcut elsewhere, and names it
-`Prospero Dungeon (checkout)` when the installed app already has a `Prospero Dungeon` shortcut.
+`Prospero Adventure (checkout)` when the installed app already has a `Prospero Adventure` shortcut.
 `dev.bat` starts the backend with `uvicorn --reload` in its own window (or reuses one already
 running), runs `npm run dev` in its own, and stops the backend it started when Vite exits.
-Dev mode uses the real workspace unless `DUNGEON_DATA_DIR` points elsewhere. CI runs
+Dev mode uses the real workspace unless `ADVENTURE_DATA_DIR` points elsewhere. CI runs
 `scripts/windows/helpers-test.ps1` after the installer to exercise each helper through its `.bat`.
 
 Until October 2026 the scripts and the code sat together at the top of the checkout. On its first run
@@ -52,7 +52,7 @@ in the new layout, `scripts/windows/install.ps1` tidies what the old layout left
 `node_modules`, `dist`, folders kept only by `__pycache__`), moves a top-level `private-cities/` into
 Program and repoints desktop shortcuts at `Windows\launch.bat`.
 
-On Linux, follow the commands above and below, then run `.venv/bin/python -m dungeon.launch`.
+On Linux, follow the commands above and below, then run `.venv/bin/python -m adventure.launch`.
 
 ## Installing on a Mac
 
@@ -66,7 +66,7 @@ nodejs.org download page. `create-shortcut.command` writes a small `.app` bundle
 setup-python or setup-node on Apple Silicon and Intel runners, then
 `scripts/macos/helpers-test.sh`; the backend tests also run on macOS. On a pull request the
 `macos-install` and `windows-install` jobs run only when the PR touches `Windows/`, `Mac/`, the
-platform scripts, the manifests, `dungeon/launch.py` or `dungeon/main.py`; on main they always
+platform scripts, the manifests, `adventure/launch.py` or `adventure/main.py`; on main they always
 run. No one has run these on a real Mac. User-facing instructions, Gatekeeper and what is missing on
 a Mac are in
 [Installing on a Mac](macos.md).
@@ -74,8 +74,8 @@ a Mac are in
 ## Windows bundle
 
 `python scripts/package/build_bundle.py` (after `npm run build`) assembles a self-contained
-Windows x64 bundle in `build/package/`: `ProsperoDungeon-<version>-win-x64.zip` and
-`SHA256SUMS.txt`. Inside, `Prospero Dungeon.cmd` starts the app with its own Python runtime, so
+Windows x64 bundle in `build/package/`: `ProsperoAdventure-<version>-win-x64.zip` and
+`SHA256SUMS.txt`. Inside, `Prospero Adventure.cmd` starts the app with its own Python runtime, so
 the machine needs neither Python, Node nor Prospero's Study.
 
 | Part | Contents |
@@ -86,29 +86,29 @@ the machine needs neither Python, Node nor Prospero's Study.
 
 The runtime's `python312._pth` fixes its import paths and the launcher runs it with `-I`, so
 `PYTHONPATH`, `PYTHONHOME`, user site-packages and any other Python on the machine are ignored.
-The workspace still lives in `%LOCALAPPDATA%\ProsperoDungeon`, separate from the program files.
+The workspace still lives in `%LOCALAPPDATA%\ProsperoAdventure`, separate from the program files.
 
 The `Package` workflow builds the bundle on Windows and uploads it as a workflow artifact; it never
 tags or publishes a release. A second job downloads it onto a fresh runner, checks the checksum,
 unpacks it into a path with spaces and runs `scripts/package/smoke-test.ps1`: with no Python or
 Node on `PATH`, poisoned Python variables and the Study's port 8765 taken, the app must verify
-against `bundle.json`, answer on 8785, serve the interface, run on its bundled runtime, keep its
+against `bundle.json`, answer on 8805, serve the interface, run on its bundled runtime, keep its
 workspace and backups in its own data directory, and reuse the running copy on a second launch.
 
 ### Per-user installer
 
-`scripts/package/dungeon.iss` wraps the unpacked bundle in an Inno Setup installer,
-`ProsperoDungeon-<version>-win-x64-setup.exe`. It installs into
-`%LOCALAPPDATA%\Programs\Prospero Dungeon` without administrator rights, adds a Start menu
+`scripts/package/adventure.iss` wraps the unpacked bundle in an Inno Setup installer,
+`ProsperoAdventure-<version>-win-x64-setup.exe`. It installs into
+`%LOCALAPPDATA%\Programs\Prospero Adventure` without administrator rights, adds a Start menu
 shortcut (a desktop shortcut is optional) and a per-user uninstall entry, and offers to close a
-running Dungeon before replacing files. An upgrade clears the old `app/` and `runtime/` first so
-modules a release drops do not linger. The workspace in `%LOCALAPPDATA%\ProsperoDungeon` is
+running Adventure before replacing files. An upgrade clears the old `app/` and `runtime/` first so
+modules a release drops do not linger. The workspace in `%LOCALAPPDATA%\ProsperoAdventure` is
 never installed, replaced or removed: uninstalling keeps it (a portable `Data/` folder in the
 install folder is kept too), and the app upgrades it on first open
 as described under [Upgrades](#upgrades).
 
 ```powershell
-ISCC.exe /DAppVersion=0.1.0 /DSourceDir=build\package\ProsperoDungeon /DOutputDir=build\package scripts\package\dungeon.iss
+ISCC.exe /DAppVersion=0.1.0 /DSourceDir=build\package\ProsperoAdventure /DOutputDir=build\package scripts\package\adventure.iss
 ```
 
 The `Package` workflow builds the setup from the bundle artifact, publishes both with one
@@ -117,10 +117,10 @@ on a fresh runner: install, launch, install again as an upgrade, launch, restore
 installed launcher, launch, uninstall, with no Python or Node on `PATH`.
 
 A `beside-the-study` job installs Prospero's Study from its repository (pinned to `bbcbde4`),
-starts it on 8765, installs the Dungeon and runs `scripts/package/beside-study-test.ps1`: a
-Dungeon pointed at the Study's port refuses and stops nothing, the Dungeon runs on 8785 while
+starts it on 8765, installs Adventure and runs `scripts/package/beside-study-test.ps1`: a
+Adventure pointed at the Study's port refuses and stops nothing, Adventure runs on 8805 while
 the Study keeps answering, neither data folder holds the other's files, and the Study's database
-never gains the Dungeon's identity marker.
+never gains Adventure's identity marker.
 
 The bundle and setup are not code signed yet, so Windows SmartScreen may warn on first launch. Signing is an
 open release decision.
@@ -143,7 +143,7 @@ Releases only ever publish from `main`.
 
 ### Publishing a release
 
-1. Set the same version in `package.json`, `pyproject.toml` and `dungeon/identity.py`, and write the
+1. Set the same version in `package.json`, `pyproject.toml` and `adventure/identity.py`, and write the
    release notes in `docs/releases/v<version>.md` (plus an entry in the top-level `CHANGELOG.md`).
    A new minor version also needs its title in `docs/releases/titles.json`; patch releases share it, so
    every 0.4 release is named "v0.4.x: Small World, Big News".
@@ -163,12 +163,12 @@ to update, separated by spaces. Pick `title` instead of `notes` to rename releas
 ## Interface
 
 Node 22 or newer. `npm run build` writes `dist/`, which the backend serves at
-http://127.0.0.1:8785 when it exists. For development, run the backend and Vite side by side;
-Vite serves http://127.0.0.1:5177 and forwards `/api` to the backend.
+http://127.0.0.1:8805 when it exists. For development, run the backend and Vite side by side;
+Vite serves http://127.0.0.1:5197 and forwards `/api` to the backend.
 
 ```sh
 npm ci
-npm run dev        # http://127.0.0.1:5177
+npm run dev        # http://127.0.0.1:5197
 npm run lint
 npm test           # pure UI logic in tests/ui, run with Node's test runner
 npm run build
@@ -184,15 +184,15 @@ or `#settings/<tab>` in the address; an unknown tab opens the first tab availabl
 
 ## Workspace and identity
 
-The Dungeon has its own identity so it can run beside Prospero's Study without collisions:
+Adventure has its own identity so it can run beside Prospero's Study without collisions:
 
-| Item | Dungeon | Study |
+| Item | Adventure | Study |
 | --- | --- | --- |
-| Data directory | `DUNGEON_DATA_DIR` if set, else `Data/` in the app folder if it exists (portable; `dungeon/data_folder.py`), else `%LOCALAPPDATA%\ProsperoDungeon` (Windows), `~/Library/Application Support/ProsperoDungeon` (macOS), `$XDG_DATA_HOME/prospero-dungeon` elsewhere | `data/` in the checkout |
-| Database | `dungeon.sqlite3`; `DUNGEON_DB` overrides | `roleplay.sqlite3` (`ROLEPLAY_DB`) |
-| Port | 8785 | 8765 |
-| Credential service | `Prospero Dungeon` (`DUNGEON_API_KEY` fallback) | `Roleplay Interface` |
-| Backup marker | `prospero-dungeon-archive` | Study archive format |
+| Data directory | `ADVENTURE_DATA_DIR` if set, else `Data/` in the app folder if it exists (portable; `adventure/data_folder.py`), else `%LOCALAPPDATA%\ProsperoAdventure` (Windows), `~/Library/Application Support/ProsperoAdventure` (macOS), `$XDG_DATA_HOME/prospero-adventure` elsewhere | `data/` in the checkout |
+| Database | `adventure.sqlite3`; `ADVENTURE_DB` overrides | `roleplay.sqlite3` (`ROLEPLAY_DB`) |
+| Port | 8805 | 8765 |
+| Credential service | `Prospero Adventure` (`ADVENTURE_API_KEY` fallback) | `Roleplay Interface` |
+| Backup marker | `prospero-adventure-archive` | Study archive format |
 
 Every workspace database carries an `app_identity` marker. Opening any other non-empty SQLite
 file, including a Study database, is refused with a read-only check before anything is written.
@@ -200,7 +200,7 @@ file, including a Study database, is refused with a read-only check before anyth
 ### Upgrades
 
 The marker also records the schema version, the app version and a digest of `schema.sql`, so any schema change is noticed without anyone bumping a number. When a workspace
-was written with a different digest, `dungeon/upgrade.py` runs before the server listens:
+was written with a different digest, `adventure/upgrade.py` runs before the server listens:
 
 1. A workspace from a newer schema version, or another app's database, is refused untouched.
 2. A verified backup in the original schema is written to `backups/pre-upgrade-<time>.zip`
@@ -228,20 +228,20 @@ it in full first and can be cancelled with `DELETE /api/backups/restore`). The r
 replace its own open workspace, so the choice is recorded in `pending-restore.json` and the
 launcher applies it on the next start, before the workspace opens; the request is consumed whether
 or not the restore succeeds, so a failure is reported once and never retried. Outside the app, close
-it and run the launcher with `--restore <backup.zip>` (`"Prospero Dungeon.cmd" --restore <file>`
+it and run the launcher with `--restore <backup.zip>` (`"Prospero Adventure.cmd" --restore <file>`
 in the bundle). The current workspace moves to `replaced-<time>/` beside it, not deleted, and moves back if the
 restore fails.
 
 ### Logs
 
-`python -m dungeon.launch` logs to its window and to `logs/dungeon.log` in the data directory
+`python -m adventure.launch` logs to its window and to `logs/adventure.log` in the data directory
 (1 MB, three older files kept). Request logging is off, since a URL can carry a search query, and
-`dungeon/logs.py` masks anything shaped like a credential (bearer tokens, `api_key=` values,
+`adventure/logs.py` masks anything shaped like a credential (bearer tokens, `api_key=` values,
 `sk-`/`hf_`-style keys) in messages and tracebacks before a line is written. The app itself never
 logs message text. An unexpected error returns `{"code": "server_error"}` with a message naming the log's
 full path, and the page shows "Open the log folder" under it on the PC (`POST /api/logs/open-folder`).
 
-**Record model calls** (Settings > Developer, PC only, off by default; `dungeon/model_calls.py`) is the one
+**Record model calls** (Settings > Developer, PC only, off by default; `adventure/model_calls.py`) is the one
 exception: while it is on, every text model call (the narrator and anything else that asks a model) is appended in full to
 `logs/model-calls/YYYY-MM-DD.jsonl`: which part of the app asked, provider, model, address without its query
 string, the system prompt, messages and exact request body, and the streamed text, thinking, finish reason, usage
@@ -255,37 +255,37 @@ Modules were copied from [prosperos-study](https://github.com/vantaloomin/prospe
 commit `bbcbde4` and now evolve independently. Each copied file names its source path and the
 changes made.
 
-| Dungeon file | Study source | Changes |
+| Adventure file | Study source | Changes |
 | --- | --- | --- |
-| `dungeon/memory/retrieval.py` | `server/memory/retrieval.py` | Removed Story stopwords (`continue`, `story`); in-process memoization only |
-| `dungeon/memory/hybrid_recall.py` | `server/memory/hybrid_recall.py` | Takes chunks and a read limit from the caller |
-| `dungeon/memory/chunks.py` | `server/memory/chunks.py` | No persistent cache format |
-| `dungeon/memory/cache.py` | `server/memory/cache.py` | Persistent index backing removed |
-| `dungeon/memory/phrases.py` | `server/phrases/detection.py` | Findings without evidence quotes; single-word check and context line added |
-| `dungeon/memory/budget.py` | `server/memory/budget.py` | Estimates plain text |
-| `dungeon/providers/scheduling.py` | `server/providers/scheduling.py` | Dungeon work kinds |
-| `dungeon/providers/chat.py` | `server/providers/http.py`, `completion.py` | Conversation messages; token-limit and filter stops stay visible incomplete replies |
-| `dungeon/providers/config.py` | `server/providers/config.py` | No LM Studio native protocol; Dungeon environment fallbacks |
-| `dungeon/providers/capabilities.py` | `server/providers/capabilities.py` | No native protocol or safety margin |
-| `dungeon/providers/requests.py` | `server/providers/requests.py` | System text plus alternating messages |
-| `dungeon/providers/events.py` | `server/providers/events.py` | Dungeon `Chunk` with a normalized finish reason |
-| `dungeon/providers/discovery.py`, `discovery_errors.py` | same files | No native model list |
-| `dungeon/providers/codex.py` | `server/providers/codex.py` | Conversation sent as one transcript |
-| `dungeon/providers/vault.py` | `server/providers/vault.py` | Dungeon credential service; delete; in-memory vault for tests |
-| `dungeon/providers/urls.py` | `server/providers/config.py` | URL checks only |
-| `dungeon/text_models.py`, `text_model_routes.py` | `server/profiles.py`, `profile_routes.py`, `roles.py` | Unversioned profiles; workspace job assignments |
+| `adventure/memory/retrieval.py` | `server/memory/retrieval.py` | Removed Story stopwords (`continue`, `story`); in-process memoization only |
+| `adventure/memory/hybrid_recall.py` | `server/memory/hybrid_recall.py` | Takes chunks and a read limit from the caller |
+| `adventure/memory/chunks.py` | `server/memory/chunks.py` | No persistent cache format |
+| `adventure/memory/cache.py` | `server/memory/cache.py` | Persistent index backing removed |
+| `adventure/memory/phrases.py` | `server/phrases/detection.py` | Findings without evidence quotes; single-word check and context line added |
+| `adventure/memory/budget.py` | `server/memory/budget.py` | Estimates plain text |
+| `adventure/providers/scheduling.py` | `server/providers/scheduling.py` | Adventure work kinds |
+| `adventure/providers/chat.py` | `server/providers/http.py`, `completion.py` | Conversation messages; token-limit and filter stops stay visible incomplete replies |
+| `adventure/providers/config.py` | `server/providers/config.py` | No LM Studio native protocol; Adventure environment fallbacks |
+| `adventure/providers/capabilities.py` | `server/providers/capabilities.py` | No native protocol or safety margin |
+| `adventure/providers/requests.py` | `server/providers/requests.py` | System text plus alternating messages |
+| `adventure/providers/events.py` | `server/providers/events.py` | Adventure `Chunk` with a normalized finish reason |
+| `adventure/providers/discovery.py`, `discovery_errors.py` | same files | No native model list |
+| `adventure/providers/codex.py` | `server/providers/codex.py` | Conversation sent as one transcript |
+| `adventure/providers/vault.py` | `server/providers/vault.py` | Adventure credential service; delete; in-memory vault for tests |
+| `adventure/providers/urls.py` | `server/providers/config.py` | URL checks only |
+| `adventure/text_models.py`, `text_model_routes.py` | `server/profiles.py`, `profile_routes.py`, `roles.py` | Unversioned profiles; workspace job assignments |
 | `src/features/settings/models/` | `src/features/models/` | Opens in Settings, not a dialog; no native protocol |
-| `dungeon/database.py`, `errors.py`, `models.py` | `server/database.py`, `errors.py`, `models.py` | Identity marker and Dungeon helpers |
-| `src/api.ts` | `src/api.ts` | Dungeon client header; offline and error codes |
-| `src/styles.css` (palette, type, focus) | `src/styles.css` | Dungeon layout; one palette |
-| `eslint.config.js`, `tsconfig.json` | same files | Dungeon paths |
-| `dungeon/launch.py` | `scripts/launch_interface.py` | Dungeon identity, port and health check |
-| `Windows/install.bat`, `scripts/windows/install.ps1`, `Windows/launch.bat`, `scripts/windows/launch.ps1` | `install.bat`, `install.ps1`, `launch.bat`, `start.ps1` | Dungeon name, checks and launcher |
-| `dungeon/life/chance.py` | `server/mechanics/randomness.py` (`Draws`), `server/mechanics/table_engine.py` (`face`, `resolve`) | `Draws` unchanged; tables are plain dicts with no versions, disabled tables or excluded rows |
-| `dungeon/imports/cards.py` | `server/library_formats/png_cards.py` (`chunks`, `embedded_card`), `server/library_formats/cards.py` (`card_data`) | Errors are `DomainError`s; no duplicate-payload or trailing-data refusal; the card becomes plain text for the paste box, not Library files |
-| `dungeon/imports/formats.py` | `server/library_formats/json_formats.py` (signatures), `native_characters.py` (field maps), `containers.py` (ZIP checks), `charx.py`, `byaf.py` | One plain shape (character, lorebook, picture) instead of Library proposals; lighter BYAF validation; no asset review |
-| `dungeon/imports/lorebooks.py` | `server/library_formats/native_lorebooks.py`, `card_lore.py`, `server/lore/import_rules.py` | Entries are used straight away; pattern entries stay off instead of awaiting review |
-| `dungeon/lore.py` (keyword matching) | `server/lore/matching.py` | Whole-word, case-insensitive literal keywords only |
+| `adventure/database.py`, `errors.py`, `models.py` | `server/database.py`, `errors.py`, `models.py` | Identity marker and Adventure helpers |
+| `src/api.ts` | `src/api.ts` | Adventure client header; offline and error codes |
+| `src/styles.css` (palette, type, focus) | `src/styles.css` | Adventure layout; one palette |
+| `eslint.config.js`, `tsconfig.json` | same files | Adventure paths |
+| `adventure/launch.py` | `scripts/launch_interface.py` | Adventure identity, port and health check |
+| `Windows/install.bat`, `scripts/windows/install.ps1`, `Windows/launch.bat`, `scripts/windows/launch.ps1` | `install.bat`, `install.ps1`, `launch.bat`, `start.ps1` | Adventure name, checks and launcher |
+| `adventure/life/chance.py` | `server/mechanics/randomness.py` (`Draws`), `server/mechanics/table_engine.py` (`face`, `resolve`) | `Draws` unchanged; tables are plain dicts with no versions, disabled tables or excluded rows |
+| `adventure/imports/cards.py` | `server/library_formats/png_cards.py` (`chunks`, `embedded_card`), `server/library_formats/cards.py` (`card_data`) | Errors are `DomainError`s; no duplicate-payload or trailing-data refusal; the card becomes plain text for the paste box, not Library files |
+| `adventure/imports/formats.py` | `server/library_formats/json_formats.py` (signatures), `native_characters.py` (field maps), `containers.py` (ZIP checks), `charx.py`, `byaf.py` | One plain shape (character, lorebook, picture) instead of Library proposals; lighter BYAF validation; no asset review |
+| `adventure/imports/lorebooks.py` | `server/library_formats/native_lorebooks.py`, `card_lore.py`, `server/lore/import_rules.py` | Entries are used straight away; pattern entries stay off instead of awaiting review |
+| `adventure/lore.py` (keyword matching) | `server/lore/matching.py` | Whole-word, case-insensitive literal keywords only |
 
-The Study's `assemble_memory` was not copied: it assumes an accepted Story path. The Dungeon's
-narrator prompt is built in `dungeon/narration/prompt.py`.
+The Study's `assemble_memory` was not copied: it assumes an accepted Story path. Adventure's
+narrator prompt is built in `adventure/narration/prompt.py`.

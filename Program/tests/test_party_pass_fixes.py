@@ -3,7 +3,7 @@ bare hands or a poor weapon no longer takes a character on their feet to Dying."
 from test_combat import foe
 from test_lies import begin
 
-from dungeon import combat, referee
+from adventure import combat, referee
 
 
 class High:

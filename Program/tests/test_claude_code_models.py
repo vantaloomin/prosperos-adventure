@@ -6,9 +6,9 @@ import textwrap
 
 import pytest
 
-from dungeon.errors import DomainError
-from dungeon.providers import claude_code
-from dungeon.providers.config import ProfileConfig
+from adventure.errors import DomainError
+from adventure.providers import claude_code
+from adventure.providers.config import ProfileConfig
 
 # Prints the stream a `claude -p --output-format stream-json --include-partial-messages` turn writes, and
 # records what it was given in seen.json beside itself.
@@ -88,7 +88,7 @@ def test_a_reply_streams_from_claude_p_with_tools_off_and_the_plan_login(stand_i
     assert {'--strict-mcp-config', '--disable-slash-commands', '--no-session-persistence'} <= set(arguments)
     assert seen['system'] == 'You are Sally.'
     assert seen['stdin'] == 'User: Hi\n\nAssistant: Hey!\n\nUser: How are you?\n\nAssistant:'
-    assert 'dungeon-claude-' in seen['cwd']
+    assert 'adventure-claude-' in seen['cwd']
     assert seen['api_key'] is None  # a key set for the Anthropic provider never replaces the plan
 
 
@@ -183,7 +183,7 @@ def test_a_profile_can_use_its_own_claude_account(stand_in, monkeypatch, tmp_pat
 
 
 def test_each_account_has_its_own_places_and_the_folder_must_be_a_full_path():
-    from dungeon.providers.scheduling import resource_for
+    from adventure.providers.scheduling import resource_for
     assert resource_for(config()) == ('claude-cli', 2)
     assert resource_for(config(cli_account_dir='/home/me/.claude-second')) == ('claude-cli:/home/me/.claude-second', 2)
     assert ProfileConfig(provider='claude_code', model='sonnet', cli_account_dir=sys.prefix).cli_account_dir == sys.prefix

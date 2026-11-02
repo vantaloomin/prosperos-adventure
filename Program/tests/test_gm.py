@@ -1,8 +1,8 @@
-"""The GM view (dungeon/gm.py): everything behind the story, secrets included, and set by hand."""
+"""The GM view (adventure/gm.py): everything behind the story, secrets included, and set by hand."""
 from test_director import start
 from test_travel import ok
 
-from dungeon import record
+from adventure import record
 
 
 def test_the_gm_view_shows_what_is_behind_the_story_and_sets_feelings_and_standing(client, app):

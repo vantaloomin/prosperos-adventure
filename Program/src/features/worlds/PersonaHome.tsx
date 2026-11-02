@@ -7,7 +7,7 @@ import type { HomeDraft } from './personaHomeText'
 
 interface PersonaHomeProps { moving: { world: World; home: HomeDraft } | null; disabled?: boolean; onChange: (draft: HomeDraft) => void }
 
-/** Where you live in this world (dungeon/life/where.py): the app picked it, and it is the user's to change. Cities
+/** Where you live in this world (adventure/life/where.py): the app picked it, and it is the user's to change. Cities
  * are the world's own and those a trip from it could reach. */
 export function PersonaHome({ moving, disabled, onChange }: PersonaHomeProps) {
   // Only on the form of the persona the user is now, in the world they are in.

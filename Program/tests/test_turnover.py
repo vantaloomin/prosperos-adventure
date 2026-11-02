@@ -1,12 +1,12 @@
-"""The town changes hands (dungeon/world/turnover.py): townsfolk move away, change jobs and retire, and newcomers
+"""The town changes hands (adventure/world/turnover.py): townsfolk move away, change jobs and retire, and newcomers
 take their place, all seeded from the day with nothing stored."""
 import copy
 from datetime import UTC, date, datetime, timedelta
 
 import pytest
 
-from dungeon.clock import FixedClock
-from dungeon.world import catalog, townsfolk, turnover
+from adventure.clock import FixedClock
+from adventure.world import catalog, townsfolk, turnover
 
 START = turnover.START
 

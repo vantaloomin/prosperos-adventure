@@ -1,7 +1,7 @@
 """Engines kept from Companion for later milestones (M0): the odds engine and the Life Cards deck. They have no
 callers yet, so these tests keep them working until the story uses them."""
-from dungeon import consequences
-from dungeon.life import deck
+from adventure import consequences
+from adventure.life import deck
 
 
 def test_the_odds_sum_to_one_and_a_rule_that_matches_moves_its_option():

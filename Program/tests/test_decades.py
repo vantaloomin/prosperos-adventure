@@ -1,13 +1,13 @@
-"""Decades (dungeon/world/decades.py): a modern world in a past year keeps to it, and the present is untouched."""
+"""Decades (adventure/world/decades.py): a modern world in a past year keeps to it, and the present is untouched."""
 import asyncio
 from datetime import datetime
 
 import pytest
 from pydantic import ValidationError
 
-from dungeon import passages, story
-from dungeon.world import catalog, decades
-from dungeon.world.schema import Career
+from adventure import passages, story
+from adventure.world import catalog, decades
+from adventure.world.schema import Career
 
 AUTUMN_2009 = datetime(2009, 10, 3, 20, 0)
 TODAY = 2026

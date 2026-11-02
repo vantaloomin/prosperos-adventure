@@ -1,7 +1,7 @@
-"""Decide before describing (dungeon/finds.py): what is inside things is rolled once, stored, then described."""
+"""Decide before describing (adventure/finds.py): what is inside things is rolled once, stored, then described."""
 from conftest import Chunk, tell
 
-from dungeon import finds
+from adventure import finds
 
 
 def ok(response):

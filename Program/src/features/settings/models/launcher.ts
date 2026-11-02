@@ -19,7 +19,7 @@ export interface LauncherView { auto_launch: boolean; system: 'windows' | 'mac' 
 
 export const LAUNCHER_KEY = ['launcher']
 
-/** The local programs in use (dungeon/launcher.py), asked again every few seconds while one is starting. */
+/** The local programs in use (adventure/launcher.py), asked again every few seconds while one is starting. */
 export function useLauncher(enabled = true) {
   const client = useQueryClient()
   const query = useQuery({
@@ -37,7 +37,7 @@ export function useLauncher(enabled = true) {
 
 export const STATE_TEXT: Record<LocalProgram['state'], string> = { idle: 'Not running.', starting: 'Starting…', running: 'Running.', failed: 'Did not start.' }
 
-/** The program a profile or image backend uses, when the Dungeon can start it. */
+/** The program a profile or image backend uses, when Adventure can start it. */
 export function programFor(view: LauncherView | undefined, id: string): LocalProgram | undefined {
   return view?.programs.find(item => item.used_by.some(use => use.id === id))
 }

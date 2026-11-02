@@ -3,9 +3,9 @@ import zipfile
 
 import pytest
 
-from dungeon import backup, upgrade
-from dungeon.database import Database, schema_digest
-from dungeon.errors import DomainError
+from adventure import backup, upgrade
+from adventure.database import Database, schema_digest
+from adventure.errors import DomainError
 
 
 def older_workspace(path):
@@ -27,7 +27,7 @@ def tables(path):
 
 
 def test_upgrade_backs_up_first_then_migrates(tmp_path):
-    path = tmp_path / 'dungeon.sqlite3'
+    path = tmp_path / 'adventure.sqlite3'
     older_workspace(path)
     assert 'town_levels' not in tables(path)
 
@@ -42,20 +42,20 @@ def test_upgrade_backs_up_first_then_migrates(tmp_path):
     checked = backup.inspect(saved[0])
     assert checked['manifest']['app_version'] == 'unknown'
     # The backup holds the workspace as it was, and restores through the normal path.
-    restored = backup.restore(saved[0], tmp_path / 'restored' / 'dungeon.sqlite3')
+    restored = backup.restore(saved[0], tmp_path / 'restored' / 'adventure.sqlite3')
     assert 'town_levels' in tables(restored.path)
-    assert not (tmp_path / 'dungeon.sqlite3.upgrading').exists()
+    assert not (tmp_path / 'adventure.sqlite3.upgrading').exists()
 
 
 def test_current_workspace_opens_without_an_upgrade(tmp_path):
-    path = tmp_path / 'dungeon.sqlite3'
+    path = tmp_path / 'adventure.sqlite3'
     Database(path)
     Database(path)
     assert not (tmp_path / 'backups').exists()
 
 
 def test_failed_upgrade_leaves_the_workspace_untouched(tmp_path, monkeypatch):
-    path = tmp_path / 'dungeon.sqlite3'
+    path = tmp_path / 'adventure.sqlite3'
     older_workspace(path)
     connection = sqlite3.connect(path)
     connection.execute('PRAGMA wal_checkpoint(TRUNCATE)')
@@ -70,12 +70,12 @@ def test_failed_upgrade_leaves_the_workspace_untouched(tmp_path, monkeypatch):
         Database(path)
     assert 'was not changed' in error.value.message and 'pre-upgrade-' in error.value.message
     assert path.read_bytes() == before
-    assert not (tmp_path / 'dungeon.sqlite3.upgrading').exists()
+    assert not (tmp_path / 'adventure.sqlite3.upgrading').exists()
     assert 'town_levels' not in tables(path)
 
 
 def test_newer_workspace_is_refused_before_any_backup(tmp_path):
-    path = tmp_path / 'dungeon.sqlite3'
+    path = tmp_path / 'adventure.sqlite3'
     database = Database(path)
     with database.connect(write=True) as connection:
         connection.execute("UPDATE app_identity SET value='999' WHERE key='schema_version'")
@@ -96,7 +96,7 @@ def test_only_recent_pre_upgrade_backups_are_kept(tmp_path):
 
 
 def test_a_workspace_from_before_milestone_0_starts_fresh_and_keeps_the_settings(tmp_path):
-    path = tmp_path / 'dungeon.sqlite3'
+    path = tmp_path / 'adventure.sqlite3'
     database = Database(path)
     with database.connect(write=True) as connection:  # As the companion's schema (version 1) left it.
         connection.execute("UPDATE workspace_settings SET color_scheme='moss'")

@@ -7,7 +7,7 @@ of and the endings a woman's or a man's name takes) or a way of making family na
 drawn from a fixed seed so the lists only change when this file does. Every group has well over a hundred given names
 and over a hundred family names (or titles, for peoples who go by them). Names that read as made up by a language
 model (Elara, Kael, Ravencrest, Thessaly) and names from other people's books are left out, the same check
-dungeon/world/naming.py runs on what a model writes.
+adventure/world/naming.py runs on what a model writes.
 
 A town draws on these through `names.also: ["peoples"]` and weighs each group in its `mix`, beside its own human
 heritages: {"english": 6, "dwarf": 2, "wolf-kin": 1} is a town of mostly human folk with dwarves and wolf-kin.
@@ -20,9 +20,9 @@ from pathlib import Path
 
 PROGRAM = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROGRAM))
-from dungeon.world.naming import COINED_FAMILY, COINED_GIVEN  # noqa: E402
+from adventure.world.naming import COINED_FAMILY, COINED_GIVEN  # noqa: E402
 
-DATA = PROGRAM / 'dungeon' / 'world' / 'data'
+DATA = PROGRAM / 'adventure' / 'world' / 'data'
 GIVEN_NAMES = json.loads((DATA / 'given_names.json').read_text(encoding='utf-8'))
 INVENTED = {word.casefold() for word in [*GIVEN_NAMES['invented']['given'], *GIVEN_NAMES['invented']['family']]}
 # Other people's books and games, and names Vanta has asked to keep out (Voss, Maren, Thorne, Ostrec).

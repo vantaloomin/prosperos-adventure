@@ -7,7 +7,7 @@ import { useTable } from './table'
 const CHOICES: [InjuryPersistence, string][] = [['permanent', 'Permanent: they stay'],
   ['temporary', 'Temporary: they fade with time'], ['none', 'None: wounds heal clean']]
 
-/** Injury persistence (dungeon/injuries.py): whether a maiming leaves a lasting injury, and whether it stays. */
+/** Injury persistence (adventure/injuries.py): whether a maiming leaves a lasting injury, and whether it stays. */
 export function StoryInjuries({ persistence, onSaved }: { persistence: InjuryPersistence; onSaved: () => void }) {
   const { save: keep } = useTable()
   const [error, setError] = useState('')

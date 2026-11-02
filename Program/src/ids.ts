@@ -1,7 +1,7 @@
 // Kept free of imports so tests/ui can load it directly.
 
 /** A random id. Browsers only offer randomUUID on https or this PC, so a phone on the plain http backup address
- * (dungeon/phone/tailscale.py) builds one from random bytes. */
+ * (adventure/phone/tailscale.py) builds one from random bytes. */
 export function newId(): string {
   if (typeof crypto.randomUUID === 'function') return crypto.randomUUID()
   const bytes = crypto.getRandomValues(new Uint8Array(16))

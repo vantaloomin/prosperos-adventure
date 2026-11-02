@@ -1,11 +1,11 @@
-"""5E subclasses and more of the spells (dungeon/rules/srd52.py, dungeon/combat5e.py): the SRD's one subclass a
+"""5E subclasses and more of the spells (adventure/rules/srd52.py, adventure/combat5e.py): the SRD's one subclass a
 class at its subclass level, the subclass's spells, upcasting, conditions laid by a failed save, Magic Missile."""
 from test_combat import ok
 from test_combat5e import Always, swing
 from test_rulesets import start
 
-from dungeon import combat, combat5e, sheet
-from dungeon.rules import srd52
+from adventure import combat, combat5e, sheet
+from adventure.rules import srd52
 
 
 def built(class_id, background_id, level=1):

@@ -23,7 +23,7 @@ function layout(interior: Interior): Map<string, { x: number; y: number }> {
   return found
 }
 
-/** The interior your character is inside (dungeon/delving.py), as far as they know it: the rooms they have been in,
+/** The interior your character is inside (adventure/delving.py), as far as they know it: the rooms they have been in,
  *  the passages between them, and where they are. Ways they have seen but not taken show as short stubs. */
 export function StoryInterior({ interior, open, onLine }: { interior: Interior | null | undefined; open?: boolean; onLine?: (text: string) => void }) {
   if (!interior) return null

@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parents[2] / 'dungeon' / 'world' / 'data' / 'cities' / 'kingswood.json'
+OUT = Path(__file__).resolve().parents[2] / 'adventure' / 'world' / 'data' / 'cities' / 'kingswood.json'
 SRC = 'curated-2026-10'
 
 

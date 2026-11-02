@@ -5,7 +5,7 @@ import { arrayPlaced, signed } from './storyText'
 
 export type FateDraft = { high_concept: string; trouble: string; aspects: string[]; approaches: Record<string, number>; stunts: string[] }
 
-/** A Fate character (dungeon/rules/fate.py build): a high concept and a trouble, a few more aspects, the approaches'
+/** A Fate character (adventure/rules/fate.py build): a high concept and a trouble, a few more aspects, the approaches'
  *  array placed, and stunts, all in the player's own words. Ready when there is a high concept and the array fits. */
 export function FateBuild({ choices, onChange }: { choices: FateChoices; onChange: (build: FateDraft | null) => void }) {
   const [draft, setDraft] = useState<FateDraft>(() => ({

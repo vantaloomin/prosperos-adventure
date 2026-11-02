@@ -1,8 +1,8 @@
-"""Gear wears and the fallen carry things (dungeon/inventory.py wear and repair, dungeon/combat.py, dungeon/finds.py
+"""Gear wears and the fallen carry things (adventure/inventory.py wear and repair, adventure/combat.py, adventure/finds.py
 spoils)."""
 from conftest import Chunk, tell
 
-from dungeon import combat, finds, inventory
+from adventure import combat, finds, inventory
 
 NOW, DAY = '2026-10-01T12:00:00Z', '2026-10-01'
 

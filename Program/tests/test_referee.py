@@ -1,5 +1,5 @@
-"""The Referee (dungeon/referee.py): actions, stats and difficulty for each turn."""
-from dungeon import referee
+"""The Referee (adventure/referee.py): actions, stats and difficulty for each turn."""
+from adventure import referee
 
 
 def test_keyword_rules_find_the_uncertain_actions():

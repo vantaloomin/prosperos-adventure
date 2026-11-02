@@ -1,10 +1,10 @@
 """Their voice stays theirs: lines the narration gave someone, shown to the narrator at later meetings
-(dungeon/story_people.py). Ported from Prospero's Companion 1.0."""
+(adventure/story_people.py). Ported from Prospero's Companion 1.0."""
 from datetime import date, timedelta
 
 from conftest import Chunk
 
-from dungeon import story, story_people
+from adventure import story, story_people
 
 ANNA = {'key': 'anna', 'name': 'Anna', 'full': 'Anna Bell'}
 TOM = {'key': 'tom', 'name': 'Tom', 'full': 'Tom Reed'}

@@ -1,4 +1,4 @@
-"""Fate (dungeon/rules/fate.py): aspects, approaches, 4dF against the ladder, Fate points spent by code."""
+"""Fate (adventure/rules/fate.py): aspects, approaches, 4dF against the ladder, Fate points spent by code."""
 import random
 
 import pytest
@@ -6,8 +6,8 @@ from conftest import Chunk, tell
 from test_rulesets import start
 from test_travel import ok
 
-from dungeon import combat, growth, sheet, story
-from dungeon.rules import fate
+from adventure import combat, growth, sheet, story
+from adventure.rules import fate
 
 APPROACHES = {'Sneaky': 3, 'Clever': 2, 'Quick': 2, 'Careful': 1, 'Flashy': 1, 'Forceful': 0}
 
@@ -141,9 +141,9 @@ def test_a_line_acting_on_the_trouble_earns_a_fate_point_with_nothing_rolled(cli
         assert sheet.native(connection)['fate_points'] == 4
 
 
-# Stress and consequences (dungeon/combat_fate.py) -------------------------------------------------------------
+# Stress and consequences (adventure/combat_fate.py) -------------------------------------------------------------
 
-from dungeon import combat_fate  # noqa: E402
+from adventure import combat_fate  # noqa: E402
 
 
 def fresh():

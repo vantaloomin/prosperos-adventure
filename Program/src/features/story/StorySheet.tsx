@@ -8,8 +8,8 @@ import { abilityLine, bondLine, bondsText, darkText, signed, spellLine, xpLine }
 
 const SHEET_KEY = ['story-sheet']
 
-/** Your character in the campaign's ruleset (dungeon/sheet.py): Prospero's stats, each rolling a bigger die as it
- * grows, one used under pressure marked to grow at the next rest (dungeon/growth.py); or a 5E sheet. And the dark
+/** Your character in the campaign's ruleset (adventure/sheet.py): Prospero's stats, each rolling a bigger die as it
+ * grows, one used under pressure marked to grow at the next rest (adventure/growth.py); or a 5E sheet. And the dark
  * tracks they are on. */
 export function StorySheet({ open }: { open?: boolean }) {
   const sheet = useQuery({ queryKey: SHEET_KEY, queryFn: () => api<Sheet>('/story/sheet') })
@@ -32,7 +32,7 @@ function Rules({ sheet }: { sheet: Sheet }) {
   return <Marvel sheet={sheet} />
 }
 
-/** A Narrative Only sheet (dungeon/rules/narrative.py): no stats; who the character is decides what happens. */
+/** A Narrative Only sheet (adventure/rules/narrative.py): no stats; who the character is decides what happens. */
 function Narrative({ sheet }: { sheet: NarrativeSheet }) {
   return <>
     <p className="subtle">No stats or dice: what happens comes from who your character is and what you write.</p>
@@ -41,7 +41,7 @@ function Narrative({ sheet }: { sheet: NarrativeSheet }) {
   </>
 }
 
-/** A Fate sheet (dungeon/rules/fate.py): the aspects and stunts in the player's words, approaches, Fate points spent
+/** A Fate sheet (adventure/rules/fate.py): the aspects and stunts in the player's words, approaches, Fate points spent
  *  and gained by code as the story goes, stress and consequences. */
 function Fate({ sheet }: { sheet: FateSheet }) {
   const hurt = Object.entries(sheet.consequences).filter(([, text]) => text)
@@ -56,7 +56,7 @@ function Fate({ sheet }: { sheet: FateSheet }) {
   </>
 }
 
-/** A Percentile sheet (dungeon/rules/brp.py): set when the character was made; skills grow by experience. */
+/** A Percentile sheet (adventure/rules/brp.py): set when the character was made; skills grow by experience. */
 function Percentile({ sheet }: { sheet: BrpSheet }) {
   return <>
     <p>{sheet.names.profession}, {sheet.names.personality.toLowerCase()}</p>
@@ -77,7 +77,7 @@ function Percentile({ sheet }: { sheet: BrpSheet }) {
   </>
 }
 
-/** An Ironsworn sheet (dungeon/rules/ironsworn.py): set when the character was made, so it only reads. */
+/** An Ironsworn sheet (adventure/rules/ironsworn.py): set when the character was made, so it only reads. */
 function progressLine(track: NonNullable<IronswornSheet['progress']>[number]) {
   const ticks = track.ticks % 4
   const name = track.rank ? `${track.name} (${track.rank})` : track.name
@@ -120,7 +120,7 @@ function Marvel({ sheet }: { sheet: MarvelSheet }) {
   </>
 }
 
-/** A 5E sheet (dungeon/rules/srd52.py): set when the character was made, so it only reads. */
+/** A 5E sheet (adventure/rules/srd52.py): set when the character was made, so it only reads. */
 function Srd52({ sheet }: { sheet: Srd52Sheet }) {
   const skills = Object.entries(sheet.skill_bonuses)
   return <>

@@ -3,7 +3,7 @@ import { tierText } from './storyText'
 import { EntityName } from './EntityCard'
 import { ThingIcon } from './StoryGear'
 
-/** Your character's tier (dungeon/tiers.py) and the factions they know of (dungeon/factions.py), with how you stand
+/** Your character's tier (adventure/tiers.py) and the factions they know of (adventure/factions.py), with how you stand
  * with each. */
 export function StoryPowers({ factions, tier, open }: { factions: StoryFaction[]; tier?: StoryTier | null; open?: boolean }) {
   if (!factions.length && !tier) return null

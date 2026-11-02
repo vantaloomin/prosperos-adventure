@@ -80,7 +80,7 @@ export function rollWhat(roll: StoryRoll): string {
 }
 
 /** "Allure d8: 62 + 5, hard (-10) = 57, Success at a cost"; under 5E "Athletics d20: 12 + 5 = 17 vs DC 15, Success". */
-/** A check that needed no dice: a 5E spell with no slot left just fails (dungeon/sheet.py cast). */
+/** A check that needed no dice: a 5E spell with no slot left just fails (adventure/sheet.py cast). */
 export function unrolled(roll: StoryRoll): boolean {
   return roll.ruleset === 'srd52' && roll.natural === 0
 }
@@ -91,7 +91,7 @@ export function rollText(roll: StoryRoll): string {
   return dicedText(roll)
 }
 
-/** A Fate roll's line without its dice ("Sneaky +3 vs Fair (+2) (stunt +2)"), and its four faces (dungeon/rules/fate.py). */
+/** A Fate roll's line without its dice ("Sneaky +3 vs Fair (+2) (stunt +2)"), and its four faces (adventure/rules/fate.py). */
 export function fateLine(skill: string | null | undefined): string {
   return (skill ?? '').replace(/, dice [+0−]{4}$/, '')
 }
@@ -261,7 +261,7 @@ export const LEVEL_NAMES = ['Off the page', 'Restrained', 'Mature', 'Unflinching
 export const VEIL_TOPICS: [VeilTopic, string][] = [['torture', 'Torture'], ['sexual-violence', 'Sexual violence'], ['child-harm', 'Harm to children'],
   ['self-harm', 'Self-harm'], ['mutilation', 'Mutilation'], ['execution', 'Executions'], ['slavery', 'Slavery'], ['sacrifice', 'Sacrifice'],
   ['addiction', 'Addiction'], ['disease', 'Disease']]
-/** The narration format's choices (dungeon/narration/prompt.py Format). */
+/** The narration format's choices (adventure/narration/prompt.py Format). */
 export const POVS: [NarrationPov, string][] = [['third', 'Close third person ("she draws her knife")'],
   ['second', 'Second person ("you draw your knife")'], ['first', 'First person ("I draw my knife")']]
 export const TENSES: [NarrationTense, string][] = [['past', 'Past tense'], ['present', 'Present tense']]
@@ -300,7 +300,7 @@ export function paceText(pace: TurnPace): string {
     skipped.length ? `skipped ${skipped.join(' and ')} for time` : ''].filter(Boolean).join(' · ')
 }
 
-/** The arcs a campaign can start with (dungeon/tiers.py ARCS) and how fast it climbs. */
+/** The arcs a campaign can start with (adventure/tiers.py ARCS) and how fast it climbs. */
 export const ARC_NAMES: Record<StoryArc, string> = {
   grounded: 'Grounded: stays close to home', classic: 'Classic: from the street to the gods', epic: 'Epic: starts high',
 }
@@ -327,7 +327,7 @@ export function bondLine(bond: SheetBonds['bonds'][number]): string {
   return `${bond.name} (${bond.how}${bond.state === 'whole' ? '' : `, ${bond.state}`})`
 }
 
-/** How hard the director pushes the story (dungeon/director.py HANDS). */
+/** How hard the director pushes the story (adventure/director.py HANDS). */
 export const HAND_NAMES: Record<StoryHand, string> = {
   soft: 'Soft: the story waits for you', guiding: 'Guiding: the story comes looking for you', firm: 'Firm: the story moves on schedule',
 }
@@ -352,7 +352,7 @@ export function sentences(paragraph: string): string[] {
 const words = (text: string) => (text.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []).join(' ')
 
 /** The sentences of `saved` whose words are not in `draft`: what the checks reworded after the narration streamed
- *  (dungeon/pace.py). Punctuation alone doesn't count, so the always-on em dash fix marks nothing. */
+ *  (adventure/pace.py). Punctuation alone doesn't count, so the always-on em dash fix marks nothing. */
 export function reworded(draft: string, saved: string): Set<string> {
   const before = ` ${words(draft)} `
   return new Set(saved.split(/\n{2,}/).flatMap(sentences).filter((sentence) => {
@@ -364,7 +364,7 @@ export function reworded(draft: string, saved: string): Set<string> {
 /** A turn before any of it has been told. */
 export const NO_TURN: TurnSoFar = { stage: null, actions: [], bands: null, rolls: [] }
 
-/** A turn under way with one more of its stream events (dungeon/story.py answer). */
+/** A turn under way with one more of its stream events (adventure/story.py answer). */
 export function turnAfter(turn: TurnSoFar, event: TurnEvent): TurnSoFar {
   if ('stage' in event) return { ...turn, stage: event.stage }
   if ('actions' in event) return { ...turn, actions: event.actions, bands: event.bands ?? null }
@@ -444,7 +444,7 @@ export function diceNotation(faces: DieFace[]): string {
 
 const ENDED_BY: Record<string, string> = { place: 'a new place', time: 'time passing', fight: 'the fight ending', quest: 'a quest ending', player: 'you' }
 
-/** A chapter's line in the list: its number, its length, and what ended it (dungeon/chapters.py). */
+/** A chapter's line in the list: its number, its length, and what ended it (adventure/chapters.py). */
 export function chapterLine(chapter: Pick<StoryChapter, 'number' | 'turns' | 'open' | 'ended_by'>): string {
   const turns = `${chapter.turns} ${chapter.turns === 1 ? 'turn' : 'turns'}`
   if (chapter.open) return `Chapter ${chapter.number} · ${turns} · under way`
@@ -456,7 +456,7 @@ export function endingText(ending: string): string {
   return ending === 'death' ? ' · ended in death' : ending === 'lost' ? ' · ended with the character lost' : ''
 }
 
-/** How an earlier campaign's character comes into a new one (dungeon/legacy.py). */
+/** How an earlier campaign's character comes into a new one (adventure/legacy.py). */
 export const LEGACY_ROLES: Record<LegacyRole, string> = {
   legend: 'A legend: the world remembers them',
   villain: 'A villain: they live on, hidden and turned',
@@ -492,7 +492,7 @@ export function brpCost(characteristics: Record<string, number>, start: number, 
   return Object.entries(characteristics).reduce((sum, [stat, value]) => sum + (value - start) * (costly.includes(stat) ? price : 1), 0)
 }
 
-/** Whether the standard array is placed on the six abilities, each value once (dungeon/rules/srd52.py build). */
+/** Whether the standard array is placed on the six abilities, each value once (adventure/rules/srd52.py build). */
 export function arrayPlaced(scores: Record<string, number>, array: number[]): boolean {
   const placed = Object.values(scores).sort((a, b) => b - a)
   return placed.length === array.length && placed.every((value, index) => value === array[index])
@@ -515,7 +515,7 @@ export function receiptsByReply(messages: StoryMessage[]): Map<string, ReceiptCh
     .map((message) => [message.id, byLine.get(message.reply_to ?? '') ?? []]))
 }
 
-/** A school or guild in a line: the term, the grades so far and classes missed (dungeon/institutions.py). */
+/** A school or guild in a line: the term, the grades so far and classes missed (adventure/institutions.py). */
 export function institutionLine(item: Pick<JournalInstitution, 'term' | 'grades'>): string {
   if (!item.term) return 'Out of term'
   if (!item.grades) return `${item.term} · no grades yet`

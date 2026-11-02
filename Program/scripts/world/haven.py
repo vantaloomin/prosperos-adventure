@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parents[2] / 'dungeon' / 'world' / 'data' / 'cities' / 'haven.json'
+OUT = Path(__file__).resolve().parents[2] / 'adventure' / 'world' / 'data' / 'cities' / 'haven.json'
 SRC = 'curated-2026-10'
 
 
@@ -136,7 +136,7 @@ places = [
           'campus. The trails are kept by day; after dusk the lycans run and the witches gather.',
           ['woods', 'night', 'lycans'], 'free', 'outdoor', ['solo', 'friends', 'date'], ALWAYS,
           spots=['the creek', 'the training clearing', 'the unmarked paths']),
-    # Off the trails (dungeon/hexes.py): the hex crawl's stand-in for wherever a walk past Ironroot or the Riverwalk ends.
+    # Off the trails (adventure/hexes.py): the hex crawl's stand-in for wherever a walk past Ironroot or the Riverwalk ends.
     place('the-back-woods', 'the back woods', 'trail', 'campus', 'Off the kept trails, in the woods and hills that run '
           'west and south of Haven: second-growth forest, old stone walls, hunting stands and no signal.',
           ['woods', 'wild', 'remote'], 'free', 'outdoor', ['solo', 'friends'], ALWAYS,

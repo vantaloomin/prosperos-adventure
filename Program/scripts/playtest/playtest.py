@@ -1,6 +1,6 @@
-"""Play real sessions of the Dungeon end to end, with a real model, and write what happened.
+"""Play real sessions of Adventure end to end, with a real model, and write what happened.
 
-Each scenario starts its own Dungeon (scripts/acceptance/serve.py) on a fresh data folder, sets up a Claude Code
+Each scenario starts its own Adventure (scripts/acceptance/serve.py) on a fresh data folder, sets up a Claude Code
 profile for the narrator, Referee and Continuity jobs, and plays its lines through the API the screen uses. The
 transcript (narration, rolls, the fight, gear, journal, the director's hidden note) goes in a Markdown file per
 scenario, with checks that flag what looks wrong.
@@ -29,7 +29,7 @@ from scenarios import SCENARIOS
 
 PROGRAM = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROGRAM))
-from dungeon.identity import CLIENT_HEADER  # noqa: E402
+from adventure.identity import CLIENT_HEADER  # noqa: E402
 
 
 def free_port() -> int:
@@ -38,13 +38,13 @@ def free_port() -> int:
         return probe.getsockname()[1]
 
 
-class Dungeon:
-    """One running Dungeon on its own data folder."""
+class Adventure:
+    """One running Adventure on its own data folder."""
 
     def __init__(self, data_dir: Path, log):
         self.data_dir = data_dir
         self.port = free_port()
-        environment = {**os.environ, 'DUNGEON_DATA_DIR': str(data_dir), 'PYTHONPATH': str(PROGRAM)}
+        environment = {**os.environ, 'ADVENTURE_DATA_DIR': str(data_dir), 'PYTHONPATH': str(PROGRAM)}
         self.process = subprocess.Popen([sys.executable, str(PROGRAM / 'scripts' / 'acceptance' / 'serve.py'),
                                          '--port', str(self.port)], cwd=PROGRAM, env=environment,
                                         stdout=log, stderr=subprocess.STDOUT)
@@ -57,9 +57,9 @@ class Dungeon:
             except httpx.TransportError:
                 pass
             if self.process.poll() is not None:
-                raise RuntimeError('The Dungeon stopped while starting; see the server log.')
+                raise RuntimeError('Adventure stopped while starting; see the server log.')
             time.sleep(0.5)
-        raise RuntimeError('The Dungeon did not start.')
+        raise RuntimeError('Adventure did not start.')
 
     def call(self, method: str, path: str, body=None, ok=(200, 201)):
         response = self.http.request(method, path, json=body)
@@ -68,7 +68,7 @@ class Dungeon:
         return response.json() if response.content else None
 
     def database(self):
-        return sqlite3.connect(f'file:{self.data_dir / "dungeon.sqlite3"}?mode=ro', uri=True)
+        return sqlite3.connect(f'file:{self.data_dir / "adventure.sqlite3"}?mode=ro', uri=True)
 
     def stop(self):
         self.http.close()
@@ -91,30 +91,30 @@ class ApiError(Exception):
         self.status = status
 
 
-def set_up(dungeon: Dungeon, account_dir: str, model: str, helper_model: str, effort: str | None):
-    dungeon.call('PUT', '/api/settings', {'show_odds': True, 'ai_notice_confirmed': True})
+def set_up(adventure: Adventure, account_dir: str, model: str, helper_model: str, effort: str | None):
+    adventure.call('PUT', '/api/settings', {'show_odds': True, 'ai_notice_confirmed': True})
     common = {'provider': 'claude_code', 'cli_account_dir': account_dir, 'timeout_seconds': 600,
               'max_output_tokens': 1200}
     if effort:
         common['reasoning_effort'] = effort
-    narrator = dungeon.call('POST', '/api/models/profiles', {'name': f'Playtest {model}',
+    narrator = adventure.call('POST', '/api/models/profiles', {'name': f'Playtest {model}',
                                                              'config': common | {'model': model}})
-    helper = dungeon.call('POST', '/api/models/profiles', {'name': f'Playtest {helper_model}',
+    helper = adventure.call('POST', '/api/models/profiles', {'name': f'Playtest {helper_model}',
                                                            'config': common | {'model': helper_model}})
-    who = dungeon.call('POST', f"/api/models/profiles/{narrator['id']}/check")
-    jobs = {job['key'] for job in dungeon.call('GET', '/api/models')['jobs']}
+    who = adventure.call('POST', f"/api/models/profiles/{narrator['id']}/check")
+    jobs = {job['key'] for job in adventure.call('GET', '/api/models')['jobs']}
     for job, profile in (('chat', narrator), ('story', narrator), ('referee', helper), ('continuity', helper),
                          ('director', helper), ('importer', narrator)):
         if job in jobs:
-            dungeon.call('PUT', '/api/models/routes', {'job': job, 'profile_id': profile['id']})
+            adventure.call('PUT', '/api/models/routes', {'job': job, 'profile_id': profile['id']})
     return who.get('note', '')
 
 
 class Play:
-    """A scenario's lines played against one Dungeon, written to its transcript as they go."""
+    """A scenario's lines played against one Adventure, written to its transcript as they go."""
 
-    def __init__(self, dungeon: Dungeon, out):
-        self.dungeon = dungeon
+    def __init__(self, adventure: Adventure, out):
+        self.adventure = adventure
         self.out = out
         self.problems: list[str] = []
         self.turns = 0
@@ -128,13 +128,13 @@ class Play:
         self.write(f'> **FLAG:** {text}')
 
     def story(self):
-        return self.dungeon.call('GET', '/api/story')
+        return self.adventure.call('GET', '/api/story')
 
     def start(self, premade=None, persona=None, stats=None, **choices):
         body = {'premade_id': premade} if premade else {'persona': persona, 'stats': stats}
         # The dice show, so the transcript has every roll (the Table keeps it per campaign).
         choices['table'] = {'show_odds': True} | (choices.get('table') or {})
-        self.dungeon.call('POST', '/api/story/start', body | choices)
+        self.adventure.call('POST', '/api/story/start', body | choices)
         view = self.story()
         scene = view['scene']
         self.write(f"## Start: {premade or persona['name']}\n")
@@ -144,7 +144,7 @@ class Play:
 
     def move(self, place_id: str, city_id='kingswood'):
         try:
-            self.dungeon.call('PUT', '/api/story/scene', {'city_id': city_id, 'place_id': place_id})
+            self.adventure.call('PUT', '/api/story/scene', {'city_id': city_id, 'place_id': place_id})
             self.write(f'### Move to {place_id}\n')
         except ApiError as error:
             self.write(f'### Move to {place_id} refused ({error})\n')
@@ -155,7 +155,7 @@ class Play:
         self.write(f'### {self.turns}. > {text}\n')
         started = time.monotonic()
         done, error, first = None, None, None
-        with self.dungeon.http.stream('POST', '/api/story/messages/stream',
+        with self.adventure.http.stream('POST', '/api/story/messages/stream',
                                       json={'text': text, 'client_id': uuid.uuid4().hex}) as response:
             if response.status_code != 200:
                 response.read()
@@ -218,7 +218,7 @@ class Play:
         """The fight round kept with the line, if one was fought (a fight can start and end on the same line)."""
         if not message_id:
             return []
-        with self.dungeon.database() as connection:
+        with self.adventure.database() as connection:
             row = connection.execute('SELECT lines FROM story_rounds WHERE message_id=?', (message_id,)).fetchone()
         return json.loads(row[0]) if row else []
 
@@ -226,7 +226,7 @@ class Play:
         """The hidden things kept with the line: the director's note, beats, Life Cards (story_cards)."""
         if not message_id:
             return []
-        with self.dungeon.database() as connection:
+        with self.adventure.database() as connection:
             rows = connection.execute('SELECT scene, lines FROM story_cards WHERE message_id=?', (message_id,))
             return [(scene, ' / '.join(str(line) for line in json.loads(lines or '[]'))) for scene, lines in rows
                     if lines and lines != '[]']
@@ -251,7 +251,7 @@ class Play:
             self.flag(f'Narration is long: {words} words.')
 
     def gear(self):
-        gear = self.dungeon.call('GET', '/api/story/gear')
+        gear = self.adventure.call('GET', '/api/story/gear')
         items = ', '.join(f"{i.get('name')} x{i.get('qty', 1)}"
                           + (' (stolen)' if i.get('stolen') else '')
                           + (f" ({i['condition']})" if i.get('condition') not in (None, 'sound') else '')
@@ -270,13 +270,13 @@ class Play:
 
     def buy(self, item_id: str, qty=1):
         try:
-            self.dungeon.call('POST', '/api/story/shop/buy', {'item_id': item_id, 'qty': qty})
+            self.adventure.call('POST', '/api/story/shop/buy', {'item_id': item_id, 'qty': qty})
             self.write(f'### Buy {qty} {item_id} at the counter\n')
         except ApiError as error:
             self.write(f'### Buy {item_id} refused ({error})\n')
 
     def journal(self):
-        journal = self.dungeon.call('GET', '/api/story/journal')
+        journal = self.adventure.call('GET', '/api/story/journal')
         self.write('#### Journal')
         for quest in journal.get('quests') or []:
             self.write(f"- quest {quest.get('title')}: {quest.get('status')}, left {quest.get('left')}")
@@ -288,7 +288,7 @@ class Play:
         return journal
 
     def sheet(self):
-        sheet = self.dungeon.call('GET', '/api/story/sheet')
+        sheet = self.adventure.call('GET', '/api/story/sheet')
         self.write(f"- sheet: {json.dumps(sheet, ensure_ascii=False)[:2000]}\n")
         return sheet
 
@@ -304,7 +304,7 @@ class Play:
         view = self.story()
         lines = [m for m in view['messages'] if m['role'] == 'user']
         target = lines[-turns_ago]
-        result = self.dungeon.call('POST', '/api/story/back', {'message_id': target['id']})
+        result = self.adventure.call('POST', '/api/story/back', {'message_id': target['id']})
         self.clock = None
         self.write(f"### Go back to before \"{target['text']}\" (draft: {result.get('draft')!r})\n")
         return result.get('draft') or target['text']
@@ -314,7 +314,7 @@ class Play:
     def attempt(self, label: str, method: str, path: str, body=None, expect_refusal=False):
         """A screen action that may be refused; a refusal is a finding unless the scenario expects one."""
         try:
-            result = self.dungeon.call(method, path, body)
+            result = self.adventure.call(method, path, body)
         except ApiError as error:
             self.last_error = str(error)
             self.write(f'### {label}: refused ({error})\n')
@@ -348,7 +348,7 @@ class Play:
         return campaign
 
     def gm(self):
-        behind = self.dungeon.call('GET', '/api/story/gm')
+        behind = self.adventure.call('GET', '/api/story/gm')
         self.write('#### Behind the story (GM view)')
         for quest in behind.get('quests') or []:
             self.write(f"- quest {quest.get('title')}: {quest.get('status')}, known {quest.get('known')}")
@@ -366,14 +366,14 @@ class Play:
 
     def export(self):
         for format in ('md', 'epub', 'pdf'):
-            response = self.dungeon.http.get('/api/story/export/book', params={'format': format})
+            response = self.adventure.http.get('/api/story/export/book', params={'format': format})
             self.write(f"### Export the book as {format}: {response.status_code}, {len(response.content)} bytes, "
                        f"{response.headers.get('content-type')}")
             if response.status_code != 200 or not response.content:
                 self.flag(f'Book export as {format} failed: {response.status_code} {response.text[:200]}')
             elif format == 'md':
                 self.write('```\n' + response.text[:1500] + '\n```')
-        campaign = self.dungeon.http.get('/api/story/export/campaign')
+        campaign = self.adventure.http.get('/api/story/export/campaign')
         self.write(f'### Export the campaign: {campaign.status_code}, {len(campaign.content)} bytes\n')
         if campaign.status_code != 200:
             self.flag(f'Campaign export failed: {campaign.status_code} {campaign.text[:200]}')
@@ -384,12 +384,12 @@ class Play:
 def run(name: str, scenario, args, out_dir: Path):
     data_dir = Path(tempfile.mkdtemp(prefix=f'playtest-{name}-'))
     log = open(out_dir / f'{name}.server.log', 'w', encoding='utf-8')
-    dungeon = Dungeon(data_dir, log)
+    adventure = Adventure(data_dir, log)
     path = out_dir / f'{name}.md'
     with open(path, 'w', encoding='utf-8') as out:
-        play = Play(dungeon, out)
+        play = Play(adventure, out)
         try:
-            note = set_up(dungeon, args.account_dir, args.model, args.helper_model, args.effort)
+            note = set_up(adventure, args.account_dir, args.model, args.helper_model, args.effort)
             play.write(f'# Playtest: {name}\n\n{scenario.__doc__ or ""}\n\nModel {args.model}, helpers '
                        f'{args.helper_model}. {note}\nData: {data_dir}\n')
             scenario(play)
@@ -399,7 +399,7 @@ def run(name: str, scenario, args, out_dir: Path):
         finally:
             play.write('## Flags\n')
             play.write('\n'.join(f'- {p}' for p in play.problems) or '- none')
-            dungeon.stop()
+            adventure.stop()
             log.close()
     return path, play.problems
 

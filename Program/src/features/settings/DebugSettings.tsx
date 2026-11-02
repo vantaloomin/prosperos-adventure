@@ -39,7 +39,7 @@ function useDebugCalls() {
   return { call, finish, busy, problem }
 }
 
-/** Settings > Developer: move the app's time ahead or run it faster, then go back (dungeon/debug_time.py). */
+/** Settings > Developer: move the app's time ahead or run it faster, then go back (adventure/debug_time.py). */
 export function DebugSettings() {
   const status = useDebugTime()
   const { call, finish, busy, problem } = useDebugCalls()

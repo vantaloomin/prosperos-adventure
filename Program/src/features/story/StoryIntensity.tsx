@@ -7,8 +7,8 @@ import { NarrationFormat } from './NarrationFormat'
 import { useTable } from './table'
 import { POLITICS_LEVELS } from './politicsText'
 
-/** How far the story goes on the page (dungeon/story.py intensity) and how eventful it is (dungeon/happenings.py):
- * the world's own, or the player's, at any time; and whether off-page beats are shown (dungeon/beats.py). This
+/** How far the story goes on the page (adventure/story.py intensity) and how eventful it is (adventure/happenings.py):
+ * the world's own, or the player's, at any time; and whether off-page beats are shown (adventure/beats.py). This
  * campaign's rules, kept at the Table (./table.ts). */
 export function StoryIntensity({ intensity, onSaved }: { intensity: Intensity; onSaved: () => void }) {
   const { rules, save: keep } = useTable()
@@ -62,7 +62,7 @@ export function StoryIntensity({ intensity, onSaved }: { intensity: Intensity; o
 }
 
 
-/** Who can stop the character leaving a scene (dungeon/leaving.py): anyone with a reason, only a fight, or nobody. */
+/** Who can stop the character leaving a scene (adventure/leaving.py): anyone with a reason, only a fight, or nobody. */
 function LeavingRule({ rules, save }: { rules?: TableRules | null; save: (change: Partial<TableRules>) => void }) {
   if (!rules) return null
   return <Field label="Who can stop you leaving" hint="Anyone with a reason: someone there who hates you and isn't afraid of you blocks the way, someone fond of you begs you to stay, and a fight holds you until you flee. Each is a roll to get away. Only fights: conversations never hold you. Nobody: you can walk out of a fight too.">
@@ -75,7 +75,7 @@ function LeavingRule({ rules, save }: { rules?: TableRules | null; save: (change
   </Field>
 }
 
-/** How much local politics goes on (dungeon/politics.py): the town's arguments, its factions and who takes which side. */
+/** How much local politics goes on (adventure/politics.py): the town's arguments, its factions and who takes which side. */
 function PoliticsRule({ rules, save }: { rules?: TableRules | null; save: (change: Partial<TableRules>) => void }) {
   if (!rules) return null
   const value = rules.politics ?? 'true_to_life'
@@ -87,7 +87,7 @@ function PoliticsRule({ rules, save }: { rules?: TableRules | null; save: (chang
   </Field>
 }
 
-/** Each category on its own slider, the veils, and the narrator's voice (dungeon/tone.py). A preset above sets every
+/** Each category on its own slider, the veils, and the narrator's voice (adventure/tone.py). A preset above sets every
  *  category again; the veils and the voice stay. */
 function ToneDetails({ intensity, save }: { intensity: Intensity; save: (change: Partial<TableRules>) => void }) {
   const levels = intensity.levels

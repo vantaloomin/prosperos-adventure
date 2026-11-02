@@ -182,7 +182,7 @@ function WorldRow({ world, run, store, onSwitch }: { world: World; run: Run; sto
   )
 }
 
-/** A campaign file (Story > Export) from here or another machine, as a new world (dungeon/legacy.py). */
+/** A campaign file (Story > Export) from here or another machine, as a new world (adventure/legacy.py). */
 function ImportCampaign({ run, store }: { run: Run; store: (data: WorldsData) => void }) {
   const input = useRef<HTMLInputElement>(null)
   const chosen = (file: File | undefined) => { if (file) void run(async () => { store(await upload<WorldsData>('/worlds/import', file)) }) }

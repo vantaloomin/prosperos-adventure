@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Launches an installed or unpacked Prospero Dungeon bundle on a machine without Python or Node.
+Launches an installed or unpacked Prospero Adventure bundle on a machine without Python or Node.
 
 .DESCRIPTION
 Verifies every file against bundle.json, hides any Python or Node from PATH and poisons the Python
@@ -10,13 +10,13 @@ running copy on a second launch and stays clear of Prospero's Study port. Used b
 #>
 param(
   [Parameter(Mandatory = $true)][string]$Bundle,
-  [string]$DataDir = (Join-Path $env:LOCALAPPDATA 'ProsperoDungeon'),
+  [string]$DataDir = (Join-Path $env:LOCALAPPDATA 'ProsperoAdventure'),
   # Prospero's Study is already running on 8765; check it instead of holding the port ourselves.
   [switch]$StudyRunning
 )
 $ErrorActionPreference = 'Stop'
 $Bundle = (Resolve-Path -LiteralPath $Bundle).Path
-$launcher = Join-Path $Bundle 'Prospero Dungeon.cmd'
+$launcher = Join-Path $Bundle 'Prospero Adventure.cmd'
 
 function Check([bool]$condition, [string]$message) {
   if (-not $condition) { throw $message }
@@ -39,27 +39,27 @@ Check ($mismatched.Count -eq 0) "all $(@($manifest.files.PSObject.Properties).Co
 $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot\System32\WindowsPowerShell\v1.0"
 $env:PYTHONPATH = 'C:\nonexistent\pythonpath'
 $env:PYTHONHOME = 'C:\nonexistent\pythonhome'
-Remove-Item Env:DUNGEON_DATA_DIR, Env:DUNGEON_DB -ErrorAction SilentlyContinue
+Remove-Item Env:ADVENTURE_DATA_DIR, Env:ADVENTURE_DB -ErrorAction SilentlyContinue
 $toolchain = @(Get-Command python, python3, py, node, npm -CommandType Application -ErrorAction SilentlyContinue)
 Check ($toolchain.Count -eq 0) "no Python or Node on PATH $($toolchain.Source -join ', ')"
 
-# Prospero's Study's port is taken, as it would be with the Study running beside the Dungeon.
+# Prospero's Study's port is taken, as it would be with the Study running beside Adventure.
 $study = $null
 if (-not $StudyRunning) {
   $study = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Loopback, 8765)
   $study.Start()
 }
-$log = Join-Path ([System.IO.Path]::GetTempPath()) 'dungeon-smoke.log'
+$log = Join-Path ([System.IO.Path]::GetTempPath()) 'adventure-smoke.log'
 $app = Start-Process -FilePath $env:ComSpec -ArgumentList '/d', '/c', "`"`"$launcher`" --no-browser > `"$log`" 2>&1`"" -PassThru -WindowStyle Hidden
 try {
   $health = $null
   foreach ($attempt in 1..120) {
-    try { $health = Invoke-RestMethod -Uri 'http://127.0.0.1:8785/api/health' -TimeoutSec 2; break } catch { Start-Sleep -Milliseconds 500 }
+    try { $health = Invoke-RestMethod -Uri 'http://127.0.0.1:8805/api/health' -TimeoutSec 2; break } catch { Start-Sleep -Milliseconds 500 }
   }
-  if (-not $health) { Get-Content -LiteralPath $log -ErrorAction SilentlyContinue; throw 'The Dungeon did not answer on port 8785.' }
-  Check ($health.app_id -eq 'prospero-dungeon' -and $health.version -eq $manifest.version) "answers as $($health.app_id) $($health.version)"
-  $page = Invoke-WebRequest -Uri 'http://127.0.0.1:8785/' -UseBasicParsing
-  Check ($page.Content -match 'Prospero Dungeon') 'serves the interface'
+  if (-not $health) { Get-Content -LiteralPath $log -ErrorAction SilentlyContinue; throw 'Adventure did not answer on port 8805.' }
+  Check ($health.app_id -eq 'prospero-adventure' -and $health.version -eq $manifest.version) "answers as $($health.app_id) $($health.version)"
+  $page = Invoke-WebRequest -Uri 'http://127.0.0.1:8805/' -UseBasicParsing
+  Check ($page.Content -match 'Prospero Adventure') 'serves the interface'
 
   $runtime = Join-Path $Bundle 'runtime\python.exe'
   $server = Get-CimInstance Win32_Process -Filter "Name = 'python.exe'" | Where-Object { $_.CommandLine -match 'dungeon\.launch' }
@@ -68,8 +68,8 @@ try {
   $vault = & $runtime -I -c 'import keyring; print(type(keyring.get_keyring()).__name__)'
   Check ($vault -eq 'WinVaultKeyring') "finds the Windows credential store ($vault)"
 
-  Check (Test-Path -LiteralPath (Join-Path $DataDir 'dungeon.sqlite3')) "keeps its workspace in $DataDir"
-  $backup = Invoke-RestMethod -Method Post -Uri 'http://127.0.0.1:8785/api/backups' -Headers @{ 'x-dungeon-client' = 'workspace' }
+  Check (Test-Path -LiteralPath (Join-Path $DataDir 'adventure.sqlite3')) "keeps its workspace in $DataDir"
+  $backup = Invoke-RestMethod -Method Post -Uri 'http://127.0.0.1:8805/api/backups' -Headers @{ 'x-adventure-client' = 'workspace' }
   Check ((Test-Path -LiteralPath $backup.path) -and $backup.path.StartsWith($DataDir)) "writes backups inside its workspace: $($backup.path)"
 
   $second = & $env:ComSpec /d /c "`"$launcher`" --no-browser" 2>&1 | Out-String

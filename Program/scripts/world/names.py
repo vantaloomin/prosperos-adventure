@@ -11,7 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import peoples  # noqa: E402  (beastkin, fantasy humanoids and other peoples, each with its own naming scheme)
 
-OUT = Path(__file__).resolve().parents[2] / 'dungeon' / 'world' / 'data' / 'names.json'
+OUT = Path(__file__).resolve().parents[2] / 'adventure' / 'world' / 'data' / 'names.json'
 LIFESPANS = OUT.with_name('lifespans.json')
 
 

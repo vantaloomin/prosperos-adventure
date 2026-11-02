@@ -5,7 +5,7 @@ import textwrap
 
 import httpx
 
-from dungeon.providers import balance, codex
+from adventure.providers import balance, codex
 
 OPENROUTER = {'provider': 'openrouter', 'base_url': 'https://openrouter.ai/api/v1'}
 

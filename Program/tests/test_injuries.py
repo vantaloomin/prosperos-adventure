@@ -1,4 +1,4 @@
-"""Lasting injuries and treatment (dungeon/injuries.py), under the Injury persistence setting."""
+"""Lasting injuries and treatment (adventure/injuries.py), under the Injury persistence setting."""
 from datetime import datetime, timedelta
 
 from conftest import tell
@@ -6,7 +6,7 @@ from test_combat import Dice, foe
 from test_inventory import begin
 from test_travel import Road, ok, reply
 
-from dungeon import combat, injuries, inventory
+from adventure import combat, injuries, inventory
 
 NOW = datetime(1290, 5, 1, 12)
 ILSE = {'sheet': {'name': 'Ilse Rook', 'role': 'shrine keeper', 'about': 'Keeper of the shrine, healer and gravedigger.'}}

@@ -1,4 +1,4 @@
-from dungeon import prompt_library
+from adventure import prompt_library
 
 
 def test_every_prompt_is_listed_with_its_default_and_placeholder_help(client):

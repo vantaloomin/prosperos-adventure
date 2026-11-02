@@ -1,5 +1,5 @@
 """Author's note: one note per chat, sent last before the user's words with every reply while it is on, and never part
-of the story (dungeon/authors_note.py)."""
+of the story (adventure/authors_note.py)."""
 
 
 NOTE = "Mira's exhausted from the commute. Keep it short tonight."
