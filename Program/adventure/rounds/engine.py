@@ -235,3 +235,6 @@ def committed_memory(connection, turn: Turn):
 
 register(State.GATHERING, 'pick', pick)
 on_commit('memory', committed_memory)
+
+# Who may read what: the context builders' own Gathering step (adventure/rounds/context.py `privacy`).
+from adventure.rounds import context  # noqa: E402,F401

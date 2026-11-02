@@ -65,6 +65,7 @@ changes made from here on. New tables come from `schema.sql`; a column added to 
 | Engine | Where | What it does now |
 | --- | --- | --- |
 | Round loop | `rounds/` | The state machine every turn of agent play runs through, its step registry, the turn draft committed in one transaction, and per-character memory that follows branches |
+| Who sees what | `rounds/context.py`, `lore.py`, `package_lore.py` | One context builder per reader (each agent, the Writer by mode, the Referee, the minds panel, the GM view), so privacy is decided by what goes into a prompt; untrusted text arrives fenced; lore and package facts carry visibility tags. Leak tests seed sentinel secrets (`tests/test_rounds_privacy*.py`, `tests/leak_probes.py`), and `scripts/leak_probes.py` runs the probe set against a real model |
 | Narrator | `story.py`, `narration/` | Builds the layered narrator prompt, checks the prose in code, and writes each story turn |
 | Odds and rolls | `consequences.py`, `life/chance.py` | Weighted outcomes and seeded rolls, the base for the Milestone 1 dice |
 | Life Cards | `life/deck.py` | The deck of life events, drawn by code |
