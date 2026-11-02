@@ -1,4 +1,4 @@
-"""Fights under BRP (docs/requirements.md "Combat"; docs/story.md "Fights under BRP").
+"""Fights under BRP (Dungeon's docs/requirements.md "Combat"; docs/story.md "Fights under BRP").
 
 The fight runs as adventure/combat.py does (one player line is one round, foes close in and attack, morale, the defeat
 table by what the foes want), with BRP's numbers from the pack:

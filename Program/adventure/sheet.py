@@ -1,7 +1,7 @@
 """Character sheets: Prospero stats per actor (adventure/rules/marvel.py). The player's character is 'persona'; an actor
 with no stats rolls with no die.
 
-The campaign's ruleset is chosen at its start and then locked (story_campaign.ruleset; docs/requirements.md
+The campaign's ruleset is chosen at its start and then locked (story_campaign.ruleset; Dungeon's docs/requirements.md
 "Rulesets"). Under Prospero the persona's sheet is its six stats. Under another ruleset the persona has that ruleset's
 own sheet (story_sheet, branched with the story), and `check` rolls the persona's checks its way: the Referee's
 approach (a Prospero stat) and the action's words decide what the ruleset tests. Everyone else keeps Prospero stats.

@@ -1,4 +1,4 @@
-"""Life Cards in play (requirements "Intensity and tone": drama; "Time and travel"; docs/life-cards.md;
+"""Life Cards in play (requirements "Intensity and tone": drama; "Time and travel"; Dungeon's docs/life-cards.md;
 docs/story.md "Life Cards").
 
 The world's deck (adventure/life/cards.py) is drawn into the story by code, with the same seeded dice:

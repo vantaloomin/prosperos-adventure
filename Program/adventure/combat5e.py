@@ -1,4 +1,4 @@
-"""Fights under 5E (docs/requirements.md "Combat": "5e keeps HP"; docs/story.md "Fights under 5E").
+"""Fights under 5E (Dungeon's docs/requirements.md "Combat": "5e keeps HP"; docs/story.md "Fights under 5E").
 
 The fight runs as adventure/combat.py does (one player line is one round, foes close in and attack, morale, the defeat
 table by what the foes want), with 5E's numbers from the SRD 5.2.1 pack:

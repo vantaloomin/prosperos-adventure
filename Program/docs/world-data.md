@@ -11,11 +11,9 @@ and the model only phrases it (PRD W1–W4). A townsperson's day, job, home and 
 deterministic code from these records. The model never has to invent a
 museum, an employer or a neighbourhood, and the same inputs always give the same choice.
 
-The app ships each built-in world's towns, all `setting: original` and written for Adventure: **Kingswood**, the
+The app ships each built-in world's towns, all `setting: original` and written for Dungeon: **Kingswood**, the
 Post-Reform logging town in Vanta's Vallarith where new stories start (`scripts/world/kingswood.py`), Haven for
-Havenbrooke, and the Concourse, Hollin and the Gilded Bazaar for BABEL. Haddon Harbor, the modern Maine town from
-Companion, is retired (`adventure/world/data/retired`, `adventure/world/retired.py`): a world already set there keeps it
-as one of its own cities, and new worlds never see it. Every other city is the user's own or comes from a city pack. Cities can
+Havenbrooke, and the Concourse, Hollin and the Gilded Bazaar for BABEL. Every other city is the user's own or comes from a city pack. Cities can
 be `real`, `fictional` or `original`, in any era.
 
 The tests use copies of the cities that used to ship (real cities such as Baltimore and London, other eras such

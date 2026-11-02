@@ -9,7 +9,7 @@ as extra cards weighted by their dice ranges.
 The drama level sets how often a card turns up and which cards can: quiet keeps to the gentle ones. A card whose
 `needs` aren't met is left out, and a card drawn lately steps aside so the weeks don't repeat. No model decides
 anything. Companion drew one card a day for the companion; Adventure draws them for road encounters, rest
-interruptions and the drama level (docs/requirements.md), wired up from Milestone 2.
+interruptions and the drama level (Dungeon's docs/requirements.md), wired up from Milestone 2.
 """
 import json
 from functools import cache

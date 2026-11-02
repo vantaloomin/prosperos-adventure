@@ -3,8 +3,8 @@
 [Back to the README](../../README.md)
 
 This is what the code in `Program` holds after Milestone 0: the engines kept from Prospero's Companion, with
-the companion itself removed. The game systems in [the requirements](../../docs/requirements.md) are built on
-top of it, milestone by milestone, as set out in [the roadmap](../../docs/roadmap.md).
+the companion itself removed. The game systems in [the requirements](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/requirements.md) are built on
+top of it, milestone by milestone, as set out in [the roadmap](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/roadmap.md).
 
 ## Shape
 

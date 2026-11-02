@@ -6,7 +6,7 @@ transcript (narration, rolls, the fight, gear, journal, the director's hidden no
 scenario, with checks that flag what looks wrong.
 
     python scripts/playtest/playtest.py --account-dir C:/Users/me/.claude-account2 --out playtests
-    python scripts/playtest/playtest.py --only shop,heartwood --model sonnet
+    python scripts/playtest/playtest.py --only <name>,<name> --model sonnet
 
 --account-dir is a Claude Code account folder (CLAUDE_CONFIG_DIR) already signed in with `claude`, so playtests
 can run on a second account. Without it the usual account is used.
@@ -416,6 +416,12 @@ def main():
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     chosen = [n for n in args.only.split(',') if n] or list(SCENARIOS)
+    if not chosen:
+        print('There are no playtest scenarios yet (scripts/playtest/scenarios.py).')
+        return
+    unknown = [name for name in chosen if name not in SCENARIOS]
+    if unknown:
+        parser.error(f"unknown scenario: {', '.join(unknown)}")
     summary = []
     for name in chosen:
         path, problems = run(name, SCENARIOS[name], args, out_dir)

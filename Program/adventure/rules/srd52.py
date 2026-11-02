@@ -1,4 +1,4 @@
-"""5E via the SRD 5.2.1 (docs/requirements.md "Rulesets"; content in adventure/rules/packs/srd52, under CC-BY-4.0).
+"""5E via the SRD 5.2.1 (Dungeon's docs/requirements.md "Rulesets"; content in adventure/rules/packs/srd52, under CC-BY-4.0).
 
 - **The sheet.** Six ability scores, a class, a species and a background from the pack, a level, proficiency in the
   class's saving throws and in skills (the background's two and the class's own picks), hit points from the class's

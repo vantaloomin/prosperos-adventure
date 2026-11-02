@@ -12,3 +12,7 @@
   Companion and the Study: its own port (8805, dev interface 5197), data folder (`ProsperoAdventure`), credential
   service, backup format, Windows installer id and `ADVENTURE_` environment variables. World packages keep
   Dungeon's format, so Worldsmith worlds import unchanged. Dungeon's own history is in its repository.
+- **Cleanup after the fork:** Dungeon's design notes (requirements, roadmap, Life Cards) are no longer copied here;
+  code comments point to them in Dungeon's repository. The playtest runner stays, without Dungeon's single-player
+  scenarios. The carry-over that kept Haddon Harbor for worlds made before it was retired is gone, since no
+  Adventure world was ever set there.

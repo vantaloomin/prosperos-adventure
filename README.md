@@ -65,7 +65,7 @@ Environment variables use the `ADVENTURE_` prefix (for example `ADVENTURE_DATA_D
 | [`Windows`](Windows) | Running Adventure on a Windows PC. |
 | [`Mac`](Mac) | Running it on a Mac. |
 | [`Program`](Program) | The app itself: code (`Program/adventure`), interface (`Program/src`), tests, build scripts and docs. |
-| [`docs`](docs) | Design: Adventure's product spec, and the Dungeon design notes that came with the copy. |
+| [`docs`](docs) | Design: Adventure's product spec. Dungeon's design notes stay in [its repository](https://github.com/vantaloomin/prosperos-dungeon/tree/main/docs). |
 
 | Script | What it does |
 | --- | --- |

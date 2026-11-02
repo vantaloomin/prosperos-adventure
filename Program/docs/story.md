@@ -2,7 +2,7 @@
 
 The **Story** is the app's home screen: the user plays their persona in one of the cities, and a narrator
 describes the place and voices the people there. Since Milestone 0 it is the whole app; the dice, the rulesets
-and the rest of the game are built on it from Milestone 1 ([the roadmap](../../docs/roadmap.md)).
+and the rest of the game are built on it from Milestone 1 ([the roadmap](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/roadmap.md)).
 
 ## Who decides what
 
@@ -36,7 +36,7 @@ The narrator model only voices the scene. Its prompt is built in layers (`advent
 the narration format (second person, present tense, short turns), the intensity, then a `## Scene` section
 with the facts above. After each reply, `adventure/narration/prose.py` removes em dashes and asks the model for
 one rewrite when the reply has the strongest AI tells (see "Narrator prompting" in the top-level
-docs/requirements.md). The narrator gets the names of the people present, with a rule not to use a name until
+Dungeon's docs/requirements.md). The narrator gets the names of the people present, with a rule not to use a name until
 that person gives it. The screen lists them only as the user would see them ("the barista", "a regular").
 
 The narrator stays in the story. Sentences saying it is an AI are dropped (`in_character.Guard`), and OOC: or
@@ -943,7 +943,7 @@ when the dice are shown): steady, shaken (1 to 3), strained (to 7), frayed (to 1
 
 ## Life Cards
 
-`adventure/happenings.py` draws the world's Life Cards (`adventure/life/cards.py`, `docs/life-cards.md`) into the
+`adventure/happenings.py` draws the world's Life Cards (`adventure/life/cards.py`, Dungeon's `docs/life-cards.md`) into the
 story, with the deck and region from the travel map (`world`, `regions.*.cards`).
 
 - **When.** A day in town draws once, on the first line of the story day spent in a town (not on the Road, not mid

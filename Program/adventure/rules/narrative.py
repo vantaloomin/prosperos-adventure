@@ -1,4 +1,4 @@
-"""Narrative Only (docs/requirements.md "Narrative Only"): no stats and no dice.
+"""Narrative Only (Dungeon's docs/requirements.md "Narrative Only"): no stats and no dice.
 
 - **The sheet** is the character's own description (the persona's About), with two short optional lists the player
   may fill in, what they are good at and bad at.

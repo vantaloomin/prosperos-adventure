@@ -4,5 +4,5 @@ Code decides and the model narrates. The prompt tells the narrator how to write 
 code already settled, and prose.py checks the result before the player sees it, so the rules that can be
 checked mechanically (no em dashes, the blocklist, dialogue echoes) do not depend on the model obeying.
 The sources are Vanta's three writing documents, kept verbatim in the project files under
-adventure/prompting/; docs/requirements.md ("Narrator prompting") says how they were adapted.
+adventure/prompting/; Dungeon's docs/requirements.md ("Narrator prompting") says how they were adapted.
 """
