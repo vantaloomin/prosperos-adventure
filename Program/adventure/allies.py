@@ -5,6 +5,11 @@ move, each ally still on their feet goes for the foe worst hurt already (code's 
 their own skill on the d100 (adventure/rules/marvel.py roll): FIGHTER for someone whose work is fighting, else
 COMMONER. A hit hurts the foe in the campaign's own terms (a wound level, hit points, or Ironsworn harm).
 
+An ally with an agent (adventure/rounds/) declares their own move for the round, and it replaces the tactic for them
+alone (`moves`, key to declared intent): a move that names a foe goes for that foe, one that holds back (hides,
+stands aside, keeps out of it, flees) strikes nobody, and any other goes for the foe worst hurt as before. Code still
+rolls the blow. Program allies keep the tactic.
+
 Foes split their blows: each foe still standing turns on an ally instead of the character, one in (allies + 1) of
 the time, and that foe's attack lands half the time. An ally who takes HITS_DOWN hits is down and out of the fight,
 and the record keeps that they were hurt badly. Allies' state is kept in the fight (state['allies']).
@@ -52,13 +57,37 @@ def hurt(foe: dict, band: str, rng):
         foe['wound'] = min(5, foe['wound'] + HARM[band])
 
 
-def strike(state: dict, standing, down, rng, lines: list[str]):
-    """Each ally on their feet goes for the foe worst hurt already."""
+HOLDING = re.compile(r"\b(hold\w* back|stand\w* aside|step\w* (back|aside)|keep\w* (out of|clear of|back)|stay\w* "
+                     r"(out of|back|clear)|hid(e|es|ing)|flee\w*|run\w* (away|off)|don'?t fight|do not fight|"
+                     r"refus\w* to fight|watch\w*)\b", re.I)
+
+
+def named(foe: dict, move: str) -> bool:
+    """Whether a declared move names this foe ("I go for the archer")."""
+    words = [word for word in re.findall(r'[a-z]+', foe['name'].lower()) if len(word) > 2 and word != 'the']
+    return any(re.search(rf'\b{re.escape(word)}', move.lower()) for word in words)
+
+
+def target(ally: dict, targets: list[dict], moves: dict[str, str]) -> dict | None:
+    """The foe an ally goes for: the one their declared move names, else the one worst hurt; None when the move holds
+    back."""
+    move = moves.get(ally['key'], '')
+    if move and HOLDING.search(move):
+        return None
+    chosen = next((foe for foe in targets if move and named(foe, move)), None)
+    return chosen or max(targets, key=lambda item: item['wound'])
+
+
+def strike(state: dict, standing, down, rng, lines: list[str], moves: dict[str, str] | None = None):
+    """Each ally on their feet goes for the foe worst hurt already, or where their declared move sends them."""
     for ally in fighting(state):
         targets = standing(state)
         if not targets:
             return
-        foe = max(targets, key=lambda item: item['wound'])
+        foe = target(ally, targets, moves or {})
+        if foe is None:
+            lines.append(f"{ally['name']} holds back from the fight this round.")
+            continue
         band = marvel.roll(ally['skill'], 'normal', rng)['band']
         if band in SUCCESS:
             hurt(foe, band, rng)

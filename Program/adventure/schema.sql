@@ -1280,3 +1280,32 @@ CREATE TABLE IF NOT EXISTS character_feelings (
 );
 
 CREATE INDEX IF NOT EXISTS character_feelings_of ON character_feelings (from_key, branch_id, seq);
+
+-- W3 Resolve for a party
+-- The other characters' rolls in a round (adventure/rounds/resolve.py), written at the turn's commit, beside the
+-- story line the turn played on, for the dice log. The player's own line keeps its rolls in story_rolls.
+CREATE TABLE IF NOT EXISTS round_rolls (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  message_id TEXT,
+  position INTEGER NOT NULL,
+  actor TEXT NOT NULL,
+  target TEXT NOT NULL DEFAULT '',
+  kind TEXT NOT NULL,
+  stake TEXT NOT NULL DEFAULT '',
+  action TEXT NOT NULL,
+  stat TEXT NOT NULL,
+  difficulty TEXT NOT NULL,
+  die INTEGER,
+  natural INTEGER NOT NULL,
+  bonus INTEGER NOT NULL,
+  shift INTEGER NOT NULL,
+  total INTEGER NOT NULL,
+  band TEXT NOT NULL,
+  ruleset TEXT NOT NULL,
+  -- The band the one it was aimed at rolled to resist, when it was opposed.
+  against TEXT,
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS round_rolls_of ON round_rolls (message_id);
