@@ -131,6 +131,17 @@ def marked(connection) -> list[str]:
     return [row['id'] for row in rows if MARK in (decode(row['marks']) or [])]
 
 
+def minds_panel(connection) -> dict:
+    """The minds panel, not the GM view: who is deciding on the watched turn, and in Author and Watch (or for the
+    user's own character) what each means and why; in Play the others show only whether they have decided."""
+    turn = watched_turn(connection)
+    if turn is None:
+        return {'turn': None, 'mode': seats.settings(connection)['mode'], 'minds': []}
+    snapshot = Snapshot.of(decode(turn['snapshot']))
+    return {'turn': turn['id'], 'mode': turn['mode'],
+            'minds': context.minds(snapshot, Draft.of(decode(turn['draft'])))}
+
+
 def round_view(connection, turn: dict | None) -> dict:
     """Everything about one turn, for the GM view (adventure/rounds/context.py `gm` is the same as model text)."""
     if turn is None:

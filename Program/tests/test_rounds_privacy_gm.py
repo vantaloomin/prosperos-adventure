@@ -85,3 +85,19 @@ def test_author_and_watch_have_no_gate_and_mark_nothing(client, app):
 def test_with_no_turn_yet_it_shows_nothing(client, app):
     sit(app, 'watch')
     assert ok(client.post('/api/gm/round', json={})) == {'turn': None, 'marked': []}
+
+
+def test_the_minds_panel_shows_motives_in_watch_and_only_status_in_play(client, app):
+    assert ok(client.get('/api/minds'))['minds'] == []
+    sit(app)
+    turn = play_turn(app, 1)
+    play = ok(client.get('/api/minds'))
+    hesk = next(row for row in play['minds'] if row['key'] == 'hesk')
+    assert play['turn'] == turn and play['mode'] == 'play'
+    assert hesk == {'key': 'hesk', 'name': 'Hesk', 'mind': 'agent', 'status': 'decided'}
+    # Looking at the panel is not opening the GM view: nothing is marked.
+    assert ok(client.get('/api/gm/round/marks'))['marked'] == []
+    sit(app, 'watch')
+    play_turn(app, 2)
+    hesk = next(row for row in ok(client.get('/api/minds'))['minds'] if row['key'] == 'hesk')
+    assert hesk['motive'] == MOTIVE and hesk['intent'] == 'Lead the way.'

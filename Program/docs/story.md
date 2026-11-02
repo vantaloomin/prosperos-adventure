@@ -295,6 +295,8 @@ impressions, the factions' standing (set by hand), the dark tracks' points, and 
 
 In round play, **the GM view of a turn** (`adventure/gm.py` `open_round`, `POST /api/gm/round`) shows the turn being played, or the last one committed on this branch, with everything in it: each character's declaration, motive and whispers, what each learned this turn and remembers, how each feels toward the others, the turn result and every package fact with its visibility tag. In Play it asks first: until the user confirms, it answers 409 with code `gm_view_asks_first` and "This shows every secret and motive. Open anyway?"; `{"confirmed": true, "remember": true}` stops it asking for the rest of the campaign (a new story asks again). Each turn it was open on in Play is marked `gm_view` (the turn it opened on, and any turn played while the GM view setting is on), and `GET /api/gm/round/marks` lists the marked turns on this branch. Author and Watch have no gate and mark nothing.
 
+The **minds panel** (`adventure/gm.py` `minds_panel`, `GET /api/minds`) is not the GM view and never asks or marks: for the same turn it lists each character's name, mind (human, agent or program) and status (decided, waiting or fallback). In Author and Watch each row also carries the intent, spoken lines, motive and whispers; in Play only the user's own row does.
+
 The narrator reads the latest messages word for word. Once 30 recent ones plus 20 more are waiting, the oldest 20 are
 folded into one rolling summary (`story_summary`) by the Continuity model, or the Default one without it, and the
 narrator gets that summary as "The story so far" in their place. The summary calls the character by name, never
