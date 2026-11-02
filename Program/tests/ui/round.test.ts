@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { hasAgents, liveSummary, modeOf, NO_ROUND, replyBody, roundAfter, roundStarting, seatChanges, seatLine, stepAt, STEPS, titleWhile, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { estimateLine, spendLine, hasAgents, liveSummary, modeOf, NO_ROUND, replyBody, roundAfter, roundStarting, seatChanges, seatLine, stepAt, STEPS, titleWhile, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
 const table = (seats: Seat[], under_way: RoundTable['under_way'] = null): RoundTable => ({
@@ -88,4 +88,11 @@ test('the table, the reply and the title', () => {
   assert.equal(titleWhile(true, 'Adventure'), '(1) Adventure')
   assert.equal(titleWhile(true, '(1) Adventure'), '(1) Adventure')
   assert.equal(titleWhile(false, '(1) Adventure'), 'Adventure')
+})
+
+test('the pace reads plainly', () => {
+  assert.equal(estimateLine({ calls: 14, tokens: 9400 }), 'About 14 calls and 9k tokens a turn')
+  assert.equal(estimateLine({ calls: 1, tokens: 600 }), 'About 1 call and 600 tokens a turn')
+  assert.equal(spendLine({ spent: 12400, held: 0, cap: 200000 }), '12k of 200k tokens this session')
+  assert.equal(spendLine({ spent: 0, held: 0, cap: 0 }), '0 tokens this session')
 })

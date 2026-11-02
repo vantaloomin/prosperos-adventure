@@ -148,3 +148,28 @@ export function titleWhile(waiting: boolean, title: string): string {
   const plain = title.replace(/^\(1\) /, '')
   return waiting ? `(1) ${plain}` : plain
 }
+
+// Pace (adventure/agent_routes.py): the agents' preset with its estimate, the dials, and the session's spend. -----------
+
+export type PresetKey = 'quick' | 'balanced' | 'rich'
+export type Loyalty = 'slow' | 'steady' | 'fast'
+export interface AgentPace {
+  preset: PresetKey; scheming: number; loyalty: Loyalty; session_cap: number
+  presets: { key: PresetKey; name: string; estimate: { calls: number; tokens: number } }[]
+  spend: { spent: number; held: number; cap: number }; capped: boolean
+}
+
+export const SCHEMING = ['Rarely', 'When it serves them', 'Readily', 'Always']
+export const LOYALTY: { key: Loyalty; name: string }[] = [{ key: 'slow', name: 'Slowly' }, { key: 'steady', name: 'Steadily' }, { key: 'fast', name: 'Fast' }]
+
+const rounded = (tokens: number) => tokens >= 1000 ? `${Math.round(tokens / 1000)}k` : String(tokens)
+
+/** "About 14 calls and 9k tokens a turn". */
+export function estimateLine(estimate: { calls: number; tokens: number }): string {
+  return `About ${estimate.calls} ${estimate.calls === 1 ? 'call' : 'calls'} and ${rounded(estimate.tokens)} tokens a turn`
+}
+
+/** "12k of 200k tokens this session", or with no cap "12k tokens this session". */
+export function spendLine(spend: AgentPace['spend']): string {
+  return spend.cap ? `${rounded(spend.spent)} of ${rounded(spend.cap)} tokens this session` : `${rounded(spend.spent)} tokens this session`
+}
