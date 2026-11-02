@@ -207,7 +207,9 @@ ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"
                  ('story_campaign', 'politics', "TEXT CHECK (politics IN ('off', 'quiet', 'true_to_life', 'lively'))"),
                  ('story_inventory', 'stolen', 'INTEGER NOT NULL DEFAULT 0 CHECK (stolen IN (0, 1))'),
                  ('story_inventory', 'condition',
-                  "TEXT NOT NULL DEFAULT 'sound' CHECK (condition IN ('sound', 'damaged', 'broken'))"))
+                  "TEXT NOT NULL DEFAULT 'sound' CHECK (condition IN ('sound', 'damaged', 'broken'))"),
+                 # A planned beat that reached the page (adventure/rounds/author.py), for the beat board.
+                 ('story_arc_beats', 'landed', 'INTEGER NOT NULL DEFAULT 0'))
 
 
 # Tables renamed since they were made: (old, new). Renamed before the schema runs, so their rows carry over.
