@@ -107,7 +107,7 @@ Batch 2, agent minds, decided 2026-11-02 (Vanta's cards):
   page (its seeds), so a betrayal is fair in hindsight.
 - **An agent knows its own knowledge plus the world's public canon.** Its sheet, its memories, what it saw and heard,
   what it believes (lies included), and the world's public lore as common knowledge. Never a hidden truth it hasn't
-  learned.
+  learned. (Since the 2026-11-02 review, "public" means lore tagged public: see "Who sees what".)
 - **Agents can talk privately to each other.** Whispers and plots between characters are hidden from the user's
   character and from anyone not party to them, but readable in the GM view.
 - **Personality is the world's cast sheet plus the user's notes.** The world package's sheet (voice, wants, fears,
@@ -168,32 +168,151 @@ Batch 4, the Writer, sliders, models, campaigns and the screen, decided 2026-11-
 
 ## The turn loop
 
-Put together from the decisions above. Steps marked *(Dungeon)* are carried over unchanged.
+Put together from the decisions above and revised after the 2026-11-02 reviews (concurrency and state, prompts and
+leaks, UX). Steps marked *(Dungeon)* are carried over unchanged. The state each step runs in is in brackets; see
+"Turn state and persistence".
 
-1. **Setup.** Code gathers the scene: who is present, which of them are agents (up to the cap), which are Program
-   characters, and the user's seat (a character in Play, none in Author and Watch). In Author, the user's nudge for
-   the turn is taken here.
+1. **Gather** `[Gathering]`. Code takes one frozen **snapshot** of the scene: who is present, the record, every
+   character's committed memory and feelings, and the settings in force. Every context this turn is built from that
+   snapshot, and it is stored with the turn so a re-ask reads exactly what the original read. Code picks the agents
+   (up to the cap: party first, then characters promoted by hand, then by role in the scene, ties by seat order);
+   the rest are Program characters. The user's seat is a character in Play and none in Author and Watch. In Author,
+   the nudge for the turn is taken here.
 2. **The director's note** *(Dungeon)*. The director adds its hidden GM note: scene pressure, a seed to plant, what
-   antagonists are doing, and any warning signs owed before a betrayal. The Author's nudge and beat edits join it.
-3. **Declare.** In parallel, each agent gets its own context (sheet, user notes, its memories, its beliefs, public
-   canon, what it has seen this scene, its feelings toward everyone present) and returns intent, spoken lines and a
-   hidden motive. Program characters' moves come from code *(Dungeon)*. The user, when playing, declares too.
-4. **React.** Each agent sees the others' declared intents and lines (never their motives) and may react once.
-   Private whispers between agents are exchanged here.
-5. **Converse.** The Writer may put follow-up questions to agents and take their answers, up to the user's cap. If
-   anyone addresses the user's character, the turn pauses for the user's reply.
-6. **Resolve** *(Dungeon)*. Plain talk and small choices stand as declared. The Referee splits out anything opposed,
-   dangerous or uncertain; code rolls it, applies the bands, and rolls lies against insight. Life Cards may inject
-   an event.
-7. **Write.** The Writer turns the results into the turn's post, from the mode's point of view, never contradicting
-   a roll or the record.
-8. **Remember** *(Dungeon, per character)*. Fact extraction updates the record. Each character's memory gets what
-   they witnessed, said, were told and now believe; motives and whispers go to the speaker's memory only. Feelings
-   move. The turn is saved as a branch point.
-9. **Pace.** In Watch, the next turn starts on the timer unless this turn hit a big moment or the session cap.
+   antagonists are doing. Warning signs owed before a betrayal go in as **the sign itself** ("Hesk's purse is heavier
+   than it should be"), never the secret behind it. The Author's nudge and beat edits join it.
+3. **Declare** `[Declaring]`. In parallel, each agent gets its own context (see "Who sees what") and returns its
+   structured output (see "Agent output"). Program characters' moves come from code *(Dungeon)*. The user, when
+   playing, declares too. Results are merged in seat order, not in the order they arrive.
+4. **Lies are rolled when heard.** Before anyone reacts, code rolls insight against deception for every declared
+   deception, for each listener it is aimed at or overheard by. Each listener's in-turn knowledge gets the line as a
+   belief or as a caught tell. The same happens for any lie told later in the turn.
+5. **React** `[Reacting]`. Each agent sees the others' declared intents and lines (never their motives), filtered by
+   what it could see and hear, with lie outcomes applied, and may react once. Private whispers between agents are
+   exchanged here, delivered by code only to their audience.
+6. **Converse** `[Conversing ⇄ AwaitingUser]`. The Writer may set up follow-up exchanges between characters, up to the
+   user's cap. *Who writes each question: pending (2026-11-02 review card).* Each answer is added to the in-turn
+   knowledge of the characters who heard it. If anyone addresses the user's character, the turn waits for the user
+   on the reply card (see "Waiting and pauses").
+7. **Resolve** `[Resolving]` *(Dungeon)*. Code first classifies intents into risky kinds where it can (attack, steal,
+   deceive, persuade or threaten against someone's interest); the Referee rules on the rest, seeing the bare intent,
+   not the speaker's pitch. Anything opposed, dangerous or uncertain is rolled by code. Life Cards may inject an
+   event. The output is an immutable **turn result**: intents, rolls, outcomes, and who saw and heard what.
+8. **Write** `[Writing]`. The Writer renders the turn result into the turn's post, from the mode's point of view,
+   streamed as it is written, never contradicting a roll or the record. What the Writer may see depends on the mode
+   (see "Who sees what").
+9. **Commit** `[Committing]`. In one SQLite transaction, code writes the record from the turn result, folds each
+   character's in-turn knowledge into their memory, moves feelings, and saves the branch point. Code, not a model,
+   routes every memory by visibility: who was present, who a whisper was for, whose motive it is. Fact extraction
+   only adds colour from the prose (descriptions, named objects) and never overrides an outcome or decides who
+   learns what. Then the turn is marked committed.
+10. **Pace** `[Idle]`. Queued mode, cap and model changes take effect now. In Watch, the next turn starts on the timer
+    unless this turn hit a big moment or the session cap.
+
+## Agent output
+
+Each agent returns a structured object that code validates:
+
+- **intent:** what the character *attempts*, never a result. An intent or line that claims an outcome ("as my blade
+  finds his heart") is cut back to the attempt before anyone else sees it.
+- **lines:** what they say aloud, and to whom.
+- **motive:** their private reason. Goes only to their own memory, the minds panel where the mode allows, and the GM
+  view.
+- **deceptions:** each lie as a field: what they claim, what they believe is true, and who it is aimed at. Code rolls
+  only these. A line with no declared deception is honest as far as the speaker knows.
+- **whispers:** private lines and their audience.
+
+Veils and intensity apply to every field, hidden ones included. The agent's prompt says so, and code filters motives,
+whispers and memories the same way it filters the post.
+
+## Who sees what
+
+Privacy is enforced by building context, not by asking a model to keep quiet. **Nothing is ever "in the prompt but
+don't mention it."** One context builder per reader decides what goes into each model call:
+
+| Reader | Gets | Never gets |
+| --- | --- | --- |
+| An agent | Its sheet and user notes, its committed memory plus this turn's in-turn knowledge, its beliefs (lies included), lore tagged public or known to it, what it saw and heard, its feelings | Other characters' motives, whispers not meant for it, GM-only lore, the director's note, truth flags on lies it heard |
+| The Writer in Play | Declared intents and lines, the turn result, the director's signs to place | Offstage motives and whispers, hidden truths behind the signs |
+| The Writer in Author and Watch | As in Play, plus motives and whispers | Hidden truths nobody in the scene knows |
+| The Referee | Bare intents and the scene state | Motives, whispers, speakers' pitches |
+| The minds panel | Per mode: "Hesk has decided" in Play; intents, motives and whispers in Author and Watch | |
+| The GM view | Everything | |
+
+**World lore carries a visibility tag:** public, known to listed characters, or GM only. *Default for untagged lore:
+pending (2026-11-02 review card).*
+
+**Untrusted text is fenced.** The player's typed action, the Author's nudge, the user's character notes, cast sheets
+from world packages (which may come from other people), character names and other agents' lines all arrive in
+labelled blocks the prompt treats as in-fiction content, never as instructions.
+
+Each context builder has tests that seed a sentinel motive, whisper and GM-only fact and assert they never appear in
+any other reader's context.
+
+## Turn state and persistence
+
+- **One state machine.** A turn moves `Idle → Gathering → Declaring → Reacting → Conversing ⇄ AwaitingUser →
+  Resolving → Writing → Committing → Idle`. `AwaitingUser` is keyed by seat, not "the user", so hotseat and online
+  play fit later without a schema change.
+- **One command queue.** Every input (the Watch timer, Next, a reply, a mode switch, rewind and re-ask, the session cap,
+  settings changes, a second browser tab) is a command on one serialized queue, carrying the turn id it was issued
+  against. A command whose turn is no longer the head is dropped. Mode switches and cap and model changes are
+  accepted at any time and take effect at the next `Idle`, so "switch any time" means the current turn finishes in
+  the mode it started in. Cancelling a turn is the one command that acts at once: it discards the draft.
+- **A turn is a transaction.** Steps 1 to 8 build a **turn draft** nothing else reads; step 9 commits it in one
+  transaction. On restart, a draft paused in `AwaitingUser` resumes from its checkpoint, and any other open draft is
+  discarded and the turn re-run from its snapshot.
+- **Memory follows branches.** Every per-turn write (memories, beliefs, feelings, whispers, motives) is keyed by the
+  turn that made it and read through the branch's ancestry, like Dungeon's record. Fading is a read-time function of
+  age and importance, never an in-place rewrite of shared rows.
+- **Re-asking an agent.** *What gets redone: pending (2026-11-02 review card).* Either way, it reads the stored
+  snapshot and brings new dice, per the branch rule.
+- **World packages are imported, not shared.** Adventure copies a package into its own data folder with a version
+  stamp, so it never opens a file Dungeon or Worldsmith may be writing. Campaign state lives in Adventure's own
+  database.
+- **Budgets hold across parallel calls.** Each call reserves its estimated cost before it starts and settles after,
+  under one lock. The session cap applies in every mode and stops play only at `Idle`: a turn that has started
+  finishes, using only its required steps.
+- **Failures fall back, never leave a hole.** Each call has a deadline inside the turn budget and one retry (with the
+  parse error, for broken output). After that, or on a refusal, the character runs on its Program mind for the turn,
+  and the minds panel marks it. Deadlines account for local models that serialize calls.
+
+## Waiting and pauses
+
+A round can take 20 or more model calls, so waiting is designed, not left blank.
+
+- **The round timeline.** Above the minds panel: Declare · React · Converse · Resolve · Write, with the current step
+  lit. Each character's row moves through thinking, declared, reacting, done. In Play a row says only "Hesk has
+  decided"; in Author and Watch, intents appear as they arrive. The Writer's post streams.
+- **The reply card.** When a character addresses the user's character: who is speaking, their line in full, the last
+  two lines of context, and a text box. *Shortcuts offered: pending (2026-11-02 review card).* If the tab is not in
+  focus, a sound or title badge; the minds panel shows "Mara is waiting for your answer".
+- **Every pause says why and what next.** One banner: "Paused: Hesk betrayed the party. [Continue] [Switch to
+  Author]", or "Paused: this session reached its $2.00 cap. [Raise cap] [Stop here]". A dropped optional step and a
+  fallback to a Program mind are noted too.
+- **Agent or Program is visible.** A badge (icon and text) on each character in the minds panel and party list, never
+  in the story text.
+- **Author nudges get feedback.** After the turn, a line under the nudge box: "Used: the director moved the storm
+  forward" or "Not yet: no character chose to go north." The beat board shows which beats have landed.
+- **The GM view and mode switches guard against spoilers.** *Pending (2026-11-02 review cards).*
+- **Lies read as story.** Beliefs use belief language on sheets and in memories ("Ilsa *believes* the bridge is
+  guarded"). An uncovered lie gets a short moment in the prose and a strike-through in memory; a caught tell gets the
+  same treatment.
+- **Settings have three presets.** "Quick and cheap", "Balanced" and "Rich and slow" set the agent cap, conversation
+  cap and models together, with a plain estimate ("about 25 seconds and 14 calls per turn"). Everything else is under
+  Advanced, and every slider has one sentence on what it changes in play.
+- **Behind-the-scenes names stay behind the scenes.** The play screen names only the Writer. The director, Referee
+  and GM view are named in settings and the GM view.
+- **Accessibility.** A polite live region announces status changes in summary ("3 of 5 characters have decided"),
+  every control is keyboard reachable, and the timeline respects reduced motion.
+- **Branches read as questions.** A re-ask branch is labelled "What if Hesk had stayed?" with the character's
+  portrait.
 
 ## Later batches (planned)
 
-- Worlds: anything Adventure needs from Worldsmith beyond today's package (for example, marking which cast members
-  default to agents).
-- First milestone: the smallest playable slice to build first.
+- Worlds: what Adventure needs from Worldsmith beyond today's package: visibility tags on lore, facts and cast
+  secrets (with a tagging pass), voice anchors on cast sheets (sample lines and verbal habits), and marking which cast
+  members default to agents.
+- First milestone: the smallest playable slice to build first. It should include the round timeline and reply card
+  from day one, the per-reader context tests, and a red-team regression set of leak probes for each surface above,
+  run across the default agent model and the cheapest local one, plus a "stayed in character" check.
