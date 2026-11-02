@@ -5,5 +5,6 @@ module here, one line each, so nothing depends on which module happened to be im
 from adventure.rounds import (
     converse,  # noqa: F401 - Converse and the reply card
     declare,  # noqa: F401 - the agents: pick, declare, lies heard, react, feelings
+    offpage,  # noqa: F401 - off-page beats in a round with agents, and their commit
     telling,  # noqa: F401 - today's turn as steps, and the party's Resolve (resolve.py)
 )
