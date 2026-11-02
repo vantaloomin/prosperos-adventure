@@ -1,4 +1,4 @@
-import type { BandStep, DiceLog, DramaLevel, Gear, HiddenRoll, IntensityPreset, JournalEntry, JournalInstitution, JournalQuest, JournalThread, LegacyRole, Looks, NarrationLength, NarrationPov, NarrationTense, Premade, ReceiptChip, SheetBonds, SheetGrowth, Srd52Spells, StoryArc, StoryBranch, StoryChapter, StoryFight, StoryHand, StoryMessage, StoryPace, StoryPerson, StoryPlace, StoryRoll, StoryScene, StoryStart, StoryTier, ToneCategory, ToneVoice, TurnAction, TurnEvent, TurnPace, TurnSoFar, VeilTopic, Zone } from '../../types'
+import type { BandStep, DiceLog, DramaLevel, Gear, HiddenRoll, IntensityPreset, JournalEntry, JournalInstitution, JournalQuest, JournalThread, LegacyRole, Looks, NarrationLength, NarrationPov, NarrationTense, ReceiptChip, SheetBonds, SheetGrowth, Srd52Spells, StoryArc, StoryBranch, StoryChapter, StoryFight, StoryHand, StoryMessage, StoryPace, StoryPerson, StoryPlace, StoryRoll, StoryScene, StoryStart, StoryTier, ToneCategory, ToneVoice, TurnAction, TurnEvent, TurnPace, TurnSoFar, VeilTopic, Zone } from '../../types'
 
 /** "Tuesday, 9:40 am" from the scene's local time, which is the city's own clock with no offset. */
 export function sceneTime(localTime: string): string {
@@ -119,12 +119,6 @@ function dicedText(roll: StoryRoll): string {
   const sum = roll.die ? `${roll.natural} + ${roll.bonus}` : `${roll.natural}`
   const shift = roll.shift ? `, ${roll.difficulty.replace('_', ' ')} (${roll.shift > 0 ? '-' : '+'}${Math.abs(roll.shift)})` : ''
   return `${roll.stat}${die}: ${sum}${shift} = ${roll.total}, ${roll.label}`
-}
-
-/** "a woman, 41" under a premade's name. */
-export function premadeLine(premade: Pick<Premade, 'gender' | 'age'>): string {
-  const gender = premade.gender === 'nonbinary' ? 'nonbinary' : premade.gender ? `a ${premade.gender}` : ''
-  return [gender, premade.age ? String(premade.age) : ''].filter(Boolean).join(', ')
 }
 
 /** A made character starts with every stat as even as the points allow. */

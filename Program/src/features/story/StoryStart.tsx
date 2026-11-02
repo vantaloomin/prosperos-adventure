@@ -1,68 +1,84 @@
-import { useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
+import { Plus } from 'lucide-react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../../api'
-import type { BrpChoices, IronswornChoices, PersonaGender, Ruleset, Srd52Choices, Story as StoryData, StoryIntensity, StoryStart as StartChoices } from '../../types'
+import type { BrpChoices, IronswornChoices, PersonaGender, Ruleset, Srd52Choices, Story as StoryData, StoryStart as StartChoices } from '../../types'
 import { Field, TextArea, TextInput } from '../../components/Fields'
 import { Stepper } from '../../components/NumberFields'
 import { Loading, Notice } from '../../components/Feedback'
 import { GENDERS } from '../worlds/worldsText'
 import { WORLDS_KEY } from '../worlds/useWorlds'
-import { arrayPlaced, brpCost, skillChoices, skillId, pointsLeft, pointsText, premadeLine, startingStats } from './storyText'
-import { SessionZero } from './SessionZero'
+import { arrayPlaced, brpCost, skillChoices, skillId, pointsLeft, pointsText, startingStats } from './storyText'
+import { CampaignOptions } from './CampaignOptions'
+import { useSession } from './campaignSession'
 import { FateBuild, type FateDraft } from './FateBuild'
 
-/** Campaign start (adventure/campaign.py): play a premade character from this town, or make your own; then session zero
- * (./SessionZero.tsx) sets how the campaign plays. The ruleset is picked first, as it decides how a character is made. */
-export function StoryStart({ onStarted, intensity }: { onStarted: (data: StoryData) => void; intensity?: StoryIntensity }) {
+/** The cast page: the campaign start (adventure/campaign.py) on one page. The town's people are a grid; tapping one
+ * plays as them and shows who they are under the grid, and the + tile makes your own there instead. Rules (locked
+ * once the campaign begins), the tone preset and Begin sit together at the foot. */
+export function StoryStart({ onStarted, place }: { onStarted: (data: StoryData) => void; place: string }) {
   const choices = useQuery({ queryKey: ['story-start'], queryFn: () => api<StartChoices>('/story/start') })
+  if (!choices.data) return <Loading label="Finding who you could be" />
+  return <Cast choices={choices.data} place={place} onStarted={onStarted} />
+}
+
+/** The + tile's seat: a character of your own. */
+const OWN = ''
+
+function Cast({ choices, place, onStarted }: { choices: StartChoices; place: string; onStarted: (data: StoryData) => void }) {
   const client = useQueryClient()
-  const [making, setMaking] = useState(false)
-  const [who, setWho] = useState<{ name: string; body: object } | null>(null)
+  const { premades } = choices
+  const [seat, setSeat] = useState(premades[0]?.id ?? OWN)
+  const [made, setMade] = useState<object | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const [ruleset, setRuleset] = useState<Ruleset | null>(null)
-  if (!choices.data) return <Loading label="Finding who you could be" />
-  const begin = async (body: object) => {
+  const session = useSession(choices)
+  const who = seat === OWN ? made : { premade_id: seat }
+  const begin = async () => {
+    if (!who) return
     setBusy(true)
     setError('')
     try {
-      onStarted(await api<StoryData>('/story/start', { ...who?.body, ...body, ...(ruleset ? { ruleset } : {}) }))
+      onStarted(await api<StoryData>('/story/start', { ...who, ...session.body, ...(ruleset ? { ruleset } : {}) }))
       await Promise.all([client.invalidateQueries({ queryKey: ['story-sheet'] }), client.invalidateQueries({ queryKey: WORLDS_KEY })])
     } catch (failure) { setError(failure instanceof Error ? failure.message : 'The story did not start. Try again.') }
     finally { setBusy(false) }
   }
-  if (who) return (<>
-    <SessionZero choices={choices.data} intensity={intensity} ruleset={ruleset ?? choices.data.ruleset} who={who.name} busy={busy} onStart={(body) => void begin(body)} onBack={() => setWho(null)} />
-    {error && <Notice tone="error">{error}</Notice>}
-  </>)
-  const { premades } = choices.data
-  const own = making || !premades.length
+  const looking = premades.find((premade) => premade.id === seat)
   return (
-    <section className="story-start" aria-labelledby="story-start-heading">
-      <h2 id="story-start-heading">Who are you?</h2>
-      <RulesetPick choices={choices.data} value={ruleset} onChange={setRuleset} />
-      {!own && <>
-        <p className="subtle">Play someone from this town, or make your own.</p>
-        <ul className="story-premades">
-          {premades.map((premade) => (
-            <li key={premade.id}>
-              <strong>{premade.name}</strong> <span className="subtle">{premadeLine(premade)}</span>
-              <p>{premade.about}</p>
-              <button type="button" className="button primary" onClick={() => setWho({ name: premade.name, body: { premade_id: premade.id } })}>Play as {premade.name.split(' ')[0]}</button>
-            </li>
-          ))}
-        </ul>
-        <button type="button" className="button" onClick={() => setMaking(true)}>Make your own…</button>
-      </>}
-      {own && <MakeYourOwn choices={choices.data} ruleset={ruleset ?? choices.data.ruleset} busy={busy} onBegin={(body, name) => setWho({ name, body })}
-        onBack={premades.length ? () => setMaking(false) : undefined} />}
-    </section>
+    <form className="cast-setup" aria-labelledby="cast-heading" onSubmit={(event) => { event.preventDefault(); void begin() }}>
+      <h2 id="cast-heading">{place}</h2>
+      <ul className="cast-grid" aria-label="Who you play">
+        {premades.map((premade) => (
+          <li key={premade.id}>
+            <button type="button" className="cast-card" aria-pressed={seat === premade.id} onClick={() => setSeat(premade.id)}>
+              <span className="portrait" aria-hidden="true">{premade.name.charAt(0)}</span>
+              <span className="cast-name">{premade.name}</span>
+            </button>
+          </li>
+        ))}
+        <li><button type="button" className="cast-card cast-own" aria-pressed={seat === OWN} aria-label="Make your own character" onClick={() => setSeat(OWN)}><Plus aria-hidden="true" /></button></li>
+      </ul>
+      {looking ? <p className="cast-bio" aria-live="polite">{looking.about}</p>
+        : <MakeYourOwn choices={choices} ruleset={ruleset ?? choices.ruleset} onChange={setMade} />}
+      <CampaignOptions choices={choices} session={session} />
+      {error && <Notice tone="error">{error}</Notice>}
+      <div className="cast-foot">
+        <RulesetPick choices={choices} value={ruleset} onChange={setRuleset} />
+        {session.presets.length > 1 && <select aria-label="Tone" value={session.presetId} onChange={(event) => session.pick(event.target.value)}>
+          {session.presets.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}
+        </select>}
+        <button type="submit" className="button primary" disabled={busy || !who}>{busy ? 'Beginning…' : 'Begin'}</button>
+      </div>
+    </form>
   )
 }
 
-interface MakeProps { choices: StartChoices; ruleset?: Ruleset; busy: boolean; onBegin: (body: object, name: string) => void; onBack?: () => void }
+interface MakeProps { choices: StartChoices; ruleset?: Ruleset; onChange: (body: object | null) => void }
 
-function MakeYourOwn({ choices, ruleset, busy, onBegin, onBack }: MakeProps) {
+/** Your own character, under the grid. It reports the start body as it changes, or null while it isn't ready. */
+function MakeYourOwn({ choices, ruleset, onChange }: MakeProps) {
   const [name, setName] = useState('')
   const [gender, setGender] = useState<PersonaGender>('')
   const [age, setAge] = useState('')
@@ -78,9 +94,12 @@ function MakeYourOwn({ choices, ruleset, busy, onBegin, onBack }: MakeProps) {
   const native = { srd52: build, ironsworn: iron, brp: percentReady(percent, choices.brp), narrative: listed(narrated), fate, marvel: true }[kind]
   const valid = !!name.trim() && builtFor(native, pointsLeft(stats, choices.points)) && adultAge(years)
   const sheetPart = kind === 'marvel' ? { stats } : { [BODY_KEYS[kind]]: native }
-  const submit = () => onBegin({ persona: { name: name.trim(), gender, age: years, about: about.trim() }, ...sheetPart }, name.trim())
+  const body = valid ? { persona: { name: name.trim(), gender, age: years, about: about.trim() }, ...sheetPart } : null
+  const report = JSON.stringify(body)
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- `report` is `body`, compared by value
+  useEffect(() => onChange(body), [report, onChange])
   return (
-    <form className="story-make" onSubmit={(event) => { event.preventDefault(); if (valid) submit() }}>
+    <div className="story-make">
       <TextInput label="Name" value={name} onChange={setName} required maxLength={80} />
       <label className="field">Gender
         <select value={gender} onChange={(event) => setGender(event.target.value as PersonaGender)}>
@@ -88,14 +107,9 @@ function MakeYourOwn({ choices, ruleset, busy, onBegin, onBack }: MakeProps) {
         </select>
       </label>
       <TextInput label="Age" type="number" value={age} onChange={setAge} min={18} max={120} />
-      <TextArea label="About you" hint="Who they are, what they want, what they're running from. The narrator only knows what you write here."
-        value={about} onChange={setAbout} rows={4} maxLength={2000} />
+      <TextArea label="About you" value={about} onChange={setAbout} rows={4} maxLength={2000} />
       <RulesBuild choices={choices} kind={kind} stats={stats} percent={percent} narrated={narrated} onStats={setStats} onBuild={setBuild} onIron={setIron} onPercent={setPercent} onNarrated={setNarrated} onFate={setFate} />
-      <div className="form-actions">
-        <button type="submit" className="button primary" disabled={busy || !valid}>Next: how it plays</button>
-        {onBack && <button type="button" className="button" onClick={onBack}>Back</button>}
-      </div>
-    </form>
+    </div>
   )
 }
 
@@ -138,8 +152,7 @@ function RulesBuild({ choices, kind, stats, percent, narrated, onStats, onBuild,
   return own[kind]?.() || <MarvelStats choices={choices} stats={stats} onChange={onStats} />
 }
 
-/** Narrative Only (adventure/rules/narrative.py): no stats to buy; About you is the sheet, and two optional lists sharpen it.
- *  The ruleset's own hint shows under the Rules pick (RulesetPick). */
+/** Narrative Only (adventure/rules/narrative.py): no stats to buy; About you is the sheet, and two optional lists sharpen it. */
 function NarrativeBuild({ narrated, onChange }: { narrated: Narrated; onChange: (narrated: Narrated) => void }) {
   return <>
     <TextInput label="Good at (optional)" hint="A few things, separated by commas." value={narrated.good_at} maxLength={500} onChange={(good_at) => onChange({ ...narrated, good_at })} />
@@ -234,19 +247,14 @@ function IronswornBuild({ choices, onChange }: { choices: IronswornChoices; onCh
   )
 }
 
-/** The ruleset the campaign is played in (adventure/sheet.py): chosen now and locked for the whole campaign. */
+/** The ruleset the campaign is played in (adventure/sheet.py): chosen now and locked once the campaign begins. */
 function RulesetPick({ choices, value, onChange }: { choices: StartChoices; value: Ruleset | null; onChange: (value: Ruleset) => void }) {
   if (!choices.rulesets || choices.rulesets.length < 2) return null
-  const current = value ?? choices.ruleset ?? 'marvel'
-  return (<>
-    <Field label="Rules" hint="How what your character tries is decided. Chosen now for the whole campaign; it cannot change later.">
-      {(id, describedBy) => <select id={id} value={current} aria-describedby={describedBy} onChange={(event) => onChange(event.target.value as Ruleset)}>
-        {choices.rulesets?.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}
-      </select>}
-    </Field>
-    {current === 'narrative' && choices.narrative && <p className="subtle">{choices.narrative.hint}</p>}
-    {current === 'fate' && choices.fate && <p className="subtle">{choices.fate.hint}</p>}
-  </>)
+  return (
+    <select aria-label="Rules" value={value ?? choices.ruleset ?? 'marvel'} onChange={(event) => onChange(event.target.value as Ruleset)}>
+      {choices.rulesets.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}
+    </select>
+  )
 }
 
 type Build = { class_id: string; species_id: string; background_id: string; scores: Record<string, number>; skills: string[] }

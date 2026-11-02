@@ -366,7 +366,7 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .story-people textarea { width: 100%; }
 /* The title screen before a campaign starts (src/features/story/TitleScreen.tsx): one sideways row of worlds. */
 /* The scene line waits until the campaign begins. */
-.story-main:has(> .title-screen) > .story-header { display: none; }
+.story-main:has(> .title-screen) > .story-header, .story-main:has(> .cast-setup) > .story-header { display: none; }
 .title-screen { flex: 1; min-height: 0; width: 100%; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
 .title-screen > .notice { margin: 0 24px; }
 .title-worlds { position: relative; }
@@ -397,21 +397,29 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .title-step.after { right: 12px; }
 :root[data-motion='reduce'] .title-world[aria-busy='true'] { animation: none; opacity: .6; }
 @media (max-width: 640px) { .title-row > li { flex-basis: 72%; } .title-step { display: none; } }
-.story-start, .session-zero { flex: 1; overflow-y: auto; max-width: var(--story-width); width: 100%; margin: 0 auto; padding: 20px 32px; }
-.story-start h2, .session-zero h2 { margin: 0 0 6px; }
-.session-zero { display: flex; flex-direction: column; gap: 14px; }
-.session-presets { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-.session-preset { position: relative; display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; background: var(--surface); cursor: pointer; }
-.session-preset input { position: absolute; opacity: 0; pointer-events: none; }
-.session-preset.picked { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
-.session-preset:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
-.session-fine-tune { display: flex; flex-direction: column; gap: 12px; }
-.session-fine-tune[open] > summary { margin-bottom: 8px; }
-.session-fine-tune > summary { cursor: pointer; font-weight: 600; }
-.story-premades { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 12px; }
-.story-premades li { border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; background: var(--surface); }
-.story-premades p { margin: 6px 0 10px; }
-.story-make { display: grid; gap: 12px; }
+.story-start { flex: 1; overflow-y: auto; max-width: var(--story-width); width: 100%; margin: 0 auto; padding: 20px 32px; }
+/* The cast page (src/features/story/StoryStart.tsx): who you play, then rules, tone and Begin at the foot. */
+.cast-setup { flex: 1; overflow-y: auto; max-width: 880px; width: 100%; margin: 0 auto; padding: 24px 32px; display: flex; flex-direction: column; gap: 20px; }
+.cast-setup h2 { font-size: 1.35rem; }
+.cast-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
+.cast-card { width: 100%; height: 100%; min-height: 128px; display: grid; justify-items: center; align-content: center; gap: 8px; padding: 16px 12px 12px; border: 1px solid var(--border);
+  border-radius: 12px; background: var(--surface); text-align: center; transition: border-color 160ms var(--ease); }
+.cast-card:hover { border-color: var(--input-border, var(--border)); }
+.cast-card[aria-pressed='true'] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.cast-card .portrait { width: 52px; height: 52px; }
+.cast-name { font-weight: 500; font-size: 0.875rem; line-height: 1.3; }
+.cast-own { border-style: dashed; color: var(--muted); }
+.cast-own svg { width: 24px; height: 24px; }
+.cast-bio { font-family: var(--read-font); color: var(--muted); max-width: 62ch; min-height: 3.2em; font-size: 0.95rem; line-height: 1.6; }
+.cast-options { display: flex; flex-direction: column; gap: 12px; }
+.cast-options > summary { cursor: pointer; color: var(--muted); font-size: 0.875rem; width: fit-content; }
+.cast-options > summary:hover { color: var(--text); }
+.cast-foot { position: sticky; bottom: -24px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: auto -32px -24px; padding: 16px 32px 24px;
+  border-top: 1px solid var(--border); background: var(--canvas); }
+.cast-foot select { padding: 8px 10px; font-size: 0.875rem; background: var(--surface); }
+.cast-foot .button { margin-left: auto; }
+@media (max-width: 720px) { .cast-foot select { flex: 1 1 40%; min-width: 0; } .cast-foot .button { flex-basis: 100%; } }
+.story-make { display: grid; gap: 12px; max-width: var(--story-width); }
 .story-points { margin: 4px 0 0; color: var(--muted); }
 .story-points.over { color: var(--danger); }
 .story-sheet summary { cursor: pointer; color: var(--muted); }
@@ -474,7 +482,7 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
   .page-header { flex-wrap: wrap; }
   .composer { padding: 10px 12px 12px; }
   .story-note-form { grid-template-columns: 1fr; }
-  .story-header, .story-log, .story-start, .session-zero, .story-notice, .story-footer, .title-screen { padding-left: 16px; padding-right: 16px; }
+  .story-header, .story-log, .story-start, .cast-setup, .story-notice, .story-footer, .title-screen { padding-left: 16px; padding-right: 16px; }
   .title-words { padding: 18px 18px; }
 }
 @media (prefers-reduced-motion: reduce) { :root:not([data-motion='full']) *, :root:not([data-motion='full']) *::before, :root:not([data-motion='full']) *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
