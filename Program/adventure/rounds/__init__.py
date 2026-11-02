@@ -15,6 +15,8 @@
 - solo.py: a player's line played as a turn of the loop (send, retry)
 - telling.py: today's turn as the loop's steps (Gather, Resolve, Write, Commit)
 - resolve.py: every character's risky acts rolled by code, the one question on ambiguity, the TurnResult and brief
+- house_rules.py: the campaign's house rulebook as data, and the user's rulings, applied from their turn forward
+- scan.py: the draft scan every Writer post passes before Commit, with the fixes code makes when a rewrite can't
 
 The API is adventure/round_routes.py.
 """
