@@ -1,0 +1,2678 @@
+{
+ "about": "Character-sheet lines for a townsperson who becomes a companion (dungeon/world/profile_bank.py), drawn by seed. 'careers' is keyed by career id (shared and city careers), 'staff' by the title someone holds at a place, 'sectors' by a career's sector as a fallback; each has three subject-less skill sentences. 'laughs' completes 'laughs at ...' and 'snaps' completes 'snaps when ...' (lowercase, no period); 'speech' and 'middling' are subject-less sentences. Lines never use a pronoun for the person and the four lists fit every era.",
+ "careers": {
+  "accountant": [
+   "Reconciles a month of ledger entries and finds the one transposed figure.",
+   "Knows the tax rules well enough to find a legitimate deduction others miss.",
+   "Walks an auditor through the books with every receipt filed and ready."
+  ],
+  "actor": [
+   "Can memorise a page of lines overnight for an audition.",
+   "Weeps, laughs or rages on cue and does it again just as true the next night.",
+   "Takes a director's note and changes a scene on the very next run."
+  ],
+  "aerospace-engineer": [
+   "Models a flight part in CAD and runs stress and thermal simulations on it.",
+   "Plans and runs vibration and thermal-vacuum tests on flight hardware.",
+   "Digs through telemetry logs to trace an anomaly back to its root cause."
+  ],
+  "airship-mail-rigger": [
+   "Handles mooring lines at the mast in a gusty crosswind without losing grip.",
+   "Checks gas bags and rigging wires for chafe and tears before a flight.",
+   "Climbs the frame of an airship in flight without a slip."
+  ],
+  "alewife": [
+   "Brews a good batch of ale from malt, water and herbs.",
+   "Knows by taste when ale is ready and when it has turned sour.",
+   "Keeps order in a crowded alehouse with a sharp tongue."
+  ],
+  "antiquarian-bookseller": [
+   "Spots a valuable first edition in a box of junk at an estate sale.",
+   "Judges a book's condition and fair price at a glance.",
+   "Repairs a loose binding or a torn page carefully."
+  ],
+  "apothecary": [
+   "Grinds, measures and mixes herbs into salves, syrups and powders by careful recipe.",
+   "Recognises dozens of dried roots, barks and leaves by sight and smell alone.",
+   "Asks the right questions about a cough or a fever and recommends a remedy to suit."
+  ],
+  "arbiter": [
+   "Hears both sides of a dispute and gets to the heart of it with a few sharp questions.",
+   "Witnesses and seals contracts so both parties are bound by the temple's law.",
+   "Quotes the precedents and customs of past rulings from memory."
+  ],
+  "armourer": [
+   "Rivets mail rings together into a shirt that turns a blade.",
+   "Hammers plate steel over a stake to fit a particular body.",
+   "Mends dented helms and split mail fast in the rush before a tournament."
+  ],
+  "assayer": [
+   "Crushes, fluxes and fires an ore sample to find its gold and silver content.",
+   "Weighs a tiny bead of metal on a fine balance to a fraction of a grain.",
+   "Tells promising ore from worthless rock by eye and heft before testing it."
+  ],
+  "asylum-attendant": [
+   "Talks an agitated patient down without force or a raised voice.",
+   "Bathes, feeds and dresses patients who cannot manage alone, on a strict ward routine.",
+   "Watches a crowded day room and spots the patient about to lash out before it happens."
+  ],
+  "baker": [
+   "Shapes dozens of loaves by hand, each one the same weight and size.",
+   "Can tell when a dough has proved enough by pressing it with a fingertip.",
+   "Gets the first batch of bread out of the oven before the sun is up."
+  ],
+  "bank-clerk": [
+   "Counts a stack of notes and coin at speed and feels a counterfeit before seeing it.",
+   "Posts the day's cheques and deposits to the ledgers and balances the books before going home.",
+   "Finds a single misplaced figure in a page of accounts by checking the totals backward."
+  ],
+  "bank-teller": [
+   "Counts a stack of bills quickly and accurately by hand.",
+   "Spots a forged signature or a counterfeit note at the grille.",
+   "Balances the cash drawer to the penny at the end of the day."
+  ],
+  "barista": [
+   "Pulls a balanced espresso shot and steams milk into silky microfoam.",
+   "Keeps a line of fifteen drink orders straight in memory during the morning rush.",
+   "Remembers the regulars' usual orders and starts them before they reach the till."
+  ],
+  "barmaid": [
+   "Pulls a pint from the hand pump with just the right head.",
+   "Keeps order in a crowded taproom with a firm word.",
+   "Chalks up a tally of drinks owed on the slate through a busy evening."
+  ],
+  "bartender": [
+   "Pours a measure by eye without bothering with a jigger.",
+   "Spots who has had enough to drink and cuts them off without a scene.",
+   "Keeps a crowd three deep at the bar served in the right order."
+  ],
+  "biologist": [
+   "Identifies local species by sight, call or track in the field.",
+   "Collects, labels and preserves samples so they hold up in the lab.",
+   "Writes a field report with data clean enough for a regulator or journal."
+  ],
+  "biotech-scientist": [
+   "Can run a PCR or western blot and get clean, repeatable results.",
+   "Keeps a lab notebook detailed enough to defend a patent.",
+   "Troubleshoots a failed assay by changing one variable at a time."
+  ],
+  "blacksmith": [
+   "Shoes a horse so it walks out of the forge sound.",
+   "Judges the heat of iron by its colour before striking.",
+   "Forges nails, hinges, tools and ploughshares to order."
+  ],
+  "boatbuilder": [
+   "Lofts a hull's lines full size from a set of plans.",
+   "Scarfs and fastens new planking into an old hull so it is watertight.",
+   "Fairs, sands and paints a hull to a smooth, glossy finish before launch."
+  ],
+  "boatman": [
+   "Poles a loaded barge upstream against the current without running it onto a shoal.",
+   "Knows every ford, weir and sandbar on the river between the bridge and the next town.",
+   "Stows wool bales, timber and wine casks so the barge rides level and nothing shifts."
+  ],
+  "boilermaker": [
+   "Can close a red-hot rivet in boiler plate with a holder-up on the other side.",
+   "Caulks a plate seam tight enough to hold full steam pressure on test.",
+   "Marks out rivet holes on plate from a template without a measuring slip."
+  ],
+  "bootblack": [
+   "Brings a pair of shoes to a mirror shine with polish, brush and rag in a few minutes.",
+   "Snaps the rag in a quick rhythm that pleases customers and draws a crowd.",
+   "Remembers regulars by name and keeps up chatter about the ball game and the headlines."
+  ],
+  "bootlegger": [
+   "Can run a load of liquor past checkpoints on back roads at night.",
+   "Knows which cops and officials take bribes and how much.",
+   "Cuts and rebottles liquor to stretch a shipment."
+  ],
+  "brakeman": [
+   "Runs along the car roofs of a moving freight and sets each brake wheel by hand.",
+   "Couples cars in the yard with link and pin and keeps all ten fingers.",
+   "Signals the engineer with arm and lantern so every move is clear."
+  ],
+  "cabman": [
+   "Knows the quickest way between any two streets in London without asking or looking.",
+   "Drives a horse and hansom through thick traffic and pea-soup fog without a scrape.",
+   "Sizes up a fare at a glance and knows who will tip, who will haggle and who will bolt."
+  ],
+  "canal-boatman": [
+   "Steers a loaded narrowboat into a lock without touching the walls.",
+   "Handles a tow horse along the towpath and unhitches it at every bridge.",
+   "Legs a boat through a tunnel by walking it along the brickwork."
+  ],
+  "cannery-hand": [
+   "Guts and cleans fish at the line with a few quick strokes of a knife.",
+   "Packs fish into tins so each one makes weight without overfilling.",
+   "Feeds tins into the sealing machine steadily without causing a jam."
+  ],
+  "carpenter": [
+   "Saws, planes and joins timber to build a sturdy frame without nails.",
+   "Mends a broken wagon wheel or axle so the wagon can roll again the same day.",
+   "Measures twice and cuts once, working to the width of a fingernail."
+  ],
+  "carter": [
+   "Drives an ox or horse team with a heavy wagon down steep, rutted roads without tipping.",
+   "Loads sacks, logs and barrels so the weight sits evenly over the axles.",
+   "Greases axles, mends a cracked wheel spoke and fixes harness on the roadside."
+  ],
+  "casino-dealer": [
+   "Can pitch cards around a blackjack table fast without a single misdeal.",
+   "Counts a pile of chips by sight and pays out to the dollar.",
+   "Keeps a straight face while a table full of strangers loses their tempers."
+  ],
+  "castle-servant": [
+   "Scrubs pots, turns spits and hauls water for a great household.",
+   "Knows the order of service in the hall and when to stay out of sight.",
+   "Washes linen with lye and beats it clean on the laundry board."
+  ],
+  "caulker": [
+   "Drives oakum into hull seams with a caulking iron and mallet until every seam is tight.",
+   "Pays hot pitch over the seams without scalding a hand or wasting any.",
+   "Hears from the ring of the mallet whether a seam is packed hard enough."
+  ],
+  "chaplain": [
+   "Sings the daily mass in Latin from memory, with every response and chant in its place.",
+   "Teaches boys the alphabet on a wax tablet and drills the psalter until every pupil can read it aloud.",
+   "Copies and mends service books with quill, ink and a careful hand."
+  ],
+  "charcoal-burner": [
+   "Stacks a kiln of cut logs and seals it with turf and earth so it burns slow without flame.",
+   "Reads the colour of the smoke to tell when the wood inside is turning to charcoal.",
+   "Stays awake through days and nights of tending, patching any hole before the kiln flares up."
+  ],
+  "chart-copyist": [
+   "Copies a sea chart with fine pen lines so every rock and sounding is in place.",
+   "Updates charts with new soundings and hazards from captains' reports.",
+   "Draws compass roses, coastlines and lettering in a clean, legible hand."
+  ],
+  "chauffeur": [
+   "Keeps the motorcar running, polished and gassed up at all hours.",
+   "Drives smoothly enough that passengers can read or doze in the back.",
+   "Stays discreet about where the family went and with whom."
+  ],
+  "chorus-dancer": [
+   "Can kick in perfect time with a line of twenty other dancers.",
+   "Changes costume in under a minute between numbers.",
+   "Learns a new routine in a single rehearsal and holds it every show."
+  ],
+  "cigarette-seller": [
+   "Walks a crowded nightclub with a loaded tray on a strap without spilling a thing.",
+   "Makes change in the dark and never comes up short at the end of the night.",
+   "Banters with customers just enough to earn a generous tip without starting trouble."
+  ],
+  "citrus-farmer": [
+   "Prunes tangerine trees in spring so light reaches the inner branches.",
+   "Thins young fruit in summer so the rest grows larger and sweeter.",
+   "Picks, grades and boxes tangerines by size and colour for market."
+  ],
+  "clam-digger": [
+   "Spots clam holes in the mud and turns the clams out quickly with a fork.",
+   "Times the dig to the low tide and gets off the flats before it turns.",
+   "Fills a hod with clams without breaking the shells."
+  ],
+  "clerk": [
+   "Copies a letter in clean copperplate and takes a press copy in the letter-book before it goes out.",
+   "Adds a long column of pounds, shillings and pence in the head and carries it to the ledger without a blot.",
+   "Runs a parcel of deeds across the City and knows which chambers and offices close early on Saturdays."
+  ],
+  "cobbler": [
+   "Resoles and reheels worn boots with leather, nails and a cobbler's last.",
+   "Stitches a split seam or torn upper with a waxed thread and an awl.",
+   "Stretches tight shoes on a last overnight until the pair fits comfortably."
+  ],
+  "compositor": [
+   "Picks type from the case by feel and sets a stick quickly and accurately.",
+   "Reads type upside down and backwards as easily as print.",
+   "Locks up a forme in the chase so nothing shifts on the press."
+  ],
+  "constable": [
+   "Walks a beat at regulation pace and knows every shop door, alley and pub on it.",
+   "Takes a drunk or a brawler in charge with a firm grip and no more force than needed.",
+   "Writes up an incident in a pocketbook clearly enough to stand up when read out in court."
+  ],
+  "construction-trades": [
+   "Can wire a room to code with every circuit labelled at the panel.",
+   "Traces a dead outlet or a tripping breaker to the bad connection.",
+   "Works safely around live wires, knowing what must be shut off first."
+  ],
+  "convent-teacher": [
+   "Teaches small children to read from a hornbook and to count with pebbles and slates.",
+   "Shows girls how to hem, darn and work a sampler with neat, even stitches.",
+   "Keeps a room of restless children quiet and at lessons with a single look."
+  ],
+  "cook": [
+   "Turns out pies, stews and bread for a crowd of hungry workers by noon.",
+   "Makes cheap cuts of meat and leftover bread into a filling meal.",
+   "Keeps several pots going at once on one fire without anything burning."
+  ],
+  "counting-clerk": [
+   "Copies ledgers and contracts in a neat, fast hand without blots or errors.",
+   "Adds long columns of figures in the head and balances the books to the coin.",
+   "Files and finds any letter, bill of lading or receipt in the counting house."
+  ],
+  "courier": [
+   "Runs sealed letters through the city by the quickest alleys and bridges.",
+   "Knows which doors and which servants to ask for in every great house.",
+   "Keeps a letter's seal unbroken and its contents secret no matter who asks."
+  ],
+  "court-clerk": [
+   "Writes a fair chancery hand in Latin on parchment.",
+   "Keeps accounts with tally sticks and on long pipe rolls.",
+   "Drafts writs and letters in the proper forms and seals them correctly."
+  ],
+  "dairymaid": [
+   "Milks a cow quickly and cleanly by hand.",
+   "Churns cream into butter and works out the buttermilk.",
+   "Presses curds into cheese and knows when a cheese is ready to sell."
+  ],
+  "dancer": [
+   "Dances for hours in time with the music without missing a step.",
+   "Picks up a new dance after seeing it performed once or twice.",
+   "Reads a crowd and plays to the patrons most likely to throw coins."
+  ],
+  "data-analyst": [
+   "Writes a SQL query that joins five messy tables and returns the right numbers.",
+   "Builds a dashboard that answers the question the manager actually meant to ask.",
+   "Spots when a surprising trend is really a broken data pipeline."
+  ],
+  "defense-engineer": [
+   "Runs stress and load calculations on a structural part to strict tolerances.",
+   "Writes test procedures and documentation that pass a government review.",
+   "Traces a test failure back to one component through careful data analysis."
+  ],
+  "department-store-clerk": [
+   "Measures and cuts fabric or ribbon precisely across the counter.",
+   "Writes up a sales slip and wraps a parcel neatly in brown paper.",
+   "Persuades a customer to buy the better model."
+  ],
+  "deputy": [
+   "Serves warrants and court papers on unwilling people without starting a fight.",
+   "Keeps order on Main Street on a Saturday night without drawing a gun.",
+   "Collects county taxes and keeps the receipts in good order for the sheriff."
+  ],
+  "detective": [
+   "Questions a witness patiently and catches the moment a story stops adding up.",
+   "Shadows a suspect through crowded streets in plain clothes without being spotted.",
+   "Searches a room methodically and turns up the pawn ticket or letter everyone else missed."
+  ],
+  "docker": [
+   "Swings a hand-hook into a sack or bale and shoulders it out of a hold all day.",
+   "Rigs a sling so cargo can be hoisted onto the quay without spilling or swinging loose.",
+   "Knows which foremen hire at which dock gates and how to get taken on early."
+  ],
+  "dockhand": [
+   "Shoulders bales, sacks and barrels up a gangplank all day without dropping a load.",
+   "Works a block-and-tackle or crane to swing heavy cargo out of a hold.",
+   "Pushes to the front of the hiring line each morning and gets picked for a day's work."
+  ],
+  "doctor": [
+   "Sets broken bones and stitches up mine injuries by lamplight.",
+   "Delivers a baby at a ranch house in the middle of the night.",
+   "Diagnoses a fever from the patient's symptoms and doses the right medicine."
+  ],
+  "dowser": [
+   "Walks a field slowly with a forked witch-hazel stick and feels for the downward pull.",
+   "Reads slopes, ferns and wet ground for hints of a spring under the surface.",
+   "Talks a doubting farmer into digging where the stick dipped."
+  ],
+  "draughtsman": [
+   "Draws a precise engineering plan in ink with compasses, scale and set square.",
+   "Works up a full set of dimensioned drawings from a foreman's rough sketch.",
+   "Letters a title block in a clean hand that the shop floor can read at a glance."
+  ],
+  "dressmaker": [
+   "Cuts and sews a dress from a catalogue pattern to the customer's measurements.",
+   "Fits a dress on a customer with pins and tucks so it hangs just right.",
+   "Alters an old gown into the latest fashion with new sleeves and trim."
+  ],
+  "drover": [
+   "Drives a herd of cattle along a road without losing any to the ditches.",
+   "Works with dogs to keep the herd together and moving.",
+   "Judges a beast's weight and health by eye at the market."
+  ],
+  "druggist": [
+   "Compounds pills, powders and tinctures from a written prescription.",
+   "Weighs out tiny doses on a balance scale without error.",
+   "Recommends a remedy for a cough or upset stomach over the counter."
+  ],
+  "dyer": [
+   "Mixes woad, madder and weld to match a colour by eye.",
+   "Fixes colour with alum so the cloth won't fade in the wash.",
+   "Judges vat heat and steeping time by smell and experience."
+  ],
+  "elevator-operator": [
+   "Stops the car level with the floor every time using only the hand lever.",
+   "Calls out the floors and departments in a clear voice without missing a stop.",
+   "Stays polite and calm with impatient passengers in a packed car."
+  ],
+  "emerald-cutter": [
+   "Reads the grain of a rough emerald and splits it along the cleavage with one tap.",
+   "Grinds and polishes facets on a wheel until the stone throws back the light.",
+   "Grades emeralds by colour and clarity at a glance under a loupe."
+  ],
+  "event-planner": [
+   "Builds a minute-by-minute run sheet for a wedding or conference.",
+   "Haggles a caterer and a venue down to fit a tight budget.",
+   "Fixes a missing vendor or a late speaker on the day without guests noticing."
+  ],
+  "factory-hand": [
+   "Keeps pace with the line for a full shift without falling behind.",
+   "Knows how to stay clear of the machine's moving parts.",
+   "Spots a faulty part coming down the belt before it gets packed."
+  ],
+  "falconer": [
+   "Mans a young hawk until it steps up to the fist and comes back to the lure.",
+   "Cuts and fits jesses, hoods and bells for falcons.",
+   "Reads wind and weather to know when a bird can be flown safely."
+  ],
+  "farmer": [
+   "Ploughs a straight furrow behind an ox team and sows seed broadcast in an even spread.",
+   "Reads the sky and the soil to judge the right week to sow, reap and bring the hay in.",
+   "Keeps pigs, geese and a cow fed and healthy through a lean winter on very little fodder."
+  ],
+  "farmhand": [
+   "Swings a scythe through barley all day in a smooth, steady rhythm.",
+   "Digs and clears drainage ditches to keep the fields from flooding.",
+   "Binds sheaves with a twist of straw and stands the sheaves in stooks to dry."
+  ],
+  "fashion-assistant": [
+   "Pins and marks a garment on a fitting model in seconds.",
+   "Tracks dozens of samples so none go missing between showroom and shoot.",
+   "Spots a flaw in a seam or a colour mismatch from across the room."
+  ],
+  "ferry-deckhand": [
+   "Throws a line to the pilings and makes the ferry fast in one smooth motion.",
+   "Collects fares and makes change on a rolling deck without dropping a coin.",
+   "Judges when fog is too thick to cross safely and tells the skipper plainly."
+  ],
+  "ferryman": [
+   "Hauls a loaded ferry hand over hand along the rope across a swift river.",
+   "Loads carts and cattle so the ferry stays level and the animals don't panic.",
+   "Judges when the river is too high or too fast to cross safely and refuses the fare."
+  ],
+  "finance-banker": [
+   "Builds a valuation model for a deal overnight when a client calls.",
+   "Polishes a pitch book until every number and logo lines up.",
+   "Stays sharp on a negotiation call after three hours of sleep."
+  ],
+  "financial-analyst": [
+   "Builds a three-statement spreadsheet model that ties out to the penny.",
+   "Turns a quarter of numbers into a ten-slide deck a client can follow.",
+   "Reads an earnings report and finds the line item management hoped nobody would see."
+  ],
+  "fire-watcher": [
+   "Stays awake and alert in a tower through a long night watch.",
+   "Spots smoke or a glow over the rooftops and names the street it is in.",
+   "Rings the alarm bell in the pattern that tells the fire crews where to go."
+  ],
+  "fisher": [
+   "Sets nets and wicker eel traps where the fish run and lifts every trap before dawn.",
+   "Mends torn netting quickly with a netting needle and twine.",
+   "Keeps the catch alive and fresh in water tubs and sells it off by weight on the bank."
+  ],
+  "fisherman": [
+   "Can mend a torn net quickly with a netting needle.",
+   "Reads weather, tides and birds to find where the fish are running.",
+   "Guts and ices a catch fast enough to get the best price at the wharf."
+  ],
+  "fishing-crew": [
+   "Baits and sets longlines for hairtail and hauls the lines back without tangles.",
+   "Sorts and ices the catch on deck so it reaches the auction fresh.",
+   "Mends nets and lines between trips with a netting needle."
+  ],
+  "fishmonger": [
+   "Guts, scales and fillets a fish in seconds with a sharp knife.",
+   "Judges the freshness of fish by its eyes, gills and smell.",
+   "Cries the catch loud enough to draw buyers across a busy market."
+  ],
+  "fitness-trainer": [
+   "Spots bad form on a squat or deadlift and fixes it with one cue.",
+   "Writes a training plan that builds strength without injuring a beginner.",
+   "Keeps a client motivated through the last hard set of a session."
+  ],
+  "folklore-lecturer": [
+   "Coaxes reluctant old people into sharing songs, sayings and stories.",
+   "Takes down ballads in shorthand and notes the tune while the singer is still going.",
+   "Lectures on folklore with stories that keep a room of students listening."
+  ],
+  "garage-mechanic": [
+   "Can diagnose a misfiring engine by its sound.",
+   "Patches an inner tube and changes a tyre on the roadside.",
+   "Adjusts carburettors, brakes and timing with basic hand tools."
+  ],
+  "gardener": [
+   "Prunes fruit trees in late winter for a well-shaped crown and a heavy crop.",
+   "Keeps fountains running clear by clearing pipes, basins and leaves.",
+   "Plants and weeds flower beds so something is in bloom from spring to first frost."
+  ],
+  "garment-worker": [
+   "Runs a straight seam on a sewing machine at piecework speed.",
+   "Matches stripes and patterns across seams on cut pieces.",
+   "Fixes a jammed machine or a broken needle without losing much time."
+  ],
+  "gate-warden": [
+   "Fits each traveller with green spectacles and locks the clasp with the little gold key.",
+   "Keeps the spectacle boxes counted, cleaned and sorted by size.",
+   "Questions strangers at the gate politely and finds out what business brings each one to the city."
+  ],
+  "glazier": [
+   "Blows green glass and spins it into a flat, clear pane of even thickness.",
+   "Cuts glass to size with a scoring tool and a straight edge without cracking it.",
+   "Fits and putties panes into window frames tight enough to keep out wind and rain."
+  ],
+  "goldsmith": [
+   "Melts, pours and hammers gold into wire, sheet and settings.",
+   "Sets a stone in a gold claw so it holds fast without any chance of falling out.",
+   "Engraves fine patterns on gold with a graver and a steady hand."
+  ],
+  "goose-girl": [
+   "Drives a whole flock of geese down a road with a willow switch and never loses a bird.",
+   "Knows each goose by its markings and temper and can call the strays back by name.",
+   "Spots a fox or a hawk at the edge of the meadow before the flock does."
+  ],
+  "governess": [
+   "Teaches reading, French, geography and sums to children of different ages in one schoolroom.",
+   "Plays the piano well enough to teach a pupil a drawing-room piece for company.",
+   "Corrects a child's posture and table manners with a quiet word rather than a raised voice."
+  ],
+  "government-analyst": [
+   "Condenses a two-hundred-page report into a one-page briefing memo.",
+   "Drafts policy options with the costs and trade-offs laid out plainly.",
+   "Knows which agency, committee or official needs to sign off on what."
+  ],
+  "graduate-student": [
+   "Can read and summarise a dense academic paper in one sitting.",
+   "Runs a discussion section for undergraduates a few years younger.",
+   "Survives on little sleep and cheap coffee through a deadline week."
+  ],
+  "graphic-designer": [
+   "Can build a logo and colour palette that still works tiny on a business card.",
+   "Lays out a crowded page so the eye lands where the client wants it.",
+   "Gets files ready for the printer with the right bleed, crop marks and colour mode."
+  ],
+  "grocer": [
+   "Weighs out flour, sugar and coffee by scoop and scale without fuss.",
+   "Keeps a running credit book for regular customers in the neighbourhood.",
+   "Knows which produce will spoil soonest and sells it first."
+  ],
+  "groom": [
+   "Curries and brushes a horse until the coat shines and the hooves are picked.",
+   "Spots lameness or colic before it turns serious.",
+   "Rides a fresh horse out on exercise without being thrown."
+  ],
+  "guild-mason": [
+   "Dresses ashlar blocks with chisel and mallet to a true, square face.",
+   "Lays courses of stone level and plumb with thin, even mortar joints.",
+   "Carves mouldings, corbels and window tracery to a template."
+  ],
+  "guild-surveyor": [
+   "Measures how far a building has settled each year with level and rod.",
+   "Spots cracked joints and bulging walls long before a wall turns dangerous.",
+   "Keeps a careful record of every house's survey in the guild books."
+  ],
+  "hatcheck-attendant": [
+   "Matches every coat and hat to its ticket on a packed night.",
+   "Remembers a regular's face and name to earn a bigger tip.",
+   "Knows which club gossip to repeat and which to keep quiet."
+  ],
+  "healer": [
+   "Cleans and binds wounds and sets broken bones with splints.",
+   "Brews herb tinctures and teas to ease pain, fever and sleeplessness.",
+   "Sits with the sick through the night and spots when a fever is turning worse."
+  ],
+  "hotel-clerk": [
+   "Keeps the register and room keys in order and never gives out the wrong key.",
+   "Meets every train and talks travellers into taking a room before a rival does.",
+   "Remembers every guest's name, face and room number."
+  ],
+  "hotel-front-desk": [
+   "Checks in a lobby full of tired guests quickly and with a smile.",
+   "Finds a room for a guest when the hotel is supposedly overbooked.",
+   "Calms an angry guest over a noisy neighbour at two in the morning."
+  ],
+  "house-guard": [
+   "Stands guard at a palace gate and turns away anyone without business.",
+   "Knows every face in the household and notices a stranger at once.",
+   "Fights with sword and buckler in a narrow corridor or stairway."
+  ],
+  "house-servant": [
+   "Serves a formal dinner, clearing and laying each course without a clatter.",
+   "Polishes silver, scrubs floors and keeps a great room spotless.",
+   "Keeps quiet about everything overheard in the household."
+  ],
+  "housemaid": [
+   "Blacks a grate, scrubs a floor and dusts a parlour before breakfast.",
+   "Gets stains out of linen with soap, bluing and elbow grease.",
+   "Serves at table quietly, knowing which side to serve from."
+  ],
+  "huntsman": [
+   "Reads deer and boar tracks, droppings and rubbings to know what passed and when.",
+   "Brings down game cleanly with a crossbow or spear and dresses the carcass in the field.",
+   "Handles a pack of hounds on the leash and calls the pack off with a blast of the horn."
+  ],
+  "iceman": [
+   "Can split a block of ice to the right size with an ice pick.",
+   "Carries a heavy block up flights of stairs with tongs and a leather pad.",
+   "Remembers every customer's order from the card in the window."
+  ],
+  "infirmarer": [
+   "Sets a broken bone and splints it with linen and wood.",
+   "Makes salves, poultices and tisanes from herbs in the garden.",
+   "Nurses the sick through a fever with broth, sponging and watchfulness."
+  ],
+  "infirmary-nurse": [
+   "Makes beds, washes patients and changes dressings on a full ward.",
+   "Keeps a ward clean and orderly enough to pass matron's round.",
+   "Spots a rising fever or a failing patient on the night round."
+  ],
+  "innkeeper": [
+   "Cooks a hearty pottage and roast for a crowd of travellers.",
+   "Makes up beds with fresh straw and linen and keeps the rooms clean.",
+   "Stables, waters and feeds guests' horses."
+  ],
+  "institute-lecturer": [
+   "Explains levers and pulleys with clear chalkboard diagrams to tired workmen.",
+   "Marks drawing exercises with sharp, useful corrections in red ink.",
+   "Keeps an evening class awake after a ten-hour day in the works."
+  ],
+  "iron-moulder": [
+   "Rams a sand mould around a pattern firm enough to take molten iron.",
+   "Pours from the ladle steadily so the casting fills without cold shuts.",
+   "Allows for shrinkage and draft when setting cores and gates in a mould."
+  ],
+  "jazz-musician": [
+   "Improvises a hot solo over the changes without missing a beat.",
+   "Sight-reads a new arrangement on the bandstand the same night.",
+   "Jumps into an after-hours jam session and keeps up with anyone."
+  ],
+  "joiner": [
+   "Dovetails a chest corner so tight it needs no glue.",
+   "Planes and fits wall panelling so the seams barely show.",
+   "Turns chair legs and spindles on a pole lathe to matching shapes."
+  ],
+  "journalist": [
+   "Gets a reluctant source to talk on the record.",
+   "Writes a clean news story on a tight deadline with the key facts up top.",
+   "Checks a rumour against documents and second sources before printing it."
+  ],
+  "laundress": [
+   "Boils, scrubs and wrings out sheets on a washboard until the linen comes out white.",
+   "Starches and irons shirts to a crisp finish with irons heated on the stove.",
+   "Lifts stains with lye soap, bluing and sunlight."
+  ],
+  "lawyer": [
+   "Drafts a will or contract with no loopholes.",
+   "Cross-examines a witness until the story falls apart.",
+   "Knows which court clerk and which judge to approach for what."
+  ],
+  "librarian": [
+   "Finds the right book for a patron's vague question.",
+   "Catalogues new books so they can be found on the shelves.",
+   "Keeps a reading room quiet with a look and a whisper."
+  ],
+  "lifeguard": [
+   "Spots a swimmer in trouble long before anyone starts shouting.",
+   "Can tow a struggling adult to shore and start resuscitation.",
+   "Reads the water for rip currents, drop-offs and hazards before a shift."
+  ],
+  "lighthouse-keeper": [
+   "Trims the wick and polishes the brass and lens so the lamp shines at full strength.",
+   "Winds the clockwork and rings the fog bell by hand through a long night of fog.",
+   "Keeps a careful log of weather, passing ships and the hours the light was lit."
+  ],
+  "line-cook": [
+   "Can sear, plate and fire a dozen tickets at once without burning anything.",
+   "Breaks down a whole case of chicken or vegetables with fast, even knife work.",
+   "Keeps a station clean and stocked through a slammed Friday dinner service."
+  ],
+  "linotype-operator": [
+   "Sets a column of type on a Linotype keyboard at speed.",
+   "Clears a jammed matrix or a hot metal squirt without wrecking the machine.",
+   "Catches spelling mistakes in the copy while setting it."
+  ],
+  "lobster-fisher": [
+   "Hauls, picks, rebaits and resets a string of traps quickly on a rolling deck.",
+   "Measures lobsters with a gauge and throws back shorts, oversize and egg-bearing females.",
+   "Finds the buoys again in fog using GPS, depth sounder and local knowledge."
+  ],
+  "lock-keeper": [
+   "Winds the paddles and swings the balance beams to pass a boat in minutes.",
+   "Clears silt and weed from the gates and patches a leaking cill.",
+   "Collects tolls and logs every boat's name, cargo and tonnage in the book."
+  ],
+  "longshoreman": [
+   "Can hook and sling a heavy load so it rides safely up out of a hold.",
+   "Stacks crates and sacks in a hold so nothing shifts at sea.",
+   "Knows how to get picked at the shape-up and keep working all day."
+  ],
+  "man-at-arms": [
+   "Can stand a long watch on the walls without nodding off.",
+   "Fights with spear, sword and shield in a close line.",
+   "Breaks up a brawl at a fair without anyone getting killed."
+  ],
+  "market-gardener": [
+   "Raises seedlings under straw and glass bells and plants out tidy rows when the frosts are past.",
+   "Times the sowing of lettuces and onions so something is ready for market every week.",
+   "Enriches the beds with manure and compost until the soil is dark and crumbly."
+  ],
+  "market-keeper": [
+   "Lays out the stalls on the square each morning so every trader has a fair pitch.",
+   "Weighs and shares out produce fairly and settles quarrels over measures.",
+   "Keeps a tally of who brought what and who is owed a share."
+  ],
+  "marketing-coordinator": [
+   "Schedules a month of social posts around a product launch.",
+   "Writes punchy ad copy that fits a strict character limit.",
+   "Reads campaign numbers and knows which ad to cut and which to boost."
+  ],
+  "mason": [
+   "Cuts stone square and true with chisel and mallet.",
+   "Lays courses straight and level with a plumb line and square.",
+   "Reads the master mason's templates and tracings in the lodge."
+  ],
+  "medical-researcher": [
+   "Can design a controlled experiment with the right sample size and blinding.",
+   "Writes a grant aims page that a tired review panel actually finishes reading.",
+   "Keeps cell lines alive, uncontaminated and labelled through months of experiments."
+  ],
+  "merchant": [
+   "Judges wool, wine or cloth by touch, smell and taste.",
+   "Haggles a good price with suppliers and customers alike.",
+   "Keeps accounts of debts and credits in a ledger."
+  ],
+  "merchant-factor": [
+   "Haggles for a cargo in a foreign port and closes the deal at a good price.",
+   "Knows what goods sell for in a dozen ports and when to buy or hold.",
+   "Writes clear reports to the house and keeps the house's money safe abroad."
+  ],
+  "military-sailor": [
+   "Can tie and handle mooring lines quickly on a crowded deck.",
+   "Stands a night watch alert and reports contacts by the book.",
+   "Keeps a bunk, locker and uniform squared away for any inspection."
+  ],
+  "militia-archer": [
+   "Draws a heavy longbow and puts arrows into a target at long range.",
+   "Shoots a fast volley in time with the rest of the line on command.",
+   "Makes and mends arrows and keeps the bowstring waxed and dry."
+  ],
+  "milkman": [
+   "Runs a delivery route before dawn without waking the street.",
+   "Keeps track of which houses owe money and which leave notes.",
+   "Knows how to handle a horse that knows the route better than anyone."
+  ],
+  "mill-hand": [
+   "Can tie a broken thread on a running frame in seconds.",
+   "Hears from the clatter when a loom or frame is about to go wrong.",
+   "Reads lips across a deafening mill floor."
+  ],
+  "miller": [
+   "Dresses a millstone with pick and chisel so the grooves grind flour fine and even.",
+   "Sets the gap between the stones by ear and feel from the sound of the grain running.",
+   "Measures out the miller's toll from each sack quickly and fairly enough to keep customers coming back."
+  ],
+  "miner": [
+   "Drills holes in rock face with hand steel and a single jack by candlelight.",
+   "Loads and fires charges in the right order to break ore cleanly.",
+   "Mucks broken ore into cars and tramps each car to the shaft without derailing."
+  ],
+  "minister": [
+   "Writes and preaches a Sunday sermon that holds a congregation.",
+   "Comforts a grieving family at a deathbed or graveside.",
+   "Performs a wedding, baptism or funeral service from memory."
+  ],
+  "minstrel": [
+   "Plays harp, fiddle or pipe for dancing in the hall.",
+   "Tells a long tale from memory and keeps the crowd listening.",
+   "Makes up a song on the spot about a guest or event."
+  ],
+  "museum-curator": [
+   "Dates and identifies an old object by its materials and style.",
+   "Mounts an exhibit with labels that tell a clear story.",
+   "Writes to collectors to persuade them to lend or give pieces."
+  ],
+  "music-hall-singer": [
+   "Sings a comic song so the whole gallery roars back the chorus.",
+   "Puts down a heckler with a quick line and gets the laugh.",
+   "Switches from a comic number to a weepy ballad and has the house in tears."
+  ],
+  "musician": [
+   "Can learn a new tune by ear and play it the same night.",
+   "Keeps a performance going smoothly after a broken string or a missed cue.",
+   "Teaches a nervous beginner the first scales and simple songs."
+  ],
+  "naval-officer": [
+   "Commands a ship's crew through a storm or a fight with clear orders.",
+   "Reads a chart and plots a course between islands and shoals.",
+   "Keeps the ship's log, accounts and discipline in good order."
+  ],
+  "navigator": [
+   "Takes a sun or star sight with a sextant and works out the ship's latitude.",
+   "Uses tables and dead reckoning to plot a position on a chart.",
+   "Reads currents, depths and the colour of the water near land."
+  ],
+  "newsboy": [
+   "Can shout a headline loud enough to stop a crowd on the sidewalk.",
+   "Makes change for a nickel paper on the run without missing a sale.",
+   "Knows the best corners and the regular buyers on the route."
+  ],
+  "night-nurse": [
+   "Checks vitals at 3 a.m. without fully waking a sleeping patient.",
+   "Knows which overnight changes warrant paging the on-call doctor and which can wait.",
+   "Calms a confused, agitated patient in the small hours with a low voice and a lamp."
+  ],
+  "numbers-runner": [
+   "Remembers every bettor's number and stake on the route and never mixes up the slips.",
+   "Knows every tenement stairwell, barbershop and candy store that takes a play.",
+   "Spots a cop or an unfamiliar face on the block in time to stash the slips."
+  ],
+  "nurse": [
+   "Dresses wounds and changes poultices cleanly on a busy ward without wasting lint.",
+   "Takes temperatures and pulses and records each reading neatly on the bed chart for the house surgeon.",
+   "Notices the first signs that a patient is sinking and fetches the doctor in time."
+  ],
+  "office-clerk": [
+   "Can add a column of figures in a ledger quickly and without error.",
+   "Files invoices and letters so any one can be found on request.",
+   "Writes a clear, even hand on forms, receipts and accounts."
+  ],
+  "orchard-farmer": [
+   "Prunes apple trees in winter to open the canopy and boost the crop.",
+   "Times spraying and mowing to keep pests and disease down without wasting product.",
+   "Runs a cider press and knows which apples blend into a good cider."
+  ],
+  "palace-cook": [
+   "Roasts, bakes and stews for a feast of a hundred guests and has every dish ready on time.",
+   "Runs a busy kitchen of scullions and under-cooks, giving each one a task.",
+   "Judges whether meat is done by touch and bread by the hollow sound of its crust."
+  ],
+  "palace-steward": [
+   "Prepares guest rooms with fresh linen, candles and fires before visitors arrive.",
+   "Keeps count of linens, silver and stores and notices at once when something goes missing.",
+   "Greets guests of every rank with the right courtesy and sees each one settled."
+  ],
+  "paralegal": [
+   "Can assemble a court filing with every exhibit tabbed and every deadline met.",
+   "Digs up the relevant case law in a research database in an afternoon.",
+   "Keeps a case file of thousands of documents organised so anything turns up in minutes."
+  ],
+  "pastry-cook": [
+   "Rolls puff pastry thin and even and crimps a pie edge in one pass.",
+   "Judges a coal oven's heat by hand and turns out a cake risen evenly.",
+   "Pipes icing and dresses cakes neatly for the tea room window."
+  ],
+  "performer": [
+   "Can project to the back of the gallery without straining the voice.",
+   "Covers a dropped line or a missed cue so smoothly nobody notices.",
+   "Learns new blocking and a dance routine in a single rehearsal."
+  ],
+  "pharmacist": [
+   "Spots a dangerous drug interaction on a prescription before it goes out the door.",
+   "Counts, labels and checks a stack of prescriptions without one wrong pill.",
+   "Explains a new inhaler or insulin pen to a nervous customer in plain words."
+  ],
+  "photographer": [
+   "Arranges a large wedding group so every face shows on the plate.",
+   "Judges exposure time by the light through the studio skylight.",
+   "Develops and prints glass plates in the darkroom without fogging them."
+  ],
+  "physician": [
+   "Diagnoses by listening to the chest, feeling the pulse and asking good questions.",
+   "Sets a broken bone and stitches a cut in a patient's kitchen.",
+   "Delivers a baby at home with only a black bag."
+  ],
+  "physician-resident": [
+   "Can present a new admission to the attending in two tight minutes.",
+   "Writes admission orders and progress notes fast enough to keep up with a full service.",
+   "Runs through a differential diagnosis at the bedside while still half-asleep on call."
+  ],
+  "pile-driver": [
+   "Hoists the heavy ram and drops it on the pile head in a steady rhythm.",
+   "Keeps a pile driving straight down through the silt without it twisting or splitting.",
+   "Judges by the sound and the bounce when a pile has reached bedrock."
+  ],
+  "police-patrolman": [
+   "Knows every shop, alley and troublemaker on the beat.",
+   "Breaks up a street fight without drawing the nightstick.",
+   "Calls in from the box on the corner and writes up a clear report."
+  ],
+  "port-logistics": [
+   "Routes a shipment around a delayed vessel and still makes the delivery date.",
+   "Reads a bill of lading and customs paperwork and spots the missing form.",
+   "Juggles trucks, cranes and warehouse slots so containers never sit idle."
+  ],
+  "postman": [
+   "Sorts a bag of letters into walk order at the sorting frame before the first delivery.",
+   "Knows every name, house number and awkward letter-box on the round by heart.",
+   "Walks the same round up to twelve times a day in rain or fog and keeps to the timetable."
+  ],
+  "printer": [
+   "Sets type backward in a composing stick quickly and without mistakes.",
+   "Inks the forme and pulls clean, even sheets on the hand press.",
+   "Proofreads a sheet and spots a wrong letter before the run starts."
+  ],
+  "private-detective": [
+   "Can tail someone through the city without being spotted.",
+   "Gets information out of desk clerks, cabbies and barmen.",
+   "Takes a sharp photograph from a parked car or doorway."
+  ],
+  "professor": [
+   "Lectures for an hour from a few scribbled notes without losing the hall.",
+   "Tears apart a weak argument in a paper and suggests how to fix it.",
+   "Guides a struggling student through a research project during office hours."
+  ],
+  "pullman-porter": [
+   "Makes up a sleeping berth quickly with crisp sheets.",
+   "Remembers every passenger's name, stop and wake-up call.",
+   "Keeps a polite manner through long trips and difficult passengers."
+  ],
+  "pushcart-peddler": [
+   "Haggles a customer up or down and still clears a profit on every sale.",
+   "Stacks fruit or notions on the cart so the best goods catch the eye of passers-by.",
+   "Knows the best corners, the busiest hours and how to keep the licence inspector happy."
+  ],
+  "quarry-worker": [
+   "Drills a row of holes in granite with a steam drill for the next blast.",
+   "Sets and fires charges to break stone without endangering the crew.",
+   "Splits blocks along a straight line with plugs and feathers and a heavy hammer."
+  ],
+  "radio-repairman": [
+   "Can find the dead tube in a radio set and replace it.",
+   "Solders a loose connection inside a cramped radio chassis.",
+   "Builds a working receiver from parts and a wiring diagram."
+  ],
+  "railway-porter": [
+   "Stacks trunks and hatboxes on a barrow and wheels it through a crowded platform without a bump.",
+   "Knows the departure times and platforms of the main trains at the terminus by heart.",
+   "Spots the first-class passengers likely to tip and reaches the luggage before any other porter."
+  ],
+  "railway-signalman": [
+   "Pulls the levers in the right order so the interlocking never fights back.",
+   "Reads the bell codes from neighbouring boxes without a mistake.",
+   "Keeps the train register to the minute through a busy turn."
+  ],
+  "ranch-hand": [
+   "Ropes a calf from the saddle and drags it to the branding fire.",
+   "Stretches barbed wire, sets fence posts and repairs a windmill pump.",
+   "Rides all day in the saddle and still stands night guard over the herd."
+  ],
+  "rare-books-cataloguer": [
+   "Identifies an old book's edition, printer and date from its title page and collation.",
+   "Writes catalogue cards in a neat library hand with every detail correct.",
+   "Handles brittle bindings and foxed pages without cracking a spine or tearing a leaf."
+  ],
+  "ratcatcher": [
+   "Sets snares and spring traps along the runs rats use in cellars and granaries.",
+   "Reads gnaw marks, droppings and greasy smears to find where rats nest and how many.",
+   "Works a terrier through a barn to flush out rats from under the floorboards."
+  ],
+  "real-estate-agent": [
+   "Prices a home close to what it will actually sell for.",
+   "Shows a house so buyers picture themselves living there.",
+   "Talks a nervous buyer and a stubborn seller toward the same number."
+  ],
+  "registered-nurse": [
+   "Can start an IV on a dehydrated patient with tiny, rolling veins.",
+   "Catches a dropping blood pressure on the monitor before anyone calls it.",
+   "Gives a clean shift handoff on six patients in under ten minutes."
+  ],
+  "reporter": [
+   "Takes shorthand notes of a council debate or police court verbatim.",
+   "Writes a short, clear news piece against the printers' deadline.",
+   "Gets a usable quote from a shaken witness at the scene of an accident."
+  ],
+  "retail-associate": [
+   "Folds and fronts a messy display table in minutes.",
+   "Rings up a long line of customers quickly and balances the till at closing.",
+   "Suggests a better size or style that sends a customer out happy."
+  ],
+  "road-mender": [
+   "Lifts broken bricks and relays the gap in a tight, level herringbone pattern.",
+   "Packs sand and gravel into potholes and tamps each one down firm.",
+   "Reads where water pools on a road and lays the bricks so it drains away."
+  ],
+  "ropewalk-spinner": [
+   "Walks backward down the ropewalk feeding hemp into an even yarn.",
+   "Lays yarns into strands and strands into cable with the right twist.",
+   "Spots a weak or uneven stretch of yarn and splices it out."
+  ],
+  "royal-army-soldier": [
+   "Marches and drills in step and presents arms smartly on parade.",
+   "Stands guard for hours without slouching, fidgeting or falling asleep.",
+   "Polishes uniform buttons, boots and buckles to a parade-ground shine for inspection."
+  ],
+  "royal-gardener": [
+   "Clips a long hedge with shears into a straight, even face without a single gap.",
+   "Trains pear and apricot trees flat against a warm wall to ripen fruit early.",
+   "Plans a kitchen garden so there are fresh greens and roots on the castle table all year."
+  ],
+  "sailmaker": [
+   "Cuts canvas to shape and seams it with a palm and needle in tight, even stitches.",
+   "Sews bolt ropes and grommets onto a sail so it can take a gale.",
+   "Patches a torn sail quickly enough to get it back on the yard the same day."
+  ],
+  "sailor": [
+   "Climbs the rigging in a rolling sea and furls a sail on the yard.",
+   "Ties, splices and coils every knot and line aboard by feel in the dark.",
+   "Stands a watch at the helm and holds the ship steady on its course."
+  ],
+  "saloon-pianist": [
+   "Plays any popular song by ear the moment someone hums it.",
+   "Keeps the music going through a noisy saloon from supper until the small hours.",
+   "Plays waltzes, schottisches and reels in strict time for a Saturday dance."
+  ],
+  "schoolmistress": [
+   "Keeps a class of sixty children quiet and working with a glance and a pointer.",
+   "Drills a whole class in reading, spelling and tables on slates until every child can answer.",
+   "Prepares pupils for the inspector's yearly examination so the class passes up to the next standard."
+  ],
+  "schoolteacher": [
+   "Keeps order in a crowded classroom with a firm voice and a raised hand.",
+   "Drills reading, writing and sums until a whole class can recite them.",
+   "Marks slates and copybooks quickly and fairly between lessons."
+  ],
+  "scribe": [
+   "Copies a page of text neatly without a single error.",
+   "Grinds pigments and lays gold leaf for an illuminated initial.",
+   "Writes a will or letter for townsfolk who cannot read."
+  ],
+  "seamstress": [
+   "Runs a straight seam on a treadle machine fast enough to keep up with piece rates.",
+   "Works buttonholes and hems by hand neatly enough to pass the forewoman first time.",
+   "Cuts and makes up a dozen blouses from a bundle without wasting a scrap of cloth."
+  ],
+  "server": [
+   "Can carry four full plates up one arm without a wobble.",
+   "Remembers a table of eight's orders without writing anything down.",
+   "Reads which tables want chat and which want to be left alone."
+  ],
+  "sexton": [
+   "Digs a grave to the proper depth with square sides and neat corners.",
+   "Rings the bell in the right pattern for services, weddings and funerals.",
+   "Keeps the church furnace banked so the pews are warm by Sunday morning."
+  ],
+  "ships-man-at-arms": [
+   "Leaps from rail to rail and fights hand to hand on a pitching deck.",
+   "Fights with shield and seax in close quarters without fouling shipmates.",
+   "Keeps a gambeson, shield and blade in fighting order in salt air."
+  ],
+  "shipwright": [
+   "Shapes ship's ribs from curved timber with an adze to the right sweep.",
+   "Steam-bends planks and fastens each one to the frames with oak treenails.",
+   "Reads a half-model and lays out a hull on the slipway to match it."
+  ],
+  "shoemaker": [
+   "Cuts upper leather from a hide with a curved knife, wasting as little as possible.",
+   "Lasts and stitches a pair of boots by hand with waxed thread, awl and bristle needles.",
+   "Measures a foot once and builds shoes that fit without pinching on the first wearing."
+  ],
+  "shop-assistant": [
+   "Weighs, wraps and ties a parcel in brown paper and string in a moment.",
+   "Remembers what a regular customer bought last week and suggests the same.",
+   "Keeps the stock dusted, faced and counted for the monthly stocktake."
+  ],
+  "signal-keeper": [
+   "Reads flag hoists from a distant ship through a spyglass and decodes the message at once.",
+   "Sends lantern signals at night with a shutter in the proper code.",
+   "Relays a message along the island chain without changing a word."
+  ],
+  "skyscraper-riveter": [
+   "Catches a red-hot rivet in a tin can tossed from forty feet away.",
+   "Bucks or drives a rivet home with a pneumatic gun in a few seconds.",
+   "Walks a narrow steel beam hundreds of feet up without a safety line or a wobble."
+  ],
+  "social-worker": [
+   "Can assess a home visit for safety risks within minutes of walking in.",
+   "Knows which aid programmes a struggling family qualifies for and how to apply.",
+   "Writes careful case notes that would stand up in front of a judge."
+  ],
+  "soda-jerk": [
+   "Pulls a soda or builds a sundae fast and pretty for the counter.",
+   "Talks soda-fountain slang that keeps customers laughing.",
+   "Mixes syrups and fizz to the right balance every time."
+  ],
+  "software-engineer": [
+   "Can track a production bug from a vague error log down to one bad line.",
+   "Writes code reviews that catch real problems without starting a fight.",
+   "Breaks a big feature into small changes that ship safely one at a time."
+  ],
+  "song-plugger": [
+   "Sells a new tune to a bandleader by playing and singing a single chorus on the piano.",
+   "Belts out a song loud enough to fill a dime store and get shoppers buying sheet music.",
+   "Knows which vaudevillians and bandleaders are hunting for fresh material this week."
+  ],
+  "speakeasy-bartender": [
+   "Mixes a decent cocktail that hides the taste of rough gin.",
+   "Spots a cop or a stranger at the door before trouble comes in.",
+   "Hides the bottles fast when someone raps the warning knock."
+  ],
+  "spinner": [
+   "Draws out flax or wool on a spinning wheel into a thread of even thickness.",
+   "Winds finished yarn onto a reel into skeins of the right count for the buyer.",
+   "Can tell good fleece or flax from poor by feel and pick out the burrs and straw."
+  ],
+  "spiritualist-medium": [
+   "Runs a seance in a darkened parlour and keeps every sitter holding hands and spellbound.",
+   "Reads grief, hope and doubt in a sitter's face and speaks straight to it.",
+   "Delivers messages from beyond in a voice convincing enough to bring believers back."
+  ],
+  "squire": [
+   "Arms a knight in mail and plate, buckling every strap in the right order.",
+   "Carves and serves at the high table with proper courtesy.",
+   "Scours rust from mail in a barrel of sand and mends harness after a fight."
+  ],
+  "stage-driver": [
+   "Handles a six-horse team on a mountain road at speed without upsetting the coach.",
+   "Keeps the mail sacks and payroll box safe and knows the likely ambush spots.",
+   "Knows every station, ford and grade on the line and the time it takes to cover each."
+  ],
+  "stenographer": [
+   "Takes dictation in shorthand as fast as a boss can talk.",
+   "Types a clean letter from shorthand notes with no erasures.",
+   "Keeps a filing system where any letter can be found in a minute."
+  ],
+  "stockbroker": [
+   "Reads a ticker tape and spots a move in a stock.",
+   "Talks a nervous client into holding or selling at the right time.",
+   "Keeps track of margin accounts and knows when to call for more money."
+  ],
+  "store-clerk": [
+   "Measures and cuts calico against the yardstick on the counter, straight and true.",
+   "Weighs coffee, sugar and flour on the counter scales to the ounce.",
+   "Keeps the credit ledger and knows exactly what each customer owes."
+  ],
+  "street-keeper": [
+   "Sweeps and polishes marble paving until it gleams without leaving streaks.",
+   "Resets loose gems in the pavement with mortar so each sits flush and secure.",
+   "Spots a cracked or lifted paving stone before anyone trips over it."
+  ],
+  "streetcar-motorman": [
+   "Can stop a loaded streetcar smoothly right on the mark.",
+   "Knows every stop, switch and steep grade on the line.",
+   "Spots a wagon or a careless pedestrian on the tracks in time to brake."
+  ],
+  "subway-guard": [
+   "Works the car gates quickly at each stop so the train leaves on time.",
+   "Calls out the stations clearly over the roar of the train and the crowd.",
+   "Packs passengers into a crowded car during rush hour and keeps tempers down."
+  ],
+  "surf-instructor": [
+   "Reads swell, tide and wind to pick a safe spot for beginners.",
+   "Pushes a student into a wave at just the right moment to stand up.",
+   "Teaches a nervous learner to pop up on a board on dry sand first."
+  ],
+  "switchboard-operator": [
+   "Plugs a call through the right jack on a crowded board in seconds.",
+   "Keeps a calm, polite 'Number, please' through a rush of callers.",
+   "Handles several lines at once without dropping a connection."
+  ],
+  "tailor": [
+   "Takes a customer's measurements with a tape and chalks the cloth straight from the numbers, no paper pattern needed.",
+   "Sews fine, even stitches by hand fast enough to finish a coat in a few days.",
+   "Lets out, takes in and turns an old coat so it looks new to anyone but another tailor."
+  ],
+  "tanner": [
+   "Scrapes hides clean of flesh and hair over the beam.",
+   "Knows how long a hide needs in each tan pit.",
+   "Curries finished leather until it is supple and strong."
+  ],
+  "tavern-keeper": [
+   "Keeps a fire burning and a pot of stew on all day without running out.",
+   "Taps a cask, judges when the ale has turned and keeps the cellar cool and clean.",
+   "Spots trouble brewing at a table and settles it before fists start flying."
+  ],
+  "tavern-server": [
+   "Carries a fistful of tankards through a crowded room without spilling a drop.",
+   "Remembers every regular's usual drink and tab.",
+   "Passes on news and gossip at just the right table and keeps the talk flowing."
+  ],
+  "taxi-dancer": [
+   "Dances the foxtrot, waltz and Charleston with any partner, however clumsy.",
+   "Keeps a customer buying ten-cent tickets with easy conversation and charm.",
+   "Gets rid of a pushy customer politely without losing the dance or the bouncer's goodwill."
+  ],
+  "taxi-driver": [
+   "Knows the fastest way across the city at any hour.",
+   "Spots a likely fare on a busy sidewalk before another cab does.",
+   "Can sweet-talk a tip out of a grumpy passenger."
+  ],
+  "teacher": [
+   "Can quiet a room of thirty restless kids with a single look.",
+   "Grades a stack of essays in an evening with a useful comment on each.",
+   "Explains fractions three different ways until the last student gets it."
+  ],
+  "teamster": [
+   "Drives a twelve-mule team from the saddle with a single jerk line.",
+   "Takes a loaded wagon down a steep grade using brake and lock chains.",
+   "Greases axles and mends harness on the roadside far from any shop."
+  ],
+  "telegraph-operator": [
+   "Sends and reads Morse code by ear at a steady speed.",
+   "Counts words and charges for a telegram at the counter.",
+   "Keeps the line working and knows what to do when it goes dead."
+  ],
+  "telegraphist": [
+   "Sends and reads Morse at speed on the post office sounder.",
+   "Counts words and works out the charge on a telegram form at the counter.",
+   "Spots a garbled group and asks for a repeat before the message goes out."
+  ],
+  "tide-clerk": [
+   "Works out the week's high and low tides from the almanac and harbour tables.",
+   "Logs every vessel in and out in the harbormaster's ledger with time, name and tonnage.",
+   "Chalks clear tide tables on the harbour board that fishermen can read at a glance."
+  ],
+  "tide-waiter": [
+   "Boards a ship and gauges every cask and bale in the hold to set the correct duty.",
+   "Spots false-bottomed crates and cargo hidden to dodge the duty.",
+   "Checks a ship's manifest against what is actually aboard and notes every difference."
+  ],
+  "timber-framer": [
+   "Cuts mortise and tenon joints in oak beams with chisel and auger.",
+   "Raises a full house frame with a crew, ropes and pike poles in a single day.",
+   "Pegs a frame together so it stands square and true without iron fastenings."
+  ],
+  "tinsmith": [
+   "Cuts tin sheet with snips and folds it into pails, cups and lantern bodies.",
+   "Solders seams so neatly that a pail holds water without a drip.",
+   "Patches a holed oil can or kettle so it works like new."
+  ],
+  "tour-guide": [
+   "Tells a city's history as a story that keeps a group listening.",
+   "Keeps a group of thirty together through crowds and traffic.",
+   "Answers odd questions from visitors on the spot with good humour."
+  ],
+  "town-musician": [
+   "Plays dance tunes on the fiddle for hours, keeping the beat steady for the dancers.",
+   "Knows the right songs for weddings, harvest feasts and funerals and can strike up any one on request.",
+   "Joins in with the rest of the town band on horn or drum without a written part."
+  ],
+  "trained-nurse": [
+   "Makes a hospital bed with tight corners while the patient stays in it.",
+   "Takes temperature, pulse and respiration and charts them neatly.",
+   "Dresses wounds and changes bandages with clean technique."
+  ],
+  "trooper": [
+   "Rides, grooms and shoes a cavalry horse and keeps it sound on long scouts.",
+   "Fires a carbine accurately from the saddle at a gallop.",
+   "Drills in formation with the troop and follows bugle calls without hesitation."
+  ],
+  "tube-drawer": [
+   "Pulls tube through the die on the draw bench to an even wall thickness.",
+   "Judges the heat of a bloom by its colour, from cherry red to straw.",
+   "Spots a split, seam or chatter mark on a length of tube before it leaves the bench."
+  ],
+  "tube-fitter": [
+   "Bends brass tube to a smooth sweep so a carrier never sticks on a corner.",
+   "Finds a leaking joint on a pneumatic run by ear and a dab of soapy water.",
+   "Fits a sending station into a shop counter or bank wall neat as furniture."
+  ],
+  "tube-post-sorter": [
+   "Reads an address and drops the carrier in the right tube in one motion.",
+   "Clears a jammed carrier from a tube without crushing the letters inside.",
+   "Knows every pneumatic route in town and which stations each one reaches."
+  ],
+  "typesetter": [
+   "Sets type by hand from the case quickly and justifies each line in the stick.",
+   "Inks the forme and pulls clean, even sheets on the hand press.",
+   "Spots typos and dropped letters in a proof before the run starts."
+  ],
+  "typist": [
+   "Types a clean letter on a typewriter at speed with no erasures.",
+   "Keeps carbon copies straight and files every letter in date order.",
+   "Turns a manager's scrawled draft into neat, correctly spelt type."
+  ],
+  "undergraduate": [
+   "Crams a term's worth of notes the night before an exam and still passes.",
+   "Writes a passable essay to a word limit with an hour to spare.",
+   "Juggles lectures, a part-time job and a social life on very little money."
+  ],
+  "undertaker": [
+   "Prepares and lays out a body so the family can view it in peace.",
+   "Arranges a funeral, hearse, flowers and plot in a couple of days.",
+   "Speaks gently to grieving families while sorting out the bill."
+  ],
+  "underwriter": [
+   "Prices the risk on a ship and cargo from its route, season and captain's record.",
+   "Reads a ship's survey and spots a rotten hull or overloaded cargo on paper.",
+   "Spreads a big risk among several insurers so no single loss ruins anyone."
+  ],
+  "union-organiser": [
+   "Signs up new members at the works gate between turns.",
+   "Puts a grievance to a manager in clear, firm terms without losing the temper.",
+   "Rouses a packed meeting hall with a speech about wages and hours."
+  ],
+  "ux-designer": [
+   "Can turn a rough idea into a clickable prototype in an afternoon.",
+   "Runs a user interview without leading the person toward the answer.",
+   "Notices the one confusing button that makes half of users quit a form."
+  ],
+  "waiter": [
+   "Carries four hot plates up one arm through a crowded dining room without a spill.",
+   "Takes a table's order without writing it down and serves every guest the right dish.",
+   "Speaks enough French, German and Italian to explain the menu and handle foreign guests."
+  ],
+  "weaver": [
+   "Throws the shuttle steadily to weave an even broadcloth.",
+   "Mends a broken thread without leaving a flaw in the cloth.",
+   "Sets up a warp to the right length and width for the clothier."
+  ],
+  "wireless-operator": [
+   "Sends and copies Morse code quickly and accurately through heavy static.",
+   "Keeps a valve set tuned and working through a long night watch.",
+   "Picks out a faint distress call among the chatter and logs its position."
+  ],
+  "woodcutter": [
+   "Fells a tree with an axe so it drops exactly where it was aimed, clear of the others.",
+   "Splits rounds into firewood with maul and wedge, reading the grain for the easiest line.",
+   "Sharpens an axe on a whetstone to an edge that bites clean and holds all day."
+  ],
+  "subscription-creator": [
+   "Plans a month of posts in one afternoon and schedules every one.",
+   "Finds good light in any corner of a small apartment.",
+   "Answers forty subscriber messages without mixing up who said what."
+  ],
+  "cam-model": [
+   "Keeps a live room chatting and tipping through a slow hour.",
+   "Sets up lights, camera and sound in ten minutes flat.",
+   "Remembers every regular's name, birthday and favorite request."
+  ],
+  "exotic-dancer": [
+   "Climbs a pole to the ceiling and comes down slow in heels.",
+   "Reads which customers will tip and which will waste a night.",
+   "Counts a stack of small bills by feel in the dark."
+  ],
+  "adult-film-performer": [
+   "Hits a mark and finds the light without looking.",
+   "Keeps a shoot day on schedule when everyone else is running late.",
+   "Reads a contract and spots the clause that changes the pay."
+  ],
+  "phone-sex-operator": [
+   "Keeps a caller on the line with nothing but voice.",
+   "Switches characters between calls without missing a beat.",
+   "Types notes on a regular caller while still talking."
+  ],
+  "adult-store-clerk": [
+   "Explains any product on the shelf without blushing.",
+   "Spots a fake ID across the room.",
+   "Puts a nervous first-time shopper at ease in two sentences."
+  ],
+  "professional-dominatrix": [
+   "Ties a rope harness that is safe, quick and neat.",
+   "Screens a client in one phone call and knows whether to book them.",
+   "Holds a firm boundary without raising their voice."
+  ],
+  "burlesque-performer": [
+   "Glues a thousand rhinestones on a costume in an evening.",
+   "Pulls off a glove with a whole room watching every finger.",
+   "Builds a full act around a three-minute song."
+  ],
+  "glamour-model": [
+   "Holds an awkward pose for as long as the photographer needs.",
+   "Finds their best angle in any mirror within seconds.",
+   "Does their own hair and makeup for a full day of shoots."
+  ],
+  "erotica-author": [
+   "Writes three thousand words before lunch on a deadline.",
+   "Keeps a dozen pen-name series straight in a spreadsheet.",
+   "Knows which cover and title will sell before the book is done."
+  ],
+  "adult-video-editor": [
+   "Cuts a scene to length without losing what matters.",
+   "Color-corrects footage from three cameras to match.",
+   "Writes a scene description that gets clicks in one draft."
+  ],
+  "burlesque-dancer": [
+   "Strips to the beat of a house band without a rehearsal.",
+   "Gets dressed again fast when the police come through.",
+   "Gets a laugh from a rowdy crowd between numbers."
+  ],
+  "art-model": [
+   "Holds a pose for twenty minutes without a twitch.",
+   "Finds the same pose again exactly after a break.",
+   "Stays warm in a cold studio with nothing on."
+  ]
+ },
+ "staff": {
+  "DJ": [
+   "Beatmatches two tracks by ear and blends from one to the next without a gap.",
+   "Reads a dance floor and swaps the next record when the energy starts to dip.",
+   "Can untangle a snarl of cables and find the dead one in under a minute."
+  ],
+  "animal doctor": [
+   "Can calm a frightened dog enough to listen to its heart.",
+   "Spots lameness in a horse from the way it puts down one hoof.",
+   "Sets a broken leg on a goat with splints and a steady hand."
+  ],
+  "animal doctor's assistant": [
+   "Holds a squirming cat still with one arm and a towel.",
+   "Measures out doses by weight and keeps the record of who got what.",
+   "Scrubs and boils instruments between patients without being asked."
+  ],
+  "antiques dealer": [
+   "Can date a chair by its joints and the tool marks underneath.",
+   "Spots a repaired crack or a faked maker's mark under a glass.",
+   "Knows which piece to talk up and which to let the buyer find."
+  ],
+  "apothecary": [
+   "Grinds and weighs powders to the grain on a brass balance.",
+   "Knows which roots and leaves settle a stomach and which ones kill.",
+   "Can read a physician's scrawled prescription and catch a wrong dose."
+  ],
+  "apprentice": [
+   "Sweeps, sorts and fetches before the master has to ask.",
+   "Copies a technique after watching it done only twice.",
+   "Knows where every tool in the shop hangs and puts each one back."
+  ],
+  "artisan": [
+   "Can turn rough material into something fine with a few hand tools.",
+   "Judges the quality of stock by feel before buying it.",
+   "Fixes a botched piece so cleanly that no one can see the mend."
+  ],
+  "attendant": [
+   "Notices who looks lost and points the way before being asked.",
+   "Keeps the place tidy and stocked between rushes.",
+   "Answers the same question for the hundredth time without a sigh."
+  ],
+  "baker": [
+   "Can tell when dough has risen enough by pressing it with a fingertip.",
+   "Gets the first loaves out of the oven before the town is awake.",
+   "Scales a recipe up for a wedding or down for one without ruining it."
+  ],
+  "bandleader": [
+   "Counts in a band and holds the tempo steady through a long set.",
+   "Calls a change of tune mid-song with a nod and a raised hand.",
+   "Knows which musician to feature when the room starts to drift."
+  ],
+  "barista": [
+   "Steams milk to a glossy microfoam and pours a clean rosette.",
+   "Dials in the grinder each morning by taste and shot time.",
+   "Remembers the regulars' orders and starts each drink as the door opens."
+  ],
+  "barkeep": [
+   "Draws a pint with the right head and wipes the bar in one motion.",
+   "Knows which regular is good for a tab and which never pays.",
+   "Can end a brawl with a look, a raised voice or a cudgel under the counter."
+  ],
+  "barker": [
+   "Pulls a crowd off the street with a patter that never runs dry.",
+   "Picks the doubter in a crowd and wins that person over first.",
+   "Can make a voice carry over a brass band without going hoarse."
+  ],
+  "bartender": [
+   "Can pour four drinks at once and remember who ordered which.",
+   "Spots the customer who's had enough before anyone else does.",
+   "Mixes a classic cocktail from memory and balances it by taste."
+  ],
+  "bookseller": [
+   "Can find a book from a half-remembered title and a cover color.",
+   "Matches a reader to a well-loved next book after a short chat.",
+   "Judges an old volume's value by its binding, edition and condition."
+  ],
+  "bouncer": [
+   "Reads a queue and picks out the troublemaker before anyone reaches the door.",
+   "Talks a drunk out the door without throwing a punch.",
+   "Holds someone in a firm grip that doesn't leave a mark."
+  ],
+  "box office clerk": [
+   "Can sell the last good seats in a sold-out house without a mix-up.",
+   "Counts a cash drawer fast and finds the error when it doesn't balance.",
+   "Handles an angry patron with a wrong ticket and keeps the line moving."
+  ],
+  "boxing coach": [
+   "Spots a dropped guard or a telegraphed punch from across the gym.",
+   "Wraps hands tight and fast so the knuckles stay protected.",
+   "Works the corner between rounds, closing a cut and giving one clear order."
+  ],
+  "butcher": [
+   "Breaks down a side of beef into cuts with a knife and a cleaver.",
+   "Can judge the freshness of meat by color, smell and feel.",
+   "Ties a roast with butcher's string in a few quick loops."
+  ],
+  "caretaker": [
+   "Fixes a sticking door, a leaking pipe and a loose stair in one morning.",
+   "Knows every key on the ring and which lock it opens.",
+   "Spots damp, rot or pests early, while the fix is still small."
+  ],
+  "chambermaid": [
+   "Strips and makes a bed with hospital corners in under two minutes.",
+   "Lays and lights a fire in a guest room before the guest wakes.",
+   "Notices what guests leave behind and returns it without prying."
+  ],
+  "clerk": [
+   "Keeps ledgers and files in order so anything can be found fast.",
+   "Copies a document out neatly without a single error.",
+   "Knows which form goes where and who needs to sign it."
+  ],
+  "coast guardsman": [
+   "Can read a sea and say whether a small boat will make it in.",
+   "Ties a bowline one-handed in the dark on a pitching deck.",
+   "Spots a flare or a capsized hull far out on the water."
+  ],
+  "concessions worker": [
+   "Fills popcorn, pours sodas and makes change during a packed intermission.",
+   "Keeps the hot dog roller and nacho cheese going without a burnt batch.",
+   "Restocks cups and napkins before the rush rather than during it."
+  ],
+  "cook": [
+   "Keeps several pots going at once and times every dish to finish together.",
+   "Can stretch a thin larder into a filling meal for a crowd.",
+   "Seasons by taste and fixes an over-salted stew."
+  ],
+  "counter hand": [
+   "Wipes down, refills and serves without leaving the counter unattended.",
+   "Slices cheese and cold meats to an even thickness by eye.",
+   "Keeps a running tally of what's sold and what's running low."
+  ],
+  "counter server": [
+   "Takes an order, rings it up and hands it over in one smooth motion.",
+   "Remembers how each regular likes an order without being told.",
+   "Keeps the counter clean and the queue moving at the busiest hour."
+  ],
+  "craftsperson": [
+   "Keeps tools sharp and knows which one a job needs.",
+   "Can repair a piece so it lasts longer than it did new.",
+   "Measures twice and cuts once, and still leaves a little extra."
+  ],
+  "desk clerk": [
+   "Checks guests in and assigns rooms without ever double-booking.",
+   "Knows which guests to watch and which to leave alone.",
+   "Takes and passes on messages without garbling a name or a time."
+  ],
+  "docent": [
+   "Tells the story behind an object in two minutes or twenty, as the group needs.",
+   "Answers a child's question and an expert's question in the same tour.",
+   "Keeps a group together and away from the fragile pieces."
+  ],
+  "dockhand": [
+   "Throws and makes fast a mooring line as a boat comes alongside.",
+   "Can shift heavy crates on a hand truck without dropping one in the water.",
+   "Knows the tides at this dock and when the gangway will be steep."
+  ],
+  "dockworker": [
+   "Stows cargo so it won't shift in a heavy sea.",
+   "Works a hook and sling to lift a load without swinging it into anyone.",
+   "Can tell from the markings and the weight what's inside a crate."
+  ],
+  "doorman": [
+   "Remembers every resident's face and the names of regular visitors.",
+   "Can flag down a cab or carriage in the rain for a waiting guest.",
+   "Turns away an unwanted caller politely and without a scene."
+  ],
+  "druggist": [
+   "Measures and mixes a prescription to the exact dose.",
+   "Spots two medicines that shouldn't be taken together.",
+   "Gives plain advice on a cough, a rash or a sleepless night."
+  ],
+  "early walker": [
+   "Walks the same route at first light and notices anything out of place.",
+   "Knows which doors should be locked and which lamps should be lit.",
+   "Can tell the weather for the day from the dawn sky and the wind."
+  ],
+  "fiddler": [
+   "Plays a reel at dance speed for an hour without missing a note.",
+   "Picks up a new tune by ear after hearing it once or twice.",
+   "Can retune a string mid-set without stopping the dance."
+  ],
+  "floor manager": [
+   "Moves staff around the floor to cover a sudden rush.",
+   "Calms an upset customer and settles a complaint on the spot.",
+   "Spots a problem on the floor before anyone reports it."
+  ],
+  "floorwalker": [
+   "Watches the aisles and spots a shoplifter by the way someone moves.",
+   "Directs customers to the right counter and the right clerk.",
+   "Settles a dispute between a customer and a clerk without a fuss."
+  ],
+  "front desk attendant": [
+   "Greets every visitor and sends each one to the right room.",
+   "Answers phones and keeps the appointment book straight.",
+   "Knows who is in the building and who has left."
+  ],
+  "front desk clerk": [
+   "Checks in a line of guests quickly without mixing up rooms or keys.",
+   "Handles a booking error and finds the guest another room.",
+   "Knows the area well enough to recommend a meal or a doctor."
+  ],
+  "gatekeeper": [
+   "Remembers who has passed through the gate and when.",
+   "Can tell a forged pass or a false story from a true one.",
+   "Opens and secures the gate on schedule, whatever the weather."
+  ],
+  "grocer": [
+   "Judges the ripeness of fruit by smell and a gentle squeeze.",
+   "Keeps stock rotated so the oldest goods sell first.",
+   "Weighs out goods and totals a bill in a hurry without a mistake."
+  ],
+  "groundskeeper": [
+   "Keeps lawns, hedges and paths neat through every season.",
+   "Knows which plants need water, shade or cutting back.",
+   "Can fix a fence, clear a drain or fell a dead tree safely."
+  ],
+  "guide": [
+   "Knows the safe route and the best viewpoints on the way.",
+   "Keeps a group together and counts heads at every stop.",
+   "Tells stories about the place that make people want to come back."
+  ],
+  "guild clerk": [
+   "Keeps the rolls of members, dues and apprenticeships in order.",
+   "Knows the guild's rules well enough to settle a dispute by citing chapter and clause.",
+   "Copies charters and minutes in a clear, careful hand."
+  ],
+  "harbor clerk": [
+   "Logs every ship, cargo and berth in the harbor book.",
+   "Collects dues and fees and keeps the accounts straight.",
+   "Can match a ship to its papers and spot a false manifest."
+  ],
+  "harbormaster's clerk": [
+   "Keeps the berthing list and tide tables up to date.",
+   "Writes out permits and notices in a clear, careful hand.",
+   "Knows which captains pay on time and which need chasing."
+  ],
+  "hawker": [
+   "Cries wares loud enough to carry the length of a busy street.",
+   "Sizes up a passerby and names a price to match.",
+   "Can sell the last of the stock just before closing time."
+  ],
+  "housekeeper": [
+   "Runs a household's linen, larder and cleaning on a set schedule.",
+   "Knows how to get wine, wax and soot out of almost anything.",
+   "Keeps the accounts and the keys and catches any waste."
+  ],
+  "innkeeper": [
+   "Can find a bed for one more traveler on a full night.",
+   "Knows the gossip of the road and who is passing through.",
+   "Keeps the kitchen, cellar and stables running at once."
+  ],
+  "librarian": [
+   "Can find the right book for a vague question in a few minutes.",
+   "Repairs a loose spine or a torn page so it lasts.",
+   "Keeps a reading room quiet with a single look."
+  ],
+  "library assistant": [
+   "Shelves returns in the right order and spots misplaced books.",
+   "Checks books in and out and keeps the loan records straight.",
+   "Helps a reader find a book by subject, author or title."
+  ],
+  "library page": [
+   "Fetches books from the stacks quickly and accurately.",
+   "Knows the shelving order well enough to spot a book out of place.",
+   "Pushes a loaded cart through narrow aisles without bumping a shelf."
+  ],
+  "lighthouse keeper": [
+   "Trims wicks, polishes the lens and keeps the light burning all night.",
+   "Reads a storm coming from the sky, the swell and the birds.",
+   "Keeps a careful log of weather, ships and the light's working."
+  ],
+  "line cook": [
+   "Works a station through a dinner rush without falling behind.",
+   "Times several orders to come up together for one table.",
+   "Keeps a station prepped and clean between tickets."
+  ],
+  "medium": [
+   "Runs a seance and keeps the room in hushed attention.",
+   "Reads a sitter's hands, clothes and manner before saying a word.",
+   "Can deliver a hard message from the other side gently."
+  ],
+  "museum guide": [
+   "Brings an exhibit to life with a well-chosen story.",
+   "Answers questions about a collection from memory.",
+   "Keeps a group from touching the exhibits without spoiling the mood."
+  ],
+  "owner": [
+   "Knows the business's numbers by heart and where money leaks.",
+   "Hires well and spots a good worker quickly.",
+   "Can step into any job in the place when someone doesn't show."
+  ],
+  "pawnbroker": [
+   "Values a ring, watch or tool with a quick look and a weigh.",
+   "Spots stolen goods and knows when to refuse a pledge.",
+   "Keeps careful tickets so every pledge can be redeemed."
+  ],
+  "peanut vendor": [
+   "Roasts peanuts to just the right shade without burning a batch.",
+   "Calls out a sale over the noise of a crowd.",
+   "Makes change one-handed while scooping with the other."
+  ],
+  "personal trainer": [
+   "Designs a workout plan around someone's goals and injuries.",
+   "Spots bad form on a lift and corrects it before it causes harm.",
+   "Keeps clients motivated through the hard final reps."
+  ],
+  "porter": [
+   "Carries heavy luggage up stairs without scuffing a case.",
+   "Knows every room and the quickest way to reach it.",
+   "Can find a missing trunk by asking the right people."
+  ],
+  "proprietor": [
+   "Runs the place so smoothly that customers never notice the work.",
+   "Knows each supplier and how to drive a fair bargain.",
+   "Keeps the books and knows what sells and what doesn't."
+  ],
+  "psychic": [
+   "Reads palms and cards with a steady, confident patter.",
+   "Picks up on small cues and turns each one into a striking insight.",
+   "Can calm a nervous client and keep a reading on track."
+  ],
+  "pushcart peddler": [
+   "Steers a loaded cart through a crowded street without spilling.",
+   "Knows which corners sell best at which hour.",
+   "Haggles fast and closes a sale before the customer walks on."
+  ],
+  "redcap": [
+   "Loads a heap of bags onto a cart and gets it to the train on time.",
+   "Knows every platform and which train leaves from where.",
+   "Can steer a traveler through a crowded station in a hurry."
+  ],
+  "ride operator": [
+   "Checks every lap bar and harness before starting a ride.",
+   "Spots a rider who's too short or unwell and turns that rider away kindly.",
+   "Keeps a long line moving with clear, loud instructions."
+  ],
+  "salesclerk": [
+   "Finds the right size or color in the stockroom in a minute.",
+   "Matches a customer to the product that actually fits the need.",
+   "Wraps a purchase neatly and rings it up without error."
+  ],
+  "security guard": [
+   "Spots someone who doesn't belong in a building.",
+   "Walks rounds and checks every door, window and alarm point.",
+   "Writes up an incident report clearly and accurately."
+  ],
+  "server": [
+   "Carries three plates on one arm without a wobble.",
+   "Remembers a table's order without writing it down.",
+   "Reads a table and knows when to chat and when to stay away."
+  ],
+  "sexton": [
+   "Rings the bells on time for services, weddings and funerals.",
+   "Digs a grave straight and square to the right depth.",
+   "Keeps the church, its keys and its graveyard in order."
+  ],
+  "ship chandler": [
+   "Stocks rope, canvas, tar and stores for any voyage.",
+   "Knows what a ship needs for a passage before the captain asks.",
+   "Can supply a vessel in a hurry before the tide turns."
+  ],
+  "shop assistant": [
+   "Keeps shelves tidy, stocked and priced.",
+   "Helps a customer find what's needed and suggests something extra.",
+   "Wraps parcels and counts out change quickly and correctly."
+  ],
+  "shop clerk": [
+   "Rings up sales, makes change and keeps the till balanced.",
+   "Knows where every item in the shop is kept.",
+   "Handles returns and complaints politely and fairly."
+  ],
+  "shopkeeper": [
+   "Orders the right amount of stock so little goes to waste.",
+   "Knows every regular customer and the usual order of each.",
+   "Arranges a window display that draws people in from the street."
+  ],
+  "shopwalker": [
+   "Greets customers at the door and directs each to the right counter.",
+   "Watches the floor for shoplifters and idle clerks alike.",
+   "Smooths over a complaint before it reaches the manager."
+  ],
+  "short-order cook": [
+   "Cooks eggs any style, several orders at once, on one griddle.",
+   "Flips pancakes and burgers at the right moment by sound and color.",
+   "Keeps a stack of tickets straight during the breakfast rush."
+  ],
+  "soda jerk": [
+   "Pulls a fizzing soda from the fountain with a flourish.",
+   "Builds a sundae or a malted milk to order without a recipe.",
+   "Keeps up the banter with customers along the counter."
+  ],
+  "stagehand": [
+   "Moves scenery quietly and fast in the dark between scenes.",
+   "Rigs and runs ropes to fly scenery in and out on cue.",
+   "Fixes a broken prop or a stuck flat during a performance."
+  ],
+  "stall vendor": [
+   "Sets up and packs down a stall quickly and neatly.",
+   "Arranges goods so the best ones catch the eye.",
+   "Haggles cheerfully and knows the lowest acceptable price."
+  ],
+  "stallholder": [
+   "Knows which pitch in the market draws the most passing trade.",
+   "Keeps goods fresh and covered from the sun and rain.",
+   "Builds a loyal following among regular market shoppers."
+  ],
+  "station agent": [
+   "Knows the timetable by heart and every connection on the line.",
+   "Sells tickets, handles freight and keeps the station accounts.",
+   "Can send and receive urgent messages along the line."
+  ],
+  "store manager": [
+   "Sets staff schedules that cover busy and quiet hours.",
+   "Reads the sales figures and adjusts orders to match.",
+   "Handles a difficult customer or a staff dispute calmly."
+  ],
+  "storekeeper": [
+   "Keeps a full and accurate tally of everything in stock.",
+   "Knows which goods are running low and orders in time.",
+   "Weighs, measures and wraps goods for customers neatly."
+  ],
+  "street vendor": [
+   "Can set up a pitch in a minute and move on if told to.",
+   "Knows the busiest corners and the best times to sell.",
+   "Calls out wares in a voice that cuts through traffic."
+  ],
+  "surfman": [
+   "Rows a surfboat through breaking waves to reach a wreck.",
+   "Fires a line to a stranded ship and rigs a breeches buoy.",
+   "Patrols the beach at night watching for ships in trouble."
+  ],
+  "ticket collector": [
+   "Checks and punches tickets quickly as a crowd files past.",
+   "Spots a forged or out-of-date ticket at a glance.",
+   "Handles a fare dodger firmly but without a scene."
+  ],
+  "ticket seller": [
+   "Sells tickets fast and makes change without a mistake.",
+   "Knows the prices, times and discounts by heart.",
+   "Keeps a patient smile with a long, impatient queue."
+  ],
+  "ticket taker": [
+   "Tears or checks tickets quickly to keep the line moving.",
+   "Spots a fake or reused ticket at a glance.",
+   "Directs people to the right entrance or seat."
+  ],
+  "tour guide": [
+   "Leads a group on a set route and keeps the whole party on schedule.",
+   "Tells stories about the place that make people laugh and listen.",
+   "Knows the quickest way back when someone gets lost."
+  ],
+  "tradesman": [
+   "Does skilled repair work that holds up for years.",
+   "Quotes a fair price and sticks to it.",
+   "Knows the right material and the right tool for each job."
+  ],
+  "trainer": [
+   "Breaks a hard skill into small steps someone can learn.",
+   "Watches someone practice and corrects mistakes on the spot.",
+   "Builds up strength and stamina step by step without injury."
+  ],
+  "vendor": [
+   "Keeps stock moving and knows what will sell today.",
+   "Makes change fast and keeps count of takings.",
+   "Draws customers in with a friendly call and a smile."
+  ],
+  "vet tech": [
+   "Draws blood from a wriggling dog on the first try.",
+   "Monitors an animal under anesthesia and reads the vital signs.",
+   "Calms a nervous pet and its owner in the waiting room."
+  ],
+  "veterinarian": [
+   "Diagnoses an animal that can't say where it hurts.",
+   "Performs surgery on anything from a cat to a cow.",
+   "Delivers a breech calf or foal in the middle of the night."
+  ],
+  "waiter": [
+   "Carries a loaded tray through a crowded room without spilling.",
+   "Recommends the right dish and drink to a hesitant diner.",
+   "Keeps several tables happy at once without forgetting an order."
+  ],
+  "watchman": [
+   "Walks rounds at night and checks every lock and shutter.",
+   "Notices a smell of smoke or a sound that shouldn't be there.",
+   "Raises the alarm quickly and keeps calm in an emergency."
+  ]
+ },
+ "sectors": {
+  "aerospace": [
+   "Checks every joint and fastening twice before anything leaves the ground.",
+   "Reads wind, weather and load before deciding whether a flight can go.",
+   "Keeps exact logs of every flight, fault and repair."
+  ],
+  "agriculture": [
+   "Knows when to plant and harvest from the soil and the weather.",
+   "Can tell a sick animal or a blighted crop at a glance.",
+   "Mends fences, tools and harness without help."
+  ],
+  "army": [
+   "Marches long distances with a full pack and stays alert.",
+   "Keeps kit clean and ready for inspection at any hour.",
+   "Follows and passes on orders clearly under pressure."
+  ],
+  "arts": [
+   "Sketches a likeness quickly from life.",
+   "Knows how to mix colors and prepare materials properly.",
+   "Can talk about a piece of art and make others see it anew."
+  ],
+  "biotech": [
+   "Keeps cultures and samples clean, labelled and alive.",
+   "Measures tiny amounts with steady hands and exact care.",
+   "Records every step of a trial so it can be repeated."
+  ],
+  "building": [
+   "Reads a plan and sets out a building's corners true.",
+   "Lays brick, stone or timber straight and level by eye and line.",
+   "Knows which ground will hold a foundation and which won't."
+  ],
+  "business": [
+   "Reads a ledger and spots where money is being lost.",
+   "Drives a hard bargain without losing a customer.",
+   "Knows the market and what will sell next season."
+  ],
+  "care": [
+   "Lifts and turns someone in bed without hurting either person.",
+   "Notices small changes in someone's health or mood.",
+   "Keeps patience with difficult or confused people."
+  ],
+  "church": [
+   "Knows the order of services and the calendar of feasts by heart.",
+   "Comforts the grieving with the right words or just silence.",
+   "Keeps the parish records of births, marriages and deaths."
+  ],
+  "city-works": [
+   "Clears blocked drains and gutters before a downpour floods the street.",
+   "Repairs a road or pavement so it lasts through winter.",
+   "Knows where every main, sewer and culvert runs under the streets."
+  ],
+  "clerical": [
+   "Writes a clear, correct letter or copy quickly.",
+   "Keeps files in an order anyone can follow.",
+   "Spots an error in a column of figures."
+  ],
+  "cloth": [
+   "Judges the quality of a cloth by its weave and feel.",
+   "Can dye fabric evenly to a matching shade.",
+   "Measures and cuts cloth with little waste."
+  ],
+  "commerce": [
+   "Knows the going price of goods and spots a bargain.",
+   "Keeps accurate books of sales and debts.",
+   "Builds trust with suppliers and customers alike."
+  ],
+  "communications": [
+   "Passes on a message quickly and word for word.",
+   "Knows the fastest route for news to travel.",
+   "Keeps urgent and confidential messages straight and private."
+  ],
+  "construction": [
+   "Raises a frame safely and keeps the site tidy.",
+   "Reads plans and measures accurately.",
+   "Spots a weak beam or bad footing before it gives way."
+  ],
+  "court": [
+   "Knows the forms and courtesies of the court.",
+   "Keeps careful records of proceedings and judgments.",
+   "Speaks clearly and respectfully before a judge or a lord."
+  ],
+  "crafts": [
+   "Uses hand tools with precision and care.",
+   "Can turn raw materials into something useful and beautiful.",
+   "Repairs broken items so each works as good as new."
+  ],
+  "creative": [
+   "Comes up with fresh ideas when others are stuck.",
+   "Can turn a rough idea into a finished piece.",
+   "Takes criticism and uses it to improve the work."
+  ],
+  "defense": [
+   "Keeps watch for long hours without losing focus.",
+   "Knows the weak points in a wall, gate or line.",
+   "Stays calm and follows orders under threat."
+  ],
+  "domestic": [
+   "Cleans a house top to bottom on a regular routine.",
+   "Cooks plain, hearty meals for a household.",
+   "Darns stockings and patches linen so nothing is thrown out early."
+  ],
+  "education": [
+   "Explains a hard idea in simple steps.",
+   "Keeps a noisy room in order and attentive.",
+   "Notices which learner is struggling and why."
+  ],
+  "engineering": [
+   "Works out loads and stresses before anything is built.",
+   "Draws clear plans others can follow.",
+   "Finds the cause of a fault by testing one part at a time."
+  ],
+  "entertainment": [
+   "Reads an audience and adjusts the act to suit it.",
+   "Keeps going smoothly when something goes wrong on stage.",
+   "Remembers lines, songs or routines perfectly."
+  ],
+  "farming": [
+   "Plows a straight furrow and sows evenly.",
+   "Knows the signs of a sick animal or a failing crop.",
+   "Reads the weather well enough to plan the day's work."
+  ],
+  "finance": [
+   "Adds long columns of figures quickly and accurately.",
+   "Spots a forged note or a cooked book.",
+   "Knows when a loan is a good risk and when it isn't."
+  ],
+  "fishing": [
+   "Mends nets quickly with a needle and twine.",
+   "Knows where the fish are by the season, tide and birds.",
+   "Guts and cleans a catch fast with a sharp knife."
+  ],
+  "fitness": [
+   "Shows the right form for a lift, a stretch or a run.",
+   "Builds a routine that gradually increases strength and stamina.",
+   "Spots signs of overexertion or injury early."
+  ],
+  "food": [
+   "Prepares meals cleanly and safely for many people.",
+   "Knows how to keep food fresh and spot when it's spoiled.",
+   "Balances flavors by taste and adjusts a dish on the fly."
+  ],
+  "forest": [
+   "Fells a tree exactly where it should land.",
+   "Knows the trees, tracks and plants of the woods.",
+   "Finds the way through thick woods without a path."
+  ],
+  "freight": [
+   "Loads cargo so it won't shift or break in transit.",
+   "Keeps track of every crate and where it's bound.",
+   "Can lift and move heavy loads safely with ropes and levers."
+  ],
+  "gardens": [
+   "Knows when and how to prune each plant.",
+   "Raises seedlings under cover and keeps slugs and aphids off.",
+   "Can make a plot look neat and full in every season."
+  ],
+  "garment": [
+   "Cuts a pattern to fit and sews straight seams quickly.",
+   "Takes measurements accurately and alters clothes to fit.",
+   "Knows which fabric suits which garment."
+  ],
+  "gates": [
+   "Remembers faces and who has passed through.",
+   "Spots a forged pass or a lie at the gate.",
+   "Opens and secures the gate at the right hours."
+  ],
+  "government": [
+   "Knows how to get a request through the proper channels.",
+   "Drafts clear notices and official letters.",
+   "Keeps calm and polite with angry members of the public."
+  ],
+  "healing": [
+   "Cleans and dresses a wound so it heals well.",
+   "Knows which herbs and remedies ease pain and fever.",
+   "Keeps a calm manner at a sickbed."
+  ],
+  "healthcare": [
+   "Takes a pulse and spots signs of fever or shock.",
+   "Dresses wounds and changes bandages before infection sets in.",
+   "Keeps careful notes on each patient's condition."
+  ],
+  "hospitality": [
+   "Makes guests feel welcome from the moment of arrival.",
+   "Keeps rooms clean and ready for the next guest.",
+   "Solves a guest's problem quickly and quietly."
+  ],
+  "household": [
+   "Keeps a household's stores stocked and accounted for.",
+   "Runs the daily routine of meals, cleaning and laundry.",
+   "Knows how to deal with tradesmen and get a fair price."
+  ],
+  "labour": [
+   "Works hard for long hours without slowing down.",
+   "Lifts and carries heavy loads safely.",
+   "Learns a new task quickly by watching someone do it."
+  ],
+  "law": [
+   "Knows the law and finds the right precedent quickly.",
+   "Argues a case clearly and persuasively.",
+   "Spots a loophole or a weak point in a contract."
+  ],
+  "law-enforcement": [
+   "Notices when someone is lying or hiding something.",
+   "Breaks up a fight and restores order quickly.",
+   "Remembers faces and names from the streets."
+  ],
+  "legal": [
+   "Drafts a clear, binding contract or deed.",
+   "Reads closely and spots tricky wording in a document.",
+   "Keeps careful records and client confidences."
+  ],
+  "logistics": [
+   "Plans routes so goods arrive on time.",
+   "Keeps track of stock and shipments without losing anything.",
+   "Solves a delay by finding another way to move goods."
+  ],
+  "manufacturing": [
+   "Keeps a machine or process running smoothly all shift.",
+   "Spots a faulty part before it leaves the floor.",
+   "Works quickly and safely in a noisy workplace."
+  ],
+  "marine-trades": [
+   "Caulks seams and patches a hull so it stays watertight.",
+   "Splices rope and rigs lines securely.",
+   "Knows the tools and timbers of boatbuilding."
+  ],
+  "maritime": [
+   "Reads the weather and the sea for signs of trouble.",
+   "Ties strong knots quickly and handles lines safely.",
+   "Knows the tides and currents of local waters."
+  ],
+  "media": [
+   "Writes a clear, catchy headline or story quickly.",
+   "Finds the right person to interview for a story.",
+   "Checks facts before anything goes out."
+  ],
+  "medicine": [
+   "Diagnoses an illness from symptoms and examination.",
+   "Sets a broken bone and stitches a wound neatly.",
+   "Knows the right dose of medicine for each patient."
+  ],
+  "military": [
+   "Follows orders exactly and under pressure.",
+   "Keeps kit and weapons clean and ready.",
+   "Works as part of a team in difficult conditions."
+  ],
+  "mining": [
+   "Can tell good ore from waste rock by its look and weight.",
+   "Shores up a tunnel so it won't collapse.",
+   "Notices bad air or a creaking roof before disaster strikes."
+  ],
+  "newspaper": [
+   "Writes a story to a tight deadline.",
+   "Gets people to talk and remembers every quote word for word.",
+   "Checks facts and names before the paper goes to print."
+  ],
+  "palace": [
+   "Knows the rules of etiquette and precedence inside out.",
+   "Moves quietly and unnoticed through busy rooms.",
+   "Keeps secrets and stays loyal under pressure."
+  ],
+  "press": [
+   "Sets type quickly and correctly by hand.",
+   "Keeps a press inked and running smoothly.",
+   "Spots a misprint or a smudge before the run goes out."
+  ],
+  "public-safety": [
+   "Stays calm and takes charge in an emergency.",
+   "Knows how to put out a fire or clear a crowd safely.",
+   "Gives clear instructions people will follow."
+  ],
+  "quarrying": [
+   "Splits stone along its grain with wedges and hammers.",
+   "Judges which stone is sound and which is flawed.",
+   "Moves heavy blocks safely with levers and rollers."
+  ],
+  "railroad": [
+   "Knows the timetable and every stop on the line.",
+   "Couples cars and checks brakes safely.",
+   "Spots a fault on the track or rolling stock before it fails."
+  ],
+  "ranching": [
+   "Rides all day and keeps a herd together.",
+   "Ropes and brands cattle quickly and safely.",
+   "Knows the land, the water and the weather of the range."
+  ],
+  "real-estate": [
+   "Values a property by its location, condition and size.",
+   "Shows a house in its best light to buyers.",
+   "Negotiates a fair deal between buyer and seller."
+  ],
+  "recreation": [
+   "Organizes games and activities for groups of all ages.",
+   "Keeps people safe without spoiling the fun.",
+   "Teaches a new game or sport in simple steps."
+  ],
+  "religion": [
+   "Knows the scriptures and rituals by heart.",
+   "Comforts the sick and grieving.",
+   "Leads a service with a clear and steady voice."
+  ],
+  "retail": [
+   "Arranges goods so the best sellers catch the eye first.",
+   "Knows the stock and finds any item quickly.",
+   "Handles money accurately and gives correct change."
+  ],
+  "river": [
+   "Knows the river's channels, shallows and snags.",
+   "Steers a boat safely through currents and rapids.",
+   "Reads the water level and weather for floods."
+  ],
+  "science": [
+   "Observes carefully and records exact results.",
+   "Designs a fair test and repeats it to be sure.",
+   "Handles delicate instruments carefully and keeps each one clean and calibrated."
+  ],
+  "security": [
+   "Notices when something or someone is out of place.",
+   "Checks doors, locks and windows on every round.",
+   "Stays alert through long, quiet hours."
+  ],
+  "services": [
+   "Helps customers quickly and politely.",
+   "Remembers each regular's name and usual request.",
+   "Sorts out a small problem before it turns into a complaint."
+  ],
+  "shipbuilding": [
+   "Shapes timbers and planks to fit a hull.",
+   "Reads ship plans and builds to the drawn lines exactly.",
+   "Knows which woods and fittings stand up to the sea."
+  ],
+  "shipping": [
+   "Plans cargo loads so ships sail balanced and full.",
+   "Keeps track of every bill of lading.",
+   "Knows the routes, ports and dues of the trade."
+  ],
+  "social-services": [
+   "Listens closely and finds out what someone really needs.",
+   "Knows where to find help, food or shelter in town.",
+   "Stays calm and kind with people in crisis."
+  ],
+  "spiritualism": [
+   "Leads a seance and keeps the room in hushed attention.",
+   "Reads people's faces and manner for clues.",
+   "Speaks of the departed with confidence and comfort."
+  ],
+  "technology": [
+   "Takes apart a mechanism and puts it back together working.",
+   "Finds the cause of a fault by testing one part at a time.",
+   "Explains how a device works in plain words."
+  ],
+  "tourism": [
+   "Knows the sights, history and best views of the area.",
+   "Keeps visitors happy, informed and on schedule.",
+   "Recommends good places to eat and stay."
+  ],
+  "trade": [
+   "Knows the value of goods in different markets.",
+   "Haggles a fair price on both ends of a deal.",
+   "Keeps accurate records of goods bought and sold."
+  ],
+  "trades": [
+   "Uses the tools of the trade with skill and care.",
+   "Quotes a fair price and finishes the job on time.",
+   "Fixes a problem so it stays fixed."
+  ],
+  "transit": [
+   "Knows every route and stop by heart.",
+   "Keeps to the schedule even in bad weather.",
+   "Handles crowds and passengers patiently."
+  ],
+  "transport": [
+   "Loads and secures cargo so it arrives safely.",
+   "Knows the fastest routes and roads.",
+   "Keeps vehicles or animals in good working order."
+  ],
+  "underworld": [
+   "Knows who to bribe and who to avoid.",
+   "Spots a plainclothes officer or an informer.",
+   "Keeps secrets and never talks under pressure."
+  ],
+  "victualling": [
+   "Packs and stores food so it keeps for a long voyage.",
+   "Knows exactly how much food a crew or garrison needs.",
+   "Inspects supplies and spots spoiled goods."
+  ]
+ },
+ "laughs": [
+  "puns so groan-worthy the room goes quiet",
+  "a dog that refuses to walk any further",
+  "a perfectly timed silence",
+  "a goose chasing a grown man across a square",
+  "a hat blown clean off in the wind",
+  "a baby's first sneeze",
+  "a cat knocking a cup off a table on purpose",
+  "a friend tripping over nothing at all",
+  "a wrong word used with total confidence",
+  "a sermon that runs long and loses its point",
+  "an old joke told badly for the hundredth time",
+  "a pompous speech ruined by a hiccup",
+  "a goat eating the washing off a neighbor's line",
+  "a dog stealing a whole sausage from a market stall",
+  "a pigeon strutting like a city alderman",
+  "a cake that collapses at the very last moment",
+  "a story where the hero is a donkey",
+  "a song with the verses sung in the wrong order",
+  "puns on people's names",
+  "bad rhymes made up on the spot",
+  "a mimic doing the magistrate's voice",
+  "a child's honest opinion of a new hat",
+  "a horse that stops dead in front of a puddle",
+  "a dignified guest slipping on wet cobbles",
+  "a duck leading ducklings into the wrong pond",
+  "a friend's terrible impression of a rooster",
+  "the same joke told three times by three people",
+  "a solemn moment broken by a growling stomach",
+  "a ridiculous wager settled in public",
+  "a dropped tray of spoons in a quiet room",
+  "a toddler marching around in a grown-up's boots",
+  "a sheep wandering into a wedding",
+  "a dog with a ridiculously long list of names",
+  "riddles with stupid answers",
+  "a play where the scenery falls over",
+  "a crow stealing a biscuit right out of a hand",
+  "people pretending not to have heard a loud noise",
+  "a cook tasting the soup and pulling a face",
+  "a speech that thanks the wrong family",
+  "a cat stuck halfway through a fence",
+  "a friend's laugh more than the joke itself",
+  "a snore during a long sermon",
+  "a bow so low the bower falls over",
+  "mispronounced foreign words said with great pride",
+  "a squirrel scolding passersby from a branch",
+  "mismatched shoes noticed at noon",
+  "an argument over which way is north",
+  "a rooster crowing at midnight",
+  "a parrot repeating something it should not",
+  "a dog wearing a scarf",
+  "an old couple bickering over the right way to fold linen",
+  "a misheard lyric sung loudly",
+  "a birthday candle that will not stay lit",
+  "a pompous letter full of spelling mistakes",
+  "a well-aimed snowball",
+  "a barber who talks more than cuts",
+  "a gossip who gets the story completely backwards",
+  "a cow staring down a group of walkers",
+  "a runaway wheel rolling down a hill on its own",
+  "a child explaining where babies come from",
+  "a fish slipping out of a proud angler's hands",
+  "a priest losing the place in a prayer book",
+  "a hound howling along to a fiddle",
+  "a guest who arrives a full day early",
+  "a sneeze that blows out every candle on a table",
+  "a joke that only lands an hour later",
+  "a solemn toast given with a crumb on the speaker's chin",
+  "a mule winning an argument with a farmer",
+  "someone saying 'you too' to a waiter wishing a good meal",
+  "dry remarks about the weather",
+  "a long buildup with a tiny payoff",
+  "words that sound rude but are not",
+  "a dance step done wrong with full commitment",
+  "a kitten attacking its own shadow",
+  "a loaf too big to fit through the oven door",
+  "a tall man ducking under a doorway that was plenty high",
+  "a friend losing at cards and blaming the deck",
+  "a bee chasing a grown man around a garden",
+  "two people bowing to each other over and over",
+  "a teacher's stern face cracking into a grin",
+  "a frog jumping into a bucket of milk",
+  "a pie that bursts in the oven",
+  "wordplay in a language barely understood",
+  "a prank where the prankster gets caught first",
+  "a fussy cat refusing a fine meal",
+  "a hen chasing a fox out of the yard",
+  "an overdressed guest at a muddy fair",
+  "a goat climbing onto a roof",
+  "a choir that finishes at three different times",
+  "a tiny dog barking at a huge one",
+  "stories about disastrous first courtships",
+  "a bishop's hat knocked askew",
+  "gossip so wild nobody could have invented it",
+  "a bucket of water balanced over a door",
+  "a child reciting a poem with all the wrong words",
+  "a pig escaping a pen and leading a whole street on a chase",
+  "deadpan replies to silly questions",
+  "a grumpy neighbor caught dancing alone",
+  "a cat sitting in a box far too small",
+  "an echo answering back at the wrong moment",
+  "someone waving back at a wave meant for someone else",
+  "a soup ladle used as a sword in a kitchen duel",
+  "nicknames that stick for no good reason",
+  "a baby giggling at a dropped spoon",
+  "an owl looking deeply offended",
+  "puns about cheese",
+  "a rude limerick recited at the wrong gathering",
+  "a seagull making off with a whole pie",
+  "a bold claim proven wrong within the minute",
+  "a puppy tumbling down a single step",
+  "a fancy dinner where nobody knows which fork to use",
+  "a huge dog that believes it is a lap dog",
+  "a goose hissing at a soldier on parade",
+  "a sleepy baker putting salt in the sugar bowl",
+  "a cat walking across the keys of a piano mid-recital",
+  "an uncle's wildly exaggerated fishing story"
+ ],
+ "snaps": [
+  "someone is late without a word of warning",
+  "people talk over a quiet friend",
+  "a promise gets broken twice",
+  "a borrowed tool comes back broken",
+  "someone takes credit for another's work",
+  "children are mocked for being small",
+  "a door is slammed in the middle of a nap",
+  "a debt goes unpaid past the agreed day",
+  "a child is struck in public",
+  "someone laughs at a funeral",
+  "a horse is whipped for no reason",
+  "the last of the bread is eaten without asking",
+  "a secret gets passed around the neighborhood",
+  "someone chews with an open mouth at the table",
+  "a plan is changed at the last moment without discussion",
+  "the same question is asked five times in a row",
+  "a stranger gives orders as if in charge",
+  "a dog is kicked",
+  "food is thrown away while neighbors go hungry",
+  "a friend is lied to for sport",
+  "someone reads a private letter without permission",
+  "a queue is jumped",
+  "muddy boots cross a freshly scrubbed floor",
+  "an apology comes with an excuse attached",
+  "a workbench is tidied by someone else",
+  "someone whistles the same tune all afternoon",
+  "a guest overstays by hours",
+  "a joke is made about someone's mother",
+  "a sick friend is called lazy",
+  "the truth is bent to win an argument",
+  "someone pretends not to remember a favor",
+  "a gift is regifted back to the giver",
+  "a garden bed is trampled",
+  "someone corrects a story mid-telling",
+  "a meal goes cold because someone dawdled",
+  "the weak are blamed for a strong person's mistake",
+  "a trader cheats an old woman on the weight",
+  "a book is returned with the pages folded down",
+  "someone sighs loudly instead of speaking up",
+  "a fair fight turns into three against one",
+  "an animal is teased through a fence",
+  "a wedding is used to settle an old score",
+  "a favor is demanded rather than asked",
+  "a word of honor turns out to mean nothing",
+  "someone eats from another person's plate uninvited",
+  "a newcomer is frozen out of a group",
+  "hard work is called luck",
+  "someone spits in the street",
+  "a coat is borrowed and returned soaking wet",
+  "the same mistake happens a third time",
+  "a child's drawing is laughed at",
+  "the fire is let go out on a cold night",
+  "food is salted before anyone tastes it",
+  "a friend's grief is told to hurry up",
+  "an elder is mocked for being slow",
+  "a gate is left open and the animals get out",
+  "someone hogs the best seat by the fire every night",
+  "a decision is made behind closed doors",
+  "someone knocks and walks in before an answer",
+  "gossip is dressed up as concern",
+  "a candle is left burning in an empty room",
+  "tools are left out in the rain",
+  "a nickname is used after being asked to stop",
+  "someone flatters the boss and kicks those below",
+  "a bargain is broken after a handshake",
+  "wet laundry gets knocked off the line",
+  "a story is interrupted right before the ending",
+  "someone hums over a song being sung",
+  "a stranger touches a newborn without asking",
+  "a lazy answer is given to an honest question",
+  "a missed deadline gets blamed on the weather",
+  "a friend is mocked for a stammer",
+  "a cheat wins and brags about it",
+  "boots are left in the middle of a doorway",
+  "the washing water is used up and not refilled",
+  "an insult is passed off as just a joke",
+  "someone keeps score of every kindness",
+  "a pet is fed scraps from the table against the rules",
+  "a meeting drags on with nothing decided",
+  "someone shows up empty-handed to a shared supper",
+  "the well is fouled by careless hands",
+  "prices are raised on the poor during a hard winter",
+  "a grudge is dragged up from twenty years ago",
+  "someone sneers at country accents",
+  "a lie is told to a child for convenience",
+  "a neighbor's dog digs up the same patch again",
+  "a job is half done and called finished",
+  "an argument is won by shouting",
+  "a lesson has to be taught for the fourth time",
+  "a sleeping baby gets woken by a loud visitor",
+  "someone points out every flaw in a gift",
+  "a seat is saved with a coat and never used",
+  "a servant is spoken to like furniture",
+  "a fiddle is played out of tune on purpose",
+  "someone else's child is scolded in front of the parents",
+  "the knife is put away dirty",
+  "talk of inheritance starts at a funeral",
+  "someone says 'calm down'",
+  "a question gets answered with a shrug",
+  "a friend is ordered around like a dog",
+  "a walking stick is hidden as a prank",
+  "an honest mistake is punished harder than a deliberate one",
+  "the punchline of a joke is given away",
+  "a horse is left saddled in the sun all day",
+  "the bed is made badly by someone else",
+  "the same rumor is repeated as fact",
+  "bread is cut with the wrong knife",
+  "a sick animal is ignored",
+  "someone sniffs loudly through an entire service",
+  "a cupboard door is left open at head height",
+  "a long-awaited letter is opened by the wrong person",
+  "a friend is talked about behind a turned back",
+  "the kettle boils dry because nobody was watching",
+  "a shopkeeper pretends not to see a waiting customer"
+ ],
+ "speech": [
+  "Says 'right then' to close every topic.",
+  "Answers a question with a story that takes the long way round.",
+  "Saves the best word for last and pauses before it.",
+  "Calls everyone 'my dear', even strangers and dogs.",
+  "Speaks in short bursts, like a hammer on a nail.",
+  "Ends most sentences with 'isn't it?' whether or not it fits.",
+  "Drops into a whisper for the important parts.",
+  "Counts points off on fingers while arguing.",
+  "Laughs before reaching the punchline.",
+  "Uses weather sayings for every situation.",
+  "Repeats the last word someone else said, thoughtfully.",
+  "Starts every complaint with 'not to be difficult, but'.",
+  "Talks to animals in full, polite sentences.",
+  "Never uses one word where three will do.",
+  "Gives directions by landmarks that vanished years ago.",
+  "Swears creatively without ever repeating an oath.",
+  "Hums between sentences while thinking.",
+  "Speaks slowly and lets silence do half the work.",
+  "Says 'mark my words' before every prediction.",
+  "Rhymes by accident and then looks pleased about it.",
+  "Tells jokes with a perfectly straight face.",
+  "Asks 'and then what?' to keep any story going.",
+  "Calls every small mishap 'a tiny disaster'.",
+  "Quotes a grandmother's proverbs, often wrongly.",
+  "Clears the throat before saying anything serious.",
+  "Interrupts with 'sorry, sorry' and keeps going anyway.",
+  "Answers yes or no questions with 'that depends'.",
+  "Speaks with the hands as much as the mouth.",
+  "Nicknames everyone within a minute of meeting.",
+  "Lists things in threes, always.",
+  "Trails off mid-sentence and expects the listener to finish.",
+  "Uses 'proper' as the highest praise: a proper loaf, a proper friend.",
+  "Mutters the second half of insults under the breath.",
+  "Says 'well now' to buy time before answering.",
+  "Talks fast when nervous and very slowly when angry.",
+  "Quotes old songs to make a point.",
+  "Asks questions that are really advice in disguise.",
+  "Replaces curse words with the names of vegetables.",
+  "Narrates every task out loud while working.",
+  "Sighs before agreeing to anything.",
+  "Speaks in a booming voice, even in small rooms.",
+  "Barely speaks above a murmur, so people have to lean in.",
+  "Begins stories with 'you'll never believe this'.",
+  "Finishes other people's sentences, usually correctly.",
+  "Uses formal words for silly things, like 'a regrettable sock'.",
+  "Says 'fair enough' to end any disagreement.",
+  "Gives the wind and the rain pet names.",
+  "Makes every compliment sound like a complaint.",
+  "Makes every complaint sound like a compliment.",
+  "Adds 'more or less' to every number given.",
+  "Answers every greeting with 'surviving'.",
+  "Talks to the fire, the kettle and the door.",
+  "Pronounces long words very carefully, syllable by syllable.",
+  "Teases gently and always apologizes after.",
+  "Asks 'is that so?' in a tone that means it is not.",
+  "Uses the same three jokes for every occasion.",
+  "Gives every opinion as if reporting a fact.",
+  "Speaks plainly and never softens bad news.",
+  "Laughs loudly at own jokes and at nobody else's.",
+  "Peppers speech with 'honestly' and 'truly'.",
+  "Describes people by the food each one resembles.",
+  "Calls friends by surname alone.",
+  "Turns statements into questions when unsure of anything.",
+  "Drops the ends of words when tired.",
+  "Whistles softly through the teeth instead of saying 'wow'.",
+  "Tells the same fishing story with a bigger fish each time.",
+  "Calls every child 'little captain'.",
+  "Begins sentences with 'listen' and then says something small.",
+  "Recites grievances in alphabetical order when properly angry.",
+  "Answers insults with exaggerated politeness.",
+  "Speaks in a sing-song voice to babies and grown men alike.",
+  "Corrects grammar in the middle of an argument.",
+  "Says 'bless' as a reply to almost everything.",
+  "Uses sailing words for everyday things, like 'batten down the cupboard'.",
+  "Measures distances in songs, as in 'three songs' walk away'.",
+  "Never says goodbye, only 'until next time'.",
+  "Says 'that's a thought' to mean no.",
+  "Spins a short joke into a long tale with a moral.",
+  "Laughs in a sharp bark that startles people.",
+  "Asks for opinions and then argues with each one.",
+  "Switches to a grand voice when quoting anyone important.",
+  "Calls bad luck 'the usual' with a shrug.",
+  "Turns any topic back to the garden within three sentences.",
+  "Speaks very softly when furious, which frightens people more.",
+  "Gives praise in single words: 'good', 'fine', 'right'.",
+  "Mixes two sayings into one, like 'a stitch in time gathers no moss'.",
+  "Invents new words and repeats each one until friends start using it too.",
+  "Answers 'how are you' with an honest, full report.",
+  "Pauses for applause after a good line.",
+  "Uses 'we' when giving orders, so each one sounds like a request.",
+  "Fills silences with remarks about the bread.",
+  "Tells secrets in a voice everyone can hear.",
+  "Asks 'where was I?' and then remembers exactly.",
+  "Says 'go on then' to give permission for anything.",
+  "Refers to the town as if it were an old aunt.",
+  "Speaks in careful full sentences, like reading from a letter.",
+  "Gives advice wrapped in a story about a cousin.",
+  "Snorts when amused and pretends it was a cough.",
+  "Uses 'brilliant' sarcastically and sincerely in equal measure.",
+  "Calls every meal 'a feast', even plain porridge.",
+  "Repeats instructions back word for word to be certain.",
+  "Keeps a half-joking running tally of who owes whom a favor.",
+  "Starts arguments with 'with respect' and shows none.",
+  "Uses old-fashioned oaths like 'by the stars'.",
+  "Talks about the future as if it already happened.",
+  "Counts to three out loud before any hard task.",
+  "Greets every dog before greeting the owner.",
+  "Says 'mind how you go' at every parting.",
+  "Asks permission before telling a sad story.",
+  "Changes the subject with 'anyway' and a clap.",
+  "Speaks in a low drawl that makes everything sound like a secret.",
+  "Answers questions with questions when cornered.",
+  "Over-explains simple jokes until nobody laughs.",
+  "Compares everyone to animals, like 'stubborn as a goat'.",
+  "Laughs with the whole body, slapping a knee or the table.",
+  "Cuts long stories short with 'and so on, and so on'.",
+  "Ends tense talks with 'we'll see'."
+ ],
+ "middling": [
+  "Only middling at cooking; can do eggs four ways and nothing else.",
+  "Hopeless at keeping houseplants alive.",
+  "Gets lost in any part of town with curved streets.",
+  "Cannot carry a tune, though tries in every song.",
+  "Only fair at sums; checks every total three times.",
+  "Terrible at remembering names, though good with faces.",
+  "Clumsy with a needle; buttons fall off within a week.",
+  "Middling at cards; a twitching face gives every hand away.",
+  "Burns the toast more often than not.",
+  "Cannot whistle at all, only blow air.",
+  "Bad at lying; goes red at the first fib.",
+  "Only average at dancing; counts the steps out loud.",
+  "Poor swimmer, good only for a slow paddle.",
+  "Hopeless at riddles and gives up quickly.",
+  "Middling at haggling; always pays the first price asked.",
+  "Cannot ride a horse without clutching the mane.",
+  "Unreliable with keys; loses one a month.",
+  "Bad at waking early, even for important days.",
+  "Only so-so at writing letters; starts many, sends few.",
+  "Terrible at judging distance; every walk takes twice as long as promised.",
+  "Weak at drawing; every animal looks like a potato.",
+  "Poor at sitting still through long ceremonies.",
+  "Only fair with children; good for ten minutes, then worn out.",
+  "Clumsy at carrying trays.",
+  "Middling at gardening; grows marrows and nothing else.",
+  "Bad at keeping secrets past a single evening.",
+  "Hopeless at chess; forgets how the knight moves.",
+  "Only fair at chopping wood; takes six swings for one log.",
+  "Terrible at spelling long words.",
+  "Cannot fold a sheet neatly to save a life.",
+  "Bad at saying no to anyone asking a favor.",
+  "Middling at reading maps; turns every one upside down.",
+  "Poor at telling jokes; always forgets the ending.",
+  "Hopeless at remembering birthdays.",
+  "Only fair at fishing; catches weeds and old boots.",
+  "Bad at bargaining for anything secondhand.",
+  "Struggles to sew a straight seam.",
+  "Middling at baking; cakes come out flat but tasty.",
+  "Clumsy on ice and snow.",
+  "Terrible at languages; knows three words of every tongue.",
+  "Poor at keeping accounts; the ledger rarely balances.",
+  "Only so-so with cats, which flee on sight.",
+  "Bad at arriving on time.",
+  "Hopeless with knots; every parcel comes undone.",
+  "Middling at singing harmony; drifts back to the tune.",
+  "Cannot judge when dough has risen enough.",
+  "Only average at archery; hits the target, rarely the middle.",
+  "Bad at packing; always forgets something important.",
+  "Poor at listening without interrupting.",
+  "Terrible at cutting hair, as several friends can confirm.",
+  "Only fair at mending roofs; the leaks move rather than stop.",
+  "Struggles to remember which day the market is held.",
+  "Middling at painting walls; drips everywhere.",
+  "Hopeless at climbing; freezes halfway up a ladder.",
+  "Cannot light a fire without a lot of smoke and swearing.",
+  "Bad at apologizing; the words come out tangled.",
+  "Only so-so at reading aloud; stumbles on long names.",
+  "Weak at throwing and catching; drops even the easy ones.",
+  "Poor at hiding feelings at the dinner table.",
+  "Middling at brewing tea; always too strong or too weak.",
+  "Terrible at guessing ages and offends people often.",
+  "Clumsy with glassware; has broken half a set.",
+  "Bad at choosing gifts; gives socks every year.",
+  "Hopeless at keeping a diary for more than a week.",
+  "Only fair at milking; the goat usually wins.",
+  "Struggles to stay awake past sundown.",
+  "Middling at carpentry; shelves lean a little to the left.",
+  "Bad at following spoken directions; mixes up left and right.",
+  "Poor at small talk with strangers.",
+  "Terrible at waiting in a queue without fidgeting.",
+  "Cannot sharpen a knife properly.",
+  "Only average at running; out of breath after a street or two.",
+  "Hopeless at stretching a week's food; runs short by midweek.",
+  "Middling at storytelling; gets the order of events muddled.",
+  "Bad at remembering where things were put down.",
+  "Poor at drawing a straight line, even with a ruler.",
+  "Only fair at mending shoes; the heel always squeaks after.",
+  "Clumsy at shaving; nicks are a daily thing.",
+  "Struggles with any height above a hayloft.",
+  "Terrible at keeping a straight face at serious moments.",
+  "Middling at herb lore; mixes up mint and nettle.",
+  "Weak at tying a neat bow.",
+  "Bad at pouring without spilling.",
+  "Hopeless at card games that need counting.",
+  "Only so-so at sweeping; the corners never get done.",
+  "Poor at making soup; it always needs more salt.",
+  "Cannot tell a good melon from a bad one.",
+  "Only fair at pitching a tent; it sags by morning.",
+  "Bad at remembering any recipe that is not written down.",
+  "Middling at rowing a boat; mostly goes in circles.",
+  "Terrible at whispering; every secret carries across the room.",
+  "Struggles to wrap a parcel neatly.",
+  "Clumsy with candle wax; spills it on every table.",
+  "Hopeless at guessing how much food to cook for guests.",
+  "Poor at games of chance and loses every coin toss.",
+  "Only average at skipping stones; two bounces at best.",
+  "Bad at board games that take longer than an hour.",
+  "Middling at ironing; leaves new creases behind.",
+  "Weak at sums in the head; has to count on fingers.",
+  "Terrible at stopping after one sweet.",
+  "Cannot plait hair without it falling out by noon.",
+  "Only fair at polishing boots; streaks every time.",
+  "Hopeless at telling twins apart.",
+  "Bad at keeping a fire going overnight.",
+  "Struggles with jars that have tight lids.",
+  "Middling at poetry; rhymes 'heart' with 'heart'.",
+  "Poor at judging the weather; always caught in the rain.",
+  "Only so-so at making beds; the corners never sit right.",
+  "Only fair at knitting; scarves come out wider at one end.",
+  "Clumsy in crowded rooms; bumps into every chair.",
+  "Bad at choosing ripe fruit at market.",
+  "Hopeless at remembering which neighbor is which.",
+  "Middling at dice games; never knows when to stop.",
+  "Slow at learning card tricks and fumbles every one."
+ ]
+}

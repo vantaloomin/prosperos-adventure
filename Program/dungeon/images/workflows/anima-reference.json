@@ -1,0 +1,15 @@
+{
+  "1": {"class_type": "UNETLoader", "inputs": {"unet_name": "anima-base-v1.0.safetensors", "weight_dtype": "default"}},
+  "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "qwen_3_06b_base.safetensors", "type": "stable_diffusion"}},
+  "3": {"class_type": "VAELoader", "inputs": {"vae_name": "qwen_image_vae.safetensors"}},
+  "14": {"class_type": "LoraLoaderModelOnly", "inputs": {"model": ["1", 0], "lora_name": "AnimeEditV2.safetensors", "strength_model": 1.0}},
+  "11": {"class_type": "LoadImage", "inputs": {"image": "{{reference_image}}"}},
+  "12": {"class_type": "ImageScaleToTotalPixels", "inputs": {"image": ["11", 0], "upscale_method": "lanczos", "megapixels": 1.0, "resolution_steps": 32}},
+  "6": {"class_type": "VAEEncode", "inputs": {"pixels": ["12", 0], "vae": ["3", 0]}},
+  "13": {"class_type": "ApplyCosmosReferenceLatent", "inputs": {"model": ["14", 0], "ref_latents.ref_latent_1": ["6", 0]}},
+  "4": {"class_type": "CLIPTextEncode", "inputs": {"text": "{{prompt}}", "clip": ["2", 0]}},
+  "5": {"class_type": "CLIPTextEncode", "inputs": {"text": "{{negative}}, worst quality, low quality, lowres, score_1, score_2, score_3, blurry, jpeg artifacts, bad anatomy, watermark, artist name", "clip": ["2", 0]}},
+  "7": {"class_type": "KSampler", "inputs": {"model": ["13", 0], "positive": ["4", 0], "negative": ["5", 0], "latent_image": ["6", 0], "seed": "{{seed}}", "steps": 30, "cfg": 3.0, "sampler_name": "euler_ancestral", "scheduler": "simple", "denoise": 1.0}},
+  "8": {"class_type": "VAEDecode", "inputs": {"samples": ["7", 0], "vae": ["3", 0]}},
+  "9": {"class_type": "SaveImage", "inputs": {"images": ["8", 0], "filename_prefix": "prospero-dungeon"}}
+}

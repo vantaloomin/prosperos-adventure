@@ -1,0 +1,4120 @@
+{
+ "schema_version": 1,
+ "id": "camelot",
+ "name": "Camelot",
+ "setting": "fictional",
+ "era": "medieval",
+ "basis": "Arthurian legend in public-domain tellings: Malory's Le Morte d'Arthur (1485), the romances of Chretien de Troyes (12th century), Tennyson's Idylls of the King (1859-1885) and Howard Pyle's King Arthur books (1903-1910). Town life is filled in from ordinary medieval English towns.",
+ "region": "Logres",
+ "country": "Britain",
+ "timezone": "Europe/London",
+ "aliases": [
+  "Camelot in Logres",
+  "the King's city",
+  "Kamelot"
+ ],
+ "summary": "King Arthur's walled city on a hill above the river Cam: the castle with its Round Table hall and St Stephen's Minster at the top, and below them markets, guild streets, inns, mills, tanneries and farmland worked by ordinary townsfolk.",
+ "lat": 51.02,
+ "lon": -2.53,
+ "currency": {
+  "code": "penny",
+  "symbol": "d.",
+  "name": "silver pennies"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.5,
+  "horse": 10,
+  "carriage": 5,
+  "boat": 6
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Camelot wards, places and trades written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "An original town plan for fiction. The castle, the Round Table, St Stephen's church (where Malory has Arthur wed Guenever), Pentecost courts and tournaments, the river barge from Astolat and the realm of Logres come from public-domain sources: Malory, Chretien de Troyes, Tennyson and Howard Pyle. Streets, inns, guilds and townspeople are invented on the pattern of real medieval English towns; nothing is taken from modern film, television or stage adaptations. Coordinates sit around Cadbury Castle in Somerset, the traditional site. Rents are rough weekly sums in silver pennies. Climate values are rounded southern England averages."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "castle-ward",
+   "name": "Castle Ward",
+   "summary": "The upper bailey inside the castle walls: the great hall of the Round Table, the royal lodgings, kitchens, stables and the barracks of the household.",
+   "vibe": [
+    "royal",
+    "walled",
+    "busy-at-court"
+   ],
+   "lat": 51.025,
+   "lon": -2.53,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     4,
+     6
+    ],
+    "one_bedroom": [
+     8,
+     12
+    ],
+    "two_bedroom": [
+     16,
+     24
+    ]
+   },
+   "housing": [
+    "servants-loft",
+    "tower-chamber",
+    "lodging-range"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "kings-horses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minster-close",
+   "name": "Minster Close",
+   "summary": "The quiet walled close around St Stephen's Minster, with canons' houses, the song school and a lawn where clerks walk between services.",
+   "vibe": [
+    "quiet",
+    "religious",
+    "scholarly"
+   ],
+   "lat": 51.022,
+   "lon": -2.526,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     7,
+     10
+    ],
+    "two_bedroom": [
+     12,
+     18
+    ]
+   },
+   "housing": [
+    "canons-house",
+    "rented-chamber"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheapside",
+   "name": "Cheapside",
+   "summary": "The market street and square below the castle gate, lined with shops, the guildhall, the market cross and the best inns.",
+   "vibe": [
+    "market",
+    "central",
+    "crowded"
+   ],
+   "lat": 51.019,
+   "lon": -2.531,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     6,
+     10
+    ],
+    "two_bedroom": [
+     12,
+     20
+    ]
+   },
+   "housing": [
+    "shop-with-solar",
+    "rented-chamber",
+    "timber-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "carriers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shambles",
+   "name": "The Shambles",
+   "summary": "A narrow street of butchers' stalls with overhanging upper floors, cookshops and cheap rooms over the shops.",
+   "vibe": [
+    "narrow",
+    "food",
+    "cheap-rooms"
+   ],
+   "lat": 51.018,
+   "lon": -2.534,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     4,
+     6
+    ],
+    "two_bedroom": [
+     7,
+     11
+    ]
+   },
+   "housing": [
+    "rented-chamber",
+    "shop-with-solar"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "smithgate",
+   "name": "Smithgate",
+   "summary": "The street of forges and armourers by the west gate, loud with hammers from dawn and busy before every tournament.",
+   "vibe": [
+    "crafts",
+    "noisy",
+    "working"
+   ],
+   "lat": 51.02,
+   "lon": -2.538,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     4,
+     6
+    ],
+    "two_bedroom": [
+     8,
+     12
+    ]
+   },
+   "housing": [
+    "workshop-dwelling",
+    "rented-chamber"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "carriers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fishergate",
+   "name": "Fishergate",
+   "summary": "The lane down from the market to the river wharf, with fishmongers, the watermen's houses and the Swan inn.",
+   "vibe": [
+    "river",
+    "working",
+    "fish"
+   ],
+   "lat": 51.015,
+   "lon": -2.528,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     4,
+     6
+    ],
+    "two_bedroom": [
+     7,
+     11
+    ]
+   },
+   "housing": [
+    "timber-house",
+    "rented-chamber"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "cam-barges"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bridgefoot",
+   "name": "Bridgefoot",
+   "summary": "Where the stone bridge crosses the Cam: the toll house, the wharf for barges up from Astolat, warehouses and a row of alehouses.",
+   "vibe": [
+    "river",
+    "trade",
+    "alehouses"
+   ],
+   "lat": 51.012,
+   "lon": -2.525,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     4,
+     7
+    ],
+    "two_bedroom": [
+     8,
+     12
+    ]
+   },
+   "housing": [
+    "timber-house",
+    "warehouse-loft"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "cam-barges",
+    "carriers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southgate",
+   "name": "Southgate",
+   "summary": "A ward of weavers, dyers and bakers inside the south gate, with tenter frames in the yards and the bathhouse on Pump Lane.",
+   "vibe": [
+    "crafts",
+    "family",
+    "neighbourly"
+   ],
+   "lat": 51.014,
+   "lon": -2.535,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     6,
+     10
+    ]
+   },
+   "housing": [
+    "timber-house",
+    "rented-chamber",
+    "cottage"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "carriers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barkers-end",
+   "name": "Barkers End",
+   "summary": "The tannery quarter outside the walls on the river, kept downwind of the town for its smell: tan pits, curriers and cheap cottages.",
+   "vibe": [
+    "outside-walls",
+    "river",
+    "cheap"
+   ],
+   "lat": 51.008,
+   "lon": -2.533,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     3
+    ],
+    "two_bedroom": [
+     4,
+     6
+    ]
+   },
+   "housing": [
+    "cottage",
+    "rented-chamber"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "cam-barges"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-end",
+   "name": "Mill End",
+   "summary": "The King's mill on the Cam with its weir, the miller's house, a ford, and a hamlet of millers' and carters' cottages.",
+   "vibe": [
+    "river",
+    "rural-edge",
+    "quiet"
+   ],
+   "lat": 51.01,
+   "lon": -2.515,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     4
+    ],
+    "two_bedroom": [
+     5,
+     7
+    ]
+   },
+   "housing": [
+    "cottage",
+    "longhouse"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "carriers",
+    "mill-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-giles",
+   "name": "St Giles Without",
+   "summary": "A suburb outside the east gate around the Hospital of St Giles, with its infirmary, almshouses and herb garden.",
+   "vibe": [
+    "outside-walls",
+    "hospital",
+    "quiet"
+   ],
+   "lat": 51.021,
+   "lon": -2.518,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     4
+    ],
+    "two_bedroom": [
+     5,
+     8
+    ]
+   },
+   "housing": [
+    "cottage",
+    "almshouse",
+    "rented-chamber"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "carriers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbey-precinct",
+   "name": "St Mary's Abbey",
+   "summary": "The Benedictine abbey north of the walls, with its school, library, orchards, fishponds and the lay folk who work its lands.",
+   "vibe": [
+    "religious",
+    "orchards",
+    "scholarly"
+   ],
+   "lat": 51.032,
+   "lon": -2.524,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     6,
+     10
+    ]
+   },
+   "housing": [
+    "cottage",
+    "guest-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "carriers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tiltyard-meads",
+   "name": "Tiltyard Meads",
+   "summary": "Flat meadows by the river below the castle where the lists are set up for tournaments, with grazing, archery butts and the horse fair ground.",
+   "vibe": [
+    "tournaments",
+    "open-ground",
+    "horses"
+   ],
+   "lat": 51.028,
+   "lon": -2.54,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     6,
+     9
+    ]
+   },
+   "housing": [
+    "cottage",
+    "stable-loft"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "kings-horses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woolston",
+   "name": "Woolston",
+   "summary": "A farming village of open fields, strips and a green, two miles out on the road to Ilchester.",
+   "vibe": [
+    "village",
+    "farming",
+    "family"
+   ],
+   "lat": 51.04,
+   "lon": -2.565,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     3
+    ],
+    "two_bedroom": [
+     3,
+     6
+    ]
+   },
+   "housing": [
+    "cottage",
+    "longhouse",
+    "farmhouse"
+   ],
+   "walkability": "low",
+   "transit": [
+    "carriers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "forest-side",
+   "name": "Forest Side",
+   "summary": "Scattered cottages, charcoal burners and the verderer's lodge where the fields give way to the King's forest to the east.",
+   "vibe": [
+    "forest",
+    "remote",
+    "quiet"
+   ],
+   "lat": 51.02,
+   "lon": -2.48,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     1
+    ],
+    "one_bedroom": [
+     1,
+     3
+    ],
+    "two_bedroom": [
+     3,
+     5
+    ]
+   },
+   "housing": [
+    "cottage",
+    "woodward-lodge"
+   ],
+   "walkability": "low",
+   "transit": [
+    "carriers",
+    "kings-horses"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "on-foot",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "How almost everyone gets about: the walls can be walked round in half an hour and the villages are an hour out.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kings-horses",
+   "name": "Horses from the royal stables",
+   "kind": "horse",
+   "summary": "Household officers and messengers ride; others hire a hackney from the ostlers at the Bell.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "carriers",
+   "name": "Carriers' carts",
+   "kind": "carriage",
+   "summary": "Ox and horse carts carry grain, wool, timber and riders willing to sit on the load, leaving from Cheapside on market days.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cam-barges",
+   "name": "Cam barges",
+   "kind": "boat",
+   "summary": "Flat barges poled and towed along the Cam between Bridgefoot, Barkers End and Astolat downriver.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-ferry",
+   "name": "Mill End ferry",
+   "kind": "ferry",
+   "summary": "A rope ferry across the Cam above the weir, for when the ford is too high.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "round-table-hall",
+   "name": "the great hall of the Round Table",
+   "kind": "landmark",
+   "neighborhood": "castle-ward",
+   "summary": "The castle's great hall, where the Round Table stands and the court sits down to feast on high days.",
+   "tags": [
+    "court",
+    "iconic",
+    "feasts"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "castle-gatehouse",
+   "name": "the castle gatehouse",
+   "kind": "landmark",
+   "neighborhood": "castle-ward",
+   "summary": "Twin towers over the gate where petitioners queue, news is cried and the watch changes at dusk.",
+   "tags": [
+    "court",
+    "news",
+    "walls"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "castle-herb-garden",
+   "name": "the Queen's herb garden",
+   "kind": "garden",
+   "neighborhood": "castle-ward",
+   "summary": "A walled garden of turf seats, roses, lavender and kitchen herbs under the south wall of the castle.",
+   "tags": [
+    "flowers",
+    "quiet",
+    "walled"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "castle-wall-walk",
+   "name": "the wall walk",
+   "kind": "trail",
+   "neighborhood": "castle-ward",
+   "summary": "The walkway along the castle battlements, with a view down over the town, the river and the forest.",
+   "tags": [
+    "views",
+    "walk",
+    "walls"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tiltyard",
+   "name": "the tiltyard",
+   "kind": "stadium",
+   "neighborhood": "tiltyard-meads",
+   "summary": "The lists on the meadow below the castle, with stands for the court and standing room for the town on tournament days.",
+   "tags": [
+    "tournaments",
+    "crowds",
+    "horses"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "archery-butts",
+   "name": "the archery butts",
+   "kind": "fitness",
+   "neighborhood": "tiltyard-meads",
+   "summary": "Earth banks with straw targets where townsmen practise the longbow on Sunday afternoons.",
+   "tags": [
+    "archery",
+    "practice",
+    "sport"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "horse-fair-ground",
+   "name": "the horse fair ground",
+   "kind": "market",
+   "neighborhood": "tiltyard-meads",
+   "summary": "Railed pens by the river where horses are trotted out, haggled over and sold.",
+   "tags": [
+    "horses",
+    "trade"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-stephens-minster",
+   "name": "St Stephen's Minster",
+   "kind": "temple",
+   "neighborhood": "minster-close",
+   "summary": "The great church of Camelot, where knights keep their vigil before they are made and the court hears mass on feast days.",
+   "tags": [
+    "church",
+    "iconic",
+    "vigil"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minster-treasury",
+   "name": "the minster treasury",
+   "kind": "museum",
+   "neighborhood": "minster-close",
+   "summary": "A vaulted chamber where the canons show pilgrims the reliquaries, banners and gifts given by kings.",
+   "tags": [
+    "relics",
+    "history",
+    "pilgrims"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minster-close-lawn",
+   "name": "the Close lawn",
+   "kind": "park",
+   "neighborhood": "minster-close",
+   "summary": "Grass and old yews inside the Close wall, where clerks read and townsfolk sit after mass.",
+   "tags": [
+    "quiet",
+    "trees",
+    "reading"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-martins-church",
+   "name": "St Martin's, Cheapside",
+   "kind": "temple",
+   "neighborhood": "cheapside",
+   "summary": "The market parish church, its porch used for weddings, contracts and gossip.",
+   "tags": [
+    "church",
+    "parish",
+    "weddings"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-square",
+   "name": "the market square",
+   "kind": "square",
+   "neighborhood": "cheapside",
+   "summary": "The open square under the castle hill with the market cross, the stocks, the town well and space for criers and players.",
+   "tags": [
+    "market",
+    "news",
+    "crowds"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheapside-market",
+   "name": "Cheapside market",
+   "kind": "market",
+   "neighborhood": "cheapside",
+   "summary": "Wednesday and Saturday stalls of cheese, eggs, poultry, onions, cloth and pots along both sides of the street.",
+   "tags": [
+    "market",
+    "food",
+    "haggling"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-mercery",
+   "name": "the Mercery",
+   "kind": "shopping",
+   "neighborhood": "cheapside",
+   "summary": "A row of mercers' shops selling linen, silk ribbon, thread, gloves and purses from open shutters.",
+   "tags": [
+    "cloth",
+    "shopping",
+    "fine-goods"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guildhall",
+   "name": "the Guildhall",
+   "kind": "guildhall",
+   "neighborhood": "cheapside",
+   "summary": "The merchants' hall over an open arcade, where the mayor's court sits and the guild feasts are held.",
+   "tags": [
+    "guilds",
+    "civic",
+    "feasts"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-bell",
+   "name": "the Bell",
+   "kind": "inn",
+   "neighborhood": "cheapside",
+   "summary": "The largest inn on Cheapside, with a galleried yard, stabling for forty horses and a long table for travellers' suppers.",
+   "tags": [
+    "inn",
+    "travellers",
+    "suppers"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-chequers",
+   "name": "the Chequers",
+   "kind": "tavern",
+   "neighborhood": "cheapside",
+   "summary": "A wine tavern under a chequerboard sign, where clerks and merchants dice and drink Gascon wine.",
+   "tags": [
+    "wine",
+    "dice",
+    "merchants"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-cross-steps",
+   "name": "the steps of the market cross",
+   "kind": "landmark",
+   "neighborhood": "cheapside",
+   "summary": "Stone steps round the market cross where friars preach, criers read proclamations and people wait to meet.",
+   "tags": [
+    "meeting-place",
+    "news",
+    "preaching"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shambles-cookshop",
+   "name": "Agnes Pie's cookshop",
+   "kind": "restaurant",
+   "neighborhood": "shambles",
+   "summary": "A hot cookshop on the Shambles selling meat pies, pease pottage and roast capon over the counter.",
+   "tags": [
+    "pies",
+    "cheap",
+    "hot-food"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shambles-bakehouse",
+   "name": "the Shambles bakehouse",
+   "kind": "cafe",
+   "neighborhood": "shambles",
+   "summary": "A common oven where households bring dough at dawn and buy wastel loaves and spiced buns warm.",
+   "tags": [
+    "bread",
+    "morning",
+    "neighbours"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "butchers-row",
+   "name": "Butchers' Row",
+   "kind": "market",
+   "neighborhood": "shambles",
+   "summary": "The open-fronted meat stalls of the Shambles, cheapest just before the Saturday bell.",
+   "tags": [
+    "meat",
+    "market",
+    "haggling"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-three-cranes",
+   "name": "the Three Cranes",
+   "kind": "tavern",
+   "neighborhood": "shambles",
+   "summary": "A low-beamed alehouse with a settle by the fire, popular with butchers, carters and apprentices.",
+   "tags": [
+    "ale",
+    "cheap",
+    "fire"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "armourers-row",
+   "name": "Armourers' Row",
+   "kind": "workshop",
+   "neighborhood": "smithgate",
+   "summary": "Forges where mail is riveted and plates are hammered, with squires waiting outside for repairs before tournaments.",
+   "tags": [
+    "forges",
+    "armour",
+    "tournaments"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-green-dragon",
+   "name": "the Green Dragon",
+   "kind": "tavern",
+   "neighborhood": "smithgate",
+   "summary": "A smiths' alehouse by the west gate with a skittle alley in the yard.",
+   "tags": [
+    "ale",
+    "skittles",
+    "craftsmen"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-gate-smithy-yard",
+   "name": "the west gate smithy yard",
+   "kind": "workshop",
+   "neighborhood": "smithgate",
+   "summary": "The farrier's yard where horses are shod and carters wait their turn.",
+   "tags": [
+    "horses",
+    "farrier",
+    "waiting"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fishergate-fish-market",
+   "name": "Fishergate fish stalls",
+   "kind": "market",
+   "neighborhood": "fishergate",
+   "summary": "Wet slabs of eel, pike, salted herring and river trout sold early, especially on Fridays and through Lent.",
+   "tags": [
+    "fish",
+    "market",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-swan",
+   "name": "the Swan",
+   "kind": "inn",
+   "neighborhood": "fishergate",
+   "summary": "A riverside inn with a garden down to the water, where bargemen and travellers eat eel pie.",
+   "tags": [
+    "river",
+    "garden",
+    "eel-pie"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bridgefoot-wharf",
+   "name": "Bridgefoot wharf",
+   "kind": "docks",
+   "neighborhood": "bridgefoot",
+   "summary": "The stone quay below the bridge where barges from Astolat unload wine, salt, wool and timber.",
+   "tags": [
+    "river",
+    "barges",
+    "trade"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cam-bridge",
+   "name": "the Cam bridge",
+   "kind": "landmark",
+   "neighborhood": "bridgefoot",
+   "summary": "The five-arched stone bridge with a small chapel on the middle pier where travellers leave a coin.",
+   "tags": [
+    "bridge",
+    "chapel",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-star",
+   "name": "the Star",
+   "kind": "tavern",
+   "neighborhood": "bridgefoot",
+   "summary": "A bargemen's alehouse on the quay, rowdy on pay nights, with a brewster who brews twice a week.",
+   "tags": [
+    "ale",
+    "bargemen",
+    "river"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "towpath",
+   "name": "the Cam towpath",
+   "kind": "trail",
+   "neighborhood": "bridgefoot",
+   "summary": "A path along the river past willows, eel traps and grazing meadows toward Astolat.",
+   "tags": [
+    "river",
+    "walk",
+    "willows"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cam-shallows",
+   "name": "the bathing shallows",
+   "kind": "beach",
+   "neighborhood": "mill-end",
+   "summary": "A gravel bank above the weir where children paddle and townsfolk swim on hot evenings.",
+   "tags": [
+    "swimming",
+    "summer",
+    "river"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kings-mill",
+   "name": "the King's mill",
+   "kind": "workshop",
+   "neighborhood": "mill-end",
+   "summary": "The undershot water mill where the town's grain is ground and millers take their toll from every sack.",
+   "tags": [
+    "mill",
+    "grain",
+    "river"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pump-lane-bathhouse",
+   "name": "the Pump Lane bathhouse",
+   "kind": "fitness",
+   "neighborhood": "southgate",
+   "summary": "A stewhouse with wooden tubs and a steam room, men's days and women's days, cheap on Saturdays.",
+   "tags": [
+    "bath",
+    "steam",
+    "clean"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bread-street-bakery",
+   "name": "Bread Street bakers",
+   "kind": "cafe",
+   "neighborhood": "southgate",
+   "summary": "Three bakers' shops side by side selling white loaves, rye, simnel cakes and hot cross buns in season.",
+   "tags": [
+    "bread",
+    "cakes",
+    "morning"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dyers-yard",
+   "name": "the dyers' yard",
+   "kind": "workshop",
+   "neighborhood": "southgate",
+   "summary": "Vats of woad, madder and weld steaming in a yard by the town ditch, cloth hung blue and red on the tenter frames.",
+   "tags": [
+    "cloth",
+    "colour",
+    "craft"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mother-joans-alehouse",
+   "name": "Mother Joan's alehouse",
+   "kind": "tavern",
+   "neighborhood": "southgate",
+   "summary": "A front-room alehouse with an ale-stake over the door, where weavers' wives meet in the evening.",
+   "tags": [
+    "ale",
+    "neighbours",
+    "homely"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barkers-end-tan-pits",
+   "name": "the tan pits",
+   "kind": "workshop",
+   "neighborhood": "barkers-end",
+   "summary": "Pits of oak-bark liquor where hides soak for a year; the smell carries if the wind turns.",
+   "tags": [
+    "tannery",
+    "leather",
+    "smell"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-giles-hospital",
+   "name": "the Hospital of St Giles",
+   "kind": "temple",
+   "neighborhood": "st-giles",
+   "summary": "The infirmary hall and chapel run by the brothers and sisters of St Giles, open to the sick, the old and travellers.",
+   "tags": [
+    "infirmary",
+    "charity",
+    "chapel"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-giles-physic-garden",
+   "name": "the St Giles physic garden",
+   "kind": "garden",
+   "neighborhood": "st-giles",
+   "summary": "Raised beds of feverfew, comfrey, sage and poppy kept by the infirmarer, with a bench by the well.",
+   "tags": [
+    "herbs",
+    "quiet",
+    "healing"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbey-library",
+   "name": "the abbey library",
+   "kind": "library",
+   "neighborhood": "abbey-precinct",
+   "summary": "A cloister walk of book presses and a chained reading desk, open to scholars and to townsfolk with the librarian's leave.",
+   "tags": [
+    "books",
+    "quiet",
+    "scholars"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbey-orchards",
+   "name": "the abbey orchards",
+   "kind": "park",
+   "neighborhood": "abbey-precinct",
+   "summary": "Rows of apple, pear and medlar trees by the fishponds, open for walking and blossom in spring, picking in autumn.",
+   "tags": [
+    "orchard",
+    "blossom",
+    "apples"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbey-guest-hall",
+   "name": "the abbey guest hall",
+   "kind": "inn",
+   "neighborhood": "abbey-precinct",
+   "summary": "Plain lodging and a supper of bread, pottage and small beer for pilgrims and travellers, paid for by gift.",
+   "tags": [
+    "pilgrims",
+    "plain",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woolston-green",
+   "name": "Woolston green",
+   "kind": "park",
+   "neighborhood": "woolston",
+   "summary": "A village green with a pond, a maypole and a bench under the elm, where the reeve calls the harvest.",
+   "tags": [
+    "village",
+    "maypole",
+    "pond"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-plough",
+   "name": "the Plough",
+   "kind": "tavern",
+   "neighborhood": "woolston",
+   "summary": "A thatched village alehouse where field hands drink after work and fiddlers play on Saturdays.",
+   "tags": [
+    "ale",
+    "village",
+    "fiddle"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "forest-ride",
+   "name": "the forest ride",
+   "kind": "trail",
+   "neighborhood": "forest-side",
+   "summary": "A broad green track into the King's forest under oak and beech, used by hunts, swineherds and walkers.",
+   "tags": [
+    "forest",
+    "walk",
+    "oaks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guildhall-undercroft",
+   "name": "the Guildhall undercroft",
+   "kind": "venue",
+   "neighborhood": "cheapside",
+   "summary": "A vaulted room under the Guildhall where minstrels, storytellers and the guild players perform on winter evenings.",
+   "tags": [
+    "music",
+    "stories",
+    "plays"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "castle-buttery",
+   "name": "the buttery hatch",
+   "kind": "restaurant",
+   "neighborhood": "castle-ward",
+   "summary": "The hatch by the castle kitchens where the butler hands out bread, cheese and ale to the household, and the broken meats of the high table go to the poor.",
+   "tags": [
+    "bread",
+    "ale",
+    "household"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "castle-well-court",
+   "name": "the well court",
+   "kind": "square",
+   "neighborhood": "castle-ward",
+   "summary": "A cobbled yard round the castle well where grooms, laundresses and pages draw water and trade the gossip of the court.",
+   "tags": [
+    "well",
+    "gossip",
+    "servants"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-mitre",
+   "name": "the Mitre",
+   "kind": "tavern",
+   "neighborhood": "minster-close",
+   "summary": "A quiet alehouse just outside the Close gate, kept by a former verger, where clerks and choirmen drink after evensong.",
+   "tags": [
+    "ale",
+    "clerks",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "song-school-door",
+   "name": "the song school door",
+   "kind": "venue",
+   "neighborhood": "minster-close",
+   "summary": "A long room by the cloister where the choirboys practise plainsong each morning and anyone may stand at the door and listen.",
+   "tags": [
+    "music",
+    "chant",
+    "choir"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pudding-wifes-stall",
+   "name": "the pudding wife's stall",
+   "kind": "cafe",
+   "neighborhood": "shambles",
+   "summary": "A trestle at the foot of the Shambles selling hot black puddings, sausages and tripe from a pan over coals.",
+   "tags": [
+    "sausages",
+    "cheap",
+    "hot-food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cutlers-cookstall",
+   "name": "the cutlers' cookstall",
+   "kind": "cafe",
+   "neighborhood": "smithgate",
+   "summary": "A cookstall against the forge wall where smiths buy hot pasties and mulled ale between heats.",
+   "tags": [
+    "pasties",
+    "cheap",
+    "hot-food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-gate-conduit",
+   "name": "the west gate conduit",
+   "kind": "square",
+   "neighborhood": "smithgate",
+   "summary": "A stone cistern fed by a pipe from the hill spring, where apprentices fill buckets for the quenching tubs and wives fill jugs.",
+   "tags": [
+    "water",
+    "meeting-place",
+    "neighbours"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fishergate-net-lofts",
+   "name": "the net lofts",
+   "kind": "workshop",
+   "neighborhood": "fishergate",
+   "summary": "Lofts over the fish stalls where old fishermen and their wives mend eel nets and weave traps from willow.",
+   "tags": [
+    "nets",
+    "craft",
+    "river"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fishergate-water-stairs",
+   "name": "the water stairs",
+   "kind": "docks",
+   "neighborhood": "fishergate",
+   "summary": "Stone steps down to the Cam where watermen wait in their boats to row folk across or down to Bridgefoot for a halfpenny.",
+   "tags": [
+    "river",
+    "boats",
+    "watermen"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fishergate-smokehouse",
+   "name": "the smokehouse",
+   "kind": "market",
+   "neighborhood": "fishergate",
+   "summary": "A blackened shed where herring and eels are hung over oak smoke and sold by the dozen from the door.",
+   "tags": [
+    "fish",
+    "smoked",
+    "market"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "smoked fish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bridgefoot-ropewalk",
+   "name": "the ropewalk",
+   "kind": "workshop",
+   "neighborhood": "bridgefoot",
+   "summary": "A long open shed along the river where ropers walk backwards twisting hemp into tow ropes for the barges.",
+   "tags": [
+    "rope",
+    "craft",
+    "river"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weavers-hall",
+   "name": "the weavers' hall",
+   "kind": "guildhall",
+   "neighborhood": "southgate",
+   "summary": "A plain timber hall where the weavers' guild searches cloth for faults, settles quarrels and holds its feast on St Blaise's day.",
+   "tags": [
+    "guild",
+    "cloth",
+    "feasts"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-bull",
+   "name": "the Bull",
+   "kind": "tavern",
+   "neighborhood": "barkers-end",
+   "summary": "A tanners' alehouse by the river with a strong fire, strong ale and no complaints about the smell.",
+   "tags": [
+    "ale",
+    "tanners",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "curriers-row",
+   "name": "Curriers' Row",
+   "kind": "workshop",
+   "neighborhood": "barkers-end",
+   "summary": "Open sheds where tanned hides are shaved, oiled and dressed into leather for saddles, shoes and buckets.",
+   "tags": [
+    "leather",
+    "craft"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "washing-stones",
+   "name": "the washing stones",
+   "kind": "square",
+   "neighborhood": "barkers-end",
+   "summary": "Flat stones on the riverbank above the tan pits where women beat linen with paddles and spread it on the grass to dry.",
+   "tags": [
+    "laundry",
+    "river",
+    "neighbours"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-clements-chapel",
+   "name": "St Clement's chapel",
+   "kind": "temple",
+   "neighborhood": "barkers-end",
+   "summary": "A small chapel of ease outside the walls, so the tanners need not carry their smell up to the town churches.",
+   "tags": [
+    "chapel",
+    "parish",
+    "small"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-wheatsheaf",
+   "name": "the Wheatsheaf",
+   "kind": "tavern",
+   "neighborhood": "mill-end",
+   "summary": "The millers' and carters' alehouse by the ford, with a bench outside for waiting on the ferry.",
+   "tags": [
+    "ale",
+    "carters",
+    "river"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-ferry-landing",
+   "name": "the ferry landing",
+   "kind": "docks",
+   "neighborhood": "mill-end",
+   "summary": "The rope ferry's wooden landing above the weir, where folk wait with baskets and the ferryman takes a farthing.",
+   "tags": [
+    "ferry",
+    "river",
+    "waiting"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-pond",
+   "name": "the mill pond",
+   "kind": "park",
+   "neighborhood": "mill-end",
+   "summary": "The still water behind the weir, with willows, moorhens and boys fishing for roach when the miller is not looking.",
+   "tags": [
+    "fishing",
+    "willows",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-cross-keys",
+   "name": "the Cross Keys",
+   "kind": "tavern",
+   "neighborhood": "st-giles",
+   "summary": "An alehouse outside the east gate where travellers arriving after the gate shuts can eat, drink and sleep on the settles.",
+   "tags": [
+    "ale",
+    "travellers",
+    "late"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-giles-well",
+   "name": "St Giles's well",
+   "kind": "square",
+   "neighborhood": "st-giles",
+   "summary": "A walled spring by the hospital said to ease sore eyes, where neighbours draw water and the sick sit in the sun.",
+   "tags": [
+    "well",
+    "healing",
+    "neighbours"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-gate-cookshop",
+   "name": "the east gate cookshop",
+   "kind": "restaurant",
+   "neighborhood": "st-giles",
+   "summary": "A cookshop in a cottage front selling pottage, bacon and oatcakes to carters and visitors to the infirmary.",
+   "tags": [
+    "pottage",
+    "cheap",
+    "travellers"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbey-brewhouse",
+   "name": "the abbey brewhouse",
+   "kind": "tavern",
+   "neighborhood": "abbey-precinct",
+   "summary": "The brewhouse by the abbey gate where the lay brothers sell good ale by the jug to the abbey's tenants.",
+   "tags": [
+    "ale",
+    "abbey",
+    "brewing"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbey-fishponds",
+   "name": "the abbey fishponds",
+   "kind": "park",
+   "neighborhood": "abbey-precinct",
+   "summary": "Three stepped ponds of carp and bream, with a path round them where the novices walk and townsfolk come to feed the swans.",
+   "tags": [
+    "ponds",
+    "walk",
+    "swans"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-horseshoe",
+   "name": "the Horseshoe",
+   "kind": "tavern",
+   "neighborhood": "tiltyard-meads",
+   "summary": "An alehouse on the edge of the meads full of horse dealers, grooms and squires, busiest on fair and tourney days.",
+   "tags": [
+    "ale",
+    "horses",
+    "squires"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saddlers-sheds",
+   "name": "the saddlers' sheds",
+   "kind": "workshop",
+   "neighborhood": "tiltyard-meads",
+   "summary": "A row of sheds by the horse lines where saddles, girths and harness are stitched and mended while you wait.",
+   "tags": [
+    "leather",
+    "horses",
+    "craft"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-andrews-woolston",
+   "name": "St Andrew's, Woolston",
+   "kind": "temple",
+   "neighborhood": "woolston",
+   "summary": "The village church of flint and thatch, with a church ale in the nave at Whitsun.",
+   "tags": [
+    "church",
+    "village",
+    "church-ale"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woolston-common-oven",
+   "name": "the common oven",
+   "kind": "cafe",
+   "neighborhood": "woolston",
+   "summary": "The village oven by the green where wives bake their loaves on Saturdays and swap news while the bread rises.",
+   "tags": [
+    "bread",
+    "village",
+    "neighbours"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "bread",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woolston-smithy",
+   "name": "the Woolston smithy",
+   "kind": "workshop",
+   "neighborhood": "woolston",
+   "summary": "The village forge where ploughshares are sharpened and oxen are shod, with men waiting on the bench outside.",
+   "tags": [
+    "forge",
+    "village",
+    "ploughs"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-holly-bush",
+   "name": "the Holly Bush",
+   "kind": "tavern",
+   "neighborhood": "forest-side",
+   "summary": "A cottage alehouse with a holly bush over the door, where charcoal burners and swineherds drink by a peat fire.",
+   "tags": [
+    "ale",
+    "forest",
+    "fire"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charcoal-hearths",
+   "name": "the charcoal hearths",
+   "kind": "workshop",
+   "neighborhood": "forest-side",
+   "summary": "Turf-covered stacks smouldering in a clearing for days, watched by colliers who sleep in a hut beside them.",
+   "tags": [
+    "charcoal",
+    "forest",
+    "craft"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "forest-hermitage",
+   "name": "the hermitage",
+   "kind": "temple",
+   "neighborhood": "forest-side",
+   "summary": "A hermit's cell and chapel at the forest edge, of the kind Malory's knights are always finding, where any traveller may ask for bread and a blessing.",
+   "tags": [
+    "hermit",
+    "chapel",
+    "malory"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "verderers-lodge",
+   "name": "the verderer's lodge",
+   "kind": "landmark",
+   "neighborhood": "forest-side",
+   "summary": "The timber lodge where the verderer holds his court for forest offences and grants leave to gather fallen wood and pannage.",
+   "tags": [
+    "forest",
+    "court",
+    "firewood"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "abbey-school",
+   "name": "St Mary's Abbey school",
+   "type": "seminary",
+   "neighborhood": "abbey-precinct",
+   "size": "small",
+   "known_for": [
+    "latin",
+    "grammar",
+    "copying",
+    "chant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minster-song-school",
+   "name": "the Minster song school",
+   "type": "music-school",
+   "neighborhood": "minster-close",
+   "size": "small",
+   "known_for": [
+    "plainsong",
+    "choristers",
+    "reading"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "castle-pages-school",
+   "name": "the castle household school",
+   "type": "academy",
+   "neighborhood": "castle-ward",
+   "size": "small",
+   "known_for": [
+    "horsemanship",
+    "arms",
+    "courtesy",
+    "carving-at-table"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "armourers-guild-school",
+   "name": "the Armourers' and Smiths' guild apprentices",
+   "type": "guild-school",
+   "neighborhood": "smithgate",
+   "size": "small",
+   "known_for": [
+    "mail",
+    "plate",
+    "smithing",
+    "apprenticeship"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-giles-infirmary-school",
+   "name": "the St Giles infirmary",
+   "type": "medical-school",
+   "neighborhood": "st-giles",
+   "size": "small",
+   "known_for": [
+    "herbs",
+    "nursing",
+    "bonesetting"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "castle-servant",
+   "name": "Castle servant",
+   "sector": "household",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Kitchen, buttery, laundry or chamber work in the King's household, paid in wages, food and a livery gown at Christmas.",
+   "themes": [
+    "the great kitchen",
+    "feast days",
+    "the steward",
+    "servants' gossip"
+   ],
+   "eras": [
+    "medieval"
+   ]
+  },
+  {
+   "id": "groom",
+   "name": "Groom of the stables",
+   "sector": "household",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Feeding, mucking out, grooming and exercising horses in the royal stables.",
+   "themes": [
+    "horses",
+    "the stable yard",
+    "tournament days",
+    "early mornings"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "falconer",
+   "name": "Falconer",
+   "sector": "household",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Training and flying the King's hawks and falcons from the mews, and riding out with hunting parties.",
+   "themes": [
+    "hawks",
+    "the mews",
+    "hunting",
+    "patience"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "squire",
+   "name": "Squire",
+   "sector": "household",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Serving a knight: arming him, carving at his table, keeping his horses and gear, and training for knighthood.",
+   "themes": [
+    "arms practice",
+    "serving a knight",
+    "tournaments",
+    "the vigil to come"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "man-at-arms",
+   "name": "Man-at-arms",
+   "sector": "household",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Garrison soldier on watch at the gates and walls, escorting travellers and keeping order at fairs.",
+   "themes": [
+    "night watch",
+    "the gatehouse",
+    "drill",
+    "barrack life"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "court-clerk",
+   "name": "Clerk of the court",
+   "sector": "government",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Writing letters, writs and accounts for the King's chancery and exchequer at the castle.",
+   "themes": [
+    "parchment",
+    "seals",
+    "accounts",
+    "the chancellor"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "scribe",
+   "name": "Scribe",
+   "sector": "church",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Copying and illuminating books in the abbey scriptorium, or writing letters and wills for townsfolk.",
+   "themes": [
+    "the scriptorium",
+    "ink and quills",
+    "candlelight",
+    "commissions"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "armourer",
+   "name": "Armourer",
+   "sector": "crafts",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Making and mending mail and plate in a Smithgate forge, with a rush of work before every tournament.",
+   "themes": [
+    "the forge",
+    "fitting knights",
+    "apprentices",
+    "tournament rush"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "blacksmith",
+   "name": "Blacksmith",
+   "sector": "crafts",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Shoeing horses and making nails, hinges, tools and ploughshares at a town forge.",
+   "themes": [
+    "the anvil",
+    "shoeing",
+    "farm tools",
+    "regular customers"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "alewife",
+   "name": "Alewife",
+   "sector": "victualling",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Brewing ale in her own house, selling it under an ale-stake and keeping the alehouse in the evenings.",
+   "themes": [
+    "brewing",
+    "regulars",
+    "the ale-taster",
+    "evening talk"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "baker",
+   "name": "Baker",
+   "sector": "victualling",
+   "schedule": "early",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Up before dawn to fire the oven and bake loaves to the assize weight for the morning trade.",
+   "themes": [
+    "the oven",
+    "dawn",
+    "the assize of bread",
+    "neighbours"
+   ],
+   "eras": [
+    "medieval"
+   ]
+  },
+  {
+   "id": "innkeeper",
+   "name": "Innkeeper's hand",
+   "sector": "victualling",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Serving, cooking, making beds and stabling horses at one of the town's inns.",
+   "themes": [
+    "travellers",
+    "the inn yard",
+    "suppers",
+    "news from the road"
+   ],
+   "eras": [
+    "medieval"
+   ]
+  },
+  {
+   "id": "weaver",
+   "name": "Weaver",
+   "sector": "cloth",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Working a broadloom in a Southgate house for a clothier who supplies the yarn and buys the cloth.",
+   "themes": [
+    "the loom",
+    "piecework",
+    "the guild",
+    "family workshop"
+   ],
+   "eras": [
+    "medieval"
+   ]
+  },
+  {
+   "id": "dyer",
+   "name": "Dyer",
+   "sector": "cloth",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Steeping cloth in woad, madder and weld vats, with blue hands to show for it.",
+   "themes": [
+    "dye vats",
+    "colours",
+    "the tenter yard",
+    "stained hands"
+   ],
+   "eras": [
+    "medieval"
+   ]
+  },
+  {
+   "id": "tanner",
+   "name": "Tanner",
+   "sector": "crafts",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Scraping hides and working the tan pits at Barkers End outside the walls.",
+   "themes": [
+    "the tan pits",
+    "leather",
+    "the smell",
+    "river work"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "mason",
+   "name": "Mason",
+   "sector": "building",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Cutting and laying stone at the minster works or the castle, under a master mason in the lodge.",
+   "themes": [
+    "the lodge",
+    "stone",
+    "scaffolding",
+    "the master mason"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "minstrel",
+   "name": "Minstrel",
+   "sector": "entertainment",
+   "schedule": "evening",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Playing harp, fiddle or pipe and telling tales in the castle hall, the Guildhall undercroft and the inns.",
+   "themes": [
+    "songs and tales",
+    "feast nights",
+    "patrons",
+    "travelling"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "infirmarer",
+   "name": "Healer at the infirmary",
+   "sector": "healing",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Nursing the sick, setting bones and making salves at the Hospital of St Giles.",
+   "themes": [
+    "the infirmary hall",
+    "herbs",
+    "the sick",
+    "the brothers and sisters"
+   ],
+   "eras": [
+    "medieval"
+   ]
+  },
+  {
+   "id": "merchant",
+   "name": "Merchant",
+   "sector": "trade",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$$$",
+   "summary": "Buying wool, wine and cloth by the barge load and selling from a shop on Cheapside.",
+   "themes": [
+    "the Guildhall",
+    "barges from Astolat",
+    "credit",
+    "market days"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "boatman",
+   "name": "Bargeman",
+   "sector": "river",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Poling and towing barges on the Cam between Bridgefoot and Astolat with wool, timber and wine.",
+   "themes": [
+    "the river",
+    "the towpath",
+    "loading",
+    "Astolat"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "miller",
+   "name": "Miller",
+   "sector": "river",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Running the King's mill on the Cam, grinding grain and taking the toll.",
+   "themes": [
+    "the millstones",
+    "the weir",
+    "flour dust",
+    "tolls"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "farmer",
+   "name": "Farmer",
+   "sector": "farming",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Working strips in Woolston's open fields, keeping pigs and geese, and owing days of labour on the King's demesne.",
+   "themes": [
+    "ploughing",
+    "harvest",
+    "the reeve",
+    "weather"
+   ],
+   "eras": [
+    "medieval"
+   ]
+  },
+  {
+   "id": "chaplain",
+   "name": "Chantry priest",
+   "sector": "church",
+   "schedule": "academic",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Singing daily masses at the minster and teaching a few boys their letters between services.",
+   "themes": [
+    "the minster",
+    "mass",
+    "teaching",
+    "the canons"
+   ],
+   "eras": [
+    "medieval"
+   ],
+   "worked_by": "men"
+  }
+ ],
+ "employers": [
+  {
+   "id": "kings-household",
+   "name": "the King's household",
+   "sector": "household",
+   "neighborhood": "castle-ward",
+   "size": "large",
+   "summary": "The steward's department that runs the castle: kitchens, hall, chambers, laundry and the garrison.",
+   "careers": [
+    "castle-servant",
+    "squire",
+    "man-at-arms",
+    "minstrel"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-stables",
+   "name": "the royal stables",
+   "sector": "household",
+   "neighborhood": "castle-ward",
+   "size": "medium",
+   "summary": "Long stone stables under the castle wall, run by the marshal, with the King's and knights' horses.",
+   "careers": [
+    "groom",
+    "squire",
+    "blacksmith"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-mews",
+   "name": "the King's mews",
+   "sector": "household",
+   "neighborhood": "tiltyard-meads",
+   "size": "small",
+   "summary": "The hawk house by the meadows where the falcons are kept, moulted and trained.",
+   "careers": [
+    "falconer",
+    "groom"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chancery",
+   "name": "the chancery and exchequer",
+   "sector": "government",
+   "neighborhood": "castle-ward",
+   "size": "medium",
+   "summary": "The writing office and counting house of the court, in the tower by the hall.",
+   "careers": [
+    "court-clerk",
+    "scribe"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-stephens-chapter",
+   "name": "the chapter of St Stephen's",
+   "sector": "church",
+   "neighborhood": "minster-close",
+   "size": "medium",
+   "summary": "The dean and canons of the minster, who employ priests, clerks and the building works.",
+   "careers": [
+    "chaplain",
+    "scribe",
+    "court-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minster-works",
+   "name": "the minster works lodge",
+   "sector": "building",
+   "neighborhood": "minster-close",
+   "size": "medium",
+   "summary": "The masons' lodge and yard rebuilding the minster's west front, paid by the chapter.",
+   "careers": [
+    "mason"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-marys-abbey",
+   "name": "St Mary's Abbey",
+   "sector": "church",
+   "neighborhood": "abbey-precinct",
+   "size": "medium",
+   "summary": "The abbey employs lay scribes, farm servants, bakers and brewers on its lands.",
+   "careers": [
+    "scribe",
+    "farmer",
+    "baker",
+    "chaplain"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-giles-hospital-employer",
+   "name": "the Hospital of St Giles",
+   "sector": "healing",
+   "neighborhood": "st-giles",
+   "size": "small",
+   "summary": "The religious house that runs the infirmary and almshouses outside the east gate.",
+   "careers": [
+    "infirmarer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ferrour-forge",
+   "name": "Hugh Ferrour's forge",
+   "sector": "crafts",
+   "neighborhood": "smithgate",
+   "size": "small",
+   "summary": "The busiest armourer's shop on Smithgate, with three journeymen and the court's custom.",
+   "careers": [
+    "armourer",
+    "blacksmith"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weavers-guild",
+   "name": "the Weavers' and Dyers' guild",
+   "sector": "cloth",
+   "neighborhood": "southgate",
+   "size": "medium",
+   "summary": "The craft guild of Southgate's cloth workers, who weave and dye for clothiers on Cheapside.",
+   "careers": [
+    "weaver",
+    "dyer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-bell-inn",
+   "name": "the Bell",
+   "sector": "victualling",
+   "neighborhood": "cheapside",
+   "size": "medium",
+   "summary": "The largest inn on Cheapside, with a brewhouse, kitchens and stabling.",
+   "careers": [
+    "innkeeper",
+    "alewife",
+    "groom",
+    "minstrel"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bread-street-bakers",
+   "name": "the bakers of Bread Street",
+   "sector": "victualling",
+   "neighborhood": "southgate",
+   "size": "small",
+   "summary": "Three family bakehouses under the bakers' company.",
+   "careers": [
+    "baker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mercers-company",
+   "name": "the Mercers' company",
+   "sector": "trade",
+   "neighborhood": "cheapside",
+   "size": "medium",
+   "summary": "The merchants' guild that keeps the Guildhall and trades wool, wine and cloth by river.",
+   "careers": [
+    "merchant",
+    "court-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cam-watermen",
+   "name": "the Cam watermen",
+   "sector": "river",
+   "neighborhood": "bridgefoot",
+   "size": "small",
+   "summary": "The fraternity of bargemen that works the river between Bridgefoot and Astolat.",
+   "careers": [
+    "boatman"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kings-mill-employer",
+   "name": "the King's mill",
+   "sector": "river",
+   "neighborhood": "mill-end",
+   "size": "small",
+   "summary": "The water mill on the Cam, leased by the crown to a master miller.",
+   "careers": [
+    "miller",
+    "boatman"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barkers-end-tannery",
+   "name": "Barkers End tanyards",
+   "sector": "crafts",
+   "neighborhood": "barkers-end",
+   "size": "small",
+   "summary": "A row of family tanyards on the river below the town walls.",
+   "careers": [
+    "tanner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woolston-manor",
+   "name": "Woolston manor",
+   "sector": "farming",
+   "neighborhood": "woolston",
+   "size": "medium",
+   "summary": "The King's demesne farm and its tenants' open fields, run by a reeve.",
+   "careers": [
+    "farmer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-star-alehouse",
+   "name": "the Star alehouse",
+   "sector": "victualling",
+   "neighborhood": "bridgefoot",
+   "size": "small",
+   "summary": "A bargemen's alehouse on the quay with its own brewster.",
+   "careers": [
+    "alewife"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "castle-and-court",
+   "name": "The castle and court",
+   "neighborhoods": [
+    "castle-ward",
+    "tiltyard-meads"
+   ],
+   "sectors": [
+    "household",
+    "government",
+    "entertainment"
+   ],
+   "summary": "The King's household, stables, mews and writing offices employ hundreds, from scullions to clerks.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "church-houses",
+   "name": "The minster, abbey and hospital",
+   "neighborhoods": [
+    "minster-close",
+    "abbey-precinct",
+    "st-giles"
+   ],
+   "sectors": [
+    "church",
+    "healing",
+    "building"
+   ],
+   "summary": "The religious houses employ priests, scribes, masons, healers and lay servants.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guild-streets",
+   "name": "The guild streets",
+   "neighborhoods": [
+    "cheapside",
+    "smithgate",
+    "southgate",
+    "shambles"
+   ],
+   "sectors": [
+    "crafts",
+    "cloth",
+    "trade",
+    "victualling"
+   ],
+   "summary": "Shops and workshops of the craft and merchant guilds inside the walls.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "river-and-fields",
+   "name": "The river and the fields",
+   "neighborhoods": [
+    "bridgefoot",
+    "barkers-end",
+    "mill-end",
+    "woolston"
+   ],
+   "sectors": [
+    "river",
+    "farming",
+    "crafts"
+   ],
+   "summary": "Barges, the mill, the tanyards and the manor farm along the Cam.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Mild and damp southern English weather: cool, wet winters with the odd frost or snow, green springs, warm but rarely hot summers, and rainy autumns.",
+  "months": [
+   {
+    "high_f": 47,
+    "low_f": 36,
+    "rain_days": 13,
+    "note": "Cold and wet; frosts some nights, mud on the roads."
+   },
+   {
+    "high_f": 48,
+    "low_f": 35,
+    "rain_days": 10,
+    "note": "Raw and grey; snowdrops and lambing."
+   },
+   {
+    "high_f": 52,
+    "low_f": 38,
+    "rain_days": 10,
+    "note": "Windy; ploughing and sowing begin."
+   },
+   {
+    "high_f": 57,
+    "low_f": 41,
+    "rain_days": 9,
+    "note": "Showers and blossom in the orchards."
+   },
+   {
+    "high_f": 63,
+    "low_f": 46,
+    "rain_days": 9,
+    "note": "Green and mild; hawthorn in flower."
+   },
+   {
+    "high_f": 68,
+    "low_f": 51,
+    "rain_days": 8,
+    "note": "Long light evenings; haymaking."
+   },
+   {
+    "high_f": 72,
+    "low_f": 55,
+    "rain_days": 8,
+    "note": "Warmest month; swimming at the shallows."
+   },
+   {
+    "high_f": 71,
+    "low_f": 54,
+    "rain_days": 9,
+    "note": "Warm; harvest in the fields."
+   },
+   {
+    "high_f": 66,
+    "low_f": 50,
+    "rain_days": 9,
+    "note": "Mild; apples picked and hops dried."
+   },
+   {
+    "high_f": 59,
+    "low_f": 45,
+    "rain_days": 12,
+    "note": "Rain returns; leaves turn in the forest."
+   },
+   {
+    "high_f": 52,
+    "low_f": 40,
+    "rain_days": 13,
+    "note": "Wet and dark early; pigs to the forest for acorns."
+   },
+   {
+    "high_f": 48,
+    "low_f": 37,
+    "rain_days": 13,
+    "note": "Short days, rain and the Christmas feast."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "plough-monday",
+   "name": "Plough Monday",
+   "months": [
+    1
+   ],
+   "neighborhood": "woolston",
+   "summary": "Ploughmen drag a decorated plough through the village and into town, begging pennies for the plough light.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "candlemas",
+   "name": "Candlemas",
+   "months": [
+    2
+   ],
+   "neighborhood": "minster-close",
+   "summary": "Townsfolk carry candles in procession to St Stephen's to have them blessed for the year.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "easter",
+   "name": "Easter",
+   "months": [
+    3,
+    4
+   ],
+   "neighborhood": "minster-close",
+   "summary": "Lent ends with the Easter vigil at the minster, new clothes and eggs at breakfast.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "may-day",
+   "name": "May Day",
+   "months": [
+    5
+   ],
+   "neighborhood": "woolston",
+   "summary": "Young people go out at dawn to bring in hawthorn, then dance round the maypole on Woolston green.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pentecost-court",
+   "name": "Pentecost court and tournament",
+   "months": [
+    5,
+    6
+   ],
+   "neighborhood": "tiltyard-meads",
+   "summary": "The King holds his great court at Pentecost: new knights are made, petitions heard, and a tournament runs for days in the lists.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "midsummer",
+   "name": "Midsummer Eve",
+   "months": [
+    6
+   ],
+   "neighborhood": "cheapside",
+   "summary": "Bonfires in the streets, doors hung with birch and St John's wort, and a watch procession with torches.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harvest-home",
+   "name": "Harvest home",
+   "months": [
+    8,
+    9
+   ],
+   "neighborhood": "woolston",
+   "summary": "The last sheaf is brought in on a decorated cart and the manor gives the reapers a supper.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "michaelmas-fair",
+   "name": "Michaelmas fair",
+   "months": [
+    9,
+    10
+   ],
+   "neighborhood": "tiltyard-meads",
+   "summary": "A week-long fair of horses, cattle, cloth and hiring, with goose dinners, rents due and servants seeking new places.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "martinmas",
+   "name": "Martinmas",
+   "months": [
+    11
+   ],
+   "neighborhood": "shambles",
+   "summary": "Beasts are slaughtered and salted for winter and the Shambles runs with work for a week.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "christmas-court",
+   "name": "Christmas court",
+   "months": [
+    12,
+    1
+   ],
+   "neighborhood": "castle-ward",
+   "summary": "Twelve days of feasting in the great hall, mummers and carols in the town, and no work in the fields.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "no-meat-before-a-marvel",
+   "name": "No meat before a marvel",
+   "kind": "custom",
+   "summary": "At the high feast of Pentecost King Arthur will not sit down to eat until he has seen or heard of some marvel or adventure, so the hall waits on news.",
+   "places": [
+    "round-table-hall"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pentecost-oath",
+   "name": "The Pentecost oath",
+   "kind": "custom",
+   "summary": "Every year at Pentecost the knights of the Round Table renew their oath: to flee treason, give mercy to those who ask it, and always help ladies and damosels.",
+   "places": [
+    "round-table-hall",
+    "st-stephens-minster"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "siege-perilous",
+   "name": "The Siege Perilous",
+   "kind": "other",
+   "summary": "Each seat at the Round Table bears its knight's name in letters of gold, but one, the Siege Perilous, is kept empty, and no one sits there and lives.",
+   "places": [
+    "round-table-hall"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gramercy",
+   "name": "\"Gramercy\" and \"fair sir\"",
+   "kind": "saying",
+   "summary": "Courtesy runs on set phrases: \"gramercy\" for many thanks, \"fair sir\" and \"fair damosel\" to strangers, and \"God speed\" to anyone setting out.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beaumains",
+   "name": "\"Beaumains\"",
+   "kind": "saying",
+   "summary": "Sir Kay's mocking name, \"Fair-hands\", for the tall kitchen lad who turned out to be Gareth of Orkney; to call a scullion Beaumains is to warn that he may be more than he seems.",
+   "places": [
+    "castle-buttery"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jousting-sides",
+   "name": "Taking sides at the jousts",
+   "kind": "custom",
+   "summary": "At every tournament the town cheers for a party: Lancelot's kin or Gawain's Orkney brothers, and arguments carry on in the taverns afterward.",
+   "places": [
+    "tiltyard",
+    "the-green-dragon"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "a-maying",
+   "name": "Going a-Maying",
+   "kind": "custom",
+   "summary": "On May morning the court and the townsfolk ride or walk into the woods and fields to bring home green boughs and flowers, as the Queen does with her knights.",
+   "places": [
+    "forest-ride",
+    "woolston-green"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pottage",
+   "name": "Pottage",
+   "kind": "dish",
+   "summary": "The everyday meal: a thick pot of peas, beans, leeks and grain, with bacon when there is any, kept going on the hearth from day to day.",
+   "places": [
+    "shambles-cookshop",
+    "east-gate-cookshop"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "trenchers",
+   "name": "Trenchers",
+   "kind": "custom",
+   "summary": "At table meat is served on thick slices of stale bread called trenchers, which soak up the gravy and are given to the poor or the dogs after the meal.",
+   "places": [
+    "bread-street-bakery",
+    "castle-buttery"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hot-pies-cry",
+   "name": "\"Hot pies, hot!\"",
+   "kind": "shop",
+   "summary": "Cooks and pie-wives cry their wares in the street, and cookshops sell hot pies, roast meat and puddings ready to carry home.",
+   "places": [
+    "shambles-cookshop",
+    "pudding-wifes-stall",
+    "cutlers-cookstall"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ale-stake",
+   "name": "The ale-stake",
+   "kind": "custom",
+   "summary": "A bush or bundle of greenery on a pole over the door means a house has new ale to sell, and the town ale-taster must try it before it is sold.",
+   "places": [
+    "mother-joans-alehouse",
+    "the-chequers"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spiced-wine",
+   "name": "Spiced wine",
+   "kind": "drink",
+   "summary": "At feasts the butler serves wine sweetened with honey and spiced with ginger and cinnamon, while ordinary folk drink ale.",
+   "places": [
+    "castle-buttery",
+    "round-table-hall"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "frumenty",
+   "name": "Frumenty",
+   "kind": "dish",
+   "summary": "Hulled wheat boiled in milk with egg yolks and saffron, eaten with venison at feasts or plain at harvest.",
+   "places": [],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lammas-loaf",
+   "name": "Lammas loaf",
+   "kind": "custom",
+   "summary": "On the first of August a loaf baked from the first ripe wheat is carried to the church and blessed.",
+   "places": [
+    "st-stephens-minster",
+    "woolston-common-oven"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fish-days",
+   "name": "Fish days",
+   "kind": "custom",
+   "summary": "No meat is eaten on Fridays, through Lent, or on other fast days, so the town lives on herring, eels and river fish.",
+   "places": [
+    "fishergate-fish-market",
+    "fishergate-smokehouse"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "curfew-bell",
+   "name": "The curfew bell",
+   "kind": "custom",
+   "summary": "At dusk the minster bell rings curfew: hearth fires are covered, gates are shut, and anyone abroad without a light may be questioned by the watch.",
+   "places": [
+    "st-stephens-minster"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hue-and-cry",
+   "name": "Hue and cry",
+   "kind": "custom",
+   "summary": "Anyone who sees a crime must raise the hue and cry, and every household within earshot is bound to turn out and chase the wrongdoer.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wassail",
+   "name": "Wassail",
+   "kind": "drink",
+   "summary": "At Christmas and Twelfth Night a bowl of hot spiced ale with roasted apples is passed around with the greeting \"wassail\" (\"be well\") and the answer \"drinkhail\".",
+   "places": [],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "ale",
+   "item": "Ale",
+   "low": 1,
+   "high": 1.5,
+   "per": "a gallon",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "loaf",
+   "item": "Loaf of bread",
+   "low": 0.25,
+   "high": 0.5,
+   "per": "a farthing or halfpenny loaf",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pie",
+   "item": "Pie from a cookshop",
+   "low": 0.5,
+   "high": 1,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "inn-meal",
+   "item": "Meal at an inn",
+   "low": 1,
+   "high": 3,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wine",
+   "item": "Wine",
+   "low": 4,
+   "high": 8,
+   "per": "a gallon",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "inn-bed",
+   "item": "Bed at an inn",
+   "low": 0.5,
+   "high": 1,
+   "per": "a night, often shared",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "board",
+   "item": "Board and lodging",
+   "low": 6,
+   "high": 10,
+   "per": "a week's board",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stabling",
+   "item": "Stabling a horse",
+   "low": 1,
+   "high": 2,
+   "per": "a night",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "horse-hire",
+   "item": "Hired horse",
+   "low": 6,
+   "high": 12,
+   "per": "a day",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "toll",
+   "item": "Bridge toll",
+   "low": 0.25,
+   "high": 1,
+   "per": "on foot to a laden cart",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bath",
+   "item": "Bathhouse",
+   "low": 0.5,
+   "high": 1,
+   "per": "a bath",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "candles",
+   "item": "Tallow candles",
+   "low": 1,
+   "high": 1.5,
+   "per": "a pound",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shoes",
+   "item": "Shoes",
+   "low": 4,
+   "high": 8,
+   "per": "a pair",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wage",
+   "item": "Labourer's wage",
+   "low": 2,
+   "high": 4,
+   "per": "a day",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "river",
+   "name": "Cam",
+   "width_km": 0.12,
+   "points": [
+    [
+     51.034,
+     -2.552
+    ],
+    [
+     51.024,
+     -2.545
+    ],
+    [
+     51.012,
+     -2.538
+    ],
+    [
+     51.006,
+     -2.526
+    ],
+    [
+     51.007,
+     -2.508
+    ]
+   ]
+  }
+ ]
+}

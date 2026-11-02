@@ -1,0 +1,4216 @@
+{
+ "schema_version": 1,
+ "id": "ellerbruck",
+ "name": "Ellerbrück",
+ "setting": "fictional",
+ "era": "fantasy",
+ "basis": "Drawn only from public-domain folk and fairy tales: the Brothers Grimm (1812-1857 editions of the Kinder- und Hausmärchen, and Deutsche Sagen), Perrault (1697), Andersen (1835-1872) and older European folklore, all long out of copyright. Nothing from Disney or any modern adaptation; the town and its people are invented.",
+ "region": "the Eller valley",
+ "country": "a small German principality",
+ "timezone": "Europe/Berlin",
+ "aliases": [
+  "Ellerbrueck",
+  "Ellerbruck",
+  "Ellerbrück an der Eller"
+ ],
+ "summary": "A walled market town where a stone bridge crosses the river Eller, with a small castle on the hill, a mill, guild lanes, goose meadows and a great dark forest beyond the fields, where people still tell the old tales about their neighbours.",
+ "lat": 51.3,
+ "lon": 9.55,
+ "currency": {
+  "code": "groschen",
+  "symbol": "gr.",
+  "name": "silver groschen"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.5,
+  "carriage": 6,
+  "horse": 10,
+  "ferry": 4,
+  "boat": 5
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Ellerbrück quarters, places and trades written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "An original town for fiction. Tale lore comes only from public-domain texts: Grimm's Rumpelstiltskin, Elves and the Shoemaker, Hansel and Gretel, Bremen Town Musicians, Rapunzel, Goose Girl, Mother Holle, Little Red Cap, Brave Little Tailor, Sweet Porridge, Table-Be-Set, Clever Elsie, Hans in Luck, Fisherman and His Wife, Three Golden Hairs, Briar Rose, Aschenputtel, Golden Goose, Wolf and Seven Kids; the Hamelin ratcatcher (Deutsche Sagen, 1816); Perrault's Little Thumb and Puss in Boots (1697); Andersen's Princess and the Pea (1835). Nothing from Disney or later adaptations. Streets, inns and townsfolk are invented on the pattern of small Hessian towns; coordinates are a fixed anchor in northern Hesse. Rents are rough weekly sums in groschen. Climate is approximate Kassel-area averages, rounded."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "am-markt",
+   "name": "Am Markt",
+   "summary": "The cobbled market square at the heart of the town, with the town hall, the fountain, the best inn and the stalls on market days.",
+   "vibe": [
+    "market",
+    "central",
+    "busy"
+   ],
+   "lat": 51.3,
+   "lon": 9.55,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     3,
+     4
+    ],
+    "one_bedroom": [
+     5,
+     8
+    ],
+    "two_bedroom": [
+     9,
+     14
+    ]
+   },
+   "housing": [
+    "room-over-shop",
+    "timber-frame-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "carters"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schlossberg",
+   "name": "Schlossberg",
+   "summary": "The hill above the market with the Count's small castle, its gardens, its kitchens and the houses of the court officials.",
+   "vibe": [
+    "court",
+    "quiet",
+    "gardens"
+   ],
+   "lat": 51.304,
+   "lon": 9.548,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     4,
+     6
+    ],
+    "one_bedroom": [
+     8,
+     12
+    ],
+    "two_bedroom": [
+     14,
+     20
+    ]
+   },
+   "housing": [
+    "servants-attic",
+    "officials-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "hired-horses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schustergasse",
+   "name": "Schustergasse",
+   "summary": "The cobblers' and tailors' lane, narrow and crooked, with workshops on the ground floor and families above.",
+   "vibe": [
+    "crafts",
+    "guilds",
+    "narrow"
+   ],
+   "lat": 51.299,
+   "lon": 9.546,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     4,
+     6
+    ],
+    "two_bedroom": [
+     7,
+     10
+    ]
+   },
+   "housing": [
+    "workshop-house",
+    "rented-room"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "backergasse",
+   "name": "Bäckergasse",
+   "summary": "The bakers' street behind the market, warm and smelling of bread from before dawn, with the common bakehouse and the porridge kitchen.",
+   "vibe": [
+    "food",
+    "early",
+    "neighbourly"
+   ],
+   "lat": 51.301,
+   "lon": 9.553,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     4,
+     6
+    ],
+    "two_bedroom": [
+     7,
+     10
+    ]
+   },
+   "housing": [
+    "workshop-house",
+    "rented-room"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weberviertel",
+   "name": "Weberviertel",
+   "summary": "The spinners' and weavers' quarter by the north wall, loud with looms by day and full of spinning rooms on winter nights.",
+   "vibe": [
+    "crafts",
+    "cloth",
+    "family"
+   ],
+   "lat": 51.303,
+   "lon": 9.556,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     6,
+     9
+    ]
+   },
+   "housing": [
+    "timber-frame-house",
+    "rented-room"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kirchhof",
+   "name": "St. Martin's Kirchhof",
+   "summary": "The quiet close around St. Martin's church and the convent of St. Clare, with the churchyard, the parsonage and the convent school.",
+   "vibe": [
+    "quiet",
+    "religious",
+    "old"
+   ],
+   "lat": 51.302,
+   "lon": 9.545,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     3,
+     4
+    ],
+    "one_bedroom": [
+     5,
+     8
+    ],
+    "two_bedroom": [
+     9,
+     13
+    ]
+   },
+   "housing": [
+    "rented-room",
+    "canon-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "muhlbach",
+   "name": "Mühlbach",
+   "summary": "The mill on the stream below the west wall, with its pond, weir and a cluster of millers' and carters' cottages.",
+   "vibe": [
+    "river",
+    "working",
+    "quiet"
+   ],
+   "lat": 51.297,
+   "lon": 9.54,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     4
+    ],
+    "two_bedroom": [
+     4,
+     6
+    ]
+   },
+   "housing": [
+    "cottage",
+    "mill-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "carters",
+    "mill-barges"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fahrhaus",
+   "name": "Am Fährhaus",
+   "summary": "The riverbank below the bridge where the ferry crosses, with fishermen's huts, drying nets and the Flounder tavern.",
+   "vibe": [
+    "river",
+    "fishing",
+    "working"
+   ],
+   "lat": 51.295,
+   "lon": 9.552,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     4
+    ],
+    "two_bedroom": [
+     4,
+     6
+    ]
+   },
+   "housing": [
+    "cottage",
+    "fishers-hut"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "eller-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gerberviertel",
+   "name": "Gerberviertel",
+   "summary": "The tanners' quarter downstream by the south gate, smelly and cheap, with the bathhouse, the ratcatcher and the cheapest rooms in town.",
+   "vibe": [
+    "cheap",
+    "river",
+    "rough"
+   ],
+   "lat": 51.294,
+   "lon": 9.548,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     3
+    ],
+    "two_bedroom": [
+     3,
+     5
+    ]
+   },
+   "housing": [
+    "rented-room",
+    "cottage"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "mill-barges"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ganseanger",
+   "name": "Gänseanger",
+   "summary": "The goose meadow outside the dark east gate, with the cattle market ground, the marksmen's field and the carters' inn.",
+   "vibe": [
+    "open-ground",
+    "geese",
+    "market"
+   ],
+   "lat": 51.301,
+   "lon": 9.562,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     4
+    ],
+    "two_bedroom": [
+     4,
+     6
+    ]
+   },
+   "housing": [
+    "cottage",
+    "stable-loft"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "carters"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gartenvorstadt",
+   "name": "Gartenvorstadt",
+   "summary": "Walled kitchen gardens and orchards outside the north gate, and beyond them the open fields where the old tower stands.",
+   "vibe": [
+    "gardens",
+    "outside-walls",
+    "quiet"
+   ],
+   "lat": 51.309,
+   "lon": 9.552,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     5,
+     8
+    ]
+   },
+   "housing": [
+    "garden-cottage",
+    "cottage"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "carters"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "waldrand",
+   "name": "Am Waldrand",
+   "summary": "A hamlet of woodcutters and charcoal burners where the fields end and the forest begins, an hour's walk from the market.",
+   "vibe": [
+    "forest",
+    "remote",
+    "poor"
+   ],
+   "lat": 51.312,
+   "lon": 9.528,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     1
+    ],
+    "one_bedroom": [
+     1,
+     2
+    ],
+    "two_bedroom": [
+     2,
+     4
+    ]
+   },
+   "housing": [
+    "cottage",
+    "woodcutters-hut"
+   ],
+   "walkability": "low",
+   "transit": [
+    "carters"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jagerhof",
+   "name": "Jägerhof",
+   "summary": "The Count's hunting lodge and the foresters' houses on the forest road, with trails running off into the deep wood.",
+   "vibe": [
+    "forest",
+    "hunting",
+    "remote"
+   ],
+   "lat": 51.318,
+   "lon": 9.54,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     4
+    ],
+    "two_bedroom": [
+     4,
+     6
+    ]
+   },
+   "housing": [
+    "foresters-house",
+    "cottage"
+   ],
+   "walkability": "low",
+   "transit": [
+    "carters",
+    "hired-horses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eichdorf",
+   "name": "Eichdorf",
+   "summary": "A farming village of strip fields, geese and a great linden tree, a half hour south of town across the bridge.",
+   "vibe": [
+    "village",
+    "farming",
+    "family"
+   ],
+   "lat": 51.285,
+   "lon": 9.56,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     1
+    ],
+    "one_bedroom": [
+     1,
+     2
+    ],
+    "two_bedroom": [
+     2,
+     4
+    ]
+   },
+   "housing": [
+    "farmhouse",
+    "cottage"
+   ],
+   "walkability": "low",
+   "transit": [
+    "carters"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "on-foot",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "Everyone walks: the walls take twenty minutes to go round and the farthest hamlets are an hour out.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "carters",
+   "name": "Carters' wagons",
+   "kind": "carriage",
+   "summary": "Ox and horse carts haul grain, timber and passengers willing to sit on the load, leaving from the market on market days.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hired-horses",
+   "name": "Hired horses",
+   "kind": "horse",
+   "summary": "Horses can be hired from the Golden Goose by the east gate, and court messengers ride the Count's.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eller-ferry",
+   "name": "The Eller ferry",
+   "kind": "ferry",
+   "summary": "A rope ferry crosses the Eller below the bridge for carts too heavy for the old stone arches.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-barges",
+   "name": "Mill barges",
+   "kind": "boat",
+   "summary": "Flat barges carry flour and hides between the mill, the tanyards and the bridge.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "marktplatz",
+   "name": "the Marktplatz",
+   "kind": "square",
+   "neighborhood": "am-markt",
+   "summary": "The sloping market square in front of the town hall, where news is cried, notices are nailed up and children chase pigeons.",
+   "tags": [
+    "central",
+    "news",
+    "meeting-point"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wochenmarkt",
+   "name": "the Wednesday and Saturday market",
+   "kind": "market",
+   "neighborhood": "am-markt",
+   "summary": "Stalls of eggs, cheese, cabbages, geese, pots and cloth fill the square twice a week.",
+   "tags": [
+    "market-day",
+    "food",
+    "haggling"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marktbrunnen",
+   "name": "the market fountain",
+   "kind": "landmark",
+   "neighborhood": "am-markt",
+   "summary": "A stone basin fed by a spring, where the town draws water and maids trade gossip with full buckets.",
+   "tags": [
+    "water",
+    "gossip",
+    "old"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ratskeller",
+   "name": "the Ratskeller",
+   "kind": "tavern",
+   "neighborhood": "am-markt",
+   "summary": "A vaulted cellar under the town hall serving beer, wine and roast pork to councillors and anyone who can pay.",
+   "tags": [
+    "beer",
+    "councillors",
+    "vaulted"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zum-tischlein",
+   "name": "Zum Tischlein",
+   "kind": "inn",
+   "neighborhood": "am-markt",
+   "summary": "The best inn in town, whose landlord gets touchy if guests ask whether he ever swapped a magic table for a plain one.",
+   "tags": [
+    "inn",
+    "travellers",
+    "local-lore"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schwan-apotheke",
+   "name": "the Swan apothecary",
+   "kind": "shopping",
+   "neighborhood": "am-markt",
+   "summary": "Jars of salves, dried herbs and cough syrups behind a counter on the corner of the square.",
+   "tags": [
+    "herbs",
+    "remedies",
+    "shop"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schlossgarten",
+   "name": "the castle gardens",
+   "kind": "garden",
+   "neighborhood": "schlossberg",
+   "summary": "Box hedges, fruit walls and a fountain behind the castle, opened to townsfolk on Sunday afternoons.",
+   "tags": [
+    "gardens",
+    "strolling",
+    "court"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dornenhecke",
+   "name": "the briar hedge",
+   "kind": "landmark",
+   "neighborhood": "schlossberg",
+   "summary": "A thick old hedge of wild roses grown over the ruined east wing, which the Count's gardeners are forbidden to cut.",
+   "tags": [
+    "roses",
+    "local-lore",
+    "ruin"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schlosshof",
+   "name": "the castle courtyard",
+   "kind": "landmark",
+   "neighborhood": "schlossberg",
+   "summary": "The cobbled court inside the gate where petitioners wait, carts unload for the kitchens and the guard changes.",
+   "tags": [
+    "court",
+    "petitions",
+    "busy"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schlosskapelle",
+   "name": "the castle chapel",
+   "kind": "temple",
+   "neighborhood": "schlossberg",
+   "summary": "A small painted chapel where the household hears mass and townsfolk may come in on feast days.",
+   "tags": [
+    "chapel",
+    "court",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kuchengarten",
+   "name": "the castle kitchen garden",
+   "kind": "garden",
+   "neighborhood": "schlossberg",
+   "summary": "Rows of cabbages, beans and herbs below the kitchen windows, worked by the royal gardener and his boys.",
+   "tags": [
+    "vegetables",
+    "work",
+    "gardens"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aussicht",
+   "name": "the castle lookout",
+   "kind": "park",
+   "neighborhood": "schlossberg",
+   "summary": "A linden-shaded terrace on the castle wall with a view over the roofs, the river and the dark line of the forest.",
+   "tags": [
+    "view",
+    "benches",
+    "courting"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "torkuche",
+   "name": "the gate kitchen",
+   "kind": "restaurant",
+   "neighborhood": "schlossberg",
+   "summary": "A hatch beside the castle gate where the under-cook sells yesterday's roasts and pies to petitioners, and boxes the scullion's ears if he dozes off.",
+   "tags": [
+    "pies",
+    "cheap",
+    "court"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lorenz-schuhe",
+   "name": "Lorenz's shoe shop",
+   "kind": "shopping",
+   "neighborhood": "schustergasse",
+   "summary": "A cobbler's shop with a pair of huge boots in the window labelled \"seven leagues a stride, price on asking\".",
+   "tags": [
+    "shoes",
+    "joke",
+    "local-lore"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sieben-streich",
+   "name": "the Seven-at-a-Blow tailor",
+   "kind": "shopping",
+   "neighborhood": "schustergasse",
+   "summary": "A tailor's shop whose owner keeps an embroidered belt over the counter and swears his grandfather earned it.",
+   "tags": [
+    "tailor",
+    "clothes",
+    "local-lore"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zum-roten-stiefel",
+   "name": "Zum Roten Stiefel",
+   "kind": "tavern",
+   "neighborhood": "schustergasse",
+   "summary": "The Red Boot, a low-beamed tavern where journeymen drink after work and argue about their masters.",
+   "tags": [
+    "journeymen",
+    "beer",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gesellenherberge",
+   "name": "the journeymen's hostel",
+   "kind": "inn",
+   "neighborhood": "schustergasse",
+   "summary": "Cheap bunks for travelling journeymen, kept by the guilds, with a long table for soup in the evening.",
+   "tags": [
+    "travellers",
+    "cheap",
+    "guilds"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zunfthaus",
+   "name": "the shoemakers' and tailors' guildhall",
+   "kind": "guildhall",
+   "neighborhood": "schustergasse",
+   "summary": "A timber hall where the two guilds meet, test apprentices and hold their dances at Shrovetide.",
+   "tags": [
+    "guilds",
+    "meetings",
+    "dances"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "becker-backerei",
+   "name": "Becker's bakery",
+   "kind": "cafe",
+   "neighborhood": "backergasse",
+   "summary": "Rye loaves, pretzels and poppy-seed rolls sold through the window from first light.",
+   "tags": [
+    "bread",
+    "pretzels",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brei-kuche",
+   "name": "the porridge kitchen",
+   "kind": "restaurant",
+   "neighborhood": "backergasse",
+   "summary": "A widow's kitchen selling bowls of sweet millet porridge from a pot she swears she always tells to stop.",
+   "tags": [
+    "porridge",
+    "cheap",
+    "local-lore"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lebkuchner",
+   "name": "the gingerbread baker",
+   "kind": "cafe",
+   "neighborhood": "backergasse",
+   "summary": "Spiced honey cakes and gingerbread hearts, though the baker refuses outright to build a gingerbread cottage.",
+   "tags": [
+    "gingerbread",
+    "sweets",
+    "gifts"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "backhaus",
+   "name": "the common bakehouse",
+   "kind": "workshop",
+   "neighborhood": "backergasse",
+   "summary": "The town oven where households bring their own dough to bake on Fridays and pay the baker a loaf in twenty.",
+   "tags": [
+    "oven",
+    "neighbours",
+    "bread"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wurststand",
+   "name": "the sausage stall",
+   "kind": "market",
+   "neighborhood": "backergasse",
+   "summary": "Grilled sausages on rye with mustard, sold from a brazier at the market end of the street.",
+   "tags": [
+    "sausages",
+    "quick",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zum-krug",
+   "name": "Zum Krug",
+   "kind": "tavern",
+   "neighborhood": "backergasse",
+   "summary": "The Jug, a bakers' alehouse that opens at noon when the ovens cool and closes early.",
+   "tags": [
+    "beer",
+    "bakers",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holle-brunnen",
+   "name": "the deep well",
+   "kind": "landmark",
+   "neighborhood": "weberviertel",
+   "summary": "An old well in the weavers' yard where, the story goes, a girl once dropped her spindle and climbed down after it.",
+   "tags": [
+    "well",
+    "local-lore",
+    "water"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spinnstube",
+   "name": "the spinning room",
+   "kind": "workshop",
+   "neighborhood": "weberviertel",
+   "summary": "A big warm room where women bring their wheels on winter evenings to spin, sing and tell stories by one candle.",
+   "tags": [
+    "spinning",
+    "stories",
+    "gossip"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weberhof",
+   "name": "the weavers' yard",
+   "kind": "workshop",
+   "neighborhood": "weberviertel",
+   "summary": "A courtyard ringed with loom rooms where linen is woven for the market and the castle.",
+   "tags": [
+    "looms",
+    "linen",
+    "work"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bleiche",
+   "name": "the bleaching green",
+   "kind": "park",
+   "neighborhood": "weberviertel",
+   "summary": "A meadow inside the wall where linen is spread to whiten in the sun and children are paid to keep the geese off.",
+   "tags": [
+    "meadow",
+    "linen",
+    "sunny"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zur-spindel",
+   "name": "Zur Spindel",
+   "kind": "tavern",
+   "neighborhood": "weberviertel",
+   "summary": "The Spindle, a weavers' tavern with cheap cider and a fiddler on Saturdays.",
+   "tags": [
+    "cider",
+    "music",
+    "weavers"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-martin",
+   "name": "St. Martin's church",
+   "kind": "temple",
+   "neighborhood": "kirchhof",
+   "summary": "The town church with its squat tower, painted saints and the bell that rings the hours and the curfew.",
+   "tags": [
+    "church",
+    "bells",
+    "old"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haselbaum",
+   "name": "the hazel tree in the churchyard",
+   "kind": "garden",
+   "neighborhood": "kirchhof",
+   "summary": "An old hazel on a grave in the churchyard, where girls make wishes and leave a few lentils for the birds.",
+   "tags": [
+    "wishes",
+    "birds",
+    "local-lore"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "klarissen",
+   "name": "the convent of St. Clare",
+   "kind": "temple",
+   "neighborhood": "kirchhof",
+   "summary": "A small house of nuns who keep a school, a herb garden and a guest room for women travelling alone.",
+   "tags": [
+    "convent",
+    "quiet",
+    "herbs"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kirchlinde",
+   "name": "the churchyard linden",
+   "kind": "park",
+   "neighborhood": "kirchhof",
+   "summary": "A huge linden with a stone bench around its trunk, where old men sit after mass and the elders once held court.",
+   "tags": [
+    "shade",
+    "benches",
+    "old"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pfarrbibliothek",
+   "name": "the parish library",
+   "kind": "library",
+   "neighborhood": "kirchhof",
+   "summary": "A room over the sacristy with chained books, sermons and an herbal, open to anyone who can read and asks the sexton.",
+   "tags": [
+    "books",
+    "quiet",
+    "reading"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kusterschenke",
+   "name": "the sexton's alehouse",
+   "kind": "tavern",
+   "neighborhood": "kirchhof",
+   "summary": "Beer drawn in the sexton's front room by the lych gate; he no longer climbs the tower after dark, not since a boy who wanted to learn to shudder threw him down the stairs.",
+   "tags": [
+    "beer",
+    "local-lore",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "alte-muhle",
+   "name": "the old mill",
+   "kind": "workshop",
+   "neighborhood": "muhlbach",
+   "summary": "The undershot mill on the Mühlbach, whose miller once boasted that his daughter could spin straw into gold.",
+   "tags": [
+    "mill",
+    "flour",
+    "local-lore"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "muhlteich",
+   "name": "the millpond",
+   "kind": "park",
+   "neighborhood": "muhlbach",
+   "summary": "A reedy pond above the weir with ducks, a pair of swans and a path round it for an evening walk.",
+   "tags": [
+    "pond",
+    "swans",
+    "walks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "muhlgraben-weg",
+   "name": "the millrace path",
+   "kind": "trail",
+   "neighborhood": "muhlbach",
+   "summary": "A footpath along the millrace from the west gate to the weir under willows and alders.",
+   "tags": [
+    "willows",
+    "water",
+    "walks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zum-kater",
+   "name": "Zum Kater",
+   "kind": "tavern",
+   "neighborhood": "muhlbach",
+   "summary": "The Tomcat, a millers' tavern named for the youngest son who was left nothing but the mill cat.",
+   "tags": [
+    "beer",
+    "millers",
+    "local-lore"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "muhlfurt",
+   "name": "the mill ford",
+   "kind": "landmark",
+   "neighborhood": "muhlbach",
+   "summary": "Stepping stones across the stream below the mill, where carts splash through and boys catch crayfish.",
+   "tags": [
+    "ford",
+    "crayfish",
+    "stream"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fahranleger",
+   "name": "the ferry landing",
+   "kind": "docks",
+   "neighborhood": "fahrhaus",
+   "summary": "The ferry stage under the bridge, where the ferryman pulls his raft across on a rope and grumbles that nobody ever takes the pole.",
+   "tags": [
+    "ferry",
+    "river",
+    "local-lore"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fischmarkt",
+   "name": "the fish stalls",
+   "kind": "market",
+   "neighborhood": "fahrhaus",
+   "summary": "Fishermen's wives selling pike, carp, eel and crayfish from tubs on the bank every morning.",
+   "tags": [
+    "fish",
+    "river",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "fish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zum-butt",
+   "name": "Zum Butt",
+   "kind": "tavern",
+   "neighborhood": "fahrhaus",
+   "summary": "The Flounder, a fishermen's tavern whose landlady is teased that she will want a palace next.",
+   "tags": [
+    "fish",
+    "river",
+    "local-lore"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "fish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "badestelle",
+   "name": "the bathing meadow",
+   "kind": "beach",
+   "neighborhood": "fahrhaus",
+   "summary": "A grassy bank and gravel shallows upstream of the ferry where the town swims on hot afternoons.",
+   "tags": [
+    "swimming",
+    "summer",
+    "meadow"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "leinpfad",
+   "name": "the towpath",
+   "kind": "trail",
+   "neighborhood": "fahrhaus",
+   "summary": "A riverside path along the Eller past fishing huts, willows and the old boundary stones.",
+   "tags": [
+    "river",
+    "walks",
+    "willows"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "badestube",
+   "name": "the bathhouse",
+   "kind": "fitness",
+   "neighborhood": "gerberviertel",
+   "summary": "A steam bath with hot tubs and a barber who trims beards, lets blood and knows everyone's business.",
+   "tags": [
+    "bath",
+    "steam",
+    "gossip"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gerberei",
+   "name": "the tanyards",
+   "kind": "workshop",
+   "neighborhood": "gerberviertel",
+   "summary": "Tan pits and drying sheds on the river below the town, kept downstream and downwind for good reason.",
+   "tags": [
+    "leather",
+    "smell",
+    "work"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rattenfanger-haus",
+   "name": "the ratcatcher's house",
+   "kind": "landmark",
+   "neighborhood": "gerberviertel",
+   "summary": "A crooked house with the council's unpaid bill nailed to the door, kept by a ratcatcher with a long memory.",
+   "tags": [
+    "rats",
+    "local-lore",
+    "odd"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zur-laute",
+   "name": "Zur Laute",
+   "kind": "tavern",
+   "neighborhood": "gerberviertel",
+   "summary": "The Lute, a rough tavern where the town band of four old players has been \"about to leave for Bremen\" for twenty years.",
+   "tags": [
+    "music",
+    "beer",
+    "local-lore"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "garkuche",
+   "name": "the south gate cookshop",
+   "kind": "restaurant",
+   "neighborhood": "gerberviertel",
+   "summary": "Lentil soup, blood sausage and black bread for tanners and carters at the cheapest prices in town.",
+   "tags": [
+    "soup",
+    "cheap",
+    "working"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ganseweide",
+   "name": "the goose meadow",
+   "kind": "park",
+   "neighborhood": "ganseanger",
+   "summary": "A long green meadow outside the east gate where the goose girls drive the town's geese every morning.",
+   "tags": [
+    "geese",
+    "meadow",
+    "open"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dunkles-tor",
+   "name": "the dark gate",
+   "kind": "landmark",
+   "neighborhood": "ganseanger",
+   "summary": "The deep, dim east gate, with an old carved horse's head over the arch that the goose girls greet as they pass.",
+   "tags": [
+    "gate",
+    "local-lore",
+    "old"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "viehmarkt",
+   "name": "the cattle market ground",
+   "kind": "market",
+   "neighborhood": "ganseanger",
+   "summary": "Pens and hitching rails where cows, pigs, horses and geese are traded on the first Monday of each month.",
+   "tags": [
+    "livestock",
+    "haggling",
+    "market-day"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "goldene-gans",
+   "name": "the Golden Goose",
+   "kind": "inn",
+   "neighborhood": "ganseanger",
+   "summary": "The carters' inn by the east gate, with stabling, a long table and a painted goose on the sign that people swear sticks to fingers.",
+   "tags": [
+    "inn",
+    "carters",
+    "stabling"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schutzenwiese",
+   "name": "the marksmen's field",
+   "kind": "venue",
+   "neighborhood": "ganseanger",
+   "summary": "A meadow with crossbow butts and a wooden bird on a pole, where the marksmen's guild shoots on summer Sundays.",
+   "tags": [
+    "crossbows",
+    "contests",
+    "guild"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rapunzelgarten",
+   "name": "the walled rampion garden",
+   "kind": "garden",
+   "neighborhood": "gartenvorstadt",
+   "summary": "A high-walled garden full of rampion and lettuces whose owner sells nothing and lets nobody in.",
+   "tags": [
+    "gardens",
+    "local-lore",
+    "walled"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "turm",
+   "name": "the tower in the fields",
+   "kind": "landmark",
+   "neighborhood": "gartenvorstadt",
+   "summary": "An old stone tower in the fields with one window at the top and no door at all, which nobody claims to own.",
+   "tags": [
+    "tower",
+    "local-lore",
+    "walks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "apothekergarten",
+   "name": "the apothecary's garden",
+   "kind": "garden",
+   "neighborhood": "gartenvorstadt",
+   "summary": "Neat beds of sage, chamomile, foxglove and poppies grown for the Swan apothecary's jars.",
+   "tags": [
+    "herbs",
+    "gardens",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "obstwiesen-weg",
+   "name": "the orchard path",
+   "kind": "trail",
+   "neighborhood": "gartenvorstadt",
+   "summary": "A path through apple and pear meadows from the north gate out toward the tower.",
+   "tags": [
+    "orchards",
+    "blossom",
+    "walks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gartenwirtschaft",
+   "name": "the garden tavern",
+   "kind": "tavern",
+   "neighborhood": "gartenvorstadt",
+   "summary": "Tables under chestnut trees behind a market gardener's house, serving cider, cheese and radishes on summer evenings.",
+   "tags": [
+    "cider",
+    "outdoors",
+    "summer"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holzplatz",
+   "name": "the woodyard",
+   "kind": "workshop",
+   "neighborhood": "waldrand",
+   "summary": "A clearing stacked with cut logs, where the woodcutters split and sell firewood to carters from town.",
+   "tags": [
+    "timber",
+    "work",
+    "forest"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "verbotener-pfad",
+   "name": "the path children are told not to take",
+   "kind": "trail",
+   "neighborhood": "waldrand",
+   "summary": "A narrow track into the deep forest toward an old woman's cottage that local children are warned away from.",
+   "tags": [
+    "forest",
+    "local-lore",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kohlermeiler",
+   "name": "the charcoal kilns",
+   "kind": "workshop",
+   "neighborhood": "waldrand",
+   "summary": "Smoking turf-covered mounds tended day and night by the charcoal burners in their huts.",
+   "tags": [
+    "charcoal",
+    "smoke",
+    "work"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "waldquelle",
+   "name": "the forest spring",
+   "kind": "park",
+   "neighborhood": "waldrand",
+   "summary": "A cold spring under beeches at the edge of the wood, a favourite place to rest on the way back with firewood.",
+   "tags": [
+    "spring",
+    "shade",
+    "water"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holzhauer-krug",
+   "name": "the woodcutters' alehouse",
+   "kind": "tavern",
+   "neighborhood": "waldrand",
+   "summary": "A one-room alehouse with a bench outside, where woodcutters drink thin beer and talk about hard winters.",
+   "tags": [
+    "beer",
+    "forest",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jagdhaus",
+   "name": "the hunting lodge inn",
+   "kind": "inn",
+   "neighborhood": "jagerhof",
+   "summary": "The Count's old hunting lodge, now partly an inn serving venison and wild-mushroom stew to travellers on the forest road.",
+   "tags": [
+    "venison",
+    "inn",
+    "forest"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "waldweg",
+   "name": "the forest road path",
+   "kind": "trail",
+   "neighborhood": "jagerhof",
+   "summary": "The marked path through the wood to the next village, where every parent says to keep to the path and not stop to pick flowers.",
+   "tags": [
+    "forest",
+    "local-lore",
+    "walks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hochsitz",
+   "name": "the high seat",
+   "kind": "landmark",
+   "neighborhood": "jagerhof",
+   "summary": "A wooden hunting stand on the edge of a clearing where deer come out at dusk.",
+   "tags": [
+    "deer",
+    "view",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pilzwald",
+   "name": "the mushroom woods",
+   "kind": "trail",
+   "neighborhood": "jagerhof",
+   "summary": "Beech and oak woods where townsfolk go for mushrooms, bilberries and beechnuts in late summer and autumn.",
+   "tags": [
+    "foraging",
+    "berries",
+    "mushrooms"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bildstock",
+   "name": "the wayside shrine",
+   "kind": "temple",
+   "neighborhood": "jagerhof",
+   "summary": "A painted shrine to St. Hubert on the forest road, where hunters leave a sprig of oak.",
+   "tags": [
+    "shrine",
+    "forest",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tanzlinde",
+   "name": "the dancing linden",
+   "kind": "square",
+   "neighborhood": "eichdorf",
+   "summary": "A great linden on the village green with a wooden floor built into its lower branches for dancing on feast days.",
+   "tags": [
+    "dancing",
+    "linden",
+    "feasts"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dorfanger",
+   "name": "the village green",
+   "kind": "park",
+   "neighborhood": "eichdorf",
+   "summary": "Common grass with a pond for the geese, a pump and a bench for the old men.",
+   "tags": [
+    "green",
+    "geese",
+    "village"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kelterei",
+   "name": "the cider press",
+   "kind": "tavern",
+   "neighborhood": "eichdorf",
+   "summary": "A farmhouse press that sells new cider and onion tart at long tables in autumn.",
+   "tags": [
+    "cider",
+    "autumn",
+    "farm"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall"
+   ],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dorfkirche",
+   "name": "Eichdorf chapel",
+   "kind": "temple",
+   "neighborhood": "eichdorf",
+   "summary": "A plain stone chapel with a wooden bell tower, served by the curate from town every other Sunday.",
+   "tags": [
+    "chapel",
+    "village",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "feldweg",
+   "name": "the field path",
+   "kind": "trail",
+   "neighborhood": "eichdorf",
+   "summary": "A path between strips of rye, flax and cabbages from the village back to the bridge.",
+   "tags": [
+    "fields",
+    "walks",
+    "larks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "klosterschule",
+   "name": "the convent school of St. Clare",
+   "type": "academy",
+   "neighborhood": "kirchhof",
+   "size": "small",
+   "known_for": [
+    "reading",
+    "needlework",
+    "latin",
+    "herbs"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zunftschule",
+   "name": "the shoemakers' and tailors' guild apprenticeship",
+   "type": "guild-school",
+   "neighborhood": "schustergasse",
+   "size": "small",
+   "known_for": [
+    "shoemaking",
+    "tailoring",
+    "apprenticeship",
+    "masterpiece"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weberschule",
+   "name": "the weavers' guild school",
+   "type": "guild-school",
+   "neighborhood": "weberviertel",
+   "size": "small",
+   "known_for": [
+    "weaving",
+    "spinning",
+    "linen"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "woodcutter",
+   "name": "Woodcutter",
+   "sector": "forest",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Felling and splitting timber at the forest edge and selling firewood to carters from town.",
+   "themes": [
+    "the axe",
+    "hard winters",
+    "the forest",
+    "feeding a family"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "charcoal-burner",
+   "name": "Charcoal burner",
+   "sector": "forest",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Building and tending the smoking kilns in the woods day and night for the smiths' charcoal.",
+   "themes": [
+    "the kilns",
+    "night watches",
+    "smoke",
+    "the deep wood"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "miller",
+   "name": "Miller",
+   "sector": "milling",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Grinding grain at the Mühlbach mill and taking a share of every sack as toll.",
+   "themes": [
+    "the millstones",
+    "flour dust",
+    "tolls",
+    "boasting"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "goose-girl",
+   "name": "Goose girl",
+   "sector": "farming",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Driving the town's geese out through the dark gate to the meadow at dawn and home again at dusk.",
+   "themes": [
+    "the geese",
+    "the meadow",
+    "the gate",
+    "long days"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "shoemaker",
+   "name": "Shoemaker",
+   "sector": "crafts",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Cutting and stitching shoes and boots in a Schustergasse workshop, from the last to the finished pair.",
+   "themes": [
+    "the last",
+    "leather",
+    "the guild",
+    "unfinished work"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "tailor",
+   "name": "Tailor",
+   "sector": "crafts",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Cutting cloth, fitting customers and sewing coats and gowns, cross-legged on the workbench.",
+   "themes": [
+    "the needle",
+    "customers",
+    "the guild",
+    "big talk"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "baker",
+   "name": "Baker",
+   "sector": "food",
+   "schedule": "early",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Firing the oven before dawn for rye loaves, rolls and pretzels, by the town's weight rules.",
+   "themes": [
+    "the oven",
+    "dawn",
+    "the bread weight",
+    "neighbours"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "spinner",
+   "name": "Spinner",
+   "sector": "cloth",
+   "schedule": "flexible",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Spinning flax and wool at home or in the spinning room, paid by the skein.",
+   "themes": [
+    "the wheel",
+    "piecework",
+    "stories",
+    "winter evenings"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "weaver",
+   "name": "Weaver",
+   "sector": "cloth",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Weaving linen on a loom in the Weberviertel for merchants and the castle.",
+   "themes": [
+    "the loom",
+    "linen",
+    "the guild",
+    "family workshop"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "huntsman",
+   "name": "Huntsman",
+   "sector": "forest",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Keeping the Count's game, culling deer and boar, and walking the forest road.",
+   "themes": [
+    "the forest",
+    "the Count",
+    "wolves",
+    "poachers"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "ferryman",
+   "name": "Ferryman",
+   "sector": "river",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Pulling the rope ferry across the Eller for carts, cattle and walkers, in all weathers.",
+   "themes": [
+    "the river",
+    "the rope",
+    "travellers",
+    "floods"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "fisher",
+   "name": "Fisher",
+   "sector": "river",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Setting nets and eel traps on the Eller and selling the catch from tubs on the bank.",
+   "themes": [
+    "nets",
+    "the river",
+    "the fish stalls",
+    "early mornings"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "innkeeper",
+   "name": "Innkeeper's hand",
+   "sector": "hospitality",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Cooking, serving, making beds and stabling horses at one of the town's inns.",
+   "themes": [
+    "travellers",
+    "the kitchen",
+    "stabling",
+    "news from the road"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "apothecary",
+   "name": "Apothecary",
+   "sector": "healing",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Making salves, syrups and powders at the Swan apothecary and advising on coughs and fevers.",
+   "themes": [
+    "herbs",
+    "remedies",
+    "patients",
+    "the garden"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "royal-gardener",
+   "name": "Royal gardener",
+   "sector": "court",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Keeping the castle's hedges, fruit walls and kitchen beds, and never cutting the briar hedge.",
+   "themes": [
+    "the castle gardens",
+    "seasons",
+    "the Count",
+    "apprentices"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "castle-servant",
+   "name": "Castle servant",
+   "sector": "court",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Kitchen, laundry or chamber work in the Count's household, paid in wages, food and a livery coat.",
+   "themes": [
+    "the kitchen",
+    "the household",
+    "gossip",
+    "feast days"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "tanner",
+   "name": "Tanner",
+   "sector": "crafts",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Scraping hides and working the tan pits in the Gerberviertel.",
+   "themes": [
+    "the tan pits",
+    "leather",
+    "the smell",
+    "the river"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "ratcatcher",
+   "name": "Ratcatcher",
+   "sector": "trades",
+   "schedule": "evening",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Trapping rats in cellars, granaries and the mill, and reminding the council what it owes.",
+   "themes": [
+    "rats",
+    "cellars",
+    "the council",
+    "unpaid bills"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "town-musician",
+   "name": "Town musician",
+   "sector": "entertainment",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Playing fiddle, horn or drum at weddings, dances and taverns as one of the town band.",
+   "themes": [
+    "the band",
+    "weddings",
+    "taverns",
+    "old age"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "carter",
+   "name": "Carter",
+   "sector": "transport",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Driving ox and horse wagons of grain, timber and flour between the forest, the mill and the market.",
+   "themes": [
+    "the wagon",
+    "the roads",
+    "market days",
+    "the horses"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "market-gardener",
+   "name": "Market gardener",
+   "sector": "farming",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Growing cabbages, lettuces, onions and herbs in the Gartenvorstadt for the market.",
+   "themes": [
+    "the garden",
+    "the market",
+    "weather",
+    "neighbours' walls"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "convent-teacher",
+   "name": "Convent schoolteacher",
+   "sector": "church",
+   "schedule": "academic",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Teaching girls and small boys to read, count and sew at the convent of St. Clare.",
+   "themes": [
+    "the schoolroom",
+    "the sisters",
+    "letters",
+    "pupils"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "women"
+  }
+ ],
+ "work_by_gender": true,
+ "employers": [
+  {
+   "id": "grafliche-hof",
+   "name": "the Count's household",
+   "sector": "court",
+   "neighborhood": "schlossberg",
+   "size": "medium",
+   "summary": "The steward's household that runs the castle's kitchens, laundry, chambers and stables.",
+   "careers": [
+    "castle-servant",
+    "royal-gardener",
+    "town-musician"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schlossgartnerei",
+   "name": "the castle gardens",
+   "sector": "court",
+   "neighborhood": "schlossberg",
+   "size": "small",
+   "summary": "The head gardener and his boys, who keep the castle gardens and kitchen beds.",
+   "careers": [
+    "royal-gardener"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "forstamt",
+   "name": "the Count's forest office",
+   "sector": "forest",
+   "neighborhood": "jagerhof",
+   "size": "small",
+   "summary": "The head forester's office at the hunting lodge, which licenses woodcutting and keeps the game.",
+   "careers": [
+    "huntsman",
+    "woodcutter",
+    "charcoal-burner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jagdhaus-wirt",
+   "name": "the hunting lodge inn",
+   "sector": "hospitality",
+   "neighborhood": "jagerhof",
+   "size": "small",
+   "summary": "The inn in the old lodge on the forest road.",
+   "careers": [
+    "innkeeper"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "muhle",
+   "name": "the Mühlbach mill",
+   "sector": "milling",
+   "neighborhood": "muhlbach",
+   "size": "small",
+   "summary": "The town's water mill, leased from the Count to the master miller and his family.",
+   "careers": [
+    "miller",
+    "carter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tischlein-wirt",
+   "name": "Zum Tischlein",
+   "sector": "hospitality",
+   "neighborhood": "am-markt",
+   "size": "medium",
+   "summary": "The best inn on the market square, with kitchens, rooms and stabling.",
+   "careers": [
+    "innkeeper",
+    "town-musician"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "goldene-gans-wirt",
+   "name": "the Golden Goose",
+   "sector": "hospitality",
+   "neighborhood": "ganseanger",
+   "size": "small",
+   "summary": "The carters' inn by the east gate, with stabling and horses for hire.",
+   "careers": [
+    "innkeeper",
+    "carter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schuhmacherzunft",
+   "name": "the shoemakers' and tailors' guild",
+   "sector": "crafts",
+   "neighborhood": "schustergasse",
+   "size": "medium",
+   "summary": "The two craft guilds of Schustergasse and their masters' workshops.",
+   "careers": [
+    "shoemaker",
+    "tailor"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weberzunft",
+   "name": "the weavers' guild",
+   "sector": "cloth",
+   "neighborhood": "weberviertel",
+   "size": "medium",
+   "summary": "The guild of the Weberviertel's weavers, who also put out flax to spinners.",
+   "careers": [
+    "weaver",
+    "spinner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "backerzunft",
+   "name": "the bakers of Bäckergasse",
+   "sector": "food",
+   "neighborhood": "backergasse",
+   "size": "small",
+   "summary": "Four family bakeries and the common bakehouse under the bakers' guild.",
+   "careers": [
+    "baker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schwan-apotheke-haus",
+   "name": "the Swan apothecary",
+   "sector": "healing",
+   "neighborhood": "am-markt",
+   "size": "small",
+   "summary": "The town's only apothecary, with a shop on the square and a garden outside the north gate.",
+   "careers": [
+    "apothecary",
+    "market-gardener"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fahre",
+   "name": "the Eller ferry and fishery",
+   "sector": "river",
+   "neighborhood": "fahrhaus",
+   "size": "small",
+   "summary": "The ferry rights and fishing leases on the Eller, held from the town council.",
+   "careers": [
+    "ferryman",
+    "fisher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gerberei-haus",
+   "name": "the Gerberviertel tanyards",
+   "sector": "crafts",
+   "neighborhood": "gerberviertel",
+   "size": "small",
+   "summary": "Three family tanyards on the river below the south gate.",
+   "careers": [
+    "tanner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stadtrat",
+   "name": "the town council",
+   "sector": "government",
+   "neighborhood": "am-markt",
+   "size": "small",
+   "summary": "The mayor and council in the town hall, who pay the goose girls, the band and, in theory, the ratcatcher.",
+   "careers": [
+    "goose-girl",
+    "ratcatcher",
+    "town-musician"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "klarissen-konvent",
+   "name": "the convent of St. Clare",
+   "sector": "church",
+   "neighborhood": "kirchhof",
+   "size": "small",
+   "summary": "The nuns' house by St. Martin's, which runs the school and the herb garden.",
+   "careers": [
+    "convent-teacher",
+    "apothecary"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eichdorf-hof",
+   "name": "the Eichdorf farms",
+   "sector": "farming",
+   "neighborhood": "eichdorf",
+   "size": "medium",
+   "summary": "The village's farmers, who hire hands for haymaking and harvest and send geese to market.",
+   "careers": [
+    "goose-girl",
+    "carter",
+    "market-gardener"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "castle-and-forest",
+   "name": "The castle and the forest",
+   "neighborhoods": [
+    "schlossberg",
+    "jagerhof",
+    "waldrand"
+   ],
+   "sectors": [
+    "court",
+    "forest"
+   ],
+   "summary": "The Count's household, gardens and forest office employ servants, gardeners, huntsmen and woodcutters.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guild-lanes",
+   "name": "The guild lanes",
+   "neighborhoods": [
+    "schustergasse",
+    "backergasse",
+    "weberviertel",
+    "am-markt"
+   ],
+   "sectors": [
+    "crafts",
+    "cloth",
+    "food",
+    "hospitality",
+    "healing"
+   ],
+   "summary": "Workshops, bakeries, inns and shops of the town's guilds inside the walls.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "river-and-fields",
+   "name": "The river and the fields",
+   "neighborhoods": [
+    "muhlbach",
+    "fahrhaus",
+    "gerberviertel",
+    "ganseanger",
+    "eichdorf"
+   ],
+   "sectors": [
+    "milling",
+    "river",
+    "farming",
+    "transport"
+   ],
+   "summary": "The mill, ferry, tanyards, goose meadow and farms along the Eller.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Approximate central-German weather: cold, grey winters with frost and some snow, late springs, warm summers with thunderstorms, and misty autumns.",
+  "months": [
+   {
+    "high_f": 37,
+    "low_f": 27,
+    "rain_days": 12,
+    "note": "Cold; frost and the odd snowfall."
+   },
+   {
+    "high_f": 40,
+    "low_f": 28,
+    "rain_days": 10,
+    "note": "Grey and raw; snow lies in the forest."
+   },
+   {
+    "high_f": 48,
+    "low_f": 32,
+    "rain_days": 11,
+    "note": "Thaw and mud; first ploughing."
+   },
+   {
+    "high_f": 57,
+    "low_f": 37,
+    "rain_days": 10,
+    "note": "Changeable; orchards in blossom late in the month."
+   },
+   {
+    "high_f": 65,
+    "low_f": 45,
+    "rain_days": 11,
+    "note": "Mild and green; geese out on the meadow."
+   },
+   {
+    "high_f": 71,
+    "low_f": 51,
+    "rain_days": 11,
+    "note": "Warm; haymaking and thunderstorms."
+   },
+   {
+    "high_f": 75,
+    "low_f": 55,
+    "rain_days": 12,
+    "note": "Warmest month; swimming in the Eller."
+   },
+   {
+    "high_f": 74,
+    "low_f": 54,
+    "rain_days": 11,
+    "note": "Warm; rye harvest in the fields."
+   },
+   {
+    "high_f": 66,
+    "low_f": 48,
+    "rain_days": 9,
+    "note": "Mild; apples, mushrooms and cider."
+   },
+   {
+    "high_f": 56,
+    "low_f": 41,
+    "rain_days": 10,
+    "note": "Cool and misty; leaves turn in the forest."
+   },
+   {
+    "high_f": 45,
+    "low_f": 35,
+    "rain_days": 12,
+    "note": "Damp and dark early; first frosts."
+   },
+   {
+    "high_f": 39,
+    "low_f": 30,
+    "rain_days": 13,
+    "note": "Cold and short days; snow some years."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "epiphany-singers",
+   "name": "Star singers",
+   "months": [
+    1
+   ],
+   "neighborhood": "kirchhof",
+   "summary": "Children in paper crowns carry a star from door to door at Epiphany, singing and chalking a blessing over each lintel.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fastnacht",
+   "name": "Fastnacht",
+   "months": [
+    2,
+    3
+   ],
+   "neighborhood": "schustergasse",
+   "summary": "The guilds hold dances and the journeymen parade in masks before Lent begins.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "walpurgis",
+   "name": "Walpurgis night",
+   "months": [
+    4
+   ],
+   "neighborhood": "eichdorf",
+   "summary": "Bonfires on the hills and a racket of pots and whips to drive off witches on the last night of April.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maypole",
+   "name": "May Day",
+   "months": [
+    5
+   ],
+   "neighborhood": "eichdorf",
+   "summary": "Young people bring in birch boughs at dawn and dance round the maypole and the linden on Eichdorf green.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schutzenfest",
+   "name": "The marksmen's festival",
+   "months": [
+    7
+   ],
+   "neighborhood": "ganseanger",
+   "summary": "A week of crossbow shooting at a wooden bird, with a parade, a fair and a marksman king crowned for the year.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-john-fires",
+   "name": "Midsummer fires",
+   "months": [
+    6
+   ],
+   "neighborhood": "fahrhaus",
+   "summary": "Bonfires on the riverbank on St. John's Eve, with couples jumping the embers and wreaths floated on the Eller.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rye-harvest",
+   "name": "Harvest home",
+   "months": [
+    8
+   ],
+   "neighborhood": "eichdorf",
+   "summary": "The last sheaf is tied into a figure and carried to the farm on a wagon, followed by a supper and dancing.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kirmes",
+   "name": "Kirmes",
+   "months": [
+    9
+   ],
+   "neighborhood": "am-markt",
+   "summary": "The church-dedication fair: booths, swings, roast ox and three days of dancing on the market square.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "erntedank",
+   "name": "Harvest thanksgiving",
+   "months": [
+    10
+   ],
+   "neighborhood": "kirchhof",
+   "summary": "A harvest crown of grain and apples is hung in St. Martin's and the bread of the year is blessed.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cider-pressing",
+   "name": "Cider pressing",
+   "months": [
+    9,
+    10
+   ],
+   "neighborhood": "eichdorf",
+   "summary": "Families bring windfalls to the press and drink the new cider with onion tart at long tables.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "martinmas-lanterns",
+   "name": "Martinmas lanterns",
+   "months": [
+    11
+   ],
+   "neighborhood": "kirchhof",
+   "summary": "Children carry paper lanterns through the streets singing St. Martin's songs, and every family that can afford one eats goose.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-nicholas",
+   "name": "St. Nicholas's Eve",
+   "months": [
+    12
+   ],
+   "neighborhood": "backergasse",
+   "summary": "Children put out their shoes and find nuts, apples and gingerbread from the bakers in them in the morning.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "christmas-market",
+   "name": "The Christmas market",
+   "months": [
+    12
+   ],
+   "neighborhood": "am-markt",
+   "summary": "Through Advent the square fills with booths of gingerbread, toys, candles and hot spiced wine.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spinning-season",
+   "name": "Spinning room season",
+   "months": [
+    11,
+    12,
+    1,
+    2
+   ],
+   "neighborhood": "weberviertel",
+   "summary": "From Martinmas to Candlemas the spinning rooms are full every evening of wheels, songs and long stories.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "straw-into-gold",
+   "name": "The miller's boast",
+   "kind": "saying",
+   "summary": "When someone oversells a child or an apprentice, people say \"careful, or they'll have to spin straw into gold\", after the old miller of Mühlbach.",
+   "places": [
+    "alte-muhle"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "elves-finished-it",
+   "name": "\"The elves finished it\"",
+   "kind": "saying",
+   "summary": "Shoemakers who find work done that nobody admits to doing say the elves came in the night, and some leave out a small suit of clothes at Christmas just in case.",
+   "places": [
+    "lorenz-schuhe"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seven-league-boots",
+   "name": "Seven-league boots",
+   "kind": "shop",
+   "summary": "Lorenz the cobbler keeps a pair of enormous boots in his window as a joke and quotes an absurd price to anyone who asks.",
+   "places": [
+    "lorenz-schuhe"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stay-on-the-path",
+   "name": "\"Keep to the path\"",
+   "kind": "saying",
+   "summary": "Every child sent through the wood is told to keep to the path, not stop to pick flowers and not talk to strangers, wolves especially.",
+   "places": [
+    "waldweg",
+    "verbotener-pfad"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-old-womans-cottage",
+   "name": "The cottage in the wood",
+   "kind": "other",
+   "summary": "Children are warned off the track to an old woman's cottage deep in the forest, and told never to eat anything they find there.",
+   "places": [
+    "verbotener-pfad"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bremen-band",
+   "name": "The band that never got to Bremen",
+   "kind": "other",
+   "summary": "The town band of four old players, a braying horn, a fiddle, a growling bass and a crowing tenor, has been leaving for Bremen any day now for twenty years.",
+   "places": [
+    "zur-laute"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-unpaid-ratcatcher",
+   "name": "The unpaid ratcatcher",
+   "kind": "custom",
+   "summary": "The council still owes the ratcatcher for clearing the granaries, he reminds them at every meeting, and mothers keep children indoors whenever he takes out his pipe.",
+   "places": [
+    "rattenfanger-haus"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-tower-with-no-door",
+   "name": "The tower with no door",
+   "kind": "other",
+   "summary": "Nobody knows who built the tower in the fields; children dare each other to call up to the window, and the market gardeners give the walled rampion garden next to it a wide berth.",
+   "places": [
+    "turm",
+    "rapunzelgarten"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "frau-holle-snow",
+   "name": "Frau Holle is shaking her beds",
+   "kind": "saying",
+   "summary": "When it snows, people say Mother Holle is shaking out her feather beds, and a hard-working girl is called a \"gold girl\".",
+   "places": [
+    "holle-brunnen"
+   ],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "falada",
+   "name": "Greeting the horse over the gate",
+   "kind": "custom",
+   "summary": "Goose girls say good morning to the carved horse's head over the dark gate every day, after the goose girl of the old story.",
+   "places": [
+    "dunkles-tor",
+    "ganseweide"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "little-pot-stop",
+   "name": "\"Little pot, stop!\"",
+   "kind": "saying",
+   "summary": "Said when anything runs on too long, from the tale of the sweet porridge pot that flooded a town because nobody knew the word to stop it.",
+   "places": [
+    "brei-kuche"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sweet-millet",
+   "name": "Sweet millet porridge",
+   "kind": "dish",
+   "summary": "Millet boiled in milk with honey and a pinch of cinnamon, the everyday breakfast for children and the poor.",
+   "places": [
+    "brei-kuche"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seven-at-a-blow",
+   "name": "\"Seven at one blow\"",
+   "kind": "saying",
+   "summary": "A boast that turns out smaller than it sounds, after the little tailor whose seven were flies.",
+   "places": [
+    "sieben-streich"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hans-in-luck",
+   "name": "A Hans-in-luck trade",
+   "kind": "saying",
+   "summary": "Swapping something good for something worse and feeling pleased about it, like Hans who traded a lump of gold down to nothing on his way home.",
+   "places": [
+    "wochenmarkt",
+    "viehmarkt"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clever-elsie",
+   "name": "A Clever Elsie",
+   "kind": "saying",
+   "summary": "Someone who worries about troubles that have not happened yet, after the girl who wept in the cellar over a child she did not have.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ilsebill",
+   "name": "\"Like Ilsebill\"",
+   "kind": "saying",
+   "summary": "Said of anyone never satisfied with what they have, after the fisherman's wife who kept asking the flounder for more.",
+   "places": [
+    "zum-butt"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pea-under-the-mattress",
+   "name": "The pea under the mattress",
+   "kind": "saying",
+   "summary": "A fussy guest is said to feel a pea through twenty mattresses, and the landlord of Zum Tischlein keeps a dried pea in a dish as a joke.",
+   "places": [
+    "zum-tischlein"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "martinmas-goose",
+   "name": "Martinmas goose",
+   "kind": "dish",
+   "summary": "Roast goose with red cabbage and dumplings on St. Martin's day, the year's one goose for families who can manage it.",
+   "places": [
+    "goldene-gans",
+    "zum-tischlein"
+   ],
+   "seasons": [
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gingerbread",
+   "name": "Gingerbread",
+   "kind": "dish",
+   "summary": "Honey-and-spice cakes baked from Advent, sold as hearts and figures, though the baker will not make cottages.",
+   "places": [
+    "lebkuchner"
+   ],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "show-me-your-paw",
+   "name": "\"Show me your paw\"",
+   "kind": "saying",
+   "summary": "What parents teach children to say before opening the door to a stranger, from the goat and the seven young kids.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  }
+ ],
+ "names": {
+  "groups": {
+   "town": {
+    "feminine": [
+     "Gretel",
+     "Liese",
+     "Anna",
+     "Margarete",
+     "Katharina",
+     "Elisabeth",
+     "Barbara",
+     "Dorothea",
+     "Ursula",
+     "Agnes",
+     "Magdalena",
+     "Gertrud",
+     "Christine",
+     "Marie",
+     "Sophie",
+     "Johanna",
+     "Ilse",
+     "Hedwig",
+     "Klara",
+     "Regina",
+     "Sabine",
+     "Walburga",
+     "Eva",
+     "Apollonia"
+    ],
+    "masculine": [
+     "Hans",
+     "Jakob",
+     "Peter",
+     "Konrad",
+     "Heinrich",
+     "Friedrich",
+     "Wilhelm",
+     "Georg",
+     "Michel",
+     "Matthias",
+     "Kaspar",
+     "Lorenz",
+     "Martin",
+     "Johann",
+     "Christoph",
+     "Andreas",
+     "Ulrich",
+     "Veit",
+     "Sebastian",
+     "Thomas",
+     "Bastian",
+     "Wolfgang",
+     "Philipp",
+     "Nikolaus"
+    ],
+    "neutral": [
+     "Kim",
+     "Toni",
+     "Sascha",
+     "Luca"
+    ],
+    "family": [
+     "Müller",
+     "Schneider",
+     "Weber",
+     "Becker",
+     "Fischer",
+     "Schmidt",
+     "Wagner",
+     "Hoffmann",
+     "Koch",
+     "Bauer",
+     "Richter",
+     "Wolf",
+     "Schuster",
+     "Zimmermann",
+     "Krämer",
+     "Jäger",
+     "Gärtner",
+     "Vogt",
+     "Hartmann",
+     "Lange",
+     "Köhler",
+     "Holzer",
+     "Brenner",
+     "Fuchs",
+     "Engel",
+     "Keller",
+     "Roth",
+     "Sommer",
+     "Winter",
+     "Haas"
+    ]
+   }
+  }
+ },
+ "calendar": "none",
+ "holidays": [
+  {
+   "id": "new-year",
+   "name": "New Year's Day",
+   "kind": "public",
+   "summary": "The new year is rung in from St. Martin's tower and neighbours call with good wishes.",
+   "month": 1,
+   "day": 1
+  },
+  {
+   "id": "epiphany",
+   "name": "Epiphany",
+   "kind": "feast",
+   "summary": "Twelfth Day, when the star singers go round and the Christmas greenery comes down.",
+   "month": 1,
+   "day": 6
+  },
+  {
+   "id": "candlemas",
+   "name": "Candlemas",
+   "kind": "feast",
+   "summary": "Candles are blessed at St. Martin's and the spinning-room season ends.",
+   "month": 2,
+   "day": 2
+  },
+  {
+   "id": "shrove-tuesday",
+   "name": "Fastnacht",
+   "kind": "observance",
+   "summary": "The last day before Lent, with doughnuts, masks and guild dances.",
+   "easter": -47
+  },
+  {
+   "id": "good-friday",
+   "name": "Good Friday",
+   "kind": "public",
+   "summary": "A quiet day of fasting; the bells are silent until Easter.",
+   "easter": -2
+  },
+  {
+   "id": "easter",
+   "name": "Easter Sunday",
+   "kind": "public",
+   "summary": "Coloured eggs, new clothes and the first lamb of the year after mass.",
+   "easter": 0
+  },
+  {
+   "id": "easter-monday",
+   "name": "Easter Monday",
+   "kind": "public",
+   "summary": "A day off for walking out to the villages and egg-rolling on the meadows.",
+   "easter": 1
+  },
+  {
+   "id": "walpurgis-night",
+   "name": "Walpurgis night",
+   "kind": "observance",
+   "summary": "Bonfires and noise to drive off witches on the eve of May.",
+   "month": 4,
+   "day": 30
+  },
+  {
+   "id": "may-day",
+   "name": "May Day",
+   "kind": "feast",
+   "summary": "Birch boughs on the doors and dancing round the maypole.",
+   "month": 5,
+   "day": 1
+  },
+  {
+   "id": "ascension",
+   "name": "Ascension Day",
+   "kind": "public",
+   "summary": "A holiday for walking the town bounds and drinking in the garden taverns.",
+   "easter": 39
+  },
+  {
+   "id": "whit-monday",
+   "name": "Whit Monday",
+   "kind": "public",
+   "summary": "Shops shut, the guilds walk out to the woods and the cattle go up to summer grazing.",
+   "easter": 50
+  },
+  {
+   "id": "st-johns-day",
+   "name": "St. John's Day",
+   "kind": "feast",
+   "summary": "Midsummer: bonfires on the eve and herbs gathered at dawn.",
+   "month": 6,
+   "day": 24
+  },
+  {
+   "id": "harvest-thanksgiving",
+   "name": "Harvest thanksgiving",
+   "kind": "feast",
+   "summary": "The harvest crown at St. Martin's on the first Sunday of October.",
+   "month": 10,
+   "weekday": 6,
+   "nth": 1
+  },
+  {
+   "id": "all-souls",
+   "name": "All Souls' Day",
+   "kind": "observance",
+   "summary": "Graves are tidied and candles lit in the churchyard.",
+   "month": 11,
+   "day": 2
+  },
+  {
+   "id": "martinmas",
+   "name": "Martinmas",
+   "kind": "feast",
+   "summary": "Lantern processions, roast goose, and rents and wages due.",
+   "month": 11,
+   "day": 11
+  },
+  {
+   "id": "st-nicholas",
+   "name": "St. Nicholas's Day",
+   "kind": "feast",
+   "summary": "Children find nuts and gingerbread in their shoes.",
+   "month": 12,
+   "day": 6
+  },
+  {
+   "id": "christmas-eve",
+   "name": "Christmas Eve",
+   "kind": "observance",
+   "summary": "Shops close at noon and families gather for carp and the midnight mass.",
+   "month": 12,
+   "day": 24
+  },
+  {
+   "id": "christmas",
+   "name": "Christmas Day",
+   "kind": "public",
+   "summary": "Mass, a goose or a ham, and no work in the fields.",
+   "month": 12,
+   "day": 25
+  },
+  {
+   "id": "st-stephens-day",
+   "name": "St. Stephen's Day",
+   "kind": "public",
+   "summary": "The second day of Christmas, for visiting and riding out the horses.",
+   "month": 12,
+   "day": 26
+  }
+ ],
+ "prices": [
+  {
+   "id": "beer",
+   "item": "Mug of beer",
+   "low": 0.5,
+   "high": 1,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wine",
+   "item": "Glass of wine",
+   "low": 1,
+   "high": 3,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "loaf",
+   "item": "Rye loaf",
+   "low": 1,
+   "high": 2,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gingerbread",
+   "item": "Gingerbread",
+   "low": 0.25,
+   "high": 1,
+   "per": "a piece",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "meal",
+   "item": "Meal at the Ratskeller",
+   "low": 3,
+   "high": 6,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "inn",
+   "item": "Bed at the inn",
+   "low": 4,
+   "high": 8,
+   "per": "a night",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "board",
+   "item": "Board and lodging",
+   "low": 15,
+   "high": 25,
+   "per": "a week's board",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ferry",
+   "item": "Ferry crossing",
+   "low": 0.25,
+   "high": 0.5,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cart-hire",
+   "item": "Horse and cart",
+   "low": 12,
+   "high": 24,
+   "per": "a day",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bath",
+   "item": "Bathhouse",
+   "low": 1,
+   "high": 2,
+   "per": "a bath",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tobacco",
+   "item": "Pipe tobacco",
+   "low": 1,
+   "high": 2,
+   "per": "a packet",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clogs",
+   "item": "Wooden shoes",
+   "low": 4,
+   "high": 8,
+   "per": "a pair",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "goose",
+   "item": "Goose at market",
+   "low": 12,
+   "high": 24,
+   "per": "for Martinmas",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wage",
+   "item": "Labourer's wage",
+   "low": 6,
+   "high": 10,
+   "per": "a day",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "river",
+   "name": "Eller",
+   "width_km": 0.1,
+   "points": [
+    [
+     51.296,
+     9.525
+    ],
+    [
+     51.292,
+     9.54
+    ],
+    [
+     51.292,
+     9.555
+    ],
+    [
+     51.29,
+     9.57
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7602 @@
+{
+ "schema_version": 1,
+ "id": "osaka",
+ "name": "Osaka",
+ "region": "Osaka Prefecture",
+ "country": "Japan",
+ "timezone": "Asia/Tokyo",
+ "aliases": [
+  "Ōsaka",
+  "Naniwa",
+  "Osaka City",
+  "Osaka, Japan",
+  "大阪"
+ ],
+ "summary": "Japan's merchant city on Osaka Bay: loud, friendly and food-obsessed, with neon over the Dotonbori canal, shotengai shopping arcades, manzai comedy, standing bars and a castle park, tied together by the Osaka Metro and a web of private railways.",
+ "lat": 34.69,
+ "lon": 135.5,
+ "currency": {
+  "code": "JPY",
+  "symbol": "¥",
+  "name": "Japanese yen"
+ },
+ "rent_period": "month",
+ "speeds": {
+  "walk": 4.5,
+  "car": 20,
+  "rideshare": 20,
+  "bus": 11,
+  "subway": 30,
+  "commuter-rail": 45,
+  "monorail": 30,
+  "light-rail": 25,
+  "streetcar": 13,
+  "bike-share": 12
+ },
+ "names": {
+  "mix": {
+   "anglo": 9,
+   "east-asian": 0.5
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Osaka places and neighborhoods written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Well-known public places, institutions and employers from general knowledge. Businesses open and close and rents move: treat this as a snapshot for fiction. Rents are rounded estimates of typical monthly asking ranges in yen, not listings. Coordinates are approximate neighborhood centers. Names use common Hepburn spellings without macrons."
+  },
+  "curated-climate-2026-10": {
+   "kind": "curated",
+   "title": "Approximate monthly climate for Osaka (Osaka Regional Meteorological Observatory)",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Rounded values in line with Japan Meteorological Agency 1991-2020 normals, converted to Fahrenheit; rain days count days with 1 mm or more. Refresh with scripts/world when network access to the JMA is available."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "umeda",
+   "name": "Umeda",
+   "summary": "Kita's hub around Osaka and Umeda stations: department stores, underground malls, office towers, Grand Front Osaka and a maze of izakaya and karaoke on Higashi-dori.",
+   "vibe": [
+    "business",
+    "shopping",
+    "nightlife",
+    "central",
+    "transit-hub"
+   ],
+   "lat": 34.703,
+   "lon": 135.497,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     75000,
+     110000
+    ],
+    "one_bedroom": [
+     130000,
+     220000
+    ],
+    "two_bedroom": [
+     200000,
+     350000
+    ]
+   },
+   "housing": [
+    "tower-mansion",
+    "one-room-mansion",
+    "mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "midosuji",
+    "tanimachi",
+    "yotsubashi",
+    "jr-loop",
+    "hankyu",
+    "hanshin",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakazakicho",
+   "name": "Nakazakicho and Chayamachi",
+   "summary": "Old wooden row houses that survived the war, turned into cafes, vintage shops and galleries a few minutes' walk from Umeda, beside the theaters of Chayamachi.",
+   "vibe": [
+    "artsy",
+    "retro",
+    "cafes",
+    "quiet"
+   ],
+   "lat": 34.708,
+   "lon": 135.506,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     52000,
+     78000
+    ],
+    "one_bedroom": [
+     90000,
+     145000
+    ],
+    "two_bedroom": [
+     130000,
+     220000
+    ]
+   },
+   "housing": [
+    "nagaya",
+    "apartment",
+    "one-room-mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "tanimachi",
+    "hankyu",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tenma",
+   "name": "Tenma and Tenjinbashisuji",
+   "summary": "Tenjinbashisuji, the longest shopping street in Japan, runs past Osaka Tenmangu shrine and a warren of cheap, packed izakaya around JR Tenma station.",
+   "vibe": [
+    "shotengai",
+    "izakaya",
+    "local",
+    "traditional"
+   ],
+   "lat": 34.703,
+   "lon": 135.512,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     52000,
+     78000
+    ],
+    "one_bedroom": [
+     90000,
+     145000
+    ],
+    "two_bedroom": [
+     130000,
+     220000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "one-room-mansion",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "jr-loop",
+    "sakaisuji",
+    "tanimachi",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fukushima",
+   "name": "Fukushima",
+   "summary": "One stop west of Osaka station, a grid of small streets known across the city for izakaya, yakitori and oden, with the central wholesale market at Noda.",
+   "vibe": [
+    "izakaya",
+    "food",
+    "young-professional",
+    "local"
+   ],
+   "lat": 34.697,
+   "lon": 135.485,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     62000,
+     90000
+    ],
+    "one_bedroom": [
+     105000,
+     170000
+    ],
+    "two_bedroom": [
+     150000,
+     260000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "one-room-mansion",
+    "tower-mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "jr-loop",
+    "hanshin",
+    "sennichimae",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakanoshima",
+   "name": "Nakanoshima",
+   "summary": "The island between the Dojima and Tosabori rivers: City Hall, the red-brick Central Public Hall, art museums, Festival Hall and a rose garden at the eastern tip.",
+   "vibe": [
+    "cultural",
+    "riverside",
+    "business",
+    "architecture"
+   ],
+   "lat": 34.692,
+   "lon": 135.495,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     70000,
+     100000
+    ],
+    "one_bedroom": [
+     120000,
+     200000
+    ],
+    "two_bedroom": [
+     180000,
+     320000
+    ]
+   },
+   "housing": [
+    "tower-mansion",
+    "mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "yotsubashi",
+    "midosuji",
+    "keihan",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kitahama",
+   "name": "Kitahama",
+   "summary": "The old financial quarter south of the Tosabori river, with the Osaka Exchange, Meiji and Taisho-era buildings and riverside terraces.",
+   "vibe": [
+    "historic",
+    "business",
+    "riverside",
+    "cafes"
+   ],
+   "lat": 34.689,
+   "lon": 135.507,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     62000,
+     90000
+    ],
+    "one_bedroom": [
+     105000,
+     170000
+    ],
+    "two_bedroom": [
+     150000,
+     260000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "tower-mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "sakaisuji",
+    "keihan",
+    "midosuji",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "honmachi",
+   "name": "Honmachi and Semba",
+   "summary": "The weekday business district along Midosuji boulevard: trading houses, textile wholesalers, pharmaceutical head offices in Doshomachi and the green strip of Utsubo Park.",
+   "vibe": [
+    "business",
+    "office",
+    "leafy",
+    "quiet-weekends"
+   ],
+   "lat": 34.682,
+   "lon": 135.5,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     65000,
+     92000
+    ],
+    "one_bedroom": [
+     110000,
+     180000
+    ],
+    "two_bedroom": [
+     160000,
+     280000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "tower-mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "midosuji",
+    "chuo",
+    "yotsubashi",
+    "sakaisuji",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shinsaibashi",
+   "name": "Shinsaibashi and Amerikamura",
+   "summary": "The covered Shinsaibashi-suji arcade and department stores on one side of Midosuji; on the other, Amerikamura's thrift shops, street fashion and clubs, running into Horie's boutiques.",
+   "vibe": [
+    "shopping",
+    "fashion",
+    "youth",
+    "nightlife"
+   ],
+   "lat": 34.673,
+   "lon": 135.499,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     62000,
+     90000
+    ],
+    "one_bedroom": [
+     105000,
+     170000
+    ],
+    "two_bedroom": [
+     150000,
+     260000
+    ]
+   },
+   "housing": [
+    "one-room-mansion",
+    "mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "midosuji",
+    "nagahori-tsurumi-ryokuchi",
+    "yotsubashi",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dotonbori",
+   "name": "Dotonbori",
+   "summary": "The canal-side strip of giant food signs, the Glico running man, takoyaki stands and theaters, packed until late every night; the stone alley of Hozenji sits just behind it.",
+   "vibe": [
+    "neon",
+    "food",
+    "touristy",
+    "nightlife"
+   ],
+   "lat": 34.669,
+   "lon": 135.502,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     52000,
+     78000
+    ],
+    "one_bedroom": [
+     90000,
+     145000
+    ],
+    "two_bedroom": [
+     130000,
+     220000
+    ]
+   },
+   "housing": [
+    "one-room-mansion",
+    "mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "midosuji",
+    "sennichimae",
+    "yotsubashi",
+    "nankai",
+    "kintetsu",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "namba",
+   "name": "Namba",
+   "summary": "Minami's rail hub: Nankai and Kintetsu terminals, Namba Parks, Takashimaya, the Sennichimae arcades and Namba Grand Kagetsu, the home of Yoshimoto comedy.",
+   "vibe": [
+    "transit-hub",
+    "comedy",
+    "shopping",
+    "food"
+   ],
+   "lat": 34.665,
+   "lon": 135.501,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     52000,
+     78000
+    ],
+    "one_bedroom": [
+     90000,
+     145000
+    ],
+    "two_bedroom": [
+     130000,
+     220000
+    ]
+   },
+   "housing": [
+    "one-room-mansion",
+    "mansion",
+    "tower-mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "midosuji",
+    "sennichimae",
+    "yotsubashi",
+    "nankai",
+    "kintetsu",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nipponbashi",
+   "name": "Nipponbashi and Den Den Town",
+   "summary": "Kuromon Market's covered fish and produce stalls, the National Bunraku Theatre, and Den Den Town's electronics, anime, retro game and maid cafe strip along Sakaisuji.",
+   "vibe": [
+    "otaku",
+    "market",
+    "electronics",
+    "theater"
+   ],
+   "lat": 34.66,
+   "lon": 135.506,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     46000,
+     68000
+    ],
+    "one_bedroom": [
+     78000,
+     120000
+    ],
+    "two_bedroom": [
+     105000,
+     170000
+    ]
+   },
+   "housing": [
+    "one-room-mansion",
+    "mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "sakaisuji",
+    "sennichimae",
+    "kintetsu",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shinsekai",
+   "name": "Shinsekai",
+   "summary": "A retro entertainment district built in 1912 under Tsutenkaku tower, all kushikatsu counters, shogi parlors and old-fashioned signs, between Tennoji Park and Spa World.",
+   "vibe": [
+    "retro",
+    "food",
+    "working-class",
+    "touristy"
+   ],
+   "lat": 34.652,
+   "lon": 135.506,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     38000,
+     58000
+    ],
+    "one_bedroom": [
+     62000,
+     98000
+    ],
+    "two_bedroom": [
+     85000,
+     140000
+    ]
+   },
+   "housing": [
+    "apartment",
+    "one-room-mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "sakaisuji",
+    "midosuji",
+    "jr-loop",
+    "nankai",
+    "hankai",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tennoji",
+   "name": "Tennoji and Abeno",
+   "summary": "A southern hub around Tennoji station and Abeno Harukas, Japan's second-tallest building, with Shitennoji temple, Tennoji Park and the zoo.",
+   "vibe": [
+    "transit-hub",
+    "shopping",
+    "temples",
+    "family"
+   ],
+   "lat": 34.646,
+   "lon": 135.514,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     55000,
+     80000
+    ],
+    "one_bedroom": [
+     95000,
+     155000
+    ],
+    "two_bedroom": [
+     140000,
+     240000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "tower-mansion",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "midosuji",
+    "tanimachi",
+    "jr-loop",
+    "kintetsu",
+    "hankai",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tsuruhashi",
+   "name": "Tsuruhashi and Ikuno Koreatown",
+   "summary": "Where the smell of yakiniku greets you on the platform: a covered market of kimchi, hanbok and fish stalls, and the Koreatown shopping street, home to one of Japan's oldest Zainichi Korean communities.",
+   "vibe": [
+    "multicultural",
+    "market",
+    "food",
+    "working-class"
+   ],
+   "lat": 34.663,
+   "lon": 135.533,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     40000,
+     60000
+    ],
+    "one_bedroom": [
+     65000,
+     100000
+    ],
+    "two_bedroom": [
+     90000,
+     140000
+    ]
+   },
+   "housing": [
+    "apartment",
+    "mansion",
+    "detached-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "sennichimae",
+    "jr-loop",
+    "kintetsu",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-castle",
+   "name": "Osaka Castle and Morinomiya",
+   "summary": "The castle's moats, stone walls and huge park, with Osaka-jo Hall, the history museum and residential Morinomiya to the south-east.",
+   "vibe": [
+    "historic",
+    "park",
+    "running",
+    "family"
+   ],
+   "lat": 34.684,
+   "lon": 135.528,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     60000,
+     85000
+    ],
+    "one_bedroom": [
+     100000,
+     160000
+    ],
+    "two_bedroom": [
+     150000,
+     250000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "tower-mansion",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "tanimachi",
+    "chuo",
+    "nagahori-tsurumi-ryokuchi",
+    "jr-loop",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kyobashi",
+   "name": "Kyobashi",
+   "summary": "A busy junction of the Loop Line and Keihan railway, famous for cheap standing bars that open in the morning, with the cherry trees of Sakuranomiya along the river.",
+   "vibe": [
+    "drinking",
+    "working-class",
+    "transit-hub",
+    "riverside"
+   ],
+   "lat": 34.697,
+   "lon": 135.534,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     46000,
+     68000
+    ],
+    "one_bedroom": [
+     78000,
+     120000
+    ],
+    "two_bedroom": [
+     105000,
+     170000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "one-room-mansion",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "jr-loop",
+    "keihan",
+    "nagahori-tsurumi-ryokuchi",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "juso",
+   "name": "Juso",
+   "summary": "A gritty, friendly Hankyu junction just across the Yodo river from Umeda, with shopping arcades, late bars, a famous negiyaki shop and the fireworks on the riverbank.",
+   "vibe": [
+    "gritty",
+    "nightlife",
+    "riverside",
+    "cheap"
+   ],
+   "lat": 34.72,
+   "lon": 135.484,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     42000,
+     62000
+    ],
+    "one_bedroom": [
+     70000,
+     110000
+    ],
+    "two_bedroom": [
+     95000,
+     150000
+    ]
+   },
+   "housing": [
+    "apartment",
+    "one-room-mansion",
+    "mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "hankyu",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bay-area",
+   "name": "Bentencho and the Bay Area",
+   "summary": "The waterfront west of the center: Kaiyukan aquarium and the Tempozan wheel, Universal Studios Japan across the river at Sakurajima, Kyocera Dome, the port, and the Okinawan eateries of Taisho.",
+   "vibe": [
+    "waterfront",
+    "family",
+    "theme-park",
+    "port"
+   ],
+   "lat": 34.662,
+   "lon": 135.445,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     48000,
+     70000
+    ],
+    "one_bedroom": [
+     80000,
+     125000
+    ],
+    "two_bedroom": [
+     110000,
+     180000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "public-housing",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "chuo",
+    "jr-loop",
+    "jr-yumesaki",
+    "new-tram",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sumiyoshi",
+   "name": "Sumiyoshi",
+   "summary": "A calm southern district around Sumiyoshi Taisha, one of Japan's oldest shrines, with Nagai Park's stadiums and the Osaka Metropolitan University campus nearby.",
+   "vibe": [
+    "traditional",
+    "residential",
+    "shrines",
+    "students"
+   ],
+   "lat": 34.613,
+   "lon": 135.496,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     45000,
+     65000
+    ],
+    "one_bedroom": [
+     75000,
+     115000
+    ],
+    "two_bedroom": [
+     100000,
+     160000
+    ]
+   },
+   "housing": [
+    "detached-house",
+    "mansion",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "midosuji",
+    "nankai",
+    "hankai",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nishinari",
+   "name": "Nishinari and Kamagasaki",
+   "summary": "Osaka's poorest and oldest working district, where Kamagasaki's day labourers, now mostly elderly, live in small lodging-house rooms beside cheap diners, budget hostels and a strong network of community support groups.",
+   "vibe": [
+    "working-class",
+    "cheap",
+    "community",
+    "changing"
+   ],
+   "lat": 34.644,
+   "lon": 135.5,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     28000,
+     45000
+    ],
+    "one_bedroom": [
+     50000,
+     80000
+    ],
+    "two_bedroom": [
+     65000,
+     110000
+    ]
+   },
+   "housing": [
+    "apartment",
+    "doya",
+    "public-housing"
+   ],
+   "walkability": "high",
+   "transit": [
+    "midosuji",
+    "sakaisuji",
+    "nankai",
+    "jr-loop",
+    "hankai",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "suita",
+   "name": "Suita",
+   "summary": "A northern suburb and university town: Expo '70 Commemorative Park and the Tower of the Sun, Osaka University's main campus, Kansai University and Gamba Osaka's stadium.",
+   "vibe": [
+    "suburban",
+    "students",
+    "family",
+    "parks"
+   ],
+   "lat": 34.785,
+   "lon": 135.52,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     46000,
+     68000
+    ],
+    "one_bedroom": [
+     78000,
+     120000
+    ],
+    "two_bedroom": [
+     105000,
+     170000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "danchi",
+    "detached-house",
+    "student-housing"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "midosuji",
+    "hankyu",
+    "osaka-monorail",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "toyonaka-minoh",
+   "name": "Toyonaka and Minoh",
+   "summary": "Leafy commuter towns on the Hankyu lines below the hills, with Hattori Ryokuchi park, the Itami airport runway and the Minoo waterfall walk.",
+   "vibe": [
+    "suburban",
+    "leafy",
+    "family",
+    "nature"
+   ],
+   "lat": 34.81,
+   "lon": 135.47,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     50000,
+     70000
+    ],
+    "one_bedroom": [
+     85000,
+     130000
+    ],
+    "two_bedroom": [
+     120000,
+     200000
+    ]
+   },
+   "housing": [
+    "detached-house",
+    "mansion",
+    "danchi"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "hankyu",
+    "midosuji",
+    "osaka-monorail",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakai",
+   "name": "Sakai",
+   "summary": "Osaka's southern neighbour, a medieval free port turned industrial city, known for keyhole-shaped imperial tombs, kitchen knives, Sen no Rikyu's tea and Sharp's bayside head office.",
+   "vibe": [
+    "historic",
+    "suburban",
+    "crafts",
+    "industrial"
+   ],
+   "lat": 34.573,
+   "lon": 135.483,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     40000,
+     58000
+    ],
+    "one_bedroom": [
+     65000,
+     100000
+    ],
+    "two_bedroom": [
+     85000,
+     140000
+    ]
+   },
+   "housing": [
+    "detached-house",
+    "mansion",
+    "danchi"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "nankai",
+    "hankai",
+    "midosuji",
+    "rail-network",
+    "buses"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "midosuji",
+   "name": "Osaka Metro Midosuji Line",
+   "kind": "subway",
+   "summary": "The red north-south trunk line under Midosuji boulevard, from Esaka (through to Senri-Chuo and Minoh) via Umeda, Namba and Tennoji to Nakamozu in Sakai; standing room only at rush hour.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tanimachi",
+   "name": "Osaka Metro Tanimachi Line",
+   "kind": "subway",
+   "summary": "The purple line from Dainichi through Higashi-Umeda, Tenmabashi, Tanimachi 4-chome and Tennoji to Yaominami.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yotsubashi",
+   "name": "Osaka Metro Yotsubashi Line",
+   "kind": "subway",
+   "summary": "The blue line from Nishi-Umeda down the west side via Higobashi and Yotsubashi to Namba and Suminoekoen.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chuo",
+   "name": "Osaka Metro Chuo Line",
+   "kind": "subway",
+   "summary": "The green east-west line from Nagata through Morinomiya, Tanimachi 4-chome and Honmachi to Osakako and Yumeshima.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sennichimae",
+   "name": "Osaka Metro Sennichimae Line",
+   "kind": "subway",
+   "summary": "The pink line from Nodahanshin through Namba, Nipponbashi and Tsuruhashi to Minami-Tatsumi.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakaisuji",
+   "name": "Osaka Metro Sakaisuji Line",
+   "kind": "subway",
+   "summary": "The brown line from Tenjinbashisuji 6-chome through Kitahama and Nipponbashi to Dobutsuen-mae and Tengachaya, running through to Hankyu trains for Kyoto.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nagahori-tsurumi-ryokuchi",
+   "name": "Osaka Metro Nagahori Tsurumi-ryokuchi Line",
+   "kind": "subway",
+   "summary": "The light green line from Taisho through Shinsaibashi, Morinomiya and Kyobashi to Kadoma-minami.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "imazatosuji",
+   "name": "Osaka Metro Imazatosuji Line",
+   "kind": "subway",
+   "summary": "The orange line through the eastern wards from Itakano to Imazato, linking with the Sennichimae Line.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-tram",
+   "name": "New Tram (Nanko Port Town Line)",
+   "kind": "light-rail",
+   "summary": "Driverless rubber-tyred trains on an elevated guideway from Cosmosquare through the Nanko port district to Suminoekoen.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jr-loop",
+   "name": "JR Osaka Loop Line",
+   "kind": "commuter-rail",
+   "summary": "The orange loop around the center through Osaka, Kyobashi, Tsuruhashi, Tennoji, Shin-Imamiya, Bentencho and Fukushima; trains run both ways.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jr-yumesaki",
+   "name": "JR Yumesaki Line",
+   "kind": "commuter-rail",
+   "summary": "The short branch from Nishikujo to Universal City and Sakurajima, often run with character-wrapped trains.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hankyu",
+   "name": "Hankyu Railway",
+   "kind": "commuter-rail",
+   "summary": "Maroon trains from Osaka-umeda to Kyoto, Kobe and Takarazuka, with branches to Minoo and Senri; every line crosses the river at Juso.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hanshin",
+   "name": "Hanshin Electric Railway",
+   "kind": "commuter-rail",
+   "summary": "The coastal line from Osaka-umeda to Kobe by way of Koshien Stadium, and the Namba Line to Nara through Kintetsu.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "keihan",
+   "name": "Keihan Electric Railway",
+   "kind": "commuter-rail",
+   "summary": "From Nakanoshima and Yodoyabashi along the Yodo river through Kyobashi, Kadoma and Hirakata to Kyoto.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nankai",
+   "name": "Nankai Electric Railway",
+   "kind": "commuter-rail",
+   "summary": "From Namba south through Shin-Imamiya, Sumiyoshi Taisha and Sakai, and out to Kansai Airport and Wakayama.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kintetsu",
+   "name": "Kintetsu Railway",
+   "kind": "commuter-rail",
+   "summary": "Japan's largest private railway, from Osaka-Namba, Osaka-Uehommachi and Osaka-Abenobashi to Nara, Ise and Nagoya, through Tsuruhashi.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-monorail",
+   "name": "Osaka Monorail",
+   "kind": "monorail",
+   "summary": "An elevated monorail in an arc across the northern suburbs, from Osaka Airport through Senri-Chuo and Banpaku-kinen-koen (Expo park).",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hankai",
+   "name": "Hankai Tramway",
+   "kind": "streetcar",
+   "summary": "Osaka's last streetcars, rattling from Tennoji-ekimae and Ebisucho through Sumiyoshi to Sakai.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rail-network",
+   "name": "Osaka trains, changing lines",
+   "kind": "subway",
+   "summary": "Metro, JR and private railways meet at Umeda, Namba, Tennoji, Kyobashi and Tsuruhashi; most trips across town change trains once or twice on one ICOCA card.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "buses",
+   "name": "City and private buses",
+   "kind": "bus",
+   "summary": "Osaka City Bus routes in the city, and Hankyu, Keihan, Kintetsu and Nankai buses in the suburbs; boarded at the middle door, paid at the front.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bike-share",
+   "name": "Bike share and mamachari",
+   "kind": "bike-share",
+   "summary": "Docked share bikes around the center, and everyone's own city bicycle with a basket and a child seat, parked in vast station lots.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "umeda-sky-building",
+   "name": "Umeda Sky Building Floating Garden Observatory",
+   "kind": "attraction",
+   "neighborhood": "umeda",
+   "summary": "Open-air rooftop deck joining two towers forty floors up, with night views over the Yodo river.",
+   "tags": [
+    "views",
+    "architecture",
+    "sunset",
+    "date-spot"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "takimi-koji",
+   "name": "Takimi Koji",
+   "kind": "restaurant",
+   "neighborhood": "umeda",
+   "summary": "A recreated Showa-era alley of okonomiyaki, kushikatsu and izakaya counters in the basement of the Umeda Sky Building.",
+   "tags": [
+    "retro",
+    "okonomiyaki",
+    "kushikatsu"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hep-five-ferris-wheel",
+   "name": "HEP FIVE Ferris Wheel",
+   "kind": "attraction",
+   "neighborhood": "umeda",
+   "summary": "Red Ferris wheel growing out of the roof of a youth fashion mall, fifteen minutes around above Umeda.",
+   "tags": [
+    "views",
+    "date-spot",
+    "shopping"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grand-front-osaka",
+   "name": "Grand Front Osaka",
+   "kind": "shopping",
+   "neighborhood": "umeda",
+   "summary": "Shops, restaurants and offices north of Osaka station, beside the Umekita lawns.",
+   "tags": [
+    "shopping",
+    "restaurants",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "umekita-park",
+   "name": "Umekita Park",
+   "kind": "park",
+   "neighborhood": "umeda",
+   "summary": "The large new park on the old freight yard north of Osaka station, with lawns, water play and events in front of the towers.",
+   "tags": [
+    "lawn",
+    "picnic",
+    "new",
+    "events"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hankyu-umeda-food-hall",
+   "name": "Hankyu Umeda Main Store food hall",
+   "kind": "market",
+   "neighborhood": "umeda",
+   "summary": "The busiest depachika in the city: bento, sweets, pickles and gift boxes, with the counters marked down near closing time.",
+   "tags": [
+    "depachika",
+    "sweets",
+    "bento",
+    "gifts"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hanshin-umeda-food-hall",
+   "name": "Hanshin Umeda Main Store food hall",
+   "kind": "market",
+   "neighborhood": "umeda",
+   "summary": "The everyday department store basement, known for its long-running ikayaki squid-pancake stand.",
+   "tags": [
+    "depachika",
+    "ikayaki",
+    "snacks"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shin-umeda-shokudogai",
+   "name": "Shin-Umeda Shokudogai",
+   "kind": "restaurant",
+   "neighborhood": "umeda",
+   "summary": "A cramped two-level warren of cheap eateries and standing bars under the JR tracks, open since 1950.",
+   "tags": [
+    "cheap-eats",
+    "standing-bar",
+    "retro"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "higashi-dori",
+   "name": "Higashi-dori shopping street",
+   "kind": "nightlife",
+   "neighborhood": "umeda",
+   "summary": "Umeda's nightlife arcade of izakaya chains, karaoke boxes, game centers and bars, loud until the last trains.",
+   "tags": [
+    "karaoke",
+    "izakaya",
+    "arcade"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "salon-de-amanto",
+   "name": "Salon de AManTo",
+   "kind": "cafe",
+   "neighborhood": "nakazakicho",
+   "summary": "A ramshackle cafe and arts space in a century-old wooden house that helped start Nakazakicho's revival.",
+   "tags": [
+    "retro",
+    "arts",
+    "cozy"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakazakicho-nagaya-cafes",
+   "name": "Nakazakicho row-house cafes",
+   "kind": "cafe",
+   "neighborhood": "nakazakicho",
+   "summary": "Tiny cafes and sweet shops tucked into converted nagaya along the narrow lanes, each seating a handful.",
+   "tags": [
+    "cozy",
+    "retro",
+    "sweets"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakazakicho-vintage",
+   "name": "Nakazakicho vintage and zakka shops",
+   "kind": "shopping",
+   "neighborhood": "nakazakicho",
+   "summary": "Secondhand clothes, handmade goods and small galleries in old houses.",
+   "tags": [
+    "vintage",
+    "crafts",
+    "browsing"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "umeda-arts-theater",
+   "name": "Umeda Arts Theater",
+   "kind": "venue",
+   "neighborhood": "nakazakicho",
+   "summary": "Large theater in Chayamachi for musicals, plays and touring productions.",
+   "tags": [
+    "musicals",
+    "theater"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chayamachi-spice-curry",
+   "name": "Chayamachi spice curry counters",
+   "kind": "restaurant",
+   "neighborhood": "nakazakicho",
+   "summary": "Small counters serving Osaka-style spice curry, several curries on one plate with rice, at lunch.",
+   "tags": [
+    "curry",
+    "lunch",
+    "local-trend"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "curry",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakazakicho-wine-bars",
+   "name": "Nakazakicho natural wine and craft bars",
+   "kind": "bar",
+   "neighborhood": "nakazakicho",
+   "summary": "A few snug bars in old houses pouring natural wine and craft beer to a small crowd.",
+   "tags": [
+    "wine",
+    "craft-beer",
+    "cozy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakazakicho-izakaya",
+   "name": "Nakazakicho back-street izakaya",
+   "kind": "restaurant",
+   "neighborhood": "nakazakicho",
+   "summary": "Neighbourhood izakaya and yakitori grills on the streets between the station and the tracks.",
+   "tags": [
+    "izakaya",
+    "yakitori"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "izakaya",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tenjinbashisuji",
+   "name": "Tenjinbashisuji Shopping Street",
+   "kind": "shopping",
+   "neighborhood": "tenma",
+   "summary": "About 2.6 km of covered arcade, the longest in Japan: croquettes, tea shops, cheap clothes and everything else.",
+   "tags": [
+    "shotengai",
+    "street-food",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-tenmangu",
+   "name": "Osaka Tenmangu",
+   "kind": "temple",
+   "neighborhood": "tenma",
+   "summary": "The shrine to Sugawara no Michizane, god of learning, where students pray before exams and the Tenjin Matsuri begins.",
+   "tags": [
+    "shrine",
+    "festival",
+    "plum-blossom"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tenma-tenjin-hanjotei",
+   "name": "Tenma Tenjin Hanjotei",
+   "kind": "venue",
+   "neighborhood": "tenma",
+   "summary": "A rakugo theater beside the shrine, with storytellers on stage every day.",
+   "tags": [
+    "rakugo",
+    "comedy",
+    "traditional"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-museum-of-housing",
+   "name": "Osaka Museum of Housing and Living",
+   "kind": "museum",
+   "neighborhood": "tenma",
+   "summary": "A full-size Edo-period Osaka street indoors, with houses to walk into and kimono to try on.",
+   "tags": [
+    "history",
+    "rainy-day",
+    "kimono"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tenma-izakaya",
+   "name": "Tenma izakaya alleys",
+   "kind": "bar",
+   "neighborhood": "tenma",
+   "summary": "Dozens of cheap, crowded izakaya, standing bars and seafood counters around JR Tenma station, spilling into the street.",
+   "tags": [
+    "izakaya",
+    "standing-bar",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harukoma-sushi",
+   "name": "Harukoma",
+   "kind": "restaurant",
+   "neighborhood": "tenma",
+   "summary": "A cheap, popular sushi counter on Tenjinbashisuji with a queue at most hours.",
+   "tags": [
+    "sushi",
+    "queue",
+    "local-favorite"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "sushi",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakamuraya-croquette",
+   "name": "Nakamuraya",
+   "kind": "market",
+   "neighborhood": "tenma",
+   "summary": "Takeaway croquette shop on the arcade, famous for hot, cheap potato korokke.",
+   "tags": [
+    "croquette",
+    "street-food",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tenma-ichiba",
+   "name": "Tenma Market",
+   "kind": "market",
+   "neighborhood": "tenma",
+   "summary": "Old covered fresh market of fish, vegetables and pickles off the arcade, with cheap eateries round about.",
+   "tags": [
+    "market",
+    "fish",
+    "produce"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ogimachi-pool",
+   "name": "Ogimachi Pool",
+   "kind": "fitness",
+   "neighborhood": "tenma",
+   "summary": "Municipal indoor pool and gym in Ogimachi Park, cheap per visit.",
+   "tags": [
+    "swimming",
+    "gym",
+    "municipal"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mint-bureau-cherry-passage",
+   "name": "Japan Mint cherry blossom passage",
+   "kind": "garden",
+   "neighborhood": "tenma",
+   "summary": "For one week in April the Mint opens its riverside lane of late-blooming cherry varieties to the public.",
+   "tags": [
+    "cherry-blossom",
+    "seasonal",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tenma-kissaten",
+   "name": "Tenjinbashisuji kissaten",
+   "kind": "cafe",
+   "neighborhood": "tenma",
+   "summary": "Old coffee shops along the arcade with morning sets, mix juice and regulars reading the paper.",
+   "tags": [
+    "kissaten",
+    "morning-set",
+    "retro"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "kissaten",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fukushima-izakaya",
+   "name": "Fukushima izakaya streets",
+   "kind": "bar",
+   "neighborhood": "fukushima",
+   "summary": "Back streets of small izakaya, yakitori grills and wine bars between JR Fukushima and the Hanshin line.",
+   "tags": [
+    "izakaya",
+    "yakitori",
+    "hopping"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hanakujira",
+   "name": "Hanakujira",
+   "kind": "restaurant",
+   "neighborhood": "fukushima",
+   "summary": "Oden shop with a famous queue for its dashi-soaked daikon, tofu and beef tendon.",
+   "tags": [
+    "oden",
+    "queue",
+    "local-favorite"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "oden",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fukushima-standing-bars",
+   "name": "Fukushima standing bars under the tracks",
+   "kind": "bar",
+   "neighborhood": "fukushima",
+   "summary": "Tiny tachinomi counters beneath the JR viaduct where office workers stop for a highball and skewers.",
+   "tags": [
+    "standing-bar",
+    "cheap",
+    "after-work"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-central-wholesale-market",
+   "name": "Osaka Municipal Central Wholesale Market",
+   "kind": "market",
+   "neighborhood": "fukushima",
+   "summary": "The city's main fish and produce market at Noda, busiest before dawn; its restaurant row is open to the public.",
+   "tags": [
+    "fish",
+    "market",
+    "early-morning"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "endo-sushi",
+   "name": "Endo Sushi",
+   "kind": "restaurant",
+   "neighborhood": "fukushima",
+   "summary": "Early-morning sushi counter by the central market, serving plates of five pieces from the day's catch.",
+   "tags": [
+    "sushi",
+    "breakfast",
+    "market"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "sushi",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakanoshima-park",
+   "name": "Nakanoshima Park",
+   "kind": "park",
+   "neighborhood": "nakanoshima",
+   "summary": "Riverside lawns and a rose garden at the eastern end of the island, Osaka's first public park.",
+   "tags": [
+    "roses",
+    "riverside",
+    "picnic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "central-public-hall",
+   "name": "Osaka City Central Public Hall",
+   "kind": "landmark",
+   "neighborhood": "nakanoshima",
+   "summary": "Red-brick and granite hall from 1918, paid for by a stockbroker's gift, still used for concerts and lectures.",
+   "tags": [
+    "architecture",
+    "history",
+    "concerts"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakanoshima-library",
+   "name": "Osaka Prefectural Nakanoshima Library",
+   "kind": "library",
+   "neighborhood": "nakanoshima",
+   "summary": "The domed 1904 library beside City Hall, with business and Osaka history collections.",
+   "tags": [
+    "library",
+    "architecture",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakanoshima-museum-of-art",
+   "name": "Nakanoshima Museum of Art, Osaka",
+   "kind": "museum",
+   "neighborhood": "nakanoshima",
+   "summary": "A black box of a museum opened in 2022, with modern art, design and big touring shows.",
+   "tags": [
+    "art",
+    "design",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "festival-hall",
+   "name": "Festival Hall",
+   "kind": "venue",
+   "neighborhood": "nakanoshima",
+   "summary": "Concert hall with famous acoustics, rebuilt in 2013 inside a skyscraper, for orchestras, pop shows and kabuki.",
+   "tags": [
+    "concerts",
+    "classical",
+    "pop"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "takamura-wine-coffee",
+   "name": "Takamura Wine & Coffee Roasters",
+   "kind": "cafe",
+   "neighborhood": "nakanoshima",
+   "summary": "A warehouse south of Higobashi that roasts its own coffee and sells wine, with long tables to linger at.",
+   "tags": [
+    "specialty-coffee",
+    "wine",
+    "warehouse"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "festival-city-dining",
+   "name": "Festival City restaurant floors",
+   "kind": "restaurant",
+   "neighborhood": "nakanoshima",
+   "summary": "Restaurants and cafes in the twin Festival towers, from set lunches to river-view dinners.",
+   "tags": [
+    "lunch",
+    "views",
+    "after-work"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakanoshima-riverside-bars",
+   "name": "Nakanoshima riverside bars",
+   "kind": "bar",
+   "neighborhood": "nakanoshima",
+   "summary": "A handful of bars and bistros looking onto the Dojima and Tosabori rivers, with terraces in fine weather.",
+   "tags": [
+    "riverside",
+    "cocktails",
+    "after-work"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakanoshima-bistros",
+   "name": "Higobashi bistros and izakaya",
+   "kind": "restaurant",
+   "neighborhood": "nakanoshima",
+   "summary": "Small French bistros, wine bars and izakaya around Higobashi where office workers have dinner.",
+   "tags": [
+    "bistro",
+    "izakaya",
+    "after-work"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "bistro",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nakanoshima-park-cafes",
+   "name": "Nakanoshima Park cafes",
+   "kind": "cafe",
+   "neighborhood": "nakanoshima",
+   "summary": "Cafes and kiosks by the rose garden and the riverside lawns.",
+   "tags": [
+    "coffee",
+    "riverside",
+    "park-view"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kitahama-retro",
+   "name": "Kitahama Retro",
+   "kind": "cafe",
+   "neighborhood": "kitahama",
+   "summary": "An English-style tea room in a tiny 1912 brick building facing the river, known for afternoon tea and scones.",
+   "tags": [
+    "afternoon-tea",
+    "historic",
+    "queue"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "tea-room",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brooklyn-roasting-kitahama",
+   "name": "Brooklyn Roasting Company Kitahama",
+   "kind": "cafe",
+   "neighborhood": "kitahama",
+   "summary": "Big, airy coffee shop facing the Tosabori river, with seats on the riverside terrace.",
+   "tags": [
+    "coffee",
+    "riverside",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kitahama-terrace",
+   "name": "Kitahama Terrace",
+   "kind": "restaurant",
+   "neighborhood": "kitahama",
+   "summary": "Wooden decks along the Tosabori river behind cafes and restaurants, open from spring to autumn.",
+   "tags": [
+    "riverside",
+    "terrace",
+    "seasonal"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "various",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tekijuku",
+   "name": "Tekijuku",
+   "kind": "museum",
+   "neighborhood": "kitahama",
+   "summary": "The Edo-period house of Ogata Koan's school of Dutch medicine, where Fukuzawa Yukichi studied; an ancestor of Osaka University.",
+   "tags": [
+    "history",
+    "medicine",
+    "architecture"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kitahama-curry-counters",
+   "name": "Kitahama and Doshomachi lunch counters",
+   "kind": "restaurant",
+   "neighborhood": "kitahama",
+   "summary": "Spice curry, soba and teishoku counters with office-worker queues from noon to one.",
+   "tags": [
+    "lunch",
+    "curry",
+    "soba"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kitahama-sake-bars",
+   "name": "Kitahama sake and wine bars",
+   "kind": "bar",
+   "neighborhood": "kitahama",
+   "summary": "Quiet bars in old office buildings serving regional sake and wine to the after-work crowd.",
+   "tags": [
+    "sake",
+    "wine",
+    "quiet"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "coworkers",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "utsubo-park",
+   "name": "Utsubo Park",
+   "kind": "park",
+   "neighborhood": "honmachi",
+   "summary": "A long green park on an old airfield, with a rose garden, zelkova trees and cafes on its edges.",
+   "tags": [
+    "roses",
+    "picnic",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "utsubo-tennis-center",
+   "name": "Utsubo Tennis Center",
+   "kind": "fitness",
+   "neighborhood": "honmachi",
+   "summary": "Public tennis courts in Utsubo Park, with a stadium court for tournaments.",
+   "tags": [
+    "tennis",
+    "municipal"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "semba-center-building",
+   "name": "Semba Center Building",
+   "kind": "shopping",
+   "neighborhood": "honmachi",
+   "summary": "A kilometre-long building under the expressway full of textile and clothing wholesalers who sell to anyone.",
+   "tags": [
+    "wholesale",
+    "clothes",
+    "bargains"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kyomachibori-bistros",
+   "name": "Kyomachibori bistros",
+   "kind": "restaurant",
+   "neighborhood": "honmachi",
+   "summary": "Small restaurants and wine bars on the streets east of Utsubo Park, popular for dates.",
+   "tags": [
+    "bistro",
+    "wine",
+    "date-spot"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "bistro",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "honmachi-lunch",
+   "name": "Honmachi office lunch spots",
+   "kind": "restaurant",
+   "neighborhood": "honmachi",
+   "summary": "Udon, curry and teishoku set-meal shops in the side streets, all rushed at noon on weekdays.",
+   "tags": [
+    "lunch",
+    "udon",
+    "teishoku"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "utsubo-park-cafes",
+   "name": "Utsubo Park cafes",
+   "kind": "cafe",
+   "neighborhood": "honmachi",
+   "summary": "Bakeries and coffee stands lining the park, with seats looking onto the trees.",
+   "tags": [
+    "coffee",
+    "bakery",
+    "park-view"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "honmachi-standing-bars",
+   "name": "Honmachi standing bars",
+   "kind": "bar",
+   "neighborhood": "honmachi",
+   "summary": "After-work tachinomi near the stations where suits stand elbow to elbow over beer and fried skewers.",
+   "tags": [
+    "standing-bar",
+    "after-work"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-municipal-central-library",
+   "name": "Osaka Municipal Central Library",
+   "kind": "library",
+   "neighborhood": "honmachi",
+   "summary": "The city's main library at Nishi-Nagahori, open late with big study floors.",
+   "tags": [
+    "library",
+    "study",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yoshino-sushi",
+   "name": "Yoshino Sushi",
+   "kind": "restaurant",
+   "neighborhood": "honmachi",
+   "summary": "Old Semba shop serving Osaka-style hakozushi, pressed box sushi cut into neat squares, since the Edo period.",
+   "tags": [
+    "hakozushi",
+    "historic",
+    "lunch"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "sushi",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shinsaibashi-suji",
+   "name": "Shinsaibashi-suji Shopping Street",
+   "kind": "shopping",
+   "neighborhood": "shinsaibashi",
+   "summary": "The covered shopping arcade from Nagahori to Dotonbori, crowded with fashion chains, drugstores and visitors.",
+   "tags": [
+    "shopping",
+    "arcade",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daimaru-shinsaibashi",
+   "name": "Daimaru Shinsaibashi",
+   "kind": "shopping",
+   "neighborhood": "shinsaibashi",
+   "summary": "Department store rebuilt in 2019 behind its old Vories facade, with a busy food hall in the basement.",
+   "tags": [
+    "department-store",
+    "depachika",
+    "architecture"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amerikamura-triangle-park",
+   "name": "Triangle Park (Mitsu Park)",
+   "kind": "landmark",
+   "neighborhood": "shinsaibashi",
+   "summary": "A small concrete square at the heart of Amerikamura where young people sit, eat takoyaki and watch the street.",
+   "tags": [
+    "youth",
+    "people-watching",
+    "street-culture"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amerikamura-thrift",
+   "name": "Amerikamura vintage shops",
+   "kind": "shopping",
+   "neighborhood": "shinsaibashi",
+   "summary": "Used American clothes, sneakers, records and street fashion stacked into narrow buildings.",
+   "tags": [
+    "vintage",
+    "streetwear",
+    "records"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kogaryu-takoyaki",
+   "name": "Kogaryu",
+   "kind": "restaurant",
+   "neighborhood": "shinsaibashi",
+   "summary": "The Amerikamura takoyaki stand by Triangle Park, eaten standing or on the benches.",
+   "tags": [
+    "takoyaki",
+    "street-food",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "takoyaki",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "matsubaya-kitsune-udon",
+   "name": "Usami-tei Matsubaya",
+   "kind": "restaurant",
+   "neighborhood": "shinsaibashi",
+   "summary": "Old udon shop in Minami-Senba that claims to have invented kitsune udon, with sweet fried tofu on top.",
+   "tags": [
+    "udon",
+    "kitsune-udon",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "udon",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lilo-coffee-roasters",
+   "name": "LiLo Coffee Roasters",
+   "kind": "cafe",
+   "neighborhood": "shinsaibashi",
+   "summary": "Tiny specialty roaster in Nishi-Shinsaibashi with light-roast single origins and a few stools.",
+   "tags": [
+    "specialty-coffee",
+    "small"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amerikamura-clubs",
+   "name": "Amerikamura bars and clubs",
+   "kind": "nightlife",
+   "neighborhood": "shinsaibashi",
+   "summary": "DJ bars, small clubs and late bars in the blocks around Triangle Park, busiest on Friday and Saturday.",
+   "tags": [
+    "clubs",
+    "dj",
+    "late-night"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "neon-shokudogai",
+   "name": "Shinsaibashi Neon Shokudogai",
+   "kind": "restaurant",
+   "neighborhood": "shinsaibashi",
+   "summary": "A basement food alley in Shinsaibashi PARCO, with neon-lit counters of gyoza, ramen and highballs.",
+   "tags": [
+    "food-hall",
+    "neon",
+    "drinks"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "glico-sign",
+   "name": "Glico sign and Ebisubashi",
+   "kind": "landmark",
+   "neighborhood": "dotonbori",
+   "summary": "The running-man billboard over the canal, the city's favourite photo spot; the bridge below is where crowds gather to celebrate.",
+   "tags": [
+    "iconic",
+    "neon",
+    "photo-spot"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tombori-river-cruise",
+   "name": "Tombori River Cruise",
+   "kind": "attraction",
+   "neighborhood": "dotonbori",
+   "summary": "Twenty-minute boat ride along the Dotonbori canal with a chatty guide.",
+   "tags": [
+    "boat",
+    "canal",
+    "touristy"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hozenji-yokocho",
+   "name": "Hozenji and Hozenji Yokocho",
+   "kind": "temple",
+   "neighborhood": "dotonbori",
+   "summary": "A moss-covered Fudo statue people splash with water for luck, in a lantern-lit flagstone alley of small restaurants.",
+   "tags": [
+    "temple",
+    "lanterns",
+    "atmospheric"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kani-doraku-dotonbori",
+   "name": "Kani Doraku Dotonbori Main Store",
+   "kind": "restaurant",
+   "neighborhood": "dotonbori",
+   "summary": "Crab restaurant under the giant moving crab sign, serving crab courses in private rooms.",
+   "tags": [
+    "crab",
+    "iconic",
+    "splurge"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kukuru-takoyaki",
+   "name": "Takoyaki Dotonbori Kukuru",
+   "kind": "restaurant",
+   "neighborhood": "dotonbori",
+   "summary": "Takoyaki stand with an octopus on the sign and big pieces of octopus inside, eaten at the counter or on the street.",
+   "tags": [
+    "takoyaki",
+    "street-food"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "takoyaki",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kinryu-ramen",
+   "name": "Kinryu Ramen",
+   "kind": "restaurant",
+   "neighborhood": "dotonbori",
+   "summary": "Pork-bone ramen under a dragon sign, open all night, with free kimchi and garlic on the counter.",
+   "tags": [
+    "ramen",
+    "late-night",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "ramen",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mizuno-okonomiyaki",
+   "name": "Mizuno",
+   "kind": "restaurant",
+   "neighborhood": "dotonbori",
+   "summary": "Family-run okonomiyaki shop since 1945, cooked on the griddle in front of you; expect a queue.",
+   "tags": [
+    "okonomiyaki",
+    "queue",
+    "family-run"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "okonomiyaki",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arabiya-coffee",
+   "name": "Arabiya Coffee",
+   "kind": "cafe",
+   "neighborhood": "dotonbori",
+   "summary": "Kissaten near Hozenji serving siphon coffee and toast since the early 1950s.",
+   "tags": [
+    "kissaten",
+    "retro",
+    "siphon"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "kissaten",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kissa-american",
+   "name": "Kissa American",
+   "kind": "cafe",
+   "neighborhood": "dotonbori",
+   "summary": "Grand old kissaten from 1946 with chandeliers, thick hotcakes and waiters in bow ties.",
+   "tags": [
+    "kissaten",
+    "retro",
+    "hotcakes"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "kissaten",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shochikuza",
+   "name": "Osaka Shochikuza",
+   "kind": "venue",
+   "neighborhood": "dotonbori",
+   "summary": "A 1923 theater with an arched facade on the canal, staging kabuki, plays and musicals.",
+   "tags": [
+    "kabuki",
+    "theater",
+    "historic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "namba-grand-kagetsu",
+   "name": "Namba Grand Kagetsu",
+   "kind": "venue",
+   "neighborhood": "namba",
+   "summary": "Yoshimoto's flagship comedy theater: manzai duos, then the slapstick Yoshimoto Shinkigeki troupe, several shows a day.",
+   "tags": [
+    "manzai",
+    "comedy",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "namba-parks",
+   "name": "Namba Parks",
+   "kind": "shopping",
+   "neighborhood": "namba",
+   "summary": "Mall stepping up in terraces of rooftop gardens behind Nankai Namba station.",
+   "tags": [
+    "shopping",
+    "rooftop-garden"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "takashimaya-osaka",
+   "name": "Takashimaya Osaka",
+   "kind": "shopping",
+   "neighborhood": "namba",
+   "summary": "The grand department store on top of Nankai Namba station, with a deep food hall and restaurant floors.",
+   "tags": [
+    "department-store",
+    "depachika"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "doguyasuji",
+   "name": "Sennichimae Doguyasuji",
+   "kind": "shopping",
+   "neighborhood": "namba",
+   "summary": "Covered arcade of kitchenware shops: knives, takoyaki pans, plastic food samples and shop lanterns.",
+   "tags": [
+    "kitchenware",
+    "knives",
+    "browsing"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "takoyaki-wanaka",
+   "name": "Takoyaki Wanaka Sennichimae Main Store",
+   "kind": "restaurant",
+   "neighborhood": "namba",
+   "summary": "Takoyaki shop by Namba Grand Kagetsu, crisp outside and molten inside, with a choice of sauces.",
+   "tags": [
+    "takoyaki",
+    "street-food",
+    "comedy"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "takoyaki",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jiyuken",
+   "name": "Jiyuken",
+   "kind": "restaurant",
+   "neighborhood": "namba",
+   "summary": "Western-style restaurant since 1910, known for curry already mixed into the rice and topped with a raw egg.",
+   "tags": [
+    "curry",
+    "yoshoku",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "yoshoku",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "horai-551-main",
+   "name": "551 Horai Main Store",
+   "kind": "market",
+   "neighborhood": "namba",
+   "summary": "The pork bun shop on Ebisubashi-suji where the butaman are folded in the window; everyone queues.",
+   "tags": [
+    "butaman",
+    "takeaway",
+    "queue"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "chinese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rikuro-ojisan",
+   "name": "Rikuro's Namba Main Store",
+   "kind": "cafe",
+   "neighborhood": "namba",
+   "summary": "Bakery that rings a bell each time a jiggly baked cheesecake comes out of the oven.",
+   "tags": [
+    "cheesecake",
+    "bakery",
+    "takeaway"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maru-fuku-coffee",
+   "name": "Maru-Fuku Coffee Sennichimae Main Shop",
+   "kind": "cafe",
+   "neighborhood": "namba",
+   "summary": "Dark, wood-panelled kissaten serving strong drip coffee and hotcakes since 1934.",
+   "tags": [
+    "kissaten",
+    "retro",
+    "strong"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "kissaten",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ura-namba",
+   "name": "Ura-Namba",
+   "kind": "bar",
+   "neighborhood": "namba",
+   "summary": "Back streets east of Namba packed with standing bars, oyster bars and tiny izakaya where strangers end up talking.",
+   "tags": [
+    "standing-bar",
+    "izakaya",
+    "hopping"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "edion-arena",
+   "name": "Edion Arena Osaka",
+   "kind": "stadium",
+   "neighborhood": "namba",
+   "summary": "The prefectural gymnasium, home of the Spring Grand Sumo Tournament each March and of boxing and concerts the rest of the year.",
+   "tags": [
+    "sumo",
+    "sports",
+    "concerts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kuromon-market",
+   "name": "Kuromon Market",
+   "kind": "market",
+   "neighborhood": "nipponbashi",
+   "summary": "The covered \"kitchen of Osaka\": fish stalls, grilled scallops, fruit and wagyu skewers eaten on the spot.",
+   "tags": [
+    "market",
+    "seafood",
+    "street-food"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "national-bunraku-theatre",
+   "name": "National Bunraku Theatre",
+   "kind": "venue",
+   "neighborhood": "nipponbashi",
+   "summary": "The home of bunraku puppet theater, born in Osaka, with English earphone guides.",
+   "tags": [
+    "bunraku",
+    "traditional",
+    "theater"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "den-den-town",
+   "name": "Den Den Town",
+   "kind": "shopping",
+   "neighborhood": "nipponbashi",
+   "summary": "Electronics, anime, figure and card shops along Sakaisuji and Otaku Road.",
+   "tags": [
+    "anime",
+    "electronics",
+    "figures"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "den-den-arcades",
+   "name": "Den Den Town game centers",
+   "kind": "attraction",
+   "neighborhood": "nipponbashi",
+   "summary": "Floors of crane games, rhythm games and fighting-game cabinets.",
+   "tags": [
+    "arcade",
+    "games",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "den-den-maid-cafes",
+   "name": "Den Den Town maid cafes",
+   "kind": "cafe",
+   "neighborhood": "nipponbashi",
+   "summary": "Themed cafes on Otaku Road where staff in costume serve omurice with drawings in ketchup.",
+   "tags": [
+    "themed",
+    "otaku",
+    "kitsch"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kuromon-fugu",
+   "name": "Kuromon fugu and seafood restaurants",
+   "kind": "restaurant",
+   "neighborhood": "nipponbashi",
+   "summary": "Restaurants around the market serving pufferfish hot pot in winter and sashimi all year.",
+   "tags": [
+    "fugu",
+    "seafood",
+    "winter"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nipponbashi-ramen",
+   "name": "Sakaisuji ramen counters",
+   "kind": "restaurant",
+   "neighborhood": "nipponbashi",
+   "summary": "Ramen and gyoza counters feeding gamers and shop staff along Sakaisuji until late.",
+   "tags": [
+    "ramen",
+    "cheap",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "ramen",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nipponbashi-game-bars",
+   "name": "Nipponbashi game bars",
+   "kind": "bar",
+   "neighborhood": "nipponbashi",
+   "summary": "Small bars with consoles and anime on the screens, where regulars play and drink.",
+   "tags": [
+    "games",
+    "anime",
+    "bar"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tsutenkaku",
+   "name": "Tsutenkaku",
+   "kind": "attraction",
+   "neighborhood": "shinsekai",
+   "summary": "The 1956 steel tower over Shinsekai, with the lucky Billiken statue on the observation deck and an outdoor slide down the side.",
+   "tags": [
+    "tower",
+    "retro",
+    "views",
+    "billiken"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kushikatsu-daruma-shinsekai",
+   "name": "Kushikatsu Daruma Shinsekai Main Store",
+   "kind": "restaurant",
+   "neighborhood": "shinsekai",
+   "summary": "The 1929 kushikatsu counter whose angry-chef statue warns: no double-dipping in the sauce.",
+   "tags": [
+    "kushikatsu",
+    "iconic",
+    "counter"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "kushikatsu",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yaekatsu",
+   "name": "Yaekatsu",
+   "kind": "restaurant",
+   "neighborhood": "shinsekai",
+   "summary": "Long-running kushikatsu counter in Janjan Yokocho with a constant queue and fast-moving cooks.",
+   "tags": [
+    "kushikatsu",
+    "queue",
+    "counter"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "kushikatsu",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tengu-kushikatsu",
+   "name": "Tengu",
+   "kind": "restaurant",
+   "neighborhood": "shinsekai",
+   "summary": "Kushikatsu and doteyaki beef-tendon stew at a crowded counter in Janjan Yokocho.",
+   "tags": [
+    "kushikatsu",
+    "doteyaki",
+    "counter"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "kushikatsu",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "janjan-yokocho",
+   "name": "Janjan Yokocho",
+   "kind": "landmark",
+   "neighborhood": "shinsekai",
+   "summary": "A narrow covered alley of kushikatsu counters, standing bars and old men playing shogi in open-fronted parlors.",
+   "tags": [
+    "retro",
+    "shogi",
+    "atmospheric"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shinsekai-standing-bars",
+   "name": "Shinsekai standing bars",
+   "kind": "bar",
+   "neighborhood": "shinsekai",
+   "summary": "Cheap tachinomi where a beer, doteyaki and a chat with the regulars costs very little.",
+   "tags": [
+    "standing-bar",
+    "cheap",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shinsekai-doteyaki",
+   "name": "Shinsekai doteyaki and horumon stalls",
+   "kind": "restaurant",
+   "neighborhood": "shinsekai",
+   "summary": "Stalls and counters simmering beef tendon in miso and grilling offal on the main street.",
+   "tags": [
+    "doteyaki",
+    "horumon",
+    "street-food"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spa-world",
+   "name": "Spa World",
+   "kind": "attraction",
+   "neighborhood": "shinsekai",
+   "summary": "A huge onsen complex with themed European and Asian bath floors (alternating by gender month to month), a swimsuit pool zone and rest areas.",
+   "tags": [
+    "onsen",
+    "sento",
+    "pool",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tennoji-zoo",
+   "name": "Tennoji Zoo",
+   "kind": "attraction",
+   "neighborhood": "shinsekai",
+   "summary": "A century-old city zoo between Shinsekai and Tennoji Park, with an African savanna zone.",
+   "tags": [
+    "animals",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abeno-harukas-300",
+   "name": "Harukas 300",
+   "kind": "attraction",
+   "neighborhood": "tennoji",
+   "summary": "Glass-walled observation floors at the top of the 300-metre Abeno Harukas, with views to Kobe and the bay at sunset.",
+   "tags": [
+    "views",
+    "skyscraper",
+    "sunset"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shitennoji",
+   "name": "Shitennoji",
+   "kind": "temple",
+   "neighborhood": "tennoji",
+   "summary": "One of Japan's oldest temples, founded by Prince Shotoku in 593, with a five-story pagoda and a monthly flea market.",
+   "tags": [
+    "temple",
+    "pagoda",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shitennoji-flea-market",
+   "name": "Shitennoji flea market",
+   "kind": "market",
+   "neighborhood": "tennoji",
+   "summary": "Stalls of antiques, old kimono, tools and snacks fill the temple grounds on the 21st and 22nd of each month.",
+   "tags": [
+    "antiques",
+    "flea-market",
+    "monthly"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tennoji-park-keitakuen",
+   "name": "Tennoji Park and Keitakuen Garden",
+   "kind": "park",
+   "neighborhood": "tennoji",
+   "summary": "City park with a stroll garden around a pond, beside the zoo and the art museum.",
+   "tags": [
+    "garden",
+    "pond",
+    "walk"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tennoshiba",
+   "name": "Tennoshiba",
+   "kind": "cafe",
+   "neighborhood": "tennoji",
+   "summary": "The lawn at the front of Tennoji Park ringed by cafes, a playground and a dog run.",
+   "tags": [
+    "lawn",
+    "cafes",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-city-museum-of-fine-arts",
+   "name": "Osaka City Museum of Fine Arts",
+   "kind": "museum",
+   "neighborhood": "tennoji",
+   "summary": "Asian art and big exhibitions in a 1936 building in Tennoji Park.",
+   "tags": [
+    "art",
+    "history",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harukas-kintetsu-food-hall",
+   "name": "Abeno Harukas Kintetsu food hall",
+   "kind": "market",
+   "neighborhood": "tennoji",
+   "summary": "Sprawling department store basement of bento, wagashi and deli counters under the tower.",
+   "tags": [
+    "depachika",
+    "bento",
+    "sweets"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harukas-dining",
+   "name": "Abeno Harukas restaurant floors",
+   "kind": "restaurant",
+   "neighborhood": "tennoji",
+   "summary": "Restaurant floors high in the tower, from tonkatsu to kaiseki, with views across the south of the city.",
+   "tags": [
+    "views",
+    "dinner",
+    "date-spot"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ura-tennoji",
+   "name": "Ura-Tennoji",
+   "kind": "bar",
+   "neighborhood": "tennoji",
+   "summary": "Lanes behind Tennoji station full of small bars, yakitori and Spanish-style bars in old houses.",
+   "tags": [
+    "izakaya",
+    "hopping",
+    "small-bars"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tsuruhashi-market",
+   "name": "Tsuruhashi Market",
+   "kind": "market",
+   "neighborhood": "tsuruhashi",
+   "summary": "A dark, covered maze of kimchi stalls, Korean rice cakes, hanbok tailors, fish and dried goods beside the station.",
+   "tags": [
+    "market",
+    "kimchi",
+    "korean"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tsuruhashi-yakiniku",
+   "name": "Tsuruhashi yakiniku alleys",
+   "kind": "restaurant",
+   "neighborhood": "tsuruhashi",
+   "summary": "Charcoal yakiniku shops crowded under the tracks, smoke rolling over the platforms.",
+   "tags": [
+    "yakiniku",
+    "smoky",
+    "groups"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "yakiniku",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tsuruichi",
+   "name": "Tsuruichi",
+   "kind": "restaurant",
+   "neighborhood": "tsuruhashi",
+   "summary": "Long-established yakiniku house by Tsuruhashi station, with cuts grilled over charcoal and sauce made in the house.",
+   "tags": [
+    "yakiniku",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "yakiniku",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fugetsu-tsuruhashi",
+   "name": "Tsuruhashi Fugetsu Main Store",
+   "kind": "restaurant",
+   "neighborhood": "tsuruhashi",
+   "summary": "Where the Fugetsu okonomiyaki chain started in 1950, cooked for you on the table griddle.",
+   "tags": [
+    "okonomiyaki",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "okonomiyaki",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ikuno-koreatown",
+   "name": "Ikuno Koreatown",
+   "kind": "shopping",
+   "neighborhood": "tsuruhashi",
+   "summary": "The Miyuki-dori shopping street of Korean groceries, cosmetics and K-pop goods, busy with young visitors at weekends.",
+   "tags": [
+    "korean",
+    "k-pop",
+    "shopping"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "koreatown-cafes",
+   "name": "Koreatown cafes and hotteok stands",
+   "kind": "cafe",
+   "neighborhood": "tsuruhashi",
+   "summary": "Korean cafes, cheese hotdog and hotteok stands along the shopping street.",
+   "tags": [
+    "korean",
+    "street-food",
+    "sweets"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-koreatown-history-museum",
+   "name": "Osaka Koreatown History Museum",
+   "kind": "museum",
+   "neighborhood": "tsuruhashi",
+   "summary": "Small museum telling the century-long story of Korean residents in Ikuno.",
+   "tags": [
+    "history",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-castle-tower",
+   "name": "Osaka Castle Main Tower",
+   "kind": "museum",
+   "neighborhood": "osaka-castle",
+   "summary": "The gold-trimmed 1931 concrete rebuild of Hideyoshi's keep, a museum of the castle's wars with a lookout on top.",
+   "tags": [
+    "castle",
+    "history",
+    "iconic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-castle-park",
+   "name": "Osaka Castle Park",
+   "kind": "park",
+   "neighborhood": "osaka-castle",
+   "summary": "Huge park inside and around the moats, with a plum grove in February and thousands of cherry trees in April.",
+   "tags": [
+    "park",
+    "cherry-blossom",
+    "plum-blossom",
+    "picnic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nishinomaru-garden",
+   "name": "Nishinomaru Garden",
+   "kind": "garden",
+   "neighborhood": "osaka-castle",
+   "summary": "Lawn garden under the castle walls, a favourite hanami spot with evening cherry-blossom lighting.",
+   "tags": [
+    "cherry-blossom",
+    "lawn",
+    "views"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-castle-running",
+   "name": "Osaka Castle Park running loop",
+   "kind": "fitness",
+   "neighborhood": "osaka-castle",
+   "summary": "The moat-side loops where half the city's runners train, with lockers and showers at the station.",
+   "tags": [
+    "running",
+    "outdoors"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-jo-hall",
+   "name": "Osaka-jo Hall",
+   "kind": "venue",
+   "neighborhood": "osaka-castle",
+   "summary": "Big arena in the castle park for pop concerts and sports.",
+   "tags": [
+    "concerts",
+    "arena"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-museum-of-history",
+   "name": "Osaka Museum of History",
+   "kind": "museum",
+   "neighborhood": "osaka-castle",
+   "summary": "Museum that walks down through the centuries floor by floor, with views over the castle and the Naniwa palace site.",
+   "tags": [
+    "history",
+    "views",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jo-terrace",
+   "name": "JO-TERRACE OSAKA",
+   "kind": "restaurant",
+   "neighborhood": "osaka-castle",
+   "summary": "Restaurants and cafes by Osakajokoen station, handy after a run or a concert.",
+   "tags": [
+    "casual",
+    "after-run"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "various",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "miraiza",
+   "name": "Miraiza Osaka-jo",
+   "kind": "restaurant",
+   "neighborhood": "osaka-castle",
+   "summary": "Restaurants and a rooftop bar in a castle-style 1931 military headquarters inside the park.",
+   "tags": [
+    "historic-building",
+    "rooftop"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "various",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "morinomiya-izakaya",
+   "name": "Morinomiya izakaya",
+   "kind": "bar",
+   "neighborhood": "osaka-castle",
+   "summary": "Neighbourhood izakaya and yakitori around Morinomiya station, full of locals after work.",
+   "tags": [
+    "izakaya",
+    "locals"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "castle-park-food-stalls",
+   "name": "Osaka Castle hanami stalls",
+   "kind": "market",
+   "neighborhood": "osaka-castle",
+   "summary": "Yatai selling takoyaki, yakisoba and beer along the paths at cherry blossom time.",
+   "tags": [
+    "yatai",
+    "hanami",
+    "seasonal"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "cuisine": "street-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tanimachi-lunch",
+   "name": "Tanimachi lunch counters and kissaten",
+   "kind": "restaurant",
+   "neighborhood": "osaka-castle",
+   "summary": "Curry, udon and coffee shops along Tanimachi-suji feeding prefectural office workers.",
+   "tags": [
+    "lunch",
+    "curry",
+    "kissaten"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tachinomi-toyo",
+   "name": "Tachinomi Toyo",
+   "kind": "bar",
+   "neighborhood": "kyobashi",
+   "summary": "Famous standing bar where the owner sears tuna with a blowtorch in front of the crowd.",
+   "tags": [
+    "standing-bar",
+    "tuna",
+    "iconic"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kyobashi-standing-bars",
+   "name": "Kyobashi standing bars",
+   "kind": "bar",
+   "neighborhood": "kyobashi",
+   "summary": "Morning-to-night tachinomi around the station, some serving a beer at breakfast time.",
+   "tags": [
+    "standing-bar",
+    "cheap",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kyobashi-grand-chateau",
+   "name": "Kyobashi Grand Chateau",
+   "kind": "nightlife",
+   "neighborhood": "kyobashi",
+   "summary": "A 1970s leisure building of karaoke, bars and restaurants, famous for its old TV jingle.",
+   "tags": [
+    "karaoke",
+    "retro",
+    "bars"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kyobashi-eateries",
+   "name": "Kyobashi arcade eateries",
+   "kind": "restaurant",
+   "neighborhood": "kyobashi",
+   "summary": "Udon, gyoza, kushikatsu and teishoku shops along the arcade.",
+   "tags": [
+    "cheap-eats",
+    "udon",
+    "gyoza"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kyobashi-kissaten",
+   "name": "Kyobashi kissaten",
+   "kind": "cafe",
+   "neighborhood": "kyobashi",
+   "summary": "Old coffee shops with morning sets of toast, boiled egg and coffee for regulars reading the sports paper.",
+   "tags": [
+    "kissaten",
+    "morning-set"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "kissaten",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakuranomiya-park",
+   "name": "Kema Sakuranomiya Park",
+   "kind": "park",
+   "neighborhood": "kyobashi",
+   "summary": "Kilometres of cherry trees along the Okawa river, crowded with hanami parties in April and joggers all year.",
+   "tags": [
+    "cherry-blossom",
+    "riverside",
+    "running"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "negiyaki-yamamoto",
+   "name": "Negiyaki Yamamoto Main Store",
+   "kind": "restaurant",
+   "neighborhood": "juso",
+   "summary": "Where negiyaki began in 1965: a thin savoury pancake buried in green onion, finished with lemon and soy.",
+   "tags": [
+    "negiyaki",
+    "historic",
+    "local-favorite"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "okonomiyaki",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "juso-izakaya",
+   "name": "Juso izakaya and bars",
+   "kind": "bar",
+   "neighborhood": "juso",
+   "summary": "Narrow streets west of Hankyu Juso station lined with cheap izakaya and standing bars.",
+   "tags": [
+    "izakaya",
+    "snack-bar",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "juso-bakeries-kissa",
+   "name": "Juso bakeries and kissaten",
+   "kind": "cafe",
+   "neighborhood": "juso",
+   "summary": "Old kissaten and local bakeries in the arcades, with morning sets and sweet buns.",
+   "tags": [
+    "kissaten",
+    "bakery"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "kissaten",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "juso-ramen-yakiniku",
+   "name": "Juso late-night ramen and yakiniku",
+   "kind": "restaurant",
+   "neighborhood": "juso",
+   "summary": "Ramen counters and horumon grills that keep going after the bars close.",
+   "tags": [
+    "ramen",
+    "horumon",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "ramen",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seventh-art-theater",
+   "name": "The Seventh Art Theater",
+   "kind": "venue",
+   "neighborhood": "juso",
+   "summary": "Independent mini-cinema showing documentaries and art films.",
+   "tags": [
+    "cinema",
+    "indie"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yodogawa-riverside",
+   "name": "Yodogawa riverside park",
+   "kind": "fitness",
+   "neighborhood": "juso",
+   "summary": "Wide grassy riverbanks along the Yodo with running and cycling paths and baseball fields.",
+   "tags": [
+    "running",
+    "cycling",
+    "riverside"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "juso-snack-bars",
+   "name": "Juso snack bars",
+   "kind": "nightlife",
+   "neighborhood": "juso",
+   "summary": "Tiny \"sunakku\" bars run by a mama-san, with a bottle kept for regulars and a karaoke machine in the corner.",
+   "tags": [
+    "snack-bar",
+    "karaoke",
+    "regulars"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kaiyukan",
+   "name": "Kaiyukan",
+   "kind": "attraction",
+   "neighborhood": "bay-area",
+   "summary": "One of the world's largest aquariums, spiralling down around a giant central tank with a whale shark.",
+   "tags": [
+    "aquarium",
+    "kids",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "naniwa-kuishinbo-yokocho",
+   "name": "Naniwa Kuishinbo Yokocho",
+   "kind": "restaurant",
+   "neighborhood": "bay-area",
+   "summary": "A retro 1960s Osaka street inside Tempozan Marketplace with takoyaki, okonomiyaki and curry shops.",
+   "tags": [
+    "retro",
+    "food-court",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "universal-studios-japan",
+   "name": "Universal Studios Japan",
+   "kind": "attraction",
+   "neighborhood": "bay-area",
+   "summary": "The theme park at Sakurajima, with Super Nintendo World, the Wizarding World of Harry Potter and seasonal events.",
+   "tags": [
+    "theme-park",
+    "nintendo",
+    "all-day"
+   ],
+   "cost": "$$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "universal-citywalk",
+   "name": "Universal CityWalk Osaka",
+   "kind": "restaurant",
+   "neighborhood": "bay-area",
+   "summary": "Restaurants, takoyaki stands and shops outside the theme park gates.",
+   "tags": [
+    "restaurants",
+    "theme-park"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "various",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kyocera-dome",
+   "name": "Kyocera Dome Osaka",
+   "kind": "stadium",
+   "neighborhood": "bay-area",
+   "summary": "Domed ballpark of the Orix Buffaloes and a stadium-size concert venue.",
+   "tags": [
+    "baseball",
+    "concerts"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "taisho-okinawan",
+   "name": "Taisho Okinawan eateries",
+   "kind": "restaurant",
+   "neighborhood": "bay-area",
+   "summary": "Okinawan shokudo and bars of Taisho ward, serving goya champuru, Okinawa soba and awamori.",
+   "tags": [
+    "okinawan",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "okinawan",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bentencho-izakaya",
+   "name": "Bentencho izakaya",
+   "kind": "bar",
+   "neighborhood": "bay-area",
+   "summary": "Plain izakaya and standing bars under the Loop Line at Bentencho station.",
+   "tags": [
+    "izakaya",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-pool",
+   "name": "Osaka Pool",
+   "kind": "fitness",
+   "neighborhood": "bay-area",
+   "summary": "The big municipal swimming pool by Asashiobashi station, with a 50 m pool open to the public.",
+   "tags": [
+    "swimming",
+    "municipal"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-central-gymnasium",
+   "name": "Osaka Municipal Central Gymnasium",
+   "kind": "fitness",
+   "neighborhood": "bay-area",
+   "summary": "Domed sports center under a grassy hill, with a public training room and studio classes.",
+   "tags": [
+    "gym",
+    "municipal",
+    "classes"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hirao-shotengai",
+   "name": "Hirao shopping street",
+   "kind": "market",
+   "neighborhood": "bay-area",
+   "summary": "Taisho's arcade with Okinawan groceries, sata andagi doughnuts and shops for the ward's Okinawan community.",
+   "tags": [
+    "okinawan",
+    "shotengai",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "okinawan",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sumiyoshi-taisha",
+   "name": "Sumiyoshi Taisha",
+   "kind": "temple",
+   "neighborhood": "sumiyoshi",
+   "summary": "Head of Japan's Sumiyoshi shrines, with its own ancient architecture and a steep red arched bridge over the pond.",
+   "tags": [
+    "shrine",
+    "architecture",
+    "new-year"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nagai-park",
+   "name": "Nagai Park",
+   "kind": "park",
+   "neighborhood": "sumiyoshi",
+   "summary": "Large park with a botanical garden, a natural history museum and two stadiums.",
+   "tags": [
+    "park",
+    "botanical-garden",
+    "stadiums"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nagai-park-running",
+   "name": "Nagai Park jogging course",
+   "kind": "fitness",
+   "neighborhood": "sumiyoshi",
+   "summary": "Measured running loop around the stadiums, busy with club runners.",
+   "tags": [
+    "running",
+    "measured-course"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yodoko-sakura-stadium",
+   "name": "Yodoko Sakura Stadium",
+   "kind": "stadium",
+   "neighborhood": "sumiyoshi",
+   "summary": "Football stadium in Nagai Park, home of Cerezo Osaka.",
+   "tags": [
+    "football",
+    "cerezo"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sumiyoshi-sweet-shops",
+   "name": "Sumiyoshi Taisha mochi and tea shops",
+   "kind": "cafe",
+   "neighborhood": "sumiyoshi",
+   "summary": "Old sweet shops by the shrine gates selling mochi and green tea to worshippers.",
+   "tags": [
+    "wagashi",
+    "mochi",
+    "traditional"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "wagashi",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sumiyoshi-shotengai",
+   "name": "Sumiyoshi local shopping streets",
+   "kind": "market",
+   "neighborhood": "sumiyoshi",
+   "summary": "Small arcades of greengrocers, tofu makers and croquette counters near the tram stops.",
+   "tags": [
+    "shotengai",
+    "local",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sumiyoshi-izakaya",
+   "name": "Hankai tram-stop izakaya",
+   "kind": "bar",
+   "neighborhood": "sumiyoshi",
+   "summary": "Family-run izakaya by the streetcar stops, with oden and highballs.",
+   "tags": [
+    "izakaya",
+    "locals",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sumiyoshi-okonomiyaki",
+   "name": "Sumiyoshi neighbourhood okonomiyaki",
+   "kind": "restaurant",
+   "neighborhood": "sumiyoshi",
+   "summary": "Small okonomiyaki shops where the owner cooks on a griddle that fills the room.",
+   "tags": [
+    "okonomiyaki",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "okonomiyaki",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tezukayama-cafes",
+   "name": "Tezukayama bakeries and cafes",
+   "kind": "cafe",
+   "neighborhood": "sumiyoshi",
+   "summary": "Bakeries and quiet cafes in the leafy hill streets above the shrine.",
+   "tags": [
+    "bakery",
+    "coffee",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "supermarket-tamade",
+   "name": "Supermarket Tamade",
+   "kind": "market",
+   "neighborhood": "nishinari",
+   "summary": "The neon-lit, all-hours discount supermarket chain born in Nishinari, known for very cheap bento.",
+   "tags": [
+    "discount",
+    "neon",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocoroom",
+   "name": "Cocoroom",
+   "kind": "cafe",
+   "neighborhood": "nishinari",
+   "summary": "Guesthouse, garden and cafe in Kamagasaki that runs poetry, art and study sessions with local residents.",
+   "tags": [
+    "community",
+    "arts",
+    "guesthouse"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shin-imamiya-standing-bars",
+   "name": "Shin-Imamiya standing bars",
+   "kind": "bar",
+   "neighborhood": "nishinari",
+   "summary": "Some of the cheapest drinks in Japan, poured at counters near the station for regulars and backpackers.",
+   "tags": [
+    "standing-bar",
+    "cheap",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nishinari-shokudo",
+   "name": "Nishinari shokudo and horumon counters",
+   "kind": "restaurant",
+   "neighborhood": "nishinari",
+   "summary": "Cheap canteens serving set meals, doteyaki and grilled offal from early morning.",
+   "tags": [
+    "cheap-eats",
+    "horumon",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tengachaya-shotengai",
+   "name": "Tengachaya shopping street",
+   "kind": "market",
+   "neighborhood": "nishinari",
+   "summary": "Old covered arcade of greengrocers, fishmongers and cheap clothes by the Nankai station.",
+   "tags": [
+    "shotengai",
+    "local",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "expo-70-park",
+   "name": "Expo '70 Commemorative Park",
+   "kind": "park",
+   "neighborhood": "suita",
+   "summary": "The grounds of the 1970 World Expo turned into a huge park of lawns, forests, a Japanese garden and seasonal flower fields.",
+   "tags": [
+    "park",
+    "cherry-blossom",
+    "picnic"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tower-of-the-sun",
+   "name": "Tower of the Sun",
+   "kind": "landmark",
+   "neighborhood": "suita",
+   "summary": "Taro Okamoto's three-faced tower from Expo '70, which can be visited inside by reservation.",
+   "tags": [
+    "art",
+    "iconic",
+    "expo"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minpaku",
+   "name": "National Museum of Ethnology (Minpaku)",
+   "kind": "museum",
+   "neighborhood": "suita",
+   "summary": "One of the world's largest ethnology museums, with everyday objects from every continent.",
+   "tags": [
+    "culture",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "expocity",
+   "name": "EXPOCITY",
+   "kind": "shopping",
+   "neighborhood": "suita",
+   "summary": "Mall beside Expo park with the Nifrel living museum, the Osaka Wheel and a food court.",
+   "tags": [
+    "mall",
+    "ferris-wheel",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "expocity-food-court",
+   "name": "EXPOCITY restaurants and food court",
+   "kind": "restaurant",
+   "neighborhood": "suita",
+   "summary": "Ramen, okonomiyaki, burgers and family restaurants under one roof.",
+   "tags": [
+    "food-court",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "various",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "panasonic-stadium-suita",
+   "name": "Panasonic Stadium Suita",
+   "kind": "stadium",
+   "neighborhood": "suita",
+   "summary": "Football stadium of Gamba Osaka, steep and loud, beside Expo park.",
+   "tags": [
+    "football",
+    "gamba"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "esaka-izakaya",
+   "name": "Esaka izakaya streets",
+   "kind": "bar",
+   "neighborhood": "suita",
+   "summary": "Bars and izakaya around Esaka station on the Midosuji line, popular with students and young workers.",
+   "tags": [
+    "izakaya",
+    "students"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kandai-mae-eateries",
+   "name": "Kandaimae student eateries",
+   "kind": "restaurant",
+   "neighborhood": "suita",
+   "summary": "Cheap ramen, curry and set-meal shops on the slope up to Kansai University.",
+   "tags": [
+    "cheap-eats",
+    "students"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "suita-cafes",
+   "name": "Suita station cafes",
+   "kind": "cafe",
+   "neighborhood": "suita",
+   "summary": "Chain and local coffee shops by the stations where students study over a single drink.",
+   "tags": [
+    "study",
+    "coffee"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "esaka-ramen",
+   "name": "Esaka ramen and gyoza counters",
+   "kind": "restaurant",
+   "neighborhood": "suita",
+   "summary": "Ramen, gyoza and teishoku shops around Esaka station, open late.",
+   "tags": [
+    "ramen",
+    "gyoza",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "ramen",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minoo-park",
+   "name": "Minoo Park and Minoo Falls",
+   "kind": "trail",
+   "neighborhood": "toyonaka-minoh",
+   "summary": "A three-kilometre path up a wooded gorge to a 33-metre waterfall, at its best in autumn colours.",
+   "tags": [
+    "hiking",
+    "waterfall",
+    "autumn-leaves"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "momiji-tempura",
+   "name": "Minoo momiji tempura stands",
+   "kind": "market",
+   "neighborhood": "toyonaka-minoh",
+   "summary": "Shops on the path to the falls frying maple leaves in sweet batter, a snack found almost only here.",
+   "tags": [
+    "street-food",
+    "unique",
+    "autumn-leaves"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "snacks",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "katsuoji",
+   "name": "Katsuoji",
+   "kind": "temple",
+   "neighborhood": "toyonaka-minoh",
+   "summary": "Mountain temple of winning luck, covered in small red daruma dolls left by visitors.",
+   "tags": [
+    "temple",
+    "daruma",
+    "nature"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minoh-beer",
+   "name": "Minoh Beer",
+   "kind": "bar",
+   "neighborhood": "toyonaka-minoh",
+   "summary": "Award-winning family craft brewery from Minoh, poured at its own taproom near the station.",
+   "tags": [
+    "craft-beer",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hattori-ryokuchi",
+   "name": "Hattori Ryokuchi Park",
+   "kind": "park",
+   "neighborhood": "toyonaka-minoh",
+   "summary": "Big park with ponds, a riding ground and an open-air museum of old farmhouses.",
+   "tags": [
+    "park",
+    "cycling",
+    "family"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ishibashi-shotengai",
+   "name": "Ishibashi Handai-mae eateries",
+   "kind": "restaurant",
+   "neighborhood": "toyonaka-minoh",
+   "summary": "Cheap student restaurants and izakaya in the arcade below Osaka University's Toyonaka campus.",
+   "tags": [
+    "students",
+    "cheap-eats"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "toyonaka-cafes",
+   "name": "Toyonaka bakeries and cafes",
+   "kind": "cafe",
+   "neighborhood": "toyonaka-minoh",
+   "summary": "Neighbourhood bakeries and coffee shops by the Hankyu stations, busy with parents after school drop-off.",
+   "tags": [
+    "bakery",
+    "coffee",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minoh-izakaya",
+   "name": "Minoh and Senri-Chuo izakaya",
+   "kind": "bar",
+   "neighborhood": "toyonaka-minoh",
+   "summary": "Quiet suburban izakaya near the stations for a drink on the way home.",
+   "tags": [
+    "izakaya",
+    "suburban"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daisen-kofun",
+   "name": "Daisen Kofun (Emperor Nintoku's tomb)",
+   "kind": "landmark",
+   "neighborhood": "sakai",
+   "summary": "The largest of the keyhole-shaped Mozu tombs, a UNESCO World Heritage site ringed by moats; walk the path round it.",
+   "tags": [
+    "history",
+    "unesco",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakai-city-museum",
+   "name": "Sakai City Museum",
+   "kind": "museum",
+   "neighborhood": "sakai",
+   "summary": "Museum of Sakai's tombs, merchants and crafts in Daisen Park.",
+   "tags": [
+    "history",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakai-rikyu-akiko",
+   "name": "Sakai Plaza of Rikyu and Akiko",
+   "kind": "museum",
+   "neighborhood": "sakai",
+   "summary": "Museum of tea master Sen no Rikyu and poet Yosano Akiko, both from Sakai, with tea served in its tea rooms.",
+   "tags": [
+    "tea-ceremony",
+    "poetry",
+    "history"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakai-traditional-crafts",
+   "name": "Sakai Traditional Crafts Museum",
+   "kind": "shopping",
+   "neighborhood": "sakai",
+   "summary": "Knife smiths' showroom and shop where chefs buy Sakai kitchen knives.",
+   "tags": [
+    "knives",
+    "crafts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kanbukuro",
+   "name": "Kanbukuro",
+   "kind": "cafe",
+   "neighborhood": "sakai",
+   "summary": "Sweet shop founded centuries ago, serving kurumi mochi in green bean paste, often over shaved ice in summer.",
+   "tags": [
+    "wagashi",
+    "historic",
+    "kakigori"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "wagashi",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakai-higashi-izakaya",
+   "name": "Sakai-Higashi izakaya",
+   "kind": "bar",
+   "neighborhood": "sakai",
+   "summary": "Izakaya and standing bars around Sakai-Higashi station.",
+   "tags": [
+    "izakaya",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakai-eateries",
+   "name": "Sakai old-town eateries",
+   "kind": "restaurant",
+   "neighborhood": "sakai",
+   "summary": "Soba, udon and okonomiyaki shops in the old town along the Hankai tram line.",
+   "tags": [
+    "soba",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakai-kissaten",
+   "name": "Sakai kissaten",
+   "kind": "cafe",
+   "neighborhood": "sakai",
+   "summary": "Neighbourhood coffee shops with morning sets and newspapers.",
+   "tags": [
+    "kissaten",
+    "morning-set"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "kissaten",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakai-fish-market-eats",
+   "name": "Sakai harbour seafood shokudo",
+   "kind": "restaurant",
+   "neighborhood": "sakai",
+   "summary": "Plain seafood canteens near the harbour serving rice bowls of the morning's fish.",
+   "tags": [
+    "seafood",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "osaka-university",
+   "name": "Osaka University",
+   "type": "research-university",
+   "neighborhood": "suita",
+   "size": "large",
+   "known_for": [
+    "medicine",
+    "engineering",
+    "science",
+    "research",
+    "foreign-studies"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-metropolitan-university",
+   "name": "Osaka Metropolitan University",
+   "type": "public-university",
+   "neighborhood": "sumiyoshi",
+   "size": "large",
+   "known_for": [
+    "engineering",
+    "medicine",
+    "urban-studies",
+    "business",
+    "veterinary"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kansai-university",
+   "name": "Kansai University",
+   "type": "private-university",
+   "neighborhood": "suita",
+   "size": "large",
+   "known_for": [
+    "law",
+    "business",
+    "sociology",
+    "engineering"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kindai-university",
+   "name": "Kindai University",
+   "type": "private-university",
+   "neighborhood": "tsuruhashi",
+   "size": "large",
+   "known_for": [
+    "aquaculture",
+    "medicine",
+    "law",
+    "engineering"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kansai-gaidai",
+   "name": "Kansai Gaidai University",
+   "type": "private-university",
+   "neighborhood": "kyobashi",
+   "size": "medium",
+   "known_for": [
+    "languages",
+    "international-studies",
+    "exchange-programs"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-university-of-arts",
+   "name": "Osaka University of Arts",
+   "type": "art-school",
+   "neighborhood": "tennoji",
+   "size": "medium",
+   "known_for": [
+    "art",
+    "design",
+    "film",
+    "music",
+    "manga"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-institute-of-technology",
+   "name": "Osaka Institute of Technology",
+   "type": "technical-institute",
+   "neighborhood": "kyobashi",
+   "size": "large",
+   "known_for": [
+    "engineering",
+    "robotics",
+    "information-science"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "panasonic",
+   "name": "Panasonic",
+   "sector": "technology",
+   "neighborhood": "kyobashi",
+   "size": "large",
+   "summary": "Electronics maker founded in Osaka by Konosuke Matsushita in 1918, headquartered in Kadoma, a short Keihan ride east of Kyobashi.",
+   "careers": [
+    "software-engineer",
+    "data-analyst",
+    "ux-designer",
+    "marketing-coordinator",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sharp",
+   "name": "Sharp",
+   "sector": "technology",
+   "neighborhood": "sakai",
+   "size": "large",
+   "summary": "Electronics company founded in Osaka in 1912, with its head office on the Sakai waterfront.",
+   "careers": [
+    "software-engineer",
+    "data-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daikin",
+   "name": "Daikin Industries",
+   "sector": "technology",
+   "neighborhood": "umeda",
+   "size": "large",
+   "summary": "Air-conditioning maker with its head office in Umeda.",
+   "careers": [
+    "software-engineer",
+    "data-analyst",
+    "accountant",
+    "marketing-coordinator",
+    "construction-trades"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sakura-internet",
+   "name": "Sakura Internet",
+   "sector": "technology",
+   "neighborhood": "umeda",
+   "size": "medium",
+   "summary": "Cloud and data-center company with its head office in Grand Front Osaka.",
+   "careers": [
+    "software-engineer",
+    "data-analyst",
+    "ux-designer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kansai-electric",
+   "name": "Kansai Electric Power",
+   "sector": "energy",
+   "neighborhood": "nakanoshima",
+   "size": "large",
+   "summary": "Kanden, the utility that powers the Kansai region, run from its tower on the west of Nakanoshima.",
+   "careers": [
+    "data-analyst",
+    "accountant",
+    "software-engineer",
+    "construction-trades"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "takeda",
+   "name": "Takeda Pharmaceutical",
+   "sector": "biotech",
+   "neighborhood": "honmachi",
+   "size": "large",
+   "summary": "Drug maker founded in Doshomachi, Osaka's old medicine merchants' street, in 1781; it keeps its Osaka head office there.",
+   "careers": [
+    "biotech-scientist",
+    "medical-researcher",
+    "pharmacist",
+    "marketing-coordinator",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shionogi",
+   "name": "Shionogi",
+   "sector": "biotech",
+   "neighborhood": "honmachi",
+   "size": "large",
+   "summary": "Pharmaceutical company founded in Doshomachi in 1878, headquartered there still, with research labs in Toyonaka.",
+   "careers": [
+    "biotech-scientist",
+    "medical-researcher",
+    "pharmacist",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "suntory",
+   "name": "Suntory",
+   "sector": "food",
+   "neighborhood": "nakanoshima",
+   "size": "large",
+   "summary": "Whisky, beer and soft-drink company founded in Osaka in 1899, with its Osaka head office at Dojimahama by the river.",
+   "careers": [
+    "marketing-coordinator",
+    "accountant",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nissin-foods",
+   "name": "Nissin Foods",
+   "sector": "food",
+   "neighborhood": "juso",
+   "size": "large",
+   "summary": "The instant noodle company Momofuku Ando founded, with its Osaka head office in Yodogawa ward north of the river.",
+   "careers": [
+    "marketing-coordinator",
+    "accountant",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kintetsu-group",
+   "name": "Kintetsu Group",
+   "sector": "transport",
+   "neighborhood": "tennoji",
+   "size": "large",
+   "summary": "Japan's largest private railway group, headquartered in Uehommachi, which also runs Abeno Harukas, department stores and hotels.",
+   "careers": [
+    "hotel-front-desk",
+    "retail-associate",
+    "accountant",
+    "marketing-coordinator",
+    "real-estate-agent"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hankyu-hanshin",
+   "name": "Hankyu Hanshin group",
+   "sector": "transport",
+   "neighborhood": "umeda",
+   "size": "large",
+   "summary": "The group behind the Hankyu and Hanshin railways, the Umeda department stores, the Takarazuka Revue and the Hanshin Tigers.",
+   "careers": [
+    "retail-associate",
+    "real-estate-agent",
+    "event-planner",
+    "marketing-coordinator",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-city-office",
+   "name": "Osaka City Office",
+   "sector": "government",
+   "neighborhood": "nakanoshima",
+   "size": "large",
+   "summary": "City Hall on Nakanoshima and the ward offices, including the board of education that runs the city's public schools.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "teacher",
+    "accountant",
+    "construction-trades"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-university-hospital",
+   "name": "Osaka University Hospital",
+   "sector": "healthcare",
+   "neighborhood": "suita",
+   "size": "large",
+   "summary": "Teaching hospital on the Suita campus.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "medical-researcher",
+    "pharmacist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "omu-hospital",
+   "name": "Osaka Metropolitan University Hospital",
+   "sector": "healthcare",
+   "neighborhood": "tennoji",
+   "size": "large",
+   "summary": "University hospital at Abeno, a short walk from Tennoji station.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-international-cancer-institute",
+   "name": "Osaka International Cancer Institute",
+   "sector": "healthcare",
+   "neighborhood": "osaka-castle",
+   "size": "large",
+   "summary": "Prefectural cancer hospital and research center by Osaka Castle.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "medical-researcher",
+    "pharmacist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kitano-hospital",
+   "name": "Kitano Hospital",
+   "sector": "healthcare",
+   "neighborhood": "tenma",
+   "size": "medium",
+   "summary": "General hospital in Ogimachi, Kita ward.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "usj-llc",
+   "name": "Universal Studios Japan",
+   "sector": "entertainment",
+   "neighborhood": "bay-area",
+   "size": "large",
+   "summary": "The Sakurajima theme park, one of the city's biggest hirers of performers, cooks and crew.",
+   "careers": [
+    "performer",
+    "actor",
+    "server",
+    "line-cook",
+    "retail-associate",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yoshimoto-kogyo",
+   "name": "Yoshimoto Kogyo",
+   "sector": "entertainment",
+   "neighborhood": "namba",
+   "size": "large",
+   "summary": "The comedy company founded in Osaka in 1912, running Namba Grand Kagetsu and a training school for manzai duos.",
+   "careers": [
+    "performer",
+    "actor",
+    "event-planner",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "asahi-broadcasting",
+   "name": "Asahi Broadcasting (ABC TV)",
+   "sector": "media",
+   "neighborhood": "fukushima",
+   "size": "medium",
+   "summary": "Osaka TV and radio broadcaster at Hotarumachi, Fukushima.",
+   "careers": [
+    "journalist",
+    "graphic-designer",
+    "marketing-coordinator",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "port-of-osaka",
+   "name": "Port of Osaka",
+   "sector": "logistics",
+   "neighborhood": "bay-area",
+   "size": "large",
+   "summary": "Container terminals at Nanko and Yumeshima, ferry piers and warehouses run by the city and private operators.",
+   "careers": [
+    "port-logistics",
+    "construction-trades"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "resona-bank",
+   "name": "Resona Bank",
+   "sector": "finance",
+   "neighborhood": "honmachi",
+   "size": "large",
+   "summary": "Bank with its registered head office in Osaka's Chuo ward.",
+   "careers": [
+    "finance-banker",
+    "financial-analyst",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-exchange",
+   "name": "Osaka Exchange",
+   "sector": "finance",
+   "neighborhood": "kitahama",
+   "size": "medium",
+   "summary": "Japan's derivatives exchange, part of Japan Exchange Group, in the old Osaka Stock Exchange building at Kitahama.",
+   "careers": [
+    "financial-analyst",
+    "software-engineer",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "imperial-hotel-osaka",
+   "name": "Imperial Hotel Osaka",
+   "sector": "hospitality",
+   "neighborhood": "tenma",
+   "size": "medium",
+   "summary": "Grand hotel on the Okawa river across from the Mint.",
+   "careers": [
+    "hotel-front-desk",
+    "line-cook",
+    "server",
+    "bartender",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "kita",
+   "name": "Kita business district",
+   "neighborhoods": [
+    "umeda",
+    "nakazakicho",
+    "nakanoshima",
+    "fukushima"
+   ],
+   "sectors": [
+    "finance",
+    "technology",
+    "business",
+    "media",
+    "legal",
+    "real-estate",
+    "energy",
+    "retail"
+   ],
+   "summary": "Head offices, banks, law firms and broadcasters in the towers around Umeda and Nakanoshima.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "semba",
+   "name": "Semba and Kitahama",
+   "neighborhoods": [
+    "honmachi",
+    "kitahama"
+   ],
+   "sectors": [
+    "finance",
+    "biotech",
+    "business",
+    "legal",
+    "fashion"
+   ],
+   "summary": "The old merchant quarter: trading houses, textile wholesalers and the pharmaceutical street of Doshomachi.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minami",
+   "name": "Minami",
+   "neighborhoods": [
+    "namba",
+    "dotonbori",
+    "shinsaibashi",
+    "nipponbashi",
+    "tennoji"
+   ],
+   "sectors": [
+    "hospitality",
+    "retail",
+    "entertainment",
+    "tourism",
+    "food",
+    "creative",
+    "fashion"
+   ],
+   "summary": "Restaurants, department stores, theaters, hotels and shops from Shinsaibashi down to Tennoji.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bay",
+   "name": "Osaka Bay",
+   "neighborhoods": [
+    "bay-area"
+   ],
+   "sectors": [
+    "logistics",
+    "tourism",
+    "entertainment",
+    "construction"
+   ],
+   "summary": "The port, warehouses, the aquarium and the theme park along the bay.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "northern-campuses",
+   "name": "Northern campuses and research parks",
+   "neighborhoods": [
+    "suita",
+    "toyonaka-minoh"
+   ],
+   "sectors": [
+    "education",
+    "healthcare",
+    "biotech",
+    "technology"
+   ],
+   "summary": "Universities, hospitals and corporate labs in the northern suburbs.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Humid subtropical: mild, dry winters; a rainy season in June and early July; long, hot, humid summers with typhoons possible from August to October; and clear, comfortable autumns.",
+  "months": [
+   {
+    "high_f": 49,
+    "low_f": 37,
+    "rain_days": 6,
+    "note": "Coldest month; dry and clear, rarely any snow."
+   },
+   {
+    "high_f": 51,
+    "low_f": 37,
+    "rain_days": 7,
+    "note": "Cold and dry; plum blossoms open at the castle late in the month."
+   },
+   {
+    "high_f": 57,
+    "low_f": 42,
+    "rain_days": 10,
+    "note": "Changeable; cherry blossoms usually open in the last week."
+   },
+   {
+    "high_f": 68,
+    "low_f": 52,
+    "rain_days": 9,
+    "note": "Cherry blossoms early in the month; mild and pleasant."
+   },
+   {
+    "high_f": 77,
+    "low_f": 61,
+    "rain_days": 9,
+    "note": "Warm and sunny through Golden Week."
+   },
+   {
+    "high_f": 82,
+    "low_f": 68,
+    "rain_days": 12,
+    "note": "Tsuyu rainy season sets in; damp and muggy."
+   },
+   {
+    "high_f": 89,
+    "low_f": 76,
+    "rain_days": 11,
+    "note": "Rainy season ends mid-month, then hot, sticky festival nights."
+   },
+   {
+    "high_f": 93,
+    "low_f": 78,
+    "rain_days": 7,
+    "note": "Hottest month; heat warnings, cicadas and the odd typhoon."
+   },
+   {
+    "high_f": 85,
+    "low_f": 71,
+    "rain_days": 10,
+    "note": "Still hot; typhoon season peaks."
+   },
+   {
+    "high_f": 75,
+    "low_f": 60,
+    "rain_days": 8,
+    "note": "Warm, clear and comfortable."
+   },
+   {
+    "high_f": 64,
+    "low_f": 50,
+    "rain_days": 7,
+    "note": "Crisp and dry; autumn leaves in the parks and at Minoo."
+   },
+   {
+    "high_f": 54,
+    "low_f": 41,
+    "rain_days": 6,
+    "note": "Cool and dry; illuminations along Midosuji and Nakanoshima."
+   }
+  ],
+  "source": "curated-climate-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "toka-ebisu",
+   "name": "Toka Ebisu",
+   "months": [
+    1
+   ],
+   "neighborhood": "shinsekai",
+   "summary": "From the 9th to the 11th of January, crowds at Imamiya Ebisu Shrine buy bamboo branches hung with lucky charms for business in the year ahead.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "doya-doya",
+   "name": "Doya Doya at Shitennoji",
+   "months": [
+    1
+   ],
+   "neighborhood": "tennoji",
+   "summary": "On January 14 teams in loincloths wrestle for paper charms showered down in the temple hall.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-marathon",
+   "name": "Osaka Marathon",
+   "months": [
+    2
+   ],
+   "neighborhood": "osaka-castle",
+   "summary": "Late-February marathon through the center, from the prefectural offices by the castle out and back across the city.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spring-sumo-basho",
+   "name": "Spring Grand Sumo Tournament",
+   "months": [
+    3
+   ],
+   "neighborhood": "namba",
+   "summary": "Fifteen days of top-division sumo at Edion Arena each March, with wrestlers seen around Namba.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cherry-blossom-viewing",
+   "name": "Cherry blossom season",
+   "months": [
+    3,
+    4
+   ],
+   "neighborhood": "osaka-castle",
+   "summary": "Hanami picnics under the trees at Osaka Castle, Sakuranomiya and Expo park from late March into early April.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mint-cherry-passage",
+   "name": "Mint Bureau cherry blossom passage",
+   "months": [
+    4
+   ],
+   "neighborhood": "tenma",
+   "summary": "One week in mid-April when the Japan Mint opens its riverside lane of late-blooming cherry trees.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aizen-matsuri",
+   "name": "Aizen Matsuri",
+   "months": [
+    6,
+    7
+   ],
+   "neighborhood": "tennoji",
+   "summary": "From June 30 to July 2 at Aizendo near Shitennoji, the first of Osaka's summer festivals, with yukata-clad women carried in palanquins.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tenjin-matsuri",
+   "name": "Tenjin Matsuri",
+   "months": [
+    7
+   ],
+   "neighborhood": "tenma",
+   "summary": "On July 24 and 25, one of Japan's three great festivals: a land procession from Osaka Tenmangu, a hundred boats on the Okawa river and fireworks overhead.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sumiyoshi-matsuri",
+   "name": "Sumiyoshi Matsuri",
+   "months": [
+    7,
+    8
+   ],
+   "neighborhood": "sumiyoshi",
+   "summary": "Summer purification festival at Sumiyoshi Taisha, ending on August 1 with a portable shrine carried to Sakai.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "naniwa-yodogawa-fireworks",
+   "name": "Naniwa Yodogawa Fireworks",
+   "months": [
+    8
+   ],
+   "neighborhood": "juso",
+   "summary": "A summer night of fireworks over the Yodo river near Juso, watched from packed riverbanks.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "koshien-summer",
+   "name": "Summer Koshien high school baseball",
+   "months": [
+    8
+   ],
+   "neighborhood": null,
+   "summary": "The national high school baseball championship at Koshien Stadium in Nishinomiya, a short Hanshin ride away; the whole region watches on TV.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kishiwada-danjiri",
+   "name": "Kishiwada Danjiri Matsuri",
+   "months": [
+    9
+   ],
+   "neighborhood": null,
+   "summary": "In Kishiwada, south of Sakai, teams haul heavy carved wooden floats through the streets at a run, taking corners at speed.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "midosuji-autumn-party",
+   "name": "Midosuji Autumn Party",
+   "months": [
+    10,
+    11
+   ],
+   "neighborhood": "honmachi",
+   "summary": "A day when Midosuji boulevard closes to traffic for parades, marching bands and stalls under the ginkgo trees.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osaka-hikari-renaissance",
+   "name": "OSAKA Hikari-Renaissance",
+   "months": [
+    12
+   ],
+   "neighborhood": "nakanoshima",
+   "summary": "Light shows projected on the Central Public Hall and illuminations along Nakanoshima through December.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "midosuji-illumination",
+   "name": "Midosuji Illumination",
+   "months": [
+    11,
+    12
+   ],
+   "neighborhood": "shinsaibashi",
+   "summary": "Kilometres of Midosuji's ginkgo trees strung with lights from November to the new year.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "takoyaki",
+   "name": "Takoyaki",
+   "kind": "dish",
+   "summary": "Batter balls with octopus inside, turned with picks in a dimpled pan, topped with sauce, mayonnaise, aonori and bonito flakes; many families own a takoyaki pan.",
+   "places": [
+    "kogaryu-takoyaki",
+    "takoyaki-wanaka",
+    "kukuru-takoyaki"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "okonomiyaki",
+   "name": "Okonomiyaki",
+   "kind": "dish",
+   "summary": "The savoury cabbage pancake cooked on a griddle, Osaka style with everything mixed into the batter, often eaten with rice as a set.",
+   "places": [
+    "mizuno-okonomiyaki",
+    "fugetsu-tsuruhashi",
+    "takimi-koji"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kushikatsu",
+   "name": "Kushikatsu",
+   "kind": "dish",
+   "summary": "Deep-fried skewers of meat, vegetables and cheese, dipped once in a shared tin of sauce; \"no double-dipping\" is the rule, and cabbage scoops more sauce.",
+   "places": [
+    "kushikatsu-daruma-shinsekai",
+    "yaekatsu",
+    "tengu-kushikatsu"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kitsune-udon",
+   "name": "Kitsune udon",
+   "kind": "dish",
+   "summary": "Udon in light kombu dashi topped with sweet fried tofu, an Osaka invention; locals insist the soup should be clear, not dark like Tokyo's.",
+   "places": [
+    "matsubaya-kitsune-udon"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "butaman",
+   "name": "551 Horai butaman",
+   "kind": "dish",
+   "summary": "Big pork buns bought by the box at the station and carried home or to the office; the TV ad line goes \"when there is 551, everyone smiles\".",
+   "places": [
+    "horai-551-main"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "negiyaki-ikayaki",
+   "name": "Negiyaki and ikayaki",
+   "kind": "dish",
+   "summary": "Negiyaki is a thin pancake buried in green onion; ikayaki is Osaka's squid-and-egg pancake folded in paper, eaten standing in the Hanshin basement.",
+   "places": [
+    "negiyaki-yamamoto",
+    "hanshin-umeda-food-hall"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mix-juice",
+   "name": "Mix juice",
+   "kind": "drink",
+   "summary": "A kissaten classic: banana, peach, orange and milk blended smooth and served cold.",
+   "places": [
+    "kissa-american",
+    "maru-fuku-coffee"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "highball",
+   "name": "Highball",
+   "kind": "drink",
+   "summary": "Whisky and soda in a big mug, the default order in standing bars and izakaya alongside a beer.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maido",
+   "name": "\"Maido\"",
+   "kind": "saying",
+   "summary": "The all-purpose shopkeeper's greeting, \"thanks as always\", which the abacus-shaking merchant spirit of the city boils down to.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ookini",
+   "name": "\"Ookini\"",
+   "kind": "saying",
+   "summary": "Osaka-ben for thank you, still heard from older shopkeepers and taxi drivers.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nande-ya-nen",
+   "name": "\"Nande ya nen\"",
+   "kind": "saying",
+   "summary": "The comedian's \"what do you mean?!\", the tsukkomi line everyone in Osaka uses to snap back at nonsense.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mokarimakka",
+   "name": "\"Mokarimakka?\" \"Bochi bochi denna\"",
+   "kind": "saying",
+   "summary": "The merchants' joke greeting, \"making money?\" answered with \"so-so\", said half in earnest.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "honma",
+   "name": "\"Honma\" and \"akan\"",
+   "kind": "saying",
+   "summary": "Osaka-ben for \"really\" and \"no good\", used in every second sentence.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kuidaore",
+   "name": "Kuidaore",
+   "kind": "custom",
+   "summary": "Osaka's motto of eating until you drop, or eating yourself into ruin: food is where the money goes. Its mascot, Kuidaore Taro, a drum-beating clown doll, stands outside a Dotonbori building.",
+   "places": [
+    "dotonbori"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "escalator-right",
+   "name": "Standing on the right",
+   "kind": "custom",
+   "summary": "On Osaka escalators people stand on the right and walk on the left, the opposite of Tokyo.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boke-tsukkomi",
+   "name": "Boke and tsukkomi",
+   "kind": "custom",
+   "summary": "Conversations run like manzai: one person plays the fool and the other slaps back with the correction, and a story without a punchline is complained about.",
+   "places": [
+    "namba-grand-kagetsu"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haggling",
+   "name": "\"Nanbo?\" and haggling",
+   "kind": "custom",
+   "summary": "Osakans ask \"how much?\" and push for \"makete\" (a discount), and like to tell you how cheaply they got something.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "obachan-ame-chan",
+   "name": "Osaka obachan and ame-chan",
+   "kind": "custom",
+   "summary": "The neighbourhood aunties, famous for loud prints, bicycles and handing candy (\"ame-chan\") to strangers on trains.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mamachari",
+   "name": "Mamachari",
+   "kind": "custom",
+   "summary": "Everyday city bicycles with baskets and child seats ridden on the pavements, often holding an umbrella, and parked by the hundred at every station.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "billiken",
+   "name": "Billiken",
+   "kind": "other",
+   "summary": "The grinning god of things as they ought to be; people rub the soles of his feet in Tsutenkaku for luck.",
+   "places": [
+    "tsutenkaku"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "depachika-konbini",
+   "name": "Depachika and konbini",
+   "kind": "shop",
+   "summary": "Department store basements for gifts and evening bento discounts, and a Lawson, FamilyMart or 7-Eleven on every corner for everything else.",
+   "places": [
+    "hankyu-umeda-food-hall",
+    "harukas-kintetsu-food-hall"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hanshin-tigers",
+   "name": "Hanshin Tigers",
+   "kind": "team",
+   "summary": "The baseball team followed with near-religious devotion; fans sing \"Rokko Oroshi\" at Koshien, and after the 2023 Japan Series title some jumped off Ebisubashi into the canal.",
+   "places": [
+    "glico-sign"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "orix-buffaloes",
+   "name": "Orix Buffaloes",
+   "kind": "team",
+   "summary": "Osaka's other baseball team, playing at Kyocera Dome, Pacific League champions three years running from 2021.",
+   "places": [
+    "kyocera-dome"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gamba-osaka",
+   "name": "Gamba Osaka",
+   "kind": "team",
+   "summary": "J.League football club in blue and black, playing at Panasonic Stadium Suita.",
+   "places": [
+    "panasonic-stadium-suita"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cerezo-osaka",
+   "name": "Cerezo Osaka",
+   "kind": "team",
+   "summary": "The city's pink-shirted J.League club, named for the cherry blossom, at Nagai Park.",
+   "places": [
+    "yodoko-sakura-stadium"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "expo-2025-memories",
+   "name": "Expo 2025 memories",
+   "kind": "other",
+   "summary": "The 2025 World Expo ran on the reclaimed island of Yumeshima from April to October 2025; Myaku-Myaku, its red and blue mascot, still turns up on souvenirs, and the island is now being rebuilt for a planned integrated resort.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ehomaki",
+   "name": "Ehomaki at Setsubun",
+   "kind": "custom",
+   "summary": "On Setsubun in early February people eat a whole uncut sushi roll in silence, facing the year's lucky direction, a custom spread from Osaka.",
+   "places": [],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Kissaten blend coffee",
+   "low": 450,
+   "high": 650,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Cafe latte",
+   "low": 480,
+   "high": 700,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "onigiri",
+   "item": "Konbini onigiri",
+   "low": 150,
+   "high": 250,
+   "per": "one rice ball",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "takoyaki",
+   "item": "Takoyaki",
+   "low": 500,
+   "high": 800,
+   "per": "eight pieces",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheap-lunch",
+   "item": "Cheap lunch",
+   "low": 750,
+   "high": 1200,
+   "per": "udon, curry or a set meal",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner",
+   "item": "Izakaya dinner",
+   "low": 3000,
+   "high": 5000,
+   "per": "for one, with a couple of drinks",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beer",
+   "item": "Draft beer",
+   "low": 450,
+   "high": 750,
+   "per": "a mug",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocktail",
+   "item": "Highball or cocktail",
+   "low": 400,
+   "high": 1000,
+   "per": "a glass",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries",
+   "low": 6000,
+   "high": 10000,
+   "per": "a week, one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "transit",
+   "item": "Metro fare",
+   "low": 190,
+   "high": 390,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rideshare",
+   "item": "Taxi across town",
+   "low": 1800,
+   "high": 3500,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movie",
+   "item": "Movie ticket",
+   "low": 1900,
+   "high": 2200,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "show",
+   "item": "Comedy at Namba Grand Kagetsu",
+   "low": 4000,
+   "high": 6000,
+   "per": "a seat",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sento",
+   "item": "Public bath (sento)",
+   "low": 550,
+   "high": 600,
+   "per": "one entry",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gym",
+   "item": "Gym membership",
+   "low": 7000,
+   "high": 12000,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haircut",
+   "item": "Haircut",
+   "low": 3000,
+   "high": 6000,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wage",
+   "item": "Day's pay",
+   "low": 8000,
+   "high": 12000,
+   "per": "a day's take-home for an ordinary job",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "sea",
+   "name": "Osaka Bay",
+   "side": "west",
+   "width_km": 5
+  },
+  {
+   "kind": "river",
+   "name": "Yodo River",
+   "width_km": 0.6,
+   "points": [
+    [
+     34.76,
+     135.565
+    ],
+    [
+     34.735,
+     135.53
+    ],
+    [
+     34.716,
+     135.5
+    ],
+    [
+     34.708,
+     135.47
+    ],
+    [
+     34.695,
+     135.44
+    ]
+   ]
+  },
+  {
+   "kind": "river",
+   "name": "Okawa",
+   "width_km": 0.12,
+   "points": [
+    [
+     34.712,
+     135.523
+    ],
+    [
+     34.7,
+     135.518
+    ],
+    [
+     34.693,
+     135.51
+    ],
+    [
+     34.692,
+     135.495
+    ],
+    [
+     34.689,
+     135.478
+    ],
+    [
+     34.68,
+     135.46
+    ]
+   ]
+  }
+ ]
+}

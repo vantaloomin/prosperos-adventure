@@ -1,0 +1,91 @@
+name: Release
+
+# Publishes a GitHub release for the version in Program/package.json, started by hand from the Actions
+# tab on main. The Package workflow builds and tests the Windows bundle and installer first; the release
+# is tagged on the exact commit those were built from, with notes from Program/docs/releases/v<version>.md.
+
+on:
+  workflow_dispatch:
+    inputs:
+      prerelease:
+        description: Mark the release as a pre-release
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      title: ${{ steps.version.outputs.title }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check the branch, version numbers and notes
+        id: version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then echo "Releases are made from main only." >&2; exit 1; fi
+          version=$(node -p "require('./Program/package.json').version")
+          python3 - "$version" <<'PY'
+          import re, sys, tomllib
+          version = sys.argv[1]
+          with open('Program/pyproject.toml', 'rb') as f:
+              project = tomllib.load(f)['project']['version']
+          identity = re.search(r"^VERSION = '([^']+)'", open('Program/dungeon/identity.py').read(), re.M).group(1)
+          if not version == project == identity:
+              sys.exit(f'Version mismatch: package.json {version}, pyproject.toml {project}, identity.py {identity}')
+          PY
+          test -f "Program/docs/releases/v$version.md" || { echo "Missing Program/docs/releases/v$version.md" >&2; exit 1; }
+          # Every release in a minor version shares its title, from Program/docs/releases/titles.json.
+          title=$(jq -r --arg minor "${version%.*}" '.[$minor] // empty' Program/docs/releases/titles.json)
+          test -n "$title" || { echo "Add a title for ${version%.*} to Program/docs/releases/titles.json" >&2; exit 1; }
+          if gh release view "v$version" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "v$version is already released." >&2; exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "title=v$version: $title" >> "$GITHUB_OUTPUT"
+
+  package:
+    needs: check
+    uses: ./.github/workflows/package.yml
+
+  publish:
+    needs: [check, package]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: Program/docs/releases
+      - uses: actions/download-artifact@v4
+        with:
+          name: windows-release
+          path: release
+      - name: Tag and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.check.outputs.version }}
+          TITLE: ${{ needs.check.outputs.title }}
+          PRERELEASE: ${{ inputs.prerelease }}
+        run: |
+          cd release
+          sha256sum -c SHA256SUMS.txt
+          flags=()
+          if [ "$PRERELEASE" = "true" ]; then flags+=(--prerelease); fi
+          gh release create "v$VERSION" ./* --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "$TITLE" \
+            --notes-file "../Program/docs/releases/v$VERSION.md" "${flags[@]}"

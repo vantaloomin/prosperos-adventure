@@ -1,0 +1,2059 @@
+{
+ "characteristics": [
+  {
+   "id": "str",
+   "name": "Strength",
+   "roll": "Effort",
+   "dice": "3D6"
+  },
+  {
+   "id": "con",
+   "name": "Constitution",
+   "roll": "Stamina",
+   "dice": "3D6"
+  },
+  {
+   "id": "siz",
+   "name": "Size",
+   "roll": null,
+   "dice": "2D6+6"
+  },
+  {
+   "id": "int",
+   "name": "Intelligence",
+   "roll": "Idea",
+   "dice": "2D6+6"
+  },
+  {
+   "id": "pow",
+   "name": "Power",
+   "roll": "Luck",
+   "dice": "3D6"
+  },
+  {
+   "id": "dex",
+   "name": "Dexterity",
+   "roll": "Agility",
+   "dice": "3D6"
+  },
+  {
+   "id": "cha",
+   "name": "Charisma",
+   "roll": "Charm",
+   "dice": "3D6"
+  }
+ ],
+ "skills": [
+  {
+   "id": "appraise",
+   "name": "Appraise",
+   "category": "mental",
+   "base": 15
+  },
+  {
+   "id": "art",
+   "name": "Art",
+   "category": "manipulation",
+   "base": 5
+  },
+  {
+   "id": "bargain",
+   "name": "Bargain",
+   "category": "communication",
+   "base": 5
+  },
+  {
+   "id": "brawl",
+   "name": "Brawl",
+   "category": "combat",
+   "base": 25
+  },
+  {
+   "id": "climb",
+   "name": "Climb",
+   "category": "physical",
+   "base": 40
+  },
+  {
+   "id": "command",
+   "name": "Command",
+   "category": "communication",
+   "base": 5
+  },
+  {
+   "id": "craft",
+   "name": "Craft",
+   "category": "manipulation",
+   "base": 5
+  },
+  {
+   "id": "disguise",
+   "name": "Disguise",
+   "category": "communication",
+   "base": 1
+  },
+  {
+   "id": "dodge",
+   "name": "Dodge",
+   "category": "physical",
+   "base": "dex*2"
+  },
+  {
+   "id": "etiquette",
+   "name": "Etiquette",
+   "category": "communication",
+   "base": 5
+  },
+  {
+   "id": "fast_talk",
+   "name": "Fast Talk",
+   "category": "communication",
+   "base": 5
+  },
+  {
+   "id": "fine_manipulation",
+   "name": "Fine Manipulation",
+   "category": "manipulation",
+   "base": 5
+  },
+  {
+   "id": "first_aid",
+   "name": "First Aid",
+   "category": "mental",
+   "base": 30
+  },
+  {
+   "id": "gaming",
+   "name": "Gaming",
+   "category": "mental",
+   "base": "int+pow"
+  },
+  {
+   "id": "grapple",
+   "name": "Grapple",
+   "category": "combat",
+   "base": 25
+  },
+  {
+   "id": "hide",
+   "name": "Hide",
+   "category": "physical",
+   "base": 10
+  },
+  {
+   "id": "insight",
+   "name": "Insight",
+   "category": "perception",
+   "base": 5
+  },
+  {
+   "id": "jump",
+   "name": "Jump",
+   "category": "physical",
+   "base": 25
+  },
+  {
+   "id": "knowledge_history",
+   "name": "Knowledge (History)",
+   "category": "mental",
+   "base": 5
+  },
+  {
+   "id": "knowledge_natural_history",
+   "name": "Knowledge (Natural History)",
+   "category": "mental",
+   "base": 5
+  },
+  {
+   "id": "knowledge_occult",
+   "name": "Knowledge (Occult)",
+   "category": "mental",
+   "base": 5
+  },
+  {
+   "id": "knowledge_religion",
+   "name": "Knowledge (Religion)",
+   "category": "mental",
+   "base": 5
+  },
+  {
+   "id": "knowledge_region",
+   "name": "Knowledge (Region)",
+   "category": "mental",
+   "base": 5
+  },
+  {
+   "id": "knowledge_law",
+   "name": "Knowledge (Law)",
+   "category": "mental",
+   "base": 5
+  },
+  {
+   "id": "language_own",
+   "name": "Language (Own)",
+   "category": "communication",
+   "base": "int*5"
+  },
+  {
+   "id": "language_other",
+   "name": "Language (Other)",
+   "category": "communication",
+   "base": 0
+  },
+  {
+   "id": "listen",
+   "name": "Listen",
+   "category": "perception",
+   "base": 25
+  },
+  {
+   "id": "martial_arts",
+   "name": "Martial Arts",
+   "category": "combat",
+   "base": 1
+  },
+  {
+   "id": "medicine",
+   "name": "Medicine",
+   "category": "mental",
+   "base": 5
+  },
+  {
+   "id": "navigate",
+   "name": "Navigate",
+   "category": "perception",
+   "base": 10
+  },
+  {
+   "id": "perform",
+   "name": "Perform",
+   "category": "communication",
+   "base": 5
+  },
+  {
+   "id": "persuade",
+   "name": "Persuade",
+   "category": "communication",
+   "base": 15
+  },
+  {
+   "id": "repair",
+   "name": "Repair",
+   "category": "manipulation",
+   "base": 15
+  },
+  {
+   "id": "research",
+   "name": "Research",
+   "category": "perception",
+   "base": 25
+  },
+  {
+   "id": "ride",
+   "name": "Ride",
+   "category": "physical",
+   "base": 5
+  },
+  {
+   "id": "sense",
+   "name": "Sense",
+   "category": "perception",
+   "base": 10
+  },
+  {
+   "id": "shield",
+   "name": "Shield",
+   "category": "combat",
+   "base": 15
+  },
+  {
+   "id": "sleight_of_hand",
+   "name": "Sleight of Hand",
+   "category": "manipulation",
+   "base": 5
+  },
+  {
+   "id": "spot",
+   "name": "Spot",
+   "category": "perception",
+   "base": 25
+  },
+  {
+   "id": "status",
+   "name": "Status",
+   "category": "communication",
+   "base": 15
+  },
+  {
+   "id": "stealth",
+   "name": "Stealth",
+   "category": "physical",
+   "base": 10
+  },
+  {
+   "id": "strategy",
+   "name": "Strategy",
+   "category": "mental",
+   "base": 1
+  },
+  {
+   "id": "swim",
+   "name": "Swim",
+   "category": "physical",
+   "base": 25
+  },
+  {
+   "id": "teach",
+   "name": "Teach",
+   "category": "communication",
+   "base": 10
+  },
+  {
+   "id": "throw",
+   "name": "Throw",
+   "category": "physical",
+   "base": 25
+  },
+  {
+   "id": "track",
+   "name": "Track",
+   "category": "perception",
+   "base": 10
+  },
+  {
+   "id": "sword",
+   "name": "Melee Weapon (Sword)",
+   "category": "combat",
+   "base": 15
+  },
+  {
+   "id": "axe",
+   "name": "Melee Weapon (Axe)",
+   "category": "combat",
+   "base": 15
+  },
+  {
+   "id": "dagger",
+   "name": "Melee Weapon (Dagger)",
+   "category": "combat",
+   "base": 25
+  },
+  {
+   "id": "spear",
+   "name": "Melee Weapon (Spear)",
+   "category": "combat",
+   "base": 15
+  },
+  {
+   "id": "club",
+   "name": "Melee Weapon (Club)",
+   "category": "combat",
+   "base": 25
+  },
+  {
+   "id": "mace",
+   "name": "Melee Weapon (Mace)",
+   "category": "combat",
+   "base": 25
+  },
+  {
+   "id": "hammer",
+   "name": "Melee Weapon (Hammer)",
+   "category": "combat",
+   "base": 25
+  },
+  {
+   "id": "staff",
+   "name": "Melee Weapon (Staff)",
+   "category": "combat",
+   "base": 25
+  },
+  {
+   "id": "polearm",
+   "name": "Melee Weapon (Polearm)",
+   "category": "combat",
+   "base": 15
+  },
+  {
+   "id": "flail",
+   "name": "Melee Weapon (Flail)",
+   "category": "combat",
+   "base": 10
+  },
+  {
+   "id": "bow",
+   "name": "Missile Weapon (Bow)",
+   "category": "combat",
+   "base": 10
+  },
+  {
+   "id": "crossbow",
+   "name": "Missile Weapon (Crossbow)",
+   "category": "combat",
+   "base": 25
+  },
+  {
+   "id": "sling",
+   "name": "Missile Weapon (Sling)",
+   "category": "combat",
+   "base": 5
+  }
+ ],
+ "weapons": [
+  {
+   "id": "fist",
+   "name": "Fist",
+   "skill": "brawl",
+   "damage": "1D3",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "kick",
+   "name": "Kick",
+   "skill": "brawl",
+   "damage": "1D3",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "head_butt",
+   "name": "Head Butt",
+   "skill": "brawl",
+   "damage": "1D3",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "knife",
+   "name": "Knife",
+   "skill": "dagger",
+   "damage": "1D3+1",
+   "special": "impaling",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "dagger",
+   "name": "Dagger",
+   "skill": "dagger",
+   "damage": "1D4+2",
+   "special": "impaling",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "hand_axe",
+   "name": "Axe, Hand",
+   "skill": "axe",
+   "damage": "1D6+1",
+   "special": "bleeding",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "battle_axe",
+   "name": "Axe, Battle",
+   "skill": "axe",
+   "damage": "1D8+2",
+   "special": "bleeding",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "great_axe",
+   "name": "Axe, Great",
+   "skill": "axe",
+   "damage": "2D6+2",
+   "special": "bleeding",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "wood_axe",
+   "name": "Axe, Wood",
+   "skill": "axe",
+   "damage": "1D8+2",
+   "special": "bleeding",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "light_club",
+   "name": "Club, Light",
+   "skill": "club",
+   "damage": "1D6",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "heavy_club",
+   "name": "Club, Heavy",
+   "skill": "club",
+   "damage": "1D8",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "short_spear",
+   "name": "Spear, Short",
+   "skill": "spear",
+   "damage": "1D6+1",
+   "special": "impaling",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "long_spear",
+   "name": "Spear, Long",
+   "skill": "spear",
+   "damage": "1D10+1",
+   "special": "impaling",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "light_mace",
+   "name": "Mace, Light",
+   "skill": "mace",
+   "damage": "1D6+2",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "heavy_mace",
+   "name": "Mace, Heavy",
+   "skill": "mace",
+   "damage": "1D8+2",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "war_hammer",
+   "name": "Hammer, War",
+   "skill": "hammer",
+   "damage": "1D6+2",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "great_hammer",
+   "name": "Hammer, Great",
+   "skill": "hammer",
+   "damage": "1D10+3",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "quarterstaff",
+   "name": "Staff, Quarter-",
+   "skill": "staff",
+   "damage": "1D8",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "short_sword",
+   "name": "Sword, Short",
+   "skill": "sword",
+   "damage": "1D6+1",
+   "special": "impaling",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "broadsword",
+   "name": "Sword, Broad",
+   "skill": "sword",
+   "damage": "1D8+1",
+   "special": "bleeding",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "long_sword",
+   "name": "Sword, Long",
+   "skill": "sword",
+   "damage": "1D8",
+   "special": "bleeding",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "great_sword",
+   "name": "Sword, Great",
+   "skill": "sword",
+   "damage": "2D8",
+   "special": "bleeding",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "rapier",
+   "name": "Rapier",
+   "skill": "sword",
+   "damage": "1D6+1",
+   "special": "impaling",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "saber",
+   "name": "Saber",
+   "skill": "sword",
+   "damage": "1D8+1",
+   "special": "bleeding",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "halberd",
+   "name": "Halberd",
+   "skill": "polearm",
+   "damage": "3D6",
+   "special": "bleeding",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "morningstar",
+   "name": "Flail, Morningstar",
+   "skill": "flail",
+   "damage": "1D10+1",
+   "special": "crushing",
+   "damage_modifier": "full",
+   "ranged": false
+  },
+  {
+   "id": "self_bow",
+   "name": "Bow, Self",
+   "skill": "bow",
+   "damage": "1D6+1",
+   "special": "impaling",
+   "damage_modifier": "half",
+   "ranged": true
+  },
+  {
+   "id": "long_bow",
+   "name": "Bow, Long",
+   "skill": "bow",
+   "damage": "1D8+1",
+   "special": "impaling",
+   "damage_modifier": "half",
+   "ranged": true
+  },
+  {
+   "id": "light_crossbow",
+   "name": "Crossbow, Light",
+   "skill": "crossbow",
+   "damage": "1D6+2",
+   "special": "impaling",
+   "damage_modifier": "none",
+   "ranged": true
+  },
+  {
+   "id": "heavy_crossbow",
+   "name": "Crossbow, Heavy",
+   "skill": "crossbow",
+   "damage": "2D6+2",
+   "special": "impaling",
+   "damage_modifier": "none",
+   "ranged": true
+  },
+  {
+   "id": "sling",
+   "name": "Sling",
+   "skill": "sling",
+   "damage": "1D8",
+   "special": "crushing",
+   "damage_modifier": "half",
+   "ranged": true
+  },
+  {
+   "id": "javelin",
+   "name": "Javelin",
+   "skill": "throw",
+   "damage": "1D6",
+   "special": "impaling",
+   "damage_modifier": "half",
+   "ranged": true
+  },
+  {
+   "id": "throwing_knife",
+   "name": "Knife, Throwing",
+   "skill": "throw",
+   "damage": "1D4",
+   "special": "impaling",
+   "damage_modifier": "half",
+   "ranged": true
+  }
+ ],
+ "armor": [
+  {
+   "id": "soft_leather",
+   "name": "Leather, Soft",
+   "av": 1,
+   "physical_penalty": 0
+  },
+  {
+   "id": "hard_leather",
+   "name": "Leather, Hard",
+   "av": 2,
+   "physical_penalty": 10
+  },
+  {
+   "id": "cuirbouilli",
+   "name": "Leather, Cuirbouilli",
+   "av": 3,
+   "physical_penalty": 10
+  },
+  {
+   "id": "padded",
+   "name": "Padded/Quilted",
+   "av": 1,
+   "physical_penalty": 0
+  },
+  {
+   "id": "ring",
+   "name": "Ring",
+   "av": 5,
+   "physical_penalty": 10
+  },
+  {
+   "id": "scale",
+   "name": "Scale",
+   "av": 6,
+   "physical_penalty": 15
+  },
+  {
+   "id": "lamellar",
+   "name": "Lamellar",
+   "av": 6,
+   "physical_penalty": 15
+  },
+  {
+   "id": "chain",
+   "name": "Chain",
+   "av": 7,
+   "physical_penalty": 20
+  },
+  {
+   "id": "half_plate",
+   "name": "Plate, Half",
+   "av": 7,
+   "physical_penalty": 20
+  },
+  {
+   "id": "full_plate",
+   "name": "Plate, Full",
+   "av": 8,
+   "physical_penalty": 25
+  }
+ ],
+ "damage_modifier": [
+  [
+   12,
+   "-1D6"
+  ],
+  [
+   16,
+   "-1D4"
+  ],
+  [
+   24,
+   ""
+  ],
+  [
+   32,
+   "+1D4"
+  ],
+  [
+   40,
+   "+1D6"
+  ],
+  [
+   56,
+   "+2D6"
+  ],
+  [
+   72,
+   "+3D6"
+  ],
+  [
+   88,
+   "+4D6"
+  ],
+  [
+   104,
+   "+5D6"
+  ]
+ ],
+ "professions": [
+  {
+   "id": "beggar",
+   "name": "Beggar",
+   "wealth": "destitute",
+   "skills": [
+    "bargain",
+    "fast_talk",
+    "hide",
+    "insight",
+    "knowledge_region",
+    "listen",
+    "persuade",
+    "sleight_of_hand",
+    "spot",
+    "stealth"
+   ],
+   "armor": null,
+   "weapons": []
+  },
+  {
+   "id": "crafter",
+   "name": "Crafter",
+   "wealth": "average",
+   "skills": [
+    "appraise",
+    "art",
+    "bargain",
+    "craft",
+    "spot",
+    "research",
+    "status",
+    "fine_manipulation",
+    "repair",
+    "persuade"
+   ],
+   "armor": null,
+   "weapons": []
+  },
+  {
+   "id": "criminal",
+   "name": "Criminal",
+   "wealth": "average",
+   "skills": [
+    "bargain",
+    "hide",
+    "stealth",
+    "ride",
+    "brawl",
+    "climb",
+    "fast_talk",
+    "dagger",
+    "insight",
+    "listen"
+   ],
+   "armor": "soft_leather",
+   "weapons": [
+    "knife"
+   ]
+  },
+  {
+   "id": "healer",
+   "name": "Healer (Doctor)",
+   "wealth": "average",
+   "skills": [
+    "first_aid",
+    "language_other",
+    "medicine",
+    "persuade",
+    "research",
+    "spot",
+    "insight",
+    "knowledge_natural_history",
+    "knowledge_religion",
+    "status"
+   ],
+   "armor": null,
+   "weapons": []
+  },
+  {
+   "id": "entertainer",
+   "name": "Entertainer",
+   "wealth": "poor",
+   "skills": [
+    "art",
+    "disguise",
+    "fast_talk",
+    "fine_manipulation",
+    "insight",
+    "language_other",
+    "listen",
+    "perform",
+    "persuade",
+    "sleight_of_hand"
+   ],
+   "armor": null,
+   "weapons": []
+  },
+  {
+   "id": "explorer",
+   "name": "Explorer",
+   "wealth": "affluent",
+   "skills": [
+    "climb",
+    "language_other",
+    "language_own",
+    "persuade",
+    "research",
+    "spot",
+    "knowledge_history",
+    "navigate",
+    "ride",
+    "track"
+   ],
+   "armor": "soft_leather",
+   "weapons": [
+    "dagger"
+   ]
+  },
+  {
+   "id": "farmer",
+   "name": "Farmer",
+   "wealth": "poor",
+   "skills": [
+    "bargain",
+    "craft",
+    "knowledge_natural_history",
+    "listen",
+    "spot",
+    "brawl",
+    "first_aid",
+    "knowledge_history",
+    "ride",
+    "track"
+   ],
+   "armor": null,
+   "weapons": []
+  },
+  {
+   "id": "herder",
+   "name": "Herder",
+   "wealth": "poor",
+   "skills": [
+    "craft",
+    "knowledge_natural_history",
+    "knowledge_region",
+    "listen",
+    "navigate",
+    "ride",
+    "spot",
+    "throw",
+    "track",
+    "sling"
+   ],
+   "armor": null,
+   "weapons": [
+    "sling"
+   ]
+  },
+  {
+   "id": "hunter",
+   "name": "Hunter",
+   "wealth": "poor",
+   "skills": [
+    "climb",
+    "hide",
+    "listen",
+    "navigate",
+    "spot",
+    "stealth",
+    "track",
+    "knowledge_natural_history",
+    "spear",
+    "bow"
+   ],
+   "armor": "soft_leather",
+   "weapons": [
+    "self_bow",
+    "short_spear"
+   ]
+  },
+  {
+   "id": "merchant",
+   "name": "Merchant",
+   "wealth": "affluent",
+   "skills": [
+    "appraise",
+    "bargain",
+    "fast_talk",
+    "knowledge_law",
+    "knowledge_region",
+    "persuade",
+    "research",
+    "status",
+    "insight",
+    "etiquette"
+   ],
+   "armor": null,
+   "weapons": []
+  },
+  {
+   "id": "noble",
+   "name": "Noble",
+   "wealth": "wealthy",
+   "skills": [
+    "bargain",
+    "ride",
+    "etiquette",
+    "language_own",
+    "language_other",
+    "status",
+    "sword",
+    "command",
+    "insight",
+    "persuade"
+   ],
+   "armor": "hard_leather",
+   "weapons": [
+    "rapier"
+   ]
+  },
+  {
+   "id": "priest",
+   "name": "Priest",
+   "wealth": "average",
+   "skills": [
+    "fast_talk",
+    "insight",
+    "knowledge_history",
+    "knowledge_occult",
+    "knowledge_religion",
+    "language_own",
+    "perform",
+    "persuade",
+    "listen",
+    "teach"
+   ],
+   "armor": null,
+   "weapons": []
+  },
+  {
+   "id": "sailor",
+   "name": "Sailor",
+   "wealth": "poor",
+   "skills": [
+    "climb",
+    "craft",
+    "dodge",
+    "grapple",
+    "navigate",
+    "swim",
+    "listen",
+    "spot",
+    "repair",
+    "brawl"
+   ],
+   "armor": null,
+   "weapons": [
+    "knife"
+   ]
+  },
+  {
+   "id": "scholar",
+   "name": "Scholar",
+   "wealth": "average",
+   "skills": [
+    "language_other",
+    "language_own",
+    "persuade",
+    "research",
+    "teach",
+    "knowledge_history",
+    "knowledge_natural_history",
+    "knowledge_occult",
+    "knowledge_religion",
+    "knowledge_law"
+   ],
+   "armor": null,
+   "weapons": []
+  },
+  {
+   "id": "soldier",
+   "name": "Soldier",
+   "wealth": "poor",
+   "skills": [
+    "brawl",
+    "climb",
+    "dodge",
+    "first_aid",
+    "sword",
+    "bow",
+    "shield",
+    "listen",
+    "spot",
+    "ride"
+   ],
+   "armor": "hard_leather",
+   "weapons": [
+    "broadsword",
+    "self_bow"
+   ]
+  },
+  {
+   "id": "thief",
+   "name": "Thief",
+   "wealth": "poor",
+   "skills": [
+    "appraise",
+    "dodge",
+    "fast_talk",
+    "hide",
+    "stealth",
+    "climb",
+    "fine_manipulation",
+    "listen",
+    "spot",
+    "dagger"
+   ],
+   "armor": "soft_leather",
+   "weapons": [
+    "knife"
+   ]
+  },
+  {
+   "id": "warrior",
+   "name": "Warrior",
+   "wealth": "poor",
+   "skills": [
+    "brawl",
+    "dodge",
+    "grapple",
+    "sword",
+    "bow",
+    "shield",
+    "climb",
+    "jump",
+    "spot",
+    "ride"
+   ],
+   "armor": "hard_leather",
+   "weapons": [
+    "broadsword",
+    "self_bow"
+   ]
+  },
+  {
+   "id": "wizard",
+   "name": "Wizard",
+   "wealth": "affluent",
+   "skills": [
+    "craft",
+    "insight",
+    "knowledge_occult",
+    "knowledge_history",
+    "knowledge_natural_history",
+    "language_other",
+    "listen",
+    "perform",
+    "persuade",
+    "research"
+   ],
+   "armor": null,
+   "weapons": []
+  }
+ ],
+ "personalities": [
+  {
+   "id": "brutal",
+   "name": "Brutal",
+   "about": "Thinks first of solving problems by force and brawn.",
+   "skills": [
+    "brawl",
+    "climb",
+    "dodge",
+    "grapple",
+    "insight",
+    "jump",
+    "ride",
+    "sense",
+    "stealth",
+    "swim",
+    "throw",
+    "combat",
+    "combat"
+   ]
+  },
+  {
+   "id": "skilled",
+   "name": "Skilled",
+   "about": "Believes technique, craft and expertise are the secrets of success.",
+   "skills": [
+    "appraise",
+    "craft",
+    "disguise",
+    "dodge",
+    "fine_manipulation",
+    "first_aid",
+    "knowledge_natural_history",
+    "navigate",
+    "ride",
+    "sleight_of_hand",
+    "stealth",
+    "combat"
+   ]
+  },
+  {
+   "id": "cunning",
+   "name": "Cunning",
+   "about": "First tries to outsmart an opponent to gain an advantage.",
+   "skills": [
+    "appraise",
+    "bargain",
+    "disguise",
+    "insight",
+    "knowledge_history",
+    "knowledge_region",
+    "listen",
+    "research",
+    "sense",
+    "spot",
+    "stealth",
+    "combat"
+   ]
+  },
+  {
+   "id": "charming",
+   "name": "Charming",
+   "about": "Enjoys persuading other people to do the work, while they make the decisions.",
+   "skills": [
+    "appraise",
+    "bargain",
+    "command",
+    "etiquette",
+    "fast_talk",
+    "insight",
+    "perform",
+    "persuade",
+    "language_other",
+    "language_own",
+    "sense",
+    "status",
+    "combat"
+   ]
+  }
+ ],
+ "foes": [
+  {
+   "id": "thug",
+   "name": "Thug",
+   "characteristics": {
+    "str": 16,
+    "con": 14,
+    "siz": 15,
+    "int": 10,
+    "pow": 10,
+    "dex": 12,
+    "cha": 11
+   },
+   "hp": 15,
+   "armor": 1,
+   "dodge": 35,
+   "attacks": [
+    {
+     "name": "Cudgel",
+     "skill": 50,
+     "damage": "1D6",
+     "damage_modifier": "full",
+     "special": "crushing"
+    },
+    {
+     "name": "Fist",
+     "skill": 50,
+     "damage": "1D3",
+     "damage_modifier": "full",
+     "special": "crushing"
+    }
+   ],
+   "damage_modifier": "+1D4"
+  },
+  {
+   "id": "knight",
+   "name": "Knight",
+   "characteristics": {
+    "str": 15,
+    "con": 15,
+    "siz": 15,
+    "int": 11,
+    "pow": 12,
+    "dex": 15,
+    "cha": 14
+   },
+   "hp": 15,
+   "armor": 10,
+   "dodge": 50,
+   "attacks": [
+    {
+     "name": "Long Sword",
+     "skill": 75,
+     "damage": "1D8",
+     "damage_modifier": "full",
+     "special": "bleeding"
+    }
+   ],
+   "damage_modifier": "+1D4"
+  },
+  {
+   "id": "viking",
+   "name": "Viking",
+   "characteristics": {
+    "str": 15,
+    "con": 14,
+    "siz": 15,
+    "int": 11,
+    "pow": 11,
+    "dex": 13,
+    "cha": 12
+   },
+   "hp": 15,
+   "armor": 7,
+   "dodge": 40,
+   "attacks": [
+    {
+     "name": "Broad Sword",
+     "skill": 65,
+     "damage": "1D8+1",
+     "damage_modifier": "full",
+     "special": "bleeding"
+    }
+   ],
+   "damage_modifier": "+1D4"
+  },
+  {
+   "id": "pirate",
+   "name": "Pirate",
+   "characteristics": {
+    "str": 14,
+    "con": 15,
+    "siz": 13,
+    "int": 11,
+    "pow": 10,
+    "dex": 14,
+    "cha": 13
+   },
+   "hp": 14,
+   "armor": 0,
+   "dodge": 40,
+   "attacks": [
+    {
+     "name": "Cutlass (Saber)",
+     "skill": 55,
+     "damage": "1D8+1",
+     "damage_modifier": "full",
+     "special": "bleeding"
+    }
+   ],
+   "damage_modifier": "+1D4"
+  },
+  {
+   "id": "tribal_warrior",
+   "name": "Tribal Warrior",
+   "characteristics": {
+    "str": 16,
+    "con": 14,
+    "siz": 15,
+    "int": 11,
+    "pow": 13,
+    "dex": 16,
+    "cha": 13
+   },
+   "hp": 15,
+   "armor": 1,
+   "dodge": 40,
+   "attacks": [
+    {
+     "name": "Short Spear",
+     "skill": 65,
+     "damage": "1D6+1",
+     "damage_modifier": "full",
+     "special": "impaling"
+    }
+   ],
+   "damage_modifier": "+1D4"
+  },
+  {
+   "id": "priest",
+   "name": "Priest",
+   "characteristics": {
+    "str": 14,
+    "con": 13,
+    "siz": 14,
+    "int": 15,
+    "pow": 16,
+    "dex": 13,
+    "cha": 15
+   },
+   "hp": 14,
+   "armor": 8,
+   "dodge": 40,
+   "attacks": [
+    {
+     "name": "Morningstar Flail",
+     "skill": 50,
+     "damage": "1D10+1",
+     "damage_modifier": "full",
+     "special": "crushing"
+    }
+   ],
+   "damage_modifier": "+1D4"
+  },
+  {
+   "id": "sorcerer",
+   "name": "Sorcerer",
+   "characteristics": {
+    "str": 9,
+    "con": 11,
+    "siz": 15,
+    "int": 19,
+    "pow": 21,
+    "dex": 14,
+    "cha": 12
+   },
+   "hp": 13,
+   "armor": 0,
+   "dodge": 40,
+   "attacks": [
+    {
+     "name": "Dagger",
+     "skill": 35,
+     "damage": "1D4+2",
+     "damage_modifier": "full",
+     "special": "impaling"
+    }
+   ],
+   "damage_modifier": ""
+  },
+  {
+   "id": "bear",
+   "name": "Bear",
+   "characteristics": {
+    "str": 20,
+    "con": 13,
+    "siz": 20,
+    "int": 4,
+    "pow": 10,
+    "dex": 10
+   },
+   "hp": 17,
+   "armor": 3,
+   "dodge": 0,
+   "attacks": [
+    {
+     "name": "Claw",
+     "skill": 25,
+     "damage": "1D6",
+     "damage_modifier": "full",
+     "special": "bleeding"
+    },
+    {
+     "name": "Bite",
+     "skill": 25,
+     "damage": "1D10",
+     "damage_modifier": "none",
+     "special": "bleeding"
+    }
+   ],
+   "damage_modifier": "+2D6"
+  },
+  {
+   "id": "wolf",
+   "name": "Wolf",
+   "characteristics": {
+    "str": 13,
+    "con": 10,
+    "siz": 8,
+    "int": 4,
+    "pow": 10,
+    "dex": 13
+   },
+   "hp": 9,
+   "armor": 2,
+   "dodge": 35,
+   "attacks": [
+    {
+     "name": "Bite",
+     "skill": 30,
+     "damage": "1D8",
+     "damage_modifier": "half",
+     "special": "bleeding"
+    }
+   ],
+   "damage_modifier": ""
+  },
+  {
+   "id": "dog",
+   "name": "Dog",
+   "characteristics": {
+    "str": 7,
+    "con": 10,
+    "siz": 4,
+    "int": 4,
+    "pow": 7,
+    "dex": 13
+   },
+   "hp": 7,
+   "armor": 0,
+   "dodge": 0,
+   "attacks": [
+    {
+     "name": "Bite",
+     "skill": 30,
+     "damage": "1D6",
+     "damage_modifier": "half",
+     "special": "bleeding"
+    }
+   ],
+   "damage_modifier": "-1D4"
+  },
+  {
+   "id": "horse",
+   "name": "Horse",
+   "characteristics": {
+    "str": 28,
+    "con": 13,
+    "siz": 26,
+    "int": 4,
+    "pow": 10,
+    "dex": 10
+   },
+   "hp": 20,
+   "armor": 1,
+   "dodge": 45,
+   "attacks": [
+    {
+     "name": "Kick",
+     "skill": 20,
+     "damage": "2D8",
+     "damage_modifier": "full",
+     "special": "crushing"
+    }
+   ],
+   "damage_modifier": "+2D6"
+  },
+  {
+   "id": "ghoul",
+   "name": "Ghoul",
+   "characteristics": {
+    "str": 14,
+    "con": 10,
+    "siz": 13,
+    "int": 10,
+    "pow": 10,
+    "dex": 10
+   },
+   "hp": 12,
+   "armor": 0,
+   "dodge": 45,
+   "attacks": [
+    {
+     "name": "Claw",
+     "skill": 30,
+     "damage": "1D6",
+     "damage_modifier": "full",
+     "special": "bleeding"
+    },
+    {
+     "name": "Bite",
+     "skill": 30,
+     "damage": "1D6",
+     "damage_modifier": "full",
+     "special": "bleeding"
+    }
+   ],
+   "damage_modifier": "+1D4"
+  },
+  {
+   "id": "skeleton",
+   "name": "Skeleton",
+   "characteristics": {
+    "str": 10,
+    "siz": 13,
+    "int": 10,
+    "pow": 1,
+    "dex": 10
+   },
+   "hp": 13,
+   "armor": 0,
+   "dodge": 40,
+   "attacks": [
+    {
+     "name": "Broadsword",
+     "skill": 55,
+     "damage": "1D8+1",
+     "damage_modifier": "full",
+     "special": "bleeding"
+    }
+   ],
+   "damage_modifier": ""
+  },
+  {
+   "id": "zombie",
+   "name": "Zombie",
+   "characteristics": {
+    "str": 16,
+    "con": 16,
+    "siz": 13,
+    "int": 6,
+    "pow": 1,
+    "dex": 7,
+    "cha": 3
+   },
+   "hp": 14,
+   "armor": 0,
+   "dodge": 0,
+   "attacks": [
+    {
+     "name": "Large Club",
+     "skill": 35,
+     "damage": "1D8+1",
+     "damage_modifier": "full",
+     "special": "crushing"
+    },
+    {
+     "name": "Bite",
+     "skill": 30,
+     "damage": "1D3",
+     "damage_modifier": "half",
+     "special": "bleeding"
+    }
+   ],
+   "damage_modifier": "+1D4"
+  }
+ ],
+ "major_wounds": [
+  {
+   "up_to": 10,
+   "characteristic": "dex",
+   "loss": "1D3",
+   "text": "A crippling leg wound: a limp, a stiff knee or a twisted back.",
+   "can_fight": true
+  },
+  {
+   "up_to": 20,
+   "characteristic": "cha",
+   "loss": "1D3",
+   "text": "A disfiguring wound: a cut-away ear or nose, or a livid scar that cannot be hidden.",
+   "can_fight": true
+  },
+  {
+   "up_to": 30,
+   "characteristic": "str",
+   "loss": "1D3",
+   "text": "Wrist, hand or muscle cut away, or fingers severed; no shield for now.",
+   "can_fight": true
+  },
+  {
+   "up_to": 40,
+   "characteristic": "con",
+   "loss": "1D3",
+   "text": "A wound to the vitals: a punctured lung, a gut wound that festers.",
+   "can_fight": true
+  },
+  {
+   "up_to": 50,
+   "characteristic": "int",
+   "loss": "1D3",
+   "text": "A blow to the head: hearing, sight or speech dulled.",
+   "can_fight": true
+  },
+  {
+   "up_to": 60,
+   "characteristic": "dex",
+   "loss": "1D6",
+   "text": "The loss of an arm or a leg.",
+   "can_fight": false
+  },
+  {
+   "up_to": 70,
+   "characteristic": "cha",
+   "loss": "1D6",
+   "text": "Worse mutilations, visible deformities that cannot be disguised.",
+   "can_fight": true
+  },
+  {
+   "up_to": 80,
+   "characteristic": "str",
+   "loss": "1D6",
+   "text": "Mutilating cuts and losses of muscle.",
+   "can_fight": true
+  },
+  {
+   "up_to": 90,
+   "characteristic": "con",
+   "loss": "1D6",
+   "text": "Grievous wounds to the vitals.",
+   "can_fight": false
+  },
+  {
+   "up_to": 92,
+   "characteristic": "cha",
+   "loss": "1D6",
+   "text": "Bad facial and vocal cord injuries.",
+   "can_fight": true
+  },
+  {
+   "up_to": 96,
+   "characteristic": "dex",
+   "loss": "1D6",
+   "text": "Broken bones and severed nerves: one arm only from now on.",
+   "can_fight": true
+  },
+  {
+   "up_to": 98,
+   "characteristic": "dex",
+   "loss": "1D6",
+   "text": "Nerve damage to both arms: neither hand can hold anything.",
+   "can_fight": false
+  },
+  {
+   "up_to": 100,
+   "characteristic": "con",
+   "loss": "1D3",
+   "text": "Mutilated with vicious wounds (CHA, DEX and CON).",
+   "can_fight": false
+  }
+ ],
+ "creation": {
+  "points": 24,
+  "start": 10,
+  "least": 3,
+  "most": 21,
+  "costly": [
+   "dex",
+   "int",
+   "pow"
+  ],
+  "costly_price": 3,
+  "professional_points": 250,
+  "professional_cap": 75,
+  "personal_per_int": 10,
+  "personality_points": 20
+ },
+ "magic": [
+  {
+   "id": "blast",
+   "name": "Blast",
+   "range": "100 meters",
+   "duration": "Instantaneous",
+   "cost": 3,
+   "effect": "damage",
+   "armor": true,
+   "summary": "A beam of magic energy at one target: 1D6 damage per level. Armour absorbs it; it can be dodged."
+  },
+  {
+   "id": "change",
+   "name": "Change",
+   "range": "30 meters",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Transforms 3 SIZ of a being or object per level into another shape of the same kind; an unwilling target resists with POW."
+  },
+  {
+   "id": "conjure_elemental",
+   "name": "Conjure Elemental",
+   "range": "12 meters",
+   "duration": "10 combat rounds",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Summons or dismisses an elemental of one type (air, earth, fire, water); 1 power point per point of its POW."
+  },
+  {
+   "id": "control",
+   "name": "Control",
+   "range": "100 meters",
+   "duration": "10 combat rounds",
+   "cost": 3,
+   "effect": "control",
+   "armor": false,
+   "summary": "Controls one intelligent being's actions per level, overcoming its POW with the magician's; the magician must concentrate."
+  },
+  {
+   "id": "countermagic",
+   "name": "Countermagic",
+   "range": "100 meters",
+   "duration": "5 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "A shield that turns incoming spells back on their caster unless their level overcomes its own."
+  },
+  {
+   "id": "dark",
+   "name": "Dark",
+   "range": "100 meters",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Absolute darkness in a circle 3 meters in radius plus 3 meters per level, cast on an object."
+  },
+  {
+   "id": "diminish",
+   "name": "Diminish",
+   "range": "Touch",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Lowers one of the target's STR, CON, SIZ or DEX by 1 per level, overcoming its POW."
+  },
+  {
+   "id": "dispel",
+   "name": "Dispel",
+   "range": "100 meters",
+   "duration": "Instantaneous",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Ends a spell in effect if its level overcomes the spell's; can banish lesser summoned beings."
+  },
+  {
+   "id": "dull",
+   "name": "Dull",
+   "range": "100 meters",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "dull",
+   "armor": false,
+   "summary": "Takes 5% off a weapon's attack chance and 1 off its damage per level, or spreads over several weapons."
+  },
+  {
+   "id": "enhance",
+   "name": "Enhance",
+   "range": "Touch",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Raises one of the target's STR, CON, SIZ or DEX by 1 per level."
+  },
+  {
+   "id": "fire",
+   "name": "Fire",
+   "range": "100 meters",
+   "duration": "Instantaneous",
+   "cost": 3,
+   "effect": "damage",
+   "armor": true,
+   "summary": "A pillar of fire: 1D6 fire damage per level. Armour absorbs it; it can be dodged."
+  },
+  {
+   "id": "frost",
+   "name": "Frost",
+   "range": "100 meters",
+   "duration": "Instantaneous",
+   "cost": 3,
+   "effect": "damage",
+   "armor": true,
+   "summary": "A pillar of cold: 1D6 cold damage per level. Armour absorbs it; it can be dodged."
+  },
+  {
+   "id": "heal",
+   "name": "Heal",
+   "range": "Touch",
+   "duration": "Instantaneous",
+   "cost": 3,
+   "effect": "heal",
+   "armor": false,
+   "summary": "Heals 1D6 hit points per level; it restores no lost limb."
+  },
+  {
+   "id": "illusion",
+   "name": "Illusion",
+   "range": "30 meters",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Creates the look of an object, 3 SIZ per level: sight only, insubstantial."
+  },
+  {
+   "id": "invisibility",
+   "name": "Invisibility",
+   "range": "Touch",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Makes 3 SIZ per level of a being or object invisible while the magician concentrates."
+  },
+  {
+   "id": "lift",
+   "name": "Lift",
+   "range": "100 meters",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Lifts and moves 3 SIZ per level through the air, the magician too."
+  },
+  {
+   "id": "light",
+   "name": "Light",
+   "range": "100 meters",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Torchlight in a circle 3 meters per level in radius, cast on an object."
+  },
+  {
+   "id": "lightning",
+   "name": "Lightning",
+   "range": "60 meters",
+   "duration": "Instantaneous",
+   "cost": 3,
+   "effect": "damage",
+   "armor": false,
+   "summary": "A lightning bolt: 1D6 damage per level straight to the target's hit points."
+  },
+  {
+   "id": "perception",
+   "name": "Perception",
+   "range": "60 meters",
+   "duration": "Instantaneous",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Points out the nearest thing of one kind (a trap, a secret door, gold, magic) per level."
+  },
+  {
+   "id": "protection",
+   "name": "Protection",
+   "range": "100 meters",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "protection",
+   "armor": false,
+   "summary": "Adds 1 armour point per level against physical attacks."
+  },
+  {
+   "id": "resistance",
+   "name": "Resistance",
+   "range": "Touch",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Takes 1 per level off damage from heat, cold and the elements."
+  },
+  {
+   "id": "seal",
+   "name": "Seal",
+   "range": "Touch",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Joins two fitted objects (a door in its frame, a lid on a box) as one."
+  },
+  {
+   "id": "sharpen",
+   "name": "Sharpen",
+   "range": "100 meters",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "sharpen",
+   "armor": false,
+   "summary": "Adds 5% to a weapon's attack chance and 1 to its damage per level."
+  },
+  {
+   "id": "speak_to_mind",
+   "name": "Speak to Mind",
+   "range": "100 meters",
+   "duration": "10 combat rounds",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Mind-to-mind speech with one other mind per level, whatever its language."
+  },
+  {
+   "id": "teleport",
+   "name": "Teleport",
+   "range": "1,000 meters",
+   "duration": "Instantaneous",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Moves 3 SIZ per level of a whole object or being anywhere within range."
+  },
+  {
+   "id": "unseal",
+   "name": "Unseal",
+   "range": "Touch",
+   "duration": "Instantaneous",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Opens unlocked doors and boxes and drops weapons from their sheaths; cancels Seal."
+  },
+  {
+   "id": "vision",
+   "name": "Vision",
+   "range": "100/10 meters",
+   "duration": "10 combat rounds",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Sees and hears what happens in a place in range, or a day further into its past per extra level."
+  },
+  {
+   "id": "wall",
+   "name": "Wall",
+   "range": "12 meters",
+   "duration": "15 minutes",
+   "cost": 1,
+   "effect": "other",
+   "armor": false,
+   "summary": "Raises a wall of the earth, stone or wood at hand, 1 square meter per level, with 30 hit points."
+  },
+  {
+   "id": "ward",
+   "name": "Ward",
+   "range": "Touch",
+   "duration": "Permanent",
+   "cost": 3,
+   "effect": "other",
+   "armor": false,
+   "summary": "Four objects guard a square: power crossing it meets Countermagic, and anything crossing it Blast."
+  },
+  {
+   "id": "wounding",
+   "name": "Wounding",
+   "range": "Touch",
+   "duration": "Instantaneous",
+   "cost": 3,
+   "effect": "damage",
+   "armor": false,
+   "summary": "A touch that does 1D6 magic damage per level; armour does not stop it."
+  }
+ ],
+ "magicians": {
+  "about": "Professions that begin as magicians at the Normal power level: four spells, each a skill starting at INT x1, that the profession's points also go to (the spells code picks).",
+  "wizard": [
+   "blast",
+   "protection",
+   "light",
+   "perception"
+  ],
+  "priest": [
+   "heal",
+   "protection",
+   "light",
+   "dispel"
+  ]
+ }
+}

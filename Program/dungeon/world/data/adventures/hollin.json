@@ -1,0 +1,103 @@
+{
+  "quests": [
+    {
+      "id": "the-rats-in-the-mill",
+      "title": "Rats in the mill cellar",
+      "known": true,
+      "days": null,
+      "hook": "Goodwife Marra on her bench by the mill wants the rats cleared out of her dry cellar, the same starter quest BABEL's beta gave every climber who came through Hollin. She pays in honey.",
+      "truth": "The rats are people: Marked refugees hiding in the dry cellar Aldo built before he went in the river, waiting for the cage down. Rats is the word for the Close's ears. The Close pays a Talent a head for Marked found on its side of the ford, more for the furred. Marra fears most that someone she has hidden will be the one who gives her up. Whoever drew Varrow for the build knew the real floor.",
+      "missed": "",
+      "places": [
+        "the-mill",
+        "the-ford",
+        "the-pens",
+        "the-landing-alehouse"
+      ]
+    },
+    {
+      "id": "the-patch-before-the-cold",
+      "title": "The patch before the cold",
+      "known": true,
+      "days": 21,
+      "hook": "Captain Berit Hode wants hands on the Reachwall: the patch by the north tower, rebuilt badly three winters ago, has to be laid right before the first frost, and Orla the mason says it cannot be done in time. The giants have started standing in the ditch below it, as if to talk.",
+      "truth": "Three winters ago Teague sat at the Reach giants' fire and promised to open the Margrave's stair so they could climb out. He went up it with Darla Kinney and never came down, and two nights later the Reach came over the north tower looking for him and killed twelve men: the patch is that breach. The giants at the ditch want the promise kept, and some of them say Brother to a climber they look at too long. If the Keep keeps the Close's gift on the Wall past the first frost against the Close's will, the autumn tithe doubles to forty souls.",
+      "missed": "The first frost came with the patch still open. The Reach came through it at night, and the Keep counted its dead in the yard where Gil Fenwick buried six the last time.",
+      "places": [
+        "the-patch",
+        "the-rampart",
+        "the-ditch",
+        "the-drill-ground",
+        "the-keep-hall"
+      ]
+    },
+    {
+      "id": "the-autumn-weighing",
+      "title": "The autumn weighing",
+      "known": false,
+      "days": 30,
+      "hook": "When the cold comes, the Close weighs Hollin's people on the Scales in Saint Aurel's nave. Nobody in the Bell and Bushel asks where the ones found wanting go.",
+      "truth": "Since the Margrave's grandfather the Close has kept its gift on the Keep's Wall, and in return it weighs Hollin every autumn. Those found wanting go to the Pens under Saint Aurel and down the cage in spring: the Varrow cage trade, whose buyers pay the Archdeacon in Talents. A girl from that trade dances at the Lantern Room on the Gilded Bazaar. The Margrave has sent forty-one people down his own bone-cellar stair in fourteen years, people the Scales would have taken.",
+      "missed": "The weighing was done. Twenty of Hollin went to the Pens to wait for the spring cage, and the Bell and Bushel was quiet for a week.",
+      "places": [
+        "saint-aurel",
+        "the-pens",
+        "the-bone-cellar",
+        "the-keep-hall"
+      ]
+    }
+  ],
+  "dangers": [
+    {
+      "place": "the-ditch",
+      "action": "stand in the ditch below the patch and live",
+      "difficulty": "hard",
+      "threats": [
+        "A giant's shadow falls over them, and the giant only looks, for a long time, at them alone.",
+        "Stones come down off the rampart: the company thought they were the Reach.",
+        {
+          "text": "A Reach giant climbs down into the ditch, and it has not come to talk.",
+          "foe": {
+            "name": "Reach giant",
+            "count": 1,
+            "vitality": 20,
+            "resolve": 18,
+            "weapon": 2,
+            "wants": "kill",
+            "srd52": "hill-giant"
+          }
+        }
+      ]
+    },
+    {
+      "place": "burners-wood",
+      "action": "pass through Burners' Wood unseen",
+      "difficulty": "normal",
+      "threats": [
+        "A cart waits in a charcoal clearing, off the road, with a cage on the back and two men smoking by it.",
+        "Smoke in the eyes and the throat from a clamp burning wrong: an hour lost coughing.",
+        {
+          "text": "The cage men by the cart decide whoever saw them is coming along.",
+          "foe": {
+            "name": "cage trader",
+            "count": 2,
+            "vitality": 12,
+            "resolve": 10,
+            "weapon": 1,
+            "wants": "capture"
+          }
+        }
+      ]
+    },
+    {
+      "place": "the-bone-cellar",
+      "action": "find a way through the bone-cellar in the dark",
+      "difficulty": "hard",
+      "threats": [
+        "The lamp goes out, and the stair they came down is not where they left it.",
+        "Bones shift in the niches as they pass, as though something lay down there to sleep.",
+        "Fresh boot prints in the dust, going down, none coming up."
+      ]
+    }
+  ]
+}

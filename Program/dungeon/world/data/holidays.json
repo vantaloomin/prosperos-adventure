@@ -1,0 +1,1433 @@
+{
+ "schema_version": 1,
+ "source": {
+  "kind": "curated",
+  "title": "Holiday calendars written for Prospero Dungeon",
+  "license": "CC0-1.0",
+  "retrieved": "2026-10-05",
+  "note": "Public holidays and observances from general knowledge. Moved weekend dates (\"observed\" and substitute days) are not included. Korean lunar holidays follow KASI tables and Japan's equinox days the almanac formula, for 2024-2040."
+ },
+ "calendars": {
+  "us": {
+   "name": "United States (current)",
+   "holidays": [
+    {
+     "id": "new-years-day",
+     "name": "New Year's Day",
+     "kind": "public",
+     "month": 1,
+     "day": 1,
+     "summary": "A slow day after the night before; most things closed."
+    },
+    {
+     "id": "mlk-day",
+     "name": "Martin Luther King Jr. Day",
+     "kind": "public",
+     "month": 1,
+     "weekday": 0,
+     "nth": 3,
+     "summary": "Federal holiday with days of service and marches; schools and government offices close."
+    },
+    {
+     "id": "valentines-day",
+     "name": "Valentine's Day",
+     "kind": "observance",
+     "month": 2,
+     "day": 14,
+     "summary": "Restaurants book up; cards and flowers."
+    },
+    {
+     "id": "presidents-day",
+     "name": "Presidents' Day",
+     "kind": "public",
+     "month": 2,
+     "weekday": 0,
+     "nth": 3,
+     "summary": "Federal holiday; government offices and many schools close, and stores run sales."
+    },
+    {
+     "id": "st-patricks-day",
+     "name": "St. Patrick's Day",
+     "kind": "observance",
+     "month": 3,
+     "day": 17,
+     "summary": "Green beer, parades and crowded pubs."
+    },
+    {
+     "id": "easter",
+     "name": "Easter Sunday",
+     "kind": "observance",
+     "easter": 0,
+     "summary": "Church services, egg hunts and family brunch."
+    },
+    {
+     "id": "mothers-day",
+     "name": "Mother's Day",
+     "kind": "observance",
+     "month": 5,
+     "weekday": 6,
+     "nth": 2,
+     "summary": "Brunch reservations and calls home."
+    },
+    {
+     "id": "memorial-day",
+     "name": "Memorial Day",
+     "kind": "public",
+     "month": 5,
+     "weekday": 0,
+     "nth": -1,
+     "summary": "The unofficial start of summer: cookouts, beaches and remembrance of the war dead."
+    },
+    {
+     "id": "fathers-day",
+     "name": "Father's Day",
+     "kind": "observance",
+     "month": 6,
+     "weekday": 6,
+     "nth": 3,
+     "summary": "Cookouts and calls home."
+    },
+    {
+     "id": "juneteenth",
+     "name": "Juneteenth",
+     "kind": "public",
+     "month": 6,
+     "day": 19,
+     "summary": "Marks the end of slavery in the United States; festivals and cookouts."
+    },
+    {
+     "id": "independence-day",
+     "name": "Independence Day",
+     "kind": "public",
+     "month": 7,
+     "day": 4,
+     "summary": "Fireworks, cookouts and a day off."
+    },
+    {
+     "id": "labor-day",
+     "name": "Labor Day",
+     "kind": "public",
+     "month": 9,
+     "weekday": 0,
+     "nth": 1,
+     "summary": "The unofficial end of summer and a long weekend."
+    },
+    {
+     "id": "halloween",
+     "name": "Halloween",
+     "kind": "observance",
+     "month": 10,
+     "day": 31,
+     "summary": "Costumes, trick-or-treating and parties."
+    },
+    {
+     "id": "veterans-day",
+     "name": "Veterans Day",
+     "kind": "public",
+     "month": 11,
+     "day": 11,
+     "summary": "Federal holiday; government offices and banks close."
+    },
+    {
+     "id": "thanksgiving",
+     "name": "Thanksgiving",
+     "kind": "public",
+     "month": 11,
+     "weekday": 3,
+     "nth": 4,
+     "summary": "A big family meal, football and travel; most things close."
+    },
+    {
+     "id": "christmas-eve",
+     "name": "Christmas Eve",
+     "kind": "observance",
+     "month": 12,
+     "day": 24,
+     "summary": "Last-minute shopping and family gatherings; many offices close early."
+    },
+    {
+     "id": "christmas",
+     "name": "Christmas Day",
+     "kind": "public",
+     "month": 12,
+     "day": 25,
+     "summary": "Presents and family; almost everything closes."
+    },
+    {
+     "id": "new-years-eve",
+     "name": "New Year's Eve",
+     "kind": "observance",
+     "month": 12,
+     "day": 31,
+     "summary": "Parties and countdowns at midnight."
+    }
+   ]
+  },
+  "uk": {
+   "name": "United Kingdom (England and Wales, current)",
+   "holidays": [
+    {
+     "id": "new-years-day",
+     "name": "New Year's Day",
+     "kind": "public",
+     "month": 1,
+     "day": 1,
+     "summary": "A bank holiday: a slow, hungover day, a walk and the football."
+    },
+    {
+     "id": "valentines-day",
+     "name": "Valentine's Day",
+     "kind": "observance",
+     "month": 2,
+     "day": 14,
+     "summary": "Restaurants book up; cards, roses and set menus."
+    },
+    {
+     "id": "pancake-day",
+     "name": "Pancake Day (Shrove Tuesday)",
+     "kind": "observance",
+     "easter": -47,
+     "summary": "Pancakes with lemon and sugar, and pancake races in some towns."
+    },
+    {
+     "id": "mothering-sunday",
+     "name": "Mothering Sunday",
+     "kind": "observance",
+     "easter": -21,
+     "summary": "Flowers, cards and Sunday lunch out with mum; pubs and restaurants are full."
+    },
+    {
+     "id": "st-patricks-day",
+     "name": "St Patrick's Day",
+     "kind": "observance",
+     "month": 3,
+     "day": 17,
+     "summary": "Guinness, parades and crowded Irish pubs."
+    },
+    {
+     "id": "good-friday",
+     "name": "Good Friday",
+     "kind": "public",
+     "easter": -2,
+     "summary": "A bank holiday: hot cross buns and the start of a four-day weekend."
+    },
+    {
+     "id": "easter",
+     "name": "Easter Sunday",
+     "kind": "observance",
+     "easter": 0,
+     "summary": "Chocolate eggs, egg hunts, church for some and a roast lunch."
+    },
+    {
+     "id": "easter-monday",
+     "name": "Easter Monday",
+     "kind": "public",
+     "easter": 1,
+     "summary": "A bank holiday in England and Wales: garden centres, DIY and day trips."
+    },
+    {
+     "id": "st-georges-day",
+     "name": "St George's Day",
+     "kind": "observance",
+     "month": 4,
+     "day": 23,
+     "summary": "England's saint's day: a few flags and the odd pub event, and an ordinary working day."
+    },
+    {
+     "id": "early-may-bank-holiday",
+     "name": "Early May bank holiday",
+     "kind": "public",
+     "month": 5,
+     "weekday": 0,
+     "nth": 1,
+     "summary": "A long weekend: May Day fairs, morris dancing and the first barbecues."
+    },
+    {
+     "id": "spring-bank-holiday",
+     "name": "Spring bank holiday",
+     "kind": "public",
+     "month": 5,
+     "weekday": 0,
+     "nth": -1,
+     "summary": "A long weekend at the end of May: traffic to the coast and half-term for schools."
+    },
+    {
+     "id": "fathers-day",
+     "name": "Father's Day",
+     "kind": "observance",
+     "month": 6,
+     "weekday": 6,
+     "nth": 3,
+     "summary": "Cards, a pub lunch and socks."
+    },
+    {
+     "id": "summer-bank-holiday",
+     "name": "Summer bank holiday",
+     "kind": "public",
+     "month": 8,
+     "weekday": 0,
+     "nth": -1,
+     "summary": "The last long weekend of summer in England and Wales: festivals, Notting Hill Carnival in London and packed beaches."
+    },
+    {
+     "id": "halloween",
+     "name": "Halloween",
+     "kind": "observance",
+     "month": 10,
+     "day": 31,
+     "summary": "Costumes, trick-or-treating and fancy-dress parties."
+    },
+    {
+     "id": "bonfire-night",
+     "name": "Bonfire Night",
+     "kind": "observance",
+     "month": 11,
+     "day": 5,
+     "summary": "Guy Fawkes Night: bonfires, fireworks displays in the parks, sparklers and toffee apples."
+    },
+    {
+     "id": "armistice-day",
+     "name": "Armistice Day",
+     "kind": "observance",
+     "month": 11,
+     "day": 11,
+     "summary": "Two minutes' silence at 11 a.m. and poppies on coats."
+    },
+    {
+     "id": "remembrance-sunday",
+     "name": "Remembrance Sunday",
+     "kind": "observance",
+     "month": 11,
+     "weekday": 6,
+     "nth": 2,
+     "summary": "Wreaths laid at the Cenotaph and war memorials, and two minutes' silence at eleven."
+    },
+    {
+     "id": "christmas-eve",
+     "name": "Christmas Eve",
+     "kind": "observance",
+     "month": 12,
+     "day": 24,
+     "summary": "Last-minute shopping, the pub with friends from home and midnight Mass."
+    },
+    {
+     "id": "christmas",
+     "name": "Christmas Day",
+     "kind": "public",
+     "month": 12,
+     "day": 25,
+     "summary": "Presents, crackers, turkey, the King's speech at three and almost everything shut, trains included."
+    },
+    {
+     "id": "boxing-day",
+     "name": "Boxing Day",
+     "kind": "public",
+     "month": 12,
+     "day": 26,
+     "summary": "A bank holiday: leftovers, the sales, football and a long walk."
+    },
+    {
+     "id": "new-years-eve",
+     "name": "New Year's Eve",
+     "kind": "observance",
+     "month": 12,
+     "day": 31,
+     "summary": "Parties, the fireworks over the river at midnight and Auld Lang Syne."
+    }
+   ]
+  },
+  "south-korea": {
+   "name": "South Korea (current)",
+   "holidays": [
+    {
+     "id": "new-years-day",
+     "name": "New Year's Day",
+     "kind": "public",
+     "month": 1,
+     "day": 1,
+     "summary": "Sinjeong: watching the first sunrise of the year from a beach or peak, and tteokguk."
+    },
+    {
+     "id": "seollal-eve",
+     "name": "Seollal holiday",
+     "kind": "public",
+     "dates": {
+      "2024": "02-09",
+      "2025": "01-28",
+      "2026": "02-16",
+      "2027": "02-06",
+      "2028": "01-26",
+      "2029": "02-12",
+      "2030": "02-02",
+      "2031": "01-22",
+      "2032": "02-10",
+      "2033": "01-30",
+      "2034": "02-18",
+      "2035": "02-07",
+      "2036": "01-27",
+      "2037": "02-14",
+      "2038": "02-03",
+      "2039": "01-23",
+      "2040": "02-11"
+     },
+     "summary": "The day before Lunar New Year: the great traffic jam out of the cities and cooking jeon at home."
+    },
+    {
+     "id": "seollal",
+     "name": "Seollal (Lunar New Year)",
+     "kind": "public",
+     "dates": {
+      "2024": "02-10",
+      "2025": "01-29",
+      "2026": "02-17",
+      "2027": "02-07",
+      "2028": "01-27",
+      "2029": "02-13",
+      "2030": "02-03",
+      "2031": "01-23",
+      "2032": "02-11",
+      "2033": "01-31",
+      "2034": "02-19",
+      "2035": "02-08",
+      "2036": "01-28",
+      "2037": "02-15",
+      "2038": "02-04",
+      "2039": "01-24",
+      "2040": "02-12"
+     },
+     "summary": "Ancestral rites, tteokguk, deep bows to elders for sebae money and games of yut; most shops close."
+    },
+    {
+     "id": "seollal-after",
+     "name": "Seollal holiday",
+     "kind": "public",
+     "dates": {
+      "2024": "02-11",
+      "2025": "01-30",
+      "2026": "02-18",
+      "2027": "02-08",
+      "2028": "01-28",
+      "2029": "02-14",
+      "2030": "02-04",
+      "2031": "01-24",
+      "2032": "02-12",
+      "2033": "02-01",
+      "2034": "02-20",
+      "2035": "02-09",
+      "2036": "01-29",
+      "2037": "02-16",
+      "2038": "02-05",
+      "2039": "01-25",
+      "2040": "02-13"
+     },
+     "summary": "The last day of the New Year holiday: visiting the other side of the family and the drive home."
+    },
+    {
+     "id": "valentines-day",
+     "name": "Valentine's Day",
+     "kind": "observance",
+     "month": 2,
+     "day": 14,
+     "summary": "Women give men chocolate; cafes and convenience stores are stacked with gift boxes."
+    },
+    {
+     "id": "samiljeol",
+     "name": "Samiljeol (Independence Movement Day)",
+     "kind": "public",
+     "month": 3,
+     "day": 1,
+     "summary": "Marks the 1919 independence protests: flags on balconies and ceremonies."
+    },
+    {
+     "id": "white-day",
+     "name": "White Day",
+     "kind": "observance",
+     "month": 3,
+     "day": 14,
+     "summary": "Men return the favour with candy, flowers and dinner."
+    },
+    {
+     "id": "black-day",
+     "name": "Black Day",
+     "kind": "observance",
+     "month": 4,
+     "day": 14,
+     "summary": "Singles without a valentine meet for black-bean jajangmyeon, half joking."
+    },
+    {
+     "id": "workers-day",
+     "name": "Workers' Day",
+     "kind": "observance",
+     "month": 5,
+     "day": 1,
+     "summary": "Many companies give the day off; schools and government offices stay open."
+    },
+    {
+     "id": "childrens-day",
+     "name": "Children's Day",
+     "kind": "public",
+     "month": 5,
+     "day": 5,
+     "summary": "Parks, zoos and amusement parks packed with families; presents for the kids."
+    },
+    {
+     "id": "parents-day",
+     "name": "Parents' Day",
+     "kind": "observance",
+     "month": 5,
+     "day": 8,
+     "summary": "Red carnations pinned on parents, a meal out and an envelope of money."
+    },
+    {
+     "id": "buddhas-birthday",
+     "name": "Buddha's Birthday",
+     "kind": "public",
+     "dates": {
+      "2024": "05-15",
+      "2025": "05-05",
+      "2026": "05-24",
+      "2027": "05-13",
+      "2028": "05-02",
+      "2029": "05-20",
+      "2030": "05-09",
+      "2031": "05-28",
+      "2032": "05-16",
+      "2033": "05-06",
+      "2034": "05-25",
+      "2035": "05-15",
+      "2036": "05-03",
+      "2037": "05-22",
+      "2038": "05-11",
+      "2039": "04-30",
+      "2040": "05-18"
+     },
+     "summary": "Lanterns strung through temple courtyards and the streets; free temple bibimbap."
+    },
+    {
+     "id": "teachers-day",
+     "name": "Teachers' Day",
+     "kind": "observance",
+     "month": 5,
+     "day": 15,
+     "summary": "Students thank teachers with carnations and letters."
+    },
+    {
+     "id": "memorial-day",
+     "name": "Memorial Day",
+     "kind": "public",
+     "month": 6,
+     "day": 6,
+     "summary": "Hyeonchungil: a siren at 10 a.m. and a minute of silence for the war dead; flags at half-mast."
+    },
+    {
+     "id": "constitution-day",
+     "name": "Constitution Day",
+     "kind": "observance",
+     "month": 7,
+     "day": 17,
+     "summary": "Jeheonjeol, marking the 1948 constitution: flags out, ceremonies."
+    },
+    {
+     "id": "liberation-day",
+     "name": "Liberation Day",
+     "kind": "public",
+     "month": 8,
+     "day": 15,
+     "summary": "Gwangbokjeol, the end of Japanese rule in 1945: flags, ceremonies and bells."
+    },
+    {
+     "id": "chuseok-eve",
+     "name": "Chuseok holiday",
+     "kind": "public",
+     "dates": {
+      "2024": "09-16",
+      "2025": "10-05",
+      "2026": "09-24",
+      "2027": "09-14",
+      "2028": "10-02",
+      "2029": "09-21",
+      "2030": "09-11",
+      "2031": "09-30",
+      "2032": "09-18",
+      "2033": "09-07",
+      "2034": "09-26",
+      "2035": "09-15",
+      "2036": "10-03",
+      "2037": "09-23",
+      "2038": "09-12",
+      "2039": "10-01",
+      "2040": "09-20"
+     },
+     "summary": "The day before Chuseok: the exodus to hometowns, and songpyeon made together."
+    },
+    {
+     "id": "chuseok",
+     "name": "Chuseok",
+     "kind": "public",
+     "dates": {
+      "2024": "09-17",
+      "2025": "10-06",
+      "2026": "09-25",
+      "2027": "09-15",
+      "2028": "10-03",
+      "2029": "09-22",
+      "2030": "09-12",
+      "2031": "10-01",
+      "2032": "09-19",
+      "2033": "09-08",
+      "2034": "09-27",
+      "2035": "09-16",
+      "2036": "10-04",
+      "2037": "09-24",
+      "2038": "09-13",
+      "2039": "10-02",
+      "2040": "09-21"
+     },
+     "summary": "The harvest moon festival: ancestral rites, tending family graves, songpyeon and family gift sets."
+    },
+    {
+     "id": "chuseok-after",
+     "name": "Chuseok holiday",
+     "kind": "public",
+     "dates": {
+      "2024": "09-18",
+      "2025": "10-07",
+      "2026": "09-26",
+      "2027": "09-16",
+      "2028": "10-04",
+      "2029": "09-23",
+      "2030": "09-13",
+      "2031": "10-02",
+      "2032": "09-20",
+      "2033": "09-09",
+      "2034": "09-28",
+      "2035": "09-17",
+      "2036": "10-05",
+      "2037": "09-25",
+      "2038": "09-14",
+      "2039": "10-03",
+      "2040": "09-22"
+     },
+     "summary": "The last day of the Chuseok holiday and the long drive back."
+    },
+    {
+     "id": "gaecheonjeol",
+     "name": "Gaecheonjeol (National Foundation Day)",
+     "kind": "public",
+     "month": 10,
+     "day": 3,
+     "summary": "The legendary founding of Gojoseon by Dangun; a quiet day off."
+    },
+    {
+     "id": "hangul-day",
+     "name": "Hangul Day",
+     "kind": "public",
+     "month": 10,
+     "day": 9,
+     "summary": "Celebrates the Korean alphabet: exhibitions and a day off."
+    },
+    {
+     "id": "halloween",
+     "name": "Halloween",
+     "kind": "observance",
+     "month": 10,
+     "day": 31,
+     "summary": "Costume parties in the clubbing districts."
+    },
+    {
+     "id": "pepero-day",
+     "name": "Pepero Day",
+     "kind": "observance",
+     "month": 11,
+     "day": 11,
+     "summary": "Boxes of chocolate-dipped Pepero sticks traded between friends and couples."
+    },
+    {
+     "id": "christmas-eve",
+     "name": "Christmas Eve",
+     "kind": "observance",
+     "month": 12,
+     "day": 24,
+     "summary": "A couples' night: booked-out restaurants, cakes and lit-up streets."
+    },
+    {
+     "id": "christmas",
+     "name": "Christmas Day",
+     "kind": "public",
+     "month": 12,
+     "day": 25,
+     "summary": "A day off spent as a couple or with friends more than family; church for some."
+    },
+    {
+     "id": "new-years-eve",
+     "name": "New Year's Eve",
+     "kind": "observance",
+     "month": 12,
+     "day": 31,
+     "summary": "The Bosingak bell rung at midnight, and countdowns."
+    }
+   ]
+  },
+  "japan": {
+   "name": "Japan (current)",
+   "holidays": [
+    {
+     "id": "new-years-day",
+     "name": "New Year's Day",
+     "kind": "public",
+     "month": 1,
+     "day": 1,
+     "summary": "Ganjitsu: the first shrine visit, osechi boxes, nengajo cards in the post and offices shut."
+    },
+    {
+     "id": "new-year-2",
+     "name": "New Year holiday",
+     "kind": "public",
+     "month": 1,
+     "day": 2,
+     "summary": "Offices and banks stay shut; department stores open with fukubukuro lucky bags."
+    },
+    {
+     "id": "new-year-3",
+     "name": "New Year holiday",
+     "kind": "public",
+     "month": 1,
+     "day": 3,
+     "summary": "The last day of the New Year break: Hakone Ekiden on TV and the trip back to the city."
+    },
+    {
+     "id": "coming-of-age-day",
+     "name": "Coming of Age Day",
+     "kind": "public",
+     "month": 1,
+     "weekday": 0,
+     "nth": 2,
+     "summary": "Twenty-year-olds in furisode and suits at city ceremonies, then out drinking."
+    },
+    {
+     "id": "setsubun",
+     "name": "Setsubun",
+     "kind": "observance",
+     "month": 2,
+     "day": 3,
+     "summary": "Beans thrown to drive out demons and an ehomaki roll eaten in silence facing the lucky direction."
+    },
+    {
+     "id": "national-foundation-day",
+     "name": "National Foundation Day",
+     "kind": "public",
+     "month": 2,
+     "day": 11,
+     "summary": "Kenkoku Kinen no Hi: a quiet day off."
+    },
+    {
+     "id": "valentines-day",
+     "name": "Valentine's Day",
+     "kind": "observance",
+     "month": 2,
+     "day": 14,
+     "summary": "Women give chocolate: honmei for a crush, giri for coworkers."
+    },
+    {
+     "id": "emperors-birthday",
+     "name": "Emperor's Birthday",
+     "kind": "public",
+     "month": 2,
+     "day": 23,
+     "summary": "A day off; the palace opens for the Emperor's greeting."
+    },
+    {
+     "id": "hinamatsuri",
+     "name": "Hinamatsuri",
+     "kind": "observance",
+     "month": 3,
+     "day": 3,
+     "summary": "Girls' Day: tiered doll displays, chirashi sushi and pink amazake."
+    },
+    {
+     "id": "white-day",
+     "name": "White Day",
+     "kind": "observance",
+     "month": 3,
+     "day": 14,
+     "summary": "A month after Valentine's, men return gifts, supposedly three times the value."
+    },
+    {
+     "id": "vernal-equinox-day",
+     "name": "Vernal Equinox Day",
+     "kind": "public",
+     "dates": {
+      "2024": "03-20",
+      "2025": "03-20",
+      "2026": "03-20",
+      "2027": "03-21",
+      "2028": "03-20",
+      "2029": "03-20",
+      "2030": "03-20",
+      "2031": "03-21",
+      "2032": "03-20",
+      "2033": "03-20",
+      "2034": "03-20",
+      "2035": "03-21",
+      "2036": "03-20",
+      "2037": "03-20",
+      "2038": "03-20",
+      "2039": "03-21",
+      "2040": "03-20"
+     },
+     "summary": "Shunbun no Hi: family graves visited for higan, and the first cherry blossom forecasts."
+    },
+    {
+     "id": "showa-day",
+     "name": "Showa Day",
+     "kind": "public",
+     "month": 4,
+     "day": 29,
+     "summary": "Golden Week begins: trains and airports fill."
+    },
+    {
+     "id": "constitution-memorial-day",
+     "name": "Constitution Memorial Day",
+     "kind": "public",
+     "month": 5,
+     "day": 3,
+     "summary": "Golden Week: crowded resorts, festivals and queues everywhere."
+    },
+    {
+     "id": "greenery-day",
+     "name": "Greenery Day",
+     "kind": "public",
+     "month": 5,
+     "day": 4,
+     "summary": "Golden Week: parks and gardens full."
+    },
+    {
+     "id": "childrens-day",
+     "name": "Children's Day",
+     "kind": "public",
+     "month": 5,
+     "day": 5,
+     "summary": "The end of Golden Week: koinobori carp streamers and kashiwa mochi."
+    },
+    {
+     "id": "tanabata",
+     "name": "Tanabata",
+     "kind": "observance",
+     "month": 7,
+     "day": 7,
+     "summary": "Wishes written on paper strips hung on bamboo, for the star-crossed lovers."
+    },
+    {
+     "id": "marine-day",
+     "name": "Marine Day",
+     "kind": "public",
+     "month": 7,
+     "weekday": 0,
+     "nth": 3,
+     "summary": "Umi no Hi: the beaches open and summer starts in earnest."
+    },
+    {
+     "id": "mountain-day",
+     "name": "Mountain Day",
+     "kind": "public",
+     "month": 8,
+     "day": 11,
+     "summary": "Yama no Hi: a day off at the start of the Obon season."
+    },
+    {
+     "id": "obon",
+     "name": "Obon",
+     "kind": "observance",
+     "month": 8,
+     "day": 13,
+     "summary": "Ancestors welcomed home for four days: trips to hometowns, bon odori dances and lanterns; many businesses close for the week."
+    },
+    {
+     "id": "respect-for-the-aged-day",
+     "name": "Respect for the Aged Day",
+     "kind": "public",
+     "month": 9,
+     "weekday": 0,
+     "nth": 3,
+     "summary": "Keiro no Hi: visits and gifts for grandparents."
+    },
+    {
+     "id": "citizens-holiday",
+     "name": "Citizens' Holiday",
+     "kind": "public",
+     "dates": {
+      "2026": "09-22",
+      "2032": "09-21",
+      "2037": "09-22"
+     },
+     "summary": "A day off sandwiched between two holidays, making a five-day Silver Week."
+    },
+    {
+     "id": "autumnal-equinox-day",
+     "name": "Autumnal Equinox Day",
+     "kind": "public",
+     "dates": {
+      "2024": "09-22",
+      "2025": "09-23",
+      "2026": "09-23",
+      "2027": "09-23",
+      "2028": "09-22",
+      "2029": "09-23",
+      "2030": "09-23",
+      "2031": "09-23",
+      "2032": "09-22",
+      "2033": "09-23",
+      "2034": "09-23",
+      "2035": "09-23",
+      "2036": "09-22",
+      "2037": "09-23",
+      "2038": "09-23",
+      "2039": "09-23",
+      "2040": "09-22"
+     },
+     "summary": "Shubun no Hi: graves tended for autumn higan and ohagi rice cakes."
+    },
+    {
+     "id": "sports-day",
+     "name": "Sports Day",
+     "kind": "public",
+     "month": 10,
+     "weekday": 0,
+     "nth": 2,
+     "summary": "Supotsu no Hi: school and neighbourhood sports days, relays and tug-of-war."
+    },
+    {
+     "id": "halloween",
+     "name": "Halloween",
+     "kind": "observance",
+     "month": 10,
+     "day": 31,
+     "summary": "Costumed crowds in the nightlife districts and on the trains."
+    },
+    {
+     "id": "culture-day",
+     "name": "Culture Day",
+     "kind": "public",
+     "month": 11,
+     "day": 3,
+     "summary": "Bunka no Hi: museums, school culture festivals and awards."
+    },
+    {
+     "id": "shichi-go-san",
+     "name": "Shichi-Go-San",
+     "kind": "observance",
+     "month": 11,
+     "day": 15,
+     "summary": "Children of three, five and seven dressed up for shrine visits and photos, with chitose-ame candy."
+    },
+    {
+     "id": "labour-thanksgiving-day",
+     "name": "Labour Thanksgiving Day",
+     "kind": "public",
+     "month": 11,
+     "day": 23,
+     "summary": "Kinro Kansha no Hi: a day off and the first year-end parties."
+    },
+    {
+     "id": "christmas-eve",
+     "name": "Christmas Eve",
+     "kind": "observance",
+     "month": 12,
+     "day": 24,
+     "summary": "The date night of the year: illuminations, booked restaurants, Christmas cake and fried chicken."
+    },
+    {
+     "id": "christmas",
+     "name": "Christmas Day",
+     "kind": "observance",
+     "month": 12,
+     "day": 25,
+     "summary": "An ordinary working day; the decorations come down for the New Year pine."
+    },
+    {
+     "id": "new-years-eve",
+     "name": "New Year's Eve",
+     "kind": "public",
+     "month": 12,
+     "day": 31,
+     "summary": "Omisoka: offices shut from the 29th, toshikoshi soba, Kohaku on TV and temple bells rung 108 times at midnight."
+    }
+   ]
+  },
+  "us-1920s": {
+   "name": "United States in the 1920s",
+   "holidays": [
+    {
+     "id": "new-years-day",
+     "name": "New Year's Day",
+     "kind": "public",
+     "month": 1,
+     "day": 1,
+     "summary": "Hangovers from the night before, calls on family and a quiet city until noon."
+    },
+    {
+     "id": "lincolns-birthday",
+     "name": "Lincoln's Birthday",
+     "kind": "observance",
+     "month": 2,
+     "day": 12,
+     "summary": "A legal holiday in New York and much of the North: banks and schools close there, flags fly and veterans of the Union march."
+    },
+    {
+     "id": "valentines-day",
+     "name": "Valentine's Day",
+     "kind": "observance",
+     "month": 2,
+     "day": 14,
+     "summary": "Penny cards and lace valentines, boxes of chocolates and a dance or two."
+    },
+    {
+     "id": "washingtons-birthday",
+     "name": "Washington's Birthday",
+     "kind": "public",
+     "month": 2,
+     "day": 22,
+     "summary": "Banks, offices and schools close; cherry pie, store sales and patriotic speeches."
+    },
+    {
+     "id": "st-patricks-day",
+     "name": "St. Patrick's Day",
+     "kind": "observance",
+     "month": 3,
+     "day": 17,
+     "summary": "The parade up Fifth Avenue and green carnations, with Prohibition doing little to keep anyone dry."
+    },
+    {
+     "id": "easter",
+     "name": "Easter Sunday",
+     "kind": "observance",
+     "easter": 0,
+     "summary": "Church in new spring hats, then the Easter Parade along the avenue to see and be seen."
+    },
+    {
+     "id": "mothers-day",
+     "name": "Mother's Day",
+     "kind": "observance",
+     "month": 5,
+     "weekday": 6,
+     "nth": 2,
+     "summary": "A white carnation worn for mother, a card home and Sunday dinner."
+    },
+    {
+     "id": "decoration-day",
+     "name": "Decoration Day",
+     "kind": "public",
+     "month": 5,
+     "day": 30,
+     "summary": "Graves decorated with flowers and flags for the dead of the Civil War and the Great War; parades, then the first trips to the shore."
+    },
+    {
+     "id": "independence-day",
+     "name": "Independence Day",
+     "kind": "public",
+     "month": 7,
+     "day": 4,
+     "summary": "Firecrackers, parades, picnics, ball games and packed beaches."
+    },
+    {
+     "id": "labor-day",
+     "name": "Labor Day",
+     "kind": "public",
+     "month": 9,
+     "weekday": 0,
+     "nth": 1,
+     "summary": "Union parades and picnics, and the end of straw-hat season."
+    },
+    {
+     "id": "columbus-day",
+     "name": "Columbus Day",
+     "kind": "public",
+     "month": 10,
+     "day": 12,
+     "summary": "A state holiday in New York, Massachusetts and most of the Northeast; Italian societies march with bands and banners."
+    },
+    {
+     "id": "halloween",
+     "name": "Hallowe'en",
+     "kind": "observance",
+     "month": 10,
+     "day": 31,
+     "summary": "Masquerade parties, bobbing for apples, fortune games and boys up to pranks after dark."
+    },
+    {
+     "id": "armistice-day",
+     "name": "Armistice Day",
+     "kind": "public",
+     "month": 11,
+     "day": 11,
+     "summary": "Two minutes of silence at the eleventh hour, then parades of Great War veterans; a legal holiday in most states."
+    },
+    {
+     "id": "thanksgiving",
+     "name": "Thanksgiving Day",
+     "kind": "public",
+     "month": 11,
+     "weekday": 3,
+     "nth": -1,
+     "summary": "The last Thursday of November: turkey, family, the big college football games and the department-store parade."
+    },
+    {
+     "id": "christmas-eve",
+     "name": "Christmas Eve",
+     "kind": "observance",
+     "month": 12,
+     "day": 24,
+     "summary": "Last shopping at the department stores, carols and midnight Mass."
+    },
+    {
+     "id": "christmas",
+     "name": "Christmas Day",
+     "kind": "public",
+     "month": 12,
+     "day": 25,
+     "summary": "Church, a tree with electric lights, presents and a big dinner; almost everything closes."
+    },
+    {
+     "id": "new-years-eve",
+     "name": "New Year's Eve",
+     "kind": "observance",
+     "month": 12,
+     "day": 31,
+     "summary": "Times Square crowds, noisemakers, hotel ballrooms and speakeasies packed until dawn."
+    }
+   ]
+  },
+  "us-1880s": {
+   "name": "United States in the 1880s",
+   "holidays": [
+    {
+     "id": "new-years-day",
+     "name": "New Year's Day",
+     "kind": "public",
+     "month": 1,
+     "day": 1,
+     "summary": "Calls on friends and an open house in the parlour."
+    },
+    {
+     "id": "washingtons-birthday",
+     "name": "Washington's Birthday",
+     "kind": "public",
+     "month": 2,
+     "day": 22,
+     "summary": "Speeches, a ball and a day off for banks and offices."
+    },
+    {
+     "id": "easter",
+     "name": "Easter Sunday",
+     "kind": "observance",
+     "easter": 0,
+     "summary": "Church in new clothes and a big dinner after."
+    },
+    {
+     "id": "decoration-day",
+     "name": "Decoration Day",
+     "kind": "public",
+     "month": 5,
+     "day": 30,
+     "summary": "Veterans and townsfolk decorate soldiers' graves with flowers, with a procession and speeches."
+    },
+    {
+     "id": "independence-day",
+     "name": "Independence Day",
+     "kind": "public",
+     "month": 7,
+     "day": 4,
+     "summary": "The biggest day of the year: parade, oration, races, a barbecue and fireworks."
+    },
+    {
+     "id": "thanksgiving",
+     "name": "Thanksgiving Day",
+     "kind": "public",
+     "month": 11,
+     "weekday": 3,
+     "nth": -1,
+     "summary": "Proclaimed each year for the last Thursday of November: church, turkey and a shooting match."
+    },
+    {
+     "id": "christmas",
+     "name": "Christmas Day",
+     "kind": "public",
+     "month": 12,
+     "day": 25,
+     "summary": "Church, a tree, presents and a big dinner."
+    }
+   ]
+  },
+  "uk-victorian": {
+   "name": "England in the 1890s",
+   "holidays": [
+    {
+     "id": "new-years-day",
+     "name": "New Year's Day",
+     "kind": "observance",
+     "month": 1,
+     "day": 1,
+     "summary": "Not a holiday in England; Scots keep Hogmanay."
+    },
+    {
+     "id": "lady-day",
+     "name": "Lady Day",
+     "kind": "feast",
+     "month": 3,
+     "day": 25,
+     "summary": "A quarter day: rents fall due and servants' terms change."
+    },
+    {
+     "id": "shrove-tuesday",
+     "name": "Shrove Tuesday",
+     "kind": "observance",
+     "easter": -47,
+     "summary": "Pancake day, with football in some towns."
+    },
+    {
+     "id": "good-friday",
+     "name": "Good Friday",
+     "kind": "public",
+     "easter": -2,
+     "summary": "Shops shut, hot cross buns and church."
+    },
+    {
+     "id": "easter",
+     "name": "Easter Sunday",
+     "kind": "observance",
+     "easter": 0,
+     "summary": "Church and a family dinner."
+    },
+    {
+     "id": "easter-monday",
+     "name": "Easter Monday",
+     "kind": "public",
+     "easter": 1,
+     "summary": "A bank holiday: excursion trains, fairs and Hampstead Heath crowded with day-trippers."
+    },
+    {
+     "id": "queens-birthday",
+     "name": "The Queen's Birthday",
+     "kind": "observance",
+     "month": 5,
+     "day": 24,
+     "summary": "Flags, a royal salute and, in the colonies, a holiday."
+    },
+    {
+     "id": "whit-monday",
+     "name": "Whit Monday",
+     "kind": "public",
+     "easter": 50,
+     "summary": "A bank holiday: Whit walks, Sunday-school treats and excursions."
+    },
+    {
+     "id": "midsummer-day",
+     "name": "Midsummer Day",
+     "kind": "feast",
+     "month": 6,
+     "day": 24,
+     "summary": "A quarter day when rents fall due."
+    },
+    {
+     "id": "august-bank-holiday",
+     "name": "August Bank Holiday",
+     "kind": "public",
+     "month": 8,
+     "weekday": 0,
+     "nth": 1,
+     "summary": "The first Monday in August: seaside trips, crowded trains and fairs."
+    },
+    {
+     "id": "michaelmas",
+     "name": "Michaelmas",
+     "kind": "feast",
+     "month": 9,
+     "day": 29,
+     "summary": "A quarter day; goose for dinner and hiring fairs."
+    },
+    {
+     "id": "bonfire-night",
+     "name": "Guy Fawkes Night",
+     "kind": "observance",
+     "month": 11,
+     "day": 5,
+     "summary": "Bonfires, guys carried through the streets and fireworks."
+    },
+    {
+     "id": "christmas",
+     "name": "Christmas Day",
+     "kind": "public",
+     "month": 12,
+     "day": 25,
+     "summary": "Church, a goose or a joint, plum pudding and family."
+    },
+    {
+     "id": "boxing-day",
+     "name": "Boxing Day",
+     "kind": "public",
+     "month": 12,
+     "day": 26,
+     "summary": "A bank holiday: Christmas boxes for tradesmen and servants, and the pantomime season opens."
+    }
+   ]
+  },
+  "medieval-england": {
+   "name": "Medieval England",
+   "holidays": [
+    {
+     "id": "twelfth-night",
+     "name": "Twelfth Night",
+     "kind": "feast",
+     "month": 1,
+     "day": 5,
+     "summary": "The last night of Christmas: a bean in the cake makes a king for the evening."
+    },
+    {
+     "id": "epiphany",
+     "name": "Epiphany",
+     "kind": "feast",
+     "month": 1,
+     "day": 6,
+     "summary": "The end of the twelve days of Christmas."
+    },
+    {
+     "id": "plough-monday",
+     "name": "Plough Monday",
+     "kind": "observance",
+     "month": 1,
+     "weekday": 0,
+     "nth": 2,
+     "summary": "Ploughboys drag a decorated plough round the town begging for pennies before work starts again."
+    },
+    {
+     "id": "candlemas",
+     "name": "Candlemas",
+     "kind": "feast",
+     "month": 2,
+     "day": 2,
+     "summary": "Candles blessed in church and carried in procession."
+    },
+    {
+     "id": "shrove-tuesday",
+     "name": "Shrove Tuesday",
+     "kind": "feast",
+     "easter": -47,
+     "summary": "Feasting, cock-throwing and football before Lent."
+    },
+    {
+     "id": "ash-wednesday",
+     "name": "Ash Wednesday",
+     "kind": "feast",
+     "easter": -46,
+     "summary": "Lent begins: no meat until Easter."
+    },
+    {
+     "id": "lady-day",
+     "name": "Lady Day",
+     "kind": "feast",
+     "month": 3,
+     "day": 25,
+     "summary": "The Annunciation and the start of the year; a quarter day."
+    },
+    {
+     "id": "palm-sunday",
+     "name": "Palm Sunday",
+     "kind": "feast",
+     "easter": -7,
+     "summary": "Procession with yew and willow for palms."
+    },
+    {
+     "id": "good-friday",
+     "name": "Good Friday",
+     "kind": "feast",
+     "easter": -2,
+     "summary": "Creeping to the cross; a day of fasting."
+    },
+    {
+     "id": "easter",
+     "name": "Easter Day",
+     "kind": "feast",
+     "easter": 0,
+     "summary": "Lent ends: meat, eggs and ale, and a day free of work."
+    },
+    {
+     "id": "hock-monday",
+     "name": "Hock Monday",
+     "kind": "observance",
+     "easter": 8,
+     "summary": "The women of the town rope the men and let them go for a forfeit; the men return the favour next day."
+    },
+    {
+     "id": "may-day",
+     "name": "May Day",
+     "kind": "observance",
+     "month": 5,
+     "day": 1,
+     "summary": "Bringing in the may at dawn, a maypole and dancing."
+    },
+    {
+     "id": "ascension",
+     "name": "Ascension Day",
+     "kind": "feast",
+     "easter": 39,
+     "summary": "Beating the bounds of the parish."
+    },
+    {
+     "id": "whitsun",
+     "name": "Whitsunday (Pentecost)",
+     "kind": "feast",
+     "easter": 49,
+     "summary": "A great feast; the king holds court and church ales are brewed."
+    },
+    {
+     "id": "midsummer-eve",
+     "name": "St John's Eve",
+     "kind": "feast",
+     "month": 6,
+     "day": 23,
+     "summary": "Bonfires on the hills and watch fires in the town."
+    },
+    {
+     "id": "lammas",
+     "name": "Lammas",
+     "kind": "feast",
+     "month": 8,
+     "day": 1,
+     "summary": "Loaf-mass: bread from the first wheat blessed in church."
+    },
+    {
+     "id": "michaelmas",
+     "name": "Michaelmas",
+     "kind": "feast",
+     "month": 9,
+     "day": 29,
+     "summary": "Rents and reeves' accounts due, and a goose for dinner."
+    },
+    {
+     "id": "all-hallows",
+     "name": "All Hallows",
+     "kind": "feast",
+     "month": 11,
+     "day": 1,
+     "summary": "Bells rung for the dead through the night before."
+    },
+    {
+     "id": "martinmas",
+     "name": "Martinmas",
+     "kind": "feast",
+     "month": 11,
+     "day": 11,
+     "summary": "Beasts slaughtered and salted for winter; a feast of fresh meat."
+    },
+    {
+     "id": "christmas",
+     "name": "Christmas Day",
+     "kind": "feast",
+     "month": 12,
+     "day": 25,
+     "summary": "Twelve days of feasting, games and no work in the fields."
+    }
+   ]
+  }
+ }
+}

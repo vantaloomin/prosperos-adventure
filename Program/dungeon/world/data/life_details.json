@@ -1,0 +1,4667 @@
+{
+ "about": "Life details for seeded townspeople, drawn by seed with no model and revealed one meeting at a time. 'seen' and 'told' phrases are subject-less and lowercase with no final period; {hood} is a nearby neighborhood name, {city} the city's name and {pet} a name from pet_names. An entry may carry min_age or max_age, and a 'period' object with the same fields in pre-industrial or 1890s wording.",
+ "origins": [
+  {
+   "id": "hood_born",
+   "seen": [
+    "was born and raised in {hood}",
+    "has called {hood} home since birth",
+    "was born in {hood} and never really left it"
+   ]
+  },
+  {
+   "id": "hood_streets",
+   "seen": [
+    "grew up three streets over in {hood}",
+    "spent childhood a few streets away in {hood}",
+    "grew up just around the corner in {hood}"
+   ]
+  },
+  {
+   "id": "hood_moved_young",
+   "seen": [
+    "moved to {hood} as a small kid and stayed",
+    "came to {hood} as a toddler and has been there ever since",
+    "has lived in {hood} since early childhood"
+   ]
+  },
+  {
+   "id": "hood_above_shop",
+   "seen": [
+    "grew up in rooms above the family shop in {hood}",
+    "was raised over a little corner shop in {hood}",
+    "spent childhood living upstairs from a shop in {hood}"
+   ]
+  },
+  {
+   "id": "hood_returned",
+   "seen": [
+    "left {hood} young and came back years later",
+    "moved away from {hood} for a while, then drifted home",
+    "grew up in {hood}, wandered off, and returned in the end"
+   ],
+   "min_age": 28
+  },
+  {
+   "id": "hood_family_house",
+   "seen": [
+    "grew up in a grandparent's house in {hood}",
+    "was raised in an old family house in {hood}",
+    "spent childhood in a crowded family home in {hood}"
+   ]
+  },
+  {
+   "id": "hood_proud",
+   "seen": [
+    "grew up in {hood} and still thinks of it as the real town",
+    "is {hood} through and through",
+    "will tell anyone that {hood} is the best part of town, having grown up there"
+   ]
+  },
+  {
+   "id": "hood_settled",
+   "seen": [
+    "moved around a lot as a kid before settling in {hood}",
+    "lived in half a dozen places before landing in {hood}",
+    "bounced between rented rooms until the family settled in {hood}"
+   ]
+  },
+  {
+   "id": "hood_one_street",
+   "seen": [
+    "has lived on the same street in {hood} for years",
+    "has kept the same front door in {hood} for a long time",
+    "knows every neighbor on one particular street in {hood}"
+   ],
+   "min_age": 35
+  },
+  {
+   "id": "hood_partner_family",
+   "seen": [
+    "moved to {hood} to be near a partner's family",
+    "settled in {hood} to be close to a partner's people",
+    "ended up in {hood} because a partner's family lived there"
+   ],
+   "min_age": 24
+  },
+  {
+   "id": "city_never_left",
+   "seen": [
+    "has never lived anywhere but {city}",
+    "has spent an entire life in {city}",
+    "was born in {city} and plans to stay forever"
+   ]
+  },
+  {
+   "id": "city_nineteen",
+   "seen": [
+    "came to {city} at nineteen with one bag",
+    "arrived in {city} young, with very little and a lot of nerve",
+    "turned up in {city} at nineteen knowing nobody"
+   ],
+   "min_age": 21
+  },
+  {
+   "id": "city_summer_job",
+   "seen": [
+    "came to {city} for a summer job and never left",
+    "meant to spend one season in {city} and is still here",
+    "arrived in {city} for a few months of work and stayed for good"
+   ]
+  },
+  {
+   "id": "city_tried_leaving",
+   "seen": [
+    "left {city} once and came straight back within a year",
+    "tried living away from {city} and missed it too much",
+    "moved off from {city} for a year and couldn't stay away"
+   ]
+  },
+  {
+   "id": "farm_inland",
+   "seen": [
+    "grew up on a farm a few hours inland",
+    "was raised on a farm out past the hills",
+    "spent childhood on a family farm a long way from here"
+   ]
+  },
+  {
+   "id": "fishing_village",
+   "seen": [
+    "grew up in a fishing village up the coast",
+    "was raised in a little harbor town along the coast",
+    "spent childhood in a seaside village where everyone fished"
+   ]
+  },
+  {
+   "id": "mountain_town",
+   "seen": [
+    "grew up in the hills where winters were long",
+    "was raised in a mountain town with one main street",
+    "comes from high country where the snow came early"
+   ]
+  },
+  {
+   "id": "big_city",
+   "seen": [
+    "grew up in a much bigger city and finds this place restful",
+    "came here from a big crowded city looking for some quiet",
+    "was raised in a huge city and still walks like it"
+   ]
+  },
+  {
+   "id": "moved_often",
+   "seen": [
+    "moved town to town as a kid because of a parent's work",
+    "grew up all over the place, following a parent's job",
+    "changed schools every couple of years as a kid"
+   ]
+  },
+  {
+   "id": "orchard",
+   "seen": [
+    "grew up among apple orchards out in the country",
+    "was raised on a fruit farm and still misses harvest time",
+    "spent childhood picking fruit on a family orchard"
+   ]
+  },
+  {
+   "id": "river_town",
+   "seen": [
+    "grew up in a little river town downstream",
+    "was raised in a sleepy town along the river",
+    "comes from a river town where the ferry was the big event"
+   ]
+  },
+  {
+   "id": "followed_partner",
+   "seen": [
+    "moved here to follow a partner's work",
+    "came to town because a partner got work here",
+    "arrived years ago following a partner and stayed"
+   ],
+   "min_age": 24
+  },
+  {
+   "id": "apprenticeship",
+   "seen": [
+    "came to town as a teenager to learn a trade",
+    "arrived young to apprentice in a local workshop",
+    "moved here at sixteen to be trained in a trade"
+   ]
+  },
+  {
+   "id": "student",
+   "seen": [
+    "came here to study and never went home",
+    "arrived as a student and stayed after finishing",
+    "moved here for schooling and liked it too much to leave"
+   ]
+  },
+  {
+   "id": "inherited_house",
+   "seen": [
+    "moved here after inheriting a relative's house",
+    "came to town after a relative left them a small house",
+    "settled here when an old family house came to them"
+   ]
+  },
+  {
+   "id": "overseas",
+   "seen": [
+    "grew up in another country and came here as a young adult",
+    "was raised far away and still has a trace of an accent",
+    "came here from overseas and has made it home"
+   ]
+  },
+  {
+   "id": "tiny_village",
+   "seen": [
+    "grew up in a village so small it had one shop",
+    "comes from a hamlet with more sheep than people",
+    "was raised somewhere so tiny everyone knew everyone's business"
+   ]
+  },
+  {
+   "id": "family_inn",
+   "seen": [
+    "grew up in a family that ran an inn on the main road",
+    "was raised behind the counter of a roadside inn",
+    "spent childhood helping at the family's wayside inn"
+   ]
+  },
+  {
+   "id": "market_town",
+   "seen": [
+    "grew up in a market town not far from here",
+    "comes from a busy market town just down the road",
+    "was raised in the next town over and still roots for it"
+   ]
+  },
+  {
+   "id": "near_sibling",
+   "seen": [
+    "moved here to be near a sibling",
+    "came to town after a sibling raved about it",
+    "followed an older sibling here and stayed"
+   ]
+  },
+  {
+   "id": "fresh_start",
+   "seen": [
+    "came here for a fresh start and found one",
+    "arrived wanting a clean slate and got it",
+    "moved here to start over and is glad of it"
+   ]
+  },
+  {
+   "id": "newcomer",
+   "seen": [
+    "only moved here a couple of years ago",
+    "is still fairly new in town and learning the streets",
+    "arrived recently and is still finding favorite spots"
+   ]
+  },
+  {
+   "id": "lifelong_elder",
+   "seen": [
+    "has watched the whole town change over the decades",
+    "remembers when half the town was fields",
+    "can point out what every building used to be"
+   ],
+   "min_age": 60
+  },
+  {
+   "id": "long_journey",
+   "seen": [
+    "rode a bus for two days to get here and stayed",
+    "arrived on a cross-country bus with two suitcases",
+    "took a one-way bus here on a whim years ago"
+   ],
+   "period": {
+    "seen": [
+     "rode a coach for days to get here and stayed",
+     "arrived after a long coach journey with two battered trunks",
+     "bought a one-way seat on the coach here on a whim years ago"
+    ]
+   }
+  },
+  {
+   "id": "plains",
+   "seen": [
+    "grew up on the open plains where storms could be seen coming for hours",
+    "was raised on flat farmland with sky in every direction",
+    "comes from wide prairie country and finds hills odd"
+   ]
+  },
+  {
+   "id": "island",
+   "seen": [
+    "grew up on a small island where the boat came twice a week",
+    "was raised on an island and still checks the tide out of habit",
+    "comes from a tiny island and finds the mainland very busy"
+   ]
+  },
+  {
+   "id": "work_posting",
+   "seen": [
+    "was sent here for work and decided to stay",
+    "came for a posting that was meant to be temporary",
+    "arrived on a work assignment that turned permanent"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "later_life",
+   "seen": [
+    "moved here later in life to be near the grandkids",
+    "settled here in later years to be close to family",
+    "came to town after retiring to be near the grandkids"
+   ],
+   "min_age": 60
+  },
+  {
+   "id": "town_edge",
+   "seen": [
+    "grew up at the edge of town where the road turns to dirt",
+    "was raised on the outskirts, past the last streetlamp",
+    "spent childhood out where the town gives way to fields"
+   ]
+  },
+  {
+   "id": "vineyard",
+   "seen": [
+    "grew up working a family vineyard in the south",
+    "was raised among vineyards down south",
+    "spent childhood in wine country helping with the harvest"
+   ]
+  },
+  {
+   "id": "traveling_show",
+   "seen": [
+    "grew up traveling with a family that played fairs and markets",
+    "spent childhood on the road with a family of traveling performers",
+    "was raised moving from fair to fair with a family show"
+   ]
+  },
+  {
+   "id": "mill_town",
+   "seen": [
+    "grew up in a mill town where the whistle set the day",
+    "comes from a town built around one big mill",
+    "was raised in a working town that ran on the mill's hours"
+   ]
+  },
+  {
+   "id": "decades_newcomer",
+   "seen": [
+    "came here decades ago and still gets called the new one by old-timers",
+    "arrived thirty years ago and is still not considered local by some",
+    "has lived here for decades yet still calls another town home"
+   ],
+   "min_age": 50
+  },
+  {
+   "id": "lake_town",
+   "seen": [
+    "grew up by a big lake and swam in it every summer",
+    "was raised in a lakeside town that emptied out in winter",
+    "spent childhood summers on a lake and the rest of the year waiting for them"
+   ]
+  },
+  {
+   "id": "forest",
+   "seen": [
+    "grew up in a cottage at the edge of a great forest",
+    "was raised in woodland country where everyone cut their own firewood",
+    "comes from deep forest country and still loves the smell of pine"
+   ]
+  },
+  {
+   "id": "hood_bakery_window",
+   "seen": [
+    "grew up in {hood} with the smell of the bakery coming through the window",
+    "spent childhood in {hood}, waking to the bakery ovens next door",
+    "was raised in {hood} next to a bakery and has never forgiven bread made anywhere else"
+   ]
+  },
+  {
+   "id": "hood_cheap_rent",
+   "seen": [
+    "moved to {hood} because the rent was cheap and found it had a heart",
+    "chose {hood} for the low rent and stayed for the neighbors",
+    "came to {hood} for a cheap room and ended up loving the place"
+   ]
+  },
+  {
+   "id": "hood_schoolmates",
+   "seen": [
+    "went to the little school in {hood} and still sees old classmates everywhere",
+    "grew up in {hood} and still runs into old schoolmates on every corner",
+    "can't walk through {hood} without meeting someone from school days"
+   ]
+  },
+  {
+   "id": "hood_bought_house",
+   "seen": [
+    "saved for years to buy a small place in {hood}",
+    "finally bought a little house in {hood} after a long time renting",
+    "put every spare coin into a cottage in {hood}"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "hood_from_country",
+   "seen": [
+    "left the countryside for {hood} and still keeps a few country habits",
+    "traded fields for the streets of {hood} as a young adult",
+    "came in from the country to {hood} and still rises with the birds"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "hood_lodging",
+   "seen": [
+    "started out in a lodging house in {hood} and worked up to a place of their own",
+    "rented a tiny room in {hood} at first and still lives a stone's throw from it",
+    "spent early years in a cramped boarding room in {hood}"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "hood_errand_kid",
+   "seen": [
+    "grew up running errands for the stallholders of {hood}",
+    "was the kid every shopkeeper in {hood} knew by name",
+    "spent childhood underfoot in the shops of {hood}"
+   ]
+  },
+  {
+   "id": "hood_old_family",
+   "seen": [
+    "comes from a family that has been in {hood} for four generations",
+    "has roots in {hood} going back to the great-grandparents",
+    "belongs to one of the oldest families in {hood}"
+   ]
+  },
+  {
+   "id": "hood_crossed_town",
+   "seen": [
+    "grew up on the other side of town and moved to {hood} on a whim",
+    "crossed town to live in {hood} and never looked back",
+    "lived all over town before deciding {hood} suited best"
+   ]
+  },
+  {
+   "id": "hood_main_street",
+   "seen": [
+    "grew up in a narrow house on the busiest street in {hood}",
+    "was raised above the noise of the main street in {hood}",
+    "spent childhood watching the main road through {hood} from a top window"
+   ]
+  },
+  {
+   "id": "city_one_visit",
+   "seen": [
+    "visited {city} once on a holiday and moved here the next year",
+    "fell for {city} on a short visit and came back to stay",
+    "came to {city} for a week and went home only to pack"
+   ]
+  },
+  {
+   "id": "city_generations",
+   "seen": [
+    "has family in {city} going back further than anyone can remember",
+    "comes from a line of people who have always lived in {city}",
+    "is the latest of many generations born in {city}"
+   ]
+  },
+  {
+   "id": "lighthouse",
+   "seen": [
+    "grew up in a lighthouse keeper's cottage on the headland",
+    "was raised out on the headland where a parent kept the light",
+    "spent childhood beside a lighthouse with the sea on three sides"
+   ]
+  },
+  {
+   "id": "cattle_farm",
+   "seen": [
+    "grew up on a cattle farm where the nearest neighbor was miles off",
+    "was raised among cattle on a big lonely farm",
+    "comes from cattle country and still sizes up every cow passed"
+   ]
+  },
+  {
+   "id": "boarding_school",
+   "seen": [
+    "was sent away to a boarding school and came here afterward",
+    "spent schooldays at a strict boarding school far from home",
+    "grew up mostly at boarding school and only saw home in the holidays"
+   ]
+  },
+  {
+   "id": "border_town",
+   "seen": [
+    "grew up in a border town where everyone spoke two languages",
+    "was raised where two countries meet and switches languages without noticing",
+    "comes from a border town with two names on every sign"
+   ]
+  },
+  {
+   "id": "barge",
+   "seen": [
+    "grew up on a river barge that moved up and down the waterways",
+    "spent childhood living on a family boat",
+    "was raised afloat on a working barge"
+   ]
+  },
+  {
+   "id": "mining_town",
+   "seen": [
+    "grew up in a mining town where everyone knew the shift bell",
+    "comes from a hill town built around the mines",
+    "was raised in quarry country and knows a lot about stone"
+   ]
+  },
+  {
+   "id": "college_town",
+   "seen": [
+    "grew up in a quiet college town full of bookshops",
+    "was raised in a town where the school was the biggest employer",
+    "comes from a sleepy town that came alive every term"
+   ]
+  },
+  {
+   "id": "dry_country",
+   "seen": [
+    "grew up in dry country where rain was an event",
+    "was raised somewhere so dry that a puddle drew a crowd",
+    "comes from dusty country and still marvels at green grass"
+   ]
+  },
+  {
+   "id": "far_north",
+   "seen": [
+    "grew up far up north where winter lasted half the year",
+    "was raised in the cold north and finds this place mild",
+    "comes from the far north and laughs at what locals call cold"
+   ]
+  },
+  {
+   "id": "warm_south",
+   "seen": [
+    "grew up in the warm south and is always cold here",
+    "was raised down south and still misses the heat",
+    "comes from a sunny southern town and wears a coat most of the year"
+   ]
+  },
+  {
+   "id": "marshes",
+   "seen": [
+    "grew up out in the marshes among reeds and herons",
+    "was raised in fen country where the land is flat and wet",
+    "comes from marshland where everyone owned a little boat"
+   ]
+  },
+  {
+   "id": "moors",
+   "seen": [
+    "grew up minding sheep on the high moors",
+    "was raised in sheep country and can still whistle a dog round",
+    "spent childhood on the moors helping with the flock"
+   ]
+  },
+  {
+   "id": "port_city",
+   "seen": [
+    "grew up in a busy port watching ships come and go",
+    "was raised by the docks of a big harbor city",
+    "comes from a port town where every accent in the world passed through"
+   ]
+  },
+  {
+   "id": "estate_grounds",
+   "seen": [
+    "grew up on a big country estate where a parent was the groundskeeper",
+    "was raised in the gatehouse of a grand estate",
+    "spent childhood running about the grounds of a big house where the family worked"
+   ]
+  },
+  {
+   "id": "schoolhouse",
+   "seen": [
+    "grew up in rooms attached to the village schoolhouse",
+    "was raised in the schoolhouse where a parent taught",
+    "lived at the village school as a kid and never escaped homework"
+   ]
+  },
+  {
+   "id": "two_homes",
+   "seen": [
+    "spent childhood shuttling between relatives in two towns",
+    "grew up half the year with one side of the family and half with the other",
+    "split growing up between two homes in two towns"
+   ]
+  },
+  {
+   "id": "came_for_love",
+   "seen": [
+    "moved here for a sweetheart and stayed after the romance didn't",
+    "came for love, lost the sweetheart, and kept the town",
+    "followed a sweetheart here and liked the town better than the sweetheart"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "on_foot",
+   "seen": [
+    "walked to town from the country as a young adult looking for work",
+    "arrived on foot from the countryside with a bundle and a plan",
+    "came into town on foot one spring looking for work"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "sailor",
+   "seen": [
+    "came ashore here after years at sea and stayed",
+    "spent youth working on ships and dropped anchor here for good",
+    "sailed into the harbor one day and never sailed out again"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "traveling_seller",
+   "seen": [
+    "came to town to sell at a fair and set up shop instead",
+    "arrived as a traveling seller and decided to stop traveling",
+    "used to pass through with a cart of wares until settling here"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "rebuild_crew",
+   "seen": [
+    "came to help rebuild after a big storm and stayed on",
+    "arrived with a crew to repair the bridge and never left",
+    "came for a building job that was meant to take a season and stayed for good"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "cousin_spare_room",
+   "seen": [
+    "came to stay with a cousin for a month and is still here",
+    "moved into a cousin's spare room and never moved out",
+    "arrived as a houseguest of a cousin years ago"
+   ]
+  },
+  {
+   "id": "pin_in_map",
+   "seen": [
+    "picked this town off a map with eyes closed",
+    "chose the town by sticking a pin in a map",
+    "let a coin toss decide between this town and another"
+   ]
+  },
+  {
+   "id": "grandparent_tales",
+   "seen": [
+    "moved here because a grandparent always talked about the place",
+    "came to see the town from a grandparent's stories and stayed",
+    "grew up hearing about this town and finally came to see it"
+   ]
+  },
+  {
+   "id": "quiet_place",
+   "seen": [
+    "grew up somewhere so quiet that a new shop was big news",
+    "was raised in a sleepy place where nothing ever happened",
+    "comes from a town where the biggest event was the annual fair"
+   ]
+  },
+  {
+   "id": "eleven_towns",
+   "seen": [
+    "has lived in eleven towns and likes this one best",
+    "has moved more times than can be counted and finally unpacked here",
+    "has lived all over and chose this place on purpose"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "big_household",
+   "seen": [
+    "came to town young to work in a grand household",
+    "first arrived as kitchen help in a big house",
+    "started out here in service at a big house on the hill"
+   ]
+  },
+  {
+   "id": "dairy",
+   "seen": [
+    "grew up on a dairy farm and can milk a cow in minutes",
+    "was raised on a dairy where the day started before dawn",
+    "comes from a dairy family that made its own cheese"
+   ]
+  },
+  {
+   "id": "walled_town",
+   "seen": [
+    "grew up in an old walled town with narrow lanes",
+    "was raised among the crooked lanes of an old walled town",
+    "comes from a hilltop town with a wall all the way round"
+   ]
+  },
+  {
+   "id": "forge",
+   "seen": [
+    "grew up next door to a forge and fell asleep to the hammering",
+    "was raised beside a busy smithy",
+    "spent childhood at the edge of a forge yard"
+   ]
+  },
+  {
+   "id": "watermill",
+   "seen": [
+    "grew up beside a watermill and still loves the sound of a wheel",
+    "was raised in a miller's cottage by the millpond",
+    "spent childhood fishing in a millrace"
+   ]
+  },
+  {
+   "id": "market_square",
+   "seen": [
+    "grew up overlooking a busy market square in another town",
+    "was raised above a tavern on a lively square",
+    "spent childhood watching market day from a window over the square"
+   ]
+  },
+  {
+   "id": "dunes",
+   "seen": [
+    "grew up among the sand dunes of a windy beach town",
+    "was raised in a seaside town of dunes and gulls",
+    "comes from a windswept beach town and misses the roar of surf"
+   ]
+  },
+  {
+   "id": "harvest_road",
+   "seen": [
+    "grew up following the harvest from farm to farm with family",
+    "spent childhood picking crops from one farm to the next",
+    "was raised on the move with the harvest seasons"
+   ]
+  },
+  {
+   "id": "exchange_year",
+   "seen": [
+    "came here on an exchange as a teenager and returned as an adult",
+    "spent a year here as a young student and came back for good later",
+    "first visited as a teen on an exchange and never forgot it"
+   ],
+   "min_age": 21
+  },
+  {
+   "id": "garden_town",
+   "seen": [
+    "grew up in a town famous for its gardens",
+    "was raised in a flower-growing town where every yard bloomed",
+    "comes from a town known for its rose gardens"
+   ]
+  },
+  {
+   "id": "steep_hill",
+   "seen": [
+    "grew up in a house at the top of a very steep hill",
+    "was raised up a hill so steep the bread got delivered by rope",
+    "spent childhood climbing the same steep hill twice a day"
+   ]
+  },
+  {
+   "id": "crossroads",
+   "seen": [
+    "grew up in a hamlet at a crossroads where travelers stopped for directions",
+    "was raised at a crossroads where everyone passing stopped in",
+    "spent childhood giving directions to travelers at a country crossroads"
+   ]
+  },
+  {
+   "id": "toll_bridge",
+   "seen": [
+    "grew up in a toll house by a bridge, collecting coins as a kid",
+    "was raised beside the old toll bridge",
+    "spent childhood watching carts cross the bridge outside the front door"
+   ]
+  },
+  {
+   "id": "bookshop",
+   "seen": [
+    "grew up in the back of a secondhand bookshop",
+    "was raised among the shelves of a family bookshop",
+    "spent childhood reading in the corner of a parent's bookshop"
+   ]
+  },
+  {
+   "id": "backstage",
+   "seen": [
+    "grew up backstage at a little theater",
+    "was raised around a theater where a parent worked",
+    "spent childhood among costumes and painted scenery"
+   ]
+  },
+  {
+   "id": "for_the_school",
+   "seen": [
+    "moved here so the kids could go to a good school",
+    "came to town for the sake of the kids' schooling",
+    "settled here because the local school had a good name"
+   ],
+   "min_age": 28
+  },
+  {
+   "id": "dock_work",
+   "seen": [
+    "came to town to work the docks and stayed",
+    "arrived to work on the harbor wharves and made a life here",
+    "first came for dock work and stayed long after"
+   ]
+  },
+  {
+   "id": "ancestral_town",
+   "seen": [
+    "grew up abroad and came back to the family's old hometown",
+    "was raised far away but moved to where the family originally came from",
+    "returned to the town the grandparents left long ago"
+   ]
+  },
+  {
+   "id": "city_and_farm",
+   "seen": [
+    "split childhood between the city and a grandparent's farm",
+    "spent school terms in town and summers on a farm",
+    "grew up half a city kid and half a farm kid"
+   ]
+  },
+  {
+   "id": "resort_town",
+   "seen": [
+    "grew up in a holiday town full of visitors every summer",
+    "was raised in a resort town that was empty half the year",
+    "comes from a resort town where locals worked all summer and rested all winter"
+   ]
+  },
+  {
+   "id": "craft_village",
+   "seen": [
+    "grew up in a village of woodcarvers",
+    "comes from a village famous for its lace",
+    "was raised in a craft village where every house had a workshop"
+   ]
+  },
+  {
+   "id": "midlife_shop",
+   "seen": [
+    "moved to town in middle age to start a small business",
+    "came here in later years to open a little shop",
+    "arrived mid-life with savings and an idea for a business"
+   ],
+   "min_age": 40
+  }
+ ],
+ "leaving": [
+  "the place closed",
+  "the business shut its doors",
+  "wanted something with steadier hours",
+  "got tired of the early mornings",
+  "followed a friend into something new",
+  "the owner retired and sold up",
+  "moved across town and the trip got too long",
+  "needed better pay",
+  "got restless and wanted a change",
+  "had a falling out with the boss",
+  "was offered something better",
+  "the work dried up",
+  "went back to school",
+  "wanted to be closer to family",
+  "decided life was too short to do one thing forever",
+  "got tired of the late nights",
+  "the place changed hands and it was never the same",
+  "realized it had stopped being fun",
+  "took some time off to look after family",
+  "the season ended and something else came along",
+  "wanted to work with people more",
+  "got poached by a rival",
+  "moved away for a while",
+  "finally saved enough to try something new",
+  "the shop moved out of town",
+  "a regular customer offered a job",
+  "wanted to be outdoors more",
+  "got tired of working in the cold",
+  "the hours grew longer and the pay didn't",
+  "took a chance on a long-held dream",
+  "decided to learn a trade instead",
+  "the boss's kid took over and things went sideways",
+  "grew bored of the same four walls",
+  "a partner's work meant moving",
+  "found a job with a shorter walk",
+  "needed something quieter",
+  "wanted more time at home",
+  "lost interest and drifted into something else",
+  "struck out alone",
+  "was let go when things got slow",
+  "the roof finally caved in on the old workshop",
+  "the new manager changed everything for the worse",
+  "the business went under in a bad year",
+  "got married and moved to a partner's town",
+  "wanted to be their own boss",
+  "got fed up with the long walk in",
+  "was asked to train someone and realized the trainee was better",
+  "the building was pulled down",
+  "the owner's kids sold the place",
+  "missed the old town and went home for a while",
+  "the pay kept arriving later every month",
+  "needed time to care for a new baby",
+  "won a little money and took a break",
+  "a friend offered a partnership",
+  "took over a relative's business",
+  "clashed with the head cook once too often",
+  "a bigger one opened down the road",
+  "the customers stopped coming",
+  "realized the job had stopped teaching anything new",
+  "got an apprenticeship in a different trade",
+  "decided to travel for a year",
+  "the shop was flooded out",
+  "found the noise too much",
+  "wanted work that used the hands more",
+  "wanted work that used the head more",
+  "simply ran out of steam",
+  "a bigger rival bought the place",
+  "couldn't agree with the new owners about anything",
+  "was promoted into something else",
+  "the family needed help on the farm",
+  "got a chance to study",
+  "the boss moved away and closed up",
+  "had a dream about doing something else and took it seriously",
+  "the rent on the shop doubled",
+  "got tired of coming home smelling of work",
+  "fell out of love with the work",
+  "wanted to work somewhere with windows",
+  "a neighbor's business needed an extra pair of hands",
+  "got itchy feet",
+  "the new rules were the last straw",
+  "was too proud to take the pay cut",
+  "had a disagreement over wages",
+  "wanted to try the trade a parent always talked about",
+  "heard about an opening and jumped at it",
+  "the hours clashed with family life",
+  "figured it was now or never for something different",
+  "the town changed and the trade stopped paying",
+  "fewer people needed that kind of work anymore",
+  "the old crew all left and it felt empty",
+  "wanted to be nearer the sea",
+  "decided to open a shop of their own",
+  "got tired of answering to anyone",
+  "spent a winter thinking it over and gave notice in spring",
+  "a cousin needed help with a new venture",
+  "the work was too lonely",
+  "the place got too busy to enjoy",
+  "the owner hired family and there was no room left",
+  "never got along with the other staff",
+  "took a job that came with a room",
+  "started making more from a side trade than the main one",
+  "was talked into something new over a drink",
+  "simply wanted a change of scenery",
+  "got bored once everything ran smoothly",
+  "felt it was time to give someone younger a turn",
+  "saved enough to buy a cart and go trading"
+ ],
+ "family": [
+  {
+   "id": "only_child",
+   "seen": [
+    "is an only child",
+    "grew up without any siblings",
+    "was the only kid in the house growing up"
+   ]
+  },
+  {
+   "id": "big_family",
+   "seen": [
+    "comes from a big noisy family",
+    "grew up in a loud house with too many cousins",
+    "is one of a very large and very chatty family"
+   ]
+  },
+  {
+   "id": "eldest_of_five",
+   "seen": [
+    "is the eldest of five",
+    "was the oldest of five kids and helped raise the rest",
+    "grew up the eldest of five and still acts like it"
+   ]
+  },
+  {
+   "id": "youngest",
+   "seen": [
+    "is the youngest of four and was spoiled for it",
+    "was the baby of the family",
+    "grew up the youngest, with three older siblings in charge"
+   ]
+  },
+  {
+   "id": "middle_child",
+   "seen": [
+    "is a middle child and says it explains a lot",
+    "was stuck in the middle of five siblings",
+    "grew up a middle kid, always negotiating"
+   ]
+  },
+  {
+   "id": "twin",
+   "seen": [
+    "has a twin who lives across town",
+    "is a twin and the two still finish each other's sentences",
+    "has a twin who is the complete opposite in every way"
+   ]
+  },
+  {
+   "id": "raised_grandparent",
+   "seen": [
+    "was raised by a grandparent",
+    "grew up in a grandparent's care",
+    "was brought up mostly by a grandparent who taught cooking and card games"
+   ]
+  },
+  {
+   "id": "close_sibling",
+   "seen": [
+    "is very close to an older sibling",
+    "talks to a sibling nearly every day",
+    "has a sibling who is also a best friend"
+   ]
+  },
+  {
+   "id": "sibling_far",
+   "seen": [
+    "has a sibling living far away and writes often",
+    "misses a sibling who moved far away",
+    "has a sibling across the sea and sends long letters"
+   ]
+  },
+  {
+   "id": "estranged_cousin",
+   "seen": [
+    "has an estranged cousin and won't say why",
+    "hasn't spoken to a certain cousin in years",
+    "has a long-running feud with a cousin over something small"
+   ]
+  },
+  {
+   "id": "cousin_close",
+   "seen": [
+    "grew up with a cousin who was more like a sibling",
+    "has had the same cousin as a best friend since childhood",
+    "spent every childhood summer with a favorite cousin"
+   ]
+  },
+  {
+   "id": "parents_nearby",
+   "seen": [
+    "still has both parents living nearby",
+    "has parents just a few streets away",
+    "has dinner with the parents most weeks"
+   ],
+   "max_age": 60
+  },
+  {
+   "id": "parent_shop",
+   "seen": [
+    "helps out at a parent's shop on weekends",
+    "still lends a hand in the family business now and then",
+    "has a parent who runs a little shop and expects help"
+   ],
+   "max_age": 55
+  },
+  {
+   "id": "step_siblings",
+   "seen": [
+    "has a step-sibling who became a good friend",
+    "gained a couple of step-siblings as a teenager",
+    "grew up in a blended family with step-siblings"
+   ]
+  },
+  {
+   "id": "new_grandparent",
+   "seen": [
+    "has just become a grandparent",
+    "is a brand-new grandparent and talks about it constantly",
+    "recently became a grandparent and can't stop smiling about it"
+   ],
+   "min_age": 45
+  },
+  {
+   "id": "many_grandkids",
+   "seen": [
+    "has seven grandkids and remembers every birthday",
+    "is a grandparent many times over",
+    "has a houseful of grandkids every holiday"
+   ],
+   "min_age": 55
+  },
+  {
+   "id": "lives_with_parents",
+   "seen": [
+    "still lives with the parents",
+    "lives at home with family while saving up",
+    "hasn't moved out of the family home yet"
+   ],
+   "max_age": 30
+  },
+  {
+   "id": "married_decades",
+   "seen": [
+    "has been married for decades",
+    "has been with the same partner for over twenty years",
+    "is still happily married after a very long time"
+   ],
+   "min_age": 45
+  },
+  {
+   "id": "newlywed",
+   "seen": [
+    "got married not long ago",
+    "is a newlywed and still a little giddy about it",
+    "married a partner only last year"
+   ],
+   "min_age": 20,
+   "max_age": 50
+  },
+  {
+   "id": "engaged",
+   "seen": [
+    "is engaged and planning a small wedding",
+    "recently got engaged",
+    "is in the middle of planning a wedding and is a bit frazzled"
+   ],
+   "min_age": 20,
+   "max_age": 50
+  },
+  {
+   "id": "single_happy",
+   "seen": [
+    "is single and quite happy about it",
+    "lives alone and likes it that way",
+    "has never married and has no regrets about it"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "courting",
+   "seen": [
+    "is seeing someone new and keeps mentioning them",
+    "has a new sweetheart and is trying not to rush things",
+    "recently started courting someone"
+   ]
+  },
+  {
+   "id": "young_kids",
+   "seen": [
+    "has two little kids who run the household",
+    "is raising a pair of small, loud kids",
+    "has young kids and never quite enough sleep"
+   ],
+   "min_age": 22,
+   "max_age": 50
+  },
+  {
+   "id": "teen_kid",
+   "seen": [
+    "has a teenager at home who thinks everything is embarrassing",
+    "is raising a teenager and learning patience",
+    "has a teenage kid who is suddenly taller than everyone"
+   ],
+   "min_age": 35,
+   "max_age": 60
+  },
+  {
+   "id": "grown_kids",
+   "seen": [
+    "has grown kids who have all moved away",
+    "has kids who are grown and scattered",
+    "has grown kids who visit when they can"
+   ],
+   "min_age": 45
+  },
+  {
+   "id": "kid_at_school",
+   "seen": [
+    "has a kid away at school and misses them",
+    "recently saw a kid off to school in another town",
+    "has an empty room at home now that the youngest has gone off to study"
+   ],
+   "min_age": 40,
+   "max_age": 65
+  },
+  {
+   "id": "one_kid",
+   "seen": [
+    "has one kid and is very proud of them",
+    "has one kid who is the center of the family",
+    "has an only child of their own"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "single_parent",
+   "seen": [
+    "is raising a kid on their own",
+    "is a single parent and very organized because of it",
+    "brings up a kid alone with help from the neighbors"
+   ],
+   "min_age": 22,
+   "max_age": 60
+  },
+  {
+   "id": "old_grandparent",
+   "seen": [
+    "still has a grandparent living, sharp as a tack",
+    "visits a very old grandparent every week",
+    "has a grandparent who tells the same three stories"
+   ],
+   "max_age": 50
+  },
+  {
+   "id": "elderly_parent",
+   "seen": [
+    "looks in on an elderly parent most days",
+    "helps an aging parent with the shopping",
+    "has an elderly parent who recently moved in"
+   ],
+   "min_age": 40
+  },
+  {
+   "id": "family_recipes",
+   "seen": [
+    "comes from a family that argues about recipes",
+    "has a family where every gathering turns into a cooking contest",
+    "grew up in a family that measures love in second helpings"
+   ]
+  },
+  {
+   "id": "family_musicians",
+   "seen": [
+    "comes from a family of musicians but can't carry a tune",
+    "grew up in a house where everyone played an instrument",
+    "has relatives who all sing at every gathering"
+   ]
+  },
+  {
+   "id": "sibling_rivalry",
+   "seen": [
+    "still competes with a sibling over everything",
+    "has a friendly rivalry with a sibling that goes back to childhood",
+    "keeps score against a sibling at every family game"
+   ]
+  },
+  {
+   "id": "family_trade",
+   "seen": [
+    "comes from three generations in the same trade",
+    "is the latest in a long line of the same trade",
+    "follows a family trade going back generations"
+   ]
+  },
+  {
+   "id": "odd_one_out",
+   "seen": [
+    "is the only one in the family who didn't go into the family business",
+    "broke from family tradition and still hears about it",
+    "is the family's odd one out and quite enjoys it"
+   ]
+  },
+  {
+   "id": "adopted",
+   "seen": [
+    "was adopted young and adores the family who raised them",
+    "was adopted and has a big, devoted family",
+    "joined the family by adoption and calls it the luckiest break"
+   ]
+  },
+  {
+   "id": "foster_siblings",
+   "seen": [
+    "grew up with a revolving set of foster siblings",
+    "had foster siblings coming and going growing up",
+    "is still in touch with several foster siblings"
+   ]
+  },
+  {
+   "id": "partner_hours",
+   "seen": [
+    "has a partner who works nights, so they pass like ships",
+    "has a partner on the opposite schedule",
+    "barely sees a partner on weekdays because of their hours"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "partner_cooks",
+   "seen": [
+    "has a partner who does all the cooking",
+    "lets a partner run the kitchen",
+    "says a partner is the better cook by a mile"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "partner_away",
+   "seen": [
+    "has a partner working away for months at a time",
+    "is in a long-distance relationship and writes constantly",
+    "waits on letters from a partner who works far off"
+   ],
+   "min_age": 20
+  },
+  {
+   "id": "met_partner",
+   "seen": [
+    "met a partner at a dance years ago",
+    "met a partner over a spilled drink and never looked back",
+    "met a partner in school and has been with them ever since"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "friendly_ex",
+   "seen": [
+    "is divorced but on friendly terms with the ex",
+    "split from a partner years ago and they're still friends",
+    "gets along fine with a former partner"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "doting_relative",
+   "seen": [
+    "dotes on a sibling's kids",
+    "is the favorite relative of a sibling's kids",
+    "spoils a sibling's kids rotten"
+   ]
+  },
+  {
+   "id": "reunion",
+   "seen": [
+    "goes to a huge family reunion every summer",
+    "has a family reunion every year with over a hundred relatives",
+    "organizes the family gathering every year"
+   ]
+  },
+  {
+   "id": "family_scattered",
+   "seen": [
+    "has family scattered all over the country",
+    "has relatives in a dozen different towns",
+    "has a family spread so far apart it takes a year of letters to catch up"
+   ]
+  },
+  {
+   "id": "parent_stories",
+   "seen": [
+    "has a parent who tells embarrassing childhood stories to anyone",
+    "has a parent who keeps every childhood drawing",
+    "inherited a love of stories from a parent who never stopped telling them"
+   ]
+  },
+  {
+   "id": "grandparent_skills",
+   "seen": [
+    "learned a trade from a grandparent",
+    "picked up whittling from a grandparent",
+    "credits a grandparent with every useful skill they have"
+   ]
+  },
+  {
+   "id": "lives_with_sibling",
+   "seen": [
+    "shares a home with a sibling",
+    "lives with a sibling and they bicker constantly",
+    "rents a place with a sibling and splits the chores"
+   ]
+  },
+  {
+   "id": "twin_kids",
+   "seen": [
+    "has twins and still mixes up their names sometimes",
+    "is raising twins and has the patience to show for it",
+    "has a pair of twins who are always up to something"
+   ],
+   "min_age": 25,
+   "max_age": 55
+  },
+  {
+   "id": "new_parent",
+   "seen": [
+    "just had a first baby",
+    "is a brand-new parent and permanently tired",
+    "recently welcomed a baby and talks about little else"
+   ],
+   "min_age": 20,
+   "max_age": 45
+  },
+  {
+   "id": "great_grandparent",
+   "seen": [
+    "is a great-grandparent and very proud of it",
+    "has great-grandkids now",
+    "has four generations of family at every holiday"
+   ],
+   "min_age": 70
+  },
+  {
+   "id": "family_house",
+   "seen": [
+    "lives in the house a grandparent built",
+    "still lives in the family home",
+    "grew up in the same house they live in now"
+   ]
+  },
+  {
+   "id": "many_cousins",
+   "seen": [
+    "has more cousins than can be counted",
+    "has about forty cousins and knows them all",
+    "can't go anywhere in town without bumping into a cousin"
+   ]
+  },
+  {
+   "id": "teacher_parent",
+   "seen": [
+    "has a parent who was the local schoolteacher",
+    "grew up as the teacher's kid and never got away with anything",
+    "had a parent who taught half the town"
+   ]
+  },
+  {
+   "id": "in_laws",
+   "seen": [
+    "gets on wonderfully with the in-laws",
+    "is closer to a partner's family than their own",
+    "has in-laws who visit far too often"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "great_grandparent_alive",
+   "seen": [
+    "still has a great-grandparent living",
+    "has a great-grandparent nearly a hundred years old",
+    "has a great-grandparent who still remembers everyone's birthday"
+   ],
+   "max_age": 35
+  },
+  {
+   "id": "kid_moved_back",
+   "seen": [
+    "has a grown kid who moved back home",
+    "has a grown kid living at home again",
+    "had a grown kid move back in and secretly loves it"
+   ],
+   "min_age": 45
+  },
+  {
+   "id": "age_gap_sibling",
+   "seen": [
+    "has a sibling fifteen years younger",
+    "is old enough to have helped raise a much younger sibling",
+    "has a baby sibling who is now a grown adult and still the baby"
+   ]
+  },
+  {
+   "id": "cousins_abroad",
+   "seen": [
+    "has cousins overseas and has never met most of them",
+    "writes to cousins in another country",
+    "keeps up with a branch of the family abroad"
+   ]
+  },
+  {
+   "id": "family_historian",
+   "seen": [
+    "has traced the family tree back three hundred years",
+    "is the family's unofficial historian",
+    "keeps a big book of family records and stories"
+   ]
+  },
+  {
+   "id": "family_farm",
+   "seen": [
+    "has relatives who still run the family farm",
+    "goes back to help on the family farm at harvest",
+    "has a family farm out in the country that everyone visits"
+   ]
+  },
+  {
+   "id": "adopted_kid",
+   "seen": [
+    "adopted a kid a few years ago",
+    "became a parent through adoption",
+    "has an adopted kid who is the joy of the house"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "foster_parent",
+   "seen": [
+    "fosters kids and has had dozens through the house",
+    "has been a foster parent for years",
+    "keeps a spare room ready for foster kids"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "stepkids",
+   "seen": [
+    "has stepkids and is slowly winning them over",
+    "inherited a couple of stepkids with a new partner",
+    "gets on well with a partner's kids"
+   ],
+   "min_age": 28
+  },
+  {
+   "id": "raising_grandkid",
+   "seen": [
+    "is helping raise a grandkid",
+    "has a grandkid living with them",
+    "looks after the grandkids most days"
+   ],
+   "min_age": 50
+  },
+  {
+   "id": "three_generations",
+   "seen": [
+    "lives in a house with three generations under one roof",
+    "shares a home with a parent and a kid",
+    "lives in a crowded house of grandparents, parents and kids"
+   ],
+   "min_age": 25,
+   "max_age": 65
+  },
+  {
+   "id": "family_glue",
+   "seen": [
+    "hosts the whole family for dinner every week",
+    "is the one who brings the family together",
+    "keeps the family in touch and remembers every birthday"
+   ]
+  },
+  {
+   "id": "sibling_business",
+   "seen": [
+    "runs a business with a sibling",
+    "works side by side with a sibling every day",
+    "went into trade with a sibling and they argue about the books"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "partner_from_afar",
+   "seen": [
+    "has a partner from far away and they split holidays between families",
+    "married into a family from another country",
+    "has a partner whose family lives across the sea"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "second_marriage",
+   "seen": [
+    "married again later in life",
+    "found love a second time and is very happy",
+    "remarried a few years ago"
+   ],
+   "min_age": 35
+  },
+  {
+   "id": "childhood_sweetheart",
+   "seen": [
+    "married a childhood sweetheart",
+    "has been with the same sweetheart since school",
+    "is still with a first love"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "no_kids",
+   "seen": [
+    "has no kids and spoils everyone else's",
+    "chose not to have kids and loves the quiet",
+    "never had kids but is an honorary relative to half the street"
+   ],
+   "min_age": 35
+  },
+  {
+   "id": "many_kids",
+   "seen": [
+    "has six kids and a very big kitchen table",
+    "is raising a houseful of kids",
+    "has so many kids the house is never quiet"
+   ],
+   "min_age": 35,
+   "max_age": 65
+  },
+  {
+   "id": "protective_sibling",
+   "seen": [
+    "has an older sibling who still checks up on them",
+    "has a protective older sibling",
+    "is still treated like the little one by an older sibling"
+   ]
+  },
+  {
+   "id": "scrape_sibling",
+   "seen": [
+    "keeps an eye on a younger sibling who is always in scrapes",
+    "feels responsible for a younger sibling",
+    "is forever bailing out a younger sibling"
+   ]
+  },
+  {
+   "id": "wandering_parent",
+   "seen": [
+    "has a restless parent who travels constantly and writes from everywhere",
+    "has a parent who took up wandering in old age",
+    "gets letters from a parent off exploring somewhere"
+   ],
+   "max_age": 60
+  },
+  {
+   "id": "parent_courting",
+   "seen": [
+    "has a parent who has just started courting again",
+    "is getting used to a parent's new sweetheart",
+    "has a parent who remarried recently and seems very happy"
+   ],
+   "max_age": 60
+  },
+  {
+   "id": "grandparent_rivals",
+   "seen": [
+    "has two grandparents who compete to be the favorite",
+    "has grandparents who argue over who taught them what",
+    "has a grandparent who still treats them like a small kid"
+   ],
+   "max_age": 40
+  },
+  {
+   "id": "family_nicknames",
+   "seen": [
+    "has a family where nobody is called by a real name",
+    "is known by a silly childhood nickname to all the relatives",
+    "still gets called by a baby name at family gatherings"
+   ]
+  },
+  {
+   "id": "family_grudge",
+   "seen": [
+    "comes from a family with a long feud with the neighbors",
+    "has a family that hasn't spoken to the neighbors in two generations",
+    "inherited a family grudge nobody remembers the reason for"
+   ]
+  },
+  {
+   "id": "eldest_cousin",
+   "seen": [
+    "is the eldest of all the cousins and the one who organizes them",
+    "is the oldest cousin and always gets left in charge",
+    "is the cousin everyone calls for advice"
+   ]
+  },
+  {
+   "id": "animal_family",
+   "seen": [
+    "comes from a family that always has a houseful of animals",
+    "grew up in a house with more animals than people",
+    "has relatives who rescue every stray in town"
+   ]
+  },
+  {
+   "id": "opposite_partner",
+   "seen": [
+    "has a partner who is the complete opposite",
+    "has a partner who loves parties while they prefer quiet nights",
+    "says a partner balances them out perfectly"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "partner_business",
+   "seen": [
+    "runs a business with a partner",
+    "works alongside a partner every day",
+    "has a partner who is also a business partner"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "long_engagement",
+   "seen": [
+    "has been engaged for six years with no date set",
+    "keeps putting off the wedding for one reason or another",
+    "has a very patient partner waiting on a wedding date"
+   ],
+   "min_age": 24
+  },
+  {
+   "id": "living_apart",
+   "seen": [
+    "has a partner but they keep separate homes",
+    "is happily partnered but lives alone",
+    "has a sweetheart across town and likes it that way"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "grown_kids_near",
+   "seen": [
+    "has grown kids who still come for dinner every week",
+    "is close with grown kids who live nearby",
+    "has grown kids who drop by most days"
+   ],
+   "min_age": 50
+  },
+  {
+   "id": "namesake_grandkid",
+   "seen": [
+    "has a grandkid named after them",
+    "was honored when a grandkid got their name",
+    "has a namesake grandkid"
+   ],
+   "min_age": 50
+  },
+  {
+   "id": "grandkid_coming",
+   "seen": [
+    "is about to become a grandparent",
+    "has a first grandkid on the way",
+    "is knitting things for a grandkid due any day"
+   ],
+   "min_age": 42
+  },
+  {
+   "id": "kid_married",
+   "seen": [
+    "has a kid who just got married",
+    "recently gained a kid-in-law",
+    "danced all night at a kid's wedding last season"
+   ],
+   "min_age": 42
+  },
+  {
+   "id": "kid_new_trade",
+   "seen": [
+    "has a grown kid who just started a trade",
+    "is proud of a grown kid's new business",
+    "talks up a grown kid's work to anyone who'll listen"
+   ],
+   "min_age": 40
+  },
+  {
+   "id": "kid_far",
+   "seen": [
+    "has a grown kid living far away and misses them",
+    "has a kid who moved across the country",
+    "has a grown kid overseas and saves up for visits"
+   ],
+   "min_age": 45
+  },
+  {
+   "id": "wise_parent",
+   "seen": [
+    "quotes a parent's sayings constantly",
+    "still takes advice from a parent on everything",
+    "calls a parent the wisest person around"
+   ],
+   "max_age": 60
+  },
+  {
+   "id": "raised_by_sibling",
+   "seen": [
+    "was mostly raised by an older sibling",
+    "was brought up largely by an eldest sibling",
+    "credits an older sibling with raising them"
+   ]
+  },
+  {
+   "id": "raised_by_relatives",
+   "seen": [
+    "was raised by relatives in the country",
+    "was brought up by a pair of kindly relatives",
+    "spent childhood with an elderly relative who spoiled them"
+   ]
+  },
+  {
+   "id": "moved_in_together",
+   "seen": [
+    "just moved in with a partner",
+    "recently set up home with a sweetheart",
+    "is learning to share a home with a partner for the first time"
+   ],
+   "min_age": 19,
+   "max_age": 45
+  },
+  {
+   "id": "two_houses",
+   "seen": [
+    "grew up with parents in two houses",
+    "has parents who split up but stayed friends",
+    "had two homes as a kid and liked having two bedrooms"
+   ]
+  },
+  {
+   "id": "family_traditions",
+   "seen": [
+    "has a family that goes to the same seaside spot every year",
+    "keeps up an odd family tradition every midsummer",
+    "has family traditions nobody can explain"
+   ]
+  },
+  {
+   "id": "famous_sibling",
+   "seen": [
+    "has a sibling who is a bit of a local celebrity",
+    "is always being asked about a well-known sibling",
+    "has a sibling everybody in town knows"
+   ]
+  },
+  {
+   "id": "sibling_next_door",
+   "seen": [
+    "lives next door to a sibling and they share a garden",
+    "has a sibling right next door",
+    "can shout across the fence to a sibling"
+   ]
+  },
+  {
+   "id": "cousin_lodger",
+   "seen": [
+    "has a cousin staying in the spare room indefinitely",
+    "took in a cousin who needed a place for a while",
+    "has a cousin lodging with them"
+   ]
+  },
+  {
+   "id": "grandparent_at_home",
+   "seen": [
+    "has a grandparent living with them",
+    "shares a home with a grandparent",
+    "lives with a grandparent and does the heavy lifting"
+   ],
+   "max_age": 40
+  },
+  {
+   "id": "busy_retired_parents",
+   "seen": [
+    "has retired parents who garden competitively",
+    "has parents who took up dancing in retirement",
+    "has a retired parent who has never been busier"
+   ],
+   "min_age": 30,
+   "max_age": 60
+  },
+  {
+   "id": "kid_starting_school",
+   "seen": [
+    "has a kid just starting school",
+    "walks a little kid to school every morning",
+    "has a kid in the first year of school"
+   ],
+   "min_age": 22,
+   "max_age": 50
+  },
+  {
+   "id": "hand_me_downs",
+   "seen": [
+    "wore hand-me-downs from four older cousins",
+    "grew up in hand-me-downs and still loves a secondhand coat",
+    "never had a new coat until grown, thanks to older cousins"
+   ]
+  }
+ ],
+ "pets": [
+  {
+   "id": "tabby",
+   "seen": [
+    "keeps an elderly tabby called {pet}",
+    "shares a home with an old striped cat named {pet}"
+   ]
+  },
+  {
+   "id": "terrier",
+   "seen": [
+    "walks a scruffy terrier named {pet} twice a day",
+    "has a wiry little terrier called {pet} that never sits still"
+   ]
+  },
+  {
+   "id": "tortoise",
+   "seen": [
+    "has a tortoise called {pet} that is older than its owner",
+    "keeps a slow, stubborn tortoise named {pet}"
+   ]
+  },
+  {
+   "id": "chickens",
+   "seen": [
+    "keeps a few chickens and the bossiest one is {pet}",
+    "raises backyard hens, led by one called {pet}"
+   ]
+  },
+  {
+   "id": "swearing_parrot",
+   "seen": [
+    "has a parrot named {pet} that swears at visitors",
+    "owns a parrot called {pet} with a shocking vocabulary"
+   ]
+  },
+  {
+   "id": "big_dog",
+   "seen": [
+    "has a huge, gentle dog named {pet}",
+    "is usually pulled down the street by an enormous dog called {pet}"
+   ]
+  },
+  {
+   "id": "stray_cat",
+   "seen": [
+    "took in a stray cat that turned up one winter and named it {pet}",
+    "adopted a scruffy stray and called it {pet}"
+   ]
+  },
+  {
+   "id": "goldfish",
+   "seen": [
+    "has a goldfish called {pet} that has lived far too long",
+    "keeps a single goldfish named {pet} in a bowl by the window"
+   ]
+  },
+  {
+   "id": "rabbit",
+   "seen": [
+    "keeps a rabbit called {pet} that chews everything",
+    "has a fat, fluffy rabbit named {pet}"
+   ]
+  },
+  {
+   "id": "two_cats",
+   "seen": [
+    "has two cats, and {pet} is the one in charge",
+    "lives with a pair of cats but talks mostly about {pet}"
+   ]
+  },
+  {
+   "id": "goat",
+   "seen": [
+    "keeps a goat called {pet} that has eaten at least one hat",
+    "has a goat named {pet} that escapes about once a week"
+   ]
+  },
+  {
+   "id": "old_hound",
+   "seen": [
+    "has an old hound called {pet} that sleeps most of the day",
+    "has a gray-muzzled hound named {pet}"
+   ]
+  },
+  {
+   "id": "canary",
+   "seen": [
+    "keeps a canary called {pet} that sings in the mornings",
+    "has a little yellow songbird named {pet}"
+   ]
+  },
+  {
+   "id": "sheepdog",
+   "seen": [
+    "has a sheepdog named {pet} that tries to herd the neighbors",
+    "owns a herding dog called {pet} that rounds up anyone walking by"
+   ]
+  },
+  {
+   "id": "visiting_cat",
+   "seen": [
+    "feeds a neighbor's cat called {pet} that seems to live there now",
+    "has been adopted by a neighborhood cat known as {pet}"
+   ]
+  },
+  {
+   "id": "duck",
+   "seen": [
+    "keeps a duck called {pet} that waddles along behind on errands",
+    "has a pet duck named {pet} with very firm opinions"
+   ]
+  },
+  {
+   "id": "ferret",
+   "seen": [
+    "keeps a ferret called {pet} that steals socks",
+    "has a mischievous ferret named {pet}"
+   ]
+  },
+  {
+   "id": "pony",
+   "seen": [
+    "keeps an old pony called {pet} out at a friend's field",
+    "has a fat little pony named {pet} that loves apples"
+   ]
+  },
+  {
+   "id": "lizard",
+   "seen": [
+    "keeps a lizard named {pet} that suns itself on the windowsill",
+    "has a little green lizard called {pet}"
+   ]
+  },
+  {
+   "id": "dachshund",
+   "seen": [
+    "has a long, low dachshund named {pet}",
+    "walks a sausage dog called {pet} very slowly"
+   ]
+  },
+  {
+   "id": "pigeons",
+   "seen": [
+    "keeps racing pigeons and the champion is {pet}",
+    "has a loft of pigeons, the favorite being {pet}"
+   ]
+  },
+  {
+   "id": "crow",
+   "seen": [
+    "has befriended a crow they call {pet}",
+    "leaves peanuts out for a crow they have named {pet}"
+   ]
+  },
+  {
+   "id": "borrowed_dog",
+   "seen": [
+    "borrows a neighbor's dog called {pet} for long walks",
+    "walks a neighbor's spaniel named {pet} most evenings and acts like it's theirs"
+   ]
+  },
+  {
+   "id": "greyhound",
+   "seen": [
+    "has a lanky greyhound called {pet} that sleeps all day",
+    "keeps a greyhound named {pet} that runs like the wind and naps like a log"
+   ]
+  },
+  {
+   "id": "pug",
+   "seen": [
+    "has a snoring pug named {pet}",
+    "owns a squash-faced pug called {pet}"
+   ]
+  },
+  {
+   "id": "black_cat",
+   "seen": [
+    "keeps a sleek black cat called {pet}",
+    "has a black cat named {pet} that the neighbors think is lucky"
+   ]
+  },
+  {
+   "id": "ginger_cat",
+   "seen": [
+    "has a huge ginger cat called {pet} that rules the street",
+    "shares a home with a fat orange cat named {pet}"
+   ]
+  },
+  {
+   "id": "kitten",
+   "seen": [
+    "has just taken in a kitten named {pet}",
+    "is raising a mischievous kitten called {pet}"
+   ]
+  },
+  {
+   "id": "puppy",
+   "seen": [
+    "has a new puppy named {pet} that chews every shoe",
+    "is trying to train a puppy called {pet}, without much luck"
+   ]
+  },
+  {
+   "id": "sheep",
+   "seen": [
+    "keeps a pet sheep named {pet} in the back field",
+    "raised a lamb called {pet} that still thinks it's a dog"
+   ]
+  },
+  {
+   "id": "pig",
+   "seen": [
+    "has a pig named {pet} that is cleverer than most people",
+    "keeps a pot-bellied pig called {pet}"
+   ]
+  },
+  {
+   "id": "donkey",
+   "seen": [
+    "keeps a donkey called {pet} that brays at sunrise",
+    "has a stubborn donkey named {pet} that only moves for carrots"
+   ]
+  },
+  {
+   "id": "geese",
+   "seen": [
+    "keeps a pair of geese, and the loud one is {pet}",
+    "has a guard goose named {pet} that terrifies visitors"
+   ]
+  },
+  {
+   "id": "bantam",
+   "seen": [
+    "has a little bantam called {pet} that crows at all hours",
+    "keeps a tiny bantam named {pet} that thinks it's huge"
+   ]
+  },
+  {
+   "id": "milk_cow",
+   "seen": [
+    "keeps a milk cow named {pet}",
+    "has a family cow called {pet} that gives the best milk in the street"
+   ]
+  },
+  {
+   "id": "cockatiel",
+   "seen": [
+    "has a cockatiel named {pet} that whistles along to songs",
+    "keeps a crested songbird called {pet} that whistles back"
+   ]
+  },
+  {
+   "id": "magpie",
+   "seen": [
+    "has a tame magpie named {pet} that steals shiny things",
+    "feeds a magpie called {pet} that brings little gifts"
+   ]
+  },
+  {
+   "id": "owl",
+   "seen": [
+    "has a rescued owl named {pet} living in the barn",
+    "looks after a barn owl called {pet}"
+   ]
+  },
+  {
+   "id": "budgies",
+   "seen": [
+    "keeps a pair of budgies, the chatty one being {pet}",
+    "has a little blue budgie named {pet} that talks to its mirror"
+   ]
+  },
+  {
+   "id": "parakeet",
+   "seen": [
+    "has a talking parakeet called {pet} that says good morning to everyone",
+    "owns a parakeet named {pet} that can imitate the kettle"
+   ]
+  },
+  {
+   "id": "koi",
+   "seen": [
+    "keeps koi in a garden pond, the biggest called {pet}",
+    "has a fat orange koi named {pet} that comes when called"
+   ]
+  },
+  {
+   "id": "fighting_fish",
+   "seen": [
+    "keeps a fighting fish called {pet} in a jar on the counter",
+    "has a bright blue fish named {pet} that flares at its reflection"
+   ]
+  },
+  {
+   "id": "minnows",
+   "seen": [
+    "keeps a tank of little fish and claims {pet} is the smart one",
+    "has a bowl of minnows led by one called {pet}"
+   ]
+  },
+  {
+   "id": "turtle",
+   "seen": [
+    "keeps a box turtle named {pet}",
+    "has a pond turtle called {pet} that basks on a rock"
+   ]
+  },
+  {
+   "id": "snake",
+   "seen": [
+    "keeps a corn snake called {pet} that likes being held",
+    "has a placid snake named {pet} that lives in a warm box"
+   ]
+  },
+  {
+   "id": "gecko",
+   "seen": [
+    "has a tiny gecko named {pet} that chirps at night",
+    "keeps a gecko called {pet} that hunts crickets with great seriousness"
+   ]
+  },
+  {
+   "id": "toad",
+   "seen": [
+    "keeps a frog called {pet} in a garden pond",
+    "has a fat toad named {pet} that lives under the step"
+   ]
+  },
+  {
+   "id": "spider",
+   "seen": [
+    "keeps a fuzzy spider named {pet} that frightens visitors",
+    "has a large, gentle spider called {pet}"
+   ]
+  },
+  {
+   "id": "hamster",
+   "seen": [
+    "has a hamster named {pet} that runs on its wheel all night",
+    "keeps a hamster called {pet} that stuffs its cheeks"
+   ],
+   "period": {
+    "seen": [
+     "keeps a dormouse named {pet} that sleeps all winter",
+     "has a pet field mouse called {pet} that lives in a teacup"
+    ]
+   }
+  },
+  {
+   "id": "guinea_pigs",
+   "seen": [
+    "keeps two guinea pigs, and {pet} is the noisy one",
+    "has a squeaky guinea pig named {pet}"
+   ]
+  },
+  {
+   "id": "rat",
+   "seen": [
+    "keeps a pet rat called {pet} that rides on a shoulder",
+    "has a clever rat named {pet} that knows tricks"
+   ]
+  },
+  {
+   "id": "white_mice",
+   "seen": [
+    "keeps a family of white mice ruled by one called {pet}",
+    "has a tiny white mouse named {pet}"
+   ]
+  },
+  {
+   "id": "hedgehog",
+   "seen": [
+    "has a hedgehog called {pet} that visits the garden each night",
+    "looks after a hedgehog named {pet} that lives under the hedge"
+   ]
+  },
+  {
+   "id": "squirrel",
+   "seen": [
+    "feeds a squirrel named {pet} that knocks on the window",
+    "has a tame squirrel called {pet} that raids the bird table"
+   ]
+  },
+  {
+   "id": "stray_mutt",
+   "seen": [
+    "adopted a stray mutt named {pet} that turned up at the back door",
+    "took in a scruffy stray dog and named it {pet}"
+   ]
+  },
+  {
+   "id": "collie",
+   "seen": [
+    "has a clever collie named {pet} that understands every word",
+    "walks a black-and-white collie called {pet}"
+   ]
+  },
+  {
+   "id": "bulldog",
+   "seen": [
+    "has a grumpy bulldog called {pet} that snores like a saw",
+    "owns a stout bulldog named {pet}"
+   ]
+  },
+  {
+   "id": "lapdog",
+   "seen": [
+    "keeps a tiny lapdog called {pet} that rides in a basket",
+    "has a fluffy little lapdog named {pet} with a bow"
+   ]
+  },
+  {
+   "id": "poodle",
+   "seen": [
+    "has a very fancy poodle named {pet}",
+    "walks a curly poodle called {pet} that's always freshly groomed"
+   ]
+  },
+  {
+   "id": "mastiff",
+   "seen": [
+    "keeps a great slobbering mastiff named {pet}",
+    "has a mastiff called {pet} that is frightened of cats"
+   ]
+  },
+  {
+   "id": "spaniel",
+   "seen": [
+    "has a springy spaniel called {pet} that loves puddles",
+    "owns a spaniel named {pet} that comes home muddy every day"
+   ]
+  },
+  {
+   "id": "beagle",
+   "seen": [
+    "has a beagle named {pet} that howls at the bells",
+    "walks a nose-down beagle called {pet} that follows every scent"
+   ]
+  },
+  {
+   "id": "wolfhound",
+   "seen": [
+    "has a shaggy wolfhound called {pet} as tall as a table",
+    "owns a giant gray wolfhound named {pet}"
+   ]
+  },
+  {
+   "id": "work_dog",
+   "seen": [
+    "has a mutt called {pet} that waits outside the shop all day",
+    "has a dog named {pet} that greets every customer at work"
+   ]
+  },
+  {
+   "id": "shop_cat",
+   "seen": [
+    "keeps a shop cat called {pet} that sleeps in the window",
+    "has a cat named {pet} that minds the counter at work"
+   ]
+  },
+  {
+   "id": "barn_cats",
+   "seen": [
+    "feeds a colony of barn cats, the boss being {pet}",
+    "has half-wild barn cats and one tame one called {pet}"
+   ]
+  },
+  {
+   "id": "fluffy_cat",
+   "seen": [
+    "has a fluffy white cat called {pet} that sheds on everything",
+    "keeps a long-haired cat named {pet} that needs brushing daily"
+   ]
+  },
+  {
+   "id": "fetching_cat",
+   "seen": [
+    "has a cat called {pet} that fetches like a dog",
+    "owns a cat named {pet} that comes when whistled for"
+   ]
+  },
+  {
+   "id": "grumpy_cat",
+   "seen": [
+    "has a grumpy old cat named {pet} that tolerates nobody",
+    "keeps a cranky gray cat called {pet}"
+   ]
+  },
+  {
+   "id": "cart_horse",
+   "seen": [
+    "keeps a big old cart horse named {pet}",
+    "has a gentle draft horse called {pet} that loves having its nose rubbed"
+   ]
+  },
+  {
+   "id": "mule",
+   "seen": [
+    "has a mule called {pet} that is smarter than it lets on",
+    "keeps a sure-footed mule named {pet}"
+   ]
+  },
+  {
+   "id": "swan",
+   "seen": [
+    "feeds a swan called {pet} that rules the pond",
+    "has a bad-tempered swan named {pet} that lives on the millpond"
+   ]
+  },
+  {
+   "id": "turkey",
+   "seen": [
+    "keeps a turkey named {pet} that follows them around the yard",
+    "has a pet turkey called {pet} that gobbles at strangers"
+   ]
+  },
+  {
+   "id": "peacock",
+   "seen": [
+    "has a peacock called {pet} that screams at dawn",
+    "keeps a showy peacock named {pet}"
+   ]
+  },
+  {
+   "id": "jackdaw",
+   "seen": [
+    "has a cheeky jackdaw called {pet} that perches on the chimney",
+    "feeds a jackdaw named {pet} that taps at the glass"
+   ]
+  },
+  {
+   "id": "falcon",
+   "seen": [
+    "keeps a hunting falcon called {pet}",
+    "flies a hawk named {pet} out on the hills"
+   ]
+  },
+  {
+   "id": "doves",
+   "seen": [
+    "keeps white doves, the tamest being {pet}",
+    "has a soft gray dove called {pet} that coos on the sill"
+   ]
+  },
+  {
+   "id": "robin",
+   "seen": [
+    "has a robin called {pet} that eats from the hand in the garden",
+    "feeds a little robin named {pet} that follows the spade"
+   ]
+  },
+  {
+   "id": "bees",
+   "seen": [
+    "keeps bees and has named the queen {pet}",
+    "talks to the beehives and calls the strongest colony {pet}"
+   ]
+  },
+  {
+   "id": "snail",
+   "seen": [
+    "keeps a giant snail named {pet}",
+    "has a garden snail called {pet} that a kid brought home"
+   ]
+  },
+  {
+   "id": "cricket",
+   "seen": [
+    "keeps a singing cricket named {pet} in a little cage",
+    "has a cricket called {pet} that chirps by the stove"
+   ]
+  },
+  {
+   "id": "newt",
+   "seen": [
+    "has a little spotted newt named {pet}",
+    "keeps a newt called {pet} in a glass jar of pond water"
+   ]
+  },
+  {
+   "id": "iguana",
+   "seen": [
+    "has a large iguana named {pet} that sits by the stove",
+    "keeps an iguana called {pet} that looks very unimpressed"
+   ]
+  },
+  {
+   "id": "chameleon",
+   "seen": [
+    "has a chameleon named {pet} that never matches anything",
+    "keeps a slow chameleon called {pet}"
+   ]
+  },
+  {
+   "id": "llama",
+   "seen": [
+    "keeps a llama called {pet} that spits at strangers",
+    "has a woolly alpaca named {pet}"
+   ]
+  },
+  {
+   "id": "rabbit_hutch",
+   "seen": [
+    "keeps a hutch of rabbits, chief among them {pet}",
+    "has a big gray rabbit called {pet} that thumps when annoyed"
+   ]
+  },
+  {
+   "id": "pygmy_goats",
+   "seen": [
+    "keeps two little pygmy goats, and {pet} is the climber",
+    "has a tiny goat called {pet} that stands on everything"
+   ]
+  },
+  {
+   "id": "shared_cat",
+   "seen": [
+    "shares a cat called {pet} with the neighbors, who call it something else",
+    "has a cat named {pet} that eats dinner at three different houses"
+   ]
+  },
+  {
+   "id": "foster_dog",
+   "seen": [
+    "is fostering a shy dog named {pet} until it finds a home",
+    "is looking after a stray dog called {pet} for the winter"
+   ]
+  },
+  {
+   "id": "tub_goldfish",
+   "seen": [
+    "keeps goldfish in an old tub, the boldest called {pet}",
+    "has a pond fish named {pet} that is older than the pond"
+   ]
+  },
+  {
+   "id": "pigeon_rescue",
+   "seen": [
+    "nursed a pigeon called {pet} back to flying and it never left",
+    "took in a lost homing pigeon and named it {pet}"
+   ]
+  },
+  {
+   "id": "gull",
+   "seen": [
+    "has a seagull called {pet} that waits on the roof for scraps",
+    "feeds a bold gull named {pet} that knocks on the door"
+   ]
+  },
+  {
+   "id": "ratter",
+   "seen": [
+    "keeps a ratting terrier called {pet} for the cellar",
+    "has a tough little dog named {pet} that keeps the mice away"
+   ]
+  },
+  {
+   "id": "lurcher",
+   "seen": [
+    "has a lurcher named {pet} that steals bread off the table",
+    "walks a rangy lurcher called {pet}"
+   ]
+  },
+  {
+   "id": "inherited_dog",
+   "seen": [
+    "inherited an old dog called {pet} from a grandparent",
+    "took on a grandparent's elderly dog named {pet}"
+   ]
+  },
+  {
+   "id": "litter_cat",
+   "seen": [
+    "has a cat named {pet} that had kittens in the laundry basket",
+    "keeps a cat called {pet} that keeps having litters"
+   ]
+  },
+  {
+   "id": "mynah",
+   "seen": [
+    "has a mynah bird called {pet} that laughs like a neighbor",
+    "keeps a mynah named {pet} that mimics everyone in the house"
+   ]
+  },
+  {
+   "id": "tortoiseshell",
+   "seen": [
+    "has a tortoiseshell cat called {pet} with a dramatic personality",
+    "keeps a patchy tortoiseshell named {pet}"
+   ]
+  },
+  {
+   "id": "ox",
+   "seen": [
+    "keeps a patient old ox named {pet}",
+    "has a big gentle ox called {pet} that plows the plot"
+   ]
+  },
+  {
+   "id": "fair_puppy",
+   "seen": [
+    "bought a puppy named {pet} at a market on impulse",
+    "came home from the fair with a puppy called {pet}"
+   ]
+  }
+ ],
+ "pet_names": [
+  "Biscuit",
+  "Pickles",
+  "Muffin",
+  "Pepper",
+  "Ginger",
+  "Bramble",
+  "Mittens",
+  "Socks",
+  "Rufus",
+  "Barnaby",
+  "Bonnie",
+  "Clover",
+  "Dumpling",
+  "Nutmeg",
+  "Sprout",
+  "Turnip",
+  "Waffles",
+  "Noodle",
+  "Crumpet",
+  "Pudding",
+  "Pip",
+  "Bean",
+  "Toffee",
+  "Marmalade",
+  "Custard",
+  "Sir Fluffington",
+  "Captain",
+  "The Mayor",
+  "Admiral Whiskers",
+  "Professor",
+  "Napoleon",
+  "Cleopatra",
+  "Caesar",
+  "Hercules",
+  "Odin",
+  "Gerald",
+  "Doris",
+  "Steve",
+  "Linda",
+  "Kevin",
+  "Brenda",
+  "Norman",
+  "Mabel",
+  "Harold",
+  "Agnes",
+  "Frank",
+  "Gertrude",
+  "Dennis",
+  "Maureen",
+  "Shadow",
+  "Smudge",
+  "Patch",
+  "Scout",
+  "Bandit",
+  "Lucky",
+  "Rascal",
+  "Tinker",
+  "Pebble",
+  "Acorn",
+  "Thistle",
+  "Hazel",
+  "Juniper",
+  "Lord Wobbles",
+  "Meatball",
+  "Chairman Meow",
+  "Sergeant Sniffles",
+  "Moth",
+  "Turbo",
+  "Old Crumbs",
+  "Bumble",
+  "Wellington",
+  "Fig",
+  "Olive",
+  "Basil",
+  "Sage",
+  "Pumpkin",
+  "Archibald",
+  "Winifred",
+  "Percy",
+  "Florence",
+  "Bertie",
+  "Ethel",
+  "Reginald",
+  "Mildred",
+  "Cecil",
+  "Hilda",
+  "Barry",
+  "Sandra",
+  "Trevor",
+  "Pam",
+  "Cosmo",
+  "Ziggy",
+  "Boots",
+  "Domino",
+  "Freckles",
+  "Gizmo",
+  "Jellybean",
+  "Mochi",
+  "Peaches",
+  "Kipper",
+  "Sardine",
+  "Haddock",
+  "Whiskers",
+  "Snowball",
+  "Sooty",
+  "Ember",
+  "Blaze",
+  "Thunder",
+  "Comet",
+  "Biscotti",
+  "Crouton",
+  "Parsnip",
+  "Radish",
+  "Fennel",
+  "Poppy",
+  "Daisy",
+  "Rosie",
+  "Buttons",
+  "Bartholomew",
+  "Humphrey"
+ ],
+ "likes": [
+  {
+   "id": "bakery",
+   "seen": [
+    "can't walk past a bakery without going in",
+    "has a weakness for fresh bread",
+    "knows which bakery has the best buns on every street"
+   ]
+  },
+  {
+   "id": "ball_team",
+   "seen": [
+    "follows the local ball team with a lot of feeling",
+    "takes the local team's losses personally",
+    "never misses a home game"
+   ],
+   "period": {
+    "seen": [
+     "follows the local wrestling matches with a lot of feeling",
+     "takes the local champion's losses personally",
+     "never misses a match on the green"
+    ]
+   }
+  },
+  {
+   "id": "chess",
+   "seen": [
+    "plays chess in the park on Sundays",
+    "will challenge anyone to a game of chess",
+    "keeps a chess set ready and is hard to beat"
+   ]
+  },
+  {
+   "id": "garden",
+   "seen": [
+    "keeps a garden plot and talks about tomatoes",
+    "grows vegetables and gives away far too many",
+    "spends spare evenings in the garden"
+   ]
+  },
+  {
+   "id": "birds",
+   "seen": [
+    "knows the name of every bird in town",
+    "goes out early to watch birds",
+    "keeps a list of every bird spotted this year"
+   ]
+  },
+  {
+   "id": "fishing",
+   "seen": [
+    "goes fishing whenever there's a free morning",
+    "has a favorite fishing spot and won't say where",
+    "would rather be by the water with a line in"
+   ]
+  },
+  {
+   "id": "reading",
+   "seen": [
+    "always has a book on the go",
+    "loves a good mystery story",
+    "reads late into the night most evenings"
+   ]
+  },
+  {
+   "id": "baking",
+   "seen": [
+    "bakes on weekends and brings the results to work",
+    "makes a famous apple pie",
+    "is always trying a new bread recipe"
+   ]
+  },
+  {
+   "id": "cards",
+   "seen": [
+    "plays cards with the same friends every week",
+    "has a standing card game on Thursdays",
+    "is very competitive at cards"
+   ]
+  },
+  {
+   "id": "dancing",
+   "seen": [
+    "goes dancing whenever there's music",
+    "is the first on the floor at any dance",
+    "loves to dance and isn't shy about it"
+   ]
+  },
+  {
+   "id": "singing",
+   "seen": [
+    "sings while working without noticing",
+    "sings in a local choir",
+    "hums the same tune all day"
+   ]
+  },
+  {
+   "id": "knitting",
+   "seen": [
+    "knits scarves for friends whether they want one or not",
+    "always has some knitting on the go",
+    "can knit without looking"
+   ]
+  },
+  {
+   "id": "tea",
+   "seen": [
+    "is very particular about tea",
+    "drinks tea strong enough to stand a spoon in",
+    "keeps a dozen kinds of tea at home"
+   ]
+  },
+  {
+   "id": "coffee",
+   "seen": [
+    "won't talk to anyone before the first cup of coffee",
+    "has strong opinions about coffee",
+    "knows every coffee spot in town"
+   ],
+   "period": {
+    "seen": [
+     "won't talk to anyone before breakfast",
+     "has strong opinions about the local ale",
+     "knows which tavern pours the best ale"
+    ]
+   }
+  },
+  {
+   "id": "walks",
+   "seen": [
+    "takes long walks with no destination",
+    "walks everywhere and knows every shortcut",
+    "goes for a walk every evening, rain or shine"
+   ]
+  },
+  {
+   "id": "riddles",
+   "seen": [
+    "loves a good puzzle or riddle",
+    "can't leave a riddle unsolved",
+    "collects riddles and tests them on friends"
+   ]
+  },
+  {
+   "id": "secondhand",
+   "seen": [
+    "loves poking around secondhand shops",
+    "can't resist a market stall full of old junk",
+    "hunts for bargains at every market"
+   ]
+  },
+  {
+   "id": "buttons",
+   "seen": [
+    "collects old buttons",
+    "has a jar of interesting buttons from all over",
+    "keeps a collection of odd buttons and knows the story of each"
+   ]
+  },
+  {
+   "id": "stars",
+   "seen": [
+    "likes to look at the stars on clear nights",
+    "can name most of the constellations",
+    "will drag anyone outside to look at a bright planet"
+   ]
+  },
+  {
+   "id": "spicy",
+   "seen": [
+    "puts pepper on everything",
+    "loves bold, spicy food",
+    "always asks for the hottest thing on offer"
+   ]
+  },
+  {
+   "id": "local_history",
+   "seen": [
+    "knows more local history than anyone should",
+    "can tell the story behind every old building",
+    "loves digging into the town's past"
+   ]
+  },
+  {
+   "id": "sketching",
+   "seen": [
+    "paints little watercolors on weekends",
+    "sketches people in the square",
+    "always carries a small sketchbook"
+   ]
+  },
+  {
+   "id": "woodwork",
+   "seen": [
+    "carves small wooden animals",
+    "builds furniture in a back shed",
+    "loves working with wood"
+   ]
+  },
+  {
+   "id": "swimming",
+   "seen": [
+    "swims in cold water all year round",
+    "goes for a swim every morning in summer",
+    "loves a swim in the river"
+   ]
+  },
+  {
+   "id": "cats",
+   "seen": [
+    "stops to greet every cat on the street",
+    "is a cat person through and through",
+    "knows every cat in the neighborhood by name"
+   ]
+  },
+  {
+   "id": "news",
+   "seen": [
+    "loves hearing what everyone's up to",
+    "always knows the latest town news",
+    "enjoys a good chat on the doorstep"
+   ]
+  },
+  {
+   "id": "rain",
+   "seen": [
+    "loves rainy days",
+    "likes the sound of rain on the roof best of all",
+    "is happiest on a gray, drizzly day"
+   ]
+  },
+  {
+   "id": "dawn",
+   "seen": [
+    "loves the town at dawn before anyone's up",
+    "is up with the sun and proud of it",
+    "enjoys the quiet of the early morning"
+   ]
+  },
+  {
+   "id": "night_owl",
+   "seen": [
+    "does the best work late at night",
+    "is a proud night owl",
+    "comes alive after dark"
+   ]
+  },
+  {
+   "id": "sweets",
+   "seen": [
+    "always has sweets in a pocket",
+    "has a serious sweet tooth",
+    "can't say no to cake"
+   ]
+  },
+  {
+   "id": "games",
+   "seen": [
+    "loves a good board game",
+    "loves a game of dice",
+    "has a favorite board game and knows every rule"
+   ]
+  },
+  {
+   "id": "theater",
+   "seen": [
+    "never misses a play in town",
+    "loves the theater and goes whenever possible",
+    "can quote whole scenes from favorite plays"
+   ]
+  },
+  {
+   "id": "fiddle",
+   "seen": [
+    "plays the fiddle badly but happily",
+    "practices the fiddle most evenings",
+    "brings a fiddle to every gathering"
+   ]
+  },
+  {
+   "id": "flowers",
+   "seen": [
+    "always has fresh flowers on the table",
+    "grows roses and frets over them",
+    "can name almost any flower"
+   ]
+  },
+  {
+   "id": "market",
+   "seen": [
+    "loves a busy market day",
+    "goes to the market every week just to look",
+    "knows every stallholder at the market"
+   ]
+  },
+  {
+   "id": "jokes",
+   "seen": [
+    "collects jokes and tells them badly",
+    "has a terrible joke for every occasion",
+    "laughs hardest at their own jokes"
+   ]
+  },
+  {
+   "id": "photos",
+   "seen": [
+    "takes photographs of old doorways",
+    "always has a camera nearby",
+    "has boxes of photographs of the town"
+   ],
+   "period": {
+    "seen": [
+     "sketches old doorways around town",
+     "always has a pencil and paper nearby",
+     "has stacks of sketches of the town"
+    ]
+   }
+  },
+  {
+   "id": "cycling",
+   "seen": [
+    "rides a bicycle everywhere",
+    "keeps an old bicycle in perfect order",
+    "goes for long rides out of town on weekends"
+   ],
+   "period": {
+    "seen": [
+     "rides an old mare everywhere",
+     "keeps an old saddle in perfect order",
+     "goes for long rides out of town on rest days"
+    ]
+   }
+  },
+  {
+   "id": "letters",
+   "seen": [
+    "writes long letters to old friends",
+    "still keeps up with a pen pal from years ago",
+    "loves getting letters"
+   ]
+  },
+  {
+   "id": "languages",
+   "seen": [
+    "is slowly learning another language",
+    "picks up words in every language heard",
+    "practices a new language on anyone willing"
+   ]
+  },
+  {
+   "id": "picnics",
+   "seen": [
+    "loves a picnic in the park",
+    "will turn any sunny afternoon into a picnic",
+    "packs a picnic at the first hint of sun"
+   ]
+  },
+  {
+   "id": "hats",
+   "seen": [
+    "has a hat for every occasion",
+    "is never seen without a hat",
+    "collects hats"
+   ]
+  },
+  {
+   "id": "maps",
+   "seen": [
+    "collects old maps",
+    "loves poring over maps of places never visited",
+    "draws little maps for friends giving directions"
+   ]
+  },
+  {
+   "id": "crowd_cooking",
+   "seen": [
+    "loves cooking for a crowd",
+    "throws big dinners for friends",
+    "always makes far too much food"
+   ]
+  },
+  {
+   "id": "soup",
+   "seen": [
+    "makes a pot of soup every week",
+    "has a secret soup recipe",
+    "judges every eatery by its soup"
+   ]
+  },
+  {
+   "id": "water",
+   "seen": [
+    "goes down to the water to think",
+    "feels calmest near the water",
+    "likes to sit by the river and watch boats go by"
+   ]
+  },
+  {
+   "id": "words",
+   "seen": [
+    "loves word games",
+    "is unbeatable at word games",
+    "keeps a little notebook of interesting words"
+   ]
+  },
+  {
+   "id": "kites",
+   "seen": [
+    "flies kites with the neighborhood kids",
+    "makes kites by hand",
+    "loves a windy day for flying a kite"
+   ]
+  },
+  {
+   "id": "horses",
+   "seen": [
+    "stops to talk to every horse on the street",
+    "knows a lot about horses",
+    "visits the stables just to say hello to the horses"
+   ]
+  },
+  {
+   "id": "preserves",
+   "seen": [
+    "makes jam every summer",
+    "has a pantry full of homemade preserves",
+    "gives jars of pickles as gifts"
+   ]
+  },
+  {
+   "id": "people_watching",
+   "seen": [
+    "loves watching people go by from a corner seat",
+    "could sit in the square for hours watching the world",
+    "makes up stories about strangers walking past"
+   ]
+  },
+  {
+   "id": "cheese",
+   "seen": [
+    "has strong feelings about cheese",
+    "knows a lot about cheese",
+    "will go across town for good cheese"
+   ]
+  },
+  {
+   "id": "lawn_games",
+   "seen": [
+    "plays bowls with a group of old friends",
+    "is surprisingly good at horseshoes",
+    "never misses the summer lawn games"
+   ]
+  },
+  {
+   "id": "sewing",
+   "seen": [
+    "makes their own clothes",
+    "mends everyone's clothes for them",
+    "is handy with a needle and thread"
+   ]
+  },
+  {
+   "id": "storms",
+   "seen": [
+    "loves a good thunderstorm",
+    "goes out to watch storms roll in",
+    "finds thunder oddly soothing"
+   ]
+  },
+  {
+   "id": "bells",
+   "seen": [
+    "loves the bells ringing across town",
+    "sets the day by the town clock",
+    "can tell the time by the bells without looking"
+   ]
+  },
+  {
+   "id": "movies",
+   "seen": [
+    "goes to the movies every week",
+    "has seen every film playing in town",
+    "loves an old black-and-white movie"
+   ],
+   "period": {
+    "seen": [
+     "goes to every traveling show that comes to town",
+     "has seen every performance put on in town this year",
+     "loves a puppet show more than anyone should"
+    ]
+   }
+  },
+  {
+   "id": "street_music",
+   "seen": [
+    "always gives a coin to street musicians",
+    "stops for every street musician",
+    "hums along to the buskers"
+   ]
+  },
+  {
+   "id": "tidy",
+   "seen": [
+    "loves a tidy cupboard",
+    "finds organizing things deeply relaxing",
+    "labels everything at home"
+   ]
+  },
+  {
+   "id": "foraging",
+   "seen": [
+    "goes mushroom hunting in the autumn",
+    "knows every edible mushroom in the woods",
+    "forages for berries and greens"
+   ]
+  },
+  {
+   "id": "far_places",
+   "seen": [
+    "loves hearing about faraway places",
+    "dreams over travel stories",
+    "asks every traveler where they've been"
+   ]
+  },
+  {
+   "id": "ducks",
+   "seen": [
+    "feeds the ducks at the pond",
+    "always carries crumbs for the birds",
+    "can't pass a duck pond without stopping"
+   ]
+  },
+  {
+   "id": "snow",
+   "seen": [
+    "loves the first snowfall of the year",
+    "builds a snow figure every winter without fail",
+    "gets excited like a kid when it snows"
+   ]
+  },
+  {
+   "id": "ball_games",
+   "seen": [
+    "kicks a ball around with friends on weekends",
+    "plays in a casual weekend ball game",
+    "is always up for a game in the park"
+   ]
+  },
+  {
+   "id": "old_songs",
+   "seen": [
+    "knows the words to every old song",
+    "loves the old songs best",
+    "can't resist singing along to an old tune"
+   ]
+  },
+  {
+   "id": "haggling",
+   "seen": [
+    "loves to haggle",
+    "never pays full price if it can be helped",
+    "treats every market trip as a negotiation"
+   ]
+  },
+  {
+   "id": "fireside",
+   "seen": [
+    "loves a fire in the hearth on a cold night",
+    "keeps the house warm and cozy all winter",
+    "likes nothing better than a quiet night by the fire"
+   ]
+  },
+  {
+   "id": "fixing",
+   "seen": [
+    "loves fixing broken things",
+    "will take anything apart to see how it works",
+    "keeps a drawer full of odd screws and springs"
+   ]
+  },
+  {
+   "id": "festivals",
+   "seen": [
+    "loves the town's festivals",
+    "volunteers at every local fair",
+    "counts down the days to the summer fair"
+   ]
+  },
+  {
+   "id": "woods",
+   "seen": [
+    "loves the woods in autumn",
+    "goes walking in the hills whenever possible",
+    "knows every trail outside town"
+   ]
+  },
+  {
+   "id": "ghost_stories",
+   "seen": [
+    "loves a good ghost story",
+    "tells ghost stories at every gathering",
+    "collects local ghost stories"
+   ]
+  },
+  {
+   "id": "bonfires",
+   "seen": [
+    "never misses a bonfire night",
+    "loves sitting around a bonfire",
+    "is always the one to build the fire at gatherings"
+   ]
+  },
+  {
+   "id": "boats",
+   "seen": [
+    "loves messing about in boats",
+    "is restoring an old rowing boat",
+    "spends summer evenings out sailing"
+   ]
+  },
+  {
+   "id": "clocks",
+   "seen": [
+    "collects old clocks",
+    "loves anything with gears",
+    "can't pass a clockmaker's window without stopping"
+   ]
+  },
+  {
+   "id": "lettering",
+   "seen": [
+    "writes in beautiful handwriting",
+    "practices fancy lettering for fun",
+    "makes hand-lettered cards for friends' birthdays"
+   ]
+  },
+  {
+   "id": "herbs",
+   "seen": [
+    "grows herbs on every windowsill",
+    "knows what every herb is good for in cooking",
+    "dries bunches of herbs from the kitchen ceiling"
+   ]
+  },
+  {
+   "id": "brewing",
+   "seen": [
+    "brews a little beer at home",
+    "makes cider every autumn",
+    "has a cellar of homemade elderflower wine"
+   ]
+  },
+  {
+   "id": "sunsets",
+   "seen": [
+    "never misses a good sunset",
+    "climbs the hill to watch the sun go down",
+    "always stops to admire the evening sky"
+   ]
+  },
+  {
+   "id": "trains",
+   "seen": [
+    "loves watching trains come and go",
+    "knows the train timetable by heart",
+    "takes the train just for the scenery"
+   ],
+   "period": {
+    "seen": [
+     "loves watching carts and coaches come and go",
+     "knows every coach route by heart",
+     "rides out on the carrier's cart just for the scenery"
+    ]
+   }
+  },
+  {
+   "id": "lists",
+   "seen": [
+    "makes lists for everything",
+    "loves crossing things off a list",
+    "keeps a little notebook of plans"
+   ]
+  },
+  {
+   "id": "stones",
+   "seen": [
+    "collects interesting stones",
+    "picks up a pebble from every place visited",
+    "has a windowsill lined with seashells"
+   ]
+  },
+  {
+   "id": "storytelling",
+   "seen": [
+    "tells stories to the neighborhood kids",
+    "makes up bedtime stories on the spot",
+    "is the best storyteller at any gathering"
+   ]
+  },
+  {
+   "id": "running",
+   "seen": [
+    "runs at dawn most days",
+    "races anyone who'll race",
+    "loves a footrace at the fair"
+   ]
+  },
+  {
+   "id": "cake_decorating",
+   "seen": [
+    "decorates cakes with great ambition",
+    "makes elaborate cakes for every celebration",
+    "spends hours piping icing flowers"
+   ]
+  },
+  {
+   "id": "rearranging",
+   "seen": [
+    "rearranges the furniture every season",
+    "loves redecorating",
+    "can't leave a room the way it was"
+   ]
+  },
+  {
+   "id": "pottery",
+   "seen": [
+    "throws pots on a wheel in a back room",
+    "makes wonky clay mugs for friends",
+    "loves getting stuck into a lump of clay"
+   ]
+  },
+  {
+   "id": "quilting",
+   "seen": [
+    "makes patchwork quilts from old clothes",
+    "is halfway through an enormous quilt",
+    "saves every scrap of fabric for a quilt"
+   ]
+  },
+  {
+   "id": "whistle",
+   "seen": [
+    "plays a little wooden flute",
+    "whistles beautifully",
+    "plays a tin whistle at the tavern"
+   ]
+  },
+  {
+   "id": "poetry",
+   "seen": [
+    "writes little poems and hides them",
+    "can recite poems for an hour",
+    "loves poetry and isn't embarrassed about it"
+   ]
+  },
+  {
+   "id": "trees",
+   "seen": [
+    "can identify any tree by its leaf",
+    "has planted a tree for every year in the house",
+    "loves old trees and visits a favorite oak"
+   ]
+  },
+  {
+   "id": "butterflies",
+   "seen": [
+    "watches butterflies in the meadow",
+    "grows flowers just for the butterflies",
+    "knows the local butterflies by name"
+   ]
+  },
+  {
+   "id": "parades",
+   "seen": [
+    "loves a parade",
+    "turns up early for every procession",
+    "never misses the town's summer parade"
+   ]
+  },
+  {
+   "id": "weather",
+   "seen": [
+    "keeps a weather diary",
+    "is fascinated by the weather",
+    "can predict rain by the look of the sky"
+   ]
+  },
+  {
+   "id": "breakfast",
+   "seen": [
+    "makes a huge breakfast every weekend",
+    "says breakfast is the best meal of the day",
+    "has a breakfast ritual that cannot be interrupted"
+   ]
+  },
+  {
+   "id": "archery",
+   "seen": [
+    "is a surprisingly good shot with a bow",
+    "practices archery at the butts every week",
+    "loves an archery contest at the fair"
+   ]
+  },
+  {
+   "id": "knots",
+   "seen": [
+    "can tie every kind of knot",
+    "loves learning knots and rope tricks",
+    "makes rope mats and nets for fun"
+   ]
+  },
+  {
+   "id": "handmade_gifts",
+   "seen": [
+    "makes candles at home",
+    "has a knack for making soap",
+    "makes little gifts by hand every winter"
+   ]
+  },
+  {
+   "id": "tricks",
+   "seen": [
+    "does card tricks for kids",
+    "knows a few magic tricks and shows them off",
+    "can make a coin vanish and reappear"
+   ]
+  },
+  {
+   "id": "skating",
+   "seen": [
+    "loves skating on the frozen pond",
+    "is first on the ice every winter",
+    "skates beautifully and loves to show it"
+   ]
+  },
+  {
+   "id": "naps",
+   "seen": [
+    "loves an afternoon nap",
+    "takes a nap every day after lunch",
+    "can nap anywhere"
+   ]
+  },
+  {
+   "id": "far_food",
+   "seen": [
+    "loves trying food from faraway places",
+    "cooks dishes learned from travelers",
+    "is always hunting for unusual spices"
+   ]
+  },
+  {
+   "id": "restoring",
+   "seen": [
+    "restores old furniture",
+    "rescues chairs from the rubbish and fixes them up",
+    "loves sanding and polishing old wood"
+   ]
+  },
+  {
+   "id": "helping",
+   "seen": [
+    "lends a hand wherever the town needs it",
+    "volunteers at the soup kitchen every week",
+    "is first to sign up when the town needs help"
+   ]
+  },
+  {
+   "id": "toys",
+   "seen": [
+    "whittles little toys for kids",
+    "makes wooden toys at the kitchen table",
+    "gives away hand-carved spinning tops"
+   ]
+  },
+  {
+   "id": "dogs",
+   "seen": [
+    "can't pass a dog without saying hello",
+    "carries treats for every dog in the street",
+    "would rather talk to the dogs than the people at a party"
+   ]
+  }
+ ],
+ "anecdotes": [
+  {
+   "id": "freezer",
+   "told": [
+    "got locked in a walk-in freezer at a summer job and sang to keep warm",
+    "spent half an hour shut in a freezer at work, singing to pass the time"
+   ],
+   "period": {
+    "told": [
+     "got locked in an ice house at a summer job and sang to keep warm",
+     "spent half an hour shut in the ice cellar at work, singing to pass the time"
+    ]
+   }
+  },
+  {
+   "id": "pie_contest",
+   "told": [
+    "won a pie-eating contest by accident",
+    "entered a pie contest as a joke and somehow won"
+   ]
+  },
+  {
+   "id": "wrong_wedding",
+   "told": [
+    "turned up at the wrong wedding and stayed for the cake",
+    "wandered into a stranger's wedding party and was made welcome"
+   ],
+   "min_age": 20
+  },
+  {
+   "id": "fog",
+   "told": [
+    "got lost in the fog on the way home and ended up in the next village",
+    "walked in circles for hours in a thick fog and came out at a farm miles off"
+   ]
+  },
+  {
+   "id": "goose",
+   "told": [
+    "was chased across a field by an angry goose",
+    "lost a staring contest with a goose and had to run for it"
+   ]
+  },
+  {
+   "id": "tree_cat",
+   "told": [
+    "climbed a tree to rescue a cat and had to be rescued too",
+    "went up after a stuck kitten and needed a ladder to get down"
+   ]
+  },
+  {
+   "id": "first_loaf",
+   "told": [
+    "filled the house with smoke baking a first loaf of bread",
+    "baked a cake so flat it got used as a doorstop"
+   ]
+  },
+  {
+   "id": "talent_show",
+   "told": [
+    "forgot every word at a school talent show and just hummed",
+    "froze on stage at a school show and got a standing ovation anyway"
+   ]
+  },
+  {
+   "id": "famous_stranger",
+   "told": [
+    "sat next to a famous performer at dinner without knowing who it was",
+    "chatted for an hour with a stranger who turned out to be famous"
+   ]
+  },
+  {
+   "id": "snowed_in",
+   "told": [
+    "got snowed in at a friend's place for a whole week",
+    "spent four days snowed in at an inn with a crowd of strangers who became friends"
+   ]
+  },
+  {
+   "id": "first_day_spill",
+   "told": [
+    "dropped an entire tray of drinks on the first day of a first job",
+    "spilled soup on the most important customer on day one of a new job"
+   ]
+  },
+  {
+   "id": "driving_lesson",
+   "told": [
+    "drove straight into a hedge during a first driving lesson",
+    "stalled the car in the middle of a busy crossing during a driving test"
+   ],
+   "period": {
+    "told": [
+     "steered a cart straight into a hedge on the first try",
+     "let a pony take a cart halfway across town in the wrong direction"
+    ]
+   },
+   "min_age": 18
+  },
+  {
+   "id": "old_coins",
+   "told": [
+    "found a pile of old coins while digging in the garden",
+    "dug up a rusty tin of old coins while planting potatoes"
+   ]
+  },
+  {
+   "id": "danced_till_dawn",
+   "told": [
+    "danced until sunrise at a summer festival",
+    "stayed out dancing all night at a harvest fair and went straight to work"
+   ]
+  },
+  {
+   "id": "wrong_train",
+   "told": [
+    "fell asleep on a train and woke up three towns too far",
+    "took the wrong train and spent a lovely day in a town never heard of before"
+   ],
+   "period": {
+    "told": [
+     "fell asleep on a cart and woke up three villages too far",
+     "took the wrong road and spent a lovely day in a village never heard of before"
+    ]
+   }
+  },
+  {
+   "id": "grandparent_recipe",
+   "told": [
+    "spent a whole summer trying to recreate a grandparent's stew",
+    "finally cracked a grandparent's secret biscuit recipe after years of trying"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "spelling",
+   "told": [
+    "lost a spelling contest on the word cat by overthinking it",
+    "won a school spelling contest with a word nobody else could pronounce"
+   ]
+  },
+  {
+   "id": "lost_oars",
+   "told": [
+    "rowed out on the lake and lost both oars",
+    "drifted halfway down the river after forgetting to tie up a boat"
+   ]
+  },
+  {
+   "id": "stray_dog",
+   "told": [
+    "had a stray dog follow them home and stay for twelve years",
+    "was followed home by a stray dog that never left"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "surprise_party",
+   "told": [
+    "planned a surprise party and accidentally told the guest of honor",
+    "spoiled a friend's surprise party by arriving with the friend"
+   ]
+  },
+  {
+   "id": "locked_out",
+   "told": [
+    "got locked out in nightclothes and had to borrow a coat from a neighbor",
+    "locked the keys inside and climbed in through the pantry window"
+   ]
+  },
+  {
+   "id": "bad_haircut",
+   "told": [
+    "gave a friend a haircut so bad they both wore hats for a month",
+    "tried cutting a sibling's hair as a kid and got grounded for a week"
+   ]
+  },
+  {
+   "id": "proposal",
+   "told": [
+    "proposed in the rain because the plan for a sunny picnic fell apart",
+    "hid an engagement ring in a cake and nearly saw it eaten"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "school_play",
+   "told": [
+    "played a tree in a school play and still considers it a career high",
+    "was cast as the back half of a horse in a school play"
+   ]
+  },
+  {
+   "id": "wrong_coat",
+   "told": [
+    "met a best friend by grabbing the wrong coat at a party",
+    "made a lifelong friend after an argument over the last loaf at the bakery"
+   ]
+  },
+  {
+   "id": "downpour",
+   "told": [
+    "got caught in a downpour and was offered shelter in a stranger's kitchen",
+    "sheltered from a storm in a barn and found a litter of kittens"
+   ]
+  },
+  {
+   "id": "pumpkin",
+   "told": [
+    "won a ribbon at the fair for an enormous pumpkin",
+    "grew a prize-winning marrow and still has the ribbon"
+   ]
+  },
+  {
+   "id": "interview",
+   "told": [
+    "showed up to an interview a whole day early",
+    "went to a job interview in mismatched shoes and got the job anyway"
+   ]
+  },
+  {
+   "id": "runaway_goat",
+   "told": [
+    "spent a whole afternoon chasing an escaped goat through town",
+    "helped catch a runaway pig at a market and was given sausages as thanks"
+   ]
+  },
+  {
+   "id": "late_swimmer",
+   "told": [
+    "learned to swim at forty and now goes every week",
+    "only learned to swim in middle age and is very proud of it"
+   ],
+   "min_age": 45
+  },
+  {
+   "id": "met_partner_story",
+   "told": [
+    "met a partner by sitting in their seat at the theater",
+    "met the love of their life in a queue at the market"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "abroad",
+   "told": [
+    "traveled far away once and got gloriously lost for a day",
+    "ordered a meal abroad by pointing and got a plate of snails"
+   ]
+  },
+  {
+   "id": "recital",
+   "told": [
+    "played at a recital and the music blew off the stand",
+    "played a recital piece twice through after losing count"
+   ]
+  },
+  {
+   "id": "broken_window",
+   "told": [
+    "broke a neighbor's window with a ball and owned up straight away",
+    "kicked a ball through the baker's window as a kid and worked off the cost sweeping the shop"
+   ]
+  },
+  {
+   "id": "wrong_name",
+   "told": [
+    "called a new boss by the wrong name for a whole month",
+    "introduced a friend at a party by completely the wrong name"
+   ]
+  },
+  {
+   "id": "orange_room",
+   "told": [
+    "painted a whole room bright orange and then had to live with it",
+    "tried to paint the kitchen and got more paint on the cat than the walls"
+   ]
+  },
+  {
+   "id": "muddy_boot",
+   "told": [
+    "got stuck in deep mud chasing a runaway hat",
+    "lost a boot in a muddy field and walked home in just one"
+   ]
+  },
+  {
+   "id": "bees",
+   "told": [
+    "accidentally became a beekeeper when a swarm moved into the shed",
+    "had a swarm of bees settle in the chimney and ended up keeping them"
+   ]
+  },
+  {
+   "id": "blackout",
+   "told": [
+    "spent a blackout telling ghost stories by candlelight with the whole street",
+    "sat through a three-day power cut playing cards with the neighbors"
+   ],
+   "period": {
+    "told": [
+     "spent a stormy night telling ghost stories by the fire with the whole street",
+     "sat out a three-day storm playing cards with the neighbors"
+    ]
+   }
+  },
+  {
+   "id": "calf",
+   "told": [
+    "helped deliver a calf at a friend's farm in the middle of the night",
+    "raised an orphaned lamb in the kitchen one spring"
+   ]
+  },
+  {
+   "id": "class_election",
+   "told": [
+    "was elected class president on the promise of longer lunches",
+    "won a school election by handing out toffee"
+   ]
+  },
+  {
+   "id": "lost_purse",
+   "told": [
+    "lost a purse and had it returned by a stranger with a kind note",
+    "dropped a whole week's wages in the street and had a kid run after them with it"
+   ]
+  },
+  {
+   "id": "showing_off",
+   "told": [
+    "rode a bicycle straight into a pond while showing off",
+    "tried to ride a bicycle with no hands and ended up in a hedge"
+   ],
+   "period": {
+    "told": [
+     "rode a pony straight into a pond while showing off",
+     "tried to stand on a moving cart and ended up in a hedge"
+    ]
+   }
+  },
+  {
+   "id": "cooked_for_thirty",
+   "told": [
+    "cooked dinner for thirty people with one pot and a lot of nerve",
+    "fed an entire wedding party when the cook didn't show up"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "juggling",
+   "told": [
+    "discovered a talent for juggling at a fair and never looked back",
+    "learned to juggle from a street performer one summer"
+   ]
+  },
+  {
+   "id": "met_hero",
+   "told": [
+    "met a childhood hero and was too nervous to speak",
+    "finally met a favorite author and could only manage hello"
+   ]
+  },
+  {
+   "id": "camping",
+   "told": [
+    "camped out under the stars and woke up surrounded by sheep",
+    "slept out in a field and woke up with a cow staring at them"
+   ]
+  },
+  {
+   "id": "karaoke",
+   "told": [
+    "sang karaoke for the first time and couldn't be stopped",
+    "was dared to sing at a bar and ended up with an encore"
+   ],
+   "period": {
+    "told": [
+     "sang at the tavern for the first time and couldn't be stopped",
+     "was dared to sing at the inn and ended up with an encore"
+    ]
+   }
+  },
+  {
+   "id": "school_trip",
+   "told": [
+    "got separated from a school trip and was found in a sweet shop",
+    "wandered off from a school outing and was found feeding ducks"
+   ]
+  },
+  {
+   "id": "salt_cake",
+   "told": [
+    "used salt instead of sugar in a birthday cake",
+    "made a whole batch of biscuits with salt in place of sugar"
+   ]
+  },
+  {
+   "id": "raffle_goose",
+   "told": [
+    "won a small raffle prize and spent it all on a party",
+    "won a goose in a raffle and had no idea what to do with it"
+   ]
+  },
+  {
+   "id": "haunted",
+   "told": [
+    "spent a night in a supposedly haunted house on a dare",
+    "was dared to sleep in an old barn said to be haunted and slept like a log"
+   ]
+  },
+  {
+   "id": "wrong_house",
+   "told": [
+    "walked into the wrong house after a party and made a cup of tea before noticing",
+    "let themselves into a neighbor's house by mistake and sat down for supper"
+   ]
+  },
+  {
+   "id": "late_letter",
+   "told": [
+    "got a letter forty years late from an old school friend",
+    "received a letter decades after it was sent, from a childhood pen pal"
+   ],
+   "min_age": 50
+  },
+  {
+   "id": "apprentice_mixup",
+   "told": [
+    "ruined a whole order in the first week of an apprenticeship",
+    "mixed up two orders at a first job and somehow both customers were happier"
+   ]
+  },
+  {
+   "id": "dog_show",
+   "told": [
+    "entered a scruffy dog in a dog show and won best personality",
+    "took a very ordinary mutt to a show and came home with a ribbon"
+   ]
+  },
+  {
+   "id": "snowball",
+   "told": [
+    "started a snowball fight that took over the whole square",
+    "lost a snowball fight to a group of seven-year-olds"
+   ]
+  },
+  {
+   "id": "wedding_toast",
+   "told": [
+    "gave a wedding toast that ran so long the cake was cut during it",
+    "gave a speech at a friend's wedding with the notes upside down"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "lost_first_day",
+   "told": [
+    "got completely lost on a first day in the city and was guided home by a baker",
+    "spent a first night in town lost and was rescued by a kind street sweeper"
+   ]
+  },
+  {
+   "id": "last_race",
+   "told": [
+    "came last in a school race and got the biggest cheer",
+    "won a sack race at a summer fair with a lucky tumble"
+   ]
+  },
+  {
+   "id": "taught_fiddle",
+   "told": [
+    "taught themselves to play the fiddle one long winter",
+    "learned three songs on a borrowed instrument and played them for years"
+   ]
+  },
+  {
+   "id": "regift",
+   "told": [
+    "gave a friend a birthday present the friend had given them the year before",
+    "accidentally regifted a present back to the person who gave it"
+   ]
+  },
+  {
+   "id": "skating",
+   "told": [
+    "went skating on the pond and spent most of it sitting on the ice",
+    "tried ice skating once and clung to the edge all afternoon"
+   ]
+  },
+  {
+   "id": "giant_veg",
+   "told": [
+    "grew a sunflower taller than the house",
+    "grew a cabbage so big it took two people to carry"
+   ]
+  },
+  {
+   "id": "hedge_war",
+   "told": [
+    "had a hedge war with a neighbor that ended in a shared dinner",
+    "argued with a neighbor for a year over a fence and they are now best friends"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "mistaken_guest",
+   "told": [
+    "was mistaken for an important guest at a party and given the best seat in the house",
+    "got waved into a fancy dinner because the host mistook them for someone else"
+   ]
+  },
+  {
+   "id": "parrot_tune",
+   "told": [
+    "taught a neighbor's parrot to whistle a tune that drove the whole street mad",
+    "taught a parrot to call out a neighbor's name every morning"
+   ]
+  },
+  {
+   "id": "flood",
+   "told": [
+    "helped neighbors sandbag the street during a big flood and made lifelong friends",
+    "spent a night ferrying neighbors across a flooded street in a washtub"
+   ]
+  },
+  {
+   "id": "stew_contest",
+   "told": [
+    "entered a stew contest and came second to a ten-year-old",
+    "lost a baking contest to a kid of nine and has never recovered"
+   ]
+  },
+  {
+   "id": "first_wages",
+   "told": [
+    "spent the whole of a first week's wages on a fancy coat",
+    "blew a first pay packet on a feast for friends"
+   ]
+  },
+  {
+   "id": "moving_day",
+   "told": [
+    "moved house in a single day with the help of a borrowed handcart",
+    "carried a whole household across town in one day with a borrowed cart"
+   ]
+  },
+  {
+   "id": "slept_through_play",
+   "told": [
+    "slept through an entire play and woke up for the applause",
+    "nodded off at a concert and snored through the quiet part"
+   ]
+  },
+  {
+   "id": "lost_dog_bed",
+   "told": [
+    "spent a whole night searching for a lost dog that was asleep under the bed the entire time",
+    "hunted the town for a missing cat that turned out to be in the cupboard"
+   ]
+  },
+  {
+   "id": "elevator",
+   "told": [
+    "got stuck in an elevator with a stranger and they became friends",
+    "spent two hours stuck in a lift playing word games with strangers"
+   ],
+   "period": {
+    "told": [
+     "got stuck in a broken-down coach with a stranger and they became friends",
+     "spent two hours stuck on a stalled ferry playing word games with strangers"
+    ]
+   }
+  },
+  {
+   "id": "picnic_cows",
+   "told": [
+    "had a picnic ruined by a herd of curious cows",
+    "lost a whole picnic to a family of very bold ducks"
+   ]
+  },
+  {
+   "id": "love_note",
+   "told": [
+    "had a secret admirer at school who turned out to be a best friend",
+    "sent an anonymous love note at school and was caught by the handwriting"
+   ]
+  },
+  {
+   "id": "hat_wind",
+   "told": [
+    "chased a hat blown off in the wind all the way down to the harbor",
+    "lost a brand-new hat to the wind on the first day of wearing it"
+   ]
+  },
+  {
+   "id": "famous_recipe",
+   "told": [
+    "had a cake recipe become a local favorite at every fair",
+    "invented a pie that a local inn still sells"
+   ]
+  },
+  {
+   "id": "walking_bet",
+   "told": [
+    "walked thirty miles in a day for a bet",
+    "won a bet by walking to the next town and back before supper"
+   ]
+  },
+  {
+   "id": "lost_shoe",
+   "told": [
+    "lost a shoe dancing at a party and never found it",
+    "danced so hard at a festival that a shoe went flying into the crowd"
+   ]
+  },
+  {
+   "id": "clever_mouse",
+   "told": [
+    "spent a week trying to catch a mouse that outsmarted every trap",
+    "named the mouse living in the pantry after giving up on catching it"
+   ]
+  },
+  {
+   "id": "dough",
+   "told": [
+    "left dough to rise overnight and woke to find it creeping off the table",
+    "made so much bread dough it overflowed every bowl in the house"
+   ]
+  },
+  {
+   "id": "radio_quiz",
+   "told": [
+    "called in to a radio quiz and won a toaster",
+    "won a crate of oranges answering a quiz on the radio"
+   ],
+   "period": {
+    "told": [
+     "answered a riddle at the fair and won a whole ham",
+     "won a basket of oranges in a guessing contest at the fair"
+    ]
+   }
+  },
+  {
+   "id": "snuck_out",
+   "told": [
+    "snuck out to a dance as a teenager and found a parent waiting at the door",
+    "climbed out a window as a teen and got stuck halfway"
+   ]
+  },
+  {
+   "id": "cat_moved_in",
+   "told": [
+    "came home to find a neighbor's cat asleep in their bed",
+    "had a cat move in uninvited and stay for ten years"
+   ],
+   "min_age": 25
+  },
+  {
+   "id": "strawberries",
+   "told": [
+    "spent a summer picking strawberries and couldn't look at one for years",
+    "worked one harvest on a farm and has distrusted geese ever since"
+   ]
+  },
+  {
+   "id": "tall_tale",
+   "told": [
+    "convinced a younger sibling for years that the house was built by giants",
+    "told a little cousin the moon was made of cheese and was believed until age twelve"
+   ]
+  },
+  {
+   "id": "haggle_melon",
+   "told": [
+    "haggled a market trader down so far the trader threw in a free melon",
+    "bargained so hard for a chair that the seller threw in the table"
+   ]
+  },
+  {
+   "id": "found_locket",
+   "told": [
+    "found a lost ring in the river and tracked down its owner",
+    "returned a lost locket to its owner after weeks of asking around"
+   ]
+  },
+  {
+   "id": "dinner_party",
+   "told": [
+    "burned the main course at a first dinner party and served toast instead",
+    "hosted a first dinner party where the pudding went up in flames"
+   ]
+  },
+  {
+   "id": "wrong_directions",
+   "told": [
+    "gave a stranger directions so confidently wrong they both ended up lost",
+    "offered to show visitors the way and took them on a two-hour detour"
+   ]
+  },
+  {
+   "id": "sold_painting",
+   "told": [
+    "sold a painting at a market for far more than expected",
+    "sold a first painting to a stranger at the market and still remembers the price"
+   ]
+  },
+  {
+   "id": "big_fish",
+   "told": [
+    "caught a fish so big it took two people to land it",
+    "hooked an enormous fish and lost it right at the bank, as every angler does"
+   ]
+  },
+  {
+   "id": "teen_band",
+   "told": [
+    "played in a terrible band as a teenager that only knew three songs",
+    "started a band with friends that played exactly one show"
+   ]
+  },
+  {
+   "id": "tree_house",
+   "told": [
+    "built a tree house as a kid that's still standing",
+    "spent a whole summer building a fort in the woods with cousins"
+   ]
+  },
+  {
+   "id": "dare_river",
+   "told": [
+    "rowed across the lake at midnight on a dare",
+    "jumped in the river in the middle of winter on a dare"
+   ]
+  },
+  {
+   "id": "grandkid_cards",
+   "told": [
+    "danced at a grandkid's wedding until the band packed up",
+    "taught a grandkid to play cards and has been losing ever since"
+   ],
+   "min_age": 55
+  },
+  {
+   "id": "tide",
+   "told": [
+    "got stranded on a sandbar when the tide came in and waited it out with a sandwich",
+    "got cut off by the tide on a beach walk and had to wade back"
+   ]
+  },
+  {
+   "id": "cellar_storm",
+   "told": [
+    "rode out a huge storm in a cellar with the neighbors and a lot of jam",
+    "watched a storm lift the roof off a barn and spent a week rebuilding it with the neighbors"
+   ]
+  },
+  {
+   "id": "seaside",
+   "told": [
+    "won a raffle for a seaside holiday and brought the whole family",
+    "spent a whole summer working at a seaside inn"
+   ]
+  },
+  {
+   "id": "understudy",
+   "told": [
+    "stepped in to play the lead in a play at an hour's notice",
+    "had to take over a part on opening night and made up half the lines"
+   ]
+  },
+  {
+   "id": "learned_drive",
+   "told": [
+    "learned to drive in a grandparent's old truck in a field",
+    "practiced driving in an empty field with a very calm grandparent"
+   ],
+   "period": {
+    "told": [
+     "learned to drive a cart behind a grandparent's old mare",
+     "learned to handle a team of horses from a very patient grandparent"
+    ]
+   }
+  },
+  {
+   "id": "town_clock",
+   "told": [
+    "fixed the town clock by accident while trying to dust it",
+    "climbed the clock tower to fix the hands and put the whole town an hour ahead"
+   ]
+  },
+  {
+   "id": "lost_wager",
+   "told": [
+    "lost a bet and had to wear a ridiculous hat for a week",
+    "lost a wager to a friend and had to sing in the town square"
+   ]
+  },
+  {
+   "id": "letters_romance",
+   "told": [
+    "wrote letters to a sweetheart every day for a year",
+    "fell in love by letter before ever meeting in person"
+   ],
+   "min_age": 22
+  },
+  {
+   "id": "fox",
+   "told": [
+    "befriended a fox that came to the garden every evening",
+    "raised a baby bird that fell from its nest and set it free"
+   ]
+  },
+  {
+   "id": "turnips",
+   "told": [
+    "had a whole cartload of turnips delivered to the house by mistake",
+    "received a crate of live lobsters by mistake and had to find their owner"
+   ]
+  },
+  {
+   "id": "dog_cake",
+   "told": [
+    "baked a cake for a contest and the dog ate it the night before",
+    "carried a prize pie across town only for a dog to steal it at the door"
+   ]
+  },
+  {
+   "id": "ducklings",
+   "told": [
+    "stopped traffic to help a family of ducks cross the road",
+    "helped a line of ducklings cross the main street"
+   ]
+  },
+  {
+   "id": "snow_fort",
+   "told": [
+    "built a snow fort so big the neighborhood kids used it all winter",
+    "spent a whole winter's day making an ice slide down the street"
+   ]
+  },
+  {
+   "id": "overslept",
+   "told": [
+    "woke late on a very important day and ran the whole way there",
+    "overslept on a very important day and got there just in time anyway"
+   ]
+  },
+  {
+   "id": "library",
+   "told": [
+    "got lost in a huge old library and was found reading in a corner hours later",
+    "was locked in a library after closing and read until morning"
+   ]
+  },
+  {
+   "id": "costume",
+   "told": [
+    "went to a party in costume that turned out not to be a costume party",
+    "turned up at a dinner dressed as a pirate after misreading the invitation"
+   ]
+  },
+  {
+   "id": "sheep",
+   "told": [
+    "spent a summer minding sheep and named every single one",
+    "lost a whole flock of sheep for an afternoon and found them in the orchard"
+   ]
+  },
+  {
+   "id": "reunion_street",
+   "told": [
+    "bumped into a childhood friend on the street after thirty years apart",
+    "ran into an old school friend in a faraway town by pure chance"
+   ],
+   "min_age": 40
+  },
+  {
+   "id": "tug_of_war",
+   "told": [
+    "was crowned champion of the summer fair's tug of war",
+    "won the egg-and-spoon race three years running"
+   ]
+  },
+  {
+   "id": "wedding_cake",
+   "told": [
+    "dropped a wedding cake on the way to the wedding and rebuilt it in an hour",
+    "carried a three-tier cake across town and arrived with only two"
+   ],
+   "min_age": 20
+  },
+  {
+   "id": "first_chair",
+   "told": [
+    "spent a whole first year as an apprentice sweeping floors",
+    "made a first chair as an apprentice and it wobbled for years"
+   ]
+  },
+  {
+   "id": "lucky_coin",
+   "told": [
+    "found a four-leaf clover on the morning of a big exam and passed",
+    "found a lucky coin on the road and has carried it ever since"
+   ]
+  },
+  {
+   "id": "washtub",
+   "told": [
+    "forgot a pot on the stove and filled the house with steam",
+    "let a washtub overflow and flooded the kitchen floor"
+   ]
+  },
+  {
+   "id": "fair_goldfish",
+   "told": [
+    "won a goldfish at a fair and it lived for eleven years",
+    "won a goldfish at the fair that became a family legend"
+   ],
+   "min_age": 20
+  },
+  {
+   "id": "piano_stairs",
+   "told": [
+    "helped a neighbor get a piano up three flights of stairs",
+    "spent a whole afternoon wedging a sofa through a narrow doorway"
+   ]
+  },
+  {
+   "id": "squall",
+   "told": [
+    "was out on a boat when a squall hit and made it home soaked and laughing",
+    "spent a night on a fishing boat in rough weather and swore off boats for a year"
+   ]
+  },
+  {
+   "id": "old_sweetheart",
+   "told": [
+    "ran into a first sweetheart decades later and they laughed for hours",
+    "rekindled an old friendship with a school sweetheart late in life"
+   ],
+   "min_age": 55
+  },
+  {
+   "id": "garden_raider",
+   "told": [
+    "caught a badger raiding the vegetable patch and let it finish",
+    "spent a summer at war with a rabbit over the lettuce"
+   ]
+  },
+  {
+   "id": "whistling",
+   "told": [
+    "won a whistling contest at a county fair",
+    "beat the whole town at a whistling contest"
+   ]
+  },
+  {
+   "id": "goat_trade",
+   "told": [
+    "traded a pocketknife for a goat as a kid and had to explain it at home",
+    "swapped a good coat for a fiddle at a market and never regretted it"
+   ]
+  },
+  {
+   "id": "front_row",
+   "told": [
+    "camped out all night to get a front-row seat for a traveling show",
+    "queued from dawn to see a famous performer and got the last seat"
+   ]
+  },
+  {
+   "id": "rain_dance",
+   "told": [
+    "led a whole wedding party in a dance through the rain",
+    "kept a street party going through a downpour by dancing on the tables"
+   ]
+  },
+  {
+   "id": "local_news",
+   "told": [
+    "appeared on the local TV news by accident while walking a dog",
+    "was interviewed on the radio about a giant marrow"
+   ],
+   "period": {
+    "told": [
+     "ended up in a traveling painter's picture by accident while walking a dog",
+     "had a giant marrow announced to the whole town by the crier"
+    ]
+   }
+  },
+  {
+   "id": "kitchen_band",
+   "told": [
+    "started a kitchen band with pots and spoons that played every holiday",
+    "kept the whole family up one night practicing a drum on an upturned bucket"
+   ]
+  },
+  {
+   "id": "roof_goat",
+   "told": [
+    "found a goat standing on the roof one morning and never learned how it got there",
+    "woke to find a neighbor's cow in the garden eating the washing"
+   ]
+  },
+  {
+   "id": "town_bell",
+   "told": [
+    "rang the town bell by accident and brought everyone running",
+    "pulled the wrong rope and set every bell in town clanging"
+   ]
+  },
+  {
+   "id": "statue",
+   "told": [
+    "waved for an hour at someone across the square who turned out to be a statue",
+    "spent ten minutes chatting to a scarecrow, thinking it was a farmer"
+   ]
+  },
+  {
+   "id": "lent_coat",
+   "told": [
+    "lent an umbrella to a stranger who returned it ten years later",
+    "lent a coat to a stranger in the rain and got it back with a cake in the pocket"
+   ],
+   "min_age": 30
+  },
+  {
+   "id": "wrong_address",
+   "told": [
+    "sent a love letter to the wrong address and made a new friend",
+    "posted a birthday letter to the wrong cousin and started a long correspondence"
+   ]
+  },
+  {
+   "id": "market_stall",
+   "told": [
+    "minded a friend's market stall for a day and sold everything",
+    "ran a stall for a single afternoon and sold the table by mistake"
+   ]
+  },
+  {
+   "id": "maze",
+   "told": [
+    "got lost in a hedge maze for an entire afternoon",
+    "led a group into a maze at a fair and out the wrong side two hours later"
+   ]
+  },
+  {
+   "id": "cheese_rolling",
+   "told": [
+    "chased a cheese down a hill at a country fair",
+    "won a wheel of cheese in a rolling race"
+   ]
+  },
+  {
+   "id": "fifty_guests",
+   "told": [
+    "accidentally invited the whole street to a small birthday supper",
+    "baked for a party of six and fifty people turned up"
+   ]
+  }
+ ]
+}

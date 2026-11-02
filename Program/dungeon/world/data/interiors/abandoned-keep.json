@@ -1,0 +1,44 @@
+{
+ "schema_version": 1,
+ "id": "abandoned-keep",
+ "name": "The Abandoned Keep",
+ "world": "vallarith",
+ "style": "keep",
+ "summary": "Himo Xiloscient's ward-keep in the broken hills west of Adlmyr, empty since Adlmyr fell. The wards are failing, Haggoth's gnolls have found the gatehouse, and the Kingswood branch of the Ley runs under the cellars.",
+ "at": {"node": "abandoned-keep", "city": "vallarith-road", "place": "abandoned-keep"},
+ "entrance": "broken-gate",
+ "levels": [
+  {"id": "walls", "name": "The walls and yard", "summary": "Open to the sky where the roofs have gone."},
+  {"id": "keep", "name": "The keep", "summary": "The tower block, cold and mostly dry."},
+  {"id": "under", "name": "Under the keep", "summary": "Cellars cut into the rock, and older stone below them."}
+ ],
+ "rooms": [
+  {"id": "broken-gate", "name": "The broken gate", "level": "walls", "kind": "gate", "size": "hall", "light": "lit", "summary": "The gate leaf lies flat in the grass where something pulled it off its pins. Crows on the wall walk.", "features": ["the fallen gate leaf", "claw marks on the gate posts", "a cairn of gnawed bones"], "map": {"x": 0.15, "y": 0.15}, "source": "curated-2026-11"},
+  {"id": "gatehouse", "name": "The gatehouse", "level": "walls", "kind": "guardroom", "size": "room", "light": "dim", "summary": "A low guardroom that stinks of wet fur and old meat. Someone has been sleeping here, in a nest of rotten blankets.", "features": ["a nest of blankets and bones", "a murder hole over the gate passage", "a rusted rack of spears"], "foes": [{"name": "Haggoth's gnoll", "count": 2, "vitality": 12, "resolve": 10, "weapon": 1, "wants": "kill"}], "loot": ["rope", "knife"], "map": {"x": 0.15, "y": 0.4}, "source": "curated-2026-11"},
+  {"id": "ward-court", "name": "The ward-stone court", "level": "walls", "kind": "courtyard", "size": "hall", "light": "lit", "summary": "A ring of standing stones in the yard, cut with Xiloscient's wards. Most of the lines have worn smooth. Two stones have been toppled on purpose, recently.", "features": ["the ring of ward stones", "two stones pulled down with ropes", "a dry well"], "lore": "The wards were cut to hold the place where the horde came through. A character who knows the Ley can feel the current under the yard, weak and uneven, like a pulse in a sick man.", "map": {"x": 0.45, "y": 0.15}, "source": "curated-2026-11"},
+  {"id": "barracks", "name": "The old barracks", "level": "walls", "kind": "barracks", "size": "hall", "light": "dim", "summary": "Long and roofless, rows of rotted bunks under the sky. Elves and Cyrel soldiers both carved their names into the same beams.", "features": ["names carved in two scripts", "a collapsed chimney", "a soldier's chest under the rubble"], "loot": ["blanket", "whetstone"], "map": {"x": 0.8, "y": 0.15}, "source": "curated-2026-11"},
+  {"id": "cold-hall", "name": "The cold hall", "level": "keep", "kind": "hall", "size": "hall", "light": "dark", "summary": "The keep's great hall, colder than the night outside. Frost on the inside of the walls in high summer. The long table is still set for a meal no one came back to.", "features": ["the long table, still set", "frost on the walls", "a hearth that will not stay lit"], "hazard": {"action": "keep a fire or lamp burning in the cold hall", "difficulty": "hard", "threat": "The flame shrinks to a blue bead and goes out. In the dark the cold gets into the chest, and every breath hurts."}, "map": {"x": 0.45, "y": 0.5}, "source": "curated-2026-11"},
+  {"id": "commanders-room", "name": "The commander's room", "level": "keep", "kind": "chamber", "size": "room", "light": "dim", "summary": "A narrow room at the top of the stair, with a window over the broken hills toward Adlmyr. The last garrison commander's log is still on the desk.", "features": ["the garrison log", "a window toward Adlmyr", "a locked strongbox"], "loot": ["ledger-book", "candles"], "lore": "The log's last entries count the fall of Adlmyr in smoke on the horizon, then orders to march, then nothing. On the last page, in another hand: the stones will not hold without someone to feed them.", "map": {"x": 0.8, "y": 0.5}, "source": "curated-2026-11"},
+  {"id": "cellars", "name": "The cellars", "level": "under", "kind": "cellar", "size": "room", "light": "dark", "summary": "Storerooms cut into the rock under the keep. Broken barrels, a smell of old wine, and rats that do not run from a light.", "features": ["broken barrels", "a cracked cistern", "rats that watch"], "loot": ["lamp-oil", "salt"], "map": {"x": 0.45, "y": 0.82}, "source": "curated-2026-11"},
+  {"id": "ley-vault", "name": "The Ley vault", "level": "under", "kind": "vault", "size": "cavern", "light": "dim", "summary": "A round chamber of older stone than the keep, cut before the keep was built. The Kingswood branch of the Ley runs through it as a seam of faint light in the floor, and the floor is warm.", "features": ["the seam of light in the floor", "a circle of ward cuts around it", "old offerings at the edge"], "hidden": true, "hazard": {"action": "touch the seam without being taken by it", "difficulty": "very_hard", "threat": {"text": "The current takes hold through the hands and does not let go. Something on the other side of it notices."}}, "lore": "This is what the keep was built to guard. The ward cuts here are fresher than the ones in the yard: someone has been keeping them, and has stopped.", "map": {"x": 0.8, "y": 0.82}, "source": "curated-2026-11"}
+ ],
+ "passages": [
+  {"between": ["broken-gate", "gatehouse"], "kind": "door", "summary": "a low door in the gate passage"},
+  {"between": ["broken-gate", "ward-court"], "kind": "open"},
+  {"between": ["ward-court", "barracks"], "kind": "open"},
+  {"between": ["ward-court", "cold-hall"], "kind": "door", "summary": "the keep's iron-banded door, ajar"},
+  {"between": ["cold-hall", "commanders-room"], "kind": "stairs", "summary": "a spiral stair in the wall"},
+  {"between": ["cold-hall", "cellars"], "kind": "stairs", "summary": "worn steps behind the hearth", "lock": {"difficulty": "normal"}},
+  {"between": ["cellars", "ley-vault"], "kind": "secret", "summary": "a cistern wall that is a door", "hidden": true, "trap": {"action": "open the cistern door without loosing the ward on it", "difficulty": "hard", "threat": "A ward-cut flares as the stone moves and burns a line of white pain up the arm."}}
+ ],
+ "wanders": [
+  {"weight": 3, "text": "Wind through the broken roofs, carrying the smell of a cookfire from the hills."},
+  {"weight": 2, "text": "Crows go up off the wall all at once, and then nothing happens."},
+  {"weight": 2, "action": "hear the gnolls coming back before they reach the gate", "difficulty": "normal", "threat": {"text": "Gnolls come in through the broken gate, laughing their high laugh, spears up.", "foe": {"name": "Haggoth's gnoll", "count": 3, "vitality": 12, "resolve": 10, "weapon": 1, "wants": "kill"}}},
+  {"weight": 1, "action": "keep away from where the wards have failed", "difficulty": "hard", "threat": {"text": "Something long dead and badly buried pulls itself up out of the yard where a stone has fallen.", "foe": {"name": "ward-ghoul", "count": 1, "vitality": 14, "resolve": 20, "weapon": 1, "wants": "kill", "horror": true}}}
+ ],
+ "wander_every": 3,
+ "sources": {
+  "curated-2026-11": {"kind": "curated", "title": "Written for Prospero's Dungeon from Vanta's Vallarith (the Abandoned Keep lore entry)", "license": "All rights reserved", "retrieved": "2026-11-02"}
+ }
+}

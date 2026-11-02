@@ -1,0 +1,3983 @@
+{
+ "schema_version": 1,
+ "id": "calderwick",
+ "name": "Calderwick",
+ "setting": "original",
+ "era": "steampunk",
+ "basis": "Original setting written for Prospero Dungeon.",
+ "region": "West Riding",
+ "country": "England",
+ "timezone": "Europe/London",
+ "aliases": [
+  "Calderwick-on-Calder",
+  "the Tube Town"
+ ],
+ "summary": "A smoky river and canal town in the Pennine foothills that made its fortune drawing metal tube and building pneumatic dispatch systems: the cash carriers in shop ceilings, the message tubes in banks and the town's own pneumatic post.",
+ "lat": 53.735,
+ "lon": -1.94,
+ "currency": {
+  "code": "s",
+  "symbol": "s",
+  "name": "shillings"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.5,
+  "tram": 11,
+  "bus": 8,
+  "commuter-rail": 30,
+  "boat": 5,
+  "carriage": 10,
+  "horse": 12,
+  "airship": 60
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Calderwick, an original setting written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "Invented town with no real counterpart. Its texture follows ordinary late-Victorian life in the textile and engineering towns of the West Riding and Lancashire: canal basins, workers' terraces, temperance halls, mechanics' institutes, wakes weeks, Whit walks and municipal parks. Rents are weekly, in shillings, for one room, two rooms and a small whole house. Climate is rounded from Pennine-town normals with winter smog added for the setting."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "castle-hill",
+   "name": "Castle Hill",
+   "summary": "The old town on the hill: the ruined castle, the parish church, crooked stone lanes and the tall houses of the families who owned the land before the works came.",
+   "vibe": [
+    "old-town",
+    "old-families",
+    "quiet",
+    "views"
+   ],
+   "lat": 53.7385,
+   "lon": -1.942,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     6,
+     9
+    ],
+    "one_bedroom": [
+     10,
+     16
+    ],
+    "two_bedroom": [
+     25,
+     45
+    ]
+   },
+   "housing": [
+    "stone-townhouse",
+    "lodgings"
+   ],
+   "walkability": "high",
+   "transit": [
+    "kirkgate-tram"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lowfield",
+   "name": "Lowfield",
+   "summary": "The works district on the flat river land: tube mills, foundries and pump shops, chimneys in every direction and a hooter at six each morning.",
+   "vibe": [
+    "industrial",
+    "loud",
+    "soot",
+    "working-class"
+   ],
+   "lat": 53.73,
+   "lon": -1.931,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     5,
+     7
+    ]
+   },
+   "housing": [
+    "back-to-back",
+    "lodging-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "river-road-tram",
+    "omnibus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saltergate-basin",
+   "name": "Saltergate Basin",
+   "summary": "The canal basin where the Calder and Aske Navigation meets the river: warehouses, wharf cranes, horse-boat stables and boat families living aboard.",
+   "vibe": [
+    "canal",
+    "warehouses",
+    "working",
+    "waterside"
+   ],
+   "lat": 53.733,
+   "lon": -1.938,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     4
+    ],
+    "one_bedroom": [
+     4,
+     6
+    ],
+    "two_bedroom": [
+     6,
+     9
+    ]
+   },
+   "housing": [
+    "canal-boat",
+    "warehouse-lodgings",
+    "terrace"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "river-road-tram",
+    "packet-boat"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hobcroft",
+   "name": "Hobcroft",
+   "summary": "Rows of red-brick workers' terraces up the slope from Lowfield, with corner shops, a wash-house, chapels and washing strung across the back streets on Mondays.",
+   "vibe": [
+    "terraces",
+    "working-class",
+    "neighbourly",
+    "chapels"
+   ],
+   "lat": 53.7275,
+   "lon": -1.9445,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     5,
+     8
+    ]
+   },
+   "housing": [
+    "terrace",
+    "back-to-back"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "river-road-tram",
+    "omnibus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ings-end",
+   "name": "Ings End",
+   "summary": "Newer through-terraces on the old water meadows downstream, built by the Co-operative building society, with allotments running down to the river.",
+   "vibe": [
+    "terraces",
+    "allotments",
+    "respectable-working",
+    "riverside"
+   ],
+   "lat": 53.724,
+   "lon": -1.918,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     4
+    ],
+    "one_bedroom": [
+     4,
+     6
+    ],
+    "two_bedroom": [
+     6,
+     9
+    ]
+   },
+   "housing": [
+    "through-terrace",
+    "cottage"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "river-road-tram"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "exchange-quarter",
+   "name": "Exchange Quarter",
+   "summary": "The respectable merchant quarter: banks, insurance offices, the Exchange, the department store and the town's first pneumatic post office.",
+   "vibe": [
+    "commercial",
+    "respectable",
+    "offices",
+    "shopping"
+   ],
+   "lat": 53.7355,
+   "lon": -1.94,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     5,
+     8
+    ],
+    "one_bedroom": [
+     9,
+     14
+    ],
+    "two_bedroom": [
+     18,
+     30
+    ]
+   },
+   "housing": [
+    "rooms-over-shops",
+    "stone-townhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "kirkgate-tram",
+    "river-road-tram",
+    "omnibus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "station-fields",
+   "name": "Station Fields",
+   "summary": "The railway quarter around Calderwick Central: goods yards, the engine shed, commercial hotels, cab ranks and the music hall.",
+   "vibe": [
+    "railway",
+    "hotels",
+    "nightlife",
+    "transient"
+   ],
+   "lat": 53.734,
+   "lon": -1.948,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     5,
+     8
+    ],
+    "two_bedroom": [
+     8,
+     12
+    ]
+   },
+   "housing": [
+    "lodging-house",
+    "terrace",
+    "hotel-rooms"
+   ],
+   "walkability": "high",
+   "transit": [
+    "kirkgate-tram",
+    "local-trains",
+    "omnibus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-place",
+   "name": "Market Place",
+   "summary": "The market district below Castle Hill: the covered market hall, Saturday stalls on the setts, tripe shops, pawnbrokers and the Theatre Royal.",
+   "vibe": [
+    "market",
+    "busy",
+    "food",
+    "theatre"
+   ],
+   "lat": 53.737,
+   "lon": -1.9375,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     5,
+     8
+    ],
+    "two_bedroom": [
+     9,
+     14
+    ]
+   },
+   "housing": [
+    "rooms-over-shops",
+    "lodgings"
+   ],
+   "walkability": "high",
+   "transit": [
+    "kirkgate-tram",
+    "omnibus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "paradise",
+   "name": "Paradise",
+   "summary": "The immigrant quarter around Paradise Street, settled by Irish labourers who dug the canal and later by Italian families: ice-cream carts, a Catholic church and crowded courts.",
+   "vibe": [
+    "immigrant",
+    "irish",
+    "italian",
+    "crowded",
+    "catholic"
+   ],
+   "lat": 53.731,
+   "lon": -1.945,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     5,
+     7
+    ]
+   },
+   "housing": [
+    "court-housing",
+    "lodging-house",
+    "terrace"
+   ],
+   "walkability": "high",
+   "transit": [
+    "river-road-tram"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ackroyd-park",
+   "name": "Ackroyd Park",
+   "summary": "Villas and better terraces around the park that Hannah Ackroyd, widow of a tube-mill owner, gave the town, with its glasshouse, lake and bandstand.",
+   "vibe": [
+    "park",
+    "leafy",
+    "family",
+    "respectable"
+   ],
+   "lat": 53.742,
+   "lon": -1.933,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     4,
+     6
+    ],
+    "one_bedroom": [
+     7,
+     11
+    ],
+    "two_bedroom": [
+     14,
+     24
+    ]
+   },
+   "housing": [
+    "villa",
+    "through-terrace"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "kirkgate-tram"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moorside",
+   "name": "Moorside",
+   "summary": "The institute district on the road up to the moor: the Pennock Institute, the art school, the infirmary, the museum and lodgings full of students and nurses.",
+   "vibe": [
+    "students",
+    "institute",
+    "medical",
+    "lodgings"
+   ],
+   "lat": 53.744,
+   "lon": -1.945,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     6,
+     9
+    ],
+    "two_bedroom": [
+     12,
+     18
+    ]
+   },
+   "housing": [
+    "lodgings",
+    "terrace",
+    "nurses-home"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "kirkgate-tram",
+    "omnibus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fernleigh",
+   "name": "Fernleigh",
+   "summary": "Where the new money lives: big stone villas of the tube and pump manufacturers, each with a carriage drive, a conservatory and a message tube to the works.",
+   "vibe": [
+    "new-money",
+    "affluent",
+    "villas",
+    "quiet"
+   ],
+   "lat": 53.749,
+   "lon": -1.93,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     8,
+     12
+    ],
+    "one_bedroom": [
+     14,
+     22
+    ],
+    "two_bedroom": [
+     40,
+     80
+    ]
+   },
+   "housing": [
+    "villa",
+    "coach-house-flat"
+   ],
+   "walkability": "low",
+   "transit": [
+    "omnibus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridley-moor",
+   "name": "Ridley Moor",
+   "summary": "Open moor above the town with reservoirs, a few farms and the airship mooring mast where the mail ship ties up.",
+   "vibe": [
+    "moorland",
+    "airship",
+    "reservoirs",
+    "fresh-air"
+   ],
+   "lat": 53.756,
+   "lon": -1.955,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     5,
+     8
+    ],
+    "two_bedroom": [
+     9,
+     15
+    ]
+   },
+   "housing": [
+    "farm-cottage",
+    "cottage"
+   ],
+   "walkability": "low",
+   "transit": [
+    "air-mail",
+    "omnibus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "calder-holme",
+   "name": "Calder Holme",
+   "summary": "The riverside pleasure ground upstream of the works, with the lido, the velodrome, a pier on the old mill dam and Sunday crowds in summer.",
+   "vibe": [
+    "leisure",
+    "riverside",
+    "summer",
+    "sport"
+   ],
+   "lat": 53.727,
+   "lon": -1.962,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     5,
+     8
+    ],
+    "two_bedroom": [
+     9,
+     14
+    ]
+   },
+   "housing": [
+    "terrace",
+    "cottage"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "river-road-tram",
+    "packet-boat"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "kirkgate-tram",
+   "name": "Kirkgate steam tram",
+   "kind": "tram",
+   "summary": "A small steam tram engine pulling double-deck cars from Station Fields up Kirkgate past the market to Moorside and the park gates.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "river-road-tram",
+   "name": "River Road horse tram",
+   "kind": "tram",
+   "summary": "Horse trams along the valley bottom from Calder Holme through Lowfield and the basin to Ings End, packed at shift change.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "omnibus",
+   "name": "Corporation horse omnibuses",
+   "kind": "bus",
+   "summary": "Horse buses on the hill routes the trams cannot climb, out to Fernleigh and up to Ridley Moor.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "local-trains",
+   "name": "Calder Valley local trains",
+   "kind": "commuter-rail",
+   "summary": "Stopping trains from Calderwick Central down the valley to the neighbouring mill towns and the main line.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "packet-boat",
+   "name": "Canal packet boat",
+   "kind": "boat",
+   "summary": "A slow horse-drawn passenger boat on the canal between Saltergate Basin and Calder Holme, popular on summer Sundays.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "air-mail",
+   "name": "Ridley Moor air mail",
+   "kind": "airship",
+   "summary": "One mail airship that flies the bags to the coast and back twice a week, carrying a handful of paying passengers.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cab",
+   "name": "Hackney cabs",
+   "kind": "carriage",
+   "summary": "Horse cabs from the station rank and the Exchange, for anyone who can afford a shilling.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "old-bell",
+   "name": "The Old Bell",
+   "kind": "tavern",
+   "neighborhood": "castle-hill",
+   "summary": "The oldest pub in town, low-beamed, by the church gate; bell-ringers drink there after practice night.",
+   "tags": [
+    "old",
+    "pub",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "castle-ruins",
+   "name": "Calderwick Castle ruins",
+   "kind": "landmark",
+   "neighborhood": "castle-hill",
+   "summary": "A broken keep and curtain wall on top of the hill with a view over the chimneys and the canal.",
+   "tags": [
+    "history",
+    "views",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-wilfrids",
+   "name": "St Wilfrid's parish church",
+   "kind": "temple",
+   "neighborhood": "castle-hill",
+   "summary": "The old parish church, blackened by soot, with Sunday services and a Thursday organ recital.",
+   "tags": [
+    "church",
+    "music"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moulders-arms",
+   "name": "The Moulders' Arms",
+   "kind": "tavern",
+   "neighborhood": "lowfield",
+   "summary": "A works pub at the gates of Dunmore Brothers that opens early for men coming off the night turn.",
+   "tags": [
+    "pub",
+    "works",
+    "rough"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lowfield-boxing",
+   "name": "Lowfield Amateur Boxing Club",
+   "kind": "fitness",
+   "neighborhood": "lowfield",
+   "summary": "A boxing gym in an old pattern shop, with skipping ropes, a ring and Friday night bouts.",
+   "tags": [
+    "boxing",
+    "sport"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saltergate-wharves",
+   "name": "Saltergate wharves",
+   "kind": "docks",
+   "neighborhood": "saltergate-basin",
+   "summary": "The canal wharves where narrowboats unload coal and pig iron and load crated tube for the coast.",
+   "tags": [
+    "canal",
+    "boats",
+    "work"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "navigation-inn",
+   "name": "The Navigation Inn",
+   "kind": "tavern",
+   "neighborhood": "saltergate-basin",
+   "summary": "A boatmen's pub on the basin with a stable yard behind and a fire in the back room.",
+   "tags": [
+    "pub",
+    "canal",
+    "boatmen"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "basin-coffee-tavern",
+   "name": "Basin Coffee Tavern",
+   "kind": "cafe",
+   "neighborhood": "saltergate-basin",
+   "summary": "A temperance coffee tavern for boat families: mugs of cocoa, bacon breadcakes and newspapers on a rail.",
+   "tags": [
+    "temperance",
+    "breakfast",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hobcroft-baths",
+   "name": "Hobcroft Public Baths and Wash-house",
+   "kind": "fitness",
+   "neighborhood": "hobcroft",
+   "summary": "Corporation baths with a swimming bath, slipper baths by the half hour and a steam laundry for washing day.",
+   "tags": [
+    "swimming",
+    "baths",
+    "laundry"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hobcroft-fish-saloon",
+   "name": "Garside's Fish Saloon",
+   "kind": "restaurant",
+   "neighborhood": "hobcroft",
+   "summary": "A fish and chip shop with a back room of oilcloth tables, open till the last pub closes.",
+   "tags": [
+    "fish-and-chips",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "fish and chips",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hope-street-hall",
+   "name": "Hope Street Temperance Hall",
+   "kind": "venue",
+   "neighborhood": "hobcroft",
+   "summary": "A temperance hall with magic-lantern shows, penny readings, choir practice and a tea urn that never goes cold.",
+   "tags": [
+    "temperance",
+    "lantern-shows",
+    "choir"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ings-allotments",
+   "name": "Ings End allotments",
+   "kind": "garden",
+   "neighborhood": "ings-end",
+   "summary": "Allotment strips down to the river, with leeks, rhubarb, pigeon lofts and sheds for a quiet pipe.",
+   "tags": [
+    "allotments",
+    "pigeons",
+    "outdoors"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rose-and-crown",
+   "name": "The Rose and Crown",
+   "kind": "tavern",
+   "neighborhood": "ings-end",
+   "summary": "A neighbourhood pub with a bowling green, a darts board and a Saturday sing-song round the piano.",
+   "tags": [
+    "pub",
+    "bowls",
+    "singing"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-exchange",
+   "name": "The Calderwick Exchange",
+   "kind": "landmark",
+   "neighborhood": "exchange-quarter",
+   "summary": "The columned Exchange where tube orders and metal prices are dealt on Tuesdays, with a public gallery.",
+   "tags": [
+    "architecture",
+    "commerce"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bulmers-chophouse",
+   "name": "Bulmer's Chophouse",
+   "kind": "restaurant",
+   "neighborhood": "exchange-quarter",
+   "summary": "A panelled chophouse for clerks and merchants: chops, steak pudding and stout at long tables.",
+   "tags": [
+    "chophouse",
+    "lunch"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "listers-coffee-rooms",
+   "name": "Lister's Coffee Rooms",
+   "kind": "cafe",
+   "neighborhood": "exchange-quarter",
+   "summary": "Upstairs coffee rooms with chess tables, the London papers and a pneumatic tube to send notes to the Exchange.",
+   "tags": [
+    "coffee",
+    "chess",
+    "newspapers"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wright-battersby",
+   "name": "Wright and Battersby",
+   "kind": "shopping",
+   "neighborhood": "exchange-quarter",
+   "summary": "The department store, with cash carriers whizzing through ceiling tubes to the counting house and a tea room upstairs.",
+   "tags": [
+    "department-store",
+    "shopping"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "free-library",
+   "name": "Calderwick Free Library",
+   "kind": "library",
+   "neighborhood": "exchange-quarter",
+   "summary": "The free lending library and newsroom, warm in winter, with a ladies' reading room and a long waiting list for new novels.",
+   "tags": [
+    "books",
+    "newspapers",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "railway-tavern",
+   "name": "The Railway Tavern",
+   "kind": "tavern",
+   "neighborhood": "station-fields",
+   "summary": "A busy pub opposite the station full of porters, commercial travellers and drivers off the late train.",
+   "tags": [
+    "pub",
+    "railway"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "thornbers-varieties",
+   "name": "Thornber's Varieties",
+   "kind": "venue",
+   "neighborhood": "station-fields",
+   "summary": "The music hall: comic singers, a juggler, a ventriloquist and the chorus, twice nightly, with a bar at the back.",
+   "tags": [
+    "music-hall",
+    "comedy",
+    "songs"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "station-refreshment-room",
+   "name": "Central Station refreshment room",
+   "kind": "restaurant",
+   "neighborhood": "station-fields",
+   "summary": "Tea, pork pies and hot soup on the platform, open for the first and last trains.",
+   "tags": [
+    "tea",
+    "railway",
+    "quick"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-hall",
+   "name": "Calderwick Market Hall",
+   "kind": "market",
+   "neighborhood": "market-place",
+   "summary": "A cast-iron covered market of butchers, cheese stalls, a sweet stall, a herbalist and a mushy-pea stand.",
+   "tags": [
+    "market",
+    "food",
+    "shopping"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saturday-market",
+   "name": "Saturday open market",
+   "kind": "market",
+   "neighborhood": "market-place",
+   "summary": "Stalls on the setts every Saturday selling cloth, crockery, second-hand books and quack remedies, lit by naphtha flares after dark.",
+   "tags": [
+    "market",
+    "saturday",
+    "bargains"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brierleys-tripe",
+   "name": "Brierley's Tripe and Cow-heel Shop",
+   "kind": "restaurant",
+   "neighborhood": "market-place",
+   "summary": "A tripe dresser's with a dining room behind: tripe and onions, pies and peas, very cheap.",
+   "tags": [
+    "tripe",
+    "pies",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whiteleys-cafe",
+   "name": "Whiteley's Cafe",
+   "kind": "cafe",
+   "neighborhood": "market-place",
+   "summary": "A tea room above the confectioner's, with fat rascals, curd tarts and a trio playing on Saturday afternoons.",
+   "tags": [
+    "tea-room",
+    "cakes"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "tea room",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "theatre-royal",
+   "name": "Theatre Royal",
+   "kind": "venue",
+   "neighborhood": "market-place",
+   "summary": "The proper theatre, with touring companies, melodrama, Shakespeare in winter and the pantomime from Boxing Day.",
+   "tags": [
+    "theatre",
+    "pantomime"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rossis-ices",
+   "name": "Rossi's ice-cream parlour",
+   "kind": "cafe",
+   "neighborhood": "paradise",
+   "summary": "An Italian family's parlour that sells ice cream, hot chestnuts in winter and strong coffee all year.",
+   "tags": [
+    "ice-cream",
+    "italian"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-patricks-hall",
+   "name": "St Patrick's Hall",
+   "kind": "venue",
+   "neighborhood": "paradise",
+   "summary": "The Catholic parish hall: Irish dances on Saturday night, whist drives and a boxing tournament at Easter.",
+   "tags": [
+    "dances",
+    "irish",
+    "whist"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bonettis-bakery",
+   "name": "Bonetti's bakery",
+   "kind": "market",
+   "neighborhood": "paradise",
+   "summary": "A bakery on Paradise Street selling bread rolls, biscotti and hot pies to the works crowds before six.",
+   "tags": [
+    "bakery",
+    "italian",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ackroyd-park-grounds",
+   "name": "Ackroyd Park",
+   "kind": "park",
+   "neighborhood": "ackroyd-park",
+   "summary": "The philanthropist's park, with a boating lake, a bandstand, bowling greens and a drinking fountain carved with her motto.",
+   "tags": [
+    "park",
+    "bandstand",
+    "boating"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ackroyd-glasshouse",
+   "name": "Ackroyd Palm House",
+   "kind": "garden",
+   "neighborhood": "ackroyd-park",
+   "summary": "The botanic glasshouse in the park, warm and wet, with palms, ferns and a banana plant that fruited once.",
+   "tags": [
+    "glasshouse",
+    "plants",
+    "warm"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fernleigh-tennis",
+   "name": "Fernleigh Lawn Tennis Club",
+   "kind": "fitness",
+   "neighborhood": "fernleigh",
+   "summary": "Grass courts and a pavilion where manufacturers' sons and daughters play doubles and flirt.",
+   "tags": [
+    "tennis",
+    "society"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fernleigh-assembly-rooms",
+   "name": "Fernleigh Assembly Rooms",
+   "kind": "venue",
+   "neighborhood": "fernleigh",
+   "summary": "Subscription balls, charity bazaars and lectures by visiting explorers.",
+   "tags": [
+    "balls",
+    "society"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "museum-of-pneumatics",
+   "name": "Calderwick Museum of Pneumatics",
+   "kind": "museum",
+   "neighborhood": "moorside",
+   "summary": "The town's own industry museum: the first cash carrier, cutaway compressors and a working tube you can send a message through.",
+   "tags": [
+    "industry",
+    "machines",
+    "hands-on"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "art-gallery",
+   "name": "Calderwick Art Gallery and Museum",
+   "kind": "museum",
+   "neighborhood": "moorside",
+   "summary": "Paintings given by mill owners, stuffed birds, Roman coins from the castle and a mummy nobody can explain.",
+   "tags": [
+    "art",
+    "natural-history",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mechanics-library",
+   "name": "Mechanics' Library",
+   "kind": "library",
+   "neighborhood": "moorside",
+   "summary": "The Pennock Institute's lending library of engineering books and trade journals, open to members until nine.",
+   "tags": [
+    "books",
+    "engineering",
+    "study"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moorside-coffee-room",
+   "name": "Moorside Coffee Room",
+   "kind": "cafe",
+   "neighborhood": "moorside",
+   "summary": "A cheap coffee room where students argue over drawings and nurses come off the morning shift.",
+   "tags": [
+    "students",
+    "coffee"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mooring-mast",
+   "name": "Ridley Moor mooring mast",
+   "kind": "landmark",
+   "neighborhood": "ridley-moor",
+   "summary": "The iron mast where the mail airship ties up; people walk up on Tuesdays and Fridays to watch her come in.",
+   "tags": [
+    "airship",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "reservoir-walk",
+   "name": "Ridley reservoirs walk",
+   "kind": "trail",
+   "neighborhood": "ridley-moor",
+   "summary": "A path round the reservoirs and over the moor, above the smoke, with curlews in spring.",
+   "tags": [
+    "walk",
+    "moorland",
+    "fresh-air"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moor-cock-inn",
+   "name": "The Moor Cock Inn",
+   "kind": "inn",
+   "neighborhood": "ridley-moor",
+   "summary": "A stone inn on the moor road serving ham and eggs to walkers and the airship crew.",
+   "tags": [
+    "inn",
+    "walkers"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "calder-holme-lido",
+   "name": "Calder Holme Lido",
+   "kind": "beach",
+   "neighborhood": "calder-holme",
+   "summary": "An open-air bathing pool fed from the river, cold even in August, with a sand bank and changing huts.",
+   "tags": [
+    "swimming",
+    "outdoors",
+    "summer"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "calderwick-velodrome",
+   "name": "Calderwick Velodrome",
+   "kind": "stadium",
+   "neighborhood": "calder-holme",
+   "summary": "A cinder and timber cycle track with Saturday races, betting under the stand and a club for lady cyclists.",
+   "tags": [
+    "cycling",
+    "races",
+    "sport"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holme-pier",
+   "name": "Holme pleasure pier",
+   "kind": "attraction",
+   "neighborhood": "calder-holme",
+   "summary": "A short pier on the old mill dam with rowing boats, a penny-in-the-slot machine hall and a whelk stall.",
+   "tags": [
+    "pier",
+    "boating",
+    "amusements"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "miss-pickles-tea-room",
+   "name": "Miss Pickles' tea room",
+   "kind": "cafe",
+   "neighborhood": "castle-hill",
+   "summary": "A front-room tea room in a stone house below the castle, with seed cake, potted-meat sandwiches and a view of the chimneys.",
+   "tags": [
+    "tea-room",
+    "cakes",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "tea room",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "castle-bowling-green",
+   "name": "Castle Hill bowling green",
+   "kind": "fitness",
+   "neighborhood": "castle-hill",
+   "summary": "A level green inside the old outer bailey where retired mill managers play crown bowls on summer evenings.",
+   "tags": [
+    "bowls",
+    "quiet",
+    "old-town"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lowfield-dining-rooms",
+   "name": "Lowfield Dining Rooms",
+   "kind": "restaurant",
+   "neighborhood": "lowfield",
+   "summary": "A works cookshop by the tube mill gates selling hot dinners in basins: meat and potato pie, peas and a mug of tea for fourpence.",
+   "tags": [
+    "dinners",
+    "works",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lowfield-co-op",
+   "name": "Lowfield Co-operative Store",
+   "kind": "shopping",
+   "neighborhood": "lowfield",
+   "summary": "The Co-op grocery and drapery, where members collect their dividend twice a year and argue about it at the counter.",
+   "tags": [
+    "co-op",
+    "groceries",
+    "dividend"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ogdens-clogger",
+   "name": "Ogden's clogger",
+   "kind": "workshop",
+   "neighborhood": "lowfield",
+   "summary": "A clogger's shop where wooden soles are cut, irons nailed on and old clogs re-ironed while you wait on the bench.",
+   "tags": [
+    "clogs",
+    "craft",
+    "repairs"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hirsts-dry-dock",
+   "name": "Hirst's dry dock",
+   "kind": "workshop",
+   "neighborhood": "saltergate-basin",
+   "summary": "A boatyard at the end of the basin where narrowboats are caulked, tarred and painted with roses and castles.",
+   "tags": [
+    "boats",
+    "craft",
+    "canal"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boatmens-mission",
+   "name": "Boatmen's Mission",
+   "kind": "temple",
+   "neighborhood": "saltergate-basin",
+   "summary": "A small mission chapel on the wharf with a Sunday service, a reading room and a night school for boat children.",
+   "tags": [
+    "chapel",
+    "canal",
+    "school"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zion-chapel",
+   "name": "Zion Primitive Methodist Chapel",
+   "kind": "temple",
+   "neighborhood": "hobcroft",
+   "summary": "A plain brick chapel with a big Sunday school, a brass band and the anniversary sing on the second Sunday in June.",
+   "tags": [
+    "chapel",
+    "singing",
+    "sunday-school"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hobcroft-rec",
+   "name": "Hobcroft recreation ground",
+   "kind": "park",
+   "neighborhood": "hobcroft",
+   "summary": "A cinder field with swings, a cricket pitch and a shelter where old men sit and children kick a ball till dark.",
+   "tags": [
+    "playground",
+    "cricket",
+    "children"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ings-end-co-op",
+   "name": "Ings End Co-operative Store and News Room",
+   "kind": "shopping",
+   "neighborhood": "ings-end",
+   "summary": "The branch Co-op with a grocery below and a news room above, where members read the papers for nothing.",
+   "tags": [
+    "co-op",
+    "groceries",
+    "newspapers"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pickerings-pie-shop",
+   "name": "Pickering's pie shop",
+   "kind": "restaurant",
+   "neighborhood": "ings-end",
+   "summary": "A pie shop with a few tables, selling pork pies, pie and peas with mint sauce, and a jug of gravy for home.",
+   "tags": [
+    "pies",
+    "cheap",
+    "takeaway"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ings-end-wesleyan",
+   "name": "Ings End Wesleyan Chapel",
+   "kind": "temple",
+   "neighborhood": "ings-end",
+   "summary": "A new stone chapel built by subscription, with a Thursday choir practice and a Band of Hope for the children.",
+   "tags": [
+    "chapel",
+    "choir",
+    "temperance"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pneumatic-post-office",
+   "name": "Head Post Office",
+   "kind": "landmark",
+   "neighborhood": "exchange-quarter",
+   "summary": "The post office where the pneumatic post began, with a counter of brass tube mouths and a clerk who sends a letter across town in a minute.",
+   "tags": [
+    "post",
+    "pneumatics",
+    "civic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "commercial-hotel",
+   "name": "The Commercial Hotel",
+   "kind": "inn",
+   "neighborhood": "station-fields",
+   "summary": "A hotel for travelling salesmen opposite the station, with sample rooms, a coffee room and a plain table d'hote at six.",
+   "tags": [
+    "hotel",
+    "travellers",
+    "dinner"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "station-bookstall",
+   "name": "Central Station bookstall",
+   "kind": "shopping",
+   "neighborhood": "station-fields",
+   "summary": "A platform bookstall of newspapers, railway novels, timetables and penny maps of the valley.",
+   "tags": [
+    "books",
+    "newspapers",
+    "railway"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "uncle-dicks",
+   "name": "Uncle Dick's pawnshop",
+   "kind": "shopping",
+   "neighborhood": "market-place",
+   "summary": "The busiest pawnbroker in town, with Sunday suits going in on Monday and coming out again on Saturday.",
+   "tags": [
+    "pawnshop",
+    "bargains",
+    "secondhand"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-patricks-church",
+   "name": "St Patrick's Church",
+   "kind": "temple",
+   "neighborhood": "paradise",
+   "summary": "The Catholic church at the top of Paradise Street, with early Mass for the works and the Whit procession behind a band.",
+   "tags": [
+    "church",
+    "catholic",
+    "procession"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-harp",
+   "name": "The Harp",
+   "kind": "tavern",
+   "neighborhood": "paradise",
+   "summary": "An Irish pub on Paradise Street with a fiddler on Saturday nights and a back room where the Hibernian society meets.",
+   "tags": [
+    "pub",
+    "irish",
+    "music"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ackroyd-bandstand",
+   "name": "Ackroyd Park bandstand",
+   "kind": "venue",
+   "neighborhood": "ackroyd-park",
+   "summary": "An iron bandstand by the lake where works brass bands play on Sunday afternoons and the town band on summer evenings.",
+   "tags": [
+    "brass-band",
+    "music",
+    "sunday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ackroyd-pavilion",
+   "name": "Park refreshment pavilion",
+   "kind": "cafe",
+   "neighborhood": "ackroyd-park",
+   "summary": "A timber pavilion by the boating lake selling tea, lemonade, buns and ices to families on their Sunday walk.",
+   "tags": [
+    "tea",
+    "family",
+    "lake"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "tea room",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ackroyd-bowling-greens",
+   "name": "Ackroyd Park bowling greens",
+   "kind": "fitness",
+   "neighborhood": "ackroyd-park",
+   "summary": "Two corporation greens with a hut for woods, open to anyone with a penny and flat-soled shoes.",
+   "tags": [
+    "bowls",
+    "corporation",
+    "evening"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shoulder-of-mutton",
+   "name": "The Shoulder of Mutton",
+   "kind": "tavern",
+   "neighborhood": "moorside",
+   "summary": "A pub on the moor road used by students, porters from the infirmary and art-school teachers arguing about Ruskin.",
+   "tags": [
+    "pub",
+    "students",
+    "arguments"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-aidans-fernleigh",
+   "name": "St Aidan's, Fernleigh",
+   "kind": "temple",
+   "neighborhood": "fernleigh",
+   "summary": "A new stone church paid for by the manufacturers, with carved pews, a good organ and a Sunday parade of hats.",
+   "tags": [
+    "church",
+    "organ",
+    "society"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fernleigh-hotel",
+   "name": "Fernleigh Hotel dining room",
+   "kind": "restaurant",
+   "neighborhood": "fernleigh",
+   "summary": "A quiet hotel dining room on the omnibus terminus where villa families take Sunday luncheon and wedding breakfasts.",
+   "tags": [
+    "dining-room",
+    "sunday-lunch",
+    "society"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fernleigh-subscription-library",
+   "name": "Fernleigh Subscription Library",
+   "kind": "library",
+   "neighborhood": "fernleigh",
+   "summary": "A subscription library in a converted villa, with new novels from London and a ladies' committee that picks them.",
+   "tags": [
+    "books",
+    "novels",
+    "subscription"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridley-top-farm",
+   "name": "Ridley Top Farm teas",
+   "kind": "cafe",
+   "neighborhood": "ridley-moor",
+   "summary": "A farmhouse that sells teas, eggs and buttermilk to walkers, with a parlour for wet days and a table outside for fine ones.",
+   "tags": [
+    "farm",
+    "teas",
+    "walkers"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "farmhouse teas",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridley-quarry",
+   "name": "Ridley delph",
+   "kind": "workshop",
+   "neighborhood": "ridley-moor",
+   "summary": "A gritstone quarry on the moor edge where the stone for the town's chapels and villas is cut and dressed in open sheds.",
+   "tags": [
+    "quarry",
+    "stone",
+    "work"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holme-tea-gardens",
+   "name": "Holme tea gardens",
+   "kind": "cafe",
+   "neighborhood": "calder-holme",
+   "summary": "Trestle tables under the alders by the river where families buy a jug of hot water for their own tea and a plate of teacakes.",
+   "tags": [
+    "tea",
+    "river",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "tea room",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ferry-boat-inn",
+   "name": "The Ferry Boat Inn",
+   "kind": "tavern",
+   "neighborhood": "calder-holme",
+   "summary": "A riverside pub by the old ferry with a garden of benches, where cyclists stop after the Saturday races.",
+   "tags": [
+    "pub",
+    "river",
+    "cyclists"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "calder-rowing-club",
+   "name": "Calder Rowing Club",
+   "kind": "fitness",
+   "neighborhood": "calder-holme",
+   "summary": "A wooden boathouse on the mill dam where clerks and mechanics row fours in the evening and hold a regatta in July.",
+   "tags": [
+    "rowing",
+    "river",
+    "club"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "pennock-institute",
+   "name": "Pennock Institute of Mechanical Science",
+   "type": "technical-institute",
+   "neighborhood": "moorside",
+   "size": "medium",
+   "known_for": [
+    "pneumatics",
+    "mechanical-engineering",
+    "draughtsmanship",
+    "chemistry",
+    "evening-classes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "school-of-art",
+   "name": "Calderwick School of Art",
+   "type": "art-school",
+   "neighborhood": "moorside",
+   "size": "small",
+   "known_for": [
+    "design",
+    "drawing",
+    "photography",
+    "pattern-design"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "infirmary-nursing-school",
+   "name": "Royal Infirmary Training School for Nurses",
+   "type": "medical-school",
+   "neighborhood": "moorside",
+   "size": "small",
+   "known_for": [
+    "nursing",
+    "midwifery"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grammar-school",
+   "name": "Calderwick Grammar School",
+   "type": "academy",
+   "neighborhood": "castle-hill",
+   "size": "small",
+   "known_for": [
+    "latin",
+    "mathematics",
+    "scholarships"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pupil-teacher-centre",
+   "name": "Calderwick Pupil-Teacher Centre",
+   "type": "academy",
+   "neighborhood": "hobcroft",
+   "size": "small",
+   "known_for": [
+    "teacher-training",
+    "elementary-schooling"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "tube-fitter",
+   "name": "Tube fitter",
+   "sector": "engineering",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Installing and repairing pneumatic tube runs in shops, banks and offices across town and beyond.",
+   "themes": [
+    "ladders and ceilings",
+    "customers watching",
+    "blockages",
+    "travelling jobs"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "tube-drawer",
+   "name": "Tube drawer",
+   "sector": "manufacturing",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Drawing hot and cold metal tube on the benches of a tube mill, on day and night turns.",
+   "themes": [
+    "heat",
+    "noise",
+    "piecework",
+    "the turn changing"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "boilermaker",
+   "name": "Boilermaker",
+   "sector": "manufacturing",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Riveting and caulking boiler plate for engines and compressors.",
+   "themes": [
+    "rivet gangs",
+    "deafness",
+    "the union",
+    "apprentices"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "iron-moulder",
+   "name": "Iron moulder",
+   "sector": "manufacturing",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Making sand moulds and pouring castings in a foundry.",
+   "themes": [
+    "casting days",
+    "burns",
+    "skill and pride"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "draughtsman",
+   "name": "Draughtsman",
+   "sector": "engineering",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Drawing engineering plans in a works drawing office, with evening classes at the Institute.",
+   "themes": [
+    "tracing paper",
+    "deadlines",
+    "the chief draughtsman",
+    "evening classes"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "mill-hand",
+   "name": "Mill hand",
+   "sector": "textiles",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Minding looms in a worsted shed from six in the morning, as many young women in town do.",
+   "themes": [
+    "looms",
+    "noise",
+    "mill friendships",
+    "half-holidays"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "id": "canal-boatman",
+   "name": "Canal boatman",
+   "sector": "transport",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Working a horse-drawn narrowboat between the basin and the coast with family aboard.",
+   "themes": [
+    "locks",
+    "the horse",
+    "weather",
+    "long trips"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "lock-keeper",
+   "name": "Lock-keeper",
+   "sector": "transport",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Keeping a canal lock and its cottage, working the gates for every boat.",
+   "themes": [
+    "boats passing",
+    "gardening",
+    "solitude"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "railway-signalman",
+   "name": "Railway signalman",
+   "sector": "transport",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Working the levers and bells in a signal box on eight-hour turns.",
+   "themes": [
+    "bells and levers",
+    "night turns",
+    "responsibility"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "telegraphist",
+   "name": "Telegraphist",
+   "sector": "communications",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$$",
+   "summary": "Sending and taking telegrams at the post office instrument room.",
+   "themes": [
+    "morse",
+    "urgent news",
+    "night duty"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "id": "tube-post-sorter",
+   "name": "Tube post sorter",
+   "sector": "communications",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Sorting and dispatching carriers in the town's pneumatic post office.",
+   "themes": [
+    "carriers",
+    "jams",
+    "speed"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "id": "airship-mail-rigger",
+   "name": "Airship mail rigger",
+   "sector": "transport",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Handling lines, gas bags and mail at the mooring mast and flying as crew on the mail run.",
+   "themes": [
+    "heights",
+    "weather",
+    "the mast crew",
+    "flights to the coast"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "typist",
+   "name": "Typist",
+   "sector": "clerical",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Typing letters and invoices in a works or merchant's office, one of the new jobs open to young women.",
+   "themes": [
+    "typewriters",
+    "office gossip",
+    "shorthand"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "office-clerk",
+   "name": "Clerk",
+   "sector": "clerical",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Keeping ledgers and copying letters in a counting house or company office.",
+   "themes": [
+    "ledgers",
+    "the senior clerk",
+    "respectability on little pay"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "shop-assistant",
+   "name": "Shop assistant",
+   "sector": "retail",
+   "schedule": "shift-day",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Serving behind the counter in a store, long hours, living in above the shop.",
+   "themes": [
+    "customers",
+    "the floorwalker",
+    "late Saturdays"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "id": "infirmary-nurse",
+   "name": "Infirmary nurse",
+   "sector": "healthcare",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Ward nursing at the Royal Infirmary, living in the nurses' home.",
+   "themes": [
+    "ward sister",
+    "works accidents",
+    "night duty"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "schoolteacher",
+   "name": "Board school teacher",
+   "sector": "education",
+   "schedule": "academic",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Teaching a class of sixty in a board school, mostly children of mill and works families.",
+   "themes": [
+    "big classes",
+    "inspections",
+    "clever children"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "id": "institute-lecturer",
+   "name": "Institute lecturer",
+   "sector": "education",
+   "schedule": "academic",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Teaching mechanics and drawing at the Pennock Institute, many classes in the evening.",
+   "themes": [
+    "students",
+    "apparatus",
+    "the exhibition"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "music-hall-singer",
+   "name": "Music hall singer",
+   "sector": "entertainment",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Singing comic and sentimental songs twice nightly, touring the halls between bookings.",
+   "themes": [
+    "the audience",
+    "new songs",
+    "touring",
+    "stage-door friends"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "id": "union-organiser",
+   "name": "Union organiser",
+   "sector": "labour",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Recruiting members and fighting grievances for the tube workers' union.",
+   "themes": [
+    "meetings",
+    "masters",
+    "strike talk",
+    "hope"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "pastry-cook",
+   "name": "Pastry cook",
+   "sector": "food",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Baking tarts, pies and cakes from four in the morning for a confectioner and tea room.",
+   "themes": [
+    "ovens",
+    "early starts",
+    "wedding cakes"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "id": "compositor",
+   "name": "Compositor",
+   "sector": "press",
+   "schedule": "shift-night",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Setting type by hand for the morning paper, through the night.",
+   "themes": [
+    "type cases",
+    "deadlines",
+    "the press thundering"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "reporter",
+   "name": "Reporter",
+   "sector": "press",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Covering council meetings, police court, accidents and football for the town paper.",
+   "themes": [
+    "notebooks",
+    "the editor",
+    "scoops"
+   ],
+   "eras": [
+    "steampunk"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "photographer",
+   "name": "Photographer",
+   "sector": "arts",
+   "schedule": "flexible",
+   "employment": "freelance",
+   "pay": "$$",
+   "summary": "Taking studio portraits, wedding groups and works outings.",
+   "themes": [
+    "the darkroom",
+    "sitters",
+    "glass plates"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "id": "barmaid",
+   "name": "Bar staff",
+   "sector": "hospitality",
+   "schedule": "evening",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Pulling pints and keeping order in a brewery tied house.",
+   "themes": [
+    "regulars",
+    "closing time",
+    "the landlord"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  }
+ ],
+ "employers": [
+  {
+   "id": "haworth-pyne",
+   "name": "Haworth and Pyne Pneumatic Works",
+   "sector": "engineering",
+   "neighborhood": "lowfield",
+   "size": "large",
+   "summary": "The largest firm in town, making and fitting pneumatic dispatch systems for shops, banks and post offices across the country.",
+   "careers": [
+    "tube-fitter",
+    "draughtsman",
+    "office-clerk",
+    "typist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ingleby-tube-mill",
+   "name": "Ingleby's Drawn Tube Mill",
+   "sector": "manufacturing",
+   "neighborhood": "lowfield",
+   "size": "large",
+   "summary": "A hot and noisy mill drawing copper and steel tube by the mile, worked round the clock.",
+   "careers": [
+    "tube-drawer",
+    "office-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dunmore-brothers",
+   "name": "Dunmore Brothers Engine and Pump Works",
+   "sector": "manufacturing",
+   "neighborhood": "lowfield",
+   "size": "large",
+   "summary": "Builds the compressors and pumping engines that drive the tube systems, with its own boiler shop and foundry.",
+   "careers": [
+    "boilermaker",
+    "iron-moulder",
+    "draughtsman",
+    "typist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sugden-mill",
+   "name": "Sugden and Sons Worsted Mill",
+   "sector": "textiles",
+   "neighborhood": "hobcroft",
+   "size": "large",
+   "summary": "The old family mill on the river, still spinning and weaving worsted with a mostly female workforce.",
+   "careers": [
+    "mill-hand",
+    "office-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "navigation-company",
+   "name": "Calder and Aske Navigation Company",
+   "sector": "transport",
+   "neighborhood": "saltergate-basin",
+   "size": "medium",
+   "summary": "Owns the canal, the basin, the warehouses and the lock cottages, and hires out boats.",
+   "careers": [
+    "canal-boatman",
+    "lock-keeper",
+    "office-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "valley-railway",
+   "name": "Calder Valley Railway",
+   "sector": "transport",
+   "neighborhood": "station-fields",
+   "size": "large",
+   "summary": "Runs Central station, the goods yards and the valley line.",
+   "careers": [
+    "railway-signalman",
+    "telegraphist",
+    "office-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "corporation-gasworks",
+   "name": "Calderwick Corporation Gasworks",
+   "sector": "municipal",
+   "neighborhood": "saltergate-basin",
+   "size": "medium",
+   "summary": "The municipal gasworks by the basin, lighting the streets and supplying the tube post engines.",
+   "careers": [
+    "boilermaker",
+    "office-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-infirmary",
+   "name": "Calderwick Royal Infirmary",
+   "sector": "healthcare",
+   "neighborhood": "moorside",
+   "size": "large",
+   "summary": "The town hospital, paid for by subscription and works collections, busy with works accidents.",
+   "careers": [
+    "infirmary-nurse",
+    "office-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "calderwick-examiner",
+   "name": "The Calderwick Examiner",
+   "sector": "press",
+   "neighborhood": "exchange-quarter",
+   "size": "medium",
+   "summary": "The daily paper, Liberal in politics, printed overnight behind its Exchange Street office.",
+   "careers": [
+    "compositor",
+    "reporter",
+    "typist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pennock-institute-staff",
+   "name": "Pennock Institute",
+   "sector": "education",
+   "neighborhood": "moorside",
+   "size": "medium",
+   "summary": "The engineering institute founded by a pump maker, teaching day and evening classes.",
+   "careers": [
+    "institute-lecturer",
+    "office-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tube-post-office",
+   "name": "Calderwick Pneumatic and Telegraph Office",
+   "sector": "communications",
+   "neighborhood": "exchange-quarter",
+   "size": "medium",
+   "summary": "The post office instrument room and the hub of the town's pneumatic post.",
+   "careers": [
+    "telegraphist",
+    "tube-post-sorter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridley-air-mail",
+   "name": "Ridley Moor Air Mail Company",
+   "sector": "transport",
+   "neighborhood": "ridley-moor",
+   "size": "small",
+   "summary": "Runs the single mail airship and its mast crew.",
+   "careers": [
+    "airship-mail-rigger",
+    "office-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wright-battersby-store",
+   "name": "Wright and Battersby",
+   "sector": "retail",
+   "neighborhood": "exchange-quarter",
+   "size": "medium",
+   "summary": "The department store, with live-in assistants and a counting house fed by cash tubes.",
+   "careers": [
+    "shop-assistant",
+    "office-clerk",
+    "pastry-cook"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whiteleys",
+   "name": "Whiteley's Confectioners",
+   "sector": "food",
+   "neighborhood": "market-place",
+   "size": "small",
+   "summary": "A confectioner and tea room baking for weddings, funerals and Saturday afternoons.",
+   "careers": [
+    "pastry-cook",
+    "shop-assistant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "school-board",
+   "name": "Calderwick School Board",
+   "sector": "education",
+   "neighborhood": "hobcroft",
+   "size": "large",
+   "summary": "Runs the board schools in the terraces and Paradise.",
+   "careers": [
+    "schoolteacher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tube-workers-union",
+   "name": "Amalgamated Society of Tube Workers",
+   "sector": "labour",
+   "neighborhood": "hobcroft",
+   "size": "small",
+   "summary": "The union of tube drawers and fitters, meeting upstairs at Hope Street.",
+   "careers": [
+    "union-organiser"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "thornbers",
+   "name": "Thornber's Varieties",
+   "sector": "entertainment",
+   "neighborhood": "station-fields",
+   "size": "small",
+   "summary": "The music hall and its company of turns.",
+   "careers": [
+    "music-hall-singer",
+    "barmaid"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ackworth-brewery",
+   "name": "Ackworth's Calder Brewery",
+   "sector": "hospitality",
+   "neighborhood": "ings-end",
+   "size": "medium",
+   "summary": "The local brewery and its tied pubs across the valley.",
+   "careers": [
+    "barmaid",
+    "office-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fothergill-studio",
+   "name": "Fothergill's Photographic Studio",
+   "sector": "arts",
+   "neighborhood": "exchange-quarter",
+   "size": "small",
+   "summary": "A portrait studio with a glass roof and painted backdrops.",
+   "careers": [
+    "photographer"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "lowfield-works",
+   "name": "Lowfield works",
+   "neighborhoods": [
+    "lowfield",
+    "hobcroft"
+   ],
+   "sectors": [
+    "engineering",
+    "manufacturing",
+    "textiles",
+    "labour"
+   ],
+   "summary": "The tube mills, pump works, foundries and the worsted shed along the river.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "exchange-offices",
+   "name": "Exchange Quarter offices and shops",
+   "neighborhoods": [
+    "exchange-quarter",
+    "market-place"
+   ],
+   "sectors": [
+    "clerical",
+    "retail",
+    "press",
+    "communications",
+    "food",
+    "arts"
+   ],
+   "summary": "Banks, merchants' counting houses, the newspaper, the post office and the shops.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "basin-and-railway",
+   "name": "Basin and railway",
+   "neighborhoods": [
+    "saltergate-basin",
+    "station-fields",
+    "ridley-moor"
+   ],
+   "sectors": [
+    "transport",
+    "municipal",
+    "hospitality",
+    "entertainment"
+   ],
+   "summary": "The canal basin, gasworks, station yards, music hall and the airship mast.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moorside-institutions",
+   "name": "Moorside institutions",
+   "neighborhoods": [
+    "moorside"
+   ],
+   "sectors": [
+    "healthcare",
+    "education"
+   ],
+   "summary": "The Infirmary, the Pennock Institute and the art school.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Cool and wet Pennine weather: mild summers, long grey winters, rain in every month and smoke fogs in the valley bottom on still winter days.",
+  "months": [
+   {
+    "high_f": 43,
+    "low_f": 34,
+    "rain_days": 17,
+    "note": "Raw and dark; smoke fogs sit in Lowfield for days."
+   },
+   {
+    "high_f": 44,
+    "low_f": 34,
+    "rain_days": 15,
+    "note": "Cold, with sleet and snow on the moor."
+   },
+   {
+    "high_f": 48,
+    "low_f": 36,
+    "rain_days": 15,
+    "note": "Wind and showers; the first light evenings."
+   },
+   {
+    "high_f": 53,
+    "low_f": 39,
+    "rain_days": 13,
+    "note": "Bright spells, curlews back on the moor."
+   },
+   {
+    "high_f": 59,
+    "low_f": 44,
+    "rain_days": 13,
+    "note": "Mild; washing dries outside again."
+   },
+   {
+    "high_f": 64,
+    "low_f": 49,
+    "rain_days": 13,
+    "note": "Long light evenings and the smoke lifts."
+   },
+   {
+    "high_f": 67,
+    "low_f": 53,
+    "rain_days": 13,
+    "note": "Warmest month; the lido opens fully."
+   },
+   {
+    "high_f": 66,
+    "low_f": 52,
+    "rain_days": 14,
+    "note": "Warm but showery; wakes week."
+   },
+   {
+    "high_f": 61,
+    "low_f": 48,
+    "rain_days": 14,
+    "note": "Fresh mornings and mellow afternoons."
+   },
+   {
+    "high_f": 54,
+    "low_f": 43,
+    "rain_days": 17,
+    "note": "Wet and windy; fires lit again."
+   },
+   {
+    "high_f": 47,
+    "low_f": 38,
+    "rain_days": 17,
+    "note": "Dark by half past four; fog returns."
+   },
+   {
+    "high_f": 44,
+    "low_f": 35,
+    "rain_days": 17,
+    "note": "Cold and grey; the worst smog of the year."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "mast-day",
+   "name": "Mast Day",
+   "months": [
+    4
+   ],
+   "neighborhood": "ridley-moor",
+   "summary": "Crowds walk up the moor to see the mail airship come back from her winter overhaul and take the first bags of the year.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whit-walks",
+   "name": "Whit Walks",
+   "months": [
+    5,
+    6
+   ],
+   "neighborhood": "market-place",
+   "summary": "Sunday schools and chapels march through town behind banners and bands, children in new clothes, then tea and races in the park.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canal-regatta",
+   "name": "Saltergate canal regatta",
+   "months": [
+    6
+   ],
+   "neighborhood": "saltergate-basin",
+   "summary": "Rowing, sculling and decorated-boat races on the basin, with a greasy pole and a boatmen's tug of war.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "infirmary-gala",
+   "name": "Infirmary Sunday gala",
+   "months": [
+    7
+   ],
+   "neighborhood": "ackroyd-park",
+   "summary": "Band concerts and a procession in Ackroyd Park collecting for the Royal Infirmary.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "institute-exhibition",
+   "name": "Pennock Institute exhibition",
+   "months": [
+    7
+   ],
+   "neighborhood": "moorside",
+   "summary": "Students show engines, models and drawings, and the firms come looking for apprentices.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wakes-week",
+   "name": "Calder Wakes Week",
+   "months": [
+    8
+   ],
+   "neighborhood": null,
+   "summary": "The works and mills shut for a week; the town empties to the seaside and those who stay crowd the lido and the pier.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "velodrome-championship",
+   "name": "Valley cycling championship",
+   "months": [
+    9
+   ],
+   "neighborhood": "calder-holme",
+   "summary": "The big race meeting of the season at the velodrome, with bookmakers under the stand and a band between heats.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charter-fair",
+   "name": "Calderwick Charter Fair",
+   "months": [
+    10
+   ],
+   "neighborhood": "market-place",
+   "summary": "The old market charter fair: steam roundabouts, coconut shies, brandy snap stalls and a hiring of farm servants on the first day.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bonfire-night",
+   "name": "Bonfire Night",
+   "months": [
+    11
+   ],
+   "neighborhood": "hobcroft",
+   "summary": "Every street in the terraces builds a bonfire on the fifth, with parkin, toffee and treacle.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lantern-procession",
+   "name": "Lantern procession",
+   "months": [
+    12
+   ],
+   "neighborhood": "castle-hill",
+   "summary": "Children and choirs carry paper lanterns up Kirkgate to the castle on the shortest day, ending with carols at St Wilfrid's.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pantomime-season",
+   "name": "Pantomime season",
+   "months": [
+    12,
+    1
+   ],
+   "neighborhood": "market-place",
+   "summary": "The Theatre Royal pantomime runs from Boxing Day, with works outings booking whole rows.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "parkin",
+   "name": "Parkin",
+   "kind": "dish",
+   "summary": "A dark, sticky oatmeal and treacle gingerbread, baked in slabs for Bonfire Night and better a week after.",
+   "places": [
+    "market-hall",
+    "hobcroft"
+   ],
+   "seasons": [
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chumping",
+   "name": "Chumping",
+   "kind": "custom",
+   "summary": "In the weeks before Bonfire Night children go \"chumping\", collecting wood for their street's bonfire and guarding the pile from rival streets.",
+   "places": [
+    "hobcroft",
+    "ings-end"
+   ],
+   "seasons": [
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yorkshire-pudding",
+   "name": "Yorkshire pudding first",
+   "kind": "dish",
+   "summary": "The batter pudding comes to the table on its own with gravy before the meat, so that a family fills up before the joint is cut.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pie-and-peas",
+   "name": "Pie and peas",
+   "kind": "dish",
+   "summary": "A hot pork or meat-and-potato pie with mushy peas and mint sauce, the supper of the works and the market.",
+   "places": [
+    "pickerings-pie-shop",
+    "brierleys-tripe",
+    "lowfield-dining-rooms"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tripe-and-onions",
+   "name": "Tripe and onions",
+   "kind": "dish",
+   "summary": "Tripe stewed in milk with onions, or eaten cold with salt and vinegar, from the tripe dresser's.",
+   "places": [
+    "brierleys-tripe",
+    "market-hall"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oatcake",
+   "name": "Oatcake on the creel",
+   "kind": "dish",
+   "summary": "Soft oatcakes are hung to dry on a wooden rack over the range and eaten fresh and floppy, or crisp and toasted with dripping.",
+   "places": [
+    "market-hall",
+    "hobcroft"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "forced-rhubarb",
+   "name": "Forced rhubarb",
+   "kind": "dish",
+   "summary": "Rhubarb grown in the dark in forcing sheds comes pink and tender in the cold months, stewed with custard or baked in a pie.",
+   "places": [
+    "ings-allotments",
+    "market-hall"
+   ],
+   "seasons": [
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mild-ale",
+   "name": "A pint of mild",
+   "kind": "drink",
+   "summary": "Dark, sweetish mild ale is the working man's pint, drunk in quantity after a shift at the tube mill or the foundry.",
+   "places": [
+    "moulders-arms",
+    "rose-and-crown",
+    "navigation-inn"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "temperance-pop",
+   "name": "Dandelion and burdock",
+   "kind": "drink",
+   "summary": "Chapel folk and the temperance halls drink dandelion and burdock, sarsaparilla and ginger beer instead of ale.",
+   "places": [
+    "hope-street-hall",
+    "basin-coffee-tavern"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nowt-owt-summat",
+   "name": "\"Nowt\", \"owt\" and \"summat\"",
+   "kind": "saying",
+   "summary": "Nothing, anything and something: \"Has tha got owt?\" \"Nowt.\" Older people still say \"thee\" and \"tha\" to family and friends.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ginnel",
+   "name": "Ginnel",
+   "kind": "saying",
+   "summary": "A narrow passage between houses or through to the back street; Calderwick uses \"ginnel\", and a stranger from the next valley may say \"snicket\".",
+   "places": [
+    "hobcroft",
+    "castle-hill"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ey-up",
+   "name": "\"Ey up\"",
+   "kind": "saying",
+   "summary": "The everyday greeting, meaning hello or look out, usually followed by \"love\" or \"lad\" whoever you are.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "where-theres-muck",
+   "name": "\"Where there's muck there's brass\"",
+   "kind": "saying",
+   "summary": "Where there is dirt there is money: the town's answer to anyone who complains about the smoke from the tube mills.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mash-the-tea",
+   "name": "\"Mash the tea\"",
+   "kind": "saying",
+   "summary": "Tea is \"mashed\" rather than brewed, strong, in a brown pot, and offered to anyone who comes to the door.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tube-it",
+   "name": "\"Tube it\"",
+   "kind": "saying",
+   "summary": "To send a note across town by the pneumatic post; a quick answer is \"back down the tube\", and a lost one \"gone up the pipe\".",
+   "places": [
+    "pneumatic-post-office",
+    "listers-coffee-rooms"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "knocker-up",
+   "name": "The knocker-up",
+   "kind": "custom",
+   "summary": "Before the six o'clock hooter a knocker-up goes along the terraces tapping on bedroom windows with a long pole, paid a few pence a week by each house.",
+   "places": [
+    "hobcroft",
+    "lowfield"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "donkey-stone",
+   "name": "Donkey-stoning the step",
+   "kind": "custom",
+   "summary": "Women scour their front doorsteps and window sills with a donkey stone, a cream or white scouring block, and judge a street by its steps.",
+   "places": [
+    "hobcroft",
+    "ings-end"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "co-op-divi",
+   "name": "The Co-op divi",
+   "kind": "custom",
+   "summary": "Every member's purchases earn a share of the profits, the \"divi\", paid out twice a year; families quote their check number like a name.",
+   "places": [
+    "lowfield-co-op",
+    "ings-end-co-op"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "popping-at-uncles",
+   "name": "Popping it at Uncle's",
+   "kind": "saying",
+   "summary": "Pawning, usually the Sunday suit on a Monday to be redeemed on Saturday payday; \"Uncle's\" is the pawnbroker.",
+   "places": [
+    "uncle-dicks"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clogger",
+   "name": "The clogger",
+   "kind": "shop",
+   "summary": "Most of the town walks on clogs, and the clogger cuts alder soles, fits the uppers and nails on fresh irons while you sit in your stockings.",
+   "places": [
+    "ogdens-clogger"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "beer",
+   "item": "Pint of bitter",
+   "low": 0.17,
+   "high": 0.25,
+   "per": "a pint, 2d.-3d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "loaf",
+   "item": "Loaf of bread",
+   "low": 0.42,
+   "high": 0.5,
+   "per": "4 lb, 5d.-6d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pie-and-peas",
+   "item": "Pie and peas",
+   "low": 0.17,
+   "high": 0.33,
+   "per": "2d.-4d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eating-house",
+   "item": "Eating-house dinner",
+   "low": 0.5,
+   "high": 1.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "inn",
+   "item": "Commercial inn",
+   "low": 1.5,
+   "high": 3,
+   "per": "a night",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "board",
+   "item": "Board and lodging",
+   "low": 10,
+   "high": 15,
+   "per": "a week's board",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tram",
+   "item": "Tram fare",
+   "low": 0.08,
+   "high": 0.17,
+   "per": "one way, 1d.-2d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tube-post",
+   "item": "Pneumatic post letter",
+   "low": 0.08,
+   "high": 0.17,
+   "per": "across town, 1d.-2d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "newspaper",
+   "item": "Newspaper",
+   "low": 0.04,
+   "high": 0.08,
+   "per": "a halfpenny or a penny",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "music-hall",
+   "item": "Music-hall seat",
+   "low": 0.25,
+   "high": 1.5,
+   "per": "gallery to stalls",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tobacco",
+   "item": "Twist tobacco",
+   "low": 0.25,
+   "high": 0.33,
+   "per": "an ounce, 3d.-4d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "baths",
+   "item": "Public baths",
+   "low": 0.17,
+   "high": 0.5,
+   "per": "2d. plunge to 6d. private bath",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clogs",
+   "item": "Clogs",
+   "low": 3,
+   "high": 5,
+   "per": "a pair",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wage",
+   "item": "Labourer's wage",
+   "low": 3,
+   "high": 4.5,
+   "per": "a day",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "river",
+   "name": "River Calder",
+   "width_km": 0.15,
+   "points": [
+    [
+     53.724,
+     -1.975
+    ],
+    [
+     53.725,
+     -1.955
+    ],
+    [
+     53.729,
+     -1.943
+    ],
+    [
+     53.726,
+     -1.928
+    ],
+    [
+     53.72,
+     -1.91
+    ]
+   ]
+  }
+ ]
+}

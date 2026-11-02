@@ -1,0 +1,144 @@
+{
+ "about": "Havenbrooke's arcs for the director (dungeon/director.py), from dungeon/world/packages/havenbrooke/beats.json and hidden-truths.json, set in sophomore year. Each stage has its tier, what is true (truth), a seed the narrator may plant, and how it reaches a character who is not there (word). Drafts for Vanta to keep, change or cut.",
+ "world": "havenbrooke",
+ "era": "sophomore",
+ "default_spine": "institutions-that-claim",
+ "arcs": [
+  {
+   "id": "institutions-that-claim",
+   "name": "Institutions that claim",
+   "seen": "Every family, court and office with a claim on the third floor is starting to collect.",
+   "words": [
+    "court",
+    "betrothal",
+    "callum",
+    "corwin",
+    "genevieve",
+    "crane",
+    "ded",
+    "auditor",
+    "hearing",
+    "review",
+    "lineage"
+   ],
+   "quests": [],
+   "antagonist": {
+    "name": "the claimants",
+    "agenda": "to bring each of the six back under the family, court or office that thinks it owns them",
+    "where": [
+     "haven",
+     "boston",
+     "new-york"
+    ]
+   },
+   "stages": [
+    {
+     "tier": 1,
+     "truth": "A sylph diplomat is coming to see Rina unannounced, Genevieve Corwin has booked a layover in Syracuse, and the Crane gala list has two Nexus names on it.",
+     "seed": "A cream envelope on the common-room table, addressed in fountain pen to someone who does not live here.",
+     "word": "Someone on the third floor of Nexus is having a visit from family, and it is not going well."
+    },
+    {
+     "tier": 2,
+     "truth": "The Eastern Seelie court sends an auditor with an envelope, a DED review board asks for files, and a cold case in Boston reopens.",
+     "seed": "A woman in a gray coat in the Grove at closing, asking the night staff about signatures.",
+     "word": "A fae auditor is asking questions in Haven, and the Fae Heritage Association has stopped returning calls."
+    },
+    {
+     "tier": 3,
+     "truth": "The claims go to hearings: the court, the Federal Esoteric Court and the Council of Bloodlines all sit on matters with Nexus names in them.",
+     "seed": "A summons served in the Morrowe dining hall, in front of everyone.",
+     "word": "Three hearings in one spring, and the Oracle has the docket numbers."
+    }
+   ]
+  },
+  {
+   "id": "the-sealskin",
+   "name": "The stolen sealskin",
+   "seen": "A selkie senior's skin is gone from its warded chest, and campus security is calling it a dorm theft.",
+   "words": [
+    "sealskin",
+    "selkie",
+    "mairead",
+    "evander",
+    "vale",
+    "drothe",
+    "collection",
+    "skin",
+    "binding"
+   ],
+   "quests": [],
+   "antagonist": {
+    "name": "Evander Crane",
+    "agenda": "to keep what he took, and keep the family from finding out he took it",
+    "where": [
+     "haven"
+    ]
+   },
+   "stages": [
+    {
+     "tier": 1,
+     "truth": "Evander Crane stole Mairead's sealskin, and the Crane steward has been buying selkie-kin binding texts at Drothe's for months.",
+     "seed": "A selkie senior in the library with her hair gone brittle, rereading the same page.",
+     "word": "A selkie on campus has lost her skin, and nobody is saying it out loud."
+    },
+    {
+     "tier": 2,
+     "truth": "There is an older sealskin in the Crane collection, and a selkie family in Maine has been looking for it since 1931.",
+     "seed": "A receipt from Drothe's in a coat pocket: three books on binding, paid in cash.",
+     "word": "Drothe will not sell certain books to certain buyers this month, and will not say why."
+    },
+    {
+     "tier": 3,
+     "truth": "Sealskin theft is sentenced like aggravated assault, and the federal case would reach the Council of Bloodlines.",
+     "seed": "A DED field agent at Midnight Gas asking the cook about the Crane cars.",
+     "word": "The DED is asking about the Cranes, and the Cranes are asking who called."
+    }
+   ]
+  },
+  {
+   "id": "exposure-fatigue",
+   "name": "Exposure fatigue",
+   "seen": "Mundane students keep dropping out with \"depression\", and Evermere keeps the numbers to itself.",
+   "words": [
+    "fatigue",
+    "exposure",
+    "protocol",
+    "evermere",
+    "mundane",
+    "scholarship",
+    "oracle",
+    "tired",
+    "depression"
+   ],
+   "quests": [],
+   "antagonist": {
+    "name": "the university",
+    "agenda": "to keep the numbers out of the papers and the scholarships funded",
+    "where": [
+     "haven"
+    ]
+   },
+   "stages": [
+    {
+     "tier": 1,
+     "truth": "Since 2005 mundane students have been pulled from classes with what was undiagnosed exposure fatigue, and the files are in the Evermere intake records.",
+     "seed": "A human sophomore asleep in the library at noon, with the Evermere protocol pamphlet under his hand.",
+     "word": "Another mundane student went home mid-term, and the Oracle wants to know why."
+    },
+    {
+     "tier": 2,
+     "truth": "The Oracle has a source and a set of files, and one of them is a scholarship student's from the third floor of Nexus.",
+     "seed": "An unsigned email with a spreadsheet attached and the subject line \"you should see this\".",
+     "word": "The Oracle is sitting on a story about the scholarship kids."
+    },
+    {
+     "tier": 3,
+     "truth": "The story runs, the DED opens a review, and the university has to choose between its numbers and its students.",
+     "seed": "A front page on every table in Morrowe, and a Dean who cancels all her meetings.",
+     "word": "The exposure-fatigue story is out, and the DED has called the president."
+    }
+   ]
+  }
+ ]
+}

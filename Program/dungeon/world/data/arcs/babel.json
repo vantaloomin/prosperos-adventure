@@ -1,0 +1,146 @@
+{
+ "about": "BABEL's arcs for the director (dungeon/director.py), from dungeon/world/packages/babel/beats.json and hidden-truths.json. Each stage has its tier, what is true (truth), a seed the narrator may plant, and how it reaches a character who is not there (word). The Season on the Reachwall and the First Frost run as planned beats in the package; this file carries the arcs that run from arrival day. Drafts for Vanta to keep, change or cut.",
+ "world": "babel",
+ "era": "the-turning",
+ "default_spine": "the-climb",
+ "arcs": [
+  {
+   "id": "the-climb",
+   "name": "The climb",
+   "seen": "Four people from one engagement party came down on two different floors, and the only way anyone talks about home is up.",
+   "words": [
+    "halvorsen",
+    "roll",
+    "waystone",
+    "bri",
+    "chase",
+    "grant",
+    "kenzie",
+    "bazaar",
+    "climb"
+   ],
+   "quests": [],
+   "antagonist": {
+    "name": "the tower",
+    "agenda": "to keep the four apart and climbing, and to see what each of them will pay to leave a floor",
+    "where": [
+     "the-concourse",
+     "the-gilded-bazaar"
+    ]
+   },
+   "stages": [
+    {
+     "tier": 1,
+     "truth": "Bri and Chase came down on the Gilded Bazaar, three floors up, and the Roll lists them with the Bazaar's mark.",
+     "seed": "A line on the Waystone's Roll: two names from Earth, a floor number, and a coin-shaped glyph.",
+     "word": "A porter from the Bazaar says two new-wave climbers from the same party as the engineer are up there, and broke."
+    },
+    {
+     "tier": 1,
+     "truth": "The way up from the Concourse runs through Varrow, and Varrow's Close weighs every big arrival who passes.",
+     "seed": "Cobb at the cage looks at the character's size and says nothing, which is worse.",
+     "word": "Word on the Concourse: the Close weighed another one at the ford."
+    },
+    {
+     "tier": 2,
+     "truth": "The Stair is out above the fourth floor. The way up from there goes through the floors themselves, and every floor costs something to leave.",
+     "seed": "A broken span on a copied map, and an arrow drawn into the Foundry.",
+     "word": "A climber who went up says the Stair just stops above the Foundry."
+    },
+    {
+     "tier": 3,
+     "truth": "Nobody who has reached the top has come back down to say what is there.",
+     "seed": "An old climber's chalk mark, very high up a landing wall: a ring, and nothing inside it.",
+     "word": "A rumor from the high floors: someone made the top, and the Roll stopped listing them."
+    }
+   ]
+  },
+  {
+   "id": "the-wakefuls-eyes",
+   "name": "The Wakeful's eyes",
+   "seen": "Old natives look twice at white-ringed eyes, and none of them will say who wore them last.",
+   "words": [
+    "teague",
+    "white ring",
+    "darla",
+    "wakeful",
+    "muster",
+    "reachwall",
+    "fiddle",
+    "hammer"
+   ],
+   "quests": [],
+   "antagonist": {
+    "name": "Darla Kinney",
+    "agenda": "to keep what happened to Teague above Varrow buried, until the new white ring makes that impossible",
+    "where": [
+     "the-concourse",
+     "hollin"
+    ]
+   },
+   "stages": [
+    {
+     "tier": 1,
+     "truth": "Teague, a big climber with white-ringed eyes, came down three years ago, stood a season on the Reachwall, and went up the Margrave's cellar stair with Darla. Only she came back.",
+     "seed": "Ruth Ann at the forge holds a hammer handle that was cut for a much bigger hand, and asks where the character got their eyes.",
+     "word": "Someone on the Concourse asked Hamid about the white ring, and Hamid shut his cart early."
+    },
+    {
+     "tier": 2,
+     "truth": "The Reach giants remember Teague as a Wakeful who promised them the stair, and they take the new white ring for him.",
+     "seed": "A giant at the ditch calls out a word in a tongue nobody on the Wall speaks, and looks straight at the character.",
+     "word": "The Wall says a giant came to the ditch calling for its brother."
+    },
+    {
+     "tier": 2,
+     "truth": "Teague is still on the Roll, marked no longer climbing. Darla knows what that means and has never said.",
+     "seed": "The Muster board at the Keep has a name scratched out and written back in, twice.",
+     "word": "Darla Kinney has left the Landing and gone up to Varrow."
+    }
+   ]
+  },
+  {
+   "id": "the-bazaars-price",
+   "name": "The Bazaar's price",
+   "seen": "The Gilded Bazaar takes everything in trade, and two new climbers there have already learned what that means.",
+   "words": [
+    "sabeen",
+    "lantern room",
+    "chit",
+    "contract",
+    "copper steps",
+    "night cage",
+    "debt",
+    "bounty"
+   ],
+   "quests": [],
+   "antagonist": {
+    "name": "Sabeen Oro",
+    "agenda": "to own the engineer who wrote the new rules before anyone else does, starting with the debts of the two who love him",
+    "where": [
+     "the-gilded-bazaar"
+    ]
+   },
+   "stages": [
+    {
+     "tier": 2,
+     "truth": "Sabeen Oro of the Lantern Room learned what the engineer is worth from the two who came down on her floor, and gave them a chit that is really a contract.",
+     "seed": "A Lantern Room chit, gilt-edged, with a clause in small hand that keeps going after the line.",
+     "word": "A trader from the Bazaar says the Lantern Room is asking after an engineer from the new wave."
+    },
+    {
+     "tier": 2,
+     "truth": "Sabeen's runner has gone down the Stair to fetch the engineer, and is hired into the Keep as a harper.",
+     "seed": "A new harper at the Keep who plays well and asks too many questions about the big climber.",
+     "word": "There is a new harper in Hollin, from up the Stair."
+    },
+    {
+     "tier": 3,
+     "truth": "The gate behind the Copper Steps closed on the two defaulters; a night cage took what they had, and a bounty went down the chain ahead of them.",
+     "seed": "A bounty notice on a Marches landing with two Earth names on it.",
+     "word": "A bounty board came down from the Bazaar with names from the new wave on it."
+    }
+   ]
+  }
+ ]
+}

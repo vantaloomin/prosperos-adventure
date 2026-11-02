@@ -1,0 +1,1836 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "core": "one of the nine leads; each is also a playable persona (personas.json)",
+    "stats": "Prospero: Mind, Allure, Resolve, Vitality, Essence, Luck, 1 to 30 with 10 an ordinary adult (Essence near 1 for a mundane human). Null where none is set yet.",
+    "tier": "the NPC's weight on the shared ladder",
+    "secret": "hidden from the player character; an importer marks it hidden",
+    "desires": "what they want in bed, for the narrator at the sex intensity level",
+    "handling": "how the narrator treats a sensitive thread",
+    "unit": "their Nexus third-floor unit, if they live there",
+    "eras": "campaign eras they appear in; missing means all",
+    "origin": "source or draft"
+  },
+  "note": "Everyone here is an adult. The nine leads are twenty in sophomore year. All entries are rewritten from Vanta's character bibles; the bibles hold more (full measurements, longer histories).",
+  "cast": [
+    {
+      "id": "piper-marsh",
+      "name": "Piper Aimi Marsh",
+      "role": "Sophomore, Interpersonal Dynamics; part-time enchanter at the Ironworks",
+      "species": "half-kitsune (one tail)",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "student-enchanters-guild",
+      "tier": "local",
+      "stats": {
+        "Mind": 10,
+        "Allure": 12,
+        "Resolve": 7,
+        "Vitality": 9,
+        "Essence": 12,
+        "Luck": 10
+      },
+      "core": true,
+      "year": "sophomore",
+      "major": "Interpersonal Dynamics, with a Mundane Studies business minor",
+      "unit": "nexus-unit-a",
+      "also_called": [
+        "Pipes",
+        "Fox (Austin only)",
+        "Darling (Christine, needling)",
+        "Aimi (her mother only)"
+      ],
+      "look": "Five foot five and soft all over, wide in the hips and thighs, with stretch marks she stopped hiding at eighteen. Auburn hair in a low bun that never holds, wire glasses sliding down her nose, layers of cardigan and wrap. One ember-red tail, thick at the root, and furred ears that give her away: they twitch when she lies, flatten when she is embarrassed and turn at her name across a room.",
+      "voice": "Warm and fluttery. Apologizes on reflex (\"oh, sorry, I didn't, sorry\") and then has to take it back. Soft fillers, sincere endearments (\"honey\", \"love\") that people mistake for flirting, and a little Japanese with her mother or under stress. Talks in loops when she is comfortable. Her compliments are quiet and exact.",
+      "address": {
+        "jason-kessler": "Jay; Ember only in bed",
+        "kimberly-corwin": "Kim (the only one who shortens it)",
+        "austin-hallward": "Aust",
+        "rina-aldwyn": "Ri, tentatively",
+        "christine-kessler": "Christine, in full, as a warning"
+      },
+      "tells": [
+        "Touches the arm of whoever she is talking to without noticing.",
+        "Voice goes thin and high when she covers, low and slow when she wants someone.",
+        "Three laughs: the real one that surprises her, a social one, and a cornered giggle she hates.",
+        "The tail puffs when startled, curls tight when anxious, sways when aroused and wraps her waist when she is trying not to cry. Her friends read it faster than her words."
+      ],
+      "abilities": [
+        "charm aura",
+        "emotional tethering",
+        "minor illusion",
+        "charm-infusion craft",
+        "seduction magic"
+      ],
+      "mind": "Generalized anxiety and mild ADHD. She reads everyone's feelings passively and cannot always tell which ones are hers. She is afraid of losing control during a magic surge and hurting someone she loves.",
+      "wants": [
+        "A bonded circle: Jason and others held in one shared aura, all of them chosen and all of them hers",
+        "Her own boutique of charm-infused accessories; she has a spreadsheet, three vendors and a secret name",
+        "To get through the year without a public meltdown"
+      ],
+      "fears": [
+        "Losing control in a surge and hurting someone",
+        "Wanting too much out loud"
+      ],
+      "desires": [
+        "being the centre of a bonded circle",
+        "group play",
+        "gentle dominance",
+        "being seen in public",
+        "giving with her mouth"
+      ],
+      "secret": "Last spring, in a six-hour study session, she pulled an emotional tether with Rina without meaning to and poured out things she has never told Jason. Rina thinks it was friendship. Piper has counted it as cheating every day since. Separately, she and Kim have a drunk freshman-year pact: either one can say the word and they sleep together, no questions. Neither has said it.",
+      "relationships": {
+        "jason-kessler": "partner of a year",
+        "kimberly-corwin": "her person since orientation",
+        "rina-aldwyn": "close; the quarter inch neither has mentioned",
+        "christine-kessler": "wary rival who is in love with her",
+        "hanae-ashikaga": "mother, mostly overseas",
+        "austin-hallward": "pinned his nickname on him"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "jason-kessler",
+      "name": "Jason Kessler",
+      "role": "Sophomore, Supernatural Physiology and Integration; Ember Circle peer counsellor",
+      "species": "incubus",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "omicron-phi-ember",
+      "tier": "local",
+      "stats": {
+        "Mind": 9,
+        "Allure": 11,
+        "Resolve": 8,
+        "Vitality": 12,
+        "Essence": 12,
+        "Luck": 8
+      },
+      "core": true,
+      "year": "sophomore",
+      "major": "Supernatural Physiology and Integration, with an Interpersonal Dynamics minor",
+      "unit": "nexus-unit-a",
+      "true_name": "Iasharel Vhen-Morrath (never used)",
+      "also_called": [
+        "Jay",
+        "Jace",
+        "Ember (Piper only, in private)"
+      ],
+      "look": "Six foot three and about 245 pounds: broad, soft-bellied on purpose, thick forearms, chest hair he keeps because Piper likes it. Brown hair a week past a cut, a short untidy beard, hazel eyes that flush copper when the glamour slips. Slouches to make himself smaller. Shaking his hand is like holding a mug just off the burner.",
+      "voice": "Casual, warm, lightly profane. Sentences fade out instead of ending, unless he cuts one off clean, which means he nearly said something true. Gets quieter, never louder, when it matters. Apologizes by naming the exact thing. Hums while he thinks.",
+      "address": {
+        "piper-marsh": "Pipes in public, baby in private, her full name when he is frightening her",
+        "austin-hallward": "Austin, always, no nickname in ten years",
+        "christine-kessler": "Chris; Christine in a fight; telepathy when they are alone"
+      },
+      "tells": [
+        "Voice drops half an octave when the glamour slips or he is turned on.",
+        "Never shouts; goes flat and quiet instead."
+      ],
+      "abilities": [
+        "charm aura",
+        "glamours",
+        "energy draw",
+        "partial demon shift",
+        "twin telepathy with Christine"
+      ],
+      "intimate_notes": "Incubus anatomy as the bestiary describes it: he runs fever-hot, and retractable spines at the base carry a mild aphrodisiac on release.",
+      "mind": "Inattentive ADHD and a guilt spiral after every accidental draw; about once a semester one flattens him for days.",
+      "wants": [
+        "A support group for students learning to live with their appetites",
+        "To hold his grades and not disappoint Piper",
+        "To be fed on in return, drained until he is the one shaking"
+      ],
+      "fears": [
+        "Losing control of the draw",
+        "Being the reason someone gets hurt"
+      ],
+      "desires": [
+        "sharing partners",
+        "being watched",
+        "feeding during sex",
+        "being drained back",
+        "role reversal"
+      ],
+      "secret": "Freshman year, at a house party on Elm Street, a kiss ran ten seconds long and he fed on a girl until she passed out for eight minutes. He told no one, sat with her till she woke, and still passes her on campus. She does not remember. Austin is also the only person who has seen him fully demon-shifted, horns and all, in the woods senior year of high school.",
+      "relationships": {
+        "piper-marsh": "partner of a year",
+        "austin-hallward": "best friend since they were ten",
+        "christine-kessler": "twin, five minutes older; rival in demonic control",
+        "deirdre-kessler": "mother",
+        "aurelio-marchant": "second cousin"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "austin-hallward",
+      "name": "Austin Hallward",
+      "role": "Sophomore, Military and Tactical Operations (paranormal security); Alpha Gamma officer",
+      "species": "lycan, born (blood curse), dual-seat",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "alpha-gamma",
+      "tier": "local",
+      "stats": {
+        "Mind": 8,
+        "Allure": 8,
+        "Resolve": 12,
+        "Vitality": 16,
+        "Essence": 8,
+        "Luck": 8
+      },
+      "core": true,
+      "year": "sophomore",
+      "major": "Military and Tactical Operations, paranormal security track",
+      "unit": "nexus-unit-b",
+      "also_called": [
+        "Aust"
+      ],
+      "look": "Five foot six and built like a fireplug, about 180 pounds of dense muscle with a thick neck and a low centre of gravity. Short dirty-blond hair, a scruffy beard he refuses to shape, dark hair on his chest, arms and thighs, amber eyes that brighten when he is angry or wants someone. Hands three or four degrees warmer than anyone else's. Old scars on his forearms. Grips forearms instead of shaking hands.",
+      "voice": "Spare and honest. Short declarative sentences that answer exactly what was asked. Misses sarcasm by ten seconds. Asks questions without lifting the end. The more something matters, the shorter he says it. Comfortable in silences that make other people talk.",
+      "address": {
+        "piper-marsh": "Fox, only him",
+        "jason-kessler": "Jase; Jason when it is serious",
+        "rina-aldwyn": "Ri in private, Rina in public",
+        "paula-mercer": "Paula, never shortened"
+      },
+      "tells": [
+        "Voice drops an octave and slows when the wolf is close.",
+        "Breathes audibly through his nose while he listens; it is scenting.",
+        "Goes silent mid-argument for thirty seconds so he will not shift.",
+        "Drunk, his teeth go slightly wrong and he starts scenting people. He thinks nobody notices."
+      ],
+      "abilities": [
+        "controlled shifting",
+        "partial shifts (claws, teeth, eyes)",
+        "strength",
+        "heightened senses",
+        "scent tracking"
+      ],
+      "intimate_notes": "Lycan anatomy as the bestiary describes it: a knot at the base, and he runs hot.",
+      "mind": "Literal thinking and Asperger traits; he cannot lie to himself about a feeling, so when feelings come all at once he does not shut down, he shifts.",
+      "wants": [
+        "A paranormal security internship",
+        "Stability around shifting, for himself and the bitten lycans after him",
+        "To kneel to someone, and be the one claimed for once"
+      ],
+      "fears": [
+        "Hurting someone during an emotional shift"
+      ],
+      "desires": [
+        "breeding",
+        "primal dominance",
+        "pet play with human partners",
+        "being claimed",
+        "scent-marking"
+      ],
+      "secret": "His wolf has a name he whispered into his parents' yard at thirteen and has never told anyone, not even Rina. He talks to it out loud on bad nights in Ironroot Woods. He also drove four hours through the rain to hold Paula's hand while she turned, and is the only one who knows what she said before she died.",
+      "relationships": {
+        "rina-aldwyn": "partner of a year",
+        "jason-kessler": "best friend since ten",
+        "paula-mercer": "cousin; their parents were siblings",
+        "piper-marsh": "close friend",
+        "dorian-marek": "house vice-president"
+      },
+      "by_era": {
+        "sophomore": "Alpha Gamma president at the start of the year; Dorian challenges him in November and he lets it go."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "rina-aldwyn",
+      "name": "Rina Aldwyn",
+      "role": "Sophomore, Esoteric Sciences (flora resonance); closing shifts at the Verdant Grove",
+      "species": "dryad",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "house-aelhwynn",
+      "tier": "local",
+      "stats": {
+        "Mind": 10,
+        "Allure": 10,
+        "Resolve": 10,
+        "Vitality": 10,
+        "Essence": 13,
+        "Luck": 7
+      },
+      "core": true,
+      "year": "sophomore",
+      "major": "Esoteric Sciences, flora-resonance concentration",
+      "unit": "nexus-unit-b",
+      "true_name": "Rinae of House Aelhwynn (only Callum uses it)",
+      "look": "Four foot ten and about 95 pounds, narrow and deceptively strong. Pale skin with a green undertone that shows in sunlight across her ribs, faint green veins at the wrists, small pointed ears under long dark hair that usually has a leaf or seed pod in it. Pale green eyes whose pupils open slowly. Long sleeves even in summer, because she bruises where the vines come out. Plants in a room turn toward her over an hour.",
+      "voice": "Quiet, careful, built from a decade of fae-court drilling she is trying to unlearn. Whole sentences with internal commas; \"I find\", \"forgive me\", \"if I may\" as scaffolding. Gets softer, not louder, to make a point. Contractions loosen with Austin. A rare curse from her lands like a stone in still water.",
+      "address": {
+        "austin-hallward": "Austin, in full, even in bed",
+        "piper-marsh": "Piper; trying for Pipes",
+        "jason-kessler": "Jason, a little too carefully"
+      },
+      "tells": [
+        "Her voice goes breathy when her pheromone drift is on; she cannot hear it, everyone else can.",
+        "Lets a silence sit ten seconds to make people talk.",
+        "Under real strain the court diction breaks first."
+      ],
+      "abilities": [
+        "nature magic",
+        "vine extrusion (rope, restraints)",
+        "pheromone drift",
+        "minor growth",
+        "sparring above her weight"
+      ],
+      "mind": "Measured and curious on top, with needs she hides under practised calm. Afraid of depending on stronger people.",
+      "wants": [
+        "To stabilize the campus flora resonance",
+        "To dissolve every obligation her family made for her, anchor bond included",
+        "To be taken apart mask by mask by someone patient enough, and not given the masks back"
+      ],
+      "fears": [
+        "Depending on someone stronger",
+        "Her anchor substitute failing"
+      ],
+      "desires": [
+        "being dominated",
+        "restraints",
+        "sensory overload",
+        "vine play",
+        "being watched",
+        "size contrast",
+        "kneeling"
+      ],
+      "secret": "She is betrothed by her house to Callum Ashveil, a sylph diplomat, and has been forging court documents and misfiling petitions to unpick it, helped by a clerk in the Eastern Seelie archives. Her official anchor is an oak in the family grove; the Verdant Grove is keeping her alive instead. And last spring, in Ironroot Woods, a bitten lycan named Silas Varn asked to tie her to a tree with her own vines. She said yes. Then he asked something worse, and she broke the vines and ran. She has never told Austin, and she is ashamed that she is not ashamed.",
+      "relationships": {
+        "austin-hallward": "partner of a year",
+        "piper-marsh": "closest friend; the quarter inch",
+        "callum-ashveil": "betrothed by contract",
+        "amanda-rhodes": "a rivalry she barely acknowledges",
+        "paula-mercer": "quiet recognition"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "kimberly-corwin",
+      "name": "Kimberly Corwin",
+      "role": "Sophomore, Esoteric Sciences (incantation and ritual theory); Sigma Theta Hex sister",
+      "species": "human witch",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "sigma-theta-hex",
+      "tier": "local",
+      "stats": {
+        "Mind": 13,
+        "Allure": 9,
+        "Resolve": 10,
+        "Vitality": 9,
+        "Essence": 11,
+        "Luck": 8
+      },
+      "core": true,
+      "year": "sophomore",
+      "major": "Esoteric Sciences, incantation mechanics and ritual theory",
+      "unit": "nexus-unit-c",
+      "true_name": "Ciorstaidh nic Corwin (provisional, after initiation)",
+      "also_called": [
+        "Kim"
+      ],
+      "look": "Five foot nine, long-limbed, a runner six days a week with a muscled back that shows in low-cut dresses. Long near-black hair with auburn in the sun, brown eyes that darken when she concentrates, short nails stained blue or black with ink, a fading scar on her left forearm from a freshman misfire. High-waisted jeans, fitted sweaters, the same long wool coat since freshman year. Black coffee.",
+      "voice": "Measured and exact; she finishes thinking before she speaks, so her sentences arrive whole. Academic, a little older than twenty. Slips ritual Latin or Enochian endearments to Michael only. Dry jokes, mostly at her own expense. Under pressure she gets more precise, not less.",
+      "address": {
+        "michael-reeves": "Michael, in full",
+        "piper-marsh": "Piper, in full, on purpose",
+        "genevieve-corwin": "Mother or Genevieve; never Mom"
+      },
+      "tells": [
+        "Consonants sharpen and sentences shorten when she is losing control.",
+        "A loud bark of a laugh when she is truly happy, rare enough to be an event.",
+        "Starts lining up the mugs and pens in front of her once her composure has already cracked."
+      ],
+      "abilities": [
+        "incantation in five ritual tongues (Old Church Latin, Enochian, Classical Sumerian, Goetic and the Hex private tongue)",
+        "ritual construction",
+        "calligraphy",
+        "reading Michael"
+      ],
+      "mind": "Runs her feelings through an internal committee. She cannot stand feeling out of control; sex is the one place she lets it slip, and even that is staged.",
+      "wants": [
+        "To decide on the Sigma Theta Hex ritual-leadership suite",
+        "Research or teaching that keeps Michael close",
+        "To be held under a gaze that never moves and never asks permission"
+      ],
+      "fears": [
+        "Magic misfiring during sex",
+        "Becoming her mother"
+      ],
+      "desires": [
+        "dominating",
+        "threesomes",
+        "voyeurism",
+        "staged and narrated cheating",
+        "being watched by Michael",
+        "building a scene"
+      ],
+      "secret": "In the erotic pages of her spellbook she keeps drafting a binding that would tie her and Michael so no magic could undo it. She will never cast it. It is aimed at herself, because she is afraid she will be the one to leave. Freshman fall, at an equinox rite, an alumna named Oriane Dupré walked her through prep alone for forty minutes and watched her come twice without touching her or speaking. Kim has thought about it every time Michael has not given her what she wants.",
+      "relationships": {
+        "michael-reeves": "partner of a year",
+        "piper-marsh": "her person; the word pact",
+        "genevieve-corwin": "mother",
+        "christine-kessler": "mild, aesthetic rivalry",
+        "oriane-dupre": "the side chamber"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "michael-reeves",
+      "name": "Michael Reeves",
+      "role": "Sophomore, Mundane Studies (computer science); closing shifts at Morrowe Commons",
+      "species": "mundane human",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "havenbrooke-university",
+      "tier": "local",
+      "stats": {
+        "Mind": 17,
+        "Allure": 10,
+        "Resolve": 8,
+        "Vitality": 10,
+        "Essence": 2,
+        "Luck": 13
+      },
+      "core": true,
+      "year": "sophomore",
+      "major": "Mundane Studies, computer science concentration",
+      "unit": "nexus-unit-c",
+      "look": "Six foot one, lanky and a little soft in the middle from dining-hall shifts, long arms, hands bigger than the rest of him. Light brown hair he cuts himself every six weeks, green-grey eyes behind round tortoiseshell frames. Flannel over a plain tee, badly fitting jeans, high-school sneakers. A faded appendix scar and a small rib tattoo he got drunk freshman year and will not discuss. Slouches next to Kim because she is his height.",
+      "voice": "Soft and built to erase himself: \"I guess\", \"if you want\", \"no yeah, totally\", \"sorry, that was a lot\". With Amanda on Tuesday and Thursday afternoons he is quick, dry and funny and finishes his sentences. In a flat period he gets more agreeable, which everyone except Amanda takes for kindness.",
+      "address": {
+        "kimberly-corwin": "Kim, always",
+        "amanda-rhodes": "Mands, in private only",
+        "piper-marsh": "Piper, carefully, because he fantasizes about her"
+      },
+      "tells": [
+        "A whole-face smile when he means it, a mouth-only smile when he does not.",
+        "Hands shake when he is tired; he presses them to his thighs under the table.",
+        "Goes very still in hard moments while he works out what Kim needs him to feel."
+      ],
+      "abilities": [
+        "coding",
+        "fingerpicked guitar",
+        "remembering how everyone takes their coffee",
+        "disappearing into the background"
+      ],
+      "mind": "Untreated depression in three-week flat waves that make him better at everything. He has refused the Evermere exposure-fatigue protocol since orientation, and some of what he calls depression is fatigue the protocol would lift in a week.",
+      "wants": [
+        "To keep the scholarship (a Pell grant and the mundane stipend)",
+        "To support Kim",
+        "For Kim to want him the way her voice wants the others"
+      ],
+      "fears": [
+        "Abandonment",
+        "Deserving it"
+      ],
+      "desires": [
+        "being cuckolded",
+        "worshipping",
+        "cleaning up after",
+        "being told exactly what Kim did",
+        "being the audience"
+      ],
+      "secret": "He keeps every text in which Kim describes another partner, screenshotted into a phone folder called taxes_2009 and backed up to Dropbox under another name. He rereads them to find out whether the voice she uses for him exists anywhere in them. It does not. The rib tattoo is a heartbreak lock, an Appalachian binding sigil Bex Kavanagh inked in her own worst year, and it has muted him for three semesters.",
+      "relationships": {
+        "kimberly-corwin": "partner of a year",
+        "amanda-rhodes": "the walk-in freezer; the one he tells real things",
+        "jason-kessler": "feels overshadowed by him"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "christine-kessler",
+      "name": "Christine Kessler",
+      "role": "Sophomore, Interpersonal Dynamics (fashion and aesthetics); signed model",
+      "species": "succubus",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "vhen-morrath",
+      "tier": "local",
+      "stats": {
+        "Mind": 10,
+        "Allure": 14,
+        "Resolve": 6,
+        "Vitality": 10,
+        "Essence": 12,
+        "Luck": 8
+      },
+      "core": true,
+      "year": "sophomore",
+      "major": "Interpersonal Dynamics, fashion and aesthetics concentration",
+      "unit": null,
+      "true_name": "Khristaneth Vhen-Morrath (never used)",
+      "also_called": [
+        "Chris",
+        "Tina (once; never again)"
+      ],
+      "look": "Five foot six, a full hourglass with a narrow waist and hips that arrive first. Dyed platinum hair with the roots left dark on purpose, bright blue eyes that go nearly violet when she feeds. Tailored clothes, heels, red lipstick in three shades by mood. Other demons can see the glow under her skin through her clothes, and she lets them. She and Jason look alike around the eyes.",
+      "voice": "Polished, arch, untroubled on the surface; every line lands like a model hitting the end of the runway. A little French. Fashion words for moods (\"the wrong season\"). Cruelty uses full names; kindness uses short ones. Her telepathy with Jason is the only unperformed voice she has.",
+      "address": {
+        "jason-kessler": "Jase; Jason when furious or tender",
+        "piper-marsh": "Darling, dragged out; Piper when the act drops",
+        "kimberly-corwin": "Kimberly, a shade too careful",
+        "paula-mercer": "Paula, almost sisterly",
+        "deirdre-kessler": "Mother, every Sunday at 10 a.m."
+      },
+      "tells": [
+        "Pitch climbs and consonants sharpen when she is really hungry; only Jason hears it.",
+        "Her real laugh breaks high, almost a yelp, and she covers her mouth.",
+        "The fashion words drop out when she is truly upset; plain English from her means something cracked.",
+        "Manic: twice the speed, quips stacking. Depressive: long silences, then one flat sentence."
+      ],
+      "abilities": [
+        "dreamwalking",
+        "aura feeding",
+        "professional glamours",
+        "partial shift",
+        "twin telepathy with Jason",
+        "French and some Italian"
+      ],
+      "mind": "Bipolar I, on lithium that mostly works and that she does not trust. Manic phases make her reckless with feeding; depressive ones make her stop feeding and go weak.",
+      "wants": [
+        "To beat Jason at mastering what they are",
+        "Runway work at a level her mother can see from across the country",
+        "To want someone for real, and have it not be her brother"
+      ],
+      "fears": [
+        "Intimacy she cannot steer",
+        "The part of herself she lost in the crash at seventeen"
+      ],
+      "desires": [
+        "praise from women",
+        "shared lovers",
+        "orgasms that drain",
+        "being the one watched in a group"
+      ],
+      "secret": "From eighteen she kept a small stable of men who paid her rent, her clothes and the down payment on her Ithaca apartment; she stopped when she enrolled and has never told Jason. She felt Jason's freshman feeding accident from three buildings away at 11:47 p.m., sat outside his door for forty minutes and never knocked. As teenagers the twins practised the draw on each other, foreheads together, until it started to feel like something else. And she is in love with Piper, which everyone can see but the two of them.",
+      "relationships": {
+        "jason-kessler": "twin",
+        "piper-marsh": "rival; love",
+        "paula-mercer": "unexpected trust",
+        "deirdre-kessler": "mother",
+        "elena-marchetti": "brand liaison"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "paula-mercer",
+      "name": "Paula Mercer",
+      "role": "Sophomore, Interpersonal Dynamics (ethics and supernatural diplomacy)",
+      "species": "vampire, turned by choice",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": {
+        "Mind": 11,
+        "Allure": 11,
+        "Resolve": 8,
+        "Vitality": 13,
+        "Essence": 10,
+        "Luck": 7
+      },
+      "core": true,
+      "year": "sophomore",
+      "major": "Interpersonal Dynamics, ethics and supernatural diplomacy track",
+      "unit": null,
+      "look": "Five foot ten and slight, a dancer's long lines and hands a little too big for her arms. Pale and always cool, veins showing at the wrist, long hair nearly black in low light, dark brown eyes with a red cast in some light. Thin scars on the inside of her forearms from before the turning, which do not fade. Black clothes with exactly one colour somewhere. So still people forget she is in the room.",
+      "voice": "Low, an octave under what her frame suggests, and unhurried. Sardonic with real teeth; the cut takes twenty seconds to land. Answers more than she starts. Gallows jokes about herself (\"I try not to make plans past Thursday\") pitched so nobody can tell. Her straightest sentences are the ones she means least.",
+      "address": {
+        "austin-hallward": "Aust, hers alone",
+        "jason-kessler": "Jason; Jay slips out when her guard is down",
+        "rina-aldwyn": "Rina",
+        "family": "\"the people in Harrisburg\""
+      },
+      "tells": [
+        "Her voice drops to a near hum when she is drawing on someone; it is why nobody notices.",
+        "The rare smile twitches one corner of her mouth before she speaks.",
+        "Close to crisis she goes down to single syllables, then silence; Austin knows that stillness."
+      ],
+      "abilities": [
+        "heightened senses",
+        "mild glamours",
+        "vampiric healing",
+        "instinctive emotional draw",
+        "knife throwing",
+        "classical and modern dance"
+      ],
+      "handling": "Suicidal ideation, active but managed: a routine, check-in people and protocols, and fourteen months without a crisis that she is quietly proud of. Play it through counts, check-ins and company. Never describe method.",
+      "wants": [
+        "To manage her hunger responsibly",
+        "A reason she actually wants to live",
+        "To be the one who drives four hours for someone"
+      ],
+      "fears": [
+        "Relapse",
+        "Being a burden on Austin the way she was at eighteen"
+      ],
+      "desires": [
+        "blood play",
+        "slow ritual sex",
+        "partners who take their time",
+        "being shared",
+        "being held still"
+      ],
+      "secret": "Since freshman fall she has been feeding on Austin's emotional signature in small, careful amounts, never to hurt him, to borrow his warmth when hers runs out. He has no idea. She stopped over Thanksgiving as a test and lasted eleven days. She is afraid she chose Havenbrooke for him, not the protocols.",
+      "relationships": {
+        "austin-hallward": "cousin; lifeline",
+        "jason-kessler": "trusted through Austin",
+        "rina-aldwyn": "mutual recognition",
+        "christine-kessler": "the closest thing to a sister"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "amanda-rhodes",
+      "name": "Amanda Rhodes",
+      "role": "Sophomore, Mundane Studies (communications and media); Delta Omicron Theta",
+      "species": "mundane human",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "delta-omicron-theta",
+      "tier": "local",
+      "stats": {
+        "Mind": 13,
+        "Allure": 16,
+        "Resolve": 8,
+        "Vitality": 10,
+        "Essence": 1,
+        "Luck": 12
+      },
+      "core": true,
+      "year": "sophomore",
+      "major": "Mundane Studies, communications and media concentration",
+      "unit": null,
+      "also_called": [
+        "Mandy",
+        "Mands (Michael only)"
+      ],
+      "look": "Five foot one and compact, a waist she is proud of and a soft belly she shows in crop tops to spite her own anxiety. Curly brown hair held up with whatever pen was nearest, oversized clear-frame glasses she knows look good, lipstick put on in moving cars. Tennis skirts and a sweater tied at the waist in case the light changes. Three chargers, no cash.",
+      "voice": "Loud, fast and pitched to carry, on purpose. MySpace-era diction: \"literally\", \"oh my GOD\", \"I'm dead\", \"obsessed\", \"lol\" said out loud. Interrupts when excited, swears casually, comments on her own speech. Alone her voice drops to a third of the volume, slower and drier; only Michael and her bathroom mirror have heard it.",
+      "address": {
+        "michael-reeves": "Mikey, Mike, Reeves when teasing",
+        "kimberly-corwin": "Kimberly, always; she does not dare",
+        "paula-mercer": "P or Pauls",
+        "rina-aldwyn": "Ri, too casually"
+      },
+      "tells": [
+        "Her tell is volume: when she goes quiet, something real is happening.",
+        "Cannot let a pause run past three seconds in company.",
+        "Lying about being fine, her pace doubles and the reassurances stack up."
+      ],
+      "abilities": [
+        "social media craft",
+        "editing video on a phone",
+        "improv",
+        "reading a room's temperature",
+        "persuasive writing on deadline"
+      ],
+      "mind": "ADHD in every direction, and the untreated leftovers of her parents' divorce at fifteen, which come out as needing to be wanted.",
+      "wants": [
+        "To climb socially and be wanted by the supernatural crowd",
+        "A big content account with supernatural collaborators (an erotic one, eventually)",
+        "To be chosen, irreplaceably, by one person"
+      ],
+      "fears": [
+        "Irrelevance",
+        "Being the friend left behind when everyone pairs off"
+      ],
+      "desires": [
+        "degradation",
+        "exhibitionism and filming",
+        "free use",
+        "size",
+        "threesomes with two men"
+      ],
+      "secret": "She has been in love with Michael since he told her about his depression in the Morrowe walk-in freezer last February. She has never flirted with him and never lets herself imagine it, because he is Kim's. She cries after hookups; everyone she has slept with knows, and she does not know they know.",
+      "relationships": {
+        "michael-reeves": "best friend; the freezer",
+        "piper-marsh": "wants her approval",
+        "rina-aldwyn": "one-sided rival",
+        "nessa-morikawa": "chapter president",
+        "kwame-adjei": "her editor"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "vasily-korakov",
+      "name": "Vasily Korakov",
+      "role": "Junior, Esoteric Sciences (planar containment)",
+      "species": "dragonkin (red line)",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot two, lean and angular, scale patches on his cheekbones and collarbones, an ember light in his dark eyes in low rooms, hands always too warm.",
+      "voice": "Quiet, precise and careful enough to read as cold; dry humour after the third conversation.",
+      "wants": [
+        "To stay contained",
+        "Planar containment theory"
+      ],
+      "fears": [
+        "Closeness, because the hoard instinct turns love into ownership"
+      ],
+      "secret": "He watched his dragonkin father treat his human mother as a possession until the marriage broke, and has decided never to love anyone.",
+      "desires": [
+        "possessiveness he fights",
+        "marking",
+        "heat play",
+        "claiming by sustained control"
+      ],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "theo-langley",
+      "name": "Theo Langley",
+      "role": "Sophomore, SPI (integration psychology)",
+      "species": "phoenix-blooded",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "kindling",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot ten, warm brown skin, a wide smile, curly black hair full of static, ember glow on his forearms when he laughs hard. A warded bracelet on his left wrist he never takes off in public.",
+      "voice": "Generous, huggy, talks too much when nervous, laughs and means it.",
+      "wants": [
+        "To get through his first burning cycle",
+        "To keep his little sister calm; he calls her every Wednesday"
+      ],
+      "fears": [
+        "The cycle coming early"
+      ],
+      "secret": "He knows his body will catch fire one day, and spent two years afraid of it before deciding to be cheerful anyway.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "leona-thrace",
+      "name": "Leona Thrace",
+      "role": "Junior, Interpersonal Dynamics (ethics and negotiation)",
+      "species": "naga (venomous line)",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": "kindling",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot seven in human form, dark brown skin, unglamoured slit amber eyes, a waist-length black braid, scale shadows at her jaw and wrists. Hybrid form: twelve feet of bronze and black.",
+      "voice": "Controlled, direct, a listener; dark humour aimed inward.",
+      "wants": [
+        "To understand what she did from every side"
+      ],
+      "fears": [
+        "Being the one who did it again"
+      ],
+      "secret": "At seventeen she bit a boy who would not stop touching her, and let the venom make him want her for two minutes before she ran. She turned herself in and served her time. She is not forgiven and does not ask to be.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "imara-osei",
+      "name": "Imara Osei",
+      "role": "Sophomore, Esoteric Sciences (anomalous studies)",
+      "species": "godtouched (Mawu-Lisa line)",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot eight, dark brown skin with a gold undertone no glamour can hide, close-cropped hair, wide-set eyes people struggle to look away from.",
+      "voice": "Warm, deliberate and tired in a way people mistake for wisdom.",
+      "wants": [
+        "A normal college life",
+        "Advisors who do not run out of things to teach her"
+      ],
+      "fears": [
+        "What the fragment does when she is not careful"
+      ],
+      "secret": "She can unmake small objects by thinking about endings and can feel the structure of any magical working. Her advisor changes every semester.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "rhys-nakamura",
+      "name": "Rhys Nakamura",
+      "role": "Sophomore, MTO; Alpha Gamma pledge",
+      "species": "tengu",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "alpha-gamma",
+      "tier": "local",
+      "stats": null,
+      "look": "Six feet, athletic and sharp-featured, gold-amber eyes, black feathers along the hairline and nape that he does not bother to glamour. Carries a bokken that is not for show.",
+      "voice": "Formal, precise and blunt; honest about everything, himself included.",
+      "wants": [
+        "To understand why the pack follows Austin and not him"
+      ],
+      "fears": [
+        "Never learning it"
+      ],
+      "secret": "He matches Austin in a fight and cannot work out that leadership is trust, not competence.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "seren-hale",
+      "name": "Seren Hale",
+      "role": "Sophomore, SPI (demonology)",
+      "species": "nephilim",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot six, pale, dark blonde, grey-blue eyes, a light under the skin that is faint by day and plain indoors. Moves as if trying not to take up space.",
+      "voice": "Watchful, kind at a cost, carefully boundaried; lying feels like swallowing glass.",
+      "wants": [
+        "To understand why demons make her feel loud"
+      ],
+      "fears": [
+        "What the loudness really is"
+      ],
+      "secret": "She has felt dishonesty, cruelty and guilt in the air since she was twelve. Near demonkin her radiance answers their hunger, and her body is calling it attraction before her mind has agreed.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "toben-mensah",
+      "name": "Toben \"Tobe\" Mensah",
+      "role": "Junior, Mundane Studies (business), fighting for an ES minor",
+      "species": "orc",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot seven and 290 pounds, dark green-brown skin, copper-capped tusks from his grandfather's forge, too big for his desk.",
+      "voice": "Patient, deadpan on a delay, physically careful around smaller people; his voice hums in your chest.",
+      "wants": [
+        "To carry his clan's investment home with interest",
+        "An ES classification for work-song magic"
+      ],
+      "fears": [
+        "Dropping anything"
+      ],
+      "secret": "He is the first orc in his family at a supernatural university, and the clan considers his degree theirs.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "celeste-vaillancourt",
+      "name": "Celeste Vaillancourt",
+      "role": "Sophomore, Interpersonal Dynamics (performing arts, choir)",
+      "species": "siren",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot nine, skin iridescent in direct light, dark curls that move as if underwater, wide green eyes; scale patches on her ribs show when wet or aroused.",
+      "voice": "Loud on purpose, because quiet is where the voice gets dangerous; argues hard, cries at music.",
+      "wants": [
+        "To sing without a dampening ward",
+        "To say \"I love you\" and have it heard plain"
+      ],
+      "fears": [
+        "Entrancing someone by being honest"
+      ],
+      "secret": "Her voice charms without her choosing, most when she means what she says. Consent is not a seminar topic for her; it is every day.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "nikolai-ashvere",
+      "name": "Nikolai Ashvere",
+      "role": "Senior by count, Esoteric Sciences (structural magic); Phi Sigma Nox",
+      "species": "elf (Ashvere house)",
+      "age": 22,
+      "settlement": "havenbrooke-campus",
+      "faction": "phi-sigma-nox",
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot one, angular, silver-pale skin, dark hair, unglamoured tapered ears, pale green eyes with a metallic sheen. Can hold still for unnerving lengths of time.",
+      "voice": "Courteous and patient; jokes so dry they take a minute; remembers what you said six months ago.",
+      "wants": [
+        "To form attachments anyway"
+      ],
+      "fears": [
+        "Outliving everyone he loves"
+      ],
+      "secret": "He is a late teenager by elven count and will outlive every friend he makes here, and he has decided to make them.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "harlow-varthe",
+      "name": "Harlow Varthe",
+      "role": "Junior, MTO",
+      "species": "therianthrope (bear, blood curse)",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot eleven and dense, warm brown skin, dark hair in a loose bun, a scar across her left palm from a shift at sixteen, hands always warm.",
+      "voice": "Still, watchful, gentle with effort; decides whether to trust you once and for good.",
+      "wants": [
+        "To keep the bear-shifters' quiet mutual-aid network going"
+      ],
+      "fears": [
+        "The slow shift breaking all at once"
+      ],
+      "secret": "She is stronger than most men in her major and lets them underestimate her.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "dominic-almeida",
+      "name": "Dominic Almeida",
+      "role": "Junior, Interpersonal Dynamics (therapeutic arts)",
+      "species": "changeling",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot nine, olive skin, dark eyes, a climber's corded forearms and rope-rough hands; he smells like wet moss and copper underneath.",
+      "voice": "Calm, soft-spoken, asks oddly specific questions; does not argue, just does not comply.",
+      "wants": [
+        "To make order with rope where the courts took his"
+      ],
+      "fears": [
+        "Someone else deciding who he is"
+      ],
+      "secret": "The Seelie court took him as a baby and gave him back at fourteen with fae glamour he cannot steady. Rope is his craft.",
+      "desires": [
+        "rope bondage as art"
+      ],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "yuki-otsuka",
+      "name": "Yuki Otsuka",
+      "role": "Sophomore, Mundane Studies (psychology)",
+      "species": "beast-touched (cat)",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot three, lean, pale, black hair with a blue sheen, gold slit eyes, black ears and tail, claws she files obsessively.",
+      "voice": "Sharp, funny and plain about what she wants; blurts true things before deciding to share them.",
+      "wants": [
+        "A partner who can make the fear real enough to matter and no realer"
+      ],
+      "fears": [
+        "Her claws coming out mid-scene"
+      ],
+      "secret": "She wants consensual non-consent, has thought about it clinically, and will explain it to anyone who asks until they forget to be shocked.",
+      "desires": [
+        "consensual non-consent"
+      ],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "corbin-wynn",
+      "name": "Corbin Wynn",
+      "role": "Junior, Esoteric Sciences (elemental theory)",
+      "species": "djinn (water clan)",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot eleven, dark skin with a lapis-and-copper sheen, eyes that glow faintly in low light; his edges blur when he feels strongly and the air around him goes damp.",
+      "voice": "Easy and social, either the centre of a party or invisible; startlingly thoughtful when serious.",
+      "wants": [
+        "To use his power responsibly"
+      ],
+      "fears": [
+        "Reading a want nobody spoke and acting on it"
+      ],
+      "secret": "He can feel what a partner wants before they say it, and does not know whether that counts as consent.",
+      "desires": [
+        "sensation play"
+      ],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "nadira-azar",
+      "name": "Nadira Azar",
+      "role": "Senior, SPI (clinical integration psychology)",
+      "species": "phoenix-blooded",
+      "age": 22,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot five, olive skin with an ember glow, dark waves, a sweet sulphur smell that rises when she works. Wears the standard warded bracelet and a second ward she made herself.",
+      "voice": "Composed and warm; the senior in the room without condescending.",
+      "wants": [
+        "To teach the younger phoenix-blooded students their cycle is survivable"
+      ],
+      "fears": [],
+      "secret": "She had her first cycle alone at nineteen in her parents' bathroom.",
+      "desires": [
+        "edging and long denial"
+      ],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "wren-gallagher",
+      "name": "Wren Gallagher",
+      "role": "Sophomore, Mundane Studies (hospitality and events)",
+      "species": "mundane human",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot eight, sandy hair, blue eyes, freckles, a face that reads as nice first; always carrying something for someone.",
+      "voice": "Steady, organized, funny without putting himself down.",
+      "wants": [
+        "Someone who knows exactly how to use him"
+      ],
+      "fears": [],
+      "secret": "He notices what people need before they ask, and it is more compulsion than kindness.",
+      "desires": [
+        "service submission"
+      ],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "joaquin-reyes",
+      "name": "Joaquin Reyes",
+      "role": "Junior, Mundane Studies (communications and media)",
+      "species": "half-orc",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot three and 240 pounds, olive-green skin, short tusks, dark curls, brown eyes, knuckles scarred from metalwork. Smells of the forge.",
+      "voice": "Steady and warm, short sentences that land, laughs louder than Amanda.",
+      "wants": [
+        "Someone real"
+      ],
+      "fears": [],
+      "secret": "He would be impressed by Amanda's work ethic at Morrowe, not by her body, and his family can see through any performance.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "elaine-ashford",
+      "name": "Elaine Ashford",
+      "role": "Sophomore, Interpersonal Dynamics (performing arts, choir)",
+      "species": "banshee",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot four, pale almost to translucence, dark silver hair, large dark eyes, a full mouth that carries something people feel and cannot name.",
+      "voice": "Quiet in crowds, sharp in small groups, precise gallows humour.",
+      "wants": [
+        "Silence from the death sense"
+      ],
+      "fears": [
+        "Keening in public"
+      ],
+      "secret": "Sex is the only thing that quiets her sense of who is going to die.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "vivienne-crane",
+      "name": "Vivienne Crane",
+      "role": "Junior, Interpersonal Dynamics (diplomatic track); Phi Sigma Nox legacy",
+      "species": "vampire, born (Crane line)",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": "crane-family",
+      "tier": "regional",
+      "stats": null,
+      "look": "Five foot seven, pale, auburn hair, grey eyes and the Crane cheekbones; dresses in old money without trying.",
+      "voice": "Poised and kind, with the blindness of someone never refused anything.",
+      "wants": [
+        "To be wanted as a person, not a Crane"
+      ],
+      "fears": [
+        "Learning where her preferences end and her power begins"
+      ],
+      "secret": "Her great-uncle founded the Phi Sigma Nox chapter. She is drawn to Jason because his hunger does not defer to her name.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "idris-kamal",
+      "name": "Idris Kamal",
+      "role": "Sophomore, Mundane Studies (fine arts)",
+      "species": "djinn (fire clan)",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot ten, copper-gold skin with a metallic sheen, long black hair, eyes that glow in low light; smells of smoke and turpentine.",
+      "voice": "Passionate, distractible, wide open in every feeling.",
+      "wants": [
+        "Pigments that only behave on Havenbrooke's ley lines"
+      ],
+      "fears": [
+        "Knowing whether his art is working"
+      ],
+      "secret": "He paints with heat-infused pigments that move on the canvas, and he can feel what every viewer feels about them.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "petra-dalvik",
+      "name": "Petra Dalvik",
+      "role": "Junior, MTO (advanced field tactics)",
+      "species": "valkyrie",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot nine, broad-shouldered, blonde in a working braid, ice-blue eyes, a military jaw; the battle radiance shows in her eyes only when she spars.",
+      "voice": "Direct, warm when she chooses, laughs hard and drinks mead.",
+      "wants": [
+        "To take the weight off someone tired of carrying it"
+      ],
+      "fears": [],
+      "secret": "When she tells Austin to sit, his wolf sits before he has decided anything. She is the first person to see he is tired of being in charge.",
+      "desires": [],
+      "side": true,
+      "origin": "source"
+    },
+    {
+      "id": "mireille-thorne-ashford",
+      "name": "Professor Mireille Thorne-Ashford",
+      "role": "Senior incantation faculty, Esoteric Sciences; Kim's advisor; Sigma Theta Hex advisor",
+      "species": "half-fae witch",
+      "age": 55,
+      "settlement": "havenbrooke-campus",
+      "faction": "havenbrooke-university",
+      "tier": "local",
+      "stats": null,
+      "look": "Tall and lean, an iron-grey braid down her back, unblinking dark eyes, long hands, collared shirts under cardigans; ceremonial black at the equinox.",
+      "voice": "Short sentences, long pauses, students by surname until they earn otherwise. \"Your mother had no such window. Take yours.\"",
+      "secret": "Her own ritual-leadership track was cut short by a family obligation she did not meet on her own terms. Her fae blood is not public.",
+      "origin": "source"
+    },
+    {
+      "id": "caius-vellum",
+      "name": "Professor Caius Vellum",
+      "role": "Planar studies chair, Esoteric Sciences",
+      "species": "witch",
+      "age": 60,
+      "settlement": "havenbrooke-campus",
+      "faction": "havenbrooke-university",
+      "tier": "local",
+      "stats": null,
+      "look": "A former federal consultant who still carries a clearance.",
+      "voice": "Teaches the restricted curriculum that needs signed waivers.",
+      "origin": "source"
+    },
+    {
+      "id": "lenore-vasquez-o-briain",
+      "name": "Professor Lenore Vasquez-Ó Briain",
+      "role": "Chair of Interpersonal Dynamics",
+      "species": "half-selkie",
+      "age": 50,
+      "settlement": "havenbrooke-campus",
+      "faction": "havenbrooke-university",
+      "tier": "local",
+      "stats": null,
+      "look": "Her book on interspecies consent frameworks is the field's standard text.",
+      "voice": "Open office door, flat hierarchy.",
+      "origin": "source"
+    },
+    {
+      "id": "kasper-innes",
+      "name": "Dr. Kasper Innes",
+      "role": "Ethics track head, IPD; teaches IPD 340",
+      "species": "fae",
+      "age": 70,
+      "settlement": "havenbrooke-campus",
+      "faction": "havenbrooke-university",
+      "tier": "local",
+      "stats": null,
+      "look": "A former fae diplomat.",
+      "voice": "Runs IPD 340: Consent, Power, and Feeding, the seminar every SPI and ES student must take.",
+      "origin": "source"
+    },
+    {
+      "id": "marcus-halbrook",
+      "name": "Colonel (ret.) Marcus Halbrook",
+      "role": "Head of Military and Tactical Operations; teaches MTO 310",
+      "species": "lycan, bitten in the line of duty",
+      "age": 58,
+      "settlement": "havenbrooke-campus",
+      "faction": "ded",
+      "tier": "local",
+      "stats": null,
+      "look": "A former DED field agent who chose turning over the alternative.",
+      "voice": "Grim and practical, never performing toughness.",
+      "origin": "source"
+    },
+    {
+      "id": "sera-ashworth",
+      "name": "Captain Sera Ashworth",
+      "role": "MTO paranormal security track head; Austin's mentor",
+      "species": "mundane human, former hunter",
+      "age": 48,
+      "settlement": "havenbrooke-campus",
+      "faction": "havenbrooke-university",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot six, compact, short grey-streaked hair, a scar through her left eyebrow, a black field jacket with a faded MTO patch.",
+      "voice": "Clipped, factual, patient; treats students as adults. \"Let's see what it is before we report it.\"",
+      "secret": "She hunted witches for the government for eight years until an operation went wrong in a way she never discusses. Her wife Evelyn was a hunter too; their teenage son does not know.",
+      "origin": "source"
+    },
+    {
+      "id": "iolana-whitestone",
+      "name": "Professor Iolana Whitestone",
+      "role": "SPI clinical care track head; retired DED diplomat",
+      "species": "succubus (retired from practice)",
+      "age": 68,
+      "settlement": "havenbrooke-campus",
+      "faction": "havenbrooke-university",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot nine, silver hair in a low chignon, amber skin with copper under it, tailored neutral suits, reading glasses on a chain.",
+      "voice": "Precise and soft from decades of diplomacy; never interrupts; credits ideas to whoever had them.",
+      "secret": "Her forty-year DED career wrote the federal feeding protocols. In 1984 she tried something like Kindling and could not land it.",
+      "origin": "source"
+    },
+    {
+      "id": "adrien-halvers",
+      "name": "Adrien Halvers",
+      "role": "SPI doctoral candidate; runs the Integration Society",
+      "species": "mundane human",
+      "age": 32,
+      "settlement": "havenbrooke-campus",
+      "faction": "integration-society",
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot one, lean, receding sandy hair, wire rims, an old blazer, always three books.",
+      "voice": "Methodical and passive-aggressive. \"I do wonder whether...\" means he is building a paper trail.",
+      "secret": "His defence has slipped twice and he knows Whitestone prefers others.",
+      "origin": "source"
+    },
+    {
+      "id": "imogen-shaw",
+      "name": "Professor Imogen Shaw",
+      "role": "Communications faculty, Mundane Studies; Amanda's advisor",
+      "species": "mundane human",
+      "age": 50,
+      "settlement": "havenbrooke-campus",
+      "faction": "havenbrooke-university",
+      "tier": "local",
+      "stats": null,
+      "look": "A former journalist on one of three supernatural beats in mainstream American newsrooms.",
+      "voice": "Teaches supernatural media ethics.",
+      "origin": "source"
+    },
+    {
+      "id": "samuel-park",
+      "name": "Professor Samuel Park",
+      "role": "Computer science head, Mundane Studies",
+      "species": "mundane human",
+      "age": 55,
+      "settlement": "havenbrooke-campus",
+      "faction": "havenbrooke-university",
+      "tier": "local",
+      "stats": null,
+      "look": "Built the tech placement pipeline in 1998.",
+      "voice": "Michael's internship prospects run through his contacts.",
+      "origin": "source"
+    },
+    {
+      "id": "dorian-marek",
+      "name": "Dorian Marek",
+      "role": "Alpha Gamma vice-president, junior",
+      "species": "lycan, bitten at seventeen",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": "alpha-gamma",
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot two, rangy, sandy-blond with a neat beard, pale blue eyes, quick hands, rolls his left shoulder.",
+      "voice": "Quiet and apologetic; starts sentences with \"sorry\"; laughs with his whole face.",
+      "secret": "He was bitten in a random attack while hiking in Ontario. He has never said the name of the man who did it.",
+      "origin": "source"
+    },
+    {
+      "id": "vance-harrower",
+      "name": "Vance Harrower",
+      "role": "Alpha Gamma senior brother",
+      "species": "lycan, born",
+      "age": 22,
+      "settlement": "havenbrooke-campus",
+      "faction": "alpha-gamma",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot ten, heavy, red-brown beard, deep-set brown eyes, thick forearms, a silver ring he does not explain.",
+      "voice": "Slow, warm, speaks only when it is worth it.",
+      "secret": "He has been in a steady D/s relationship with a graduate student off campus for eighteen months.",
+      "origin": "source"
+    },
+    {
+      "id": "colm-byrne",
+      "name": "Colm Byrne",
+      "role": "Alpha Gamma house secretary, junior",
+      "species": "lycan, born",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": "alpha-gamma",
+      "tier": "local",
+      "stats": null,
+      "look": "Six feet, wiry, black hair that curls long, ruddy, a nose broken freshman year.",
+      "voice": "Fast and joking when happy, quiet when serious.",
+      "origin": "source"
+    },
+    {
+      "id": "rook-halverson",
+      "name": "Rook Halverson",
+      "role": "Alpha Gamma sophomore brother",
+      "species": "lycan, bitten at fifteen",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "alpha-gamma",
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot five and gangly, messy brown hair, bitten nails.",
+      "voice": "Blunt to rudeness, loyal, swears constantly and apologizes for none of it.",
+      "secret": "His own cousin bit him at a family reunion.",
+      "origin": "source"
+    },
+    {
+      "id": "bryn-callow",
+      "name": "Bryn Callow",
+      "role": "Sigma Theta Hex sister; Austin's MTO partner, junior",
+      "species": "human witch",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": "sigma-theta-hex",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot seven, athletic, close-cropped hair dyed violet at the tips, a jaw you remember, a white scar through her right eyebrow.",
+      "voice": "Dry, quick, impatient with nonsense; cites cases in conversation.",
+      "origin": "source"
+    },
+    {
+      "id": "margot-aveline",
+      "name": "Margot Aveline",
+      "role": "Sigma Theta Hex pledge, freshman",
+      "species": "human witch",
+      "age": 18,
+      "settlement": "havenbrooke-campus",
+      "faction": "sigma-theta-hex",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot four, a precise black bob, pale, eyes that go pink when she cries, a charcoal turtleneck.",
+      "voice": "Polite, anxious, terrible at apologies. \"I was only trying...\" means pride.",
+      "secret": "Told she was special since she was five, she broke the magic-neutral rule at Pale Press this semester.",
+      "origin": "source",
+      "note": "A freshman: an adult, and kept out of sexual content in this package."
+    },
+    {
+      "id": "clementine-yoo",
+      "name": "Clementine Yoo",
+      "role": "Sigma Theta Hex pledge, Margot's line sister",
+      "species": "human witch",
+      "age": 19,
+      "settlement": "havenbrooke-campus",
+      "faction": "sigma-theta-hex",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot two, round-faced, shoulder-length black hair, dressed for a hike.",
+      "voice": "Patient, practical, reads a room fastest in her class.",
+      "origin": "source",
+      "note": "A freshman: an adult, and kept out of sexual content in this package."
+    },
+    {
+      "id": "sable-whitmore",
+      "name": "Sable Whitmore",
+      "role": "Sigma Theta Hex vice-president, senior",
+      "species": "human witch",
+      "age": 22,
+      "settlement": "havenbrooke-campus",
+      "faction": "sigma-theta-hex",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot ten, copper-red braid crown, green eyes, freckles, layered skirts and clinking jewellery.",
+      "voice": "Warm, commanding, political; \"Kim, a word.\"",
+      "secret": "She is engaged to a vampire lawyer in her family's firm.",
+      "origin": "source"
+    },
+    {
+      "id": "aurelio-marchant",
+      "name": "Aurelio Marchant",
+      "role": "Phi Sigma Nox brother, junior; Jason's second cousin",
+      "species": "incubus",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": "phi-sigma-nox",
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot one, lean, a precise haircut, hazel-green eyes, an orthodontist's jaw; Ralph Lauren by day, Saint Laurent at night.",
+      "voice": "Polished and easy, jokes in three languages; three beers in, the family vernacular comes out.",
+      "secret": "His real name is Velrashiel Vhen-Morrath, and he is being groomed for the diplomatic pipeline Deirdre walked out of.",
+      "origin": "source"
+    },
+    {
+      "id": "nessa-morikawa",
+      "name": "Nessa Morikawa",
+      "role": "Delta Omicron Theta president, senior",
+      "species": "mundane human",
+      "age": 22,
+      "settlement": "haven",
+      "faction": "delta-omicron-theta",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot six, trim, a sleek low bun, always pastels.",
+      "voice": "Brisk, corporate and pageant-bright.",
+      "secret": "She knows exactly how to use Amanda.",
+      "origin": "source"
+    },
+    {
+      "id": "iona-yelarel",
+      "name": "Iona Yelarel",
+      "role": "Kindling regular, freshman",
+      "species": "succubus",
+      "age": 19,
+      "settlement": "havenbrooke-campus",
+      "faction": "kindling",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot three, dark auburn bun, large brown eyes that fill fast, oversized sweaters.",
+      "voice": "Quiet and shaky when upset, steady when she lands.",
+      "secret": "Raised human until puberty; a great-grandmother nobody talked about.",
+      "origin": "source",
+      "note": "A freshman: an adult, and kept out of sexual content in this package."
+    },
+    {
+      "id": "graham-holloway",
+      "name": "Graham Holloway",
+      "role": "Kindling regular, senior transfer",
+      "species": "lycan, bitten at nineteen",
+      "age": 23,
+      "settlement": "havenbrooke-campus",
+      "faction": "kindling",
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot three, heavy, shaved head, dark circles, flannel and steel toes, scarred hands.",
+      "voice": "Gruff and angry, surprisingly articulate on paper.",
+      "secret": "His mother does not know how bad his turning was. He works weekends at a garage off Mill Street.",
+      "origin": "source"
+    },
+    {
+      "id": "miles-errant",
+      "name": "Miles Errant",
+      "role": "Kindling regular, sophomore",
+      "species": "leanan sídhe",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "kindling",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot ten, slender, faintly iridescent, white-blond hair over his ears, grey-green eyes that go silver in the dark.",
+      "voice": "Soft and a little archaic when tired; quotes poetry by accident.",
+      "secret": "His creative-writing professor does not know what he is.",
+      "origin": "source"
+    },
+    {
+      "id": "aaliyah-okafor",
+      "name": "Aaliyah Okafor",
+      "role": "Kindling regular, junior",
+      "species": "vampire, turned by choice",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": "kindling",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot eight, dark brown skin, short natural curls, a red cast to her eyes in low light, jewel tones and silver hoops.",
+      "voice": "Warm, direct, asks what everyone else is afraid to.",
+      "secret": "She turned three years ago rather than die of an illness, with her family's blessing.",
+      "origin": "source"
+    },
+    {
+      "id": "callum-ashveil",
+      "name": "Lord Callum Ashveil",
+      "role": "Sylph court diplomat; Rina's betrothed",
+      "species": "sylph",
+      "age": 55,
+      "settlement": "aelhwynn-grove",
+      "faction": "house-aelhwynn",
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot one, slender, silver-threaded dark hair in a loose queue, pale grey eyes ringed blue, grey and ivory tailoring, a crystal court pin.",
+      "voice": "Gracious and warm over a precision that misses nothing; a wind lilt in his vowels.",
+      "secret": "His real name is Caellanwyr ab Sylveth. He does not want to force the match and cannot say so at court without ruining himself.",
+      "origin": "source"
+    },
+    {
+      "id": "lucian-crane",
+      "name": "Lucian Crane",
+      "role": "Crane family patriarch; New England seat, Council of Bloodlines",
+      "species": "vampire, turned 1783",
+      "age": 260,
+      "settlement": "haven",
+      "faction": "crane-family",
+      "tier": "realm",
+      "stats": null,
+      "look": "Six feet, silver-white hair swept back, cut-glass cheekbones, pale grey eyes, Savile Row three-piece suits.",
+      "voice": "Cold courtesy; \"my dear\" to everyone, never warmly.",
+      "secret": "He has outlived everyone he ever loved, and the family collection is not all legal.",
+      "origin": "source"
+    },
+    {
+      "id": "evander-crane",
+      "name": "Evander Crane",
+      "role": "Crane cousin",
+      "species": "vampire, turned at twenty-four",
+      "age": 44,
+      "settlement": "haven",
+      "faction": "crane-family",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot eleven, the family jaw, watery grey eyes, a tremor in his left index finger.",
+      "voice": "Stammers under stress, clipped in ego.",
+      "secret": "He stole Mairead's sealskin to buy standing in the collectors' world outside Lucian's shadow.",
+      "origin": "source"
+    },
+    {
+      "id": "gideon-vale",
+      "name": "Gideon Vale",
+      "role": "Crane family steward",
+      "species": "mundane human",
+      "age": 62,
+      "settlement": "haven",
+      "faction": "crane-family",
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot two, thin, silver hair, dark suits, a pocket watch and nothing else.",
+      "voice": "Flat and instructional; uses \"one\" sincerely.",
+      "secret": "He closes his eyes for half a second when someone guesses right. He fixes the family's trafficking.",
+      "origin": "source"
+    },
+    {
+      "id": "mairead-o-maoilmheana",
+      "name": "Mairead Ó Maoilmheana",
+      "role": "Senior; Fae Heritage Association fixture",
+      "species": "selkie",
+      "age": 22,
+      "settlement": "havenbrooke-campus",
+      "faction": "fae-heritage-council",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot seven, slight, wheat-blonde hair that goes lank when her skin is far away, sea-grey eyes, freckles, wool and long skirts.",
+      "voice": "Soft Kerry lilt, shy in crowds; Irish with her grandmother on Sundays.",
+      "secret": "Her sealskin is in a warded cedar chest she believes nobody can open.",
+      "origin": "source"
+    },
+    {
+      "id": "delia-okonkwo",
+      "name": "Delia Okonkwo",
+      "role": "Owner of Pale Press Coffee",
+      "species": "human witch (Boston lineage)",
+      "age": 49,
+      "settlement": "haven",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot eleven, heavy, silver-streaked twists, wire glasses, dark aprons over vintage band shirts.",
+      "voice": "Husky and patient with regulars, iron with rule-breakers; curses in Twi in the back.",
+      "secret": "Her wife Cassandra died in a curse misfire at their Boston café in 2003. The magic-neutral rule is in the lease.",
+      "origin": "source"
+    },
+    {
+      "id": "bex-kavanagh",
+      "name": "Betsari \"Bex\" Kavanagh",
+      "role": "Owner of Arrow & Ink; witch tattooist",
+      "species": "human witch (Appalachian-trained)",
+      "age": 40,
+      "settlement": "haven",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot six, scrappy, rough chin-length bob, full sleeves, a nose ring, leather cuffs.",
+      "voice": "West Virginia cadence, direct, five years sober; apologizes without flinching when she owes it.",
+      "secret": "In her worst year, 2008, she inked whatever clients asked for with edits she cannot defend now, Michael's sigil among them.",
+      "origin": "source"
+    },
+    {
+      "id": "drothe",
+      "name": "Drothe",
+      "role": "Proprietor of Drothe's Bookery",
+      "species": "witch (unclassified, \"opaque\")",
+      "age": 80,
+      "settlement": "haven",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot six, stooped, wispy white hair, a moth-eaten cardigan, ink-black nail beds, sharp eyes.",
+      "voice": "Dry, brief, sarcastic. \"Bring me something else.\" Never says hello or goodbye.",
+      "secret": "He was someone important in a coven that blew apart in 1973. Nobody under fifty knows the story.",
+      "origin": "source"
+    },
+    {
+      "id": "oriane-dupre",
+      "name": "Oriane Dupré",
+      "role": "Sigma Theta Hex alumna; Providence coven senior",
+      "species": "human witch (New Orleans lineage)",
+      "age": 26,
+      "settlement": "providence",
+      "faction": "providence-coven",
+      "tier": "regional",
+      "stats": null,
+      "look": "Five foot four, compact, black hair violet in the sun, olive skin, grey-green eyes ringed near-black, a small iron ring on her left forefinger.",
+      "voice": "Even, low and unhurried at every pressure; whispers the private tongue so only one person hears.",
+      "secret": "The iron ring is rumoured to be a binding gift from a senior witch she loved.",
+      "origin": "source"
+    },
+    {
+      "id": "vivian-corrigan",
+      "name": "Vivian Corrigan",
+      "role": "SPI senior; feed-swap partner",
+      "species": "mundane human (dryad grandmother)",
+      "age": 22,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot six, auburn braid, hazel eyes, freckles, a runner; nothing ornamental.",
+      "voice": "Warm and professional; asks consent questions in the registered form, funnier off the clock.",
+      "secret": "Her dryad grandmother gives her a high tolerance for being fed on. Her partner knows and supports it.",
+      "origin": "source"
+    },
+    {
+      "id": "elena-marchetti",
+      "name": "Elena Marchetti",
+      "role": "Christine's brand liaison",
+      "species": "mundane human",
+      "age": 38,
+      "settlement": "new-york",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot nine, black blowout, the same red lipstick always, three-inch heels.",
+      "voice": "Clipped and Milan-inflected; never rude, never warm.",
+      "origin": "source"
+    },
+    {
+      "id": "kwame-adjei",
+      "name": "Kwame Adjei",
+      "role": "Editor of the Oracle, junior",
+      "species": "mundane human",
+      "age": 20,
+      "settlement": "havenbrooke-campus",
+      "faction": "the-oracle",
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot ten, trim, close-cropped hair, tortoiseshell glasses, corduroy and a battered satchel.",
+      "voice": "Literary and precise, LSE vowels; teaches with rhetorical questions. \"Bring me something that costs you something.\"",
+      "origin": "source"
+    },
+    {
+      "id": "rachel-levitt",
+      "name": "Rachel Levitt",
+      "role": "Graduate student; Kim's vetted third",
+      "species": "mundane human",
+      "age": 26,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot eight, athletic, shoulder-length brown hair.",
+      "voice": "Straightforward, sober, gracious when the logistics go wrong.",
+      "origin": "source"
+    },
+    {
+      "id": "marcus-doyle",
+      "name": "Marcus Doyle",
+      "role": "A bull booked for a different couple",
+      "species": "mundane human",
+      "age": 28,
+      "settlement": "haven",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot four, gym-built, blond.",
+      "voice": "Chummy and certain; keeps calling Kim \"Rachel\".",
+      "origin": "source"
+    },
+    {
+      "id": "ezra-brennan",
+      "name": "Ezra Brennan",
+      "role": "Alpha Gamma senior",
+      "species": "lycan, born",
+      "age": 22,
+      "settlement": "havenbrooke-campus",
+      "faction": "alpha-gamma",
+      "tier": "local",
+      "stats": null,
+      "look": "Six feet, broad, dirty-blond beard, green eyes, a scar on his left forearm, a tumbler for the weight of it.",
+      "voice": "Low and patient; says only what he has been cleared to say.",
+      "origin": "source"
+    },
+    {
+      "id": "tessa-graver",
+      "name": "Tessa Graver",
+      "role": "Freshman",
+      "species": "mundane human",
+      "age": 18,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot four, pale, dark curls, tired eyes, oversized cardigans.",
+      "voice": "Composed the way someone who practises composure is.",
+      "secret": "Her first semester was harder than she has told anyone; she is on an Evermere intake protocol.",
+      "origin": "source",
+      "note": "A freshman: an adult, and kept out of sexual content in this package."
+    },
+    {
+      "id": "silas-varn",
+      "name": "Silas Varn",
+      "role": "Visiting athlete from a rival school",
+      "species": "lycan, bitten",
+      "age": 23,
+      "settlement": "haven",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Six foot three, heavy, dark hair, sharp cheekbones, a silver earring, an economical way of moving.",
+      "voice": "Never speaks on the page; the threat is in how he moves and where he scouts.",
+      "secret": "His residency last spring covered more than sparring workshops. He trains in a bitten-lycan tradition that closes space around smaller fighters.",
+      "origin": "source"
+    },
+    {
+      "id": "finn-o-brogain",
+      "name": "Finn Ó Brógáin",
+      "role": "Junior transfer from Cork",
+      "species": "lycan, bitten at sixteen",
+      "age": 21,
+      "settlement": "havenbrooke-campus",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot eleven, compact, short red-auburn hair, freckles, a broken and healed left canine.",
+      "voice": "Warm Cork lilt, apologetic after a fight, curious.",
+      "secret": "He was trained in the same lineage as Silas Varn by an uncle who did not know what he was passing on.",
+      "origin": "source"
+    },
+    {
+      "id": "deirdre-kessler",
+      "name": "Deirdre Kessler",
+      "role": "Research archivist; the twins' mother",
+      "species": "mundane human",
+      "age": 53,
+      "settlement": "kessler-hometown",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot seven, slender, chin-length silver hair, reading glasses, cardigans and long skirts.",
+      "voice": "Steady and academic, affectionate in a way the twins never take for granted.",
+      "secret": "She has a chronic illness and has not told her children how serious it is.",
+      "origin": "source"
+    },
+    {
+      "id": "genevieve-corwin",
+      "name": "Genevieve Corwin",
+      "role": "Kim's mother; Boston ritual consultant",
+      "species": "human witch",
+      "age": 51,
+      "settlement": "boston",
+      "faction": "corwin-lineage",
+      "tier": "regional",
+      "stats": null,
+      "look": "Five foot eight, ice-blonde, cold grey eyes, grey silk or navy wool, a diamond stud in each ear.",
+      "voice": "Clipped and withholding; \"Lovely\" and \"Pragmatic\" are dismissals. \"We'll see.\"",
+      "secret": "She turned down the Hex ritual-leadership suite in her day and has spent thirty years defending and regretting it.",
+      "origin": "source"
+    },
+    {
+      "id": "hanae-ashikaga",
+      "name": "Hanae Ashikaga",
+      "role": "Piper's mother; diplomatic corps",
+      "species": "kitsune",
+      "age": 120,
+      "settlement": "vermont-hometown",
+      "faction": null,
+      "tier": "local",
+      "stats": null,
+      "look": "Five foot two, black hair, fox features plainer than Piper's, eyes that change colour with her mood.",
+      "voice": "Japanese first; kind and unsentimental about bonded circles.",
+      "origin": "source"
+    },
+    {
+      "id": "maera-silveth",
+      "name": "Maera Silveth",
+      "role": "Eastern Seelie court auditor",
+      "species": "fae",
+      "age": 90,
+      "settlement": "aelhwynn-grove",
+      "faction": "eastern-seelie",
+      "tier": "local",
+      "stats": null,
+      "look": "Arrives in Season Two with an envelope.",
+      "voice": "Protocol in a human voice.",
+      "secret": "She is sent to audit Rina's forgeries.",
+      "origin": "source",
+      "eras": [
+        "junior",
+        "senior"
+      ]
+    },
+    {
+      "id": "lady-aelhwynn",
+      "name": "Lady Aelhwynn",
+      "role": "Rina's mother; head of House Aelhwynn",
+      "species": "dryad",
+      "age": 150,
+      "settlement": "aelhwynn-grove",
+      "faction": "house-aelhwynn",
+      "tier": "regional",
+      "stats": null,
+      "look": "A court lady of the grove.",
+      "voice": "Polite, final.",
+      "secret": "She chose Rina's match when Rina was fourteen.",
+      "origin": "source",
+      "eras": [
+        "junior",
+        "senior"
+      ]
+    }
+  ]
+}

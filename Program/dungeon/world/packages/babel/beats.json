@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "note": "Planned beats feed the director (docs/requirements.md, The director): how hard it pushes toward them follows the campaign's hand setting (Soft, Guiding or Firm), and it never writes the player's actions. A BABEL campaign starts on arrival night, so the Mabry Curve run is what tends to happen, not what has to: these beats are its shape, for the director to steer toward when the player's choices allow. The engine's arcs are in Program/dungeon/world/data/arcs/babel.json.",
+  "arcs": [
+    {
+      "id": "the-climb",
+      "name": "The climb",
+      "tier": "local",
+      "summary": "The spine. Four people taken from one engagement party land on two different floors. Getting everyone onto one floor alive comes first; any way home is up, because BABEL was always about climbing. Every floor costs something to leave.",
+      "steps": [
+        "The Concourse: the Roll, the missing names, a veteran's deal, the white ring in Grant's eyes.",
+        "Varrow: the Close weighs the big; a bond is made that cannot be taken back.",
+        "The Marches and the Bazaar: the missing pair, and what they did while nobody was watching.",
+        "Above four: the Stair is out, and the way up goes through the floors.",
+        "The top: nobody agrees what it is."
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-season",
+      "name": "A season on the Reachwall",
+      "tier": "local",
+      "summary": "If the Margrave's offer is taken (a season on his Wall under his captain, paid in his coin, then his cellar), the season runs about three and a half months of Varrow time and ends at the first frost. Mabry Curve played it as ten events, one per long turn, in this order. A player who refuses the Wall, or who isn't Grant, meets the same people and pressures by other roads.",
+      "events": [
+        {"n": 1, "week": "days 1 to 9", "name": "The Giant's Word", "summary": "A Reach giant at the ditch calls the gift Brother. Something teaches him the Reach tongue in his sleep. The giants return the Wall's dead men's helmets and take a misspoken word for an oath: the son will open the stair before the cold."},
+        {"n": 2, "week": "week 3", "name": "Kenzie's Class", "summary": "The tower finally reads the Gilt's conduct at the Margrave's household stone and offers her a class, a hidden one among them."},
+        {"n": 3, "week": "week 4", "name": "Merrow's Move", "summary": "Sabeen's runner, hired into the Keep as a harper, lures someone off the Wall road with word of their family and lays a stolen Seraph's word on them."},
+        {"n": 4, "week": "weeks 5 and 6", "name": "The Margrave's Solar", "summary": "Honesty for honesty with the Margrave: his wife taken by the tithe, the compact, his stair trade, the Bishop gone down. A dynamic quest opens: The First Frost."},
+        {"n": 5, "week": "weeks 6 and 7", "name": "Ide's Play", "summary": "Released from discipline on the Archdeacon's terms, Sister Ide offers herself as a bond, in exchange for how the Scales weigh. A spoke is a door."},
+        {"n": 6, "week": "week 8", "name": "First Rank-up and the Glass Window", "summary": "The Reach breaches the patch. Someone ranks up mid-fight and is glass. Men die. A window opens toward whoever the hook points at."},
+        {"n": 7, "week": "week 9", "name": "Rachel", "summary": "A bug-report answer or a dream, at a cost to her."},
+        {"n": 8, "week": "weeks 10 and 11", "name": "Darla Comes Up", "summary": "Word reaches the Landing through Danny, and Darla climbs to Varrow. A confrontation over Teague and the Muster board."},
+        {"n": 9, "week": "week 12", "name": "The Bishop", "summary": "The Bishop's sealed letter, or a sign of him; the Consort prophecy deepens."},
+        {"n": 10, "week": "weeks 14 and 15", "name": "The Breach Night", "summary": "The cold comes, and the Reach comes over unless the son opens the stair. The Close comes to weigh Hollin, or the Wall."}
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-first-frost",
+      "name": "The First Frost",
+      "tier": "local",
+      "summary": "A dynamic quest from Edmund Corve whose objectives rewrite themselves as people talk: answer the Close in your own hand, stand the Wall at the first frost as Corve's, settle the fetcher, and a garbled one (open the stair). It fails if one soul of Hollin is weighed and taken. It pays too much (Rank D, Corve's stair up past the Wall toward the Marches), and quests are built to pay what they cost: the Wall, the Close and the Reach cannot all be satisfied without someone breaking.",
+      "origin": "source"
+    },
+    {
+      "id": "the-weighing",
+      "name": "The weighing",
+      "tier": "local",
+      "summary": "A giant comes up the Stair and the Close comes down the hill for him. Walk up to be weighed uncompelled, or watch the people with you go to the Pens. Whatever the Scales find, the Close keeps.",
+      "origin": "source"
+    },
+    {
+      "id": "the-wakefuls-eyes",
+      "name": "The Wakeful's eyes",
+      "tier": "regional",
+      "summary": "Teague's story, surfacing piece by piece: Ruth Ann's hammer, Pia's slate, Hamid's warning, the Muster board, the empty bunk, Gil's fiddle, the giants' promise, and Darla, who came back alone. Whoever wears the white ring inherits it.",
+      "origin": "source"
+    },
+    {
+      "id": "the-bazaars-price",
+      "name": "The Bazaar's price",
+      "tier": "regional",
+      "summary": "The two who came down on the Bazaar pay for a room the only way the floor accepts. Sabeen Oro learns what the engineer is worth and gives a chit that turns into a contract. A runner goes down the Stair to fetch him. The gate behind the Copper Steps closes on defaulters, a night cage takes everything they have, and a bounty board goes down the chain ahead of them. On the Marches the pair are broke, apart in every way that matters, and hunted.",
+      "origin": "source"
+    },
+    {
+      "id": "out-is-not-down",
+      "name": "Out is not down",
+      "tier": "realm",
+      "summary": "Teo Ruiz's route: a map that says OUT IS NOT DOWN, chalk marks on the landings, a broken span above four, and an arrow into the Foundry. Teo thinks up is out. Following him is the way off the low floors.",
+      "origin": "source"
+    },
+    {
+      "id": "the-bishops-letter",
+      "name": "The Bishop's letter",
+      "tier": "regional",
+      "summary": "Six years ago the Bishop went down the Margrave's stair alone and left a sealed letter for the Archdeacon. Before he left he wrote that a Consort would come up the Stair bound to one and able to bind more. Someone on Varrow knew the rewritten Tether before the Turning.",
+      "origin": "source"
+    },
+    {
+      "id": "the-hub",
+      "name": "The hub",
+      "tier": "realm",
+      "summary": "If someone takes the Consort class, everyone who learns what it is wants to be a spoke or to own the hub: the Close (one giant feeding every sister on the Wall), the Margrave, Sabeen (a hub through whom her girls' Allure flows), Darla (leverage on the Turning). The exploit that killed Tether in 2024 is a class now, and a partner fed through the hub can be pumped dry.",
+      "origin": "source"
+    }
+  ]
+}

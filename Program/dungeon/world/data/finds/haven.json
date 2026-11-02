@@ -1,0 +1,256 @@
+{
+  "about": "What is inside things in Haven, rolled the first time the player looks (dungeon/finds.py), in dollars.",
+  "containers": {
+    "chest": {
+      "words": [
+        "chest",
+        "footlocker",
+        "lockbox",
+        "safe",
+        "trunk",
+        "box"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 3,
+          "coins": [
+            5,
+            120
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "licensed-charm"
+        },
+        {
+          "weight": 1,
+          "item": "silver-knife"
+        },
+        {
+          "weight": 1,
+          "item": "blood-pack"
+        },
+        {
+          "weight": 2,
+          "note": "a stack of love letters in green ink, every one signed with a different initial"
+        },
+        {
+          "weight": 1,
+          "note": "a ward cut into the lid that bites the hand that opens it",
+          "trap": true
+        }
+      ]
+    },
+    "drawer": {
+      "words": [
+        "drawer",
+        "desk",
+        "cupboard",
+        "cabinet",
+        "shelf",
+        "shelves",
+        "dresser",
+        "nightstand"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 4,
+          "nothing": true
+        },
+        {
+          "weight": 3,
+          "coins": [
+            1,
+            30
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "notebook"
+        },
+        {
+          "weight": 1,
+          "item": "painkillers"
+        },
+        {
+          "weight": 1,
+          "item": "chalk"
+        },
+        {
+          "weight": 1,
+          "item": "sage-bundle"
+        },
+        {
+          "weight": 1,
+          "item": "condoms"
+        },
+        {
+          "weight": 2,
+          "note": "a Havenbrooke housing form with the room number crossed out and another written in"
+        },
+        {
+          "weight": 1,
+          "note": "a Polaroid of the Nexus third-floor common room, taken from outside the window"
+        }
+      ]
+    },
+    "crate": {
+      "words": [
+        "crate",
+        "cooler",
+        "bin",
+        "dumpster",
+        "trash",
+        "carton"
+      ],
+      "draws": 1,
+      "table": [
+        {
+          "weight": 4,
+          "nothing": true
+        },
+        {
+          "weight": 2,
+          "item": "beer-case"
+        },
+        {
+          "weight": 2,
+          "item": "ramen"
+        },
+        {
+          "weight": 1,
+          "item": "energy-drink"
+        },
+        {
+          "weight": 1,
+          "note": "empty blood bags rinsed and stacked to dry"
+        }
+      ]
+    },
+    "body": {
+      "words": [
+        "body",
+        "corpse",
+        "dead man",
+        "dead woman",
+        "the dead"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 4,
+          "coins": [
+            2,
+            60
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "flip-phone"
+        },
+        {
+          "weight": 1,
+          "item": "pepper-spray"
+        },
+        {
+          "weight": 2,
+          "note": "a Velvet Spire wristband, the middle-floor color"
+        },
+        {
+          "weight": 1,
+          "note": "two neat punctures on the inside of the wrist, a day old"
+        }
+      ]
+    },
+    "purse": {
+      "words": [
+        "purse",
+        "wallet",
+        "pocket",
+        "pockets",
+        "handbag",
+        "backpack"
+      ],
+      "draws": 1,
+      "table": [
+        {
+          "weight": 2,
+          "nothing": true
+        },
+        {
+          "weight": 6,
+          "coins": [
+            1,
+            45
+          ]
+        },
+        {
+          "weight": 1,
+          "item": "shuttle-pass"
+        },
+        {
+          "weight": 1,
+          "item": "licensed-charm"
+        },
+        {
+          "weight": 1,
+          "note": "a student ID with a different name on it than the face"
+        }
+      ]
+    },
+    "room": {
+      "words": [
+        "room",
+        "the place",
+        "the dorm room",
+        "the apartment",
+        "the garage",
+        "the basement"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 2,
+          "coins": [
+            1,
+            20
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "hoodie"
+        },
+        {
+          "weight": 1,
+          "item": "laptop"
+        },
+        {
+          "weight": 1,
+          "item": "first-aid-kit"
+        },
+        {
+          "weight": 2,
+          "note": "a radiator warm in a room nobody has been in for days"
+        },
+        {
+          "weight": 1,
+          "note": "a chalk circle under the rug, scuffed out on one side"
+        }
+      ]
+    }
+  }
+}

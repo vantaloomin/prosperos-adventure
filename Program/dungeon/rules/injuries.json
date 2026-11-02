@@ -1,0 +1,23 @@
+{
+ "about": "The lasting-injury and stress-condition tables (dungeon/injuries.py, requirements \"Injuries and recovery\"): what a maiming, a critical hit or a beating that nearly killed the character leaves behind. Each has a weight, the actions it makes a step harder (words in the action), what people see and how they take it, and the days it takes to fade under Temporary injury persistence. The conditions are the same for the mind: what stress leaves past its thresholds (dungeon/stress.py).",
+ "injuries": [
+  {"id": "lost-eye", "name": "a lost eye", "weight": 2, "harder": "shoot|aim|throw|spot|notice|see|watch|search|look|read|track", "seen": "An empty socket or a patch over it. People stare, then look carefully anywhere else.", "fade_days": 40, "intensity": {"violence": 2}},
+  {"id": "limp", "name": "a limp from a leg that knit badly", "weight": 3, "harder": "run|chase|flee|climb|jump|leap|dance|sneak|kick|sprint|escape", "seen": "The limp shows at every step. People take the character for slow, and some for easy.", "fade_days": 30},
+  {"id": "ruined-hand", "name": "a ruined hand", "weight": 2, "harder": "grip|climb|pick|play|write|tie|sew|shoot|swing|carve|steal|lift", "seen": "The hand is clawed and scarred and does half what it should. Shopkeepers count the change for them.", "fade_days": 40, "intensity": {"violence": 2}},
+  {"id": "lost-fingers", "name": "two lost fingers", "weight": 2, "harder": "pick|play|sew|write|tie|steal|pickpocket|lockpick", "seen": "Two stumps on one hand, the sort a thief's punishment leaves. Wardens look twice.", "fade_days": 30, "intensity": {"violence": 2}},
+  {"id": "face-scar", "name": "a disfiguring scar across the face", "weight": 3, "harder": "charm|flirt|seduce|persuade|win over|reassure|comfort|blend in", "seen": "A raw seam from brow to jaw. Strangers flinch and children stare; hard men trust it more.", "fade_days": 60},
+  {"id": "ribs", "name": "ribs that knit wrong", "weight": 2, "harder": "lift|carry|swim|wrestle|climb|shout|grapple|haul", "seen": "The character moves stiffly and breathes short when they hurry. People notice them wince.", "fade_days": 25},
+  {"id": "deaf-ear", "name": "a deaf ear", "weight": 2, "harder": "listen|hear|overhear|eavesdrop|sneak", "seen": "They turn their head to catch what is said and miss what is whispered. People repeat themselves, or don't.", "fade_days": 30},
+  {"id": "shaking-hand", "name": "a tremor in the sword hand", "weight": 2, "harder": "stab|slash|strike|swing|aim|shoot|parry|block", "seen": "The hand shakes when it is still. People who fight for a living notice it at once.", "fade_days": 30}
+ ],
+ "conditions": [
+  {"id": "nightmares", "name": "nightmares", "weight": 3, "harder": "keep watch|stay awake|focus|concentrate|study|stand guard", "seen": "Wakes shouting some nights. The eyes are sunk and red, and the character dreads lying down.", "fade_days": 30},
+  {"id": "fear-of-the-dark", "name": "a fear of the dark", "weight": 2, "harder": "sneak|explore|descend|go down|enter|creep|crawl", "seen": "Keeps a light burning, and goes quiet and quick wherever it is dark.", "fade_days": 30},
+  {"id": "horror-of-blood", "name": "a horror of blood", "weight": 2, "harder": "treat|bandage|stitch|butcher|skin|gut|stab|cut", "seen": "Goes grey at the sight of blood, and looks away from wounds.", "fade_days": 25},
+  {"id": "numbness", "name": "a numbness", "weight": 3, "harder": "comfort|charm|flirt|console|reassure|befriend|win over", "seen": "A flat voice and far-off eyes. People find the character hard to reach.", "fade_days": 40},
+  {"id": "checking", "name": "a compulsion to check and check again", "weight": 2, "harder": "hurry|rush|quickly|race|dash", "seen": "Counts the exits, checks the locks twice, three times, and cannot leave until it is done.", "fade_days": 30},
+  {"id": "temper", "name": "a short, hot temper", "weight": 2, "harder": "calm|negotiate|persuade|apologi[sz]e|haggle|soothe|bargain", "seen": "Snaps at small things. Anyone who knows violence reads it at once.", "fade_days": 25},
+  {"id": "the-shakes", "name": "the shakes under strain", "weight": 2, "harder": "aim|shoot|pick|steady|sew|lockpick|throw", "seen": "The hands shake when things turn tense, and the character hides them.", "fade_days": 20},
+  {"id": "drink", "name": "a thirst for drink to steady the nerves", "weight": 2, "harder": "resist|refuse|keep a clear head|stay sober", "seen": "Reaches for a cup before noon, and keeps a flask close.", "fade_days": 40}
+ ]
+}

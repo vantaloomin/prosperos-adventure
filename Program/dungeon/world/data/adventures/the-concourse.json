@@ -1,0 +1,50 @@
+{
+  "quests": [
+    {
+      "id": "the-name-off-the-roll",
+      "title": "The name off the Roll",
+      "known": true,
+      "days": 3,
+      "hook": "Two who came through with the last wave are not on the Roll. The scrivener has searched it twice for a Talent a time. Darla Kinney says the missing come down one floor off, almost always up, on Varrow, and offers a bed at the Landing while the search is planned.",
+      "truth": "Darla doesn't know where the missing are. She says Varrow to keep a useful arrival under her roof and in her debt overnight. The missing two came down on the Gilded Bazaar, three floors up, unranked, with almost nothing, in the one city built on pricing bodies and desire. Rumor of them runs down the cage traffic, and the scrivener will say who else has asked, for more.",
+      "missed": "Three days, and the last wave stopped asking after its missing. A bounty notice with their descriptions came down the chain from the Bazaar's crier post: not to find them, to sell them.",
+      "places": [
+        "the-waystone",
+        "the-scriveners-stall",
+        "the-landing",
+        "the-tap-and-tally",
+        "the-gate-arch"
+      ]
+    },
+    {
+      "id": "the-sallis-terms",
+      "title": "Sallis's first week",
+      "known": true,
+      "days": 7,
+      "hook": "Ivo Sallis lends Talents against what an arrival will be worth, at terms that are fair the first week. Half the pallets at the Pallet House are his paper. A girl there says her brother missed a payment and went up the Stair with two men she didn't know.",
+      "truth": "After the first week Sallis's rate doubles, and a debt a month old is copied out and sold up the chain to the Gilded Bazaar's crier post, where the Lantern Room buys the paper of anyone young and pretty enough. The brother was sold to a carry crew to work it off on the Stair. Sallis keeps the originals in a strongbox under his counting table and is careful to break no law of the Concourse.",
+      "missed": "The week ran out. Sallis's rate doubled, and the girl's paper went up the chain with the next cage.",
+      "places": [
+        "sallis-counting-house",
+        "the-pallet-house",
+        "the-porters-yard",
+        "the-gate-tea-stall"
+      ]
+    },
+    {
+      "id": "what-hamid-saw",
+      "title": "What Hamid saw",
+      "known": false,
+      "days": null,
+      "hook": "Hamid won't serve anyone with a white ring in their eyes, and the Landing's quartermaster reaches for her hammer at the sight of one.",
+      "truth": "Three years ago Hamid saw the last man with white-ringed eyes, Teague, go up the Stair with Darla Kinney's people. Darla came down. Teague did not. Ruth Ann Teel watched his eyes over the Landing's cookfire for two years before he did what he did, and wants to be believed about it. Sister Pia wants someone to make Darla answer.",
+      "missed": "",
+      "places": [
+        "hamids-cart",
+        "the-landing",
+        "the-gate-arch"
+      ]
+    }
+  ],
+  "dangers": []
+}

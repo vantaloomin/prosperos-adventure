@@ -1,0 +1,57 @@
+name: Release notes
+
+# Updates already published releases from main: the notes from Program/docs/releases/<tag>.md (for
+# example to warn about a bug in an older version), or the title from Program/docs/releases/titles.json.
+# Nothing else about the release changes.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: Releases to update, separated by spaces (for example "v0.1.0 v0.1.1")
+        type: string
+        required: true
+      update:
+        description: What to update
+        type: choice
+        options: [notes, title, notes and title]
+        default: notes
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: Program/docs/releases
+      - name: Update the releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAGS: ${{ inputs.tags }}
+          UPDATE: ${{ inputs.update }}
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then echo "Release notes are updated from main only." >&2; exit 1; fi
+          for tag in $TAGS; do
+            case "$tag" in v[0-9]*.[0-9]*.[0-9]*) ;; *) echo "Not a release tag: $tag" >&2; exit 1 ;; esac
+            args=()
+            if [ "$UPDATE" != "title" ]; then
+              notes="Program/docs/releases/$tag.md"
+              test -f "$notes" || { echo "Missing $notes" >&2; exit 1; }
+              args+=(--notes-file "$notes")
+            fi
+            if [ "$UPDATE" != "notes" ]; then
+              minor="${tag#v}"; minor="${minor%.*}"
+              title=$(jq -r --arg minor "$minor" '.[$minor] // empty' Program/docs/releases/titles.json)
+              test -n "$title" || { echo "No title for $minor in Program/docs/releases/titles.json" >&2; exit 1; }
+              args+=(--title "$tag: $title")
+            fi
+            gh release edit "$tag" --repo "$GITHUB_REPOSITORY" "${args[@]}"
+            echo "Updated $tag"
+          done

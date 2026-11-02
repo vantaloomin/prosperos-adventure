@@ -1,0 +1,794 @@
+{
+ "about": "Personality sliders (dungeon/world/personality.py): five traits, each low, in between or high, in plain words. `shows` is what the form says under each stop, `model` what the chat prompt gets (nothing for in between), `keywords` the words in a character idea that settle a trait, and `implies` which slider pole a perception bank entry (dungeon/world/data/perception.json) speaks to, so entries that clash with a slider are not drawn.",
+ "traits": [
+  {
+   "key": "social",
+   "name": "How social",
+   "low": "Reserved",
+   "high": "Outgoing",
+   "shows": [
+    "Recharges alone; messages are short until they know you.",
+    "Fine in a group, happy at home too.",
+    "Talks first, fills silences, plans the get-together."
+   ],
+   "model": [
+    "Needs time alone to recharge, keeps messages brief with people they are still getting to know, rarely starts group plans.",
+    "",
+    "Starts conversations easily, fills silences, is usually the one who suggests getting together."
+   ],
+   "keywords": {
+    "low": [
+     "shy",
+     "introvert",
+     "introverted",
+     "reserved",
+     "quiet",
+     "private",
+     "withdrawn",
+     "loner",
+     "homebody",
+     "solitary",
+     "taciturn",
+     "aloof",
+     "keeps to themselves",
+     "keeps to herself",
+     "keeps to himself",
+     "wallflower",
+     "reclusive",
+     "retiring",
+     "standoffish"
+    ],
+    "high": [
+     "outgoing",
+     "extrovert",
+     "extroverted",
+     "extravert",
+     "extraverted",
+     "bubbly",
+     "chatty",
+     "sociable",
+     "social butterfly",
+     "gregarious",
+     "talkative",
+     "life of the party",
+     "boisterous",
+     "party animal",
+     "loves a crowd",
+     "people person",
+     "vivacious"
+    ]
+   }
+  },
+  {
+   "key": "warmth",
+   "name": "How they come across",
+   "low": "Blunt",
+   "high": "Warm",
+   "shows": [
+    "Says what they think, even when it stings.",
+    "Kind, but will push back.",
+    "Gives the benefit of the doubt, smooths things over."
+   ],
+   "model": [
+    "Says what they think even when it stings, argues a point rather than letting it go.",
+    "",
+    "Gives people the benefit of the doubt, smooths over tension, apologises first."
+   ],
+   "keywords": {
+    "low": [
+     "blunt",
+     "abrasive",
+     "prickly",
+     "grumpy",
+     "gruff",
+     "cold",
+     "sarcastic",
+     "cynical",
+     "contrary",
+     "harsh",
+     "rude",
+     "combative",
+     "argumentative",
+     "brusque",
+     "acerbic",
+     "caustic",
+     "curmudgeon",
+     "curmudgeonly",
+     "surly",
+     "cantankerous",
+     "sharp-tongued",
+     "no-nonsense"
+    ],
+    "high": [
+     "kind",
+     "sweet",
+     "gentle",
+     "caring",
+     "warm",
+     "nurturing",
+     "compassionate",
+     "tender",
+     "soft-hearted",
+     "kindhearted",
+     "kind-hearted",
+     "agreeable",
+     "considerate",
+     "accommodating",
+     "good-natured",
+     "sweet-natured",
+     "big-hearted",
+     "warmhearted",
+     "warm-hearted",
+     "empathetic",
+     "forgiving",
+     "motherly",
+     "fatherly"
+    ]
+   }
+  },
+  {
+   "key": "order",
+   "name": "How they run their life",
+   "low": "Goes with the flow",
+   "high": "Organized",
+   "shows": [
+    "Late, spontaneous, plans change on a whim.",
+    "Keeps the important things on track.",
+    "Lists, calendars, never misses a promise."
+   ],
+   "model": [
+    "Runs late, decides on the spot, lets small promises slide.",
+    "",
+    "Keeps lists and a calendar, follows through on every promise, dislikes last-minute changes."
+   ],
+   "keywords": {
+    "low": [
+     "spontaneous",
+     "disorganized",
+     "disorganised",
+     "scatterbrained",
+     "scatter-brained",
+     "chaotic",
+     "carefree",
+     "messy",
+     "impulsive",
+     "forgetful",
+     "flaky",
+     "haphazard",
+     "always late",
+     "perpetually late",
+     "free spirit",
+     "free-spirited",
+     "happy-go-lucky",
+     "devil-may-care",
+     "unreliable",
+     "lazy"
+    ],
+    "high": [
+     "organized",
+     "organised",
+     "meticulous",
+     "punctual",
+     "disciplined",
+     "tidy",
+     "methodical",
+     "orderly",
+     "dependable",
+     "reliable",
+     "perfectionist",
+     "structured",
+     "conscientious",
+     "diligent",
+     "neat freak",
+     "type a",
+     "type-a",
+     "list-maker",
+     "list maker",
+     "always on time",
+     "hardworking",
+     "hard-working",
+     "responsible"
+    ]
+   }
+  },
+  {
+   "key": "curiosity",
+   "name": "How curious",
+   "low": "Sticks to what they know",
+   "high": "Tries anything",
+   "shows": [
+    "Same café, same order, likes it that way.",
+    "Open to new things now and then.",
+    "New hobby every month, asks a lot of questions."
+   ],
+   "model": [
+    "Prefers familiar places and routines, is wary of new ideas until they are proven.",
+    "",
+    "Picks up new hobbies, asks lots of questions, gets excited by unusual ideas."
+   ],
+   "keywords": {
+    "low": [
+     "traditional",
+     "set in their ways",
+     "set in her ways",
+     "set in his ways",
+     "conventional",
+     "old-fashioned",
+     "creature of habit",
+     "stuck in their ways",
+     "conservative",
+     "unadventurous",
+     "routine-loving",
+     "predictable",
+     "old school",
+     "old-school"
+    ],
+    "high": [
+     "curious",
+     "adventurous",
+     "creative",
+     "inquisitive",
+     "restless",
+     "imaginative",
+     "artsy",
+     "artistic",
+     "open-minded",
+     "experimental",
+     "eccentric",
+     "quirky",
+     "thrill-seeker",
+     "thrill seeker",
+     "explorer",
+     "wanderlust",
+     "daring",
+     "unconventional",
+     "bohemian",
+     "free-thinking",
+     "polymath"
+    ]
+   }
+  },
+  {
+   "key": "stress",
+   "name": "How they handle stress",
+   "low": "Steady",
+   "high": "Feels everything",
+   "shows": [
+    "Hard to rattle; bad news rolls off.",
+    "Has off days like anyone.",
+    "Big highs and lows, worries out loud."
+   ],
+   "model": [
+    "Stays calm under pressure, rarely worries, bounces back fast from bad news.",
+    "",
+    "Feels highs and lows strongly, worries out loud, needs reassurance after a bad day."
+   ],
+   "keywords": {
+    "low": [
+     "calm",
+     "steady",
+     "unflappable",
+     "stoic",
+     "laid-back",
+     "laid back",
+     "easygoing",
+     "easy-going",
+     "even-keeled",
+     "relaxed",
+     "composed",
+     "chill",
+     "unbothered",
+     "mellow",
+     "level-headed",
+     "levelheaded",
+     "unshakeable",
+     "unshakable",
+     "serene",
+     "cool-headed",
+     "zen"
+    ],
+    "high": [
+     "anxious",
+     "sensitive",
+     "emotional",
+     "moody",
+     "worrier",
+     "nervous",
+     "overthinker",
+     "overthinks",
+     "overthinking",
+     "dramatic",
+     "volatile",
+     "high-strung",
+     "highly strung",
+     "insecure",
+     "temperamental",
+     "neurotic",
+     "jittery",
+     "hot-headed",
+     "hotheaded",
+     "fiery",
+     "thin-skinned",
+     "emotionally intense",
+     "a worrier",
+     "frets"
+    ]
+   }
+  }
+ ],
+ "implies": {
+  "temperament": {
+   "warm": {
+    "warmth": "high"
+   },
+   "gruff": {
+    "warmth": "low"
+   },
+   "shy": {
+    "social": "low"
+   },
+   "chatty": {
+    "social": "high"
+   },
+   "cheerful": {
+    "stress": "low"
+   },
+   "anxious": {
+    "stress": "high"
+   },
+   "easygoing": {
+    "stress": "low"
+   },
+   "driven": {
+    "order": "high"
+   },
+   "dreamy": {
+    "order": "low"
+   },
+   "gentle": {
+    "warmth": "high"
+   },
+   "prickly": {
+    "warmth": "low"
+   },
+   "blunt": {
+    "warmth": "low"
+   },
+   "guarded": {
+    "social": "low"
+   },
+   "curious": {
+    "curiosity": "high"
+   },
+   "fussy": {
+    "order": "high"
+   },
+   "stoic": {
+    "stress": "low"
+   },
+   "breezy": {
+    "stress": "low"
+   },
+   "inventive": {
+    "curiosity": "high"
+   },
+   "considerate": {
+    "warmth": "high"
+   },
+   "jovial": {
+    "social": "high"
+   },
+   "reserved": {
+    "social": "low"
+   },
+   "patient": {
+    "stress": "low"
+   },
+   "restless": {
+    "curiosity": "high"
+   },
+   "theatrical": {
+    "social": "high"
+   },
+   "tactful": {
+    "warmth": "high"
+   },
+   "skeptical": {
+    "curiosity": "low"
+   },
+   "spontaneous": {
+    "order": "low"
+   },
+   "fiery": {
+    "stress": "high"
+   },
+   "aloof": {
+    "social": "low"
+   },
+   "whimsical": {
+    "curiosity": "high"
+   },
+   "gloomy": {
+    "stress": "high"
+   },
+   "cagey": {
+    "social": "low"
+   },
+   "taciturn": {
+    "social": "low"
+   },
+   "flustered": {
+    "stress": "high"
+   },
+   "steady": {
+    "stress": "low"
+   },
+   "worldly": {
+    "curiosity": "high"
+   },
+   "cynical": {
+    "warmth": "low"
+   },
+   "gracious": {
+    "warmth": "high"
+   },
+   "composed": {
+    "stress": "low"
+   },
+   "boisterous": {
+    "social": "high"
+   },
+   "methodical": {
+    "order": "high"
+   },
+   "moody": {
+    "stress": "high"
+   },
+   "stern": {
+    "warmth": "low"
+   },
+   "philosophical": {
+    "curiosity": "high"
+   },
+   "effusive": {
+    "social": "high"
+   },
+   "cautious": {
+    "curiosity": "low"
+   },
+   "solitary": {
+    "social": "low"
+   },
+   "charming": {
+    "social": "high"
+   },
+   "doting": {
+    "warmth": "high"
+   },
+   "eccentric": {
+    "curiosity": "high"
+   },
+   "brash": {
+    "warmth": "low"
+   },
+   "peaceable": {
+    "warmth": "high"
+   },
+   "dutiful": {
+    "order": "high"
+   },
+   "excitable": {
+    "stress": "high"
+   },
+   "contrary": {
+    "warmth": "low"
+   },
+   "apologetic": {
+    "warmth": "high"
+   },
+   "generous": {
+    "warmth": "high"
+   },
+   "trusting": {
+    "warmth": "high"
+   },
+   "industrious": {
+    "order": "high"
+   },
+   "confident": {
+    "stress": "low"
+   }
+  },
+  "flaw": {
+   "procrastinator": {
+    "order": "low"
+   },
+   "spender": {
+    "order": "low"
+   },
+   "temper": {
+    "stress": "high"
+   },
+   "doubter": {
+    "stress": "high"
+   },
+   "pleaser": {
+    "warmth": "high"
+   },
+   "jealous": {
+    "stress": "high"
+   },
+   "scattered": {
+    "order": "low"
+   },
+   "reckless": {
+    "order": "low"
+   },
+   "tardy": {
+    "order": "low"
+   },
+   "worrier": {
+    "stress": "high"
+   },
+   "perfectionist": {
+    "order": "high"
+   },
+   "idle": {
+    "order": "low"
+   },
+   "interrupter": {
+    "social": "high"
+   },
+   "messy": {
+    "order": "low"
+   },
+   "sarcastic": {
+    "warmth": "low"
+   },
+   "judgmental": {
+    "warmth": "low"
+   },
+   "secretive": {
+    "social": "low"
+   },
+   "routine-bound": {
+    "curiosity": "low"
+   },
+   "dabbler": {
+    "curiosity": "high"
+   },
+   "drama": {
+    "stress": "high"
+   },
+   "corner-cutter": {
+    "order": "low"
+   },
+   "nitpicker": {
+    "order": "high"
+   },
+   "arguer": {
+    "warmth": "low"
+   },
+   "workaholic": {
+    "order": "high"
+   },
+   "flaky": {
+    "order": "low"
+   },
+   "attention-seeker": {
+    "social": "high"
+   },
+   "drifter": {
+    "order": "low"
+   },
+   "freezes": {
+    "stress": "high"
+   },
+   "past-dweller": {
+    "curiosity": "low"
+   },
+   "loud": {
+    "social": "high"
+   },
+   "never-sorry": {
+    "warmth": "low"
+   },
+   "stickler": {
+    "order": "high"
+   },
+   "complacent": {
+    "curiosity": "low"
+   },
+   "naysayer": {
+    "curiosity": "low"
+   },
+   "stingy-praise": {
+    "warmth": "low"
+   },
+   "plays-safe": {
+    "curiosity": "low"
+   }
+  },
+  "tell": {
+   "always-early": {
+    "order": "high"
+   },
+   "always-late": {
+    "order": "low"
+   },
+   "makes-lists": {
+    "order": "high"
+   },
+   "double-checks": {
+    "order": "high"
+   },
+   "keeps-notebook": {
+    "order": "high"
+   },
+   "tidies-others": {
+    "order": "high"
+   },
+   "worst-case": {
+    "stress": "high"
+   },
+   "bites-nails": {
+    "stress": "high"
+   },
+   "paces": {
+    "stress": "high"
+   },
+   "fidgets": {
+    "stress": "high"
+   },
+   "over-apologizes": {
+    "warmth": "high"
+   },
+   "blunt-truths": {
+    "warmth": "low"
+   },
+   "quiet-in-groups": {
+    "social": "low"
+   },
+   "leaves-quietly": {
+    "social": "low"
+   },
+   "makes-entrance": {
+    "social": "high"
+   },
+   "loud-voice": {
+    "social": "high"
+   },
+   "big-laugh": {
+    "social": "high"
+   },
+   "waves-at-everyone": {
+    "social": "high"
+   },
+   "gives-nicknames": {
+    "social": "high"
+   },
+   "feeds-everyone": {
+    "warmth": "high"
+   },
+   "remembers-birthdays": {
+    "warmth": "high"
+   },
+   "small-gifts": {
+    "warmth": "high"
+   },
+   "asks-questions": {
+    "curiosity": "high"
+   },
+   "tangents": {
+    "curiosity": "high"
+   },
+   "cleans-when-upset": {
+    "stress": "high"
+   },
+   "long-goodbyes": {
+    "social": "high"
+   },
+   "fusses-health": {
+    "stress": "high"
+   },
+   "rescues-insects": {
+    "warmth": "high"
+   },
+   "collects-strays": {
+    "warmth": "high"
+   },
+   "old-sayings": {
+    "curiosity": "low"
+   },
+   "up-at-dawn": {
+    "order": "high"
+   },
+   "knows-everyones-business": {
+    "social": "high"
+   }
+  },
+  "self_story": {
+   "sensible-one": {
+    "order": "high"
+   },
+   "peacemaker": {
+    "warmth": "high"
+   },
+   "free-spirit": {
+    "order": "low"
+   },
+   "outsider": {
+    "social": "low"
+   },
+   "planner": {
+    "order": "high"
+   },
+   "rule-follower": {
+    "order": "high"
+   },
+   "lifelong-learner": {
+    "curiosity": "high"
+   },
+   "simple-tastes": {
+    "curiosity": "low"
+   },
+   "calm-in-a-crisis": {
+    "stress": "low"
+   },
+   "life-of-the-party": {
+    "social": "high"
+   },
+   "homebody": {
+    "social": "low"
+   },
+   "born-worrier": {
+    "stress": "high"
+   },
+   "slow-and-steady": {
+    "stress": "low"
+   },
+   "endlessly-curious": {
+    "curiosity": "high"
+   },
+   "spur-of-the-moment": {
+    "order": "low"
+   },
+   "thick-skinned": {
+    "stress": "low"
+   },
+   "soft-heart": {
+    "warmth": "high"
+   },
+   "straight-talker": {
+    "warmth": "low"
+   },
+   "tradition-keeper": {
+    "curiosity": "low"
+   },
+   "wanderer": {
+    "curiosity": "high"
+   },
+   "the-host": {
+    "social": "high"
+   },
+   "caretaker": {
+    "warmth": "high"
+   },
+   "generous-one": {
+    "warmth": "high"
+   },
+   "forgiving-one": {
+    "warmth": "high"
+   },
+   "perfectionist": {
+    "order": "high"
+   },
+   "good-neighbour": {
+    "warmth": "high"
+   },
+   "builds-to-last": {
+    "order": "high"
+   }
+  }
+ }
+}

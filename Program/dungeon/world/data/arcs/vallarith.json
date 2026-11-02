@@ -1,0 +1,52 @@
+{
+ "about": "Vallarith's Post-Reform arcs for the director (dungeon/director.py), from dungeon/world/packages/vallarith/beats.json and hidden-truths.json. Each stage has its tier, what the world knows of it (truth), a seed the narrator may plant, and how it reaches a character who is not there (word). Drafts for Vanta to keep, change or cut.",
+ "world": "vallarith",
+ "era": "post-reform",
+ "default_spine": "the-eight-pieces",
+ "arcs": [
+  {
+   "id": "the-eight-pieces",
+   "name": "The Eight Pieces",
+   "seen": "Something about the Heartwood contract is wrong, and the Cyrel buyer wants the grove down too badly.",
+   "words": ["heartwood", "gannet", "pryce", "mammon", "asmodeus", "roots", "grove", "rook", "contract", "infernal", "cult"],
+   "quests": ["the-heartwood-contract"],
+   "antagonist": {"name": "Gannet & Pryce's agent", "agenda": "to see the Heartwood felled before the wardens or the shrine can stop it, and to buy whoever stands in the way", "where": ["kingswood", "cyrel"]},
+   "stages": [
+    {"tier": 1, "truth": "Under the Heartwood an arm of Asmodeus lies held by the roots, and Gannet & Pryce, who are paying for the felling, are a Mammon cult front.", "seed": "A root cut at the edge of the grove bleeds dark sap that smells of hot iron.", "word": "Felling crews say the Heartwood's roots bleed when cut."},
+    {"tier": 2, "truth": "Gannet & Pryce send a second buyer to Kingswood with gold for the reeve, and a contract signed in old infernal ink.", "seed": "A Gannet & Pryce contract on a table: the ink is brown and the signatures do not dry.", "word": "A clerk from Cyrel is buying drinks for the reeve's men, and paying in new gold."},
+    {"tier": 3, "truth": "A Hellfire cult preaches openly in an engineered city when its wards fail, and its preachers speak of the arm under the Heartwood.", "seed": "A travelling preacher draws a closed hand in the dust and asks who has seen the old trees bleed.", "word": "Word from the south: a Hellfire cult preaches in the open where the wards failed."},
+    {"tier": 4, "truth": "Another piece surfaces: an arm, in a Ley mine, and Naamah's eyes and Mephistopheles's cult race each other for it.", "seed": "A miner's token from a Ley mine, warm, with a fingermark burned into it.", "word": "A Ley mine has been closed and its miners paid to forget something."},
+    {"tier": 5, "truth": "A New God takes notice of who has been digging up the pieces of Asmodeus.", "seed": "Every shrine candle in town gutters at once, and leans toward the character.", "word": "The priests say a god is watching the roads, and none of them will say which."}
+   ]
+  },
+  {
+   "id": "the-long-border",
+   "name": "The Long Border",
+   "seen": "The Badlands are too quiet, and Bastion's soldiers are running.",
+   "words": ["bastion", "adlmyr", "unguruk", "deserter", "levy", "siege", "murga", "hollowtooth", "border", "passes", "ambry"],
+   "quests": [],
+   "antagonist": {"name": "Mister Ambry", "agenda": "a devil in clean robes, courting Murga Hollowtooth to open the passes in exchange for power, and anyone else who will sign", "where": ["adlmyr", "bastion"]},
+   "stages": [
+    {"tier": 1, "truth": "The Unguruk have stopped raiding and started building siege works at Adlmyr.", "seed": "A deserter's boots, cut from Cyrel leather, left by a cold fire: someone ran from Bastion in a hurry.", "word": "Carters from the Badlands road say the Unguruk are digging, not raiding."},
+    {"tier": 2, "truth": "Bastion's deserters flood Kingswood and Convila, and the levy officers hang the ones they catch.", "seed": "A boy with a soldier's haircut and no soldier's coat flinches at the sound of a horn.", "word": "Bastion's men are deserting by the dozen, and the levy officers are hanging them."},
+    {"tier": 2, "truth": "A polite stranger in clean robes visits the Bastion commander too, with the same offer he made Murga Hollowtooth.", "seed": "A pleasant man in robes too clean for the road asks the way to Bastion, and thanks the character by name.", "word": "A stranger in clean robes has been seen at Bastion, and again at Adlmyr."},
+    {"tier": 3, "truth": "Unguruk opens the passes, or does not; whichever Murga chose, the border will not be the same.", "seed": "Smoke on the Badlands horizon, in a line, like a road being lit.", "word": "The passes are open, or about to be: nobody agrees which, and everyone is packing."}
+   ]
+  },
+  {
+   "id": "the-failing-wards",
+   "name": "The Failing Wards",
+   "seen": "The old ward-stones at the Abandoned Keep are failing, and something on the other side knows it.",
+   "words": ["keep", "ward", "wards", "ward-stone", "gnoll", "gnolls", "haggoth", "scar", "portal", "xiloscient", "himo"],
+   "quests": [],
+   "antagonist": {"name": "Haggoth's gnoll-priests", "agenda": "to leave offerings at the portal scar until the last ward-stone cracks and the door opens again", "where": ["abandoned-keep", "adlmyr"]},
+   "stages": [
+    {"tier": 1, "truth": "Gnolls have begun leaving offerings at the portal scar under the Abandoned Keep.", "seed": "Bones tied with red cord, hung from a thorn on the keep road, all pointing the same way.", "word": "Shepherds near the keep say someone is leaving bones on the thorns."},
+    {"tier": 2, "truth": "A Kingswood elder pays in secret to have the ward-stones renewed, knowing the keep was built over the door Himo Xiloscient let open.", "seed": "An old Kingswood charter with a page cut out, and the name Xiloscient scratched from the stone beside the green.", "word": "Someone in Kingswood is paying stonecutters to go out to the keep, and paying them to keep quiet."},
+    {"tier": 3, "truth": "Brynwyr wardens arrive at the keep and will not say why.", "seed": "Grey-fletched arrows in the keep's old gate, pointing outward.", "word": "Elves have been seen at the Abandoned Keep, standing guard."},
+    {"tier": 3, "truth": "The portal scar is warm in summer now, and the ground around the keep hums at night.", "seed": "The stones of the keep road are warm at midnight, and the frost will not settle on them.", "word": "The ground at the keep is warm, and nothing grows on it."},
+    {"tier": 4, "truth": "Something comes through.", "seed": "Every dog in Kingswood howls toward the west at the same moment, and then stops.", "word": "Something has come through at the keep. The shepherds have left the hills."}
+   ]
+  }
+ ]
+}

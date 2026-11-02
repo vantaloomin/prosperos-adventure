@@ -1,0 +1,81 @@
+{
+  "quests": [
+    {
+      "id": "the-heartwood-contract",
+      "title": "The Heartwood contract",
+      "known": true,
+      "days": 7,
+      "hook": "The Timber Guild's factor has posted a contract on the green: double wages for crews to cross the border stones and fell the old trees of the Heartwood. The first crews go in a week from now. Grey-fletched arrows have started turning up on bunks in Cutters' Camp.",
+      "truth": "The Heartwood stands on a convergence of the Ley, and under it, held down by the grove's roots, lies one of the eight buried pieces of Asmodeus: an arm. The buyer in Cyrel paying the Guild for the cutting rights, the timber house of Gannet & Pryce, is a front for a cult of Mammon that wants the roots gone. Fell the grove and the arm starts to work loose, and Hell takes notice. Ilse Rook, Mother Rook at the shrine, knows what lies under the trees. The wardens of Brynwyr have sent word through Sereth that if one tree past the stones falls, they will burn Cutters' Camp with the crews asleep in it. Aldous Marr, the reeve, knows of the threat and has told nobody. Hesk Varro needs the contract to pay his own debt to the Guild.",
+      "missed": "The crews went past the stones on the seventh morning. That night the wardens burned Cutters' Camp; the bunkhouses went up with men inside, and Kingswood is counting its dead.",
+      "places": [
+        "guild-factor",
+        "the-green",
+        "bunkhouses",
+        "shrine-of-tidum",
+        "border-stones",
+        "the-heartwood"
+      ]
+    },
+    {
+      "id": "the-wardens-eyes",
+      "title": "The wardens' eyes",
+      "known": false,
+      "days": null,
+      "hook": "Someone in Kingswood tells the wardens who signs on with the crews.",
+      "truth": "Sereth of the Ford passes the names of everyone who signs the Heartwood contract to the wardens, in herb bundles left at the border stones. Bram Tolley half suspects them and has no proof.",
+      "missed": "",
+      "places": [
+        "crossroads-market",
+        "border-stones"
+      ]
+    }
+  ],
+  "dangers": [
+    {
+      "place": "border-stones",
+      "action": "stay clear of the wardens' watch on the stones",
+      "difficulty": "normal",
+      "threats": [
+        "A grey-fletched arrow thuds into the stone beside them: a warning, the first and last.",
+        "Someone on the far side has seen them, and will remember the face.",
+        "A snare in the leaf litter bites into an ankle."
+      ]
+    },
+    {
+      "place": "the-heartwood",
+      "action": "come through the Heartwood unharmed",
+      "difficulty": "hard",
+      "threats": [
+        "The ground hums, and for a moment they cannot remember which way the stones are.",
+        {
+          "text": "Wardens close in among the trees, unseen, bows drawn.",
+          "foe": {
+            "name": "warden of Brynwyr",
+            "count": 2,
+            "vitality": 12,
+            "resolve": 12,
+            "weapon": 1,
+            "wants": "capture",
+            "ranged": true,
+            "zone": "far"
+          }
+        },
+        {
+          "text": "A boar the size of a cart, ley-fat and mad, comes out of the undergrowth.",
+          "foe": {
+            "name": "ley-mad boar",
+            "srd52": "giant-boar",
+            "count": 1,
+            "vitality": 16,
+            "resolve": 16,
+            "weapon": 1,
+            "wants": "kill"
+          }
+        },
+        "The trail they came by is gone; the trees stand where it was.",
+        "A cut on the hand will not stop bleeding, and the blood smells of sap."
+      ]
+    }
+  ]
+}

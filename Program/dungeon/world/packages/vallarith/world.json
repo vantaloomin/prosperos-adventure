@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "id": "vallarith",
+  "name": "Vallarith",
+  "status": "draft",
+  "genre": "grimdark high fantasy",
+  "pitch": "A brutal continent where magic is a physical current anyone can be cut off from, the old gods are gone, the new ones are a few lifetimes old, the dragons cannot breed, and the whole world was rebuilt as a prison for the King of Hell.",
+  "default_ruleset": "marvel",
+  "calendar": {
+    "note": "Years count on from the Age of Dragons without resetting; each era has its own suffix. The Age of Magic and the Age of Man overlap from 2984 to 3000.",
+    "eras": [
+      {
+        "id": "aod",
+        "name": "Age of Dragons",
+        "suffix": "AOD",
+        "start": 1,
+        "end": 750,
+        "opened_by": "The death of Ghondiir, God King of Dragons"
+      },
+      {
+        "id": "aom",
+        "name": "Age of Magic",
+        "suffix": "AOM",
+        "start": 1001,
+        "end": 3000,
+        "opened_by": null
+      },
+      {
+        "id": "bom",
+        "name": "Age of Man",
+        "suffix": "BOM",
+        "start": 2984,
+        "end": 3135,
+        "opened_by": "The founding of the Brotherhood of Man"
+      },
+      {
+        "id": "rfm",
+        "name": "Reformation",
+        "suffix": "RFM",
+        "start": 3136,
+        "end": null,
+        "opened_by": "The New Gods remake the world as a prison for Asmodeus"
+      }
+    ],
+    "campaign_eras": {
+      "note": "Vanta, 2026-10-21: one world, three times to play in. Entries carry an 'eras' list (missing means all three) and 'by_era' notes where a fact changes. See canon/eras.md.",
+      "default": "post-reform",
+      "eras": [
+        {
+          "id": "pre-reform",
+          "name": "Pre-Reform",
+          "start_year": 2750,
+          "suffix": "AOM",
+          "origin": "source",
+          "summary": "The Age of Magic, about 230 years before the Brotherhood. The cities are settled, the Ley flows free and unlicensed, the Old Gods are fading, Adlmyr still holds the Badlands line, and nobody has heard of the Brotherhood yet."
+        },
+        {
+          "id": "brotherhood",
+          "name": "The Brotherhood Years",
+          "start_year": 3121,
+          "suffix": "BOM",
+          "origin": "source",
+          "summary": "The Dam has stood for over a century. Magic is licensed by brooch, cities live on Brotherhood crystal, and the first devils are signing deals at war-fires. The future New Gods are still mortal adventurers."
+        },
+        {
+          "id": "post-reform",
+          "name": "Post-Reform",
+          "start_year": 3436,
+          "years_after_reformation": 300,
+          "suffix": "RFM",
+          "origin": "source",
+          "summary": "About 300 years after the Reformation. The New Gods are young, the old Brotherhood is a half-remembered scandal, and Mistress Sara has quietly revived it in Trein."
+        }
+      ]
+    }
+  },
+  "currency": {
+    "origin": "draft",
+    "note": "Matches the Kingswood slice (silver crowns). Denominations are a proposal. Obirykan prices in Ley crystal, and Badlands tribes trade in kind.",
+    "base": "crown",
+    "denominations": [
+      {
+        "id": "sovereign",
+        "name": "gold sovereign",
+        "crowns": 20
+      },
+      {
+        "id": "crown",
+        "name": "silver crown",
+        "crowns": 1
+      },
+      {
+        "id": "penny",
+        "name": "copper penny",
+        "per_crown": 12
+      }
+    ],
+    "regional": [
+      {
+        "region": "etryona",
+        "medium": "Ley crystal, graded by size and clarity"
+      },
+      {
+        "region": "badlands",
+        "medium": "barter: water, salt, iron, slaves and favors"
+      }
+    ]
+  },
+  "tiers": {
+    "track": "renown",
+    "defaults": {
+      "start": "local",
+      "ceiling": "mythic",
+      "pace": "slow"
+    },
+    "note": "Classic arc: Kingswood loggers' quarrels at the start, Eternal Dragons, archdevils and the Source Font at the top. Ascension at the Source Font is the literal Mythic ceiling."
+  },
+  "progression": {
+    "origin": "draft",
+    "tracks": [
+      {
+        "id": "renown",
+        "type": "Reputation",
+        "name": "Renown",
+        "sets_tier": true,
+        "note": "How far your name has travelled, and in whose mouths. Tracked per realm as well as overall."
+      },
+      {
+        "id": "marvel-growth",
+        "type": "use-based",
+        "name": "Prospero growth",
+        "note": "The engine default: stats used under pressure are marked and rolled at rest."
+      },
+      {
+        "id": "milestones",
+        "type": "Milestones",
+        "name": "Deeds",
+        "note": "Named deeds (first kill, first contract refused, first Font touched) grant the bigger boosts."
+      },
+      {
+        "id": "infernal-debt",
+        "type": "Corruption",
+        "name": "Infernal debt",
+        "dark": true,
+        "note": "Devils deal in contracts. Every clause signed grants power and a lien; thresholds mark the body, draw collectors and can end with the soul foreclosed."
+      },
+      {
+        "id": "ley-scarring",
+        "type": "Corruption",
+        "name": "Ley scarring",
+        "dark": true,
+        "note": "Burning crystallized Ley or channelling past your limit. Grants raw power; thresholds bring crystal growths in the flesh, Ley-sickness and finally coming apart into the current."
+      },
+      {
+        "id": "wealth",
+        "type": "Wealth",
+        "name": "Wealth",
+        "note": "Read from the economy."
+      }
+    ]
+  },
+  "death_rule": "Death is always possible and always final on that branch. Recovery is by branching back to an earlier turn, with new dice.",
+  "intensity_defaults": {
+    "preset": "unflinching",
+    "levels": {
+      "violence": "unflinching",
+      "sex": "unflinching",
+      "horror": "unflinching",
+      "cruelty": "unflinching",
+      "drugs": "mature"
+    },
+    "veils": [],
+    "note": "Vallarith is the grimdark world. Drugs sit at mature only because the source has little on them; raise freely."
+  },
+  "tone": {
+    "voice": "grim",
+    "drama": "eventful",
+    "note": "See canon/tone-and-house-rules.md."
+  },
+  "theme": {
+    "name": "Ember and soot",
+    "palette": {
+      "accent": "#c4623f",
+      "background": "#15110e",
+      "surface": "#1d1814",
+      "text": "#e8ddcb"
+    }
+  },
+  "personas": {
+    "custom_allowed": true,
+    "file": "personas.json"
+  },
+  "starting_place": {
+    "settlement": "kingswood",
+    "era": "post-reform",
+    "note": "The Milestone 1 slice town. Its authoritative data is Program/dungeon/world/data/cities/kingswood.json."
+  },
+  "assets": {
+    "maps": [
+      {
+        "id": "known-world",
+        "file": "assets/maps/vallarith.jpg",
+        "title": "The Known World",
+        "note": "Reference map for all map positions in this package."
+      },
+      {
+        "id": "ley-line",
+        "file": "assets/maps/ley-line.jpg",
+        "title": "The Ley Line",
+        "note": "The same continent on a wider sheet, with the main Ley Line and its branch currents in green."
+      }
+    ]
+  }
+}

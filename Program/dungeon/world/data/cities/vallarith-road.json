@@ -1,0 +1,1031 @@
+{
+ "schema_version": 1,
+ "id": "vallarith-road",
+ "name": "the Road",
+ "setting": "original",
+ "era": "fantasy",
+ "category": "fictional",
+ "basis": "The travel nodes of Vanta's Vallarith that are not yet built out as towns.",
+ "region": "Vallarith",
+ "country": "Vallarith",
+ "timezone": "Europe/London",
+ "aliases": [],
+ "summary": "On the road in Vallarith, between towns: a gate, an edge, a ruin to arrive at.",
+ "home": false,
+ "town_map": {
+  "style": "none"
+ },
+ "lat": 52.012,
+ "lon": -2.004,
+ "intensity": {
+  "preset": "unflinching",
+  "voice": "grim and earthy: a hard frontier where kindness costs something, power is bought, and nobody is safe because they deserve to be",
+  "drama": "eventful"
+ },
+ "currency": {
+  "code": "crown",
+  "symbol": "cr.",
+  "name": "silver crowns"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.5,
+  "horse": 10,
+  "boat": 5
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Kingswood written for Prospero's Dungeon from Vanta's Vallarith lore",
+   "license": "Vanta's own setting; all rights reserved",
+   "retrieved": "2026-10-21",
+   "note": "Drawn from Vallarith's existing lore (Kingswood, Cyrel, Brynwyr, Tidum, the Ley). Places, trades, prices and people are new."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "kingdom-of-cyrel",
+   "name": "the Kingdom of Cyrel",
+   "summary": "Cyrel and its sister towns: farmland, timber and the fortress line against the Badlands, at war with Asania more often than not.",
+   "vibe": [
+    "farmland",
+    "roads",
+    "war"
+   ],
+   "lat": 52.012,
+   "lon": -2.004,
+   "rent_tier": "low",
+   "housing": [
+    "inn-room"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kingdoms-of-man",
+   "name": "the Kingdoms of Man",
+   "summary": "The rich human kingdoms north of Cyrel: magic on every corner and marble towers paid for with crystal.",
+   "vibe": [
+    "rich",
+    "magic",
+    "crowded"
+   ],
+   "lat": 52.012,
+   "lon": -2.004,
+   "rent_tier": "low",
+   "housing": [
+    "inn-room"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "badlands",
+   "name": "the Badlands",
+   "summary": "Broken hills and dead forts past the Bastion line, held by the tribes, where the old hordes came through.",
+   "vibe": [
+    "wild",
+    "dangerous",
+    "border"
+   ],
+   "lat": 52.012,
+   "lon": -2.004,
+   "rent_tier": "low",
+   "housing": [
+    "inn-room"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wilds",
+   "name": "the wilds",
+   "summary": "Off the roads, out in the open country between the towns, wherever the walking has led.",
+   "vibe": [
+    "wild",
+    "remote",
+    "open"
+   ],
+   "lat": 52.012,
+   "lon": -2.004,
+   "rent_tier": "low",
+   "housing": [
+    "inn-room"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brynwyr-forest",
+   "name": "the forest of Brynwyr",
+   "summary": "The high elves' forest past Kingswood's border stones: closed, old and watched.",
+   "vibe": [
+    "wild",
+    "elven",
+    "closed"
+   ],
+   "lat": 52.012,
+   "lon": -2.004,
+   "rent_tier": "low",
+   "housing": [
+    "inn-room"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "convila",
+   "name": "Convila",
+   "kind": "landmark",
+   "neighborhood": "kingdom-of-cyrel",
+   "summary": "The gate of Convila. A lively town between Kingswood and Brynwyr, built on the remains of a larger, older city. Under it lies a crystalline fountain of Ley, sealed long ago by the Convila Pact and spent, or so people say. The graveyard story is a local legend about the God of the Afterlife.",
+   "tags": [
+    "travel",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the gate",
+    "the graveyard road",
+    "the market cross"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eriane",
+   "name": "Eriane",
+   "kind": "landmark",
+   "neighborhood": "kingdom-of-cyrel",
+   "summary": "The lake road into Eriane. Cyrel's larder, on a lake: farms, orchards, vineyards and breweries, loud markets and good food. Humans and halflings live side by side.",
+   "tags": [
+    "travel",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the lake market",
+    "the breweries",
+    "the orchards"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cyrel",
+   "name": "Cyrel",
+   "kind": "landmark",
+   "neighborhood": "kingdom-of-cyrel",
+   "summary": "The great gate of Cyrel. A fortress capital that has never fallen, head of a kingdom of three sister cities. At war with land-hungry Asania and holding the Badlands line through Bastion.",
+   "tags": [
+    "travel",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the great gate",
+    "the toll house",
+    "the walls"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bastion",
+   "name": "Bastion",
+   "kind": "landmark",
+   "neighborhood": "kingdom-of-cyrel",
+   "summary": "The outer yard of Bastion. The last great fortress between Cyrel and the Badlands. Scarred walls carved with the faces of old heroes, drills from dawn to dark, and a garrison that never gets enough men.",
+   "tags": [
+    "travel",
+    "regional"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the outer yard",
+    "the wall of faces",
+    "the drill ground"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mossrun",
+   "name": "Mossrun",
+   "kind": "landmark",
+   "neighborhood": "kingdom-of-cyrel",
+   "summary": "The tailings road into Mossrun. A company town in the wet mountain valleys north-east of Cyrel, where the Mossrun Expedition struck its first two veins: one of iron, one of crystallized Ley. Five generations later it is a maze of shafts and tailings feeding Cyrel, Mendle and Loch Torogh with iron and selling crystal west to Trein and Asania. The streams around it have gone metallic and the moss it",
+   "tags": [
+    "travel",
+    "regional"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the pit heads",
+    "the company store",
+    "the tailings"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "asania",
+   "name": "Asania",
+   "kind": "landmark",
+   "neighborhood": "kingdoms-of-man",
+   "summary": "The strait gate of Asania. Capital of its kingdom on the Asanian Strait. Marble towers, magic on every corner, splendor, and a war with Cyrel that never quite ends. Allied with Trein's sorcerers, wary of Wrenspire.",
+   "tags": [
+    "travel",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the strait gate",
+    "the customs house",
+    "the marble steps"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abandoned-keep",
+   "name": "The Abandoned Keep",
+   "kind": "landmark",
+   "neighborhood": "badlands",
+   "summary": "The broken gate of the ward-keep. A ward-keep in the broken hills west of Adlmyr, built by Himo Xiloscient after his stand in 251 AOD, over the place where the horde came through. Elves and Cyrel soldiers garrisoned it in turns for centuries. It was left empty when Adlmyr fell, and its wards have been fading ever since. The Kingswood branch of the Ley runs under it.",
+   "tags": [
+    "travel",
+    "realm"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the broken gate",
+    "the ward stones",
+    "the cold hall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "adlmyr",
+   "name": "Adlmyr",
+   "kind": "landmark",
+   "neighborhood": "badlands",
+   "summary": "The fallen walls of Adlmyr. Once Cyrel's pride on the Badlands border. The tribes broke its walls late in the Age of Magic, before the Brotherhood was founded, and the Unguruk tribe has held the skeleton of the fortress ever since as proof of who won. An Unguruk-held ruin.",
+   "tags": [
+    "travel",
+    "regional"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the breach",
+    "the tribal fires",
+    "the old gatehouse"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brynwyr",
+   "name": "Brynwyr",
+   "kind": "trail",
+   "neighborhood": "brynwyr-forest",
+   "summary": "The forest edge of Brynwyr. The high elves' forest stronghold on the south-western peninsula, with sylvan cities and warfaring sea-elves on the horizon. Mostly closed and calm; a restless young few wander into human lands.",
+   "tags": [
+    "travel",
+    "regional"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the first trees",
+    "the warden path",
+    "the silent glade"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-wilds",
+   "name": "the wilds",
+   "kind": "trail",
+   "neighborhood": "wilds",
+   "summary": "Out in the open country, off the roads and away from any town: the land itself, whatever it is where the walking stopped.",
+   "tags": [
+    "travel",
+    "wild"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the open ground",
+    "a sheltered hollow",
+    "a rise with a view"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "on-foot",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "Kingswood is a half hour end to end; the line is another half hour past the camp.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "logger",
+   "name": "Logger",
+   "sector": "forest",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Felling and limbing at the cutting line with a crew, paid by the tree.",
+   "themes": [
+    "the axe",
+    "falling timber",
+    "the crew",
+    "elf arrows"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "sawyer",
+   "name": "Sawyer",
+   "sector": "timber",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Feeding logs to the great blade at the mill and keeping all ten fingers.",
+   "themes": [
+    "the blade",
+    "sawdust",
+    "noise"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "teamster",
+   "name": "Teamster",
+   "sector": "timber",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Driving the ox teams that skid logs from the line to the mill pond.",
+   "themes": [
+    "oxen",
+    "mud",
+    "the skid trail"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "bargeman",
+   "name": "Bargeman",
+   "sector": "river",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Poling the timber barge down the Kingsbrook to Cyrel and back.",
+   "themes": [
+    "the river",
+    "Cyrel",
+    "smuggling"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "tally-clerk",
+   "name": "Tally clerk",
+   "sector": "guild",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Counting every board for the guild factor, and being paid to count some twice.",
+   "themes": [
+    "ledgers",
+    "the guild",
+    "skimming"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "watch-soldier",
+   "name": "Watch soldier",
+   "sector": "watch",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Standing a Cyrel soldier's watch at the post or the border stones.",
+   "themes": [
+    "the border",
+    "boredom",
+    "fear",
+    "orders"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "tanner",
+   "name": "Tanner",
+   "sector": "craft",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Working hides in the lime pits at Low Ford.",
+   "themes": [
+    "the stink",
+    "hides",
+    "cheap work"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "charcoal-burner",
+   "name": "Charcoal burner",
+   "sector": "forest",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Tending the smoking kilns day and night for the smithy and the barge.",
+   "themes": [
+    "the kilns",
+    "night watches",
+    "smoke"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "camp-cook",
+   "name": "Camp cook",
+   "sector": "food",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Feeding the crews from one pot before dawn and after dark.",
+   "themes": [
+    "the pot",
+    "the crews",
+    "gossip"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "herb-woman",
+   "name": "Herb seller",
+   "sector": "healing",
+   "schedule": "flexible",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Selling remedies, poultices and quieter things from a market stall or a back room.",
+   "themes": [
+    "herbs",
+    "cures",
+    "poisons"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "shrine-keeper",
+   "name": "Shrine keeper",
+   "sector": "faith",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Keeping Tidum's shrine, nursing the sick and burying the poor.",
+   "themes": [
+    "the shrine",
+    "the sick",
+    "the New Gods"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "tavern-hand",
+   "name": "Tavern hand",
+   "sector": "food",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Pouring, carrying and cleaning up after loggers at the Felled Oak.",
+   "themes": [
+    "ale",
+    "fights",
+    "tips"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "smith",
+   "name": "Smith",
+   "sector": "craft",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Forging axes, saw-teeth and the odd blade at Blackwood.",
+   "themes": [
+    "the forge",
+    "steel",
+    "customers"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "fighter",
+   "name": "Pit fighter",
+   "sector": "camp",
+   "schedule": "evening",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Fighting in the stump pit for coin and the crowd.",
+   "themes": [
+    "the pit",
+    "bets",
+    "bruises"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  }
+ ],
+ "work_by_gender": true,
+ "employers": [],
+ "career_hubs": [],
+ "climate": {
+  "summary": "Damp and temperate: long wet winters, mud springs, short warm summers, fogs off the brook.",
+  "months": [
+   {
+    "high_f": 40,
+    "low_f": 29,
+    "rain_days": 13,
+    "note": "Cold and wet; the line shuts in hard frost."
+   },
+   {
+    "high_f": 42,
+    "low_f": 30,
+    "rain_days": 11,
+    "note": "Raw; snow lies in the Heartwood."
+   },
+   {
+    "high_f": 49,
+    "low_f": 34,
+    "rain_days": 12,
+    "note": "Mud season; the skid trails turn to soup."
+   },
+   {
+    "high_f": 56,
+    "low_f": 38,
+    "rain_days": 11,
+    "note": "The cutting starts again."
+   },
+   {
+    "high_f": 63,
+    "low_f": 44,
+    "rain_days": 11,
+    "note": "Long days at the line; the barge runs full."
+   },
+   {
+    "high_f": 69,
+    "low_f": 50,
+    "rain_days": 10,
+    "note": "Warm; midges at the ford."
+   },
+   {
+    "high_f": 73,
+    "low_f": 54,
+    "rain_days": 9,
+    "note": "The warmest month; the mill runs late."
+   },
+   {
+    "high_f": 72,
+    "low_f": 53,
+    "rain_days": 10,
+    "note": "Heavy, thundery air."
+   },
+   {
+    "high_f": 66,
+    "low_f": 48,
+    "rain_days": 10,
+    "note": "Harvest in Eriane, wages down in Kingswood."
+   },
+   {
+    "high_f": 57,
+    "low_f": 42,
+    "rain_days": 12,
+    "note": "Leaves turn; fogs off the brook."
+   },
+   {
+    "high_f": 48,
+    "low_f": 35,
+    "rain_days": 13,
+    "note": "Dark early; fewer crews, more drinking."
+   },
+   {
+    "high_f": 42,
+    "low_f": 31,
+    "rain_days": 14,
+    "note": "Bitter; the camp half empty."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [],
+ "local_color": [],
+ "names": {
+  "mix": {
+   "cyrel": 0.84,
+   "halfling": 0.1,
+   "half-elf": 0.06
+  },
+  "groups": {
+   "cyrel": {
+    "feminine": [
+     "Hesk",
+     "Wenna",
+     "Maud",
+     "Ilse",
+     "Brannagh",
+     "Edda",
+     "Tamsin",
+     "Garra",
+     "Orla",
+     "Nell",
+     "Sabeth",
+     "Aud",
+     "Rhoswen",
+     "Kettie",
+     "Joss",
+     "Margery",
+     "Elspeth",
+     "Hild",
+     "Cass",
+     "Linnet"
+    ],
+    "masculine": [
+     "Aldous",
+     "Bram",
+     "Corin",
+     "Tobin",
+     "Garrick",
+     "Osric",
+     "Wat",
+     "Hamon",
+     "Dunstan",
+     "Piers",
+     "Rowan",
+     "Edric",
+     "Halden",
+     "Jory",
+     "Matthias",
+     "Colm",
+     "Fenwick",
+     "Ulric",
+     "Brand",
+     "Simkin"
+    ],
+    "neutral": [
+     "Ash",
+     "Wren",
+     "Rook",
+     "Linden"
+    ],
+    "family": [
+     "Marr",
+     "Varro",
+     "Tolley",
+     "Ashby",
+     "Rook",
+     "Pell",
+     "Blacklock",
+     "Hale",
+     "Thorley",
+     "Cutter",
+     "Fenn",
+     "Brook",
+     "Mossley",
+     "Grieve",
+     "Holt",
+     "Sawyer",
+     "Wainwright",
+     "Dunmore",
+     "Carrow",
+     "Stoat"
+    ]
+   },
+   "halfling": {
+    "feminine": [
+     "Pip",
+     "Marigold",
+     "Tansy",
+     "Bree"
+    ],
+    "masculine": [
+     "Dob",
+     "Hobb",
+     "Tam",
+     "Fennick"
+    ],
+    "family": [
+     "Underbough",
+     "Hollyhock",
+     "Tealeaf",
+     "Brambleway"
+    ],
+    "kind": "halfling"
+   },
+   "half-elf": {
+    "feminine": [
+     "Sereth",
+     "Ilvane",
+     "Ailsa"
+    ],
+    "masculine": [
+     "Thalen",
+     "Corvane",
+     "Emrys"
+    ],
+    "neutral": [
+     "Lirien"
+    ],
+    "family": [
+     "of the Ford",
+     "Greenhand",
+     "Mossley"
+    ],
+    "kind": "half-elf"
+   }
+  }
+ },
+ "calendar": "none",
+ "prices": [
+  {
+   "id": "ale",
+   "item": "Mug of ale",
+   "low": 0.1,
+   "high": 0.2,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stew",
+   "item": "Bowl of stew and bread",
+   "low": 0.2,
+   "high": 0.3,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "room",
+   "item": "Room at the Wayhouse",
+   "low": 1,
+   "high": 2,
+   "per": "night",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bunk",
+   "item": "Bunk in the camp",
+   "low": 0.3,
+   "high": 0.5,
+   "per": "night",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "day-wage",
+   "item": "A logger's day wage",
+   "low": 1,
+   "high": 2,
+   "per": "day",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "axe",
+   "item": "Felling axe",
+   "low": 4,
+   "high": 6,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sword",
+   "item": "Plain sword",
+   "low": 15,
+   "high": 25,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rope",
+   "item": "Rope, fifty feet",
+   "low": 0.5,
+   "high": 1,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lamp-oil",
+   "item": "Lamp oil",
+   "low": 0.2,
+   "high": 0.4,
+   "per": "flask",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "remedy",
+   "item": "Poultice or remedy",
+   "low": 0.5,
+   "high": 3,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barge-passage",
+   "item": "Passage to Cyrel on the barge",
+   "low": 1,
+   "high": 1,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pit-purse",
+   "item": "Stump-pit purse",
+   "low": 2,
+   "high": 10,
+   "per": "fight",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [],
+ "notables": []
+}

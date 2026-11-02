@@ -1,0 +1,479 @@
+{
+ "about": "Random tables (dungeon/life/deck.py, Feature Hit List #35): Prospero's Study's d100 tables (server/mechanics/defaults.json) reworded for everyday life, rolled with the same dice (dungeon/life/chance.py). `push` is the top table, after Study's Narrative Push; each of its rows names a table to roll on next (`child`), and that table's rows are what happened. The rows join the Life deck as extra cards, one picker for both: `tables_weight` in life_deck.json is how much room they take next to the cards. `from` names the Study table each one adapts. Study's tables about danger, story structure and dice mechanics (Direct Challenge, Automaton, Handling, Hooks, Arc, Scene and Thread Resolution, Clue, Vector, Boon, Consequence) have no everyday-life version here.",
+ "start": "push",
+ "tables": {
+  "push": {
+   "name": "Little pushes",
+   "from": "narrative-push",
+   "rows": [
+    {
+     "id": "push-1",
+     "low": 1,
+     "high": 15,
+     "kind": "event",
+     "child": "momentum"
+    },
+    {
+     "id": "push-2",
+     "low": 16,
+     "high": 50,
+     "kind": "event",
+     "child": "micro-friction"
+    },
+    {
+     "id": "push-3",
+     "low": 51,
+     "high": 70,
+     "kind": "event",
+     "child": "complication"
+    },
+    {
+     "id": "push-4",
+     "low": 71,
+     "high": 80,
+     "kind": "event",
+     "child": "change-of-plans"
+    },
+    {
+     "id": "push-5",
+     "low": 81,
+     "high": 88,
+     "kind": "event",
+     "child": "contact"
+    },
+    {
+     "id": "push-6",
+     "low": 89,
+     "high": 95,
+     "kind": "event",
+     "child": "find"
+    },
+    {
+     "id": "push-7",
+     "low": 96,
+     "high": 100,
+     "kind": "event",
+     "child": "odd-day"
+    }
+   ]
+  },
+  "momentum": {
+   "name": "Momentum",
+   "from": "momentum",
+   "rows": [
+    {
+     "id": "momentum-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "An opening",
+     "tone": "good",
+     "text": "Someone asked {first}'s opinion on something they actually know about.",
+     "told": "Someone asked your opinion on something you actually know about.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "momentum-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "Things fell into place",
+     "tone": "good",
+     "text": "A few small things {first} had been waiting on all came through at once.",
+     "told": "A few small things you'd been waiting on all came through at once.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "momentum-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "A good idea",
+     "tone": "good",
+     "text": "{first} had a good idea in the shower and wrote it down before it vanished.",
+     "told": "You had a good idea in the shower and wrote it down before it vanished.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "momentum-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "Easy day",
+     "tone": "good",
+     "text": "{first}'s to-do list went faster than expected.",
+     "told": "Your to-do list went faster than expected today.",
+     "drama": 0,
+     "needs": []
+    }
+   ]
+  },
+  "micro-friction": {
+   "name": "Micro-friction",
+   "from": "micro-friction",
+   "rows": [
+    {
+     "id": "micro-friction-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "Stuck lid",
+     "tone": "bad",
+     "text": "A jar lid refused to open and {first} had to fight it for five minutes.",
+     "told": "A jar lid refused to open and you fought it for five minutes.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "micro-friction-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "Misheard",
+     "tone": "bad",
+     "text": "Someone misheard {first} and they had to explain the same thing three times.",
+     "told": "Someone misheard you and you had to explain the same thing three times.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "micro-friction-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "Too loud",
+     "tone": "bad",
+     "text": "A loud group nearby made it hard for {first} to think.",
+     "told": "A loud group nearby made it hard for you to think.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "micro-friction-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "Long queue",
+     "tone": "bad",
+     "text": "Every line {first} stood in today was the slow one.",
+     "told": "Every line you stood in today was the slow one.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "micro-friction-5",
+     "low": 5,
+     "high": 5,
+     "kind": "event",
+     "title": "App update",
+     "tone": "bad",
+     "text": "An app {first} uses every day updated and moved all the buttons.",
+     "told": "An app you use every day updated and moved all the buttons.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "micro-friction-6",
+     "low": 6,
+     "high": 6,
+     "kind": "event",
+     "title": "Wet sock",
+     "tone": "bad",
+     "text": "{first} stepped in a puddle and had a wet sock for hours.",
+     "told": "You stepped in a puddle and had a wet sock for hours.",
+     "drama": 0,
+     "needs": []
+    }
+   ]
+  },
+  "complication": {
+   "name": "Complication",
+   "from": "complication",
+   "rows": [
+    {
+     "id": "complication-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "Closed",
+     "tone": "bad",
+     "text": "The place {first} meant to go was unexpectedly closed.",
+     "told": "The place you meant to go was unexpectedly closed.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "complication-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "Two things at once",
+     "tone": "bad",
+     "text": "{first} ended up with two things due at the same time.",
+     "told": "You ended up with two things due at the same time.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "complication-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "Sold out",
+     "tone": "bad",
+     "text": "The thing {first} went out to buy was sold out everywhere.",
+     "told": "The thing you went out to buy was sold out everywhere.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "complication-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "Small cost",
+     "tone": "bad",
+     "text": "Fixing a small problem at home cost {first} more than it should have.",
+     "told": "Fixing a small problem at home cost you more than it should have.",
+     "drama": 1,
+     "needs": []
+    }
+   ]
+  },
+  "change-of-plans": {
+   "name": "Change of plans",
+   "from": "transition-pressure",
+   "rows": [
+    {
+     "id": "change-of-plans-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "Moved",
+     "tone": "mixed",
+     "text": "Something {first} had planned got moved to another day.",
+     "told": "Something you had planned got moved to another day.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "change-of-plans-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "Called away",
+     "tone": "mixed",
+     "text": "{first} got called away halfway through doing something else.",
+     "told": "You got called away halfway through doing something else.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "change-of-plans-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "Plans swapped",
+     "tone": "mixed",
+     "text": "{friend} suggested a different plan and {first} went along with it.",
+     "told": "{friend} suggested a different plan and you went along with it.",
+     "drama": 0,
+     "needs": [
+      "friend"
+     ]
+    },
+    {
+     "id": "change-of-plans-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "Left early",
+     "tone": "mixed",
+     "text": "{first} left somewhere early because the vibe was off.",
+     "told": "You left somewhere early because the vibe was off.",
+     "drama": 1,
+     "needs": []
+    }
+   ]
+  },
+  "contact": {
+   "name": "Contact",
+   "from": "contact",
+   "rows": [
+    {
+     "id": "contact-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "Asked for help",
+     "tone": "mixed",
+     "text": "A stranger asked {first} for directions and they walked them halfway there.",
+     "told": "A stranger asked you for directions and you walked them halfway there.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "contact-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "Chatty local",
+     "tone": "mixed",
+     "text": "A chatty older neighbor told {first} the whole history of the street.",
+     "told": "A chatty older neighbor told you the whole history of your street.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "contact-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "A recommendation",
+     "tone": "mixed",
+     "text": "Someone in line recommended a book to {first}, very insistently.",
+     "told": "Someone in line recommended a book to you, very insistently.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "contact-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "Someone new",
+     "tone": "mixed",
+     "text": "{first} met a friend of {friend}'s and they hit it off.",
+     "told": "You met a friend of {friend}'s and the two of you hit it off.",
+     "drama": 0,
+     "needs": [
+      "friend"
+     ]
+    },
+    {
+     "id": "contact-5",
+     "low": 5,
+     "high": 5,
+     "kind": "event",
+     "title": "Lost tourist",
+     "tone": "mixed",
+     "text": "A lost tourist asked {first} to take their photo, five times.",
+     "told": "A lost tourist asked you to take their photo, five times.",
+     "drama": 0,
+     "needs": []
+    }
+   ]
+  },
+  "find": {
+   "name": "A small find",
+   "from": "find",
+   "rows": [
+    {
+     "id": "find-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "A good deal",
+     "tone": "good",
+     "text": "Something {first} needed was on sale.",
+     "told": "Something you needed was on sale today.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "find-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "A quiet corner",
+     "tone": "good",
+     "text": "{first} found a quiet corner nearby that's perfect for reading.",
+     "told": "You found a quiet corner nearby that's perfect for reading.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "find-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "Useful tip",
+     "tone": "good",
+     "text": "Someone gave {first} a tip that will save them a lot of hassle.",
+     "told": "Someone gave you a tip that'll save you a lot of hassle.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "find-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "Free afternoon",
+     "tone": "good",
+     "text": "Something got cancelled and {first} suddenly had a free afternoon.",
+     "told": "Something got cancelled and you suddenly had a free afternoon.",
+     "drama": 0,
+     "needs": []
+    }
+   ]
+  },
+  "odd-day": {
+   "name": "An odd little thing",
+   "from": "anomaly",
+   "rows": [
+    {
+     "id": "odd-day-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "Coincidence",
+     "tone": "odd",
+     "text": "{first} ran into the same stranger three times in different parts of town.",
+     "told": "You ran into the same stranger three times in different parts of town.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "odd-day-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "Mystery note",
+     "tone": "odd",
+     "text": "{first} found a note on the street that just said 'thank you'.",
+     "told": "You found a note on the street that just said 'thank you'.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "odd-day-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "Odd weather",
+     "tone": "odd",
+     "text": "It went from sunny to hail to sunny again in ten minutes.",
+     "told": "It went from sunny to hail to sunny again in ten minutes where you were.",
+     "drama": 0,
+     "needs": []
+    },
+    {
+     "id": "odd-day-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "Old place changed",
+     "tone": "odd",
+     "text": "A place {first} has known for years suddenly looks completely different.",
+     "told": "A place you've known for years suddenly looks completely different.",
+     "drama": 0,
+     "needs": []
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,1687 @@
+{
+ "schema_version": 1,
+ "id": "hollin",
+ "name": "Hollin",
+ "setting": "original",
+ "era": "fantasy",
+ "category": "fictional",
+ "basis": "Vanta's own world of BABEL, from the Mabry Curve roleplay: a living tower of themed floors wearing the skin of an unreleased full-dive game.",
+ "region": "Varrow",
+ "country": "the tower",
+ "timezone": "America/Chicago",
+ "aliases": [
+  "Varrow",
+  "Hollin"
+ ],
+ "summary": "Varrow's market town at the ford, one floor up from the Concourse, almost exactly as BABEL's beta drew it: the mill, the stone bridge, the green with its Waystone and well. Saint Aurel's white cathedral stands on one hill and Varrow Keep on the other, and eight miles up the valley the Reachwall holds back the Reach. The Close weighs the big and bans the Marked beyond the ford.",
+ "lat": 30.528,
+ "lon": -97.679,
+ "intensity": {
+  "preset": "unflinching",
+  "drama": "eventful",
+  "voice": "pulpy and mythic in a modern frame: omens, weather and System panes, where every win carries a bill and desire is a power with a price"
+ },
+ "currency": {
+  "code": "talent",
+  "symbol": "T",
+  "name": "Talents"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.5,
+  "horse": 10
+ },
+ "sources": {
+  "mabry-curve-2026-10": {
+   "kind": "curated",
+   "title": "BABEL written for Prospero's Dungeon from Vanta's Mabry Curve archive",
+   "license": "Vanta's own setting; all rights reserved",
+   "retrieved": "2026-10-22",
+   "note": "Places, people and customs from the Mabry Curve story, hidden files and side cast (dungeon/world/packages/babel/sources.md). Names the story does not give are new."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "hollin-town",
+   "name": "Hollin",
+   "summary": "The market town at the ford, just as the beta drew it: the green with its Waystone and well, thatched roofs, the stone bridge, the mill and its wheel, and Goodwife Marra on her bench.",
+   "vibe": [
+    "town",
+    "beta",
+    "watched"
+   ],
+   "lat": 30.528,
+   "lon": -97.679,
+   "rent_tier": "low",
+   "housing": [
+    "cottage",
+    "room-over-shop"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     3
+    ],
+    "two_bedroom": [
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "id": "the-stair-landing",
+   "name": "the landing",
+   "summary": "The hillside above Hollin where the Stair opens onto Varrow under a pale sky, with steps down to the road.",
+   "vibe": [
+    "arrival",
+    "hillside"
+   ],
+   "lat": 30.531,
+   "lon": -97.683,
+   "rent_tier": "low",
+   "housing": [
+    "none"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-close",
+   "name": "the Close",
+   "summary": "Saint Aurel's hill across the valley: the white cathedral, the cloister, the sisters' house, the guesthouse, the old cemetery with its hives, and down by the river the Pens.",
+   "vibe": [
+    "church",
+    "white",
+    "watched"
+   ],
+   "lat": 30.532,
+   "lon": -97.673,
+   "rent_tier": "mid",
+   "housing": [
+    "cell"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-keep",
+   "name": "Varrow Keep",
+   "summary": "The Margrave's hill: the Keep's ward and hall, the solar, the manor wing, the lower barracks, the east wall-walk and the Cairn tower, and the bone-cellar under it all.",
+   "vibe": [
+    "lordly",
+    "gray",
+    "guarded"
+   ],
+   "lat": 30.525,
+   "lon": -97.685,
+   "rent_tier": "high",
+   "housing": [
+    "barracks",
+    "manor-room"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "horse"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-valley-road",
+   "name": "the valley road",
+   "summary": "Eight miles of road between hawthorns from the Keep to the valley head, with Burners' Wood off to the east two miles short of the Wall.",
+   "vibe": [
+    "road",
+    "hawthorn",
+    "woods"
+   ],
+   "lat": 30.567999999999998,
+   "lon": -97.679,
+   "rent_tier": "low",
+   "housing": [
+    "cottage"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot",
+    "horse",
+    "mule"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-reachwall",
+   "name": "the Reachwall",
+   "summary": "Thirty feet of fitted stone across the valley head with a rampart walk three abreast and towers every quarter mile, the badly patched breach by the north tower, and the ditch below. Past it, the Reach.",
+   "vibe": [
+    "wall",
+    "border",
+    "dangerous"
+   ],
+   "lat": 30.643,
+   "lon": -97.679,
+   "rent_tier": "low",
+   "housing": [
+    "barracks"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "the-green",
+   "name": "Hollin green",
+   "kind": "square",
+   "neighborhood": "hollin-town",
+   "summary": "The green with the Waystone in the middle and the well and bucket at the bottom of the hill road. A board on a post by the well, in fresh black paint that was never in any build: NO MARKED BEYOND THE FORD BY ORDER OF THE CLOSE.",
+   "tags": [
+    "central",
+    "waystone",
+    "notices"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the Waystone",
+    "the well and bucket",
+    "the notice board",
+    "the Keep road"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-ford",
+   "name": "the ford",
+   "kind": "trail",
+   "neighborhood": "hollin-town",
+   "summary": "Stepping stones across the river below the mill, and the Close's line: no Marked beyond it.",
+   "tags": [
+    "river",
+    "border",
+    "bounty"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the stepping stones",
+    "the deep pool below",
+    "the far bank"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-mill",
+   "name": "the mill",
+   "kind": "workshop",
+   "neighborhood": "hollin-town",
+   "summary": "The water mill and its wheel by the ford, and Goodwife Marra's stone cottage beside it, where she shells peas on the bench and sends climbers after rats in the dry cellar her husband built.",
+   "tags": [
+    "mill",
+    "tutorial",
+    "hidden"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Marra's bench",
+    "the mill cellar door",
+    "the mill wall",
+    "the wheel"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-stone-bridge",
+   "name": "the stone bridge",
+   "kind": "landmark",
+   "neighborhood": "hollin-town",
+   "summary": "The old bridge on the Keep road, where the Keep's riders and the Close's wardens pass each other without speaking.",
+   "tags": [
+    "bridge",
+    "road"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-bell-and-bushel",
+   "name": "the Bell and Bushel",
+   "kind": "tavern",
+   "neighborhood": "hollin-town",
+   "summary": "Hollin's alehouse: small beer, bread, a fire, the Keep's men on one side of the room and the Close's lay brothers on the other.",
+   "tags": [
+    "ale",
+    "rumors",
+    "rooms"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "alehouse",
+   "spots": [
+    "the Keep side",
+    "the Close side",
+    "the fire"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-landing-steps",
+   "name": "the landing steps",
+   "kind": "landmark",
+   "neighborhood": "the-stair-landing",
+   "summary": "Where the Stair opens out of the floor's wall onto the hillside above Hollin. Below lies the beta, almost exactly. A Close acolyte sweeps the steps and watches who comes up.",
+   "tags": [
+    "arrival",
+    "stair",
+    "watched"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the top step",
+    "the view of the valley",
+    "the road down"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "saint-aurel",
+   "name": "Saint Aurel",
+   "kind": "temple",
+   "neighborhood": "the-close",
+   "summary": "The white cathedral, its spires the beta's pride. In the nave hang the Scales: a black iron beam and two bronze pans big enough to stand in, over a brass arc with a sun at one end and a cracked wall at the other. One does not stand in the pan shod.",
+   "tags": [
+    "cathedral",
+    "the-scales",
+    "weighing"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the Scales",
+    "the front pew",
+    "the nave",
+    "the door behind the Scales"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-guesthouse",
+   "name": "the guesthouse",
+   "kind": "inn",
+   "neighborhood": "the-close",
+   "summary": "Whitewashed cells across the cloister with tin sun-discs over the doors and windows on the herb garden. No bolts on the doors; boots outside them.",
+   "tags": [
+    "cells",
+    "watched"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Hask's six-foot bed",
+    "the herb garden"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-infirmary",
+   "name": "the infirmary",
+   "kind": "temple",
+   "neighborhood": "the-close",
+   "summary": "Brother Coll's rooms: basins, willow bark, clean linen and a Keeper's Mend.",
+   "tags": [
+    "healing",
+    "mend"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-sisters-house",
+   "name": "the sisters' house",
+   "kind": "temple",
+   "neighborhood": "the-close",
+   "summary": "Where the vowed sisters live, and where Sister Maud still trims a dead giant's lamp.",
+   "tags": [
+    "sisters",
+    "vows"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Hask's lamp",
+    "the basins"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-old-cemetery",
+   "name": "the old cemetery",
+   "kind": "garden",
+   "neighborhood": "the-close",
+   "summary": "Sister Abelone's hives among the old graves, a prayer over each at Lauds. Her honey is the only food on Varrow that tastes to a climber.",
+   "tags": [
+    "hives",
+    "honey",
+    "graves"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-pens",
+   "name": "the Pens",
+   "kind": "landmark",
+   "neighborhood": "the-close",
+   "summary": "The old tannery on the river, where the Close holds Marked found beyond the ford, and in autumn the wanting, until the cage goes down in spring.",
+   "tags": [
+    "prison",
+    "river",
+    "cage-trade"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the gate",
+    "the river door"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-keep-hall",
+   "name": "the Margrave's hall",
+   "kind": "landmark",
+   "neighborhood": "the-keep",
+   "summary": "The Keep's great hall under the black stag on silver, gray-and-blue livery, the Margrave's chair with the Muster board and his old gauntlet behind it, and a gray lurcher on the hearth.",
+   "tags": [
+    "hall",
+    "lord",
+    "muster"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the Muster board",
+    "the Margrave's chair",
+    "the hearth"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-solar",
+   "name": "the Margrave's solar",
+   "kind": "landmark",
+   "neighborhood": "the-keep",
+   "summary": "His private room up the solar stair: a fire, a good table, lunch, and his dead wife's harp that nobody plays.",
+   "tags": [
+    "private",
+    "lunch",
+    "harp"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Aveline's harp",
+    "the table",
+    "the window"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-keep-chapel",
+   "name": "the Keep chapel",
+   "kind": "temple",
+   "neighborhood": "the-keep",
+   "summary": "A small chapel in the manor wing with a side door by the solar.",
+   "tags": [
+    "chapel",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-lower-barracks",
+   "name": "the lower barracks",
+   "kind": "inn",
+   "neighborhood": "the-keep",
+   "summary": "A long low room of wool, boot grease and twenty men, arrow-slit light, and in one corner a bunk nobody takes.",
+   "tags": [
+    "barracks",
+    "soldiers"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Teague's old bunk",
+    "the aisle",
+    "the arrow slits"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-cairn-tower",
+   "name": "the Cairn tower",
+   "kind": "landmark",
+   "neighborhood": "the-keep",
+   "summary": "The tower on the Keep's east wall-walk, his lordship's ground, with only the one stair up. From the top: the valley head, the Wall, and the beacons on the Reach.",
+   "tags": [
+    "view",
+    "private"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-bone-cellar",
+   "name": "the bone-cellar",
+   "kind": "landmark",
+   "neighborhood": "the-keep",
+   "summary": "The catacombs under the Keep. In the beta a stair here let climbers up off the floor. It is locked, and the Margrave keeps the key.",
+   "tags": [
+    "catacombs",
+    "stair",
+    "secret"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the stair",
+    "the bone shelves"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "burners-wood",
+   "name": "Burners' Wood",
+   "kind": "trail",
+   "neighborhood": "the-valley-road",
+   "summary": "Woods two miles short of the Wall, with charcoal clearings where a cart can wait off the road and nobody on the rampart can see.",
+   "tags": [
+    "woods",
+    "charcoal",
+    "ambush"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the burners' clearing",
+    "the cart track"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-rampart",
+   "name": "the rampart walk",
+   "kind": "landmark",
+   "neighborhood": "the-reachwall",
+   "summary": "Three abreast along the top of the Wall, horns in every tower. At dusk you can see the beacons on the Reach ridges.",
+   "tags": [
+    "wall",
+    "watch",
+    "horns"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the north tower",
+    "the gate tower",
+    "the horn"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-patch",
+   "name": "the patch",
+   "kind": "workshop",
+   "neighborhood": "the-reachwall",
+   "summary": "The breach by the north tower, rebuilt badly in rubble and timber three winters ago, the color of a healed burn. Orla's plumb line and the earth ramp for hauling stone.",
+   "tags": [
+    "repair",
+    "labor",
+    "weak-point"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the earth ramp",
+    "the timber shoring",
+    "Orla's line"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-north-tower-chapel",
+   "name": "the north tower chapel",
+   "kind": "temple",
+   "neighborhood": "the-reachwall",
+   "summary": "A chapel in the north tower where a gift's sister keeps his lamp.",
+   "tags": [
+    "chapel",
+    "lamp"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-drill-ground",
+   "name": "the drill ground",
+   "kind": "venue",
+   "neighborhood": "the-reachwall",
+   "summary": "Beaten earth below the tower where Captain Hode drills the company: sticks first, blunted blades after.",
+   "tags": [
+    "drill",
+    "training"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-ditch",
+   "name": "the ditch",
+   "kind": "trail",
+   "neighborhood": "the-reachwall",
+   "summary": "The ditch below the patch, where the giants stand when they come to talk, a little more than their own height from the rampart.",
+   "tags": [
+    "border",
+    "parley",
+    "giants"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-wall-kitchen",
+   "name": "the Wall kitchen",
+   "kind": "restaurant",
+   "neighborhood": "the-reachwall",
+   "summary": "The company's cookhouse under the north tower: porridge, salt pork, small beer, and whatever the sisters send down.",
+   "tags": [
+    "company",
+    "mess"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "camp fare",
+   "spots": [
+    "the long bench",
+    "the fire"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-landing-alehouse",
+   "name": "the landing alehouse",
+   "kind": "tavern",
+   "neighborhood": "the-stair-landing",
+   "summary": "A two-table alehouse by the cage where porters wait for Cobb, and the Close's men watch who comes up.",
+   "tags": [
+    "porters",
+    "watchers"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "alehouse",
+   "spots": [
+    "the window on the cage",
+    "the bar"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-mile-inn",
+   "name": "the mile inn",
+   "kind": "inn",
+   "neighborhood": "the-valley-road",
+   "summary": "A posting inn halfway up the valley road with a stable, a fire and a landlady who knows every rider of the Keep.",
+   "tags": [
+    "rooms",
+    "riders",
+    "stable"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "alehouse",
+   "spots": [
+    "the settle by the fire",
+    "the stable yard"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "on-foot",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "Hollin is a quarter hour end to end; the Keep and the Close are each a stiff climb; the Wall is eight miles.",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "horse",
+   "name": "Horse",
+   "kind": "horse",
+   "summary": "The Keep's riders, and a roan for a guest the Margrave likes.",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "mule",
+   "name": "Mule",
+   "kind": "horse",
+   "summary": "The Close's sisters ride white mules.",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "miller",
+   "name": "Miller",
+   "sector": "grain",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Grinding at the mill by the ford.",
+   "themes": [
+    "the wheel",
+    "flour",
+    "the cellar"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "wall-soldier",
+   "name": "Wall soldier",
+   "sector": "wall",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "A season on the Reachwall in the Margrave's company: stone, drill and the horns at dusk.",
+   "themes": [
+    "the Wall",
+    "the Reach",
+    "the patch"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "mason",
+   "name": "Mason",
+   "sector": "wall",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Laying stone at the patch under Orla's line.",
+   "themes": [
+    "stone",
+    "the patch",
+    "the cold coming"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "warden",
+   "name": "Warden of the Close",
+   "sector": "church",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "A halberd and a white tabard with the gold sun.",
+   "themes": [
+    "the ford",
+    "the Marked",
+    "orders"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "lay-brother",
+   "name": "Lay brother",
+   "sector": "church",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Working the Close's fields, kitchens and gates.",
+   "themes": [
+    "the Close",
+    "chores",
+    "gossip"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "keep-servant",
+   "name": "Keep servant",
+   "sector": "household",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Serving in the Margrave's household.",
+   "themes": [
+    "the Keep",
+    "the solar",
+    "the hall"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "charcoal-burner",
+   "name": "Charcoal burner",
+   "sector": "woods",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Tending the kilns in Burners' Wood.",
+   "themes": [
+    "the kilns",
+    "smoke",
+    "the road"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "farmhand",
+   "name": "Farmhand",
+   "sector": "farm",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Working the valley's fields.",
+   "themes": [
+    "harvest",
+    "the weighing",
+    "mud"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  }
+ ],
+ "work_by_gender": false,
+ "employers": [
+  {
+   "id": "house-corve",
+   "name": "House Corve",
+   "sector": "household",
+   "neighborhood": "the-keep",
+   "size": "medium",
+   "summary": "The Margrave's household and his Wall company.",
+   "careers": [
+    "wall-soldier",
+    "mason",
+    "keep-servant"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-close-church",
+   "name": "the Close of Saint Aurel",
+   "sector": "church",
+   "neighborhood": "the-close",
+   "size": "medium",
+   "summary": "Varrow's church.",
+   "careers": [
+    "warden",
+    "lay-brother"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "hollin-mill",
+   "name": "the Hollin mill",
+   "sector": "grain",
+   "neighborhood": "hollin-town",
+   "size": "small",
+   "summary": "The mill by the ford.",
+   "careers": [
+    "miller",
+    "farmhand"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "the-valley",
+   "name": "The Keep and the Close",
+   "neighborhoods": [
+    "the-keep",
+    "the-close",
+    "the-reachwall"
+   ],
+   "sectors": [
+    "household",
+    "church",
+    "wall"
+   ],
+   "summary": "Most of Varrow's wages come from the Margrave or the Close.",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Varrow's valley under a real-looking sky: mild summers, a wet autumn, and the first frost that brings the Reach down and the Close's weighing.",
+  "months": [
+   {
+    "high_f": 40,
+    "low_f": 28,
+    "rain_days": 12,
+    "note": "Hard cold on the Wall."
+   },
+   {
+    "high_f": 43,
+    "low_f": 30,
+    "rain_days": 10,
+    "note": "Snow on the Reach."
+   },
+   {
+    "high_f": 50,
+    "low_f": 35,
+    "rain_days": 11,
+    "note": "Mud."
+   },
+   {
+    "high_f": 57,
+    "low_f": 40,
+    "rain_days": 10,
+    "note": "Lambing."
+   },
+   {
+    "high_f": 64,
+    "low_f": 46,
+    "rain_days": 10,
+    "note": "The fields green."
+   },
+   {
+    "high_f": 70,
+    "low_f": 51,
+    "rain_days": 9,
+    "note": "Long days."
+   },
+   {
+    "high_f": 74,
+    "low_f": 55,
+    "rain_days": 8,
+    "note": "The warmest month."
+   },
+   {
+    "high_f": 73,
+    "low_f": 54,
+    "rain_days": 9,
+    "note": "Lammas: the Close reads the names of its kept."
+   },
+   {
+    "high_f": 66,
+    "low_f": 49,
+    "rain_days": 10,
+    "note": "Harvest."
+   },
+   {
+    "high_f": 57,
+    "low_f": 42,
+    "rain_days": 12,
+    "note": "The first frost, and the weighing."
+   },
+   {
+    "high_f": 48,
+    "low_f": 35,
+    "rain_days": 13,
+    "note": "The cage goes quiet until spring."
+   },
+   {
+    "high_f": 41,
+    "low_f": 30,
+    "rain_days": 13,
+    "note": "Bitter on the rampart."
+   }
+  ],
+  "source": "mabry-curve-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "lammas",
+   "name": "Lammas",
+   "months": [
+    8
+   ],
+   "neighborhood": "the-close",
+   "summary": "The Close reads out the names of its kept.",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-weighing",
+   "name": "The autumn weighing",
+   "months": [
+    10
+   ],
+   "neighborhood": "the-close",
+   "summary": "At the first frost the Close weighs Hollin's people. Those found wanting go to the Pens.",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-spring-cage",
+   "name": "The spring cage",
+   "months": [
+    4
+   ],
+   "neighborhood": "the-stair-landing",
+   "summary": "The Pens empty down the Stair, and nobody in Hollin watches the cage go.",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "rats",
+   "name": "Rats",
+   "kind": "saying",
+   "summary": "Rats is what Hollin says about the Marked when the Close is listening.",
+   "places": [
+    "the-mill"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-gift",
+   "name": "The gift",
+   "kind": "custom",
+   "summary": "A giant the Close weighs and keeps is its gift: a cell, a lamp, his name read at Lammas, a sister to tend him, and the Wall.",
+   "places": [
+    "saint-aurel",
+    "the-sisters-house"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "sun-stoles",
+   "name": "Sun stoles",
+   "kind": "custom",
+   "summary": "The Close marks what it keeps with white stoles and the gold sun, so the Margrave's men know whose it is.",
+   "places": [
+    "saint-aurel"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "two-finger-sign",
+   "name": "The two-finger sign",
+   "kind": "custom",
+   "summary": "Close folk make a sign across the chest with two fingers at anything big, Marked or ringed-eyed.",
+   "places": [
+    "the-landing-steps"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "hask",
+   "name": "Brother Hask",
+   "kind": "legend",
+   "summary": "The last gift: a giant forty years on the Wall, who slept on the floor because the Close never made him a longer bed. He died last winter in his sleep.",
+   "places": [
+    "the-guesthouse"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-onion-game",
+   "name": "The onion game",
+   "kind": "custom",
+   "summary": "A barracks game nobody explains to outsiders.",
+   "places": [
+    "the-lower-barracks"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "aldo",
+   "name": "Aldo went in the river",
+   "kind": "rumor",
+   "summary": "The miller went in the river, Marra says, and that is all she says.",
+   "places": [
+    "the-mill"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "close-honey",
+   "name": "Close honey",
+   "kind": "dish",
+   "summary": "Sister Abelone's honey, which gives a climber a little Resolve and actually tastes.",
+   "places": [
+    "the-old-cemetery"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "names": {
+  "groups": {
+   "varrow": {
+    "feminine": [
+     "Marra",
+     "Ide",
+     "Tamsin",
+     "Abelone",
+     "Maud",
+     "Aveline",
+     "Orla",
+     "Berit",
+     "Nell",
+     "Gunnild",
+     "Elsbet",
+     "Wenna",
+     "Hild",
+     "Joan",
+     "Agnes",
+     "Sibbe"
+    ],
+    "masculine": [
+     "Aldo",
+     "Coll",
+     "Hask",
+     "Edmund",
+     "Gil",
+     "Pim",
+     "Tobe",
+     "Wat",
+     "Oswy",
+     "Rafe",
+     "Hennet",
+     "Jory",
+     "Dunstan",
+     "Hobb",
+     "Lambert",
+     "Osric"
+    ],
+    "neutral": [
+     "Wren",
+     "Linnet",
+     "Ash"
+    ],
+    "family": [
+     "Corve",
+     "Fenwick",
+     "Ashby",
+     "Cooper",
+     "Hode",
+     "Long",
+     "Hale",
+     "Miller",
+     "Thatcher",
+     "Reeve",
+     "Brook",
+     "Wainwright",
+     "Pask",
+     "Gedge",
+     "Hallam",
+     "Dunn"
+    ]
+   }
+  }
+ },
+ "calendar": "none",
+ "prices": [
+  {
+   "id": "small-beer",
+   "item": "Cup of small beer",
+   "low": 0.1,
+   "high": 0.2,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "bread",
+   "item": "Brown bread",
+   "low": 0.1,
+   "high": 0.2,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "honey",
+   "item": "Pot of Close honey",
+   "low": 2,
+   "high": 3,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "room",
+   "item": "Room at the Bell and Bushel",
+   "low": 2,
+   "high": 3,
+   "per": "night",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "wall-wage",
+   "item": "A Wall soldier's wage",
+   "low": 1,
+   "high": 2,
+   "per": "day",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "marked-bounty",
+   "item": "Close bounty on a Marked",
+   "low": 1,
+   "high": 2,
+   "per": "head",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "harper",
+   "item": "A harper in the Keep",
+   "low": 3,
+   "high": 3,
+   "per": "week",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "mend",
+   "item": "A Keeper's Mend at the infirmary",
+   "low": 0,
+   "high": 2,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "water": [],
+ "notables": [
+  {
+   "id": "goodwife-marra",
+   "name": "Goodwife Marra",
+   "given": "Marra",
+   "pronouns": "she/her",
+   "age": 61,
+   "place": "the-mill",
+   "role": "miller's widow",
+   "staff": true,
+   "about": "BABEL's tutorial quest-giver, who sends climbers after rats in her dead husband's mill cellar, and drops the script when she decides to trust you.",
+   "wants": "to get her rats onto the cage down",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-archdeacon",
+   "name": "the Archdeacon",
+   "given": "the Archdeacon",
+   "pronouns": "he/him",
+   "age": 300,
+   "place": "saint-aurel",
+   "role": "Archdeacon of Saint Aurel",
+   "staff": true,
+   "about": "A Seraph with ash-gray wings and pale fire at the pupils, calm and kind-voiced, whose spoken word is obeyed. He weighs the big, and keeps what he weighs.",
+   "wants": "a Nephil, weighed and kept",
+   "source": "mabry-curve-2026-10",
+   "kind": "seraph"
+  },
+  {
+   "id": "sister-ide",
+   "name": "Sister Ide",
+   "given": "Ide",
+   "pronouns": "she/her",
+   "age": 30,
+   "place": "the-sisters-house",
+   "role": "vowed sister",
+   "staff": true,
+   "about": "Eleven years in vows, barefoot in white wool, light showing at her collarbones. She has waited all that time for a giant.",
+   "wants": "to finish the Consecration",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "brother-coll",
+   "name": "Brother Coll",
+   "given": "Coll",
+   "pronouns": "he/him",
+   "age": 68,
+   "place": "the-infirmary",
+   "role": "infirmarian",
+   "staff": true,
+   "about": "Old, round, talkative, a Keeper's Mend in his hands; pleased to be asked, and honest about who he will have to tell.",
+   "wants": "to see the Bishop come home",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "brother-tamsin",
+   "name": "Brother Tamsin",
+   "given": "Tamsin",
+   "pronouns": "he/him",
+   "age": 46,
+   "place": "saint-aurel",
+   "role": "warden captain",
+   "staff": true,
+   "about": "Leads the Close's wardens and reads lists somebody else wrote.",
+   "wants": "the Close's claims kept",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "sister-abelone",
+   "name": "Sister Abelone",
+   "given": "Abelone",
+   "pronouns": "she/her",
+   "age": 52,
+   "place": "the-old-cemetery",
+   "role": "beekeeper",
+   "staff": true,
+   "about": "Keeps the hives among the old graves. Unbearable when praised.",
+   "wants": "her honey praised",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "edmund-corve",
+   "name": "the Margrave",
+   "given": "Edmund",
+   "pronouns": "he/him",
+   "age": 63,
+   "place": "the-keep-hall",
+   "role": "Margrave of Varrow",
+   "staff": true,
+   "about": "Lean, one-armed, dry, with a gray lurcher at his feet. He owns the valley and the Close owns his soul, and he is tired of the arrangement.",
+   "wants": "the Wall under his own banner",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "oswy",
+   "name": "Oswy",
+   "given": "Oswy",
+   "pronouns": "he/him",
+   "age": 50,
+   "place": "the-keep-hall",
+   "role": "steward",
+   "staff": true,
+   "about": "Long and silent; sits outside doors.",
+   "wants": "the household kept",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "hennet",
+   "name": "Hennet",
+   "given": "Hennet",
+   "pronouns": "they/them",
+   "age": 41,
+   "place": "the-lower-barracks",
+   "role": "cook",
+   "staff": true,
+   "about": "Stirs the barracks porridge with a paddle and shouts at anyone near the pot.",
+   "wants": "enough oats for the winter",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "berit-hode",
+   "name": "Captain Berit Hode",
+   "given": "Berit",
+   "pronouns": "she/her",
+   "age": 45,
+   "place": "the-rampart",
+   "role": "Wall captain",
+   "staff": true,
+   "about": "Commands the Margrave's Wall-work company with a flattened nose and calm eyes.",
+   "wants": "the patch rebuilt properly",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "gil-fenwick",
+   "name": "Gil Fenwick",
+   "given": "Gil",
+   "pronouns": "he/him",
+   "age": 54,
+   "place": "the-rampart",
+   "role": "Wall veteran",
+   "staff": true,
+   "about": "Heavy, gray-bearded, a face like a dropped pie. Stood a season with the last man with white-ringed eyes and buried six afterward.",
+   "wants": "one more season, then his sister's farm",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "orla",
+   "name": "Orla",
+   "given": "Orla",
+   "pronouns": "she/her",
+   "age": 58,
+   "place": "the-patch",
+   "role": "master mason",
+   "staff": true,
+   "about": "Laid the Wall's first courses as a girl and directs with her chin.",
+   "wants": "the patch laid right",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "pim",
+   "name": "Pim",
+   "given": "Pim",
+   "pronouns": "he/him",
+   "age": 19,
+   "place": "the-lower-barracks",
+   "role": "Wall soldier",
+   "staff": false,
+   "about": "Gangly, burn-scarred, believes everything Gil says.",
+   "wants": "a story worth telling",
+   "source": "mabry-curve-2026-10"
+  }
+ ]
+}

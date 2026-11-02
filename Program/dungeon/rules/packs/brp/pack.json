@@ -1,0 +1,33 @@
+{
+ "id": "brp",
+ "name": "Percentile",
+ "ruleset": "brp",
+ "version": "ORC Content Document (2023)",
+ "source": {
+  "document": "Basic Roleplaying: Universal Game Engine, ORC Content Document, by Jason Durall and Steve Perrin (Chaosium Inc.)",
+  "url": "https://www.chaosium.com/content/orclicense/BasicRoleplaying-ORC-Content-Document.pdf",
+  "file": "BasicRoleplaying-ORC-Content-Document.pdf",
+  "sha256": "d38af1fc2c27326b0ee8e42af0579684220ccf30809b195275d9daf29cedbb28"
+ },
+ "license": {
+  "id": "ORC",
+  "url": "https://www.chaosium.com/orclicense/",
+  "attribution": "This product is licensed under the ORC License held in the Library of Congress at TX 9-307-067 and available online at various locations including www.chaosium.com/orclicense, www.azoralaw.com/orclicense, www.gencon.com/orclicense and others. All warranties are disclaimed as set forth therein. Powered by BRP: rules from Basic Roleplaying: Universal Game Engine, copyright © 2023 Chaosium Inc., by Jason Durall and Steve Perrin. Basic Roleplaying is the trademark of Chaosium Inc."
+ },
+ "changes": [
+  "brp.json is transcribed by hand from the document, for a world before firearms: the skills (each \"various\" skill given the specialties such a world uses; modern skills left out), ancient and medieval weapons and armour, the damage modifier table, the professions such a world has (each \"choose from\" list resolved to fixed picks; Doctor becomes Healer), the four personality types, sample characters and natural animals, and the major wound table summarised.",
+  "Sorcery, psychic abilities, mutations, superpowers, hit locations, fatigue and sanity are not included.",
+  "The sample thug's baseball bat (as a club) is a cudgel, with the same numbers.",
+  "Magic (Chapter 4: Powers, Magic) is transcribed as each spell's name, range, duration and cost per level, with a one-line summary in our own words and the effect code plays; the wizard and priest professions begin as magicians at the Normal power level with four spells code picks. Sorcery, psychic abilities, mutations and superpowers are left out."
+ ],
+ "resolution": {
+  "die": "d100 roll-under against a skill or a characteristic roll",
+  "outcome_mapping": {
+   "critical": "critical_success",
+   "special": "success",
+   "success": "success",
+   "failure": "failure",
+   "fumble": "critical_failure"
+  }
+ }
+}

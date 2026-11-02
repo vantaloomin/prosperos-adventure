@@ -1,0 +1,37 @@
+[project]
+name = "prospero-dungeon"
+version = "0.1.0"
+requires-python = ">=3.12"
+license = "AGPL-3.0-only"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "httpx>=0.28,<1", "pydantic>=2.12,<3",
+                "keyring>=25.7,<26", "tzdata>=2025.2", "segno>=1.6,<2",
+                "cryptography>=44"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-xdist>=3.8,<4", "ruff>=0.11,<1"]
+
+[tool.setuptools.packages.find]
+include = ["dungeon*"]
+
+[tool.setuptools.package-data]
+dungeon = ["schema.sql", "images/workflows/*.json", "images/model_links.json", "world/data/*.json", "life/decks/*.json", "world/data/cities/*.json", "world/data/retired/*.json", "world/data/kitchen/*.json", "world/data/hobbies/*.json", "world/data/media/*.json", "world/data/rough_patches/*.json", "almanac/data/*.json", "rules/packs/srd52/*.json", "rules/packs/ironsworn/*.json", "rules/packs/brp/*.json", "world/packages/*/*.json", "world/packages/*/*.md", "world/packages/*/canon/*.md", "world/packages/*/assets/*/*", "world/packages/*/assets/*.webp", "world/packages/*/engine/*/*.json"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+include = ["dungeon/**/*.py", "tests/**/*.py", "scripts/**/*.py"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "C901"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+# A test stuck this long prints every thread's stack, so a hang on CI shows where it is.
+faulthandler_timeout = 300
+# Each test's workspace installs the built-in world packages with all their art (tens of MB): keep only failed ones,
+# or a full run fills the disk.
+tmp_path_retention_policy = "failed"

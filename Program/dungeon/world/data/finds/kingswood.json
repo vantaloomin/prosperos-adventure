@@ -1,0 +1,80 @@
+{
+ "about": "What is inside things in Kingswood, rolled the first time the player looks (dungeon/finds.py). Each container kind names the words a player uses for it, how many draws it gets, and a weighted table: an item from the town's catalog (world/data/items/kingswood.json), coins in silver crowns (a range), a note the narrator describes, or nothing. A note marked trap is a trap that was there before anyone looked.",
+ "containers": {
+  "chest": {
+   "words": ["chest", "strongbox", "coffer", "trunk", "lockbox", "box"],
+   "draws": 2,
+   "table": [
+    {"weight": 3, "nothing": true},
+    {"weight": 4, "coins": [0.2, 2.5]},
+    {"weight": 2, "item": "candles"},
+    {"weight": 1, "item": "knife"},
+    {"weight": 2, "item": "blanket"},
+    {"weight": 2, "note": "a bundle of letters tied with twine, the top one addressed to someone at Gannet & Pryce"},
+    {"weight": 1, "note": "a spring needle in the lock, its tip dark with something", "trap": true},
+    {"weight": 1, "item": "plum-spirit"}
+   ]
+  },
+  "drawer": {
+   "words": ["drawer", "desk", "cupboard", "cabinet", "shelf", "shelves"],
+   "draws": 2,
+   "table": [
+    {"weight": 4, "nothing": true},
+    {"weight": 3, "coins": [0.05, 0.6]},
+    {"weight": 2, "item": "chalk"},
+    {"weight": 2, "item": "candles"},
+    {"weight": 1, "item": "ledger-book"},
+    {"weight": 2, "note": "a tally of felled timber with two sets of numbers that do not agree"},
+    {"weight": 1, "note": "a pressed oak leaf wrapped in a scrap of grey cloth"}
+   ]
+  },
+  "crate": {
+   "words": ["crate", "barrel", "sack", "basket", "cask", "bin"],
+   "draws": 1,
+   "table": [
+    {"weight": 3, "nothing": true},
+    {"weight": 3, "item": "dried-meat"},
+    {"weight": 2, "item": "salt"},
+    {"weight": 2, "item": "bread"},
+    {"weight": 1, "item": "sack"},
+    {"weight": 1, "note": "a nest of rats, who object"}
+   ]
+  },
+  "body": {
+   "words": ["body", "corpse", "dead man", "dead woman", "the dead"],
+   "draws": 2,
+   "table": [
+    {"weight": 3, "nothing": true},
+    {"weight": 4, "coins": [0.1, 1.5]},
+    {"weight": 2, "item": "knife"},
+    {"weight": 1, "item": "warden-arrow"},
+    {"weight": 1, "item": "flint"},
+    {"weight": 2, "note": "a chit stamped with the Timber Guild's mark and a number"},
+    {"weight": 1, "note": "a wound that no blade made: three parallel scores, deep and clean"}
+   ]
+  },
+  "purse": {
+   "words": ["purse", "pocket", "pockets", "pouch", "coin pouch", "belt pouch"],
+   "draws": 1,
+   "table": [
+    {"weight": 2, "nothing": true},
+    {"weight": 6, "coins": [0.05, 1.2]},
+    {"weight": 1, "item": "chalk"},
+    {"weight": 1, "note": "a lucky charm: a bent nail on a thong"}
+   ]
+  },
+  "room": {
+   "words": ["room", "the place", "the hut", "the shed", "the loft", "the cellar"],
+   "draws": 2,
+   "table": [
+    {"weight": 3, "nothing": true},
+    {"weight": 2, "coins": [0.1, 0.8]},
+    {"weight": 2, "item": "lamp-oil"},
+    {"weight": 1, "item": "crowbar"},
+    {"weight": 1, "item": "snare-wire"},
+    {"weight": 2, "note": "a loose floorboard with nothing under it but dust and a smell of earth"},
+    {"weight": 1, "note": "a cold draught from a crack in the wall that runs toward the Heartwood"}
+   ]
+  }
+ }
+}

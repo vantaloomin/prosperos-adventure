@@ -1,0 +1,669 @@
+{
+ "schema_version": 1,
+ "source": {
+  "kind": "curated",
+  "title": "City change wording written for Prospero Dungeon",
+  "license": "CC0-1.0",
+  "retrieved": "2026-10-05",
+  "note": "Invented names and phrasing for fictional changes; no real business is meant."
+ },
+ "styles": {
+  "modern": {
+   "openings": {
+    "cafe": {
+     "first": [
+      "Little",
+      "Second",
+      "Copper",
+      "Juniper",
+      "Paper Lantern",
+      "Slow Morning",
+      "Northside",
+      "Golden Hour",
+      "Blue Door",
+      "Sparrow"
+     ],
+     "second": [
+      "Coffee",
+      "Coffee Bar",
+      "Espresso",
+      "Roasters",
+      "Coffee House"
+     ],
+     "summary": "A new cafe with pastries and a few tables by the window."
+    },
+    "restaurant": {
+     "first": [
+      "Olive",
+      "Ember",
+      "Harbor",
+      "Fig",
+      "Saffron",
+      "Lantern",
+      "Oak",
+      "Pepper",
+      "Juniper",
+      "Corner"
+     ],
+     "second": [
+      "Kitchen",
+      "Table",
+      "Bistro",
+      "Eatery",
+      "Noodle House",
+      "Taqueria",
+      "Grill"
+     ],
+     "summary": "A new restaurant that is still finding its regulars."
+    },
+    "bar": {
+     "first": [
+      "Last",
+      "Velvet",
+      "Neon",
+      "Copper",
+      "Night",
+      "Hollow",
+      "Paper",
+      "Lucky"
+     ],
+     "second": [
+      "Call",
+      "Room",
+      "Owl",
+      "Tap",
+      "Social",
+      "Lounge"
+     ],
+     "summary": "A new bar with a short cocktail list and a loud Friday crowd."
+    },
+    "shopping": {
+     "first": [
+      "Common",
+      "Thread",
+      "Fern",
+      "Second Hand",
+      "Odd",
+      "Good"
+     ],
+     "second": [
+      "Goods",
+      "Supply",
+      "Vintage",
+      "Books",
+      "Market",
+      "Store"
+     ],
+     "summary": "A new shop people keep mentioning."
+    },
+    "fitness": {
+     "first": [
+      "Core",
+      "Iron",
+      "Rise",
+      "Flow",
+      "Summit",
+      "Pulse"
+     ],
+     "second": [
+      "Studio",
+      "Gym",
+      "Climbing",
+      "Yoga",
+      "Cycle"
+     ],
+     "summary": "A new studio running opening-month deals."
+    }
+   },
+   "renovation": [
+    "closed for renovation",
+    "closed for a remodel",
+    "closed for a refit",
+    "closed for repairs after a burst pipe"
+   ],
+   "closing": [
+    "closed for good",
+    "closed when the lease ran out",
+    "closed after the owners retired",
+    "closed; the space is for lease"
+   ],
+   "roadworks": [
+    {
+     "summary": "road works on the main street",
+     "delay": 8
+    },
+    {
+     "summary": "a water main replacement",
+     "delay": 10
+    },
+    {
+     "summary": "repaving with lane closures",
+     "delay": 6
+    },
+    {
+     "summary": "utility work with a lane closed",
+     "delay": 5
+    },
+    {
+     "summary": "a new bike lane being built",
+     "delay": 4
+    }
+   ]
+  },
+  "victorian": {
+   "openings": {
+    "cafe": {
+     "first": [
+      "Albion",
+      "Crown",
+      "Rose",
+      "Kingsway",
+      "Brass",
+      "Gaslight"
+     ],
+     "second": [
+      "Tea Rooms",
+      "Coffee House",
+      "Dining Rooms"
+     ],
+     "summary": "Newly opened tea rooms, much talked of by the neighbours."
+    },
+    "restaurant": {
+     "first": [
+      "Albion",
+      "Royal",
+      "Kingsway",
+      "Garland",
+      "Victoria"
+     ],
+     "second": [
+      "Chop House",
+      "Dining Rooms",
+      "Grill Room",
+      "Oyster Rooms"
+     ],
+     "summary": "A newly opened dining room, still finding its custom."
+    },
+    "bar": {
+     "first": [
+      "Red",
+      "Old",
+      "Three",
+      "Golden",
+      "Brass"
+     ],
+     "second": [
+      "Lion",
+      "Crown",
+      "Feathers",
+      "Anchor",
+      "Bell"
+     ],
+     "summary": "A public house lately opened under a new landlord."
+    },
+    "tavern": {
+     "first": [
+      "Red",
+      "Old",
+      "Three",
+      "Golden"
+     ],
+     "second": [
+      "Lion",
+      "Crown",
+      "Feathers",
+      "Anchor"
+     ],
+     "summary": "A public house lately opened under a new landlord."
+    },
+    "shopping": {
+     "first": [
+      "Hartley",
+      "Pemberton",
+      "Ashby",
+      "Crane"
+     ],
+     "second": [
+      "& Sons",
+      "Emporium",
+      "Drapers",
+      "Booksellers"
+     ],
+     "summary": "A new shop front, its windows freshly lettered."
+    },
+    "workshop": {
+     "first": [
+      "Gearing",
+      "Hartley",
+      "Crane",
+      "Copperfield"
+     ],
+     "second": [
+      "Works",
+      "Foundry",
+      "Instrument Makers"
+     ],
+     "summary": "A workshop newly set up, its bench still bare."
+    }
+   },
+   "renovation": [
+    "closed for refitting",
+    "shut while the front is rebuilt",
+    "closed after a chimney fire"
+   ],
+   "closing": [
+    "shut for good",
+    "closed when the lease fell in",
+    "gone; the premises are to let"
+   ],
+   "roadworks": [
+    {
+     "summary": "new gas mains being laid",
+     "delay": 10
+    },
+    {
+     "summary": "the cobbles taken up for new drains",
+     "delay": 12
+    },
+    {
+     "summary": "the bridge closed for repairs",
+     "delay": 15
+    },
+    {
+     "summary": "tram rails being relaid",
+     "delay": 8
+    }
+   ]
+  },
+  "medieval": {
+   "openings": {
+    "tavern": {
+     "first": [
+      "Green",
+      "Golden",
+      "Laughing",
+      "Wandering",
+      "Silver"
+     ],
+     "second": [
+      "Dragon",
+      "Goose",
+      "Hart",
+      "Boar",
+      "Kettle"
+     ],
+     "summary": "A new alehouse with a bush hung at its door."
+    },
+    "inn": {
+     "first": [
+      "Green",
+      "Golden",
+      "Laughing",
+      "Wandering"
+     ],
+     "second": [
+      "Dragon",
+      "Goose",
+      "Hart",
+      "Boar"
+     ],
+     "summary": "A new inn that has taken in its first travellers."
+    },
+    "market": {
+     "first": [
+      "Wool",
+      "Hay",
+      "Fish",
+      "Spice"
+     ],
+     "second": [
+      "Stalls",
+      "Market",
+      "Row"
+     ],
+     "summary": "New stalls set out by traders lately come to town."
+    },
+    "workshop": {
+     "first": [
+      "Weaver",
+      "Cooper",
+      "Tanner",
+      "Chandler"
+     ],
+     "second": [
+      "Workshop",
+      "Yard",
+      "Shop"
+     ],
+     "summary": "A craftsman newly set up in town."
+    },
+    "cafe": {
+     "first": [
+      "Hearth",
+      "Honey",
+      "Baker"
+     ],
+     "second": [
+      "House",
+      "Ovens",
+      "Loaves"
+     ],
+     "summary": "A new bakehouse that sells warm bread at dawn."
+    },
+    "restaurant": {
+     "first": [
+      "Hearth",
+      "Spit",
+      "Bramble"
+     ],
+     "second": [
+      "Cookshop",
+      "Hall",
+      "Board"
+     ],
+     "summary": "A new cookshop selling pies and pottage."
+    }
+   },
+   "renovation": [
+    "shut while the roof is rethatched",
+    "closed for mending after a storm",
+    "closed while the walls are limewashed"
+   ],
+   "closing": [
+    "shut for good",
+    "abandoned when its keeper left town",
+    "closed after a quarrel with the guild"
+   ],
+   "roadworks": [
+    {
+     "summary": "the high road torn up for new paving stones",
+     "delay": 12
+    },
+    {
+     "summary": "the bridge closed for mending",
+     "delay": 20
+    },
+    {
+     "summary": "the ditch beside the road being re-dug",
+     "delay": 8
+    }
+   ]
+  },
+  "frontier": {
+   "openings": {
+    "bar": {
+     "first": [
+      "Silver",
+      "Lucky",
+      "Red",
+      "Golden",
+      "Prospector’s"
+     ],
+     "second": [
+      "Dollar",
+      "Strike",
+      "Horseshoe",
+      "Nugget"
+     ],
+     "summary": "A saloon that opened with a free first round."
+    },
+    "tavern": {
+     "first": [
+      "Silver",
+      "Lucky",
+      "Red",
+      "Golden"
+     ],
+     "second": [
+      "Dollar",
+      "Strike",
+      "Horseshoe",
+      "Nugget"
+     ],
+     "summary": "A saloon that opened with a free first round."
+    },
+    "restaurant": {
+     "first": [
+      "Railroad",
+      "Miner’s",
+      "Union",
+      "Widow Parker’s"
+     ],
+     "second": [
+      "Eating House",
+      "Lunch Room",
+      "Chop House"
+     ],
+     "summary": "A new eating house serving beans, biscuits and coffee."
+    },
+    "cafe": {
+     "first": [
+      "Railroad",
+      "Union",
+      "Main Street"
+     ],
+     "second": [
+      "Bakery",
+      "Coffee House"
+     ],
+     "summary": "A new bakery with coffee on the stove all day."
+    },
+    "shopping": {
+     "first": [
+      "Hartley",
+      "Union",
+      "Pioneer",
+      "Frontier"
+     ],
+     "second": [
+      "Mercantile",
+      "Dry Goods",
+      "Outfitters"
+     ],
+     "summary": "A new store just in from back East."
+    },
+    "inn": {
+     "first": [
+      "Railroad",
+      "Grand",
+      "Union"
+     ],
+     "second": [
+      "Hotel",
+      "House",
+      "Boarding House"
+     ],
+     "summary": "A new hotel with a fresh coat of paint on its false front."
+    }
+   },
+   "renovation": [
+    "closed while a new front is built",
+    "shut after a fire scare",
+    "closed while the floor is relaid"
+   ],
+   "closing": [
+    "closed for good",
+    "shut when the owner went bust",
+    "boarded up; the owner left for the next strike"
+   ],
+   "roadworks": [
+    {
+     "summary": "the main street mired after a burst flume",
+     "delay": 10
+    },
+    {
+     "summary": "a new rail spur being laid across the road",
+     "delay": 8
+    },
+    {
+     "summary": "the boardwalk being rebuilt",
+     "delay": 4
+    }
+   ]
+  },
+  "jazz-age": {
+   "openings": {
+    "cafe": {
+     "first": [
+      "Busy Bee",
+      "Majestic",
+      "Corner",
+      "Liberty",
+      "Bluebird",
+      "Main Street",
+      "Little Gem"
+     ],
+     "second": [
+      "Lunch Counter",
+      "Soda Fountain",
+      "Coffee Shop",
+      "Luncheonette",
+      "Tea Room"
+     ],
+     "summary": "A new lunch counter with a marble soda fountain and pie under glass."
+    },
+    "restaurant": {
+     "first": [
+      "Wilton",
+      "Columbia",
+      "Liberty",
+      "Sunset",
+      "Rialto",
+      "Gold Coast",
+      "Mama Rosa’s"
+     ],
+     "second": [
+      "Grill",
+      "Chop House",
+      "Cafeteria",
+      "Oyster Bar",
+      "Restaurant",
+      "Spaghetti House"
+     ],
+     "summary": "A new restaurant with white tablecloths and a fifty-cent blue-plate special."
+    },
+    "bar": {
+     "first": [
+      "Blue",
+      "Green",
+      "Gilded",
+      "Velvet",
+      "Hidden",
+      "Back Room",
+      "Side Door"
+     ],
+     "second": [
+      "Door",
+      "Parrot",
+      "Lantern",
+      "Club",
+      "Room",
+      "Cellar"
+     ],
+     "summary": "A new speakeasy behind an unmarked door; you need the password."
+    },
+    "nightlife": {
+     "first": [
+      "Moonlight",
+      "Starlight",
+      "Paradise",
+      "Peacock",
+      "Red Lantern",
+      "Gilded Cage"
+     ],
+     "second": [
+      "Club",
+      "Ballroom",
+      "Supper Club",
+      "Dance Hall",
+      "Revue"
+     ],
+     "summary": "A new club with a hot band, a chorus line and a doorman who knows everyone."
+    },
+    "shopping": {
+     "first": [
+      "Hartwell",
+      "Kessler",
+      "Liberty",
+      "Modern",
+      "Empire",
+      "Bon Ton"
+     ],
+     "second": [
+      "Dry Goods",
+      "Haberdashery",
+      "Millinery",
+      "Five-and-Dime",
+      "Department Store"
+     ],
+     "summary": "A new shop with electric lights in the window and the latest from Paris."
+    },
+    "inn": {
+     "first": [
+      "Hotel",
+      "The"
+     ],
+     "second": [
+      "Halcyon",
+      "Linden",
+      "Wexford",
+      "Marlowe",
+      "Garland"
+     ],
+     "summary": "A new hotel with an elevator, a barbershop off the lobby and a radio in the lounge."
+    },
+    "venue": {
+     "first": [
+      "Roxy",
+      "Bijou",
+      "Palace",
+      "Orpheum",
+      "Strand",
+      "Capitol"
+     ],
+     "second": [
+      "Theatre",
+      "Picture Palace",
+      "Vaudeville House"
+     ],
+     "summary": "A new picture palace with a Wurlitzer organ and an usher in braid."
+    }
+   },
+   "renovation": [
+    "closed while it is wired for electric light",
+    "shut after a Prohibition raid",
+    "closed while a new marble front goes up"
+   ],
+   "closing": [
+    "closed for good",
+    "padlocked by the Prohibition agents",
+    "shut when the owner lost everything on the market"
+   ],
+   "roadworks": [
+    {
+     "summary": "the streetcar tracks being relaid",
+     "delay": 10
+    },
+    {
+     "summary": "a new subway line being dug under the street",
+     "delay": 12
+    },
+    {
+     "summary": "the cobbles being paved over with asphalt",
+     "delay": 6
+    }
+   ]
+  }
+ },
+ "eras": {
+  "modern": "modern",
+  "future": "modern",
+  "other": "modern",
+  "victorian": "victorian",
+  "steampunk": "victorian",
+  "medieval": "medieval",
+  "fantasy": "medieval",
+  "frontier": "frontier",
+  "jazz-age": "jazz-age"
+ }
+}

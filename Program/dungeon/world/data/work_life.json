@@ -1,0 +1,11712 @@
+{
+ "schema_version": 1,
+ "source": "Vacation days and raises: national minimums and typical practice (US BLS, UK gov.uk, Japan and Korea labour law), historical practice for older eras; projects written for Prospero's Dungeon 2026-10-13.",
+ "rules": {
+  "us": {
+   "vacation": 11,
+   "raise": [
+    2.5,
+    4.5
+   ],
+   "review_month": null,
+   "vacation_month": [
+    6,
+    7,
+    8
+   ],
+   "note": "No legal minimum; about 11 paid days in the first years (BLS)."
+  },
+  "uk": {
+   "vacation": 25,
+   "raise": [
+    2.0,
+    4.0
+   ],
+   "review_month": 4,
+   "vacation_month": [
+    7,
+    8
+   ],
+   "note": "28 days statutory including bank holidays; 25 plus bank holidays is usual."
+  },
+  "japan": {
+   "vacation": 10,
+   "raise": [
+    1.5,
+    3.0
+   ],
+   "review_month": 4,
+   "vacation_month": [
+    8
+   ],
+   "note": "10 days by law after six months, few taken; raises in April after shunto."
+  },
+  "south-korea": {
+   "vacation": 15,
+   "raise": [
+    2.5,
+    5.0
+   ],
+   "review_month": 1,
+   "vacation_month": [
+    7,
+    8
+   ],
+   "note": "15 days by law after a year."
+  },
+  "us-1920s": {
+   "vacation": 6,
+   "raise": [
+    0.0,
+    6.0
+   ],
+   "raise_chance": 0.6,
+   "review_month": 1,
+   "vacation_month": [
+    7,
+    8
+   ],
+   "note": "A paid week was a perk for office workers; many had none."
+  },
+  "us-1880s": {
+   "vacation": 0,
+   "raise": [
+    0.0,
+    5.0
+   ],
+   "raise_chance": 0.4,
+   "review_month": null,
+   "vacation_month": [],
+   "note": "No paid holidays; a better wage now and then."
+  },
+  "uk-victorian": {
+   "vacation": 0,
+   "raise": [
+    0.0,
+    5.0
+   ],
+   "raise_chance": 0.4,
+   "review_month": 3,
+   "vacation_month": [],
+   "note": "Bank holidays from 1871, no paid leave; wages reviewed at Lady Day."
+  },
+  "medieval-england": {
+   "vacation": 0,
+   "raise": [
+    0.0,
+    6.0
+   ],
+   "raise_chance": 0.3,
+   "review_month": 9,
+   "vacation_month": [],
+   "note": "Feast days only; wages agreed at Michaelmas."
+  },
+  "countries": {
+   "france": {
+    "vacation": 25,
+    "raise": [
+     1.5,
+     3.5
+    ],
+    "vacation_month": [
+     8
+    ]
+   },
+   "germany": {
+    "vacation": 28,
+    "raise": [
+     2.0,
+     4.0
+    ],
+    "vacation_month": [
+     7,
+     8
+    ]
+   },
+   "spain": {
+    "vacation": 22,
+    "raise": [
+     1.5,
+     3.5
+    ],
+    "vacation_month": [
+     8
+    ]
+   },
+   "italy": {
+    "vacation": 22,
+    "raise": [
+     1.5,
+     3.0
+    ],
+    "vacation_month": [
+     8
+    ]
+   },
+   "netherlands": {
+    "vacation": 25,
+    "raise": [
+     2.0,
+     4.0
+    ],
+    "vacation_month": [
+     7,
+     8
+    ]
+   },
+   "ireland": {
+    "vacation": 20,
+    "raise": [
+     2.0,
+     4.0
+    ],
+    "vacation_month": [
+     7,
+     8
+    ]
+   },
+   "sweden": {
+    "vacation": 25,
+    "raise": [
+     2.0,
+     3.5
+    ],
+    "vacation_month": [
+     7
+    ]
+   },
+   "norway": {
+    "vacation": 25,
+    "raise": [
+     2.5,
+     4.0
+    ],
+    "vacation_month": [
+     7
+    ]
+   },
+   "denmark": {
+    "vacation": 25,
+    "raise": [
+     2.0,
+     3.5
+    ],
+    "vacation_month": [
+     7
+    ]
+   },
+   "finland": {
+    "vacation": 25,
+    "raise": [
+     2.0,
+     3.5
+    ],
+    "vacation_month": [
+     7
+    ]
+   },
+   "canada": {
+    "vacation": 10,
+    "raise": [
+     2.5,
+     4.0
+    ],
+    "vacation_month": [
+     7,
+     8
+    ]
+   },
+   "australia": {
+    "vacation": 20,
+    "raise": [
+     2.5,
+     4.0
+    ],
+    "vacation_month": [
+     12,
+     1
+    ]
+   },
+   "new zealand": {
+    "vacation": 20,
+    "raise": [
+     2.5,
+     4.0
+    ],
+    "vacation_month": [
+     12,
+     1
+    ]
+   },
+   "mexico": {
+    "vacation": 12,
+    "raise": [
+     4.0,
+     7.0
+    ],
+    "vacation_month": [
+     7,
+     12
+    ]
+   },
+   "brazil": {
+    "vacation": 30,
+    "raise": [
+     4.0,
+     7.0
+    ],
+    "vacation_month": [
+     1,
+     7
+    ]
+   },
+   "china": {
+    "vacation": 5,
+    "raise": [
+     3.0,
+     6.0
+    ],
+    "vacation_month": [
+     10
+    ]
+   },
+   "india": {
+    "vacation": 15,
+    "raise": [
+     6.0,
+     10.0
+    ],
+    "vacation_month": [
+     5,
+     10
+    ]
+   },
+   "singapore": {
+    "vacation": 14,
+    "raise": [
+     3.0,
+     5.0
+    ],
+    "vacation_month": [
+     6,
+     12
+    ]
+   },
+   "taiwan": {
+    "vacation": 7,
+    "raise": [
+     2.0,
+     4.0
+    ],
+    "vacation_month": [
+     7,
+     8
+    ]
+   }
+  },
+  "modern": {
+   "vacation": 20,
+   "raise": [
+    2.0,
+    4.0
+   ],
+   "review_month": null,
+   "vacation_month": [
+    7,
+    8
+   ]
+  },
+  "industrial": {
+   "vacation": 0,
+   "raise": [
+    0.0,
+    5.0
+   ],
+   "raise_chance": 0.4,
+   "review_month": null,
+   "vacation_month": []
+  },
+  "old": {
+   "vacation": 0,
+   "raise": [
+    0.0,
+    6.0
+   ],
+   "raise_chance": 0.3,
+   "review_month": 9,
+   "vacation_month": []
+  }
+ },
+ "projects": {
+  "office": [
+   {
+    "title": "the Q3 budget forecast",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the year-end audit prep for the Hollis account",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "a rebrand rollout for Pinewater Credit Union",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "the spring email campaign for Larkfield Home Goods",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "the quarterly board deck",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "a lease renewal for the Danforth Street office",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "the vendor contract review for Brightmoor Foods",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "legal",
+     "trade"
+    ]
+   },
+   {
+    "title": "the client onboarding checklist overhaul",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "a merger due-diligence data room",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the annual tax filing for Ostrander & Vale",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance",
+     "clerical"
+    ]
+   },
+   {
+    "title": "the travel expense policy rewrite",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "a pitch for the Corvell Hotels account",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance",
+     "marketing"
+    ]
+   },
+   {
+    "title": "the Q4 sales pipeline cleanup",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "the switch to new accounting software",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "a portfolio rebalance for the Whitcombe family trust",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the discovery binders for the Mercer v. Ashby case",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "legal"
+    ]
+   },
+   {
+    "title": "a commercial property listing on Harlow Avenue",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "the renewal quote for a regional trucking fleet",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "insurance"
+    ]
+   },
+   {
+    "title": "an underwriting review for a riverside warehouse",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "insurance"
+    ]
+   },
+   {
+    "title": "the month-end close for October",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "a loan application backlog at the Eastgate branch",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the customer survey results report",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "the launch plan for Tidewell's new oat-milk line",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "a payroll migration to a new provider",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "a social media calendar for the holiday season",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "the investor update for Tallow Ridge Capital",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "an internal fraud-controls review",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the closing paperwork for a duplex on Birch Lane",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "the office move to the fourth floor",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "a market research study on pet insurance",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "insurance",
+     "marketing"
+    ]
+   },
+   {
+    "title": "the trademark filing for Kestrel Outdoor",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "legal",
+     "clerical"
+    ]
+   },
+   {
+    "title": "a cash-flow model for a bakery expansion",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the compliance training refresh for new hires",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "legal",
+     "clerical"
+    ]
+   },
+   {
+    "title": "a settlement agreement in the Ferrante contract dispute",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "legal"
+    ]
+   },
+   {
+    "title": "the claims backlog from the March hailstorm",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "insurance"
+    ]
+   },
+   {
+    "title": "the pricing page rewrite for Fernway Software",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "the annual report design and copy",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "a trade show booth for the Lakeshore Home Expo",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "accounts receivable cleanup for Dunmore Supply",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the new hire orientation packet",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "deposition prep for the Calloway estate case",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "legal"
+    ]
+   },
+   {
+    "title": "the retirement plan enrollment drive",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "finance",
+     "insurance"
+    ]
+   },
+   {
+    "title": "open-house season listings in Maple Heights",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "the ledgers for the Hartwell Department Store audit",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "a newspaper ad series for Belmont Hats",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "the backlog of stock certificates after the bull run",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the typing pool's switch to carbon-copy order forms",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "the dictation backlog for the senior partner",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "a mortgage file for a bungalow on Sycamore Street",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "the fire insurance survey of the Kellerman warehouse",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "insurance"
+    ]
+   },
+   {
+    "title": "year-end ledger balancing at the Union Mercantile Bank",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the margin accounts review at Pell & Carraway",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the Christmas catalogue copy for Abernathy's",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "a trust deed for the Wexley estate",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "legal"
+    ]
+   },
+   {
+    "title": "the telegram code book for the overseas office",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "the shorthand transcripts for the Doyle trial",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "legal",
+     "clerical"
+    ]
+   },
+   {
+    "title": "the filing-cabinet reorganization in the claims office",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "insurance",
+     "clerical"
+    ]
+   },
+   {
+    "title": "lot sales for the Ferncliff Gardens subdivision",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "a radio sponsorship deal for Sunbright Soap",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "the payroll ledgers for the Tremont shoe factory",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "the switchboard call log audit at the insurance office",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance",
+     "insurance",
+     "clerical"
+    ]
+   },
+   {
+    "title": "a cargo insurance policy for the steamship Marigold",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "insurance",
+     "trade"
+    ]
+   },
+   {
+    "title": "bond drive pamphlets for the city waterworks",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance",
+     "marketing"
+    ]
+   },
+   {
+    "title": "the inventory count at the Grand Arcade store",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clerical",
+     "trade"
+    ]
+   },
+   {
+    "title": "the correspondence files for the Brennan lawsuit",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "legal",
+     "clerical"
+    ]
+   },
+   {
+    "title": "quarterly dividend notices for Ashgrove Mills",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "a life insurance sales push across the north side",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "insurance",
+     "marketing"
+    ]
+   },
+   {
+    "title": "price lists for the spring mail-order catalogue",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "marketing"
+    ]
+   },
+   {
+    "title": "the bookkeeping for a new chain of soda fountains",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "lease drafts for the Calder Building's new tenants",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "the window display budget for the Easter season",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "finance",
+     "marketing"
+    ]
+   },
+   {
+    "title": "the half-yearly accounts for Brindle & Sons Mill",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the copying of the Penhallow estate letters",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "the railway freight ledgers for the autumn quarter",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "a marine insurance policy for the barque Elspeth",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "insurance"
+    ]
+   },
+   {
+    "title": "the conveyance papers for a terrace on Gully Lane",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "legal",
+     "property"
+    ]
+   },
+   {
+    "title": "the share register for the Coldbrook Mining Company",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "finance",
+     "clerical"
+    ]
+   },
+   {
+    "title": "the court rolls for the Michaelmas sittings",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "legal",
+     "clerical"
+    ]
+   },
+   {
+    "title": "the counting-house books for the wool consignment",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "the probate papers for the Ambrose Tull estate",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "legal"
+    ]
+   },
+   {
+    "title": "the telegraph code ledger for cotton orders",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "finance",
+     "clerical"
+    ]
+   },
+   {
+    "title": "the wage books for the Ironvale foundry",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "a fair copy of the Harrowgate railway prospectus",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "the bank's ledger reconciliation after the quarter-day rents",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "land claims paperwork for the Sweetwater homesteads",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "insurance",
+     "property"
+    ]
+   },
+   {
+    "title": "a partnership deed for a new ropewalk",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "legal"
+    ]
+   },
+   {
+    "title": "the stock-taking at Marsh & Pellow drapers",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clerical",
+     "trade"
+    ]
+   },
+   {
+    "title": "the fire insurance survey of the Sedge Street warehouses",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "insurance"
+    ]
+   },
+   {
+    "title": "the debtors' letters for overdue accounts",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "finance",
+     "clerical"
+    ]
+   },
+   {
+    "title": "price circulars for the tea importers on Wharf Row",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "trade"
+    ]
+   },
+   {
+    "title": "the brief for the Calloway boundary dispute",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "legal"
+    ]
+   },
+   {
+    "title": "the cargo manifests for the steamer Halcyon Belle",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "trade"
+    ]
+   },
+   {
+    "title": "the shipping agent's accounts for the Bristol run",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "the rent books for the Canal Street tenements",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "the guild's tally of autumn dues",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "a copy of the castle's charter for the new market",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "legal",
+     "clerical"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the harvest tithe accounts for the abbey lands",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance"
+    ]
+   },
+   {
+    "title": "the cargo ledgers for the spice ship Saffron Gull",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "the court roll for the midsummer assizes",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "legal",
+     "clerical"
+    ]
+   },
+   {
+    "title": "the land deed for the miller's new holding",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "legal",
+     "property"
+    ]
+   },
+   {
+    "title": "the wool fair accounts for the Mercers' Guild",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "the treasury ledger for the royal wedding feast",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "a merchant's contract for Emerald City glassware",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "trade"
+    ],
+    "cities": [
+     "emerald-city"
+    ]
+   },
+   {
+    "title": "the scribing of the duke's new tax roll",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance",
+     "clerical"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "an inventory of the castle storerooms before winter",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clerical"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the toll accounts for the harbour gate",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "letters of credit for the Lantern Bay traders",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "the boundary records for Thornwood manor",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "legal"
+    ]
+   },
+   {
+    "title": "the guild register of new apprentices",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clerical"
+    ]
+   },
+   {
+    "title": "the property rolls for the lower town",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "copying the city's trade laws onto fresh parchment",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "legal",
+     "clerical"
+    ]
+   },
+   {
+    "title": "the factor's accounts for the winter fur trade",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "the market stall leases for the spring fair",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "property"
+    ]
+   },
+   {
+    "title": "the surety pledges for a wine fleet bound south",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance",
+     "trade"
+    ]
+   },
+   {
+    "title": "the petitions ledger for the open court at midsummer",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance",
+     "legal",
+     "clerical"
+    ]
+   },
+   {
+    "title": "the reckoning of the mint's silver for the new coinage",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "finance"
+    ]
+   }
+  ],
+  "tech": [
+   {
+    "title": "the checkout page redesign",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "a migration to the new database cluster",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the mobile app's offline mode",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the login flow overhaul",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the data pipeline for the Q2 sales dashboard",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "a usability study for the Fernway booking app",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the API rate-limiting rollout",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the bug backlog before the 4.0 release",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "a churn prediction model for Lumen Telecom",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the design system's new color tokens",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the protein assay validation run",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "a CRISPR screen on liver cell lines",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the cleanroom airflow upgrade",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "load calculations for the Kessler Creek bridge",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the drawings for a hospital parking garage",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "a wind-tunnel test series on a new wing flap",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the satellite thermal model for the Tern-2 mission",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the radar firmware update for the coastal patrol contract",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "an accessibility audit of the customer portal",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the search ranking experiment",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the cloud cost cleanup",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "a recommendation engine for the Basil & Brine recipe app",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the cell culture scale-up for a vaccine candidate",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the onboarding screens for the Pathwise fitness app",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the HVAC redesign for the Linwood library",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "a sensor calibration rig for the test lab",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "science",
+     "engineering"
+    ]
+   },
+   {
+    "title": "the security patch sprint for the payments service",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "an A/B test on the new pricing page",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the fraud-alert model retrain",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "CAD models for a new pump housing",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "stress tests on the drone's battery mount",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the data warehouse cleanup",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "customer interview synthesis for the travel app",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the sequencing run for the soil microbe study",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the documentation site rewrite",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "a flight-software review for the Kite lander",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the website's move to a new hosting platform",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "survey data cleaning for the city transit study",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the prototype circuit board for a smart thermostat",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering",
+     "radio"
+    ]
+   },
+   {
+    "title": "the code review backlog for the spring release",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "wiring diagrams for a new assembly line",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "a stability study on a new antibody formula",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the dashboard redesign for the logistics team",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "software"
+    ]
+   },
+   {
+    "title": "the repair queue of broken radio sets at the shop",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "radio"
+    ]
+   },
+   {
+    "title": "a five-tube radio set rebuild for the Ellery family",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "radio"
+    ]
+   },
+   {
+    "title": "blueprints for the Delmont Hotel's new elevator shafts",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the bridge survey for the river crossing at Millford",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the draughting of a new streetcar truck",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "steam turbine tests at the Bayshore power plant",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the aircraft engine cooling trials",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "tracing the waterworks pipe maps",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "a new antenna mast for the Riverton radio station",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering",
+     "radio"
+    ]
+   },
+   {
+    "title": "the telephone exchange wiring at the Oakdale office",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering",
+     "radio"
+    ]
+   },
+   {
+    "title": "a lab study on vitamin content in canned peas",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "soil tests for the Cardiff Street skyscraper footings",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "calibration of the factory's pressure gauges",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "rewiring the department store's display lighting",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering",
+     "radio"
+    ]
+   },
+   {
+    "title": "gearbox drawings for a new motor truck",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the airship mooring mast calculations",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the loudspeaker horn experiments",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "science",
+     "engineering",
+     "radio"
+    ]
+   },
+   {
+    "title": "hydraulic tests on the new dam spillway",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the coastal artillery rangefinder refit",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "naval gunsight drawings for the shipyard contract",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "a seaplane float design for the coastal patrol trials",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the ore assays for the Silver Gulch mine",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "crystal-set kits for the spring catalogue",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "radio"
+    ]
+   },
+   {
+    "title": "refrigeration plant drawings for the meatpacking works",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "traffic signal timing for Main and Fifth",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the backlog of tube replacements at the radio shop",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "radio"
+    ]
+   },
+   {
+    "title": "bench tests on a new carburetor",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the drawings for the Ashby viaduct",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "boiler pressure tests at the Coldbrook mill",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the survey for the new branch line to Ferrisburg",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "an assay of ore samples from the Blue Wren claim",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the telegraph line extension to the Fort Haddon post",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "a brass sextant order for the Wexford shipping line",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "chart corrections from the latest harbour soundings",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the gas-lighting scheme for the High Street",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the steam pump design for the Wheal Penrose mine",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the experiments on electric lamp filaments",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "science",
+     "engineering"
+    ]
+   },
+   {
+    "title": "a barometer series for the meteorological society",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "truss calculations for the Kettle River crossing",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the sewer drawings for the east district",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "a lecture demonstration on electromagnetism",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "calibrating the mill's new spinning mules",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "patent drawings for an improved loom shuttle",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "a dredging engine for the canal company",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the microscope lenses for the university order",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the gold assay ledger for the autumn shipments",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the locomotive valve gear redesign",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the water analysis for the city reservoir",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "airship envelope trials in the steamworks yard",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the copying of the harbour charts for the guild",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "a new astrolabe for the court astronomer",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the star tables for the coming year",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the assay of silver from the northern mines",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the clockwork for the cathedral tower",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the survey of the king's new canal",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the plans for the castle's west bridge",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "a chart of the reef passage to the Pearl Isles",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the waterwheel design for the guild mill",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the repair of the great siege engine",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "drawings for a new city wall gatehouse",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the grinding of glass lenses for the royal court",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "a treatise on the motions of the tides",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "experiments on a fast green dye for the weavers",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "a fair copy of the ship captains' rutters",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "lodestone compasses for the royal fleet",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "measurements of the Emerald City's spires",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ],
+    "cities": [
+     "emerald-city"
+    ]
+   },
+   {
+    "title": "the assay of the mint's new gold coins",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "a drainage plan for the lower marsh",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the reckoning of the eclipse due at harvest",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "science"
+    ]
+   },
+   {
+    "title": "the water clock for the guildhall",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   },
+   {
+    "title": "the mapping of the new eastern road",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "engineering"
+    ]
+   }
+  ],
+  "care": [
+   {
+    "title": "the ward's switch to new charting",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the night-shift rota for December",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the flu vaccine clinic for the fall",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the infection control audit on 4 West",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "a quality-improvement project on patient falls",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the discharge planning overhaul for the cardiac unit",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the medication reconciliation backlog",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "the residents' teaching schedule for spring",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the case file review for the Ridgeway family",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "clinical trial enrollment for a migraine study",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical",
+     "research"
+    ]
+   },
+   {
+    "title": "the pharmacy's switch to barcode scanning",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "a grant application for a sleep apnea study",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "research"
+    ]
+   },
+   {
+    "title": "the new-grad nurse orientation program",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the hospice volunteer training course",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "pediatric asthma education classes",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the housing assistance caseload after the plant closure",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "a case presentation for grand rounds",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the ICU's sepsis protocol update",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the clinic's move to a new scheduling system",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the medicine take-back drive at the pharmacy",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "data analysis for the diabetes cohort study",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "research"
+    ]
+   },
+   {
+    "title": "a grief support group for families on the oncology floor",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "social",
+     "church"
+    ]
+   },
+   {
+    "title": "the hand-hygiene campaign on the surgical floor",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "foster care home visits for the Kendall siblings",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "the board exam review course for second-year residents",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the ER's triage workflow revamp",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the immunization catch-up drive at the school clinic",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "patient survey follow-ups for the spring quarter",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the lab's mouse model study on gut bacteria",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "research"
+    ]
+   },
+   {
+    "title": "the memory care unit's activity calendar",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the compounding room recertification",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "an outreach program for seniors living alone",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "the research ethics review for the Pell Hospital study",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "research"
+    ]
+   },
+   {
+    "title": "the community health fair at Rosewood Park",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "the wound care protocol refresh",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the maternity ward's new visitor policy",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "a paper on stroke recovery outcomes",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "research"
+    ]
+   },
+   {
+    "title": "refugee family resettlement cases for the quarter",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "the chaplaincy's annual memorial service",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "church"
+    ]
+   },
+   {
+    "title": "the antibiotic stewardship review",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "the telehealth clinic launch for rural patients",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the staffing plan for the new urgent care wing",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the influenza ward rota for the winter",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the well-baby clinic at the settlement house",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical",
+     "social"
+    ]
+   },
+   {
+    "title": "the dispensary inventory at the drugstore on Fulton Street",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "case visits to the tenement families on Mott Lane",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "the sanatorium's new rest-cure schedule",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the insulin trial at the university hospital",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "research"
+    ]
+   },
+   {
+    "title": "the nursing school's spring examinations",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the milk station campaign for infant health",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the X-ray room's new film filing system",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the hospital's switch to typed patient charts",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the prescription ledger audit at the Elm Street pharmacy",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "house-call rounds through the north end in flu season",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the polio ward's summer schedule",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "first-aid classes for the department store staff",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the asylum's new occupational therapy room",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the orphanage health inspections",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the church's winter coat and food drive",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "social",
+     "church"
+    ]
+   },
+   {
+    "title": "immigrant family aid cases at the settlement house",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "the vaccination drive in the schoolhouses",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "case notes for the juvenile court",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "the operating theatre's new sterilizer routine",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "parish visits to the shut-ins before Easter",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "church"
+    ]
+   },
+   {
+    "title": "research notes on a diphtheria antitoxin",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "research"
+    ]
+   },
+   {
+    "title": "the mothers' clinic at the Bayside dispensary",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "the night duty rota for the surgical ward",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the pharmacy's new compounding ledger",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "a public-health lecture series on hygiene",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the fever ward rota during the cholera scare",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the dispensary's herbal stock for winter",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "the infirmary's switch to carbolic dressings",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "visiting rounds to the mill-workers' cottages",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the asylum's new airing-court routine",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "poor-relief cases for the Ashby workhouse",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "the smallpox vaccination round in the riverside parishes",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical",
+     "church"
+    ]
+   },
+   {
+    "title": "the nurses' training ledger at the cottage hospital",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the apothecary's order book for the mining camp",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "the mission's soup kitchen for the hard winter",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "social",
+     "church"
+    ]
+   },
+   {
+    "title": "the doctor's circuit through the valley towns",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "a cholera map of the Brickfield district",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "research"
+    ]
+   },
+   {
+    "title": "the parish register of the sick and needy",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "social",
+     "church"
+    ]
+   },
+   {
+    "title": "the ward linen and bedding overhaul",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the asylum attendants' new night rotation",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "tonic recipes for the chemist's shop counter",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "the lying-in hospital's new maternity ledger",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "a study of fever cases at the dye works",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical",
+     "research"
+    ]
+   },
+   {
+    "title": "health checks at the ragged school",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the chaplain's visits to the prison infirmary",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical",
+     "church"
+    ]
+   },
+   {
+    "title": "the clinic for injured miners at the Coldbrook pit",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the relief fund for families after the mine collapse",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "social"
+    ]
+   },
+   {
+    "title": "the abbey infirmary's winter herb stores",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy",
+     "church"
+    ]
+   },
+   {
+    "title": "the plague ward at the hospice of Saint Wenna",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "church"
+    ]
+   },
+   {
+    "title": "the healer's rounds through the harvest villages",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "church"
+    ]
+   },
+   {
+    "title": "the infirmarer's register of sick brothers",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "church"
+    ]
+   },
+   {
+    "title": "the apothecary's stock of fever remedies",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "poultice trials for the knights' wounds",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the almshouse's care of the winter poor",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "social",
+     "church"
+    ]
+   },
+   {
+    "title": "tending the tourney wounded",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "replanting the infirmary herb garden",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the midwife's rounds through the lower town",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the chaplain's blessings for the departing fleet",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "church"
+    ]
+   },
+   {
+    "title": "the remedies ledger for the royal household",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the sickroom watch over the ailing lord chancellor",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the leper house's new well and washroom",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "the pilgrims' hospice for the summer crossings",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "church"
+    ]
+   },
+   {
+    "title": "a copy of the herbal for the Emerald City healers",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy",
+     "church"
+    ],
+    "cities": [
+     "emerald-city"
+    ]
+   },
+   {
+    "title": "fever remedies for the harbour sailors",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "tending the sick in the siege camp",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   },
+   {
+    "title": "parish visits to the plague-struck farms",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "church"
+    ]
+   },
+   {
+    "title": "batches of honey cough syrup for winter",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "pharmacy"
+    ]
+   },
+   {
+    "title": "training a new infirmary novice",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical",
+     "church"
+    ]
+   },
+   {
+    "title": "setting bones after the bridge collapse",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "clinical"
+    ]
+   }
+  ],
+  "teaching": [
+   {
+    "title": "the fall syllabus for Intro to Chemistry",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school",
+     "academic"
+    ]
+   },
+   {
+    "title": "the Year 9 unit on volcanoes and plate tectonics",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a third-grade reading intervention plan",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the spring science fair at Maple Hollow Elementary",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "chapter three of a thesis on coastal erosion",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the lab's protein crystallisation trials",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "a grant proposal for the Riverbend Literacy Project",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the department's switch to a new gradebook app",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the eighth-grade field trip to the Corwin Science Center",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a term paper on the economics of tidal energy",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the senior thesis literature review",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "revision packets for the June algebra finals",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the school's new anti-bullying curriculum",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a semester-long poetry anthology with Room 12",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the library's graphic-novel collection overhaul",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the museum's autumn exhibit on lighthouse keepers",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the digitisation of the Harlow family letters",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the AP History mock exam series",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a paper on soil microbes in apple orchards",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the conference poster for the Lakeshore Ecology Forum",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the spring parent-teacher conference schedule",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "an online course module on statistics for nurses",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the library's summer reading challenge",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the school musical's rehearsal schedule",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the fifth-grade class garden and its lesson plans",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a cataloguing backlog of donated cookbooks",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the PhD qualifying exam reading list",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the lab's move to a new fume-hood wing",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "a group project on the history of the town ferry",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the robotics club's build for the regional contest",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the exhibit labels for a fossil gallery",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the department's new rubric for lab reports",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a reading list overhaul for Year 11 English",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the community college's evening ESL course",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the archive's oral-history interview series",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "a museum loan agreement for a travelling quilt show",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the debate team's prep for the state tournament",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the kindergarten's new phonics program",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a final-year dissertation on urban beekeeping",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the school's accreditation self-study report",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the library's switch to a new self-checkout system",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "a sixth-grade unit on ancient Egypt",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the undergraduate cell-biology lab manual rewrite",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the spring examinations at the Normal School",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the one-room schoolhouse's Christmas pageant",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a term paper on the new Federal Reserve banks",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the reading room's new card catalogue",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the museum's new hall of Egyptian antiquities",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the eighth-grade elocution recital",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the college debating society's spring tournament",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "a thesis chapter on Mississippi river trade",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the penmanship drills for the autumn term",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the radio-lecture series on astronomy",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the new kindergarten class in Room 4",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the women's college chemistry laboratory course",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the night-school English classes for new arrivals",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the Latin final examinations for the senior class",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a typewritten catalogue of the Pembrooke bequest",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the bookmobile route through the county farms",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the museum's diorama of prairie birds",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the commencement program for the class of 1926",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the high school's new domestic-science curriculum",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "a lecture series on Shakespeare at the Lyceum Hall",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the state geography examinations in May",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the library's clipping file on the river flood",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "a doctoral dissertation on Pacific trade winds",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the school board's new reading primer adoption",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the summer institute course for rural teachers",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the college glee club's spring tour programme",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the zoology department's collecting trip to the dunes",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the arithmetic drills on slates for the winter term",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the ragged school's harvest-festival recitation",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "French and pianoforte lessons for the Ashworth children",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the parish schoolroom's annual inspection",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the mechanics' institute lecture course on steam engines",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the museum's new cabinet of fossil ammonites",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "a catalogue of the subscription library's sermons",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the Michaelmas term examinations in Greek",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the frontier schoolhouse's spelling bee",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the lantern-slide lecture on the polar expeditions",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "a monograph chapter on the geology of the coal measures",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the Founders' Day recitation at Hollins Lane School",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the girls' academy's needlework and deportment course",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the new copybooks for the infant class",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the circulating library's catalogue of triple-deckers",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the college herbarium's mounting of pressed ferns",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "academic",
+     "library"
+    ]
+   },
+   {
+    "title": "the folklore society's lecture on harvest customs",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the night classes in reading for the mill children",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the prize-day preparations at Dovecote Street School",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the rare-books catalogue of the Whitcombe collection",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the museum's mineral gallery rearrangement",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the mill town's first lending-library reading room",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the novices' lessons in Latin grammar at the convent",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "an illuminated primer for the castle's young pages",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the scriptorium's copy of a herbal for the abbey",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "academic",
+     "library"
+    ]
+   },
+   {
+    "title": "the apprentice scribes' lessons in letter-forms",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the guild school's reckoning lessons for merchants' children",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the royal library's catalogue of sea charts",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "library"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the Emerald City academy's spring disputation",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "academic"
+    ],
+    "cities": [
+     "emerald-city"
+    ]
+   },
+   {
+    "title": "lessons on heraldry for the young heirs of Castle Dunmere",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the star-lore lessons for the tower's apprentices",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the cathedral school's Lenten examinations",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the bestiary transcription for the monastery library",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the convent's lessons in herbal remedies",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the village schoolroom's harvest-time reading lessons",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ]
+   },
+   {
+    "title": "the court dance lessons for the royal pages",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the archive of the guild charters of Harrowmere",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "a treatise on the tides of the Sapphire Harbour",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the fairy-tale kingdom's royal genealogy scroll",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "library"
+    ],
+    "fantasy": true,
+    "monarchy": true
+   },
+   {
+    "title": "the cataloguing of the abbey's chained books",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "library"
+    ]
+   },
+   {
+    "title": "the bardic college's winter recitation of ballads",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "the lore-master's collection of riddles from the hill villages",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "academic"
+    ]
+   },
+   {
+    "title": "map-reading lessons for the royal children",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "school"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the Camelot scholars' disputation on the wandering stars",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "academic"
+    ],
+    "cities": [
+     "camelot"
+    ]
+   }
+  ],
+  "service": [
+   {
+    "title": "the spring menu change at the Juniper Room",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the hotel's switch to a new booking system",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "a sixty-guest wedding at Willow Creek Barn",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the café's new seasonal latte lineup",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the bar's summer cocktail list",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the holiday window display at Harwell's Department Store",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the grocery store's aisle reset for back-to-school",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the bookshop's author-signing series for October",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the city walking-tour route through the old docks",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "leisure"
+    ]
+   },
+   {
+    "title": "the lifeguard roster for the July heatwave",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "leisure"
+    ]
+   },
+   {
+    "title": "a ten-week strength program for a marathon group",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "leisure"
+    ]
+   },
+   {
+    "title": "the surf school's beginner course for August",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "leisure"
+    ]
+   },
+   {
+    "title": "the casino's new poker-room table schedule",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "hospitality",
+     "leisure"
+    ]
+   },
+   {
+    "title": "the hotel front desk's loyalty-program rollout",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "hospitality",
+     "retail"
+    ]
+   },
+   {
+    "title": "the café's move to a new point-of-sale app",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food",
+     "retail"
+    ]
+   },
+   {
+    "title": "the restaurant's Saturday brunch launch",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the corporate retreat for Bellweather Insurance",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the reopening of the hotel's conference wing",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the bakery's holiday cookie preorders",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the grocery's new local-produce section",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the bookstore's year-end inventory count",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the kitchen's deep-clean before the health inspection",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the cocktail bar's tenth-anniversary party",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "a family reunion at Lakeview Pines Lodge",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the gym's new-member challenge for January",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "leisure"
+    ]
+   },
+   {
+    "title": "the coffee shop's switch to a new oat-milk supplier",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the boutique's spring-collection launch event",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the tour company's new food-tasting walk",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "leisure"
+    ]
+   },
+   {
+    "title": "the diner's late-night menu trial",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the pool's summer swim-lesson schedule",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "leisure"
+    ]
+   },
+   {
+    "title": "the cleaning rota for the Fernwood apartments",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "hospitality",
+     "household"
+    ]
+   },
+   {
+    "title": "the airport-run schedule for the trade fair guests",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "household"
+    ]
+   },
+   {
+    "title": "the department store's holiday-sale floor plan",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the hotel's wedding-season staffing plan",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "a charity gala for the Marsh Street Animal Shelter",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the restaurant's wine list rewrite",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the food truck's festival-season schedule",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the bakery's new sourdough line",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the cinema snack bar's menu refresh",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the guesthouse's new online booking page",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the gift shop's loyalty-card launch",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the bar team's new batch-cocktail program",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the hotel spa's new treatment menu",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the soda fountain's summer sundae menu",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the department store's Christmas window display",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the speakeasy's move to a new cellar on Dock Street",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the hotel ballroom's New Year's Eve gala",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the milk route's new streets past the streetcar line",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the bakery's June wedding-cake orders",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the hatcheck system for the Starlight Supper Club",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the steamship's first-class menu for the autumn crossings",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the grocer's new delivery service by motor truck",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the bookshop's Thursday evening poetry readings",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the dance hall's Saturday night band bookings",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the hotel switchboard schedule for convention week",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "a chauffeured motoring tour for the Vandermeer family",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "household"
+    ]
+   },
+   {
+    "title": "the luncheonette's blue-plate specials for the month",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the department store's spring millinery sale",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the beach resort's bathing-season lifeguard roster",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "hospitality",
+     "leisure"
+    ]
+   },
+   {
+    "title": "the country club's debutante ball",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the five-and-dime's spring stock-taking",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the supper club's new floor show",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the boarding house's spring cleaning and new lodgers",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "hospitality",
+     "household"
+    ]
+   },
+   {
+    "title": "the ice-cream parlour's new marble counter",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the dining car's menu for the Western run",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the hotel's grand reopening after the fire",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the tea room's bridge-club luncheons",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the motor-coach sightseeing tour of the harbour",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "leisure"
+    ]
+   },
+   {
+    "title": "the household's preparations for the Ashford garden party",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "food",
+     "household"
+    ]
+   },
+   {
+    "title": "the barbershop's new hot-towel service",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the coaching inn's Christmas goose dinners",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the hotel's banquet for the railway directors",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the grocer's new tinned-goods counter",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the milk round to the new terraces on Canal Row",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the bakery's Easter hot-cross-bun orders",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the saloon's new mahogany bar and mirror",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the boarding house's preparations for the cattle season",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the spring cleaning at Brackley Hall",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "household"
+    ]
+   },
+   {
+    "title": "the frontier hotel's arrangements with the stagecoach line",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the oyster bar's winter bill of fare",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the draper's autumn stock of woollens",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the music hall's refreshment-bar arrangements",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the coffee house's new reading room for merchants",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the dining room at the railway station hotel",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the household's preparations for the London Season",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "household"
+    ]
+   },
+   {
+    "title": "the seaside resort's bathing-machine schedule",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "hospitality",
+     "leisure"
+    ]
+   },
+   {
+    "title": "the bookseller's catalogue of new serial novels",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the packing and travel plans for a Highland shooting trip",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "household"
+    ]
+   },
+   {
+    "title": "the coachman's new route to the Exhibition grounds",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "household"
+    ]
+   },
+   {
+    "title": "the pie shop's stall at the Michaelmas fair",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the chophouse's new bill of fare",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the general store's spring order from the railhead",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the castle kitchen's preparations for the Midsummer feast",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food",
+     "household"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the inn's new ale for the harvest fair",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the tavern's hiring of minstrels for the winter fair",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the market stall's stock of spices for the spring fair",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the royal banquet for the visiting Duke of Westmarch",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food",
+     "household"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the alehouse's new cellar of spiced cider",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the palace guest chambers readied for the royal wedding",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "hospitality",
+     "household"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the bakery's honey cakes for the Lammas festival",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the inn's stabling for the pilgrims' season",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the Emerald City guesthouse's coronation preparations",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "hospitality"
+    ],
+    "cities": [
+     "emerald-city"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the castle's laundry and linen count before winter",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "household"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the new stall rents for the cloth fair",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "hospitality",
+     "retail"
+    ]
+   },
+   {
+    "title": "the harbour tavern's welcome for the returning fleet",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the tourney feast in Camelot's great hall",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food",
+     "household"
+    ],
+    "cities": [
+     "camelot"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the royal household's move to the summer palace",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "household"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the cookshop's new pies for pilgrims on the road",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food",
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the alewife's brewing for the May Day revels",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the guided crossings of the Whispering Wood for travellers",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "leisure"
+    ]
+   },
+   {
+    "title": "the barmaids' rota for horse-fair week",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "food"
+    ]
+   },
+   {
+    "title": "the bathhouse's new herbal baths at the Sapphire Harbour",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "hospitality"
+    ]
+   },
+   {
+    "title": "the chandler's stock of candles for Candlemas",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "retail"
+    ]
+   },
+   {
+    "title": "the great hall's tapestries cleaned for the royal visit",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "household"
+    ],
+    "monarchy": true
+   }
+  ],
+  "handson": [
+   {
+    "title": "a kitchen remodel on Elm Street",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the roof replacement at the Halvorsen place",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the line changeover for the new bottle caps",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the brake recall work at Dawson Auto",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "mechanic"
+    ]
+   },
+   {
+    "title": "the framing for a duplex on Birch Lane",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the trap rebuild before the fall lobster season",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the plumbing rough-in at the new dental clinic",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the factory floor's switch to a new packaging line",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the apple harvest in the north orchard",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the herd's spring calving",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the boatyard's restoration of the sloop Marigold",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the container backlog on the docks after the strike",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the bathroom tile job at the Okafor house",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "a deck and pergola build on Cedar Court",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the electrical upgrade at the old Grange hall",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "a run of three hundred school blazers",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the quarry's new bench on the east face",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the mine's ventilation upgrade on level four",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the landscaping of the new library courtyard",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building",
+     "farming"
+    ]
+   },
+   {
+    "title": "the trawler's engine overhaul before the season",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "sea",
+     "mechanic"
+    ]
+   },
+   {
+    "title": "the funeral home's chapel renovation",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building",
+     "crafts"
+    ]
+   },
+   {
+    "title": "the orchard's switch to drip irrigation",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "transmission rebuilds on a fleet of delivery vans",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "mechanic"
+    ]
+   },
+   {
+    "title": "the weld repairs on the Pier 9 crane rails",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building",
+     "sea",
+     "mechanic"
+    ]
+   },
+   {
+    "title": "the fence line repair across the south pasture",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building",
+     "farming"
+    ]
+   },
+   {
+    "title": "the paint job on the Marlow Street apartments",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the community garden's new raised beds",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building",
+     "farming"
+    ]
+   },
+   {
+    "title": "the bridge deck resurfacing on Route 14",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the mill's new conveyor installation",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the cabinetry for a café on Harbor Road",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building",
+     "crafts"
+    ]
+   },
+   {
+    "title": "the HVAC replacement at the middle school",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the tailor shop's run of wedding-party suits",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the shoe-repair shop's backlog of winter boots",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the masonry repointing on the old courthouse",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the firewood cutting for the winter orders",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the hay baling on the river fields",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the farm's new greenhouse build",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building",
+     "farming"
+    ]
+   },
+   {
+    "title": "the tree-removal job along Ridgeway Drive",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building",
+     "farming"
+    ]
+   },
+   {
+    "title": "a hand-dyed yarn batch for the Spinners' Fair",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the boiler refit at the Kestrel paper mill",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the hull welding on the ferry Northwind",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "building",
+     "sea",
+     "mechanic"
+    ]
+   },
+   {
+    "title": "a new mainsail for the yacht Seabright",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "crafts",
+     "sea"
+    ]
+   },
+   {
+    "title": "the forge's commission of wrought-iron garden gates",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the ice route's summer deliveries to the Hill district",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "a touring car's engine overhaul at Kessler's Garage",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "mechanic"
+    ]
+   },
+   {
+    "title": "the steel frame of the Belvedere Building's top floors",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the cannery's salmon-run season",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the shirtwaist factory's spring order",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "crafts",
+     "industry"
+    ]
+   },
+   {
+    "title": "the wheat harvest on the Ostrander farm",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the new shaft at Number Six mine",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the longshore gang's unloading of the banana boats",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the streetcar track relaying on Fifth Avenue",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the textile mill's new looms",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "building",
+     "crafts",
+     "industry"
+    ]
+   },
+   {
+    "title": "the barn raising on the Lindqvist farm",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "building",
+     "farming"
+    ]
+   },
+   {
+    "title": "the tailor's run of suits for the bank clerks",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the brickwork on the new movie palace on Main Street",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the lobster season out of Gull Harbor",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the funeral parlour's new chapel and motor hearse",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "building",
+     "crafts"
+    ]
+   },
+   {
+    "title": "the automobile plant's new assembly line for roadsters",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "industry",
+     "mechanic"
+    ]
+   },
+   {
+    "title": "the orchard's peach harvest and packing shed",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the quarry's granite order for the county courthouse",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the shipyard's refit of the steamer Calliope",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the cattle drive to the railhead at Dry Fork",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the plumbing in the new apartment house on Locust Street",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the dairy farm's new milking barn",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the smithy's switch from horseshoes to auto repair",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "crafts",
+     "mechanic"
+    ]
+   },
+   {
+    "title": "the radio-set assembly at the Belden works",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "crafts",
+     "industry"
+    ]
+   },
+   {
+    "title": "the dredging of the harbour channel",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the hat factory's straw boater season",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "crafts",
+     "industry"
+    ]
+   },
+   {
+    "title": "a mahogany runabout at Pruitt's boatyard",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "crafts",
+     "sea"
+    ]
+   },
+   {
+    "title": "the new loom shed at Ashby Mill",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "crafts",
+     "industry"
+    ]
+   },
+   {
+    "title": "the railway cutting through Blackstone Hill",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the new coal seam on the lower level of Wheal Prosper",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the ironwork for the new river bridge",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "building",
+     "industry"
+    ]
+   },
+   {
+    "title": "the sailmaking for the clipper Starling",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "crafts",
+     "sea"
+    ]
+   },
+   {
+    "title": "the cotton mill's switch to ring spinning",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the boiler repairs on the paddle steamer Ondine",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "sea",
+     "industry",
+     "mechanic"
+    ]
+   },
+   {
+    "title": "the cattle round-up on the Double K range",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the tannery's new lime pits",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the dye works' new indigo vats",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "crafts",
+     "industry"
+    ]
+   },
+   {
+    "title": "the hop picking in the Weald gardens",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the whaler Persistence on the slipway",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the ice harvest on Miller's Pond",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "farming",
+     "industry"
+    ]
+   },
+   {
+    "title": "the cobbler's order of boots for the mine crews",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "crafts",
+     "industry"
+    ]
+   },
+   {
+    "title": "the brickworks' new kiln",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "building",
+     "industry"
+    ]
+   },
+   {
+    "title": "the gasworks' new gasometer foundations",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "building",
+     "industry"
+    ]
+   },
+   {
+    "title": "the tailoring of uniforms for the town band",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the quarrying for the new town hall's facade",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "building",
+     "industry"
+    ]
+   },
+   {
+    "title": "the oat harvest on the Pemberton farm",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the windmill's new sails and millstones",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "crafts",
+     "farming",
+     "industry"
+    ]
+   },
+   {
+    "title": "the wagon-wheel orders at the wheelwright's",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "building",
+     "crafts"
+    ]
+   },
+   {
+    "title": "the undertaker's new glass-sided hearse",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the herring season off the north coast",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the armour for the knights of the spring tourney",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the new tower wall at Castle Dunmere",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "building"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the guild's woven banner for the summer fair",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the barley harvest on the abbey farm",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "a new galley for the harbour guard",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the mill's new millstone from the quarry",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "farming",
+     "industry"
+    ]
+   },
+   {
+    "title": "the scarlet cloth order for the royal court",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the tanning of hides for the saddlers' guild",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the stone carving on the cathedral's west door",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "building",
+     "crafts"
+    ]
+   },
+   {
+    "title": "the boots for the royal guard",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the orchard's cider-apple harvest",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "farming"
+    ]
+   },
+   {
+    "title": "the clearing of the King's Wood road",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "building",
+     "farming"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "new sails for the merchant cog Gilded Heron",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts",
+     "sea"
+    ]
+   },
+   {
+    "title": "the horseshoes for the cavalry muster",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the replanting of the royal garden maze",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "farming"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the herring catch for the Lenten markets",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "sea"
+    ]
+   },
+   {
+    "title": "the robes for the coronation",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the drystone walls on the high sheep pastures",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "building",
+     "farming"
+    ]
+   },
+   {
+    "title": "the green dye batch for the Emerald City guards",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts"
+    ],
+    "cities": [
+     "emerald-city"
+    ]
+   },
+   {
+    "title": "the barrels for the vintners' autumn pressing",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "crafts"
+    ]
+   },
+   {
+    "title": "the stone bridge over the River Wend",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "building"
+    ]
+   },
+   {
+    "title": "the miners' new tunnel in the Silverdeep",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "industry"
+    ]
+   },
+   {
+    "title": "the thatch and timber for the new granary",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "building"
+    ]
+   }
+  ],
+  "transport": [
+   {
+    "title": "the container yard reshuffle at Berth 9",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "a new delivery route through the Harlow Hills estates",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the winter timetable for the Route 14 bus",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the switch to electronic proof-of-delivery scanners",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the night-freight schedule for the Calder Valley line",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "a driver rota rework for the holiday rush",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the dispatch app rollout for the taxi fleet",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight",
+     "transit"
+    ]
+   },
+   {
+    "title": "the cold-chain audit for the Marlow Foods contract",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the customs paperwork backlog at Pier 4",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "a fleet changeover to electric vans",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the depot move from Fenwick Road to the new site",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight",
+     "transit"
+    ]
+   },
+   {
+    "title": "the cargo manifest cleanup for the MV Orla Brandt",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the reefer container inspection drive",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the new loading-dock booking system",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the airport shuttle contract with the Grandview Hotel",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the parcel-sorting line upgrade at the north hub",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the fuel-card reconciliation for the spring quarter",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the courier zone redesign for the city centre",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the crane operator training block for new hires",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "a tram line diversion during the bridge repairs",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the warehouse slotting review for the Kessler account",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the overnight ferry crossing schedule for summer",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the last-mile pilot with cargo bikes in the Old Quarter",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping",
+     "freight"
+    ]
+   },
+   {
+    "title": "the route-optimisation trial for rural postal rounds",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight",
+     "post"
+    ]
+   },
+   {
+    "title": "signalling handover training on the Eastgate line",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "shipping lane notice updates for the harbour authority",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the safety recertification for forklift drivers",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the returns process overhaul for the Brightwell catalogue",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the cleanup after the call-routing system outage",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the radio frequency changeover for the port pilots",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the automation report for the Skerry Point lighthouse",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the bus driver uniform and badge refresh",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight",
+     "transit"
+    ]
+   },
+   {
+    "title": "freight rate talks with Tolland Haulage",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the yard tractor maintenance schedule for Q4",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the complaints backlog on the airport run",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "pallet-tracking rollout across three depots",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the holiday peak plan for parcel volumes",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the cruise-ship turnaround plan for the Pelican Star",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "a ride-share pickup zone layout at Central Station",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the mail van replacement programme",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight",
+     "post"
+    ]
+   },
+   {
+    "title": "digitising the vessel traffic logbooks",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the tachograph compliance review for the lorry fleet",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the new streetcar timetable for the Elm Avenue line",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "a switchboard expansion at the Lakeview exchange",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the Pullman roster for the Golden Coast Limited",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the telegraph office move to Commerce Street",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the cab stand dispute at Union Depot",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "freight",
+     "transit"
+    ]
+   },
+   {
+    "title": "the steamship Corinna's autumn sailing schedule",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the mail-sorting overhaul for the Christmas rush",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the freight-yard switching plan for the grain season",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "freight",
+     "transit"
+    ]
+   },
+   {
+    "title": "an airmail route survey out to Willow Falls",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "a new wireless set installation aboard the Marguerite",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the wharf strike settlement on the river docks",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the motormen's seniority list for the new car barn",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the taxi fleet's switch to metered fares",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "freight",
+     "transit"
+    ]
+   },
+   {
+    "title": "the night-shift rota for the long-distance operators",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the parcel-post route out past Cedar Creek",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "freight",
+     "post"
+    ]
+   },
+   {
+    "title": "the dining-car linen and silver inventory",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the logbooks for the Gull Rock lighthouse station",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the telegram backlog from the flood-season wires",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the moving-van contract for Halloway's department store",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "ferry landing repairs at Bayside Slip",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the radio log for the harbour weather broadcasts",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "shipping",
+     "transit",
+     "post"
+    ]
+   },
+   {
+    "title": "pneumatic tube rerouting at the main post office",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the ice-wagon route to the new Fairview houses",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the conductor training class for the interurban line",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the baggage-room reorganisation at Grand Terminal",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the stevedore gang roster for the banana boats",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the etiquette course for new switchboard girls",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the new signal box at Hatcher's Junction",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "a coaching timetable for the Dry Gulch stage line",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the canal toll ledgers for the Sowerby Cut",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "telegraph line repairs along the Red Mesa stretch",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the brakemen's roster for the coal trains",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the hackney carriage licence renewals for the borough",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the lock-gate rebuild at Number Seven Lock",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the haulage contract with Thornbury Mills",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the steamer Albion's coaling schedule",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the new letter round for the Hollins Lane district",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the horse-bus route to the Bellmere terminus",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "new uniforms and badges for the railway porters",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the airship mail rigging for the Northwind packet",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the freight-shed reorganisation at Cotterell Road goods yard",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "freight",
+     "transit"
+    ]
+   },
+   {
+    "title": "the sailing ship Mary Tolliver's refit and crew list",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the tube-post sorting hall expansion",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "Morse training for the new telegraph apprentices",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "post"
+    ]
+   },
+   {
+    "title": "the ferry service across the Wendle Estuary",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the lamp change at Corran Head to new paraffin burners",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the cart-horse stabling move to Pike Street",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the express letter service to the mining camps",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "transit",
+     "post"
+    ]
+   },
+   {
+    "title": "the coal-barge schedule for the winter freeze",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the harbour master's ledger of autumn cargoes",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "a caravan route over the Greywold Pass",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the river barge levy for the Millford ferry",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the messenger relay to the northern castles",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "post"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "refitting the cog Seawren for the spring trade",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the new bridge toll at Kingsford",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "transit"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the carters' guild roster for harvest haulage",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the beacon-tower watch rota along the coast",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the royal post riders' new waystations",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "transit"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "wharf repairs at Fishgate Quay",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the wine shipment from the Amberlands vineyards",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the ox-cart convoy for the castle stores",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "freight"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the pigeon loft expansion for the herald's office",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "post"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "new ferry ropes and rafts at Reedmere",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the stable inventory at the Golden Swan coaching inn",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "freight",
+     "transit"
+    ]
+   },
+   {
+    "title": "a tally of the salt wagons from Brinehold",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "freight"
+    ]
+   },
+   {
+    "title": "the lighthouse fire-keeping rota at Gullstone Head",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "clearing the road along the Old Forest Way",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "transit"
+    ]
+   },
+   {
+    "title": "the dockhands' guild charter renewal",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "sea charts for the voyage to the Saffron Isles",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   },
+   {
+    "title": "the yellow-brick road repairs outside the Emerald City",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "transit"
+    ],
+    "cities": [
+     "emerald-city"
+    ]
+   },
+   {
+    "title": "the grain-boat schedule for the river fair",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "shipping"
+    ]
+   }
+  ],
+  "creative": [
+   {
+    "title": "the rebrand for Halden & Pike Coffee",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the mixing sessions for a new album",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the spring lookbook for the Ivy Row label",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design",
+     "photo"
+    ]
+   },
+   {
+    "title": "the poster series for the Northbank Film Festival",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "an investigative piece on the Marsh Lane housing contracts",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "the set list for the summer tour",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "a photo series on the city's night markets",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "a music video shoot for the band Paper Lanterns",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "photo",
+     "music"
+    ]
+   },
+   {
+    "title": "the website redesign for the Calloway Theatre",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design",
+     "stage"
+    ]
+   },
+   {
+    "title": "costume fittings for a revival of The Glass Orchard",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the podcast season on the city's buried rivers",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "the packaging redesign for Fernway Tea",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "a gallery show of portraits at Studio Nine",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "backing-vocal arrangements for the winter record",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the election-night coverage plan",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "styling for the Maison Verelle sample sale",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "rehearsals for a new dance piece at the Arden",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "a typeface for the Brookside Library signage",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the jazz quartet's residency at the Blue Heron",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the obituary archive update for the Gazette",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "the social campaign for the Westmere Zoo reopening",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the editorial calendar for the autumn issue",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "audition tapes for a streaming drama",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "photo",
+     "stage"
+    ]
+   },
+   {
+    "title": "runway casting for Atelier Sorne at fashion week",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "photo",
+     "stage"
+    ]
+   },
+   {
+    "title": "product photography for the Linden & Co. catalogue",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design",
+     "photo"
+    ]
+   },
+   {
+    "title": "a stand-up hour for the comedy festival",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the brand guidelines refresh for Tidewater Bank",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the explainer series on the local elections",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "soundtrack cues for an indie game",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the art school's spring term of life-drawing sessions",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "the backlog of wedding-season photo edits",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "an illustrated children's book about a lost lighthouse",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the community theatre's production of Harbour Lights",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the newsletter redesign for the Ashby Arts Council",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the opening number of the cabaret show",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "music",
+     "stage"
+    ]
+   },
+   {
+    "title": "the print run for the zine collective's summer issue",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design",
+     "press"
+    ]
+   },
+   {
+    "title": "motion graphics for the Velo Cup broadcast",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "a data story on city rent prices",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "string arrangements for a debut EP",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the edit of the documentary on Kestrel Bay fishers",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "the press kit for the Moonvale music festival",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "restoring the hand-lettered shop sign on Cole Street",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the new revue at the Starlight Follies",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the band's arrangements for the Palm Room dances",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "music",
+     "stage"
+    ]
+   },
+   {
+    "title": "the society-page coverage of the debutante season",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "the front-page series on the Riverside tenement fires",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "a new fan dance routine for the Copper Kettle club",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "chorus line rehearsals for Sweet Mabel",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the song-plugging tour of the Main Street music shops",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the portrait sitting backlog at the Ellery studio",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "the linotype changeover in the composing room",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "window posters for Brandt's department store",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the radio broadcast of the Saturday dance band",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the summer stock season at the Lakeshore Playhouse",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "sheet-music covers for Harrow & Finch publishers",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "newsreel footage of the county fair",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "the fall fashion show at the Waverly Hotel ballroom",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the late-set piano repertoire for the Velvet Door",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "city election coverage for the Evening Clarion",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "a phonograph recording session for the Bayou Six",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "advertising sketches for Larkspur cold cream",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the vaudeville bill for the Majestic circuit",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the magazine serial's last six instalments",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "design",
+     "press"
+    ]
+   },
+   {
+    "title": "modelling sessions for the Fenwick Academy art classes",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "the tango exhibition numbers for the Casino Delmar",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "music",
+     "stage"
+    ]
+   },
+   {
+    "title": "the crossword page launch for the Sunday edition",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "a photo essay on the skyscraper rising on Ninth Street",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "photo",
+     "press"
+    ]
+   },
+   {
+    "title": "the piano accompaniment score for a silent picture",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the burlesque troupe's new feather-fan finale",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the music-hall bill for the Gaiety Rooms",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the type-case reorganisation at the Courier press",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "the serial chapters for the penny weekly",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "the engraving plates for the Christmas almanac",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "design",
+     "press"
+    ]
+   },
+   {
+    "title": "the minstrel troupe's tour of the river towns",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "music",
+     "stage"
+    ]
+   },
+   {
+    "title": "cabinet-card portraits for the Ladies' Guild",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "the saloon piano repertoire for the Silver Spur",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "dispatches from the railroad strike",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "theatre handbills for The Lady of Larkmoor",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "design",
+     "stage"
+    ]
+   },
+   {
+    "title": "the brass band's programme for the park bandstand",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the newsboys' new corners after the paper's move",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "an illustrated report on the mill-town floods",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "design",
+     "press"
+    ]
+   },
+   {
+    "title": "the composing-room night shift for the election edition",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "the tableau vivant evening at the Assembly Rooms",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "a panorama painting for the summer exhibition",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "the Christmas pantomime rehearsals at the Royal Albion",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "song sheets for the new comic ballad",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "wet-plate photographs of the new viaduct",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "life-class sittings at the Mechanics' Institute",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "photo"
+    ]
+   },
+   {
+    "title": "the travelling players' spring circuit",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "trade-card designs for Hobb's Patent Soap",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the town band's new uniforms and repertoire",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the ballads for the midsummer feast at court",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "an illuminated copy of the guild charter",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "the mummers' play for the winter fair",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the tapestry design for the great hall",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the town musicians' new watch-hour fanfares",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the herald's proclamations for the tourney",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "music",
+     "stage",
+     "press"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the puppet show for the harvest market",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "a portrait of the queen's council",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "photo"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the minstrels' tour of the river castles",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "music"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the stained-glass cartoon for the chapel window",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "the songbook for the Emerald City's jubilee",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "music"
+    ],
+    "cities": [
+     "emerald-city"
+    ]
+   },
+   {
+    "title": "masque costumes for the king's birthday",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "stage"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "woodcut broadsheets about the dragon sighting",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "design",
+     "press"
+    ],
+    "fantasy": true
+   },
+   {
+    "title": "the troupe's new play on the founding of Marrowby",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "carved signboards for Lantern Street",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "entries for the bardic contest at the spring moot",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "music"
+    ]
+   },
+   {
+    "title": "the chronicle of the year's harvests",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "press"
+    ]
+   },
+   {
+    "title": "the dances for the Maypole festival",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "stage"
+    ]
+   },
+   {
+    "title": "the jester's new routines for the royal banquet",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "stage"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "painted banners for the guild procession",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "design"
+    ]
+   },
+   {
+    "title": "lute lessons for the castle's pages",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "music"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the sculptor's model for the Market Square fountain",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "photo"
+    ]
+   }
+  ],
+  "public": [
+   {
+    "title": "the quarterly crime statistics report",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "a neighbourhood patrol plan for the Riverside estate",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the policy briefing on bus fare subsidies",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the cold-case review of the Harker Street burglaries",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the body camera rollout for the night shift",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the deployment exercise at Camp Ridley",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "the readiness inspection aboard the patrol vessel Tern",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police",
+     "military"
+    ]
+   },
+   {
+    "title": "census data cleanup for the northern wards",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the union's pay claim for the bus drivers",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "mediation in the Ashgrove tenancy dispute",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the festival security plan for Summerfield Park",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "the background check backlog for new recruits",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the evidence locker audit",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "a traffic-calming study on Pell Road",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "the cybercrime awareness campaign for schools",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "fire-safety inspections of the Old Market lofts",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the regional flood response plan",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "a cost-benefit analysis of the new tram depot",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the custody suite refurbishment",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the missing-persons database migration",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the fraud investigation at Kerridge Logistics",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "community liaison meetings in Dockside",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the holiday drink-driving crackdown on the highways",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "the fleet maintenance review for patrol cars",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the recruitment drive for the reserve battalion",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "surveillance on a stolen-car ring",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the arbitration hearing for the Linfield nurses' contract",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the port security drill with the coastguard",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police",
+     "military"
+    ]
+   },
+   {
+    "title": "the open-data portal for council spending",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the use-of-force policy review",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "a canvass of shop owners on Mercer Street",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the shift pattern overhaul for the response teams",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "noise complaint mapping for the nightlife district",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "parade route security for Founders' Day",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "joint training with the county sheriff's deputies",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the warrant backlog cleanup for the county court",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the member survey for the warehouse workers' union",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the evaluation report on the youth diversion scheme",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the emergency radio upgrade for the station",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "logistics for the naval base's winter exercise",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "a private investigation into a missing heirloom",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the budget submission for the next fiscal year",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the raid planning on the Cobalt Club speakeasy",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "a new beat along the Canal Street docks",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the fingerprint files for the detective bureau",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the traffic-signal trial at Fifth and Main",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the union drive at the Halverson textile mill",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the call-box rotation for the precinct",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the troopers' highway patrol through Pine County",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the bootlegging case against the Merriweather gang",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the dock strike arbitration at Pier 12",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "preparations for the navy cruiser's goodwill visit",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "the county fair crowd-control plan",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the files on the city council bribery affair",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the case of the missing pearl brooch",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "motorcycle squad training",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the precinct's switch from horses to patrol cars",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the deputies' posse roster for the river flood",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the civil service exam preparation class",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the customs watch on rum-running boats",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the stolen-bonds investigation at Granite Trust",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the burglar-alarm survey for the Front Street banks",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "a ledger audit of the waterworks commission",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the relief fund for the striking railway shopmen",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the army reserve summer encampment",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "the fire-watch rota for the downtown theatres",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the night-patrol schedule during the heat wave",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "a census of the Ward Six boarding houses",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the missing heiress case for the Vandermeer family",
+    "eras": [
+     "jazz-age"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the new beat book for the Ropewalk division",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the sheriff's posse for the cattle-rustling trouble",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the tide-waiters' ledger of bonded cargoes",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the inquiry into the Bellmont colliery accident",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "a private inquiry into the stolen mill payroll",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "the cavalry patrol along the Arrow River",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police",
+     "military"
+    ]
+   },
+   {
+    "title": "fire-watch towers for the timber yards",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the gaslight street inspection rounds",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the constables' drill for the jubilee parade",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the trade union's petition for the nine-hour day",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "arbitration between the weavers and Haddersby Mill",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the excise survey of the dockside warehouses",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the garrison's rifle-range course",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "bounty notices for the Kettle Creek gang",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the night-watch rota for the Exchange building",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the poor-relief census of Tanner's Row",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the street-sweeping contract for the borough",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "gunnery trials aboard the ironclad Resolute",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "the weights and measures inspection of the market",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "the detective bureau's file on the counterfeit sovereigns",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the railway strike mediation at the Ashworth shops",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the town marshal's licensing of the saloons",
+    "eras": [
+     "industrial"
+    ],
+    "fits": [
+     "police",
+     "government"
+    ]
+   },
+   {
+    "title": "the gate warden's ledger of the spring fair crowds",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the castle garrison's winter watch rota",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police",
+     "military"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "training new men-at-arms for the border keep",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "the arbitration of the mill-pond water rights",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the fire-watch rounds of the Thatchers' Quarter",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the street-keepers' cleanup after the midsummer fair",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the tide-waiters' count of wine casks at Saltgate",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "government"
+    ],
+    "cities": [
+     "grandport"
+    ]
+   },
+   {
+    "title": "the guard roster for the royal wedding procession",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police",
+     "military"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "repairs to the city walls at the North Gate",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "the hunt for the bandits on the King's Road",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "a census of the lower town for the new tithe",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the hearing of the tanners' and dyers' river dispute",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the house guards' drill for the duke's visit",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police",
+     "military"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the toll-house accounts at Bramble Bridge",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the curfew bell rota for the market wards",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the muster of the levy for the autumn campaign",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "military"
+    ]
+   },
+   {
+    "title": "spectacle fittings at the Emerald City gates",
+    "eras": [
+     "old"
+    ],
+    "cities": [
+     "emerald-city"
+    ]
+   },
+   {
+    "title": "the investigation into the stolen guild seal",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the night patrol of the harbour chains",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "police"
+    ]
+   },
+   {
+    "title": "the court records for the assize sitting",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the drafting of the new market charter",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "government"
+    ]
+   },
+   {
+    "title": "the warship crew muster for the summer sailing",
+    "eras": [
+     "old"
+    ],
+    "fits": [
+     "military"
+    ]
+   }
+  ],
+  "general": [
+   {
+    "title": "the end-of-season stock count",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "training two new hires",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "the move to a bigger workshop",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "covering a colleague's work for a month",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "a big order for a regular customer",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "the festival-week rush",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "the yearly inspection",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "clearing the backlog of unfinished orders",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "a full spring cleaning of the workroom",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "taking on an apprentice for the season",
+    "eras": [
+     "modern",
+     "jazz-age",
+     "industrial",
+     "old"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "copying out the old order book into a fresh ledger",
+    "eras": [
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "a wedding order for the miller's daughter",
+    "eras": [
+     "jazz-age",
+     "industrial",
+     "old"
+    ]
+   },
+   {
+    "title": "the switch to a new supplier across town",
+    "eras": [
+     "jazz-age",
+     "industrial"
+    ]
+   },
+   {
+    "title": "settling the accounts before quarter day",
+    "eras": [
+     "jazz-age",
+     "industrial"
+    ]
+   },
+   {
+    "title": "the switch to new booking software",
+    "eras": [
+     "modern"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "a website refresh before the holiday season",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the Q4 stock count and write-off list",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "onboarding two new part-timers",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the move into the bigger unit on Harrow Lane",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "covering the late shift while a coworker is on leave",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the annual health and safety audit",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "a bulk order for the Delacroix Group",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the summer street-festival weekend prep",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "rewriting the price list for next year",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the year-end tax paperwork",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "an overhaul of the customer email list",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the social media calendar for autumn",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "a grant application for the small-business fund",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the new loyalty card scheme",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "migrating old files to the cloud drive",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "a pop-up stall at the Riverside Night Market",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the insurance renewal and risk review",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "photographing the whole catalogue for the new site",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the December rota and holiday cover plan",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "writing a proper operations manual",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "a sponsorship pitch to Northgate Credit Union",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the spring open-house event",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "renegotiating the lease with the landlord",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "setting up online payments for regulars",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "cleaning up two years of messy receipts",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "a customer survey and the follow-up changes",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the equipment replacement budget for next year",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "prep for the regional trade fair in Corbin Falls",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "a joint promotion with the bakery next door",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the switch to a new delivery courier",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the reorganised storeroom and new shelving",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "recording a set of how-to videos for clients",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the backlog of five-star review replies",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the January sale planning",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "a corporate gift order for Halvorsen Logistics",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "updating every contract template",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the new hire's three-week shadowing plan",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "the move to a four-day week trial",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "a newsletter relaunch for long-time customers",
+    "eras": [
+     "modern"
+    ]
+   },
+   {
+    "title": "typing up the new price cards for the window",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the big Christmas order for the Pemberton Hotel",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "a stall at the Fourth of July county fair",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the switch to a new telephone exchange line",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "breaking in a new errand boy for the summer",
+    "eras": [
+     "jazz-age"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the move to bigger premises on Delancey Street",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "a rush of orders before the Labor Day parade",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "rebinding the customer ledgers for 1927",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "a newspaper advertisement campaign in the Courier",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the annual visit from the city license inspector",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "an order for the Hargrove department store",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the season's telegram orders from out-of-town clients",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "repainting the shopfront sign in gold leaf",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "covering the night shift while the partner is laid up",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "a radio advertisement spot on station WKBQ",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the steamship-season rush down at the piers",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the new filing cabinet system for old letters",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "a catalogue for the mail-order trade",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the delivery route by the new motor truck",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "settling a dispute with the ward boss's office",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "a charity bazaar for the Ladies' Aid Society",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the spring stock order from the Chicago wholesaler",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "teaching the new girl at the counter the ropes",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the Christmas window display for Halsey Avenue",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the year-end books for the accountant",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "a contract with the Bellweather Hotel kitchens",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the Mardi Gras week rush",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "a new business card and letterhead from the printer",
+    "eras": [
+     "jazz-age"
+    ]
+   },
+   {
+    "title": "the half-yearly stock-taking by lamplight",
+    "eras": [
+     "industrial"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "training two new lads from the parish workhouse",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the move to a larger yard by the canal",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "a big order for the Ashworth Mill owners",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the Whitsun fair week rush",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the yearly visit of the parish inspector",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "a railway contract for the Great Northern Line depot",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the new gas lamps fitted in the workroom",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "a telegraphed order from a client in Manchester",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "balancing the ledgers before Lady Day rent",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "covering for a partner laid up with the fever",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the Michaelmas hiring fair",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the switch to a steam-powered press",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "a commission for the mayor's jubilee procession",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the winter coal and candle accounts",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the cattle-drive season trade in Copper Gulch",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "a showing at the county exhibition hall",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "printing handbills for the new trade",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the harvest-home festivities order",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "rehanging the shop sign after the storm",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "a big order for the Bramwell Colliery",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "writing up the indentures for a new apprentice",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "a stall at the Christmas market on Fleet Row",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the move of the whole stock by horse and cart",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "a contract with the Cunliffe Steam Packet Company",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "chasing three months of unpaid accounts",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "the gold-rush boom orders from the mining camp",
+    "eras": [
+     "industrial"
+    ]
+   },
+   {
+    "title": "a repair of the leaking workshop roof",
+    "eras": [
+     "industrial"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the stock count before the winter fair",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "training two new apprentices for the guild",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "the move to a bigger stall by the castle gate",
+    "eras": [
+     "old"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the guild masters' yearly inspection",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "a great order for the Duke of Ravensmoor",
+    "eras": [
+     "old"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the midsummer festival rush",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "the Harvest Moon market week",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "a royal wedding commission at the castle",
+    "eras": [
+     "old"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "covering for a guild-sister gone on pilgrimage",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "the tithe accounts for the abbey",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "copying the guild charter onto new parchment",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "the spring fair at Brightwater Crossing",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "supplies for the knights' tournament",
+    "eras": [
+     "old"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the trade with merchant ships from the Amber Isles",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "a commission for the Emerald City palace",
+    "eras": [
+     "old"
+    ],
+    "cities": [
+     "emerald-city"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the Yuletide feast order for the great hall",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "a long journey to the market at Thornbury",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "a new sign painted for the guild hall",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "the harvest-tax reckoning with the steward",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "a petition to the guild for a master's mark",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "a winter's supply laid in before the snows",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "the coronation-week celebrations",
+    "eras": [
+     "old"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "rebuilding the workshop after the great flood",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "a gift order for the visiting elven embassy",
+    "eras": [
+     "old"
+    ],
+    "fantasy": true
+   },
+   {
+    "title": "the queen's spring progress through the town",
+    "eras": [
+     "old"
+    ],
+    "monarchy": true
+   },
+   {
+    "title": "the spice caravan's arrival from the south",
+    "eras": [
+     "old"
+    ]
+   },
+   {
+    "title": "the dragon-season repairs on the town walls",
+    "eras": [
+     "old"
+    ],
+    "fantasy": true
+   },
+   {
+    "title": "a fairy-ring market on Midsummer's Eve",
+    "eras": [
+     "old"
+    ],
+    "fantasy": true
+   }
+  ],
+  "adult": [
+   {
+    "title": "a rebrand of the subscriber page",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the Halloween theme week",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the new photo set's shoot schedule",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "film"
+    ]
+   },
+   {
+    "title": "a tiered pricing overhaul for subscribers",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the content calendar for the winter months",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "a collab week with two other creators",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the subscriber anniversary giveaway",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "moving the archive to a new platform",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "author"
+    ]
+   },
+   {
+    "title": "a fresh banner and profile photo shoot",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "film"
+    ]
+   },
+   {
+    "title": "the welcome-message sequence for new fans",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the custom-request backlog from the holidays",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "a promo swap schedule with fellow creators",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the Valentine's week bundle launch",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "taxes and bookkeeping for the quarter",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "dancer",
+     "film",
+     "phone",
+     "domme",
+     "author"
+    ]
+   },
+   {
+    "title": "the merch drop of signed prints",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "a watermarking pass on the whole back catalogue",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "editor"
+    ]
+   },
+   {
+    "title": "building a safer, separate work phone setup",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the summer beach-themed photo series",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "hiring a part-time chat assistant",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "a takedown sweep for leaked content",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "editor"
+    ]
+   },
+   {
+    "title": "the new streaming room setup",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "a lighting and camera upgrade for the stream",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the weekly show schedule across time zones",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the birthday stream and its tip goals",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "a costume rotation for the autumn shows",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "dancer"
+    ]
+   },
+   {
+    "title": "the switch to a new cam site",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "a marathon charity stream weekend",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the regulars' loyalty perks program",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "redecorating the set for a cozy-cabin theme",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the New Year's Eve countdown show",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "the club's new stage routine",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "a pole-fitness certification course",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "the costume order from the seamstress",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "the feature-dancer tour of three cities",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "the bachelor-party season bookings",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "a new set list for the main stage",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "rehearsals for the club's showcase night",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "the Velvet Room's anniversary weekend",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "a competition routine for the regional pole contest",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "building up a stretch and recovery routine",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "the house-fee dispute with club management",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "teaching the new dancers floor etiquette",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "dancer"
+    ]
+   },
+   {
+    "title": "a new shoot block for Silverline Studios",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "the convention booth at the fan expo",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "the award-season press junket",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "renewing health testing and paperwork",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "a feature shoot's rehearsal schedule",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "the booking calendar with a new agent",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "launching a performer-owned studio channel",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "a fan signing tour through the summer",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "the contract renegotiation with Moonglass Media",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "the late-night shift rota on the phone line",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "phone"
+    ]
+   },
+   {
+    "title": "a new character persona for the line",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "phone"
+    ]
+   },
+   {
+    "title": "the switch to a new call platform",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "phone"
+    ]
+   },
+   {
+    "title": "the holiday-weekend call coverage",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "phone"
+    ]
+   },
+   {
+    "title": "training the new operators on scripts",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "phone"
+    ]
+   },
+   {
+    "title": "a quality review of the call scripts",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "phone"
+    ]
+   },
+   {
+    "title": "a new dungeon space lease and fit-out",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "domme"
+    ]
+   },
+   {
+    "title": "the session booking system overhaul",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "domme"
+    ]
+   },
+   {
+    "title": "the screening and deposit policy rewrite",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "domme"
+    ]
+   },
+   {
+    "title": "the equipment cleaning and inventory check",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "domme"
+    ]
+   },
+   {
+    "title": "a workshop series on consent and safety",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "domme"
+    ]
+   },
+   {
+    "title": "a travel-tour booking to two other cities",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "domme"
+    ]
+   },
+   {
+    "title": "the new website photos for the studio",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "domme"
+    ]
+   },
+   {
+    "title": "the client etiquette guide for new bookings",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "domme"
+    ]
+   },
+   {
+    "title": "a calendar shoot for the Ironwood Garage",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "the portfolio refresh with a new photographer",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "the swimwear lookbook for Coral Tide",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "a magazine cover shoot and the interview",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "the convention appearance schedule",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "the casting call circuit for the season",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "a print-sale of signed calendar pages",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film"
+    ]
+   },
+   {
+    "title": "editing a feature for a studio",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "editor"
+    ]
+   },
+   {
+    "title": "the trailer cut for the spring release",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "editor"
+    ]
+   },
+   {
+    "title": "colour grading a twelve-scene series",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "editor"
+    ]
+   },
+   {
+    "title": "the archive re-encode for the new site",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "editor",
+     "author"
+    ]
+   },
+   {
+    "title": "a backlog of thumbnails and preview clips",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "editor"
+    ]
+   },
+   {
+    "title": "the subtitles pass for the overseas release",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "editor"
+    ]
+   },
+   {
+    "title": "the editing suite's new storage server",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "editor"
+    ]
+   },
+   {
+    "title": "the compliance paperwork check for every scene",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "editor"
+    ]
+   },
+   {
+    "title": "a recut of the anthology for streaming",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "editor"
+    ]
+   },
+   {
+    "title": "the store's holiday inventory",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shop"
+    ]
+   },
+   {
+    "title": "a window display for Pride Month",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shop"
+    ]
+   },
+   {
+    "title": "the stockroom reorganisation at Cherry Lane Boutique",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shop"
+    ]
+   },
+   {
+    "title": "the new point-of-sale system at the shop",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shop"
+    ]
+   },
+   {
+    "title": "a staff training on product knowledge",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shop"
+    ]
+   },
+   {
+    "title": "the Valentine's Day rush at the store",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shop"
+    ]
+   },
+   {
+    "title": "the year-end stocktake at the boutique",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shop"
+    ]
+   },
+   {
+    "title": "the shop's online store launch",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "shop"
+    ]
+   },
+   {
+    "title": "a novella draft for a publisher's deadline",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "author"
+    ]
+   },
+   {
+    "title": "the cover design for the next romance release",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "author"
+    ]
+   },
+   {
+    "title": "edits on the third book in the series",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "author"
+    ]
+   },
+   {
+    "title": "the newsletter for a new pen name",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "author"
+    ]
+   },
+   {
+    "title": "a short-story anthology submission",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "author"
+    ]
+   },
+   {
+    "title": "the audiobook narration casting",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "film",
+     "author"
+    ]
+   },
+   {
+    "title": "the launch week for the Harbor Lights series",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "author"
+    ]
+   },
+   {
+    "title": "the reader-ARC team for the next book",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "author"
+    ]
+   },
+   {
+    "title": "a boxed-set release of the first trilogy",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "author"
+    ]
+   },
+   {
+    "title": "the new business bank account and accounting",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "dancer",
+     "film",
+     "domme",
+     "author"
+    ]
+   },
+   {
+    "title": "a privacy audit of every online profile",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "dancer",
+     "film",
+     "phone",
+     "domme",
+     "author"
+    ]
+   },
+   {
+    "title": "a legal name and stage-name paperwork tidy-up",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "dancer",
+     "film",
+     "phone",
+     "domme"
+    ]
+   },
+   {
+    "title": "the move to a new studio apartment for shoots",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator"
+    ]
+   },
+   {
+    "title": "a brand-deal pitch to a lingerie label",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "film"
+    ]
+   },
+   {
+    "title": "the annual planning session with a manager",
+    "eras": [
+     "modern"
+    ],
+    "fits": [
+     "creator",
+     "film",
+     "domme"
+    ]
+   }
+  ]
+ }
+}

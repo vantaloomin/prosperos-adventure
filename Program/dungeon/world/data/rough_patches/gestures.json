@@ -1,0 +1,31 @@
+{
+  "about": "Rough patches (dungeon/life/rough_patches.py): what the user writes in chat that the app takes as a make-up gesture (a gift, a treat, a kind act, an offer to make it up). Matched like the apologies; *actions* count too.",
+  "phrases": [
+    "brought you flowers", "bought you flowers", "got you flowers", "picked up flowers for you", "sent you flowers",
+    "these are for you", "hands you flowers", "hands you a bouquet", "brought you coffee", "got you a coffee",
+    "hands you a coffee", "brought you your favorite", "brought you your favourite", "got you your favorite",
+    "got you your favourite", "brought you breakfast", "made you breakfast", "made you dinner", "cooked you dinner",
+    "i'm cooking you dinner", "let me cook you dinner", "let me take you to dinner", "let me take you out",
+    "dinner's on me", "dinner is on me", "drinks are on me", "my treat", "it's my treat", "i'll pay this time",
+    "i got us tickets", "got us tickets", "booked us a table", "i booked a table", "i made a reservation",
+    "bought you a present", "got you a present", "got you a little something", "got you something",
+    "brought you something", "i have something for you", "a little gift for you", "i got you a gift",
+    "wrapped a gift for you", "left a note for you", "wrote you a letter", "wrote you a card", "got you a card",
+    "baked you cookies", "baked you a cake", "made you cookies", "brought you chocolate", "got you chocolates",
+    "brought you ice cream", "picked up your favorite takeout", "picked up your favourite takeout",
+    "ordered your favorite", "ordered your favourite", "ordered you pizza", "sent you a pizza",
+    "sent food to your place", "sent you a care package", "made you a playlist", "made a playlist for you",
+    "drew you something", "knitted you a scarf", "did the dishes for you", "cleaned up for you", "did your laundry",
+    "walked your dog", "fed your cat", "ran your errands for you", "picked up your prescription",
+    "picked up your dry cleaning", "filled up your tank", "washed your car", "carried your groceries",
+    "i'll make it up to you", "let me make it up to you", "how can i make it up to you",
+    "i want to make it up to you", "to make it up to you", "planned something for us", "planned a surprise for you",
+    "i have a surprise for you", "takes your hand", "holds your hand", "pulls you into a hug", "gives you a hug",
+    "hugs you tight", "wraps you in a hug", "kisses your forehead", "rubs your shoulders", "gives you a back rub",
+    "draws you a bath", "ran you a bath", "tucks a blanket around you", "makes you tea", "made you tea",
+    "brought you tea", "brought you soup", "made you soup", "cleared my evening for you",
+    "cleared my schedule for you", "took the day off for you", "brought your favorite wine",
+    "brought your favourite wine", "brought you a plant", "got you a plant", "framed the photo of us",
+    "fixed your bike", "brought you a pastry", "saved you a slice", "got you a book you wanted"
+  ]
+}

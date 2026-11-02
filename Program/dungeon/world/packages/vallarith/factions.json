@@ -1,0 +1,604 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "kind": "realm, city-state, tribe, order, cult, company, criminal, court or plane",
+    "tier": "the faction's reach on the shared ladder",
+    "clock_seeds": "starting clocks for Milestone 2's faction clocks: what they are racing toward and how many segments",
+    "eras": "campaign eras the entry applies to; missing means all three",
+    "by_era": "facts that change by era"
+  },
+  "factions": [
+    {
+      "id": "kingdom-of-cyrel",
+      "name": "The Kingdom of Cyrel",
+      "kind": "realm",
+      "tier": "realm",
+      "seat": "cyrel",
+      "holds": [
+        "cyrel",
+        "eriane",
+        "kingswood",
+        "convila",
+        "bastion"
+      ],
+      "summary": "A stubborn fortress kingdom of three sister cities, fighting on two fronts and logging a third.",
+      "goals": [
+        "Hold the Badlands line",
+        "Beat Asania, or at least not lose",
+        "Take back Adlmyr",
+        "Cut the timber the war needs"
+      ],
+      "methods": [
+        "levies and hangings",
+        "Bastion's garrison",
+        "the Timber Guild's crews"
+      ],
+      "rivals": [
+        "kingdom-of-asania",
+        "unguruk-tribe",
+        "dramogon-tribe",
+        "brynwyr-high-elves"
+      ],
+      "allies": [
+        "cyrel-timber-guild"
+      ],
+      "clock_seeds": [
+        {
+          "name": "Asanian spring offensive",
+          "segments": 6
+        },
+        {
+          "name": "Retake Adlmyr",
+          "segments": 8
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "kingdom-of-asania",
+      "name": "The Kingdom of Asania",
+      "kind": "realm",
+      "tier": "realm",
+      "seat": "asania",
+      "holds": [
+        "asania"
+      ],
+      "summary": "Splendid, magical, land-hungry and always ready for war. Allied with Trein's sorcerers, careful around Wrenspire.",
+      "goals": [
+        "Take Cyrel's land",
+        "Keep the crystal coming",
+        "Stay first among the Kingdoms of Man"
+      ],
+      "methods": [
+        "war magic",
+        "money",
+        "alliances with Trein"
+      ],
+      "rivals": [
+        "kingdom-of-cyrel"
+      ],
+      "allies": [
+        "trein-council"
+      ],
+      "clock_seeds": [
+        {
+          "name": "Push across the Cyrel border",
+          "segments": 6
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "trein-council",
+      "name": "The Lamplighters' Council of Trein",
+      "kind": "city-state",
+      "tier": "realm",
+      "seat": "trein",
+      "holds": [
+        "trein"
+      ],
+      "summary": "Trein is governed by the Lamplighters' Council, named for the old duty of keeping the city's Ley-lamps lit. Seven seats: four great mage houses, two merchant houses, and the Guild of Wardwrights who keep the city's wards running. A Lord-Speaker chosen by the seven chairs it. Every seat depends on crystal, so crystal policy is all the council really argues about.",
+      "goals": [
+        "Keep the lights on",
+        "Stay out of Cyrel's wars",
+        "Keep the Mordun trade",
+        "Post-Reform: decide whether to bring back casting licences"
+      ],
+      "rivals": [],
+      "allies": [
+        "kingdom-of-asania"
+      ],
+      "by_era": {
+        "brotherhood": "Still sits, but in practice rubber-stamps the Brotherhood of Man.",
+        "post-reform": "House Orme carries the licence motion, with money nobody can trace (it is Mistress Sara's)."
+      },
+      "origin": "draft",
+      "origin_note": "Trein is source; its council is a draft.",
+      "methods": [
+        "crystal allocation",
+        "ward contracts",
+        "trade law"
+      ],
+      "seats": [
+        "House Ammerline (mages)",
+        "House Coldwater (mages)",
+        "House Fenwick-Sayle (mages)",
+        "House Orme (mages)",
+        "the Cloth and Salt Exchange (merchants)",
+        "the Gulf Shippers (merchants)",
+        "the Guild of Wardwrights"
+      ]
+    },
+    {
+      "id": "brotherhood-of-man",
+      "name": "The Brotherhood of Man",
+      "kind": "order",
+      "tier": "world",
+      "seat": "trein",
+      "summary": "Publicly, a secular movement for mortal self-rule: magic for mortals, no more divine leash. In truth the instrument of Mistress Sara, the Eternal White Dragon Saradrosk, who wants the Ley under her control.",
+      "goals": [
+        "Control the Source Font",
+        "License and ration the Ley",
+        "Find where the New Gods hid the Font (Post-Reform)"
+      ],
+      "methods": [
+        "brooch licences",
+        "crystal allocation",
+        "underhall flow tests and valves",
+        "recruiting the disaffected",
+        "secrecy"
+      ],
+      "assets": [
+        "academies",
+        "a research wing, a policy wing and a licensing wing",
+        "crystal stores",
+        "Mistress Sara"
+      ],
+      "rivals": [
+        "benzaiten-monastery",
+        "petrakyra-wood-elves"
+      ],
+      "leader": "mistress-sara",
+      "by_era": {
+        "pre-reform": "Not yet founded (2984). Sara cultivates the people who will found it.",
+        "brotherhood": "Rules magic openly from Trein; the Dam stands.",
+        "post-reform": "Officially gone for centuries. Secretly revived by Sara, its first rising in centuries, with small cells and a licence campaign in Trein's council."
+      },
+      "clock_seeds": [
+        {
+          "name": "Licences return to Trein",
+          "segments": 6,
+          "eras": [
+            "post-reform"
+          ]
+        },
+        {
+          "name": "Locate the Source Font",
+          "segments": 12,
+          "eras": [
+            "post-reform"
+          ]
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "wrenspire-council",
+      "name": "The Wrenspire Council",
+      "kind": "city-state",
+      "tier": "regional",
+      "seat": "wrenspire",
+      "holds": [
+        "wrenspire"
+      ],
+      "summary": "A high-minded council of engineers running a city that refuses magic, building ships and airships with gears alone.",
+      "goals": [
+        "Progress without the Ley",
+        "Stay independent of Trein and Asania"
+      ],
+      "methods": [
+        "invention",
+        "patents",
+        "airships"
+      ],
+      "rivals": [
+        "trein-council"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "stoneheart-clan",
+      "name": "The Stoneheart Clan",
+      "kind": "realm",
+      "tier": "realm",
+      "seat": "dun-aldun",
+      "holds": [
+        "dun-aldun",
+        "mordun",
+        "loch-torogh"
+      ],
+      "summary": "The blue-eyed ruling clan of the Dwarven Empire, descended from Dun Aldun's founders. Fair, hard, and patient through every winter.",
+      "goals": [
+        "Keep the Empire whole",
+        "Hold the Rulan Gaan cult in check",
+        "Profit from the world's need for steel"
+      ],
+      "methods": [
+        "contracts",
+        "closed gates",
+        "Master Grimm's arsenal"
+      ],
+      "rivals": [
+        "cult-of-vymnommyth"
+      ],
+      "allies": [
+        "master-grimms-workshop"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "cult-of-vymnommyth",
+      "name": "The Cult of Vymnommyth",
+      "kind": "cult",
+      "tier": "realm",
+      "seat": "rulan-gaan",
+      "holds": [
+        "rulan-gaan"
+      ],
+      "summary": "Dwarves who broke from the Empire to worship the Eternal black dragon of Rulan Gaan as a god of rot and renewal, protection through contamination. What preserves you is what poisons you.",
+      "goals": [
+        "Keep Rulan Gaan pure",
+        "Make the world around it hostile",
+        "Spread the swamp"
+      ],
+      "methods": [
+        "the black baptism",
+        "poison",
+        "fanatics"
+      ],
+      "rivals": [
+        "stoneheart-clan"
+      ],
+      "leader": "vymnommyth",
+      "clock_seeds": [
+        {
+          "name": "The swamp reaches the Dun Aldun road",
+          "segments": 8
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "master-grimms-workshop",
+      "name": "Master Grimm's workshop",
+      "kind": "company",
+      "tier": "world",
+      "seat": "dun-aldun",
+      "summary": "The smithy behind most of the world's enchanted weapons and armor. Its master is the Eternal green dragon Forgrimmorithal.",
+      "goals": [
+        "Sell to everyone",
+        "Know where every blade goes"
+      ],
+      "leader": "master-grimm",
+      "origin": "source"
+    },
+    {
+      "id": "mossrun-expedition",
+      "name": "The Mossrun Expedition",
+      "kind": "company",
+      "tier": "realm",
+      "summary": "A mining concern grown over five generations from two strikes, one iron and one Ley crystal, into an empire of mines serving several cities. Run by the Ilvar family, whose wives die in childbirth and whose fathers are always dying when the children come home.",
+      "goals": [
+        "More mines",
+        "More wealth",
+        "Keep the Ilvar secret"
+      ],
+      "leader": "melton-ilvar",
+      "eras": [
+        "post-reform"
+      ],
+      "origin": "source",
+      "seat": "mossrun",
+      "holds": [
+        "mossrun"
+      ],
+      "clock_seeds": [
+        {
+          "name": "The Deep Nine reaches what it is digging toward",
+          "segments": 8
+        }
+      ]
+    },
+    {
+      "id": "cyrel-timber-guild",
+      "name": "The Cyrel Timber Guild",
+      "kind": "company",
+      "tier": "regional",
+      "seat": "cyrel",
+      "summary": "The guild that owns Kingswood's cutting crews and most of its debts. It has bought the Heartwood cutting rights from the town's reeve, in secret.",
+      "goals": [
+        "Fell the Heartwood before the season ends"
+      ],
+      "rivals": [
+        "brynwyr-high-elves"
+      ],
+      "origin": "m1-slice",
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "unguruk-tribe",
+      "name": "The Unguruk Tribe",
+      "kind": "tribe",
+      "tier": "regional",
+      "seat": "unguruk-camp",
+      "holds": [
+        "unguruk-camp",
+        "adlmyr"
+      ],
+      "summary": "Orcs, half-orcs and human exiles in a walled camp at the heart of the Badlands. Proud, tough, and nursing a long grudge against Cyrel.",
+      "goals": [
+        "Hold Adlmyr",
+        "Break Bastion",
+        "Respect"
+      ],
+      "methods": [
+        "raids",
+        "challenges",
+        "strength"
+      ],
+      "rivals": [
+        "kingdom-of-cyrel"
+      ],
+      "clock_seeds": [
+        {
+          "name": "Siege works at Adlmyr",
+          "segments": 6
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "dramogon-tribe",
+      "name": "The Dramogon Tribe",
+      "kind": "tribe",
+      "tier": "regional",
+      "seat": "dramogon-range",
+      "summary": "Gnoll-majority nomads of the northern Badlands under the shadow of Haggoth, the Gnoll Lord. Stoic, relentless, silent and everywhere.",
+      "goals": [
+        "The hunt",
+        "Their territory",
+        "Their god's hunger"
+      ],
+      "rivals": [
+        "kingdom-of-cyrel",
+        "unguruk-tribe"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "kadragar-tribe",
+      "name": "The Kadragar Tribe",
+      "kind": "tribe",
+      "tier": "regional",
+      "seat": "kadragar",
+      "summary": "Goblin seafarers, merchants and warriors of the southern Badlands coast, running the trade routes to Ota'at. Their god king is the Erlking.",
+      "goals": [
+        "Trade",
+        "Survival",
+        "Control of the southern sea lanes"
+      ],
+      "methods": [
+        "ships",
+        "tolls",
+        "negotiation with a knife behind it"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "brynwyr-high-elves",
+      "name": "The High Elves of Brynwyr",
+      "kind": "realm",
+      "tier": "realm",
+      "seat": "brynwyr",
+      "holds": [
+        "brynwyr"
+      ],
+      "summary": "A closed, ancient people defending their forest from Cyrel and its loggers, with wardens on the land and sea-elves on the water.",
+      "goals": [
+        "Not one more tree",
+        "Keep the Heartwood",
+        "Keep humans out"
+      ],
+      "methods": [
+        "wardens",
+        "arrows",
+        "sea patrols",
+        "old treaties"
+      ],
+      "rivals": [
+        "kingdom-of-cyrel",
+        "cyrel-timber-guild"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "petrakyra-wood-elves",
+      "name": "The Wood Elves of Petrakyra",
+      "kind": "realm",
+      "tier": "realm",
+      "seat": "petrakyra",
+      "holds": [
+        "petrakyra"
+      ],
+      "summary": "A reclusive people who trade sparingly with Obirykan and talk only to the Benzaiten monks. An Eternal Dragon is rumored to live among them.",
+      "goals": [
+        "Stay hidden"
+      ],
+      "allies": [
+        "benzaiten-monastery"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "obirykan-city-states",
+      "name": "The Obirykan City States",
+      "kind": "city-state",
+      "tier": "realm",
+      "seat": "obirykan",
+      "holds": [
+        "obirykan"
+      ],
+      "summary": "Plutocrats who measure everything in Ley crystal. Each state fights to control the wealth and flow of Ley.",
+      "goals": [
+        "Own more crystal than the next state",
+        "Keep Petrakyra's trade"
+      ],
+      "methods": [
+        "money",
+        "debt",
+        "crystal monopoly"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "dreadfall-corsairs",
+      "name": "The Dreadfall Corsairs",
+      "kind": "criminal",
+      "tier": "regional",
+      "seat": "scullcrossed-islands",
+      "holds": [
+        "scullcrossed-islands"
+      ],
+      "summary": "The pirates of the Scullcrossed Islands. Cruel, rarely survived, and always one ship ahead in the Gulf's arms race.",
+      "goals": [
+        "Plunder",
+        "Stay unconquered"
+      ],
+      "rivals": [
+        "stoneheart-clan",
+        "trein-council"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "benzaiten-monastery",
+      "name": "The Benzaiten Monastery",
+      "kind": "order",
+      "tier": "regional",
+      "seat": "benzaiten-monastery",
+      "summary": "Monks of many peoples on Ikto Isle, training mind and body, resolving conflict quietly. The only outsiders the wood elves of Petrakyra talk to.",
+      "goals": [
+        "Balance",
+        "Discipline",
+        "Keep the Petrakyra bond"
+      ],
+      "allies": [
+        "petrakyra-wood-elves"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "fjallagracht-clans",
+      "name": "The Fjallagracht clans",
+      "kind": "tribe",
+      "tier": "regional",
+      "seat": "gurdalur-stones",
+      "summary": "Three clans hold the frozen island and its sea: Clan Skarth, raiders and fighters; Clan Hvalborg, whalers and longship-builders; and Clan Rimvik, the stone-keepers who read the Gurdalur calendar and so decide when anyone may sail, marry, bury or raid. Rimvik is the smallest clan and the one the others obey.",
+      "goals": [
+        "Endure",
+        "Keep the stones' rites",
+        "Raid the mainland when the calendar allows"
+      ],
+      "origin": "draft",
+      "origin_note": "The island and the stones are source; the clans as a faction are a draft.",
+      "methods": [
+        "longships",
+        "the calendar",
+        "feud law"
+      ],
+      "clans": [
+        {
+          "name": "Clan Skarth",
+          "note": "Raiders; the mainland's idea of Fjallagracht."
+        },
+        {
+          "name": "Clan Hvalborg",
+          "note": "Whalers and shipwrights; they know the Dire Sea's summer windows."
+        },
+        {
+          "name": "Clan Rimvik",
+          "note": "Stone-keepers; small, feared, never refused."
+        }
+      ]
+    },
+    {
+      "id": "seelie-court",
+      "name": "The Seelie Court",
+      "kind": "court",
+      "tier": "world",
+      "summary": "Titania's summer court of light, art and wild growth.",
+      "leader": "titania",
+      "rivals": [
+        "unseelie-court"
+      ],
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "unseelie-court",
+      "name": "The Unseelie Court",
+      "kind": "court",
+      "tier": "world",
+      "summary": "Mab's winter court of cold, shadow and the decay that feeds rebirth. Meddles in mortal affairs.",
+      "leader": "mab",
+      "rivals": [
+        "seelie-court"
+      ],
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "nine-hells",
+      "name": "The Nine Hells",
+      "kind": "plane",
+      "tier": "mythic",
+      "summary": "The archdevils and their courts. On the Material Plane they work through contracts and cults.",
+      "goals": [
+        "Bind mortals by pact",
+        "Win the Blood War",
+        "Post-Reform: recover the eight pieces of Asmodeus"
+      ],
+      "fronts": [
+        {
+          "name": "Mammon's cults",
+          "note": "Economic sabotage against prosperous states, through mortal fronts. One is Gannet & Pryce, the Cyrel timber house buying the Heartwood cutting rights."
+        },
+        {
+          "name": "The Hellfire cult",
+          "note": "Mephistopheles offers mortals the mastery of hellfire to grow his following."
+        },
+        {
+          "name": "Naamah's eyes",
+          "note": "Spies and fledgling cults gathering leverage for her father's favor."
+        },
+        {
+          "name": "Lilith's followers",
+          "note": "A large mortal following that answers to Lilith first and Beelzebub second."
+        }
+      ],
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "abyss",
+      "name": "The Abyss",
+      "kind": "plane",
+      "tier": "mythic",
+      "summary": "The demon lords. They do not recruit so much as devour; their mortal followers are the Dramogon gnolls' god-hunger, Orcus's necromancers and Belphegor's indulgent courts.",
+      "origin": "source",
+      "ip": "myth"
+    }
+  ]
+}

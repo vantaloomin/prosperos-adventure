@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "custom_allowed": true,
+  "note": "Every world allows player-made personas. Premades below are by era. Stats are Prospero (1 to 30, 10 an ordinary adult); the Brotherhood-era party stats are a draft from Vanta's character profiles.",
+  "personas": [
+    {
+      "id": "agna-holt",
+      "name": "Agna Holt",
+      "era": "post-reform",
+      "concept": "A Bastion deserter hiding in Kingswood",
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/premades/kingswood.json"
+    },
+    {
+      "id": "lirien-of-the-ford",
+      "name": "Lirien of the Ford",
+      "era": "post-reform",
+      "concept": "A half-elf smuggler working the Brynwyr border",
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/premades/kingswood.json"
+    },
+    {
+      "id": "tobin-pell",
+      "name": "Tobin Pell",
+      "era": "post-reform",
+      "concept": "A Timber Guild tally clerk who skims",
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/premades/kingswood.json"
+    },
+    {
+      "id": "nicana",
+      "name": "Nicana",
+      "era": "brotherhood",
+      "concept": "A monk who walked out of her monastery because neutrality was cowardice in incense",
+      "class_note": "Monk (Way of the Open Hand), Neutral Good, INFJ",
+      "stats": {"Mind": 15, "Allure": 14, "Resolve": 18, "Vitality": 15, "Essence": 12, "Luck": 10},
+      "look": "A shade under average height, lean, tan, amber hair braided tight at the nape, aquamarine eyes that miss nothing, monk calluses, a crescent scar on her left ribs. Travel-dark cloth and a sash that doubles as a bandage.",
+      "voice": "Low and controlled. Rarely raises it; when she does, people listen.",
+      "worldview": "The world runs on circulation: food, debt, violence, mercy. Anything that tries to own the flow rots. The Brotherhood's slogans are right on the surface and a chokehold underneath.",
+      "connections": {"girione": "first family after the monastery", "aveus": "a weapon she keeps pointed outward; she sees the loyalty under the rage", "cybelia": "a brilliant mind she can't protect", "tidum": "a force of nature that speaks in sentences", "witarr": "she believes him, which is rare"},
+      "future": "Goddess of Light.",
+      "origin": "source"
+    },
+    {
+      "id": "aveus",
+      "name": "Aveus",
+      "era": "brotherhood",
+      "concept": "A half-orc berserker from Unguruk who killed a devil rather than be owned",
+      "class_note": "Barbarian (Path of the Berserker), Chaotic Neutral with a loyalist bend, ESTP",
+      "stats": {"Mind": 9, "Allure": 8, "Resolve": 15, "Vitality": 22, "Essence": 7, "Luck": 11},
+      "look": "Broad and over-dense, olive-bronze skin burned by the Badlands, soot-black hair tied back with leather, near-black eyes, pronounced canines, a badly set nose, a notched ear and a brand on his left shoulder.",
+      "voice": "Blunt, mocking, quick to threaten. Statue-still when calm.",
+      "worldview": "The world is a grinding machine that only respects force. He understands the Brotherhood's appeal, which makes him the most dangerous voice in the party.",
+      "connections": {"nicana": "loves her; wants her approval like heat", "girione": "calls him small, guards him like property", "cybelia": "volatile ordnance: protect it, don't jostle it", "tidum": "his patience makes Aveus's rage feel small", "witarr": "'hell-blood', at first"},
+      "future": "God of Darkness.",
+      "origin": "source"
+    },
+    {
+      "id": "girione",
+      "name": "Girione",
+      "era": "brotherhood",
+      "concept": "A halfling bard with a Brotherhood licence and a habit of giving everything away",
+      "class_note": "Bard (College of Lore), Chaotic Good, ENFP",
+      "stats": {"Mind": 14, "Allure": 18, "Resolve": 11, "Vitality": 9, "Essence": 13, "Luck": 17},
+      "look": "Wiry, untameable dark brown hair, sharp hazel eyes, a crooked nose, ink-stained fingers, a string scar on the left palm. A coat with hidden pockets, a bright or dull scarf depending on whether he wants to be seen, a patched lute case.",
+      "voice": "Fast, funny, lying and then paying for the lie with something real.",
+      "worldview": "Faith in mortals with names and aching feet. The Ley is shared infrastructure; the brooch is a collar that jingles politely.",
+      "connections": {"nicana": "his anchor", "aveus": "a walking catastrophe, affectionately", "cybelia": "fascinating, lonely", "tidum": "makes him feel temporary", "witarr": "the first to offer him a drink and a seat"},
+      "future": "God of Mortals.",
+      "origin": "source"
+    },
+    {
+      "id": "cybelia",
+      "name": "Cybelia",
+      "era": "brotherhood",
+      "concept": "A senior Brotherhood wizard who knows its founder is a dragon and keeps the secret to steer the machine",
+      "class_note": "Wizard (Order of the Leywright, Brotherhood arcane engineer), Lawful Neutral, INTJ",
+      "stats": {"Mind": 20, "Allure": 10, "Resolve": 14, "Vitality": 7, "Essence": 19, "Luck": 9},
+      "look": "Tall, narrow-shouldered, pale, cool blonde hair in a severe bun, flat slate eyes, a trace of elf in the cheekbones and ears. Structured robes, ink-stained cuffs, a brooch pinned inside the lapel.",
+      "voice": "Clinical, quick, precise. Refuses to beg or to lie about what power costs.",
+      "worldview": "Magic is infrastructure and physics with teeth. Damming the Ley is not liberation; it is a system-wide intervention with cascading costs.",
+      "connections": {"mistress-sara": "a silent bargain: her secret for access", "nicana": "quiet envy, quieter devotion", "aveus": "alarming because he can't be bribed with theory", "girione": "irritates her, then saves her"},
+      "future": "Goddess of the Ley.",
+      "origin": "source"
+    },
+    {
+      "id": "tidum",
+      "name": "Tidum",
+      "era": "brotherhood",
+      "concept": "A deathless archdruid forced to wear a stolen Brotherhood brooch to keep the forests alive",
+      "class_note": "Druid (Circle of the Land, Archdruid), True Neutral, ISTP",
+      "stats": {"Mind": 16, "Allure": 7, "Resolve": 20, "Vitality": 13, "Essence": 21, "Luck": 10},
+      "look": "Tall and rope-lean, weather-darkened, brown hair shot with ash, hazel eyes with a green ring, layered wool and leather, a staff that looks grown, seed pods and river stones at his throat and a brooch hidden under them.",
+      "voice": "Few words, long pauses. Listens to a second conversation you can't hear.",
+      "worldview": "Not good and evil but balances and pressures. Bureaucracies don't share; they ration. Survival is not consent.",
+      "connections": {"nicana": "a torch carried correctly", "aveus": "wildfire", "cybelia": "could reroute a river or poison it; keeps her close"},
+      "future": "God of the Wild. Will give his immortality to his apprentice, who dies in the first wave of devils.",
+      "origin": "source"
+    },
+    {
+      "id": "witarr",
+      "name": "Witarr",
+      "era": "brotherhood",
+      "concept": "A tiefling grave-cleric who keeps the dead down and the receipts in order",
+      "class_note": "Cleric (Grave Domain, 'Requiem Warden'), Lawful Neutral, ISTJ",
+      "stats": {"Mind": 14, "Allure": 9, "Resolve": 18, "Vitality": 12, "Essence": 16, "Luck": 8},
+      "look": "Medium height, lean, umber skin with an ash undertone, tight swept-back horns, blue-black hair, pale gold eyes, a tail belted at the waist, a rope scar at his throat. Travel blacks and grave greys, a bone-and-iron charm.",
+      "voice": "Dry, exact, documented. Tells demons his name.",
+      "worldview": "The world is held together by boundaries. Death is a law like gravity. The Brotherhood made magic contractual, which is exactly the shape devils like.",
+      "connections": {"nicana": "trusts her because she treats boundaries as real", "aveus": "would probably kill for him", "girione": "the first to talk to him without a lecture"},
+      "future": "God of the Afterlife.",
+      "origin": "source"
+    }
+  ]
+}

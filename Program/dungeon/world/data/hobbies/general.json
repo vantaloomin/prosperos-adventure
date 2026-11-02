@@ -1,0 +1,1460 @@
+{
+ "kind": "general",
+ "milestones": [
+  {
+   "text": "spent their first real session on {hobby} and came away wanting more",
+   "post": "First proper go. I'm hooked, I think.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "read everything they could find about {hobby} in a single evening",
+   "post": "Read about it all evening. Brain full.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "bought their first proper supplies for {hobby}",
+   "post": "Got the basics. Now I have no excuses.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made a complete mess of their first attempt and laughed about it",
+   "post": "Gloriously bad first attempt. Laughed the whole way through.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "asked an old hand one question about {hobby} and got an hour of answers",
+   "post": "Asked one question. Got an hour of wisdom.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "set aside a regular time each week for {hobby}",
+   "post": "It's in the week now. Protected time.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "cleared a corner at home just for {hobby}",
+   "post": "A whole corner, just for this. Feels real now.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned the proper names for the things they had been calling 'the thingy'",
+   "post": "Turns out the thingy has a name. Several names.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made it through a whole session without needing to start over",
+   "post": "No restarts today. Tiny victory.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "told a friend about {hobby} and talked for far longer than planned",
+   "post": "Talked a friend's ear off. Sorry, friend.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found out how much there is still to learn about {hobby}, and was delighted",
+   "post": "So much to learn. Brilliant.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started a little notebook to track their progress at {hobby}",
+   "post": "Notebook started. Page one: hope.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got up early to fit in some {hobby} before the day began",
+   "post": "Early start, quiet house, good session.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tried {hobby} in front of someone else for the first time",
+   "post": "Did it in front of an audience of one. Survived.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "looked up from {hobby} to find three whole hours had gone by",
+   "post": "Three hours vanished. Didn't notice once.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had their first attempt they were not embarrassed by",
+   "post": "First attempt I'm not hiding. Progress.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "watched a seasoned expert at work and took careful mental notes",
+   "post": "Watched an expert. Took mental notes. Many of them.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found a secondhand bargain that made {hobby} much easier",
+   "post": "Secondhand find, life improved.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stuck with {hobby} through a frustrating week instead of giving up",
+   "post": "Frustrating week. Didn't quit. That's the win.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "picked up a bit of the jargon and used a word of it correctly",
+   "post": "Used the jargon correctly. Nobody laughed.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "chose {hobby} over a lie-in on a rainy morning",
+   "post": "Rainy morning, chose this over bed. Commitment.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "booked a first lesson with a patient teacher",
+   "post": "First lesson booked. Teacher seems patient. Good.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept up {hobby} every week for three months straight",
+   "post": "Three months, every week. A real habit.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "did something without thinking that used to take real effort",
+   "post": "Did it without thinking. Used to be so hard.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spotted their own mistake before anyone pointed it out",
+   "post": "Caught my own mistake. Growing up.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found a group of fellow enthusiasts and went along for the first time",
+   "post": "Met my people today. Very nice people.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "explained the basics of {hobby} to a curious friend",
+   "post": "Explained it to a friend. Sounded like I knew things.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a session where everything just clicked",
+   "post": "Today it clicked. Hoping it stays clicked.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "replaced their beginner gear with something better",
+   "post": "Upgraded. Felt like I'd earned it.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "filled their first {hobby} notebook and started another",
+   "post": "Notebook two. The saga continues.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "managed a technique that looked impossible a month ago",
+   "post": "Last month: impossible. Today: done.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "looked back at their very first attempts and laughed fondly",
+   "post": "Looked at my early efforts. Oh dear. Oh, bless.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made it through a tricky part they had been dreading",
+   "post": "Got past the tricky bit. Celebrating with tea.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "set themselves a small goal and met it a week early",
+   "post": "Goal met early. Setting a bigger one.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got a genuine compliment from someone who knows {hobby} well",
+   "post": "A real compliment from someone who knows. Glowing.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked out a routine for {hobby} that actually fits their week",
+   "post": "Routine sorted. It fits.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept going through a long plateau and came out the other side",
+   "post": "Plateau over. Moving again.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "taught themselves a new trick from an old book",
+   "post": "Old book, new trick.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started to have strong opinions about the right way to do {hobby}",
+   "post": "I have opinions now. Strong ones. Brace yourselves.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "brought a friend along to try {hobby}, and the friend enjoyed it",
+   "post": "Friend tried it. Friend liked it. Mission accomplished.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent a whole free day on {hobby} without getting bored once",
+   "post": "Whole day. Not bored once.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept their workspace tidy for an entire month",
+   "post": "Workspace still tidy after a month. Shocking.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sorted out a common problem on their own without asking anyone",
+   "post": "Fixed it myself. No help needed.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got through a whole session without checking the instructions once",
+   "post": "No instructions needed today.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a session so good it made them grin all evening",
+   "post": "Grinning all evening. Great session.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked for advice by someone newer to {hobby}",
+   "post": "Someone asked my advice. Tried to look wise.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tried something ambitious and pulled it off",
+   "post": "Aimed high. Got there.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "came up with a small trick of their own that the old hands liked",
+   "post": "My own little trick. The old hands approve.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent a weekend away given over entirely to {hobby}",
+   "post": "A whole weekend of it. Bliss.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept careful records for six months and saw real progress on paper",
+   "post": "Six months of notes. Look how far I've come.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a stranger stop and watch a whole {hobby} session",
+   "post": "A stranger stopped to watch. Tried not to show off. Failed.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "talked {hobby} for an hour with someone long admired",
+   "post": "Met someone I really admire. Talked for an hour.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "noticed details they would not even have seen a year ago",
+   "post": "Seeing things I'd never have noticed before.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "saved up for a really good piece of kit and finally bought it",
+   "post": "Saved up. Bought it. Worth it.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "turned a spectacular failure into the best lesson yet",
+   "post": "Failed spectacularly. Learned enormously.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "set a personal best and wrote the date down",
+   "post": "Personal best. Date noted.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked through an advanced book on {hobby} cover to cover",
+   "post": "Finished the advanced book. Head spinning, in a good way.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started helping out at the local group's meetings",
+   "post": "Helping run the meetings now. Tea duty and wisdom duty.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "passed their old beginner gear on to someone just starting out",
+   "post": "Passed on my old gear. Hope it treats them well.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found a style of their own within {hobby}",
+   "post": "Starting to have my own style. Exciting.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept practising through a busy month without missing a week",
+   "post": "Busy month. Didn't miss a week.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "entered their first small contest and finished comfortably in the middle",
+   "post": "Mid-table in my first contest. Not last! Celebrating.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "travelled to the next town for a gathering of {hobby} enthusiasts",
+   "post": "Travelled for a gathering. So many people like me.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked out for themselves something the books skipped over",
+   "post": "Worked it out myself. The books skipped it.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "practised a hard part fifty times until it finally came out right",
+   "post": "Fifty tries. The fifty-first was perfect.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent their birthday money on {hobby} without a second thought",
+   "post": "Birthday money, well spent.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took {hobby} along on a trip and found new inspiration away from home",
+   "post": "Brought it on holiday. New place, new ideas.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "taught a complete beginner the basics of {hobby}",
+   "post": "Taught my first beginner. They were brilliant.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "entered their first proper competition and placed respectably",
+   "post": "Respectable finish. Very respectable. Thrilled.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to show what they can do at a local gathering",
+   "post": "Showing my stuff at the gathering. Nervous and proud.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "gave a short talk about {hobby} to an interested crowd",
+   "post": "Gave a talk. People asked questions. Good questions!",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "marked a full year of keeping up {hobby}",
+   "post": "One year in. Still in love with it.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was trusted with a task the old hands usually keep for themselves",
+   "post": "They let me do the important bit today.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won a small prize at a local contest",
+   "post": "Won a little prize. Pinned it up.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "helped organise a gathering for fellow enthusiasts",
+   "post": "Helped run the gathering. Everyone had a lovely time.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "turned their keenest rival from the next town over into a friend",
+   "post": "My rival is my friend now. Friendly competition.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found themselves explaining the finer points to people with more years in",
+   "post": "Explaining the finer points to veterans. How did this happen.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "achieved the goal they wrote down on day one",
+   "post": "Day one goal: done. Look at that.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was named by a newcomer as the reason for taking up {hobby}",
+   "post": "Someone started because of me. Best feeling.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent a full week on a big project and finished it properly",
+   "post": "Big project, finished properly. Very satisfying.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "became the person the group asks when something goes wrong",
+   "post": "I'm the troubleshooter now. Bring me your problems.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was invited to join a more experienced group",
+   "post": "Invited to the experienced group. Trying to act casual.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept a promise to themselves to do {hobby} every day for a month",
+   "post": "Every day for a month. Promise kept.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked out a clever method that others in the group started copying",
+   "post": "They're copying my method. Flattered.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was named at a gathering as one to watch",
+   "post": "Someone called me 'one to watch'. Gulp.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "realised they no longer felt like a beginner at all",
+   "post": "Not a beginner anymore. When did that happen?",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "travelled further than ever before to take part in an event",
+   "post": "Longest trip yet, for the best event yet.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "ran a little taster session for friends who wanted to try {hobby}",
+   "post": "Ran a taster for friends. Recruits secured.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was trusted to look after the group's shared supplies",
+   "post": "Keeper of the group's supplies. A great honour.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took first place at a regional competition",
+   "post": "First place. I keep looking at the ribbon.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to lead a workshop for newcomers",
+   "post": "Leading the workshop now. Full circle.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "completed the big challenge they had been working toward for years",
+   "post": "Years of work. Done. Can't stop smiling.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was invited to judge at a local contest",
+   "post": "Judging instead of competing. Strange and lovely.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was sought out by someone who travelled a long way just to learn",
+   "post": "Someone travelled for days to learn from me. Humbling.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "mentored a newcomer all the way to a first prize",
+   "post": "My student won! Prouder than if I had.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was made an honorary member of the local society",
+   "post": "Honorary member. There was a speech. I blushed.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "did something at a gathering that people still talk about",
+   "post": "Apparently they're still talking about it. Blushing.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "set a personal record that may stand for a long time",
+   "post": "New record. Good luck beating it, future me.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to write a guide to {hobby} for beginners",
+   "post": "Writing the beginners' guide. Remembering how lost I was.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had their best work put on show for the public",
+   "post": "On public display. Strangers looked. Strangers liked.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won the top prize in a contest with entrants from far away",
+   "post": "Beat entrants from all over. Still stunned.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "could now do in minutes what once took a whole afternoon",
+   "post": "What used to take hours takes minutes now.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "became known around town as the one to ask about {hobby}",
+   "post": "Known as the expert around town now. Gulp.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "taught a class of eager beginners every week for a season",
+   "post": "A whole season of teaching. They all got better.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "hosted a gathering at home for enthusiasts from all around",
+   "post": "House full of enthusiasts. Best evening in ages.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "heard an old master of {hobby} call their work outstanding",
+   "post": "An old master said 'outstanding'. Dining out on that for years.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "looked back over years of {hobby} and felt quietly proud",
+   "post": "Years of it. Quietly proud.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to represent the local group at a big event",
+   "post": "Representing the group. Practising my wave.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "achieved something nobody in their circle had managed before",
+   "post": "First in our circle to do it. Wow.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "gave a demonstration at a big public fair and drew a crowd",
+   "post": "Demonstrated at the fair. A crowd gathered. I didn't wobble.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "watched beginner videos about {hobby} late into the night",
+   "post": "One more beginner video. Then bed. Then one more.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "joined an online group for {hobby} beginners and lurked happily",
+   "post": "Lurking in the beginners' group. Learning a lot.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "posted their progress in an online group and got encouraging replies",
+   "post": "Posted my progress. Strangers were kind. Faith restored.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "had a post about their {hobby} shared widely online",
+   "post": "My post got shared around. Strange and lovely.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "started a small online page about their {hobby} and gained a few followers",
+   "post": "Started a page. Twelve followers. Hello, twelve.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "made a tutorial video about {hobby} that thousands of people watched",
+   "post": "Thousands watched my tutorial video. Teaching the world, one view at a time.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "had a piece about their {hobby} printed in the local paper",
+   "post": "In the paper! The neighbours keep mentioning it.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  }
+ ],
+ "sessions": [
+  {
+   "text": "Lost track of time, in the good way.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Kept at one tricky bit until it behaved.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Made a few notes for next time.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Found it a welcome break from the week.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Tidied everything away afterwards, mostly.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Tried one new thing and stuck with the old favourites for the rest.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Had a slow start and a good finish.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Went back over the basics, which helped.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Felt pleasantly tired and quite pleased afterwards.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Did a little less than planned, which was fine.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Spent a while just enjoying it, no goals.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Came away with a small idea to try next time.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Kept it short but focused.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Got properly absorbed for an hour or so.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Thought about it for the rest of the evening.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Made steady progress, nothing dramatic.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Ran into a snag and worked around it.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Had one of those sessions where everything felt easy.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  }
+ ]
+}

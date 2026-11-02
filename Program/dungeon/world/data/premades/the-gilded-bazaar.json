@@ -1,0 +1,7 @@
+{
+ "about": "The Gilded Bazaar's premade characters (dungeon/campaign.py): the two of the four from Halvorsen's who came down three floors up. Prospero sheets drafted for this package (world/packages/babel/open-questions.md).",
+ "premades": [
+  {"id": "bri-cole", "name": "Bri Cole", "gender": "woman", "age": 26, "about": "Grant's fiancee, the only one of the four the tower gave a real class: Breaker, honored, with Heavy Swing and Brace and a line of scrambled text on her sheet where her past should be. She paid her own way from nineteen in ways she has never told Grant, and knows exactly what a body is worth in trade. She let his best friend kiss her at the coat check and said only \"Not here.\" Now she is three floors above Grant with that friend, and the Bazaar has noticed her.", "stats": {"Mind": 10, "Allure": 14, "Resolve": 12, "Vitality": 11, "Essence": 6, "Luck": 8}},
+  {"id": "chase-whitaker", "name": "Chase Whitaker", "gender": "man", "age": 34, "about": "Grant's oldest friend and the beta's pen-tester, who knows the floors from testing them and has found out the prices changed. Wolf-line Therian, honored, with a class the tower would not give him. Grant told him a private fantasy once; Chase used it at the coat check, and wants what is Grant's more than he wants out. He has a name from the beta Discord, Teo, who always knows the way out.", "stats": {"Mind": 12, "Allure": 13, "Resolve": 6, "Vitality": 12, "Essence": 7, "Luck": 11}}
+ ]
+}

@@ -1,0 +1,2254 @@
+{
+ "kind": "outdoors",
+ "milestones": [
+  {
+   "text": "went out for the first time and came home already planning the next trip",
+   "post": "First outing done. Already planning the second.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "bought the wrong gear, then the right gear",
+   "post": "Wrong gear, right gear. Two shopping trips, one lesson.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got thoroughly rained on and loved it anyway",
+   "post": "Soaked to the skin. Grinning anyway.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tagged along with an experienced group and asked a hundred questions",
+   "post": "Asked roughly a hundred questions. Everyone was very kind.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started keeping a log of every outing",
+   "post": "Outing number one, logged. Very official.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got up before dawn for it, voluntarily",
+   "post": "Up before dawn. On purpose. Who even am I.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to check the weather before heading out, after the first time they did not",
+   "post": "Check the weather first. Noted, damply.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent most of the first outing working out what they were supposed to be doing",
+   "post": "Mostly confused. Still lovely.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "went out three weekends in a row, whatever the weather",
+   "post": "Three weekends running. It's a habit now.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found a favourite spot of their own",
+   "post": "Found my spot. Not telling anyone where.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "packed for a day out in ten minutes flat with nothing forgotten",
+   "post": "Packed in ten minutes. Forgot nothing. Growth.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "talked a friend into coming along, and the friend loved it",
+   "post": "Converted a friend. Recruitment going well.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "read the sky well enough to know when to head home early",
+   "post": "Headed home before the weather turned. Felt very wise.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "filled their first logbook from cover to cover",
+   "post": "First logbook full. Starting volume two.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "went out alone for the first time and felt completely at home",
+   "post": "First solo outing. Quiet, easy, perfect.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "left the guidebook in the bag for a whole day out",
+   "post": "Didn't open the guidebook once today.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "planned a whole trip on their own, start to finish",
+   "post": "Planned it all myself. It went exactly to plan.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "went somewhere new that the old hands had only talked about",
+   "post": "Finally went to the place everyone talks about. Lived up to it.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was the one the group turned to when the plan changed",
+   "post": "Plans changed. Everyone looked at me. I had an answer.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a perfect day out they will be talking about for years",
+   "post": "Today was the one. I'll be telling this story forever.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "went out in the cold season and found it even better",
+   "post": "Winter outing. Cold air, empty places, wonderful.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "drew a map by hand of all their favourite places",
+   "post": "Drew my own map. Not to scale, but mine.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "fixed a gear problem on the spot with string and patience",
+   "post": "String and patience. Fixed it on the spot.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started noticing small things they would have walked straight past a year ago",
+   "post": "I notice so much more now. Same places, new eyes.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "led a small group of beginners on a first outing",
+   "post": "Led my first group. Everyone came home happy.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "gave a talk about their favourite places at the local club",
+   "post": "Talked for half an hour about my favourite spots. Could have gone on.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "went on a week-long trip and came back wanting more",
+   "post": "A whole week out. Coming home felt strange.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to help plan the big group outing of the year",
+   "post": "Helping plan the big trip this year. Big responsibility, big fun.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept their log going for a full year with no gaps",
+   "post": "One whole year of outings, no gaps.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "taught a friend's child the basics over a long, patient afternoon",
+   "post": "Taught a nine-year-old today. They were better at it than me.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "went out in every season of the year and found a favourite in each",
+   "post": "A favourite outing for every season now.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "lent their spare gear to a newcomer, with a full walk-through",
+   "post": "Kitted out a newcomer. Paying it forward.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a write-up of their trips printed in the club newsletter",
+   "post": "My trip write-up made the club newsletter. Front page.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "completed the big trip they had dreamed about since they started",
+   "post": "Did the dream trip. Still can't quite believe it.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was made an honorary guide by the local club",
+   "post": "Honorary guide. They gave me a badge and everything.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "knew the countryside well enough to be the one asked for directions",
+   "post": "I'm the one people ask now. Good feeling.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "saw something on an outing that the old hands had never seen",
+   "post": "Saw something today even the old-timers hadn't. Still buzzing.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "led the biggest group outing of the year without a hitch",
+   "post": "Thirty people out, thirty home, everyone smiling.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "counted up their outings for the year and lost count past a hundred",
+   "post": "Lost count past a hundred outings this year.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to write the beginners' guide for the local club",
+   "post": "Writing the club's beginners' guide. No pressure.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "finished their first proper trail and needed a long sit at the top",
+   "post": "Made it to the top. Sat there for a long time. Worth it.",
+   "level": 0,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "wore in their first pair of hiking boots on short walks around town",
+   "post": "Walking round town in hiking boots. Wearing them in.",
+   "level": 0,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "downloaded a trail app and followed the little dotted line the whole way",
+   "post": "Followed the little blue dot all the way. Six miles!",
+   "level": 0,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "finished a ten-mile loop with only one stop",
+   "post": "Ten miles, one stop, one very good sandwich.",
+   "level": 1,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "hiked to a summit before sunrise and watched the light come up",
+   "post": "Sunrise from the summit. Worth the 4am alarm.",
+   "level": 1,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to use a paper map and compass, just in case the phone died",
+   "post": "Map and compass, no phone. Didn't get lost once.",
+   "level": 1,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "did their first overnight backpacking trip",
+   "post": "First night on the trail. Stars, silence, cold toes.",
+   "level": 2,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "climbed over three thousand feet in a single day",
+   "post": "3,000 feet up today. Legs say hello.",
+   "level": 2,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "hiked the whole ridge trail that everyone at work talks about",
+   "post": "Did the ridge. Finally see what the fuss is about.",
+   "level": 2,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "finished a three-day section of a long-distance trail",
+   "post": "Three days, 45 miles, one very happy hiker.",
+   "level": 3,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "led a group of coworkers on a weekend hike",
+   "post": "Took six coworkers up a mountain. Morale: excellent.",
+   "level": 3,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "bagged their tenth peak in the region",
+   "post": "Peak number ten. The list is getting shorter.",
+   "level": 3,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "completed a week-long thru-hike from one end of a famous trail to the other",
+   "post": "A whole trail, end to end. I'm a different person.",
+   "level": 4,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "hiked every trail in the state park in a single year",
+   "post": "Every trail in the park, done. Already miss the challenge.",
+   "level": 4,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "was asked to lead hikes for the local hiking club",
+   "post": "Official hike leader. They gave me a whistle.",
+   "level": 4,
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "bought a field guide and spent an evening learning the common garden birds",
+   "post": "Field guide bought. Sparrows identified. Next: everything else.",
+   "level": 0,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "spent an hour following a mystery bird that turned out to be a pigeon",
+   "post": "Spent an hour on a mystery bird. It was a pigeon.",
+   "level": 0,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "learned to hold their field glasses steady enough to actually see a bird",
+   "post": "Field glasses and bird, both at once. Achievement.",
+   "level": 0,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "named a bird by its song before they even saw it",
+   "post": "Heard it, named it, then saw it. I was right!",
+   "level": 1,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "reached fifty species on their life list",
+   "post": "Fifty species! The list grows.",
+   "level": 1,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "got up at dawn for the morning chorus and stayed to the end",
+   "post": "The dawn chorus is a whole orchestra. Who knew.",
+   "level": 1,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "tried a bird-song app and found their own ears were faster",
+   "post": "Beat the app. My ears win.",
+   "level": 1,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "spotted a kingfisher on the river after weeks of trying",
+   "post": "A kingfisher. A flash of blue and gone. Worth every morning.",
+   "level": 2,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "learned to tell the little brown warblers apart, mostly",
+   "post": "I can tell the warblers apart now. Mostly. On a good day.",
+   "level": 2,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "kept a notebook with a sketch beside every sighting",
+   "post": "Sketches beside every sighting. My notebook is getting pretty.",
+   "level": 2,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "reached two hundred species on their life list",
+   "post": "Two hundred species. Each one a little story.",
+   "level": 3,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "led a dawn bird walk for the local society",
+   "post": "Led the dawn walk. Twelve people, thirty species.",
+   "level": 3,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "took part in the annual bird count and recorded every species on their patch",
+   "post": "Counted every bird on my patch for the census. Cold hands, full heart.",
+   "level": 3,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "found a rare visitor that brought birders from miles around",
+   "post": "Found a rarity. Fifty birders turned up by lunch.",
+   "level": 4,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "had their sighting of a rare bird entered in the county records",
+   "post": "My sighting is in the county records now. Official.",
+   "level": 4,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "was invited to write the bird notes for the local society",
+   "post": "Writing the society's bird notes this year. Honoured.",
+   "level": 4,
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "caught their first fish and let it go again",
+   "post": "First fish! Tiny. Released. Beaming.",
+   "level": 0,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "untangled their first truly hopeless knot of line",
+   "post": "One hour untangling. Zero fish. Still happy.",
+   "level": 0,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tied a proper fishing knot from memory",
+   "post": "Tied the knot from memory. Small step.",
+   "level": 0,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "cast exactly where they meant to for a whole afternoon",
+   "post": "Every cast where I wanted it. The fish disagreed, but still.",
+   "level": 1,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "caught enough for supper and cooked it on the bank",
+   "post": "Caught supper. Ate supper. Perfect day.",
+   "level": 1,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to read the water and find where the fish were resting",
+   "post": "Starting to see where fish hide. Feels like a secret.",
+   "level": 1,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "landed a fish big enough to need both hands",
+   "post": "Two hands needed. The fish was not impressed.",
+   "level": 2,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tied their own flies and caught a trout on one",
+   "post": "Caught a trout on a fly I tied myself. Unbearably proud.",
+   "level": 2,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sat out a whole grey morning and was rewarded right at the end",
+   "post": "Hours of nothing, then the best catch of the year.",
+   "level": 2,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won a small fishing contest on the river",
+   "post": "Won the river contest! Bragging rights for a year.",
+   "level": 3,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "taught a neighbour's child to cast, right up to a first fish",
+   "post": "Taught a kid to fish. Their face when it bit.",
+   "level": 3,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found a quiet pool nobody else seemed to know about",
+   "post": "Found a secret pool. Keeping that one to myself.",
+   "level": 3,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "landed the biggest fish anyone on the river had seen that year",
+   "post": "Biggest catch on the river this year. Fish released, story kept.",
+   "level": 4,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took first place at the regional angling match",
+   "post": "First place. Years of quiet mornings paid off.",
+   "level": 4,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made their own rod and caught a fine fish with it",
+   "post": "Built the rod, caught the fish. Full circle.",
+   "level": 4,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "pitched their first tent, eventually, with the instructions upside down",
+   "post": "Tent is up. Instructions were upside down. Mostly my fault.",
+   "level": 0,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "spent their first night under canvas and heard every single noise",
+   "post": "Every twig snap was a bear. None were bears.",
+   "level": 0,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "forgot the tent pegs on their first trip and improvised with sticks",
+   "post": "Forgot pegs. Used sticks. Survived. Adventurer.",
+   "level": 0,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got a campfire going with a single match",
+   "post": "One match. One fire. One very smug camper.",
+   "level": 1,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "cooked pancakes for breakfast on a camp stove",
+   "post": "Pancakes on a camp stove. Living the dream.",
+   "level": 1,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "pitched the tent in under ten minutes",
+   "post": "Tent up in nine minutes. I timed it.",
+   "level": 1,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "went wild camping for the first time, far from any campsite",
+   "post": "No campsite, no people, just us and the hills.",
+   "level": 2,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "camped through a night of heavy rain and stayed completely dry",
+   "post": "Storm all night. Bone dry inside. Great tent, better pitching.",
+   "level": 2,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "packed everything for a weekend into one backpack",
+   "post": "Whole weekend on my back. Lighter than I thought.",
+   "level": 2,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "organised a group camping weekend for eight friends",
+   "post": "Eight friends, four tents, one very long campfire.",
+   "level": 3,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "camped in the snow and woke up warm",
+   "post": "Snow camping. Woke up warm. The gear works!",
+   "level": 3,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "taught a friend to pitch a tent and build a fire",
+   "post": "Taught a friend the basics. They're hooked.",
+   "level": 3,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "spent a full week camping in the backcountry with no phone signal",
+   "post": "A week off-grid. My phone is very confused.",
+   "level": 4,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "camped out in every season of the year",
+   "post": "Spring, summer, autumn, winter. All four, under canvas.",
+   "level": 4,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "was asked to lead the camping weekend for a local youth group",
+   "post": "Led the youth group trip. Everyone ate, slept and laughed.",
+   "level": 4,
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "found their first patch of wild garlic by smell alone",
+   "post": "Smelled it before I saw it. Wild garlic!",
+   "level": 0,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "picked a whole basket of blackberries and ate half on the way home",
+   "post": "Basket half full by the time I got home. No regrets.",
+   "level": 0,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "learned the first rule: never eat anything without being certain",
+   "post": "Rule one: if in doubt, leave it out.",
+   "level": 0,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "learned five edible mushrooms well enough to be certain of them",
+   "post": "Five mushrooms I know for certain. Starting slow.",
+   "level": 1,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "made a pot of jam from berries they picked themselves",
+   "post": "Hedgerow jam. Free, wild and delicious.",
+   "level": 1,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "found a stand of elderflowers and made a cordial",
+   "post": "Elderflower cordial from my own patch. Summer in a bottle.",
+   "level": 1,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "found their first chanterelles and kept the spot a secret",
+   "post": "Chanterelles! The spot is secret. Don't ask.",
+   "level": 2,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "cooked a whole meal from what they gathered in one morning",
+   "post": "Gathered it this morning. Cooked it tonight. Ate like royalty.",
+   "level": 2,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "learned the seasons well enough to know what is ripe each month",
+   "post": "I know what's ripe each month now. The woods are a calendar.",
+   "level": 2,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "led a small foraging walk for friends",
+   "post": "Took four friends foraging. They found more than me.",
+   "level": 3,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "filled the pantry with dried mushrooms for the winter",
+   "post": "Pantry stocked with mushrooms for winter. Feeling like a squirrel.",
+   "level": 3,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "found a morel patch after three springs of searching",
+   "post": "Three springs of looking. Morels at last.",
+   "level": 3,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "was asked by the cook at the inn to supply wild mushrooms",
+   "post": "Supplying mushrooms to the inn now. Official forager.",
+   "level": 4,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "could name almost every plant on the woodland path at a glance",
+   "post": "Walked the path and named everything. Felt like a wizard.",
+   "level": 4,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "found a rare mushroom the old foragers had only heard about",
+   "post": "Found the one the old-timers talk about. Left it be.",
+   "level": 4,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "found the Plough and the North Star for the first time",
+   "post": "Found the North Star. Feel slightly less lost in the universe.",
+   "level": 0,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stayed out late enough on a clear night to see the Milky Way",
+   "post": "The Milky Way, with my own eyes. Speechless.",
+   "level": 0,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to let their eyes adjust to the dark for a full twenty minutes",
+   "post": "Twenty minutes of dark. Then a thousand more stars.",
+   "level": 0,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "named a dozen constellations without a chart",
+   "post": "Twelve constellations, no chart. The sky is less of a stranger.",
+   "level": 1,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "watched a meteor shower and counted forty shooting stars",
+   "post": "Forty shooting stars. Wished on all of them.",
+   "level": 1,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spotted Jupiter and knew it for a planet, not a star",
+   "post": "That bright 'star'? Jupiter. I knew it!",
+   "level": 1,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "saw the rings of Saturn through a telescope for the first time",
+   "post": "Saturn has rings. I saw them. Myself. Tonight.",
+   "level": 2,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "picked out the moons of Jupiter through a small telescope",
+   "post": "Four tiny dots beside Jupiter. Moons!",
+   "level": 2,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "drew a careful star chart of the summer sky",
+   "post": "Drew my own star chart. Nerdy and proud.",
+   "level": 2,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found a spot far from any lights and went back every clear night",
+   "post": "Found the darkest spot around. Going back every clear night.",
+   "level": 2,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "showed friends the craters of the moon through a telescope",
+   "post": "Friends saw the craters. Everyone said 'wow' at once.",
+   "level": 3,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "followed a comet across the sky for a whole week",
+   "post": "A comet! Watched it every night this week.",
+   "level": 3,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "taught a group of children to find the constellations",
+   "post": "Taught the kids the constellations. They called it the sky map game.",
+   "level": 3,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "hosted a public stargazing night with a line at the telescope",
+   "post": "Fifty people queued for the telescope. The sky put on a show.",
+   "level": 4,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "could name the brightest stars of every season by heart",
+   "post": "Every season's bright stars, by heart.",
+   "level": 4,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found the faint glow of the Orion Nebula after years of trying",
+   "post": "The Orion Nebula, a smudge of glow. Years to find, worth it.",
+   "level": 4,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "watched a total eclipse they had planned for years",
+   "post": "Totality. Planned for years. Over in minutes. Unforgettable.",
+   "level": 4,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "paddled in a straight line for the first time, briefly",
+   "post": "Straight line for almost a minute. Proud.",
+   "level": 0,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "took their first beginner's lesson at the lake",
+   "post": "First lesson. Mostly went in circles. Loved it.",
+   "level": 0,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "practised a capsize drill and came up laughing",
+   "post": "Capsized on purpose. Came up laughing. Weirdly fun.",
+   "level": 0,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "paddled across the whole lake and back",
+   "post": "Across the lake and back. Arms feel like noodles.",
+   "level": 1,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to lean the kayak into a smooth turn",
+   "post": "Smooth turn! Didn't even wobble.",
+   "level": 1,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "bought their own secondhand kayak",
+   "post": "Got my own kayak. Secondhand, perfect.",
+   "level": 1,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "rolled the kayak back upright for the first time",
+   "post": "Rolled it! Upside down, then right side up. Amazing.",
+   "level": 2,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "paddled ten miles down the river in an afternoon",
+   "post": "Ten miles of river. Herons the whole way.",
+   "level": 2,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "went sea kayaking along the coast",
+   "post": "Sea kayaking. Seals followed us for a while.",
+   "level": 2,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "led a group paddle for beginners on the lake",
+   "post": "Led the beginners' paddle. No one capsized. Mostly.",
+   "level": 3,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "paddled through their first stretch of easy whitewater",
+   "post": "First whitewater. Yelled a little. Happy yelling.",
+   "level": 3,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "paddled out to an island and camped there overnight",
+   "post": "Paddled to an island and slept there. Childhood dream.",
+   "level": 3,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "completed a three-day paddle down the length of the river",
+   "post": "Three days, whole river, one kayak. Done.",
+   "level": 4,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won their age group in a local kayak race",
+   "post": "Won my age group! First race medal ever.",
+   "level": 4,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "became an assistant instructor at the paddling club",
+   "post": "Assistant instructor now. Teaching the roll.",
+   "level": 4,
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "landed a first fish without help",
+   "post": "First fish. Small. Counts.",
+   "level": 0,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to tie a knot that holds",
+   "post": "The knot held!",
+   "level": 0,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned the best spot on the river",
+   "post": "Found the spot.",
+   "level": 1,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "caught enough for supper",
+   "post": "Supper, caught.",
+   "level": 1,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "landed a fish too big for the basket",
+   "post": "Too big for the basket!",
+   "level": 2,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "caught fish on a day nobody else did",
+   "post": "Only one catching today.",
+   "level": 2,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked for advice by an old angler",
+   "post": "An old angler asked ME.",
+   "level": 3,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "landed the biggest fish seen on the river in years",
+   "post": "Biggest in years.",
+   "level": 4,
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to find the north star",
+   "post": "North star, found.",
+   "level": 0,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "named five constellations without help",
+   "post": "Five constellations, named.",
+   "level": 0,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "watched a whole meteor shower until dawn",
+   "post": "Shooting stars till dawn.",
+   "level": 1,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to tell a planet from a star by its steady light",
+   "post": "Planets don't twinkle.",
+   "level": 1,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "drew a chart of the night sky from their own watching",
+   "post": "My own star chart.",
+   "level": 2,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "told the seasons by the stars alone",
+   "post": "Seasons in the stars.",
+   "level": 3,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was sought out by travellers wanting to know the stars",
+   "post": "Travellers ask me the way by the stars.",
+   "level": 4,
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to tell three safe mushrooms apart",
+   "post": "Three safe ones, learned.",
+   "level": 0,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "came home with a full basket",
+   "post": "Full basket.",
+   "level": 0,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "found a patch of wild garlic nobody else knew about",
+   "post": "Secret garlic patch.",
+   "level": 1,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned the hedgerows well enough to forage all year",
+   "post": "Something to find every season.",
+   "level": 1,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "made a whole meal from what they gathered",
+   "post": "Dinner, all foraged.",
+   "level": 2,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to identify a find by a worried neighbour",
+   "post": "Saved a neighbour a bellyache.",
+   "level": 3,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "knew every wild food within a day's walk",
+   "post": "Every wild food for miles.",
+   "level": 4,
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  }
+ ],
+ "sessions": [
+  {
+   "text": "Came home with cold cheeks and a clear head.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Stayed out longer than planned.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Brought a flask and a small snack, which made all the difference.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Didn't see much, but the quiet was worth it.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Jotted a few notes in the logbook afterwards.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Watched the light change for a while before heading home.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Had the place almost to themselves.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Kept a steady pace on the trail.",
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Stopped at the top for a long look at the view.",
+   "for": [
+    "hiking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Ticked off a few familiar birds in the notebook.",
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "Stood very still while a little flock passed overhead.",
+   "for": [
+    "birdwatching"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "Spent a peaceful hour by the water, bite or no bite.",
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Changed the bait twice and finally got a nibble.",
+   "for": [
+    "fishing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Checked over the tent and repacked the gear for next time.",
+   "for": [
+    "camping"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Came back with a small basket and muddy boots.",
+   "for": [
+    "foraging"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "Waited for the clouds to clear and was rewarded with a patch of stars.",
+   "for": [
+    "stargazing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Paddled out to the middle and just floated for a while.",
+   "for": [
+    "kayaking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  }
+ ]
+}

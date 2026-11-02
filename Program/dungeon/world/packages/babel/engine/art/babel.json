@@ -1,0 +1,730 @@
+{
+ "about": "Default backdrops (dungeon/art.py backdrop): pictures of generic places, shown behind the story when nobody has made a picture of the place. Made once with scripts/art/backdrops.py (Windows/backdrops.bat); the images are assets/backdrops/<id>.webp, and <id>-night.webp for an outdoor one. A backdrop is picked by a place's own `backdrop`, then a hex site or terrain, a blank lot's entry, the most shared tags, the kind, the street, the default. Faction emblems (`emblems`, by faction id, in `emblem_style`) and item icons (`icons`: by item id, the ids in `items`, or a whole `category`, in `icon_style`) are made by scripts/art/icons.py into assets/emblems and assets/icons (dungeon/icons.py).",
+ "backdrop_style": "Painterly digital fantasy art with the crisp, saturated finish of a full-dive video game world, dramatic light, wide establishing shot",
+ "backdrop_avoid": "people, figures, text, lettering, signs with words, watermark, logo",
+ "keyart": {"prompt": "Key art for a dark LitRPG tower world. An impossibly tall tower rising through the clouds, its floors stacked like different worlds (a forest floor, a desert floor, a glass city floor, a burning floor) seen through vast arches; at its foot a crowded stone plaza with a glowing cyan waystone obelisk and translucent game-interface light panels hanging in the air with no readable writing; tiny silhouettes of newly arrived people looking up. Awe and menace. Open sky in the upper left third.", "avoid": "text, lettering, words, title, logo, watermark, readable interface text"},
+ "backdrops": [
+  {
+   "id": "tavern",
+   "kinds": [
+    "tavern"
+   ],
+   "tags": [
+    "rumors",
+    "dice",
+    "missing"
+   ],
+   "prompt": "The common room of an adventurers' tavern inside a vast tower: stone arches, a roaring hearth, long tables with tankards and dice, a quest board of pinned notices, lanterns."
+  },
+  {
+   "id": "alehouse",
+   "tags": [
+    "porters",
+    "watchers"
+   ],
+   "prompt": "A porters' alehouse by a landing: low beams, kegs, a plank bar, worn stools, ropes and packs by the door."
+  },
+  {
+   "id": "inn-room",
+   "kinds": [
+    "inn"
+   ],
+   "tags": [
+    "rooms",
+    "lodgings",
+    "cheap",
+    "thin-walls"
+   ],
+   "prompt": "A cheap rented room in a tower town: a narrow bed, a hook for armour, a washbasin, a slit window onto a stone drop."
+  },
+  {
+   "id": "barracks",
+   "tags": [
+    "barracks",
+    "soldiers"
+   ],
+   "prompt": "Soldiers' barracks in a walled keep: rows of bunks, weapon racks, armour stands, a brazier."
+  },
+  {
+   "id": "cookshop",
+   "kinds": [
+    "restaurant"
+   ],
+   "tags": [
+    "street-food",
+    "buff-food",
+    "queue",
+    "mess",
+    "common-table",
+    "company",
+    "crews"
+   ],
+   "outdoor": true,
+   "prompt": "A street food stall under an awning: skewers over coals, steaming pots, a queue rope, painted price boards."
+  },
+  {
+   "id": "tea-stall",
+   "kinds": [
+    "cafe"
+   ],
+   "tags": [
+    "tea"
+   ],
+   "outdoor": true,
+   "prompt": "A tea stall at a gate: a copper urn, cups on a plank, crates for seats, travellers' packs piled."
+  },
+  {
+   "id": "arms-shop",
+   "tags": [
+    "arms",
+    "gear",
+    "graded"
+   ],
+   "prompt": "An arms and gear shop: racks of swords and spears with graded tags, armour on stands, a forge glowing in the back, a counter with a ledger."
+  },
+  {
+   "id": "market",
+   "kinds": [
+    "market"
+   ],
+   "tags": [
+    "market",
+    "bargains",
+    "prices"
+   ],
+   "outdoor": true,
+   "prompt": "A market street inside a colossal tower: stalls under hanging lanterns, crates of goods, banners, the stone ceiling far above lit by shafts of light."
+  },
+  {
+   "id": "shop",
+   "kinds": [
+    "shopping"
+   ],
+   "prompt": "A small shop in a tower town: shelves of supplies, potions in corked bottles, rope and lanterns, a counter."
+  },
+  {
+   "id": "workshop",
+   "kinds": [
+    "workshop"
+   ],
+   "tags": [
+    "repair",
+    "labor"
+   ],
+   "prompt": "A craftsman's workshop in a tower: benches, tools, a hearth, materials in crates."
+  },
+  {
+   "id": "chapel",
+   "tags": [
+    "chapel",
+    "quiet",
+    "lamp"
+   ],
+   "prompt": "A small stone chapel with a single lamp burning, plain benches, an altar of scales."
+  },
+  {
+   "id": "village-green",
+   "kinds": [
+    "square"
+   ],
+   "tags": [
+    "central",
+    "waystone",
+    "notices"
+   ],
+   "outdoor": true,
+   "prompt": "A village green in a walled hill town: grass, a waystone with notices, a well, stone cottages."
+  },
+  {
+   "id": "home",
+   "lots": [
+    "home"
+   ],
+   "prompt": "A plain stone room someone lives in: a cot, a chest, a hearth, a lamp."
+  },
+  {
+   "id": "waystone-plaza",
+   "tags": [
+    "safe-zone",
+    "the-roll",
+    "quests",
+    "crowds"
+   ],
+   "outdoor": true,
+   "prompt": "A huge plaza around a glowing waystone obelisk, the safe zone of a tower: a list of names carved on the stone, guild banners, a scrivener's stall, arches leading off."
+  },
+  {
+   "id": "stair-gate",
+   "tags": [
+    "gate",
+    "stair",
+    "toll",
+    "landing",
+    "arrival"
+   ],
+   "outdoor": true,
+   "prompt": "A massive gate onto a winding stone stair that climbs into darkness: toll booths, guards' posts, torches, a carved arch."
+  },
+  {
+   "id": "guild-hall",
+   "kinds": [
+    "guildhall"
+   ],
+   "tags": [
+    "guild",
+    "guilds",
+    "veterans",
+    "recruiting"
+   ],
+   "prompt": "An adventurers' guild hall: a grand room with trophies, a recruitment board, long tables, banners of the guilds."
+  },
+  {
+   "id": "porters-yard",
+   "tags": [
+    "hiring",
+    "porters",
+    "guides"
+   ],
+   "outdoor": true,
+   "prompt": "A porters' yard: stacked packs and crates, ropes and harnesses, a hiring board, carts."
+  },
+  {
+   "id": "counting-house",
+   "tags": [
+    "lender",
+    "debt",
+    "contracts",
+    "information"
+   ],
+   "prompt": "A moneylender's counting house: ledgers, scales, stacks of coin, an iron safe, contracts sealed in wax."
+  },
+  {
+   "id": "fire-market",
+   "tags": [
+    "fire-market",
+    "debts"
+   ],
+   "outdoor": true,
+   "prompt": "A night market lit by braziers and fire pits: stalls of salvaged gear, smoke, sparks, painted debt boards."
+  },
+  {
+   "id": "spice-exchange",
+   "tags": [
+    "spice"
+   ],
+   "prompt": "A spice exchange: sacks and bins of coloured spice, brass scales, a price board, hanging lamps."
+  },
+  {
+   "id": "fence-rows",
+   "tags": [
+    "fences",
+    "stolen"
+   ],
+   "outdoor": true,
+   "prompt": "A shadowy alley of fences' stalls: covered tables of stolen goods, lanterns turned low, a lookout's stool."
+  },
+  {
+   "id": "charm-sellers",
+   "tags": [
+    "charms"
+   ],
+   "prompt": "A charm sellers' row: stalls hung with amulets and talismans with graded tags, incense, little bottles."
+  },
+  {
+   "id": "map-shop",
+   "tags": [
+    "maps",
+    "paper",
+    "routes"
+   ],
+   "prompt": "A map and paper shop: rolled maps of tower floors, a drafting table, ink pots, a wall of route charts."
+  },
+  {
+   "id": "salon",
+   "kinds": [
+    "nightlife"
+   ],
+   "tags": [
+    "salon",
+    "dancing",
+    "private-rooms"
+   ],
+   "prompt": "An opulent salon: lanterns of coloured glass, silk cushions and couches, a dance floor, curtained alcoves, no people."
+  },
+  {
+   "id": "freight-wharf",
+   "kinds": [
+    "docks"
+   ],
+   "tags": [
+    "docks",
+    "smuggling",
+    "night-cage"
+   ],
+   "outdoor": true,
+   "prompt": "A freight wharf at night on a floor with an underground sea: cranes, cargo nets, a hanging cage, lamps on posts."
+  },
+  {
+   "id": "criers-post",
+   "tags": [
+    "news",
+    "bounties"
+   ],
+   "outdoor": true,
+   "prompt": "A town crier's post: a raised platform with a bell, a board of bounties and news."
+  },
+  {
+   "id": "water-sellers",
+   "tags": [
+    "water",
+    "new-wave"
+   ],
+   "prompt": "Water sellers' stand: great clay jars, a pump, tin cups, a ration board."
+  },
+  {
+   "id": "cathedral",
+   "tags": [
+    "cathedral",
+    "the-scales",
+    "weighing"
+   ],
+   "prompt": "A towering gothic cathedral nave: soaring pillars, an enormous pair of carved scales over the altar, candles, stained glass."
+  },
+  {
+   "id": "convent",
+   "tags": [
+    "sisters",
+    "vows"
+   ],
+   "prompt": "A convent's cloister: arched walkway around a garden, a fountain, plain cells off the walk."
+  },
+  {
+   "id": "infirmary",
+   "tags": [
+    "healing",
+    "mend"
+   ],
+   "prompt": "A monastic infirmary: rows of cots, white linen, herbs drying, a table of instruments."
+  },
+  {
+   "id": "prison-pens",
+   "tags": [
+    "prison",
+    "cage-trade"
+   ],
+   "outdoor": true,
+   "prompt": "Prison pens by a river: iron cages on stone, chains, a guard's stool, water running below."
+  },
+  {
+   "id": "lords-hall",
+   "tags": [
+    "hall",
+    "lord",
+    "muster"
+   ],
+   "prompt": "A margrave's great hall: a high seat, long tables, banners, a huge hearth, hunting trophies."
+  },
+  {
+   "id": "solar",
+   "tags": [
+    "private",
+    "harp",
+    "lunch"
+   ],
+   "prompt": "A lord's private solar: a harp, a window seat, tapestries, a small table laid for lunch."
+  },
+  {
+   "id": "rampart",
+   "tags": [
+    "wall",
+    "watch",
+    "horns",
+    "weak-point"
+   ],
+   "outdoor": true,
+   "prompt": "A rampart walk on a great wall: crenellations, horns on hooks, a watch fire, the land beyond."
+  },
+  {
+   "id": "catacombs",
+   "tags": [
+    "catacombs",
+    "bones",
+    "galleries"
+   ],
+   "prompt": "Catacomb galleries: niches stacked with skulls and bones, a narrow stair down, candle stubs."
+  },
+  {
+   "id": "drill-ground",
+   "kinds": [
+    "venue"
+   ],
+   "tags": [
+    "drill",
+    "training"
+   ],
+   "outdoor": true,
+   "prompt": "A drill ground: packed earth, straw dummies, weapon racks, a fence."
+  },
+  {
+   "id": "mill",
+   "tags": [
+    "mill"
+   ],
+   "outdoor": true,
+   "prompt": "A stone watermill on a river: a big wheel turning, sacks of flour, millstones inside."
+  },
+  {
+   "id": "stone-bridge",
+   "tags": [
+    "bridge",
+    "road"
+   ],
+   "outdoor": true,
+   "prompt": "An old stone bridge over a river, a road across it, a carved marker."
+  },
+  {
+   "id": "beehive-cemetery",
+   "kinds": [
+    "garden"
+   ],
+   "tags": [
+    "hives",
+    "honey",
+    "graves"
+   ],
+   "outdoor": true,
+   "prompt": "An old cemetery with beehives among the graves, honeycomb, wild flowers."
+  },
+  {
+   "id": "tower",
+   "tags": [
+    "view"
+   ],
+   "prompt": "A lone tower room high up, a view through a window over a vast landscape."
+  },
+  {
+   "id": "ditch",
+   "tags": [
+    "border",
+    "parley",
+    "giants"
+   ],
+   "outdoor": true,
+   "prompt": "A border ditch and earthwork under a grey sky, stakes, a parley flag, huge footprints."
+  },
+  {
+   "id": "frontier-town",
+   "tags": [
+    "frontier",
+    "guns"
+   ],
+   "outdoor": true,
+   "prompt": "A dusty frontier town on a western-themed floor: false-front saloons, hitching posts, a water tower, a dirt street, a painted sky."
+  },
+  {
+   "id": "castle-town",
+   "tags": [
+    "curfew",
+    "castle"
+   ],
+   "outdoor": true,
+   "prompt": "A feudal castle town under curfew at dusk: wooden machiya houses, paper lanterns, a white castle above."
+  },
+  {
+   "id": "neon-stack",
+   "tags": [
+    "neon",
+    "rain"
+   ],
+   "outdoor": true,
+   "prompt": "A neon-lit cyberpunk stack of towers in endless rain: holographic signs, cables, wet streets, steam."
+  },
+  {
+   "id": "night-hospital",
+   "tags": [
+    "hospital",
+    "horror"
+   ],
+   "prompt": "A horror-themed hospital at night: a long corridor, flickering lights, empty gurneys, a wheelchair."
+  },
+  {
+   "id": "ash-wastes",
+   "tags": [
+    "wasteland"
+   ],
+   "outdoor": true,
+   "prompt": "Post-apocalyptic ash wastes: grey dunes, rusted wrecks, a broken highway sign, a dull sun."
+  },
+  {
+   "id": "undercroft",
+   "tags": [
+    "dark",
+    "magic"
+   ],
+   "prompt": "A dark magic undercroft: vaulted stone, glowing runes, pools of black water, floating motes of light."
+  },
+  {
+   "id": "giants-hills",
+   "kinds": [
+    "trail"
+   ],
+   "tags": [
+    "hills",
+    "giants",
+    "beacons"
+   ],
+   "outdoor": true,
+   "prompt": "Rolling green hills with beacon towers and the far-off shapes of giants."
+  },
+  {
+   "id": "stilt-villages",
+   "tags": [
+    "villages",
+    "causeways",
+    "reed"
+   ],
+   "outdoor": true,
+   "prompt": "Stilt villages over reed marsh: huts on poles, rope causeways, boats, reeds."
+  },
+  {
+   "id": "landing",
+   "tags": [
+    "fog"
+   ],
+   "outdoor": true,
+   "prompt": "A fog-wrapped landing platform at the top of the Stair, a notice board, railings over a drop."
+  },
+  {
+   "id": "broken-span",
+   "tags": [
+    "broken-span",
+    "chalk"
+   ],
+   "outdoor": true,
+   "prompt": "A broken bridge span on a chalk-white floor, the stair ending in air."
+  },
+  {
+   "id": "tower-floor",
+   "kinds": [
+    "landmark"
+   ],
+   "street": true,
+   "default": true,
+   "outdoor": true,
+   "prompt": "A new floor of a colossal tower seen from its landing: a whole land under a vaulted sky, a painted horizon, a road leading away."
+  }
+ ],
+ "emblem_style": "A faction crest from a full-dive fantasy video game: a polished game interface emblem, painterly digital art with crisp saturated colors, a slight metallic bevel and a soft glow, centered and filling the frame, on a transparent background",
+ "emblem_avoid": "text, letters, numbers, words, readable labels, brand logos, watermark, signature, background scene, frame border, people, hands",
+ "emblems": [
+  {
+   "id": "the-landing",
+   "prompt": "A guild crest: a worn round shield bearing a bathhouse arch and two crossed old swords, chipped and repainted, in faded teal and bronze; a poor, proud veterans' guild."
+  },
+  {
+   "id": "the-market-rows",
+   "prompt": "A market racket's mark: a cart wheel with a coin at its hub and a flame above it, in brass and red."
+  },
+  {
+   "id": "the-close",
+   "prompt": "A church emblem: a golden sun with straight rays above a balance scale, on a white field, in white and gold."
+  },
+  {
+   "id": "house-corve",
+   "prompt": "A noble house crest: a black raven above a stone wall and a keep tower, in black, iron grey and dark red; a margrave's arms."
+  },
+  {
+   "id": "the-reach-giants",
+   "prompt": "A tribal mark: a beacon fire burning on a ridge of brown hills, in big rough strokes of ochre and grey on stone."
+  },
+  {
+   "id": "the-shut",
+   "prompt": "A sisterhood seal: a closed door with a warding knot across it, in deep blue and silver, secretive."
+  },
+  {
+   "id": "the-lantern-room",
+   "prompt": "A salon's sign: an ornate hanging lantern glowing rose-gold with a silk ribbon tied around it, in crimson and gold, sensual and expensive."
+  },
+  {
+   "id": "the-copper-steps",
+   "prompt": "A fence's mark: a flight of copper steps with a key and a folded map, in copper and verdigris."
+  },
+  {
+   "id": "the-night-cage",
+   "prompt": "A smugglers' mark: a cargo cage hanging on a chain against a crescent moon, in black and dull iron with a lantern glow inside."
+  }
+ ],
+ "icon_style": "A single object as a full-dive fantasy video game inventory icon, painterly digital art with crisp saturated colors and a soft rim light, three-quarter view, the whole object centered in frame, on a transparent background",
+ "icon_avoid": "text, letters, numbers, words, readable labels, brand logos, watermark, signature, background scene, frame border, people, hands",
+ "icons": [
+  {
+   "id": "waybread",
+   "prompt": "A flat round of golden waybread wrapped in a broad leaf."
+  },
+  {
+   "id": "dried-meat",
+   "prompt": "Strips of dried meat tied with cord."
+  },
+  {
+   "id": "skewer",
+   "prompt": "A skewer of glistening charcoal-grilled meat."
+  },
+  {
+   "id": "waterskin",
+   "prompt": "A leather waterskin with a brass cap."
+  },
+  {
+   "id": "arrival-garb",
+   "prompt": "A folded plain linen shirt and trousers with soft boots on top, starter clothes."
+  },
+  {
+   "id": "cloak",
+   "prompt": "A folded grey wool cloak."
+  },
+  {
+   "id": "boots",
+   "prompt": "A pair of sturdy laced climbing boots."
+  },
+  {
+   "id": "rope",
+   "prompt": "A coil of rope."
+  },
+  {
+   "id": "lantern",
+   "prompt": "A hooded brass lantern with a glowing flame."
+  },
+  {
+   "id": "lamp-oil",
+   "prompt": "A small glass flask of amber lamp oil."
+  },
+  {
+   "id": "chalk",
+   "prompt": "A stick of white chalk."
+  },
+  {
+   "id": "bandages",
+   "prompt": "A roll of bandages."
+  },
+  {
+   "id": "minor-potion",
+   "prompt": "A small round glass bottle of glowing red healing draught with a cork."
+  },
+  {
+   "id": "knife",
+   "prompt": "A belt knife in a leather sheath."
+  },
+  {
+   "id": "short-sword",
+   "prompt": "A plain beginner's short sword of slightly dull iron."
+  },
+  {
+   "id": "sword",
+   "prompt": "A plain steel sword with a simple crossguard."
+  },
+  {
+   "id": "buckler",
+   "prompt": "A small round iron buckler shield."
+  },
+  {
+   "id": "blanket",
+   "prompt": "A folded brown blanket."
+  },
+  {
+   "id": "satchel",
+   "prompt": "A leather satchel with a faint blue magical glow at its seams."
+  },
+  {
+   "id": "guild-token",
+   "prompt": "A bronze guild registration token stamped with a shield, on a cord."
+  },
+  {
+   "id": "charm-ring",
+   "prompt": "A copper ring set with a small pink stone, glowing faintly."
+  },
+  {
+   "id": "hush-bead",
+   "prompt": "A single smoky grey glass bead with a soft dark aura."
+  },
+  {
+   "id": "floor-map",
+   "prompt": "A rolled sheet of rough paper half open, showing a hand-copied square floor plan."
+  },
+  {
+   "id": "spice-meal",
+   "prompt": "A clay bowl of spiced rice and meat in bright red and saffron colors."
+  },
+  {
+   "id": "lodging",
+   "items": [
+    "pallet-night",
+    "private-room"
+   ],
+   "prompt": "A straw pallet with a folded blanket and a brass room key on it."
+  },
+  {
+   "id": "meal",
+   "items": [
+    "buff-meal",
+    "pot-bowl"
+   ],
+   "prompt": "A steaming bowl of stew with a faint golden glow over it."
+  },
+  {
+   "id": "ale-mug",
+   "prompt": "A wooden mug of foaming ale."
+  },
+  {
+   "id": "bath",
+   "items": [
+    "wash-house",
+    "bathhouse"
+   ],
+   "prompt": "A copper bathtub of steaming water with a towel over its rim."
+  },
+  {
+   "id": "kind-food",
+   "category": "food",
+   "prompt": "A small basket of bread, cheese and apples"
+  },
+  {
+   "id": "kind-gear",
+   "category": "gear",
+   "prompt": "A leather traveller's pack with a bedroll strapped on top"
+  },
+  {
+   "id": "kind-clothing",
+   "category": "clothing",
+   "prompt": "A folded tunic with a leather belt coiled on it"
+  },
+  {
+   "id": "kind-weapon",
+   "category": "weapon",
+   "prompt": "A sheathed short sword crossed with a dagger"
+  },
+  {
+   "id": "kind-tool",
+   "category": "tool",
+   "prompt": "A hammer, chisel and pliers on an open leather roll"
+  },
+  {
+   "id": "kind-remedy",
+   "category": "remedy",
+   "prompt": "A small clay pot of salve beside a sprig of herbs"
+  },
+  {
+   "id": "kind-curio",
+   "category": "curio",
+   "prompt": "A strange carved bone charm on a cord"
+  },
+  {
+   "id": "kind-trade",
+   "category": "trade",
+   "prompt": "A bolt of cloth beside a sealed earthenware jar"
+  },
+  {
+   "id": "kind-service",
+   "category": "service",
+   "prompt": "A brass bell on a wooden inn counter beside a candle"
+  }
+ ]
+}

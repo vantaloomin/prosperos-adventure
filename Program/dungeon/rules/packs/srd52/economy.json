@@ -1,0 +1,357 @@
+{
+ "coins": [
+  {
+   "name": "Copper Piece",
+   "abbr": "CP",
+   "cp": 1
+  },
+  {
+   "name": "Silver Piece",
+   "abbr": "SP",
+   "cp": 10
+  },
+  {
+   "name": "Electrum Piece",
+   "abbr": "EP",
+   "cp": 50
+  },
+  {
+   "name": "Gold Piece",
+   "abbr": "GP",
+   "cp": 100
+  },
+  {
+   "name": "Platinum Piece",
+   "abbr": "PP",
+   "cp": 1000
+  }
+ ],
+ "selling": "Equipment fetches half its cost when sold. Trade goods and valuables (gems, art objects) keep their full value.",
+ "lifestyles": [
+  {
+   "id": "wretched",
+   "name": "Wretched",
+   "cost_cp_per_day": 0,
+   "description": "You survive via chance and charity. You’re often exposed to natural dangers as a result of sleeping outside."
+  },
+  {
+   "id": "squalid",
+   "name": "Squalid",
+   "cost_cp_per_day": 10,
+   "description": "You spend the bare minimum for your necessities. You might be exposed to unhealthy conditions and opportunistic criminals."
+  },
+  {
+   "id": "poor",
+   "name": "Poor",
+   "cost_cp_per_day": 20,
+   "description": "You spend frugally for your necessities."
+  },
+  {
+   "id": "modest",
+   "name": "Modest",
+   "cost_cp_per_day": 100,
+   "description": "You support yourself at an average level."
+  },
+  {
+   "id": "comfortable",
+   "name": "Comfortable",
+   "cost_cp_per_day": 200,
+   "description": "You spend modestly for your necessities and enjoy a few luxuries."
+  },
+  {
+   "id": "wealthy",
+   "name": "Wealthy",
+   "cost_cp_per_day": 400,
+   "description": "You’re accustomed to the finer things in life and might have servants."
+  },
+  {
+   "id": "aristocratic",
+   "name": "Aristocratic",
+   "cost_cp_per_day": 1000,
+   "description": "You pay for the best and might have a staff that supports your lifestyle. Others notice your wealth and might encourage you to share it, either legally or otherwise."
+  }
+ ],
+ "lifestyle_rules": "Lifestyle expenses summarize the cost of living in a fantasy world. They cover lodging, food, equipment maintenance, and other necessities.\n\nAt the start of each week or month (GM’s choice), choose a lifestyle below—Wretched, Squalid, Poor, Modest, Comfortable, Wealthy, or Aristocratic—and pay the price to sustain that lifestyle.\n\nLifestyles have no inherent consequences, but the GM might take them into account when determining risks or how others perceive your character.",
+ "food_drink_lodging": [
+  {
+   "id": "ale-mug",
+   "name": "Ale (mug)",
+   "category": "drink",
+   "unit": "mug",
+   "cost_text": "4 CP",
+   "cost_cp": 4
+  },
+  {
+   "id": "bread-loaf",
+   "name": "Bread (loaf)",
+   "category": "food",
+   "unit": "loaf",
+   "cost_text": "2 CP",
+   "cost_cp": 2
+  },
+  {
+   "id": "cheese-wedge",
+   "name": "Cheese (wedge)",
+   "category": "food",
+   "unit": "wedge",
+   "cost_text": "1 SP",
+   "cost_cp": 10
+  },
+  {
+   "id": "inn-stay-squalid",
+   "name": "Inn stay (Squalid)",
+   "category": "lodging",
+   "tier": "squalid",
+   "unit": "night",
+   "cost_text": "7 CP",
+   "cost_cp": 7
+  },
+  {
+   "id": "inn-stay-poor",
+   "name": "Inn stay (Poor)",
+   "category": "lodging",
+   "tier": "poor",
+   "unit": "night",
+   "cost_text": "1 SP",
+   "cost_cp": 10
+  },
+  {
+   "id": "inn-stay-modest",
+   "name": "Inn stay (Modest)",
+   "category": "lodging",
+   "tier": "modest",
+   "unit": "night",
+   "cost_text": "5 SP",
+   "cost_cp": 50
+  },
+  {
+   "id": "inn-stay-comfortable",
+   "name": "Inn stay (Comfortable)",
+   "category": "lodging",
+   "tier": "comfortable",
+   "unit": "night",
+   "cost_text": "8 SP",
+   "cost_cp": 80
+  },
+  {
+   "id": "inn-stay-wealthy",
+   "name": "Inn stay (Wealthy)",
+   "category": "lodging",
+   "tier": "wealthy",
+   "unit": "night",
+   "cost_text": "2 GP",
+   "cost_cp": 200
+  },
+  {
+   "id": "inn-stay-aristocratic",
+   "name": "Inn stay (Aristocratic)",
+   "category": "lodging",
+   "tier": "aristocratic",
+   "unit": "night",
+   "cost_text": "4 GP",
+   "cost_cp": 400
+  },
+  {
+   "id": "meal-squalid",
+   "name": "Meal (Squalid)",
+   "category": "food",
+   "tier": "squalid",
+   "unit": "meal",
+   "cost_text": "1 CP",
+   "cost_cp": 1
+  },
+  {
+   "id": "meal-poor",
+   "name": "Meal (Poor)",
+   "category": "food",
+   "tier": "poor",
+   "unit": "meal",
+   "cost_text": "2 CP",
+   "cost_cp": 2
+  },
+  {
+   "id": "meal-modest",
+   "name": "Meal (Modest)",
+   "category": "food",
+   "tier": "modest",
+   "unit": "meal",
+   "cost_text": "1 SP",
+   "cost_cp": 10
+  },
+  {
+   "id": "meal-comfortable",
+   "name": "Meal (Comfortable)",
+   "category": "food",
+   "tier": "comfortable",
+   "unit": "meal",
+   "cost_text": "2 SP",
+   "cost_cp": 20
+  },
+  {
+   "id": "meal-wealthy",
+   "name": "Meal (Wealthy)",
+   "category": "food",
+   "tier": "wealthy",
+   "unit": "meal",
+   "cost_text": "3 SP",
+   "cost_cp": 30
+  },
+  {
+   "id": "meal-aristocratic",
+   "name": "Meal (Aristocratic)",
+   "category": "food",
+   "tier": "aristocratic",
+   "unit": "meal",
+   "cost_text": "6 SP",
+   "cost_cp": 60
+  },
+  {
+   "id": "wine-common",
+   "name": "Wine (Common, bottle)",
+   "category": "drink",
+   "tier": "common",
+   "unit": "bottle",
+   "cost_text": "2 SP",
+   "cost_cp": 20
+  },
+  {
+   "id": "wine-fine",
+   "name": "Wine (Fine, bottle)",
+   "category": "drink",
+   "tier": "fine",
+   "unit": "bottle",
+   "cost_text": "10 GP",
+   "cost_cp": 1000
+  }
+ ],
+ "food_drink_lodging_rules": "The Food, Drink, and Lodging table gives prices for food and a single night’s lodging. Prices for daily lodging and meals are included in your lifestyle’s expenses.",
+ "hirelings": [
+  {
+   "id": "skilled-hireling",
+   "name": "Skilled hireling",
+   "cost_cp": 200,
+   "unit": "day"
+  },
+  {
+   "id": "untrained-hireling",
+   "name": "Untrained hireling",
+   "cost_cp": 20,
+   "unit": "day"
+  },
+  {
+   "id": "messenger",
+   "name": "Messenger",
+   "cost_cp": 2,
+   "unit": "mile"
+  }
+ ],
+ "hireling_rules": "Skilled hirelings include anyone hired to perform a service that involves a proficiency (including weapon, tool, or skill): a mercenary, an artisan, a scribe, or the like. The pay shown on the Hirelings table is a minimum; some expert hirelings require more pay. Untrained hirelings are hired for work that requires no particular proficiencies; they include laborers and porters.",
+ "spellcasting_services": [
+  {
+   "spell_level": "Cantrip",
+   "availability": "Village, town, or city",
+   "cost_cp": 3000
+  },
+  {
+   "spell_level": "1",
+   "availability": "Village, town, or city",
+   "cost_cp": 5000
+  },
+  {
+   "spell_level": "2",
+   "availability": "Village, town, or city",
+   "cost_cp": 20000
+  },
+  {
+   "spell_level": "3",
+   "availability": "Town or city only",
+   "cost_cp": 30000
+  },
+  {
+   "spell_level": "4–5",
+   "availability": "Town or city only",
+   "cost_cp": 200000
+  },
+  {
+   "spell_level": "6–8",
+   "availability": "City only",
+   "cost_cp": 2000000
+  },
+  {
+   "spell_level": "9",
+   "availability": "City only",
+   "cost_cp": 10000000
+  }
+ ],
+ "spellcasting_service_rules": "Most settlements contain individuals who are willing to cast spells in exchange for payment. If a spell has expensive components, add the cost of those components to the cost listed in the Spellcasting Services table. The higher the level of a desired spell, the harder it is to find someone to cast it.",
+ "spell_scroll_scribing": [
+  {
+   "spell_level": "Cantrip",
+   "days": 1,
+   "cost_cp": 1500
+  },
+  {
+   "spell_level": "1",
+   "days": 1,
+   "cost_cp": 2500
+  },
+  {
+   "spell_level": "2",
+   "days": 3,
+   "cost_cp": 10000
+  },
+  {
+   "spell_level": "3",
+   "days": 5,
+   "cost_cp": 15000
+  },
+  {
+   "spell_level": "4",
+   "days": 10,
+   "cost_cp": 100000
+  },
+  {
+   "spell_level": "5",
+   "days": 25,
+   "cost_cp": 150000
+  },
+  {
+   "spell_level": "6",
+   "days": 40,
+   "cost_cp": 1000000
+  },
+  {
+   "spell_level": "7",
+   "days": 50,
+   "cost_cp": 1250000
+  },
+  {
+   "spell_level": "8",
+   "days": 60,
+   "cost_cp": 1500000
+  },
+  {
+   "spell_level": "9",
+   "days": 120,
+   "cost_cp": 5000000
+  }
+ ],
+ "crafting_rules": {
+  "nonmagical": "To craft a nonmagical item, you need tools, raw materials, and time, each of which is detailed below. If you meet the requirements, you make the item, and you can use it or sell it at its normal price.\n\n**Tools**\n\nThe “Tools” section of “Equipment” lists which tools are required to make certain items. The GM assigns required tools for items not listed there.\n\nYou must use the required tool to make an item and have proficiency with that tool. Anyone who helps you must also have proficiency with it.\n\n**Raw Materials**\n\nTo make an item, you need raw materials worth half its purchase cost (round down). For example, you need 750 GP of raw materials to make Plate Armor, which sells for 1,500 GP. The GM determines whether appropriate raw materials are available.\n\n**Time**\n\nTo determine how many days (working 8 hours a day) it takes to make an item, divide its purchase cost in GP by 10 (round a fraction up to a day). For example, you need 5 days to make a Heavy Crossbow, which sells for 50 GP.\n\nIf an item requires multiple days, the days needn’t be consecutive.\n\nCharacters can combine their efforts to shorten the crafting time. Divide the time needed to create an item by the number of characters working on it. Normally, only one other character can assist you, but the GM might allow more assistants.",
+  "potions_of_healing": "A character who has proficiency with the Herbalism Kit can create a *Potion of Healing*. Doing so requires using that kit and 25 GP of raw material over the course of 1 day (8 hours of work).",
+  "spell_scrolls": "A spellcaster can transfer a spell to a scroll and create a *Spell Scroll*, using the rules below.\n\n**Time and Cost**\n\nScribing a scroll takes an amount of time and money based on the level of the spell, as shown in the Spell Scroll Costs table. For each day of inscription, you must work for 8 hours. If a scroll requires multiple days, those days needn’t be consecutive.\n\n**Prerequisites for the Scribe**\n\nTo scribe a scroll, you must have proficiency in the Arcana skill or with Calligrapher’s Supplies and have the spell prepared on each day of the inscription. You must also have at hand any Material components required by the spell; if the spell consumes its Material components, they are consumed only when you complete the scroll. The scroll’s spell uses your spell save DC and spell attack bonus.\n\n**Cantrips**\n\nIf the scribed spell is a cantrip, the version on the scroll works as if the caster were your level."
+ },
+ "magic_item_rules": "Adventures hold the promise—but not a guarantee—of finding magic items. Hundreds of magic items are detailed in “Magic Items” later in this document. Here’s what you need to know about using magic items.\n\n**Identifying a Magic Item**\n\nSome magic items are indistinguishable from their nonmagical counterparts, while others are conspicuously magical. Handling a magic item is enough to give you a sense that it is extraordinary, but learning a magic item’s properties isn’t automatic.\n\nThe *Identify* spell is the fastest way to reveal an item’s properties. Alternatively, you can focus on one magic item during a Short Rest while being in physical contact with the item. At the end of the rest, you learn its properties and how to use them (but not any curse the item might bear).\n\nSometimes a magic item carries a clue to its properties. The command word to activate a ring might be etched inside the band, or a feathered design might hint that it’s a *Ring of Feather Falling*.\n\nWearing or experimenting with an item can also offer hints about its properties. In the specific case of Potions, a little taste is enough to tell the taster what a potion does. Other items might require more experimentation. For example, if your character puts on a *Ring of Swimming*, the GM might say, “Your movement feels strangely fluid.” Perhaps you then dive into a river to see what happens. The GM would then say you swim unexpectedly well.\n\n**Attunement**\n\nSome magic items require a creature to form a bond—called Attunement—with them before the creature can use an item’s magical properties. Without becoming attuned to an item that requires Attunement, you gain only its nonmagical benefits unless its description states otherwise. For example, a magic Shield that requires Attunement provides the benefits of a normal Shield if you aren’t attuned to it, but none of its magical properties.\n\n**Attune during a Short Rest**\n\nAttuning to an item requires you to spend a Short Rest focused on only that item while being in physical contact with it (this can’t be the same Short Rest used to learn the item’s properties). This focus can take the form of weapon practice (for a Weapon), meditation (for a Wand), or some other appropriate activity. If the Short Rest is interrupted, the Attunement attempt fails. Otherwise, at the end of the Short Rest, you’re attuned to the magic item and can access its full magical capabilities.\n\n**No More Than Three Items**\n\nYou can be attuned to no more than three magic items at a time. Any attempt to attune to a fourth item fails; you must end your Attunement to an item first. Additionally, you can’t attune to more than one copy of an item. For example, you can’t attune to more than one *Ring of Protection* at a time.\n\n**Ending Attunement**\n\nYour Attunement to an item ends if you no longer satisfy the prerequisites for Attunement, if the item has been more than 100 feet away for at least 24 hours, if you die, or if another creature attunes to the item. You can also voluntarily end Attunement by spending another Short Rest focused on the item unless the item is cursed.\n\n**Wearing and Wielding Items**\n\nUsing a magic item’s properties might mean wearing or wielding it. A magic item meant to be worn must be donned in the intended fashion: boots go on feet, gloves on hands, hats and helmets on a head, and rings on a finger. Magic armor must be donned, a Shield strapped to the arm, a cloak fastened about the shoulders. A weapon must be held.\n\nIn most cases, a magic item that’s meant to be worn can fit a creature regardless of size or build. Magic garments are made to be easily adjustable, or they magically adjust themselves to the wearer.\n\n**Multiple Items of the Same Kind**\n\nYou can’t wear more than one of certain magic items. You can’t normally wear more than one pair of footwear, one pair of gloves or gauntlets, one pair of bracers, one suit of armor, one item of headwear, or one cloak. The GM might make exceptions.\n\n**Paired Items**\n\nItems that come in pairs—such as boots, bracers, gauntlets, and gloves—impart their benefits only if both items of the pair are worn. For example, a character wearing a *Boot of Striding and Springing* on one foot and a *Boot of Elvenkind* on the other foot gains no benefit from either.",
+ "wages": [
+  {
+   "id": "unskilled",
+   "name": "Unskilled worker (untrained hireling)",
+   "cp_per_day": 20
+  },
+  {
+   "id": "skilled",
+   "name": "Skilled worker (skilled hireling)",
+   "cp_per_day": 200
+  }
+ ]
+}

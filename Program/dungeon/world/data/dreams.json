@@ -1,0 +1,301 @@
+{
+ "about": "Dreams (dungeon/life/dreams.py, Feature Hit List #31): fixed templates that mix two or three fragments of the companion's real day into a short, odd, harmless dream. {first} is the dreamer, {a} and {b} are people from that day, {place} a place they were, {odd} and {object} the dream's own strange touches. `text` is for Today, `told` for the chat context, `share` a morning text they may send. Never a nightmare. The user can appear only as {b}, in a dream about two people. Dreams are never sexual or romantic, whoever is in them; a template is not used again within `repeat_days`, and people or places a secret is about never become a fragment.",
+ "chance": 30,
+ "per_week": 3,
+ "templates": [
+  {
+   "id": "two-at-place",
+   "people": 2,
+   "place": true,
+   "text": "{first} dreamed {a} and {b} were both at {place}, except somehow it was {odd}.",
+   "told": "Last night you dreamed {a} and {b} were both at {place}, except somehow it was {odd}.",
+   "share": "Had the weirdest dream. {a} and {b} were at {place} but it was {odd}??"
+  },
+  {
+   "id": "one-at-place",
+   "people": 1,
+   "place": true,
+   "text": "{first} dreamed {a} was running {place}, and everyone had to pay with {object}.",
+   "told": "Last night you dreamed {a} was running {place}, and everyone had to pay with {object}.",
+   "share": "Dreamed {a} was running {place} and you had to pay with {object}. My brain is so weird."
+  },
+  {
+   "id": "one-looking-for",
+   "people": 1,
+   "place": false,
+   "text": "{first} dreamed they spent the whole night helping {a} look for {object}, and it was {odd}.",
+   "told": "Last night you dreamed you spent the whole night helping {a} look for {object}, and it was {odd}.",
+   "share": "I dreamed I was helping {a} look for {object} all night. It was {odd}. No idea."
+  },
+  {
+   "id": "place-odd",
+   "people": 0,
+   "place": true,
+   "text": "{first} dreamed {place} was {odd}, and nobody thought that was strange.",
+   "told": "Last night you dreamed {place} was {odd}, and nobody thought that was strange.",
+   "share": "Dreamed {place} was {odd} and everyone acted like that was totally normal."
+  },
+  {
+   "id": "two-and-object",
+   "people": 2,
+   "place": false,
+   "text": "{first} dreamed {a} and {b} were arguing about {object}, very politely, {odd}.",
+   "told": "Last night you dreamed {a} and {b} were arguing about {object}, very politely, {odd}.",
+   "share": "Weird dream: {a} and {b} were having a super polite argument about {object}, {odd}."
+  },
+  {
+   "id": "one-teaching",
+   "people": 1,
+   "place": true,
+   "text": "{first} dreamed {a} was teaching a class at {place} on how to fold {object}.",
+   "told": "Last night you dreamed {a} was teaching a class at {place} on how to fold {object}.",
+   "share": "In my dream last night {a} was teaching a class at {place} on folding {object}. I took notes."
+  },
+  {
+   "id": "place-moving",
+   "people": 0,
+   "place": true,
+   "text": "{first} dreamed {place} had moved overnight and was now {odd}.",
+   "told": "Last night you dreamed {place} had moved overnight and was now {odd}.",
+   "share": "Dreamed {place} had just moved overnight. It was {odd} now. Nobody minded."
+  },
+  {
+   "id": "place-doors",
+   "people": 0,
+   "place": true,
+   "text": "{first} dreamed every door at {place} opened onto a room that was {odd}.",
+   "told": "Last night you dreamed every door at {place} opened onto a room that was {odd}.",
+   "share": "Had a dream where every door at {place} opened onto a room that was {odd}."
+  },
+  {
+   "id": "place-object-rain",
+   "people": 0,
+   "place": true,
+   "text": "{first} dreamed it rained {object} all afternoon at {place}.",
+   "told": "Last night you dreamed it rained {object} all afternoon at {place}.",
+   "share": "Dreamed it was raining {object} at {place}. Just a normal Tuesday apparently."
+  },
+  {
+   "id": "place-lost",
+   "people": 0,
+   "place": true,
+   "text": "{first} dreamed they kept trying to get to {place} and every street led to a place that was {odd}.",
+   "told": "Last night you dreamed you kept trying to get to {place} and every street led to a place that was {odd}.",
+   "share": "I spent my whole dream trying to get to {place}. Every street ended up {odd}."
+  },
+  {
+   "id": "object-collect",
+   "people": 0,
+   "place": true,
+   "text": "{first} dreamed they had a whole suitcase of {object} to hand out at {place} before sunrise.",
+   "told": "Last night you dreamed you had a whole suitcase of {object} to hand out at {place} before sunrise.",
+   "share": "Dreamed I had a suitcase full of {object} to give away at {place} before sunrise. Why."
+  },
+  {
+   "id": "odd-swim",
+   "people": 0,
+   "place": true,
+   "text": "{first} dreamed they could swim through the air over {place}, as long as they held onto {object}.",
+   "told": "Last night you dreamed you could swim through the air over {place}, as long as you held onto {object}.",
+   "share": "I could fly over {place} in my dream last night, but only while holding {object}. Rules are rules."
+  },
+  {
+   "id": "odd-shop",
+   "people": 0,
+   "place": true,
+   "text": "{first} dreamed they ran a tiny shop inside {place} that only sold {object}.",
+   "told": "Last night you dreamed you ran a tiny shop inside {place} that only sold {object}.",
+   "share": "Dreamed I ran a little shop inside {place} that only sold {object}. Business was booming."
+  },
+  {
+   "id": "odd-exam",
+   "people": 0,
+   "place": true,
+   "text": "{first} dreamed they had to give a speech at {place} about {object} and somehow knew everything about them.",
+   "told": "Last night you dreamed you had to give a speech at {place} about {object} and somehow knew everything about them.",
+   "share": "Dream report: I gave a whole speech about {object} at {place}. I was SO informed."
+  },
+  {
+   "id": "one-band",
+   "people": 1,
+   "place": false,
+   "text": "{first} dreamed {a} had started a band and every song was about {object}.",
+   "told": "Last night you dreamed {a} had started a band and every song was about {object}.",
+   "share": "Dreamed {a} started a band and every single song was about {object}."
+  },
+  {
+   "id": "one-place-waiter",
+   "people": 1,
+   "place": true,
+   "text": "{first} dreamed {a} was serving tea at {place}, but the cups were {object}.",
+   "told": "Last night you dreamed {a} was serving tea at {place}, but the cups were {object}.",
+   "share": "In my dream {a} was serving tea at {place} out of {object}. Very fancy."
+  },
+  {
+   "id": "one-map",
+   "people": 1,
+   "place": false,
+   "text": "{first} dreamed {a} handed them a map to a place that was {odd} and said not to be late.",
+   "told": "Last night you dreamed {a} handed you a map to a place that was {odd} and said not to be late.",
+   "share": "{a} gave me a map in my dream last night. To a place that was {odd}. And told me not to be late."
+  },
+  {
+   "id": "one-tiny",
+   "people": 1,
+   "place": false,
+   "text": "{first} dreamed {a} was very small, about the size of a teacup, and didn't mind at all.",
+   "told": "Last night you dreamed {a} was very small, about the size of a teacup, and didn't mind at all.",
+   "share": "Dreamed {a} was the size of a teacup and totally fine with it."
+  },
+  {
+   "id": "one-boat",
+   "people": 1,
+   "place": false,
+   "text": "{first} dreamed they and {a} were rowing a boat full of {object}, {odd}.",
+   "told": "Last night you dreamed you and {a} were rowing a boat full of {object}, {odd}.",
+   "share": "Me and {a} were rowing a boat full of {object} in my dream. It was {odd}."
+  },
+  {
+   "id": "one-place-mayor",
+   "people": 1,
+   "place": true,
+   "text": "{first} dreamed {a} had been made mayor of {place} and gave a speech about {object}.",
+   "told": "Last night you dreamed {a} had been made mayor of {place} and gave a speech about {object}.",
+   "share": "Dreamed {a} became mayor of {place}. First speech was about {object}."
+  },
+  {
+   "id": "one-recipe",
+   "people": 1,
+   "place": false,
+   "text": "{first} dreamed {a} was teaching them a recipe that only used {object}.",
+   "told": "Last night you dreamed {a} was teaching you a recipe that only used {object}.",
+   "share": "{a} taught me a recipe in my dream. The only ingredient was {object}."
+  },
+  {
+   "id": "one-place-museum",
+   "people": 1,
+   "place": true,
+   "text": "{first} dreamed {place} had turned into a museum and {a} was the only guide.",
+   "told": "Last night you dreamed {place} had turned into a museum and {a} was the only guide.",
+   "share": "Dreamed {place} was a museum and {a} was giving the tour. Very serious about it."
+  },
+  {
+   "id": "one-wrong-name",
+   "people": 1,
+   "place": false,
+   "text": "{first} dreamed everyone kept calling {a} by the wrong name and {a} just went along with it.",
+   "told": "Last night you dreamed everyone kept calling {a} by the wrong name and {a} just went along with it.",
+   "share": "In my dream everyone kept calling {a} the wrong name and they just rolled with it."
+  },
+  {
+   "id": "two-place-race",
+   "people": 2,
+   "place": true,
+   "text": "{first} dreamed {a} and {b} were racing across {place} on bicycles made of {object}.",
+   "told": "Last night you dreamed {a} and {b} were racing across {place} on bicycles made of {object}.",
+   "share": "Weird dream: {a} and {b} raced across {place} on bikes made of {object}."
+  },
+  {
+   "id": "two-game",
+   "people": 2,
+   "place": false,
+   "text": "{first} dreamed they were playing a board game with {a} and {b}, and the pieces were {object}.",
+   "told": "Last night you dreamed you were playing a board game with {a} and {b}, and the pieces were {object}.",
+   "share": "Dreamed me, {a} and {b} were playing a board game with {object} for pieces. Nobody knew the rules."
+  },
+  {
+   "id": "two-place-picnic",
+   "people": 2,
+   "place": true,
+   "text": "{first} dreamed {a} and {b} had a picnic at {place}, {odd}.",
+   "told": "Last night you dreamed {a} and {b} had a picnic at {place}, {odd}.",
+   "share": "Dreamed {a} and {b} were having a picnic at {place}. It was {odd}."
+  },
+  {
+   "id": "two-swap",
+   "people": 2,
+   "place": false,
+   "text": "{first} dreamed {a} and {b} had swapped jobs and both were weirdly good at it.",
+   "told": "Last night you dreamed {a} and {b} had swapped jobs and both were weirdly good at it.",
+   "share": "Dreamed {a} and {b} swapped jobs. Both crushed it. Suspicious."
+  },
+  {
+   "id": "two-train",
+   "people": 2,
+   "place": false,
+   "text": "{first} dreamed they were on a train with {a} and {b}, and the tickets were {object}.",
+   "told": "Last night you dreamed you were on a train with {a} and {b}, and the tickets were {object}.",
+   "share": "Had a dream I was on a train with {a} and {b}. Our tickets were {object}."
+  },
+  {
+   "id": "two-place-dance",
+   "people": 2,
+   "place": true,
+   "text": "{first} dreamed there was a dance at {place} and {a} and {b} were the only ones who knew the steps.",
+   "told": "Last night you dreamed there was a dance at {place} and {a} and {b} were the only ones who knew the steps.",
+   "share": "Dreamed there was a dance at {place} and only {a} and {b} knew the steps."
+  },
+  {
+   "id": "two-garden",
+   "people": 2,
+   "place": false,
+   "text": "{first} dreamed {a} and {b} were growing {object} in a garden, {odd}.",
+   "told": "Last night you dreamed {a} and {b} were growing {object} in a garden, {odd}.",
+   "share": "{a} and {b} were growing {object} in a garden in my dream. It was {odd}."
+  }
+ ],
+ "odd": [
+  "on a ferry",
+  "underwater",
+  "on the moon",
+  "in the middle of a cornfield",
+  "on a train that never stopped",
+  "at the top of a lighthouse",
+  "inside a giant snow globe",
+  "on a beach at night",
+  "in an airport that went on forever",
+  "on the roof of a very tall building",
+  "in a library made of hedges",
+  "in black and white",
+  "upside down"
+ ],
+ "object": [
+  "seashells",
+  "spoons",
+  "old concert tickets",
+  "paper cranes",
+  "tiny umbrellas",
+  "buttons",
+  "postcards",
+  "lemons",
+  "enormous keys",
+  "rubber ducks",
+  "maps of places that don't exist",
+  "teacups"
+ ],
+ "worried": [
+  "{first} kept checking their wallet the whole time.",
+  "{first} kept trying to count something and losing track."
+ ],
+ "hopeful": [
+  "{first} woke up in a good mood.",
+  "{first} woke up smiling about it."
+ ],
+ "sleep_talk": [
+  "{who} says {first} was talking in their sleep last night.",
+  "{who} says {first} mumbled something about {object} in their sleep."
+ ],
+ "sleep_talk_told": "{who} says you were talking in your sleep last night.",
+ "sleep_talk_roles": [
+  "roommate",
+  "partner",
+  "boyfriend",
+  "girlfriend",
+  "husband",
+  "wife",
+  "spouse",
+  "fiance",
+  "fiancee"
+ ],
+ "repeat_days": 21
+}

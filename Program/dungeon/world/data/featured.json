@@ -1,0 +1,14 @@
+{
+ "schema_version": 1,
+ "release": "0.8",
+ "title": "The built-in worlds",
+ "note": "Kingswood is the Vallarith town, Haven is Havenbrooke's and the Concourse is Floor Zero of BABEL's tower.",
+ "cities": [
+  "kingswood",
+  "haven",
+  "the-concourse"
+ ],
+ "new_cities": [
+  "kingswood"
+ ]
+}

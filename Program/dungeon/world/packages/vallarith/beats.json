@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "note": "Planned beats feed the director (docs/requirements.md, The director): how hard it pushes toward them follows the campaign's hand setting (Soft, Guiding or Firm), and it never writes the player's actions. All of these are drafts for Vanta to keep, change or cut.",
+  "arcs": [
+    {
+      "id": "the-heartwood",
+      "name": "The Heartwood contract",
+      "era": "post-reform",
+      "tier": "local",
+      "summary": "The Milestone 1 slice quest: the Timber Guild's crews cross the treaty stones to fell the Heartwood on a deadline, and the wardens threaten to burn Cutters' Camp. Underneath it lies an arm of Asmodeus (hidden truth under-the-heartwood); this is the first rung of the Eight Pieces.",
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json"
+    },
+    {
+      "id": "the-licence-returns",
+      "name": "The Licence Returns",
+      "era": "post-reform",
+      "tier": "realm",
+      "summary": "The revived Brotherhood brings licences back to Trein, then to its allies.",
+      "beats": [
+        "A Trein council debate on 'safety registration' for casters.",
+        "The first brooches are issued, free, to the poor.",
+        "A district's wards fail; only licensed healers are allowed to fix them.",
+        "Asania adopts the licence for its war mages.",
+        "A valve test in the Trein underhalls goes wrong and crystallizes a street."
+      ],
+      "origin": "draft"
+    },
+    {
+      "id": "the-long-border",
+      "name": "The Long Border",
+      "era": "post-reform",
+      "tier": "regional",
+      "summary": "Unguruk stops raiding and starts besieging Bastion from Adlmyr, with a devil's help if Murga takes the deal.",
+      "beats": [
+        "Siege works rise at Adlmyr.",
+        "Bastion's deserters flood Kingswood and Convila.",
+        "A polite stranger visits the Bastion commander too.",
+        "Unguruk opens the passes, or does not."
+      ],
+      "origin": "draft"
+    },
+    {
+      "id": "the-ilvar-homecoming",
+      "name": "The Ilvar Homecoming",
+      "era": "post-reform",
+      "tier": "realm",
+      "summary": "Edith Ilvar comes home early to a father who is not dying yet.",
+      "beats": [
+        "Edith hires someone to look into her mother's death.",
+        "A Mossrun mine hits something that is not ore.",
+        "Melton Ilvar falls 'ill', on schedule.",
+        "Edith finds the portrait."
+      ],
+      "origin": "draft"
+    },
+    {
+      "id": "the-eight-pieces",
+      "name": "The Eight Pieces",
+      "era": "post-reform",
+      "tier": "world",
+      "summary": "Hell's surface cults hunt for the buried pieces of Asmodeus. The campaign's world-tier spine, if the player climbs that far.",
+      "beats": [
+        "Under the Heartwood at Kingswood: an arm, held down by the roots, and Gannet & Pryce, a timber house that is a Mammon cult front (see the-heartwood).",
+        "A Hellfire cult preaches openly in an engineered city when the wards fail.",
+        "A piece surfaces: an arm, in a Ley mine.",
+        "Naamah's eyes and Mephistopheles's cult race each other for it.",
+        "A New God takes notice."
+      ],
+      "origin": "draft"
+    },
+    {
+      "id": "the-gathering-party",
+      "name": "The Gathering Party",
+      "era": "brotherhood",
+      "tier": "realm",
+      "summary": "The future New Gods find each other in the 3120s, before the Invasion.",
+      "beats": [
+        "Nicana, Girione and Aveus meet on the road.",
+        "Girione finds the allocation ledger in Trein.",
+        "Cybelia notices Mistress Sara's teeth.",
+        "Tidum throws his brooch in the creek near Convila.",
+        "Witarr holds Convila's graveyard against three demons.",
+        "The Invasion: 3129."
+      ],
+      "origin": "source",
+      "origin_note": "Each beat is one of the six profiles' own stories."
+    },
+    {
+      "id": "the-founding",
+      "name": "The Founding",
+      "era": "pre-reform",
+      "tier": "realm",
+      "summary": "Mistress Sara gathers the people who will found the Brotherhood of Man in 2984.",
+      "beats": [
+        "A Trein salon argues that magic should belong to mortals.",
+        "A temple's healers fail when the crystal runs short.",
+        "Sara funds the first academy.",
+        "The Brotherhood is founded."
+      ],
+      "origin": "draft"
+    },
+    {
+      "id": "the-fall-of-adlmyr",
+      "name": "The Fall of Adlmyr",
+      "era": "pre-reform",
+      "tier": "regional",
+      "summary": "The Badlands tribes unite long enough to break Cyrel's border fortress. Sometime before 2984 it falls; a Pre-Reform campaign can be there when it does.",
+      "beats": [
+        "The Kadragar stop selling Castellan Brandt their warnings.",
+        "Unguruk, Dramogon and Kadragar war-chiefs meet at the same fire.",
+        "Cyrel's promised reinforcements go to the Asanian front instead.",
+        "The siege.",
+        "The Druid's Keep is left empty when its garrison flees west."
+      ],
+      "origin": "draft"
+    },
+    {
+      "id": "the-failing-wards",
+      "name": "The Failing Wards",
+      "era": "post-reform",
+      "tier": "realm",
+      "summary": "The ward-stones at the Abandoned Keep are almost gone, and Haggoth's gnolls know it.",
+      "beats": [
+        "Gnoll offerings appear at the portal scar.",
+        "A Kingswood elder pays to have the ward-stones renewed.",
+        "Brynwyr wardens arrive at the keep and refuse to explain why.",
+        "The scar is warm in summer now.",
+        "Something comes through."
+      ],
+      "origin": "draft"
+    }
+  ]
+}

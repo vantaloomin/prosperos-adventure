@@ -1,0 +1,90 @@
+{
+  "quests": [
+    {
+      "id": "nells-paper",
+      "title": "Nell's paper",
+      "known": true,
+      "days": 10,
+      "hook": "Nell, a girl at the Lantern Room, says she'll never go back down, and asks a stranger to find out who holds her paper before the dome dims ten times. She came up from Varrow.",
+      "truth": "Nell came up from the Varrow cage trade, and Sabeen Oro holds her bill of sale. Okonkwo Vale, a spice factor and regular, has offered for it; he wants the new ones, and fears his wife hearing about it from someone else. Pell the Wire knows the price Sabeen asked. Merrow, Sabeen's runner, wants out from under her too and would help for a share of a way up the Stair.",
+      "missed": "The dome dimmed for the tenth time. Okonkwo Vale bought Nell's paper, and she went to a house on the spice side of the Bazaar that nobody visits.",
+      "places": [
+        "the-lantern-room",
+        "the-fence-rows",
+        "the-spice-exchange",
+        "the-copper-scale"
+      ]
+    },
+    {
+      "id": "the-night-cage",
+      "title": "The night cage",
+      "known": true,
+      "days": null,
+      "hook": "After dome-dark the night crew at the freight wharf loads an unlicensed cage for the floors below and takes passengers for everything they have. A climber who rode it last week came back up without his boots, his gear or the woman he went down with.",
+      "truth": "The night foreman sells the passenger list to the Lantern Room's crier post before the cage goes down, and halfway down the chains his crew stops the cage and takes whatever was missed at the wharf. The ones worth more than their gear are handed to a buyer on a landing between floors. Down is free at the Stair gate because nobody comes back to pay; the night cage is how the Bazaar makes sure of it.",
+      "missed": "",
+      "places": [
+        "the-freight-wharf",
+        "the-wharf-kitchen",
+        "the-crier-post",
+        "the-stair-gate"
+      ]
+    },
+    {
+      "id": "out-is-not-down",
+      "title": "Out is not down",
+      "known": false,
+      "days": null,
+      "hook": "Old Wick sells maps of the floors under the Copper Steps, and won't sell one of them at any price.",
+      "truth": "Old Wick holds a hand-drawn map of the Bazaar's way onto the Stair and up, by a climber called Teo, with OUT IS NOT DOWN written across the top. They want a good blade for it and fear fire. Pell the Wire's cousin keeps the Stair gate and knows who goes up, and Pell sells that like everything else. Sabeen Oro has heard that an arrival wrote the tower's new rules, and wants him.",
+      "missed": "",
+      "places": [
+        "wicks-paper",
+        "the-fence-rows",
+        "the-stair-gate"
+      ]
+    }
+  ],
+  "dangers": [
+    {
+      "place": "the-fence-rows",
+      "action": "come out of the fence rows with what they went in with",
+      "difficulty": "normal",
+      "threats": [
+        "A hand in the pocket, and gone into the crowd under the Steps before they turn.",
+        "Someone heard what they asked about, and by dome-dark Pell will have sold it.",
+        {
+          "text": "A cutpurse's friends close in round them in a dead-end arcade, knives out.",
+          "foe": {
+            "name": "fence-row cutpurse",
+            "count": 2,
+            "vitality": 10,
+            "resolve": 8,
+            "weapon": 0,
+            "wants": "rob"
+          }
+        }
+      ]
+    },
+    {
+      "place": "the-freight-wharf",
+      "action": "keep their footing and their purse on the freight wharf",
+      "difficulty": "normal",
+      "threats": [
+        "A cargo cage swings in on its chains, and the edge of the shaft is a step away.",
+        "The night foreman marks their face, and what they carry.",
+        {
+          "text": "The night crew decide a lone stranger is cargo.",
+          "foe": {
+            "name": "night-crew hand",
+            "count": 2,
+            "vitality": 12,
+            "resolve": 12,
+            "weapon": 1,
+            "wants": "rob"
+          }
+        }
+      ]
+    }
+  ]
+}

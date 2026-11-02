@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "truth": "what is actually so",
+    "believed": "what most people think instead",
+    "known_by": "cast or power ids, or descriptions, of who knows",
+    "surfaces": "ways it can come out in play",
+    "stakes": "what changes if the player learns it",
+    "eras": "missing means all three"
+  },
+  "truths": [
+    {
+      "id": "the-world-is-a-prison",
+      "truth": "The Reformation rebuilt the world as a living prison around Asmodeus. He was torn into eight pieces (two arms, two legs, torso, head, heart and the Ruby Rod) and buried far under the earth, the heart deepest.",
+      "believed": "The New Gods ended the Invasion and remade the world; Asmodeus still rules from the Black Citadel.",
+      "known_by": [
+        "the New Gods",
+        "the archdevils",
+        "some devil cults on the surface"
+      ],
+      "surfaces": [
+        "a Ley mine that hits something warm",
+        "a devil cult that pays for deep maps",
+        "a relic of Asmodeus's blood that still breeds pit fiends"
+      ],
+      "stakes": "Any deep dig becomes a world-tier risk; devil cults' errands start to make sense.",
+      "eras": [
+        "post-reform"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-empty-throne",
+      "truth": "The throne of the Black Citadel is vacant. Since the Reformation no archdevil has dared sit on it, because the first to try would unite the others against them, and because none is certain Asmodeus cannot come back. Hell rules itself by the fiction that he is only absent from court.",
+      "believed": "Asmodeus rules, as always.",
+      "known_by": [
+        "the archdevils",
+        "the Constable"
+      ],
+      "eras": [
+        "post-reform"
+      ],
+      "origin": "source",
+      "surfaces": [
+        "an archdevil's envoy who slips and says 'the late King'",
+        "a contract signed in the King's name with no seal"
+      ],
+      "stakes": "Hell is a regency without a regent, and the first mortal who brings back a piece of Asmodeus changes the succession."
+    },
+    {
+      "id": "sara-is-saradrosk",
+      "truth": "Mistress Sara is the Eternal White Dragon Saradrosk. She founded the Brotherhood to control the Ley, restore draconic breeding and make herself queen of the Eternals.",
+      "believed": "A charismatic human reformer, centuries ago; in the Post-Reform era, nobody in particular.",
+      "known_by": [
+        "cybelia",
+        "the other Eternal Dragons, probably"
+      ],
+      "surfaces": [
+        "her teeth in lamplight",
+        "a portrait older than she should be",
+        "Cybelia's notes",
+        "an Eternal who wants her stopped"
+      ],
+      "stakes": "The Brotherhood is a dragon's tool, not a mortal movement.",
+      "origin": "source"
+    },
+    {
+      "id": "the-ilvar-cycle",
+      "truth": "Every Ilvar patriarch has been Zaraxas. He murdered Aldon Ilvar and has replayed the same life five times: marry, adopt an orphan, the wife dies 'in childbirth', the child is sent away, the father is dying when the child returns, and a new Ilvar takes over.",
+      "believed": "The Ilvars are a rich family with a curse.",
+      "known_by": [
+        "melton-ilvar"
+      ],
+      "surfaces": [
+        "a family portrait",
+        "a midwife's records",
+        "an heir who comes home early",
+        "Edith Ilvar's questions"
+      ],
+      "stakes": "The Mossrun mining empire is a red dragon's hoard.",
+      "eras": [
+        "post-reform"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "lady-zee-is-zeharyth",
+      "truth": "Lady Zee is the Eternal Copper Dragon Zeharyth. She moves city every generation or two when people notice she does not age.",
+      "believed": "An elven antiquarian.",
+      "known_by": [
+        "lady-zee"
+      ],
+      "surfaces": [
+        "an old customer's grandmother who knew her",
+        "a Trein shop sign in her handwriting, a century old"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "grimm-is-forgrimmorithal",
+      "truth": "Master Grimm is the Eternal Green Dragon Forgrimmorithal, so most of the world's enchanted weapons come from one dragon's shop.",
+      "believed": "An eccentric dwarf master.",
+      "known_by": [
+        "master-grimm",
+        "gudrun-stoneheart suspects"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "hewlight-is-ryndhallach",
+      "truth": "Lady Hewlight is the Eternal Crystal Dragon Ryndhallach, who has quietly kept the Ley healthy throughout history.",
+      "believed": "A remarkably long-lived dwarf family name.",
+      "known_by": [
+        "lady-hewlight"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-arbiter",
+      "truth": "There is a seventh New God, the Arbiter, of unknown origin. Some of the other gods once suspected it of being an outsider sent to take a share of the Ley.",
+      "believed": "There are six New Gods.",
+      "known_by": [
+        "the New Gods"
+      ],
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "creators-are-spent",
+      "truth": "The Creator Dragons spent themselves completely. Nothing of their minds survives; there is nobody to wake at the end.",
+      "believed": "The Solar and Lunar Dragons sleep and will wake at the end of time to take their power back and unmake everything. The Eternal Dragons believe this too.",
+      "known_by": [],
+      "surfaces": [
+        "a Cybelia-level study of the Ley",
+        "an ascension"
+      ],
+      "stakes": "The Eternals' doctrine is wrong, and their power is simply borrowed and dwindling.",
+      "origin": "source",
+      "note": "This draft's reading of the ley document over the older lorebook (open-questions.md)."
+    },
+    {
+      "id": "gorgels-blade",
+      "truth": "Gor'gel's axe blade was a shard of crystallized Ley. Crystal plus a dragon's heart-blood is the only known way a mortal has ascended away from the Source Font.",
+      "believed": "Gor'gel was simply the Perfect Warrior.",
+      "known_by": [
+        "scholars of the Old Gods, a few",
+        "the Eternal Dragons"
+      ],
+      "stakes": "A recipe for ascension, which anyone with a dragon to kill would want.",
+      "origin": "source"
+    },
+    {
+      "id": "the-font-is-hidden",
+      "truth": "After the Reformation the Arbiter folded the Source Font into a pocket realm of its own making, out of reach of every mortal and dragon. The realm has a deliberate leak: a seam through which the Font's output still runs into the world and keeps the Ley flowing. The seam opens in the peaks above Loch Torogh, which is why the Ley rises there and why tradition puts the Font there. Saradrosk is hunting the Font, and has not yet worked out that it is no longer in the world at all.",
+      "believed": "The Source Font is somewhere in the peaks above Loch Torogh.",
+      "known_by": [
+        "the New Gods",
+        "the Arbiter"
+      ],
+      "eras": [
+        "post-reform"
+      ],
+      "origin": "source",
+      "surfaces": [
+        "a Ley storm on the heights that shows a sky that is not this one",
+        "Brotherhood surveyors whose measurements say the current comes from nowhere",
+        "a pilgrim who walked into the seam and came back wrong"
+      ],
+      "stakes": "Whoever controls the seam controls the world's magic; whoever closes it starves the world; and the Arbiter, whom mortals don't know exists, holds the key."
+    },
+    {
+      "id": "convila-crystal",
+      "truth": "The Ley fountain under Convila, sealed by the old Convila Pact, is not spent. Its stored power is crystallized and waiting.",
+      "believed": "Spent long ago.",
+      "known_by": [],
+      "surfaces": [
+        "a cellar collapse",
+        "Pact documents"
+      ],
+      "stakes": "A fortune and a catastrophe under a busy town.",
+      "origin": "draft",
+      "origin_note": "The source calls it 'a sleeping dragon of mystery hidden under ordinary days'; this reads that literally as dormant crystal."
+    },
+    {
+      "id": "under-the-heartwood",
+      "truth": "One of the eight pieces of Asmodeus, an arm, lies buried under the Heartwood's Ley convergence. The grove's roots grew around it and hold it down. Gannet & Pryce, the Cyrel timber house buying the cutting rights through the Guild, is a front for a Mammon cult. Felling the Heartwood loosens the arm and draws Hell's attention.",
+      "known_by": [
+        "ilse-rook",
+        "the Brynwyr wardens (that something must stay buried, not what)",
+        "Gannet & Pryce (a Mammon cult front)"
+      ],
+      "eras": [
+        "post-reform"
+      ],
+      "origin": "source",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json",
+      "believed": "The Heartwood is a sacred elven grove on a Ley convergence.",
+      "surfaces": [
+        "roots that bleed when cut",
+        "a contract for the cutting rights signed in old infernal ink",
+        "the wardens' threats"
+      ],
+      "stakes": "The Kingswood quest is the first rung of the Eight Pieces arc."
+    },
+    {
+      "id": "unguruk-and-the-devil",
+      "truth": "A devil is courting Murga Hollowtooth with the same deal it offered an Unguruk war-chief in Aveus's day: power in exchange for opening the passes.",
+      "known_by": [
+        "murga-hollowtooth"
+      ],
+      "eras": [
+        "post-reform"
+      ],
+      "origin": "draft"
+    },
+    {
+      "id": "choke-points-are-gates",
+      "truth": "Damming the Ley creates choke points, and choke points make perfect gates for things that understand contracts. That is how the Invasion got in.",
+      "believed": "The Invasion simply happened.",
+      "known_by": [
+        "tidum",
+        "cybelia suspects"
+      ],
+      "surfaces": [
+        "an earth elemental showing it to a druid",
+        "Brotherhood valve schematics"
+      ],
+      "stakes": "A revived Brotherhood is building the next Invasion's doors.",
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-gorgel-deception",
+      "truth": "In 251 AOD Gor'gel, disguised as another god, duped the elf druid Himo Xiloscient into opening the first portal, the door for Ohgnu's horde of gnolls and demons. Himo's stand at Kingswood was him holding the line against what he had let in, and he built the keep west of Adlmyr over the door to seal it.",
+      "believed": "Kingswood tells Xiloscient's stand as a human town's proud legend and leaves out that he was an elf and that the door was his. The name 'Gor'gel Deception' survives, but not who was deceived.",
+      "known_by": [
+        "the elves of Brynwyr",
+        "the Brynwyr wardens",
+        "the New Gods"
+      ],
+      "surfaces": [
+        "the ward-stones at the Abandoned Keep",
+        "an elf who spits at the name Gor'gel",
+        "the old Kingswood charter"
+      ],
+      "stakes": "An Old God opened the first door for the Abyss, and the door is under a keep whose wards are failing.",
+      "origin": "source"
+    },
+    {
+      "id": "the-stolen-brood",
+      "truth": "The Eternal Dragons bred through their God King: every Eternal clutch was kindled from Ghondiir's heart, which held the brood-fire the Creators gave dragonkind. When Gor'gel tore the heart out and ascended on its blood, the brood-fire went into him, and when he shared his power with the Primordial Orcs it went into them. That is why humans and orcs breed fast and fill the world while no Eternal has hatched since. The dragons' fertility lives in mortal blood.",
+      "believed": "A catastrophe long ago, nobody says which, ended the Eternals' line.",
+      "known_by": [
+        "the Eternal Dragons, the oldest of them",
+        "yllevantharyx"
+      ],
+      "surfaces": [
+        "Saradrosk's experiments on mortal blood (Brotherhood era)",
+        "a dragon's interest in a particular human bloodline",
+        "Gor'gel's old shrines, which show a heart, not an axe"
+      ],
+      "stakes": "Every Eternal has a reason to want mortals, or mortal blood, and Saradrosk's plan to restore breeding through the Ley may need far more than the Ley.",
+      "origin": "draft",
+      "origin_note": "Vanta asked for a reason tied to Ghondiir's death (2026-10-21); this is the proposal."
+    },
+    {
+      "id": "yllen-is-yllevantharyx",
+      "truth": "Old Mother Yllen, the Petrakyra elder, is the ninth Eternal Dragon, Yllevantharyx the Silver. She is why the wood elves stay hidden.",
+      "believed": "A rumor that a dragon lives among the wood elves.",
+      "known_by": [
+        "old-mother-yllen",
+        "tetsu-imura"
+      ],
+      "origin": "draft"
+    }
+  ]
+}

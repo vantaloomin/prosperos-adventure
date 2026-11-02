@@ -1,0 +1,555 @@
+{
+ "currency_note": "Prices are in the city's currency (Kingswood: silver crowns). A logger earns 1 to 2 a day.",
+ "items": [
+  {
+   "id": "bread",
+   "name": "Loaf of black bread",
+   "category": "food",
+   "price": 0.1,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "dried-meat",
+   "name": "Dried mutton, a day's worth",
+   "category": "food",
+   "price": 0.3,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "cheese",
+   "name": "Wedge of hard cheese",
+   "category": "food",
+   "price": 0.25,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "ale-jug",
+   "name": "Stoneware jug of ale",
+   "category": "food",
+   "price": 0.3,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "waterskin",
+   "name": "Waterskin",
+   "category": "gear",
+   "price": 0.5,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "rope",
+   "name": "Rope, fifty feet",
+   "category": "gear",
+   "price": 0.75,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "lantern",
+   "name": "Hooded lantern",
+   "category": "gear",
+   "price": 2,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "lamp-oil",
+   "name": "Flask of lamp oil",
+   "category": "gear",
+   "price": 0.3,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "flint",
+   "name": "Flint and steel",
+   "category": "gear",
+   "price": 0.3,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "blanket",
+   "name": "Wool blanket",
+   "category": "gear",
+   "price": 1,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "sack",
+   "name": "Hemp sack",
+   "category": "gear",
+   "price": 0.2,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "snare-wire",
+   "name": "Coil of snare wire",
+   "category": "gear",
+   "price": 0.4,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "chalk",
+   "name": "Stick of chalk",
+   "category": "gear",
+   "price": 0.05,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "whetstone",
+   "name": "Whetstone",
+   "category": "gear",
+   "price": 0.3,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "candles",
+   "name": "Tallow candles, half a dozen",
+   "category": "gear",
+   "price": 0.2,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "bandages",
+   "name": "Linen bandages",
+   "category": "remedy",
+   "price": 0.5,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "poultice",
+   "name": "Comfrey poultice",
+   "category": "remedy",
+   "price": 1,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "cloak",
+   "name": "Oiled wool cloak",
+   "category": "clothing",
+   "price": 3,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "boots",
+   "name": "Hobnailed boots",
+   "category": "clothing",
+   "price": 4,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "gloves",
+   "name": "Leather work gloves",
+   "category": "clothing",
+   "price": 1,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "knife",
+   "name": "Belt knife",
+   "category": "weapon",
+   "price": 1,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "hatchet",
+   "name": "Hatchet",
+   "category": "weapon",
+   "price": 2,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "felling-axe",
+   "name": "Felling axe",
+   "category": "weapon",
+   "price": 5,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "crowbar",
+   "name": "Iron crowbar",
+   "category": "tool",
+   "price": 1.5,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "sword",
+   "name": "Plain sword",
+   "category": "weapon",
+   "price": 20,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "cudgel",
+   "name": "Ash cudgel",
+   "category": "weapon",
+   "price": 0.3,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "ledger-book",
+   "name": "Clerk's ledger book",
+   "category": "tool",
+   "price": 1.5,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "salt",
+   "name": "Bag of salt",
+   "category": "trade",
+   "price": 0.6,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "plum-spirit",
+   "name": "Bottle of plum spirit",
+   "category": "food",
+   "price": 0.5,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "warden-arrow",
+   "name": "Grey-fletched arrow",
+   "category": "curio",
+   "price": 0.1,
+   "slots": 0.1,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "fireside-floor",
+   "name": "Fireside floor, a night",
+   "category": "service",
+   "price": 0.1,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "lodging",
+   "tier": "floor"
+  },
+  {
+   "id": "bunk-night",
+   "name": "Common-room bunk, a night",
+   "category": "service",
+   "price": 0.4,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "lodging",
+   "tier": "common"
+  },
+  {
+   "id": "private-room",
+   "name": "Private room, a night",
+   "category": "service",
+   "price": 1.5,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "lodging",
+   "tier": "private"
+  },
+  {
+   "id": "hot-meal",
+   "name": "Hot meal",
+   "category": "service",
+   "price": 0.25,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "meal"
+  },
+  {
+   "id": "stew-bowl",
+   "name": "Bowl of stew",
+   "category": "service",
+   "price": 0.25,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "meal"
+  },
+  {
+   "id": "ale-mug",
+   "name": "Mug of ale",
+   "category": "service",
+   "price": 0.15,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "drink"
+  },
+  {
+   "id": "hot-bath",
+   "name": "Hot bath",
+   "category": "service",
+   "price": 0.2,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "bath"
+  },
+  {
+   "id": "stabling",
+   "name": "Stabling, a night",
+   "category": "service",
+   "price": 0.2,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "stabling"
+  },
+  {
+   "id": "heartwood-guide",
+   "name": "Woods guide, a day",
+   "category": "service",
+   "price": 1.5,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "guide"
+  },
+  {
+   "id": "laundry",
+   "name": "Laundry, washed and pressed",
+   "category": "service",
+   "price": 0.1,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "laundry"
+  },
+  {
+   "id": "mending",
+   "name": "Mending, a tear sewn",
+   "category": "service",
+   "price": 0.15,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "mending"
+  },
+  {
+   "id": "repair",
+   "name": "Repair, a blade or tool mended at the forge",
+   "category": "service",
+   "price": 0.5,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "repair"
+  }
+ ],
+ "shops": [
+  {
+   "place": "pell-provisions",
+   "buys": [
+    "food",
+    "gear",
+    "remedy",
+    "clothing",
+    "tool",
+    "trade"
+   ],
+   "sell_rate": 0.5,
+   "stock": {
+    "bread": 12,
+    "dried-meat": 8,
+    "cheese": 4,
+    "ale-jug": 3,
+    "waterskin": 4,
+    "rope": 5,
+    "lantern": 2,
+    "lamp-oil": 6,
+    "flint": 4,
+    "blanket": 3,
+    "sack": 10,
+    "snare-wire": 3,
+    "chalk": 6,
+    "whetstone": 3,
+    "candles": 5,
+    "bandages": 4,
+    "poultice": 2,
+    "cloak": 2,
+    "boots": 2,
+    "gloves": 3,
+    "knife": 3,
+    "hatchet": 2,
+    "crowbar": 1,
+    "salt": 4
+   }
+  },
+  {
+   "place": "mother-mags",
+   "fence": true,
+   "buys": [
+    "food",
+    "gear",
+    "remedy",
+    "clothing",
+    "tool",
+    "trade",
+    "weapon",
+    "curio"
+   ],
+   "sell_rate": 0.25,
+   "cash": 6,
+   "restock_days": 10,
+   "stock": {
+    "plum-spirit": 6,
+    "poultice": 2
+   }
+  },
+  {
+   "place": "blackwood-smithy",
+   "buys": [
+    "weapon",
+    "tool"
+   ],
+   "sell_rate": 0.4,
+   "cash": 12,
+   "restock_days": 7,
+   "stock": {
+    "knife": 3,
+    "hatchet": 2,
+    "felling-axe": 3,
+    "sword": 1,
+    "crowbar": 1,
+    "whetstone": 2,
+    "repair": 4
+   }
+  },
+  {
+   "place": "the-wayhouse",
+   "buys": [],
+   "sell_rate": 0.5,
+   "restock_days": 1,
+   "stock": {
+    "fireside-floor": 6,
+    "bunk-night": 8,
+    "private-room": 3,
+    "hot-meal": 20,
+    "hot-bath": 4,
+    "stabling": 4,
+    "heartwood-guide": 1,
+    "laundry": 4,
+    "mending": 3
+   }
+  },
+  {
+   "place": "felled-oak",
+   "buys": [],
+   "sell_rate": 0.5,
+   "restock_days": 1,
+   "stock": {
+    "stew-bowl": 20,
+    "ale-mug": 40
+   }
+  },
+  {
+   "place": "bunkhouses",
+   "buys": [],
+   "sell_rate": 0.5,
+   "restock_days": 1,
+   "stock": {
+    "bunk-night": 12
+   }
+  }
+ ],
+ "kits": {
+  "default": {
+   "coins": 5,
+   "items": {
+    "knife": 1,
+    "bread": 2,
+    "waterskin": 1,
+    "cloak": 1
+   }
+  },
+  "agna-holt": {
+   "coins": 3.4,
+   "items": {
+    "sword": 1,
+    "knife": 1,
+    "blanket": 1,
+    "boots": 1,
+    "whetstone": 1
+   }
+  },
+  "lirien-of-the-ford": {
+   "coins": 6.2,
+   "items": {
+    "knife": 1,
+    "rope": 1,
+    "salt": 2,
+    "cloak": 1,
+    "sack": 1,
+    "warden-arrow": 1
+   }
+  },
+  "tobin-pell": {
+   "coins": 11.5,
+   "items": {
+    "ledger-book": 1,
+    "candles": 1,
+    "gloves": 1,
+    "cloak": 1
+   }
+  }
+ }
+}

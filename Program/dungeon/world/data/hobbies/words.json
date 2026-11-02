@@ -1,0 +1,2622 @@
+{
+ "kind": "words",
+ "milestones": [
+  {
+   "text": "spent their first proper evening on {hobby} and enjoyed it more than expected",
+   "post": "First evening in. Already hooked.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started a fresh notebook just for {hobby}",
+   "post": "New notebook. Blank pages. Big plans.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept at {hobby} every day for a whole first week",
+   "post": "Seven days straight. Small streak, big pride.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "cleared a corner of the table that is now, officially, for {hobby}",
+   "post": "This corner is for words now.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found a quiet hour each morning for {hobby}",
+   "post": "Early hour, quiet house, my notebook. Bliss.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "admitted out loud that they had taken up {hobby}",
+   "post": "Said it out loud. Now I have to keep going.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "filled half a notebook with {hobby}",
+   "post": "Half a notebook gone. Mostly crossings-out.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "caught {hobby} creeping into their thoughts on the walk home",
+   "post": "Thinking in it on the walk home. Strange and nice.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept up {hobby} every day for a whole month",
+   "post": "A month, no gaps. Who is this person.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a session of {hobby} where things finally started to click",
+   "post": "Something clicked tonight. Holding on to it.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "talked a friend into trying {hobby} too",
+   "post": "Got a study buddy. Misery loves company. Joy too.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "looked back at their first week of {hobby} and could see the difference",
+   "post": "Read my first pages. Wow. Progress is real.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "filled a whole notebook with {hobby} and started another",
+   "post": "Notebook number two. The first one is a relic.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "realised they had strong opinions about {hobby} now",
+   "post": "I have opinions now. Do not get me started.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent a whole rainy day on {hobby} and called it well spent",
+   "post": "Rain outside, words inside. Perfect day.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got a sincere compliment on their {hobby} from someone who knows",
+   "post": "A real compliment from someone who knows. Floating.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "explained something about {hobby} to a beginner without fumbling",
+   "post": "Explained it clearly. Surprised myself.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found a {hobby} teacher worth looking forward to every week",
+   "post": "Best part of my week is this lesson.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "marked a full year of {hobby} with a long, happy evening of it",
+   "post": "One year in. Celebrated by doing more of it.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "helped a beginner through the first weeks of {hobby}",
+   "post": "Helped someone start. Felt like paying it back.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "became the go-to friend for {hobby} questions",
+   "post": "Question desk is open. Apparently I run it.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept a weekly {hobby} circle going for a whole season",
+   "post": "A season of our little circle. Not one week missed.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "realised {hobby} had stopped feeling like work and started feeling like play",
+   "post": "It stopped being homework. Now it is just fun.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got asked to tutor someone in {hobby}, and said yes",
+   "post": "Tutor now. Nervous. Thrilled.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a real expert say their {hobby} was genuinely good",
+   "post": "An expert said good. Not good for a beginner. Good.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "looked back at their first notebook of {hobby} and laughed at how far they had come",
+   "post": "Found my first notebook. Laughed. Then felt proud.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "led an evening of {hobby} for a whole room of people",
+   "post": "Led the room tonight. Nobody left early.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "filled a whole shelf with notebooks from years of {hobby}",
+   "post": "A shelf of notebooks. Years of words.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started their own {hobby} circle and kept it going for a year",
+   "post": "My own circle, a year old today.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was invited to give a short talk about their years of {hobby}",
+   "post": "Gave a little talk. Hands shook. Voice did not.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "ordered a meal in {hobby} and got what they meant to order",
+   "post": "Asked for soup. Got soup. Linguist.",
+   "level": 0,
+   "for": [
+    "spanish",
+    "french",
+    "japanese",
+    "korean",
+    "italian"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "held a five-minute conversation in {hobby} without switching back",
+   "post": "Five whole minutes. No escape hatch.",
+   "level": 1,
+   "for": [
+    "spanish",
+    "french",
+    "japanese",
+    "korean",
+    "italian"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "understood a joke in {hobby} and laughed at the right moment",
+   "post": "Laughed at the right time. In another language.",
+   "level": 2,
+   "for": [
+    "spanish",
+    "french",
+    "japanese",
+    "korean",
+    "italian"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "dreamed in {hobby} for the first time",
+   "post": "Dreamed in it last night. Is that allowed?",
+   "level": 3,
+   "for": [
+    "spanish",
+    "french",
+    "japanese",
+    "korean",
+    "italian"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was mistaken for a native speaker of {hobby}, if only for a sentence or two",
+   "post": "They thought I was a local. For two sentences. Bliss.",
+   "level": 4,
+   "for": [
+    "spanish",
+    "french",
+    "japanese",
+    "korean",
+    "italian"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to roll an r in Spanish after a week of trying",
+   "post": "The r rolls now. The neighbours heard.",
+   "level": 0,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept a Spanish streak going on a language app for two weeks",
+   "post": "Two weeks of app streak. The owl is pleased.",
+   "level": 0,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got through a whole Spanish workbook chapter on the subjunctive",
+   "post": "The subjunctive. We have met. We are not friends yet.",
+   "level": 1,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "watched a Spanish film with Spanish subtitles and followed most of it",
+   "post": "Spanish subtitles. Followed the plot. Mostly.",
+   "level": 1,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "read a short novel in Spanish cover to cover",
+   "post": "My first whole book in Spanish. Slowly. Joyfully.",
+   "level": 2,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "gave directions in Spanish to a lost tourist",
+   "post": "Someone asked me the way in Spanish. I answered.",
+   "level": 2,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "passed a B1 Spanish exam",
+   "post": "B1 passed. Certificate on the fridge.",
+   "level": 3,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "spent a whole video call speaking only Spanish with a pen pal",
+   "post": "An hour of Spanish on a call. Exhausted. Happy.",
+   "level": 3,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "passed a B2 Spanish exam with good marks",
+   "post": "B2. Years of verbs for this one.",
+   "level": 4,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "translated a short story from Spanish for a friend",
+   "post": "Translated a story for a friend. It sounded like itself.",
+   "level": 4,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "sang along to a whole Spanish song and knew every word",
+   "post": "Every word of one Spanish song. Only one. Still.",
+   "level": 1,
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to tell le from la, most of the time",
+   "post": "Masculine, feminine, guesswork. Getting there.",
+   "level": 0,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "bought a French grammar and read the first chapter twice",
+   "post": "Chapter one, twice. The grammar is winning.",
+   "level": 0,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "wrote their first letter entirely in French",
+   "post": "A whole letter in French. Sealed and sent.",
+   "level": 1,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "conjugated être without hesitating",
+   "post": "Être, all of it, no pause. Merci.",
+   "level": 1,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "read a short French novel with only a little help from the dictionary",
+   "post": "Finished a French novel. The dictionary rested.",
+   "level": 2,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "followed a French conversation at the next table",
+   "post": "Understood the table beside me. Kept quiet. Smug.",
+   "level": 2,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "read Les Misérables in the original French, one chapter a week",
+   "post": "Victor Hugo, in French, slowly. Very slowly.",
+   "level": 3,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "translated a French poem for a friend's birthday",
+   "post": "Translated a poem as a gift. It almost rhymes.",
+   "level": 3,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "gave a short toast in French at a gathering and was understood",
+   "post": "A toast in French. Everyone understood. Nobody winced.",
+   "level": 4,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "read a French newspaper front to back over breakfast",
+   "post": "The whole paper, in French, before coffee ran out.",
+   "level": 4,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "passed an evening at a Paris café talking only in French",
+   "post": "Two hours, one café, all in French.",
+   "level": 2,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "passed the DELF B2 exam in French",
+   "post": "DELF B2. Officially decent at French.",
+   "level": 3,
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned all of hiragana in a week",
+   "post": "Every hiragana. A week. Flashcards everywhere.",
+   "level": 0,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "wrote their name in katakana for the first time",
+   "post": "My name in katakana. It looks great.",
+   "level": 0,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned their first hundred kanji",
+   "post": "One hundred kanji. Only a few thousand to go.",
+   "level": 1,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "read a children's picture book in Japanese",
+   "post": "A whole picture book. In Japanese. Very proud.",
+   "level": 1,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "read a whole manga volume in Japanese without a dictionary",
+   "post": "One volume, no dictionary. Tiny victory dance.",
+   "level": 2,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "followed a Japanese radio broadcast for a full minute",
+   "post": "A full minute of Japanese radio. I caught most of it.",
+   "level": 2,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "passed the JLPT N4 exam",
+   "post": "N4 passed. The kanji paid off.",
+   "level": 3,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "ordered a whole meal in Japanese at a restaurant and chatted with the chef",
+   "post": "Ordered and chatted. The chef smiled. I smiled more.",
+   "level": 3,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "passed the JLPT N3 exam",
+   "post": "N3. Years of evenings. Worth every one.",
+   "level": 4,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "read a short Japanese novel cover to cover",
+   "post": "A whole novel in Japanese. I need to lie down.",
+   "level": 4,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept up a Japanese flashcard app streak for a hundred days",
+   "post": "One hundred days of flashcards. Not one missed.",
+   "level": 1,
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to read hangul in a single weekend",
+   "post": "Hangul in a weekend. Signs make sense now.",
+   "level": 0,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "introduced themselves in Korean at a beginners' class",
+   "post": "Said my name in Korean. Then forgot everything else.",
+   "level": 0,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "followed a Korean drama scene without looking at the subtitles",
+   "post": "One scene, no subtitles. Felt like magic.",
+   "level": 1,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got the honorifics right in a whole practice conversation",
+   "post": "Polite forms, all correct. My teacher clapped.",
+   "level": 1,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "chatted with the owner of the Korean grocery in Korean",
+   "post": "Chatted at the grocery. Got extra kimchi. Coincidence?",
+   "level": 2,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "wrote a page of diary entries in Korean",
+   "post": "A page of diary in Korean. Simple, but mine.",
+   "level": 2,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "passed TOPIK level 2",
+   "post": "TOPIK 2 passed. Small mountain climbed.",
+   "level": 3,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "spent an hour on a video call speaking only Korean",
+   "post": "An hour in Korean. My brain is soup. Happy soup.",
+   "level": 3,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "passed TOPIK level 4",
+   "post": "TOPIK 4. Years of evenings in a single number.",
+   "level": 4,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "translated a short Korean webtoon chapter for friends",
+   "post": "Translated a chapter for friends. They want more.",
+   "level": 4,
+   "for": [
+    "korean"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to roll their double consonants in Italian",
+   "post": "Double consonants. Pizza, not piza. Progress.",
+   "level": 0,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "bought an Italian phrasebook and read it on the tram",
+   "post": "Phrasebook on the tram. Practising under my breath.",
+   "level": 0,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "ordered an espresso entirely in Italian, and a pastry too",
+   "post": "Espresso and a pastry, all in Italian. Delicious.",
+   "level": 1,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "wrote a postcard in Italian to a friend",
+   "post": "A postcard in Italian. Possibly charming.",
+   "level": 1,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "followed an aria at the opera without reading the programme",
+   "post": "Followed the whole aria. No programme needed.",
+   "level": 2,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "chatted in Italian with the owner of the corner café",
+   "post": "Chatted with the café owner. Got a free biscotto.",
+   "level": 2,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "read a short Italian novel with only a few trips to the dictionary",
+   "post": "A novel in Italian. The dictionary barely moved.",
+   "level": 3,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "helped a newly arrived Italian family with directions and shopping",
+   "post": "Helped a family settle in. My Italian held up.",
+   "level": 3,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "translated a family recipe book from Italian for friends",
+   "post": "The whole recipe book, translated. Kitchen fame awaits.",
+   "level": 4,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "read Dante in the original Italian, a canto at a time",
+   "post": "Dante, in Italian, slowly. Worth every line.",
+   "level": 4,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "followed an Italian podcast episode from start to finish",
+   "post": "Whole podcast episode in Italian. Understood it.",
+   "level": 2,
+   "for": [
+    "italian"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to fingerspell their own name in sign language",
+   "post": "My name, spelled with my hands. Smooth-ish.",
+   "level": 0,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned twenty everyday signs in their first class",
+   "post": "Twenty signs. My hands are learning.",
+   "level": 0,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "held a short conversation in sign language at class",
+   "post": "A whole little conversation, hands only.",
+   "level": 1,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "fingerspelled the whole alphabet without pausing",
+   "post": "The whole alphabet. No stops.",
+   "level": 1,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "followed a signed story at a Deaf community event",
+   "post": "Followed the whole story. Clapped in sign.",
+   "level": 2,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "was complimented by a Deaf signer on their clear signing",
+   "post": "Told my signing is clear. Best compliment.",
+   "level": 2,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "passed their level two sign language exam",
+   "post": "Level two passed. My hands earned it.",
+   "level": 3,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "signed a short story for a class of children",
+   "post": "Signed a story for kids. They signed back.",
+   "level": 3,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "helped interpret a casual meetup between Deaf and hearing friends",
+   "post": "Helped everyone talk to everyone. Lovely evening.",
+   "level": 4,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "signed a song at a community concert",
+   "post": "Signed a song on stage. The room lit up.",
+   "level": 4,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "practised signs with a video call buddy every week for a month",
+   "post": "A month of weekly practice calls. Hands warmed up.",
+   "level": 1,
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned all five declensions of Latin nouns, at least on paper",
+   "post": "Five declensions. Recited them to the cat.",
+   "level": 0,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ]
+  },
+  {
+   "text": "translated their first Latin sentence without help",
+   "post": "One sentence. All mine. Very ancient.",
+   "level": 0,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ]
+  },
+  {
+   "text": "read a page of Caesar in Latin without the crib",
+   "post": "A page of Caesar. No crib. Gaul is divided.",
+   "level": 1,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ]
+  },
+  {
+   "text": "copied out and translated a Latin proverb for the wall",
+   "post": "A proverb on the wall, in Latin, translated by me.",
+   "level": 1,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ]
+  },
+  {
+   "text": "followed a Latin sermon at the abbey from start to finish",
+   "post": "Understood every word of the sermon. Nearly.",
+   "level": 2,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "translated a whole letter of Cicero by candlelight",
+   "post": "Cicero by candle. Very atmospheric. Very slow.",
+   "level": 2,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ]
+  },
+  {
+   "text": "was asked to read Latin aloud at the abbey school",
+   "post": "Read Latin aloud for the students. Voice held.",
+   "level": 3,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "helped a younger student through a Latin examination",
+   "post": "Tutored a pupil. They passed. I am very proud.",
+   "level": 3,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "victorian"
+   ]
+  },
+  {
+   "text": "read a book of Virgil in the original, one book a month",
+   "post": "One book of the Aeneid a month. Aeneas and me.",
+   "level": 3,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ]
+  },
+  {
+   "text": "translated a whole book of Ovid into verse",
+   "post": "Ovid, translated, in verse. Took all winter.",
+   "level": 4,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ]
+  },
+  {
+   "text": "wrote a letter in Latin to a distant scholar and got a reply in kind",
+   "post": "A scholar wrote back in Latin. I am thrilled.",
+   "level": 4,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ]
+  },
+  {
+   "text": "deciphered an old Latin spellbook that had stumped the court wizard",
+   "post": "The wizard was stuck. I was not.",
+   "level": 4,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "text": "read a Latin inscription on the town gate correctly",
+   "post": "Read the gate inscription. It says welcome, mostly.",
+   "level": 1,
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote the first page of a story and did not tear it up",
+   "post": "Page one exists. It stays.",
+   "level": 0,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished their first short story, all three pages of it",
+   "post": "Three pages, beginning to end. A story.",
+   "level": 0,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "invented a character they could not stop thinking about",
+   "post": "Met a character today. Made them up. Still counts.",
+   "level": 0,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "wrote a thousand words in one sitting",
+   "post": "A thousand words, one sitting. Hand needs a rest.",
+   "level": 1,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished a second draft of a story and liked it better",
+   "post": "Second draft is better. That is the whole secret.",
+   "level": 1,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "read a story aloud to friends and was asked what happened next",
+   "post": "They asked what happens next. Best question.",
+   "level": 2,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "wrote every day for a month and filled a notebook",
+   "post": "A month of writing. A whole notebook.",
+   "level": 2,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a short story printed in a local magazine",
+   "post": "Printed. In a magazine. With my name.",
+   "level": 3,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished the first draft of a whole novel",
+   "post": "A whole novel draft. Messy. Finished.",
+   "level": 3,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won a short story contest",
+   "post": "First prize for a story. I keep rereading it.",
+   "level": 4,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished a novel and sent it out to publishers",
+   "post": "The novel has left the house. Fingers crossed.",
+   "level": 4,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "posted a story to an online writing community and got kind comments",
+   "post": "Strangers liked my story. Kind strangers.",
+   "level": 2,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "wrote on a laptop at a café for a whole afternoon",
+   "post": "Café, laptop, three chapters. Nobody kicked me out.",
+   "level": 1,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "had a story read aloud at the town's winter gathering",
+   "post": "They read my story by the fire. People listened.",
+   "level": 3,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "had a story printed in a monthly periodical",
+   "post": "In the periodical. Bought three copies.",
+   "level": 3,
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "wrote their first poem and read it back without cringing",
+   "post": "First poem. Read it back. Kept it.",
+   "level": 0,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "wrote a haiku and counted the syllables twice",
+   "post": "Five, seven, five. Counted twice.",
+   "level": 0,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "copied a favourite poem by hand into a notebook",
+   "post": "Copied a poem out by hand. Felt it more.",
+   "level": 0,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "wrote a sonnet that actually scanned",
+   "post": "Fourteen lines. All in iambs. Phew.",
+   "level": 1,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "wrote a poem every day for two weeks",
+   "post": "Two weeks, fourteen poems. Some are good.",
+   "level": 1,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "read a poem aloud at an open reading for the first time",
+   "post": "Read out loud to strangers. Did not faint.",
+   "level": 2,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "wrote a poem for a friend's birthday that brought happy tears",
+   "post": "Gave a poem as a gift. Happy tears.",
+   "level": 2,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a poem printed in a small poetry journal",
+   "post": "A poem in print. Bought a copy for everyone.",
+   "level": 3,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to write a poem for a friend's celebration",
+   "post": "Commissioned, sort of. Wrote it. Read it.",
+   "level": 3,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won first prize at a poetry reading",
+   "post": "First prize. For a poem. Mine.",
+   "level": 4,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "gathered their poems into a small hand-bound collection",
+   "post": "Bound my own little book of poems.",
+   "level": 4,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "shared a poem online and heard it had stayed with a stranger for days",
+   "post": "A stranger online kept my poem. Moved.",
+   "level": 1,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "recited a poem from memory at the tavern and the room went quiet",
+   "post": "The tavern went quiet. In the good way.",
+   "level": 2,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "had a poem read at the town hall on founders' day",
+   "post": "My poem at the town hall. Hats off and all.",
+   "level": 3,
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "victorian",
+    "steampunk",
+    "jazz-age",
+    "frontier"
+   ]
+  },
+  {
+   "text": "finished a first piece of writing and kept it",
+   "post": "Finished one. Keeping it.",
+   "level": 0,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote every day for a week",
+   "post": "Every day this week.",
+   "level": 0,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "filled a first notebook",
+   "post": "Notebook one: full.",
+   "level": 0,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "read a piece aloud to one trusted friend",
+   "post": "Read it out loud. Once.",
+   "level": 0,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "found a quiet corner just for writing",
+   "post": "My writing corner.",
+   "level": 0,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote a line worth keeping",
+   "post": "One good line.",
+   "level": 0,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "stopped tearing up early drafts",
+   "post": "Keeping the drafts.",
+   "level": 0,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote something true and didn't hide it",
+   "post": "True and unhidden.",
+   "level": 0,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "finished a piece in a single evening",
+   "post": "One evening, one piece.",
+   "level": 1,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "rewrote a piece until it sang",
+   "post": "Rewrote it till it sang.",
+   "level": 1,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote a piece for a friend's wedding",
+   "post": "Wedding words.",
+   "level": 1,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "found a voice that sounds like their own",
+   "post": "Sounds like me.",
+   "level": 1,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "kept a journal through a whole season",
+   "post": "A season of pages.",
+   "level": 1,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote a piece that made a reader laugh",
+   "post": "Made someone laugh.",
+   "level": 1,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to cut what wasn't working",
+   "post": "Cut it. Better.",
+   "level": 1,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote a letter so good it was passed around",
+   "post": "My letter got passed around.",
+   "level": 1,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a piece read aloud at a gathering",
+   "post": "Read aloud at a gathering.",
+   "level": 2,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "finished a long piece months in the making",
+   "post": "Months in the making. Done.",
+   "level": 2,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote words for a farewell that were kept and treasured",
+   "post": "Words for a farewell.",
+   "level": 2,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a piece copied out by hand by an admirer",
+   "post": "Someone copied it out by hand.",
+   "level": 2,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "found a reader who waits for every new page",
+   "post": "A reader who waits for more.",
+   "level": 2,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote in a new form and made it work",
+   "post": "New form, it works.",
+   "level": 2,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote through a hard time and came out with something good",
+   "post": "Something good from a hard time.",
+   "level": 2,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to write words for a celebration",
+   "post": "Words for a celebration.",
+   "level": 2,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote something new every week for a season",
+   "post": "Weekly, all season.",
+   "level": 2,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a piece copied and shared around town",
+   "post": "Being passed around town.",
+   "level": 3,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a prize for a piece of writing",
+   "post": "Won a prize for my writing!",
+   "level": 3,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to write for the town's festival",
+   "post": "Writing for the festival.",
+   "level": 3,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "read to a full room and held it",
+   "post": "Full room, held.",
+   "level": 3,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "finished a long work and started the next one the same day",
+   "post": "Finished. Started the next.",
+   "level": 3,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a line quoted back by a stranger",
+   "post": "A stranger quoted me.",
+   "level": 3,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote a piece that was asked for again and again",
+   "post": "Asked for again.",
+   "level": 3,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to help a younger writer",
+   "post": "Helping a younger writer.",
+   "level": 3,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a whole collection of their work bound together",
+   "post": "A whole collection, bound.",
+   "level": 4,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won the most respected prize around",
+   "post": "The big prize.",
+   "level": 4,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a piece set to music",
+   "post": "Set to music!",
+   "level": 4,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was known by name for their writing",
+   "post": "Known by name.",
+   "level": 4,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a piece learned by heart by schoolchildren",
+   "post": "Kids learn it by heart now.",
+   "level": 4,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote the piece read at the year's biggest celebration",
+   "post": "My words at the big celebration.",
+   "level": 4,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a piece still being repeated years later",
+   "post": "Still repeated.",
+   "level": 4,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to teach writing",
+   "post": "Teaching writing now.",
+   "level": 4,
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "wrote a first blog post and actually hit publish",
+   "post": "First post. Published. Eek.",
+   "level": 0,
+   "for": [
+    "blogging"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got a first comment from a stranger on the blog",
+   "post": "A stranger commented on my blog!",
+   "level": 1,
+   "for": [
+    "blogging"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept the blog going every week for a whole season",
+   "post": "A post every week, all season.",
+   "level": 2,
+   "for": [
+    "blogging"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "had a blog post passed around by total strangers",
+   "post": "Total strangers are passing my post round.",
+   "level": 3,
+   "for": [
+    "blogging"
+   ],
+   "eras": [
+    "modern"
+   ]
+  }
+ ],
+ "sessions": [
+  {
+   "text": "Filled a few more pages of the notebook.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Worked quietly for an hour with a cup of something warm.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Got further than expected.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Went back over yesterday's work and tidied it up.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Lost track of time in the best way.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Kept it short but kept at it.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Read a little before starting, to warm up.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Made a list of new words to look at tomorrow.",
+   "for": [
+    "spanish",
+    "french",
+    "japanese",
+    "korean",
+    "italian",
+    "sign-language",
+    "latin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Ran through flashcards until they stuck.",
+   "for": [
+    "spanish",
+    "french",
+    "japanese",
+    "korean",
+    "italian",
+    "sign-language"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Practised out loud while tidying up.",
+   "for": [
+    "spanish",
+    "french",
+    "japanese",
+    "korean",
+    "italian"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Wrote a page of practice sentences.",
+   "for": [
+    "spanish",
+    "french",
+    "japanese",
+    "korean",
+    "italian",
+    "latin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Practised the week's signs in front of the mirror.",
+   "for": [
+    "sign-language"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Spent the evening on a stubborn paragraph of Cicero.",
+   "for": [
+    "latin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Copied out a page of kanji in neat rows.",
+   "for": [
+    "japanese"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Listened to a Spanish podcast on the way home.",
+   "for": [
+    "spanish"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Read a page of a French novel slowly, with a pencil.",
+   "for": [
+    "french"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "Wrote a scene that had been nagging at them all week.",
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Crossed out more than they kept, which felt right.",
+   "for": [
+    "writing",
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Rewrote the same line six times and settled on the first.",
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Read a few favourite poems aloud for inspiration.",
+   "for": [
+    "poetry"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Thought about the next chapter on the walk home.",
+   "for": [
+    "writing"
+   ],
+   "eras": [
+    "any"
+   ]
+  }
+ ]
+}

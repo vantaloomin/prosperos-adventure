@@ -1,0 +1,437 @@
+{
+ "currency_note": "Prices are in US dollars at 2009 prices. A work-study day pays 50 to 70.",
+ "items": [
+  {
+   "id": "coffee-to-go",
+   "name": "Coffee to go",
+   "category": "food",
+   "price": 1.75,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "sandwich",
+   "name": "Deli sandwich",
+   "category": "food",
+   "price": 5.5,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "energy-drink",
+   "name": "Can of Red Bull",
+   "category": "food",
+   "price": 2.5,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "ramen",
+   "name": "Case of instant ramen",
+   "category": "food",
+   "price": 4,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "beer-case",
+   "name": "Thirty-rack of Natty Light",
+   "category": "food",
+   "price": 16,
+   "slots": 2,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "cold-medicine",
+   "name": "Cold medicine",
+   "category": "remedy",
+   "price": 7,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "painkillers",
+   "name": "Bottle of ibuprofen",
+   "category": "remedy",
+   "price": 6,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "first-aid-kit",
+   "name": "First aid kit",
+   "category": "remedy",
+   "price": 15,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "condoms",
+   "name": "Box of condoms",
+   "category": "gear",
+   "price": 9,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "phone-card",
+   "name": "Prepaid phone card",
+   "category": "gear",
+   "price": 20,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "flip-phone",
+   "name": "Flip phone",
+   "category": "gear",
+   "price": 60,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "iphone",
+   "name": "iPhone 3GS",
+   "category": "gear",
+   "price": 199,
+   "slots": 0.1,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "laptop",
+   "name": "Laptop",
+   "category": "gear",
+   "price": 650,
+   "slots": 1,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "backpack",
+   "name": "Backpack",
+   "category": "gear",
+   "price": 35,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "notebook",
+   "name": "Spiral notebook",
+   "category": "tool",
+   "price": 2,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "textbook",
+   "name": "Used textbook",
+   "category": "tool",
+   "price": 85,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "umbrella",
+   "name": "Umbrella",
+   "category": "gear",
+   "price": 12,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "winter-coat",
+   "name": "Winter coat",
+   "category": "clothing",
+   "price": 90,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "hoodie",
+   "name": "Havenbrooke hoodie",
+   "category": "clothing",
+   "price": 40,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "sage-bundle",
+   "name": "Sage bundle",
+   "category": "curio",
+   "price": 6,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "chalk",
+   "name": "Ritual chalk",
+   "category": "tool",
+   "price": 4,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "licensed-charm",
+   "name": "Licensed charm (DED marked)",
+   "category": "curio",
+   "price": 35,
+   "slots": 0.1,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "blood-pack",
+   "name": "Donor blood pack",
+   "category": "food",
+   "price": 30,
+   "slots": 0.25,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "pepper-spray",
+   "name": "Pepper spray",
+   "category": "weapon",
+   "price": 12,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "silver-knife",
+   "name": "Silver pocketknife",
+   "category": "weapon",
+   "price": 45,
+   "slots": 0.25,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "fae-euphoric",
+   "name": "Vial of fae euphoric",
+   "category": "curio",
+   "price": 60,
+   "slots": 0.1,
+   "rarity": "rare",
+   "legal": false
+  },
+  {
+   "id": "truck-keys",
+   "name": "Keys to Austin's 1998 Ford Ranger",
+   "category": "gear",
+   "price": 0,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "audi-keys",
+   "name": "Keys to Christine's black Audi A4",
+   "category": "gear",
+   "price": 0,
+   "slots": 0,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "shuttle-pass",
+   "name": "Havenbrooke ID with a shuttle pass",
+   "category": "gear",
+   "price": 0,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true
+  }
+ ],
+ "shops": [
+  {
+   "place": "pharmacy",
+   "buys": [
+    "food",
+    "remedy",
+    "gear",
+    "tool"
+   ],
+   "sell_rate": 0.3,
+   "stock": {
+    "coffee-to-go": 10,
+    "energy-drink": 12,
+    "ramen": 6,
+    "cold-medicine": 6,
+    "painkillers": 6,
+    "first-aid-kit": 3,
+    "condoms": 10,
+    "phone-card": 8,
+    "flip-phone": 3,
+    "notebook": 10,
+    "umbrella": 4,
+    "pepper-spray": 3
+   }
+  },
+  {
+   "place": "west-haven-deli",
+   "buys": [
+    "food"
+   ],
+   "sell_rate": 0.3,
+   "stock": {
+    "sandwich": 10,
+    "coffee-to-go": 10,
+    "energy-drink": 10,
+    "beer-case": 6
+   }
+  },
+  {
+   "place": "drothes-bookery",
+   "buys": [
+    "tool",
+    "curio"
+   ],
+   "sell_rate": 0.4,
+   "stock": {
+    "textbook": 4,
+    "notebook": 6,
+    "sage-bundle": 6,
+    "chalk": 8,
+    "licensed-charm": 3,
+    "silver-knife": 1
+   }
+  }
+ ],
+ "kits": {
+  "default": {
+   "coins": 140,
+   "items": {
+    "flip-phone": 1,
+    "backpack": 1,
+    "notebook": 2,
+    "winter-coat": 1,
+    "shuttle-pass": 1
+   }
+  },
+  "piper-marsh": {
+   "coins": 210,
+   "items": {
+    "backpack": 1,
+    "notebook": 1,
+    "winter-coat": 1,
+    "flip-phone": 1,
+    "licensed-charm": 2,
+    "chalk": 1,
+    "shuttle-pass": 1
+   }
+  },
+  "jason-kessler": {
+   "coins": 260,
+   "items": {
+    "backpack": 1,
+    "notebook": 1,
+    "winter-coat": 1,
+    "flip-phone": 1,
+    "textbook": 1,
+    "shuttle-pass": 1
+   }
+  },
+  "austin-hallward": {
+   "coins": 180,
+   "items": {
+    "backpack": 1,
+    "notebook": 1,
+    "winter-coat": 1,
+    "flip-phone": 1,
+    "hoodie": 1,
+    "first-aid-kit": 1,
+    "shuttle-pass": 1,
+    "truck-keys": 1
+   }
+  },
+  "rina-aldwyn": {
+   "coins": 340,
+   "items": {
+    "backpack": 1,
+    "notebook": 1,
+    "winter-coat": 1,
+    "flip-phone": 1,
+    "umbrella": 1,
+    "shuttle-pass": 1
+   }
+  },
+  "kimberly-corwin": {
+   "coins": 420,
+   "items": {
+    "backpack": 1,
+    "notebook": 1,
+    "winter-coat": 1,
+    "flip-phone": 1,
+    "chalk": 2,
+    "sage-bundle": 1,
+    "laptop": 1,
+    "shuttle-pass": 1
+   }
+  },
+  "michael-reeves": {
+   "coins": 38,
+   "items": {
+    "backpack": 1,
+    "notebook": 1,
+    "winter-coat": 1,
+    "flip-phone": 1,
+    "laptop": 1,
+    "ramen": 1,
+    "shuttle-pass": 1
+   }
+  },
+  "christine-kessler": {
+   "coins": 610,
+   "items": {
+    "backpack": 1,
+    "notebook": 1,
+    "winter-coat": 1,
+    "iphone": 1,
+    "shuttle-pass": 1,
+    "audi-keys": 1
+   }
+  },
+  "paula-mercer": {
+   "coins": 150,
+   "items": {
+    "backpack": 1,
+    "notebook": 1,
+    "winter-coat": 1,
+    "flip-phone": 1,
+    "blood-pack": 2,
+    "shuttle-pass": 1
+   }
+  },
+  "amanda-rhodes": {
+   "coins": 95,
+   "items": {
+    "backpack": 1,
+    "notebook": 1,
+    "winter-coat": 1,
+    "iphone": 1,
+    "shuttle-pass": 1
+   }
+  }
+ }
+}

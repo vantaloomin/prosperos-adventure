@@ -1,0 +1,4829 @@
+{
+ "schema_version": 1,
+ "id": "grandport",
+ "name": "Grandport",
+ "setting": "fictional",
+ "era": "fantasy",
+ "category": "fictional",
+ "basis": "Grandport in Neokosmos, a dark fantasy world by Oak (https://quietoak.github.io/NeokosmosWiki/, CC BY-NC-SA 4.0), included with Oak's permission.",
+ "region": "The Alnhaman Islands",
+ "country": "The Alnhama Republic",
+ "timezone": "Atlantic/Azores",
+ "aliases": [
+  "Gran Porte"
+ ],
+ "summary": "The merchant republic's capital, built on oak piles in a shifting estuary: steep timber gables, stone counting houses and merchant palaces on stone rafts. Ten years after the Revolution, the Merchant Circle rules and royalists still whisper about the exiled prince.",
+ "lat": 38.72,
+ "lon": -27.22,
+ "currency": {
+  "code": "sw",
+  "symbol": "sw",
+  "name": "silver weights"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.0,
+  "boat": 6,
+  "carriage": 8
+ },
+ "sources": {
+  "wiki": {
+   "kind": "other",
+   "title": "Neokosmos Wiki: Children of Sol Eternel, The Steel and the Sun",
+   "license": "CC BY-NC-SA 4.0; included with Oak's permission",
+   "retrieved": "2026-10-10",
+   "url": "https://quietoak.github.io/NeokosmosWiki/",
+   "attribution": "Oak",
+   "note": "Named in or directly described by the wiki: Grandport's raft palaces, Edgar's tower, guild inspection, fire-watch, dock office, lower stairs, the Two Houses, Admiralty, signal towers, Nomion, Thalassar and Chryseon, people and history."
+  },
+  "inferred": {
+   "kind": "other",
+   "title": "Filled in from the Neokosmos lore for Prospero's Dungeon",
+   "license": "Neokosmos is CC BY-NC-SA 4.0 by Oak; included with Oak's permission",
+   "retrieved": "2026-10-10",
+   "attribution": "Oak (source world)",
+   "note": "Everyday places, careers, holidays and their dates, food, prices, climate and the exact district layout are invented in the setting's voice to give the city street-level detail. Correct freely. Coordinates are a stand-in grid for distances only."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "raft-palaces",
+   "name": "The Raft Palaces",
+   "summary": "Merchant princes' palaces of carved ashlar floating on six-foot stone rafts laid in the drained marsh, with Lord Edgar Grandeholm's great tower above them all. Household guards and quiet gardens.",
+   "vibe": [
+    "wealthy",
+    "merchant-princes",
+    "guarded",
+    "stone"
+   ],
+   "lat": 38.732,
+   "lon": -27.224,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     8,
+     14
+    ],
+    "one_bedroom": [
+     16,
+     30
+    ],
+    "two_bedroom": [
+     40,
+     90
+    ]
+   },
+   "housing": [
+    "palace",
+    "townhouse",
+    "servants-quarters"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "streets-and-stairs",
+    "hired-carriages"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "ledger-quarter",
+   "name": "The Ledger Quarter",
+   "summary": "Old timber houses underpinned with stone counting houses on the ground floor: insurers, brokers, notaries and the chambers where the Merchant Circle and the commons' house sit.",
+   "vibe": [
+    "commerce",
+    "government",
+    "busy",
+    "clerks"
+   ],
+   "lat": 38.726,
+   "lon": -27.222,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     5,
+     8
+    ],
+    "one_bedroom": [
+     9,
+     15
+    ],
+    "two_bedroom": [
+     18,
+     30
+    ]
+   },
+   "housing": [
+    "rooms-above-counting-house",
+    "townhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "streets-and-stairs",
+    "hired-carriages"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "guild-gables",
+   "name": "Guild Gables",
+   "summary": "The steepest, most competitive front-facing gables in the city: timber-framed guild halls, workshops and families whose houses are inspected every year by guild surveyors.",
+   "vibe": [
+    "crafts",
+    "timber",
+    "guilds",
+    "proud"
+   ],
+   "lat": 38.723,
+   "lon": -27.216,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     5,
+     9
+    ],
+    "two_bedroom": [
+     9,
+     15
+    ]
+   },
+   "housing": [
+    "timber-house",
+    "rooms-above-workshop"
+   ],
+   "walkability": "high",
+   "transit": [
+    "streets-and-stairs"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "the-quays",
+   "name": "The Quays",
+   "summary": "Grandport's working harbour: the dock office, bonded warehouses, cranes and the hiring line, where Ruestrian grain, Fresnian relics and Pictish furs are measured, taxed and insured.",
+   "vibe": [
+    "harbour",
+    "noisy",
+    "trade",
+    "early"
+   ],
+   "lat": 38.718,
+   "lon": -27.226,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     5,
+     8
+    ]
+   },
+   "housing": [
+    "lodging-house",
+    "rooms-above-tavern"
+   ],
+   "walkability": "high",
+   "transit": [
+    "streets-and-stairs",
+    "wherries"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "shipwright-yards",
+   "name": "Shipwright Yards",
+   "summary": "Slipways where war carracks and merchant hulls rise in oak, with the long ropewalks and sail lofts behind them. Sawdust, tar and the shouts of the yard bells.",
+   "vibe": [
+    "shipbuilding",
+    "industrial",
+    "tar",
+    "working"
+   ],
+   "lat": 38.714,
+   "lon": -27.232,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     4
+    ],
+    "two_bedroom": [
+     4,
+     7
+    ]
+   },
+   "housing": [
+    "row-house",
+    "lodging-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "streets-and-stairs",
+    "wherries"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "lower-stairs",
+   "name": "The Lower Stairs",
+   "summary": "Steep alleys and stairs below the warehouses, home to rope girls, pressed sailors, guild militia widows and debtors. Hunger outlasted the siege here, and the Republic's critics say so.",
+   "vibe": [
+    "poor",
+    "crowded",
+    "resilient",
+    "whispers"
+   ],
+   "lat": 38.712,
+   "lon": -27.222,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     3
+    ],
+    "two_bedroom": [
+     3,
+     5
+    ]
+   },
+   "housing": [
+    "shared-room",
+    "cellar-room",
+    "row-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "streets-and-stairs"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "ashrow",
+   "name": "Ashrow",
+   "summary": "A district rebuilt in fresh oak after the last great fire, on merchant loans that are still being paid. The fire-watch tower and its bell stand at the top of the street.",
+   "vibe": [
+    "rebuilt",
+    "new-timber",
+    "families",
+    "mortgaged"
+   ],
+   "lat": 38.721,
+   "lon": -27.21,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     4
+    ],
+    "one_bedroom": [
+     4,
+     7
+    ],
+    "two_bedroom": [
+     7,
+     12
+    ]
+   },
+   "housing": [
+    "timber-house",
+    "rooms"
+   ],
+   "walkability": "high",
+   "transit": [
+    "streets-and-stairs"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "admiralty-point",
+   "name": "Admiralty Point",
+   "summary": "The navy's fortress at the harbour mouth, Admiral Horatio Horne's headquarters, and the signal tower whose flags and shuttered lanterns talk to the whole island chain.",
+   "vibe": [
+    "navy",
+    "military",
+    "windy",
+    "signals"
+   ],
+   "lat": 38.716,
+   "lon": -27.238,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     4
+    ],
+    "one_bedroom": [
+     4,
+     6
+    ],
+    "two_bedroom": [
+     6,
+     10
+    ]
+   },
+   "housing": [
+    "barracks",
+    "officers-houses",
+    "rooms"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "streets-and-stairs",
+    "wherries"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "gran-porte",
+   "name": "Old Gran Porte",
+   "summary": "The first harbour King Aelfred secured, with the oldest quays and the shuttered royal palace. The street where King Alrdric fell is here, and old loyalties are spoken of quietly.",
+   "vibe": [
+    "historic",
+    "old-quays",
+    "royalist-whispers",
+    "quiet"
+   ],
+   "lat": 38.722,
+   "lon": -27.23,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     5,
+     8
+    ],
+    "two_bedroom": [
+     8,
+     13
+    ]
+   },
+   "housing": [
+    "old-townhouse",
+    "rooms"
+   ],
+   "walkability": "high",
+   "transit": [
+    "streets-and-stairs",
+    "wherries"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "chart-house-hill",
+   "name": "Chart House Hill",
+   "summary": "Where the Republic keeps its useful people: navigators, astronomers, engineers, printers and the public school, under the patronage of men like Magister Aldous Thorne.",
+   "vibe": [
+    "learned",
+    "presses",
+    "young",
+    "ambitious"
+   ],
+   "lat": 38.729,
+   "lon": -27.214,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     3,
+     5
+    ],
+    "one_bedroom": [
+     5,
+     8
+    ],
+    "two_bedroom": [
+     9,
+     14
+    ]
+   },
+   "housing": [
+    "rooms",
+    "boarding-house",
+    "townhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "streets-and-stairs"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "strangers-wharf",
+   "name": "Strangers' Wharf",
+   "summary": "The wharf for foreign ships and foreign people: Ruestrian grain factors, Fresnian relic dealers, Pictish fur traders, and a small chapel of Sol Eternel kept by travelling missionaries.",
+   "vibe": [
+    "foreign",
+    "mixed",
+    "markets",
+    "lively"
+   ],
+   "lat": 38.715,
+   "lon": -27.216,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     3
+    ],
+    "one_bedroom": [
+     3,
+     5
+    ],
+    "two_bedroom": [
+     5,
+     8
+    ]
+   },
+   "housing": [
+    "lodging-house",
+    "inn-room",
+    "rooms"
+   ],
+   "walkability": "high",
+   "transit": [
+    "streets-and-stairs",
+    "wherries"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "marsh-fields",
+   "name": "The Marsh Fields",
+   "summary": "Drained estuary land at the city's edge, behind dykes: barley and oat fields, cattle pasture, dairies and the market road into town.",
+   "vibe": [
+    "farmland",
+    "cattle",
+    "open",
+    "quiet"
+   ],
+   "lat": 38.738,
+   "lon": -27.2,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1,
+     2
+    ],
+    "one_bedroom": [
+     2,
+     3
+    ],
+    "two_bedroom": [
+     3,
+     6
+    ]
+   },
+   "housing": [
+    "farmhouse",
+    "cottage"
+   ],
+   "walkability": "low",
+   "transit": [
+    "market-road",
+    "streets-and-stairs"
+   ],
+   "source": "inferred"
+  }
+ ],
+ "places": [
+  {
+   "id": "grandeholm-tower",
+   "name": "Grandeholm Tower",
+   "kind": "landmark",
+   "neighborhood": "raft-palaces",
+   "summary": "The great tower Edgar Grandeholm built and rarely leaves, ruling from its upper chambers while agents and informants climb the stairs with ledgers. Visitors get as far as the gate.",
+   "tags": [
+    "edgar",
+    "power",
+    "architecture"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "raft-gardens",
+   "name": "The Raft Gardens",
+   "kind": "garden",
+   "neighborhood": "raft-palaces",
+   "summary": "Walled pleasure gardens laid on the stone rafts, opened to the public on Republic Day and to anyone with a merchant's token the rest of the year.",
+   "tags": [
+    "gardens",
+    "quiet",
+    "flowers"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "gilded-ledger",
+   "name": "The Gilded Ledger",
+   "kind": "restaurant",
+   "neighborhood": "raft-palaces",
+   "summary": "A dining house for merchant princes and their factors: beef from the Marsh Fields, Ruestrian wine and private rooms where contracts are signed over dessert.",
+   "tags": [
+    "fine-dining",
+    "deals",
+    "wine"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "thalassar-at-the-rafts",
+   "name": "Temple of Thalassar on the Rafts",
+   "kind": "temple",
+   "neighborhood": "raft-palaces",
+   "summary": "A rich shrine to the sea Titan, paid for by ship-owning houses who come to ask for calm water before their convoys sail.",
+   "tags": [
+    "faith",
+    "sea",
+    "merchants"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "silkmarket-arcade",
+   "name": "The Silk Arcade",
+   "kind": "shopping",
+   "neighborhood": "raft-palaces",
+   "summary": "A covered arcade of tailors, perfumers, ring makers and gold-thread embroiderers who dress the Merchant Circle in silks and scented oils.",
+   "tags": [
+    "luxury",
+    "tailors",
+    "jewellery"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "raft-cafe",
+   "name": "The Weighing Room",
+   "kind": "cafe",
+   "neighborhood": "raft-palaces",
+   "summary": "A quiet coffee and chocolate room where factors wait for an audience, pretending not to read each other's papers.",
+   "tags": [
+    "coffee",
+    "gossip",
+    "factors"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "merchant-circle-hall",
+   "name": "The Hall of the Two Houses",
+   "kind": "landmark",
+   "neighborhood": "ledger-quarter",
+   "summary": "Seat of the Republic: the Merchant Circle sits above, the commons' house below. Public galleries fill when tariffs or the royalist question come up.",
+   "tags": [
+    "government",
+    "politics",
+    "republic"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "temple-of-nomion",
+   "name": "Temple of Nomion",
+   "kind": "temple",
+   "neighborhood": "ledger-quarter",
+   "summary": "The great temple of the Titan of law and contract, where disputes are arbitrated, oaths sworn and the largest contracts witnessed on the altar steps.",
+   "tags": [
+    "faith",
+    "law",
+    "contracts"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "insurers-exchange",
+   "name": "The Insurers' Exchange",
+   "kind": "guildhall",
+   "neighborhood": "ledger-quarter",
+   "summary": "A loud stone hall where cargoes, hulls and convoy escorts are priced and insured, with the latest signal-tower news chalked on boards by the door.",
+   "tags": [
+    "finance",
+    "news",
+    "busy"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "inkwell-tavern",
+   "name": "The Inkwell",
+   "kind": "tavern",
+   "neighborhood": "ledger-quarter",
+   "summary": "Clerks' tavern under the counting houses, with ale, pies and arguments about interest rates until the watch calls the hour.",
+   "tags": [
+    "clerks",
+    "ale",
+    "after-work"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "scales-coffee",
+   "name": "The Honest Scales",
+   "kind": "cafe",
+   "neighborhood": "ledger-quarter",
+   "summary": "A narrow coffee house where brokers trade rumours at standing desks and a coin is touched to the little brass scale at the door for Chryseon's luck.",
+   "tags": [
+    "coffee",
+    "brokers",
+    "luck"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "notaries-row",
+   "name": "Notaries' Row",
+   "kind": "shopping",
+   "neighborhood": "ledger-quarter",
+   "summary": "A lane of scriveners, seal cutters, paper sellers and ledger binders, the cheapest place in the city to get a letter written.",
+   "tags": [
+    "paper",
+    "seals",
+    "scribes"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "masons-hall",
+   "name": "Hall of the Pile-Drivers and Masons",
+   "kind": "guildhall",
+   "neighborhood": "guild-gables",
+   "summary": "The guild that drives oak piles to bedrock and inspects every joint in the city. Its surveyors' settling records go back generations.",
+   "tags": [
+    "guild",
+    "building",
+    "records"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "carpenters-hall",
+   "name": "Carpenters' Gable Hall",
+   "kind": "guildhall",
+   "neighborhood": "guild-gables",
+   "summary": "The tallest gable on the street, built by the timber-framers to prove they could. Apprentices gather in its yard at dawn.",
+   "tags": [
+    "guild",
+    "timber",
+    "apprentices"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "gable-market",
+   "name": "Gable Street Market",
+   "kind": "market",
+   "neighborhood": "guild-gables",
+   "summary": "Stalls under the overhangs selling bread, cheese, tools, cloth and second-hand guild coats.",
+   "tags": [
+    "market",
+    "bread",
+    "cheese"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "crooked-joint",
+   "name": "The Crooked Joint",
+   "kind": "tavern",
+   "neighborhood": "guild-gables",
+   "summary": "A craftsmen's alehouse named as a joke: the only building in the quarter the guild surveyors have ever failed. A hurdy-gurdy player most nights.",
+   "tags": [
+    "ale",
+    "music",
+    "craftsmen"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "oak-and-adze",
+   "name": "Oak and Adze Workshop",
+   "kind": "workshop",
+   "neighborhood": "guild-gables",
+   "summary": "A joinery that takes small commissions: chests, cradles, ship models. Watchers are tolerated if they hold a plank now and then.",
+   "tags": [
+    "crafts",
+    "woodwork"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "gable-bakery",
+   "name": "Widow Aldwen's Bakehouse",
+   "kind": "cafe",
+   "neighborhood": "guild-gables",
+   "summary": "Oat bread, barley rolls and honey cakes from a brick oven the guild insisted on before it would let her keep a fire.",
+   "tags": [
+    "bakery",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "dock-office",
+   "name": "The Dock Office",
+   "kind": "landmark",
+   "neighborhood": "the-quays",
+   "summary": "Where every cargo is measured, taxed and recorded before it may leave the quay. The queue starts before sunrise.",
+   "tags": [
+    "harbour",
+    "tolls",
+    "records"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "grand-quay",
+   "name": "The Grand Quay",
+   "kind": "docks",
+   "neighborhood": "the-quays",
+   "summary": "The long stone quay on oak piles where carracks unload, cranes creak and the hiring line forms each morning.",
+   "tags": [
+    "ships",
+    "cranes",
+    "hiring"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "bonded-warehouses",
+   "name": "The Bonded Warehouses",
+   "kind": "landmark",
+   "neighborhood": "the-quays",
+   "summary": "Rows of guarded warehouses where goods wait for their duties to be paid. Smells of pepper, pitch and Pictish furs.",
+   "tags": [
+    "warehouses",
+    "trade"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "fish-steps",
+   "name": "The Fish Steps",
+   "kind": "market",
+   "neighborhood": "the-quays",
+   "summary": "Morning fish market on the stone steps down to the water: herring, mackerel, eel and whatever the estuary boats bring.",
+   "tags": [
+    "fish",
+    "market",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "drowned-lantern",
+   "name": "The Drowned Lantern",
+   "kind": "tavern",
+   "neighborhood": "the-quays",
+   "summary": "Sailors' tavern by the hiring line. Cheap ale, loud news from every port, and press-gang rumours that send men out the back door.",
+   "tags": [
+    "sailors",
+    "ale",
+    "news"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "quay-cookshop",
+   "name": "Mother Hild's Cookshop",
+   "kind": "restaurant",
+   "neighborhood": "the-quays",
+   "summary": "Bowls of fish stew and barley bread eaten standing at the counter between shifts.",
+   "tags": [
+    "stew",
+    "cheap",
+    "dockers"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "great-slipways",
+   "name": "The Great Slipways",
+   "kind": "docks",
+   "neighborhood": "shipwright-yards",
+   "summary": "Slipways where the navy's high-castled carracks and the merchant hulls are framed in oak. Launch days draw crowds.",
+   "tags": [
+    "ships",
+    "shipbuilding",
+    "spectacle"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "long-ropewalk",
+   "name": "The Long Ropewalk",
+   "kind": "workshop",
+   "neighborhood": "shipwright-yards",
+   "summary": "A covered walk a quarter-mile long where rope girls spin hemp into cable, singing to keep the pace.",
+   "tags": [
+    "rope",
+    "work",
+    "songs"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "sail-loft",
+   "name": "Canvas Loft",
+   "kind": "workshop",
+   "neighborhood": "shipwright-yards",
+   "summary": "Sailmakers cutting and stitching canvas on a floor so wide it is chalked like a map.",
+   "tags": [
+    "sails",
+    "crafts"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "tar-pot",
+   "name": "The Tar Pot",
+   "kind": "tavern",
+   "neighborhood": "shipwright-yards",
+   "summary": "Shipwrights' alehouse where the yard bell ends every argument. Fried eel and pickled onions.",
+   "tags": [
+    "ale",
+    "shipwrights",
+    "fried-eel"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "yard-chandlery",
+   "name": "Pell's Chandlery",
+   "kind": "shopping",
+   "neighborhood": "shipwright-yards",
+   "summary": "Everything for a ship: lanterns, pitch, compasses, salt pork and belaying pins (sold, the owner says, for sailing only).",
+   "tags": [
+    "chandlery",
+    "supplies"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "launch-green",
+   "name": "Launch Green",
+   "kind": "park",
+   "neighborhood": "shipwright-yards",
+   "summary": "A patch of grass above the slipways where yard families picnic and children race toy hulls in the drainage pond.",
+   "tags": [
+    "green",
+    "children",
+    "picnic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "hundred-steps",
+   "name": "The Hundred Steps",
+   "kind": "landmark",
+   "neighborhood": "lower-stairs",
+   "summary": "The long stair from the warehouses down into the Lower Stairs, slick after rain, where people sit to talk because there is nowhere else to sit.",
+   "tags": [
+    "stairs",
+    "neighbours",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "relief-bread-hall",
+   "name": "The Relief Hall",
+   "kind": "landmark",
+   "neighborhood": "lower-stairs",
+   "summary": "Where Republican grain was handed out during the siege. It still gives bread on Relief Day, and people still argue about who it was for.",
+   "tags": [
+    "history",
+    "charity",
+    "siege"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "widows-kitchen",
+   "name": "The Widows' Kitchen",
+   "kind": "restaurant",
+   "neighborhood": "lower-stairs",
+   "summary": "A soup kitchen and cheap eating house run by militia widows. Pay what you can; the pottage is the same either way.",
+   "tags": [
+    "soup",
+    "cheap",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "blue-cloth",
+   "name": "The Blue Cloth",
+   "kind": "tavern",
+   "neighborhood": "lower-stairs",
+   "summary": "A cellar tavern whose regulars still drink to the old Crown under their breath. Nobody admits what the faded blue cloth behind the bar once showed.",
+   "tags": [
+    "royalist-whispers",
+    "cellar",
+    "ale"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "stairs-shrine",
+   "name": "Shrine of Thalassar at the Stairs",
+   "kind": "temple",
+   "neighborhood": "lower-stairs",
+   "summary": "A niche shrine with a battered carved wave where sailors' families leave shells and candle stubs.",
+   "tags": [
+    "faith",
+    "sea",
+    "candles"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "rag-market",
+   "name": "The Rag Market",
+   "kind": "market",
+   "neighborhood": "lower-stairs",
+   "summary": "Second-hand clothes, mended boots, old sailcloth and pawned trinkets sold off blankets on the steps.",
+   "tags": [
+    "second-hand",
+    "bargains"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "firewatch-tower",
+   "name": "Ashrow Fire-Watch Tower",
+   "kind": "landmark",
+   "neighborhood": "ashrow",
+   "summary": "The merchant-funded fire-watch tower with its great bell. Watchers sweep the rooftops all night for the first smoke.",
+   "tags": [
+    "fire-watch",
+    "bells",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "new-oak-square",
+   "name": "New Oak Square",
+   "kind": "square",
+   "neighborhood": "ashrow",
+   "summary": "The rebuilt square, its houses still pale fresh oak, with a well, benches and a loan broker's booth.",
+   "tags": [
+    "square",
+    "well",
+    "neighbours"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "phoenix-alehouse",
+   "name": "The Phoenix",
+   "kind": "tavern",
+   "neighborhood": "ashrow",
+   "summary": "An alehouse whose first owner rebuilt it three times. Cheerful, crowded, and nervous about candles.",
+   "tags": [
+    "ale",
+    "neighbours",
+    "music"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "ashrow-pie-shop",
+   "name": "Ember Lane Pie Shop",
+   "kind": "restaurant",
+   "neighborhood": "ashrow",
+   "summary": "Beef and barley pies, eel pies and apple pasties sold hot through a window.",
+   "tags": [
+    "pies",
+    "takeaway"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "ashrow-bathhouse",
+   "name": "The Rain Barrel Baths",
+   "kind": "fitness",
+   "neighborhood": "ashrow",
+   "summary": "A small bathhouse fed from the fire-watch cisterns, with a steam room and a wrestling floor.",
+   "tags": [
+    "baths",
+    "steam",
+    "wrestling"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "admiralty-fortress",
+   "name": "The Admiralty Fortress",
+   "kind": "landmark",
+   "neighborhood": "admiralty-point",
+   "summary": "The navy's harbour fortress, its walls patched with thicker stone round the gun ports. Admiral Horne keeps his quarters here.",
+   "tags": [
+    "navy",
+    "fortress",
+    "horne"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "signal-tower",
+   "name": "The Signal Tower",
+   "kind": "landmark",
+   "neighborhood": "admiralty-point",
+   "summary": "A granite base with a tall oak spire. Coloured flags by day and shuttered lanterns by night carry messages across the island chain in minutes.",
+   "tags": [
+    "signals",
+    "flags",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "archery-butts",
+   "name": "Point Archery Butts",
+   "kind": "fitness",
+   "neighborhood": "admiralty-point",
+   "summary": "Longbow butts below the fortress walls where the militia companies practise and anyone may pay for a dozen arrows.",
+   "tags": [
+    "archery",
+    "sport",
+    "militia"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "powder-and-plum",
+   "name": "The Powder and Plum",
+   "kind": "tavern",
+   "neighborhood": "admiralty-point",
+   "summary": "Officers' tavern with a view of the harbour mouth. Plum brandy, roast fowl, and captains comparing commissions they bought.",
+   "tags": [
+    "officers",
+    "brandy",
+    "views"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "point-walk",
+   "name": "The Mole Walk",
+   "kind": "trail",
+   "neighborhood": "admiralty-point",
+   "summary": "A path along the harbour mole to the outer light, windy, salty and popular with couples.",
+   "tags": [
+    "walk",
+    "sea",
+    "wind"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "aelfreds-quay",
+   "name": "Aelfred's Quay",
+   "kind": "docks",
+   "neighborhood": "gran-porte",
+   "summary": "The oldest quay, where King Aelfred first made the harbour a charge of the Crown. Now used by fishing boats and wherries.",
+   "tags": [
+    "history",
+    "fishing-boats"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "royal-palace",
+   "name": "The Shuttered Palace",
+   "kind": "landmark",
+   "neighborhood": "gran-porte",
+   "summary": "The old palace of House van Alnhalm, its banner lowered and windows boarded since the Revolution. The Republic has not decided what to do with it.",
+   "tags": [
+    "history",
+    "royalty",
+    "eerie"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "kings-fall-street",
+   "name": "King's Fall Street",
+   "kind": "landmark",
+   "neighborhood": "gran-porte",
+   "summary": "The street where King Alrdric died trying to calm a hungry crowd. Republicans walk past; royalists leave a bread crust on the step.",
+   "tags": [
+    "history",
+    "revolution",
+    "memorial"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "crowned-horse",
+   "name": "The Old Horse",
+   "kind": "inn",
+   "neighborhood": "gran-porte",
+   "summary": "An old coaching inn whose sign was repainted after the Revolution; the horse's crown still shows through in the rain.",
+   "tags": [
+    "inn",
+    "history",
+    "ale"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "gran-porte-market",
+   "name": "Gran Porte Fish and Herb Market",
+   "kind": "market",
+   "neighborhood": "gran-porte",
+   "summary": "A small morning market under the old harbour wall: fish, herbs, eggs and island butter.",
+   "tags": [
+    "market",
+    "fish",
+    "herbs"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "wherry-stairs-cafe",
+   "name": "The Wherry Stairs",
+   "kind": "cafe",
+   "neighborhood": "gran-porte",
+   "summary": "A tea and coffee stall at the wherry landing, with benches facing the old harbour.",
+   "tags": [
+    "coffee",
+    "views"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "chart-house",
+   "name": "The Chart House",
+   "kind": "museum",
+   "neighborhood": "chart-house-hill",
+   "summary": "Where Eadric Wyrmscraft's charts of Neokosmos are drawn, copied and sold, with the reconstructed Atlantean sextant shown on feast days.",
+   "tags": [
+    "maps",
+    "navigation",
+    "atlantis"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "observatory",
+   "name": "The Hill Observatory",
+   "kind": "attraction",
+   "neighborhood": "chart-house-hill",
+   "summary": "A dome of oak and copper where Republic-funded astronomers time the stars for longitude tables. Open to visitors on clear nights for a coin.",
+   "tags": [
+    "stars",
+    "science"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "public-press",
+   "name": "The Republic Press",
+   "kind": "workshop",
+   "neighborhood": "chart-house-hill",
+   "summary": "The printing house that turns out the Ledger of Liberty, shipping lists and a weekly broadsheet the royalists call the Merchant's Gospel.",
+   "tags": [
+    "printing",
+    "news",
+    "politics"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "compass-rose",
+   "name": "The Compass Rose",
+   "kind": "tavern",
+   "neighborhood": "chart-house-hill",
+   "summary": "Students' and navigators' tavern where bets are settled with dividers and every table has a chart scratched into it.",
+   "tags": [
+    "students",
+    "ale",
+    "debate"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "booksellers-steps",
+   "name": "Booksellers' Steps",
+   "kind": "shopping",
+   "neighborhood": "chart-house-hill",
+   "summary": "Stalls of almanacs, tide tables, histories (both kinds), and sea romances.",
+   "tags": [
+    "books",
+    "almanacs"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "thorne-library",
+   "name": "The Thorne Library",
+   "kind": "library",
+   "neighborhood": "chart-house-hill",
+   "summary": "A subscription library endowed by Magister Aldous Thorne, open free to public school pupils.",
+   "tags": [
+    "library",
+    "study",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "strangers-quay",
+   "name": "The Strangers' Quay",
+   "kind": "docks",
+   "neighborhood": "strangers-wharf",
+   "summary": "Where foreign ships must berth: Ruestrian grain galleys, Fresnian traders from the gulf and Pictish fur boats from the north.",
+   "tags": [
+    "foreign-ships",
+    "trade"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "wiki"
+  },
+  {
+   "id": "sol-chapel",
+   "name": "Chapel of Sol Eternel",
+   "kind": "temple",
+   "neighborhood": "strangers-wharf",
+   "summary": "A plain chapel kept by travelling missionaries like Aelric Stillhand, where Ruestrian sailors hear rites and curious locals listen at the door.",
+   "tags": [
+    "faith",
+    "sol-eternel",
+    "foreigners"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "fur-and-relic-market",
+   "name": "The Fur and Relic Market",
+   "kind": "market",
+   "neighborhood": "strangers-wharf",
+   "summary": "Pictish furs and carved bone beside Fresnian dealers swearing their Atlantean shards are genuine. Most are not.",
+   "tags": [
+    "furs",
+    "relics",
+    "haggling"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "ruestrian-cookhouse",
+   "name": "Le Pain Solaire",
+   "kind": "restaurant",
+   "neighborhood": "strangers-wharf",
+   "summary": "A Ruestrian cookhouse serving bread, lentils and wine the way the grain sailors like it.",
+   "tags": [
+    "ruestrian",
+    "wine",
+    "bread"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Ruestrian",
+   "source": "inferred"
+  },
+  {
+   "id": "fresnian-alehouse",
+   "name": "De Gulden Kraan",
+   "kind": "tavern",
+   "neighborhood": "strangers-wharf",
+   "summary": "A Fresnian alehouse with red-brick walls brought as ballast, stepped gables painted on the sign and dark gulf beer.",
+   "tags": [
+    "fresnian",
+    "beer",
+    "sailors"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Fresnian",
+   "source": "inferred"
+  },
+  {
+   "id": "dancers-hall",
+   "name": "The Silver Wake",
+   "kind": "nightlife",
+   "neighborhood": "strangers-wharf",
+   "summary": "A late hall of music and dancers from every port, where exiles reinvent themselves nightly.",
+   "tags": [
+    "dancing",
+    "music",
+    "late"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "dyke-walk",
+   "name": "The Dyke Walk",
+   "kind": "trail",
+   "neighborhood": "marsh-fields",
+   "summary": "A path along the sea dyke with fields on one side and marsh birds on the other.",
+   "tags": [
+    "walk",
+    "birds",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "cattle-fair-ground",
+   "name": "The Cattle Ground",
+   "kind": "market",
+   "neighborhood": "marsh-fields",
+   "summary": "Weekly cattle and grain market where island farmers sell beef, barley and oats into the city.",
+   "tags": [
+    "cattle",
+    "farmers",
+    "market"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "dairy-house",
+   "name": "Marsh Dairy House",
+   "kind": "cafe",
+   "neighborhood": "marsh-fields",
+   "summary": "Buttermilk, fresh cheese and oatcakes served on a farmhouse bench by the dairy door.",
+   "tags": [
+    "dairy",
+    "breakfast",
+    "farm"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "family",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  },
+  {
+   "id": "barley-mow",
+   "name": "The Barley Mow",
+   "kind": "tavern",
+   "neighborhood": "marsh-fields",
+   "summary": "A farmers' alehouse at the city gate with its own brewhouse and the best barley ale on the island.",
+   "tags": [
+    "ale",
+    "farmers",
+    "brewhouse"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Alnhaman",
+   "source": "inferred"
+  },
+  {
+   "id": "windmill",
+   "name": "Dyke Mill",
+   "kind": "landmark",
+   "neighborhood": "marsh-fields",
+   "summary": "The windmill that pumps the fields dry and grinds the barley, its sails visible from the signal tower.",
+   "tags": [
+    "windmill",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "inferred"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "public-school",
+   "name": "The Republic's Public School",
+   "type": "academy",
+   "neighborhood": "chart-house-hill",
+   "size": "medium",
+   "known_for": [
+    "letters",
+    "arithmetic",
+    "civics"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "navigators-school",
+   "name": "School of Navigation",
+   "type": "technical-institute",
+   "neighborhood": "chart-house-hill",
+   "size": "small",
+   "known_for": [
+    "navigation",
+    "astronomy",
+    "cartography"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "masons-school",
+   "name": "Guild School of Piling and Masonry",
+   "type": "guild-school",
+   "neighborhood": "guild-gables",
+   "size": "small",
+   "known_for": [
+    "foundations",
+    "masonry",
+    "inspection"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "shipwrights-school",
+   "name": "Shipwrights' Apprentice Loft",
+   "type": "guild-school",
+   "neighborhood": "shipwright-yards",
+   "size": "small",
+   "known_for": [
+    "shipbuilding",
+    "carpentry"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "counting-school",
+   "name": "The Counting School",
+   "type": "academy",
+   "neighborhood": "ledger-quarter",
+   "size": "small",
+   "known_for": [
+    "bookkeeping",
+    "contracts",
+    "insurance"
+   ],
+   "source": "inferred"
+  }
+ ],
+ "employers": [
+  {
+   "id": "house-grandeholm",
+   "name": "House Grandeholm",
+   "sector": "commerce",
+   "neighborhood": "raft-palaces",
+   "size": "large",
+   "summary": "Edgar Grandeholm's trading, credit and insurance empire, with agents everywhere.",
+   "careers": [
+    "counting-clerk",
+    "merchant-factor",
+    "house-guard",
+    "house-servant",
+    "courier"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "house-thorne",
+   "name": "House Thorne",
+   "sector": "commerce",
+   "neighborhood": "ledger-quarter",
+   "size": "medium",
+   "summary": "Magister Aldous Thorne's naval trading house and patronage of the sciences.",
+   "careers": [
+    "counting-clerk",
+    "merchant-factor",
+    "courier"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "admiralty",
+   "name": "The Republic Admiralty",
+   "sector": "military",
+   "neighborhood": "admiralty-point",
+   "size": "large",
+   "summary": "Admiral Horatio Horne's navy: carracks, galleys, fortresses and watchtowers.",
+   "careers": [
+    "sailor",
+    "ships-man-at-arms",
+    "signal-keeper",
+    "naval-officer"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "dock-office-employer",
+   "name": "The Dock Office",
+   "sector": "government",
+   "neighborhood": "the-quays",
+   "size": "medium",
+   "summary": "Measures, taxes and records every cargo through the port.",
+   "careers": [
+    "tide-waiter",
+    "counting-clerk",
+    "dockhand"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "merchant-circle",
+   "name": "The Two Houses",
+   "sector": "government",
+   "neighborhood": "ledger-quarter",
+   "size": "medium",
+   "summary": "The Republic's government: Merchant Circle, commons' house and their clerks.",
+   "careers": [
+    "counting-clerk",
+    "courier",
+    "arbiter"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "masons-guild",
+   "name": "Guild of Pile-Drivers and Masons",
+   "sector": "construction",
+   "neighborhood": "guild-gables",
+   "size": "large",
+   "summary": "Builds and inspects every foundation in Grandport.",
+   "careers": [
+    "pile-driver",
+    "guild-mason",
+    "guild-surveyor"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "carpenters-guild",
+   "name": "Carpenters' Guild",
+   "sector": "construction",
+   "neighborhood": "guild-gables",
+   "size": "large",
+   "summary": "Timber-framers and joiners who raise the gables and rebuild after fires.",
+   "careers": [
+    "timber-framer",
+    "joiner"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "great-yards",
+   "name": "The Great Yards",
+   "sector": "shipbuilding",
+   "neighborhood": "shipwright-yards",
+   "size": "large",
+   "summary": "Slipways building navy carracks and merchant hulls.",
+   "careers": [
+    "shipwright",
+    "sailmaker",
+    "ropewalk-spinner",
+    "caulker"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "fire-watch",
+   "name": "The Fire-Watch",
+   "sector": "public-safety",
+   "neighborhood": "ashrow",
+   "size": "medium",
+   "summary": "Merchant-funded watchers, bells and bucket crews across the timber districts.",
+   "careers": [
+    "fire-watcher"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "city-militia",
+   "name": "Grandport Militia",
+   "sector": "military",
+   "neighborhood": "admiralty-point",
+   "size": "medium",
+   "summary": "District companies of longbowmen and pikemen, outfitted by merchant lords.",
+   "careers": [
+    "militia-archer"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "chart-house-employer",
+   "name": "The Chart House",
+   "sector": "science",
+   "neighborhood": "chart-house-hill",
+   "size": "small",
+   "summary": "Draws, corrects and sells charts under Republic patronage.",
+   "careers": [
+    "chart-copyist",
+    "navigator"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "republic-press",
+   "name": "The Republic Press",
+   "sector": "press",
+   "neighborhood": "chart-house-hill",
+   "size": "small",
+   "summary": "Prints histories, shipping lists and the weekly broadsheet.",
+   "careers": [
+    "printer"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "insurers",
+   "name": "The Insurers' Exchange",
+   "sector": "finance",
+   "neighborhood": "ledger-quarter",
+   "size": "medium",
+   "summary": "Underwriters pricing hulls, cargoes and convoy escorts.",
+   "careers": [
+    "underwriter",
+    "counting-clerk"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "temple-of-nomion-employer",
+   "name": "Temple of Nomion",
+   "sector": "religion",
+   "neighborhood": "ledger-quarter",
+   "size": "small",
+   "summary": "Arbitrates disputes and witnesses contracts.",
+   "careers": [
+    "arbiter"
+   ],
+   "source": "wiki"
+  },
+  {
+   "id": "harbour-taverns",
+   "name": "Harbour taverns and cookshops",
+   "sector": "hospitality",
+   "neighborhood": "the-quays",
+   "size": "medium",
+   "summary": "The alehouses, inns and cookshops along the waterfront.",
+   "careers": [
+    "tavern-keeper",
+    "tavern-server",
+    "cook",
+    "musician"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "marsh-farms",
+   "name": "The Marsh Farms",
+   "sector": "agriculture",
+   "neighborhood": "marsh-fields",
+   "size": "medium",
+   "summary": "Barley, oat and cattle farms behind the dykes.",
+   "careers": [
+    "farmhand",
+    "dairymaid",
+    "drover"
+   ],
+   "source": "wiki"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "harbour-hub",
+   "name": "The harbour",
+   "neighborhoods": [
+    "the-quays",
+    "strangers-wharf",
+    "gran-porte"
+   ],
+   "sectors": [
+    "logistics",
+    "government",
+    "hospitality",
+    "commerce"
+   ],
+   "summary": "Quays, warehouses, the dock office, taverns and foreign traders.",
+   "source": "wiki"
+  },
+  {
+   "id": "ledger-hub",
+   "name": "The Ledger Quarter and the Rafts",
+   "neighborhoods": [
+    "ledger-quarter",
+    "raft-palaces"
+   ],
+   "sectors": [
+    "commerce",
+    "finance",
+    "government",
+    "religion"
+   ],
+   "summary": "Counting houses, insurers, the Two Houses and the merchant palaces.",
+   "source": "wiki"
+  },
+  {
+   "id": "yards-hub",
+   "name": "The yards and the gables",
+   "neighborhoods": [
+    "shipwright-yards",
+    "guild-gables",
+    "ashrow"
+   ],
+   "sectors": [
+    "shipbuilding",
+    "construction",
+    "crafts",
+    "public-safety"
+   ],
+   "summary": "Slipways, ropewalks, guild workshops and the fire-watch.",
+   "source": "inferred"
+  },
+  {
+   "id": "point-hub",
+   "name": "Admiralty Point and the Hill",
+   "neighborhoods": [
+    "admiralty-point",
+    "chart-house-hill"
+   ],
+   "sectors": [
+    "military",
+    "science",
+    "press",
+    "education"
+   ],
+   "summary": "The navy, the militia, the chart house, the press and the schools.",
+   "source": "inferred"
+  }
+ ],
+ "transit": [
+  {
+   "id": "streets-and-stairs",
+   "name": "Streets, stairs and alleys",
+   "kind": "walk",
+   "summary": "Most people walk the narrow gabled streets and the stairs that climb from the quays.",
+   "source": "inferred"
+  },
+  {
+   "id": "wherries",
+   "name": "Harbour wherries",
+   "kind": "boat",
+   "summary": "Rowing boats for hire between the quays, the yards, Admiralty Point and Gran Porte.",
+   "source": "inferred"
+  },
+  {
+   "id": "hired-carriages",
+   "name": "Hired carriages",
+   "kind": "carriage",
+   "summary": "Few streets are wide enough; merchant houses keep carriages for the raft-palace avenues.",
+   "source": "inferred"
+  },
+  {
+   "id": "market-road",
+   "name": "The market road",
+   "kind": "walk",
+   "summary": "The dyke road from the Marsh Fields into the city, busy with carts on market mornings.",
+   "source": "inferred"
+  }
+ ],
+ "climate": {
+  "summary": "Warm island sea weather: mild wet winters with gales, gentle summers, wind off the water most days. High rainfall keeps the fields green.",
+  "months": [
+   {
+    "high_f": 61,
+    "low_f": 52,
+    "rain_days": 17,
+    "note": "Winter gales; ships laid up."
+   },
+   {
+    "high_f": 60,
+    "low_f": 51,
+    "rain_days": 15,
+    "note": "Grey and blustery."
+   },
+   {
+    "high_f": 61,
+    "low_f": 52,
+    "rain_days": 15,
+    "note": "First fair days; the Two Houses sit."
+   },
+   {
+    "high_f": 63,
+    "low_f": 53,
+    "rain_days": 12,
+    "note": "Shipping season opens."
+   },
+   {
+    "high_f": 66,
+    "low_f": 56,
+    "rain_days": 10,
+    "note": "Settling survey weather."
+   },
+   {
+    "high_f": 71,
+    "low_f": 60,
+    "rain_days": 7,
+    "note": "Fur boats and long evenings."
+   },
+   {
+    "high_f": 75,
+    "low_f": 64,
+    "rain_days": 5,
+    "note": "Warmest month; fire-watch on alert."
+   },
+   {
+    "high_f": 77,
+    "low_f": 65,
+    "rain_days": 6,
+    "note": "Longbow Fair."
+   },
+   {
+    "high_f": 75,
+    "low_f": 64,
+    "rain_days": 9,
+    "note": "Grain fleet arrives."
+   },
+   {
+    "high_f": 71,
+    "low_f": 60,
+    "rain_days": 13,
+    "note": "Autumn squalls begin."
+   },
+   {
+    "high_f": 66,
+    "low_f": 57,
+    "rain_days": 15,
+    "note": "Laying up for winter."
+   },
+   {
+    "high_f": 63,
+    "low_f": 54,
+    "rain_days": 17,
+    "note": "Wet, windy, lamplit."
+   }
+  ],
+  "source": "inferred"
+ },
+ "annual_events": [
+  {
+   "id": "longbow-fair",
+   "name": "The Longbow Fair",
+   "months": [
+    8
+   ],
+   "neighborhood": "admiralty-point",
+   "summary": "District militia companies compete at the butts; archery is as much sport as duty here.",
+   "source": "wiki"
+  },
+  {
+   "id": "settling-survey",
+   "name": "The Settling Survey",
+   "months": [
+    5
+   ],
+   "neighborhood": "guild-gables",
+   "summary": "Guild surveyors measure every building's yearly settling and chalk the marks on house corners.",
+   "source": "wiki"
+  },
+  {
+   "id": "grain-fleet",
+   "name": "The Grain Fleet",
+   "months": [
+    9,
+    10
+   ],
+   "neighborhood": "strangers-wharf",
+   "summary": "Ruestrian grain galleys crowd the Strangers' Quay and bread prices finally fall.",
+   "source": "inferred"
+  },
+  {
+   "id": "fur-boats",
+   "name": "The Fur Boats",
+   "months": [
+    6
+   ],
+   "neighborhood": "strangers-wharf",
+   "summary": "Pictish boats arrive with furs and deep-wood goods; the Fur and Relic Market doubles in size.",
+   "source": "inferred"
+  },
+  {
+   "id": "launch-day",
+   "name": "Spring Launch",
+   "months": [
+    4
+   ],
+   "neighborhood": "shipwright-yards",
+   "summary": "New carracks slide down the slipways before the season, with crowds on Launch Green.",
+   "source": "inferred"
+  },
+  {
+   "id": "cattle-fair",
+   "name": "The Autumn Cattle Fair",
+   "months": [
+    10
+   ],
+   "neighborhood": "marsh-fields",
+   "summary": "The big autumn cattle and barley fair before winter feed runs short.",
+   "source": "inferred"
+  },
+  {
+   "id": "convoy-season-end",
+   "name": "Laying Up",
+   "months": [
+    11
+   ],
+   "neighborhood": "the-quays",
+   "summary": "Ships come home for the winter gales and sailors spend a season's pay in a week.",
+   "source": "inferred"
+  },
+  {
+   "id": "circle-sitting",
+   "name": "The Spring Sitting",
+   "months": [
+    3
+   ],
+   "neighborhood": "ledger-quarter",
+   "summary": "The Two Houses open their year; tariffs are argued and the galleries fill.",
+   "source": "inferred"
+  }
+ ],
+ "careers": [
+  {
+   "id": "dockhand",
+   "name": "Dockhand",
+   "sector": "logistics",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Hauling cargo on the Grand Quay for a day wage, hired at the line each morning.",
+   "themes": [
+    "the hiring line",
+    "heavy bales",
+    "the foreman",
+    "press-gang rumours"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "tide-waiter",
+   "name": "Tide-waiter",
+   "sector": "government",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "A Dock Office officer who boards ships to measure and tax their cargo.",
+   "themes": [
+    "measuring rods",
+    "bribes refused",
+    "foreign captains",
+    "ledgers"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "counting-clerk",
+   "name": "Counting-house clerk",
+   "sector": "commerce",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Copying ledgers, contracts and cargo lists in a stone-floored counting house.",
+   "themes": [
+    "ink and ledgers",
+    "interest tables",
+    "the head clerk",
+    "late accounts"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "merchant-factor",
+   "name": "Merchant's factor",
+   "sector": "commerce",
+   "schedule": "flexible",
+   "employment": "freelance",
+   "pay": "$$$",
+   "summary": "Buying, selling and negotiating for a great house in port and abroad.",
+   "themes": [
+    "deals",
+    "foreign ports",
+    "the house's orders",
+    "leverage"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "underwriter",
+   "name": "Underwriter",
+   "sector": "finance",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$$",
+   "summary": "Pricing the risk on hulls and cargoes at the Insurers' Exchange.",
+   "themes": [
+    "risk",
+    "signal-tower news",
+    "wrecks",
+    "odds"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "courier",
+   "name": "Courier",
+   "sector": "commerce",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Running sealed letters between counting houses, palaces and the Two Houses.",
+   "themes": [
+    "sealed letters",
+    "stairs",
+    "gossip overheard",
+    "tips"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "arbiter",
+   "name": "Arbiter of Nomion",
+   "sector": "religion",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Hearing disputes and witnessing contracts at the Temple of Nomion.",
+   "themes": [
+    "disputes",
+    "oaths",
+    "precedent",
+    "quarrelling merchants"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "pile-driver",
+   "name": "Pile-driver",
+   "sector": "construction",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Driving oak piles through estuary silt to bedrock for new foundations.",
+   "themes": [
+    "the ram",
+    "mud",
+    "the crew chant",
+    "bedrock refusal"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "guild-mason",
+   "name": "Guild mason",
+   "sector": "construction",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Cutting and laying ashlar for counting houses and merchant palaces.",
+   "themes": [
+    "ashlar",
+    "mortar",
+    "inspection",
+    "apprentices"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "guild-surveyor",
+   "name": "Guild surveyor",
+   "sector": "construction",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Inspecting joints and recording each house's yearly settling.",
+   "themes": [
+    "settling marks",
+    "failed joints",
+    "angry owners",
+    "old records"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "timber-framer",
+   "name": "Timber-framer",
+   "sector": "construction",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Raising oak frames and steep gables, and rebuilding after fires.",
+   "themes": [
+    "oak",
+    "gables",
+    "the raising",
+    "fire loans"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "joiner",
+   "name": "Joiner",
+   "sector": "crafts",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Making chests, panelling and furniture in a guild workshop.",
+   "themes": [
+    "commissions",
+    "joints",
+    "apprentices",
+    "fussy clients"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "shipwright",
+   "name": "Shipwright",
+   "sector": "shipbuilding",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Framing and planking carracks and merchant hulls on the slipways.",
+   "themes": [
+    "the hull",
+    "launch day",
+    "the yard bell",
+    "navy contracts"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "caulker",
+   "name": "Caulker",
+   "sector": "shipbuilding",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Packing seams with oakum and hot pitch so the hulls stay dry.",
+   "themes": [
+    "pitch",
+    "oakum",
+    "burns",
+    "tight seams"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "sailmaker",
+   "name": "Sailmaker",
+   "sector": "shipbuilding",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Cutting and stitching canvas in the sail loft.",
+   "themes": [
+    "canvas",
+    "palm and needle",
+    "patterns",
+    "storm damage"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "ropewalk-spinner",
+   "name": "Ropewalk spinner",
+   "sector": "shipbuilding",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Walking backwards down the ropewalk spinning hemp into cable.",
+   "themes": [
+    "hemp",
+    "songs",
+    "the walk",
+    "blisters"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "sailor",
+   "name": "Sailor",
+   "sector": "logistics",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Crewing a merchant or navy ship between the islands and foreign ports.",
+   "themes": [
+    "the voyage",
+    "the captain",
+    "pay day",
+    "ports"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "ships-man-at-arms",
+   "name": "Ship's man-at-arms",
+   "sector": "military",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "A professional boarding fighter with shield, seax and gambeson.",
+   "themes": [
+    "boarding drills",
+    "pirates",
+    "the bosun",
+    "old scars"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "naval-officer",
+   "name": "Naval officer",
+   "sector": "military",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$$$",
+   "summary": "A lieutenant or captain whose commission was most likely bought.",
+   "themes": [
+    "commissions",
+    "convoys",
+    "the admiral",
+    "discipline"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "signal-keeper",
+   "name": "Signal-keeper",
+   "sector": "military",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Reading and sending flag and lantern signals across the island chain.",
+   "themes": [
+    "flags",
+    "lanterns",
+    "codes",
+    "night watches"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "militia-archer",
+   "name": "Militia longbowman",
+   "sector": "military",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "A district militia archer who drills on rest days and works a trade otherwise.",
+   "themes": [
+    "the butts",
+    "drill days",
+    "the captain",
+    "contests"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "fire-watcher",
+   "name": "Fire-watcher",
+   "sector": "public-safety",
+   "schedule": "shift-night",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Watching the rooftops from a tower all night and ringing the bell at smoke.",
+   "themes": [
+    "the bell",
+    "smoke",
+    "bucket crews",
+    "long nights"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "house-guard",
+   "name": "House guard",
+   "sector": "security",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$$",
+   "summary": "Guarding a merchant prince's palace, gates and secrets.",
+   "themes": [
+    "the gate",
+    "visitors",
+    "secrets",
+    "the household"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "house-servant",
+   "name": "House servant",
+   "sector": "domestic",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Cooking, cleaning or waiting in a raft palace.",
+   "themes": [
+    "the household",
+    "banquets",
+    "gossip",
+    "the steward"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "navigator",
+   "name": "Navigator",
+   "sector": "science",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$$$",
+   "summary": "Fixing positions with sextant and tables, trained in the new Republic methods.",
+   "themes": [
+    "sextant",
+    "longitude",
+    "charts",
+    "captains who doubt"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "chart-copyist",
+   "name": "Chart copyist",
+   "sector": "science",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Copying and correcting charts at the Chart House.",
+   "themes": [
+    "fine pens",
+    "coastlines",
+    "corrections",
+    "the master"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "printer",
+   "name": "Printer",
+   "sector": "press",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Setting type and pulling sheets at the Republic Press.",
+   "themes": [
+    "type",
+    "ink",
+    "deadlines",
+    "politics"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "tavern-keeper",
+   "name": "Tavern keeper",
+   "sector": "hospitality",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Running an alehouse: barrels, regulars, debts and the watch.",
+   "themes": [
+    "regulars",
+    "barrels",
+    "fights",
+    "tabs"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "tavern-server",
+   "name": "Tavern server",
+   "sector": "hospitality",
+   "schedule": "evening",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Carrying ale and gossip between tables, binding the regulars together.",
+   "themes": [
+    "regulars",
+    "gossip",
+    "tips",
+    "rowdy nights"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "cook",
+   "name": "Cookshop cook",
+   "sector": "hospitality",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Stews, pies and bread for dockers and clerks.",
+   "themes": [
+    "the pot",
+    "early fires",
+    "regulars",
+    "shortages"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "musician",
+   "name": "Tavern musician",
+   "sector": "entertainment",
+   "schedule": "evening",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Playing hurdy-gurdy, fiddle or pipes for coins and supper.",
+   "themes": [
+    "tunes",
+    "crowds",
+    "coins in the hat",
+    "sea songs"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "dancer",
+   "name": "Dancer",
+   "sector": "entertainment",
+   "schedule": "evening",
+   "employment": "rota",
+   "pay": "$$",
+   "summary": "Dancing in the halls of Strangers' Wharf for coin and patrons.",
+   "themes": [
+    "patrons",
+    "costumes",
+    "late nights",
+    "reinvention"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "fishmonger",
+   "name": "Fishmonger",
+   "sector": "food",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Selling the night's catch on the Fish Steps.",
+   "themes": [
+    "the catch",
+    "ice and salt",
+    "haggling",
+    "early mornings"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "baker",
+   "name": "Baker",
+   "sector": "food",
+   "schedule": "early",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Baking oat and barley bread before dawn under guild fire rules.",
+   "themes": [
+    "the oven",
+    "flour",
+    "fire rules",
+    "early customers"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "farmhand",
+   "name": "Farmhand",
+   "sector": "agriculture",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Working barley fields and dykes in the Marsh Fields.",
+   "themes": [
+    "harvest",
+    "dykes",
+    "weather",
+    "market day"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "dairymaid",
+   "name": "Dairy worker",
+   "sector": "agriculture",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Milking, churning and cheese-making at a marsh dairy.",
+   "themes": [
+    "milking",
+    "butter",
+    "cheese",
+    "cattle"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "drover",
+   "name": "Drover",
+   "sector": "agriculture",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Bringing cattle down the market road to the Cattle Ground.",
+   "themes": [
+    "the herd",
+    "market day",
+    "the road",
+    "buyers"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "schoolteacher",
+   "name": "Public school teacher",
+   "sector": "education",
+   "schedule": "academic",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Teaching letters, sums and civics at the Republic's public school.",
+   "themes": [
+    "pupils",
+    "slates",
+    "civics lessons",
+    "parents"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  }
+ ],
+ "names": {
+  "year": 2578,
+  "mix": {
+   "alnhaman": 8,
+   "fresnian": 1.2,
+   "ruestrian": 1.0,
+   "far-voyagers": 0.6,
+   "pictish": 0.25,
+   "elven": 0.08
+  },
+  "groups": {
+   "alnhaman": {
+    "feminine": [
+     "Aelfflaed",
+     "Aethelburh",
+     "Aethelflaed",
+     "Aethelgifu",
+     "Aethelgyth",
+     "Aethelhild",
+     "Aethelthryth",
+     "Aethelwyn",
+     "Aldwen",
+     "Aldgyth",
+     "Beaduhild",
+     "Beorhtgifu",
+     "Beornwyn",
+     "Brithwen",
+     "Burgwyn",
+     "Cwenburh",
+     "Cwenhild",
+     "Cwenthryth",
+     "Cyneburh",
+     "Cynegyth",
+     "Cynehild",
+     "Cynethryth",
+     "Eadburh",
+     "Eadgifu",
+     "Eadgyth",
+     "Eadhild",
+     "Eadwyn",
+     "Ealdgyth",
+     "Ealhswith",
+     "Eanflaed",
+     "Eanswith",
+     "Ecgwyn",
+     "Edith",
+     "Elfleda",
+     "Eormengild",
+     "Frideswide",
+     "Godgifu",
+     "Godhild",
+     "Godwyn",
+     "Goldburh",
+     "Gunhild",
+     "Heahburh",
+     "Hereswith",
+     "Hild",
+     "Hildeburh",
+     "Hrothwyn",
+     "Leofgifu",
+     "Leofrun",
+     "Leofwyn",
+     "Mildreth",
+     "Mildburh",
+     "Osburh",
+     "Osgyth",
+     "Oswyn",
+     "Rowena",
+     "Saehild",
+     "Saewyn",
+     "Sigeburh",
+     "Sigewyn",
+     "Sunniva",
+     "Tilda",
+     "Wenflaed",
+     "Werburh",
+     "Wihtburh",
+     "Wilburh",
+     "Wulfgifu",
+     "Wulfhild",
+     "Wulfrun",
+     "Wulfwyn",
+     "Wynflaed",
+     "Wynburh",
+     "Aldburh",
+     "Ceolburh",
+     "Deorwyn",
+     "Ealdwyn",
+     "Ecgburh",
+     "Freawyn",
+     "Gytha",
+     "Hildwyn",
+     "Leofeva",
+     "Maethild",
+     "Seaxburh",
+     "Tova",
+     "Waerburh",
+     "Wenna",
+     "Wynna",
+     "Aeswyn"
+    ],
+    "masculine": [
+     "Aethelbald",
+     "Aethelberht",
+     "Aethelhard",
+     "Aethelmaer",
+     "Aethelnoth",
+     "Aethelstan",
+     "Aethelwulf",
+     "Aldhun",
+     "Aldwine",
+     "Alnoth",
+     "Baldwin",
+     "Beorhtnoth",
+     "Beorhtric",
+     "Beorn",
+     "Beornwulf",
+     "Brand",
+     "Brihtmaer",
+     "Burgred",
+     "Ceolred",
+     "Ceolwulf",
+     "Cenwulf",
+     "Cuthbert",
+     "Cuthred",
+     "Cuthwine",
+     "Cynebald",
+     "Cynric",
+     "Cynewulf",
+     "Deorman",
+     "Dunstan",
+     "Eadbald",
+     "Eadberht",
+     "Eadgar",
+     "Eadmer",
+     "Eadnoth",
+     "Eadred",
+     "Eadwig",
+     "Eadwine",
+     "Eadwulf",
+     "Ealdhelm",
+     "Ealdred",
+     "Ealdwulf",
+     "Ealhmund",
+     "Eanbald",
+     "Eanred",
+     "Ecgberht",
+     "Ecgfrith",
+     "Edwin",
+     "Elfstan",
+     "Ethelred",
+     "Folcwine",
+     "Frithric",
+     "Godric",
+     "Godwine",
+     "Guthlac",
+     "Haethured",
+     "Heahmund",
+     "Herewald",
+     "Hereward",
+     "Hrothgar",
+     "Hunberht",
+     "Ingwald",
+     "Leofric",
+     "Leofstan",
+     "Leofwine",
+     "Ordgar",
+     "Ordric",
+     "Osberht",
+     "Osmund",
+     "Oswald",
+     "Oswin",
+     "Oswulf",
+     "Saewulf",
+     "Sigeberht",
+     "Sigeric",
+     "Sigewulf",
+     "Theodred",
+     "Tostig",
+     "Ulfcytel",
+     "Waltheof",
+     "Wigheard",
+     "Wigmund",
+     "Wilfrid",
+     "Wulfgar",
+     "Wulfhere",
+     "Wulfmaer",
+     "Wulfnoth",
+     "Wulfric",
+     "Wystan",
+     "Beornred",
+     "Garmund",
+     "Hengist",
+     "Ordwulf"
+    ],
+    "neutral": [
+     "Wren",
+     "Ash",
+     "Robin",
+     "Kit",
+     "Rowan",
+     "Lark",
+     "Tamsin",
+     "Sparrow"
+    ],
+    "family": [
+     "Ashby",
+     "Ashdown",
+     "Bancroft",
+     "Barrow",
+     "Blackwater",
+     "Bracewell",
+     "Bramley",
+     "Brookhouse",
+     "Burnell",
+     "Caldwell",
+     "Carver",
+     "Chandler",
+     "Clayborne",
+     "Coldharbour",
+     "Colwell",
+     "Cooper",
+     "Cowling",
+     "Crane",
+     "Dykeman",
+     "Eastbrook",
+     "Eddings",
+     "Fairwind",
+     "Fairweather",
+     "Farrow",
+     "Fenwick",
+     "Fletcher",
+     "Galloway",
+     "Gablestone",
+     "Gilder",
+     "Glover",
+     "Greyhaven",
+     "Hale",
+     "Halliwell",
+     "Harwood",
+     "Hatherley",
+     "Hayward",
+     "Holt",
+     "Hornsey",
+     "Kettlewell",
+     "Keelson",
+     "Lanternman",
+     "Larkin",
+     "Ledgerwood",
+     "Linwood",
+     "Locke",
+     "Lowther",
+     "Marshall",
+     "Mercer",
+     "Merriweather",
+     "Middleton",
+     "Netherby",
+     "Norwood",
+     "Oakhurst",
+     "Ollerton",
+     "Palmer",
+     "Penhallow",
+     "Pilewright",
+     "Plover",
+     "Quayle",
+     "Ravensby",
+     "Redsail",
+     "Ropewell",
+     "Rowntree",
+     "Saltmarsh",
+     "Sandford",
+     "Seawold",
+     "Sedgwick",
+     "Shipley",
+     "Silverton",
+     "Slade",
+     "Southwell",
+     "Steadhand",
+     "Stoke",
+     "Strand",
+     "Tallow",
+     "Tanner",
+     "Tarrant",
+     "Thatcher",
+     "Thornbury",
+     "Tidewell",
+     "Tollgate",
+     "Tunstall",
+     "Underhill",
+     "Wainwright",
+     "Warrender",
+     "Waterman",
+     "Weatherby",
+     "Wells",
+     "Westmoor",
+     "Whitby",
+     "Whitlow",
+     "Wickham",
+     "Winslow",
+     "Woodward",
+     "Wyrmsley",
+     "Yarrow",
+     "Grandfield",
+     "Brandreth",
+     "Coppersmith",
+     "Eastgate",
+     "Fiddler",
+     "Gale",
+     "Hythe",
+     "Kemble",
+     "Lockyer",
+     "Mariner",
+     "Netherwood",
+     "Ostler",
+     "Pennywell",
+     "Rookwood",
+     "Sailor",
+     "Shorehouse",
+     "Stillwell",
+     "Swanwick",
+     "Tidemore",
+     "Wharton",
+     "Whitecliffe",
+     "Windham",
+     "Withers",
+     "Wrexham",
+     "Breakwater",
+     "Cordwell",
+     "Dockett"
+    ]
+   },
+   "fresnian": {
+    "feminine": [
+     "Aaltje",
+     "Adriana",
+     "Agatha",
+     "Aleida",
+     "Anke",
+     "Anneke",
+     "Antje",
+     "Baukje",
+     "Cato",
+     "Christina",
+     "Dieuwke",
+     "Elske",
+     "Femke",
+     "Geertje",
+     "Gesina",
+     "Griet",
+     "Grietje",
+     "Hendrika",
+     "Hilde",
+     "Ida",
+     "Jacoba",
+     "Janneke",
+     "Jantje",
+     "Johanna",
+     "Josina",
+     "Katrijn",
+     "Klaartje",
+     "Lijsbet",
+     "Liesbeth",
+     "Lotte",
+     "Margriet",
+     "Maaike",
+     "Marieke",
+     "Mayke",
+     "Neeltje",
+     "Petronella",
+     "Reinske",
+     "Saskia",
+     "Sjoukje",
+     "Stijntje",
+     "Tanneke",
+     "Teuntje",
+     "Trijntje",
+     "Wilhelmina",
+     "Willemijn",
+     "Wobbe",
+     "Ytje",
+     "Zwaantje",
+     "Fokje",
+     "Geeske",
+     "Hiske"
+    ],
+    "masculine": [
+     "Adriaan",
+     "Arend",
+     "Barend",
+     "Bastiaan",
+     "Bouwe",
+     "Claes",
+     "Cornelis",
+     "Daan",
+     "Diederik",
+     "Dirk",
+     "Douwe",
+     "Egbert",
+     "Evert",
+     "Folkert",
+     "Gerrit",
+     "Gijsbert",
+     "Govert",
+     "Hendrik",
+     "Hidde",
+     "Jacob",
+     "Jan",
+     "Jelle",
+     "Joost",
+     "Jurriaan",
+     "Kees",
+     "Klaas",
+     "Lammert",
+     "Lieven",
+     "Maarten",
+     "Melis",
+     "Nanne",
+     "Pieter",
+     "Reinier",
+     "Roelof",
+     "Ruben",
+     "Sander",
+     "Sibrand",
+     "Siemen",
+     "Sjoerd",
+     "Steven",
+     "Teunis",
+     "Thijs",
+     "Tjerk",
+     "Walraven",
+     "Wessel",
+     "Willem",
+     "Wouter",
+     "Ysbrand",
+     "Jorrit"
+    ],
+    "neutral": [],
+    "family": [
+     "Bakker",
+     "Bosch",
+     "Brouwer",
+     "Claessen",
+     "Dekker",
+     "Hoekstra",
+     "Jansen",
+     "Kuiper",
+     "Meijer",
+     "Mulder",
+     "Postma",
+     "Prins",
+     "Schouten",
+     "Smit",
+     "Visser",
+     "Vos",
+     "Wouters",
+     "Zijlstra",
+     "Dijkstra",
+     "Hendriksen",
+     "Koopman",
+     "Molenaar",
+     "Scheepmaker",
+     "Timmerman",
+     "Veenstra",
+     "Wierda",
+     "de Boer",
+     "de Graaf",
+     "de Groot",
+     "de Jong",
+     "de Vries",
+     "de Wit",
+     "van Dam",
+     "van den Berg",
+     "van der Berg",
+     "van der Meer",
+     "van Dijk",
+     "van Hal",
+     "van Leeuwen",
+     "van Rijn",
+     "van Wijk",
+     "ter Horst",
+     "van Asperen",
+     "van Brakel"
+    ]
+   },
+   "ruestrian": {
+    "feminine": [
+     "Adelaide",
+     "Agnès",
+     "Aline",
+     "Amice",
+     "Anne",
+     "Ascelina",
+     "Aude",
+     "Avice",
+     "Béatrix",
+     "Berthe",
+     "Blanche",
+     "Cécile",
+     "Clémence",
+     "Colette",
+     "Constance",
+     "Denise",
+     "Edeline",
+     "Emmeline",
+     "Ermengarde",
+     "Esclarmonde",
+     "Guillemette",
+     "Héloïse",
+     "Hermine",
+     "Isabeau",
+     "Isabelle",
+     "Jacquette",
+     "Jeanne",
+     "Laure",
+     "Léonor",
+     "Mahaut",
+     "Marguerite",
+     "Marie",
+     "Mélisande",
+     "Nicolette",
+     "Odette",
+     "Pernelle",
+     "Perrine",
+     "Philippa",
+     "Richilde",
+     "Rosamonde",
+     "Sibylle",
+     "Sybille",
+     "Thomasse",
+     "Ysolde",
+     "Yvette",
+     "Gisèle",
+     "Alix",
+     "Brunissende"
+    ],
+    "masculine": [
+     "Aimery",
+     "Anseau",
+     "Arnaud",
+     "Aubert",
+     "Baudouin",
+     "Bertrand",
+     "Charlot",
+     "Denis",
+     "Drogo",
+     "Enguerrand",
+     "Étienne",
+     "Eustache",
+     "Foulques",
+     "Gaucher",
+     "Gautier",
+     "Geoffroy",
+     "Gérard",
+     "Gilles",
+     "Guérin",
+     "Guillaume",
+     "Hugues",
+     "Jacquemin",
+     "Jourdain",
+     "Lambert",
+     "Lucien",
+     "Martial",
+     "Mathieu",
+     "Nicolas",
+     "Odon",
+     "Oudard",
+     "Philippe",
+     "Pierre",
+     "Raimbaut",
+     "Raoul",
+     "Robert",
+     "Roland",
+     "Simon",
+     "Thibaut",
+     "Thierry",
+     "Tristan",
+     "Yves",
+     "Amaury",
+     "Bérenger",
+     "Clément",
+     "Fulbert",
+     "Hélias",
+     "Josselin",
+     "Lancelin"
+    ],
+    "neutral": [],
+    "family": [
+     "Auclair",
+     "Beaumont",
+     "Bertin",
+     "Blanchard",
+     "Bonnet",
+     "Chevalier",
+     "Clément",
+     "Delacroix",
+     "Dubois",
+     "Duval",
+     "Fontaine",
+     "Fournier",
+     "Garnier",
+     "Gauthier",
+     "Guérin",
+     "Lambert",
+     "Lebrun",
+     "Leclerc",
+     "Lefèvre",
+     "Legrand",
+     "Marchand",
+     "Martel",
+     "Mercier",
+     "Moreau",
+     "Perrin",
+     "Rivière",
+     "Rousseau",
+     "Tessier",
+     "Vasseur",
+     "Vidal",
+     "Charpentier",
+     "Boulanger",
+     "Tonnelier",
+     "Fauconnier",
+     "de Lisle",
+     "de Montfort",
+     "de Roche",
+     "de Vaux",
+     "d'Aubricourt",
+     "de Marsan",
+     "de Solvane"
+    ]
+   },
+   "far-voyagers": {
+    "feminine": [
+     "Freya",
+     "Xenia",
+     "Kalliope",
+     "Irina",
+     "Sigrun",
+     "Thora",
+     "Asta",
+     "Liv",
+     "Ragna",
+     "Dalia",
+     "Zora",
+     "Leandra",
+     "Nerissa",
+     "Selka",
+     "Yara"
+    ],
+    "masculine": [
+     "Theron",
+     "Halvard",
+     "Torvin",
+     "Ivar",
+     "Damon",
+     "Leander",
+     "Ragnar",
+     "Orm",
+     "Darius",
+     "Esben",
+     "Kasimir",
+     "Nils",
+     "Tarik",
+     "Yannick"
+    ],
+    "neutral": [],
+    "family": [
+     "Freyhold",
+     "Seafarer",
+     "Islesend",
+     "Farshore",
+     "Northwind",
+     "Wavecrest",
+     "Saltwind",
+     "Longvoyage",
+     "Driftwell",
+     "Westerly",
+     "Tradewind",
+     "Harbourne"
+    ]
+   },
+   "pictish": {
+    "feminine": [
+     "Asa",
+     "Brynja",
+     "Dagna",
+     "Gudra",
+     "Hela",
+     "Inga",
+     "Jorna",
+     "Kveta",
+     "Lagra",
+     "Mira",
+     "Nessa",
+     "Orla",
+     "Rana",
+     "Sigra",
+     "Tova",
+     "Ulla",
+     "Vala",
+     "Yrsa",
+     "Bera",
+     "Dalla",
+     "Freka",
+     "Gunna",
+     "Hrafna",
+     "Ketta",
+     "Morva",
+     "Renna",
+     "Saga",
+     "Torva",
+     "Vigga"
+    ],
+    "masculine": [
+     "Arn",
+     "Bram",
+     "Dag",
+     "Eirik",
+     "Grim",
+     "Hakon",
+     "Lok",
+     "Murn",
+     "Orm",
+     "Rask",
+     "Sten",
+     "Tor",
+     "Ulf",
+     "Varg",
+     "Bjorn",
+     "Hrolf",
+     "Agnar",
+     "Brok",
+     "Dregg",
+     "Fenn",
+     "Gorm",
+     "Harald",
+     "Krag",
+     "Mord",
+     "Rurik",
+     "Skarn",
+     "Thrain",
+     "Ulfar",
+     "Vidar"
+    ],
+    "neutral": [],
+    "family": [
+     "of the Boar",
+     "of the Bear",
+     "of the Wolf",
+     "of the Deer",
+     "of the Shadowfang",
+     "of the Thunderhoof",
+     "of the Elk",
+     "of the Raven",
+     "of the Seal",
+     "of the Lynx"
+    ],
+    "own_family": true
+   },
+   "elven": {
+    "feminine": [
+     "Aerwen",
+     "Ithriel",
+     "Lairenë",
+     "Saelwen",
+     "Tuilinë",
+     "Merawen",
+     "Nimriel",
+     "Elanwë",
+     "Silmarë",
+     "Faelith",
+     "Iriel",
+     "Lothiel",
+     "Varanë",
+     "Celewen",
+     "Aranel",
+     "Ilwen",
+     "Yavië",
+     "Loriel",
+     "Thessa",
+     "Daphne",
+     "Ione",
+     "Phaedra",
+     "Rhea",
+     "Thalia",
+     "Melina",
+     "Aletha"
+    ],
+    "masculine": [
+     "Aerendil",
+     "Thalion",
+     "Voriel",
+     "Saeron",
+     "Tuilar",
+     "Calandor",
+     "Elorin",
+     "Maranor",
+     "Ithrandir",
+     "Faelor",
+     "Lairon",
+     "Quelaron",
+     "Belion",
+     "Caranor",
+     "Nethril",
+     "Varion",
+     "Halion",
+     "Erevan",
+     "Ilmarin",
+     "Tavor",
+     "Theon",
+     "Doros",
+     "Kallias",
+     "Myron",
+     "Nikias"
+    ],
+    "neutral": [],
+    "family": [
+     "of the Hrívë Court",
+     "Fernwhisper",
+     "Mossfall",
+     "Thornwillow",
+     "Leafmantle",
+     "Brookshade",
+     "Ashenbough",
+     "Dewglen",
+     "Starbriar",
+     "Quellarin",
+     "Tuilëandor"
+    ],
+    "own_family": true,
+    "kind": "elf"
+   }
+  }
+ },
+ "local_color": [
+  {
+   "id": "beef-barley-pie",
+   "name": "Beef and barley pie",
+   "kind": "dish",
+   "summary": "Island beef and barley in a thick crust, the everyday hot meal from the Marsh Fields to the quays.",
+   "places": [
+    "ashrow-pie-shop",
+    "inkwell-tavern",
+    "barley-mow"
+   ],
+   "seasons": [],
+   "source": "inferred"
+  },
+  {
+   "id": "fish-stew",
+   "name": "Quay stew",
+   "kind": "dish",
+   "summary": "Whatever the boats brought, stewed with onions and eaten with barley bread.",
+   "places": [
+    "quay-cookshop",
+    "fish-steps"
+   ],
+   "seasons": [],
+   "source": "inferred"
+  },
+  {
+   "id": "siege-loaf",
+   "name": "Siege loaf",
+   "kind": "dish",
+   "summary": "A hard, dark ration loaf baked on Relief Day; old people eat it in silence.",
+   "places": [
+    "relief-bread-hall",
+    "gable-bakery"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "oatcakes-buttermilk",
+   "name": "Oatcakes and buttermilk",
+   "kind": "dish",
+   "summary": "The farm breakfast from the Marsh Fields.",
+   "places": [
+    "dairy-house",
+    "cattle-fair-ground"
+   ],
+   "seasons": [],
+   "source": "inferred"
+  },
+  {
+   "id": "barley-ale",
+   "name": "Barley ale",
+   "kind": "drink",
+   "summary": "Brewed from island barley, brown and plain; every district argues whose is best.",
+   "places": [
+    "barley-mow",
+    "crooked-joint",
+    "drowned-lantern"
+   ],
+   "seasons": [],
+   "source": "inferred"
+  },
+  {
+   "id": "ruestrian-red",
+   "name": "Ruestrian red",
+   "kind": "drink",
+   "summary": "Imported wine, cheap on the wharf and dear on the Rafts.",
+   "places": [
+    "ruestrian-cookhouse",
+    "gilded-ledger"
+   ],
+   "seasons": [],
+   "source": "inferred"
+  },
+  {
+   "id": "plum-brandy",
+   "name": "Plum brandy",
+   "kind": "drink",
+   "summary": "The naval officers' drink, carried in flasks on watch.",
+   "places": [
+    "powder-and-plum"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "inferred"
+  },
+  {
+   "id": "saying-chryseon",
+   "name": "\"By Chryseon's scale\"",
+   "kind": "saying",
+   "summary": "An oath sworn on deals and bets; Chryseon's name is spoken whenever coin is weighed.",
+   "places": [],
+   "seasons": [],
+   "source": "wiki"
+  },
+  {
+   "id": "saying-sooner",
+   "name": "\"Ships that arrive sooner arrive richer\"",
+   "kind": "saying",
+   "summary": "Eadric Wyrmscraft's line, now said about anything done promptly.",
+   "places": [],
+   "seasons": [],
+   "source": "wiki"
+  },
+  {
+   "id": "saying-bread",
+   "name": "\"The Crown brought soldiers; the Republic brought bread\"",
+   "kind": "saying",
+   "summary": "Republican slogan from the siege; in the Lower Stairs it is usually said with a twist.",
+   "places": [],
+   "seasons": [],
+   "source": "wiki"
+  },
+  {
+   "id": "saying-unseen",
+   "name": "\"Budget for the unseen\"",
+   "kind": "saying",
+   "summary": "The builders' rule, after the oak piles under every house, used for any careful planning.",
+   "places": [],
+   "seasons": [],
+   "source": "wiki"
+  },
+  {
+   "id": "saying-crown",
+   "name": "\"What sank may yet rise\"",
+   "kind": "saying",
+   "summary": "A royalist whisper, from Captain Sterling's history of the Crown beneath the waves.",
+   "places": [
+    "blue-cloth",
+    "crowned-horse"
+   ],
+   "seasons": [],
+   "source": "wiki"
+  },
+  {
+   "id": "custom-settling-marks",
+   "name": "Settling marks",
+   "kind": "custom",
+   "summary": "Every house corner carries chalk and chisel marks from the yearly settling survey; people read them like ages.",
+   "places": [],
+   "seasons": [],
+   "source": "wiki"
+  },
+  {
+   "id": "custom-colours",
+   "name": "White and yellow",
+   "kind": "custom",
+   "summary": "The Republic's colours. A crowned horse on blue cloth is the old royal sign and is not shown openly.",
+   "places": [],
+   "seasons": [],
+   "source": "wiki"
+  },
+  {
+   "id": "custom-signal-reading",
+   "name": "Reading the flags",
+   "kind": "custom",
+   "summary": "Harbour children and idle clerks try to read the signal tower's flags before the news reaches the Exchange.",
+   "places": [
+    "signal-tower",
+    "insurers-exchange"
+   ],
+   "seasons": [],
+   "source": "inferred"
+  },
+  {
+   "id": "custom-fire-rules",
+   "name": "Fire rules",
+   "kind": "custom",
+   "summary": "Guild rules on chimneys, ovens and candles; neighbours report each other to the fire-watch without shame.",
+   "places": [
+    "firewatch-tower"
+   ],
+   "seasons": [],
+   "source": "inferred"
+  },
+  {
+   "id": "team-longbow-companies",
+   "name": "District longbow companies",
+   "kind": "team",
+   "summary": "Militia archers wear their district's ribbon and the Longbow Fair settles a year of boasting.",
+   "places": [
+    "archery-butts"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "source": "inferred"
+  }
+ ],
+ "prices": [
+  {
+   "id": "ale",
+   "item": "Mug of barley ale",
+   "low": 0.03,
+   "high": 0.05,
+   "per": "",
+   "source": "inferred"
+  },
+  {
+   "id": "wine",
+   "item": "Cup of Ruestrian red",
+   "low": 0.08,
+   "high": 0.2,
+   "per": "",
+   "source": "inferred"
+  },
+  {
+   "id": "pie",
+   "item": "Beef and barley pie",
+   "low": 0.04,
+   "high": 0.06,
+   "per": "",
+   "source": "inferred"
+  },
+  {
+   "id": "meal",
+   "item": "Tavern supper",
+   "low": 0.15,
+   "high": 0.3,
+   "per": "a meal",
+   "source": "inferred"
+  },
+  {
+   "id": "fine-dinner",
+   "item": "Dinner at the Gilded Ledger",
+   "low": 3,
+   "high": 8,
+   "per": "a person",
+   "source": "inferred"
+  },
+  {
+   "id": "bread",
+   "item": "Barley loaf",
+   "low": 0.01,
+   "high": 0.02,
+   "per": "",
+   "source": "inferred"
+  },
+  {
+   "id": "coffee",
+   "item": "Cup of coffee",
+   "low": 0.05,
+   "high": 0.1,
+   "per": "",
+   "source": "inferred"
+  },
+  {
+   "id": "wherry",
+   "item": "Wherry across the harbour",
+   "low": 0.02,
+   "high": 0.05,
+   "per": "one way",
+   "source": "inferred"
+  },
+  {
+   "id": "arrows",
+   "item": "A dozen arrows at the butts",
+   "low": 0.05,
+   "high": 0.1,
+   "per": "",
+   "source": "inferred"
+  },
+  {
+   "id": "chart",
+   "item": "Copied coastal chart",
+   "low": 2,
+   "high": 6,
+   "per": "",
+   "source": "inferred"
+  },
+  {
+   "id": "dockhand-wage",
+   "item": "Dockhand's day wage",
+   "low": 0.3,
+   "high": 0.5,
+   "per": "a day",
+   "source": "inferred"
+  },
+  {
+   "id": "baths",
+   "item": "Bathhouse entry",
+   "low": 0.03,
+   "high": 0.06,
+   "per": "",
+   "source": "inferred"
+  },
+  {
+   "id": "inn-room",
+   "item": "Room at an inn",
+   "low": 0.4,
+   "high": 1.2,
+   "per": "a night",
+   "source": "inferred"
+  }
+ ],
+ "calendar": "none",
+ "holidays": [
+  {
+   "id": "republic-day",
+   "name": "Republic Day",
+   "kind": "public",
+   "month": 9,
+   "day": 14,
+   "summary": "The founding of the Republic, with white and yellow banners, speeches at the Two Houses and the Raft Gardens opened to all."
+  },
+  {
+   "id": "relief-day",
+   "name": "Relief Day",
+   "kind": "observance",
+   "month": 3,
+   "day": 2,
+   "summary": "The day Republican grain reached the besieged city; bread is handed out at the Relief Hall."
+  },
+  {
+   "id": "fall-day",
+   "name": "Fall Day",
+   "kind": "observance",
+   "month": 1,
+   "day": 1,
+   "summary": "New year of the A.F. reckoning, counted from the Fall of Atlantis; lanterns are set on the water for drowned cities."
+  },
+  {
+   "id": "blessing-of-the-fleet",
+   "name": "Thalassar's Blessing",
+   "kind": "feast",
+   "month": 4,
+   "weekday": 6,
+   "nth": 1,
+   "summary": "The shipping season opens: priests of Thalassar bless the convoys and the whole harbour turns out."
+  },
+  {
+   "id": "contract-day",
+   "name": "Nomion's Day",
+   "kind": "public",
+   "month": 6,
+   "day": 1,
+   "summary": "Leases, apprenticeships and yearly contracts renew; queues at the Temple of Nomion all day."
+  },
+  {
+   "id": "chryseons-night",
+   "name": "Chryseon's Night",
+   "kind": "feast",
+   "month": 12,
+   "day": 31,
+   "summary": "A coin is weighed and given away for luck in the coming year; counting houses close early."
+  },
+  {
+   "id": "harbour-day",
+   "name": "Harbour Day",
+   "kind": "feast",
+   "month": 7,
+   "day": 20,
+   "summary": "Old Gran Porte's founding: boat races, fish suppers on Aelfred's Quay. Royalists drink to Aelfred, Republicans to the harbour."
+  },
+  {
+   "id": "ash-day",
+   "name": "Ash Day",
+   "kind": "observance",
+   "month": 10,
+   "day": 9,
+   "summary": "Remembering the last great fire; every fire-watch bell rings at noon and hearths are inspected."
+  },
+  {
+   "id": "sol-midsummer",
+   "name": "Sol's Midsummer",
+   "kind": "observance",
+   "month": 6,
+   "day": 21,
+   "summary": "The faithful of Sol Eternel keep a dawn rite at the Strangers' Wharf chapel."
+  },
+  {
+   "id": "kings-fall",
+   "name": "The Lowered Banner",
+   "kind": "observance",
+   "month": 9,
+   "day": 11,
+   "summary": "The anniversary of King Alrdric's death, kept only by royalists with bread crusts and quiet toasts."
+  }
+ ],
+ "notables": [
+  {
+   "id": "edgar-grandeholm",
+   "name": "Edgar Grandeholm",
+   "given": "Edgar",
+   "pronouns": "he/him",
+   "age": 56,
+   "place": "grandeholm-tower",
+   "role": "Merchant Lord of Grandport",
+   "staff": true,
+   "temperament": "shrewd",
+   "about": "Founder of the Merchant Circle and its richest man: large, silk-clad, rings on nearly every finger. He rules contracts, insurance and harbour policy from the upper chambers of his tower and believes only in leverage.",
+   "source": "wiki"
+  },
+  {
+   "id": "aldous-thorne",
+   "name": "Aldous Thorne",
+   "given": "Aldous",
+   "pronouns": "he/him",
+   "age": 64,
+   "place": "merchant-circle-hall",
+   "role": "Magister of the Merchant Circle",
+   "staff": false,
+   "temperament": "principled",
+   "about": "Author of The Ledger of Liberty and the Republic's idealist: austere dark wools, silver beard, sharp grey eyes. Led the militia in the siege and now patrons navigators and scholars.",
+   "source": "wiki"
+  },
+  {
+   "id": "horatio-horne",
+   "name": "Horatio Horne",
+   "given": "Horatio",
+   "pronouns": "he/him",
+   "age": 51,
+   "place": "admiralty-fortress",
+   "role": "Admiral of the Republic",
+   "staff": true,
+   "temperament": "blunt",
+   "about": "The Merchant Circle founder who brought the ships: broad, copper-red hair and beard, gold-trimmed dark coats. Royalists call him a turncoat; he talks of hulls, powder and tides.",
+   "source": "wiki"
+  },
+  {
+   "id": "eadric-wyrmscraft",
+   "name": "Eadric Wyrmscraft",
+   "given": "Eadric",
+   "pronouns": "he/him",
+   "age": 22,
+   "place": "chart-house",
+   "role": "cartographer of the Republic",
+   "staff": true,
+   "temperament": "confident",
+   "about": "A shipwright's son who rebuilt an Atlantean sextant and bounded the longitude problem; sharp, arrogant and usually right. Finishing his great book of the geography of Neokosmos.",
+   "source": "wiki"
+  },
+  {
+   "id": "aelric-stillhand",
+   "name": "Aelric Stillhand",
+   "given": "Aelric",
+   "pronouns": "he/him",
+   "age": 46,
+   "place": "sol-chapel",
+   "role": "merchant and missionary of Sol Eternel",
+   "staff": false,
+   "temperament": "gentle",
+   "about": "Alnhaman trader turned missionary, captain of the Sunnlad: thinning hair, broad bearded face, light blue eyes that listen. Keeps careful accounts of every faith he meets.",
+   "source": "wiki"
+  },
+  {
+   "id": "ceolmund",
+   "name": "Ceolmund",
+   "pronouns": "he/him",
+   "age": 48,
+   "place": "grand-quay",
+   "role": "trader",
+   "staff": false,
+   "temperament": "steady",
+   "about": "A calm, honest trader known in many ports: stocky, salt-and-pepper beard, warm hazel eyes, dark overcoat and a ledger always to hand. Settles crew quarrels with a few measured words.",
+   "source": "wiki"
+  },
+  {
+   "id": "ceolwynn",
+   "name": "Ceolwynn",
+   "pronouns": "she/her",
+   "age": 20,
+   "place": "drowned-lantern",
+   "role": "hurdy-gurdy player",
+   "staff": false,
+   "temperament": "shy",
+   "about": "Ceolmund's quiet daughter, petite with soft brown eyes and her mother's pendant. Says little; her hurdy-gurdy says the rest, and sailors swear it steadies a whole room.",
+   "source": "wiki"
+  },
+  {
+   "id": "freydis",
+   "name": "Freydis",
+   "pronouns": "she/her",
+   "age": 26,
+   "place": "insurers-exchange",
+   "role": "merchant guild clerk",
+   "staff": false,
+   "temperament": "bold",
+   "about": "Tall and athletic, black-dyed bob, icy blue eyes; an orphan raised by the merchant guild. Quick, funny and somehow a slightly different person each time you meet her.",
+   "source": "wiki"
+  },
+  {
+   "id": "ophir",
+   "name": "Ophir",
+   "pronouns": "she/her",
+   "age": 29,
+   "place": "dancers-hall",
+   "role": "dancer",
+   "staff": true,
+   "temperament": "charming",
+   "about": "A former noblewoman turned dancer: tall, sun-tanned, long black hair, light blue eyes, white silk trimmed in gold. Every smile is calculated; she means to be powerful again.",
+   "source": "wiki"
+  }
+ ],
+ "water": [
+  {
+   "kind": "sea",
+   "name": "Sea of Neokosmos",
+   "side": "south"
+  },
+  {
+   "kind": "river",
+   "name": "The estuary",
+   "width_km": 0.5,
+   "points": [
+    [
+     38.748,
+     -27.192
+    ],
+    [
+     38.733,
+     -27.204
+    ],
+    [
+     38.722,
+     -27.215
+    ],
+    [
+     38.712,
+     -27.226
+    ]
+   ]
+  }
+ ]
+}

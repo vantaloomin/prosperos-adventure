@@ -1,0 +1,26 @@
+{
+  "about": "Rough patches (dungeon/life/rough_patches.py): what the user writes that accepts the companion's apology when the companion was the one at fault. Matched like the apologies.",
+  "phrases": [
+    "it's okay", "it's ok", "its okay", "it's fine", "it's alright", "it's all right", "that's okay", "that's ok",
+    "that's alright", "that's fine", "don't worry about it", "dont worry about it", "no worries", "all good",
+    "it's all good", "we're good", "we're okay", "we're fine", "we're cool", "i forgive you", "you're forgiven",
+    "apology accepted", "i accept your apology", "thank you for apologizing", "thank you for apologising",
+    "thanks for apologizing", "thanks for apologising", "thanks for saying sorry", "i appreciate the apology",
+    "i appreciate you saying that", "water under the bridge", "forget about it", "let's forget it",
+    "let's move on", "let's just move on", "let's put it behind us", "it's behind us", "i'm over it",
+    "i'm not mad", "i'm not mad anymore", "i'm not upset", "i'm not upset anymore", "i was never mad",
+    "i understand", "i get it", "i totally get it", "things happen", "stuff happens", "life happens",
+    "it happens", "these things happen", "work comes first sometimes", "you can make it up to me",
+    "make it up to me", "next time then", "we'll do it another time", "we can reschedule", "let's reschedule",
+    "rain check", "raincheck", "another time then", "no harm done", "no big deal", "not a big deal",
+    "it's not a big deal", "don't sweat it", "no stress", "it's really okay", "honestly it's fine",
+    "really, it's fine", "you're fine", "you're good", "all is forgiven", "already forgotten", "already forgiven",
+    "consider it forgotten", "i know you didn't mean it", "i know you're sorry", "i believe you",
+    "thank you for telling me", "i'm glad you told me", "hugs you", "we're square", "i can't stay mad at you",
+    "how could i stay mad at you", "i'll let it slide", "i'll let it go", "let's let it go", "ok i forgive you",
+    "okay i forgive you", "i forgive you this time", "you're off the hook", "just glad you're okay",
+    "glad you're okay", "hope everything's okay", "hope everything is okay", "go take care of it",
+    "family comes first", "i'd have done the same", "no need to apologize", "no need to apologise",
+    "you don't need to apologize", "you don't need to apologise"
+  ]
+}

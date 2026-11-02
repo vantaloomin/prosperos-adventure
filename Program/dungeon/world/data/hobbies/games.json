@@ -1,0 +1,3089 @@
+{
+ "kind": "games",
+ "milestones": [
+  {
+   "text": "spent their first proper evening on {hobby} and lost track of the hour",
+   "post": "Looked up and it was dark. Good sign, I think.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned the basics of {hobby} from a very patient friend",
+   "post": "Thank you for your patience. I will need more of it.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "set aside an evening for {hobby} and actually kept to it",
+   "post": "Said I would, and I did. Small victory.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished their first real session of {hobby} wanting another straight away",
+   "post": "One more. Then bed. Probably.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "cleared a corner at home that is now, officially, for {hobby}",
+   "post": "This corner belongs to the game now.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made it through a whole first week of {hobby} without giving up",
+   "post": "One week in. Still here.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made time for {hobby} three evenings in a row",
+   "post": "Three nights running. I may have a habit.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stopped needing to ask how {hobby} works and just got on with it",
+   "post": "No questions tonight. Just playing.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had their first evening of {hobby} where everything seemed to click",
+   "post": "Tonight it all made sense. Saving this feeling.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "talked a friend into trying {hobby}",
+   "post": "Recruited one. The movement grows.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "caught themselves thinking about {hobby} on the walk home",
+   "post": "Still turning it over in my head. Cannot stop.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found a regular time for {hobby} and stuck to it for a month",
+   "post": "A month of the same night, same time. Ritual.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "surprised an old hand at {hobby} with how far they had come",
+   "post": "Got a raised eyebrow from a veteran. I will take it.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "realised they now have strong opinions about {hobby}",
+   "post": "I have opinions now. Strong ones. Ask me.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent a whole rainy day on {hobby} and called it well spent",
+   "post": "Rain all day. Did not mind one bit.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started keeping a little notebook of what works in {hobby}",
+   "post": "Taking notes now. Very serious business.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "explained a finer point of {hobby} to a newcomer without fumbling",
+   "post": "Heard myself explaining it and sounded like I knew.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "taught a friend {hobby} from scratch over a few evenings",
+   "post": "My first student. Proud teacher moment.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "marked a full year of {hobby} with a long evening of it",
+   "post": "One year. Celebrated the only way that made sense.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "became the go-to for {hobby} questions among friends",
+   "post": "Apparently I am the one to ask now. Odd.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept a weekly {hobby} evening going for a whole season",
+   "post": "A whole season of Thursdays. Nobody missed one.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got a sincere compliment about {hobby} from someone who has done it for decades",
+   "post": "Decades of experience said well done. I am glowing.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had their best night of {hobby} ever, and knew it while it was happening",
+   "post": "Best night yet. I knew it halfway through.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "hosted an evening of {hobby} that people still talk about",
+   "post": "They are still talking about it. So am I.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "looked back at their first weeks of {hobby} and laughed at how far they had come",
+   "post": "Remember when I was terrible? I do. Fondly.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started their own {hobby} group and kept it going for a year",
+   "post": "A year of our little group. Did not see that coming.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to help run a small {hobby} contest",
+   "post": "Running the contest now, not just losing it.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "lost their first proper game of {hobby} and laughed about it",
+   "post": "Lost. Badly. Had a lovely time.",
+   "level": 0,
+   "for": [
+    "chess",
+    "go",
+    "board-games",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won their first game of {hobby} against someone who was really trying",
+   "post": "An honest win. No mercy given. I won anyway.",
+   "level": 1,
+   "for": [
+    "chess",
+    "go",
+    "board-games",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won three games of {hobby} in a row on one evening",
+   "post": "Three in a row. I am trying to stay humble.",
+   "level": 2,
+   "for": [
+    "chess",
+    "go",
+    "board-games",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won a game against the best player around, once",
+   "post": "Once. Just once. It counts forever.",
+   "level": 3,
+   "for": [
+    "chess",
+    "go",
+    "board-games",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won a small {hobby} tournament outright",
+   "post": "First place. I keep looking at it.",
+   "level": 4,
+   "for": [
+    "chess",
+    "go",
+    "board-games",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned how the knight moves and immediately lost one",
+   "post": "The horse goes in an L. Mine went straight off the board.",
+   "level": 0,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "set up a chessboard correctly on the first try, white square on the right",
+   "post": "White on the right. Queen on colour. Got it.",
+   "level": 0,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a full game of chess without forgetting how a piece moves",
+   "post": "Every piece moved legally. A personal best.",
+   "level": 0,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "pulled off their first checkmate with a rook and king",
+   "post": "King and rook, slow and sure. Mate.",
+   "level": 1,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stopped losing their queen in the first ten moves",
+   "post": "Queen survived the opening. Big day for the queen.",
+   "level": 1,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned a proper opening and played it all evening",
+   "post": "I have an opening now. It has a name and everything.",
+   "level": 2,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spotted a fork two moves before it happened",
+   "post": "Saw it coming. Forked them first.",
+   "level": 2,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a whole game of chess blindfolded for fun, and lost gracefully",
+   "post": "Played without looking. Lost. Still impressive, I say.",
+   "level": 3,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "beat the oldest regular at the chess club",
+   "post": "Beat the club's longest member. The handshake was firm.",
+   "level": 3,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played six people at once at the chess club and won four",
+   "post": "Six boards, one of me. Four wins.",
+   "level": 4,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "drew a game of chess against a visiting master",
+   "post": "A draw with a master. I will be telling this for years.",
+   "level": 4,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "solved their first chess puzzle book chapter without peeking",
+   "post": "No peeking at the answers. Almost no peeking.",
+   "level": 1,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played their first chess game online against a stranger abroad",
+   "post": "Played someone on the other side of the world. Lost, politely.",
+   "level": 2,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "reached a respectable online chess rating",
+   "post": "The number went up. I am pretending not to care.",
+   "level": 3,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played chess by letter with a distant friend, one move a week",
+   "post": "Move fourteen came in the post today. Plotting.",
+   "level": 1,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "victorian",
+    "jazz-age",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "won a game of chess at the castle hall in front of a small crowd",
+   "post": "Watchers all round. Won anyway.",
+   "level": 2,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to play chess with the lord of the manor and held their own",
+   "post": "Played the lord. Did not lose too quickly.",
+   "level": 3,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned chess from an old soldier at the inn",
+   "post": "Taught by a veteran. Moves explained very loudly.",
+   "level": 0,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "won the chess prize at the harvest fair",
+   "post": "A ribbon for chess. Hanging it by the board.",
+   "level": 4,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "entered their first rated chess tournament and finished in the top ten",
+   "post": "Top ten. My knees are still shaking.",
+   "level": 4,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played chess against a clockwork automaton and lost in eight moves",
+   "post": "Beaten by gears. Eight moves. Respect.",
+   "level": 0,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "text": "held their own at the chess table in a busy coffee house",
+   "post": "Coffee house chess. Held my ground.",
+   "level": 2,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "victorian",
+    "jazz-age",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "won the chess ladder at their club for a month",
+   "post": "Top of the ladder. For now.",
+   "level": 3,
+   "for": [
+    "chess"
+   ],
+   "eras": [
+    "victorian",
+    "jazz-age",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "played their first game of go on a small nine-by-nine board",
+   "post": "Small board, big confusion. Loved it.",
+   "level": 0,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned what an eye is in go and why it matters",
+   "post": "Two eyes and the group lives. Who knew.",
+   "level": 0,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept a group alive in go for the first time",
+   "post": "My stones lived. Every one of them.",
+   "level": 1,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "moved up to the full nineteen-by-nineteen go board",
+   "post": "Big board now. So many places to be wrong.",
+   "level": 1,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won a go game by more than ten points",
+   "post": "Ten points ahead. I counted twice.",
+   "level": 2,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "started reviewing their own go games afterwards",
+   "post": "Replayed my game move by move. Found my mistakes. All of them.",
+   "level": 2,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "earned their first official go rank at the club",
+   "post": "I have a rank now. A real one.",
+   "level": 3,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played go against a visiting player from Seoul and held on",
+   "post": "Lost by a little to someone very good. Delighted.",
+   "level": 3,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won their division at a regional go tournament",
+   "post": "Division winner. Still processing.",
+   "level": 4,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "reached single-digit kyu in go",
+   "post": "Single digits. Years of stones for this.",
+   "level": 4,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "finished a whole book of go life-and-death problems",
+   "post": "Every problem in the book done. Some twice.",
+   "level": 1,
+   "for": [
+    "go"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "went to their first board game night and learned four new games",
+   "post": "Four new games. My brain is full.",
+   "level": 0,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "read a rulebook cover to cover before game night",
+   "post": "I read the whole rulebook. Ask me anything.",
+   "level": 0,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won their first game at board game night",
+   "post": "First win at game night. They were not ready.",
+   "level": 1,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "bought their first big box game and taught it to friends",
+   "post": "My own game. Taught it badly. Still fun.",
+   "level": 1,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "ran their first tabletop role-playing session for a few friends",
+   "post": "I ran the game. Nobody wandered off. Success.",
+   "level": 2,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned a famously long strategy game and finished it in one evening",
+   "post": "Four hours, one game, zero regrets.",
+   "level": 2,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "became the person who explains the rules at game night",
+   "post": "Rules person now. It is a sacred duty.",
+   "level": 3,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept a role-playing campaign going for a whole year",
+   "post": "One year of the same story. Our heroes live.",
+   "level": 3,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "designed a small board game of their own and friends asked to play it again",
+   "post": "They asked for a rematch. Of my game. My game.",
+   "level": 4,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won the café's seasonal board game league",
+   "post": "League champion. The café gave me a tiny trophy.",
+   "level": 4,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "stopped checking the rulebook every turn",
+   "post": "Whole game, no rulebook. Growth.",
+   "level": 1,
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to shuffle without spraying the deck across the floor",
+   "post": "The cards stayed in my hands. Mostly.",
+   "level": 0,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "learned the rules of whist from a kind neighbour",
+   "post": "Whist. Learned it. Lost every trick. Very nice evening.",
+   "level": 0,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "kept count of trumps through an entire hand",
+   "post": "Counted every trump. Felt like a detective.",
+   "level": 1,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "won their first hand of cribbage, pegs and all",
+   "post": "Moved my peg home first. Tiny triumph.",
+   "level": 1,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to riffle shuffle and bridge the cards back together",
+   "post": "The cascade shuffle. I have been practising for weeks.",
+   "level": 2,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "partnered well enough at cards that nobody sighed",
+   "post": "My partner did not sigh once. Huge.",
+   "level": 2,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "won the evening at the card club two weeks running",
+   "post": "Two weeks on top. The club is suspicious.",
+   "level": 3,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "taught a table of newcomers a card game and kept them laughing",
+   "post": "Taught a whole table. Everyone stayed.",
+   "level": 3,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "won the card club's season trophy",
+   "post": "Season trophy. The deck is retiring with honours.",
+   "level": 4,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "made a grand slam at bridge, all thirteen tricks",
+   "post": "All thirteen tricks. I need to sit down.",
+   "level": 4,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "modern"
+   ]
+  },
+  {
+   "text": "won a hand of poker on nerve alone at the saloon table, for matchsticks",
+   "post": "Nothing in my hand. Won the matchsticks anyway.",
+   "level": 2,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "frontier"
+   ]
+  },
+  {
+   "text": "held their own at a friendly card game on a long stagecoach ride",
+   "post": "Cards across three bumpy states. Won two games.",
+   "level": 1,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "frontier"
+   ]
+  },
+  {
+   "text": "was invited to make up a fourth at the parlour bridge table",
+   "post": "Asked to make a fourth. I have arrived.",
+   "level": 3,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "played cards on an airship deck without losing a single card to the wind",
+   "post": "Fifty-two cards, one airship, no losses.",
+   "level": 1,
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "steampunk"
+   ]
+  },
+  {
+   "text": "finished their first newspaper crossword, with a few guesses",
+   "post": "Every square filled. Some of them correctly.",
+   "level": 0,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "got their first crossword answer without any letters crossing it",
+   "post": "Got one cold. No help. I felt clever.",
+   "level": 0,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished the weekday crossword three days running",
+   "post": "Three in a row. Breakfast has a purpose now.",
+   "level": 1,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "started doing the crossword in pen",
+   "post": "Pen now. No going back.",
+   "level": 1,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "solved their first cryptic clue and understood why",
+   "post": "A cryptic clue, solved and understood. Big morning.",
+   "level": 2,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished the Saturday crossword before lunch",
+   "post": "Saturday puzzle done before noon. Unheard of.",
+   "level": 2,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished a whole cryptic crossword without a single hint",
+   "post": "A full cryptic. No hints. I might frame it.",
+   "level": 3,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "wrote a small crossword of their own for a friend",
+   "post": "Made a crossword. My friend solved it. Mostly.",
+   "level": 3,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "had a crossword they wrote printed in the local paper",
+   "post": "My puzzle is in the paper. In print.",
+   "level": 4,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "placed in the top ten at a crossword contest",
+   "post": "Top ten. Fastest pencil in the room. Nearly.",
+   "level": 4,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "kept up with the crossword craze all season and won a dictionary prize",
+   "post": "Won a dictionary. Most fitting prize ever.",
+   "level": 2,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished the daily crossword before their coffee went cold, timing it on the phone",
+   "post": "Beat the coffee. Timer says so.",
+   "level": 1,
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "finished their first 500-piece jigsaw, missing one piece",
+   "post": "499 pieces. The last one is out there somewhere.",
+   "level": 0,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "did all the edge pieces of a jigsaw first, like the experts say",
+   "post": "Edges done. Middle is a mystery.",
+   "level": 0,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished a 1,000-piece jigsaw in a single weekend",
+   "post": "A thousand pieces. One weekend. Sore neck.",
+   "level": 1,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "sorted a whole jigsaw by colour before starting, and it worked",
+   "post": "Sorted into piles. It worked. I am a convert.",
+   "level": 1,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished a jigsaw of nothing but sky",
+   "post": "All sky. Every piece blue. Done.",
+   "level": 2,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "glued and framed a finished jigsaw for the wall",
+   "post": "Glued it down. Hung it up. Admire it.",
+   "level": 2,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished a 2,000-piece jigsaw on the dining table over a month",
+   "post": "Two thousand pieces. We ate in the kitchen for a month.",
+   "level": 3,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "started a jigsaw swap with neighbours",
+   "post": "Swapped puzzles with the street. Fresh boxes for all.",
+   "level": 3,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished a 5,000-piece jigsaw, every piece accounted for",
+   "post": "Five thousand. Every one. I need a lie down.",
+   "level": 4,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "came second at a timed jigsaw contest",
+   "post": "Second place at speed jigsaws. My hands are a blur.",
+   "level": 4,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished a wooden jigsaw cut by hand, the old-fashioned kind",
+   "post": "Hand-cut wooden puzzle. Every piece a little treasure.",
+   "level": 1,
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "hit the dartboard with every dart for a whole evening",
+   "post": "Every dart hit the board. The wall is safe.",
+   "level": 0,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "learned how to keep score at darts",
+   "post": "Subtracting under pressure. Harder than the throwing.",
+   "level": 0,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "hit their first double to finish a game of darts",
+   "post": "Double sixteen to finish. Heard myself cheer.",
+   "level": 1,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "bought their own set of darts",
+   "post": "My own darts. They feel like mine already.",
+   "level": 1,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "hit their first treble twenty",
+   "post": "Treble twenty. Just the one. Still counts.",
+   "level": 2,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "joined the pub darts team as a reserve",
+   "post": "Reserve for the pub team. Ready when called.",
+   "level": 2,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "threw a hundred with three darts",
+   "post": "A ton. Three darts. The pub went quiet, then loud.",
+   "level": 3,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "won a deciding leg for the pub darts team",
+   "post": "Won the deciding leg. Team bought me a lemonade.",
+   "level": 3,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "hit a 180 on league night",
+   "post": "One hundred and eighty. Three in the treble.",
+   "level": 4,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "won the pub's annual darts cup",
+   "post": "Darts cup winner. Name on the board for a year.",
+   "level": 4,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished a game of darts on the bull",
+   "post": "Out on the bull. Felt like a film.",
+   "level": 2,
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "potted their first ball on purpose",
+   "post": "Meant to do that. Honestly.",
+   "level": 0,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "learned to hold a cue without the bridge collapsing",
+   "post": "Hand bridge held firm. Shots still wobbly.",
+   "level": 0,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "cleared three balls in a row at the pool table",
+   "post": "Three in a row. Kept my head down.",
+   "level": 1,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "stopped scratching the cue ball into the pocket",
+   "post": "Cue ball stayed on the table all night.",
+   "level": 1,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "made their first bank shot and called it beforehand",
+   "post": "Called it. Banked it. Cannot stop smiling.",
+   "level": 2,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "learned to put backspin on the cue ball",
+   "post": "Backspin works. The ball came back like a dog.",
+   "level": 2,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "ran the table at pool for the first time",
+   "post": "Ran the table. Every ball. Me.",
+   "level": 3,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "held the table for a whole evening against all comers",
+   "post": "Winner stays on. I stayed on.",
+   "level": 3,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "won the pool hall's monthly tournament",
+   "post": "Monthly champion. The cue gets a polish.",
+   "level": 4,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "made a century break at snooker",
+   "post": "A century. A hundred points, one visit.",
+   "level": 4,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "played billiards in the frontier hotel parlour and won a game",
+   "post": "A game won on the old felt table in town.",
+   "level": 1,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "frontier"
+   ]
+  },
+  {
+   "text": "held their own at the billiard table in a private members' club",
+   "post": "Played in the members' room. Was not thrown out.",
+   "level": 2,
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "learned the rules of nine men's morris from the innkeeper",
+   "post": "Nine pieces each. Lost all nine. Lovely evening.",
+   "level": 0,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "threw their first game of hazard at the tavern and lost a single copper",
+   "post": "One copper lost. Lesson learned. Cheap lesson.",
+   "level": 0,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "carved a little set of dice of their own from bone-white wood",
+   "post": "My own dice. They roll a bit crooked. I love them.",
+   "level": 0,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won their first game of tables against the miller",
+   "post": "Beat the miller at tables. The miller wants a rematch.",
+   "level": 1,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned hnefatafl and kept the king alive to the corner",
+   "post": "Got the king to the corner. Ran out of breath cheering.",
+   "level": 1,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won three games of merels in one night at the inn",
+   "post": "Three merels games. Three wins. The inn noticed.",
+   "level": 2,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to read the board at tables two moves ahead",
+   "post": "Saw two moves ahead. Like weather sense.",
+   "level": 2,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to teach the squire's children nine men's morris",
+   "post": "Taught the squire's little ones. They beat me once.",
+   "level": 3,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won the hnefatafl board as a prize at the market fair",
+   "post": "Won the board itself. Now it is mine.",
+   "level": 3,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won the midwinter games at the great hall",
+   "post": "Midwinter champion. The hall cheered.",
+   "level": 4,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "beat a travelling game-master at tables before the whole inn",
+   "post": "Beat the wanderer. Whole inn watched.",
+   "level": 4,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a game of dice against a talking raven, fair and square",
+   "post": "The raven says it was luck. It was skill.",
+   "level": 2,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "text": "played tables with pilgrims on the road and won a loaf",
+   "post": "Won a loaf of bread. Best prize yet.",
+   "level": 1,
+   "for": [
+    "dice"
+   ],
+   "eras": [
+    "medieval"
+   ]
+  },
+  {
+   "text": "won a first game against someone more experienced",
+   "post": "Beat someone better. Once.",
+   "level": 0,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned all the rules without asking twice",
+   "post": "Know the rules now. All of them.",
+   "level": 0,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "lost graciously and asked for a rematch",
+   "post": "Lost. Rematch booked.",
+   "level": 0,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "stopped making the same opening mistake",
+   "post": "Same mistake? Not anymore.",
+   "level": 0,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "played a whole evening of games",
+   "post": "A whole evening of games.",
+   "level": 0,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "kept score correctly for a whole night",
+   "post": "Kept the score. Nobody argued.",
+   "level": 0,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a game by careful play rather than luck",
+   "post": "Won it fair and square.",
+   "level": 0,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned a trick from watching an old hand",
+   "post": "Stole a trick by watching.",
+   "level": 0,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "set up a proper place to play at home",
+   "post": "A proper spot to play.",
+   "level": 0,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won three games in a row",
+   "post": "Three in a row!",
+   "level": 1,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "beat a friend who usually wins",
+   "post": "Beat the usual winner.",
+   "level": 1,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "saw through the other player's plan in time",
+   "post": "Saw it coming. Stopped it.",
+   "level": 1,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "played a long game without losing focus",
+   "post": "Long game, sharp all the way.",
+   "level": 1,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "came back from far behind to win",
+   "post": "From way behind to a win.",
+   "level": 1,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to make up the numbers at a table of good players",
+   "post": "Invited to the good table.",
+   "level": 1,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "kept a calm face through a whole tense game",
+   "post": "Poker face held.",
+   "level": 1,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned a classic strategy and used it well",
+   "post": "Classic move, used well.",
+   "level": 1,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a game with a move nobody saw coming",
+   "post": "Nobody saw it coming.",
+   "level": 1,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a small tournament in town",
+   "post": "Won the town tournament!",
+   "level": 2,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "beat a well-known local player",
+   "post": "Beat a local name.",
+   "level": 2,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "taught a newcomer to play and gained a friend",
+   "post": "Taught someone. Gained a friend.",
+   "level": 2,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "played the best game of their life so far",
+   "post": "Best game yet.",
+   "level": 2,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was given a nickname by the regulars",
+   "post": "The regulars have a name for me now.",
+   "level": 2,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "held their own at the best table in town",
+   "post": "Held my own at the top table.",
+   "level": 2,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a game that was talked about for days",
+   "post": "People are still talking about that one.",
+   "level": 2,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "went a whole season without a heavy loss",
+   "post": "No heavy losses all season.",
+   "level": 2,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won the town championship",
+   "post": "Town champion!",
+   "level": 3,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "beat a visiting champion",
+   "post": "Beat a visiting champion.",
+   "level": 3,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to settle a dispute about the rules",
+   "post": "Called in to settle the rules.",
+   "level": 3,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "played several opponents in one evening and lost to none",
+   "post": "Undefeated tonight.",
+   "level": 3,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a prize worth keeping",
+   "post": "A prize worth keeping.",
+   "level": 3,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a game retold around town for weeks",
+   "post": "Still being retold.",
+   "level": 3,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was challenged by players from the next town",
+   "post": "Challengers from the next town.",
+   "level": 3,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a long, close final",
+   "post": "Close final. Won.",
+   "level": 3,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won the regional championship",
+   "post": "Regional champion.",
+   "level": 4,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "beat the best player anyone in town had ever seen",
+   "post": "Beat the best anyone's seen.",
+   "level": 4,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was sought out by players travelling just for a game",
+   "post": "People travel to play me now.",
+   "level": 4,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "taught a student who went on to win too",
+   "post": "My student won too!",
+   "level": 4,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "played through a whole year unbeaten",
+   "post": "A whole year unbeaten.",
+   "level": 4,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "became the one to beat in town",
+   "post": "The one to beat. Me.",
+   "level": 4,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a famous game remembered for years",
+   "post": "One for the history books.",
+   "level": 4,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to teach the game to a grand family",
+   "post": "Teaching a grand family.",
+   "level": 4,
+   "for": [
+    "chess",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "finished a first game all the way through",
+   "post": "Credits rolled!",
+   "level": 0,
+   "for": [
+    "video-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "beat a boss after a whole evening of tries",
+   "post": "FINALLY.",
+   "level": 1,
+   "for": [
+    "video-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "finished a game on the hardest setting",
+   "post": "Hardest setting, beaten.",
+   "level": 2,
+   "for": [
+    "video-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "set a personal best speedrun time",
+   "post": "New personal best.",
+   "level": 3,
+   "for": [
+    "video-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "placed in an online tournament",
+   "post": "Placed in a tournament!",
+   "level": 4,
+   "for": [
+    "video-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "built a first deck of their own",
+   "post": "My first deck.",
+   "level": 0,
+   "for": [
+    "card-tcg"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won a first game at a card shop night",
+   "post": "First win at card night!",
+   "level": 1,
+   "for": [
+    "card-tcg"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "went undefeated at a local card night",
+   "post": "Undefeated tonight.",
+   "level": 2,
+   "for": [
+    "card-tcg"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "made the top eight at a regional tournament",
+   "post": "Top eight!",
+   "level": 3,
+   "for": [
+    "card-tcg"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "qualified for a national championship",
+   "post": "Qualified for nationals!",
+   "level": 4,
+   "for": [
+    "card-tcg"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "carried their own computer to a LAN party for the first time",
+   "post": "Carried the whole computer over. Worth it.",
+   "level": 0,
+   "for": [
+    "lan-parties"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "stayed up until sunrise at a LAN party",
+   "post": "Sunrise. Still playing.",
+   "level": 1,
+   "for": [
+    "lan-parties"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won the last round of the night at a LAN party",
+   "post": "Won the last round. Bragging until next time.",
+   "level": 2,
+   "for": [
+    "lan-parties"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "hosted a LAN party with every desk in the house full",
+   "post": "Every desk in the house taken. Hosting!",
+   "level": 3,
+   "for": [
+    "lan-parties"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "finished a whole song on the dance mat without failing",
+   "post": "Whole song. Did not fail!",
+   "level": 0,
+   "for": [
+    "dance-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "moved up a difficulty on the dance machine",
+   "post": "Up a difficulty. Feet flying.",
+   "level": 1,
+   "for": [
+    "dance-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "drew a small crowd at the arcade dance machine",
+   "post": "A little crowd watched me play.",
+   "level": 2,
+   "for": [
+    "dance-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got a perfect score on a hard song at the arcade",
+   "post": "Perfect score. Hard song. Shaking.",
+   "level": 3,
+   "for": [
+    "dance-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  }
+ ],
+ "sessions": [
+  {
+   "text": "Lost track of time completely.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Came home in a good mood about it.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Kept it light and had a laugh.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Stayed later than planned.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Thought about it all the way home.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Did not win much, but enjoyed every minute.",
+   "for": [
+    "chess",
+    "go",
+    "board-games",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Played the same opponent three times and it was close every time.",
+   "for": [
+    "chess",
+    "go",
+    "board-games",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Practised one thing over and over until it felt natural.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Ended the evening one game up.",
+   "for": [
+    "chess",
+    "go",
+    "board-games",
+    "cards",
+    "darts",
+    "billiards",
+    "dice"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Set the board up for tomorrow before bed.",
+   "for": [
+    "chess",
+    "go",
+    "dice"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Spent most of the evening on a single long game.",
+   "for": [
+    "chess",
+    "go",
+    "board-games"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Got stuck on one corner for an age, then it all fell into place.",
+   "for": [
+    "puzzles",
+    "crosswords"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Filled in the last answer with a satisfied tap of the pen.",
+   "for": [
+    "crosswords"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "Found three edge pieces that had been hiding under the box lid.",
+   "for": [
+    "puzzles"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "Worked on their grouping until the darts landed close together.",
+   "for": [
+    "darts"
+   ],
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "Practised long shots on an empty table.",
+   "for": [
+    "billiards"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ]
+  },
+  {
+   "text": "Played a few hands with whoever was around.",
+   "for": [
+    "cards"
+   ],
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ]
+  },
+  {
+   "text": "Learned a new game that someone brought along.",
+   "for": [
+    "board-games"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Rolled more sixes than anyone thought fair.",
+   "for": [
+    "dice",
+    "board-games"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Went over an old game move by move afterwards.",
+   "for": [
+    "chess",
+    "go"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Swapped tips with a regular between games.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  }
+ ]
+}

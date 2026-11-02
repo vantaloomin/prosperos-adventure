@@ -1,0 +1,102 @@
+{
+  "quests": [
+    {
+      "id": "the-stolen-sealskin",
+      "title": "Mairead's sealskin",
+      "known": true,
+      "days": 14,
+      "hook": "Mairead, a selkie sophomore, came back from a weekend at home to find the warded chest in her room open and her sealskin gone. Her hair has started to go brittle at the ends. She has been asking at Drothe's who buys books about selkies, and Drothe is not saying.",
+      "truth": "Evander Crane took the skin from its chest. Gideon Vale, the Crane steward, has been buying selkie-kin binding texts at Drothe's for four months, and there is an older skin already in the Crane collection on Crane Hill. Lucian Crane is untouchable; his steward is not. Aurelio at the Stag & Thistle knows a name, three beers in: look three lines down. Drothe remembers every buyer and sells that memory like any other book. Sealskin theft is sentenced like attempted murder.",
+      "missed": "Two weeks without her skin and Mairead could not keep warm or keep anything down. Her family came from the coast and took her home, and the Crane family sent flowers.",
+      "places": [
+        "drothes-bookery",
+        "crane-hill",
+        "stag-and-thistle",
+        "east-quad"
+      ]
+    },
+    {
+      "id": "the-loops-in-ironroot",
+      "title": "Recon loops in Ironroot",
+      "known": true,
+      "days": null,
+      "hook": "Someone has been running the same loop through Ironroot Woods every night for a week, out past the kept trails and back along the edge of the Verdant Grove. Lycans who run there say the scent is a bitten one, and not anybody's pack.",
+      "truth": "Silas Varn, a visiting bitten lycan, runs recon loops near the Grove because Rina Aldwyn walks there. Last spring he asked to tie her to a tree with her own vines and she said yes; his second question made her break free and run, and she has told nobody. He trains in a bitten-lycan combat lineage built to close space around smaller opponents. He wants a second chance at the tree, and he is patient.",
+      "missed": "",
+      "places": [
+        "ironroot-woods",
+        "verdant-grove",
+        "the-back-woods"
+      ]
+    },
+    {
+      "id": "the-spire-middle-floor",
+      "title": "The Velvet Spire's middle floor",
+      "known": false,
+      "days": 10,
+      "hook": "A sophomore woke on the riverwalk at dawn with two days missing, a Velvet Spire wristband on, and a bite healing on the inside of her thigh. Her roommate wants to know who did it.",
+      "truth": "The Velvet Spire runs feeding in its middle-floor booths without a facility licence, classed as an entertainment venue. A regular took too much in a booth and the staff walked her out the back rather than call Evermere. The owners know his name and need nobody to complain: one complaint to Haven PD's esoteric liaisons shuts the Spire down, and a lot of people would lose a lot.",
+      "missed": "The roommate filed a complaint on her own, without the name. Haven PD took a statement, the Spire closed for a week and reopened, and the girl transferred out.",
+      "places": [
+        "velvet-spire",
+        "riverwalk",
+        "evermere",
+        "warden-hall"
+      ]
+    }
+  ],
+  "dangers": [
+    {
+      "place": "ironroot-woods",
+      "action": "get through Ironroot Woods without crossing anyone who runs there",
+      "difficulty": "normal",
+      "threats": [
+        "A wolf the size of a pony stops on the trail ahead, looks at them a long moment, and goes.",
+        "A circle of witches in the clearing has warded it, and walking into the ward leaves them sick and dizzy for an hour.",
+        "Somebody's phone flashlight finds them where they did not want to be seen.",
+        {
+          "text": "A bitten lycan steps out of the trees, already shifted, and does not want company.",
+          "foe": {
+            "name": "bitten lycan",
+            "count": 1,
+            "vitality": 14,
+            "resolve": 14,
+            "weapon": 1,
+            "wants": "drive_off"
+          }
+        }
+      ]
+    },
+    {
+      "place": "the-back-woods",
+      "action": "find their way in the back woods and out again",
+      "difficulty": "hard",
+      "threats": [
+        "No signal, and the old stone wall they followed ends in a place they have never seen.",
+        "A hunting stand creaks overhead, and whoever is in it watched them all the way in.",
+        "A rolled ankle on a wet ledge: the walk out takes the rest of the light.",
+        {
+          "text": "Something feral that used to be someone comes out of the second growth, hungry.",
+          "foe": {
+            "name": "feral shifter",
+            "count": 1,
+            "vitality": 16,
+            "resolve": 16,
+            "weapon": 1,
+            "wants": "kill",
+            "srd52": "dire-wolf"
+          }
+        }
+      ]
+    },
+    {
+      "place": "old-cemetery",
+      "action": "keep their nerve in the old cemetery",
+      "difficulty": "normal",
+      "threats": [
+        "A headstone stands where there was none last week, and the name on it is half familiar.",
+        "Cold fingers on the back of the neck, and nobody there when they turn."
+      ]
+    }
+  ]
+}

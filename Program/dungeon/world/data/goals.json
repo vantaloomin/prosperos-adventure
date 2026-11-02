@@ -1,0 +1,1294 @@
+{
+ "about": "What townsfolk work toward (dungeon/world/townsfolk.py). text and period complete 'trying to ...' (period wording for towns before cars and phones); steps is how many good weeks it takes; practice is the place kind and part of day they go to work on it (see GOAL_KINDS), or null; progress and done lines start with {name}; interest is what a profile drafted from them lists; bio is their first-person line on a dating profile. Add goals freely; every id must be new.",
+ "goals": [
+  {
+   "id": "own-place",
+   "text": "save up to open a place of their own",
+   "period": "save enough to open a shop of their own",
+   "steps": 6,
+   "practice": null,
+   "progress": "{name} put another chunk of pay into the savings",
+   "done": "{name} finally signed for a little place of their own",
+   "interest": "saving up",
+   "bio": "Saving up to open a place of my own."
+  },
+  {
+   "id": "race",
+   "text": "run their first marathon",
+   "period": "walk the long road to the coast and back",
+   "steps": 5,
+   "practice": [
+    "park",
+    "morning"
+   ],
+   "progress": "{name} went further than ever on a long morning run",
+   "done": "{name} made it the whole way and has the blisters to prove it",
+   "interest": "running",
+   "bio": "Training for my first marathon."
+  },
+  {
+   "id": "band",
+   "text": "get their band a real gig",
+   "period": "get their troupe a proper engagement",
+   "steps": 5,
+   "practice": [
+    "venue",
+    "evening"
+   ],
+   "progress": "{name}'s band finally sounded tight at practice",
+   "done": "{name}'s band played its first real show",
+   "interest": "music",
+   "bio": "Trying to get my band a real gig."
+  },
+  {
+   "id": "exam",
+   "text": "pass a licensing exam",
+   "period": "earn their guild papers",
+   "steps": 4,
+   "practice": [
+    "library",
+    "evening"
+   ],
+   "progress": "{name} got through another chapter of study",
+   "done": "{name} passed, and can't stop grinning about it",
+   "interest": "studying",
+   "bio": "Studying for a licensing exam."
+  },
+  {
+   "id": "novel",
+   "text": "finish writing a novel",
+   "period": "finish the book they have been writing for years",
+   "steps": 7,
+   "practice": [
+    "cafe",
+    "morning"
+   ],
+   "progress": "{name} wrote another chapter",
+   "done": "{name} typed the last line of their novel",
+   "interest": "writing",
+   "bio": "Writing a novel, slowly."
+  },
+  {
+   "id": "reconcile",
+   "text": "patch things up with an estranged sibling",
+   "period": "make peace with a sibling they fell out with long ago",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} sent their sibling a message and got an answer",
+   "done": "{name} and their sibling are speaking again",
+   "interest": "family",
+   "bio": "Working on being a better sibling."
+  },
+  {
+   "id": "move",
+   "text": "save enough to move somewhere bigger",
+   "period": "save enough to take better rooms",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} went to see a place they might be able to afford",
+   "done": "{name} moved into a bigger place",
+   "interest": "apartment hunting",
+   "bio": "Saving for a bigger place."
+  },
+  {
+   "id": "language",
+   "text": "learn a new language before a big trip",
+   "period": "learn a foreign tongue",
+   "steps": 5,
+   "practice": [
+    "library",
+    "afternoon"
+   ],
+   "progress": "{name} got through a whole conversation in their new language",
+   "done": "{name} can finally hold their own in it",
+   "interest": "languages",
+   "bio": "Learning a new language before a big trip."
+  },
+  {
+   "id": "promotion",
+   "text": "get promoted",
+   "period": "be made head of the place they work",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} got trusted with something bigger at work",
+   "done": "{name} got the promotion",
+   "interest": "work",
+   "bio": "Aiming for a promotion this year."
+  },
+  {
+   "id": "art",
+   "text": "get their paintings into a show",
+   "period": "get their pictures hung in a proper gallery",
+   "steps": 5,
+   "practice": [
+    "park",
+    "afternoon"
+   ],
+   "progress": "{name} finished a painting they are actually proud of",
+   "done": "{name} has their work hanging in a show",
+   "interest": "painting",
+   "bio": "I paint, and I'd like a show one day."
+  },
+  {
+   "id": "dog",
+   "text": "adopt a dog",
+   "period": "take in a dog of their own",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} visited the shelter again and has a favorite",
+   "done": "{name} adopted a scruffy dog",
+   "interest": "dogs",
+   "bio": "Hoping to adopt a dog soon."
+  },
+  {
+   "id": "strong",
+   "text": "get properly strong",
+   "period": "win the strongman contest at the fair",
+   "steps": 5,
+   "practice": [
+    "gym",
+    "evening"
+   ],
+   "progress": "{name} hit a new personal best",
+   "done": "{name} did it, and won't stop talking about it",
+   "interest": "lifting",
+   "bio": "Getting properly strong at the gym."
+  },
+  {
+   "id": "side",
+   "text": "get a side business off the ground",
+   "period": "build up a little trade on the side",
+   "steps": 6,
+   "practice": null,
+   "progress": "{name} landed another paying customer on the side",
+   "done": "{name}'s side business is paying its own way now",
+   "interest": "their side business",
+   "bio": "Running a little business on the side."
+  },
+  {
+   "id": "swim",
+   "text": "learn to swim properly",
+   "period": "learn to swim across the river",
+   "steps": 4,
+   "practice": [
+    "beach",
+    "morning"
+   ],
+   "progress": "{name} managed a full length without stopping",
+   "done": "{name} can swim now, and goes in whenever the water allows",
+   "interest": "swimming",
+   "bio": "Learning to swim properly. Lifeguards, look away."
+  },
+  {
+   "id": "pumpkin",
+   "text": "grow the biggest pumpkin at the fair",
+   "period": "grow the prize marrow at the harvest fair",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} measured the pumpkin again and it has grown a hand's width",
+   "done": "{name} took the ribbon with a pumpkin nobody could lift alone",
+   "interest": "vegetable growing",
+   "bio": "Growing the biggest pumpkin at the fair. It has a name."
+  },
+  {
+   "id": "puzzle",
+   "text": "finish a 5,000-piece jigsaw puzzle",
+   "period": "finish the great puzzle map spread across the parlour table",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} filled in another whole corner of the puzzle",
+   "done": "{name} pressed the last piece into place and called everyone over to look",
+   "interest": "puzzles",
+   "bio": "Halfway through a 5,000-piece jigsaw. Please mind the table."
+  },
+  {
+   "id": "chess",
+   "text": "win the local chess tournament",
+   "period": "win the chess prize at the coffee house",
+   "steps": 5,
+   "practice": [
+    "cafe",
+    "evening"
+   ],
+   "progress": "{name} beat a regular who usually wins in twenty moves",
+   "done": "{name} won the tournament and kept the scoresheet as a souvenir",
+   "interest": "chess",
+   "bio": "Out to win the local chess tournament this year."
+  },
+  {
+   "id": "sourdough",
+   "text": "bake a loaf of sourdough worth showing off",
+   "period": "bake bread fit for the baker's window",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} pulled out a loaf with a better crust than the last",
+   "done": "{name} baked a loaf so good the neighbours asked for the starter",
+   "interest": "baking",
+   "bio": "Chasing a sourdough loaf worth showing off."
+  },
+  {
+   "id": "debt",
+   "text": "pay off an old debt for good",
+   "period": "clear an old debt owed to the moneylender",
+   "steps": 6,
+   "practice": null,
+   "progress": "{name} made another payment and crossed off a line in the ledger",
+   "done": "{name} is out of debt at last and slept like a stone that night",
+   "interest": "budgeting",
+   "bio": "Paying off an old debt for good. Nearly there."
+  },
+  {
+   "id": "garden",
+   "text": "turn a bare yard into a real garden",
+   "period": "turn a muddy plot into a proper kitchen garden",
+   "steps": 5,
+   "practice": [
+    "market",
+    "morning"
+   ],
+   "progress": "{name} brought home seedlings and got them in the ground",
+   "done": "{name}'s garden now makes people stop at the gate to admire it",
+   "interest": "gardening",
+   "bio": "Turning a bare yard into a real garden, one weed at a time."
+  },
+  {
+   "id": "guitar",
+   "text": "learn to play a whole song on guitar",
+   "period": "learn to play a tune on the fiddle",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} got through the chorus without a fumble",
+   "done": "{name} played the whole song for friends and only laughed once",
+   "interest": "guitar",
+   "bio": "Trying to play one whole song on guitar. Requests not yet taken."
+  },
+  {
+   "id": "choir",
+   "text": "get a solo in the community choir",
+   "period": "sing a solo at the chapel choir",
+   "steps": 4,
+   "practice": [
+    "temple",
+    "evening"
+   ],
+   "progress": "{name} held the high note at rehearsal for the first time",
+   "done": "{name} sang the solo and the room went quiet in the good way",
+   "interest": "singing",
+   "bio": "Angling for a solo in the community choir."
+  },
+  {
+   "id": "furniture",
+   "text": "build a table with their own hands",
+   "period": "build a sturdy oak table by hand",
+   "steps": 5,
+   "practice": [
+    "workshop",
+    "afternoon"
+   ],
+   "progress": "{name} cut and fitted another joint on the table",
+   "done": "{name} sat down to supper at a table they built themselves",
+   "interest": "woodworking",
+   "bio": "Building a table with my own two hands. Splinters included."
+  },
+  {
+   "id": "bike-trip",
+   "text": "cycle to the coast over a long weekend",
+   "period": "ride a bicycle to the coast over a long weekend",
+   "steps": 5,
+   "practice": [
+    "park",
+    "morning"
+   ],
+   "progress": "{name} rode a longer loop than ever and still had legs left",
+   "done": "{name} reached the sea and dipped their toes in to celebrate",
+   "interest": "cycling",
+   "bio": "Planning to cycle to the coast over a long weekend."
+  },
+  {
+   "id": "cook-dinner",
+   "text": "host a dinner party for eight friends",
+   "period": "host a proper supper for eight friends",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} tested a new dish on a couple of willing friends",
+   "done": "{name} fed eight friends and the plates came back clean",
+   "interest": "cooking",
+   "bio": "Hoping to host a dinner party for eight. Want to be nine?"
+  },
+  {
+   "id": "bird-list",
+   "text": "spot a hundred kinds of bird",
+   "period": "spot a hundred kinds of bird for their notebook",
+   "steps": 6,
+   "practice": [
+    "park",
+    "morning"
+   ],
+   "progress": "{name} added a new bird to the list after a long patient wait",
+   "done": "{name} ticked off bird number one hundred and did a quiet little dance",
+   "interest": "birdwatching",
+   "bio": "Spotting a hundred kinds of bird. Currently on sixty-two."
+  },
+  {
+   "id": "council",
+   "text": "get elected to the neighbourhood council",
+   "period": "win a seat on the parish vestry",
+   "steps": 6,
+   "practice": null,
+   "progress": "{name} knocked on another street's worth of doors",
+   "done": "{name} won the seat and has already started a list of fixes",
+   "interest": "local politics",
+   "bio": "Running for the neighbourhood council. Yes, I want your vote."
+  },
+  {
+   "id": "pottery",
+   "text": "throw a set of matching bowls",
+   "period": "throw a set of matching bowls on the wheel",
+   "steps": 5,
+   "practice": [
+    "workshop",
+    "evening"
+   ],
+   "progress": "{name} centred the clay on the first try today",
+   "done": "{name} eats from matching bowls they threw themselves",
+   "interest": "pottery",
+   "bio": "Throwing a set of bowls that actually match."
+  },
+  {
+   "id": "emergency-fund",
+   "text": "build a rainy-day fund",
+   "period": "put by enough coin for a hard winter",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} skipped a treat and put the money aside instead",
+   "done": "{name} finished building the rainy-day fund and walks a bit taller for it",
+   "interest": "saving",
+   "bio": "Building a rainy-day fund like a sensible adult."
+  },
+  {
+   "id": "museum-guide",
+   "text": "become a volunteer guide at the museum",
+   "period": "become a guide at the town's cabinet of curiosities",
+   "steps": 4,
+   "practice": [
+    "museum",
+    "afternoon"
+   ],
+   "progress": "{name} memorised the story behind another gallery",
+   "done": "{name} led their first tour and got a round of applause",
+   "interest": "history",
+   "bio": "Training to be a volunteer guide at the museum."
+  },
+  {
+   "id": "family-tree",
+   "text": "trace their family tree back five generations",
+   "period": "trace their family line back through the parish rolls",
+   "steps": 5,
+   "practice": [
+    "library",
+    "afternoon"
+   ],
+   "progress": "{name} found a great-grandparent's name in an old record",
+   "done": "{name} has the whole family tree drawn out and framed",
+   "interest": "genealogy",
+   "bio": "Tracing my family tree back five generations."
+  },
+  {
+   "id": "quilt",
+   "text": "finish a quilt for a new baby in the family",
+   "period": "stitch a quilt for a new baby in the family",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} sewed another row of squares into the quilt",
+   "done": "{name} wrapped the quilt in paper and handed it over with pride",
+   "interest": "quilting",
+   "bio": "Stitching a quilt for the newest baby in the family."
+  },
+  {
+   "id": "night-class",
+   "text": "finish an evening course in accounting",
+   "period": "learn to keep accounts properly",
+   "steps": 5,
+   "practice": [
+    "library",
+    "evening"
+   ],
+   "progress": "{name} got every sum right on this week's homework",
+   "done": "{name} finished the course and now does their own books with ease",
+   "interest": "bookkeeping",
+   "bio": "Finishing an evening course in accounting. Spreadsheets are fun now."
+  },
+  {
+   "id": "pen-pal",
+   "text": "keep up a pen pal correspondence for a year",
+   "period": "keep up letters with a friend overseas for a year",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} posted another long letter with a pressed flower inside",
+   "done": "{name} has a year of letters tied up with string",
+   "interest": "letter writing",
+   "bio": "Keeping a pen pal going for a whole year. Letters, not texts."
+  },
+  {
+   "id": "tennis",
+   "text": "win a match at the club tennis ladder",
+   "period": "win a match at the lawn tennis club",
+   "steps": 4,
+   "practice": [
+    "park",
+    "afternoon"
+   ],
+   "progress": "{name} took a set off someone higher on the ladder",
+   "done": "{name} won the match and bought everyone lemonade",
+   "interest": "tennis",
+   "bio": "Climbing the club tennis ladder, one match at a time."
+  },
+  {
+   "id": "volunteer",
+   "text": "help set up a weekly free supper",
+   "period": "help run a soup kitchen for the parish",
+   "steps": 5,
+   "practice": [
+    "temple",
+    "evening"
+   ],
+   "progress": "{name} helped serve forty bowls at the free supper",
+   "done": "{name} has the free supper running every week like clockwork",
+   "interest": "volunteering",
+   "bio": "Helping set up a weekly free supper in town."
+  },
+  {
+   "id": "mural",
+   "text": "paint a mural on the side of the corner shop",
+   "period": "paint a sign board for the corner shop",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} sketched the mural's outline in chalk on the wall",
+   "done": "{name} finished the mural and the whole street came to look",
+   "interest": "murals",
+   "bio": "Painting a mural on the side of the corner shop."
+  },
+  {
+   "id": "photo-book",
+   "text": "put together a photo book of the neighbourhood",
+   "period": "fill an album with sketches of every street in the parish",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} caught the light just right on a street they love",
+   "done": "{name} printed the book and gave the first copy to the library",
+   "interest": "photography",
+   "bio": "Making a photo book of the neighbourhood. Smile!"
+  },
+  {
+   "id": "restaurant-job",
+   "text": "land a job in a proper restaurant kitchen",
+   "period": "get taken on in a fine dining house's kitchen",
+   "steps": 4,
+   "practice": [
+    "restaurant",
+    "evening"
+   ],
+   "progress": "{name} got through a trial shift without burning anything",
+   "done": "{name} has their own apron hanging in a real kitchen now",
+   "interest": "professional kitchens",
+   "bio": "Aiming for a job in a proper restaurant kitchen."
+  },
+  {
+   "id": "cheese",
+   "text": "make a wheel of cheese that ages well",
+   "period": "make a wheel of cheese fit for market",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} turned the cheese and it smells exactly right",
+   "done": "{name} cut the cheese at last and it was worth the wait",
+   "interest": "cheesemaking",
+   "bio": "Making a wheel of cheese that ages better than I do."
+  },
+  {
+   "id": "market-stall",
+   "text": "run a stall at the weekend market",
+   "period": "keep a stall on market day",
+   "steps": 4,
+   "practice": [
+    "market",
+    "morning"
+   ],
+   "progress": "{name} sold out of jam before noon",
+   "done": "{name} has a regular pitch at the market and regulars of their own",
+   "interest": "market trading",
+   "bio": "Saving up to run a stall at the weekend market."
+  },
+  {
+   "id": "dance",
+   "text": "learn to dance well enough for a wedding",
+   "period": "learn the country dances well enough for a wedding",
+   "steps": 4,
+   "practice": [
+    "venue",
+    "evening"
+   ],
+   "progress": "{name} finally stopped stepping on toes at lessons",
+   "done": "{name} danced all night at the wedding and never missed a beat",
+   "interest": "dancing",
+   "bio": "Learning to dance well enough for a wedding."
+  },
+  {
+   "id": "bees",
+   "text": "keep a hive of bees",
+   "period": "keep a skep of bees",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} opened the hive without getting stung once",
+   "done": "{name} jarred their first honey and gave it away to friends",
+   "interest": "beekeeping",
+   "bio": "Keeping a hive of bees. Ask me for honey."
+  },
+  {
+   "id": "sketch-daily",
+   "text": "fill a whole sketchbook",
+   "period": "fill a whole book of drawings",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} drew the cafe regulars and caught a likeness",
+   "done": "{name} filled the last page of the sketchbook",
+   "interest": "sketching",
+   "bio": "Filling a whole sketchbook, page by page."
+  },
+  {
+   "id": "mend",
+   "text": "learn to mend their own clothes",
+   "period": "learn to mend and darn their own clothes",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} darned a sock and it actually held",
+   "done": "{name} patched a coat so neatly nobody can tell",
+   "interest": "sewing",
+   "bio": "Teaching myself to mend my own clothes."
+  },
+  {
+   "id": "old-friend",
+   "text": "find an old school friend they lost touch with",
+   "period": "find a childhood friend who moved away",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} tracked down someone who knew where their old friend went",
+   "done": "{name} found their old friend and they talked for hours",
+   "interest": "old friends",
+   "bio": "Looking for an old school friend I lost touch with."
+  },
+  {
+   "id": "holiday",
+   "text": "save up for a trip abroad",
+   "period": "save for a voyage to the continent",
+   "steps": 6,
+   "practice": null,
+   "progress": "{name} added to the travel jar and pinned up another map",
+   "done": "{name} has the tickets in hand and a bag half packed",
+   "interest": "travel",
+   "bio": "Saving up for a trip abroad. Got a favourite place?"
+  },
+  {
+   "id": "stargazing",
+   "text": "see every planet through a telescope",
+   "period": "see the planets through a borrowed telescope",
+   "steps": 4,
+   "practice": [
+    "park",
+    "evening"
+   ],
+   "progress": "{name} found a planet's rings on a clear night",
+   "done": "{name} has seen every planet and logged each one",
+   "interest": "astronomy",
+   "bio": "On a mission to see every planet through a telescope."
+  },
+  {
+   "id": "poetry",
+   "text": "read a poem aloud at an open mic",
+   "period": "recite their own verse at the coffee house",
+   "steps": 4,
+   "practice": [
+    "cafe",
+    "evening"
+   ],
+   "progress": "{name} rewrote a poem until it sounded right out loud",
+   "done": "{name} read their poem on stage and their hands only shook a little",
+   "interest": "poetry",
+   "bio": "Working up to reading a poem aloud at an open mic."
+  },
+  {
+   "id": "fishing",
+   "text": "land a really big fish off the pier",
+   "period": "land a great pike from the river",
+   "steps": 4,
+   "practice": [
+    "beach",
+    "morning"
+   ],
+   "progress": "{name} caught something respectable and let it go",
+   "done": "{name} landed a whopper and has the picture to prove it",
+   "interest": "fishing",
+   "bio": "Determined to land a really big fish off the pier."
+  },
+  {
+   "id": "quiz",
+   "text": "win the pub quiz with friends",
+   "period": "win the parish trivia night with friends",
+   "steps": 4,
+   "practice": [
+    "venue",
+    "evening"
+   ],
+   "progress": "{name}'s quiz team came second by a single point",
+   "done": "{name}'s team took the quiz trophy home",
+   "interest": "quizzes",
+   "bio": "Looking for a pub quiz teammate who knows sport."
+  },
+  {
+   "id": "hike",
+   "text": "climb the tallest hill in the county",
+   "period": "climb the tallest hill in the shire",
+   "steps": 4,
+   "practice": [
+    "park",
+    "morning"
+   ],
+   "progress": "{name} got halfway up a hard trail before the light went",
+   "done": "{name} stood on the summit and could see three towns",
+   "interest": "hiking",
+   "bio": "Climbing the tallest hill in the county soon. Bring snacks."
+  },
+  {
+   "id": "knit",
+   "text": "knit a sweater that actually fits",
+   "period": "knit a jumper that actually fits",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} finished a sleeve and it matches the other one",
+   "done": "{name} wears the sweater they knitted almost every day",
+   "interest": "knitting",
+   "bio": "Knitting a sweater that actually fits. Attempt number three."
+  },
+  {
+   "id": "cat",
+   "text": "adopt a shy cat from the rescue",
+   "period": "take in a stray cat and win its trust",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} got the shy cat to eat from their hand",
+   "done": "{name} now shares a home with a cat that sleeps on their feet every night",
+   "interest": "cats",
+   "bio": "Hoping to adopt a shy cat from the rescue."
+  },
+  {
+   "id": "public-speak",
+   "text": "give a talk without notes",
+   "period": "give a public lecture without notes",
+   "steps": 4,
+   "practice": [
+    "library",
+    "evening"
+   ],
+   "progress": "{name} practised the talk to an empty room and felt ready",
+   "done": "{name} gave the talk and took questions after",
+   "interest": "public speaking",
+   "bio": "Practising to give a talk without any notes."
+  },
+  {
+   "id": "clean-up",
+   "text": "organise a beach clean-up",
+   "period": "organise the clearing of the town pond",
+   "steps": 3,
+   "practice": [
+    "beach",
+    "afternoon"
+   ],
+   "progress": "{name} got a dozen neighbours to sign up for the clean-up",
+   "done": "{name}'s clean-up hauled away a cart of rubbish",
+   "interest": "community work",
+   "bio": "Organising a beach clean-up. Gloves provided."
+  },
+  {
+   "id": "cookbook",
+   "text": "collect the family recipes into a book",
+   "period": "copy out the family receipts into one book",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} wrote down a recipe that was only ever in someone's head",
+   "done": "{name} bound the family recipes into one book",
+   "interest": "family recipes",
+   "bio": "Collecting the family recipes into one book."
+  },
+  {
+   "id": "watch-repair",
+   "text": "learn to repair old clocks",
+   "period": "learn the clockmaker's trade",
+   "steps": 6,
+   "practice": [
+    "workshop",
+    "afternoon"
+   ],
+   "progress": "{name} got a stubborn old clock ticking again",
+   "done": "{name} has a shelf of mended clocks all keeping time",
+   "interest": "clock repair",
+   "bio": "Learning to repair old clocks, tick by tick."
+  },
+  {
+   "id": "theatre",
+   "text": "land a part in a community play",
+   "period": "get a speaking part with the players",
+   "steps": 4,
+   "practice": [
+    "venue",
+    "evening"
+   ],
+   "progress": "{name} nailed a scene at rehearsal",
+   "done": "{name} took a bow on opening night",
+   "interest": "acting",
+   "bio": "Auditioning for a part in a community play."
+  },
+  {
+   "id": "calligraphy",
+   "text": "master calligraphy",
+   "period": "master a fine copperplate hand",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} wrote a page with no blots at all",
+   "done": "{name} lettered a wedding invitation for a friend",
+   "interest": "calligraphy",
+   "bio": "Slowly mastering calligraphy. My shopping lists look amazing."
+  },
+  {
+   "id": "bonsai",
+   "text": "shape a bonsai tree they are proud of",
+   "period": "train a little potted tree into a fine shape",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} pruned the bonsai and wired a new branch into place",
+   "done": "{name}'s bonsai looks like an ancient tree in miniature",
+   "interest": "bonsai",
+   "bio": "Shaping a bonsai tree I can be proud of. Patience required."
+  },
+  {
+   "id": "yoga",
+   "text": "do a full yoga routine every morning for a month",
+   "period": "keep a morning habit of stretching every day for a month",
+   "steps": 4,
+   "practice": [
+    "park",
+    "morning"
+   ],
+   "progress": "{name} kept the morning routine going another week",
+   "done": "{name} made it the whole month and keeps going anyway",
+   "interest": "yoga",
+   "bio": "Doing yoga every morning for a month. Day nine."
+  },
+  {
+   "id": "walk-everywhere",
+   "text": "walk every street in town",
+   "period": "walk every lane in the town",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} crossed off another neighbourhood on the map",
+   "done": "{name} has walked every street and knows all the shortcuts",
+   "interest": "walking",
+   "bio": "Walking every street in town. Show me your favourite."
+  },
+  {
+   "id": "instrument-piano",
+   "text": "play a piano piece from memory",
+   "period": "play a sonata from memory on the pianoforte",
+   "steps": 5,
+   "practice": [
+    "venue",
+    "afternoon"
+   ],
+   "progress": "{name} got the tricky middle bit by heart",
+   "done": "{name} played the piece start to finish without looking",
+   "interest": "piano",
+   "bio": "Memorising a piano piece, bar by bar."
+  },
+  {
+   "id": "coffee-roast",
+   "text": "roast their own coffee beans",
+   "period": "roast their own coffee beans in a pan",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} got an even roast for once",
+   "done": "{name} serves coffee from beans they roasted themselves",
+   "interest": "coffee",
+   "bio": "Roasting my own coffee beans. The kitchen smells incredible."
+  },
+  {
+   "id": "kite",
+   "text": "build a kite that flies in any wind",
+   "period": "build a paper kite that rides any breeze",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} rebuilt the kite's frame lighter and stronger",
+   "done": "{name}'s kite flew so high it was a dot in the sky",
+   "interest": "kites",
+   "bio": "Building a kite that flies in any wind."
+  },
+  {
+   "id": "museum-all",
+   "text": "visit every museum in the city",
+   "period": "see every collection and curiosity in the city",
+   "steps": 5,
+   "practice": [
+    "museum",
+    "afternoon"
+   ],
+   "progress": "{name} spent a long afternoon in another museum",
+   "done": "{name} has been to every museum and has favourites in each",
+   "interest": "museums",
+   "bio": "Visiting every museum in the city. Come along?"
+  },
+  {
+   "id": "recipes-abroad",
+   "text": "cook a dish from every continent",
+   "period": "cook a dish from every land the ships trade with",
+   "steps": 6,
+   "practice": [
+    "market",
+    "afternoon"
+   ],
+   "progress": "{name} hunted down an odd spice and cooked something new",
+   "done": "{name} has cooked their way around the world",
+   "interest": "world cooking",
+   "bio": "Cooking a dish from every continent. Antarctica is tricky."
+  },
+  {
+   "id": "tidy-house",
+   "text": "clear out every cupboard in the house",
+   "period": "clear out every chest and cupboard in the house",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} emptied a whole cupboard and gave half of it away",
+   "done": "{name} has a house where everything has a place",
+   "interest": "tidying",
+   "bio": "Clearing out every cupboard in the house. Wish me luck."
+  },
+  {
+   "id": "roof",
+   "text": "fix up the leaky roof",
+   "period": "mend the leaky roof before winter",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} replaced a run of slipped tiles",
+   "done": "{name} sat through a rainstorm and stayed perfectly dry",
+   "interest": "home repair",
+   "bio": "Fixing up a leaky roof. Bring a bucket."
+  },
+  {
+   "id": "raise-funds",
+   "text": "raise money to fix up the playground",
+   "period": "raise money to repair the parish hall",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name}'s bake sale raised more than expected",
+   "done": "{name} handed over the money and the work starts next month",
+   "interest": "fundraising",
+   "bio": "Raising money to fix up the playground."
+  },
+  {
+   "id": "sign-lang",
+   "text": "learn sign language",
+   "period": "learn finger spelling and signs",
+   "steps": 5,
+   "practice": [
+    "library",
+    "afternoon"
+   ],
+   "progress": "{name} had a whole slow chat in sign",
+   "done": "{name} can sign easily now and made new friends doing it",
+   "interest": "sign language",
+   "bio": "Learning sign language, one word a day."
+  },
+  {
+   "id": "darts",
+   "text": "make the darts team",
+   "period": "make the tavern's darts team",
+   "steps": 4,
+   "practice": [
+    "venue",
+    "evening"
+   ],
+   "progress": "{name} hit three trebles in a row",
+   "done": "{name} got picked for the darts team",
+   "interest": "darts",
+   "bio": "Practising hard to make the darts team."
+  },
+  {
+   "id": "chickens",
+   "text": "keep a few hens in the back garden",
+   "period": "keep a few hens in the yard",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} built a coop out of scrap wood",
+   "done": "{name} gets fresh eggs most mornings now",
+   "interest": "hens",
+   "bio": "Planning to keep a few hens in the back garden."
+  },
+  {
+   "id": "first-date",
+   "text": "work up the nerve to ask someone out",
+   "period": "work up the nerve to ask someone to walk out together",
+   "steps": 3,
+   "practice": [
+    "cafe",
+    "afternoon"
+   ],
+   "progress": "{name} chatted with someone nice and almost asked",
+   "done": "{name} asked, got a yes, and is trying very hard to play it cool",
+   "interest": "dating",
+   "bio": "Working up the nerve to ask someone out. Maybe you?"
+  },
+  {
+   "id": "wedding-toast",
+   "text": "give a great toast at a friend's wedding",
+   "period": "give a fine toast at a friend's wedding",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} wrote a toast that made a test audience laugh",
+   "done": "{name} gave the toast and had the whole room raising a glass",
+   "interest": "weddings",
+   "bio": "Writing a great toast for a friend's wedding."
+  },
+  {
+   "id": "mentor",
+   "text": "mentor a young apprentice at work",
+   "period": "take on and train an apprentice",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} watched the apprentice manage a job alone",
+   "done": "{name}'s apprentice is doing well and says it is thanks to them",
+   "interest": "mentoring",
+   "bio": "Mentoring a young apprentice at work. It keeps me sharp."
+  },
+  {
+   "id": "raise",
+   "text": "ask for a raise and get it",
+   "period": "ask the master for better wages and get them",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} wrote down everything they have done this year",
+   "done": "{name} asked for more pay and got it",
+   "interest": "work",
+   "bio": "Asking for a raise this year, and getting it."
+  },
+  {
+   "id": "certificate",
+   "text": "earn a first aid certificate",
+   "period": "learn to bind wounds and set splints",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} passed a practice assessment",
+   "done": "{name} has the certificate tucked in their wallet",
+   "interest": "first aid",
+   "bio": "Earning a first aid certificate. You're in safe hands."
+  },
+  {
+   "id": "lighthouses",
+   "text": "visit every lighthouse on the coast",
+   "period": "visit every lighthouse along the coast road",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} ticked off another lighthouse and sketched it from the cliff",
+   "done": "{name} has stood at the foot of every lighthouse on the coast",
+   "interest": "lighthouses",
+   "bio": "Visiting every lighthouse on the coast."
+  },
+  {
+   "id": "orchard",
+   "text": "plant a small orchard",
+   "period": "plant a row of apple trees",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} grafted a young tree and it took",
+   "done": "{name}'s little orchard gave its first apples",
+   "interest": "fruit trees",
+   "bio": "Planting a small orchard. Apple pie in a few years."
+  },
+  {
+   "id": "model-ship",
+   "text": "build a ship in a bottle",
+   "period": "fit a model clipper inside a bottle",
+   "steps": 4,
+   "practice": [
+    "workshop",
+    "evening"
+   ],
+   "progress": "{name} raised the ship's masts inside the bottle without a snap",
+   "done": "{name}'s ship in a bottle sits proudly on the mantel",
+   "interest": "model making",
+   "bio": "Building a ship in a bottle with very steady hands."
+  },
+  {
+   "id": "community-garden",
+   "text": "start a community garden on an empty lot",
+   "period": "turn a waste corner into a shared green",
+   "steps": 6,
+   "practice": [
+    "park",
+    "afternoon"
+   ],
+   "progress": "{name} got permission to dig up the empty lot",
+   "done": "{name}'s community garden opened and everyone brought a plant",
+   "interest": "community gardens",
+   "bio": "Starting a community garden on an empty lot."
+  },
+  {
+   "id": "temple-roof",
+   "text": "help restore the old temple",
+   "period": "help restore the old chapel",
+   "steps": 6,
+   "practice": [
+    "temple",
+    "morning"
+   ],
+   "progress": "{name} spent a morning scraping old paint off the temple beams",
+   "done": "{name} saw the old building reopen, good as new",
+   "interest": "restoration",
+   "bio": "Helping restore the old temple, tile by tile."
+  },
+  {
+   "id": "library-read",
+   "text": "read every book on a classic reading list",
+   "period": "read every book on the shelf of great works",
+   "steps": 6,
+   "practice": [
+    "library",
+    "afternoon"
+   ],
+   "progress": "{name} closed a long book and started the next on the list",
+   "done": "{name} has read the whole list and has opinions about all of it",
+   "interest": "reading",
+   "bio": "Reading every book on a classic reading list."
+  },
+  {
+   "id": "sandcastle",
+   "text": "win the sandcastle contest",
+   "period": "win the sand sculpting contest at the summer fete",
+   "steps": 4,
+   "practice": [
+    "beach",
+    "afternoon"
+   ],
+   "progress": "{name} built a tower that survived the tide for an hour",
+   "done": "{name} won the sandcastle contest with a whole turreted fortress",
+   "interest": "sandcastles",
+   "bio": "Training to win the sandcastle contest. Dead serious."
+  },
+  {
+   "id": "wine",
+   "text": "make a decent homemade wine",
+   "period": "brew a decent country wine",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} bottled a batch that already tastes promising",
+   "done": "{name} uncorked their own wine and it was actually good",
+   "interest": "winemaking",
+   "bio": "Making a decent homemade wine. Early batches were not decent."
+  },
+  {
+   "id": "rock-climb",
+   "text": "climb the hardest wall at the climbing gym",
+   "period": "scale the old quarry face",
+   "steps": 5,
+   "practice": [
+    "gym",
+    "evening"
+   ],
+   "progress": "{name} reached a hold that beat them all last month",
+   "done": "{name} topped out on the hardest route and hung there a moment, beaming",
+   "interest": "climbing",
+   "bio": "Working up to the hardest wall at the climbing gym."
+  },
+  {
+   "id": "ferment",
+   "text": "fill a shelf with pickles",
+   "period": "fill the larder with pickles and preserves",
+   "steps": 3,
+   "practice": null,
+   "progress": "{name} filled a few jars with pickles that came out crisp",
+   "done": "{name}'s shelf is lined with jars of every colour",
+   "interest": "preserving",
+   "bio": "Filling a whole shelf with pickles."
+  },
+  {
+   "id": "mapmaking",
+   "text": "draw a map of the whole town",
+   "period": "chart every lane of the town on one great map",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} paced out another district for the map",
+   "done": "{name} finished the map and hung it in the post office",
+   "interest": "maps",
+   "bio": "Drawing a map of the whole town by hand."
+  },
+  {
+   "id": "restaurant-review",
+   "text": "eat at every restaurant on the high street",
+   "period": "dine at every eating house in town",
+   "steps": 5,
+   "practice": [
+    "restaurant",
+    "evening"
+   ],
+   "progress": "{name} tried somewhere new and wrote it up in a notebook",
+   "done": "{name} has eaten at every restaurant and has a firm favourite",
+   "interest": "eating out",
+   "bio": "Eating my way through every restaurant on the high street."
+  },
+  {
+   "id": "game-design",
+   "text": "make their own board game",
+   "period": "invent their own parlour game",
+   "steps": 5,
+   "practice": null,
+   "progress": "{name} playtested the game and friends wanted another round",
+   "done": "{name}'s board game has become the friends' favourite",
+   "interest": "board games",
+   "bio": "Designing my own board game. Playtesters wanted."
+  },
+  {
+   "id": "magic",
+   "text": "learn a few good magic tricks",
+   "period": "learn sleight of hand and conjuring tricks",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} did a card trick and nobody spotted how",
+   "done": "{name} fooled a whole table with a coin trick",
+   "interest": "magic tricks",
+   "bio": "Learning a few good magic tricks. Pick a card."
+  },
+  {
+   "id": "rescue-animals",
+   "text": "foster animals for the shelter",
+   "period": "foster stray animals for the parish",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} took in a nervous foster pup for the week",
+   "done": "{name} has fostered a dozen animals and found each a home",
+   "interest": "animal rescue",
+   "bio": "Fostering animals for the shelter. Expect fur."
+  },
+  {
+   "id": "bridge",
+   "text": "learn to play bridge well enough for the club",
+   "period": "learn whist well enough for the card club",
+   "steps": 4,
+   "practice": [
+    "cafe",
+    "afternoon"
+   ],
+   "progress": "{name} made a tricky contract with a new partner",
+   "done": "{name} plays at the club every week now",
+   "interest": "card games",
+   "bio": "Learning bridge well enough for the club."
+  },
+  {
+   "id": "stained-glass",
+   "text": "make a stained glass panel",
+   "period": "make a leaded window of coloured glass",
+   "steps": 5,
+   "practice": [
+    "workshop",
+    "morning"
+   ],
+   "progress": "{name} cut a curve in the glass without cracking it",
+   "done": "{name} hung the panel in the window and the light pours through",
+   "interest": "stained glass",
+   "bio": "Making a stained glass panel, one piece at a time."
+  },
+  {
+   "id": "rowing-team",
+   "text": "make the rowing crew",
+   "period": "make the rowing crew for the regatta",
+   "steps": 5,
+   "practice": [
+    "beach",
+    "morning"
+   ],
+   "progress": "{name} kept stroke with the crew for a whole practice",
+   "done": "{name} rowed in the regatta with the crew",
+   "interest": "rowing",
+   "bio": "Training hard to make the rowing crew."
+  },
+  {
+   "id": "neighbours",
+   "text": "get to know every neighbour on the street",
+   "period": "get to know every household on the lane",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} brought biscuits to a neighbour they had never met",
+   "done": "{name} knows every neighbour by name and is invited everywhere",
+   "interest": "neighbours",
+   "bio": "Getting to know every neighbour on my street."
+  },
+  {
+   "id": "hat",
+   "text": "make a hat good enough to sell",
+   "period": "make a bonnet fine enough to sell",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} blocked a hat that finally keeps its shape",
+   "done": "{name} sold their first hat to a stranger",
+   "interest": "millinery",
+   "bio": "Making a hat good enough to sell."
+  },
+  {
+   "id": "anniversary",
+   "text": "plan a surprise party for their parents' anniversary",
+   "period": "plan a surprise feast for their parents' anniversary",
+   "steps": 4,
+   "practice": null,
+   "progress": "{name} booked the room and kept the secret",
+   "done": "{name}'s surprise worked and their parents were teary and delighted",
+   "interest": "parties",
+   "bio": "Secretly planning a surprise party for my parents' anniversary."
+  },
+  {
+   "id": "tree-plant",
+   "text": "plant a hundred trees",
+   "period": "plant a hundred trees on the common",
+   "steps": 5,
+   "practice": [
+    "park",
+    "morning"
+   ],
+   "progress": "{name} put another twenty saplings in the ground",
+   "done": "{name} planted tree number one hundred",
+   "interest": "tree planting",
+   "bio": "Planting a hundred trees. Want to dig one?"
+  },
+  {
+   "id": "pilgrimage",
+   "text": "make a long walking pilgrimage",
+   "period": "walk the pilgrimage to a far shrine",
+   "steps": 6,
+   "practice": [
+    "temple",
+    "morning"
+   ],
+   "progress": "{name} broke in boots on a long practice walk",
+   "done": "{name} completed the pilgrimage and came home quietly changed",
+   "interest": "pilgrimage",
+   "bio": "Getting ready for a long walking pilgrimage."
+  },
+  {
+   "id": "ice-skate",
+   "text": "skate a full lap without falling",
+   "period": "skate the frozen pond without falling",
+   "steps": 3,
+   "practice": [
+    "park",
+    "afternoon"
+   ],
+   "progress": "{name} skated half a lap without grabbing the rail",
+   "done": "{name} glided a whole lap and nobody had to catch them",
+   "interest": "skating",
+   "bio": "Trying to skate a full lap without falling."
+  }
+ ]
+}

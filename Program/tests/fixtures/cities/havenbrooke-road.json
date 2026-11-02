@@ -1,0 +1,841 @@
+{
+ "schema_version": 1,
+ "id": "havenbrooke-road",
+ "name": "away from Haven",
+ "setting": "original",
+ "era": "modern",
+ "category": "fictional",
+ "basis": "The places in Vanta's Havenbrooke a trip from Haven can reach.",
+ "region": "the Northeast",
+ "country": "US",
+ "timezone": "America/New_York",
+ "aliases": [],
+ "summary": "Out of Haven: a bus station, a lake house, a city or home for the holidays.",
+ "home": false,
+ "town_map": {
+  "style": "none"
+ },
+ "lat": 42.71,
+ "lon": -76.415,
+ "intensity": {
+  "preset": "unflinching",
+  "voice": "intimate, wry and adult: a campus drama where comedy and hurt share a page, every institution claims someone, and sex is written as part of who people are",
+  "drama": "uneasy"
+ },
+ "currency": {
+  "code": "USD",
+  "symbol": "$",
+  "name": "US dollars"
+ },
+ "rent_period": "month",
+ "speeds": {
+  "walk": 4.5,
+  "car": 40,
+  "bus": 22
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Haven written for Prospero's Dungeon from Vanta's Havenbrooke material",
+   "license": "Vanta's own setting; all rights reserved",
+   "retrieved": "2026-10-22",
+   "note": "Drawn from the Havenbrooke world and university documents. Prices are typical for upstate New York in 2009. Every business and person named is fictional."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "ithaca-town",
+   "name": "Ithaca",
+   "summary": "Forty minutes southwest of Haven: gorges, two colleges, the bus station, and restaurants that charge more than fifteen dollars an entree.",
+   "vibe": [
+    "college-town",
+    "shopping",
+    "gorges"
+   ],
+   "lat": 42.44,
+   "lon": -76.5,
+   "rent_tier": "mid",
+   "housing": [
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seneca-shore",
+   "name": "Seneca Lake",
+   "summary": "An hour west: rented lake houses with loose dock boards, cold water, wineries and cheap fireworks.",
+   "vibe": [
+    "lake",
+    "summer",
+    "wineries"
+   ],
+   "lat": 42.6,
+   "lon": -76.9,
+   "rent_tier": "mid",
+   "housing": [
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "syracuse-city",
+   "name": "Syracuse",
+   "summary": "Ninety minutes north: the Amtrak station, the airport and the malls.",
+   "vibe": [
+    "city",
+    "trains",
+    "airport"
+   ],
+   "lat": 43.05,
+   "lon": -76.15,
+   "rent_tier": "mid",
+   "housing": [
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "manhattan",
+   "name": "New York City",
+   "summary": "Four and a half hours by bus: the supernatural fashion houses, The Veil, WESC and the firms everyone wants to work for.",
+   "vibe": [
+    "big-city",
+    "fashion",
+    "media"
+   ],
+   "lat": 40.75,
+   "lon": -73.99,
+   "rent_tier": "mid",
+   "housing": [
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "back-bay",
+   "name": "Boston",
+   "summary": "Old coven money, Brahmin witch families and the ritual consultancies, six hours east.",
+   "vibe": [
+    "city",
+    "covens",
+    "old-money"
+   ],
+   "lat": 42.35,
+   "lon": -71.08,
+   "rent_tier": "mid",
+   "housing": [
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pennsylvania-suburbs",
+   "name": "the Kessler suburbs",
+   "summary": "Suburban Pennsylvania, five hours south: cul-de-sacs, a registry pipeline and the Kessler and Hallward houses three doors apart.",
+   "vibe": [
+    "suburbs",
+    "home",
+    "family"
+   ],
+   "lat": 40.3,
+   "lon": -76.6,
+   "rent_tier": "mid",
+   "housing": [
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "ithaca",
+   "name": "the Ithaca bus station",
+   "kind": "square",
+   "neighborhood": "ithaca-town",
+   "summary": "The Greyhound and Shortline station on West State Street, where the Havenbrooke shuttle drops off.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the ticket window",
+    "the curb"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ithaca-commons",
+   "name": "the Ithaca Commons",
+   "kind": "restaurant",
+   "neighborhood": "ithaca-town",
+   "summary": "A pedestrian street of cafes, bookstores and restaurants, busy on any night with students from three schools.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "spots": [
+    "the benches"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seneca-lake",
+   "name": "the lake house",
+   "kind": "landmark",
+   "neighborhood": "seneca-shore",
+   "summary": "A rented house on the east shore with a screened porch, a dock with two loose boards and a grill nobody cleaned.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the dock",
+    "the porch",
+    "the fire pit"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakeside-winery",
+   "name": "a lakeside winery",
+   "kind": "bar",
+   "neighborhood": "seneca-shore",
+   "summary": "A tasting room with a deck over the vineyard: five pours for eight dollars and a view of the whole lake.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "wine",
+   "spots": [
+    "the deck"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "syracuse",
+   "name": "the Syracuse train station",
+   "kind": "square",
+   "neighborhood": "syracuse-city",
+   "summary": "The Regional Transportation Center, where Amtrak and the long-distance buses stop.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the platform",
+    "the waiting room"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "syracuse-diner",
+   "name": "a station diner",
+   "kind": "restaurant",
+   "neighborhood": "syracuse-city",
+   "summary": "A diner across from the station that feeds people waiting for the 6:10 to New York.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "diner",
+   "spots": [
+    "the counter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-york",
+   "name": "Port Authority",
+   "kind": "square",
+   "neighborhood": "manhattan",
+   "summary": "The bus terminal on Eighth Avenue, where the upstate buses come in, loud and fluorescent at any hour.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the gates",
+    "the escalators",
+    "Eighth Avenue"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "midtown-deli",
+   "name": "a Midtown deli",
+   "kind": "restaurant",
+   "neighborhood": "manhattan",
+   "summary": "A twenty-four-hour deli with a hot bar and sandwiches the size of a textbook.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "deli",
+   "spots": [
+    "the hot bar"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boston",
+   "name": "South Station",
+   "kind": "square",
+   "neighborhood": "back-bay",
+   "summary": "The train and bus station at the edge of the financial district.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the concourse",
+    "the bus gates"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boston-pub",
+   "name": "a Boston pub",
+   "kind": "bar",
+   "neighborhood": "back-bay",
+   "summary": "A narrow pub near the station with low ceilings and a witch behind the bar who knows the Corwins.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "pub food",
+   "spots": [
+    "the snug"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kessler-hometown",
+   "name": "the Kessler house",
+   "kind": "landmark",
+   "neighborhood": "pennsylvania-suburbs",
+   "summary": "Deirdre Kessler's house on a cul-de-sac, with the twins' rooms kept as they left them.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the kitchen",
+    "the twins' rooms",
+    "the driveway"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "suburb-diner",
+   "name": "the Route 22 diner",
+   "kind": "restaurant",
+   "neighborhood": "pennsylvania-suburbs",
+   "summary": "The diner where everyone from the high school ends up at Thanksgiving.",
+   "tags": [
+    "travel"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "diner",
+   "spots": [
+    "the back booth"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "car",
+   "name": "A car",
+   "kind": "car",
+   "summary": "Most students do not have one, and the ones who do are very popular on Friday.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [],
+ "employers": [],
+ "career_hubs": [],
+ "climate": {
+  "summary": "Upstate New York: long gray winters with lake-effect snow, a muddy spring, warm wet summers and a short bright fall.",
+  "months": [
+   {
+    "high_f": 30,
+    "low_f": 15,
+    "rain_days": 16,
+    "note": "Lake-effect snow and a gray sky for weeks."
+   },
+   {
+    "high_f": 32,
+    "low_f": 16,
+    "rain_days": 14,
+    "note": "The coldest stretch; the Riverwalk is ice."
+   },
+   {
+    "high_f": 41,
+    "low_f": 24,
+    "rain_days": 14,
+    "note": "Mud and slush; spring term drags."
+   },
+   {
+    "high_f": 54,
+    "low_f": 35,
+    "rain_days": 13,
+    "note": "Rain and the first green."
+   },
+   {
+    "high_f": 66,
+    "low_f": 45,
+    "rain_days": 13,
+    "note": "Finals, then the town empties."
+   },
+   {
+    "high_f": 75,
+    "low_f": 54,
+    "rain_days": 12,
+    "note": "Warm and wet; the lakes fill with summer people."
+   },
+   {
+    "high_f": 80,
+    "low_f": 59,
+    "rain_days": 11,
+    "note": "The warmest month, thunderstorms most afternoons."
+   },
+   {
+    "high_f": 78,
+    "low_f": 57,
+    "rain_days": 11,
+    "note": "Move-in heat at the end of the month."
+   },
+   {
+    "high_f": 70,
+    "low_f": 50,
+    "rain_days": 11,
+    "note": "Clear and cool; the term settles in."
+   },
+   {
+    "high_f": 58,
+    "low_f": 40,
+    "rain_days": 12,
+    "note": "Peak color in the first two weeks, then wind and rain."
+   },
+   {
+    "high_f": 46,
+    "low_f": 32,
+    "rain_days": 14,
+    "note": "Dark at five; first snow."
+   },
+   {
+    "high_f": 35,
+    "low_f": 22,
+    "rain_days": 16,
+    "note": "Snow on the ground for finals."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [],
+ "local_color": [],
+ "names": {
+  "mix": {
+   "anglo": 6,
+   "german": 1,
+   "irish": 1.5,
+   "italian": 1,
+   "east-asian": 0.6,
+   "hispanic": 0.6,
+   "black-american": 0.8,
+   "jewish": 0.4,
+   "south-asian": 0.3,
+   "slavic": 0.4
+  },
+  "year": 2009
+ },
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Coffee",
+   "low": 1.5,
+   "high": 3.5,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pint",
+   "item": "Pint of beer",
+   "low": 3,
+   "high": 5,
+   "per": "a pint",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "diner-meal",
+   "item": "Diner meal",
+   "low": 6,
+   "high": 10,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pizza-slice",
+   "item": "Slice of pizza",
+   "low": 1.75,
+   "high": 2.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner-out",
+   "item": "Dinner for two at Harper's",
+   "low": 70,
+   "high": 120,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "club-cover",
+   "item": "Cover at the Velvet Spire",
+   "low": 10,
+   "high": 25,
+   "per": "a night",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "textbook",
+   "item": "Textbook",
+   "low": 80,
+   "high": 150,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "paperback",
+   "item": "Paperback at Drothe's",
+   "low": 5,
+   "high": 5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gas",
+   "item": "Gas",
+   "low": 2.4,
+   "high": 2.7,
+   "per": "a gallon",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bus-nyc",
+   "item": "Bus to New York",
+   "low": 30,
+   "high": 50,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amtrak",
+   "item": "Amtrak from Syracuse to New York",
+   "low": 50,
+   "high": 70,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "phone",
+   "item": "iPhone 3GS",
+   "low": 199,
+   "high": 299,
+   "per": "on a two-year contract",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "laptop",
+   "item": "Laptop",
+   "low": 300,
+   "high": 1000,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "texts",
+   "item": "Unlimited texting",
+   "low": 15,
+   "high": 20,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "song",
+   "item": "Song on iTunes",
+   "low": 0.99,
+   "high": 1.29,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tattoo",
+   "item": "Small tattoo at Arrow & Ink",
+   "low": 60,
+   "high": 150,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charm",
+   "item": "Licensed charm",
+   "low": 15,
+   "high": 80,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "day-wage",
+   "item": "A work-study day",
+   "low": 50,
+   "high": 70,
+   "per": "day",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [],
+ "notables": [],
+ "kinds": {
+  "fae": {
+   "label": "Fae",
+   "lifespan": 700,
+   "words": [
+    "fae",
+    "fey",
+    "sidhe"
+   ],
+   "share": 0
+  },
+  "half-fae": {
+   "label": "Half-fae",
+   "lifespan": 200,
+   "words": [
+    "half-fae",
+    "half fae"
+   ],
+   "share": 0
+  },
+  "kitsune": {
+   "label": "Kitsune",
+   "lifespan": 1000,
+   "words": [
+    "kitsune",
+    "fox fae"
+   ],
+   "share": 0
+  },
+  "dryad": {
+   "label": "Dryad",
+   "lifespan": 400,
+   "words": [
+    "dryad"
+   ],
+   "share": 0
+  },
+  "sylph": {
+   "label": "Sylph",
+   "lifespan": 500,
+   "words": [
+    "sylph"
+   ],
+   "share": 0
+  },
+  "selkie": {
+   "label": "Selkie",
+   "lifespan": 250,
+   "words": [
+    "selkie"
+   ],
+   "share": 0
+  }
+ }
+}

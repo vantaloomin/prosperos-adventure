@@ -1,0 +1,181 @@
+name: Package
+
+# Builds the self-contained Windows bundle and its per-user installer, then launches the bundle and
+# installs, upgrades and uninstalls the setup on runners without Python or Node.
+# The bundle is a workflow artifact only: nothing here tags or publishes a release. release.yml calls
+# this workflow and publishes its windows-release artifact once every job here has passed.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+# The app and its build scripts live in Program/.
+defaults:
+  run:
+    working-directory: Program
+
+jobs:
+  bundle:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: Program/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build the interface
+        run: |
+          npm ci
+          npm run build
+      - name: Build the bundle
+        run: python scripts/package/build_bundle.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-bundle
+          path: |
+            Program/build/package/*.zip
+            Program/build/package/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 14
+
+  clean-launch:
+    needs: bundle
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      # Only the smoke test script is checked out; the app comes from the bundle.
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: Program/scripts/package
+      - uses: actions/download-artifact@v4
+        with:
+          name: windows-bundle
+          path: ${{ runner.temp }}\download
+      - name: Verify the checksum and unpack into a path with spaces
+        shell: pwsh
+        run: |
+          $download = Join-Path $env:RUNNER_TEMP 'download'
+          foreach ($line in Get-Content (Join-Path $download 'SHA256SUMS.txt')) {
+            $expected, $name = $line -split '\s+', 2
+            $actual = (Get-FileHash (Join-Path $download $name) -Algorithm SHA256).Hash.ToLower()
+            if ($actual -ne $expected) { throw "$name does not match SHA256SUMS.txt" }
+            Expand-Archive -LiteralPath (Join-Path $download $name) -DestinationPath (Join-Path $env:RUNNER_TEMP 'Clean User Apps')
+          }
+      - name: Launch on a machine without Python or Node
+        shell: pwsh
+        run: scripts/package/smoke-test.ps1 -Bundle "$env:RUNNER_TEMP\Clean User Apps\ProsperoDungeon"
+
+  installer:
+    needs: bundle
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: Program/scripts/package
+      - uses: actions/download-artifact@v4
+        with:
+          name: windows-bundle
+          path: ${{ runner.temp }}\download
+      - name: Build the per-user setup
+        shell: pwsh
+        run: |
+          $download = Join-Path $env:RUNNER_TEMP 'download'
+          $zip = Get-ChildItem -LiteralPath $download -Filter '*.zip' | Select-Object -First 1
+          Expand-Archive -LiteralPath $zip.FullName -DestinationPath (Join-Path $env:RUNNER_TEMP 'bundle')
+          $source = Join-Path $env:RUNNER_TEMP 'bundle\ProsperoDungeon'
+          $version = (Get-Content -LiteralPath (Join-Path $source 'bundle.json') -Raw | ConvertFrom-Json).version
+          $iscc = Join-Path ${env:ProgramFiles(x86)} 'Inno Setup 6\ISCC.exe'
+          if (-not (Test-Path -LiteralPath $iscc)) {
+            choco install innosetup --no-progress -y
+            if ($LASTEXITCODE -ne 0) { throw 'Inno Setup could not be installed.' }
+          }
+          $output = Join-Path $env:RUNNER_TEMP 'release'
+          & $iscc /Q "/DAppVersion=$version" "/DSourceDir=$source" "/DOutputDir=$output" scripts\package\dungeon.iss
+          if ($LASTEXITCODE -ne 0) { throw 'ISCC failed.' }
+          Copy-Item -LiteralPath $zip.FullName -Destination $output
+          Get-ChildItem -LiteralPath $output -File | Sort-Object Name | ForEach-Object {
+            "$((Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLower())  $($_.Name)"
+          } | Set-Content -LiteralPath (Join-Path $output 'SHA256SUMS.txt') -Encoding ascii
+          Get-Content -LiteralPath (Join-Path $output 'SHA256SUMS.txt')
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-release
+          path: ${{ runner.temp }}\release\*
+          if-no-files-found: error
+          retention-days: 14
+
+  install-upgrade-uninstall:
+    needs: installer
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: Program/scripts/package
+      - uses: actions/download-artifact@v4
+        with:
+          name: windows-release
+          path: ${{ runner.temp }}\release
+      - name: Install, upgrade and uninstall without Python or Node
+        shell: pwsh
+        run: |
+          $release = Join-Path $env:RUNNER_TEMP 'release'
+          foreach ($line in Get-Content (Join-Path $release 'SHA256SUMS.txt')) {
+            $expected, $name = $line -split '\s+', 2
+            if ((Get-FileHash (Join-Path $release $name) -Algorithm SHA256).Hash.ToLower() -ne $expected) { throw "$name does not match SHA256SUMS.txt" }
+          }
+          $setup = Get-ChildItem -LiteralPath $release -Filter '*-setup.exe' | Select-Object -First 1
+          scripts/package/installer-test.ps1 -Setup $setup.FullName
+
+  beside-the-study:
+    # Prospero's Study from its own repository, pinned, running beside the installed Dungeon.
+    needs: installer
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: Program/scripts/package
+      - uses: actions/checkout@v4
+        with:
+          repository: vantaloomin/prosperos-study
+          ref: bbcbde49426bc86d2430c3a912472e05be4fd89a
+          path: study
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Prospero's Study
+        shell: pwsh
+        working-directory: ${{ github.workspace }}/study
+        run: .\install.ps1 -NoPause
+      - uses: actions/download-artifact@v4
+        with:
+          name: windows-release
+          path: ${{ runner.temp }}\release
+      - name: Run the Dungeon beside the Study
+        shell: pwsh
+        run: |
+          $setup = Get-ChildItem -LiteralPath (Join-Path $env:RUNNER_TEMP 'release') -Filter '*-setup.exe' | Select-Object -First 1
+          scripts/package/beside-study-test.ps1 -Setup $setup.FullName -Study (Join-Path $env:GITHUB_WORKSPACE 'study')

@@ -1,0 +1,698 @@
+{
+ "about": "The Life deck (dungeon/life/deck.py, Feature Hit List #33): small moments drawn into the companion's days with the seeded dice. `drama` is the lowest drama level (0 quiet to 3 soap opera) a card can turn up at; `needs` lists what the companion must have (friend: someone in their circle, work: a job, love: free to have a love life of their own, dungeon/life/love_life.py); `weight` is how often it comes up next to the others (10 is usual); `text` is for Today, `told` for the chat, `share` (when present) is a first message they may send about it. {first} is the companion's first name and {friend} someone from their circle. Adapts the idea of Prospero's Study's Inspiration decks, not its code.",
+ "chance": [
+  30,
+  40,
+  50,
+  60
+ ],
+ "repeat_days": 45,
+ "tables_weight": 120,
+ "cards": [
+  {
+   "id": "old-pocket-cash",
+   "title": "Money in an old pocket",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 10,
+   "text": "{first} found a forgotten twenty in an old coat pocket.",
+   "told": "You found a forgotten twenty in an old coat pocket.",
+   "on": true,
+   "share": "Found twenty bucks in an old coat pocket. Today is a good day."
+  },
+  {
+   "id": "new-coffee-order",
+   "title": "A new usual",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 10,
+   "text": "{first} tried a different coffee order on a whim and might have a new usual.",
+   "told": "You tried a different coffee order on a whim and think it might be your new usual.",
+   "on": true
+  },
+  {
+   "id": "old-song",
+   "title": "An old song",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 10,
+   "text": "An old song {first} loved as a teenager came on in a shop and stuck all day.",
+   "told": "An old song you loved as a teenager came on in a shop and has been stuck in your head all day.",
+   "on": true,
+   "share": "A song I haven't heard since high school came on in a shop and now it's stuck in my head."
+  },
+  {
+   "id": "neighbor-package",
+   "title": "A package for a neighbor",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 10,
+   "text": "{first} took in a neighbor's package and got a plate of cookies for it.",
+   "told": "You took in a neighbor's package and they thanked you with a plate of cookies.",
+   "on": true,
+   "share": "Took in a package for my neighbor and got cookies for it. Best trade ever."
+  },
+  {
+   "id": "favor-for-neighbor",
+   "title": "A favor for a neighbor",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 8,
+   "text": "{first} helped a neighbor carry a heavy box up the stairs.",
+   "told": "You helped a neighbor carry a heavy box up the stairs.",
+   "on": true
+  },
+  {
+   "id": "old-joke",
+   "title": "An old joke comes back",
+   "tone": "good",
+   "needs": [
+    "friend"
+   ],
+   "drama": 0,
+   "weight": 10,
+   "text": "{friend} brought up an old inside joke and {first} laughed harder than it deserved.",
+   "told": "{friend} brought up an old inside joke of yours and you laughed harder than it deserved.",
+   "on": true,
+   "share": "{friend} brought up an ancient inside joke today and I could not stop laughing."
+  },
+  {
+   "id": "friend-photo",
+   "title": "An old photo",
+   "tone": "good",
+   "needs": [
+    "friend"
+   ],
+   "drama": 0,
+   "weight": 8,
+   "text": "{friend} sent {first} an old photo of the two of them from years ago.",
+   "told": "{friend} sent you an old photo of the two of you from years ago.",
+   "on": true,
+   "share": "{friend} just sent me a photo of us from years ago. The haircuts. Oh no."
+  },
+  {
+   "id": "perfect-parking",
+   "title": "The perfect spot",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first} got the perfect spot right by the door for once.",
+   "told": "You got the perfect spot right by the door for once.",
+   "on": true
+  },
+  {
+   "id": "compliment-stranger",
+   "title": "A stranger's compliment",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 8,
+   "text": "A stranger complimented {first}'s outfit and it lifted the whole afternoon.",
+   "told": "A stranger complimented your outfit and it lifted your whole afternoon.",
+   "on": true,
+   "share": "A total stranger complimented my outfit today and honestly it made my afternoon."
+  },
+  {
+   "id": "free-pastry",
+   "title": "A free pastry",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "The bakery gave {first} a free pastry at closing time.",
+   "told": "The bakery gave you a free pastry at closing time.",
+   "on": true
+  },
+  {
+   "id": "new-recipe-worked",
+   "title": "A recipe that worked",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 8,
+   "text": "{first} tried a new recipe and it actually came out right.",
+   "told": "You tried a new recipe and it actually came out right.",
+   "on": true,
+   "share": "Tried a new recipe tonight and it actually worked?? I'm a chef now."
+  },
+  {
+   "id": "plant-new-leaf",
+   "title": "A new leaf",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first}'s houseplant put out a new leaf after weeks of nothing.",
+   "told": "Your houseplant finally put out a new leaf after weeks of nothing.",
+   "on": true
+  },
+  {
+   "id": "finished-chore",
+   "title": "A chore finally done",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 8,
+   "text": "{first} finally dealt with a chore they'd been putting off for weeks.",
+   "told": "You finally dealt with a chore you'd been putting off for weeks.",
+   "on": true
+  },
+  {
+   "id": "good-hair-day",
+   "title": "A good hair day",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first}'s hair did exactly what it was told for once.",
+   "told": "Your hair did exactly what you wanted for once.",
+   "on": true
+  },
+  {
+   "id": "work-praise",
+   "title": "A word of thanks at work",
+   "tone": "good",
+   "needs": [
+    "work"
+   ],
+   "drama": 0,
+   "weight": 8,
+   "text": "Someone at work thanked {first} for something small they'd done weeks ago.",
+   "told": "Someone at work thanked you for something small you did weeks ago.",
+   "on": true,
+   "share": "Someone at work thanked me today for a thing I did ages ago. Didn't even think they noticed."
+  },
+  {
+   "id": "long-call",
+   "title": "A long call",
+   "tone": "good",
+   "needs": [
+    "friend"
+   ],
+   "drama": 0,
+   "weight": 8,
+   "text": "{first} and {friend} ended up on the phone for over an hour.",
+   "told": "You and {friend} ended up on the phone for over an hour.",
+   "on": true
+  },
+  {
+   "id": "sunset",
+   "title": "A good sunset",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first} stopped on the way home to watch a ridiculous sunset.",
+   "told": "You stopped on the way home to watch a ridiculous sunset.",
+   "on": true,
+   "share": "The sunset tonight was unreal. I just stood there like an idiot staring at it."
+  },
+  {
+   "id": "dog-say-hi",
+   "title": "A dog says hi",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 8,
+   "text": "A stranger's dog trotted over to say hi to {first} and wouldn't leave.",
+   "told": "A stranger's dog trotted over to say hi to you and would not leave.",
+   "on": true,
+   "share": "A dog adopted me for ten minutes at the park today. I have no notes."
+  },
+  {
+   "id": "lost-thing-found",
+   "title": "Found at last",
+   "tone": "good",
+   "needs": [],
+   "drama": 0,
+   "weight": 8,
+   "text": "{first} found something they'd lost months ago, under the couch.",
+   "told": "You found something you'd lost months ago, under the couch.",
+   "on": true
+  },
+  {
+   "id": "new-habit-walk",
+   "title": "A new habit",
+   "tone": "mixed",
+   "needs": [],
+   "drama": 0,
+   "weight": 8,
+   "text": "{first} has started taking a short walk after dinner and is trying to keep it up.",
+   "told": "You've started taking a short walk after dinner and are trying to keep it up.",
+   "on": true
+  },
+  {
+   "id": "early-night",
+   "title": "An early night",
+   "tone": "mixed",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first} decided on an early night and actually went through with it.",
+   "told": "You decided on an early night and actually went through with it.",
+   "on": true
+  },
+  {
+   "id": "changed-route",
+   "title": "A different way home",
+   "tone": "odd",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first} took a different way home and found a little shop they'd never noticed.",
+   "told": "You took a different way home and found a little shop you'd never noticed.",
+   "on": true
+  },
+  {
+   "id": "wrong-name",
+   "title": "Called the wrong name",
+   "tone": "odd",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "A barista wrote a completely different name on {first}'s cup.",
+   "told": "A barista wrote a completely different name on your cup.",
+   "on": true,
+   "share": "The barista wrote 'Gwen' on my cup today. I am not Gwen. I am Gwen now I guess."
+  },
+  {
+   "id": "deja-vu",
+   "title": "Deja vu",
+   "tone": "odd",
+   "needs": [],
+   "drama": 0,
+   "weight": 4,
+   "text": "{first} had the strongest deja vu standing in line at the shop.",
+   "told": "You had the strongest deja vu standing in line at the shop.",
+   "on": true
+  },
+  {
+   "id": "lookalike",
+   "title": "A lookalike",
+   "tone": "odd",
+   "needs": [],
+   "drama": 0,
+   "weight": 4,
+   "text": "{first} saw someone who looked exactly like an old teacher of theirs.",
+   "told": "You saw someone who looked exactly like an old teacher of yours.",
+   "on": true
+  },
+  {
+   "id": "spilled-coffee",
+   "title": "Spilled coffee",
+   "tone": "bad",
+   "needs": [],
+   "drama": 0,
+   "weight": 8,
+   "text": "{first} spilled coffee down their shirt first thing.",
+   "told": "You spilled coffee down your shirt first thing.",
+   "on": true,
+   "share": "Spilled coffee all down my shirt before 9am. Off to a great start."
+  },
+  {
+   "id": "phone-died",
+   "title": "A dead phone",
+   "tone": "bad",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first}'s phone died halfway through the day.",
+   "told": "Your phone died halfway through the day.",
+   "on": true
+  },
+  {
+   "id": "bus-late",
+   "title": "Late bus",
+   "tone": "bad",
+   "needs": [],
+   "drama": 0,
+   "weight": 8,
+   "text": "The bus was late and {first} spent twenty minutes at the stop.",
+   "told": "Your bus was late and you spent twenty minutes at the stop.",
+   "on": true
+  },
+  {
+   "id": "forgot-umbrella",
+   "title": "Caught in the rain",
+   "tone": "bad",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first} forgot an umbrella on the one day it poured.",
+   "told": "You forgot your umbrella on the one day it poured.",
+   "on": true
+  },
+  {
+   "id": "stubbed-toe",
+   "title": "A stubbed toe",
+   "tone": "bad",
+   "needs": [],
+   "drama": 0,
+   "weight": 4,
+   "text": "{first} stubbed a toe on the bed frame and is still annoyed about it.",
+   "told": "You stubbed your toe on the bed frame and are still annoyed about it.",
+   "on": true
+  },
+  {
+   "id": "burnt-dinner",
+   "title": "Burnt dinner",
+   "tone": "bad",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first} burnt dinner and ended up eating cereal.",
+   "told": "You burnt dinner and ended up eating cereal.",
+   "on": true,
+   "share": "Burnt dinner. Cereal it is. Living the dream."
+  },
+  {
+   "id": "keys-hunt",
+   "title": "Where are the keys",
+   "tone": "bad",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first} spent ten frantic minutes looking for keys that were in their hand.",
+   "told": "You spent ten frantic minutes looking for keys that were in your hand.",
+   "on": true
+  },
+  {
+   "id": "bad-sleep",
+   "title": "A bad night",
+   "tone": "bad",
+   "needs": [],
+   "drama": 0,
+   "weight": 6,
+   "text": "{first} slept badly and has been dragging all day.",
+   "told": "You slept badly and have been dragging all day.",
+   "on": true
+  },
+  {
+   "id": "work-printer",
+   "title": "The printer",
+   "tone": "bad",
+   "needs": [
+    "work"
+   ],
+   "drama": 0,
+   "weight": 4,
+   "text": "The printer at work jammed on {first} three times in a row.",
+   "told": "The printer at work jammed on you three times in a row.",
+   "on": true
+  },
+  {
+   "id": "work-meeting-ran-over",
+   "title": "A meeting ran over",
+   "tone": "bad",
+   "needs": [
+    "work"
+   ],
+   "drama": 0,
+   "weight": 6,
+   "text": "A meeting at work ran half an hour over and ate {first}'s lunch break.",
+   "told": "A meeting at work ran half an hour over and ate your lunch break.",
+   "on": true,
+   "share": "Meeting ran so long it ate my whole lunch break. I'm starving."
+  },
+  {
+   "id": "friend-cancelled",
+   "title": "A cancelled coffee",
+   "tone": "bad",
+   "needs": [
+    "friend"
+   ],
+   "drama": 1,
+   "weight": 6,
+   "text": "{friend} cancelled coffee with {first} at the last minute.",
+   "told": "{friend} cancelled coffee with you at the last minute.",
+   "on": true
+  },
+  {
+   "id": "friend-late-reply",
+   "title": "Left on read",
+   "tone": "mixed",
+   "needs": [
+    "friend"
+   ],
+   "drama": 1,
+   "weight": 4,
+   "text": "{friend} has been slow to answer {first}'s texts all week.",
+   "told": "{friend} has been slow to answer your texts all week.",
+   "on": true
+  },
+  {
+   "id": "small-argument",
+   "title": "A small argument",
+   "tone": "bad",
+   "needs": [
+    "friend"
+   ],
+   "drama": 1,
+   "weight": 6,
+   "text": "{first} and {friend} had a small, silly argument about plans.",
+   "told": "You and {friend} had a small, silly argument about plans.",
+   "on": true
+  },
+  {
+   "id": "unexpected-bill",
+   "title": "An annoying fee",
+   "tone": "bad",
+   "needs": [],
+   "drama": 1,
+   "weight": 6,
+   "text": "{first} got charged a fee they forgot about.",
+   "told": "You got charged a fee you forgot about.",
+   "on": true
+  },
+  {
+   "id": "work-extra-task",
+   "title": "One more thing",
+   "tone": "bad",
+   "needs": [
+    "work"
+   ],
+   "drama": 1,
+   "weight": 6,
+   "text": "{first} got handed an extra task at work right before leaving.",
+   "told": "You got handed an extra task at work right before leaving.",
+   "on": true,
+   "share": "Got handed one more thing at work right as I was leaving. Love that."
+  },
+  {
+   "id": "work-new-person",
+   "title": "Someone new at work",
+   "tone": "mixed",
+   "needs": [
+    "work"
+   ],
+   "drama": 1,
+   "weight": 6,
+   "text": "Someone new started at {first}'s work and seems nice, if a little loud.",
+   "told": "Someone new started at your work and seems nice, if a little loud.",
+   "on": true
+  },
+  {
+   "id": "noisy-neighbor",
+   "title": "Noisy neighbors",
+   "tone": "bad",
+   "needs": [],
+   "drama": 1,
+   "weight": 6,
+   "text": "The neighbors were loud until late and {first} barely slept.",
+   "told": "Your neighbors were loud until late and you barely slept.",
+   "on": true
+  },
+  {
+   "id": "invite-surprise",
+   "title": "A surprise invitation",
+   "tone": "good",
+   "needs": [
+    "friend"
+   ],
+   "drama": 0,
+   "weight": 8,
+   "text": "{friend} invited {first} to something on the weekend out of the blue.",
+   "told": "{friend} invited you to something this weekend out of the blue.",
+   "on": true,
+   "share": "{friend} just invited me to a thing this weekend out of nowhere. Should be fun."
+  },
+  {
+   "id": "old-friend-message",
+   "title": "A message from way back",
+   "tone": "mixed",
+   "needs": [],
+   "drama": 1,
+   "weight": 6,
+   "text": "Someone {first} hadn't heard from in years sent a message out of nowhere.",
+   "told": "Someone you hadn't heard from in years sent you a message out of nowhere.",
+   "on": true,
+   "share": "Someone I haven't talked to in like five years just messaged me. Weird."
+  },
+  {
+   "id": "lost-wallet-returned",
+   "title": "A wallet comes back",
+   "tone": "good",
+   "needs": [],
+   "drama": 1,
+   "weight": 4,
+   "text": "{first} lost their wallet, and a stranger returned it with everything still in it.",
+   "told": "You lost your wallet and a stranger returned it with everything still in it.",
+   "on": true,
+   "share": "Lost my wallet today and some angel returned it with everything in it. Faith in humanity restored."
+  },
+  {
+   "id": "missed-train",
+   "title": "Missed it by a second",
+   "tone": "bad",
+   "needs": [],
+   "drama": 1,
+   "weight": 6,
+   "text": "{first} missed their train by a second and watched the doors close.",
+   "told": "You missed your train by a second and watched the doors close.",
+   "on": true
+  },
+  {
+   "id": "double-booked",
+   "title": "Double-booked",
+   "tone": "bad",
+   "needs": [
+    "friend"
+   ],
+   "drama": 1,
+   "weight": 4,
+   "text": "{first} realized they'd promised the same evening to two people, including {friend}.",
+   "told": "You realized you'd promised the same evening to two people, including {friend}.",
+   "on": true
+  },
+  {
+   "id": "shower-cold",
+   "title": "No hot water",
+   "tone": "bad",
+   "needs": [],
+   "drama": 1,
+   "weight": 4,
+   "text": "The hot water went out mid-shower for {first}.",
+   "told": "Your hot water went out mid-shower.",
+   "on": true,
+   "share": "The hot water died mid-shower this morning. I screamed."
+  },
+  {
+   "id": "raise-rumor",
+   "title": "A rumor at work",
+   "tone": "mixed",
+   "needs": [
+    "work"
+   ],
+   "drama": 2,
+   "weight": 4,
+   "text": "There's a rumor at {first}'s work that someone is about to quit.",
+   "told": "There's a rumor at your work that someone is about to quit.",
+   "on": true
+  },
+  {
+   "id": "friend-secret-crush",
+   "title": "A friend's crush",
+   "tone": "mixed",
+   "needs": [
+    "friend"
+   ],
+   "drama": 2,
+   "weight": 4,
+   "text": "{friend} admitted to {first} they have a crush on someone and swore them to secrecy about who.",
+   "told": "{friend} admitted to you they have a crush on someone, but wouldn't say who.",
+   "on": true
+  },
+  {
+   "id": "car-trouble",
+   "title": "A strange noise",
+   "tone": "bad",
+   "needs": [],
+   "drama": 2,
+   "weight": 4,
+   "text": "{first}'s washing machine started making a noise that can't be good.",
+   "told": "Your washing machine started making a noise that can't be good.",
+   "on": true
+  },
+  {
+   "id": "work-snapped",
+   "title": "A short temper at work",
+   "tone": "bad",
+   "needs": [
+    "work"
+   ],
+   "drama": 2,
+   "weight": 4,
+   "text": "{first} snapped at someone at work and has felt bad about it all day.",
+   "told": "You snapped at someone at work and have felt bad about it all day.",
+   "on": true
+  },
+  {
+   "id": "friend-drama",
+   "title": "Caught in the middle",
+   "tone": "bad",
+   "needs": [
+    "friend"
+   ],
+   "drama": 2,
+   "weight": 4,
+   "text": "{friend} vented to {first} for an hour about a falling-out with someone else.",
+   "told": "{friend} vented to you for an hour about a falling-out with someone else.",
+   "on": true
+  },
+  {
+   "id": "big-spill",
+   "title": "A scene at the cafe",
+   "tone": "bad",
+   "needs": [],
+   "drama": 3,
+   "weight": 3,
+   "text": "{first} knocked a full tray of drinks over in a packed cafe.",
+   "told": "You knocked a full tray of drinks over in a packed cafe.",
+   "on": true,
+   "share": "I knocked over a WHOLE TRAY of drinks in a packed cafe today. I'm moving to another country."
+  },
+  {
+   "id": "overheard",
+   "title": "Overheard",
+   "tone": "mixed",
+   "needs": [
+    "friend"
+   ],
+   "drama": 3,
+   "weight": 3,
+   "text": "{first} overheard {friend} saying something not very nice about them, maybe as a joke.",
+   "told": "You overheard {friend} saying something not very nice about you, maybe as a joke.",
+   "on": true
+  },
+  {
+   "id": "blurted",
+   "title": "Said too much",
+   "tone": "bad",
+   "needs": [],
+   "drama": 3,
+   "weight": 3,
+   "text": "{first} blurted out something embarrassing in front of a room full of people.",
+   "told": "You blurted out something embarrassing in front of a room full of people.",
+   "on": true
+  },
+  {
+   "id": "caught-their-eye",
+   "title": "Someone caught their eye",
+   "tone": "good",
+   "needs": [
+    "love"
+   ],
+   "drama": 0,
+   "weight": 4,
+   "text": "Someone new caught {first}'s eye today, and {first} kept smiling about it all day.",
+   "told": "Someone new caught your eye today, and you have kept thinking about them since. You haven't told anyone.",
+   "on": true
+  }
+ ]
+}

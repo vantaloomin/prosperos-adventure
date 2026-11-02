@@ -1,0 +1,5395 @@
+{
+ "schema_version": 1,
+ "id": "baltimore",
+ "name": "Baltimore",
+ "region": "Maryland",
+ "country": "US",
+ "timezone": "America/New_York",
+ "aliases": [
+  "Charm City",
+  "Bmore",
+  "Baltimore, MD"
+ ],
+ "summary": "A port city of rowhouse neighborhoods on the Chesapeake Bay, known for its harbor, Johns Hopkins, steamed crabs and a strong local arts scene.",
+ "lat": 39.29,
+ "lon": -76.61,
+ "speeds": {
+  "walk": 4.5,
+  "car": 25,
+  "rideshare": 25,
+  "bus": 13,
+  "light-rail": 20,
+  "subway": 28,
+  "commuter-rail": 45,
+  "water-taxi": 10
+ },
+ "names": {
+  "mix": {
+   "black-american": 6,
+   "anglo": 3,
+   "hispanic": 0.8,
+   "irish": 0.5,
+   "italian": 0.4,
+   "jewish": 0.5,
+   "slavic": 0.4,
+   "east-asian": 0.4,
+   "south-asian": 0.3,
+   "west-african": 0.4,
+   "caribbean": 0.2
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Baltimore places and neighborhoods written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "Well-known public places, institutions and employers from general knowledge. Businesses open and close and rents move: treat this as a snapshot for fiction. Rents are rounded estimates of typical asking ranges, not listings. Coordinates are approximate neighborhood centers."
+  },
+  "curated-climate-2026-10": {
+   "kind": "curated",
+   "title": "Approximate monthly climate for Baltimore (BWI area)",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "Rounded values in line with NOAA 1991-2020 normals; refresh with scripts/world when network access to NOAA is available."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "inner-harbor",
+   "name": "Inner Harbor",
+   "summary": "The tourist waterfront: promenade, aquarium, science center and harbor views, busy on summer weekends.",
+   "vibe": [
+    "waterfront",
+    "touristy",
+    "central"
+   ],
+   "lat": 39.286,
+   "lon": -76.61,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1400,
+     1800
+    ],
+    "one_bedroom": [
+     1600,
+     2300
+    ],
+    "two_bedroom": [
+     2200,
+     3200
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "light-rail",
+    "water-taxi",
+    "circulator",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "downtown",
+   "name": "Downtown",
+   "summary": "Office towers, the stadiums, Lexington Market and the theater district.",
+   "vibe": [
+    "business",
+    "sports",
+    "central"
+   ],
+   "lat": 39.29,
+   "lon": -76.616,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1200,
+     1600
+    ],
+    "one_bedroom": [
+     1400,
+     2000
+    ],
+    "two_bedroom": [
+     1900,
+     2700
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "converted-office"
+   ],
+   "walkability": "high",
+   "transit": [
+    "light-rail",
+    "subway",
+    "circulator",
+    "citylink",
+    "marc"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fells-point",
+   "name": "Fells Point",
+   "summary": "Cobblestone streets, eighteenth-century rowhouses, pubs and live music on the waterfront.",
+   "vibe": [
+    "historic",
+    "nightlife",
+    "waterfront",
+    "cobblestones"
+   ],
+   "lat": 39.283,
+   "lon": -76.593,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1300,
+     1700
+    ],
+    "one_bedroom": [
+     1500,
+     2100
+    ],
+    "two_bedroom": [
+     2000,
+     2900
+    ]
+   },
+   "housing": [
+    "rowhouse",
+    "loft",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "water-taxi",
+    "circulator",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-east",
+   "name": "Harbor East",
+   "summary": "Polished new towers, hotels, offices and upscale restaurants between downtown and Fells Point.",
+   "vibe": [
+    "upscale",
+    "new-build",
+    "waterfront"
+   ],
+   "lat": 39.283,
+   "lon": -76.6,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1600,
+     2100
+    ],
+    "one_bedroom": [
+     1900,
+     2700
+    ],
+    "two_bedroom": [
+     2600,
+     3800
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "water-taxi",
+    "circulator",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "little-italy",
+   "name": "Little Italy",
+   "summary": "A few compact blocks of Italian restaurants, bakeries and bocce, with an outdoor film festival in summer.",
+   "vibe": [
+    "historic",
+    "food",
+    "quiet"
+   ],
+   "lat": 39.285,
+   "lon": -76.602,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1300,
+     1700
+    ],
+    "one_bedroom": [
+     1500,
+     2000
+    ],
+    "two_bedroom": [
+     1900,
+     2700
+    ]
+   },
+   "housing": [
+    "rowhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "circulator",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canton",
+   "name": "Canton",
+   "summary": "Former cannery rowhouses turned young-professional hub around O'Donnell Square, with a waterfront park and the marine terminals beyond.",
+   "vibe": [
+    "young-professional",
+    "bars",
+    "waterfront"
+   ],
+   "lat": 39.28,
+   "lon": -76.575,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1200,
+     1600
+    ],
+    "one_bedroom": [
+     1400,
+     1900
+    ],
+    "two_bedroom": [
+     1900,
+     2700
+    ]
+   },
+   "housing": [
+    "rowhouse",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "water-taxi",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "highlandtown",
+   "name": "Highlandtown",
+   "summary": "Working-class rowhouses beside Patterson Park, with Latin American groceries and an arts district.",
+   "vibe": [
+    "diverse",
+    "arts",
+    "affordable",
+    "park"
+   ],
+   "lat": 39.288,
+   "lon": -76.57,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1250
+    ],
+    "one_bedroom": [
+     1100,
+     1500
+    ],
+    "two_bedroom": [
+     1400,
+     1900
+    ]
+   },
+   "housing": [
+    "rowhouse"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "federal-hill",
+   "name": "Federal Hill",
+   "summary": "Hilltop park views over the harbor, a lively bar strip and Cross Street Market.",
+   "vibe": [
+    "young-professional",
+    "bars",
+    "views"
+   ],
+   "lat": 39.278,
+   "lon": -76.611,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1250,
+     1650
+    ],
+    "one_bedroom": [
+     1450,
+     2000
+    ],
+    "two_bedroom": [
+     1900,
+     2800
+    ]
+   },
+   "housing": [
+    "rowhouse",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "water-taxi",
+    "circulator",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "locust-point",
+   "name": "Locust Point",
+   "summary": "A quiet peninsula of rowhouses on the way to Fort McHenry, beside the Domino Sugars plant and its neon sign.",
+   "vibe": [
+    "quiet",
+    "historic",
+    "waterfront",
+    "family"
+   ],
+   "lat": 39.271,
+   "lon": -76.59,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1200,
+     1550
+    ],
+    "one_bedroom": [
+     1400,
+     1900
+    ],
+    "two_bedroom": [
+     1900,
+     2600
+    ]
+   },
+   "housing": [
+    "rowhouse",
+    "townhouse"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "water-taxi",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "baltimore-peninsula",
+   "name": "Baltimore Peninsula",
+   "summary": "A new mixed-use waterfront district in Port Covington, home to Under Armour's headquarters.",
+   "vibe": [
+    "new-build",
+    "waterfront",
+    "corporate"
+   ],
+   "lat": 39.265,
+   "lon": -76.613,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1600,
+     2100
+    ],
+    "one_bedroom": [
+     1900,
+     2600
+    ],
+    "two_bedroom": [
+     2600,
+     3600
+    ]
+   },
+   "housing": [
+    "apartment-tower"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mount-vernon",
+   "name": "Mount Vernon",
+   "summary": "Grand nineteenth-century townhouses around the original Washington Monument, with museums, the Peabody and a strong LGBTQ+ community.",
+   "vibe": [
+    "historic",
+    "cultural",
+    "lgbtq-friendly",
+    "architecture"
+   ],
+   "lat": 39.298,
+   "lon": -76.615,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1400
+    ],
+    "one_bedroom": [
+     1200,
+     1700
+    ],
+    "two_bedroom": [
+     1600,
+     2300
+    ]
+   },
+   "housing": [
+    "brownstone",
+    "apartment",
+    "converted-mansion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "light-rail",
+    "subway",
+    "circulator",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bolton-hill",
+   "name": "Bolton Hill",
+   "summary": "Leafy brick townhouse blocks next to the MICA campus.",
+   "vibe": [
+    "historic",
+    "quiet",
+    "arts"
+   ],
+   "lat": 39.305,
+   "lon": -76.625,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1350
+    ],
+    "one_bedroom": [
+     1200,
+     1650
+    ],
+    "two_bedroom": [
+     1600,
+     2200
+    ]
+   },
+   "housing": [
+    "brownstone",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "light-rail",
+    "subway",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "station-north",
+   "name": "Station North",
+   "summary": "The arts and entertainment district around Penn Station: murals, studios, an indie cinema and late-night bars.",
+   "vibe": [
+    "arts",
+    "nightlife",
+    "gritty",
+    "affordable"
+   ],
+   "lat": 39.31,
+   "lon": -76.615,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     850,
+     1150
+    ],
+    "one_bedroom": [
+     1000,
+     1400
+    ],
+    "two_bedroom": [
+     1300,
+     1800
+    ]
+   },
+   "housing": [
+    "apartment",
+    "loft",
+    "rowhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "light-rail",
+    "marc",
+    "citylink",
+    "circulator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "remington",
+   "name": "Remington",
+   "summary": "Small rowhouse blocks between Hampden and Charles Village with a food hall and music venues.",
+   "vibe": [
+    "up-and-coming",
+    "food",
+    "music"
+   ],
+   "lat": 39.318,
+   "lon": -76.623,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1300
+    ],
+    "one_bedroom": [
+     1150,
+     1550
+    ],
+    "two_bedroom": [
+     1450,
+     2000
+    ]
+   },
+   "housing": [
+    "rowhouse",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charles-village",
+   "name": "Charles Village",
+   "summary": "Painted Ladies rowhouses around the Johns Hopkins Homewood campus and the Baltimore Museum of Art.",
+   "vibe": [
+    "students",
+    "academic",
+    "colorful"
+   ],
+   "lat": 39.322,
+   "lon": -76.619,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1300
+    ],
+    "one_bedroom": [
+     1100,
+     1550
+    ],
+    "two_bedroom": [
+     1450,
+     2100
+    ]
+   },
+   "housing": [
+    "rowhouse",
+    "apartment",
+    "student-housing"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "citylink",
+    "circulator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hampden",
+   "name": "Hampden",
+   "summary": "Former mill village turned quirky shopping strip on 36th Street (\"The Avenue\"), with thrift shops, cafes and a famous Christmas light block.",
+   "vibe": [
+    "quirky",
+    "shopping",
+    "food",
+    "artsy"
+   ],
+   "lat": 39.33,
+   "lon": -76.633,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1350
+    ],
+    "one_bedroom": [
+     1200,
+     1650
+    ],
+    "two_bedroom": [
+     1550,
+     2200
+    ]
+   },
+   "housing": [
+    "rowhouse",
+    "mill-loft"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "reservoir-hill",
+   "name": "Reservoir Hill",
+   "summary": "Large Victorian homes on the edge of Druid Hill Park and the Maryland Zoo.",
+   "vibe": [
+    "historic",
+    "park",
+    "affordable"
+   ],
+   "lat": 39.316,
+   "lon": -76.635,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     850,
+     1150
+    ],
+    "one_bedroom": [
+     1000,
+     1350
+    ],
+    "two_bedroom": [
+     1300,
+     1800
+    ]
+   },
+   "housing": [
+    "victorian",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "roland-park",
+   "name": "Roland Park",
+   "summary": "One of the first planned suburbs in the country: winding streets, large houses, private schools and old trees.",
+   "vibe": [
+    "affluent",
+    "leafy",
+    "family",
+    "quiet"
+   ],
+   "lat": 39.351,
+   "lon": -76.633,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1200,
+     1500
+    ],
+    "one_bedroom": [
+     1400,
+     1900
+    ],
+    "two_bedroom": [
+     2000,
+     2900
+    ]
+   },
+   "housing": [
+    "single-family",
+    "apartment"
+   ],
+   "walkability": "low",
+   "transit": [
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lauraville",
+   "name": "Lauraville",
+   "summary": "Northeast Baltimore single-family homes with porches near Morgan State and the Harford Road restaurant strip.",
+   "vibe": [
+    "family",
+    "quiet",
+    "neighbourly"
+   ],
+   "lat": 39.346,
+   "lon": -76.565,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     900,
+     1200
+    ],
+    "one_bedroom": [
+     1050,
+     1450
+    ],
+    "two_bedroom": [
+     1400,
+     1950
+    ]
+   },
+   "housing": [
+    "single-family",
+    "rowhouse"
+   ],
+   "walkability": "low",
+   "transit": [
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "towson",
+   "name": "Towson",
+   "summary": "The Baltimore County seat just north of the city: Towson University, a large mall, hospitals and a busy suburban downtown.",
+   "vibe": [
+    "suburban",
+    "college-town",
+    "shopping"
+   ],
+   "lat": 39.401,
+   "lon": -76.602,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1150,
+     1450
+    ],
+    "one_bedroom": [
+     1350,
+     1800
+    ],
+    "two_bedroom": [
+     1700,
+     2400
+    ]
+   },
+   "housing": [
+    "apartment",
+    "townhouse",
+    "single-family"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-baltimore",
+   "name": "East Baltimore Midway",
+   "summary": "The neighborhood around the Johns Hopkins medical campus, with new graduate housing beside older rowhouse blocks.",
+   "vibe": [
+    "medical",
+    "students",
+    "changing"
+   ],
+   "lat": 39.297,
+   "lon": -76.592,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1400
+    ],
+    "one_bedroom": [
+     1200,
+     1700
+    ],
+    "two_bedroom": [
+     1500,
+     2100
+    ]
+   },
+   "housing": [
+    "apartment",
+    "rowhouse",
+    "student-housing"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "subway",
+    "citylink"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "light-rail",
+   "name": "Light RailLink",
+   "kind": "light-rail",
+   "summary": "North-south light rail from Hunt Valley through downtown and past the stadiums to BWI Airport.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "subway",
+   "name": "Metro SubwayLink",
+   "kind": "subway",
+   "summary": "A single line from Owings Mills through downtown to Johns Hopkins Hospital.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "citylink",
+   "name": "CityLink and LocalLink buses",
+   "kind": "bus",
+   "summary": "The MTA bus network, the main way around for people without cars.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "circulator",
+   "name": "Charm City Circulator",
+   "kind": "bus",
+   "summary": "Free downtown buses linking the harbor, Fells Point, Federal Hill, Mount Vernon and Penn Station.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "water-taxi",
+   "name": "Baltimore Water Taxi",
+   "kind": "water-taxi",
+   "summary": "Harbor boats between the Inner Harbor, Fells Point, Canton, Harbor East, Locust Point and Fort McHenry.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marc",
+   "name": "MARC Penn Line",
+   "kind": "commuter-rail",
+   "summary": "Commuter trains from Penn Station to Washington, D.C., used by many federal workers.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "national-aquarium",
+   "name": "National Aquarium",
+   "kind": "attraction",
+   "neighborhood": "inner-harbor",
+   "summary": "Big aquarium on the pier with a rooftop rainforest, a coral reef tank and a shark ring.",
+   "tags": [
+    "animals",
+    "rainy-day",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "inner-harbor-promenade",
+   "name": "Inner Harbor promenade",
+   "kind": "landmark",
+   "neighborhood": "inner-harbor",
+   "summary": "Brick waterfront walk past historic ships, paddle boats and street performers.",
+   "tags": [
+    "waterfront",
+    "walk",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maryland-science-center",
+   "name": "Maryland Science Center",
+   "kind": "museum",
+   "neighborhood": "inner-harbor",
+   "summary": "Hands-on science museum with a planetarium and IMAX.",
+   "tags": [
+    "science",
+    "rainy-day",
+    "kids"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "uss-constellation",
+   "name": "USS Constellation",
+   "kind": "landmark",
+   "neighborhood": "inner-harbor",
+   "summary": "A Civil War-era sloop of war you can board in the harbor.",
+   "tags": [
+    "history",
+    "ships"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-paddle-boats",
+   "name": "Inner Harbor paddle boats",
+   "kind": "attraction",
+   "neighborhood": "inner-harbor",
+   "summary": "Dragon-shaped pedal boats for a slow loop of the harbor.",
+   "tags": [
+    "water",
+    "silly"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "camden-yards",
+   "name": "Oriole Park at Camden Yards",
+   "kind": "stadium",
+   "neighborhood": "downtown",
+   "summary": "The Orioles' retro ballpark beside the old B&O warehouse.",
+   "tags": [
+    "baseball",
+    "sports",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ravens-stadium",
+   "name": "M&T Bank Stadium",
+   "kind": "stadium",
+   "neighborhood": "downtown",
+   "summary": "Home of the Ravens; tailgates fill the lots on game days.",
+   "tags": [
+    "football",
+    "sports",
+    "tailgate"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lexington-market",
+   "name": "Lexington Market",
+   "kind": "market",
+   "neighborhood": "downtown",
+   "summary": "One of the oldest public markets in the country, rebuilt with food stalls including Faidley's crab cakes.",
+   "tags": [
+    "food",
+    "crab-cakes",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hippodrome",
+   "name": "Hippodrome Theatre",
+   "kind": "venue",
+   "neighborhood": "downtown",
+   "summary": "Restored 1914 theater hosting touring Broadway shows.",
+   "tags": [
+    "theater",
+    "broadway"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bromo-seltzer-tower",
+   "name": "Bromo Seltzer Arts Tower",
+   "kind": "landmark",
+   "neighborhood": "downtown",
+   "summary": "Clock tower with artist studios and occasional open-studio days.",
+   "tags": [
+    "architecture",
+    "art"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "power-plant-live",
+   "name": "Power Plant Live!",
+   "kind": "nightlife",
+   "neighborhood": "downtown",
+   "summary": "An entertainment block of clubs and bars with outdoor concerts in summer.",
+   "tags": [
+    "clubs",
+    "party"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jfx-farmers-market",
+   "name": "Baltimore Farmers' Market & Bazaar",
+   "kind": "market",
+   "neighborhood": "downtown",
+   "summary": "Sunday morning market under the Jones Falls Expressway.",
+   "tags": [
+    "farmers-market",
+    "sunday",
+    "food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "attmans-deli",
+   "name": "Attman's Delicatessen",
+   "kind": "restaurant",
+   "neighborhood": "downtown",
+   "summary": "Century-old deli on Lombard Street's \"Corned Beef Row\".",
+   "tags": [
+    "deli",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fells-point-waterfront",
+   "name": "Thames Street waterfront",
+   "kind": "landmark",
+   "neighborhood": "fells-point",
+   "summary": "Cobblestones, tug boats and the old Recreation Pier on the harbor edge.",
+   "tags": [
+    "waterfront",
+    "walk",
+    "historic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "broadway-market",
+   "name": "Broadway Market",
+   "kind": "market",
+   "neighborhood": "fells-point",
+   "summary": "Historic market hall with lunch counters and seafood.",
+   "tags": [
+    "food",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "thames-street-oyster-house",
+   "name": "Thames Street Oyster House",
+   "kind": "restaurant",
+   "neighborhood": "fells-point",
+   "summary": "Busy seafood house known for its oyster bar and lobster rolls.",
+   "tags": [
+    "seafood",
+    "oysters"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blue-moon-cafe",
+   "name": "Blue Moon Cafe",
+   "kind": "restaurant",
+   "neighborhood": "fells-point",
+   "summary": "Tiny breakfast spot with a weekend line out the door for Cap'n Crunch French toast.",
+   "tags": [
+    "brunch",
+    "line"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "american-breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "berthas",
+   "name": "Bertha's Mussels",
+   "kind": "bar",
+   "neighborhood": "fells-point",
+   "summary": "Old pub with \"Eat Bertha's Mussels\" bumper-sticker fame and live music.",
+   "tags": [
+    "pub",
+    "mussels",
+    "live-music"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-horse-you-came-in-on",
+   "name": "The Horse You Came In On Saloon",
+   "kind": "bar",
+   "neighborhood": "fells-point",
+   "summary": "Claims to be one of the oldest continually operating saloons in the country.",
+   "tags": [
+    "bar",
+    "historic",
+    "live-music"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "vaccaros",
+   "name": "Vaccaro's Italian Pastry Shop",
+   "kind": "cafe",
+   "neighborhood": "little-italy",
+   "summary": "Cannoli and gelato institution.",
+   "tags": [
+    "dessert",
+    "cannoli"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian-pastry",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sabatinos",
+   "name": "Sabatino's",
+   "kind": "restaurant",
+   "neighborhood": "little-italy",
+   "summary": "Old-school red-sauce Italian open late, famous for its \"Bookmaker\" salad.",
+   "tags": [
+    "italian",
+    "old-school"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canton-waterfront-park",
+   "name": "Canton Waterfront Park",
+   "kind": "park",
+   "neighborhood": "canton",
+   "summary": "Small harbor-side park with a water taxi landing and views of the Domino Sugars sign.",
+   "tags": [
+    "waterfront",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "odonnell-square",
+   "name": "O'Donnell Square",
+   "kind": "nightlife",
+   "neighborhood": "canton",
+   "summary": "A square ringed by bars and restaurants, crowded on weekend nights.",
+   "tags": [
+    "bars",
+    "patios"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "captain-james",
+   "name": "Captain James Crab House",
+   "kind": "restaurant",
+   "neighborhood": "canton",
+   "summary": "Steamed crabs on butcher paper beside a building shaped like a ship.",
+   "tags": [
+    "crabs",
+    "waterfront"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "patterson-park",
+   "name": "Patterson Park",
+   "kind": "park",
+   "neighborhood": "highlandtown",
+   "summary": "A big city park with a pagoda, a boat lake, an ice rink and weekend soccer.",
+   "tags": [
+    "park",
+    "pagoda",
+    "dogs",
+    "running"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "federal-hill-park",
+   "name": "Federal Hill Park",
+   "kind": "park",
+   "neighborhood": "federal-hill",
+   "summary": "A steep hilltop with the best free view of the harbor skyline.",
+   "tags": [
+    "views",
+    "sunset"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cross-street-market",
+   "name": "Cross Street Market",
+   "kind": "market",
+   "neighborhood": "federal-hill",
+   "summary": "Renovated market hall with food stalls and a lively after-work crowd.",
+   "tags": [
+    "food-hall",
+    "happy-hour"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "avam",
+   "name": "American Visionary Art Museum",
+   "kind": "museum",
+   "neighborhood": "federal-hill",
+   "summary": "Museum of self-taught \"outsider\" art, with a mirrored mosaic facade.",
+   "tags": [
+    "art",
+    "quirky",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fort-mchenry",
+   "name": "Fort McHenry",
+   "kind": "landmark",
+   "neighborhood": "locust-point",
+   "summary": "Star-shaped fort whose 1814 defence inspired \"The Star-Spangled Banner\", with a shoreline walking path.",
+   "tags": [
+    "history",
+    "national-park",
+    "walk"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lp-steamers",
+   "name": "L.P. Steamers",
+   "kind": "restaurant",
+   "neighborhood": "locust-point",
+   "summary": "Neighborhood crab house with a rooftop deck.",
+   "tags": [
+    "crabs",
+    "rooftop"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "walters-art-museum",
+   "name": "Walters Art Museum",
+   "kind": "museum",
+   "neighborhood": "mount-vernon",
+   "summary": "Free museum with armour, manuscripts and art spanning five thousand years.",
+   "tags": [
+    "art",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "washington-monument",
+   "name": "Mount Vernon Place and the Washington Monument",
+   "kind": "landmark",
+   "neighborhood": "mount-vernon",
+   "summary": "The first monument to George Washington, set in four landscaped squares; climbable for a small fee.",
+   "tags": [
+    "views",
+    "architecture",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pratt-library",
+   "name": "Enoch Pratt Free Library Central Library",
+   "kind": "library",
+   "neighborhood": "mount-vernon",
+   "summary": "The grand central library on Cathedral Street.",
+   "tags": [
+    "books",
+    "quiet",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "meyerhoff",
+   "name": "Joseph Meyerhoff Symphony Hall",
+   "kind": "venue",
+   "neighborhood": "mount-vernon",
+   "summary": "Home of the Baltimore Symphony Orchestra.",
+   "tags": [
+    "classical",
+    "concerts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mount-vernon-marketplace",
+   "name": "Mount Vernon Marketplace",
+   "kind": "restaurant",
+   "neighborhood": "mount-vernon",
+   "summary": "Casual food hall with ramen, tacos, oysters and a bar.",
+   "tags": [
+    "food-hall",
+    "casual"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charles-theatre",
+   "name": "The Charles Theatre",
+   "kind": "venue",
+   "neighborhood": "station-north",
+   "summary": "Independent cinema showing art films and revival screenings.",
+   "tags": [
+    "movies",
+    "indie",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ottobar",
+   "name": "Ottobar",
+   "kind": "venue",
+   "neighborhood": "remington",
+   "summary": "Long-running punk and indie rock club.",
+   "tags": [
+    "live-music",
+    "rock"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "r-house",
+   "name": "R. House",
+   "kind": "restaurant",
+   "neighborhood": "remington",
+   "summary": "Food hall in a former auto body shop with a big patio.",
+   "tags": [
+    "food-hall",
+    "patio"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bma",
+   "name": "Baltimore Museum of Art",
+   "kind": "museum",
+   "neighborhood": "charles-village",
+   "summary": "Free art museum with a major Matisse collection and a sculpture garden.",
+   "tags": [
+    "art",
+    "free",
+    "sculpture-garden"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-avenue",
+   "name": "The Avenue on 36th Street",
+   "kind": "shopping",
+   "neighborhood": "hampden",
+   "summary": "Thrift shops, boutiques, cafes and kitsch along Hampden's main street.",
+   "tags": [
+    "thrift",
+    "boutiques",
+    "walk"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-charmery",
+   "name": "The Charmery",
+   "kind": "cafe",
+   "neighborhood": "hampden",
+   "summary": "Small-batch ice cream shop with local flavors like Old Bay caramel.",
+   "tags": [
+    "ice-cream",
+    "dessert"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ekiben",
+   "name": "Ekiben",
+   "kind": "restaurant",
+   "neighborhood": "hampden",
+   "summary": "Local favorite for steamed-bun sandwiches and tempura broccoli.",
+   "tags": [
+    "buns",
+    "casual"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "asian-fusion",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jones-falls-trail",
+   "name": "Jones Falls Trail",
+   "kind": "trail",
+   "neighborhood": "hampden",
+   "summary": "Paved trail along the stream from the mills to Druid Hill Park and downtown.",
+   "tags": [
+    "running",
+    "cycling",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "druid-hill-park",
+   "name": "Druid Hill Park",
+   "kind": "park",
+   "neighborhood": "reservoir-hill",
+   "summary": "Huge park with a reservoir loop, a Victorian conservatory and the Maryland Zoo.",
+   "tags": [
+    "park",
+    "running",
+    "conservatory"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maryland-zoo",
+   "name": "The Maryland Zoo",
+   "kind": "attraction",
+   "neighborhood": "reservoir-hill",
+   "summary": "Zoo in Druid Hill Park known for its African penguin colony.",
+   "tags": [
+    "animals",
+    "penguins",
+    "kids"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kocos-pub",
+   "name": "Koco's Pub",
+   "kind": "restaurant",
+   "neighborhood": "lauraville",
+   "summary": "Neighborhood pub famous for huge crab cakes.",
+   "tags": [
+    "crab-cakes",
+    "pub"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "towson-town-center",
+   "name": "Towson Town Center",
+   "kind": "shopping",
+   "neighborhood": "towson",
+   "summary": "The region's big indoor mall.",
+   "tags": [
+    "mall",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rash-field",
+   "name": "Rash Field Park",
+   "kind": "park",
+   "neighborhood": "inner-harbor",
+   "summary": "Rebuilt waterfront park below Federal Hill with a skate park, beach volleyball courts and lawn chairs facing the harbor.",
+   "tags": [
+    "waterfront",
+    "skate",
+    "volleyball"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pratt-street-ale-house",
+   "name": "Pratt Street Ale House",
+   "kind": "restaurant",
+   "neighborhood": "inner-harbor",
+   "summary": "Long-running brewpub near the Convention Center pouring Oliver ales with pub food before Orioles games.",
+   "tags": [
+    "brewpub",
+    "beer",
+    "game-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charleston",
+   "name": "Charleston",
+   "kind": "restaurant",
+   "neighborhood": "harbor-east",
+   "summary": "Cindy Wolf's acclaimed tasting-menu restaurant, one of the city's special-occasion dinners.",
+   "tags": [
+    "fine-dining",
+    "special-occasion",
+    "wine"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "southern-french",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cinghiale",
+   "name": "Cinghiale",
+   "kind": "restaurant",
+   "neighborhood": "harbor-east",
+   "summary": "Italian osteria and enoteca with house-made pasta and a long wine list.",
+   "tags": [
+    "italian",
+    "wine",
+    "pasta"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ouzo-bay",
+   "name": "Ouzo Bay",
+   "kind": "restaurant",
+   "neighborhood": "harbor-east",
+   "summary": "Glossy Greek seafood restaurant with whole fish and a see-and-be-seen bar.",
+   "tags": [
+    "seafood",
+    "greek",
+    "upscale"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "greek",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bagby-pizza-harbor-east",
+   "name": "Bagby Pizza",
+   "kind": "restaurant",
+   "neighborhood": "harbor-east",
+   "summary": "Casual brick-oven pizza shop that feeds the neighborhood's office workers and families.",
+   "tags": [
+    "pizza",
+    "casual",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whole-foods-harbor-east",
+   "name": "Whole Foods Market Harbor East",
+   "kind": "market",
+   "neighborhood": "harbor-east",
+   "summary": "The neighborhood's big grocery store, with a hot bar and seating for a quick lunch.",
+   "tags": [
+    "grocery",
+    "lunch"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-east-promenade",
+   "name": "Harbor East waterfront promenade",
+   "kind": "landmark",
+   "neighborhood": "harbor-east",
+   "summary": "Brick harbor walk linking the Inner Harbor to Fells Point past marinas and hotel terraces.",
+   "tags": [
+    "waterfront",
+    "walk",
+    "running"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chiapparellis",
+   "name": "Chiapparelli's",
+   "kind": "restaurant",
+   "neighborhood": "little-italy",
+   "summary": "Family-run red-sauce restaurant since 1940, known for its house salad and big platters.",
+   "tags": [
+    "italian",
+    "old-school",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amiccis",
+   "name": "Amicci's",
+   "kind": "restaurant",
+   "neighborhood": "little-italy",
+   "summary": "Casual Italian spot famous for its pane rotondo, a hollowed-out loaf filled with shrimp.",
+   "tags": [
+    "italian",
+    "casual"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "little-italy-bocce",
+   "name": "Little Italy bocce courts",
+   "kind": "park",
+   "neighborhood": "little-italy",
+   "summary": "Neighborhood bocce courts where league games run on warm evenings and spectators bring folding chairs.",
+   "tags": [
+    "bocce",
+    "local",
+    "games"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canton-library",
+   "name": "Enoch Pratt Canton Branch",
+   "kind": "library",
+   "neighborhood": "canton",
+   "summary": "Small historic branch library a block from the waterfront, with story times and study tables.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nacho-mamas",
+   "name": "Nacho Mama's",
+   "kind": "restaurant",
+   "neighborhood": "canton",
+   "summary": "Elvis-and-Natty-Boh-themed Tex-Mex bar on O'Donnell Square, serving margaritas in hubcaps.",
+   "tags": [
+    "tex-mex",
+    "kitschy",
+    "margaritas"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "tex-mex",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "claddagh-pub",
+   "name": "The Claddagh Pub",
+   "kind": "bar",
+   "neighborhood": "canton",
+   "summary": "Irish pub on O'Donnell Street with a big menu, sports on the TVs and a busy St. Patrick's Day.",
+   "tags": [
+    "pub",
+    "irish",
+    "sports"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "irish-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "can-company",
+   "name": "The Can Company",
+   "kind": "shopping",
+   "neighborhood": "canton",
+   "summary": "A former American Can Company factory turned into shops, restaurants and offices on Boston Street.",
+   "tags": [
+    "errands",
+    "historic",
+    "industrial"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "matthews-pizza",
+   "name": "Matthew's Pizza",
+   "kind": "restaurant",
+   "neighborhood": "highlandtown",
+   "summary": "Baltimore's oldest pizzeria, serving thick, crispy-edged pies on Eastern Avenue since 1943.",
+   "tags": [
+    "pizza",
+    "historic",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "creative-alliance",
+   "name": "Creative Alliance",
+   "kind": "venue",
+   "neighborhood": "highlandtown",
+   "summary": "Arts center in the old Patterson movie theater with concerts, film nights, galleries and classes.",
+   "tags": [
+    "arts",
+    "live-music",
+    "film"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southeast-anchor-library",
+   "name": "Enoch Pratt Southeast Anchor Library",
+   "kind": "library",
+   "neighborhood": "highlandtown",
+   "summary": "Large modern branch library on Eastern Avenue with computers, bilingual programs and a teen space.",
+   "tags": [
+    "books",
+    "study",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dipasquales",
+   "name": "Di Pasquale's Italian Marketplace",
+   "kind": "market",
+   "neighborhood": "highlandtown",
+   "summary": "Old Italian grocery and deli making its own mozzarella, with sandwiches and lasagne to eat in.",
+   "tags": [
+    "grocery",
+    "deli",
+    "italian"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "italian-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "patterson-park-ice-rink",
+   "name": "Patterson Park ice rink",
+   "kind": "fitness",
+   "neighborhood": "highlandtown",
+   "summary": "The Mimi DiPietro Family Skating Center, a city rink with public skates, hockey and lessons.",
+   "tags": [
+    "skating",
+    "winter",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "patterson-park-pagoda",
+   "name": "Patterson Park Pagoda",
+   "kind": "landmark",
+   "neighborhood": "highlandtown",
+   "summary": "Victorian observation tower in the park, open on summer Sundays for views over the rooftops to the harbor.",
+   "tags": [
+    "views",
+    "historic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "light-street-library",
+   "name": "Enoch Pratt Light Street Branch",
+   "kind": "library",
+   "neighborhood": "federal-hill",
+   "summary": "Neighborhood branch library on Light Street for books, computers and kids' programs.",
+   "tags": [
+    "books",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mothers-federal-hill",
+   "name": "Mother's Federal Hill Grille",
+   "kind": "bar",
+   "neighborhood": "federal-hill",
+   "summary": "Big neighborhood sports bar known for Ravens game days and its Purple Patio.",
+   "tags": [
+    "sports",
+    "ravens",
+    "patio"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ryleighs-oyster",
+   "name": "Ryleigh's Oyster",
+   "kind": "restaurant",
+   "neighborhood": "federal-hill",
+   "summary": "Oyster bar and seafood restaurant across from Cross Street Market.",
+   "tags": [
+    "oysters",
+    "seafood",
+    "happy-hour"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "museum-of-industry",
+   "name": "Baltimore Museum of Industry",
+   "kind": "museum",
+   "neighborhood": "locust-point",
+   "summary": "Museum in an old oyster cannery on Key Highway covering the city's factories, printers and port.",
+   "tags": [
+    "history",
+    "industry",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latrobe-park",
+   "name": "Latrobe Park",
+   "kind": "park",
+   "neighborhood": "locust-point",
+   "summary": "Neighborhood park with ball fields, a playground and dog walkers at the end of Fort Avenue.",
+   "tags": [
+    "playground",
+    "dogs",
+    "sports"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "riverside-park",
+   "name": "Riverside Park",
+   "kind": "park",
+   "neighborhood": "locust-point",
+   "summary": "Hilly South Baltimore park with a public pool, playing fields and Civil War-era history.",
+   "tags": [
+    "pool",
+    "playground",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sagamore-spirit",
+   "name": "Sagamore Spirit Distillery",
+   "kind": "bar",
+   "neighborhood": "baltimore-peninsula",
+   "summary": "Rye whiskey distillery on the Middle Branch with tours and a tasting-room bar.",
+   "tags": [
+    "whiskey",
+    "tours",
+    "waterfront"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nicks-fish-house",
+   "name": "Nick's Fish House",
+   "kind": "restaurant",
+   "neighborhood": "baltimore-peninsula",
+   "summary": "Casual seafood house and deck by the Hanover Street Bridge, with crabs and live music in summer.",
+   "tags": [
+    "crabs",
+    "deck",
+    "waterfront"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "swann-park",
+   "name": "Swann Park",
+   "kind": "park",
+   "neighborhood": "baltimore-peninsula",
+   "summary": "City ball fields and waterfront green by the Middle Branch, used for youth sports and pick-up games.",
+   "tags": [
+    "sports",
+    "fields",
+    "waterfront"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "middle-branch-park",
+   "name": "Middle Branch Park",
+   "kind": "park",
+   "neighborhood": "baltimore-peninsula",
+   "summary": "Shoreline park with a fishing pier, trails and the Baltimore Rowing Club boathouse across the water.",
+   "tags": [
+    "waterfront",
+    "fishing",
+    "rowing",
+    "trail"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "middle-branch-fitness",
+   "name": "Middle Branch Fitness and Wellness Center",
+   "kind": "fitness",
+   "neighborhood": "baltimore-peninsula",
+   "summary": "City recreation center with a pool, gym and fitness classes beside the Middle Branch.",
+   "tags": [
+    "gym",
+    "pool",
+    "rec-center"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mount-royal-tavern",
+   "name": "Mount Royal Tavern",
+   "kind": "bar",
+   "neighborhood": "bolton-hill",
+   "summary": "Cheap, friendly dive bar beloved by MICA students, with a copy of the Sistine Chapel ceiling painted overhead.",
+   "tags": [
+    "dive-bar",
+    "art-students",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lyric-baltimore",
+   "name": "Lyric Baltimore",
+   "kind": "venue",
+   "neighborhood": "bolton-hill",
+   "summary": "Historic concert hall on Mount Royal Avenue hosting touring comedians, concerts and the opera.",
+   "tags": [
+    "concerts",
+    "comedy",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mica-galleries",
+   "name": "MICA galleries",
+   "kind": "museum",
+   "neighborhood": "bolton-hill",
+   "summary": "Free student and faculty exhibitions in the Maryland Institute College of Art buildings, including the glass Brown Center.",
+   "tags": [
+    "art",
+    "free",
+    "students"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eutaw-place",
+   "name": "Eutaw Place medians",
+   "kind": "park",
+   "neighborhood": "bolton-hill",
+   "summary": "Long landscaped medians with fountains and statues running down a grand boulevard of townhouses.",
+   "tags": [
+    "walk",
+    "architecture",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brown-memorial-church",
+   "name": "Brown Memorial Park Avenue Presbyterian Church",
+   "kind": "landmark",
+   "neighborhood": "bolton-hill",
+   "summary": "Stone church with Tiffany stained-glass windows and regular organ concerts.",
+   "tags": [
+    "architecture",
+    "tiffany",
+    "music"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "club-charles",
+   "name": "Club Charles",
+   "kind": "bar",
+   "neighborhood": "station-north",
+   "summary": "Art deco dive bar across from the Charles Theatre, a late-night haunt for artists and film crowds.",
+   "tags": [
+    "dive-bar",
+    "late-night",
+    "art-deco"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tapas-teatro",
+   "name": "Tapas Teatro",
+   "kind": "restaurant",
+   "neighborhood": "station-north",
+   "summary": "Spanish small-plates restaurant next to the Charles, the classic dinner before a film.",
+   "tags": [
+    "tapas",
+    "sangria",
+    "pre-movie"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "spanish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "penn-station",
+   "name": "Baltimore Penn Station",
+   "kind": "landmark",
+   "neighborhood": "station-north",
+   "summary": "Beaux-Arts train station for Amtrak and MARC, fronted by the big aluminium \"Male/Female\" sculpture.",
+   "tags": [
+    "trains",
+    "architecture"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green-mount-cemetery",
+   "name": "Green Mount Cemetery",
+   "kind": "park",
+   "neighborhood": "station-north",
+   "summary": "Walled nineteenth-century garden cemetery with old trees, grand mausoleums and John Wilkes Booth's grave.",
+   "tags": [
+    "history",
+    "quiet",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "paper-moon-diner",
+   "name": "Paper Moon Diner",
+   "kind": "restaurant",
+   "neighborhood": "remington",
+   "summary": "Diner covered inside and out in toys, mannequins and Pez dispensers, serving breakfast all day.",
+   "tags": [
+    "diner",
+    "quirky",
+    "brunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clavel",
+   "name": "Clavel",
+   "kind": "restaurant",
+   "neighborhood": "remington",
+   "summary": "Mezcaleria and taqueria with handmade tortillas and a crowded bar.",
+   "tags": [
+    "tacos",
+    "mezcal"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wyman-park",
+   "name": "Wyman Park",
+   "kind": "park",
+   "neighborhood": "remington",
+   "summary": "Wooded valley park between Remington and the Hopkins campus, with trails down to Stony Run.",
+   "tags": [
+    "woods",
+    "trail",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wyman-park-dell",
+   "name": "Wyman Park Dell",
+   "kind": "park",
+   "neighborhood": "charles-village",
+   "summary": "Grassy dell next to the Baltimore Museum of Art with a playground and the Charles Village Festival in spring.",
+   "tags": [
+    "playground",
+    "picnic",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "waverly-farmers-market",
+   "name": "32nd Street Farmers Market",
+   "kind": "market",
+   "neighborhood": "charles-village",
+   "summary": "Year-round Saturday market in Waverly with produce, coffee, breakfast stalls and neighbors catching up.",
+   "tags": [
+    "farmers-market",
+    "saturday",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "normals-books",
+   "name": "Normal's Books & Records",
+   "kind": "shopping",
+   "neighborhood": "charles-village",
+   "summary": "Crammed used book and record shop in Waverly with occasional experimental music shows.",
+   "tags": [
+    "books",
+    "records",
+    "used"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "red-emmas",
+   "name": "Red Emma's",
+   "kind": "cafe",
+   "neighborhood": "charles-village",
+   "summary": "Worker-owned cafe, vegan restaurant and radical bookstore in Waverly with talks in the evenings.",
+   "tags": [
+    "vegan",
+    "books",
+    "coffee",
+    "events"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "vegan",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "homewood-campus",
+   "name": "Johns Hopkins Homewood campus",
+   "kind": "landmark",
+   "neighborhood": "charles-village",
+   "summary": "Red-brick quads, the Beach lawn and Homewood Museum on the university's main campus.",
+   "tags": [
+    "campus",
+    "architecture",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "atomic-books",
+   "name": "Atomic Books",
+   "kind": "shopping",
+   "neighborhood": "hampden",
+   "summary": "Independent bookstore for comics, zines and odd literature, with a bar in the back room.",
+   "tags": [
+    "books",
+    "comics",
+    "zines"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hampden-library",
+   "name": "Enoch Pratt Hampden Branch",
+   "kind": "library",
+   "neighborhood": "hampden",
+   "summary": "Neighborhood branch library on Falls Road, a quiet stop off The Avenue.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "union-craft-brewing",
+   "name": "Union Craft Brewing",
+   "kind": "bar",
+   "neighborhood": "hampden",
+   "summary": "Brewery taproom in the Union Collective, with food trucks, trivia and a big patio.",
+   "tags": [
+    "brewery",
+    "beer",
+    "patio"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holy-frijoles",
+   "name": "Holy Frijoles",
+   "kind": "restaurant",
+   "neighborhood": "hampden",
+   "summary": "Small, loud Tex-Mex restaurant on The Avenue with big burritos.",
+   "tags": [
+    "tex-mex",
+    "casual"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "tex-mex",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rawlings-conservatory",
+   "name": "Rawlings Conservatory",
+   "kind": "garden",
+   "neighborhood": "reservoir-hill",
+   "summary": "Victorian glass conservatory in Druid Hill Park with palms, orchids and desert houses; free to visit.",
+   "tags": [
+    "plants",
+    "rainy-day",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "druid-hill-farmers-market",
+   "name": "Druid Hill Park Farmers Market",
+   "kind": "market",
+   "neighborhood": "reservoir-hill",
+   "summary": "Wednesday afternoon market by the park's Superintendent's House with produce and prepared food.",
+   "tags": [
+    "farmers-market",
+    "produce"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "druid-lake-loop",
+   "name": "Druid Lake loop",
+   "kind": "trail",
+   "neighborhood": "reservoir-hill",
+   "summary": "Paved loop around Druid Lake, the neighborhood's running and dog-walking track with skyline views.",
+   "tags": [
+    "running",
+    "walk",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "druid-hill-pool",
+   "name": "Druid Hill Park pool",
+   "kind": "fitness",
+   "neighborhood": "reservoir-hill",
+   "summary": "Big city outdoor pool in the park, cheap and packed on hot summer afternoons.",
+   "tags": [
+    "pool",
+    "swimming",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "miss-shirleys",
+   "name": "Miss Shirley's Cafe",
+   "kind": "restaurant",
+   "neighborhood": "roland-park",
+   "summary": "The original location of the local brunch chain, with crab cake Benedict and long weekend waits.",
+   "tags": [
+    "brunch",
+    "breakfast",
+    "crab"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "american-breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "petit-louis",
+   "name": "Petit Louis Bistro",
+   "kind": "restaurant",
+   "neighborhood": "roland-park",
+   "summary": "Classic French bistro in the Roland Park shopping strip.",
+   "tags": [
+    "french",
+    "bistro",
+    "wine"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "french",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eddies-of-roland-park",
+   "name": "Eddie's of Roland Park",
+   "kind": "market",
+   "neighborhood": "roland-park",
+   "summary": "Family-owned gourmet grocery on Roland Avenue since the 1940s, with a prepared-food counter.",
+   "tags": [
+    "grocery",
+    "deli",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "roland-park-library",
+   "name": "Enoch Pratt Roland Park Branch",
+   "kind": "library",
+   "neighborhood": "roland-park",
+   "summary": "Busy neighborhood library on Roland Avenue with a strong children's section.",
+   "tags": [
+    "books",
+    "kids",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stony-run-trail",
+   "name": "Stony Run Trail",
+   "kind": "trail",
+   "neighborhood": "roland-park",
+   "summary": "Wooded footpath along a stream from Wyman Park up through Roland Park, popular with dog walkers.",
+   "tags": [
+    "woods",
+    "walk",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sherwood-gardens",
+   "name": "Sherwood Gardens",
+   "kind": "garden",
+   "neighborhood": "roland-park",
+   "summary": "Guilford neighborhood garden famous for its tens of thousands of spring tulips.",
+   "tags": [
+    "flowers",
+    "picnic",
+    "tulips"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "herring-run-park",
+   "name": "Herring Run Park",
+   "kind": "park",
+   "neighborhood": "lauraville",
+   "summary": "Long stream-valley park with trails, ball fields and a playground through northeast Baltimore.",
+   "tags": [
+    "trail",
+    "playground",
+    "woods"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lake-montebello",
+   "name": "Lake Montebello",
+   "kind": "trail",
+   "neighborhood": "lauraville",
+   "summary": "Reservoir with a flat paved loop of about a mile and a half, crowded with runners, cyclists and walkers.",
+   "tags": [
+    "running",
+    "cycling",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zekes-coffee",
+   "name": "Zeke's Coffee",
+   "kind": "cafe",
+   "neighborhood": "lauraville",
+   "summary": "Local roaster with a cafe on Harford Road, the neighborhood's morning stop.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hamilton-library",
+   "name": "Enoch Pratt Hamilton Branch",
+   "kind": "library",
+   "neighborhood": "lauraville",
+   "summary": "Neighborhood branch library on Harford Road.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "towson-diner",
+   "name": "Towson Diner",
+   "kind": "restaurant",
+   "neighborhood": "towson",
+   "summary": "Big Greek-run diner on York Road with an enormous menu and late hours for students.",
+   "tags": [
+    "diner",
+    "late-night",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "towson-library",
+   "name": "Towson Branch Library",
+   "kind": "library",
+   "neighborhood": "towson",
+   "summary": "Baltimore County's large Towson branch library, with study rooms and a busy children's area.",
+   "tags": [
+    "books",
+    "study",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "towson-farmers-market",
+   "name": "Towson Farmers Market",
+   "kind": "market",
+   "neighborhood": "towson",
+   "summary": "Thursday market downtown with produce, baked goods and lunch vendors.",
+   "tags": [
+    "farmers-market",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hampton-nhs",
+   "name": "Hampton National Historic Site",
+   "kind": "landmark",
+   "neighborhood": "towson",
+   "summary": "Georgian mansion and estate grounds that tell the history of a plantation and the people enslaved there.",
+   "tags": [
+    "history",
+    "grounds"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cromwell-valley-park",
+   "name": "Cromwell Valley Park",
+   "kind": "park",
+   "neighborhood": "towson",
+   "summary": "County park of farm fields, orchards and trails with nature programs.",
+   "tags": [
+    "trail",
+    "nature",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hopkins-dome",
+   "name": "Johns Hopkins Hospital dome",
+   "kind": "landmark",
+   "neighborhood": "east-baltimore",
+   "summary": "The historic Billings Building with its dome and the marble Christus statue in the rotunda.",
+   "tags": [
+    "history",
+    "medical"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "northeast-market",
+   "name": "Northeast Market",
+   "kind": "market",
+   "neighborhood": "east-baltimore",
+   "summary": "City public market on Monument Street with lunch counters feeding hospital staff and neighbors.",
+   "tags": [
+    "food",
+    "lunch",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eager-park",
+   "name": "Eager Park",
+   "kind": "park",
+   "neighborhood": "east-baltimore",
+   "summary": "New neighborhood park with lawns, a playground and summer concerts near the Hopkins campus.",
+   "tags": [
+    "playground",
+    "lawn",
+    "events"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "orleans-street-library",
+   "name": "Enoch Pratt Orleans Street Branch",
+   "kind": "library",
+   "neighborhood": "east-baltimore",
+   "summary": "Neighborhood branch library on Orleans Street with computers and after-school programs.",
+   "tags": [
+    "books",
+    "kids",
+    "computers"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "great-blacks-in-wax",
+   "name": "National Great Blacks In Wax Museum",
+   "kind": "museum",
+   "neighborhood": "east-baltimore",
+   "summary": "Wax figures telling African American history, from the Middle Passage to the civil rights movement.",
+   "tags": [
+    "history",
+    "black-history"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daily-grind",
+   "name": "The Daily Grind",
+   "kind": "cafe",
+   "neighborhood": "fells-point",
+   "summary": "Long-running coffeehouse on Thames Street with big windows, local art and a crowd of regulars with laptops.",
+   "tags": [
+    "coffee",
+    "laptop",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bonaparte-breads",
+   "name": "Bonaparte Breads",
+   "kind": "cafe",
+   "neighborhood": "fells-point",
+   "summary": "French bakery and cafe on Thames Street selling croissants, baguettes and quiche.",
+   "tags": [
+    "bakery",
+    "french",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "french-bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hoehns-bakery",
+   "name": "Hoehn's Bakery",
+   "kind": "cafe",
+   "neighborhood": "highlandtown",
+   "summary": "Family bakery on Conkling Street since 1927, still baking German-style coffee cakes and cookies in brick ovens.",
+   "tags": [
+    "bakery",
+    "historic",
+    "family-run"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ceremony-coffee",
+   "name": "Ceremony Coffee Roasters",
+   "kind": "cafe",
+   "neighborhood": "harbor-east",
+   "summary": "Local roaster's bright coffee bar at Harbor Point, busy with office workers on weekday mornings.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sophomore-coffee",
+   "name": "Sophomore Coffee",
+   "kind": "cafe",
+   "neighborhood": "remington",
+   "summary": "Tiny coffee bar on a Remington corner pulling espresso from rotating roasters.",
+   "tags": [
+    "coffee",
+    "small",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dovecote-cafe",
+   "name": "Dovecote Cafe",
+   "kind": "cafe",
+   "neighborhood": "reservoir-hill",
+   "summary": "Black-owned neighborhood cafe in a Reservoir Hill rowhouse, serving coffee, breakfast and community events.",
+   "tags": [
+    "coffee",
+    "breakfast",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movement-hampden",
+   "name": "Movement Hampden",
+   "kind": "fitness",
+   "neighborhood": "hampden",
+   "summary": "Large climbing gym in an old mill building, opened as Earth Treks, with bouldering, roped walls and yoga.",
+   "tags": [
+    "climbing",
+    "bouldering",
+    "yoga"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "towson-ymca",
+   "name": "Towson Family Center YMCA",
+   "kind": "fitness",
+   "neighborhood": "towson",
+   "summary": "Y in Central Maryland branch with a pool, gym floor and group classes.",
+   "tags": [
+    "gym",
+    "pool",
+    "classes"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mount-pleasant-ice-arena",
+   "name": "Mount Pleasant Ice Arena",
+   "kind": "fitness",
+   "neighborhood": "lauraville",
+   "summary": "City-run rink off Hillen Road with public skating, figure skating and hockey.",
+   "tags": [
+    "skating",
+    "hockey",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "jhu",
+   "name": "Johns Hopkins University",
+   "type": "research-university",
+   "neighborhood": "charles-village",
+   "size": "large",
+   "known_for": [
+    "medicine",
+    "public-health",
+    "engineering",
+    "international-studies",
+    "research"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jhu-medicine",
+   "name": "Johns Hopkins School of Medicine",
+   "type": "medical-school",
+   "neighborhood": "east-baltimore",
+   "size": "medium",
+   "known_for": [
+    "medicine",
+    "nursing",
+    "public-health"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peabody",
+   "name": "Peabody Institute",
+   "type": "music-school",
+   "neighborhood": "mount-vernon",
+   "size": "small",
+   "known_for": [
+    "music",
+    "composition",
+    "dance"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mica",
+   "name": "Maryland Institute College of Art",
+   "type": "art-school",
+   "neighborhood": "bolton-hill",
+   "size": "small",
+   "known_for": [
+    "fine-art",
+    "illustration",
+    "graphic-design"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "umb",
+   "name": "University of Maryland, Baltimore",
+   "type": "medical-school",
+   "neighborhood": "downtown",
+   "size": "medium",
+   "known_for": [
+    "medicine",
+    "law",
+    "pharmacy",
+    "nursing",
+    "social-work"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ubalt",
+   "name": "University of Baltimore",
+   "type": "public-university",
+   "neighborhood": "mount-vernon",
+   "size": "medium",
+   "known_for": [
+    "law",
+    "business",
+    "public-policy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "loyola-md",
+   "name": "Loyola University Maryland",
+   "type": "private-university",
+   "neighborhood": "roland-park",
+   "size": "medium",
+   "known_for": [
+    "business",
+    "liberal-arts"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "morgan-state",
+   "name": "Morgan State University",
+   "type": "public-university",
+   "neighborhood": "lauraville",
+   "size": "medium",
+   "known_for": [
+    "hbcu",
+    "engineering",
+    "architecture",
+    "business"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "towson-u",
+   "name": "Towson University",
+   "type": "public-university",
+   "neighborhood": "towson",
+   "size": "large",
+   "known_for": [
+    "education",
+    "nursing",
+    "business"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "jh-hospital",
+   "name": "The Johns Hopkins Hospital",
+   "sector": "healthcare",
+   "neighborhood": "east-baltimore",
+   "size": "large",
+   "summary": "The flagship teaching hospital and the city's largest employer group.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jhu-employer",
+   "name": "Johns Hopkins University (Homewood)",
+   "sector": "education",
+   "neighborhood": "charles-village",
+   "size": "large",
+   "summary": "Faculty, research and staff jobs on the main campus.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "medical-researcher",
+    "data-analyst",
+    "software-engineer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "umm-center",
+   "name": "University of Maryland Medical Center",
+   "sector": "healthcare",
+   "neighborhood": "downtown",
+   "size": "large",
+   "summary": "Academic hospital with the Shock Trauma Center.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kennedy-krieger",
+   "name": "Kennedy Krieger Institute",
+   "sector": "healthcare",
+   "neighborhood": "east-baltimore",
+   "size": "medium",
+   "summary": "Care and research for children with developmental disabilities.",
+   "careers": [
+    "registered-nurse",
+    "social-worker",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "t-rowe-price",
+   "name": "T. Rowe Price",
+   "sector": "finance",
+   "neighborhood": "harbor-east",
+   "size": "large",
+   "summary": "Investment management firm headquartered on the waterfront at Harbor Point.",
+   "careers": [
+    "financial-analyst",
+    "software-engineer",
+    "data-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "constellation",
+   "name": "Constellation Energy",
+   "sector": "energy",
+   "neighborhood": "harbor-east",
+   "size": "large",
+   "summary": "Energy company with a headquarters tower in Harbor East.",
+   "careers": [
+    "financial-analyst",
+    "data-analyst",
+    "accountant",
+    "software-engineer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "under-armour",
+   "name": "Under Armour",
+   "sector": "apparel",
+   "neighborhood": "baltimore-peninsula",
+   "size": "large",
+   "summary": "Sportswear company headquartered on the Baltimore Peninsula.",
+   "careers": [
+    "marketing-coordinator",
+    "graphic-designer",
+    "ux-designer",
+    "software-engineer",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "port-of-baltimore",
+   "name": "Port of Baltimore marine terminals",
+   "sector": "logistics",
+   "neighborhood": "canton",
+   "size": "large",
+   "summary": "Container and roll-on/roll-off terminals that employ longshore workers, logisticians and truckers.",
+   "careers": [
+    "port-logistics"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "baltimore-city-schools",
+   "name": "Baltimore City Public Schools",
+   "sector": "education",
+   "neighborhood": "station-north",
+   "size": "large",
+   "summary": "The city school district, headquartered on North Avenue.",
+   "careers": [
+    "teacher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-hall",
+   "name": "Baltimore City government",
+   "sector": "government",
+   "neighborhood": "downtown",
+   "size": "large",
+   "summary": "City agencies around City Hall and the municipal buildings.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "horseshoe-baltimore",
+   "name": "Horseshoe Casino Baltimore",
+   "sector": "hospitality",
+   "neighborhood": "downtown",
+   "size": "medium",
+   "summary": "Casino near the stadiums.",
+   "careers": [
+    "casino-dealer",
+    "bartender",
+    "line-cook",
+    "server"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "baltimore-sun",
+   "name": "The Baltimore Sun",
+   "sector": "media",
+   "neighborhood": "downtown",
+   "size": "small",
+   "summary": "The city's daily newspaper.",
+   "careers": [
+    "journalist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "four-seasons-baltimore",
+   "name": "Four Seasons Hotel Baltimore",
+   "sector": "hospitality",
+   "neighborhood": "harbor-east",
+   "size": "medium",
+   "summary": "Luxury waterfront hotel.",
+   "careers": [
+    "hotel-front-desk",
+    "event-planner",
+    "line-cook",
+    "server",
+    "bartender"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "center-stage",
+   "name": "Baltimore Center Stage",
+   "sector": "entertainment",
+   "neighborhood": "mount-vernon",
+   "size": "small",
+   "summary": "Maryland's state theater, in a converted school building on North Calvert Street.",
+   "careers": [
+    "actor",
+    "performer",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "everyman-theatre",
+   "name": "Everyman Theatre",
+   "sector": "entertainment",
+   "neighborhood": "downtown",
+   "size": "small",
+   "summary": "Resident-company theater on Fayette Street.",
+   "careers": [
+    "actor",
+    "performer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "towson-u-employer",
+   "name": "Towson University",
+   "sector": "education",
+   "neighborhood": "towson",
+   "size": "large",
+   "summary": "A large public university campus.",
+   "careers": [
+    "professor",
+    "graduate-student"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "medical-campuses",
+   "name": "Hospital and research campuses",
+   "neighborhoods": [
+    "east-baltimore",
+    "downtown"
+   ],
+   "sectors": [
+    "healthcare",
+    "biotech",
+    "education"
+   ],
+   "summary": "Johns Hopkins in East Baltimore and the University of Maryland campus downtown anchor the city's \"eds and meds\" economy.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-business",
+   "name": "Harbor business district",
+   "neighborhoods": [
+    "downtown",
+    "harbor-east",
+    "inner-harbor"
+   ],
+   "sectors": [
+    "finance",
+    "legal",
+    "energy",
+    "government",
+    "hospitality"
+   ],
+   "summary": "Banks, law firms, energy and investment companies, plus hotels and convention work.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "port-district",
+   "name": "The port",
+   "neighborhoods": [
+    "canton",
+    "locust-point"
+   ],
+   "sectors": [
+    "logistics",
+    "manufacturing"
+   ],
+   "summary": "Marine terminals, warehouses and the Domino Sugars refinery.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "homewood",
+   "name": "Homewood and North Baltimore campuses",
+   "neighborhoods": [
+    "charles-village",
+    "roland-park",
+    "towson"
+   ],
+   "sectors": [
+    "education"
+   ],
+   "summary": "Universities and private schools.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Humid subtropical: hot, sticky summers with thunderstorms, mild springs and autumns, and cold but changeable winters with occasional snow.",
+  "months": [
+   {
+    "high_f": 42,
+    "low_f": 26,
+    "rain_days": 10,
+    "note": "Coldest month; a few snow days most years."
+   },
+   {
+    "high_f": 46,
+    "low_f": 28,
+    "rain_days": 9,
+    "note": "Cold, gray; snow possible."
+   },
+   {
+    "high_f": 55,
+    "low_f": 35,
+    "rain_days": 11,
+    "note": "Changeable; early blossoms late in the month."
+   },
+   {
+    "high_f": 66,
+    "low_f": 45,
+    "rain_days": 11,
+    "note": "Spring rain and blossoms."
+   },
+   {
+    "high_f": 75,
+    "low_f": 54,
+    "rain_days": 12,
+    "note": "Warm and green; patios open."
+   },
+   {
+    "high_f": 84,
+    "low_f": 63,
+    "rain_days": 10,
+    "note": "Humid; crab season gets going."
+   },
+   {
+    "high_f": 88,
+    "low_f": 68,
+    "rain_days": 10,
+    "note": "Hottest month; afternoon thunderstorms."
+   },
+   {
+    "high_f": 86,
+    "low_f": 67,
+    "rain_days": 9,
+    "note": "Hot and humid."
+   },
+   {
+    "high_f": 79,
+    "low_f": 60,
+    "rain_days": 8,
+    "note": "Still warm; humidity eases."
+   },
+   {
+    "high_f": 68,
+    "low_f": 48,
+    "rain_days": 8,
+    "note": "Crisp, sunny autumn."
+   },
+   {
+    "high_f": 57,
+    "low_f": 38,
+    "rain_days": 8,
+    "note": "Cool; leaves turn."
+   },
+   {
+    "high_f": 46,
+    "low_f": 30,
+    "rain_days": 10,
+    "note": "Cold; holiday lights."
+   }
+  ],
+  "source": "curated-climate-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "orioles-opening-day",
+   "name": "Orioles Opening Day",
+   "months": [
+    3,
+    4
+   ],
+   "neighborhood": "downtown",
+   "summary": "The baseball season starts at Camden Yards and downtown fills with orange.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "flower-mart",
+   "name": "Flower Mart",
+   "months": [
+    5
+   ],
+   "neighborhood": "mount-vernon",
+   "summary": "Spring festival around the Washington Monument with flowers and lemon sticks.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kinetic-sculpture-race",
+   "name": "Kinetic Sculpture Race",
+   "months": [
+    5
+   ],
+   "neighborhood": "federal-hill",
+   "summary": "Human-powered art vehicles race over land, mud and harbor water, starting at the American Visionary Art Museum.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "baltimore-pride",
+   "name": "Baltimore Pride",
+   "months": [
+    6
+   ],
+   "neighborhood": "mount-vernon",
+   "summary": "Parade and block party.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "july-fourth-harbor",
+   "name": "Fourth of July fireworks",
+   "months": [
+    7
+   ],
+   "neighborhood": "inner-harbor",
+   "summary": "Fireworks over the Inner Harbor.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "little-italy-film-fest",
+   "name": "Little Italy open-air film festival",
+   "months": [
+    7,
+    8
+   ],
+   "neighborhood": "little-italy",
+   "summary": "Friday night films projected onto a wall in Little Italy.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "artscape",
+   "name": "Artscape",
+   "months": [
+    7,
+    9
+   ],
+   "neighborhood": "station-north",
+   "summary": "A large free outdoor arts festival; its dates have moved between summer and early autumn.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ravens-season",
+   "name": "Ravens football season",
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1
+   ],
+   "neighborhood": "downtown",
+   "summary": "Purple Fridays and Sunday game days.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fells-point-fun-festival",
+   "name": "Fells Point Fun Festival",
+   "months": [
+    10
+   ],
+   "neighborhood": "fells-point",
+   "summary": "Street festival with music stages and food on the cobblestones.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "christmas-village",
+   "name": "Christmas Village",
+   "months": [
+    11,
+    12
+   ],
+   "neighborhood": "inner-harbor",
+   "summary": "German-style Christmas market by the harbor.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "miracle-on-34th",
+   "name": "Miracle on 34th Street",
+   "months": [
+    12
+   ],
+   "neighborhood": "hampden",
+   "summary": "A block of rowhouses covered in over-the-top Christmas lights.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "steamed-crabs",
+   "name": "Steamed blue crabs",
+   "kind": "dish",
+   "summary": "Chesapeake blue crabs steamed with a crust of Old Bay-style seasoning, tipped onto brown paper and picked at with mallets and knives over pitchers of beer; they are heaviest and best in late summer and early fall.",
+   "places": [
+    "lp-steamers",
+    "captain-james"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crab-cake",
+   "name": "Crab cake",
+   "kind": "dish",
+   "summary": "A Maryland crab cake is mostly jumbo lump crab with just enough binder to hold it, broiled or fried and eaten on a platter or with saltines; locals argue hard about filler.",
+   "places": [
+    "lexington-market",
+    "kocos-pub",
+    "thames-street-oyster-house"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "soft-shell-crab",
+   "name": "Soft-shell crab sandwich",
+   "kind": "dish",
+   "summary": "Blue crabs caught just after molting are fried whole, legs and all, and served on white bread with lettuce, tomato and tartar sauce.",
+   "places": [],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-bay",
+   "name": "Old Bay on everything",
+   "kind": "other",
+   "summary": "Old Bay seasoning was created in Baltimore, and locals shake it on fries, corn, popcorn, chicken wings and the rims of Bloody Marys, not just crabs.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pit-beef",
+   "name": "Pit beef",
+   "kind": "dish",
+   "summary": "Top round charred over charcoal, sliced thin and rare onto a kaiser roll with raw onion and horseradish sauce; the classic stands line Pulaski Highway on the east side.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "berger-cookies",
+   "name": "Berger cookies",
+   "kind": "dish",
+   "summary": "Soft, cakey shortbread cookies buried under a thick layer of fudge icing, sold in grocery stores all over town and brought to every office party.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lake-trout",
+   "name": "Lake trout",
+   "kind": "dish",
+   "summary": "A carryout staple that is not trout at all: fried whiting on white bread with hot sauce, sold by the box at corner carryouts.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "snowball",
+   "name": "Snowball",
+   "kind": "dish",
+   "summary": "Finely shaved ice soaked in syrup, with egg custard the local favorite and marshmallow cream on top, sold from neighborhood stands that open for the warm months.",
+   "places": [],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "natty-boh",
+   "name": "Natty Boh",
+   "kind": "drink",
+   "summary": "National Bohemian, the cheap local lager whose one-eyed, mustachioed Mr. Boh still turns up on signs, T-shirts and bar taps; ordering one is a statement of loyalty.",
+   "places": [
+    "odonnell-square",
+    "mount-royal-tavern"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "half-and-half",
+   "name": "Half-and-half",
+   "kind": "drink",
+   "summary": "Iced tea mixed with lemonade, bought by the bottle or the styrofoam cup at carryouts and corner stores.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hon",
+   "name": "\"Hon\"",
+   "kind": "saying",
+   "summary": "A friendly \"hon\" (short for honey) from a waitress or neighbor is classic Baltimore, celebrated with beehive hairdos and cat-eye glasses at Hampden's summer HonFest.",
+   "places": [
+    "hampden"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "downy-ocean",
+   "name": "\"Goin' downy ocean\"",
+   "kind": "saying",
+   "summary": "Baltimorese for heading to Ocean City on the Atlantic for the weekend or the week, the default summer trip; the city name itself comes out as \"Bawlmer\".",
+   "places": [],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "o-in-the-anthem",
+   "name": "The \"O!\" in the anthem",
+   "kind": "custom",
+   "summary": "At Orioles games, and many other events in town, the crowd shouts \"O!\" at \"Oh, say does that star-spangled banner yet wave\".",
+   "places": [
+    "camden-yards"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "painted-screens",
+   "name": "Painted window screens",
+   "kind": "custom",
+   "summary": "East Baltimore rowhouses have a tradition of painted window and door screens, usually a cottage-and-stream scene, that lets residents see out while passers-by see only the picture.",
+   "places": [
+    "highlandtown",
+    "east-baltimore"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marble-steps",
+   "name": "Scrubbed marble steps",
+   "kind": "custom",
+   "summary": "Rowhouse front steps are often white marble, and older residents still scrub them on a Saturday morning as a point of pride.",
+   "places": [
+    "highlandtown",
+    "fells-point"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arabbers",
+   "name": "Arabbers",
+   "kind": "custom",
+   "summary": "Street vendors who sell fruit and vegetables from brightly painted horse-drawn carts with jingling bells and sung calls, a tradition that survives in a few West Baltimore stables.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "public-markets",
+   "name": "Public markets",
+   "kind": "shop",
+   "summary": "Baltimore still has a network of city public markets where stalls sell crab cakes, deli sandwiches, produce and lunch counter food under one roof.",
+   "places": [
+    "lexington-market",
+    "broadway-market",
+    "cross-street-market",
+    "northeast-market"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crab-house",
+   "name": "Crab houses",
+   "kind": "shop",
+   "summary": "Paper-covered tables, mallets, rolls of paper towels and crabs sold by the dozen, priced by size and season.",
+   "places": [
+    "lp-steamers",
+    "captain-james"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "orioles",
+   "name": "Baltimore Orioles",
+   "kind": "team",
+   "summary": "The city's Major League Baseball team plays at Oriole Park at Camden Yards; fans wear orange and black, and Opening Day is an unofficial city holiday.",
+   "places": [
+    "camden-yards"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ravens",
+   "name": "Baltimore Ravens",
+   "kind": "team",
+   "summary": "The NFL team, named for Poe's poem, plays at M&T Bank Stadium; Purple Friday sees the whole city wear purple before game days.",
+   "places": [
+    "ravens-stadium"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Coffee",
+   "low": 2,
+   "high": 3.5,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Latte",
+   "low": 4.5,
+   "high": 6.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "breakfast-sandwich",
+   "item": "Egg and cheese sandwich",
+   "low": 5,
+   "high": 9,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheap-lunch",
+   "item": "Cheap lunch",
+   "low": 10,
+   "high": 17,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner",
+   "item": "Mid-range dinner",
+   "low": 30,
+   "high": 55,
+   "per": "for one",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beer",
+   "item": "Pint of beer",
+   "low": 6,
+   "high": 9,
+   "per": "a pint",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocktail",
+   "item": "Cocktail",
+   "low": 12,
+   "high": 16,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries",
+   "low": 70,
+   "high": 110,
+   "per": "a week, one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "transit",
+   "item": "Bus or Light Rail fare",
+   "low": 2,
+   "high": 2,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rideshare",
+   "item": "Rideshare across town",
+   "low": 12,
+   "high": 25,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movie",
+   "item": "Movie ticket",
+   "low": 13,
+   "high": 17,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gym",
+   "item": "Gym membership",
+   "low": 25,
+   "high": 60,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crab-cake",
+   "item": "Crab cake platter",
+   "low": 20,
+   "high": 38,
+   "per": "jumbo lump",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "steamed-crabs",
+   "item": "Steamed blue crabs",
+   "low": 60,
+   "high": 120,
+   "per": "a dozen, by size and season",
+   "source": "curated-2026-10"
+  }
+ ]
+}

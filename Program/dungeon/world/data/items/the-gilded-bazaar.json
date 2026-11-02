@@ -1,0 +1,334 @@
+{
+ "currency_note": "Prices in Talents (T), dearer than the Concourse: a wharf hand makes 4 to 6 a day.",
+ "items": [
+  {
+   "id": "waybread",
+   "name": "Waybread, a day's worth",
+   "category": "food",
+   "price": 0.4,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "dried-meat",
+   "name": "Dried meat, a day's worth",
+   "category": "food",
+   "price": 0.6,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "skewer",
+   "name": "Skewer of charcoal meat",
+   "category": "food",
+   "price": 0.4,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "waterskin",
+   "name": "Waterskin",
+   "category": "gear",
+   "price": 0.8,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "arrival-garb",
+   "name": "Arrival garb (shirt, trousers, soft boots)",
+   "category": "clothing",
+   "price": 2,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "cloak",
+   "name": "Wool cloak",
+   "category": "clothing",
+   "price": 4,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "boots",
+   "name": "Climbing boots",
+   "category": "clothing",
+   "price": 6,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "rope",
+   "name": "Rope, fifty feet",
+   "category": "gear",
+   "price": 2,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "lantern",
+   "name": "Hooded lantern",
+   "category": "gear",
+   "price": 4,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "lamp-oil",
+   "name": "Flask of lamp oil",
+   "category": "gear",
+   "price": 0.5,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "chalk",
+   "name": "Stick of chalk",
+   "category": "tool",
+   "price": 0.1,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "bandages",
+   "name": "Roll of bandages",
+   "category": "remedy",
+   "price": 0.8,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "minor-potion",
+   "name": "Minor healing draught",
+   "category": "remedy",
+   "price": 12,
+   "slots": 0.25,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "knife",
+   "name": "Belt knife",
+   "category": "weapon",
+   "price": 3,
+   "slots": 0.5,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "short-sword",
+   "name": "Short sword (F grade)",
+   "category": "weapon",
+   "price": 25,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "sword",
+   "name": "Sword (E grade)",
+   "category": "weapon",
+   "price": 40,
+   "slots": 1,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "buckler",
+   "name": "Buckler",
+   "category": "weapon",
+   "price": 12,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "blanket",
+   "name": "Blanket",
+   "category": "gear",
+   "price": 1.5,
+   "slots": 1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "satchel",
+   "name": "Starter satchel (System storage)",
+   "category": "gear",
+   "price": 20,
+   "slots": 0,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "guild-token",
+   "name": "Guild registration token",
+   "category": "curio",
+   "price": 5,
+   "slots": 0.1,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "charm-ring",
+   "name": "Contraceptive charm ring (C grade)",
+   "category": "curio",
+   "price": 20,
+   "slots": 0.1,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "hush-bead",
+   "name": "Hush-bead",
+   "category": "curio",
+   "price": 45,
+   "slots": 0.1,
+   "rarity": "rare",
+   "legal": true
+  },
+  {
+   "id": "floor-map",
+   "name": "Copied floor map",
+   "category": "tool",
+   "price": 8,
+   "slots": 0.1,
+   "rarity": "uncommon",
+   "legal": true
+  },
+  {
+   "id": "spice-meal",
+   "name": "Bazaar spice meal",
+   "category": "food",
+   "price": 0.8,
+   "slots": 0.25,
+   "rarity": "common",
+   "legal": true
+  },
+  {
+   "id": "private-room",
+   "name": "Private room, a night",
+   "category": "service",
+   "price": 9,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "lodging",
+   "tier": "private"
+  },
+  {
+   "id": "bathhouse",
+   "name": "Copper bathhouse soak",
+   "category": "service",
+   "price": 3,
+   "slots": 0,
+   "rarity": "common",
+   "legal": true,
+   "service": "bath"
+  }
+ ],
+ "shops": [
+  {
+   "place": "the-fence-rows",
+   "buys": [
+    "gear",
+    "clothing",
+    "tool",
+    "weapon",
+    "curio",
+    "remedy"
+   ],
+   "sell_rate": 0.6,
+   "stock": {
+    "rope": 4,
+    "lantern": 2,
+    "knife": 4,
+    "short-sword": 2,
+    "sword": 2,
+    "buckler": 2,
+    "cloak": 3,
+    "boots": 3,
+    "floor-map": 3,
+    "minor-potion": 3
+   },
+   "fence": true
+  },
+  {
+   "place": "the-charm-sellers",
+   "buys": [
+    "curio"
+   ],
+   "sell_rate": 0.5,
+   "stock": {
+    "charm-ring": 6,
+    "hush-bead": 2
+   }
+  },
+  {
+   "place": "the-spice-exchange",
+   "buys": [
+    "food"
+   ],
+   "sell_rate": 0.5,
+   "stock": {
+    "spice-meal": 20,
+    "waybread": 20,
+    "dried-meat": 15,
+    "waterskin": 4,
+    "bandages": 6
+   }
+  },
+  {
+   "place": "the-copper-scale",
+   "buys": [],
+   "sell_rate": 0.5,
+   "restock_days": 1,
+   "stock": {
+    "private-room": 4,
+    "bathhouse": 4
+   }
+  }
+ ],
+ "kits": {
+  "default": {
+   "coins": 25,
+   "items": {
+    "arrival-garb": 1,
+    "waybread": 2,
+    "waterskin": 1,
+    "satchel": 1
+   }
+  },
+  "bri-cole": {
+   "coins": 25,
+   "items": {
+    "arrival-garb": 1,
+    "waybread": 2,
+    "waterskin": 1,
+    "satchel": 1,
+    "buckler": 1
+   }
+  },
+  "chase-whitaker": {
+   "coins": 25,
+   "items": {
+    "arrival-garb": 1,
+    "waybread": 2,
+    "waterskin": 1,
+    "satchel": 1
+   }
+  }
+ }
+}

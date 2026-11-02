@@ -1,0 +1,6021 @@
+{
+ "schema_version": 1,
+ "id": "los-angeles",
+ "name": "Los Angeles",
+ "region": "California",
+ "country": "US",
+ "timezone": "America/Los_Angeles",
+ "aliases": [
+  "LA",
+  "L.A.",
+  "City of Angels",
+  "Los Angeles, CA",
+  "The Southland"
+ ],
+ "summary": "A vast, sunny, car-shaped sprawl of distinct neighborhoods stretching from the mountains to the Pacific, home to Hollywood and the studios, beach towns, taco trucks, a growing Metro rail network and food from everywhere.",
+ "lat": 34.05,
+ "lon": -118.24,
+ "speeds": {
+  "walk": 4.5,
+  "car": 22,
+  "rideshare": 20,
+  "bus": 9,
+  "subway": 24,
+  "ferry": 20,
+  "commuter-rail": 45,
+  "bike-share": 12
+ },
+ "names": {
+  "mix": {
+   "hispanic": 4,
+   "anglo": 2.5,
+   "east-asian": 1.8,
+   "black-american": 1.2,
+   "jewish": 0.8,
+   "filipino": 0.8,
+   "armenian": 0.6,
+   "south-asian": 0.5,
+   "persian": 0.5,
+   "slavic": 0.3,
+   "arabic": 0.2,
+   "west-african": 0.1
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Los Angeles places and neighborhoods written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-07",
+   "note": "Well-known public places, institutions and employers from general knowledge. Businesses open and close and rents move fast here: treat this as a snapshot for fiction. Rents are rounded estimates of typical 2025 asking ranges, not listings. Coordinates are approximate neighborhood centers."
+  },
+  "curated-climate-2026-10": {
+   "kind": "curated",
+   "title": "Approximate monthly climate for Los Angeles (Downtown)",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-07",
+   "note": "Rounded values in line with NOAA 1991-2020 normals for downtown Los Angeles; coastal areas run cooler in summer and inland valleys run hotter. Refresh with scripts/world when network access to NOAA is available."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "downtown-la",
+   "name": "Downtown LA",
+   "summary": "Skyscrapers, the Arts District, Little Tokyo, Grand Park and Olvera Street packed into a core that is finally walkable, with Metro lines converging at Union Station.",
+   "vibe": [
+    "business",
+    "historic",
+    "arts",
+    "nightlife",
+    "central"
+   ],
+   "lat": 34.047,
+   "lon": -118.25,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     2000,
+     2800
+    ],
+    "one_bedroom": [
+     2500,
+     3500
+    ],
+    "two_bedroom": [
+     3600,
+     5500
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "loft",
+    "converted-office",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metro-rail",
+    "metro-bus",
+    "metro-bike",
+    "metrolink",
+    "ladot-dash"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hollywood",
+   "name": "Hollywood",
+   "summary": "Walk of Fame crowds, historic theaters, studios and music venues below the Hollywood Sign, with courtyard apartments climbing the hills.",
+   "vibe": [
+    "touristy",
+    "entertainment",
+    "nightlife",
+    "historic"
+   ],
+   "lat": 34.098,
+   "lon": -118.329,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1800,
+     2400
+    ],
+    "one_bedroom": [
+     2300,
+     3100
+    ],
+    "two_bedroom": [
+     3200,
+     4500
+    ]
+   },
+   "housing": [
+    "courtyard-apartment",
+    "apartment-tower",
+    "dingbat"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metro-rail",
+    "metro-bus",
+    "ladot-dash"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-hollywood",
+   "name": "West Hollywood",
+   "summary": "A small, walkable city of Sunset Strip clubs, design showrooms, LGBTQ nightlife on Santa Monica Boulevard and Cedars-Sinai nearby.",
+   "vibe": [
+    "lgbtq-friendly",
+    "nightlife",
+    "upscale",
+    "design"
+   ],
+   "lat": 34.09,
+   "lon": -118.361,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     2300,
+     3100
+    ],
+    "one_bedroom": [
+     2900,
+     4000
+    ],
+    "two_bedroom": [
+     4000,
+     6000
+    ]
+   },
+   "housing": [
+    "courtyard-apartment",
+    "condo",
+    "apartment-tower"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beverly-hills",
+   "name": "Beverly Hills",
+   "summary": "Rodeo Drive boutiques, palm-lined streets, grand hotels and mansions, plus talent agencies and medical offices.",
+   "vibe": [
+    "affluent",
+    "shopping",
+    "upscale",
+    "quiet"
+   ],
+   "lat": 34.073,
+   "lon": -118.4,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     2400,
+     3200
+    ],
+    "one_bedroom": [
+     3000,
+     4300
+    ],
+    "two_bedroom": [
+     4200,
+     7000
+    ]
+   },
+   "housing": [
+    "condo",
+    "apartment-tower",
+    "single-family"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mid-wilshire",
+   "name": "Mid-Wilshire and Miracle Mile",
+   "summary": "The Museum Row of LACMA, the Tar Pits and the Academy Museum, with the Original Farmers Market, Fairfax delis and Art Deco towers.",
+   "vibe": [
+    "museums",
+    "cultural",
+    "central",
+    "residential"
+   ],
+   "lat": 34.062,
+   "lon": -118.35,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1700,
+     2300
+    ],
+    "one_bedroom": [
+     2200,
+     2900
+    ],
+    "two_bedroom": [
+     3000,
+     4300
+    ]
+   },
+   "housing": [
+    "courtyard-apartment",
+    "dingbat",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-rail",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "koreatown",
+   "name": "Koreatown",
+   "summary": "Dense, all-hours blocks of Korean barbecue, karaoke, spas and bars, with high-rises and 1920s apartment courts.",
+   "vibe": [
+    "food",
+    "nightlife",
+    "diverse",
+    "late-night"
+   ],
+   "lat": 34.058,
+   "lon": -118.3,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1700,
+     2300
+    ],
+    "one_bedroom": [
+     2000,
+     2700
+    ],
+    "two_bedroom": [
+     2700,
+     3800
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "courtyard-apartment",
+    "dingbat"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metro-rail",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "silver-lake",
+   "name": "Silver Lake",
+   "summary": "Hillside bungalows around the reservoir, indie coffee shops, vintage stores and music venues along Sunset Boulevard.",
+   "vibe": [
+    "hip",
+    "creative",
+    "lgbtq-friendly",
+    "food",
+    "music"
+   ],
+   "lat": 34.087,
+   "lon": -118.27,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1900,
+     2500
+    ],
+    "one_bedroom": [
+     2300,
+     3200
+    ],
+    "two_bedroom": [
+     3200,
+     4800
+    ]
+   },
+   "housing": [
+    "bungalow",
+    "hillside-house",
+    "courtyard-apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "echo-park",
+   "name": "Echo Park",
+   "summary": "Swan-boat lake, steep residential hills, taquerias and bars, and Dodger Stadium on the ridge above.",
+   "vibe": [
+    "creative",
+    "food",
+    "baseball",
+    "neighbourly"
+   ],
+   "lat": 34.078,
+   "lon": -118.261,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1800,
+     2400
+    ],
+    "one_bedroom": [
+     2200,
+     3000
+    ],
+    "two_bedroom": [
+     3000,
+     4300
+    ]
+   },
+   "housing": [
+    "bungalow",
+    "hillside-house",
+    "courtyard-apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "los-feliz",
+   "name": "Los Feliz",
+   "summary": "Spanish-revival duplexes and Hillhurst Avenue cafes at the foot of Griffith Park and its Observatory.",
+   "vibe": [
+    "leafy",
+    "creative",
+    "park",
+    "residential"
+   ],
+   "lat": 34.107,
+   "lon": -118.287,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1900,
+     2500
+    ],
+    "one_bedroom": [
+     2400,
+     3200
+    ],
+    "two_bedroom": [
+     3300,
+     4800
+    ]
+   },
+   "housing": [
+    "spanish-duplex",
+    "courtyard-apartment",
+    "hillside-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-bus",
+    "ladot-dash"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "highland-park",
+   "name": "Highland Park",
+   "summary": "Craftsman bungalows and Latino family businesses mixing with new bars and cafes along York Boulevard and Figueroa Street.",
+   "vibe": [
+    "historic",
+    "arts",
+    "food",
+    "gentrifying"
+   ],
+   "lat": 34.111,
+   "lon": -118.192,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1700,
+     2200
+    ],
+    "one_bedroom": [
+     2100,
+     2800
+    ],
+    "two_bedroom": [
+     2800,
+     3900
+    ]
+   },
+   "housing": [
+    "craftsman",
+    "bungalow",
+    "walk-up"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-rail",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boyle-heights",
+   "name": "Boyle Heights",
+   "summary": "A historic Mexican American neighborhood east of the river with Mariachi Plaza, murals, taco stands and strong community roots.",
+   "vibe": [
+    "historic",
+    "latino",
+    "murals",
+    "food",
+    "affordable"
+   ],
+   "lat": 34.033,
+   "lon": -118.211,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1500,
+     2000
+    ],
+    "one_bedroom": [
+     1800,
+     2400
+    ],
+    "two_bedroom": [
+     2300,
+     3200
+    ]
+   },
+   "housing": [
+    "bungalow",
+    "courtyard-apartment",
+    "public-housing"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-rail",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "westwood",
+   "name": "Westwood",
+   "summary": "The UCLA campus, a village of student cafes and cinemas, and high-rise apartments along Wilshire.",
+   "vibe": [
+    "students",
+    "academic",
+    "medical",
+    "residential"
+   ],
+   "lat": 34.063,
+   "lon": -118.445,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     2100,
+     2800
+    ],
+    "one_bedroom": [
+     2700,
+     3600
+    ],
+    "two_bedroom": [
+     3600,
+     5200
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "student-housing",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-bus",
+    "big-blue-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "santa-monica",
+   "name": "Santa Monica",
+   "summary": "A beach city with the pier, Third Street Promenade, Palisades Park bluffs and an Expo Line terminus, home to many tech and media offices.",
+   "vibe": [
+    "beach",
+    "touristy",
+    "tech",
+    "bikeable",
+    "upscale"
+   ],
+   "lat": 34.019,
+   "lon": -118.491,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     2300,
+     3000
+    ],
+    "one_bedroom": [
+     2900,
+     4000
+    ],
+    "two_bedroom": [
+     4000,
+     6000
+    ]
+   },
+   "housing": [
+    "condo",
+    "apartment-tower",
+    "bungalow"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metro-rail",
+    "big-blue-bus",
+    "metro-bike"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "venice",
+   "name": "Venice",
+   "summary": "The boardwalk circus, Abbot Kinney boutiques, canal-side cottages and skate culture right on the sand.",
+   "vibe": [
+    "beach",
+    "eclectic",
+    "arts",
+    "touristy",
+    "tech"
+   ],
+   "lat": 33.985,
+   "lon": -118.469,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     2300,
+     3000
+    ],
+    "one_bedroom": [
+     2900,
+     3900
+    ],
+    "two_bedroom": [
+     3800,
+     5800
+    ]
+   },
+   "housing": [
+    "bungalow",
+    "loft",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metro-bus",
+    "big-blue-bus",
+    "metro-bike"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "culver-city",
+   "name": "Culver City",
+   "summary": "A former studio town turned Westside tech and media hub, with walkable restaurants, art galleries and an Expo Line stop downtown.",
+   "vibe": [
+    "media",
+    "tech",
+    "food",
+    "arts",
+    "new-build"
+   ],
+   "lat": 34.021,
+   "lon": -118.396,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     2100,
+     2700
+    ],
+    "one_bedroom": [
+     2600,
+     3500
+    ],
+    "two_bedroom": [
+     3500,
+     5000
+    ]
+   },
+   "housing": [
+    "new-build",
+    "condo",
+    "apartment-tower"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-rail",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "exposition-park",
+   "name": "Exposition Park and USC",
+   "summary": "The USC campus and a cluster of museums, a rose garden and stadiums just south of Downtown.",
+   "vibe": [
+    "students",
+    "museums",
+    "sports",
+    "family"
+   ],
+   "lat": 34.018,
+   "lon": -118.285,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1500,
+     2000
+    ],
+    "one_bedroom": [
+     1800,
+     2500
+    ],
+    "two_bedroom": [
+     2400,
+     3300
+    ]
+   },
+   "housing": [
+    "student-housing",
+    "courtyard-apartment",
+    "craftsman"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-rail",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "inglewood",
+   "name": "Inglewood",
+   "summary": "A city near LAX transformed by SoFi Stadium, the Intuit Dome and a new rail line, with long-standing Black and Latino communities.",
+   "vibe": [
+    "sports",
+    "new-build",
+    "diverse",
+    "affordable"
+   ],
+   "lat": 33.958,
+   "lon": -118.341,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1600,
+     2100
+    ],
+    "one_bedroom": [
+     1900,
+     2500
+    ],
+    "two_bedroom": [
+     2400,
+     3300
+    ]
+   },
+   "housing": [
+    "single-family",
+    "apartment",
+    "new-build"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-rail",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "burbank",
+   "name": "Burbank",
+   "summary": "The Media Capital of the World, home to Disney and Warner Bros. lots, with a small-town downtown and Magnolia Park shops.",
+   "vibe": [
+    "media",
+    "suburban",
+    "family",
+    "studios"
+   ],
+   "lat": 34.181,
+   "lon": -118.309,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1700,
+     2300
+    ],
+    "one_bedroom": [
+     2100,
+     2800
+    ],
+    "two_bedroom": [
+     2800,
+     3900
+    ]
+   },
+   "housing": [
+    "apartment",
+    "single-family",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metrolink",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "studio-city",
+   "name": "Studio City",
+   "summary": "A San Fernando Valley neighborhood of Ventura Boulevard restaurants, the Universal lot next door and canyon trails to the south.",
+   "vibe": [
+    "suburban",
+    "media",
+    "food",
+    "family"
+   ],
+   "lat": 34.139,
+   "lon": -118.396,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1900,
+     2500
+    ],
+    "one_bedroom": [
+     2300,
+     3100
+    ],
+    "two_bedroom": [
+     3200,
+     4500
+    ]
+   },
+   "housing": [
+    "apartment",
+    "single-family",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-rail",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pasadena",
+   "name": "Pasadena",
+   "summary": "Craftsman architecture, Old Town shopping, the Rose Bowl, Caltech and JPL at the foot of the San Gabriel Mountains.",
+   "vibe": [
+    "historic",
+    "academic",
+    "leafy",
+    "family"
+   ],
+   "lat": 34.147,
+   "lon": -118.144,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1800,
+     2400
+    ],
+    "one_bedroom": [
+     2200,
+     3000
+    ],
+    "two_bedroom": [
+     3000,
+     4200
+    ]
+   },
+   "housing": [
+    "craftsman",
+    "apartment",
+    "bungalow"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-rail",
+    "metro-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "long-beach",
+   "name": "Long Beach",
+   "summary": "A port city with the Queen Mary, a big aquarium, Belmont Shore, Retro Row and a large Cambodian community.",
+   "vibe": [
+    "beach",
+    "port",
+    "diverse",
+    "laid-back"
+   ],
+   "lat": 33.768,
+   "lon": -118.195,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1700,
+     2300
+    ],
+    "one_bedroom": [
+     2100,
+     2800
+    ],
+    "two_bedroom": [
+     2700,
+     3800
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "bungalow",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metro-rail",
+    "metro-bus",
+    "catalina-express"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "metro-rail",
+   "name": "LA Metro Rail",
+   "kind": "subway",
+   "summary": "Subway and light rail lines (A, B, C, D, E, K and L) linking Downtown, Hollywood, Koreatown, Santa Monica, Long Beach, Pasadena and Inglewood.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "metro-bus",
+   "name": "LA Metro buses",
+   "kind": "bus",
+   "summary": "A huge bus network across the county with frequent rapid lines on big boulevards; reliable but slow in traffic.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "big-blue-bus",
+   "name": "Santa Monica Big Blue Bus",
+   "kind": "bus",
+   "summary": "Santa Monica's municipal bus system serving the Westside, UCLA and LAX.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ladot-dash",
+   "name": "LADOT DASH",
+   "kind": "bus",
+   "summary": "Cheap neighborhood shuttle buses in Downtown, Hollywood, Los Feliz and other communities.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "metrolink",
+   "name": "Metrolink",
+   "kind": "commuter-rail",
+   "summary": "Commuter rail from Union Station to Burbank, the Valley, Orange County, the Inland Empire and beyond.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "metro-bike",
+   "name": "Metro Bike Share",
+   "kind": "bike-share",
+   "summary": "Docked bike share in Downtown, Venice, Santa Monica and several other pockets; coverage is patchy.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "catalina-express",
+   "name": "Catalina Express",
+   "kind": "ferry",
+   "summary": "Ferries from Long Beach and San Pedro to Santa Catalina Island.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "grand-central-market",
+   "name": "Grand Central Market",
+   "kind": "market",
+   "neighborhood": "downtown-la",
+   "summary": "Historic 1917 food hall on Broadway with taco counters, egg sandwiches, pupusas and fruit stands.",
+   "tags": [
+    "food-hall",
+    "iconic",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-broad",
+   "name": "The Broad",
+   "kind": "museum",
+   "neighborhood": "downtown-la",
+   "summary": "Free contemporary art museum with a honeycomb facade and Yayoi Kusama's Infinity Mirrored Room.",
+   "tags": [
+    "art",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "disney-hall",
+   "name": "Walt Disney Concert Hall",
+   "kind": "venue",
+   "neighborhood": "downtown-la",
+   "summary": "Frank Gehry's steel-clad home of the LA Philharmonic, with a public rooftop garden.",
+   "tags": [
+    "classical",
+    "architecture",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-last-bookstore",
+   "name": "The Last Bookstore",
+   "kind": "shopping",
+   "neighborhood": "downtown-la",
+   "summary": "Huge indie bookshop in an old bank with a book tunnel and an upstairs of record and art studios.",
+   "tags": [
+    "books",
+    "browse",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grand-park",
+   "name": "Grand Park",
+   "kind": "park",
+   "neighborhood": "downtown-la",
+   "summary": "A long civic park stepping down from City Hall with fountains, lawns and frequent free events.",
+   "tags": [
+    "lawn",
+    "events",
+    "lunch-break"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "olvera-street",
+   "name": "Olvera Street",
+   "kind": "landmark",
+   "neighborhood": "downtown-la",
+   "summary": "Brick-lined Mexican marketplace in the city's oldest district, with taquitos, crafts and mariachi.",
+   "tags": [
+    "historic",
+    "mexican",
+    "touristy"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "little-tokyo",
+   "name": "Little Tokyo",
+   "kind": "landmark",
+   "neighborhood": "downtown-la",
+   "summary": "Japanese American cultural district with ramen shops, mochi bakeries, bookstores and the Japanese American National Museum.",
+   "tags": [
+    "japanese",
+    "food",
+    "history"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "philippes",
+   "name": "Philippe the Original",
+   "kind": "restaurant",
+   "neighborhood": "downtown-la",
+   "summary": "Sawdust-floor canteen near Union Station that claims to have invented the French dip sandwich in 1908.",
+   "tags": [
+    "french-dip",
+    "historic",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crypto-arena",
+   "name": "Crypto.com Arena",
+   "kind": "stadium",
+   "neighborhood": "downtown-la",
+   "summary": "Downtown arena for the Lakers, Kings and Sparks and big concerts, beside the LA Live complex.",
+   "tags": [
+    "basketball",
+    "hockey",
+    "concerts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "central-library",
+   "name": "Los Angeles Central Library",
+   "kind": "library",
+   "neighborhood": "downtown-la",
+   "summary": "Art Deco 1926 landmark with a rotunda, gardens and a children's literature room.",
+   "tags": [
+    "books",
+    "architecture",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-edison",
+   "name": "The Edison",
+   "kind": "bar",
+   "neighborhood": "downtown-la",
+   "summary": "Cocktail lounge in a 1910 power plant with industrial relics and live music.",
+   "tags": [
+    "cocktails",
+    "historic",
+    "speakeasy"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arts-district-murals",
+   "name": "Arts District murals and warehouses",
+   "kind": "landmark",
+   "neighborhood": "downtown-la",
+   "summary": "Converted warehouses with big street murals, breweries and galleries.",
+   "tags": [
+    "street-art",
+    "walk",
+    "breweries"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bestia",
+   "name": "Bestia",
+   "kind": "restaurant",
+   "neighborhood": "downtown-la",
+   "summary": "Loud, hip Italian restaurant in the Arts District known for pasta and cured meats.",
+   "tags": [
+    "italian",
+    "date-night",
+    "cocktails"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-perch",
+   "name": "The Perch",
+   "kind": "bar",
+   "neighborhood": "downtown-la",
+   "summary": "Rooftop cocktail bar above Pershing Square with a fire pit and skyline views.",
+   "tags": [
+    "rooftop",
+    "views",
+    "cocktails"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hollywood-walk-of-fame",
+   "name": "Hollywood Walk of Fame",
+   "kind": "landmark",
+   "neighborhood": "hollywood",
+   "summary": "Star-studded sidewalk along Hollywood Boulevard running past the TCL Chinese Theatre.",
+   "tags": [
+    "iconic",
+    "touristy",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tcl-chinese-theatre",
+   "name": "TCL Chinese Theatre",
+   "kind": "venue",
+   "neighborhood": "hollywood",
+   "summary": "Pagoda-style movie palace with celebrity handprints in the forecourt and an IMAX screen.",
+   "tags": [
+    "film",
+    "iconic",
+    "touristy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hollywood-bowl",
+   "name": "Hollywood Bowl",
+   "kind": "venue",
+   "neighborhood": "hollywood",
+   "summary": "Natural-amphitheater concert venue where audiences picnic with wine under the stars.",
+   "tags": [
+    "concerts",
+    "picnic",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hollywood-forever",
+   "name": "Hollywood Forever Cemetery",
+   "kind": "landmark",
+   "neighborhood": "hollywood",
+   "summary": "Historic cemetery with film legends' graves, summer outdoor movie nights and Day of the Dead events.",
+   "tags": [
+    "history",
+    "film",
+    "quiet"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "musso-and-frank",
+   "name": "Musso & Frank Grill",
+   "kind": "restaurant",
+   "neighborhood": "hollywood",
+   "summary": "Hollywood's oldest restaurant, serving steaks and martinis in red booths since 1919.",
+   "tags": [
+    "historic",
+    "classic",
+    "martinis"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amoeba-music",
+   "name": "Amoeba Music",
+   "kind": "shopping",
+   "neighborhood": "hollywood",
+   "summary": "Giant independent record store on Sunset with new and used vinyl, CDs and DVDs.",
+   "tags": [
+    "music",
+    "records",
+    "browse"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "magic-castle",
+   "name": "The Magic Castle",
+   "kind": "venue",
+   "neighborhood": "hollywood",
+   "summary": "Private magicians' clubhouse in a Victorian mansion with dinner, bars and close-up magic shows.",
+   "tags": [
+    "magic",
+    "unique",
+    "dinner"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pinks-hot-dogs",
+   "name": "Pink's Hot Dogs",
+   "kind": "restaurant",
+   "neighborhood": "hollywood",
+   "summary": "Roadside hot dog stand with lines around the corner since 1939.",
+   "tags": [
+    "hot-dogs",
+    "historic",
+    "quick"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "hot-dogs",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "runyon-canyon",
+   "name": "Runyon Canyon Park",
+   "kind": "park",
+   "neighborhood": "hollywood",
+   "summary": "Popular hillside hiking park with dog-friendly trails and views of the city to the ocean.",
+   "tags": [
+    "hiking",
+    "views",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hollywood-farmers-market",
+   "name": "Hollywood Farmers' Market",
+   "kind": "market",
+   "neighborhood": "hollywood",
+   "summary": "Large Sunday morning market along Ivar Avenue with produce, flowers and prepared food.",
+   "tags": [
+    "farmers-market",
+    "sunday",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sunset-strip",
+   "name": "Sunset Strip",
+   "kind": "nightlife",
+   "neighborhood": "west-hollywood",
+   "summary": "Famous stretch of rock clubs, billboards and rooftop bars on Sunset Boulevard.",
+   "tags": [
+    "nightlife",
+    "iconic",
+    "rock"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whisky-a-go-go",
+   "name": "Whisky a Go Go",
+   "kind": "venue",
+   "neighborhood": "west-hollywood",
+   "summary": "Legendary rock club where the Doors, Van Halen and Guns N' Roses played early gigs.",
+   "tags": [
+    "live-music",
+    "rock",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "comedy-store",
+   "name": "The Comedy Store",
+   "kind": "venue",
+   "neighborhood": "west-hollywood",
+   "summary": "Sunset Boulevard comedy club with three rooms where famous comics drop by to test material.",
+   "tags": [
+    "comedy",
+    "late-night",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barneys-beanery",
+   "name": "Barney's Beanery",
+   "kind": "bar",
+   "neighborhood": "west-hollywood",
+   "summary": "Rowdy roadhouse on Santa Monica Boulevard with pool tables, chili and hundreds of beers since 1927.",
+   "tags": [
+    "dive",
+    "historic",
+    "chili"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-abbey",
+   "name": "The Abbey Food & Bar",
+   "kind": "bar",
+   "neighborhood": "west-hollywood",
+   "summary": "Giant LGBTQ bar and patio on Robertson Boulevard known for brunch, cocktails and dancing.",
+   "tags": [
+    "lgbtq",
+    "patio",
+    "dancing"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "book-soup",
+   "name": "Book Soup",
+   "kind": "shopping",
+   "neighborhood": "west-hollywood",
+   "summary": "Independent bookstore on the Sunset Strip with art books, magazines and author signings.",
+   "tags": [
+    "books",
+    "indie",
+    "browse"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wehoo-library",
+   "name": "West Hollywood Library",
+   "kind": "library",
+   "neighborhood": "west-hollywood",
+   "summary": "Modern public library in West Hollywood Park with study spaces and a community garden.",
+   "tags": [
+    "books",
+    "quiet",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rodeo-drive",
+   "name": "Rodeo Drive",
+   "kind": "shopping",
+   "neighborhood": "beverly-hills",
+   "summary": "Three blocks of luxury flagships and window shopping in the shadow of palm trees.",
+   "tags": [
+    "luxury",
+    "fashion",
+    "iconic"
+   ],
+   "cost": "$$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "polo-lounge",
+   "name": "Polo Lounge at the Beverly Hills Hotel",
+   "kind": "bar",
+   "neighborhood": "beverly-hills",
+   "summary": "Classic power-lunch spot at the Pink Palace hotel with a garden patio and old Hollywood glamour.",
+   "tags": [
+    "classic",
+    "celebrity",
+    "cocktails"
+   ],
+   "cost": "$$$$",
+   "setting": "mixed",
+   "good_for": [
+    "date",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "greystone-mansion",
+   "name": "Greystone Mansion and Gardens",
+   "kind": "park",
+   "neighborhood": "beverly-hills",
+   "summary": "1920s Tudor mansion in terraced public gardens, often used as a filming location.",
+   "tags": [
+    "gardens",
+    "architecture",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beverly-hills-library",
+   "name": "Beverly Hills Public Library",
+   "kind": "library",
+   "neighborhood": "beverly-hills",
+   "summary": "Civic library on Rexford Drive with reading rooms and community events.",
+   "tags": [
+    "books",
+    "quiet",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spago",
+   "name": "Spago Beverly Hills",
+   "kind": "restaurant",
+   "neighborhood": "beverly-hills",
+   "summary": "Wolfgang Puck's flagship California restaurant, a celebrity favorite with a courtyard patio.",
+   "tags": [
+    "california-cuisine",
+    "celebrity",
+    "upscale"
+   ],
+   "cost": "$$$$",
+   "setting": "mixed",
+   "good_for": [
+    "date",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "californian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lacma",
+   "name": "Los Angeles County Museum of Art",
+   "kind": "museum",
+   "neighborhood": "mid-wilshire",
+   "summary": "Sprawling art museum campus with the Urban Light lamppost installation out front.",
+   "tags": [
+    "art",
+    "iconic",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-brea-tar-pits",
+   "name": "La Brea Tar Pits and Museum",
+   "kind": "attraction",
+   "neighborhood": "mid-wilshire",
+   "summary": "Active asphalt seeps with Ice Age fossils, mammoth statues and a working fossil lab.",
+   "tags": [
+    "science",
+    "kids",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "petersen-automotive",
+   "name": "Petersen Automotive Museum",
+   "kind": "museum",
+   "neighborhood": "mid-wilshire",
+   "summary": "Four floors of cars from vintage classics to movie vehicles in a ribbon-wrapped building.",
+   "tags": [
+    "cars",
+    "history",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "academy-museum",
+   "name": "Academy Museum of Motion Pictures",
+   "kind": "museum",
+   "neighborhood": "mid-wilshire",
+   "summary": "Movie history museum in the former May Company building with a spherical theater.",
+   "tags": [
+    "film",
+    "iconic",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "original-farmers-market",
+   "name": "Original Farmers Market and The Grove",
+   "kind": "market",
+   "neighborhood": "mid-wilshire",
+   "summary": "1934 open-air market of food stalls and produce beside an outdoor mall with a trolley and fountain.",
+   "tags": [
+    "food",
+    "touristy",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canters-deli",
+   "name": "Canter's Deli",
+   "kind": "restaurant",
+   "neighborhood": "mid-wilshire",
+   "summary": "24-hour Jewish deli on Fairfax Avenue since 1948 with a rock-and-roll bar next door.",
+   "tags": [
+    "deli",
+    "pastrami",
+    "late-night",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "parks-bbq",
+   "name": "Park's BBQ",
+   "kind": "restaurant",
+   "neighborhood": "koreatown",
+   "summary": "Upscale Korean barbecue with premium cuts grilled at your table.",
+   "tags": [
+    "korean-bbq",
+    "grill",
+    "group"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean-bbq",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beverly-soon-tofu",
+   "name": "Beverly Soon Tofu",
+   "kind": "restaurant",
+   "neighborhood": "koreatown",
+   "summary": "Bubbling soondubu stews with sides and rice, a cheap comfort-food staple.",
+   "tags": [
+    "tofu-stew",
+    "cheap",
+    "comfort"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wi-spa",
+   "name": "Wi Spa",
+   "kind": "fitness",
+   "neighborhood": "koreatown",
+   "summary": "24-hour Korean day spa with saunas, hot pools, scrub treatments and a sleeping room.",
+   "tags": [
+    "spa",
+    "sauna",
+    "late-night"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-wiltern",
+   "name": "The Wiltern",
+   "kind": "venue",
+   "neighborhood": "koreatown",
+   "summary": "1930s Art Deco theater on Wilshire hosting mid-size concerts.",
+   "tags": [
+    "concerts",
+    "art-deco",
+    "live-music"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "koreatown-karaoke",
+   "name": "Koreatown karaoke rooms",
+   "kind": "nightlife",
+   "neighborhood": "koreatown",
+   "summary": "Private-room karaoke bars open until late with food and soju.",
+   "tags": [
+    "karaoke",
+    "group",
+    "late-night"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "koreatown-library",
+   "name": "Pio Pico-Koreatown Library",
+   "kind": "library",
+   "neighborhood": "koreatown",
+   "summary": "Busy branch library with Korean and Spanish collections and homework tables.",
+   "tags": [
+    "books",
+    "study",
+    "multilingual"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "silver-lake-reservoir",
+   "name": "Silver Lake Reservoir Meadow",
+   "kind": "park",
+   "neighborhood": "silver-lake",
+   "summary": "Fenced reservoir with a jogging loop, a dog park and a big grassy meadow.",
+   "tags": [
+    "running",
+    "dogs",
+    "picnic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "intelligentsia-silver-lake",
+   "name": "Intelligentsia Coffee",
+   "kind": "cafe",
+   "neighborhood": "silver-lake",
+   "summary": "Specialty coffee roaster on Sunset Boulevard with a shaded patio.",
+   "tags": [
+    "coffee",
+    "roastery",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sqirl",
+   "name": "Sqirl",
+   "kind": "restaurant",
+   "neighborhood": "silver-lake",
+   "summary": "Trendy brunch cafe known for jam toast and sorrel pesto rice bowls.",
+   "tags": [
+    "brunch",
+    "california-cuisine",
+    "line"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "californian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-tropical",
+   "name": "Cafe Tropical",
+   "kind": "cafe",
+   "neighborhood": "silver-lake",
+   "summary": "Neighborhood Cuban bakery and cafe with guava pastries and strong cafecito.",
+   "tags": [
+    "cuban",
+    "pastry",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cuban-bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-satellite",
+   "name": "Zebulon and The Satellite",
+   "kind": "venue",
+   "neighborhood": "silver-lake",
+   "summary": "Tiny club on Sunset Junction for emerging indie, folk and experimental bands.",
+   "tags": [
+    "live-music",
+    "indie",
+    "intimate"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "silver-lake-library",
+   "name": "Silver Lake Branch Library",
+   "kind": "library",
+   "neighborhood": "silver-lake",
+   "summary": "Neighborhood branch library with a children's room and community programs.",
+   "tags": [
+    "books",
+    "kids",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "echo-park-lake",
+   "name": "Echo Park Lake",
+   "kind": "park",
+   "neighborhood": "echo-park",
+   "summary": "Lotus-covered lake with swan-boat rentals, a fountain and downtown skyline views.",
+   "tags": [
+    "boating",
+    "views",
+    "picnic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dodger-stadium",
+   "name": "Dodger Stadium",
+   "kind": "stadium",
+   "neighborhood": "echo-park",
+   "summary": "The 1962 hilltop ballpark of the Dodgers, famous for sunsets and Dodger Dogs.",
+   "tags": [
+    "baseball",
+    "sports",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stories-books",
+   "name": "Stories Books & Cafe",
+   "kind": "shopping",
+   "neighborhood": "echo-park",
+   "summary": "Cozy used and new bookstore with a cafe on Sunset Boulevard and a rooftop events space.",
+   "tags": [
+    "books",
+    "indie",
+    "coffee"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-echo",
+   "name": "The Echo and Echoplex",
+   "kind": "venue",
+   "neighborhood": "echo-park",
+   "summary": "Indie rock club and its basement sibling hosting up-and-coming bands and DJ nights.",
+   "tags": [
+    "live-music",
+    "indie",
+    "dancing"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "echo-park-library",
+   "name": "Echo Park Branch Library",
+   "kind": "library",
+   "neighborhood": "echo-park",
+   "summary": "Neighborhood library with local history and children's programs.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "griffith-observatory",
+   "name": "Griffith Observatory",
+   "kind": "attraction",
+   "neighborhood": "los-feliz",
+   "summary": "Hilltop observatory with free admission, planetarium shows and sweeping views from the Hollywood Sign to the ocean.",
+   "tags": [
+    "views",
+    "science",
+    "iconic",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "griffith-park",
+   "name": "Griffith Park",
+   "kind": "park",
+   "neighborhood": "los-feliz",
+   "summary": "One of the largest urban parks in the country, with miles of hiking trails, the zoo and the Greek Theatre.",
+   "tags": [
+    "hiking",
+    "park",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-zoo",
+   "name": "Los Angeles Zoo",
+   "kind": "attraction",
+   "neighborhood": "los-feliz",
+   "summary": "Zoo and botanical gardens on a hillside in Griffith Park.",
+   "tags": [
+    "animals",
+    "kids",
+    "big"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "skylight-books",
+   "name": "Skylight Books",
+   "kind": "shopping",
+   "neighborhood": "los-feliz",
+   "summary": "Indie bookstore on Vermont Avenue with a tree growing indoors and local author events.",
+   "tags": [
+    "books",
+    "indie",
+    "browse"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-dresden",
+   "name": "The Dresden",
+   "kind": "bar",
+   "neighborhood": "los-feliz",
+   "summary": "Retro lounge with a live lounge act and tiki-style cocktails.",
+   "tags": [
+    "cocktails",
+    "retro",
+    "live-music"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hollyhock-house",
+   "name": "Hollyhock House at Barnsdall Art Park",
+   "kind": "landmark",
+   "neighborhood": "los-feliz",
+   "summary": "Frank Lloyd Wright's first LA home on a hilltop park with art classes and city views.",
+   "tags": [
+    "architecture",
+    "history",
+    "views"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "highland-park-bowl",
+   "name": "Highland Park Bowl",
+   "kind": "venue",
+   "neighborhood": "highland-park",
+   "summary": "1920s bowling alley turned bar and live music venue on Figueroa Street.",
+   "tags": [
+    "bowling",
+    "live-music",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-de-leche",
+   "name": "Cafe de Leche",
+   "kind": "cafe",
+   "neighborhood": "highland-park",
+   "summary": "Neighborhood coffeehouse on York Boulevard with cafe con leche and pastries.",
+   "tags": [
+    "coffee",
+    "local",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "heritage-square",
+   "name": "Heritage Square Museum",
+   "kind": "museum",
+   "neighborhood": "highland-park",
+   "summary": "Open-air museum of Victorian houses relocated from around the city along the Arroyo Seco.",
+   "tags": [
+    "history",
+    "architecture",
+    "quiet"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "highland-park-library",
+   "name": "Highland Park Branch Library",
+   "kind": "library",
+   "neighborhood": "highland-park",
+   "summary": "Carnegie-era neighborhood library with a children's room.",
+   "tags": [
+    "books",
+    "historic",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mariachi-plaza",
+   "name": "Mariachi Plaza",
+   "kind": "landmark",
+   "neighborhood": "boyle-heights",
+   "summary": "Plaza where mariachi bands wait for gigs, with a bandstand and a Metro station.",
+   "tags": [
+    "music",
+    "history",
+    "mexican"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guisados",
+   "name": "Guisados",
+   "kind": "restaurant",
+   "neighborhood": "boyle-heights",
+   "summary": "Taqueria famous for braised-stew tacos on handmade tortillas.",
+   "tags": [
+    "tacos",
+    "cheap",
+    "quick"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hollenbeck-park",
+   "name": "Hollenbeck Park",
+   "kind": "park",
+   "neighborhood": "boyle-heights",
+   "summary": "Neighborhood park with a lake, bridge and picnic lawns.",
+   "tags": [
+    "picnic",
+    "local",
+    "playground"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "el-mercadito",
+   "name": "El Mercadito",
+   "kind": "market",
+   "neighborhood": "boyle-heights",
+   "summary": "Multi-level Mexican market with mariachi, food stalls, botanicas and a party-supplies floor.",
+   "tags": [
+    "mexican",
+    "food",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boyle-heights-library",
+   "name": "Benjamin Franklin Branch Library",
+   "kind": "library",
+   "neighborhood": "boyle-heights",
+   "summary": "Neighborhood library with Spanish-language collections and a computer lab.",
+   "tags": [
+    "books",
+    "study",
+    "multilingual"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hammer-museum",
+   "name": "Hammer Museum",
+   "kind": "museum",
+   "neighborhood": "westwood",
+   "summary": "Free contemporary art museum on the UCLA edge with an interior courtyard and public lectures.",
+   "tags": [
+    "art",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royce-hall",
+   "name": "Royce Hall",
+   "kind": "venue",
+   "neighborhood": "westwood",
+   "summary": "UCLA's Romanesque concert hall for classical, world music and talks.",
+   "tags": [
+    "classical",
+    "architecture",
+    "concerts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "diddy-riese",
+   "name": "Diddy Riese",
+   "kind": "cafe",
+   "neighborhood": "westwood",
+   "summary": "Student-beloved cookie bakery with warm cookies at rock-bottom prices.",
+   "tags": [
+    "cookies",
+    "cheap",
+    "students"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ucla-powell-library",
+   "name": "UCLA Powell Library",
+   "kind": "library",
+   "neighborhood": "westwood",
+   "summary": "Romanesque reading rooms at the heart of the campus, open to students and visitors.",
+   "tags": [
+    "books",
+    "study",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "westwood-village",
+   "name": "Westwood Village",
+   "kind": "shopping",
+   "neighborhood": "westwood",
+   "summary": "Walkable student district with cafes, cheap eats, bookstores and historic movie theaters.",
+   "tags": [
+    "students",
+    "browse",
+    "food"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "santa-monica-pier",
+   "name": "Santa Monica Pier",
+   "kind": "landmark",
+   "neighborhood": "santa-monica",
+   "summary": "Century-old pier with a solar Ferris wheel, arcade and sunset views over the Pacific.",
+   "tags": [
+    "iconic",
+    "beach",
+    "touristy",
+    "rides"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "third-street-promenade",
+   "name": "Third Street Promenade",
+   "kind": "shopping",
+   "neighborhood": "santa-monica",
+   "summary": "Pedestrian shopping street with chain stores, buskers and restaurants.",
+   "tags": [
+    "shopping",
+    "touristy",
+    "walk"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "santa-monica-beach",
+   "name": "Santa Monica State Beach",
+   "kind": "beach",
+   "neighborhood": "santa-monica",
+   "summary": "Wide sandy beach with volleyball courts, a bike path and a gym on the sand.",
+   "tags": [
+    "beach",
+    "swimming",
+    "bike-path"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "santa-monica-farmers-market",
+   "name": "Santa Monica Farmers' Markets",
+   "kind": "market",
+   "neighborhood": "santa-monica",
+   "summary": "Wednesday and Saturday markets where top chefs shop for produce.",
+   "tags": [
+    "farmers-market",
+    "local",
+    "food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "palisades-park",
+   "name": "Palisades Park",
+   "kind": "park",
+   "neighborhood": "santa-monica",
+   "summary": "Palm-lined bluff-top park with ocean views and a popular sunset walk.",
+   "tags": [
+    "views",
+    "sunset",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bay-cities",
+   "name": "Bay Cities Italian Deli",
+   "kind": "restaurant",
+   "neighborhood": "santa-monica",
+   "summary": "Italian market and sandwich counter famous for the Godmother and long lunch lines.",
+   "tags": [
+    "sandwiches",
+    "italian",
+    "line"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "santa-monica-library",
+   "name": "Santa Monica Public Library Main",
+   "kind": "library",
+   "neighborhood": "santa-monica",
+   "summary": "Modern main library with a courtyard cafe, study rooms and a children's wing.",
+   "tags": [
+    "books",
+    "study",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "santa-monica-stairs",
+   "name": "Santa Monica Stairs",
+   "kind": "fitness",
+   "neighborhood": "santa-monica",
+   "summary": "Steep public staircase in a canyon, popular for outdoor workouts and trail-runner loops.",
+   "tags": [
+    "workout",
+    "running",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "venice-boardwalk",
+   "name": "Venice Beach Boardwalk",
+   "kind": "landmark",
+   "neighborhood": "venice",
+   "summary": "A carnival of street performers, vendors, skate bowls and murals along the sand.",
+   "tags": [
+    "iconic",
+    "people-watching",
+    "touristy"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "venice-canals",
+   "name": "Venice Canals",
+   "kind": "landmark",
+   "neighborhood": "venice",
+   "summary": "Picturesque residential canals with footbridges and garden-lined cottages.",
+   "tags": [
+    "walk",
+    "photogenic",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbot-kinney",
+   "name": "Abbot Kinney Boulevard",
+   "kind": "shopping",
+   "neighborhood": "venice",
+   "summary": "Trendy strip of boutiques, galleries, restaurants and coffee shops.",
+   "tags": [
+    "boutiques",
+    "food",
+    "walk"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "muscle-beach",
+   "name": "Muscle Beach",
+   "kind": "fitness",
+   "neighborhood": "venice",
+   "summary": "Open-air outdoor gym with bodybuilding equipment and a legendary reputation on the boardwalk.",
+   "tags": [
+    "gym",
+    "outdoor",
+    "iconic"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gjusta",
+   "name": "Gjusta",
+   "kind": "cafe",
+   "neighborhood": "venice",
+   "summary": "Bakery and deli with smoked fish, sandwiches and pastries served from a warehouse in a back alley.",
+   "tags": [
+    "bakery",
+    "brunch",
+    "smoked-fish"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "venice-skatepark",
+   "name": "Venice Skatepark",
+   "kind": "attraction",
+   "neighborhood": "venice",
+   "summary": "Free concrete skate bowls beside the beach, with an audience of tourists.",
+   "tags": [
+    "skate",
+    "free",
+    "beach"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "venice-library",
+   "name": "Venice Abbot Kinney Memorial Branch Library",
+   "kind": "library",
+   "neighborhood": "venice",
+   "summary": "Neighborhood branch library with local history and children's programs.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sony-pictures-tour",
+   "name": "Sony Pictures Studio Tour",
+   "kind": "attraction",
+   "neighborhood": "culver-city",
+   "summary": "Walking tour of soundstages and backlots at the former MGM studio.",
+   "tags": [
+    "film",
+    "tour",
+    "touristy"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "museum-of-jurassic-technology",
+   "name": "Museum of Jurassic Technology",
+   "kind": "museum",
+   "neighborhood": "culver-city",
+   "summary": "Dim, eccentric museum of strange exhibits that blur fact and fiction, with a rooftop tea room.",
+   "tags": [
+    "quirky",
+    "rainy-day",
+    "quiet"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "helms-bakery",
+   "name": "Helms Bakery District",
+   "kind": "shopping",
+   "neighborhood": "culver-city",
+   "summary": "Former bakery complex of design stores, galleries and restaurants.",
+   "tags": [
+    "design",
+    "shopping",
+    "food"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kirk-douglas-theatre",
+   "name": "Kirk Douglas Theatre",
+   "kind": "venue",
+   "neighborhood": "culver-city",
+   "summary": "Intimate theater in a converted movie house staging new plays.",
+   "tags": [
+    "theater",
+    "intimate",
+    "new-work"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "titos-tacos",
+   "name": "Tito's Tacos",
+   "kind": "restaurant",
+   "neighborhood": "culver-city",
+   "summary": "Retro walk-up taco stand with hard-shell tacos and long lines since 1959.",
+   "tags": [
+    "tacos",
+    "cheap",
+    "historic",
+    "quick"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "culver-city-library",
+   "name": "Culver City Julian Dixon Library",
+   "kind": "library",
+   "neighborhood": "culver-city",
+   "summary": "Modern public library near Culver City Hall with study areas and a children's room.",
+   "tags": [
+    "books",
+    "quiet",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "natural-history-museum-la",
+   "name": "Natural History Museum of Los Angeles County",
+   "kind": "museum",
+   "neighborhood": "exposition-park",
+   "summary": "Dinosaur halls, gems and a nature garden in a 1913 domed building.",
+   "tags": [
+    "science",
+    "dinosaurs",
+    "kids",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "california-science-center",
+   "name": "California Science Center",
+   "kind": "museum",
+   "neighborhood": "exposition-park",
+   "summary": "Hands-on science museum home to the Space Shuttle Endeavour; general admission is free.",
+   "tags": [
+    "science",
+    "kids",
+    "rainy-day",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "exposition-rose-garden",
+   "name": "Exposition Park Rose Garden",
+   "kind": "garden",
+   "neighborhood": "exposition-park",
+   "summary": "Seven-acre garden of roses in bloom from spring through fall.",
+   "tags": [
+    "flowers",
+    "quiet",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-coliseum",
+   "name": "Los Angeles Memorial Coliseum",
+   "kind": "stadium",
+   "neighborhood": "exposition-park",
+   "summary": "Historic stadium of two Olympics and USC football, set for 2028.",
+   "tags": [
+    "football",
+    "history",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bmo-stadium",
+   "name": "BMO Stadium",
+   "kind": "stadium",
+   "neighborhood": "exposition-park",
+   "summary": "Soccer stadium of LAFC and Angel City FC with a raucous supporters' section.",
+   "tags": [
+    "soccer",
+    "sports"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mercado-la-paloma",
+   "name": "Mercado La Paloma",
+   "kind": "market",
+   "neighborhood": "exposition-park",
+   "summary": "Community market hall with Yucatecan and Mexican vendors near USC.",
+   "tags": [
+    "food",
+    "local",
+    "mexican"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "doheny-library",
+   "name": "USC Doheny Memorial Library",
+   "kind": "library",
+   "neighborhood": "exposition-park",
+   "summary": "Gothic-style campus library with reading rooms for students.",
+   "tags": [
+    "books",
+    "study",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sofi-stadium",
+   "name": "SoFi Stadium",
+   "kind": "stadium",
+   "neighborhood": "inglewood",
+   "summary": "Giant translucent-roofed stadium for the Rams and Chargers and big concerts.",
+   "tags": [
+    "football",
+    "concerts",
+    "iconic"
+   ],
+   "cost": "$$$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "family",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "intuit-dome",
+   "name": "Intuit Dome",
+   "kind": "stadium",
+   "neighborhood": "inglewood",
+   "summary": "The Clippers' arena, opened in 2024, with a standing-only fan section and a glowing facade.",
+   "tags": [
+    "basketball",
+    "concerts",
+    "new-build"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kia-forum",
+   "name": "Kia Forum",
+   "kind": "venue",
+   "neighborhood": "inglewood",
+   "summary": "Circular 1960s arena once home to the Lakers, now a premier concert venue.",
+   "tags": [
+    "concerts",
+    "historic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "randys-donuts",
+   "name": "Randy's Donuts",
+   "kind": "cafe",
+   "neighborhood": "inglewood",
+   "summary": "Drive-through doughnut shop under a giant doughnut sign near LAX.",
+   "tags": [
+    "donuts",
+    "iconic",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "inglewood-library",
+   "name": "Inglewood Public Library",
+   "kind": "library",
+   "neighborhood": "inglewood",
+   "summary": "City library with community programs and study space.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "warner-bros-tour",
+   "name": "Warner Bros. Studio Tour Hollywood",
+   "kind": "attraction",
+   "neighborhood": "burbank",
+   "summary": "Backlot tour of soundstages, sets and the Harry Potter and Friends exhibits.",
+   "tags": [
+    "film",
+    "tour",
+    "touristy"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "magnolia-park",
+   "name": "Magnolia Park",
+   "kind": "shopping",
+   "neighborhood": "burbank",
+   "summary": "Retro shopping street of vintage stores, record shops and old-school bars.",
+   "tags": [
+    "vintage",
+    "browse",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bobs-big-boy",
+   "name": "Bob's Big Boy",
+   "kind": "restaurant",
+   "neighborhood": "burbank",
+   "summary": "Classic 1949 diner with a weekly car show on Friday nights.",
+   "tags": [
+    "diner",
+    "historic",
+    "car-show"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "burbank-library",
+   "name": "Buena Vista Library",
+   "kind": "library",
+   "neighborhood": "burbank",
+   "summary": "Burbank's central library with a large children's section and quiet reading areas.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "universal-studios",
+   "name": "Universal Studios Hollywood",
+   "kind": "attraction",
+   "neighborhood": "studio-city",
+   "summary": "Studio-theme-park with rides, a backlot tram tour and CityWalk dining.",
+   "tags": [
+    "rides",
+    "film",
+    "family"
+   ],
+   "cost": "$$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arts-deli",
+   "name": "Art's Deli",
+   "kind": "restaurant",
+   "neighborhood": "studio-city",
+   "summary": "Ventura Boulevard Jewish deli open since 1957, known for pastrami and matzo ball soup.",
+   "tags": [
+    "deli",
+    "pastrami",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "studio-city-farmers-market",
+   "name": "Studio City Farmers Market",
+   "kind": "market",
+   "neighborhood": "studio-city",
+   "summary": "Sunday market on Ventura Place with produce, food stalls and live music.",
+   "tags": [
+    "farmers-market",
+    "sunday",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "studio-city-library",
+   "name": "Studio City Branch Library",
+   "kind": "library",
+   "neighborhood": "studio-city",
+   "summary": "Branch library with a quiet reading room and kids' programs.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rose-bowl",
+   "name": "Rose Bowl",
+   "kind": "stadium",
+   "neighborhood": "pasadena",
+   "summary": "Historic 1922 stadium of the Rose Bowl Game and UCLA football, with a monthly flea market.",
+   "tags": [
+    "football",
+    "iconic",
+    "flea-market"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "huntington-library",
+   "name": "The Huntington Library, Art Museum and Botanical Gardens",
+   "kind": "garden",
+   "neighborhood": "pasadena",
+   "summary": "Sprawling gardens, rare books and art in nearby San Marino; the Japanese and Chinese gardens are highlights.",
+   "tags": [
+    "gardens",
+    "art",
+    "quiet"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "norton-simon",
+   "name": "Norton Simon Museum",
+   "kind": "museum",
+   "neighborhood": "pasadena",
+   "summary": "Highly regarded European and Asian art collection set in a sculpture garden.",
+   "tags": [
+    "art",
+    "rainy-day",
+    "gardens"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-pasadena",
+   "name": "Old Pasadena",
+   "kind": "shopping",
+   "neighborhood": "pasadena",
+   "summary": "Restored brick historic district of shops, restaurants and a pedestrian alleyway.",
+   "tags": [
+    "shopping",
+    "historic",
+    "food"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gamble-house",
+   "name": "Gamble House",
+   "kind": "landmark",
+   "neighborhood": "pasadena",
+   "summary": "Greene and Greene's Arts and Crafts masterpiece open for guided tours.",
+   "tags": [
+    "architecture",
+    "history",
+    "craftsman"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pasadena-library",
+   "name": "Pasadena Central Library",
+   "kind": "library",
+   "neighborhood": "pasadena",
+   "summary": "Spanish-revival library with a courtyard and reading room.",
+   "tags": [
+    "books",
+    "architecture",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pie-n-burger",
+   "name": "Pie 'n Burger",
+   "kind": "restaurant",
+   "neighborhood": "pasadena",
+   "summary": "Old-fashioned counter diner serving burgers and homemade pies.",
+   "tags": [
+    "diner",
+    "pie",
+    "classic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arroyo-seco",
+   "name": "Arroyo Seco and Brookside Park",
+   "kind": "park",
+   "neighborhood": "pasadena",
+   "summary": "Wooded canyon with trails, picnic lawns and the Rose Bowl nearby.",
+   "tags": [
+    "hiking",
+    "picnic",
+    "running"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "queen-mary",
+   "name": "The Queen Mary",
+   "kind": "attraction",
+   "neighborhood": "long-beach",
+   "summary": "Retired ocean liner turned hotel and museum, with ghost tours.",
+   "tags": [
+    "history",
+    "ship",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aquarium-of-the-pacific",
+   "name": "Aquarium of the Pacific",
+   "kind": "attraction",
+   "neighborhood": "long-beach",
+   "summary": "Large aquarium with a lorikeet forest, shark lagoon and Pacific ecosystems.",
+   "tags": [
+    "animals",
+    "kids",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "belmont-shore",
+   "name": "Belmont Shore and Second Street",
+   "kind": "shopping",
+   "neighborhood": "long-beach",
+   "summary": "Beachfront strip of casual restaurants, shops and ice-cream stands.",
+   "tags": [
+    "beach",
+    "food",
+    "walk"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "alamitos-beach",
+   "name": "Long Beach beaches and bike path",
+   "kind": "beach",
+   "neighborhood": "long-beach",
+   "summary": "Miles of sand beaches with a long oceanfront bike path.",
+   "tags": [
+    "beach",
+    "bike-path",
+    "swimming"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "phnom-penh-noodle-shack",
+   "name": "Phnom Penh Noodle Shack",
+   "kind": "restaurant",
+   "neighborhood": "long-beach",
+   "summary": "Cambodia Town noodle shop known for kuy teav soup.",
+   "tags": [
+    "cambodian",
+    "noodles",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cambodian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "long-beach-library",
+   "name": "Long Beach Main Library",
+   "kind": "library",
+   "neighborhood": "long-beach",
+   "summary": "Downtown library at Lincoln Park with a community garden.",
+   "tags": [
+    "books",
+    "quiet",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ymca-hollywood",
+   "name": "Hollywood Y gym",
+   "kind": "fitness",
+   "neighborhood": "hollywood",
+   "summary": "Community gym with a pool and group classes.",
+   "tags": [
+    "gym",
+    "pool"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "venice-beach-gym",
+   "name": "Gold's Gym Venice",
+   "kind": "fitness",
+   "neighborhood": "venice",
+   "summary": "Legendary bodybuilding gym since the 1960s.",
+   "tags": [
+    "gym",
+    "iconic",
+    "weights"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "echo-park-pool",
+   "name": "Echo Park Pool and recreation center",
+   "kind": "fitness",
+   "neighborhood": "echo-park",
+   "summary": "City-run community pool and gym.",
+   "tags": [
+    "pool",
+    "rec-center",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brite-spot",
+   "name": "Brite Spot",
+   "kind": "restaurant",
+   "neighborhood": "echo-park",
+   "summary": "Retro Sunset Boulevard diner known for its pies, breakfast all day and late hours.",
+   "tags": [
+    "diner",
+    "pie",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "valerie-echo-park",
+   "name": "Valerie Echo Park",
+   "kind": "cafe",
+   "neighborhood": "echo-park",
+   "summary": "Bakery cafe on Echo Park Avenue with pastries, coffee and a sunny window counter.",
+   "tags": [
+    "coffee",
+    "pastry",
+    "bakery"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "griffith-pool",
+   "name": "Griffith Park Pool and tennis courts",
+   "kind": "fitness",
+   "neighborhood": "los-feliz",
+   "summary": "Public swimming pool and courts at the foot of the park.",
+   "tags": [
+    "pool",
+    "tennis",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "ucla",
+   "name": "University of California, Los Angeles (UCLA)",
+   "type": "research-university",
+   "neighborhood": "westwood",
+   "size": "large",
+   "known_for": [
+    "film",
+    "medicine",
+    "engineering",
+    "law",
+    "research",
+    "public-university"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "usc",
+   "name": "University of Southern California (USC)",
+   "type": "research-university",
+   "neighborhood": "exposition-park",
+   "size": "large",
+   "known_for": [
+    "film",
+    "business",
+    "engineering",
+    "communication",
+    "research"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "caltech",
+   "name": "California Institute of Technology (Caltech)",
+   "type": "research-university",
+   "neighborhood": "pasadena",
+   "size": "small",
+   "known_for": [
+    "physics",
+    "engineering",
+    "planetary-science",
+    "research"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "art-center",
+   "name": "ArtCenter College of Design",
+   "type": "art-school",
+   "neighborhood": "pasadena",
+   "size": "medium",
+   "known_for": [
+    "industrial-design",
+    "illustration",
+    "film",
+    "transportation-design"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "occidental",
+   "name": "Occidental College",
+   "type": "liberal-arts-college",
+   "neighborhood": "highland-park",
+   "size": "small",
+   "known_for": [
+    "liberal-arts",
+    "politics",
+    "diplomacy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lacc",
+   "name": "Los Angeles City College",
+   "type": "community-college",
+   "neighborhood": "hollywood",
+   "size": "large",
+   "known_for": [
+    "transfer",
+    "film",
+    "nursing",
+    "adult-education"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "smc",
+   "name": "Santa Monica College",
+   "type": "community-college",
+   "neighborhood": "santa-monica",
+   "size": "large",
+   "known_for": [
+    "transfer",
+    "design",
+    "business",
+    "international-students"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "csulb",
+   "name": "California State University, Long Beach",
+   "type": "public-university",
+   "neighborhood": "long-beach",
+   "size": "large",
+   "known_for": [
+    "engineering",
+    "nursing",
+    "business",
+    "arts"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fidm",
+   "name": "FIDM (Fashion Institute of Design & Merchandising)",
+   "type": "art-school",
+   "neighborhood": "downtown-la",
+   "size": "medium",
+   "known_for": [
+    "fashion-design",
+    "merchandising",
+    "visual-arts"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "afi",
+   "name": "AFI Conservatory",
+   "type": "art-school",
+   "neighborhood": "los-feliz",
+   "size": "small",
+   "known_for": [
+    "film",
+    "directing",
+    "cinematography",
+    "screenwriting"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "cedars-sinai",
+   "name": "Cedars-Sinai Medical Center",
+   "sector": "healthcare",
+   "neighborhood": "west-hollywood",
+   "size": "large",
+   "summary": "Large hospital and research center on the edge of West Hollywood.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ucla-health",
+   "name": "UCLA Health",
+   "sector": "healthcare",
+   "neighborhood": "westwood",
+   "size": "large",
+   "summary": "Academic medical center and medical school in Westwood.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "keck-usc",
+   "name": "Keck Medicine of USC",
+   "sector": "healthcare",
+   "neighborhood": "boyle-heights",
+   "size": "large",
+   "summary": "Teaching hospital and the county's big Medical Center campus.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "childrens-hospital-la",
+   "name": "Children's Hospital Los Angeles",
+   "sector": "healthcare",
+   "neighborhood": "los-feliz",
+   "size": "large",
+   "summary": "Pediatric hospital on Sunset Boulevard.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "medical-researcher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "walt-disney-company",
+   "name": "The Walt Disney Company",
+   "sector": "media",
+   "neighborhood": "burbank",
+   "size": "large",
+   "summary": "Studio lot and corporate headquarters in Burbank.",
+   "careers": [
+    "graphic-designer",
+    "software-engineer",
+    "marketing-coordinator",
+    "performer",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "warner-bros",
+   "name": "Warner Bros. Discovery",
+   "sector": "media",
+   "neighborhood": "burbank",
+   "size": "large",
+   "summary": "Studio lot with soundstages and production offices.",
+   "careers": [
+    "graphic-designer",
+    "marketing-coordinator",
+    "software-engineer",
+    "performer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nbcuniversal",
+   "name": "NBCUniversal",
+   "sector": "media",
+   "neighborhood": "studio-city",
+   "size": "large",
+   "summary": "Studio, theme park and television operations at Universal City.",
+   "careers": [
+    "performer",
+    "marketing-coordinator",
+    "event-planner",
+    "graphic-designer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "netflix-hollywood",
+   "name": "Netflix Hollywood",
+   "sector": "media",
+   "neighborhood": "hollywood",
+   "size": "large",
+   "summary": "Production and executive offices on Sunset Boulevard.",
+   "careers": [
+    "software-engineer",
+    "data-analyst",
+    "marketing-coordinator",
+    "graphic-designer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "paramount",
+   "name": "Paramount Pictures",
+   "sector": "media",
+   "neighborhood": "hollywood",
+   "size": "large",
+   "summary": "Historic studio lot on Melrose Avenue.",
+   "careers": [
+    "performer",
+    "marketing-coordinator",
+    "graphic-designer",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sony-culver",
+   "name": "Sony Pictures Entertainment",
+   "sector": "media",
+   "neighborhood": "culver-city",
+   "size": "large",
+   "summary": "Studio lot and executive offices in downtown Culver City.",
+   "careers": [
+    "marketing-coordinator",
+    "graphic-designer",
+    "software-engineer",
+    "performer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amazon-mgm",
+   "name": "Amazon MGM Studios",
+   "sector": "media",
+   "neighborhood": "culver-city",
+   "size": "large",
+   "summary": "Film and television operations with big tech offices.",
+   "careers": [
+    "software-engineer",
+    "data-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "snap-inc",
+   "name": "Snap Inc.",
+   "sector": "technology",
+   "neighborhood": "santa-monica",
+   "size": "large",
+   "summary": "Social-media company headquartered in Santa Monica.",
+   "careers": [
+    "software-engineer",
+    "ux-designer",
+    "data-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "google-la",
+   "name": "Google Los Angeles",
+   "sector": "technology",
+   "neighborhood": "venice",
+   "size": "large",
+   "summary": "Silicon Beach offices in Venice and nearby Playa Vista.",
+   "careers": [
+    "software-engineer",
+    "ux-designer",
+    "data-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jpl",
+   "name": "NASA Jet Propulsion Laboratory",
+   "sector": "aerospace",
+   "neighborhood": "pasadena",
+   "size": "large",
+   "summary": "Space-robotics lab managed by Caltech for NASA.",
+   "careers": [
+    "aerospace-engineer",
+    "software-engineer",
+    "data-analyst",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-phil",
+   "name": "Los Angeles Philharmonic",
+   "sector": "entertainment",
+   "neighborhood": "downtown-la",
+   "size": "medium",
+   "summary": "Orchestra and operator of Disney Hall and the Hollywood Bowl.",
+   "careers": [
+    "musician",
+    "performer",
+    "event-planner",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "caa",
+   "name": "Creative Artists Agency",
+   "sector": "entertainment",
+   "neighborhood": "beverly-hills",
+   "size": "medium",
+   "summary": "Talent agency with offices in Century City and Beverly Hills.",
+   "careers": [
+    "marketing-coordinator",
+    "event-planner",
+    "paralegal"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beverly-hills-hotel",
+   "name": "The Beverly Hills Hotel",
+   "sector": "hospitality",
+   "neighborhood": "beverly-hills",
+   "size": "medium",
+   "summary": "Pink-painted luxury hotel with a famous lounge.",
+   "careers": [
+    "hotel-front-desk",
+    "server",
+    "bartender",
+    "line-cook"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-live",
+   "name": "LA Live and Crypto.com Arena",
+   "sector": "entertainment",
+   "neighborhood": "downtown-la",
+   "size": "large",
+   "summary": "Entertainment complex of arenas, theaters, hotels and restaurants.",
+   "careers": [
+    "event-planner",
+    "bartender",
+    "server",
+    "performer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dodgers",
+   "name": "Los Angeles Dodgers",
+   "sector": "entertainment",
+   "neighborhood": "echo-park",
+   "size": "large",
+   "summary": "Baseball franchise based at Dodger Stadium.",
+   "careers": [
+    "event-planner",
+    "marketing-coordinator",
+    "data-analyst",
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guess-inc",
+   "name": "Guess?",
+   "sector": "fashion",
+   "neighborhood": "downtown-la",
+   "size": "medium",
+   "summary": "Apparel brand headquartered in the Downtown fashion district.",
+   "careers": [
+    "fashion-assistant",
+    "graphic-designer",
+    "retail-associate",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-national-bank",
+   "name": "City National Bank",
+   "sector": "finance",
+   "neighborhood": "downtown-la",
+   "size": "large",
+   "summary": "Regional bank headquartered Downtown, popular with entertainment industry clients.",
+   "careers": [
+    "finance-banker",
+    "financial-analyst",
+    "accountant",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gibson-dunn",
+   "name": "Gibson, Dunn & Crutcher",
+   "sector": "legal",
+   "neighborhood": "downtown-la",
+   "size": "large",
+   "summary": "Large law firm on Grand Avenue.",
+   "careers": [
+    "paralegal"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lausd",
+   "name": "Los Angeles Unified School District",
+   "sector": "education",
+   "neighborhood": "downtown-la",
+   "size": "large",
+   "summary": "Second-largest school district in the country.",
+   "careers": [
+    "teacher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-city-government",
+   "name": "City of Los Angeles",
+   "sector": "government",
+   "neighborhood": "downtown-la",
+   "size": "large",
+   "summary": "City Hall and city agencies at the Civic Center.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "accountant",
+    "paralegal"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-metro",
+   "name": "LA Metro",
+   "sector": "government",
+   "neighborhood": "downtown-la",
+   "size": "large",
+   "summary": "Runs the county's rail and bus network from Union Station.",
+   "careers": [
+    "government-analyst",
+    "construction-trades",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "port-of-long-beach",
+   "name": "Port of Long Beach and Port of Los Angeles",
+   "sector": "logistics",
+   "neighborhood": "long-beach",
+   "size": "large",
+   "summary": "The busiest container port complex in the country.",
+   "careers": [
+    "port-logistics",
+    "construction-trades",
+    "government-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ucla-employer",
+   "name": "UCLA",
+   "sector": "education",
+   "neighborhood": "westwood",
+   "size": "large",
+   "summary": "Faculty, research and staff jobs on the Westwood campus.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "medical-researcher",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "usc-employer",
+   "name": "University of Southern California",
+   "sector": "education",
+   "neighborhood": "exposition-park",
+   "size": "large",
+   "summary": "Faculty, research and staff jobs at the University Park campus.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "downtown-core",
+   "name": "Downtown and Civic Center",
+   "neighborhoods": [
+    "downtown-la"
+   ],
+   "sectors": [
+    "finance",
+    "legal",
+    "government",
+    "fashion",
+    "entertainment",
+    "hospitality"
+   ],
+   "summary": "Banks, law firms, city and county government, the Fashion District and LA Live.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "studio-belt",
+   "name": "The studio belt",
+   "neighborhoods": [
+    "burbank",
+    "studio-city",
+    "hollywood"
+   ],
+   "sectors": [
+    "media",
+    "entertainment",
+    "creative",
+    "hospitality"
+   ],
+   "summary": "Disney, Warner Bros., Universal, Paramount and production crews across the Valley and Hollywood.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "silicon-beach",
+   "name": "Silicon Beach",
+   "neighborhoods": [
+    "santa-monica",
+    "venice",
+    "culver-city"
+   ],
+   "sectors": [
+    "technology",
+    "media",
+    "creative",
+    "business"
+   ],
+   "summary": "Tech giants and startups along the coast, plus Culver City studios.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "westside-medical",
+   "name": "Westside medical and legal",
+   "neighborhoods": [
+    "westwood",
+    "west-hollywood",
+    "beverly-hills"
+   ],
+   "sectors": [
+    "healthcare",
+    "education",
+    "legal",
+    "entertainment",
+    "retail"
+   ],
+   "summary": "UCLA Health, Cedars-Sinai, talent agencies and boutique law firms.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-logistics",
+   "name": "Harbor and logistics",
+   "neighborhoods": [
+    "long-beach",
+    "inglewood"
+   ],
+   "sectors": [
+    "logistics",
+    "construction",
+    "hospitality",
+    "government"
+   ],
+   "summary": "Container ports, trucking, airport services and stadium event work.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pasadena-research",
+   "name": "Pasadena research corridor",
+   "neighborhoods": [
+    "pasadena",
+    "highland-park"
+   ],
+   "sectors": [
+    "aerospace",
+    "education",
+    "technology",
+    "creative"
+   ],
+   "summary": "JPL, Caltech, ArtCenter and design studios in the San Gabriel Valley.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "aerospace-engineer",
+   "name": "Aerospace engineer",
+   "sector": "aerospace",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$$",
+   "summary": "Designing and testing spacecraft, instruments and flight systems at a lab or contractor.",
+   "themes": [
+    "mission milestones",
+    "design reviews",
+    "test campaigns",
+    "launch windows"
+   ]
+  }
+ ],
+ "climate": {
+  "summary": "Mediterranean and semi-arid: warm, dry summers, mild winters with occasional heavy rain, morning marine-layer fog near the coast, and hot Santa Ana winds in fall.",
+  "months": [
+   {
+    "high_f": 68,
+    "low_f": 49,
+    "rain_days": 5,
+    "note": "Cool and clear between storms; snow on distant mountain peaks."
+   },
+   {
+    "high_f": 69,
+    "low_f": 50,
+    "rain_days": 5,
+    "note": "Wettest month on average; green hills."
+   },
+   {
+    "high_f": 70,
+    "low_f": 52,
+    "rain_days": 5,
+    "note": "Mild; wildflowers on the hills after wet winters."
+   },
+   {
+    "high_f": 73,
+    "low_f": 55,
+    "rain_days": 3,
+    "note": "Pleasant; May Gray starts to creep in."
+   },
+   {
+    "high_f": 74,
+    "low_f": 59,
+    "rain_days": 1,
+    "note": "May Gray: cool gray mornings near the coast."
+   },
+   {
+    "high_f": 78,
+    "low_f": 62,
+    "rain_days": 0,
+    "note": "June Gloom marine layer clears by afternoon."
+   },
+   {
+    "high_f": 84,
+    "low_f": 66,
+    "rain_days": 0,
+    "note": "Dry and sunny; beaches full."
+   },
+   {
+    "high_f": 85,
+    "low_f": 67,
+    "rain_days": 0,
+    "note": "Hottest stretch; heat waves inland."
+   },
+   {
+    "high_f": 83,
+    "low_f": 65,
+    "rain_days": 1,
+    "note": "Often the hottest weather of the year; Santa Ana winds begin."
+   },
+   {
+    "high_f": 78,
+    "low_f": 60,
+    "rain_days": 2,
+    "note": "Warm days; fire risk with the Santa Ana winds."
+   },
+   {
+    "high_f": 73,
+    "low_f": 53,
+    "rain_days": 3,
+    "note": "Cooler; first rains arrive."
+   },
+   {
+    "high_f": 68,
+    "low_f": 48,
+    "rain_days": 4,
+    "note": "Cool; holiday lights and occasional storms."
+   }
+  ],
+  "source": "curated-climate-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "rose-parade",
+   "name": "Rose Parade and Rose Bowl Game",
+   "months": [
+    1
+   ],
+   "neighborhood": "pasadena",
+   "summary": "New Year's Day parade of floral floats down Colorado Boulevard followed by the Rose Bowl football game.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oscars",
+   "name": "Academy Awards",
+   "months": [
+    3
+   ],
+   "neighborhood": "hollywood",
+   "summary": "Film's biggest night at the Dolby Theatre, with road closures and red-carpet crowds.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-marathon",
+   "name": "Los Angeles Marathon",
+   "months": [
+    3
+   ],
+   "neighborhood": "santa-monica",
+   "summary": "Runners head from Dodger Stadium to the Santa Monica coast.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "festival-of-books",
+   "name": "Los Angeles Times Festival of Books",
+   "months": [
+    4
+   ],
+   "neighborhood": "exposition-park",
+   "summary": "Free book festival on the USC campus.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-pride",
+   "name": "LA Pride",
+   "months": [
+    6
+   ],
+   "neighborhood": "west-hollywood",
+   "summary": "Parade, festival and parties across Hollywood and West Hollywood.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hollywood-bowl-season",
+   "name": "Hollywood Bowl summer season",
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "neighborhood": "hollywood",
+   "summary": "Concerts from the LA Phil and pop acts with picnics and fireworks.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "outfest",
+   "name": "Outfest LGBTQ Film Festival",
+   "months": [
+    7
+   ],
+   "neighborhood": null,
+   "summary": "LGBTQ film festival with screenings across the city.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nisei-week",
+   "name": "Nisei Week",
+   "months": [
+    8
+   ],
+   "neighborhood": "downtown-la",
+   "summary": "Japanese American cultural festival in Little Tokyo with parade and food.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbot-kinney-festival",
+   "name": "Abbot Kinney Festival",
+   "months": [
+    9
+   ],
+   "neighborhood": "venice",
+   "summary": "Large street fair on Abbot Kinney Boulevard.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dia-de-los-muertos",
+   "name": "Day of the Dead at Hollywood Forever",
+   "months": [
+    10,
+    11
+   ],
+   "neighborhood": "hollywood",
+   "summary": "Altars, music and costumes at the cemetery.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-auto-show",
+   "name": "Los Angeles Auto Show",
+   "months": [
+    11,
+    12
+   ],
+   "neighborhood": "downtown-la",
+   "summary": "Car-industry show at the Convention Center.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hollywood-christmas-parade",
+   "name": "Hollywood Christmas Parade",
+   "months": [
+    11,
+    12
+   ],
+   "neighborhood": "hollywood",
+   "summary": "Celebrity-filled parade down Hollywood Boulevard.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "breakfast-burrito",
+   "name": "Breakfast burrito",
+   "kind": "dish",
+   "summary": "Eggs, potatoes, cheese and bacon or chorizo in a big flour tortilla, grabbed from a taqueria on the way to work.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "taco-trucks",
+   "name": "Taco trucks and stands",
+   "kind": "dish",
+   "summary": "Al pastor, carne asada and carnitas tacos served from trucks and sidewalk stands, often until very late.",
+   "places": [
+    "guisados",
+    "titos-tacos"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "in-n-out",
+   "name": "In-N-Out",
+   "kind": "dish",
+   "summary": "The local burger chain, ordered Double-Double, 'animal style', with the secret menu known by everyone.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "french-dip",
+   "name": "French dip",
+   "kind": "dish",
+   "summary": "Roast beef on a roll dipped in jus, the sandwich of old downtown.",
+   "places": [
+    "philippes"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "korean-bbq",
+   "name": "Korean barbecue",
+   "kind": "dish",
+   "summary": "Grilled short rib and pork belly with banchan, lettuce wraps and soju.",
+   "places": [
+    "parks-bbq",
+    "koreatown"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pastrami-and-deli",
+   "name": "Pastrami and Jewish deli",
+   "kind": "dish",
+   "summary": "Pastrami sandwiches and matzo ball soup from the Fairfax and Valley delis.",
+   "places": [
+    "canters-deli",
+    "arts-deli"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "street-fruit",
+   "name": "Street fruit",
+   "kind": "dish",
+   "summary": "Cups of cut mango, cucumber and watermelon with chili-lime Tajin sold by vendors from carts.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dodger-dog",
+   "name": "Dodger Dog",
+   "kind": "dish",
+   "summary": "Ten-inch hot dog sold at Dodger Stadium, eaten with a cold beer.",
+   "places": [
+    "dodger-stadium"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-freeways",
+   "name": "\"The\" plus a number",
+   "kind": "saying",
+   "summary": "Angelenos say 'the 405' or 'the 10', never just a number, and give directions by freeway and traffic.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "june-gloom",
+   "name": "May Gray and June Gloom",
+   "kind": "custom",
+   "summary": "Overcast coastal mornings in late spring and early summer that burn off by afternoon; locals complain but the beaches are empty.",
+   "places": [],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "santa-ana-winds",
+   "name": "Santa Ana winds",
+   "kind": "custom",
+   "summary": "Hot, dry offshore winds in fall that raise fire risk and set everyone on edge.",
+   "places": [],
+   "seasons": [
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "car-culture",
+   "name": "Car culture and valet parking",
+   "kind": "custom",
+   "summary": "Driving is the default, parking is a daily puzzle, and valet stands appear outside most restaurants.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hiking-culture",
+   "name": "Hiking culture",
+   "kind": "custom",
+   "summary": "Locals do sunrise hikes and sunset walks on canyon trails like Runyon and Griffith Park.",
+   "places": [
+    "runyon-canyon",
+    "griffith-park"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "farmers-markets",
+   "name": "Neighborhood farmers' markets",
+   "kind": "custom",
+   "summary": "Nearly every neighborhood has a weekly market, treated as a social event.",
+   "places": [
+    "santa-monica-farmers-market",
+    "hollywood-farmers-market",
+    "studio-city-farmers-market"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-valley",
+   "name": "\"The Valley\" and \"the Westside\"",
+   "kind": "saying",
+   "summary": "The San Fernando Valley is just 'the Valley'; the Westside means Santa Monica, Venice and nearby. People rarely cross town.",
+   "places": [
+    "studio-city",
+    "burbank",
+    "santa-monica"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dodgers",
+   "name": "Los Angeles Dodgers",
+   "kind": "team",
+   "summary": "Baseball's blue-and-white franchise at Dodger Stadium, with fans who leave in the seventh inning to beat traffic.",
+   "places": [
+    "dodger-stadium"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "angels",
+   "name": "Los Angeles Angels",
+   "kind": "team",
+   "summary": "The other baseball team, playing in Anaheim.",
+   "places": [],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakers",
+   "name": "Los Angeles Lakers",
+   "kind": "team",
+   "summary": "The purple-and-gold NBA franchise, a source of pride and celebrity courtside seats.",
+   "places": [
+    "crypto-arena"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clippers",
+   "name": "Los Angeles Clippers",
+   "kind": "team",
+   "summary": "The NBA team that moved to the Intuit Dome in 2024.",
+   "places": [
+    "intuit-dome"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kings",
+   "name": "Los Angeles Kings",
+   "kind": "team",
+   "summary": "NHL hockey team in a city of surfers, playing at Crypto.com Arena.",
+   "places": [
+    "crypto-arena"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rams-and-chargers",
+   "name": "Rams and Chargers",
+   "kind": "team",
+   "summary": "Both of LA's NFL teams share SoFi Stadium in Inglewood.",
+   "places": [
+    "sofi-stadium"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lafc",
+   "name": "LAFC and Angel City FC",
+   "kind": "team",
+   "summary": "Two soccer clubs sharing BMO Stadium, known for loud supporters' groups.",
+   "places": [
+    "bmo-stadium"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sparks",
+   "name": "Los Angeles Sparks",
+   "kind": "team",
+   "summary": "WNBA team playing at Crypto.com Arena.",
+   "places": [
+    "crypto-arena"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Drip coffee",
+   "low": 3,
+   "high": 4.5,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Latte",
+   "low": 5.5,
+   "high": 7.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bagel",
+   "item": "Bagel with cream cheese",
+   "low": 4,
+   "high": 7,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "taco",
+   "item": "Street taco",
+   "low": 2.5,
+   "high": 4.5,
+   "per": "a taco",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheap-lunch",
+   "item": "Cheap lunch",
+   "low": 14,
+   "high": 22,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner",
+   "item": "Mid-range dinner",
+   "low": 50,
+   "high": 90,
+   "per": "for one",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beer",
+   "item": "Pint of beer",
+   "low": 8,
+   "high": 11,
+   "per": "a pint",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocktail",
+   "item": "Cocktail",
+   "low": 16,
+   "high": 22,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries",
+   "low": 90,
+   "high": 140,
+   "per": "a week, one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "transit",
+   "item": "Metro bus or rail fare",
+   "low": 1.75,
+   "high": 1.75,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rideshare",
+   "item": "Rideshare across town",
+   "low": 20,
+   "high": 45,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "parking",
+   "item": "Event or valet parking",
+   "low": 15,
+   "high": 40,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movie",
+   "item": "Movie ticket",
+   "low": 15,
+   "high": 22,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gym",
+   "item": "Gym membership",
+   "low": 30,
+   "high": 120,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haircut",
+   "item": "Haircut",
+   "low": 30,
+   "high": 70,
+   "per": "",
+   "source": "curated-2026-10"
+  }
+ ]
+}

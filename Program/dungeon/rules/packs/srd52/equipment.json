@@ -1,0 +1,4089 @@
+{
+ "items": [
+  {
+   "id": "club",
+   "name": "Club",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d4",
+    "type": "bludgeoning"
+   },
+   "properties": [
+    {
+     "name": "Light"
+    }
+   ],
+   "property_names": [
+    "Light"
+   ],
+   "mastery": "Slow",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "1 SP",
+   "cost_cp": 10,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "dagger",
+   "name": "Dagger",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d4",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Finesse"
+    },
+    {
+     "name": "Light"
+    },
+    {
+     "name": "Thrown",
+     "range": 20,
+     "range_long": 60
+    }
+   ],
+   "property_names": [
+    "Finesse",
+    "Light",
+    "Thrown"
+   ],
+   "mastery": "Nick",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "greatclub",
+   "name": "Greatclub",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d8",
+    "type": "bludgeoning"
+   },
+   "properties": [
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Two-Handed"
+   ],
+   "mastery": "Push",
+   "weight_text": "10 lb.",
+   "weight_lb": 10.0,
+   "cost_text": "2 SP",
+   "cost_cp": 20,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "handaxe",
+   "name": "Handaxe",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d6",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Light"
+    },
+    {
+     "name": "Thrown",
+     "range": 20,
+     "range_long": 60
+    }
+   ],
+   "property_names": [
+    "Light",
+    "Thrown"
+   ],
+   "mastery": "Vex",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "javelin",
+   "name": "Javelin",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d6",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Thrown",
+     "range": 30,
+     "range_long": 120
+    }
+   ],
+   "property_names": [
+    "Thrown"
+   ],
+   "mastery": "Slow",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "5 SP",
+   "cost_cp": 50,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "light-hammer",
+   "name": "Light Hammer",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d4",
+    "type": "bludgeoning"
+   },
+   "properties": [
+    {
+     "name": "Light"
+    },
+    {
+     "name": "Thrown",
+     "range": 20,
+     "range_long": 60
+    }
+   ],
+   "property_names": [
+    "Light",
+    "Thrown"
+   ],
+   "mastery": "Nick",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "mace",
+   "name": "Mace",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d6",
+    "type": "bludgeoning"
+   },
+   "properties": [],
+   "property_names": [],
+   "mastery": "Sap",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "quarterstaff",
+   "name": "Quarterstaff",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d6",
+    "type": "bludgeoning"
+   },
+   "properties": [
+    {
+     "name": "Versatile",
+     "damage": "1d8"
+    }
+   ],
+   "property_names": [
+    "Versatile"
+   ],
+   "mastery": "Topple",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "2 SP",
+   "cost_cp": 20,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "sickle",
+   "name": "Sickle",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d4",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Light"
+    }
+   ],
+   "property_names": [
+    "Light"
+   ],
+   "mastery": "Nick",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "spear",
+   "name": "Spear",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d6",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Thrown",
+     "range": 20,
+     "range_long": 60
+    },
+    {
+     "name": "Versatile",
+     "damage": "1d8"
+    }
+   ],
+   "property_names": [
+    "Thrown",
+    "Versatile"
+   ],
+   "mastery": "Sap",
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "dart",
+   "name": "Dart",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1d4",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Finesse"
+    },
+    {
+     "name": "Thrown",
+     "range": 20,
+     "range_long": 60
+    }
+   ],
+   "property_names": [
+    "Finesse",
+    "Thrown"
+   ],
+   "mastery": "Vex",
+   "weight_text": "1/4 lb.",
+   "weight_lb": 0.25,
+   "cost_text": "5 CP",
+   "cost_cp": 5,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "weaponsmith"
+   ]
+  },
+  {
+   "id": "light-crossbow",
+   "name": "Light Crossbow",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1d8",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Ammunition",
+     "range": 80,
+     "range_long": 320,
+     "ammunition": "Bolt"
+    },
+    {
+     "name": "Loading"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Ammunition",
+    "Loading",
+    "Two-Handed"
+   ],
+   "mastery": "Slow",
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "weaponsmith"
+   ]
+  },
+  {
+   "id": "shortbow",
+   "name": "Shortbow",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1d6",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Ammunition",
+     "range": 80,
+     "range_long": 320,
+     "ammunition": "Arrow"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Ammunition",
+    "Two-Handed"
+   ],
+   "mastery": "Vex",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "weaponsmith"
+   ]
+  },
+  {
+   "id": "sling",
+   "name": "Sling",
+   "category": "weapon",
+   "weapon_category": "simple",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1d4",
+    "type": "bludgeoning"
+   },
+   "properties": [
+    {
+     "name": "Ammunition",
+     "range": 30,
+     "range_long": 120,
+     "ammunition": "Bullet"
+    }
+   ],
+   "property_names": [
+    "Ammunition"
+   ],
+   "mastery": "Slow",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "1 SP",
+   "cost_cp": 10,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "weaponsmith"
+   ]
+  },
+  {
+   "id": "battleaxe",
+   "name": "Battleaxe",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d8",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Versatile",
+     "damage": "1d10"
+    }
+   ],
+   "property_names": [
+    "Versatile"
+   ],
+   "mastery": "Topple",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "flail",
+   "name": "Flail",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d8",
+    "type": "bludgeoning"
+   },
+   "properties": [],
+   "property_names": [],
+   "mastery": "Sap",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "glaive",
+   "name": "Glaive",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d10",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Heavy"
+    },
+    {
+     "name": "Reach"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Heavy",
+    "Reach",
+    "Two-Handed"
+   ],
+   "mastery": "Graze",
+   "weight_text": "6 lb.",
+   "weight_lb": 6.0,
+   "cost_text": "20 GP",
+   "cost_cp": 2000,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "greataxe",
+   "name": "Greataxe",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d12",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Heavy"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Heavy",
+    "Two-Handed"
+   ],
+   "mastery": "Cleave",
+   "weight_text": "7 lb.",
+   "weight_lb": 7.0,
+   "cost_text": "30 GP",
+   "cost_cp": 3000,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "greatsword",
+   "name": "Greatsword",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "2d6",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Heavy"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Heavy",
+    "Two-Handed"
+   ],
+   "mastery": "Graze",
+   "weight_text": "6 lb.",
+   "weight_lb": 6.0,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "halberd",
+   "name": "Halberd",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d10",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Heavy"
+    },
+    {
+     "name": "Reach"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Heavy",
+    "Reach",
+    "Two-Handed"
+   ],
+   "mastery": "Cleave",
+   "weight_text": "6 lb.",
+   "weight_lb": 6.0,
+   "cost_text": "20 GP",
+   "cost_cp": 2000,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "lance",
+   "name": "Lance",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d10",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Heavy"
+    },
+    {
+     "name": "Reach"
+    },
+    {
+     "name": "Two-Handed",
+     "note": "unless mounted"
+    }
+   ],
+   "property_names": [
+    "Heavy",
+    "Reach",
+    "Two-Handed"
+   ],
+   "mastery": "Topple",
+   "weight_text": "6 lb.",
+   "weight_lb": 6.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "longsword",
+   "name": "Longsword",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d8",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Versatile",
+     "damage": "1d10"
+    }
+   ],
+   "property_names": [
+    "Versatile"
+   ],
+   "mastery": "Sap",
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "cost_text": "15 GP",
+   "cost_cp": 1500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "maul",
+   "name": "Maul",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "2d6",
+    "type": "bludgeoning"
+   },
+   "properties": [
+    {
+     "name": "Heavy"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Heavy",
+    "Two-Handed"
+   ],
+   "mastery": "Topple",
+   "weight_text": "10 lb.",
+   "weight_lb": 10.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "morningstar",
+   "name": "Morningstar",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d8",
+    "type": "piercing"
+   },
+   "properties": [],
+   "property_names": [],
+   "mastery": "Sap",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "15 GP",
+   "cost_cp": 1500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "pike",
+   "name": "Pike",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d10",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Heavy"
+    },
+    {
+     "name": "Reach"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Heavy",
+    "Reach",
+    "Two-Handed"
+   ],
+   "mastery": "Push",
+   "weight_text": "18 lb.",
+   "weight_lb": 18.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "rapier",
+   "name": "Rapier",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d8",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Finesse"
+    }
+   ],
+   "property_names": [
+    "Finesse"
+   ],
+   "mastery": "Vex",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "scimitar",
+   "name": "Scimitar",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d6",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Finesse"
+    },
+    {
+     "name": "Light"
+    }
+   ],
+   "property_names": [
+    "Finesse",
+    "Light"
+   ],
+   "mastery": "Nick",
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "shortsword",
+   "name": "Shortsword",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d6",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Finesse"
+    },
+    {
+     "name": "Light"
+    }
+   ],
+   "property_names": [
+    "Finesse",
+    "Light"
+   ],
+   "mastery": "Vex",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "trident",
+   "name": "Trident",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d8",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Thrown",
+     "range": 20,
+     "range_long": 60
+    },
+    {
+     "name": "Versatile",
+     "damage": "1d10"
+    }
+   ],
+   "property_names": [
+    "Thrown",
+    "Versatile"
+   ],
+   "mastery": "Topple",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "warhammer",
+   "name": "Warhammer",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d8",
+    "type": "bludgeoning"
+   },
+   "properties": [
+    {
+     "name": "Versatile",
+     "damage": "1d10"
+    }
+   ],
+   "property_names": [
+    "Versatile"
+   ],
+   "mastery": "Push",
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "cost_text": "15 GP",
+   "cost_cp": 1500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "war-pick",
+   "name": "War Pick",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d8",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Versatile",
+     "damage": "1d10"
+    }
+   ],
+   "property_names": [
+    "Versatile"
+   ],
+   "mastery": "Sap",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "whip",
+   "name": "Whip",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "melee",
+   "damage": {
+    "dice": "1d4",
+    "type": "slashing"
+   },
+   "properties": [
+    {
+     "name": "Finesse"
+    },
+    {
+     "name": "Reach"
+    }
+   ],
+   "property_names": [
+    "Finesse",
+    "Reach"
+   ],
+   "mastery": "Slow",
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "legality": "legal",
+   "shop_types": [
+    "weaponsmith",
+    "smith"
+   ]
+  },
+  {
+   "id": "blowgun",
+   "name": "Blowgun",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Ammunition",
+     "range": 25,
+     "range_long": 100,
+     "ammunition": "Needle"
+    },
+    {
+     "name": "Loading"
+    }
+   ],
+   "property_names": [
+    "Ammunition",
+    "Loading"
+   ],
+   "mastery": "Vex",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "weaponsmith"
+   ]
+  },
+  {
+   "id": "hand-crossbow",
+   "name": "Hand Crossbow",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1d6",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Ammunition",
+     "range": 30,
+     "range_long": 120,
+     "ammunition": "Bolt"
+    },
+    {
+     "name": "Light"
+    },
+    {
+     "name": "Loading"
+    }
+   ],
+   "property_names": [
+    "Ammunition",
+    "Light",
+    "Loading"
+   ],
+   "mastery": "Vex",
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "cost_text": "75 GP",
+   "cost_cp": 7500,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "weaponsmith"
+   ]
+  },
+  {
+   "id": "heavy-crossbow",
+   "name": "Heavy Crossbow",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1d10",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Ammunition",
+     "range": 100,
+     "range_long": 400,
+     "ammunition": "Bolt"
+    },
+    {
+     "name": "Heavy"
+    },
+    {
+     "name": "Loading"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Ammunition",
+    "Heavy",
+    "Loading",
+    "Two-Handed"
+   ],
+   "mastery": "Push",
+   "weight_text": "18 lb.",
+   "weight_lb": 18.0,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "weaponsmith"
+   ]
+  },
+  {
+   "id": "longbow",
+   "name": "Longbow",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1d8",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Ammunition",
+     "range": 150,
+     "range_long": 600,
+     "ammunition": "Arrow"
+    },
+    {
+     "name": "Heavy"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Ammunition",
+    "Heavy",
+    "Two-Handed"
+   ],
+   "mastery": "Slow",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "weaponsmith"
+   ]
+  },
+  {
+   "id": "musket",
+   "name": "Musket",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1d12",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Ammunition",
+     "range": 40,
+     "range_long": 120,
+     "ammunition": "Bullet"
+    },
+    {
+     "name": "Loading"
+    },
+    {
+     "name": "Two-Handed"
+    }
+   ],
+   "property_names": [
+    "Ammunition",
+    "Loading",
+    "Two-Handed"
+   ],
+   "mastery": "Slow",
+   "firearm": true,
+   "weight_text": "10 lb.",
+   "weight_lb": 10.0,
+   "cost_text": "500 GP",
+   "cost_cp": 50000,
+   "legality": "legal",
+   "shop_types": [
+    "gunsmith"
+   ]
+  },
+  {
+   "id": "pistol",
+   "name": "Pistol",
+   "category": "weapon",
+   "weapon_category": "martial",
+   "weapon_type": "ranged",
+   "damage": {
+    "dice": "1d10",
+    "type": "piercing"
+   },
+   "properties": [
+    {
+     "name": "Ammunition",
+     "range": 30,
+     "range_long": 90,
+     "ammunition": "Bullet"
+    },
+    {
+     "name": "Loading"
+    }
+   ],
+   "property_names": [
+    "Ammunition",
+    "Loading"
+   ],
+   "mastery": "Vex",
+   "firearm": true,
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "cost_text": "250 GP",
+   "cost_cp": 25000,
+   "legality": "legal",
+   "shop_types": [
+    "gunsmith"
+   ]
+  },
+  {
+   "id": "padded-armor",
+   "name": "Padded Armor",
+   "category": "armor",
+   "armor_type": "light",
+   "ac_base": 11,
+   "dex_bonus": true,
+   "ac_text": "11 + Dex modifier",
+   "stealth_disadvantage": true,
+   "don_minutes": 1,
+   "doff_minutes": 1,
+   "weight_text": "8 lb.",
+   "weight_lb": 8.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "legality": "legal",
+   "shop_types": [
+    "leatherworker",
+    "armorer"
+   ]
+  },
+  {
+   "id": "leather-armor",
+   "name": "Leather Armor",
+   "category": "armor",
+   "armor_type": "light",
+   "ac_base": 11,
+   "dex_bonus": true,
+   "ac_text": "11 + Dex modifier",
+   "stealth_disadvantage": false,
+   "don_minutes": 1,
+   "doff_minutes": 1,
+   "weight_text": "10 lb.",
+   "weight_lb": 10.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "leatherworker",
+    "armorer"
+   ]
+  },
+  {
+   "id": "studded-leather-armor",
+   "name": "Studded Leather Armor",
+   "category": "armor",
+   "armor_type": "light",
+   "ac_base": 12,
+   "dex_bonus": true,
+   "ac_text": "12 + Dex modifier",
+   "stealth_disadvantage": false,
+   "don_minutes": 1,
+   "doff_minutes": 1,
+   "weight_text": "13 lb.",
+   "weight_lb": 13.0,
+   "cost_text": "45 GP",
+   "cost_cp": 4500,
+   "legality": "legal",
+   "shop_types": [
+    "leatherworker",
+    "armorer"
+   ]
+  },
+  {
+   "id": "hide-armor",
+   "name": "Hide Armor",
+   "category": "armor",
+   "armor_type": "medium",
+   "ac_base": 12,
+   "dex_bonus": true,
+   "dex_max": 2,
+   "ac_text": "12 + Dex modifier (max 2)",
+   "stealth_disadvantage": false,
+   "don_minutes": 5,
+   "doff_minutes": 1,
+   "weight_text": "12 lb.",
+   "weight_lb": 12.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "leatherworker",
+    "armorer"
+   ]
+  },
+  {
+   "id": "chain-shirt",
+   "name": "Chain Shirt",
+   "category": "armor",
+   "armor_type": "medium",
+   "ac_base": 13,
+   "dex_bonus": true,
+   "dex_max": 2,
+   "ac_text": "13 + Dex modifier (max 2)",
+   "stealth_disadvantage": false,
+   "don_minutes": 5,
+   "doff_minutes": 1,
+   "weight_text": "20 lb.",
+   "weight_lb": 20.0,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "legality": "legal",
+   "shop_types": [
+    "armorer",
+    "smith"
+   ]
+  },
+  {
+   "id": "scale-mail",
+   "name": "Scale Mail",
+   "category": "armor",
+   "armor_type": "medium",
+   "ac_base": 14,
+   "dex_bonus": true,
+   "dex_max": 2,
+   "ac_text": "14 + Dex modifier (max 2)",
+   "stealth_disadvantage": true,
+   "don_minutes": 5,
+   "doff_minutes": 1,
+   "weight_text": "45 lb.",
+   "weight_lb": 45.0,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "legality": "legal",
+   "shop_types": [
+    "armorer",
+    "smith"
+   ]
+  },
+  {
+   "id": "breastplate",
+   "name": "Breastplate",
+   "category": "armor",
+   "armor_type": "medium",
+   "ac_base": 14,
+   "dex_bonus": true,
+   "dex_max": 2,
+   "ac_text": "14 + Dex modifier (max 2)",
+   "stealth_disadvantage": false,
+   "don_minutes": 5,
+   "doff_minutes": 1,
+   "weight_text": "20 lb.",
+   "weight_lb": 20.0,
+   "cost_text": "400 GP",
+   "cost_cp": 40000,
+   "legality": "legal",
+   "shop_types": [
+    "armorer",
+    "smith"
+   ]
+  },
+  {
+   "id": "half-plate-armor",
+   "name": "Half Plate Armor",
+   "category": "armor",
+   "armor_type": "medium",
+   "ac_base": 15,
+   "dex_bonus": true,
+   "dex_max": 2,
+   "ac_text": "15 + Dex modifier (max 2)",
+   "stealth_disadvantage": true,
+   "don_minutes": 5,
+   "doff_minutes": 1,
+   "weight_text": "40 lb.",
+   "weight_lb": 40.0,
+   "cost_text": "750 GP",
+   "cost_cp": 75000,
+   "legality": "legal",
+   "shop_types": [
+    "armorer",
+    "smith"
+   ]
+  },
+  {
+   "id": "ring-mail",
+   "name": "Ring Mail",
+   "category": "armor",
+   "armor_type": "heavy",
+   "ac_base": 14,
+   "dex_bonus": false,
+   "ac_text": "14",
+   "stealth_disadvantage": true,
+   "don_minutes": 10,
+   "doff_minutes": 5,
+   "weight_text": "40 lb.",
+   "weight_lb": 40.0,
+   "cost_text": "30 GP",
+   "cost_cp": 3000,
+   "legality": "legal",
+   "shop_types": [
+    "armorer",
+    "smith"
+   ]
+  },
+  {
+   "id": "chain-mail",
+   "name": "Chain Mail",
+   "category": "armor",
+   "armor_type": "heavy",
+   "ac_base": 16,
+   "dex_bonus": false,
+   "ac_text": "16",
+   "strength_required": 13,
+   "stealth_disadvantage": true,
+   "don_minutes": 10,
+   "doff_minutes": 5,
+   "weight_text": "55 lb.",
+   "weight_lb": 55.0,
+   "cost_text": "75 GP",
+   "cost_cp": 7500,
+   "legality": "legal",
+   "shop_types": [
+    "armorer",
+    "smith"
+   ]
+  },
+  {
+   "id": "splint-armor",
+   "name": "Splint Armor",
+   "category": "armor",
+   "armor_type": "heavy",
+   "ac_base": 17,
+   "dex_bonus": false,
+   "ac_text": "17",
+   "strength_required": 15,
+   "stealth_disadvantage": true,
+   "don_minutes": 10,
+   "doff_minutes": 5,
+   "weight_text": "60 lb.",
+   "weight_lb": 60.0,
+   "cost_text": "200 GP",
+   "cost_cp": 20000,
+   "legality": "legal",
+   "shop_types": [
+    "armorer",
+    "smith"
+   ]
+  },
+  {
+   "id": "plate-armor",
+   "name": "Plate Armor",
+   "category": "armor",
+   "armor_type": "heavy",
+   "ac_base": 18,
+   "dex_bonus": false,
+   "ac_text": "18",
+   "strength_required": 15,
+   "stealth_disadvantage": true,
+   "don_minutes": 10,
+   "doff_minutes": 5,
+   "weight_text": "65 lb.",
+   "weight_lb": 65.0,
+   "cost_text": "1,500 GP",
+   "cost_cp": 150000,
+   "legality": "legal",
+   "shop_types": [
+    "armorer",
+    "smith"
+   ]
+  },
+  {
+   "id": "shield",
+   "name": "Shield",
+   "category": "armor",
+   "armor_type": "shield",
+   "ac_bonus": 2,
+   "ac_text": "+2",
+   "stealth_disadvantage": false,
+   "weight_text": "6 lb.",
+   "weight_lb": 6.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "armorer",
+    "smith"
+   ]
+  },
+  {
+   "id": "alchemists-supplies",
+   "name": "Alchemist’s Supplies",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "int",
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "weight_text": "8 lb.",
+   "weight_lb": 8.0,
+   "utilize": "Identify a substance (DC 15), or start a fire (DC 15)",
+   "craft": [
+    "Acid",
+    "Alchemist’s Fire",
+    "Component Pouch",
+    "Oil",
+    "Paper",
+    "Perfume"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "brewers-supplies",
+   "name": "Brewer’s Supplies",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "int",
+   "cost_text": "20 GP",
+   "cost_cp": 2000,
+   "weight_text": "9 lb.",
+   "weight_lb": 9.0,
+   "utilize": "Detect poisoned drink (DC 15), or identify alcohol (DC 10)",
+   "craft": [
+    "Antitoxin"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "calligraphers-supplies",
+   "name": "Calligrapher’s Supplies",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "dex",
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "utilize": "Write text with impressive flourishes that guard against forgery (DC 15)",
+   "craft": [
+    "Ink",
+    "Spell Scroll"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "carpenters-tools",
+   "name": "Carpenter’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "str",
+   "cost_text": "8 GP",
+   "cost_cp": 800,
+   "weight_text": "6 lb.",
+   "weight_lb": 6.0,
+   "utilize": "Seal or pry open a door or container (DC 20)",
+   "craft": [
+    "Club",
+    "Greatclub",
+    "Quarterstaff",
+    "Barrel",
+    "Chest",
+    "Ladder",
+    "Pole",
+    "Portable Ram",
+    "Torch"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "cartographers-tools",
+   "name": "Cartographer’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "wis",
+   "cost_text": "15 GP",
+   "cost_cp": 1500,
+   "weight_text": "6 lb.",
+   "weight_lb": 6.0,
+   "utilize": "Draft a map of a small area (DC 15)",
+   "craft": [
+    "Map"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "cobblers-tools",
+   "name": "Cobbler’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "dex",
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "utilize": "Modify footwear to give Advantage on the wearer’s next Dexterity (Acrobatics) check (DC 10)",
+   "craft": [
+    "Climber’s Kit"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "cooks-utensils",
+   "name": "Cook’s Utensils",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "wis",
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "weight_text": "8 lb.",
+   "weight_lb": 8.0,
+   "utilize": "Improve food’s flavor (DC 10), or detect spoiled or poisoned food (DC 15)",
+   "craft": [
+    "Rations"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "glassblowers-tools",
+   "name": "Glassblower’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "int",
+   "cost_text": "30 GP",
+   "cost_cp": 3000,
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "utilize": "Discern what a glass object held in the past 24 hours (DC 15)",
+   "craft": [
+    "Glass Bottle",
+    "Magnifying Glass",
+    "Spyglass",
+    "Vial"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "jewelers-tools",
+   "name": "Jeweler’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "int",
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "utilize": "Discern a gem’s value (DC 15)",
+   "craft": [
+    "Arcane Focus",
+    "Holy Symbol"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "leatherworkers-tools",
+   "name": "Leatherworker’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "dex",
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "utilize": "Add a design to a leather item (DC 10)",
+   "craft": [
+    "Sling",
+    "Whip",
+    "Hide Armor",
+    "Leather Armor",
+    "Studded Leather Armor",
+    "Backpack",
+    "Crossbow Bolt Case",
+    "Map or Scroll Case",
+    "Parchment",
+    "Pouch",
+    "Quiver",
+    "Waterskin"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "masons-tools",
+   "name": "Mason’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "str",
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "weight_text": "8 lb.",
+   "weight_lb": 8.0,
+   "utilize": "Chisel a symbol or hole in stone (DC 10)",
+   "craft": [
+    "Block and Tackle"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "painters-supplies",
+   "name": "Painter’s Supplies",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "wis",
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "utilize": "Paint a recognizable image of something you’ve seen (DC 10)",
+   "craft": [
+    "Druidic Focus",
+    "Holy Symbol"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "potters-tools",
+   "name": "Potter’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "int",
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "utilize": "Discern what a ceramic object held in the past 24 hours (DC 15)",
+   "craft": [
+    "Jug",
+    "Lamp"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "smiths-tools",
+   "name": "Smith’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "str",
+   "cost_text": "20 GP",
+   "cost_cp": 2000,
+   "weight_text": "8 lb.",
+   "weight_lb": 8.0,
+   "utilize": "Pry open a door or container (DC 20)",
+   "craft": [
+    "Any Melee weapon (except Club, Greatclub, Quarterstaff, and Whip)",
+    "Medium armor (except Hide)",
+    "Heavy armor",
+    "Ball Bearings",
+    "Bucket",
+    "Caltrops",
+    "Chain",
+    "Crowbar",
+    "Firearm Bullets",
+    "Grappling Hook",
+    "Iron Pot",
+    "Iron Spikes",
+    "Sling Bullets"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "tinkers-tools",
+   "name": "Tinker’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "dex",
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "weight_text": "10 lb.",
+   "weight_lb": 10.0,
+   "utilize": "Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20)",
+   "craft": [
+    "Musket",
+    "Pistol",
+    "Bell",
+    "Bullseye Lantern",
+    "Flask",
+    "Hooded Lantern",
+    "Hunting Trap",
+    "Lock",
+    "Manacles",
+    "Mirror",
+    "Shovel",
+    "Signal Whistle",
+    "Tinderbox"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "weavers-tools",
+   "name": "Weaver’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "dex",
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "utilize": "Mend a tear in clothing (DC 10), or sew a Tiny design (DC 10)",
+   "craft": [
+    "Padded Armor",
+    "Basket",
+    "Bedroll",
+    "Blanket",
+    "Fine Clothes",
+    "Net",
+    "Robe",
+    "Rope",
+    "Sack",
+    "String",
+    "Tent",
+    "Traveler’s Clothes"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "woodcarvers-tools",
+   "name": "Woodcarver’s Tools",
+   "category": "tool",
+   "tool_type": "artisan",
+   "ability": "dex",
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "utilize": "Carve a pattern in wood (DC 10)",
+   "craft": [
+    "Club",
+    "Greatclub",
+    "Quarterstaff",
+    "Ranged weapons (except Pistol, Musket, and Sling)",
+    "Arcane Focus",
+    "Arrows",
+    "Bolts",
+    "Druidic Focus",
+    "Ink Pen",
+    "Needles"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "smith"
+   ]
+  },
+  {
+   "id": "disguise-kit",
+   "name": "Disguise Kit",
+   "category": "tool",
+   "tool_type": "other",
+   "ability": "cha",
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "utilize": "Apply makeup (DC 10)",
+   "craft": [
+    "Costume"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "tinker"
+   ]
+  },
+  {
+   "id": "forgery-kit",
+   "name": "Forgery Kit",
+   "category": "tool",
+   "tool_type": "other",
+   "ability": "dex",
+   "cost_text": "15 GP",
+   "cost_cp": 1500,
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "utilize": "Mimic 10 or fewer words of someone else’s handwriting (DC 15), or duplicate a wax seal (DC 20)",
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "tinker"
+   ]
+  },
+  {
+   "id": "gaming-set",
+   "name": "Gaming Set",
+   "category": "tool",
+   "tool_type": "other",
+   "ability": "wis",
+   "cost_text": "Varies",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "utilize": "Discern whether someone is cheating (DC 10), or win the game (DC 20)",
+   "variants": [
+    {
+     "name": "Dice",
+     "cost_text": "1 SP",
+     "cost_cp": 10
+    },
+    {
+     "name": "Dragonchess",
+     "cost_text": "1 GP",
+     "cost_cp": 100
+    },
+    {
+     "name": "Playing cards",
+     "cost_text": "5 SP",
+     "cost_cp": 50
+    },
+    {
+     "name": "Three-dragon ante",
+     "cost_text": "1 GP",
+     "cost_cp": 100
+    }
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "tinker"
+   ]
+  },
+  {
+   "id": "herbalism-kit",
+   "name": "Herbalism Kit",
+   "category": "tool",
+   "tool_type": "other",
+   "ability": "int",
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "utilize": "Identify a plant (DC 10)",
+   "craft": [
+    "Antitoxin",
+    "Candle",
+    "Healer’s Kit",
+    "Potion of Healing"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "tinker"
+   ]
+  },
+  {
+   "id": "musical-instrument",
+   "name": "Musical Instrument",
+   "category": "tool",
+   "tool_type": "other",
+   "ability": "cha",
+   "cost_text": "Varies",
+   "weight_text": "Varies",
+   "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)",
+   "variants": [
+    {
+     "name": "Bagpipes",
+     "cost_text": "30 GP",
+     "cost_cp": 3000,
+     "weight_text": "6 lb.",
+     "weight_lb": 6.0
+    },
+    {
+     "name": "Drum",
+     "cost_text": "6 GP",
+     "cost_cp": 600,
+     "weight_text": "3 lb.",
+     "weight_lb": 3.0
+    },
+    {
+     "name": "Dulcimer",
+     "cost_text": "25 GP",
+     "cost_cp": 2500,
+     "weight_text": "10 lb.",
+     "weight_lb": 10.0
+    },
+    {
+     "name": "Flute",
+     "cost_text": "2 GP",
+     "cost_cp": 200,
+     "weight_text": "1 lb.",
+     "weight_lb": 1.0
+    },
+    {
+     "name": "Horn",
+     "cost_text": "3 GP",
+     "cost_cp": 300,
+     "weight_text": "2 lb.",
+     "weight_lb": 2.0
+    },
+    {
+     "name": "Lute",
+     "cost_text": "35 GP",
+     "cost_cp": 3500,
+     "weight_text": "2 lb.",
+     "weight_lb": 2.0
+    },
+    {
+     "name": "Lyre",
+     "cost_text": "30 GP",
+     "cost_cp": 3000,
+     "weight_text": "2 lb.",
+     "weight_lb": 2.0
+    },
+    {
+     "name": "Pan flute",
+     "cost_text": "12 GP",
+     "cost_cp": 1200,
+     "weight_text": "2 lb.",
+     "weight_lb": 2.0
+    },
+    {
+     "name": "Shawm",
+     "cost_text": "2 GP",
+     "cost_cp": 200,
+     "weight_text": "1 lb.",
+     "weight_lb": 1.0
+    },
+    {
+     "name": "Viol",
+     "cost_text": "30 GP",
+     "cost_cp": 3000,
+     "weight_text": "1 lb.",
+     "weight_lb": 1.0
+    }
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "tinker"
+   ]
+  },
+  {
+   "id": "navigators-tools",
+   "name": "Navigator’s Tools",
+   "category": "tool",
+   "tool_type": "other",
+   "ability": "wis",
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "utilize": "Plot a course (DC 10), or determine position by stargazing (DC 15)",
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "tinker"
+   ]
+  },
+  {
+   "id": "poisoners-kit",
+   "name": "Poisoner’s Kit",
+   "category": "tool",
+   "tool_type": "other",
+   "ability": "int",
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "utilize": "Detect a poisoned object (DC 10)",
+   "craft": [
+    "Basic Poison"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "tinker"
+   ]
+  },
+  {
+   "id": "thieves-tools",
+   "name": "Thieves’ Tools",
+   "category": "tool",
+   "tool_type": "other",
+   "ability": "dex",
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "utilize": "Pick a lock (DC 15), or disarm a trap (DC 15)",
+   "legality": "legal",
+   "shop_types": [
+    "general_store",
+    "tinker"
+   ]
+  },
+  {
+   "id": "acid",
+   "name": "Acid",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "description": "When you take the Attack action, you can replace one of your attacks with throwing a vial of Acid. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d6 Acid damage.",
+   "legality": "legal",
+   "shop_types": [
+    "apothecary",
+    "general_store"
+   ]
+  },
+  {
+   "id": "alchemists-fire",
+   "name": "Alchemist’s Fire",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "description": "When you take the Attack action, you can replace one of your attacks with throwing a flask of Alchemist’s Fire. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 1d4 Fire damage and start burning (see “Rules Glossary”).",
+   "legality": "legal",
+   "shop_types": [
+    "apothecary",
+    "general_store"
+   ]
+  },
+  {
+   "id": "ammunition",
+   "name": "Ammunition",
+   "category": "gear",
+   "weight_text": "Varies",
+   "cost_text": "Varies",
+   "description": "Ammunition is required by a weapon that has the Ammunition property. A weapon’s description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately.",
+   "see_category": "ammunition",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "antitoxin",
+   "name": "Antitoxin",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "description": "As a Bonus Action, you can drink a vial of Antitoxin to gain Advantage on saving throws to avoid or end the Poisoned condition for 1 hour.",
+   "legality": "legal",
+   "shop_types": [
+    "apothecary",
+    "general_store"
+   ]
+  },
+  {
+   "id": "arcane-focus",
+   "name": "Arcane Focus",
+   "category": "gear",
+   "weight_text": "Varies",
+   "cost_text": "Varies",
+   "description": "An Arcane Focus takes one of the forms in the Arcane Focuses table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.",
+   "variants": [
+    {
+     "name": "Crystal",
+     "weight_text": "1 lb.",
+     "weight_lb": 1.0,
+     "cost_text": "10 GP",
+     "cost_cp": 1000
+    },
+    {
+     "name": "Orb",
+     "weight_text": "3 lb.",
+     "weight_lb": 3.0,
+     "cost_text": "20 GP",
+     "cost_cp": 2000
+    },
+    {
+     "name": "Rod",
+     "weight_text": "2 lb.",
+     "weight_lb": 2.0,
+     "cost_text": "10 GP",
+     "cost_cp": 1000
+    },
+    {
+     "name": "Staff (also a Quarterstaff)",
+     "weight_text": "4 lb.",
+     "weight_lb": 4.0,
+     "cost_text": "5 GP",
+     "cost_cp": 500
+    },
+    {
+     "name": "Wand",
+     "weight_text": "1 lb.",
+     "weight_lb": 1.0,
+     "cost_text": "10 GP",
+     "cost_cp": 1000
+    }
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "magic_shop"
+   ]
+  },
+  {
+   "id": "backpack",
+   "name": "Backpack",
+   "category": "gear",
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "A Backpack holds up to 30 pounds within 1 cubic foot. It can also serve as a saddlebag.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "ball-bearings",
+   "name": "Ball Bearings",
+   "category": "gear",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "As a Utilize action, you can spill Ball Bearings from their pouch. They spread to cover a level, 10-foot-square area within 10 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 10 Dexterity saving throw or have the Prone condition. It takes 10 minutes to recover the Ball Bearings.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "barrel",
+   "name": "Barrel",
+   "category": "gear",
+   "weight_text": "70 lb.",
+   "weight_lb": 70.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "A Barrel holds up to 40 gallons of liquid or up to 4 cubic feet of dry goods.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "basket",
+   "name": "Basket",
+   "category": "gear",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "4 SP",
+   "cost_cp": 40,
+   "description": "A Basket holds up to 40 pounds within 2 cubic feet.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "bedroll",
+   "name": "Bedroll",
+   "category": "gear",
+   "weight_text": "7 lb.",
+   "weight_lb": 7.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "A Bedroll sleeps one Small or Medium creature. While in a Bedroll, you automatically succeed on saving throws against extreme cold (see “Gameplay Toolbox”).",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "bell",
+   "name": "Bell",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "When rung as a Utilize action, a Bell produces a sound that can be heard up to 60 feet away.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "blanket",
+   "name": "Blanket",
+   "category": "gear",
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "cost_text": "5 SP",
+   "cost_cp": 50,
+   "description": "While wrapped in a blanket, you have Advantage on saving throws against extreme cold (see “Gameplay Toolbox”).",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "block-and-tackle",
+   "name": "Block and Tackle",
+   "category": "gear",
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "A Block and Tackle allows you to hoist up to four times the weight you can normally lift.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "book",
+   "name": "Book",
+   "category": "gear",
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "description": "A Book contains fiction or nonfiction. If you consult an accurate nonfiction Book about its topic, you gain a +5 bonus to Intelligence (Arcana, History, Nature, or Religion) checks you make about that topic.",
+   "legality": "legal",
+   "shop_types": [
+    "bookseller",
+    "general_store"
+   ]
+  },
+  {
+   "id": "bottle-glass",
+   "name": "Bottle, Glass",
+   "category": "gear",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "A Glass Bottle holds up to 11/2 pints.",
+   "legality": "legal",
+   "shop_types": [
+    "apothecary",
+    "general_store"
+   ]
+  },
+  {
+   "id": "bucket",
+   "name": "Bucket",
+   "category": "gear",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "5 CP",
+   "cost_cp": 5,
+   "description": "A Bucket holds up to half a cubic foot of contents.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "burglars-pack",
+   "name": "Burglar’s Pack",
+   "category": "gear",
+   "weight_text": "42 lb.",
+   "weight_lb": 42.0,
+   "cost_text": "16 GP",
+   "cost_cp": 1600,
+   "description": "A Burglar’s Pack contains the following items: Backpack, Ball Bearings, Bell, 10 Candles, Crowbar, Hooded Lantern, 7 flasks of Oil, 5 days of Rations, Rope, Tinderbox, and Waterskin.",
+   "contents": [
+    "Backpack",
+    "Ball Bearings",
+    "Bell",
+    "10 Candles",
+    "Crowbar",
+    "Hooded Lantern",
+    "7 flasks of Oil",
+    "5 days of Rations",
+    "Rope",
+    "Tinderbox",
+    "Waterskin"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "caltrops",
+   "name": "Caltrops",
+   "category": "gear",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "As a Utilize action, you can spread Caltrops from their bag to cover a 5-foot-square area within 5 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 15 Dexterity saving throw or take 1 Piercing damage and have its Speed reduced to 0 until the start of its next turn. It takes 10 minutes to recover the Caltrops.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "candle",
+   "name": "Candle",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "1 CP",
+   "cost_cp": 1,
+   "description": "For 1 hour, a lit Candle sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "case-crossbow-bolt",
+   "name": "Case, Crossbow Bolt",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "A Crossbow Bolt Case holds up to 20 Bolts.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "case-map-or-scroll",
+   "name": "Case, Map or Scroll",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "A Map or Scroll Case holds up to 10 sheets of paper or 5 sheets of parchment.",
+   "legality": "legal",
+   "shop_types": [
+    "bookseller",
+    "general_store"
+   ]
+  },
+  {
+   "id": "chain",
+   "name": "Chain",
+   "category": "gear",
+   "weight_text": "10 lb.",
+   "weight_lb": 10.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "description": "As a Utilize action, you can wrap a Chain around an unwilling creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 Strength (Athletics) check. If the creature’s legs are bound, the creature has the Restrained condition until it escapes. Escaping the Chain requires the creature to make a successful DC 18 Dexterity (Acrobatics) check as an action. Bursting the Chain requires a successful DC 20 Strength (Athletics) check as an action.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "chest",
+   "name": "Chest",
+   "category": "gear",
+   "weight_text": "25 lb.",
+   "weight_lb": 25.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "description": "A Chest holds up to 12 cubic feet of contents.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "climbers-kit",
+   "name": "Climber’s Kit",
+   "category": "gear",
+   "weight_text": "12 lb.",
+   "weight_lb": 12.0,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "description": "A Climber’s Kit includes boot tips, gloves, pitons, and a harness. As a Utilize action, you can use the Climber’s Kit to anchor yourself; when you do, you can’t fall more than 25 feet from the anchor point, and you can’t move more than 25 feet from there without undoing the anchor as a Bonus Action.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "clothes-fine",
+   "name": "Clothes, Fine",
+   "category": "gear",
+   "weight_text": "6 lb.",
+   "weight_lb": 6.0,
+   "cost_text": "15 GP",
+   "cost_cp": 1500,
+   "description": "Fine Clothes are made of expensive fabrics and adorned with expertly crafted details. Some events and locations admit only people wearing these clothes.",
+   "legality": "legal",
+   "shop_types": [
+    "tailor",
+    "general_store"
+   ]
+  },
+  {
+   "id": "clothes-travelers",
+   "name": "Clothes, Traveler’s",
+   "category": "gear",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "Traveler’s Clothes are resilient garments designed for travel in various environments.",
+   "legality": "legal",
+   "shop_types": [
+    "tailor",
+    "general_store"
+   ]
+  },
+  {
+   "id": "component-pouch",
+   "name": "Component Pouch",
+   "category": "gear",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "description": "A Component Pouch is watertight and filled with compartments that hold all the free Material components of your spells.",
+   "legality": "legal",
+   "shop_types": [
+    "magic_shop"
+   ]
+  },
+  {
+   "id": "costume",
+   "name": "Costume",
+   "category": "gear",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "description": "While wearing a Costume, you have Advantage on any ability check you make to impersonate the person or type of person it represents.",
+   "legality": "legal",
+   "shop_types": [
+    "tailor",
+    "general_store"
+   ]
+  },
+  {
+   "id": "crowbar",
+   "name": "Crowbar",
+   "category": "gear",
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "Using a Crowbar gives you Advantage on Strength checks where the Crowbar’s leverage can be applied.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "diplomats-pack",
+   "name": "Diplomat’s Pack",
+   "category": "gear",
+   "weight_text": "39 lb.",
+   "weight_lb": 39.0,
+   "cost_text": "39 GP",
+   "cost_cp": 3900,
+   "description": "A Diplomat’s Pack contains the following items: Chest, Fine Clothes, Ink, 5 Ink Pens, Lamp, 2 Map or Scroll Cases, 4 flasks of Oil, 5 sheets of Paper, 5 sheets of Parchment, Perfume, and Tinderbox.",
+   "contents": [
+    "Chest",
+    "Fine Clothes",
+    "Ink",
+    "5 Ink Pens",
+    "Lamp",
+    "2 Map or Scroll Cases",
+    "4 flasks of Oil",
+    "5 sheets of Paper",
+    "5 sheets of Parchment",
+    "Perfume",
+    "Tinderbox"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "druidic-focus",
+   "name": "Druidic Focus",
+   "category": "gear",
+   "weight_text": "Varies",
+   "cost_text": "Varies",
+   "description": "A Druidic Focus takes one of the forms in the Druidic Focuses table and is carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use such an object as a Spellcasting Focus.",
+   "variants": [
+    {
+     "name": "Sprig of mistletoe",
+     "weight_text": "—",
+     "weight_lb": 0,
+     "cost_text": "1 GP",
+     "cost_cp": 100
+    },
+    {
+     "name": "Wooden staff (also a Quarterstaff)",
+     "weight_text": "4 lb.",
+     "weight_lb": 4.0,
+     "cost_text": "5 GP",
+     "cost_cp": 500
+    },
+    {
+     "name": "Yew wand",
+     "weight_text": "1 lb.",
+     "weight_lb": 1.0,
+     "cost_text": "10 GP",
+     "cost_cp": 1000
+    }
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "magic_shop"
+   ]
+  },
+  {
+   "id": "dungeoneers-pack",
+   "name": "Dungeoneer’s Pack",
+   "category": "gear",
+   "weight_text": "55 lb.",
+   "weight_lb": 55.0,
+   "cost_text": "12 GP",
+   "cost_cp": 1200,
+   "description": "A Dungeoneer’s Pack contains the following items: Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
+   "contents": [
+    "Backpack",
+    "Caltrops",
+    "Crowbar",
+    "2 flasks of Oil",
+    "10 days of Rations",
+    "Rope",
+    "Tinderbox",
+    "10 Torches",
+    "Waterskin"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "entertainers-pack",
+   "name": "Entertainer’s Pack",
+   "category": "gear",
+   "weight_text": "58½ lb.",
+   "weight_lb": 58.5,
+   "cost_text": "40 GP",
+   "cost_cp": 4000,
+   "description": "An Entertainer’s Pack contains the following items: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin.",
+   "contents": [
+    "Backpack",
+    "Bedroll",
+    "Bell",
+    "Bullseye Lantern",
+    "3 Costumes",
+    "Mirror",
+    "8 flasks of Oil",
+    "9 days of Rations",
+    "Tinderbox",
+    "Waterskin"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "explorers-pack",
+   "name": "Explorer’s Pack",
+   "category": "gear",
+   "weight_text": "55 lb.",
+   "weight_lb": 55.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "description": "An Explorer’s Pack contains the following items: Backpack, Bedroll, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
+   "contents": [
+    "Backpack",
+    "Bedroll",
+    "2 flasks of Oil",
+    "10 days of Rations",
+    "Rope",
+    "Tinderbox",
+    "10 Torches",
+    "Waterskin"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "flask",
+   "name": "Flask",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "2 CP",
+   "cost_cp": 2,
+   "description": "A Flask holds up to 1 pint.",
+   "legality": "legal",
+   "shop_types": [
+    "apothecary",
+    "general_store"
+   ]
+  },
+  {
+   "id": "grappling-hook",
+   "name": "Grappling Hook",
+   "category": "gear",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "As a Utilize action, you can throw the Grappling Hook at a railing, a ledge, or another catch within 50 feet of yourself, and the hook catches on if you succeed on a DC 13 Dexterity (Acrobatics) check. If you tied a Rope to the hook, you can then climb it.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "healers-kit",
+   "name": "Healer’s Kit",
+   "category": "gear",
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "description": "A Healer’s Kit has ten uses. As a Utilize action, you can expend one of its uses to stabilize an Unconscious creature that has 0 Hit Points without needing to make a Wisdom (Medicine) check.",
+   "legality": "legal",
+   "shop_types": [
+    "temple",
+    "apothecary"
+   ]
+  },
+  {
+   "id": "holy-symbol",
+   "name": "Holy Symbol",
+   "category": "gear",
+   "weight_text": "Varies",
+   "cost_text": "Varies",
+   "description": "A Holy Symbol takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.\n\nThe table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.",
+   "variants": [
+    {
+     "name": "Amulet (worn or held)",
+     "weight_text": "1 lb.",
+     "weight_lb": 1.0,
+     "cost_text": "5 GP",
+     "cost_cp": 500
+    },
+    {
+     "name": "Emblem (borne on fabric or a Shield)",
+     "weight_text": "—",
+     "weight_lb": 0,
+     "cost_text": "5 GP",
+     "cost_cp": 500
+    },
+    {
+     "name": "Reliquary (held)",
+     "weight_text": "2 lb.",
+     "weight_lb": 2.0,
+     "cost_text": "5 GP",
+     "cost_cp": 500
+    }
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "temple",
+    "apothecary"
+   ]
+  },
+  {
+   "id": "holy-water",
+   "name": "Holy Water",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "description": "When you take the Attack action, you can replace one of your attacks with throwing a flask of Holy Water. Target one creature you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d8 Radiant damage if it is a Fiend or an Undead.",
+   "legality": "legal",
+   "shop_types": [
+    "temple",
+    "apothecary"
+   ]
+  },
+  {
+   "id": "hunting-trap",
+   "name": "Hunting Trap",
+   "category": "gear",
+   "weight_text": "25 lb.",
+   "weight_lb": 25.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "description": "As a Utilize action, you can set a Hunting Trap, which is a sawtooth steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 Piercing damage and have its Speed reduced to 0 until the start of its next turn. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet). A creature can use its action to make a DC 13 Strength (Athletics) check, freeing itself or another creature within its reach on a success. Each failed check deals 1 Piercing damage to the trapped creature.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "ink",
+   "name": "Ink",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "description": "Ink comes in a 1-ounce bottle, which provides enough ink to write about 500 pages.",
+   "legality": "legal",
+   "shop_types": [
+    "bookseller",
+    "general_store"
+   ]
+  },
+  {
+   "id": "ink-pen",
+   "name": "Ink Pen",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "2 CP",
+   "cost_cp": 2,
+   "description": "Using Ink, an Ink Pen is used to write or draw.",
+   "legality": "legal",
+   "shop_types": [
+    "bookseller",
+    "general_store"
+   ]
+  },
+  {
+   "id": "jug",
+   "name": "Jug",
+   "category": "gear",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "2 CP",
+   "cost_cp": 2,
+   "description": "A Jug holds up to 1 gallon.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "ladder",
+   "name": "Ladder",
+   "category": "gear",
+   "weight_text": "25 lb.",
+   "weight_lb": 25.0,
+   "cost_text": "1 SP",
+   "cost_cp": 10,
+   "description": "A Ladder is 10 feet tall. You must climb to move up or down it.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "lamp",
+   "name": "Lamp",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "5 SP",
+   "cost_cp": 50,
+   "description": "A Lamp burns Oil as fuel to cast Bright Light in a 15-foot radius and Dim Light for an additional 30 feet.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "lantern-bullseye",
+   "name": "Lantern, Bullseye",
+   "category": "gear",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "description": "A Bullseye Lantern burns Oil as fuel to cast Bright Light in a 60-foot Cone and Dim Light for an additional 60 feet.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "lantern-hooded",
+   "name": "Lantern, Hooded",
+   "category": "gear",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "description": "A Hooded Lantern burns Oil as fuel to cast Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. As a Bonus Action, you can lower the hood, reducing the light to Dim Light in a 5-foot radius, or raise it again.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "lock",
+   "name": "Lock",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "description": "A Lock comes with a key. Without the key, a creature can use Thieves’ Tools to pick this Lock with a successful DC 15 Dexterity (Sleight of Hand) check.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "magnifying-glass",
+   "name": "Magnifying Glass",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "100 GP",
+   "cost_cp": 10000,
+   "description": "A Magnifying Glass grants Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with a Magnifying Glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "manacles",
+   "name": "Manacles",
+   "category": "gear",
+   "weight_text": "6 lb.",
+   "weight_lb": 6.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "As a Utilize action, you can use Manacles to bind an unwilling Small or Medium creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 Dexterity (Sleight of Hand) check. While bound, a creature has Disadvantage on attack rolls, and the creature is Restrained if the Manacles are attached to a chain or hook that is fixed in place. Escaping the Manacles requires a successful DC 20 Dexterity (Sleight of Hand) check as an action. Bursting them requires a successful DC 25 Strength (Athletics) check as an action.\n\nEach set of Manacles comes with a key. Without the key, a creature can use Thieves’ Tools to pick the Manacles’ lock with a successful DC 15 Dexterity (Sleight of Hand) check.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "map",
+   "name": "Map",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "If you consult an accurate Map, you gain a +5 bonus to Wisdom (Survival) checks you make to find your way in the place represented on it.",
+   "legality": "legal",
+   "shop_types": [
+    "bookseller",
+    "general_store"
+   ]
+  },
+  {
+   "id": "mirror",
+   "name": "Mirror",
+   "category": "gear",
+   "weight_text": "1/2 lb.",
+   "weight_lb": 0.5,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "description": "A handheld steel Mirror is useful for personal cosmetics but also for peeking around corners and reflecting light as a signal.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "net",
+   "name": "Net",
+   "category": "gear",
+   "weight_text": "3 lb.",
+   "weight_lb": 3.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "When you take the Attack action, you can replace one of your attacks with throwing a Net. Target a creature you can see within 15 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or have the Restrained condition until it escapes. The target succeeds automatically if it is Huge or larger.\n\nTo escape, the target or a creature within 5 feet of it must take an action to make a DC 10 Strength (Athletics) check, freeing the Restrained creature on a success. Destroying the Net (AC 10; 5 HP; Immunity to Bludgeoning, Poison, and Psychic damage) also frees the target, ending the effect.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "oil",
+   "name": "Oil",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "1 SP",
+   "cost_cp": 10,
+   "description": "You can douse a creature, object, or space with Oil or use it as fuel, as detailed below.\n\n**Dousing a Creature or an Object.** When you take the Attack action, you can replace one of your attacks with throwing an Oil flask. Target one creature or object within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or be covered in oil. If the target takes Fire damage before the oil dries (after 1 minute), the target takes an extra 5 Fire damage from burning oil.\n\n**Dousing a Space.** You can take the Utilize action to pour an Oil flask on level ground to cover a 5-foot-square area within 5 feet of yourself. If lit, the oil burns until the end of the turn 2 rounds from when the oil was lit (or 12 seconds) and deals 5 Fire damage to any creature that enters the area or ends its turn there. A creature can take this damage only once per turn.\n\n**Fuel.** Oil serves as fuel for Lamps and Lanterns. Once lit, a flask of Oil burns for 6 hours in a Lamp or Lantern. That duration doesn’t need to be consecutive; you can extinguish the burning Oil (as a Utilize action) and rekindle it again until it has burned for a total of 6 hours.",
+   "legality": "legal",
+   "shop_types": [
+    "apothecary",
+    "general_store"
+   ]
+  },
+  {
+   "id": "paper",
+   "name": "Paper",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "2 SP",
+   "cost_cp": 20,
+   "description": "One sheet of Paper can hold about 250 handwritten words.",
+   "legality": "legal",
+   "shop_types": [
+    "bookseller",
+    "general_store"
+   ]
+  },
+  {
+   "id": "parchment",
+   "name": "Parchment",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "1 SP",
+   "cost_cp": 10,
+   "description": "One sheet of Parchment can hold about 250 handwritten words.",
+   "legality": "legal",
+   "shop_types": [
+    "bookseller",
+    "general_store"
+   ]
+  },
+  {
+   "id": "perfume",
+   "name": "Perfume",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "5 GP",
+   "cost_cp": 500,
+   "description": "Perfume comes in a 4-ounce vial. For 1 hour after applying Perfume to yourself, you have Advantage on Charisma (Persuasion) checks made to influence an Indifferent Humanoid within 5 feet of yourself.",
+   "legality": "legal",
+   "shop_types": [
+    "apothecary",
+    "general_store"
+   ]
+  },
+  {
+   "id": "poison-basic",
+   "name": "Poison, Basic",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "100 GP",
+   "cost_cp": 10000,
+   "description": "As a Bonus Action, you can use a vial of Basic Poison to coat one weapon or up to three pieces of ammunition. A creature that takes Piercing or Slashing damage from the poisoned weapon or ammunition takes an extra 1d4 Poison damage. Once applied, the poison retains potency for 1 minute or until its damage is dealt, whichever comes first.",
+   "legality": "restricted",
+   "shop_types": [
+    "black_market",
+    "apothecary"
+   ]
+  },
+  {
+   "id": "pole",
+   "name": "Pole",
+   "category": "gear",
+   "weight_text": "7 lb.",
+   "weight_lb": 7.0,
+   "cost_text": "5 CP",
+   "cost_cp": 5,
+   "description": "A Pole is 10 feet long. You can use it to touch something up to 10 feet away. If you must make a Strength (Athletics) check as part of a High or Long Jump, you can use the Pole to vault, giving yourself Advantage on the check.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "pot-iron",
+   "name": "Pot, Iron",
+   "category": "gear",
+   "weight_text": "10 lb.",
+   "weight_lb": 10.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "An Iron Pot holds up to 1 gallon.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "potion-of-healing",
+   "name": "Potion of Healing",
+   "category": "gear",
+   "weight_text": "1/2 lb.",
+   "weight_lb": 0.5,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "description": "This potion is a magic item. As a Bonus Action, you can drink it or administer it to another creature within 5 feet of yourself. The creature that drinks the magical red fluid in this vial regains 2d4 + 2 Hit Points.",
+   "magic": true,
+   "legality": "legal",
+   "shop_types": [
+    "apothecary",
+    "temple"
+   ]
+  },
+  {
+   "id": "pouch",
+   "name": "Pouch",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "5 SP",
+   "cost_cp": 50,
+   "description": "A Pouch holds up to 6 pounds within one-fifth of a cubic foot.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "priests-pack",
+   "name": "Priest’s Pack",
+   "category": "gear",
+   "weight_text": "29 lb.",
+   "weight_lb": 29.0,
+   "cost_text": "33 GP",
+   "cost_cp": 3300,
+   "description": "A Priest’s Pack contains the following items: Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, and Tinderbox.",
+   "contents": [
+    "Backpack",
+    "Blanket",
+    "Holy Water",
+    "Lamp",
+    "7 days of Rations",
+    "Robe",
+    "Tinderbox"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "quiver",
+   "name": "Quiver",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "A Quiver holds up to 20 Arrows.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "ram-portable",
+   "name": "Ram, Portable",
+   "category": "gear",
+   "weight_text": "35 lb.",
+   "weight_lb": 35.0,
+   "cost_text": "4 GP",
+   "cost_cp": 400,
+   "description": "You can use a Portable Ram to break down doors. When doing so, you gain a +4 bonus to the Strength check. One other character can help you use the ram, giving you Advantage on this check.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "rations",
+   "name": "Rations",
+   "category": "gear",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "5 SP",
+   "cost_cp": 50,
+   "description": "Rations consist of travel-ready food, including jerky, dried fruit, hardtack, and nuts. See “Malnutrition” in “Rules Glossary” for the risks of not eating.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "robe",
+   "name": "Robe",
+   "category": "gear",
+   "weight_text": "4 lb.",
+   "weight_lb": 4.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "A Robe has vocational or ceremonial significance. Some events and locations admit only people wearing a Robe bearing certain colors or symbols.",
+   "legality": "legal",
+   "shop_types": [
+    "tailor",
+    "general_store"
+   ]
+  },
+  {
+   "id": "rope",
+   "name": "Rope",
+   "category": "gear",
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "As a Utilize action, you can tie a knot with Rope if you succeed on a DC 10 Dexterity (Sleight of Hand) check. The Rope can be burst with a successful DC 20 Strength (Athletics) check.\n\nYou can bind an unwilling creature with the Rope only if the creature has the Grappled, Incapacitated, or Restrained condition. If the creature’s legs are bound, the creature has the Restrained condition until it escapes. Escaping the Rope requires the creature to make a successful DC 15 Dexterity (Acrobatics) check as an action.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "sack",
+   "name": "Sack",
+   "category": "gear",
+   "weight_text": "1/2 lb.",
+   "weight_lb": 0.5,
+   "cost_text": "1 CP",
+   "cost_cp": 1,
+   "description": "A Sack holds up to 30 pounds within 1 cubic foot.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "scholars-pack",
+   "name": "Scholar’s Pack",
+   "category": "gear",
+   "weight_text": "22 lb.",
+   "weight_lb": 22.0,
+   "cost_text": "40 GP",
+   "cost_cp": 4000,
+   "description": "A Scholar’s Pack contains the following items: Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, and Tinderbox.",
+   "contents": [
+    "Backpack",
+    "Book",
+    "Ink",
+    "Ink Pen",
+    "Lamp",
+    "10 flasks of Oil",
+    "10 sheets of Parchment",
+    "Tinderbox"
+   ],
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "shovel",
+   "name": "Shovel",
+   "category": "gear",
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "Working for 1 hour, you can use a Shovel to dig a hole that is 5 feet on each side in soil or similar material.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "signal-whistle",
+   "name": "Signal Whistle",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "5 CP",
+   "cost_cp": 5,
+   "description": "When blown as a Utilize action, a Signal Whistle produces a sound that can be heard up to 600 feet away.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "spell-scroll-cantrip",
+   "name": "Spell Scroll (Cantrip)",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "30 GP",
+   "cost_cp": 3000,
+   "description": "A *Spell Scroll* (Cantrip) or *Spell Scroll* (Level 1) is a magic item that bears the words of a cantrip or level 1 spell, respectively, determined by the scroll’s creator. If the spell is on your class’s spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.\n\nIf the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed.",
+   "magic": true,
+   "legality": "legal",
+   "shop_types": [
+    "magic_shop",
+    "bookseller"
+   ]
+  },
+  {
+   "id": "spell-scroll-level-1",
+   "name": "Spell Scroll (Level 1)",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "description": "A *Spell Scroll* (Cantrip) or *Spell Scroll* (Level 1) is a magic item that bears the words of a cantrip or level 1 spell, respectively, determined by the scroll’s creator. If the spell is on your class’s spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.\n\nIf the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed.",
+   "magic": true,
+   "legality": "legal",
+   "shop_types": [
+    "magic_shop",
+    "bookseller"
+   ]
+  },
+  {
+   "id": "spikes-iron",
+   "name": "Spikes, Iron",
+   "category": "gear",
+   "weight_text": "5 lb.",
+   "weight_lb": 5.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "Iron Spikes come in bundles of ten. As a Utilize action, you can use a blunt object, such as a Light Hammer, to hammer a spike into wood, earth, or a similar material. You can do so to jam a door shut or to then tie a Rope or Chain to the Spike.",
+   "legality": "legal",
+   "shop_types": [
+    "smith",
+    "general_store"
+   ]
+  },
+  {
+   "id": "spyglass",
+   "name": "Spyglass",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "1,000 GP",
+   "cost_cp": 100000,
+   "description": "Objects viewed through a Spyglass are magnified to twice their size.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "string",
+   "name": "String",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "1 SP",
+   "cost_cp": 10,
+   "description": "String is 10 feet long. You can tie a knot in it as a Utilize action.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "tent",
+   "name": "Tent",
+   "category": "gear",
+   "weight_text": "20 lb.",
+   "weight_lb": 20.0,
+   "cost_text": "2 GP",
+   "cost_cp": 200,
+   "description": "A Tent sleeps up to two Small or Medium creatures.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "tinderbox",
+   "name": "Tinderbox",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "5 SP",
+   "cost_cp": 50,
+   "description": "A Tinderbox is a small container holding flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a Candle, Lamp, Lantern, or Torch—or anything else with exposed fuel—takes a Bonus Action. Lighting any other fire takes 1 minute.",
+   "legality": "legal",
+   "shop_types": [
+    "tinker",
+    "general_store"
+   ]
+  },
+  {
+   "id": "torch",
+   "name": "Torch",
+   "category": "gear",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "1 CP",
+   "cost_cp": 1,
+   "description": "A Torch burns for 1 hour, casting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. When you take the Attack action, you can attack with the Torch, using it as a Simple Melee weapon. On a hit, the target takes 1 Fire damage.",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "vial",
+   "name": "Vial",
+   "category": "gear",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "description": "A Vial holds up to 4 ounces.",
+   "legality": "legal",
+   "shop_types": [
+    "apothecary",
+    "general_store"
+   ]
+  },
+  {
+   "id": "waterskin",
+   "name": "Waterskin",
+   "category": "gear",
+   "weight_text": "5 lb. (full)",
+   "weight_lb": 5.0,
+   "cost_text": "2 SP",
+   "cost_cp": 20,
+   "description": "A Waterskin holds up to 4 pints. If you don’t drink sufficient water, you risk dehydration (see “Rules Glossary”).",
+   "legality": "legal",
+   "shop_types": [
+    "general_store"
+   ]
+  },
+  {
+   "id": "arrows",
+   "name": "Arrows",
+   "category": "ammunition",
+   "bundle": 20,
+   "storage": "Quiver",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "general_store"
+   ]
+  },
+  {
+   "id": "bolts",
+   "name": "Bolts",
+   "category": "ammunition",
+   "bundle": 20,
+   "storage": "Case",
+   "weight_text": "1.5 lb.",
+   "weight_lb": 1.5,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "general_store"
+   ]
+  },
+  {
+   "id": "bullets-firearm",
+   "name": "Bullets, Firearm",
+   "category": "ammunition",
+   "bundle": 10,
+   "storage": "Pouch",
+   "weight_text": "2 lb.",
+   "weight_lb": 2.0,
+   "cost_text": "3 GP",
+   "cost_cp": 300,
+   "legality": "legal",
+   "shop_types": [
+    "gunsmith"
+   ]
+  },
+  {
+   "id": "bullets-sling",
+   "name": "Bullets, Sling",
+   "category": "ammunition",
+   "bundle": 20,
+   "storage": "Pouch",
+   "weight_text": "1.5 lb.",
+   "weight_lb": 1.5,
+   "cost_text": "4 CP",
+   "cost_cp": 4,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "general_store"
+   ]
+  },
+  {
+   "id": "needles",
+   "name": "Needles",
+   "category": "ammunition",
+   "bundle": 50,
+   "storage": "Pouch",
+   "weight_text": "1 lb.",
+   "weight_lb": 1.0,
+   "cost_text": "1 GP",
+   "cost_cp": 100,
+   "legality": "legal",
+   "shop_types": [
+    "bowyer",
+    "general_store"
+   ]
+  },
+  {
+   "id": "camel",
+   "name": "Camel",
+   "category": "mount",
+   "carrying_capacity_lb": 450,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "elephant",
+   "name": "Elephant",
+   "category": "mount",
+   "carrying_capacity_lb": 1320,
+   "cost_text": "200 GP",
+   "cost_cp": 20000,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "horse-draft",
+   "name": "Horse, Draft",
+   "category": "mount",
+   "carrying_capacity_lb": 540,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "horse-riding",
+   "name": "Horse, Riding",
+   "category": "mount",
+   "carrying_capacity_lb": 480,
+   "cost_text": "75 GP",
+   "cost_cp": 7500,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "mastiff",
+   "name": "Mastiff",
+   "category": "mount",
+   "carrying_capacity_lb": 195,
+   "cost_text": "25 GP",
+   "cost_cp": 2500,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "mule",
+   "name": "Mule",
+   "category": "mount",
+   "carrying_capacity_lb": 420,
+   "cost_text": "8 GP",
+   "cost_cp": 800,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "pony",
+   "name": "Pony",
+   "category": "mount",
+   "carrying_capacity_lb": 225,
+   "cost_text": "30 GP",
+   "cost_cp": 3000,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "warhorse",
+   "name": "Warhorse",
+   "category": "mount",
+   "carrying_capacity_lb": 540,
+   "cost_text": "400 GP",
+   "cost_cp": 40000,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "carriage",
+   "name": "Carriage",
+   "category": "drawn_vehicle",
+   "weight_text": "600 lb.",
+   "weight_lb": 600.0,
+   "cost_text": "100 GP",
+   "cost_cp": 10000,
+   "legality": "legal",
+   "shop_types": [
+    "stable",
+    "cartwright"
+   ]
+  },
+  {
+   "id": "cart",
+   "name": "Cart",
+   "category": "drawn_vehicle",
+   "weight_text": "200 lb.",
+   "weight_lb": 200.0,
+   "cost_text": "15 GP",
+   "cost_cp": 1500,
+   "legality": "legal",
+   "shop_types": [
+    "stable",
+    "cartwright"
+   ]
+  },
+  {
+   "id": "chariot",
+   "name": "Chariot",
+   "category": "drawn_vehicle",
+   "weight_text": "100 lb.",
+   "weight_lb": 100.0,
+   "cost_text": "250 GP",
+   "cost_cp": 25000,
+   "legality": "legal",
+   "shop_types": [
+    "stable",
+    "cartwright"
+   ]
+  },
+  {
+   "id": "feed-per-day",
+   "name": "Feed per day",
+   "category": "animal_feed",
+   "weight_text": "10 lb.",
+   "weight_lb": 10.0,
+   "cost_text": "5 CP",
+   "cost_cp": 5,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "saddle-exotic",
+   "name": "Saddle, Exotic",
+   "category": "tack",
+   "weight_text": "40 lb.",
+   "weight_lb": 40.0,
+   "cost_text": "60 GP",
+   "cost_cp": 6000,
+   "legality": "legal",
+   "shop_types": [
+    "stable",
+    "cartwright"
+   ]
+  },
+  {
+   "id": "saddle-military",
+   "name": "Saddle, Military",
+   "category": "tack",
+   "weight_text": "30 lb.",
+   "weight_lb": 30.0,
+   "cost_text": "20 GP",
+   "cost_cp": 2000,
+   "legality": "legal",
+   "shop_types": [
+    "stable",
+    "cartwright"
+   ]
+  },
+  {
+   "id": "saddle-riding",
+   "name": "Saddle, Riding",
+   "category": "tack",
+   "weight_text": "25 lb.",
+   "weight_lb": 25.0,
+   "cost_text": "10 GP",
+   "cost_cp": 1000,
+   "legality": "legal",
+   "shop_types": [
+    "stable",
+    "cartwright"
+   ]
+  },
+  {
+   "id": "sled",
+   "name": "Sled",
+   "category": "drawn_vehicle",
+   "weight_text": "300 lb.",
+   "weight_lb": 300.0,
+   "cost_text": "20 GP",
+   "cost_cp": 2000,
+   "legality": "legal",
+   "shop_types": [
+    "stable",
+    "cartwright"
+   ]
+  },
+  {
+   "id": "stabling-per-day",
+   "name": "Stabling per day",
+   "category": "service",
+   "weight_text": "—",
+   "weight_lb": 0,
+   "cost_text": "5 SP",
+   "cost_cp": 50,
+   "legality": "legal",
+   "shop_types": [
+    "stable"
+   ]
+  },
+  {
+   "id": "wagon",
+   "name": "Wagon",
+   "category": "drawn_vehicle",
+   "weight_text": "400 lb.",
+   "weight_lb": 400.0,
+   "cost_text": "35 GP",
+   "cost_cp": 3500,
+   "legality": "legal",
+   "shop_types": [
+    "stable",
+    "cartwright"
+   ]
+  },
+  {
+   "id": "airship",
+   "name": "Airship",
+   "category": "vehicle",
+   "speed_mph": 8.0,
+   "crew": 10,
+   "passengers": 20,
+   "cargo_tons": 1.0,
+   "ac": 13,
+   "hp": 300,
+   "damage_threshold": null,
+   "airborne": true,
+   "cost_text": "40,000 GP",
+   "cost_cp": 4000000,
+   "legality": "legal",
+   "shop_types": [
+    "shipwright"
+   ]
+  },
+  {
+   "id": "galley",
+   "name": "Galley",
+   "category": "vehicle",
+   "speed_mph": 4.0,
+   "crew": 80,
+   "passengers": 0,
+   "cargo_tons": 150.0,
+   "ac": 15,
+   "hp": 500,
+   "damage_threshold": 20,
+   "airborne": false,
+   "cost_text": "30,000 GP",
+   "cost_cp": 3000000,
+   "legality": "legal",
+   "shop_types": [
+    "shipwright"
+   ]
+  },
+  {
+   "id": "keelboat",
+   "name": "Keelboat",
+   "category": "vehicle",
+   "speed_mph": 1.0,
+   "crew": 1,
+   "passengers": 6,
+   "cargo_tons": 0.5,
+   "ac": 15,
+   "hp": 100,
+   "damage_threshold": 10,
+   "airborne": false,
+   "cost_text": "3,000 GP",
+   "cost_cp": 300000,
+   "legality": "legal",
+   "shop_types": [
+    "shipwright"
+   ]
+  },
+  {
+   "id": "longship",
+   "name": "Longship",
+   "category": "vehicle",
+   "speed_mph": 3.0,
+   "crew": 40,
+   "passengers": 150,
+   "cargo_tons": 10.0,
+   "ac": 15,
+   "hp": 300,
+   "damage_threshold": 15,
+   "airborne": false,
+   "cost_text": "10,000 GP",
+   "cost_cp": 1000000,
+   "legality": "legal",
+   "shop_types": [
+    "shipwright"
+   ]
+  },
+  {
+   "id": "rowboat",
+   "name": "Rowboat",
+   "category": "vehicle",
+   "speed_mph": 1.5,
+   "crew": 1,
+   "passengers": 3,
+   "cargo_tons": 0,
+   "ac": 11,
+   "hp": 50,
+   "damage_threshold": null,
+   "airborne": false,
+   "cost_text": "50 GP",
+   "cost_cp": 5000,
+   "legality": "legal",
+   "shop_types": [
+    "shipwright"
+   ]
+  },
+  {
+   "id": "sailing-ship",
+   "name": "Sailing Ship",
+   "category": "vehicle",
+   "speed_mph": 2.0,
+   "crew": 20,
+   "passengers": 20,
+   "cargo_tons": 100.0,
+   "ac": 15,
+   "hp": 300,
+   "damage_threshold": 15,
+   "airborne": false,
+   "cost_text": "10,000 GP",
+   "cost_cp": 1000000,
+   "legality": "legal",
+   "shop_types": [
+    "shipwright"
+   ]
+  },
+  {
+   "id": "warship",
+   "name": "Warship",
+   "category": "vehicle",
+   "speed_mph": 2.5,
+   "crew": 60,
+   "passengers": 60,
+   "cargo_tons": 200.0,
+   "ac": 15,
+   "hp": 500,
+   "damage_threshold": 20,
+   "airborne": false,
+   "cost_text": "25,000 GP",
+   "cost_cp": 2500000,
+   "legality": "legal",
+   "shop_types": [
+    "shipwright"
+   ]
+  }
+ ],
+ "rules": {
+  "weapon_rules": "The Weapons table in this section shows the game’s main weapons. The table lists the cost and weight of each weapon, as well as the following details:\n\n**Category.** Every weapon falls into a category: Simple or Martial. Weapon proficiencies are usually tied to one of these categories. For example, you might have proficiency with Simple weapons.\n\n**Melee or Ranged.** A weapon is classified as either Melee or Ranged. A Melee weapon is used to attack a target within 5 feet, whereas a Ranged weapon is used to attack at a greater distance.\n\n**Damage.** The table lists the amount of damage a weapon deals when an attacker hits with it as well as the type of that damage.\n\n**Properties.** Any properties a weapon has are listed in the Properties column. Each property is defined in the “Properties” section.\n\n**Mastery.** Each weapon has a mastery property, which is defined in the “Mastery Properties” section. To use that property, you must have a feature that lets you use it.\n\n**Selling Equipment**\n\nEquipment fetches half its cost when sold. In contrast, trade goods and valuables—like gems and art objects—retain their full value in the marketplace. “Magic Items” has prices for magic items.",
+  "weapon_properties": [
+   {
+    "name": "Ammunition",
+    "description": "You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon’s range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost."
+   },
+   {
+    "name": "Finesse",
+    "description": "When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls."
+   },
+   {
+    "name": "Heavy",
+    "description": "You have Disadvantage on attack rolls with a Heavy weapon if it’s a Melee weapon and your Strength score isn’t at least 13 or if it’s a Ranged weapon and your Dexterity score isn’t at least 13."
+   },
+   {
+    "name": "Light",
+    "description": "When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don’t add your ability modifier to the extra attack’s damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don’t add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative."
+   },
+   {
+    "name": "Loading",
+    "description": "You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make."
+   },
+   {
+    "name": "Range",
+    "description": "A Range weapon has a range in parentheses after the Ammunition or Thrown property. The range lists two numbers. The first is the weapon’s normal range in feet, and the second is the weapon’s long range. When attacking a target beyond normal range, you have Disadvantage on the attack roll. You can’t attack a target beyond the long range."
+   },
+   {
+    "name": "Reach",
+    "description": "A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it."
+   },
+   {
+    "name": "Thrown",
+    "description": "If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon."
+   },
+   {
+    "name": "Two-Handed",
+    "description": "A Two-Handed weapon requires two hands when you attack with it."
+   },
+   {
+    "name": "Versatile",
+    "description": "A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack."
+   }
+  ],
+  "mastery_properties": [
+   {
+    "name": "Cleave",
+    "description": "If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon’s damage, but don’t add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn."
+   },
+   {
+    "name": "Graze",
+    "description": "If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier."
+   },
+   {
+    "name": "Nick",
+    "description": "When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn."
+   },
+   {
+    "name": "Push",
+    "description": "If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller."
+   },
+   {
+    "name": "Sap",
+    "description": "If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn."
+   },
+   {
+    "name": "Slow",
+    "description": "If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn’t exceed 10 feet."
+   },
+   {
+    "name": "Topple",
+    "description": "If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition."
+   },
+   {
+    "name": "Vex",
+    "description": "If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn."
+   }
+  ],
+  "armor_rules": "The Armor table lists the game’s main armor. The table includes the cost and weight of armor, as well as the following details:\n\n**Category.** Every type of armor falls into a category: Light, Medium, or Heavy. The category determines how long it takes to don or doff the armor (as shown in the table).\n\n**Armor Class (AC).** The table’s Armor Class column tells you what your base AC is when you wear a type of armor. For example, if you wear Leather Armor, your base AC is 11 plus your Dexterity modifier, whereas your AC is 16 in Chain Mail.\n\n**Strength.** If the table shows a Strength score in the Strength column for an armor type, that armor reduces the wearer’s speed by 10 feet unless the wearer has a Strength score equal to or higher than the listed score.\n\n**Stealth.** If the table shows “Disadvantage” in the Stealth column for an armor type, the wearer has Disadvantage on Dexterity (Stealth) checks.\n\n**Armor Training**\n\nAnyone can don armor or hold a Shield, but only those with training can use them effectively, as explained below. A character’s class and other features determine the character’s armor training. A monster has training with any armor in its stat block.\n\n**Light, Medium, or Heavy Armor**\n\nIf you wear Light, Medium, or Heavy armor and lack training with it, you have Disadvantage on any D20 Test that involves Strength or Dexterity, and you can’t cast spells.\n\n**Shield**\n\nYou gain the Armor Class benefit of a Shield only if you have training with it.\n\n**One at a Time**\n\nA creature can wear only one suit of armor at a time and wield only one Shield at a time.",
+  "tool_rules": "If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that’s used with that check, you have Advantage on the check too.\n\nYour features might give you proficiency with a tool. A monster has proficiency with any tool in its stat block.",
+  "mount_rules": "A mount can help you move more quickly through the wilderness, but its primary purpose is to carry gear that would otherwise slow you down. The Mounts and Other Animals table shows each animal’s carrying capacity. See “Monsters” for the animals’ stat blocks.\n\n**Mounts and Cargo**\n\nAn animal pulling a carriage, cart, chariot, sled, or wagon can move weight up to five times its base carrying capacity, including the weight of the vehicle. If multiple animals pull the same vehicle, add their carrying capacities together.\n\n**Barding**\n\nBarding is armor designed for a mount. Any type of armor on the Armor table in “Equipment” can be purchased as barding. The cost is four times the normal cost, and it weighs twice as much.\n\n**Saddles**\n\nA saddle comes with a bit, a bridle, reins, and any other equipment needed to use the saddle. A Military Saddle gives Advantage on any ability check you make to remain mounted. An Exotic Saddle is required for riding an aquatic or a flying mount.\n\n**Large Vehicles**\n\nThe Airborne and Waterborne Vehicles table provides statistics for various types of large vehicles. The following notes apply.\n\n**Speed**\n\nA ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can’t move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can’t be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.\n\n**Crew**\n\nA ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see “Hirelings” later in “Equipment”) to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship, as shown in the table.\n\n**Passengers**\n\nThe table lists the number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.\n\n**Damage Threshold**\n\nIf a vehicle has a damage threshold (see “Rules Glossary”), it’s noted in the table.\n\n**Ship Repair**\n\nRepairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved."
+ }
+}

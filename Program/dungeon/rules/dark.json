@@ -1,0 +1,52 @@
+{
+ "about": "Dark tracks (dungeon/growth.py, requirements \"Progression\"): each grants power as it rises, rolls a lasting change at each threshold (filtered by the intensity settings), and at its top costs the player the character. `ask` is what the Continuity model is asked to look for.",
+ "tracks": {
+  "corruption": {
+   "name": "Corruption", "top": 10, "thresholds": [3, 6, 9],
+   "words": ["untouched", "tainted", "marked", "far gone", "lost"],
+   "power": {"stat": "Essence", "shift": 2},
+   "ask": "made a pact or bargain with a fiend or anything under the Heartwood, used forbidden or fiendish power, or fed something that should not be fed",
+   "lost": "The character is lost to what they bargained with. What walks on in their skin is not them, and the story ends for them here.",
+   "changes": [
+    {"kind": "body", "text": "Their shadow lags a moment behind them, and dogs will not come near.", "intensity": {"horror": 1}},
+    {"kind": "body", "text": "Their eyes have gone black from lid to lid in poor light.", "intensity": {"horror": 2}},
+    {"kind": "body", "text": "A brand like a closed hand has risen on their chest, warm to the touch, and it moves when they sleep.", "intensity": {"horror": 2}},
+    {"kind": "mind", "text": "They hear a patient voice when they are alone, and it is often right.", "intensity": {"horror": 1}},
+    {"kind": "mind", "text": "They no longer feel pity. They remember what it was, and can act it.", "intensity": {"cruelty": 2}},
+    {"kind": "social", "text": "Priests and the devout know them on sight, and will not shelter them.", "intensity": {}},
+    {"kind": "social", "text": "The Mammon faithful know them for one of their own and greet them as kin.", "intensity": {}},
+    {"kind": "body", "text": "Fresh wounds on them close black and stinking, and something under the skin knits them.", "intensity": {"horror": 3}}
+   ]
+  },
+  "addiction": {
+   "name": "Addiction", "top": 10, "thresholds": [3, 6, 9],
+   "words": ["clean", "using", "hooked", "wrecked", "lost"],
+   "power": {"stat": "Vitality", "shift": 1},
+   "ask": "took dust, dreamleaf, hard liquor to excess, or any drug",
+   "lost": "The habit has the character now. They sell what they have and then themselves, and the story ends for them in a gutter on the Cyrel road.",
+   "changes": [
+    {"kind": "body", "text": "Their hands shake until they have had some.", "intensity": {"drugs": 1}},
+    {"kind": "body", "text": "Their teeth are going grey and loose.", "intensity": {"drugs": 2}},
+    {"kind": "mind", "text": "Without it they cannot sleep more than an hour at a time.", "intensity": {"drugs": 1}},
+    {"kind": "mind", "text": "They lie about it easily now, even to themselves.", "intensity": {"drugs": 1}},
+    {"kind": "social", "text": "Dealers greet them by name, and honest traders count their change twice.", "intensity": {}},
+    {"kind": "social", "text": "They owe money to people who break fingers.", "intensity": {"violence": 1, "drugs": 1}}
+   ]
+  },
+  "infamy": {
+   "name": "Infamy", "top": 10, "thresholds": [3, 6, 9],
+   "words": ["unknown", "talked about", "notorious", "feared", "hunted"],
+   "power": {"stat": "Allure", "shift": 1},
+   "ask": "did something cruel, murderous or monstrous where others saw or will hear of it",
+   "lost": "There is a price on the character's head in every town on the map, and someone has collected it. The story ends for them on a gibbet.",
+   "changes": [
+    {"kind": "social", "text": "Children are hushed when they pass, and shopkeepers serve them first to see them gone.", "intensity": {}},
+    {"kind": "social", "text": "The watch has a drawing of their face, not a good one, but good enough.", "intensity": {}},
+    {"kind": "social", "text": "Hard men come looking to make their names by killing them.", "intensity": {"violence": 1}},
+    {"kind": "mind", "text": "They have stopped flinching at blood, their own included.", "intensity": {"violence": 2}},
+    {"kind": "social", "text": "A ballad about them goes round the taverns. It gets the worst of it right.", "intensity": {"cruelty": 1}},
+    {"kind": "body", "text": "Someone tried to blind them for what they did, and nearly did.", "intensity": {"violence": 2}}
+   ]
+  }
+ }
+}

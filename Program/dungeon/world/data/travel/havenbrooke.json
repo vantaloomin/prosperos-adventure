@@ -1,0 +1,301 @@
+{
+ "about": "Havenbrooke's travel map (dungeon/travel.py, docs/story.md \"Journeys\"): Haven and the places a trip from it reaches, joined by roads with their hours by car or bus, each region's encounters on the way and at night away from home, and the world and region its Life Cards draw from (dungeon/happenings.py). Haven is a whole town (world/data/cities/haven.json); the rest are places of world/data/cities/havenbrooke-road.json. Positions are a rough projection of the Northeast.",
+ "travel": "roads",
+ "world": "havenbrooke",
+ "by": "car or bus",
+ "hours_a_day": 16,
+ "odds": {
+  "none": 0,
+  "low": 10,
+  "medium": 25,
+  "high": 40
+ },
+ "food": [],
+ "nodes": [
+  {
+   "id": "haven",
+   "name": "Haven",
+   "region": "finger-lakes",
+   "city": "haven",
+   "place": "haven-bus-stop",
+   "safe": true,
+   "famous": true,
+   "map": {
+    "x": 0.198,
+    "y": 0.287
+   }
+  },
+  {
+   "id": "ithaca",
+   "name": "Ithaca",
+   "region": "finger-lakes",
+   "city": "havenbrooke-road",
+   "place": "ithaca",
+   "safe": true,
+   "map": {
+    "x": 0.188,
+    "y": 0.347
+   }
+  },
+  {
+   "id": "seneca-lake",
+   "name": "Seneca Lake",
+   "region": "finger-lakes",
+   "city": "havenbrooke-road",
+   "place": "seneca-lake",
+   "safe": true,
+   "map": {
+    "x": 0.137,
+    "y": 0.311
+   }
+  },
+  {
+   "id": "syracuse",
+   "name": "Syracuse",
+   "region": "finger-lakes",
+   "city": "havenbrooke-road",
+   "place": "syracuse",
+   "safe": true,
+   "map": {
+    "x": 0.231,
+    "y": 0.211
+   }
+  },
+  {
+   "id": "new-york",
+   "name": "New York City",
+   "region": "new-york-city",
+   "city": "havenbrooke-road",
+   "place": "new-york",
+   "safe": true,
+   "famous": true,
+   "map": {
+    "x": 0.501,
+    "y": 0.722
+   }
+  },
+  {
+   "id": "boston",
+   "name": "Boston",
+   "region": "new-england",
+   "city": "havenbrooke-road",
+   "place": "boston",
+   "safe": true,
+   "famous": true,
+   "map": {
+    "x": 0.865,
+    "y": 0.367
+   }
+  },
+  {
+   "id": "kessler-hometown",
+   "name": "home in Pennsylvania",
+   "region": "mid-atlantic",
+   "city": "havenbrooke-road",
+   "place": "kessler-hometown",
+   "safe": true,
+   "map": {
+    "x": 0.175,
+    "y": 0.822
+   }
+  }
+ ],
+ "routes": [
+  {
+   "from": "haven",
+   "to": "ithaca",
+   "hours": 0.7,
+   "terrain": "Route 34B along the lake",
+   "danger": "none"
+  },
+  {
+   "from": "haven",
+   "to": "seneca-lake",
+   "hours": 1,
+   "terrain": "the back roads west",
+   "danger": "none"
+  },
+  {
+   "from": "haven",
+   "to": "syracuse",
+   "hours": 1.5,
+   "terrain": "Route 81 north",
+   "danger": "low"
+  },
+  {
+   "from": "ithaca",
+   "to": "new-york",
+   "hours": 4.5,
+   "terrain": "the Shortline bus down Route 17",
+   "danger": "low"
+  },
+  {
+   "from": "syracuse",
+   "to": "new-york",
+   "hours": 5,
+   "terrain": "the Amtrak down the Hudson",
+   "danger": "none"
+  },
+  {
+   "from": "new-york",
+   "to": "boston",
+   "hours": 4.5,
+   "terrain": "I-95 and the Chinatown bus",
+   "danger": "low"
+  },
+  {
+   "from": "syracuse",
+   "to": "boston",
+   "hours": 5,
+   "terrain": "the Thruway and the Mass Pike",
+   "danger": "low"
+  },
+  {
+   "from": "ithaca",
+   "to": "kessler-hometown",
+   "hours": 4,
+   "terrain": "Route 15 south through Pennsylvania",
+   "danger": "low"
+  }
+ ],
+ "encounters": {
+  "finger-lakes": [
+   {
+    "weight": 3,
+    "text": "A farm stand on the shoulder with an honesty box, apple cider and a hand-painted sign about pie."
+   },
+   {
+    "weight": 2,
+    "text": "A county sheriff parked in the median with a radar gun, watching every car with a Havenbrooke sticker."
+   },
+   {
+    "weight": 2,
+    "text": "A carload of students from Ithaca honking at every car with a Havenbrooke parking pass."
+   },
+   {
+    "weight": 2,
+    "action": "make the last shuttle before it pulls out",
+    "difficulty": "normal",
+    "threat": "The shuttle leaves two minutes early and the next one is not until morning."
+   },
+   {
+    "weight": 1,
+    "action": "keep the car on the road through the black ice",
+    "difficulty": "hard",
+    "threat": "The car slides off the shoulder into a snowbank and has to be dug out."
+   }
+  ],
+  "new-york-city": [
+   {
+    "weight": 3,
+    "text": "A bus full of people on phones, a baby who cries through New Jersey, and the skyline at dusk."
+   },
+   {
+    "weight": 2,
+    "text": "A vampire in a good coat on the subway platform, glamour slipping in the heat of the crowd."
+   },
+   {
+    "weight": 2,
+    "action": "keep hold of a bag in the crush at Port Authority",
+    "difficulty": "normal",
+    "threat": "Someone in the crowd lifts a wallet clean out of a coat pocket."
+   }
+  ],
+  "new-england": [
+   {
+    "weight": 3,
+    "text": "A rest stop on the Mass Pike with a Dunkin' Donuts and a coven of witches in matching scarves."
+   },
+   {
+    "weight": 2,
+    "action": "get through the Worcester traffic before it locks",
+    "difficulty": "normal",
+    "threat": "An accident ahead stops the highway dead for two hours."
+   }
+  ],
+  "mid-atlantic": [
+   {
+    "weight": 3,
+    "text": "Billboards for outlet malls, a Sheetz every ten miles, and a long stretch of nothing in the hills."
+   },
+   {
+    "weight": 2,
+    "action": "find gas before the light comes on",
+    "difficulty": "normal",
+    "threat": "The tank runs dry on a dark road and the nearest station is six miles back."
+   }
+  ]
+ },
+ "regions": {
+  "finger-lakes": {
+   "danger": "low",
+   "cards": "finger-lakes",
+   "tier": 1
+  },
+  "new-york-city": {
+   "danger": "medium",
+   "cards": "new-york-city",
+   "tier": 2
+  },
+  "new-england": {
+   "danger": "low",
+   "cards": "new-england",
+   "tier": 2
+  },
+  "mid-atlantic": {
+   "danger": "low",
+   "cards": "mid-atlantic",
+   "tier": 1
+  }
+ },
+ "camp": {
+  "finger-lakes": [
+   {
+    "weight": 3,
+    "text": "The lake house creaks all night and the dock bangs in the wind, and nothing comes of it."
+   },
+   {
+    "weight": 2,
+    "action": "find somewhere warm before the cold sets in",
+    "difficulty": "normal",
+    "threat": "The heat goes out at two in the morning and nobody sleeps."
+   }
+  ],
+  "new-york-city": [
+   {
+    "weight": 3,
+    "text": "Sirens all night and a radiator that knocks like someone at the door."
+   },
+   {
+    "weight": 2,
+    "action": "keep the hostel locker shut",
+    "difficulty": "normal",
+    "threat": "Someone goes through the bags in the hostel room while everyone sleeps."
+   }
+  ],
+  "new-england": [
+   {
+    "weight": 3,
+    "text": "A friend's couch, a cat that sleeps on faces, and coffee at six."
+   },
+   {
+    "weight": 2,
+    "action": "sleep through the radiator",
+    "difficulty": "normal",
+    "threat": "The apartment is freezing and the landlord does not answer."
+   }
+  ],
+  "mid-atlantic": [
+   {
+    "weight": 3,
+    "text": "A childhood bedroom with the old posters still up, and every sound in the house familiar."
+   },
+   {
+    "weight": 2,
+    "action": "get through the night without an argument",
+    "difficulty": "normal",
+    "threat": "A shouting match downstairs at midnight, and everyone pretends at breakfast it did not happen."
+   }
+  ]
+ }
+}

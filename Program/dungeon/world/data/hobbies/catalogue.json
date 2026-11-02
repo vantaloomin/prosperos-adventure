@@ -1,0 +1,3764 @@
+{
+ "about": "Pastimes for Hobbies that progress (dungeon/life/hobbies.py): each hobby with the words that find it in an interest, its usual session, where it happens, what it costs and how it looks in a picture (visible wording only). Milestones live in one file per kind.",
+ "levels": [
+  "just starting",
+  "getting the hang of it",
+  "getting good",
+  "good",
+  "really good"
+ ],
+ "kinds": {
+  "music": {
+   "label": "Music",
+   "nature": "creative"
+  },
+  "sport": {
+   "label": "Movement",
+   "nature": "active"
+  },
+  "dance": {
+   "label": "Dance",
+   "nature": "social"
+  },
+  "crafts": {
+   "label": "Crafts",
+   "nature": "quiet"
+  },
+  "art": {
+   "label": "Art",
+   "nature": "creative"
+  },
+  "games": {
+   "label": "Games",
+   "nature": "quiet"
+  },
+  "words": {
+   "label": "Words",
+   "nature": "quiet"
+  },
+  "growing": {
+   "label": "Growing things",
+   "nature": "quiet"
+  },
+  "outdoors": {
+   "label": "Outdoors",
+   "nature": "active"
+  },
+  "stage": {
+   "label": "On stage",
+   "nature": "social"
+  },
+  "general": {
+   "label": "Other",
+   "nature": "any"
+  }
+ },
+ "leanings": {
+  "active": [
+   "active",
+   "athletic",
+   "sporty",
+   "energetic",
+   "outdoorsy",
+   "fit",
+   "restless",
+   "competitive"
+  ],
+  "creative": [
+   "creative",
+   "artistic",
+   "dreamy",
+   "musical",
+   "imaginative",
+   "expressive"
+  ],
+  "social": [
+   "outgoing",
+   "social",
+   "extrovert",
+   "bubbly",
+   "charismatic",
+   "life of the party",
+   "flirty"
+  ],
+  "quiet": [
+   "quiet",
+   "introvert",
+   "shy",
+   "patient",
+   "thoughtful",
+   "bookish",
+   "calm",
+   "reserved",
+   "homebody"
+  ]
+ },
+ "lines": {
+  "stalls": [
+   "work got busy",
+   "they lost a bit of steam",
+   "the weather turned",
+   "other things crowded it out",
+   "money got tight",
+   "the friend they went with stopped going",
+   "they hit a plateau and got frustrated",
+   "their schedule changed",
+   "they were tired most evenings",
+   "they got into something else for a while",
+   "home got busy",
+   "they kept putting it off",
+   "their usual spot closed for a few weeks",
+   "they were not enjoying it as much",
+   "life got in the way"
+  ],
+  "pickups": [
+   "on a whim",
+   "after a friend talked them into a first try",
+   "after seeing a flyer for a beginner class",
+   "after watching someone do it and thinking \"I could try that\"",
+   "to have something just for them",
+   "after a coworker kept talking about it",
+   "because they wanted a new challenge",
+   "after finding the gear at a secondhand shop",
+   "to meet some new people",
+   "after wanting to for years"
+  ],
+  "resumes": [
+   "picked {name} back up",
+   "got back into {name}",
+   "found their way back to {name}",
+   "started making time for {name} again"
+  ],
+  "drops": [
+   "gave up {name}",
+   "let {name} go",
+   "stopped doing {name}",
+   "quietly gave up on {name}"
+  ]
+ },
+ "hobbies": [
+  {
+   "id": "guitar",
+   "label": "Guitar",
+   "name": "guitar",
+   "kind": "music",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "frontier"
+   ],
+   "words": [
+    "guitar",
+    "acoustic",
+    "fingerpicking"
+   ],
+   "session": "practiced guitar",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": "a jam session",
+   "ask": "come jam with me",
+   "gear": [
+    "$$",
+    "bought a secondhand guitar"
+   ],
+   "fees": null,
+   "picture": "sitting on the sofa at home with an acoustic guitar across {possessive} lap, fingers on the frets",
+   "event": null
+  },
+  {
+   "id": "bass",
+   "label": "Bass guitar",
+   "name": "the bass",
+   "kind": "music",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "bass guitar",
+    "bassist",
+    "plays bass"
+   ],
+   "session": "practiced the bass",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a used bass and a small amp"
+   ],
+   "fees": null,
+   "picture": "playing an electric bass guitar at home, a small amp beside {possessive} feet",
+   "event": null
+  },
+  {
+   "id": "piano",
+   "label": "Piano",
+   "name": "the piano",
+   "kind": "music",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "piano",
+    "pianist",
+    "keyboard"
+   ],
+   "session": "practiced the piano",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "had the piano tuned"
+   ],
+   "fees": [
+    "$$",
+    "piano lessons"
+   ],
+   "picture": "seated at an upright piano at home, hands on the keys, sheet music open",
+   "event": null,
+   "not": [
+    "mechanical keyboard",
+    "computer keyboard"
+   ]
+  },
+  {
+   "id": "violin",
+   "label": "Violin",
+   "name": "the violin",
+   "kind": "music",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "violin",
+    "violinist"
+   ],
+   "session": "practiced the violin",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "rented a violin"
+   ],
+   "fees": [
+    "$$",
+    "violin lessons"
+   ],
+   "picture": "playing the violin at home, bow mid-stroke, a music stand in front of {possessive}",
+   "event": null
+  },
+  {
+   "id": "fiddle",
+   "label": "Fiddle",
+   "name": "the fiddle",
+   "kind": "music",
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "words": [
+    "fiddle",
+    "fiddler"
+   ],
+   "session": "played the fiddle",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": "a night of tunes",
+   "ask": "come hear me play",
+   "gear": [
+    "$",
+    "had their fiddle restrung"
+   ],
+   "fees": null,
+   "picture": "playing a fiddle by a warm hearth, bow raised",
+   "event": null
+  },
+  {
+   "id": "cello",
+   "label": "Cello",
+   "name": "the cello",
+   "kind": "music",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "cello",
+    "cellist"
+   ],
+   "session": "practiced the cello",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$$",
+    "rented a cello"
+   ],
+   "fees": [
+    "$$",
+    "cello lessons"
+   ],
+   "picture": "seated with a cello between {possessive} knees, bow on the strings, at home",
+   "event": null
+  },
+  {
+   "id": "ukulele",
+   "label": "Ukulele",
+   "name": "the ukulele",
+   "kind": "music",
+   "eras": [
+    "modern",
+    "jazz-age"
+   ],
+   "words": [
+    "ukulele",
+    "uke"
+   ],
+   "session": "played the ukulele",
+   "place": null,
+   "where": "at home",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a ukulele"
+   ],
+   "fees": null,
+   "picture": "strumming a small ukulele on a sunny windowsill at home",
+   "event": null
+  },
+  {
+   "id": "drums",
+   "label": "Drums",
+   "name": "the drums",
+   "kind": "music",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "drums",
+    "drummer",
+    "drumming",
+    "drum kit"
+   ],
+   "session": "practiced the drums",
+   "place": {
+    "kinds": [
+     "venue",
+     "workshop"
+    ],
+    "tags": [
+     "music",
+     "live-music"
+    ]
+   },
+   "where": "at a rehearsal studio",
+   "when": "evening",
+   "together": "a jam session",
+   "ask": "come jam with me",
+   "gear": [
+    "$$",
+    "bought a practice pad and new sticks"
+   ],
+   "fees": [
+    "$",
+    "rehearsal room time"
+   ],
+   "picture": "behind a drum kit in a small rehearsal room, sticks raised",
+   "event": null
+  },
+  {
+   "id": "banjo",
+   "label": "Banjo",
+   "name": "the banjo",
+   "kind": "music",
+   "eras": [
+    "frontier",
+    "jazz-age",
+    "modern"
+   ],
+   "words": [
+    "banjo"
+   ],
+   "session": "picked at the banjo",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a secondhand banjo"
+   ],
+   "fees": null,
+   "picture": "playing a banjo on a porch step, fingers picking",
+   "event": null
+  },
+  {
+   "id": "lute",
+   "label": "Lute",
+   "name": "the lute",
+   "kind": "music",
+   "eras": [
+    "medieval",
+    "fantasy"
+   ],
+   "words": [
+    "lute",
+    "lutist",
+    "minstrel"
+   ],
+   "session": "practiced the lute",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": "an evening of songs",
+   "ask": "come hear me play",
+   "gear": [
+    "$",
+    "had new gut strings put on their lute"
+   ],
+   "fees": null,
+   "picture": "playing a lute by candlelight, head bent to the strings",
+   "event": null
+  },
+  {
+   "id": "flute",
+   "label": "Flute",
+   "name": "the flute",
+   "kind": "music",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "medieval",
+    "fantasy"
+   ],
+   "words": [
+    "flute",
+    "flautist",
+    "recorder",
+    "tin whistle"
+   ],
+   "session": "practiced the flute",
+   "place": null,
+   "where": "at home",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a student flute"
+   ],
+   "fees": null,
+   "picture": "playing a flute by an open window, music stand in front of {possessive}",
+   "event": null
+  },
+  {
+   "id": "djing",
+   "label": "DJing",
+   "name": "DJing",
+   "kind": "music",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "dj",
+    "djing",
+    "turntables",
+    "mixing records"
+   ],
+   "session": "practiced mixing",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": "their DJ set",
+   "ask": "come to my set",
+   "gear": [
+    "$$$",
+    "bought a DJ controller"
+   ],
+   "fees": null,
+   "picture": "behind DJ decks with headphones half on, lights low",
+   "event": "their DJ set"
+  },
+  {
+   "id": "climbing",
+   "label": "Rock climbing",
+   "name": "rock climbing",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "climb",
+    "bouldering",
+    "boulder"
+   ],
+   "session": "went climbing",
+   "place": {
+    "kinds": [
+     "fitness"
+    ],
+    "tags": [
+     "climbing",
+     "bouldering"
+    ]
+   },
+   "where": "at the climbing gym",
+   "when": "evening",
+   "together": "a climbing session",
+   "ask": "come climbing with me",
+   "gear": [
+    "$$",
+    "bought climbing shoes and a chalk bag"
+   ],
+   "fees": [
+    "$$",
+    "a month at the climbing gym"
+   ],
+   "picture": "on an indoor climbing wall, chalked hands reaching for a hold",
+   "event": null,
+   "not": [
+    "corporate ladder",
+    "climbing the ladder",
+    "social climb"
+   ]
+  },
+  {
+   "id": "running",
+   "label": "Running",
+   "name": "running",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "running",
+    "runner",
+    "jogging",
+    "marathon",
+    "5k"
+   ],
+   "session": "went for a run",
+   "place": {
+    "kinds": [
+     "park",
+     "trail"
+    ],
+    "tags": [
+     "running",
+     "walk"
+    ]
+   },
+   "where": "around the neighborhood",
+   "when": "morning",
+   "together": "a run",
+   "ask": "come for a run with me",
+   "gear": [
+    "$$",
+    "bought proper running shoes"
+   ],
+   "fees": null,
+   "picture": "running along a park path in running gear, mid-stride",
+   "event": null
+  },
+  {
+   "id": "swimming",
+   "label": "Swimming",
+   "name": "swimming",
+   "kind": "sport",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "swim",
+    "swimming",
+    "swimmer",
+    "laps"
+   ],
+   "session": "swam laps",
+   "place": {
+    "kinds": [
+     "fitness",
+     "park",
+     "beach"
+    ],
+    "tags": [
+     "pool",
+     "swimming"
+    ]
+   },
+   "where": "at the pool",
+   "when": "morning",
+   "together": "a swim",
+   "ask": "come swimming with me",
+   "gear": [
+    "$",
+    "bought a new bathing suit"
+   ],
+   "fees": [
+    "$",
+    "pool passes"
+   ],
+   "picture": "at the edge of a swimming bath, hair tucked under a cap",
+   "event": null
+  },
+  {
+   "id": "cycling",
+   "label": "Cycling",
+   "name": "cycling",
+   "kind": "sport",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "cycling",
+    "cyclist",
+    "bike ride",
+    "biking"
+   ],
+   "session": "went for a long ride",
+   "place": {
+    "kinds": [
+     "park",
+     "trail"
+    ],
+    "tags": [
+     "cycling"
+    ]
+   },
+   "where": "out on the roads",
+   "when": "morning",
+   "together": "a bike ride",
+   "ask": "come for a ride with me",
+   "gear": [
+    "$$",
+    "had their bike tuned up"
+   ],
+   "fees": null,
+   "picture": "on a bicycle on a quiet road, mid-ride",
+   "event": null
+  },
+  {
+   "id": "yoga",
+   "label": "Yoga",
+   "name": "yoga",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "yoga",
+    "yogi"
+   ],
+   "session": "went to a yoga class",
+   "place": {
+    "kinds": [
+     "fitness"
+    ],
+    "tags": [
+     "yoga",
+     "classes"
+    ]
+   },
+   "where": "at the yoga studio",
+   "when": "morning",
+   "together": "a yoga class",
+   "ask": "come to yoga with me",
+   "gear": [
+    "$",
+    "bought a good yoga mat"
+   ],
+   "fees": [
+    "$$",
+    "a month of yoga classes"
+   ],
+   "picture": "in a calm yoga pose on a mat in a bright studio",
+   "event": null
+  },
+  {
+   "id": "tennis",
+   "label": "Tennis",
+   "name": "tennis",
+   "kind": "sport",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ],
+   "words": [
+    "tennis"
+   ],
+   "session": "played tennis",
+   "place": {
+    "kinds": [
+     "park",
+     "fitness"
+    ],
+    "tags": [
+     "tennis"
+    ]
+   },
+   "where": "at the courts",
+   "when": "any",
+   "together": "a game of tennis",
+   "ask": "play tennis with me",
+   "gear": [
+    "$$",
+    "bought a new racket"
+   ],
+   "fees": null,
+   "picture": "on a tennis court with a racket, ready to return a serve",
+   "event": null,
+   "not": [
+    "table tennis"
+   ]
+  },
+  {
+   "id": "boxing",
+   "label": "Boxing",
+   "name": "boxing",
+   "kind": "sport",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ],
+   "words": [
+    "boxing",
+    "boxer",
+    "kickboxing"
+   ],
+   "session": "trained at the boxing gym",
+   "place": {
+    "kinds": [
+     "fitness"
+    ],
+    "tags": [
+     "gym",
+     "boxing"
+    ]
+   },
+   "where": "at the boxing gym",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought their own gloves and hand wraps"
+   ],
+   "fees": [
+    "$$",
+    "a month at the boxing gym"
+   ],
+   "picture": "in a boxing gym with wrapped hands and gloves up, working a heavy bag",
+   "event": null
+  },
+  {
+   "id": "martial-arts",
+   "label": "Martial arts",
+   "name": "jiu-jitsu",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "jiu-jitsu",
+    "jiu jitsu",
+    "judo",
+    "karate",
+    "taekwondo",
+    "martial art",
+    "kung fu",
+    "aikido"
+   ],
+   "session": "trained at the dojo",
+   "place": {
+    "kinds": [
+     "fitness"
+    ],
+    "tags": [
+     "gym",
+     "classes"
+    ]
+   },
+   "where": "at the dojo",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought their first gi"
+   ],
+   "fees": [
+    "$$",
+    "a month at the dojo"
+   ],
+   "picture": "in a white gi on the mats of a dojo, belt tied, in a ready stance",
+   "event": null
+  },
+  {
+   "id": "fencing",
+   "label": "Fencing",
+   "name": "fencing",
+   "kind": "sport",
+   "eras": [
+    "victorian",
+    "steampunk",
+    "jazz-age",
+    "medieval",
+    "fantasy",
+    "modern"
+   ],
+   "words": [
+    "fencing",
+    "fencer",
+    "sword",
+    "swordplay"
+   ],
+   "session": "went to fencing practice",
+   "place": null,
+   "where": "at the fencing hall",
+   "when": "evening",
+   "together": "a fencing bout",
+   "ask": "come watch me fence",
+   "gear": [
+    "$$",
+    "had a padded jacket and a practice sword fitted"
+   ],
+   "fees": [
+    "$$",
+    "fencing school fees"
+   ],
+   "picture": "in a padded jacket holding a blunted practice sword, mid-lunge, in a long hall",
+   "event": null,
+   "not": [
+    "sword collect"
+   ]
+  },
+  {
+   "id": "archery",
+   "label": "Archery",
+   "name": "archery",
+   "kind": "sport",
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ],
+   "words": [
+    "archery",
+    "archer",
+    "bow and arrow",
+    "longbow"
+   ],
+   "session": "shot at the butts",
+   "place": {
+    "kinds": [
+     "park",
+     "square",
+     "trail"
+    ],
+    "tags": []
+   },
+   "where": "at the archery butts",
+   "when": "any",
+   "together": "an afternoon of archery",
+   "ask": "come shoot with me",
+   "gear": [
+    "$$",
+    "had a new bow made"
+   ],
+   "fees": null,
+   "picture": "drawing a longbow on an open field, a straw target in the distance",
+   "event": null
+  },
+  {
+   "id": "riding",
+   "label": "Horse riding",
+   "name": "riding",
+   "kind": "sport",
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ],
+   "words": [
+    "riding",
+    "horse",
+    "equestrian",
+    "horseback"
+   ],
+   "session": "went riding",
+   "place": null,
+   "where": "out on the trails",
+   "when": "morning",
+   "together": "a ride",
+   "ask": "come riding with me",
+   "gear": [
+    "$$",
+    "had a new saddle fitted"
+   ],
+   "fees": null,
+   "picture": "on horseback on an open trail, reins in hand",
+   "event": null,
+   "not": [
+    "horse racing",
+    "horse betting"
+   ]
+  },
+  {
+   "id": "rowing",
+   "label": "Rowing",
+   "name": "rowing",
+   "kind": "sport",
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "rowing",
+    "rower",
+    "crew",
+    "sculling"
+   ],
+   "session": "rowed on the river",
+   "place": {
+    "kinds": [
+     "park",
+     "docks",
+     "beach"
+    ],
+    "tags": [
+     "river",
+     "boating",
+     "water"
+    ]
+   },
+   "where": "on the river",
+   "when": "morning",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought rowing gloves"
+   ],
+   "fees": [
+    "$$",
+    "rowing club dues"
+   ],
+   "picture": "rowing a narrow boat on a calm river in early light",
+   "event": null,
+   "not": [
+    "crew neck",
+    "crew cut",
+    "film crew"
+   ]
+  },
+  {
+   "id": "skating",
+   "label": "Ice skating",
+   "name": "ice skating",
+   "kind": "sport",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "skating",
+    "skater",
+    "ice skate",
+    "figure skating"
+   ],
+   "session": "went skating",
+   "place": {
+    "kinds": [
+     "park",
+     "fitness",
+     "attraction"
+    ],
+    "tags": [
+     "skating"
+    ]
+   },
+   "where": "at the rink",
+   "when": "evening",
+   "together": "a skate",
+   "ask": "come skating with me",
+   "gear": [
+    "$$",
+    "bought their own skates"
+   ],
+   "fees": null,
+   "picture": "gliding across an ice rink in skates, arms out for balance, scarf trailing",
+   "event": null
+  },
+  {
+   "id": "lifting",
+   "label": "Weightlifting",
+   "name": "lifting",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "weightlifting",
+    "lifting",
+    "powerlifting",
+    "gym rat",
+    "strength training",
+    "the gym"
+   ],
+   "session": "lifted at the gym",
+   "place": {
+    "kinds": [
+     "fitness"
+    ],
+    "tags": [
+     "gym"
+    ]
+   },
+   "where": "at the gym",
+   "when": "evening",
+   "together": "a gym session",
+   "ask": "come lift with me",
+   "gear": [
+    "$",
+    "bought lifting shoes"
+   ],
+   "fees": [
+    "$",
+    "a month at the gym"
+   ],
+   "picture": "at a squat rack in a gym, chalked hands on the bar",
+   "event": null
+  },
+  {
+   "id": "surfing",
+   "label": "Surfing",
+   "name": "surfing",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "surf",
+    "surfing",
+    "surfer"
+   ],
+   "session": "went surfing",
+   "place": {
+    "kinds": [
+     "beach"
+    ],
+    "tags": [
+     "beach"
+    ]
+   },
+   "where": "at the beach",
+   "when": "morning",
+   "together": "a surf session",
+   "ask": "come surfing with me",
+   "gear": [
+    "$$$",
+    "bought a used board and a wetsuit"
+   ],
+   "fees": null,
+   "picture": "carrying a surfboard into the waves at the beach in a wetsuit",
+   "event": null
+  },
+  {
+   "id": "skateboarding",
+   "label": "Skateboarding",
+   "name": "skateboarding",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "skateboard",
+    "skating park",
+    "skater"
+   ],
+   "session": "skated at the park",
+   "place": {
+    "kinds": [
+     "park"
+    ],
+    "tags": [
+     "skating"
+    ]
+   },
+   "where": "at the skate park",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a new deck"
+   ],
+   "fees": null,
+   "picture": "on a skateboard at a skate park, mid-push",
+   "event": null
+  },
+  {
+   "id": "salsa",
+   "label": "Salsa dancing",
+   "name": "salsa",
+   "kind": "dance",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "salsa",
+    "bachata",
+    "latin danc"
+   ],
+   "session": "went to salsa class",
+   "place": {
+    "kinds": [
+     "nightlife",
+     "venue",
+     "fitness"
+    ],
+    "tags": [
+     "dancing",
+     "classes"
+    ]
+   },
+   "where": "at the dance studio",
+   "when": "evening",
+   "together": "a salsa night",
+   "ask": "come dancing with me",
+   "gear": [
+    "$",
+    "bought proper dance shoes"
+   ],
+   "fees": [
+    "$$",
+    "salsa classes"
+   ],
+   "picture": "mid-spin on a dance floor at a salsa class",
+   "event": null
+  },
+  {
+   "id": "swing",
+   "label": "Swing dancing",
+   "name": "swing dancing",
+   "kind": "dance",
+   "eras": [
+    "modern",
+    "jazz-age"
+   ],
+   "words": [
+    "swing dance",
+    "lindy hop",
+    "lindy",
+    "charleston",
+    "jitterbug",
+    "swing dancing"
+   ],
+   "session": "went swing dancing",
+   "place": {
+    "kinds": [
+     "nightlife",
+     "venue"
+    ],
+    "tags": [
+     "dancing",
+     "jazz"
+    ]
+   },
+   "where": "at the dance hall",
+   "when": "evening",
+   "together": "a night of swing dancing",
+   "ask": "come dancing with me",
+   "gear": [
+    "$",
+    "bought a pair of dancing shoes"
+   ],
+   "fees": [
+    "$",
+    "dance hall nights"
+   ],
+   "picture": "mid-twirl on a crowded dance floor, a jazz band behind",
+   "event": null
+  },
+  {
+   "id": "ballroom",
+   "label": "Ballroom dancing",
+   "name": "ballroom dancing",
+   "kind": "dance",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "ballroom",
+    "waltz",
+    "foxtrot",
+    "quickstep"
+   ],
+   "session": "went to ballroom class",
+   "place": null,
+   "where": "at the dance studio",
+   "when": "evening",
+   "together": "a ballroom lesson",
+   "ask": "come dancing with me",
+   "gear": [
+    "$",
+    "bought proper dance shoes"
+   ],
+   "fees": [
+    "$$",
+    "ballroom lessons"
+   ],
+   "picture": "in a ballroom hold mid-waltz on a polished floor",
+   "event": null
+  },
+  {
+   "id": "tap",
+   "label": "Tap dancing",
+   "name": "tap",
+   "kind": "dance",
+   "eras": [
+    "modern",
+    "jazz-age"
+   ],
+   "words": [
+    "tap dance",
+    "tap dancing"
+   ],
+   "session": "went to tap class",
+   "place": null,
+   "where": "at the dance studio",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought tap shoes"
+   ],
+   "fees": [
+    "$$",
+    "tap classes"
+   ],
+   "picture": "mid-step in tap shoes on a wooden studio floor",
+   "event": null
+  },
+  {
+   "id": "ballet",
+   "label": "Ballet",
+   "name": "ballet",
+   "kind": "dance",
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "ballet"
+   ],
+   "session": "went to adult ballet class",
+   "place": null,
+   "where": "at the ballet studio",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought ballet slippers"
+   ],
+   "fees": [
+    "$$",
+    "ballet classes"
+   ],
+   "picture": "at a ballet barre in a mirrored studio, one arm raised",
+   "event": null
+  },
+  {
+   "id": "hiphop",
+   "label": "Hip-hop dance",
+   "name": "hip-hop dance",
+   "kind": "dance",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "hip-hop dance",
+    "hip hop dance",
+    "breakdanc",
+    "street dance",
+    "k-pop dance",
+    "kpop dance"
+   ],
+   "session": "went to dance class",
+   "place": {
+    "kinds": [
+     "fitness"
+    ],
+    "tags": [
+     "classes",
+     "dancing"
+    ]
+   },
+   "where": "at the dance studio",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": null,
+   "fees": [
+    "$$",
+    "dance classes"
+   ],
+   "picture": "mid-move in a dance studio in sneakers, mirrors behind",
+   "event": null
+  },
+  {
+   "id": "tango",
+   "label": "Tango",
+   "name": "tango",
+   "kind": "dance",
+   "eras": [
+    "modern",
+    "jazz-age"
+   ],
+   "words": [
+    "tango",
+    "milonga"
+   ],
+   "session": "went to a tango class",
+   "place": null,
+   "where": "at the dance studio",
+   "when": "evening",
+   "together": "a milonga",
+   "ask": "come dancing with me",
+   "gear": null,
+   "fees": [
+    "$$",
+    "tango classes"
+   ],
+   "picture": "in a close tango embrace on a dim dance floor",
+   "event": null
+  },
+  {
+   "id": "folk-dance",
+   "label": "Country dancing",
+   "name": "country dancing",
+   "kind": "dance",
+   "eras": [
+    "frontier",
+    "medieval",
+    "fantasy",
+    "victorian"
+   ],
+   "words": [
+    "barn dance",
+    "folk dance",
+    "country dance",
+    "square dance",
+    "reel",
+    "jig"
+   ],
+   "session": "went to the dance",
+   "place": {
+    "kinds": [
+     "tavern",
+     "square",
+     "guildhall",
+     "inn"
+    ],
+    "tags": []
+   },
+   "where": "at the hall",
+   "when": "evening",
+   "together": "the next dance",
+   "ask": "come to the dance with me",
+   "gear": null,
+   "fees": null,
+   "picture": "mid-reel at a lively barn dance, skirts and coats swinging",
+   "event": null
+  },
+  {
+   "id": "pottery",
+   "label": "Pottery",
+   "name": "pottery",
+   "kind": "crafts",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "pottery",
+    "ceramics",
+    "potter",
+    "wheel throwing",
+    "clay"
+   ],
+   "session": "went to the pottery studio",
+   "place": {
+    "kinds": [
+     "workshop"
+    ],
+    "tags": [
+     "classes",
+     "craft",
+     "art"
+    ]
+   },
+   "where": "at the pottery studio",
+   "when": "evening",
+   "together": "a pottery night",
+   "ask": "come to the studio with me",
+   "gear": [
+    "$",
+    "bought their own set of tools"
+   ],
+   "fees": [
+    "$$",
+    "pottery classes"
+   ],
+   "picture": "at a pottery wheel with clay on {possessive} hands, shaping a bowl",
+   "event": null
+  },
+  {
+   "id": "knitting",
+   "label": "Knitting",
+   "name": "knitting",
+   "kind": "crafts",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ],
+   "words": [
+    "knit",
+    "knitting"
+   ],
+   "session": "knitted at home",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a bag of good wool"
+   ],
+   "fees": null,
+   "picture": "knitting on the sofa at home, a ball of yarn in {possessive} lap",
+   "event": null
+  },
+  {
+   "id": "crochet",
+   "label": "Crochet",
+   "name": "crochet",
+   "kind": "crafts",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ],
+   "words": [
+    "crochet",
+    "amigurumi"
+   ],
+   "session": "crocheted at home",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a bundle of yarn and new hooks"
+   ],
+   "fees": null,
+   "picture": "crocheting at home in an armchair, a small colorful project in {possessive} hands",
+   "event": null
+  },
+  {
+   "id": "embroidery",
+   "label": "Embroidery",
+   "name": "embroidery",
+   "kind": "crafts",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "embroider",
+    "cross-stitch",
+    "cross stitch",
+    "needlepoint",
+    "needlework"
+   ],
+   "session": "stitched at home",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought new silks and a hoop"
+   ],
+   "fees": null,
+   "picture": "stitching an embroidery hoop by a lamp at home, threads laid out",
+   "event": null
+  },
+  {
+   "id": "sewing",
+   "label": "Sewing",
+   "name": "sewing",
+   "kind": "crafts",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ],
+   "words": [
+    "sewing",
+    "dressmaking",
+    "sew my own"
+   ],
+   "session": "worked at the sewing machine",
+   "place": null,
+   "where": "at home",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought fabric for a new project"
+   ],
+   "fees": null,
+   "picture": "at a sewing machine at home, fabric pinned and flowing over the table",
+   "event": null
+  },
+  {
+   "id": "quilting",
+   "label": "Quilting",
+   "name": "quilting",
+   "kind": "crafts",
+   "eras": [
+    "frontier",
+    "modern",
+    "jazz-age"
+   ],
+   "words": [
+    "quilt",
+    "quilting"
+   ],
+   "session": "worked on a quilt",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": "a quilting circle",
+   "ask": null,
+   "gear": [
+    "$",
+    "bought fabric squares"
+   ],
+   "fees": null,
+   "picture": "at a table spread with quilt squares, pinning a row together",
+   "event": null
+  },
+  {
+   "id": "woodworking",
+   "label": "Woodworking",
+   "name": "woodworking",
+   "kind": "crafts",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "frontier",
+    "steampunk"
+   ],
+   "words": [
+    "woodwork",
+    "carpentry",
+    "woodworker",
+    "furniture making"
+   ],
+   "session": "spent a few hours in the workshop",
+   "place": {
+    "kinds": [
+     "workshop"
+    ],
+    "tags": [
+     "craft",
+     "classes"
+    ]
+   },
+   "where": "in the workshop",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a new chisel set"
+   ],
+   "fees": [
+    "$",
+    "shared workshop time"
+   ],
+   "picture": "in a workshop with sawdust on the bench, sanding a piece of wood",
+   "event": null
+  },
+  {
+   "id": "woodcarving",
+   "label": "Woodcarving",
+   "name": "woodcarving",
+   "kind": "crafts",
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ],
+   "words": [
+    "carving",
+    "whittl",
+    "woodcarv"
+   ],
+   "session": "carved by the fire",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "had their knives sharpened"
+   ],
+   "fees": null,
+   "picture": "whittling a small wooden figure by firelight, curls of wood at {possessive} feet",
+   "event": null
+  },
+  {
+   "id": "leatherwork",
+   "label": "Leatherwork",
+   "name": "leatherwork",
+   "kind": "crafts",
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ],
+   "words": [
+    "leatherwork",
+    "leathercraft"
+   ],
+   "session": "worked leather",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a side of good leather"
+   ],
+   "fees": null,
+   "picture": "at a workbench tooling a piece of leather, tools laid out",
+   "event": null
+  },
+  {
+   "id": "jewelry",
+   "label": "Jewelry making",
+   "name": "jewelry making",
+   "kind": "crafts",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "jewelry",
+    "jewellery",
+    "beading",
+    "silversmith"
+   ],
+   "session": "made jewelry at the kitchen table",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought silver wire and tools"
+   ],
+   "fees": null,
+   "picture": "at a table bent over a small piece of silver jewelry, tiny pliers in hand",
+   "event": null
+  },
+  {
+   "id": "miniatures",
+   "label": "Miniature painting",
+   "name": "miniature painting",
+   "kind": "crafts",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "miniatures",
+    "warhammer",
+    "model building",
+    "model kits",
+    "scale models"
+   ],
+   "session": "painted miniatures",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a new set of paints and brushes"
+   ],
+   "fees": null,
+   "picture": "painting a tiny figure under a desk lamp with a fine brush",
+   "event": null
+  },
+  {
+   "id": "tinkering",
+   "label": "Clockwork tinkering",
+   "name": "clockwork tinkering",
+   "kind": "crafts",
+   "eras": [
+    "steampunk",
+    "victorian"
+   ],
+   "words": [
+    "tinker",
+    "clockwork",
+    "gears",
+    "automaton",
+    "gadgets"
+   ],
+   "session": "tinkered at their workbench",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a tray of brass gears"
+   ],
+   "fees": null,
+   "picture": "at a cluttered workbench under a lamp, fitting brass gears into a small mechanism",
+   "event": null
+  },
+  {
+   "id": "weaving",
+   "label": "Weaving",
+   "name": "weaving",
+   "kind": "crafts",
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ],
+   "words": [
+    "weaving",
+    "loom",
+    "spinning wool"
+   ],
+   "session": "worked at the loom",
+   "place": null,
+   "where": "at home",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought dyed wool"
+   ],
+   "fees": null,
+   "picture": "at a wooden loom, hands passing the shuttle through",
+   "event": null
+  },
+  {
+   "id": "painting",
+   "label": "Painting",
+   "name": "painting",
+   "kind": "art",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "painting",
+    "painter",
+    "watercolo",
+    "oils",
+    "acrylic"
+   ],
+   "session": "painted for a few hours",
+   "place": null,
+   "where": "at home",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought new paints and canvases"
+   ],
+   "fees": null,
+   "picture": "at an easel with a brush in hand, a half-finished canvas in front of {possessive}",
+   "event": null,
+   "not": [
+    "essential oils",
+    "oil change"
+   ]
+  },
+  {
+   "id": "drawing",
+   "label": "Drawing",
+   "name": "drawing",
+   "kind": "art",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "drawing",
+    "sketch",
+    "illustrat",
+    "figure drawing"
+   ],
+   "session": "sketched for an hour",
+   "place": {
+    "kinds": [
+     "park",
+     "cafe",
+     "museum"
+    ],
+    "tags": [
+     "art",
+     "quiet"
+    ]
+   },
+   "where": "in a quiet corner",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a new sketchbook"
+   ],
+   "fees": null,
+   "picture": "sketching in a notebook in a quiet corner, head bent over the page",
+   "event": null
+  },
+  {
+   "id": "photography",
+   "label": "Photography",
+   "name": "photography",
+   "kind": "art",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "photograph",
+    "camera",
+    "film photography"
+   ],
+   "session": "went out shooting with their camera",
+   "place": {
+    "kinds": [
+     "park",
+     "landmark",
+     "square"
+    ],
+    "tags": [
+     "views",
+     "walk"
+    ]
+   },
+   "where": "around the city",
+   "when": "any",
+   "together": "a photo walk",
+   "ask": "come on a photo walk with me",
+   "gear": [
+    "$$$",
+    "bought a new lens"
+   ],
+   "fees": null,
+   "picture": "holding a camera up to {possessive} eye on a city street",
+   "event": null
+  },
+  {
+   "id": "calligraphy",
+   "label": "Calligraphy",
+   "name": "calligraphy",
+   "kind": "art",
+   "eras": [
+    "modern",
+    "medieval",
+    "fantasy",
+    "victorian"
+   ],
+   "words": [
+    "calligraph",
+    "lettering",
+    "illuminat"
+   ],
+   "session": "practiced calligraphy",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought fresh ink and good paper"
+   ],
+   "fees": null,
+   "picture": "at a desk with pen and ink, bent over a sheet of careful lettering",
+   "event": null
+  },
+  {
+   "id": "printmaking",
+   "label": "Printmaking",
+   "name": "printmaking",
+   "kind": "art",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "printmaking",
+    "linocut",
+    "screen print",
+    "block print"
+   ],
+   "session": "cut linocuts",
+   "place": {
+    "kinds": [
+     "workshop"
+    ],
+    "tags": [
+     "art",
+     "craft"
+    ]
+   },
+   "where": "at the print studio",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought new carving tools and ink"
+   ],
+   "fees": [
+    "$",
+    "print studio time"
+   ],
+   "picture": "inking a carved linoleum block with a roller in a print studio",
+   "event": null
+  },
+  {
+   "id": "digital-art",
+   "label": "Digital art",
+   "name": "digital art",
+   "kind": "art",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "digital art",
+    "procreate",
+    "drawing tablet",
+    "concept art",
+    "pixel art"
+   ],
+   "session": "drew on their tablet",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$$",
+    "bought a drawing tablet"
+   ],
+   "fees": null,
+   "picture": "drawing on a tablet with a stylus at a desk, colors glowing on the screen",
+   "event": null
+  },
+  {
+   "id": "sculpture",
+   "label": "Sculpture",
+   "name": "sculpting",
+   "kind": "art",
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "fantasy"
+   ],
+   "words": [
+    "sculpt",
+    "sculpture"
+   ],
+   "session": "worked on a sculpture",
+   "place": {
+    "kinds": [
+     "workshop"
+    ],
+    "tags": [
+     "art",
+     "classes"
+    ]
+   },
+   "where": "at the studio",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a block of clay and new tools"
+   ],
+   "fees": null,
+   "picture": "shaping a clay figure on a turntable in a studio",
+   "event": null
+  },
+  {
+   "id": "chess",
+   "label": "Chess",
+   "name": "chess",
+   "kind": "games",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "chess"
+   ],
+   "session": "played chess",
+   "place": {
+    "kinds": [
+     "cafe",
+     "park",
+     "tavern"
+    ],
+    "tags": [
+     "quiet",
+     "coffee"
+    ]
+   },
+   "where": "at the chess club",
+   "when": "evening",
+   "together": "a game of chess",
+   "ask": "play chess with me",
+   "gear": [
+    "$",
+    "bought a good wooden set"
+   ],
+   "fees": null,
+   "picture": "over a chessboard at a table, one hand hovering over a piece",
+   "event": null
+  },
+  {
+   "id": "go",
+   "label": "Go",
+   "name": "go",
+   "kind": "games",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "go board",
+    "baduk",
+    "weiqi",
+    "igo"
+   ],
+   "session": "played go",
+   "place": null,
+   "where": "at the go club",
+   "when": "evening",
+   "together": "a game of go",
+   "ask": "play go with me",
+   "gear": [
+    "$",
+    "bought a go set"
+   ],
+   "fees": null,
+   "picture": "placing a stone on a wooden go board, deep in thought",
+   "event": null
+  },
+  {
+   "id": "board-games",
+   "label": "Board games",
+   "name": "board games",
+   "kind": "games",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "board game",
+    "tabletop",
+    "dungeons",
+    "d&d",
+    "dnd",
+    "tabletop rpg",
+    "game night",
+    "board gaming"
+   ],
+   "session": "played at board game night",
+   "place": {
+    "kinds": [
+     "cafe",
+     "bar"
+    ],
+    "tags": [
+     "games",
+     "groups"
+    ]
+   },
+   "where": "at game night",
+   "when": "evening",
+   "together": "game night",
+   "ask": "come to game night with me",
+   "gear": [
+    "$",
+    "bought a new game"
+   ],
+   "fees": null,
+   "picture": "at a table crowded with a board game, cards and dice, laughing",
+   "event": null
+  },
+  {
+   "id": "cards",
+   "label": "Card games",
+   "name": "cards",
+   "kind": "games",
+   "eras": [
+    "jazz-age",
+    "frontier",
+    "victorian",
+    "steampunk",
+    "modern"
+   ],
+   "words": [
+    "poker",
+    "bridge",
+    "card games",
+    "whist",
+    "cribbage"
+   ],
+   "session": "played cards",
+   "place": {
+    "kinds": [
+     "tavern",
+     "bar",
+     "cafe"
+    ],
+    "tags": []
+   },
+   "where": "at the card table",
+   "when": "evening",
+   "together": "a card night",
+   "ask": "come play cards with me",
+   "gear": null,
+   "fees": null,
+   "picture": "at a card table with a hand of cards fanned out, a lamp overhead",
+   "event": null,
+   "not": [
+    "bridge build",
+    "bridges"
+   ]
+  },
+  {
+   "id": "crosswords",
+   "label": "Crosswords",
+   "name": "crosswords",
+   "kind": "games",
+   "eras": [
+    "modern",
+    "jazz-age"
+   ],
+   "words": [
+    "crossword",
+    "cryptic"
+   ],
+   "session": "did the crossword",
+   "place": null,
+   "where": "at home",
+   "when": "morning",
+   "together": null,
+   "ask": null,
+   "gear": null,
+   "fees": null,
+   "picture": "with a newspaper crossword and a pen at a breakfast table",
+   "event": null
+  },
+  {
+   "id": "puzzles",
+   "label": "Jigsaw puzzles",
+   "name": "jigsaws",
+   "kind": "games",
+   "eras": [
+    "modern",
+    "jazz-age"
+   ],
+   "words": [
+    "jigsaw",
+    "puzzles"
+   ],
+   "session": "worked on a jigsaw",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a 1,000-piece puzzle"
+   ],
+   "fees": null,
+   "picture": "bent over a half-done jigsaw puzzle on a table at home",
+   "event": null
+  },
+  {
+   "id": "darts",
+   "label": "Darts",
+   "name": "darts",
+   "kind": "games",
+   "eras": [
+    "modern",
+    "victorian",
+    "jazz-age"
+   ],
+   "words": [
+    "darts"
+   ],
+   "session": "played darts at the pub",
+   "place": {
+    "kinds": [
+     "bar",
+     "tavern"
+    ],
+    "tags": [
+     "pub"
+    ]
+   },
+   "where": "at the pub",
+   "when": "evening",
+   "together": "a game of darts",
+   "ask": "come play darts with me",
+   "gear": [
+    "$",
+    "bought their own darts"
+   ],
+   "fees": null,
+   "picture": "lining up a throw at a dartboard in a pub",
+   "event": null
+  },
+  {
+   "id": "billiards",
+   "label": "Pool",
+   "name": "pool",
+   "kind": "games",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "frontier"
+   ],
+   "words": [
+    "billiards",
+    "pool table",
+    "snooker",
+    "shooting pool"
+   ],
+   "session": "shot pool",
+   "place": {
+    "kinds": [
+     "bar",
+     "tavern"
+    ],
+    "tags": [
+     "pub"
+    ]
+   },
+   "where": "at the pool hall",
+   "when": "evening",
+   "together": "a game of pool",
+   "ask": "come shoot pool with me",
+   "gear": [
+    "$",
+    "bought their own cue"
+   ],
+   "fees": null,
+   "picture": "leaning over a pool table lining up a shot",
+   "event": null
+  },
+  {
+   "id": "dice",
+   "label": "Dice and table games",
+   "name": "dice games",
+   "kind": "games",
+   "eras": [
+    "medieval",
+    "fantasy"
+   ],
+   "words": [
+    "dice",
+    "hnefatafl",
+    "merels",
+    "nine men"
+   ],
+   "session": "played at dice and tables",
+   "place": {
+    "kinds": [
+     "tavern",
+     "inn"
+    ],
+    "tags": []
+   },
+   "where": "at the tavern",
+   "when": "evening",
+   "together": "a game at the tavern",
+   "ask": "come play with me",
+   "gear": null,
+   "fees": null,
+   "picture": "at a tavern table with dice and a wooden game board, candles lit",
+   "event": null
+  },
+  {
+   "id": "spanish",
+   "label": "Learning Spanish",
+   "name": "Spanish",
+   "kind": "words",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "learning spanish",
+    "spanish lessons",
+    "studying spanish",
+    "speaks spanish",
+    "spanish class"
+   ],
+   "session": "studied Spanish",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a Spanish workbook"
+   ],
+   "fees": null,
+   "picture": "studying a language workbook with headphones on at a desk",
+   "event": null
+  },
+  {
+   "id": "french",
+   "label": "Learning French",
+   "name": "French",
+   "kind": "words",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk"
+   ],
+   "words": [
+    "learning french",
+    "french lessons",
+    "studying french",
+    "speaks french",
+    "french class"
+   ],
+   "session": "studied French",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a French grammar book"
+   ],
+   "fees": null,
+   "picture": "reading a French book with a notebook open beside it",
+   "event": null
+  },
+  {
+   "id": "japanese",
+   "label": "Learning Japanese",
+   "name": "Japanese",
+   "kind": "words",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "learning japanese",
+    "japanese lessons",
+    "studying japanese",
+    "kanji"
+   ],
+   "session": "studied Japanese",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a kanji workbook"
+   ],
+   "fees": null,
+   "picture": "writing kanji in a practice notebook at a desk, flashcards beside",
+   "event": null
+  },
+  {
+   "id": "korean",
+   "label": "Learning Korean",
+   "name": "Korean",
+   "kind": "words",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "learning korean",
+    "korean lessons",
+    "studying korean",
+    "hangul"
+   ],
+   "session": "studied Korean",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a Korean textbook"
+   ],
+   "fees": null,
+   "picture": "studying a Korean textbook at a café table",
+   "event": null
+  },
+  {
+   "id": "italian",
+   "label": "Learning Italian",
+   "name": "Italian",
+   "kind": "words",
+   "eras": [
+    "modern",
+    "jazz-age"
+   ],
+   "words": [
+    "learning italian",
+    "italian lessons",
+    "studying italian"
+   ],
+   "session": "studied Italian",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought an Italian phrasebook"
+   ],
+   "fees": null,
+   "picture": "reading an Italian phrasebook with a coffee at a café",
+   "event": null
+  },
+  {
+   "id": "sign-language",
+   "label": "Learning sign language",
+   "name": "sign language",
+   "kind": "words",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "sign language",
+    "asl",
+    "bsl"
+   ],
+   "session": "went to sign language class",
+   "place": null,
+   "where": "at the community center",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": null,
+   "fees": [
+    "$$",
+    "sign language classes"
+   ],
+   "picture": "in a small classroom practicing a sign with {possessive} hands",
+   "event": null
+  },
+  {
+   "id": "latin",
+   "label": "Latin",
+   "name": "Latin",
+   "kind": "words",
+   "eras": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ],
+   "words": [
+    "latin",
+    "ancient greek",
+    "the classics"
+   ],
+   "session": "read Latin",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a worn grammar"
+   ],
+   "fees": null,
+   "picture": "reading an old book at a candlelit desk, notes beside",
+   "event": null,
+   "not": [
+    "latin danc",
+    "latin music",
+    "latin jazz",
+    "latin food",
+    "latin american"
+   ]
+  },
+  {
+   "id": "writing",
+   "label": "Writing fiction",
+   "name": "writing",
+   "kind": "words",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "writing",
+    "writer",
+    "creative writing",
+    "writing stories",
+    "writing a novel",
+    "screenwriting"
+   ],
+   "session": "wrote for a couple of hours",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a fresh notebook"
+   ],
+   "fees": null,
+   "picture": "writing at a desk by a window, a notebook and a cup beside {possessive}",
+   "event": null,
+   "not": [
+    "writing code",
+    "writing software",
+    "writing tests",
+    "writing emails"
+   ]
+  },
+  {
+   "id": "poetry",
+   "label": "Poetry",
+   "name": "poetry",
+   "kind": "words",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "poet",
+    "writing poetry",
+    "writes poetry",
+    "spoken word"
+   ],
+   "session": "worked on a poem",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": "a poetry reading",
+   "ask": "come to the reading",
+   "gear": null,
+   "fees": null,
+   "picture": "writing in a small notebook in a quiet corner, pen to {possessive} lips",
+   "event": "the poetry reading"
+  },
+  {
+   "id": "gardening",
+   "label": "Gardening",
+   "name": "gardening",
+   "kind": "growing",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "garden",
+    "gardening",
+    "gardener",
+    "allotment"
+   ],
+   "session": "worked in the garden",
+   "place": null,
+   "where": "at home",
+   "when": "morning",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought seedlings and compost"
+   ],
+   "fees": null,
+   "picture": "kneeling in a garden bed with gloves on, planting seedlings",
+   "event": null,
+   "not": [
+    "olive garden",
+    "beer garden",
+    "garden party"
+   ]
+  },
+  {
+   "id": "houseplants",
+   "label": "Houseplants",
+   "name": "houseplants",
+   "kind": "growing",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "houseplant",
+    "plant parent",
+    "succulents"
+   ],
+   "session": "tended their plants",
+   "place": null,
+   "where": "at home",
+   "when": "morning",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a new plant"
+   ],
+   "fees": null,
+   "picture": "watering a shelf of houseplants at home in soft morning light",
+   "event": null
+  },
+  {
+   "id": "bonsai",
+   "label": "Bonsai",
+   "name": "bonsai",
+   "kind": "growing",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "bonsai"
+   ],
+   "session": "pruned their bonsai",
+   "place": null,
+   "where": "at home",
+   "when": "morning",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a new bonsai tree"
+   ],
+   "fees": null,
+   "picture": "trimming a small bonsai tree with tiny shears at a table",
+   "event": null
+  },
+  {
+   "id": "beekeeping",
+   "label": "Beekeeping",
+   "name": "beekeeping",
+   "kind": "growing",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "bees",
+    "beekeep",
+    "apiar",
+    "hive"
+   ],
+   "session": "checked on the hives",
+   "place": null,
+   "where": "at home",
+   "when": "morning",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a new hive box"
+   ],
+   "fees": null,
+   "picture": "in a beekeeping veil lifting a frame from a hive in the sunshine",
+   "event": null
+  },
+  {
+   "id": "herbs",
+   "label": "Herb garden",
+   "name": "herbs",
+   "kind": "growing",
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ],
+   "words": [
+    "herbalism",
+    "herbalist",
+    "herb garden",
+    "physic garden"
+   ],
+   "session": "tended their herbs",
+   "place": null,
+   "where": "at home",
+   "when": "morning",
+   "together": null,
+   "ask": null,
+   "gear": null,
+   "fees": null,
+   "picture": "gathering herbs into a basket in a small garden",
+   "event": null
+  },
+  {
+   "id": "hiking",
+   "label": "Hiking",
+   "name": "hiking",
+   "kind": "outdoors",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "hiking",
+    "hiker",
+    "hike",
+    "trails",
+    "backpacking"
+   ],
+   "session": "went for a hike",
+   "place": {
+    "kinds": [
+     "trail",
+     "park"
+    ],
+    "tags": [
+     "hiking",
+     "nature",
+     "forest"
+    ]
+   },
+   "where": "on the trails",
+   "when": "morning",
+   "together": "a hike",
+   "ask": "come hiking with me",
+   "gear": [
+    "$$",
+    "bought new hiking boots"
+   ],
+   "fees": null,
+   "picture": "on a hiking trail with a daypack, a wide view behind",
+   "event": null
+  },
+  {
+   "id": "birdwatching",
+   "label": "Birdwatching",
+   "name": "birdwatching",
+   "kind": "outdoors",
+   "eras": [
+    "modern",
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ],
+   "words": [
+    "birding",
+    "birdwatch",
+    "birder",
+    "bird watching"
+   ],
+   "session": "went birding",
+   "place": {
+    "kinds": [
+     "park",
+     "trail",
+     "garden"
+    ],
+    "tags": [
+     "nature",
+     "birds",
+     "quiet"
+    ]
+   },
+   "where": "in the park",
+   "when": "morning",
+   "together": "a morning of birding",
+   "ask": "come birding with me",
+   "gear": [
+    "$$",
+    "bought a pair of binoculars"
+   ],
+   "fees": null,
+   "picture": "with binoculars raised among trees in a quiet park",
+   "event": null
+  },
+  {
+   "id": "fishing",
+   "label": "Fishing",
+   "name": "fishing",
+   "kind": "outdoors",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "fishing",
+    "angling",
+    "fly fishing",
+    "fisherman"
+   ],
+   "session": "went fishing",
+   "place": {
+    "kinds": [
+     "docks",
+     "park",
+     "beach",
+     "trail"
+    ],
+    "tags": [
+     "river",
+     "lake",
+     "water",
+     "fish"
+    ]
+   },
+   "where": "down by the water",
+   "when": "morning",
+   "together": "a morning of fishing",
+   "ask": "come fishing with me",
+   "gear": [
+    "$",
+    "bought new tackle"
+   ],
+   "fees": null,
+   "picture": "casting a fishing line from a quiet bank at dawn",
+   "event": null
+  },
+  {
+   "id": "camping",
+   "label": "Camping",
+   "name": "camping",
+   "kind": "outdoors",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "camping",
+    "camper",
+    "wild camp"
+   ],
+   "session": "went camping",
+   "place": null,
+   "where": "at the campground",
+   "when": "any",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought a new tent"
+   ],
+   "fees": null,
+   "picture": "by a campfire outside a small tent at dusk",
+   "event": null
+  },
+  {
+   "id": "foraging",
+   "label": "Foraging",
+   "name": "foraging",
+   "kind": "outdoors",
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ],
+   "words": [
+    "forag",
+    "mushroom",
+    "wild food"
+   ],
+   "session": "went foraging",
+   "place": {
+    "kinds": [
+     "trail",
+     "park"
+    ],
+    "tags": [
+     "forest",
+     "nature"
+    ]
+   },
+   "where": "in the woods",
+   "when": "morning",
+   "together": "a foraging walk",
+   "ask": "come foraging with me",
+   "gear": null,
+   "fees": null,
+   "picture": "crouching in the woods with a basket, looking at mushrooms",
+   "event": null
+  },
+  {
+   "id": "stargazing",
+   "label": "Stargazing",
+   "name": "stargazing",
+   "kind": "outdoors",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "stargaz",
+    "astronom",
+    "telescope"
+   ],
+   "session": "went out stargazing",
+   "place": null,
+   "where": "at the edge of town",
+   "when": "evening",
+   "together": "a night of stargazing",
+   "ask": "come stargazing with me",
+   "gear": [
+    "$",
+    "bought a new star chart"
+   ],
+   "fees": null,
+   "picture": "looking up at a clear night sky full of stars, a star chart in hand",
+   "event": null
+  },
+  {
+   "id": "kayaking",
+   "label": "Kayaking",
+   "name": "kayaking",
+   "kind": "outdoors",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "kayak",
+    "paddleboard",
+    "canoe"
+   ],
+   "session": "went kayaking",
+   "place": {
+    "kinds": [
+     "docks",
+     "park",
+     "beach"
+    ],
+    "tags": [
+     "river",
+     "boating",
+     "water",
+     "lake"
+    ]
+   },
+   "where": "out on the water",
+   "when": "morning",
+   "together": "a paddle",
+   "ask": "come kayaking with me",
+   "gear": null,
+   "fees": [
+    "$",
+    "kayak rentals"
+   ],
+   "picture": "paddling a kayak on calm water, paddle mid-stroke",
+   "event": null
+  },
+  {
+   "id": "choir",
+   "label": "Choir",
+   "name": "choir",
+   "kind": "stage",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "choir",
+    "chorus",
+    "singing",
+    "singer",
+    "a cappella"
+   ],
+   "session": "went to choir practice",
+   "place": {
+    "kinds": [
+     "temple",
+     "venue"
+    ],
+    "tags": [
+     "music"
+    ]
+   },
+   "where": "at the hall",
+   "when": "evening",
+   "together": "their choir concert",
+   "ask": "come to my concert",
+   "gear": null,
+   "fees": [
+    "$",
+    "choir dues"
+   ],
+   "picture": "singing in a choir row, sheet music held up",
+   "event": "their choir concert",
+   "not": [
+    "in the shower",
+    "singing along"
+   ]
+  },
+  {
+   "id": "open-mic",
+   "label": "Open mic nights",
+   "name": "open mic",
+   "kind": "stage",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "open mic",
+    "songwrit",
+    "singer-songwriter"
+   ],
+   "session": "worked on a song for open mic",
+   "place": {
+    "kinds": [
+     "bar",
+     "cafe",
+     "venue"
+    ],
+    "tags": [
+     "live-music",
+     "music"
+    ]
+   },
+   "where": "at home",
+   "when": "evening",
+   "together": "their open mic night",
+   "ask": "come to my open mic night",
+   "gear": null,
+   "fees": null,
+   "picture": "on a small stage with a microphone and a guitar, warm lights on {possessive}",
+   "event": "their open mic night"
+  },
+  {
+   "id": "stand-up",
+   "label": "Stand-up comedy",
+   "name": "stand-up",
+   "kind": "stage",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "stand-up",
+    "standup",
+    "comedian",
+    "doing comedy"
+   ],
+   "session": "worked on their stand-up set",
+   "place": {
+    "kinds": [
+     "venue",
+     "bar"
+    ],
+    "tags": [
+     "comedy"
+    ]
+   },
+   "where": "at home",
+   "when": "evening",
+   "together": "their comedy open mic",
+   "ask": "come to my set",
+   "gear": null,
+   "fees": null,
+   "picture": "on a small stage holding a microphone, a brick wall behind",
+   "event": "their comedy open mic"
+  },
+  {
+   "id": "improv",
+   "label": "Improv",
+   "name": "improv",
+   "kind": "stage",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "improv",
+    "improvisation"
+   ],
+   "session": "went to improv class",
+   "place": {
+    "kinds": [
+     "venue"
+    ],
+    "tags": [
+     "comedy",
+     "theater"
+    ]
+   },
+   "where": "at the improv theater",
+   "when": "evening",
+   "together": "their improv show",
+   "ask": "come to my improv show",
+   "gear": null,
+   "fees": [
+    "$$",
+    "improv classes"
+   ],
+   "picture": "mid-scene on a small stage with other improvisers, arms wide",
+   "event": "their improv show"
+  },
+  {
+   "id": "theatre",
+   "label": "Amateur theatre",
+   "name": "amateur theatre",
+   "kind": "stage",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "acting",
+    "actor",
+    "drama club",
+    "amateur dramatics",
+    "community theater",
+    "community theatre",
+    "am-dram"
+   ],
+   "session": "went to rehearsal",
+   "place": {
+    "kinds": [
+     "venue"
+    ],
+    "tags": [
+     "theater",
+     "theatre"
+    ]
+   },
+   "where": "at the hall",
+   "when": "evening",
+   "together": "their play",
+   "ask": "come see the play",
+   "gear": null,
+   "fees": [
+    "$",
+    "theatre company dues"
+   ],
+   "picture": "on a stage in costume under warm lights, mid-line",
+   "event": "opening night of their play"
+  },
+  {
+   "id": "karaoke",
+   "label": "Karaoke",
+   "name": "karaoke",
+   "kind": "stage",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "karaoke",
+    "noraebang"
+   ],
+   "session": "sang at karaoke",
+   "place": {
+    "kinds": [
+     "bar",
+     "nightlife"
+    ],
+    "tags": [
+     "karaoke",
+     "late-night"
+    ]
+   },
+   "where": "at the karaoke bar",
+   "when": "evening",
+   "together": "karaoke night",
+   "ask": "come to karaoke with me",
+   "gear": null,
+   "fees": null,
+   "picture": "singing into a microphone in a karaoke room, lyrics screen glowing",
+   "event": null
+  },
+  {
+   "id": "barbershop",
+   "label": "Barbershop quartet",
+   "name": "barbershop singing",
+   "kind": "stage",
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "modern"
+   ],
+   "words": [
+    "barbershop",
+    "quartet"
+   ],
+   "session": "rehearsed with the quartet",
+   "place": null,
+   "where": "at rehearsal",
+   "when": "evening",
+   "together": "their quartet performance",
+   "ask": "come hear us sing",
+   "gear": null,
+   "fees": null,
+   "picture": "singing in a four-part harmony group, straw boaters on",
+   "event": "their quartet performance"
+  },
+  {
+   "id": "dancing",
+   "label": "Dancing",
+   "name": "dancing",
+   "kind": "dance",
+   "eras": [
+    "any"
+   ],
+   "words": [
+    "dancing",
+    "dance",
+    "dance class",
+    "dance lessons"
+   ],
+   "session": "went dancing",
+   "place": {
+    "kinds": [
+     "nightlife",
+     "venue"
+    ],
+    "tags": [
+     "dancing"
+    ]
+   },
+   "where": "at the hall",
+   "when": "evening",
+   "together": "a night of dancing",
+   "ask": "come dancing with me",
+   "gear": null,
+   "fees": null,
+   "picture": "mid-turn on a crowded dance floor, music playing",
+   "event": null
+  },
+  {
+   "id": "baseball",
+   "label": "Baseball",
+   "name": "baseball",
+   "kind": "sport",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "frontier"
+   ],
+   "words": [
+    "baseball",
+    "softball",
+    "batting cage"
+   ],
+   "session": "played baseball",
+   "place": {
+    "kinds": [
+     "park"
+    ],
+    "tags": [
+     "baseball",
+     "sports"
+    ]
+   },
+   "where": "at the ballfield",
+   "when": "evening",
+   "together": "their baseball game",
+   "ask": "come watch my game",
+   "gear": [
+    "$$",
+    "bought a new glove"
+   ],
+   "fees": [
+    "$",
+    "team dues"
+   ],
+   "picture": "on a baseball diamond in a cap, bat on {possessive} shoulder, waiting for the pitch",
+   "event": "their baseball game"
+  },
+  {
+   "id": "golf",
+   "label": "Golf",
+   "name": "golf",
+   "kind": "sport",
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ],
+   "words": [
+    "golf",
+    "golfer",
+    "driving range"
+   ],
+   "session": "played a round of golf",
+   "place": {
+    "kinds": [
+     "park"
+    ],
+    "tags": [
+     "golf"
+    ]
+   },
+   "where": "at the golf course",
+   "when": "morning",
+   "together": "a round of golf",
+   "ask": "play nine holes with me",
+   "gear": [
+    "$$$",
+    "bought a set of secondhand clubs"
+   ],
+   "fees": [
+    "$$",
+    "green fees"
+   ],
+   "picture": "on a golf course mid-swing, club raised, a green fairway behind",
+   "event": null
+  },
+  {
+   "id": "soccer",
+   "label": "Soccer",
+   "name": "soccer",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "soccer",
+    "five-a-side",
+    "futsal",
+    "sunday league"
+   ],
+   "session": "played soccer",
+   "place": {
+    "kinds": [
+     "park"
+    ],
+    "tags": [
+     "sports",
+     "soccer"
+    ]
+   },
+   "where": "at the park",
+   "when": "evening",
+   "together": "a pickup game",
+   "ask": "come play soccer with me",
+   "gear": [
+    "$$",
+    "bought new cleats"
+   ],
+   "fees": [
+    "$",
+    "league fees"
+   ],
+   "picture": "on a grass field in a jersey, mid-kick, a ball at {possessive} feet",
+   "event": null
+  },
+  {
+   "id": "skiing",
+   "label": "Skiing",
+   "name": "skiing",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "skiing",
+    "skier",
+    "ski trip",
+    "snowboard"
+   ],
+   "session": "went skiing",
+   "place": null,
+   "where": "on the slopes",
+   "when": "morning",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$$",
+    "bought secondhand skis"
+   ],
+   "fees": [
+    "$$",
+    "lift tickets"
+   ],
+   "picture": "on a snowy slope in a ski jacket, poles planted, mountains behind",
+   "event": null
+  },
+  {
+   "id": "video-games",
+   "label": "Video games",
+   "name": "video games",
+   "kind": "games",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "video game",
+    "gaming",
+    "gamer",
+    "nintendo",
+    "playstation",
+    "xbox",
+    "speedrun"
+   ],
+   "session": "played video games",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": "a night of co-op games",
+   "ask": "come play a co-op game with me",
+   "gear": [
+    "$$",
+    "bought a new game"
+   ],
+   "fees": null,
+   "picture": "on the sofa with a game controller in hand, a screen glowing in front of {possessive}",
+   "event": null
+  },
+  {
+   "id": "card-tcg",
+   "label": "Trading card games",
+   "name": "trading card games",
+   "kind": "games",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "pokémon",
+    "pokemon",
+    "trading card",
+    "magic: the gathering",
+    "yu-gi-oh",
+    "tcg",
+    "deckbuilding"
+   ],
+   "session": "played trading card games",
+   "place": {
+    "kinds": [
+     "shopping",
+     "cafe"
+    ],
+    "tags": [
+     "games"
+    ]
+   },
+   "where": "at the game shop",
+   "when": "evening",
+   "together": "a card night",
+   "ask": "come to card night with me",
+   "gear": [
+    "$",
+    "bought a few booster packs"
+   ],
+   "fees": null,
+   "picture": "at a table with a playmat and a deck of trading cards, mid-game",
+   "event": null,
+   "years": [
+    1993,
+    null
+   ]
+  },
+  {
+   "id": "rollerblading",
+   "label": "Rollerblading",
+   "name": "rollerblading",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "rollerblading",
+    "rollerblades",
+    "inline skating",
+    "inline skates"
+   ],
+   "session": "went rollerblading along the path",
+   "place": {
+    "kinds": [
+     "park"
+    ],
+    "tags": [
+     "skating"
+    ]
+   },
+   "where": "on the path through the park",
+   "when": "any",
+   "together": "a skate along the path",
+   "ask": "come rollerblading with me",
+   "gear": [
+    "$$",
+    "bought new rollerblades"
+   ],
+   "fees": null,
+   "picture": "rollerblading along a park path in knee pads, arms out for balance",
+   "event": null,
+   "years": [
+    1990,
+    2005
+   ]
+  },
+  {
+   "id": "step-aerobics",
+   "label": "Step aerobics",
+   "name": "step aerobics",
+   "kind": "sport",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "step aerobics",
+    "aerobics",
+    "aerobics class",
+    "step class"
+   ],
+   "session": "went to step aerobics",
+   "place": {
+    "kinds": [
+     "fitness"
+    ],
+    "tags": [
+     "classes",
+     "gym"
+    ]
+   },
+   "where": "at the gym",
+   "when": "evening",
+   "together": "a step class",
+   "ask": "come to step class with me",
+   "gear": [
+    "$",
+    "bought new sneakers for class"
+   ],
+   "fees": [
+    "$$",
+    "a month of aerobics classes"
+   ],
+   "picture": "in a bright aerobics class, one foot up on a step platform, mid-move",
+   "event": null,
+   "years": [
+    1990,
+    2002
+   ]
+  },
+  {
+   "id": "lan-parties",
+   "label": "LAN parties",
+   "name": "LAN parties",
+   "kind": "games",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "lan party",
+    "lan parties"
+   ],
+   "session": "played at a LAN party",
+   "place": null,
+   "where": "at a friend's place",
+   "when": "evening",
+   "together": "a LAN party",
+   "ask": "come to the LAN party with me",
+   "gear": [
+    "$$",
+    "bought a better mouse"
+   ],
+   "fees": null,
+   "picture": "at a folding table crowded with desktop computers and tangled cables, headphones on, grinning at a monitor",
+   "event": null,
+   "years": [
+    1996,
+    2012
+   ]
+  },
+  {
+   "id": "dance-games",
+   "label": "Dance mat games",
+   "name": "dance mat games",
+   "kind": "games",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "dance dance revolution",
+    "ddr",
+    "dance mat",
+    "dance game"
+   ],
+   "session": "played the dance game at the arcade",
+   "place": null,
+   "where": "at the arcade",
+   "when": "evening",
+   "together": "a dance-off at the arcade",
+   "ask": "come to the arcade with me",
+   "gear": [
+    "$",
+    "bought a dance mat for home"
+   ],
+   "fees": null,
+   "picture": "stepping on the glowing arrows of an arcade dance machine, mid-jump",
+   "event": null,
+   "years": [
+    1999,
+    2012
+   ]
+  },
+  {
+   "id": "scrapbooking",
+   "label": "Scrapbooking",
+   "name": "scrapbooking",
+   "kind": "crafts",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "scrapbooking",
+    "scrapbook"
+   ],
+   "session": "worked on a scrapbook",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought new stickers and patterned paper"
+   ],
+   "fees": null,
+   "picture": "at the kitchen table with photos, patterned paper and scissors spread around a scrapbook",
+   "event": null,
+   "years": [
+    1995,
+    2012
+   ]
+  },
+  {
+   "id": "mixtapes",
+   "label": "Making mixtapes",
+   "name": "making mixtapes",
+   "kind": "music",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "mixtape",
+    "mix tape",
+    "mix cd",
+    "making mixes"
+   ],
+   "session": "made a new mix",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": [
+    "$",
+    "bought a pack of blank tapes"
+   ],
+   "fees": null,
+   "picture": "sitting on the floor by a stereo with a stack of tapes and CDs, writing out a track list",
+   "event": null,
+   "years": [
+    1990,
+    2008
+   ]
+  },
+  {
+   "id": "blogging",
+   "label": "Blogging",
+   "name": "blogging",
+   "kind": "words",
+   "eras": [
+    "modern"
+   ],
+   "words": [
+    "blogging",
+    "blogger",
+    "my blog",
+    "weblog"
+   ],
+   "session": "wrote a new blog post",
+   "place": null,
+   "where": "at home",
+   "when": "evening",
+   "together": null,
+   "ask": null,
+   "gear": null,
+   "fees": null,
+   "picture": "typing at a desktop computer late in the evening, a mug beside the keyboard",
+   "event": null,
+   "years": [
+    1999,
+    2014
+   ]
+  }
+ ]
+}

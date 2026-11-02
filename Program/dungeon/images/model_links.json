@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Krea 2 Turbo, packaged for ComfyUI (fp8)",
+    "role": "model",
+    "file": "krea2_turbo_fp8_scaled.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Krea-2/tree/main/diffusion_models",
+    "licence": "Krea 2 Community License: personal use is allowed; commercial use only below US$1M yearly revenue. Goes in models/diffusion_models. Not gated.",
+    "family": "krea2"
+  },
+  {
+    "name": "Krea 2 Turbo, packaged for ComfyUI (NVFP4, smaller; RTX 50-series cards)",
+    "role": "model",
+    "file": "krea2_turbo_nvfp4.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Krea-2/tree/main/diffusion_models",
+    "licence": "Krea 2 Community License, as above. The same folder also has bf16 and int8 files.",
+    "family": "krea2"
+  },
+  {
+    "name": "Krea 2 Turbo in GGUF files (for cards under 16 GB)",
+    "role": "model",
+    "file": "krea2_turbo-Q4_K_M.gguf",
+    "url": "https://huggingface.co/vantagewithai/Krea-2-Turbo-GGUF/tree/main",
+    "licence": "Krea 2 Community License, as above (a community conversion, not Krea's own). Goes in models/diffusion_models. Q6_K, Q5_K_M, Q4_K_M and Q3_K_M suit 12, 11, 10 and 8 GB cards. Needs the ComfyUI-GGUF nodes (Apache-2.0, https://github.com/city96/ComfyUI-GGUF) in custom_nodes; the built-in workflow loads a .gguf file with them.",
+    "family": "krea2"
+  },
+  {
+    "name": "Krea 2 Turbo, Krea's own release",
+    "role": "model",
+    "file": null,
+    "url": "https://huggingface.co/krea/Krea-2-Turbo",
+    "licence": "Gated: sign in to Hugging Face and accept the Krea 2 Community License first. Diffusers format; ComfyUI uses the packaged files above.",
+    "family": "krea2"
+  },
+  {
+    "name": "Qwen3-VL 4B text encoder (fp8)",
+    "role": "clip",
+    "file": "qwen3vl_4b_fp8_scaled.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Qwen3-VL/tree/main/text_encoders",
+    "licence": "Apache 2.0. Goes in models/text_encoders. Load it with the krea2 type.",
+    "family": "krea2"
+  },
+  {
+    "name": "Qwen Image VAE",
+    "role": "vae",
+    "file": "qwen_image_vae.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/vae",
+    "licence": "Apache 2.0. Goes in models/vae.",
+    "family": "krea2"
+  },
+  {
+    "name": "Krea 2 Identity Edit LoRA",
+    "role": "reference",
+    "file": "krea2_identity_edit_v1_2.safetensors",
+    "url": "https://huggingface.co/conradlocke/krea2-identity-edit",
+    "licence": "Krea 2 Community License (a community fine-tune, not Krea's own). Goes in models/loras. Used only by the built-in reference workflow (left out when its model is a Krea 2 Edit merge, which has it baked in), with the Krea 2 Identity Edit nodes (Apache-2.0) in custom_nodes.",
+    "family": "krea2"
+  },
+  {
+    "name": "Qwen Image 2.1, packaged for ComfyUI (int8)",
+    "role": "model",
+    "file": "qwen_image_2.1_int8_convrot.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/main/diffusion_models",
+    "licence": "Qwen Research License: personal and research use; check the license page before anything commercial. Goes in models/diffusion_models. The same folder has a Turbo file, which needs only 8 steps.",
+    "family": "qwen21"
+  },
+  {
+    "name": "Qwen Image 2.1 in GGUF files (smaller cards)",
+    "role": "model",
+    "file": "qwen_image_2.1_Q6_K.gguf",
+    "url": "https://huggingface.co/Abiray/Qwen-Image-2.1-GGUF/tree/main",
+    "licence": "Qwen Research License, as above (a community conversion, not Qwen's own). Goes in models/diffusion_models. Try the int8 file above first. If it doesn't fit, Q6_K suits 8 GB cards, Q5_K_M 7 GB, Q4_K_M 6 GB and Q3_K_M 5 GB. Needs the ComfyUI-GGUF nodes in custom_nodes.",
+    "family": "qwen21"
+  },
+  {
+    "name": "Qwen3-VL 8B text encoder (int8)",
+    "role": "clip",
+    "file": "qwen3vl_8b_int8_convrot.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/main/text_encoders",
+    "licence": "Goes in models/text_encoders. Load it with the qwen_image type.",
+    "family": "qwen21"
+  },
+  {
+    "name": "Qwen Image 2.1 VAE",
+    "role": "vae",
+    "file": "qwen_image_2.1_vae_bf16.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/main/vae",
+    "licence": "Goes in models/vae.",
+    "family": "qwen21"
+  },
+  {
+    "name": "Z-Image Turbo, packaged for ComfyUI",
+    "role": "model",
+    "file": "z_image_turbo_bf16.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/diffusion_models",
+    "licence": "Apache 2.0. Goes in models/diffusion_models. Not gated. The same folder has smaller int8 and NVFP4 files.",
+    "family": "zimage"
+  },
+  {
+    "name": "Z-Image Turbo in GGUF files (smaller cards)",
+    "role": "model",
+    "file": "z-image-turbo-Q6_K.gguf",
+    "url": "https://huggingface.co/unsloth/Z-Image-Turbo-GGUF/tree/main",
+    "licence": "Apache 2.0 (a community conversion, not Tongyi's own). Goes in models/diffusion_models. Try the int8 or NVFP4 file above first. If it doesn't fit, Q6_K suits 8 GB cards, Q4_K_M 7 GB and Q3_K_M 6 GB. Needs the ComfyUI-GGUF nodes in custom_nodes.",
+    "family": "zimage"
+  },
+  {
+    "name": "Qwen3 4B text encoder",
+    "role": "clip",
+    "file": "qwen_3_4b.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/text_encoders",
+    "licence": "Apache 2.0. Goes in models/text_encoders. Load it with the lumina2 type. Smaller fp8 and fp4 files are there too.",
+    "family": "zimage"
+  },
+  {
+    "name": "Flux VAE (ae)",
+    "role": "vae",
+    "file": "ae.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/vae",
+    "licence": "Apache 2.0. Goes in models/vae.",
+    "family": "zimage"
+  },
+  {
+    "name": "Anima Base v1.0",
+    "role": "model",
+    "file": "anima-base-v1.0.safetensors",
+    "url": "https://huggingface.co/circlestone-labs/Anima/tree/main/split_files/diffusion_models",
+    "licence": "CircleStone Labs Non-Commercial License (the pictures you make are yours to use). Goes in models/diffusion_models. Not gated. Anime and illustration only; it does not do realism. The same folder has a Turbo file for fewer steps at CFG 1.",
+    "family": "anima"
+  },
+  {
+    "name": "Anima Base v1.0 in GGUF files (smaller cards)",
+    "role": "model",
+    "file": "anima-base-v1.0-Q8_0.gguf",
+    "url": "https://huggingface.co/Abiray/Anima-base-v1.0-GGUF/tree/main",
+    "licence": "The same terms as Anima Base (a community conversion, not CircleStone Labs' own). Goes in models/diffusion_models. Try the file above first. If it doesn't fit, Q8_0 suits 5 GB cards and Q6_K 4 GB. Needs the ComfyUI-GGUF nodes in custom_nodes.",
+    "family": "anima"
+  },
+  {
+    "name": "Qwen3 0.6B text encoder",
+    "role": "clip",
+    "file": "qwen_3_06b_base.safetensors",
+    "url": "https://huggingface.co/circlestone-labs/Anima/tree/main/split_files/text_encoders",
+    "licence": "Goes in models/text_encoders. Load it with the stable_diffusion type.",
+    "family": "anima"
+  },
+  {
+    "name": "Qwen Image VAE",
+    "role": "vae",
+    "file": "qwen_image_vae.safetensors",
+    "url": "https://huggingface.co/circlestone-labs/Anima/tree/main/split_files/vae",
+    "licence": "Apache 2.0. Goes in models/vae; the same file Krea 2 uses.",
+    "family": "anima"
+  },
+  {
+    "name": "Illustrious XL v2.0",
+    "role": "model",
+    "file": "Illustrious-XL-v2.0.safetensors",
+    "url": "https://huggingface.co/OnomaAIResearch/Illustrious-XL-v2.0",
+    "licence": "CreativeML Open RAIL-M. Goes in models/checkpoints. Not gated. Any SDXL, Pony or Illustrious checkpoint works in its place.",
+    "family": "booru"
+  },
+  {
+    "name": "IP-Adapter Plus for SDXL (ViT-H)",
+    "role": "reference",
+    "file": "ip-adapter-plus_sdxl_vit-h.safetensors",
+    "url": "https://huggingface.co/h94/IP-Adapter/tree/main/sdxl_models",
+    "licence": "Apache 2.0. Goes in models/ipadapter. Used only by the built-in Booru reference workflow, with the IPAdapter Plus nodes (GPL-3.0) in custom_nodes.",
+    "family": "booru"
+  },
+  {
+    "name": "CLIP ViT-H image encoder (for IP-Adapter)",
+    "role": "reference",
+    "file": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors",
+    "url": "https://huggingface.co/h94/IP-Adapter/tree/main/models/image_encoder",
+    "licence": "Apache 2.0. Goes in models/clip_vision under this name (the file there is model.safetensors; rename it). Used only by the Booru reference workflow.",
+    "family": "booru"
+  }
+]
