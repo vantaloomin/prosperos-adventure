@@ -20,8 +20,8 @@ def rounds(monkeypatch):
     """Only Gather's pick and the off-page step run; the agent call is a stand-in that records its cues."""
     before = {state: list(listed) for state, listed in engine.STEPS.items()}
     hooks = list(engine.COMMITS)
-    for listed in engine.STEPS.values():
-        listed[:] = [(name, step) for name, step in listed if step is engine.pick]
+    for state, listed in engine.STEPS.items():
+        listed[:] = [('pick', engine.pick)] if state == State.GATHERING else []
     engine.register(State.RESOLVING, 'offpage', offpage.offpage)
     engine.on_commit('offpage', offpage.committed)
     cues = []

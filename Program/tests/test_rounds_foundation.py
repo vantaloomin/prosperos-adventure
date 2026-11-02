@@ -37,8 +37,8 @@ def steps():
     steps registered by a test are taken out again after it."""
     before = {state: list(listed) for state, listed in engine.STEPS.items()}
     hooks = list(engine.COMMITS)
-    for listed in engine.STEPS.values():
-        listed[:] = [(name, step) for name, step in listed if step is engine.pick]
+    for state, listed in engine.STEPS.items():
+        listed[:] = [('pick', engine.pick)] if state == State.GATHERING else []
     yield
     for state, listed in before.items():
         engine.STEPS[state][:] = listed
