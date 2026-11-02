@@ -1,0 +1,4036 @@
+{
+ "schema_version": 1,
+ "id": "pellmouth",
+ "name": "Pellmouth",
+ "setting": "original",
+ "era": "jazz-age",
+ "category": "fictional",
+ "basis": "Original setting written for Prospero Dungeon: a 1920s New England town with a cosmic-horror lean, modeled on real Massachusetts river and harbor towns. Nothing is taken from Lovecraft's stories or later works.",
+ "region": "Massachusetts",
+ "country": "United States",
+ "timezone": "America/New_York",
+ "aliases": [
+  "Pellmouth, Mass.",
+  "Pellmouth, Massachusetts",
+  "Pellmouth 1926"
+ ],
+ "summary": "A fog-bound town of about eighteen thousand people at the mouth of the Pell River on the North Shore of Massachusetts, 1926: a harbor and cannery, a shut-mouthed fishing quarter, a hill of gambrel roofs and a meetinghouse sealed for thirty years, a small university with a strange bequest, shoe mills, a flooded quarry, an asylum on the bluff and a lighthouse that keeps its own hours.",
+ "lat": 42.705,
+ "lon": -70.815,
+ "currency": {
+  "code": "USD",
+  "symbol": "$",
+  "name": "dollars (1926)"
+ },
+ "rent_period": "month",
+ "speeds": {
+  "walk": 4.5,
+  "streetcar": 14,
+  "commuter-rail": 40,
+  "ferry": 11,
+  "bus": 18,
+  "car": 24
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Pellmouth, Massachusetts, written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "An invented town. Its institutions, trades, prices and yearly calendar follow what was usual in North Shore harbor, shoe-mill, quarry and college towns of the mid-1920s, drawn from general historical knowledge. Every business, family and person named is fictional, and the legends and rumours are written for it; none is taken from Lovecraft or any later work. Rents are monthly, in 1926 dollars. Coordinates sit on the Essex County coast for distance estimates only; the climate follows that coast."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "market-square",
+   "name": "Market Square",
+   "summary": "The brick and granite downtown around the old market house: the town hall, the bank, the Courier office, dry goods, the Bijou, the Athenaeum and the Boston & Maine depot at the foot of Depot Street.",
+   "vibe": [
+    "central",
+    "business",
+    "shopping",
+    "civic"
+   ],
+   "lat": 42.705,
+   "lon": -70.815,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     22,
+     30
+    ],
+    "one_bedroom": [
+     28,
+     40
+    ],
+    "two_bedroom": [
+     36,
+     50
+    ]
+   },
+   "housing": [
+    "rooms-over-store",
+    "apartment-hotel",
+    "boarding-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "shore-street-railway",
+    "boston-and-maine",
+    "shore-road-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-front",
+   "name": "Harbor Front",
+   "summary": "Granite wharves, fish piers, the cannery, the Custom House and the ferry slip; it smells of tar, cod and coal smoke, and the fog horn on the point sets the rhythm of the night.",
+   "vibe": [
+    "waterfront",
+    "working",
+    "fishing",
+    "busy"
+   ],
+   "lat": 42.703,
+   "lon": -70.806,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     18,
+     24
+    ],
+    "one_bedroom": [
+     22,
+     32
+    ],
+    "two_bedroom": [
+     28,
+     40
+    ]
+   },
+   "housing": [
+    "boarding-house",
+    "rooms-over-store",
+    "sailors-home"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "shore-street-railway",
+    "pell-river-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-narrows",
+   "name": "The Narrows",
+   "summary": "The old fishing quarter where the river pinches in: leaning clapboard houses, net lofts and a Portuguese parish. Families have fished here for generations, marry among themselves and keep their own counsel; strangers are polite to and not much more.",
+   "vibe": [
+    "fishing",
+    "portuguese",
+    "close-knit",
+    "old",
+    "shabby"
+   ],
+   "lat": 42.708,
+   "lon": -70.801,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     18,
+     24
+    ],
+    "one_bedroom": [
+     22,
+     32
+    ],
+    "two_bedroom": [
+     28,
+     40
+    ]
+   },
+   "housing": [
+    "clapboard-house",
+    "two-family-house",
+    "rooms-over-loft"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "pell-river-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "meetinghouse-hill",
+   "name": "Meetinghouse Hill",
+   "summary": "A steep hill of gambrel-roofed captains' houses from the 1700s, elms, iron fences and slate gravestones, with the First Parish church, the Historical Society and the boarded-up Second Parish meetinghouse at the top.",
+   "vibe": [
+    "old-money",
+    "historic",
+    "quiet",
+    "gambrel-roofs",
+    "elms"
+   ],
+   "lat": 42.709,
+   "lon": -70.818,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     28,
+     38
+    ],
+    "one_bedroom": [
+     36,
+     50
+    ],
+    "two_bedroom": [
+     45,
+     60
+    ]
+   },
+   "housing": [
+    "gambrel-house",
+    "federal-house",
+    "rented-rooms"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "shore-street-railway"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "college-hill",
+   "name": "College Hill",
+   "summary": "Haskett University's brick halls and elm-shaded yard, the State Normal School, faculty houses, student rooming houses, the College Spa and the boathouse on the river below.",
+   "vibe": [
+    "academic",
+    "students",
+    "leafy",
+    "bookish"
+   ],
+   "lat": 42.714,
+   "lon": -70.826,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     22,
+     30
+    ],
+    "one_bedroom": [
+     28,
+     40
+    ],
+    "two_bedroom": [
+     36,
+     50
+    ]
+   },
+   "housing": [
+    "rooming-house",
+    "faculty-house",
+    "two-family-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "shore-street-railway"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-falls",
+   "name": "Lower Falls",
+   "summary": "The shoe mills and their brick housing along the falls of the Pell, where French-Canadian families came down from Quebec to work; church bells, mill whistles and pork pies.",
+   "vibe": [
+    "mills",
+    "french-canadian",
+    "working-class",
+    "noisy"
+   ],
+   "lat": 42.716,
+   "lon": -70.838,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     18,
+     24
+    ],
+    "one_bedroom": [
+     22,
+     32
+    ],
+    "two_bedroom": [
+     28,
+     40
+    ]
+   },
+   "housing": [
+    "triple-decker",
+    "mill-block",
+    "tenement"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "shore-street-railway",
+    "shore-road-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-end",
+   "name": "South End",
+   "summary": "Triple-deckers, corner stores and an Irish parish south of Market Square, with the car barn, the YMCA, the ballfield and the Spiritualist hall where messages from the dead are read out on Sunday evenings.",
+   "vibe": [
+    "irish",
+    "working-class",
+    "family",
+    "streetcar"
+   ],
+   "lat": 42.698,
+   "lon": -70.822,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     18,
+     24
+    ],
+    "one_bedroom": [
+     22,
+     32
+    ],
+    "two_bedroom": [
+     28,
+     40
+    ]
+   },
+   "housing": [
+    "triple-decker",
+    "two-family-house",
+    "tenement"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "shore-street-railway",
+    "shore-road-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-bluff",
+   "name": "The Bluff",
+   "summary": "High ground north of the river mouth: the long brick wings of the State Hospital, its farm and greenhouses, a cliff walk above the rocks, and a few houses for hospital staff.",
+   "vibe": [
+    "hospital",
+    "windswept",
+    "quiet",
+    "lonely"
+   ],
+   "lat": 42.722,
+   "lon": -70.808,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     18,
+     24
+    ],
+    "one_bedroom": [
+     22,
+     32
+    ],
+    "two_bedroom": [
+     28,
+     40
+    ]
+   },
+   "housing": [
+    "staff-cottage",
+    "boarding-house",
+    "farmhouse"
+   ],
+   "walkability": "low",
+   "transit": [
+    "shore-street-railway",
+    "shore-road-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gannet-point",
+   "name": "Gannet Point",
+   "summary": "The rocky point at the harbor entrance with the lighthouse, the Coast Guard station, a long beach, the summer dance pavilion and shingled cottages that stand empty from October to June.",
+   "vibe": [
+    "coast",
+    "lighthouse",
+    "summer",
+    "remote"
+   ],
+   "lat": 42.7,
+   "lon": -70.79,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     22,
+     30
+    ],
+    "one_bedroom": [
+     28,
+     40
+    ],
+    "two_bedroom": [
+     36,
+     50
+    ]
+   },
+   "housing": [
+    "summer-cottage",
+    "keepers-house",
+    "boarding-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "pell-river-ferry",
+    "shore-road-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "quarry-village",
+   "name": "Quarry Village",
+   "summary": "The granite company's village west of town: Italian, Polish and Finnish quarry families, a cooperative store, two halls, and the old pits, some of them flooded to a depth nobody has measured.",
+   "vibe": [
+    "quarrying",
+    "italian",
+    "polish",
+    "immigrant"
+   ],
+   "lat": 42.7,
+   "lon": -70.852,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     18,
+     24
+    ],
+    "one_bedroom": [
+     22,
+     32
+    ],
+    "two_bedroom": [
+     28,
+     40
+    ]
+   },
+   "housing": [
+    "company-house",
+    "two-family-house",
+    "boarding-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "shore-street-railway",
+    "shore-road-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-parish",
+   "name": "West Parish",
+   "summary": "Farms, orchards and stone walls up the river: a grange hall, a cider mill, Pratt's Pond where the town skates, and Sayer's Rock, where a widow was examined for witchcraft in 1692.",
+   "vibe": [
+    "rural",
+    "farms",
+    "orchards",
+    "old-legends"
+   ],
+   "lat": 42.722,
+   "lon": -70.865,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     18,
+     24
+    ],
+    "one_bedroom": [
+     22,
+     32
+    ],
+    "two_bedroom": [
+     28,
+     40
+    ]
+   },
+   "housing": [
+    "farmhouse",
+    "cape-house",
+    "rented-rooms"
+   ],
+   "walkability": "low",
+   "transit": [
+    "shore-road-bus"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "on-foot",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "The town is small and steep: Market Square to the wharves is five minutes, to College Hill fifteen uphill. In fog people walk by the sound of the bell buoy.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shore-street-railway",
+   "name": "Pellmouth & Shore Street Railway",
+   "kind": "streetcar",
+   "summary": "Yellow trolley cars every fifteen minutes from the South End car barn through Market Square to College Hill and the Lower Falls, and out the shore line to the Bluff; a dime a ride.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boston-and-maine",
+   "name": "Boston & Maine Railroad",
+   "kind": "commuter-rail",
+   "summary": "Steam trains from the Depot Street station to Boston in about an hour and a quarter, and north along the coast; the evening train brings the papers.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pell-river-ferry",
+   "name": "Pell River ferry",
+   "kind": "ferry",
+   "summary": "A small steam ferry from the Harbor Front slip to the Narrows landing and on to Gannet Point, every half hour in summer and four times a day in winter; it does not run in thick fog.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shore-road-bus",
+   "name": "Shore Road motor bus",
+   "kind": "bus",
+   "summary": "Motor buses from Market Square out to Gannet Point, the State Hospital, Quarry Village and West Parish, where the trolley does not go.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "market-house-square",
+   "name": "Market Square",
+   "kind": "square",
+   "neighborhood": "market-square",
+   "summary": "The cobbled square around the 1790s market house, with the town pump, the war memorial and a bench where the same old-timers watch the weather and everybody else.",
+   "tags": [
+    "square",
+    "people-watching",
+    "market-house"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kimballs-lunch",
+   "name": "Kimball's Lunch",
+   "kind": "restaurant",
+   "neighborhood": "market-square",
+   "summary": "A narrow lunch counter of twelve stools: fish chowder, hash, pie and coffee, with the Courier's reporters at one end and the bank clerks at the other.",
+   "tags": [
+    "lunch-counter",
+    "chowder",
+    "pie",
+    "gossip"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "new-england",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-drug-store",
+   "name": "Tarbox's Drug Store soda fountain",
+   "kind": "cafe",
+   "neighborhood": "market-square",
+   "summary": "A marble soda fountain at the back of the drug store: frappes, ice cream sodas, coffee and a newspaper rack; couples come after the pictures.",
+   "tags": [
+    "soda-fountain",
+    "frappes",
+    "courting"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "sweets",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbots-chop-house",
+   "name": "Abbot's Chop House",
+   "kind": "restaurant",
+   "neighborhood": "market-square",
+   "summary": "Dark panelling, mutton chops, broiled scrod and Indian pudding, where the selectmen lunch and anyone with something to celebrate dines.",
+   "tags": [
+    "chop-house",
+    "scrod",
+    "old-fashioned"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "new-england",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "larkin-pratt-dry-goods",
+   "name": "Larkin & Pratt Dry Goods",
+   "kind": "shopping",
+   "neighborhood": "market-square",
+   "summary": "Three floors of dry goods, ready-made dresses, oilskins and wool, with cash carriers whizzing on wires to the office upstairs.",
+   "tags": [
+    "department-store",
+    "dry-goods",
+    "cash-railway"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tuttles-books",
+   "name": "Tuttle's Antiquarian Books",
+   "kind": "shopping",
+   "neighborhood": "market-square",
+   "summary": "A crooked shop of secondhand books, sea charts and town histories, with a back room of older things the owner shows only to buyers they know.",
+   "tags": [
+    "books",
+    "antiquarian",
+    "charts",
+    "back-room"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bijou-theatre",
+   "name": "Bijou Theatre",
+   "kind": "venue",
+   "neighborhood": "market-square",
+   "summary": "Pictures with an organist, vaudeville on Saturdays and amateur nights; the balcony is where the town does its courting.",
+   "tags": [
+    "pictures",
+    "vaudeville",
+    "organ",
+    "courting"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pellmouth-athenaeum",
+   "name": "Pellmouth Athenaeum",
+   "kind": "library",
+   "neighborhood": "market-square",
+   "summary": "A subscription library of leather armchairs, ships' portraits and bound newspapers back to 1790, with a reading room open to anyone who keeps quiet.",
+   "tags": [
+    "library",
+    "newspapers",
+    "reading-room",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "depot-street-station",
+   "name": "Boston & Maine depot",
+   "kind": "landmark",
+   "neighborhood": "market-square",
+   "summary": "The brick depot with its iron canopy, where the Boston papers come in on the evening train and the town meets whoever is coming home.",
+   "tags": [
+    "railroad",
+    "trains",
+    "newsstand"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "central-wharf",
+   "name": "Central Wharf and fish pier",
+   "kind": "docks",
+   "neighborhood": "harbor-front",
+   "summary": "The granite fish pier where the schooners and the new motor draggers unload cod, haddock and mackerel before dawn, and gulls argue over everything.",
+   "tags": [
+    "fish-pier",
+    "schooners",
+    "early",
+    "gulls"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-custom-house",
+   "name": "Old Custom House",
+   "kind": "landmark",
+   "neighborhood": "harbor-front",
+   "summary": "A granite custom house with an eagle over the door; the harbormaster posts the week's tide table on the board outside, and people in the Narrows read it and then do as they please.",
+   "tags": [
+    "custom-house",
+    "tide-table",
+    "historic"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "driscolls-oyster-bar",
+   "name": "Driscoll's Oyster Bar",
+   "kind": "restaurant",
+   "neighborhood": "harbor-front",
+   "summary": "A long marble counter of oysters, steamers and fish chowder under a pressed-tin ceiling; the coffee comes with a nod toward the back stairs.",
+   "tags": [
+    "oysters",
+    "steamers",
+    "counter"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "night-boat-diner",
+   "name": "The Night Boat Diner",
+   "kind": "restaurant",
+   "neighborhood": "harbor-front",
+   "summary": "A dining car set down by the ferry slip, open all night for cannery shifts and fishing crews: fried eggs, beans, coffee and doughnuts at a nickel.",
+   "tags": [
+    "diner",
+    "all-night",
+    "coffee"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-ropewalk",
+   "name": "The Ropewalk",
+   "kind": "nightlife",
+   "neighborhood": "harbor-front",
+   "summary": "A speakeasy in the long loft of an old ropewalk, reached through a sail-maker's shop: Canadian whisky that came in on a foggy night, a piano, a three-piece band and a knock you have to know.",
+   "tags": [
+    "speakeasy",
+    "jazz",
+    "whisky",
+    "secret"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seamens-bethel",
+   "name": "Seamen's Bethel",
+   "kind": "temple",
+   "neighborhood": "harbor-front",
+   "summary": "A plain chapel for sailors with boards on the walls naming every Pellmouth vessel lost since 1716 and everyone aboard; people stop in on the way to the wharf.",
+   "tags": [
+    "chapel",
+    "memorials",
+    "sailors"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hapgoods-chandlery",
+   "name": "Hapgood's Ship Chandlery",
+   "kind": "shopping",
+   "neighborhood": "harbor-front",
+   "summary": "Rope, oilskins, lamp oil, compasses and a wall of barometers that the old skippers tap on their way past.",
+   "tags": [
+    "chandlery",
+    "barometers",
+    "marine"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ellsworth-boatyard",
+   "name": "Ellsworth's boatyard",
+   "kind": "workshop",
+   "neighborhood": "harbor-front",
+   "summary": "A boatyard of sheds and slipways where dories and draggers are built and mended, smelling of oakum, pine tar and steam boxes.",
+   "tags": [
+    "boatyard",
+    "dories",
+    "craft"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holy-ghost-church",
+   "name": "Church of the Holy Ghost",
+   "kind": "temple",
+   "neighborhood": "the-narrows",
+   "summary": "The Portuguese parish church, white clapboard with a blue door, where the fleet is blessed in June and the old keep candles burning for those at sea.",
+   "tags": [
+    "church",
+    "portuguese",
+    "candles"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "medeiros-lunch",
+   "name": "Medeiros' Lunch",
+   "kind": "restaurant",
+   "neighborhood": "the-narrows",
+   "summary": "Four tables in a front room: kale soup, fish stew, linguiça and bread, and a silence when a stranger walks in that lifts once they have ordered.",
+   "tags": [
+    "portuguese",
+    "kale-soup",
+    "family-run"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "portuguese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "furtados-bakery",
+   "name": "Furtado's Bakery",
+   "kind": "cafe",
+   "neighborhood": "the-narrows",
+   "summary": "Sweet bread, malassadas on Tuesdays and strong coffee from five in the morning, when the fishing crews come in for the day's bread.",
+   "tags": [
+    "bakery",
+    "sweet-bread",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "portuguese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "narrows-fish-market",
+   "name": "Narrows fish market",
+   "kind": "market",
+   "neighborhood": "the-narrows",
+   "summary": "Open stalls along the landing of salt cod, fresh flounder, clams and eels, sold by families who will tell you the fish but not where they caught it.",
+   "tags": [
+    "fish-market",
+    "salt-cod",
+    "clams"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cordage-lane-net-lofts",
+   "name": "Cordage Lane net lofts",
+   "kind": "workshop",
+   "neighborhood": "the-narrows",
+   "summary": "Weathered lofts where nets are mended by hand and hung to dry; the menders sing in Portuguese and stop when the tide turns.",
+   "tags": [
+    "nets",
+    "craft",
+    "portuguese"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-tide-steps",
+   "name": "The tide steps",
+   "kind": "park",
+   "neighborhood": "the-narrows",
+   "summary": "Worn granite steps running down into the river at the end of Water Lane; on the big spring tides the water comes up to the top step, and the Narrows lights a lamp in every window that faces it.",
+   "tags": [
+    "tide",
+    "steps",
+    "river",
+    "custom"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "narrows-landing-store",
+   "name": "Rapoza's variety store",
+   "kind": "shopping",
+   "neighborhood": "the-narrows",
+   "summary": "A dim little store of thread, candles, holy pictures, tobacco and penny candy, where the Narrows leaves messages for one another behind the counter.",
+   "tags": [
+    "variety-store",
+    "messages",
+    "candles"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "second-parish-meetinghouse",
+   "name": "The old Second Parish meetinghouse",
+   "kind": "landmark",
+   "neighborhood": "meetinghouse-hill",
+   "summary": "A tall white meetinghouse boarded and chained since 1894. The town record says the congregation split and the roof failed; nobody has paid to mend it, and nobody will buy it.",
+   "tags": [
+    "sealed",
+    "church",
+    "historic",
+    "legend"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hill-burying-ground",
+   "name": "Old Hill Burying Ground",
+   "kind": "park",
+   "neighborhood": "meetinghouse-hill",
+   "summary": "Slate stones with winged skulls and weeping willows under old elms; a quiet walk with a view of the harbor, and the sexton's lantern after dark.",
+   "tags": [
+    "cemetery",
+    "slate-stones",
+    "view",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pellmouth-historical-society",
+   "name": "Pellmouth Historical Society",
+   "kind": "museum",
+   "neighborhood": "meetinghouse-hill",
+   "summary": "A 1720s house of portraits, ship models, samplers and the county court papers of 1692, which the volunteers will show you but would rather not discuss.",
+   "tags": [
+    "history",
+    "ship-models",
+    "1692"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gambrel-tea-room",
+   "name": "The Gambrel Tea Room",
+   "kind": "cafe",
+   "neighborhood": "meetinghouse-hill",
+   "summary": "Tea, scones, chicken salad and lemon cake in the front parlours of an old house, among the hill's garden clubs and faculty spouses.",
+   "tags": [
+    "tea-room",
+    "cake",
+    "genteel"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "tea-room",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "first-parish-church",
+   "name": "First Parish Church",
+   "kind": "temple",
+   "neighborhood": "meetinghouse-hill",
+   "summary": "The white Unitarian church with the town clock in its steeple, where the old families sit in the same box pews their great-grandparents bought.",
+   "tags": [
+    "church",
+    "unitarian",
+    "clock"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wainwright-house-garden",
+   "name": "Wainwright House garden",
+   "kind": "garden",
+   "neighborhood": "meetinghouse-hill",
+   "summary": "A walled eighteenth-century garden of box hedges, roses and a sundial, opened to visitors by the Garden Club on afternoons in season.",
+   "tags": [
+    "garden",
+    "roses",
+    "walled"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hill-antiques",
+   "name": "Merrill Street antiques",
+   "kind": "shopping",
+   "neighborhood": "meetinghouse-hill",
+   "summary": "A parlour shop of pewter, sea chests, samplers and portraits of nobody in particular, sold off by families letting go of the old houses one room at a time.",
+   "tags": [
+    "antiques",
+    "sea-chests",
+    "old-houses"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haskett-old-yard",
+   "name": "Haskett University Old Yard",
+   "kind": "landmark",
+   "neighborhood": "college-hill",
+   "summary": "A green of elms and red brick halls from the 1780s on, with a chapel bell that rings the hours and students lying on the grass in May.",
+   "tags": [
+    "university",
+    "elms",
+    "brick",
+    "students"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lindall-library",
+   "name": "Lindall Library and the Whitcomb Room",
+   "kind": "library",
+   "neighborhood": "college-hill",
+   "summary": "The university library, open to townspeople by card. Its Whitcomb Room keeps a family bequest of almanacs, sermons, ships' logs and private journals that may not leave the room, and by the terms of the gift is locked at sundown.",
+   "tags": [
+    "library",
+    "special-collections",
+    "bequest",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haskett-museum",
+   "name": "Haskett Museum of Natural History",
+   "kind": "museum",
+   "neighborhood": "college-hill",
+   "summary": "Cases of birds, shells, whale bones and things brought home by Pellmouth captains, some labelled only \"Pacific, before 1840\".",
+   "tags": [
+    "natural-history",
+    "curiosities",
+    "whaling"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-college-spa",
+   "name": "The College Spa",
+   "kind": "cafe",
+   "neighborhood": "college-hill",
+   "summary": "A corner spa of tonic, cigarettes, magazines and a lunch counter where students argue about Freud and Mencken over coffee cabinets.",
+   "tags": [
+    "spa",
+    "students",
+    "lunch-counter",
+    "debate"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "commons-beanery",
+   "name": "The Commons Beanery",
+   "kind": "restaurant",
+   "neighborhood": "college-hill",
+   "summary": "A basement lunch room of long tables where students and junior faculty eat baked beans, brown bread and hash at prices made for scholarships.",
+   "tags": [
+    "beanery",
+    "students",
+    "cheap-eats"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "new-england",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haskett-boathouse",
+   "name": "Haskett boathouse",
+   "kind": "fitness",
+   "neighborhood": "college-hill",
+   "summary": "A shingled boathouse on the river where the crew rows at dawn and anyone with a quarter can hire a canoe on summer evenings.",
+   "tags": [
+    "rowing",
+    "canoes",
+    "river"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blanchard-observatory",
+   "name": "Blanchard Observatory",
+   "kind": "attraction",
+   "neighborhood": "college-hill",
+   "summary": "A small domed observatory with public nights on clear Fridays, which in Pellmouth are fewer than the astronomers would like.",
+   "tags": [
+    "telescope",
+    "stars",
+    "public-nights"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haskett-chapel",
+   "name": "Haskett chapel",
+   "kind": "temple",
+   "neighborhood": "college-hill",
+   "summary": "A plain brick chapel with a bell that rings the hours and an organ students practise on at odd times of night.",
+   "tags": [
+    "chapel",
+    "organ",
+    "bell"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-jean-baptiste",
+   "name": "St. Jean-Baptiste Church",
+   "kind": "temple",
+   "neighborhood": "the-falls",
+   "summary": "The big brick church of the French-Canadian parish, with sermons in French, a parochial school and a bell that wakes the mill blocks on Sunday.",
+   "tags": [
+    "church",
+    "french-canadian",
+    "bells"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "falls-diner",
+   "name": "The Falls Diner",
+   "kind": "restaurant",
+   "neighborhood": "the-falls",
+   "summary": "A Worcester lunch car by the mill gate, serving the shifts eggs, hash, pea soup and coffee from five in the morning till midnight.",
+   "tags": [
+    "diner",
+    "mill-shifts",
+    "pea-soup"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cotes-market",
+   "name": "Côté's Market",
+   "kind": "market",
+   "neighborhood": "the-falls",
+   "summary": "A corner grocery of salt pork, molasses, tourtière at Christmas, maple sugar in spring and credit on the slate until payday.",
+   "tags": [
+    "grocery",
+    "french-canadian",
+    "credit"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "club-lafayette",
+   "name": "Club Social Lafayette",
+   "kind": "bar",
+   "neighborhood": "the-falls",
+   "summary": "A members' club over a hardware store with cards, a pool table and near beer on the price list; the real beer is brewed in a cellar two streets over.",
+   "tags": [
+    "social-club",
+    "cards",
+    "home-brew"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lafayette-bowling",
+   "name": "Lafayette Bowling Alleys",
+   "kind": "fitness",
+   "neighborhood": "the-falls",
+   "summary": "Eight candlepin lanes with pinsetters, a league every weeknight and the clatter of pins until eleven.",
+   "tags": [
+    "candlepin",
+    "leagues",
+    "bowling"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "falls-footbridge",
+   "name": "The falls footbridge",
+   "kind": "park",
+   "neighborhood": "the-falls",
+   "summary": "An iron footbridge over the falls where mill workers eat lunch in the spray and couples walk after the evening shift.",
+   "tags": [
+    "falls",
+    "bridge",
+    "river",
+    "lunch"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-brendans",
+   "name": "St. Brendan's Church",
+   "kind": "temple",
+   "neighborhood": "south-end",
+   "summary": "The Irish parish church, with a Sunday crowd that spills down the steps and a parish hall that holds whist drives and dances.",
+   "tags": [
+    "church",
+    "irish",
+    "whist"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pellmouth-ymca",
+   "name": "Pellmouth YMCA",
+   "kind": "fitness",
+   "neighborhood": "south-end",
+   "summary": "A brick Y with a swimming tank, a running track over the gym, boxing on Tuesday nights and Bible classes nobody is made to attend.",
+   "tags": [
+    "ymca",
+    "swimming",
+    "boxing",
+    "gym"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "odays-lunch-room",
+   "name": "O'Day's Lunch Room",
+   "kind": "restaurant",
+   "neighborhood": "south-end",
+   "summary": "Corned beef, boiled dinner on Thursdays, fish cakes on Fridays and a counter where the car-barn crews take their dinner.",
+   "tags": [
+    "lunch-room",
+    "boiled-dinner",
+    "irish"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "irish-american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spiritualist-hall",
+   "name": "First Spiritualist Society hall",
+   "kind": "venue",
+   "neighborhood": "south-end",
+   "summary": "A plain upstairs hall with folding chairs and a harmonium, where Sunday evening services end with a medium reading messages for whoever came hoping for one.",
+   "tags": [
+    "spiritualism",
+    "seances",
+    "sunday"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "riverside-oval",
+   "name": "Riverside Oval",
+   "kind": "park",
+   "neighborhood": "south-end",
+   "summary": "A cinder-ringed ballfield by the river where the Twilight League plays after supper and the high school plays football on Thanksgiving morning.",
+   "tags": [
+    "baseball",
+    "twilight-league",
+    "football"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mahoneys-garage",
+   "name": "The back room at Mahoney's Garage",
+   "kind": "nightlife",
+   "neighborhood": "south-end",
+   "summary": "A speakeasy behind a garage where you drink gin out of teacups among tyre racks, and a fiddler and a banjo play reels and foxtrots by turns.",
+   "tags": [
+    "speakeasy",
+    "gin",
+    "dancing"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hibernian-hall",
+   "name": "Hibernian Hall",
+   "kind": "venue",
+   "neighborhood": "south-end",
+   "summary": "A dance hall over a block of shops with Saturday dances, a St. Patrick's ball and a polished floor the young people wear thin.",
+   "tags": [
+    "dance-hall",
+    "saturday-dances",
+    "irish"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kellehers-market",
+   "name": "Kelleher's Market",
+   "kind": "market",
+   "neighborhood": "south-end",
+   "summary": "A corner grocery and meat market with sawdust on the floor, corned beef in the barrel and the week's gossip at the register.",
+   "tags": [
+    "grocery",
+    "butcher",
+    "corner-store"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "state-hospital-grounds",
+   "name": "State Hospital grounds",
+   "kind": "park",
+   "neighborhood": "the-bluff",
+   "summary": "The long brick wings and central tower of Pellmouth State Hospital, set in lawns behind an iron fence; families walk there on visiting Sundays, and townsfolk lower their voices driving past.",
+   "tags": [
+    "hospital",
+    "tower",
+    "lawns",
+    "visiting-day"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bluff-cliff-walk",
+   "name": "Bluff cliff walk",
+   "kind": "trail",
+   "neighborhood": "the-bluff",
+   "summary": "A path along the cliff above the rocks with the whole harbor mouth below, the light on the point opposite and the fog coming in like a wall.",
+   "tags": [
+    "cliff",
+    "sea-view",
+    "fog",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hospital-road-inn",
+   "name": "Hospital Road Inn",
+   "kind": "inn",
+   "neighborhood": "the-bluff",
+   "summary": "A plain inn by the hospital gate for families come to visit, with a dining room of pot roast and pie and a landlord who never asks whom you have come to see.",
+   "tags": [
+    "inn",
+    "pot-roast",
+    "visitors"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "new-england",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bluff-general-store",
+   "name": "Ellery's general store",
+   "kind": "market",
+   "neighborhood": "the-bluff",
+   "summary": "Groceries, tobacco, postcards and the post office in one, kept by a family who have sold to hospital staff for forty years.",
+   "tags": [
+    "general-store",
+    "post-office"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hospital-farm",
+   "name": "State Hospital farm and greenhouses",
+   "kind": "garden",
+   "neighborhood": "the-bluff",
+   "summary": "Fields, a dairy and glasshouses worked by patients and attendants; the greenhouse sells cut flowers and seedlings at the gate.",
+   "tags": [
+    "farm",
+    "greenhouses",
+    "flowers"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "laceys-parlor",
+   "name": "The Lacey parlour",
+   "kind": "attraction",
+   "neighborhood": "the-bluff",
+   "summary": "A front parlour in a staff cottage where a medium holds private sittings by lamplight, with tea after and a donation jar on the hall table.",
+   "tags": [
+    "seances",
+    "spiritualism",
+    "parlour"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gannet-point-light",
+   "name": "Gannet Point Light",
+   "kind": "landmark",
+   "neighborhood": "gannet-point",
+   "summary": "A white stone tower and keeper's house on the rocks at the harbor mouth. The lamp is lit at sunset by the almanac, and sometimes well before it, which the keeper puts down to the fog.",
+   "tags": [
+    "lighthouse",
+    "fog-bell",
+    "rocks",
+    "legend"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "long-sands-beach",
+   "name": "Long Sands beach",
+   "kind": "beach",
+   "neighborhood": "gannet-point",
+   "summary": "A mile of sand inside the point with bathhouses, cold water, picnics in July and a bonfire on the Fourth.",
+   "tags": [
+    "beach",
+    "bathing",
+    "picnics"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gannet-pavilion",
+   "name": "Gannet Point Pavilion",
+   "kind": "venue",
+   "neighborhood": "gannet-point",
+   "summary": "A summer dance pavilion on pilings with a bandstand, Japanese lanterns and dance tickets at a dime; it shuts after the Harvest Moon dance.",
+   "tags": [
+    "dance-pavilion",
+    "bands",
+    "summer"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pikes-clam-shack",
+   "name": "Pike's Clam Shack",
+   "kind": "restaurant",
+   "neighborhood": "gannet-point",
+   "summary": "A shack on the causeway frying clams in lard and selling them in paper boats with a pickle, from Decoration Day to Labor Day.",
+   "tags": [
+    "fried-clams",
+    "take-away",
+    "summer"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-gannet-house",
+   "name": "The Gannet House",
+   "kind": "inn",
+   "neighborhood": "gannet-point",
+   "summary": "A shingled inn that stays open all year, with a parlour fire, fish dinners, and a ledger of guests going back to 1868 that the proprietor likes to read aloud from.",
+   "tags": [
+    "inn",
+    "fish-dinners",
+    "fireside"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "point-ledges",
+   "name": "The Ledges",
+   "kind": "park",
+   "neighborhood": "gannet-point",
+   "summary": "Flat granite ledges below the lighthouse full of tide pools, where children hunt crabs and the old people say not to stay past the turn.",
+   "tags": [
+    "tide-pools",
+    "rocks",
+    "sea"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coast-guard-station",
+   "name": "Gannet Point Coast Guard station",
+   "kind": "landmark",
+   "neighborhood": "gannet-point",
+   "summary": "A shingled lifeboat station with a lookout tower and a wireless mast, where the crew drills on the beach every morning and watches for rum-runners every night.",
+   "tags": [
+    "coast-guard",
+    "lifeboat",
+    "wireless"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "number-four-quarry",
+   "name": "Number Four quarry",
+   "kind": "park",
+   "neighborhood": "quarry-village",
+   "summary": "A granite pit abandoned in 1908 when it struck a spring and flooded overnight; the water is black and very still, and the company has fenced it twice.",
+   "tags": [
+    "quarry",
+    "flooded",
+    "legend"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-deep-hole",
+   "name": "The Deep Hole",
+   "kind": "beach",
+   "neighborhood": "quarry-village",
+   "summary": "An old pit with a granite ledge to jump from, where young people swim in summer despite the signs and the stories.",
+   "tags": [
+    "swimming",
+    "quarry",
+    "summer"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zanettis",
+   "name": "Zanetti's",
+   "kind": "restaurant",
+   "neighborhood": "quarry-village",
+   "summary": "A front-room restaurant of spaghetti, veal and bread, with red wine served in coffee cups and accordion music on Saturdays.",
+   "tags": [
+    "italian",
+    "spaghetti",
+    "family-run",
+    "wine"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "quarry-cooperative-store",
+   "name": "Quarry Workers' Cooperative Store",
+   "kind": "market",
+   "neighborhood": "quarry-village",
+   "summary": "A cooperative store run by the Finnish and Italian families, with flour, olive oil, rye bread, dried fish and a share for every member.",
+   "tags": [
+    "cooperative",
+    "groceries",
+    "immigrant"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mutuo-soccorso-hall",
+   "name": "Società di Mutuo Soccorso hall",
+   "kind": "venue",
+   "neighborhood": "quarry-village",
+   "summary": "The Italian mutual-aid society's hall, with bocce out back, a bar that sells only coffee and anisette, and dances on feast days.",
+   "tags": [
+    "italian",
+    "bocce",
+    "dances",
+    "hall"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "polish-national-home",
+   "name": "Polish National Home",
+   "kind": "bar",
+   "neighborhood": "quarry-village",
+   "summary": "A hall with a long bar, kielbasa and pickles, a polka band on Saturdays and a choir practising upstairs on Wednesdays.",
+   "tags": [
+    "polish",
+    "polka",
+    "hall"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-casimir",
+   "name": "St. Casimir's Church",
+   "kind": "temple",
+   "neighborhood": "quarry-village",
+   "summary": "A wooden Polish church the quarry families built themselves on Sundays, with a painted ceiling and a choir that can be heard from the pits.",
+   "tags": [
+    "church",
+    "polish",
+    "choir"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pratts-pond",
+   "name": "Pratt's Pond",
+   "kind": "park",
+   "neighborhood": "west-parish",
+   "summary": "A spring-fed pond ringed by pines where families picnic in summer, with a warming hut for skaters and a willow children dare each other to climb.",
+   "tags": [
+    "pond",
+    "picnics",
+    "pines"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pratts-pond-skating",
+   "name": "Skating on Pratt's Pond",
+   "kind": "fitness",
+   "neighborhood": "west-parish",
+   "summary": "The whole town skates on Pratt's Pond once the selectmen hang out the red ball, with a bonfire, hot cider and a hockey game at one end.",
+   "tags": [
+    "skating",
+    "bonfire",
+    "winter"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sayers-rock",
+   "name": "Sayer's Rock",
+   "kind": "trail",
+   "neighborhood": "west-parish",
+   "summary": "A split boulder in a hayfield where, the story goes, the widow Annis Sayer was examined in 1692 and from which she was never seen to come down. Nothing grows in the crack, and the farmer mows around it.",
+   "tags": [
+    "legend",
+    "1692",
+    "boulder"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dodges-cider-mill",
+   "name": "Dodge's cider mill",
+   "kind": "market",
+   "neighborhood": "west-parish",
+   "summary": "A press barn of sweet cider, doughnuts, apples by the peck and jugs of hard cider sold to people the family knows.",
+   "tags": [
+    "cider",
+    "apples",
+    "doughnuts"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "fall"
+   ],
+   "cuisine": "farm",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-parish-grange",
+   "name": "West Parish Grange Hall",
+   "kind": "venue",
+   "neighborhood": "west-parish",
+   "summary": "A plain hall of bean suppers, contra dances with a fiddler caller, and the Harvest Moon dance in October.",
+   "tags": [
+    "grange",
+    "contra-dance",
+    "bean-supper"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wayside-roadhouse",
+   "name": "The Wayside",
+   "kind": "nightlife",
+   "neighborhood": "west-parish",
+   "summary": "A roadhouse on the Boston road with chicken dinners, a dance floor and a back room where the cider is applejack; the motorcar crowd drives out from town on Saturday nights.",
+   "tags": [
+    "roadhouse",
+    "chicken-dinner",
+    "dancing",
+    "applejack"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "haskett-university",
+   "name": "Haskett University",
+   "type": "private-university",
+   "neighborhood": "college-hill",
+   "size": "small",
+   "known_for": [
+    "classics",
+    "theology",
+    "natural-history",
+    "astronomy",
+    "special-collections",
+    "rowing"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pellmouth-normal-school",
+   "name": "Pellmouth State Normal School",
+   "type": "liberal-arts-college",
+   "neighborhood": "college-hill",
+   "size": "small",
+   "known_for": [
+    "teacher-training",
+    "model-school",
+    "domestic-science"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "asylum-attendant",
+   "name": "Asylum attendant",
+   "sector": "healthcare",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Twelve-hour shifts on the wards of the State Hospital: bathing, feeding and watching patients, walking them on the lawns, and living in the attendants' home.",
+   "themes": [
+    "the wards",
+    "patients",
+    "night shifts",
+    "the doctors"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "lighthouse-keeper",
+   "name": "Lighthouse keeper",
+   "sector": "maritime",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Keeping the Gannet Point lamp lit, the lens polished, the fog bell rung and the log written up, through every watch of the night.",
+   "themes": [
+    "the lamp",
+    "the log",
+    "fog",
+    "the weather"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "rare-books-cataloguer",
+   "name": "Rare-books cataloguer",
+   "sector": "education",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Cataloguing the Whitcomb bequest card by card at the Lindall Library, in a room that must be locked at sundown.",
+   "themes": [
+    "old books",
+    "the catalogue",
+    "the bequest",
+    "readers"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "tide-clerk",
+   "name": "Tide-table clerk",
+   "sector": "maritime",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Working out and posting the week's tides, keeping the harbormaster's ledgers and logging every vessel in and out.",
+   "themes": [
+    "tides",
+    "ledgers",
+    "the harbor",
+    "skippers"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "cannery-hand",
+   "name": "Fish-cannery hand",
+   "sector": "fishing",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Gutting, packing and sealing fish at the Pell River Packing Company, on shifts set by whatever the boats bring in.",
+   "themes": [
+    "the line",
+    "the smell",
+    "piece rates",
+    "the boats"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "spiritualist-medium",
+   "name": "Séance medium",
+   "sector": "spiritualism",
+   "schedule": "evening",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Holding sittings in a front parlour and reading messages at the Spiritualist hall for people who have lost someone.",
+   "themes": [
+    "sittings",
+    "clients",
+    "the departed",
+    "skeptics"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "dowser",
+   "name": "Dowser",
+   "sector": "trades",
+   "schedule": "flexible",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Walking farms and house lots with a forked witch-hazel stick to find where a well should go, paid if the water comes.",
+   "themes": [
+    "wells",
+    "farmers",
+    "the rod",
+    "water"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "quarry-worker",
+   "name": "Quarry worker",
+   "sector": "quarrying",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Drilling, blasting and splitting granite in the Pellmouth Granite Company pits, by derrick and steam drill.",
+   "themes": [
+    "the pit",
+    "blasting",
+    "the derricks",
+    "the union"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "sexton",
+   "name": "Sexton",
+   "sector": "religion",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Ringing the bell, minding the furnace, keeping the burying ground and digging the graves for First Parish.",
+   "themes": [
+    "the bell",
+    "graves",
+    "the church",
+    "the burying ground"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "folklore-lecturer",
+   "name": "Folklore lecturer",
+   "sector": "education",
+   "schedule": "academic",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Teaching New England folklore at Haskett and collecting ballads, sayings and stories from old people who would rather not be written down.",
+   "themes": [
+    "lectures",
+    "field notes",
+    "old stories",
+    "students"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "wireless-operator",
+   "name": "Wireless operator",
+   "sector": "communications",
+   "schedule": "shift-night",
+   "employment": "rota",
+   "pay": "$$",
+   "summary": "Keeping the night watch on the Coast Guard station's wireless set, and a radio ham in the off hours who talks to strangers across the ocean.",
+   "themes": [
+    "the wireless",
+    "distress calls",
+    "night watch",
+    "far stations"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "clam-digger",
+   "name": "Clam digger",
+   "sector": "fishing",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Digging soft-shell clams on the flats at low tide with a fork and a hod, and selling them to the clam shacks and the cannery.",
+   "themes": [
+    "the flats",
+    "low tide",
+    "the catch",
+    "the weather"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "boatbuilder",
+   "name": "Boatbuilder",
+   "sector": "trades",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Building and mending dories and draggers at Ellsworth's yard by eye, adze and steam box.",
+   "themes": [
+    "the yard",
+    "planking",
+    "the boats",
+    "skippers"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "id": "ferry-deckhand",
+   "name": "Ferry deckhand",
+   "sector": "transit",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Handling lines, fares and the gangway on the Pell River ferry, and telling the skipper when the fog is too thick to cross.",
+   "themes": [
+    "the ferry",
+    "passengers",
+    "fog",
+    "the river"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  }
+ ],
+ "employers": [
+  {
+   "id": "haskett-university-employer",
+   "name": "Haskett University",
+   "sector": "education",
+   "neighborhood": "college-hill",
+   "size": "medium",
+   "summary": "A small old university of six hundred students, a library with a famous and peculiar bequest, a museum and an observatory.",
+   "careers": [
+    "professor",
+    "librarian",
+    "rare-books-cataloguer",
+    "folklore-lecturer",
+    "museum-curator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "normal-school-employer",
+   "name": "Pellmouth State Normal School",
+   "sector": "education",
+   "neighborhood": "college-hill",
+   "size": "small",
+   "summary": "The state teachers' college and its model school, training schoolteachers for the North Shore.",
+   "careers": [
+    "teacher",
+    "professor"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pellmouth-state-hospital",
+   "name": "Pellmouth State Hospital",
+   "sector": "healthcare",
+   "neighborhood": "the-bluff",
+   "size": "large",
+   "summary": "The state hospital for the insane on the bluff, with fourteen hundred patients, its own farm, laundry and power house, and the largest payroll in town.",
+   "careers": [
+    "physician",
+    "trained-nurse",
+    "asylum-attendant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gannet-point-station",
+   "name": "Gannet Point Light and Coast Guard station",
+   "sector": "maritime",
+   "neighborhood": "gannet-point",
+   "size": "small",
+   "summary": "The lighthouse, its keepers and the Coast Guard lifeboat station beside it, which also keeps a lookout for rum-runners.",
+   "careers": [
+    "lighthouse-keeper",
+    "wireless-operator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbormasters-office",
+   "name": "Harbormaster's office",
+   "sector": "maritime",
+   "neighborhood": "harbor-front",
+   "size": "small",
+   "summary": "The harbormaster and clerks in the Old Custom House, keeping moorings, tides and the vessel log.",
+   "careers": [
+    "tide-clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pell-river-packing",
+   "name": "Pell River Packing Company",
+   "sector": "fishing",
+   "neighborhood": "harbor-front",
+   "size": "medium",
+   "summary": "The cannery on the wharf, packing sardines, fish flakes and chowder clams for grocers across New England.",
+   "careers": [
+    "cannery-hand",
+    "longshoreman"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "narrows-fishermens-cooperative",
+   "name": "Narrows Fishermen's Cooperative",
+   "sector": "fishing",
+   "neighborhood": "the-narrows",
+   "size": "small",
+   "summary": "The Narrows families' co-op of boats, nets, ice house and fish stalls.",
+   "careers": [
+    "fisherman",
+    "clam-digger"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ellsworth-boatyard-employer",
+   "name": "Ellsworth's boatyard",
+   "sector": "trades",
+   "neighborhood": "harbor-front",
+   "size": "small",
+   "summary": "A family boatyard building dories and fishing draggers.",
+   "careers": [
+    "boatbuilder"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pellmouth-granite",
+   "name": "Pellmouth Granite Company",
+   "sector": "quarrying",
+   "neighborhood": "quarry-village",
+   "size": "medium",
+   "summary": "The granite company working four pits west of town for paving blocks, curbstone and monuments.",
+   "careers": [
+    "quarry-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hatch-merrill-shoe",
+   "name": "Hatch & Merrill Shoe Company",
+   "sector": "manufacturing",
+   "neighborhood": "the-falls",
+   "size": "large",
+   "summary": "Two brick shoe mills at the falls making work boots and women's shoes, on piece rates.",
+   "careers": [
+    "mill-hand",
+    "factory-hand"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pellmouth-courier",
+   "name": "Pellmouth Evening Courier",
+   "sector": "media",
+   "neighborhood": "market-square",
+   "size": "small",
+   "summary": "The town's evening paper: shipping news, tide tables, court reports and the social column.",
+   "careers": [
+    "journalist",
+    "linotype-operator",
+    "newsboy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tibbetts-funeral-home",
+   "name": "Tibbetts & Son Funeral Home",
+   "sector": "trades",
+   "neighborhood": "meetinghouse-hill",
+   "size": "small",
+   "summary": "The old funeral parlour in a gambrel house on Church Street, three generations in the trade.",
+   "careers": [
+    "undertaker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "first-parish-employer",
+   "name": "First Parish Church",
+   "sector": "religion",
+   "neighborhood": "meetinghouse-hill",
+   "size": "small",
+   "summary": "The Unitarian church of the old families, and keeper of the Old Hill Burying Ground.",
+   "careers": [
+    "minister",
+    "sexton"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "first-spiritualist-society",
+   "name": "First Spiritualist Society",
+   "sector": "spiritualism",
+   "neighborhood": "south-end",
+   "size": "small",
+   "summary": "A Spiritualist congregation with an upstairs hall, Sunday message services and mediums who also sit privately for a fee.",
+   "careers": [
+    "spiritualist-medium"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shore-street-railway-company",
+   "name": "Pellmouth & Shore Street Railway",
+   "sector": "transit",
+   "neighborhood": "south-end",
+   "size": "medium",
+   "summary": "The trolley company and its car barn.",
+   "careers": [
+    "streetcar-motorman"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pellmouth-police",
+   "name": "Pellmouth Police Department",
+   "sector": "law",
+   "neighborhood": "market-square",
+   "size": "small",
+   "summary": "Two dozen officers working out of the town hall basement, more busy with fog than with crime.",
+   "careers": [
+    "police-patrolman"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pellmouth-telephone-exchange",
+   "name": "Pellmouth telephone exchange",
+   "sector": "communications",
+   "neighborhood": "market-square",
+   "size": "small",
+   "summary": "The switchboard over the bank where every call in town goes through a pair of hands.",
+   "careers": [
+    "switchboard-operator",
+    "telegraph-operator"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "hub-waterfront",
+   "name": "The waterfront",
+   "neighborhoods": [
+    "harbor-front",
+    "the-narrows",
+    "gannet-point"
+   ],
+   "sectors": [
+    "fishing",
+    "logistics",
+    "maritime",
+    "transit",
+    "trades",
+    "underworld",
+    "defense"
+   ],
+   "summary": "Wharves, the cannery, the boatyard, the ferry, the light and every boat in the harbor, including the ones that come in without lights.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hub-hill",
+   "name": "The hill and the square",
+   "neighborhoods": [
+    "market-square",
+    "college-hill",
+    "meetinghouse-hill",
+    "the-bluff"
+   ],
+   "sectors": [
+    "education",
+    "healthcare",
+    "religion",
+    "spiritualism",
+    "media",
+    "communications",
+    "law",
+    "legal",
+    "finance",
+    "business",
+    "retail",
+    "hospitality",
+    "entertainment",
+    "real-estate",
+    "social-services",
+    "technology",
+    "domestic"
+   ],
+   "summary": "The university, the State Hospital, the churches, the bank, the paper and the shops.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hub-mills",
+   "name": "The mills and the pits",
+   "neighborhoods": [
+    "the-falls",
+    "quarry-village",
+    "south-end",
+    "west-parish"
+   ],
+   "sectors": [
+    "manufacturing",
+    "quarrying",
+    "construction",
+    "food",
+    "railroad",
+    "creative",
+    "recreation"
+   ],
+   "summary": "The shoe mills at the falls, the granite pits, the car barn and the farms up the river.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "The North Shore coast: cold snowy winters with nor'easters, a raw late spring, fog banks off the water from May to July, warm summers cooled by the sea breeze, and a clear, bright autumn.",
+  "months": [
+   {
+    "high_f": 35,
+    "low_f": 19,
+    "rain_days": 11,
+    "note": "Cold and gray; nor'easters bring snow and tides over the wharves."
+   },
+   {
+    "high_f": 37,
+    "low_f": 21,
+    "rain_days": 10,
+    "note": "Snow on the ground, ice in the river; the winter carnival."
+   },
+   {
+    "high_f": 44,
+    "low_f": 28,
+    "rain_days": 11,
+    "note": "Raw and windy, with the worst of the nor'easters."
+   },
+   {
+    "high_f": 54,
+    "low_f": 37,
+    "rain_days": 11,
+    "note": "Cold rain, mud and the first fog banks."
+   },
+   {
+    "high_f": 64,
+    "low_f": 46,
+    "rain_days": 11,
+    "note": "Lilacs on the hill; fog most mornings until noon."
+   },
+   {
+    "high_f": 73,
+    "low_f": 55,
+    "rain_days": 10,
+    "note": "Sea fog rolls in at evening; the fog horn sounds half the night."
+   },
+   {
+    "high_f": 79,
+    "low_f": 61,
+    "rain_days": 9,
+    "note": "Warm days, sea breeze, and fog that comes and goes in an hour."
+   },
+   {
+    "high_f": 78,
+    "low_f": 60,
+    "rain_days": 9,
+    "note": "The warmest water of the year; thunderstorms over the flats."
+   },
+   {
+    "high_f": 71,
+    "low_f": 53,
+    "rain_days": 9,
+    "note": "Clear and golden; a gale now and then."
+   },
+   {
+    "high_f": 60,
+    "low_f": 42,
+    "rain_days": 9,
+    "note": "Bright leaves, frost in West Parish, the Harvest Moon."
+   },
+   {
+    "high_f": 50,
+    "low_f": 34,
+    "rain_days": 10,
+    "note": "Gray and blowing; nor'easter season begins."
+   },
+   {
+    "high_f": 40,
+    "low_f": 25,
+    "rain_days": 11,
+    "note": "Short dark days, first snow, ice creeping out on the pond."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "winter-carnival",
+   "name": "Haskett Winter Carnival",
+   "months": [
+    2
+   ],
+   "neighborhood": "college-hill",
+   "summary": "A weekend of ski jumping off the observatory hill, snow sculptures in the Old Yard, a torchlight skate and the Carnival Ball.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "commencement",
+   "name": "Haskett commencement",
+   "months": [
+    6
+   ],
+   "neighborhood": "college-hill",
+   "summary": "Caps and gowns in the Old Yard, the chapel bell, class day picnics and parents filling every room in town.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blessing-of-the-fleet",
+   "name": "Blessing of the Fleet",
+   "months": [
+    6
+   ],
+   "neighborhood": "the-narrows",
+   "summary": "The priest of the Holy Ghost blesses every boat from the end of the landing, the boats circle the harbor dressed in flags, and the Narrows holds open house for an afternoon.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "founders-day",
+   "name": "Founders' Day",
+   "months": [
+    6
+   ],
+   "neighborhood": "market-square",
+   "summary": "The town's birthday, kept since 1843: a parade of the militia, fire companies and schools, an oration on the common and a band concert.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holy-ghost-feast",
+   "name": "Feast of the Holy Ghost",
+   "months": [
+    7
+   ],
+   "neighborhood": "the-narrows",
+   "summary": "The Narrows' festa: a crowning in the church, a procession, and free sopas of beef and bread for everyone, strangers included.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fourth-of-july",
+   "name": "The Fourth",
+   "months": [
+    7
+   ],
+   "neighborhood": "gannet-point",
+   "summary": "Bells at dawn, the parade through Market Square, a band at the pavilion and a bonfire on Long Sands.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lights-on-the-river",
+   "name": "The night of the lights on the river",
+   "months": [
+    8
+   ],
+   "neighborhood": "the-narrows",
+   "summary": "On the night of the lowest August tide the Narrows floats candles in paper boats down the river from the tide steps, for the drowned. The rest of town comes to watch; nobody explains why it must be that night.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sayers-night",
+   "name": "The last night of September",
+   "months": [
+    9
+   ],
+   "neighborhood": "west-parish",
+   "summary": "The anniversary of the widow Sayer's examination, which the town does not mark: shops close early, curtains are drawn, the Historical Society shuts at noon, and nobody is in the hayfield after dark.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harvest-moon-dance",
+   "name": "Harvest Moon dance",
+   "months": [
+    10
+   ],
+   "neighborhood": "west-parish",
+   "summary": "The grange hall's big dance of the year under paper lanterns, with a fiddler caller, cider and a supper of baked beans and pie.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "armistice-day",
+   "name": "Armistice Day",
+   "months": [
+    11
+   ],
+   "neighborhood": "market-square",
+   "summary": "Silence at eleven at the war memorial, the Legion parade, and names of the Pellmouth dead read out from the town hall steps.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "first-ice",
+   "name": "First ice on Pratt's Pond",
+   "months": [
+    12,
+    1
+   ],
+   "neighborhood": "west-parish",
+   "summary": "The day the selectmen declare the ice safe and hang out the red ball, half the town skips work to skate.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "mind-the-tide",
+   "name": "\"Mind the tide\"",
+   "kind": "saying",
+   "summary": "The Narrows' way of saying goodbye, and also of saying mind your own business; strangers rarely know which is meant.",
+   "places": [
+    "the-narrows"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "up-the-bluff",
+   "name": "\"Gone up the Bluff\"",
+   "kind": "saying",
+   "summary": "Said of someone committed to the State Hospital, in a low voice, and never in front of the family.",
+   "places": [
+    "state-hospital-grounds"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-lights-early",
+   "name": "\"The light's early\"",
+   "kind": "saying",
+   "summary": "Said when the Gannet Point lamp is lit before sunset: the boats stay in, parents call the children home, and the Courier blames the fog.",
+   "places": [
+    "gannet-point-light"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wicked",
+   "name": "\"Wicked\"",
+   "kind": "saying",
+   "summary": "The North Shore's all-purpose intensifier: wicked cold, wicked good, a wicked lot of fog.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tide-lamps",
+   "name": "Lamps on the spring tides",
+   "kind": "custom",
+   "summary": "In the Narrows a lamp burns in every window that faces the river on the nights of the big spring tides. Ask why and you are told it always has.",
+   "places": [
+    "the-tide-steps"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "no-whistling",
+   "name": "No whistling on the wharf",
+   "kind": "custom",
+   "summary": "Nobody whistles on a Pellmouth wharf or aboard a boat; it calls up wind, or worse, and a newcomer who does it is told once.",
+   "places": [
+    "central-wharf"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitcomb-sundown",
+   "name": "Out of the Whitcomb Room by sundown",
+   "kind": "custom",
+   "summary": "By the terms of the bequest the Whitcomb Room is locked at sundown, and the librarians clear it ten minutes early, every day, without exception.",
+   "places": [
+    "lindall-library"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beans-saturday",
+   "name": "Saturday beans",
+   "kind": "dish",
+   "summary": "Baked beans with salt pork and molasses and steamed brown bread for Saturday supper, in nearly every kitchen in town.",
+   "places": [
+    "commons-beanery"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fish-chowder",
+   "name": "Fish chowder",
+   "kind": "dish",
+   "summary": "Haddock, potatoes, salt pork and milk, never tomatoes; arguing about the crackers is allowed.",
+   "places": [
+    "kimballs-lunch",
+    "driscolls-oyster-bar"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fried-clams",
+   "name": "Fried clams",
+   "kind": "dish",
+   "summary": "Whole-belly clams fried in lard in a paper boat, a summer thing from the shacks on the causeway.",
+   "places": [
+    "pikes-clam-shack"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kale-soup",
+   "name": "Kale soup",
+   "kind": "dish",
+   "summary": "The Narrows' soup of kale, potatoes, beans and linguiça, on the stove all winter.",
+   "places": [
+    "medeiros-lunch"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tourtiere",
+   "name": "Tourtière",
+   "kind": "dish",
+   "summary": "Spiced pork pie the Falls families bake for Christmas Eve after midnight mass.",
+   "places": [
+    "cotes-market"
+   ],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "frappe",
+   "name": "A frappe",
+   "kind": "drink",
+   "summary": "Ice cream shaken with milk and syrup; in Pellmouth a milkshake has no ice cream in it, and visitors find out the hard way.",
+   "places": [
+    "tarbox-drug-store"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canadian-whisky",
+   "name": "Canadian",
+   "kind": "drink",
+   "summary": "Whisky that came down from Nova Scotia on a schooner and in over the flats on a foggy night; the town calls it simply \"Canadian\".",
+   "places": [
+    "the-ropewalk"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hard-cider",
+   "name": "West Parish hard cider",
+   "kind": "drink",
+   "summary": "Cider left to work in the barrel over the winter, legal if you made it yourself and sold by the jug to people the family knows.",
+   "places": [
+    "dodges-cider-mill",
+    "wayside-roadhouse"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "twilight-league",
+   "name": "The Twilight League",
+   "kind": "team",
+   "summary": "Mill, car barn, cannery and quarry teams playing seven innings after supper at Riverside Oval, with bets the whole town knows about.",
+   "places": [
+    "riverside-oval"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haskett-crew",
+   "name": "The Haskett crew",
+   "kind": "team",
+   "summary": "The university eight, who row the river at dawn and lose to bigger colleges every spring with great dignity.",
+   "places": [
+    "haskett-boathouse"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "annis-sayer",
+   "name": "The widow Sayer",
+   "kind": "legend",
+   "summary": "Annis Sayer, a widow of West Parish, was examined for witchcraft on a boulder in 1692. The court papers stop mid-page; the story says she was never seen to come down.",
+   "places": [
+    "sayers-rock",
+    "pellmouth-historical-society"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sealed-meetinghouse",
+   "name": "The sealed meetinghouse",
+   "kind": "legend",
+   "summary": "The Second Parish meetinghouse was shut in 1894 after a winter service nobody who attended would describe. The record says a quarrel and a bad roof.",
+   "places": [
+    "second-parish-meetinghouse"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "no-bottom",
+   "name": "Number Four has no bottom",
+   "kind": "legend",
+   "summary": "Quarry Village says nobody has ever sounded the bottom of Number Four, that the water is warm in January, and that what goes in does not come up.",
+   "places": [
+    "number-four-quarry"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tide-folk",
+   "name": "The Narrows know the tide",
+   "kind": "rumor",
+   "summary": "Uptown it is said the Narrows families know the tides better than the printed tables, and that on some nights they go down to the steps to meet it. The Narrows says uptown talks too much.",
+   "places": [
+    "the-tide-steps",
+    "old-custom-house"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitcomb-journals",
+   "name": "What is in the Whitcomb Room",
+   "kind": "rumor",
+   "summary": "Students swear one of the Whitcomb journals is written in no known language, and that a professor who asked to take it home left the faculty the same term.",
+   "places": [
+    "lindall-library"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fourth-floor",
+   "name": "The fourth floor of the tower",
+   "kind": "rumor",
+   "summary": "Attendants say nobody is ever assigned to the top floor of the State Hospital tower, and that its lights are on all the same.",
+   "places": [
+    "state-hospital-grounds"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "college-spa-shop",
+   "name": "The spa",
+   "kind": "shop",
+   "summary": "A Massachusetts \"spa\" is a corner store with a soda fountain, tobacco and magazines; the College Spa on College Hill is the one everybody means.",
+   "places": [
+    "the-college-spa"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tuttles-back-room",
+   "name": "Tuttle's back room",
+   "kind": "shop",
+   "summary": "The antiquarian bookshop keeps its oldest stock in a back room shown only to customers it knows, which is most of what anyone talks about.",
+   "places": [
+    "tuttles-books"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Cup of coffee",
+   "low": 0.05,
+   "high": 0.1,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lunch-counter",
+   "item": "Lunch at a counter",
+   "low": 0.25,
+   "high": 0.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chop-house-dinner",
+   "item": "Dinner at the chop house",
+   "low": 0.75,
+   "high": 1.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oysters",
+   "item": "Oysters",
+   "low": 0.35,
+   "high": 0.6,
+   "per": "a dozen on the half shell",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fried-clams",
+   "item": "Fried clams",
+   "low": 0.25,
+   "high": 0.4,
+   "per": "a paper boat",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ice-cream-soda",
+   "item": "Ice cream soda or frappe",
+   "low": 0.15,
+   "high": 0.25,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pictures",
+   "item": "Seat at the pictures",
+   "low": 0.1,
+   "high": 0.35,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "streetcar-fare",
+   "item": "Trolley fare",
+   "low": 0.1,
+   "high": 0.1,
+   "per": "a ride",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "train-to-boston",
+   "item": "Train to Boston",
+   "low": 0.85,
+   "high": 1.4,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "newspaper",
+   "item": "Evening Courier",
+   "low": 0.02,
+   "high": 0.03,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haircut",
+   "item": "Haircut",
+   "low": 0.35,
+   "high": 0.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bootleg-gin",
+   "item": "Bootleg gin",
+   "low": 1.5,
+   "high": 3,
+   "per": "a pint",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seance-sitting",
+   "item": "Private sitting with a medium",
+   "low": 0.5,
+   "high": 2,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "room-and-board",
+   "item": "Room and board",
+   "low": 8,
+   "high": 12,
+   "per": "a week",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries for a family",
+   "low": 7,
+   "high": 11,
+   "per": "a week",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wage",
+   "item": "Day wage",
+   "low": 4,
+   "high": 6,
+   "per": "a day in the mills, the pits or the cannery; clerks $20-$30 a week",
+   "source": "curated-2026-10"
+  }
+ ],
+ "townsfolk": {
+  "quirks": [
+   {
+    "text": "keeps the tide table pinned by the door",
+    "bio": "I know when high water is. Always."
+   },
+   {
+    "text": "won't whistle near the water after dark",
+    "bio": "I will not whistle by the harbor after dark. Do not ask me why; nobody here does."
+   },
+   {
+    "text": "counts the foghorn blasts under their breath",
+    "bio": "I count the foghorn. It passes the time."
+   },
+   {
+    "text": "always takes the long way round the old meetinghouse",
+    "bio": "I take the long way round the old meetinghouse. Habit."
+   },
+   {
+    "text": "reads the Courier shipping news before the front page",
+    "bio": "Shipping news first, then the rest of the paper."
+   },
+   {
+    "text": "keeps a lamp lit in the window on foggy nights",
+    "bio": "There is always a lamp in my window when the fog comes in."
+   },
+   {
+    "text": "taps the barometer every time they pass a chandlery window",
+    "bio": "I tap every barometer I pass. Old skipper habit, and I never was a skipper."
+   },
+   {
+    "text": "knows every family plot in the Old Hill Burying Ground",
+    "bio": "Ask me about anyone in the Old Hill Burying Ground."
+   }
+  ],
+  "goals": [
+   {
+    "id": "pellmouth-dory",
+    "text": "build a dory of their own over the winter",
+    "steps": 6,
+    "practice": [
+     "workshop",
+     "evening"
+    ],
+    "progress": "{name} got another strake fastened on the dory in the shed",
+    "done": "{name} launched the new dory off the town landing, with half the street watching",
+    "interest": "boatbuilding",
+    "bio": "Building a dory in my shed, one plank at a time."
+   },
+   {
+    "id": "pellmouth-family-papers",
+    "text": "trace their family back through the town's old records",
+    "steps": 5,
+    "practice": [
+     "library",
+     "afternoon"
+    ],
+    "progress": "{name} found another great-grandparent in the Athenaeum ledgers",
+    "done": "{name} traced the family back to the first settlers, and stopped there",
+    "interest": "family history",
+    "bio": "Digging through the town records for my family."
+   },
+   {
+    "id": "pellmouth-chowder",
+    "text": "win the chowder supper at the West Parish Grange",
+    "steps": 4,
+    "practice": [
+     "market",
+     "morning"
+    ],
+    "progress": "{name} tried another batch of chowder on the neighbors",
+    "done": "{name} took first prize for chowder, and will not share the secret",
+    "interest": "cooking",
+    "bio": "Working on a chowder that will win the Grange supper."
+   },
+   {
+    "id": "pellmouth-mooring",
+    "text": "save for a mooring and a boat in the harbor",
+    "steps": 6,
+    "practice": null,
+    "progress": "{name} put another week of pay towards a mooring",
+    "done": "{name} has a boat on a mooring of their own at last",
+    "interest": "boats",
+    "bio": "Saving for a mooring in the harbor."
+   },
+   {
+    "id": "pellmouth-boston-job",
+    "text": "get a place in Boston and off the North Shore",
+    "steps": 7,
+    "practice": null,
+    "progress": "{name} wrote off to another Boston firm about a position",
+    "done": "{name} got an offer in Boston, and has not yet said whether they will go",
+    "interest": "getting ahead",
+    "bio": "Looking for a job in Boston. Maybe."
+   }
+  ]
+ },
+ "names": {
+  "mix": {
+   "anglo": 6,
+   "irish": 2,
+   "french-canadian": 1.5,
+   "italian": 1,
+   "portuguese": 0.8,
+   "slavic": 0.6,
+   "german": 0.5,
+   "jewish": 0.3,
+   "black-american": 0.15
+  },
+  "groups": {
+   "portuguese": {
+    "feminine": [
+     "Maria",
+     "Rosa",
+     "Conceição",
+     "Mary",
+     "Isabel",
+     "Amélia",
+     "Adelaide",
+     "Emília",
+     "Olívia",
+     "Glória",
+     "Laura",
+     "Clara",
+     "Lucinda",
+     "Alice",
+     "Hilda",
+     "Irene",
+     "Delfina",
+     "Ermelinda",
+     "Natália",
+     "Beatriz"
+    ],
+    "masculine": [
+     "Manuel",
+     "José",
+     "António",
+     "João",
+     "Francisco",
+     "Joaquim",
+     "Frank",
+     "Joseph",
+     "Anthony",
+     "John",
+     "Augusto",
+     "Alfredo",
+     "Domingos",
+     "Jacinto",
+     "Mateus",
+     "Luís",
+     "Henrique",
+     "Fernando",
+     "Ernesto",
+     "Albino"
+    ],
+    "family": [
+     "Silva",
+     "Souza",
+     "Medeiros",
+     "Furtado",
+     "Pereira",
+     "Costa",
+     "Mello",
+     "Rapoza",
+     "Amaral",
+     "Avila",
+     "Rego",
+     "Cabral",
+     "Sylvia",
+     "Lopes",
+     "Tavares",
+     "Pacheco",
+     "Correia",
+     "Duarte",
+     "Bettencourt",
+     "Machado",
+     "Gaspar",
+     "Mendonça",
+     "Raposo",
+     "Fernandes",
+     "Teixeira"
+    ]
+   }
+  },
+  "year": 1926
+ },
+ "water": [
+  {
+   "kind": "sea",
+   "name": "Massachusetts Bay",
+   "side": "east",
+   "width_km": 2
+  },
+  {
+   "kind": "river",
+   "name": "Pell River",
+   "width_km": 0.12,
+   "points": [
+    [
+     42.727,
+     -70.878
+    ],
+    [
+     42.722,
+     -70.857
+    ],
+    [
+     42.718,
+     -70.84
+    ],
+    [
+     42.718,
+     -70.83
+    ],
+    [
+     42.715,
+     -70.815
+    ],
+    [
+     42.709,
+     -70.806
+    ],
+    [
+     42.705,
+     -70.795
+    ],
+    [
+     42.702,
+     -70.78
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,4668 @@
+{
+ "schema_version": 1,
+ "id": "london-1895",
+ "name": "London, 1895",
+ "setting": "fictional",
+ "era": "victorian",
+ "category": "other-eras",
+ "basis": "Real late-Victorian London, as it stood in 1895, together with the places of Arthur Conan Doyle's Sherlock Holmes stories, all of which are in the public domain in the US. Nothing is taken from later films, television or pastiches.",
+ "region": "County of London",
+ "country": "United Kingdom of Great Britain and Ireland",
+ "timezone": "Europe/London",
+ "aliases": [
+  "Victorian London",
+  "Holmes's London",
+  "London 1895",
+  "Sherlock Holmes's London"
+ ],
+ "summary": "The capital of the British Empire in 1895: gaslit streets, hansom cabs, horse omnibuses and steam trains under the ground, banks in the City, newspapers on Fleet Street, docks downriver, and Mr Sherlock Holmes in rooms at 221B Baker Street.",
+ "lat": 51.512,
+ "lon": -0.123,
+ "currency": {
+  "code": "shilling",
+  "symbol": "s.",
+  "name": "shillings"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.5,
+  "bus": 7,
+  "tram": 9,
+  "carriage": 12,
+  "subway": 20,
+  "commuter-rail": 25,
+  "boat": 11
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "London in 1895, written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "Late-Victorian London from general historical knowledge: neighbourhoods, institutions, theatres, pubs and markets that existed in 1895, at approximate real coordinates. Holmes locations (221B Baker Street, the Diogenes Club) come from Arthur Conan Doyle's stories, public domain in the US. Rents are rounded weekly figures in shillings for a single room, two rooms, and three rooms or a small flat, meant for fiction. Climate figures are rounded London averages of the period; winter fogs were thicker then than now."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "marylebone",
+   "name": "Marylebone and Baker Street",
+   "summary": "Respectable terraces of lodging houses and doctors' consulting rooms between Oxford Street and Regent's Park, with Baker Street station on the Metropolitan line.",
+   "vibe": [
+    "respectable",
+    "lodgings",
+    "park"
+   ],
+   "lat": 51.522,
+   "lon": -0.157,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     8,
+     15
+    ],
+    "one_bedroom": [
+     15,
+     30
+    ],
+    "two_bedroom": [
+     25,
+     50
+    ]
+   },
+   "housing": [
+    "lodging-house",
+    "terrace",
+    "mansion-flat"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metropolitan-railway",
+    "horse-omnibus",
+    "hansom-cab"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mayfair",
+   "name": "Mayfair",
+   "summary": "Town houses of the rich between Piccadilly and Oxford Street, full of servants during the Season, with tailors, galleries and Bond Street shops.",
+   "vibe": [
+    "wealthy",
+    "fashionable",
+    "shopping"
+   ],
+   "lat": 51.51,
+   "lon": -0.148,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     20,
+     40
+    ],
+    "one_bedroom": [
+     40,
+     80
+    ],
+    "two_bedroom": [
+     80,
+     160
+    ]
+   },
+   "housing": [
+    "town-house",
+    "mews",
+    "servants-quarters"
+   ],
+   "walkability": "high",
+   "transit": [
+    "horse-omnibus",
+    "hansom-cab"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "westminster",
+   "name": "Westminster and St James's",
+   "summary": "Parliament, the Abbey, government offices on Whitehall, New Scotland Yard on the Embankment, and the gentlemen's clubs of Pall Mall.",
+   "vibe": [
+    "government",
+    "clubs",
+    "historic"
+   ],
+   "lat": 51.503,
+   "lon": -0.13,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     12,
+     25
+    ],
+    "one_bedroom": [
+     25,
+     45
+    ],
+    "two_bedroom": [
+     40,
+     80
+    ]
+   },
+   "housing": [
+    "chambers",
+    "terrace",
+    "mansion-flat"
+   ],
+   "walkability": "high",
+   "transit": [
+    "district-railway",
+    "horse-omnibus",
+    "hansom-cab",
+    "thames-steamer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "strand-covent-garden",
+   "name": "The Strand and Covent Garden",
+   "summary": "Theatres, restaurants and hotels along the Strand, and the fruit, flower and vegetable market at Covent Garden, busy from before dawn.",
+   "vibe": [
+    "theatres",
+    "market",
+    "nightlife"
+   ],
+   "lat": 51.511,
+   "lon": -0.122,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     7,
+     14
+    ],
+    "one_bedroom": [
+     12,
+     25
+    ],
+    "two_bedroom": [
+     20,
+     40
+    ]
+   },
+   "housing": [
+    "rooms-over-shops",
+    "lodging-house",
+    "chambers"
+   ],
+   "walkability": "high",
+   "transit": [
+    "district-railway",
+    "horse-omnibus",
+    "hansom-cab",
+    "thames-steamer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fleet-street",
+   "name": "Fleet Street and the Temple",
+   "summary": "Newspaper offices and printing works, chop houses and old taverns, with barristers' chambers in the Inns of Court behind.",
+   "vibe": [
+    "press",
+    "law",
+    "taverns"
+   ],
+   "lat": 51.514,
+   "lon": -0.108,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     7,
+     12
+    ],
+    "one_bedroom": [
+     12,
+     22
+    ],
+    "two_bedroom": [
+     18,
+     35
+    ]
+   },
+   "housing": [
+    "chambers",
+    "rooms-over-shops"
+   ],
+   "walkability": "high",
+   "transit": [
+    "horse-omnibus",
+    "hansom-cab",
+    "thames-steamer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-city",
+   "name": "The City",
+   "summary": "The square mile of banks, insurance offices and merchant houses around the Bank of England, crowded with clerks by day and nearly empty at night.",
+   "vibe": [
+    "finance",
+    "commerce",
+    "historic"
+   ],
+   "lat": 51.513,
+   "lon": -0.089,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     8,
+     14
+    ],
+    "one_bedroom": [
+     14,
+     25
+    ],
+    "two_bedroom": [
+     20,
+     40
+    ]
+   },
+   "housing": [
+    "caretaker-flat",
+    "chambers"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metropolitan-railway",
+    "district-railway",
+    "city-and-south-london",
+    "horse-omnibus",
+    "hansom-cab",
+    "thames-steamer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitechapel",
+   "name": "Whitechapel and Spitalfields",
+   "summary": "Crowded East End streets of tailoring workshops, common lodging houses, street markets and new Jewish arrivals from Eastern Europe, with Toynbee Hall and the London Hospital.",
+   "vibe": [
+    "working-class",
+    "crowded",
+    "markets"
+   ],
+   "lat": 51.517,
+   "lon": -0.065,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     5
+    ],
+    "one_bedroom": [
+     5,
+     8
+    ],
+    "two_bedroom": [
+     7,
+     11
+    ]
+   },
+   "housing": [
+    "tenement",
+    "common-lodging-house",
+    "model-dwelling"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metropolitan-railway",
+    "horse-omnibus",
+    "horse-tram"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "limehouse",
+   "name": "Limehouse and the Docks",
+   "summary": "Riverside streets beside the West India Docks: warehouses, ships' chandlers, sailors' boarding houses and a small Chinese quarter.",
+   "vibe": [
+    "docks",
+    "river",
+    "working-class"
+   ],
+   "lat": 51.511,
+   "lon": -0.033,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     2,
+     4
+    ],
+    "one_bedroom": [
+     4,
+     7
+    ],
+    "two_bedroom": [
+     6,
+     10
+    ]
+   },
+   "housing": [
+    "terrace",
+    "boarding-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "horse-omnibus",
+    "horse-tram",
+    "thames-steamer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bloomsbury",
+   "name": "Bloomsbury",
+   "summary": "Garden squares of boarding houses near the British Museum and University College, home to students, writers, governesses between posts and clerks on small salaries.",
+   "vibe": [
+    "academic",
+    "squares",
+    "boarding-houses"
+   ],
+   "lat": 51.521,
+   "lon": -0.127,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     6,
+     14
+    ],
+    "one_bedroom": [
+     12,
+     25
+    ],
+    "two_bedroom": [
+     20,
+     40
+    ]
+   },
+   "housing": [
+    "boarding-house",
+    "terrace",
+    "lodging-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metropolitan-railway",
+    "horse-omnibus",
+    "hansom-cab"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southwark",
+   "name": "Southwark and the Borough",
+   "summary": "South of London Bridge: Borough Market, Guy's Hospital, hop warehouses, breweries and the last galleried coaching inn.",
+   "vibe": [
+    "working-class",
+    "markets",
+    "river"
+   ],
+   "lat": 51.504,
+   "lon": -0.091,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     3,
+     6
+    ],
+    "one_bedroom": [
+     5,
+     9
+    ],
+    "two_bedroom": [
+     8,
+     13
+    ]
+   },
+   "housing": [
+    "terrace",
+    "tenement",
+    "model-dwelling"
+   ],
+   "walkability": "high",
+   "transit": [
+    "city-and-south-london",
+    "horse-omnibus",
+    "horse-tram"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lambeth",
+   "name": "Lambeth",
+   "summary": "Across Westminster Bridge: the Canterbury music hall, Doulton's pottery works, the New Cut street market and rows of small terraces.",
+   "vibe": [
+    "working-class",
+    "music-halls",
+    "industry"
+   ],
+   "lat": 51.497,
+   "lon": -0.115,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     3,
+     6
+    ],
+    "one_bedroom": [
+     6,
+     9
+    ],
+    "two_bedroom": [
+     8,
+     14
+    ]
+   },
+   "housing": [
+    "terrace",
+    "tenement"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "city-and-south-london",
+    "horse-omnibus",
+    "horse-tram",
+    "thames-steamer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pimlico",
+   "name": "Pimlico",
+   "summary": "Plain stucco terraces near Victoria station, cut up into lodgings for clerks, widows and shop assistants.",
+   "vibe": [
+    "quiet",
+    "lodgings",
+    "respectable"
+   ],
+   "lat": 51.489,
+   "lon": -0.138,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     6,
+     12
+    ],
+    "one_bedroom": [
+     10,
+     20
+    ],
+    "two_bedroom": [
+     16,
+     30
+    ]
+   },
+   "housing": [
+    "lodging-house",
+    "terrace"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "district-railway",
+    "horse-omnibus",
+    "hansom-cab",
+    "thames-steamer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chelsea",
+   "name": "Chelsea",
+   "summary": "Riverside streets of painters' studios and old houses along Cheyne Walk, with the Royal Hospital and Battersea Park across the water.",
+   "vibe": [
+    "artists",
+    "river",
+    "quiet"
+   ],
+   "lat": 51.487,
+   "lon": -0.168,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     6,
+     14
+    ],
+    "one_bedroom": [
+     12,
+     25
+    ],
+    "two_bedroom": [
+     20,
+     45
+    ]
+   },
+   "housing": [
+    "studio",
+    "terrace",
+    "mansion-flat"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "district-railway",
+    "horse-omnibus",
+    "thames-steamer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kensington",
+   "name": "Kensington and Knightsbridge",
+   "summary": "Large stucco houses, the museums of South Kensington, the Royal Albert Hall, Kensington Gardens and Harrods.",
+   "vibe": [
+    "wealthy",
+    "museums",
+    "family"
+   ],
+   "lat": 51.498,
+   "lon": -0.18,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     10,
+     25
+    ],
+    "one_bedroom": [
+     20,
+     45
+    ],
+    "two_bedroom": [
+     35,
+     80
+    ]
+   },
+   "housing": [
+    "town-house",
+    "mansion-flat",
+    "mews"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "metropolitan-railway",
+    "district-railway",
+    "horse-omnibus",
+    "hansom-cab"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hampstead",
+   "name": "Hampstead",
+   "summary": "A hill village of old houses and new villas on the northern edge, with the Heath, its ponds and its inns.",
+   "vibe": [
+    "village",
+    "heath",
+    "quiet"
+   ],
+   "lat": 51.556,
+   "lon": -0.178,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     8,
+     18
+    ],
+    "one_bedroom": [
+     15,
+     30
+    ],
+    "two_bedroom": [
+     25,
+     55
+    ]
+   },
+   "housing": [
+    "villa",
+    "cottage",
+    "terrace"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "north-london-railway",
+    "horse-omnibus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kew",
+   "name": "Kew and Richmond",
+   "summary": "Riverside villages upstream, reached by train or steamer, with the Royal Botanic Gardens, Richmond Park and boating on the Thames.",
+   "vibe": [
+    "suburban",
+    "river",
+    "gardens"
+   ],
+   "lat": 51.478,
+   "lon": -0.29,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     5,
+     10
+    ],
+    "one_bedroom": [
+     9,
+     18
+    ],
+    "two_bedroom": [
+     14,
+     28
+    ]
+   },
+   "housing": [
+    "villa",
+    "cottage"
+   ],
+   "walkability": "low",
+   "transit": [
+    "district-railway",
+    "north-london-railway",
+    "thames-steamer"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "horse-omnibus",
+   "name": "Horse omnibuses",
+   "kind": "bus",
+   "summary": "Two-horse buses of the London General Omnibus Company and its rivals, with knifeboard seats on the roof; a penny or twopence a stage.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "horse-tram",
+   "name": "Horse tramways",
+   "kind": "tram",
+   "summary": "Horse-drawn trams on rails, mostly in South and East London, since they are kept out of the West End and the City.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hansom-cab",
+   "name": "Hansom cabs and growlers",
+   "kind": "carriage",
+   "summary": "Two-wheeled hansoms for speed and four-wheeled growlers for luggage, hired from a rank or hailed in the street; a shilling for the first two miles.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "metropolitan-railway",
+   "name": "Metropolitan Railway",
+   "kind": "subway",
+   "summary": "Steam trains under the New Road through Baker Street, King's Cross and on to the City, sooty but quick.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "district-railway",
+   "name": "Metropolitan District Railway",
+   "kind": "subway",
+   "summary": "Steam underground line along the Embankment through Westminster, Charing Cross and South Kensington, out to Richmond.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-and-south-london",
+   "name": "City and South London Railway",
+   "kind": "subway",
+   "summary": "The first deep electric tube, opened in 1890 from King William Street in the City under the river to Stockwell, in small padded carriages.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "north-london-railway",
+   "name": "North London Railway",
+   "kind": "commuter-rail",
+   "summary": "Suburban steam trains looping round the north, with stations at Hampstead Heath and Kew Gardens.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "thames-steamer",
+   "name": "Thames steamboats",
+   "kind": "boat",
+   "summary": "Penny steamers calling at piers from Chelsea to London Bridge, with summer boats upriver to Kew and Richmond.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "221b-baker-street",
+   "name": "221B Baker Street",
+   "kind": "landmark",
+   "neighborhood": "marylebone",
+   "summary": "The first-floor rooms Mr Sherlock Holmes shares with Dr Watson, kept by Mrs Hudson, with a bow window over Baker Street.",
+   "tags": [
+    "holmes",
+    "canon",
+    "street"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "regents-park",
+   "name": "Regent's Park",
+   "kind": "park",
+   "neighborhood": "marylebone",
+   "summary": "Nash terraces round a wide park with a boating lake, the Inner Circle gardens and band music on summer evenings.",
+   "tags": [
+    "walk",
+    "boating",
+    "lake"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-zoo",
+   "name": "Zoological Gardens",
+   "kind": "attraction",
+   "neighborhood": "marylebone",
+   "summary": "The Zoological Society's gardens in Regent's Park, with the lion house, the reptile house and elephant rides for children.",
+   "tags": [
+    "animals",
+    "family",
+    "outing"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "madame-tussauds",
+   "name": "Madame Tussaud's",
+   "kind": "attraction",
+   "neighborhood": "marylebone",
+   "summary": "The waxwork exhibition on Marylebone Road, with kings, queens, famous murderers in the Chamber of Horrors and a band in the Hall of Kings.",
+   "tags": [
+    "waxworks",
+    "rainy-day",
+    "popular"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "queens-hall",
+   "name": "Queen's Hall",
+   "kind": "venue",
+   "neighborhood": "marylebone",
+   "summary": "New concert hall in Langham Place, opened in 1893, known for its good sound and cheap promenade tickets.",
+   "tags": [
+    "music",
+    "concerts"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-royal",
+   "name": "Café Royal",
+   "kind": "restaurant",
+   "neighborhood": "mayfair",
+   "summary": "French restaurant and domino room on Regent Street where artists, writers and young men about town meet over absinthe and dinner.",
+   "tags": [
+    "artists",
+    "french",
+    "late"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "French",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "criterion",
+   "name": "The Criterion",
+   "kind": "bar",
+   "neighborhood": "mayfair",
+   "summary": "Long bar and restaurant at Piccadilly Circus, where Dr Watson ran into young Stamford before he met Holmes.",
+   "tags": [
+    "canon",
+    "piccadilly",
+    "drinks"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "liberty",
+   "name": "Liberty and Co.",
+   "kind": "shopping",
+   "neighborhood": "mayfair",
+   "summary": "Regent Street shop selling Eastern silks, printed fabrics and art furnishings to the artistic set.",
+   "tags": [
+    "fabrics",
+    "fashion",
+    "art"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lyons-piccadilly",
+   "name": "Lyons tea shop, Piccadilly",
+   "kind": "cafe",
+   "neighborhood": "mayfair",
+   "summary": "The first Lyons tea shop, opened in 1894: tea, buns and a plate of ham at fixed low prices, with waitresses in uniform.",
+   "tags": [
+    "tea",
+    "cheap",
+    "new"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Tea and light meals",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "diogenes-club",
+   "name": "The Diogenes Club",
+   "kind": "landmark",
+   "neighborhood": "westminster",
+   "summary": "The Pall Mall club of Mycroft Holmes, for the least sociable men in London; no member may speak to another except in the Strangers' Room.",
+   "tags": [
+    "holmes",
+    "canon",
+    "club"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-james-park",
+   "name": "St James's Park",
+   "kind": "park",
+   "neighborhood": "westminster",
+   "summary": "Lake with pelicans and ducks between Buckingham Palace and the Horse Guards, a lunchtime walk for government clerks.",
+   "tags": [
+    "lake",
+    "walk",
+    "ducks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "westminster-abbey",
+   "name": "Westminster Abbey",
+   "kind": "temple",
+   "neighborhood": "westminster",
+   "summary": "The coronation church, with Poets' Corner and choral evensong every afternoon.",
+   "tags": [
+    "church",
+    "history",
+    "music"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-library",
+   "name": "The London Library",
+   "kind": "library",
+   "neighborhood": "westminster",
+   "summary": "Subscription lending library in St James's Square, where members take books home and read in a quiet upstairs room.",
+   "tags": [
+    "books",
+    "quiet",
+    "subscription"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "covent-garden-market",
+   "name": "Covent Garden Market",
+   "kind": "market",
+   "neighborhood": "strand-covent-garden",
+   "summary": "The great fruit, flower and vegetable market, loud with porters and costers before dawn and quieter by noon.",
+   "tags": [
+    "flowers",
+    "produce",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "simpsons",
+   "name": "Simpson's-in-the-Strand",
+   "kind": "restaurant",
+   "neighborhood": "strand-covent-garden",
+   "summary": "Old Strand dining room where joints of beef and mutton are wheeled to the table on silver trolleys and carved there.",
+   "tags": [
+    "roast-beef",
+    "canon",
+    "traditional"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English roasts",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lamb-and-flag",
+   "name": "The Lamb and Flag",
+   "kind": "tavern",
+   "neighborhood": "strand-covent-garden",
+   "summary": "Small, old timber-framed pub up an alley off Rose Street, full of market men and actors.",
+   "tags": [
+    "pub",
+    "old",
+    "beer"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "savoy-theatre",
+   "name": "Savoy Theatre",
+   "kind": "venue",
+   "neighborhood": "strand-covent-garden",
+   "summary": "The electrically lit theatre built for Gilbert and Sullivan's comic operas.",
+   "tags": [
+    "theatre",
+    "comic-opera"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lyceum",
+   "name": "Lyceum Theatre",
+   "kind": "venue",
+   "neighborhood": "strand-covent-garden",
+   "summary": "Henry Irving and Ellen Terry's theatre off the Strand, where Holmes and Watson met Mary Morstan by the third pillar.",
+   "tags": [
+    "theatre",
+    "canon",
+    "drama"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "drury-lane",
+   "name": "Theatre Royal, Drury Lane",
+   "kind": "venue",
+   "neighborhood": "strand-covent-garden",
+   "summary": "Huge old theatre known for spectacular melodramas in autumn and the Christmas pantomime.",
+   "tags": [
+    "theatre",
+    "pantomime"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gattis",
+   "name": "Gatti's",
+   "kind": "cafe",
+   "neighborhood": "strand-covent-garden",
+   "summary": "Swiss café and restaurant in the Strand known for ices, coffee and cheap suppers before or after the theatre.",
+   "tags": [
+    "ices",
+    "coffee",
+    "theatre"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Swiss and Italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "turkish-baths",
+   "name": "Nevill's Turkish Baths, Northumberland Avenue",
+   "kind": "fitness",
+   "neighborhood": "strand-covent-garden",
+   "summary": "Tiled hot rooms, a plunge pool and couches for resting, where Holmes and Watson took a bath in \"The Illustrious Client\".",
+   "tags": [
+    "baths",
+    "canon",
+    "steam"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charing-cross-bookshops",
+   "name": "Charing Cross Road bookshops",
+   "kind": "shopping",
+   "neighborhood": "strand-covent-garden",
+   "summary": "Secondhand booksellers with sixpenny boxes outside on the new Charing Cross Road.",
+   "tags": [
+    "books",
+    "browsing"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheshire-cheese",
+   "name": "Ye Olde Cheshire Cheese",
+   "kind": "tavern",
+   "neighborhood": "fleet-street",
+   "summary": "Dark chop house, rebuilt after the Great Fire, off Fleet Street, with sawdust floors, a famous beefsteak pudding and newspapermen at every table.",
+   "tags": [
+    "pub",
+    "pudding",
+    "press"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-pauls",
+   "name": "St Paul's Cathedral",
+   "kind": "temple",
+   "neighborhood": "fleet-street",
+   "summary": "Wren's cathedral at the top of Ludgate Hill, with the Whispering Gallery and a view from the Golden Gallery for the energetic.",
+   "tags": [
+    "church",
+    "views",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "leadenhall-market",
+   "name": "Leadenhall Market",
+   "kind": "market",
+   "neighborhood": "the-city",
+   "summary": "Iron-and-glass market hall, newly rebuilt, selling poultry, game and cheese to City clerks and their households.",
+   "tags": [
+    "poultry",
+    "covered"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "billingsgate",
+   "name": "Billingsgate Market",
+   "kind": "market",
+   "neighborhood": "the-city",
+   "summary": "The fish market on the river below London Bridge, where porters carry boxes of fish on leather hats from five in the morning.",
+   "tags": [
+    "fish",
+    "early",
+    "river"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "smithfield",
+   "name": "Smithfield Market",
+   "kind": "market",
+   "neighborhood": "the-city",
+   "summary": "The London Central Meat Market by St Bartholomew's Hospital, with pubs that open at dawn for the market men.",
+   "tags": [
+    "meat",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abc-cheapside",
+   "name": "ABC tea shop, Cheapside",
+   "kind": "cafe",
+   "neighborhood": "the-city",
+   "summary": "An Aerated Bread Company tea room where clerks and typists, women among them, take a cheap lunch of tea and a bun.",
+   "tags": [
+    "tea",
+    "cheap",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "Tea and light meals",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "british-museum",
+   "name": "British Museum",
+   "kind": "museum",
+   "neighborhood": "bloomsbury",
+   "summary": "The national collections on Great Russell Street: the Elgin Marbles, Egyptian mummies and the Assyrian reliefs, free to all.",
+   "tags": [
+    "antiquities",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "reading-room",
+   "name": "British Museum Reading Room",
+   "kind": "library",
+   "neighborhood": "bloomsbury",
+   "summary": "The great domed reading room, open to anyone with a reader's ticket, where Holmes once lodged near by in Montague Street.",
+   "tags": [
+    "books",
+    "study",
+    "canon"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "petticoat-lane",
+   "name": "Petticoat Lane market",
+   "kind": "market",
+   "neighborhood": "whitechapel",
+   "summary": "The Sunday morning clothes and oddments market on Middlesex Street, crowded with buyers and loud with patter.",
+   "tags": [
+    "secondhand",
+    "clothes",
+    "sunday"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peoples-palace",
+   "name": "The People's Palace",
+   "kind": "venue",
+   "neighborhood": "whitechapel",
+   "summary": "Hall, library, gymnasium and technical school on the Mile End Road for East Enders, with cheap concerts and lectures.",
+   "tags": [
+    "concerts",
+    "lectures",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "toynbee-hall",
+   "name": "Toynbee Hall",
+   "kind": "landmark",
+   "neighborhood": "whitechapel",
+   "summary": "University settlement in Commercial Street where young graduates live and run evening classes, a library and lectures.",
+   "tags": [
+    "settlement",
+    "classes",
+    "reform"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-grapes",
+   "name": "The Grapes",
+   "kind": "tavern",
+   "neighborhood": "limehouse",
+   "summary": "Narrow riverside pub in Narrow Street with a back room over the water, known to lightermen and ship's officers.",
+   "tags": [
+    "pub",
+    "river",
+    "docks"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-india-docks",
+   "name": "West India Docks",
+   "kind": "docks",
+   "neighborhood": "limehouse",
+   "summary": "Long basins of sailing ships and steamers unloading rum, sugar and timber into brick warehouses.",
+   "tags": [
+    "ships",
+    "river",
+    "work"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "victoria-park",
+   "name": "Victoria Park",
+   "kind": "park",
+   "neighborhood": "limehouse",
+   "summary": "The East End's big park, with lakes, open-air bathing and Sunday crowds by the drinking fountain.",
+   "tags": [
+    "lake",
+    "bathing",
+    "east-end"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "george-inn",
+   "name": "The George Inn",
+   "kind": "inn",
+   "neighborhood": "southwark",
+   "summary": "The last galleried coaching inn in London, off Borough High Street, partly used as a railway goods depot.",
+   "tags": [
+    "pub",
+    "galleries",
+    "old"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "borough-market",
+   "name": "Borough Market",
+   "kind": "market",
+   "neighborhood": "southwark",
+   "summary": "Wholesale vegetable market under the railway viaducts by Southwark Cathedral.",
+   "tags": [
+    "produce",
+    "early",
+    "railway"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canterbury-music-hall",
+   "name": "Canterbury Music Hall",
+   "kind": "venue",
+   "neighborhood": "lambeth",
+   "summary": "Big music hall on Westminster Bridge Road: comic singers, acrobats and a chairman, with drinks served at your seat.",
+   "tags": [
+    "music-hall",
+    "comedy",
+    "songs"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lambeth-baths",
+   "name": "Lambeth Public Baths",
+   "kind": "fitness",
+   "neighborhood": "lambeth",
+   "summary": "Public swimming bath and slipper baths on the Westminster Bridge Road, cheap on second-class days.",
+   "tags": [
+    "swimming",
+    "baths",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-new-cut",
+   "name": "The New Cut",
+   "kind": "market",
+   "neighborhood": "lambeth",
+   "summary": "Saturday night street market lit by naphtha flares, selling cheap meat, crockery and old clothes.",
+   "tags": [
+    "street-market",
+    "saturday"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "battersea-park",
+   "name": "Battersea Park",
+   "kind": "park",
+   "neighborhood": "chelsea",
+   "summary": "Across the Albert Bridge: a boating lake, a subtropical garden and long paths where people learn to ride the new safety bicycles.",
+   "tags": [
+    "cycling",
+    "boating",
+    "lake"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hyde-park",
+   "name": "Hyde Park",
+   "kind": "park",
+   "neighborhood": "kensington",
+   "summary": "The Serpentine, Rotten Row for riders, and the afternoon carriage parade of fashionable society during the Season.",
+   "tags": [
+    "walk",
+    "riding",
+    "lake"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-kensington-museum",
+   "name": "South Kensington Museum",
+   "kind": "museum",
+   "neighborhood": "kensington",
+   "summary": "Decorative arts, casts and design collections in Cromwell Road, with the first museum refreshment rooms.",
+   "tags": [
+    "art",
+    "design",
+    "tea-room"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-albert-hall",
+   "name": "Royal Albert Hall",
+   "kind": "venue",
+   "neighborhood": "kensington",
+   "summary": "The great round hall for concerts, choral societies and balls.",
+   "tags": [
+    "concerts",
+    "choirs"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harrods",
+   "name": "Harrods",
+   "kind": "shopping",
+   "neighborhood": "kensington",
+   "summary": "Grocer and draper in the Brompton Road grown into a department store.",
+   "tags": [
+    "department-store",
+    "groceries"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pimlico-dairy",
+   "name": "Dairy tea shop, Pimlico Road",
+   "kind": "cafe",
+   "neighborhood": "pimlico",
+   "summary": "A small dairy with a few tables selling milk, eggs, bread and butter and pots of tea to lodgers and shop girls.",
+   "tags": [
+    "tea",
+    "cheap",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "Tea, bread and eggs",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hampstead-heath",
+   "name": "Hampstead Heath",
+   "kind": "park",
+   "neighborhood": "hampstead",
+   "summary": "Rough heath, ponds and the view over London from Parliament Hill, crowded with fairs on Bank Holidays.",
+   "tags": [
+    "heath",
+    "views",
+    "ponds"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spaniards-inn",
+   "name": "The Spaniards Inn",
+   "kind": "inn",
+   "neighborhood": "hampstead",
+   "summary": "Old inn by the tollhouse at the top of the Heath, with a garden for tea and beer after a walk.",
+   "tags": [
+    "pub",
+    "garden",
+    "heath"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kew-gardens",
+   "name": "Royal Botanic Gardens, Kew",
+   "kind": "garden",
+   "neighborhood": "kew",
+   "summary": "Palm House, Temperate House and pagoda, a penny admission and a long day out by steamer or train.",
+   "tags": [
+    "plants",
+    "glasshouses",
+    "outing"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marylebone-church",
+   "name": "St Marylebone Parish Church",
+   "kind": "temple",
+   "neighborhood": "marylebone",
+   "summary": "The big classical parish church on the Marylebone Road where the Brownings married, with a choir on Sundays.",
+   "tags": [
+    "church",
+    "parish",
+    "music"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marylebone-baths",
+   "name": "St Marylebone Public Baths",
+   "kind": "fitness",
+   "neighborhood": "marylebone",
+   "summary": "Parish baths and wash-houses on the Marylebone Road: a swimming bath, slipper baths and a laundry for households.",
+   "tags": [
+    "swimming",
+    "baths",
+    "laundry"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blandford-street-chop-house",
+   "name": "Dawson's chop house, Blandford Street",
+   "kind": "restaurant",
+   "neighborhood": "marylebone",
+   "summary": "A plain chop house off Baker Street with high-backed boxes, mutton chops, kidneys and a pint of stout for lodgers and cabmen.",
+   "tags": [
+    "chop-house",
+    "cheap",
+    "invented"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English chops",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shepherd-market",
+   "name": "Shepherd Market",
+   "kind": "market",
+   "neighborhood": "mayfair",
+   "summary": "A small village of lanes off Curzon Street with a butcher, a dairy, a pub and cheap rooms, where Mayfair's servants do their own shopping.",
+   "tags": [
+    "shops",
+    "servants",
+    "village"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-stephens-tavern",
+   "name": "St Stephen's Tavern",
+   "kind": "tavern",
+   "neighborhood": "westminster",
+   "summary": "A pub on Bridge Street facing the Clock Tower, with a division bell so members of Parliament can finish their drinks.",
+   "tags": [
+    "pub",
+    "parliament",
+    "gossip"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "army-and-navy-stores",
+   "name": "Army and Navy Stores",
+   "kind": "shopping",
+   "neighborhood": "westminster",
+   "summary": "The great co-operative store on Victoria Street, for members and their friends, selling everything from tea to tents.",
+   "tags": [
+    "department-store",
+    "groceries",
+    "members"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "great-smith-street-baths",
+   "name": "Westminster Public Baths, Great Smith Street",
+   "kind": "fitness",
+   "neighborhood": "westminster",
+   "summary": "New parish baths with a swimming bath, private hot baths and a public wash-house behind the Abbey.",
+   "tags": [
+    "swimming",
+    "baths",
+    "laundry"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ye-olde-cock-tavern",
+   "name": "Ye Olde Cock Tavern",
+   "kind": "tavern",
+   "neighborhood": "fleet-street",
+   "summary": "Old Fleet Street chop house and tavern, moved across the road when the bank took its site, still serving chops and stout to lawyers and printers.",
+   "tags": [
+    "pub",
+    "chops",
+    "press"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English chops",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-bride-foundation",
+   "name": "St Bride Foundation Institute",
+   "kind": "library",
+   "neighborhood": "fleet-street",
+   "summary": "New institute in Bride Lane for the printing trades, with a technical library, a reading room and swimming baths.",
+   "tags": [
+    "books",
+    "printing",
+    "baths"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "temple-gardens",
+   "name": "Inner Temple Garden",
+   "kind": "garden",
+   "neighborhood": "fleet-street",
+   "summary": "Lawns and flower borders between the barristers' chambers and the Embankment, a quiet place to eat a sandwich.",
+   "tags": [
+    "garden",
+    "quiet",
+    "law"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "simpsons-tavern",
+   "name": "Simpson's Tavern",
+   "kind": "restaurant",
+   "neighborhood": "the-city",
+   "summary": "Old chop house up Ball Court off Cornhill where clerks crowd the benches at one o'clock for chops, stewed cheese and beer.",
+   "tags": [
+    "chop-house",
+    "lunch",
+    "clerks"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "English chops",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guildhall-library",
+   "name": "Guildhall Library",
+   "kind": "library",
+   "neighborhood": "the-city",
+   "summary": "The Corporation's free reference library in the Guildhall, full of maps, directories and London history, open to all.",
+   "tags": [
+    "books",
+    "free",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ten-bells",
+   "name": "The Ten Bells",
+   "kind": "tavern",
+   "neighborhood": "whitechapel",
+   "summary": "Corner pub on Commercial Street opposite Christ Church, Spitalfields, crowded with market porters and weavers' descendants.",
+   "tags": [
+    "pub",
+    "market",
+    "east-end"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spitalfields-market",
+   "name": "Spitalfields Market",
+   "kind": "market",
+   "neighborhood": "whitechapel",
+   "summary": "The fruit and vegetable market in its new buildings by Christ Church, busy with carts from before dawn.",
+   "tags": [
+    "produce",
+    "early",
+    "carts"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitechapel-library",
+   "name": "Whitechapel Public Library",
+   "kind": "library",
+   "neighborhood": "whitechapel",
+   "summary": "New free library on the High Street with a newsroom and reading room, much used by young immigrants learning English.",
+   "tags": [
+    "books",
+    "free",
+    "newsroom"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "goulston-street-baths",
+   "name": "Goulston Street Baths and Wash-houses",
+   "kind": "fitness",
+   "neighborhood": "whitechapel",
+   "summary": "Early public baths and wash-houses where women do the family washing and men pay a penny for a bath.",
+   "tags": [
+    "baths",
+    "laundry",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "prospect-of-whitby",
+   "name": "The Prospect of Whitby",
+   "kind": "tavern",
+   "neighborhood": "limehouse",
+   "summary": "Old riverside pub on Wapping Wall with a flagstone floor, a pewter bar and a balcony over the Thames.",
+   "tags": [
+    "pub",
+    "river",
+    "old"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chrisp-street-market",
+   "name": "Chrisp Street market",
+   "kind": "market",
+   "neighborhood": "limehouse",
+   "summary": "Poplar's street market of costers' barrows selling vegetables, fish, crockery and cheap clothes to dockers' wives.",
+   "tags": [
+    "street-market",
+    "cheap",
+    "east-end"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "poplar-baths",
+   "name": "Poplar Public Baths",
+   "kind": "fitness",
+   "neighborhood": "limehouse",
+   "summary": "Parish baths on the East India Dock Road with a swimming bath, slipper baths and a wash-house for dock families.",
+   "tags": [
+    "swimming",
+    "baths",
+    "laundry"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "museum-tavern",
+   "name": "The Museum Tavern",
+   "kind": "tavern",
+   "neighborhood": "bloomsbury",
+   "summary": "Pub on Great Russell Street opposite the British Museum gates, full of readers, students and porters at lunchtime.",
+   "tags": [
+    "pub",
+    "students",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-lamb",
+   "name": "The Lamb",
+   "kind": "tavern",
+   "neighborhood": "bloomsbury",
+   "summary": "Small pub in Lamb's Conduit Street with snob screens at the bar, used by hospital staff and clerks from the Inns of Court.",
+   "tags": [
+    "pub",
+    "snob-screens",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mudies-library",
+   "name": "Mudie's Select Library",
+   "kind": "library",
+   "neighborhood": "bloomsbury",
+   "summary": "The great circulating library on New Oxford Street, where a guinea a year lets you borrow the new three-volume novels.",
+   "tags": [
+    "books",
+    "novels",
+    "subscription"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-anchor-bankside",
+   "name": "The Anchor, Bankside",
+   "kind": "tavern",
+   "neighborhood": "southwark",
+   "summary": "Riverside pub by the Barclay Perkins brewery, with draymen at the bar and a view across to St Paul's.",
+   "tags": [
+    "pub",
+    "river",
+    "brewery"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-saviours-southwark",
+   "name": "St Saviour's Church, Southwark",
+   "kind": "temple",
+   "neighborhood": "southwark",
+   "summary": "The old priory church by London Bridge, its nave being rebuilt, with a parish of market men and hop factors.",
+   "tags": [
+    "church",
+    "old",
+    "parish"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southwark-park",
+   "name": "Southwark Park",
+   "kind": "park",
+   "neighborhood": "southwark",
+   "summary": "A people's park in Rotherhithe with a lake, a bandstand and cricket pitches, near the Surrey Docks.",
+   "tags": [
+    "park",
+    "bandstand",
+    "cricket"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-vic",
+   "name": "Royal Victoria Hall",
+   "kind": "venue",
+   "neighborhood": "lambeth",
+   "summary": "Miss Cons's temperance music hall on the Waterloo Road: cheap concerts, ballads and lantern lectures, with coffee instead of gin.",
+   "tags": [
+    "music-hall",
+    "temperance",
+    "lectures"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "vauxhall-park",
+   "name": "Vauxhall Park",
+   "kind": "park",
+   "neighborhood": "lambeth",
+   "summary": "Small new public park off the South Lambeth Road with flower beds, benches and a playground for the neighbouring terraces.",
+   "tags": [
+    "park",
+    "children",
+    "new"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lower-marsh-eel-pie-shop",
+   "name": "Pie and eel shop, Lower Marsh",
+   "kind": "restaurant",
+   "neighborhood": "lambeth",
+   "summary": "Marble tables and sawdust on the floor, serving hot meat pies, mashed potato and stewed eels with green liquor.",
+   "tags": [
+    "pies",
+    "eels",
+    "cheap",
+    "invented"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Pie and eels",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-barnabas-pimlico",
+   "name": "St Barnabas, Pimlico",
+   "kind": "temple",
+   "neighborhood": "pimlico",
+   "summary": "High church in Church Street with a choir school and incense, popular with servants and lodgers on Sunday evenings.",
+   "tags": [
+    "church",
+    "choir",
+    "high-church"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "victoria-station",
+   "name": "Victoria Station",
+   "kind": "landmark",
+   "neighborhood": "pimlico",
+   "summary": "Two railway termini side by side, for Brighton and for the Continent, with bookstalls, a refreshment room and a cab yard.",
+   "tags": [
+    "railway",
+    "travel",
+    "bookstall"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lupus-street-coffee-house",
+   "name": "Coffee house, Lupus Street",
+   "kind": "cafe",
+   "neighborhood": "pimlico",
+   "summary": "A clean coffee house with high-backed boxes, serving coffee, rashers and toast to clerks before the omnibus.",
+   "tags": [
+    "coffee",
+    "breakfast",
+    "cheap",
+    "invented"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "Coffee and breakfasts",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "warwick-way-laundry",
+   "name": "Mrs Pratt's laundry, Warwick Way",
+   "kind": "workshop",
+   "neighborhood": "pimlico",
+   "summary": "A hand laundry of coppers, mangles and drying lines that collects lodgers' collars and shirts by the dozen.",
+   "tags": [
+    "laundry",
+    "local",
+    "invented"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-hospital-chelsea",
+   "name": "Royal Hospital Chelsea",
+   "kind": "landmark",
+   "neighborhood": "chelsea",
+   "summary": "Wren's home for old soldiers, whose pensioners in scarlet coats show visitors the chapel and the great hall.",
+   "tags": [
+    "history",
+    "soldiers",
+    "gardens"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kings-head-eight-bells",
+   "name": "The King's Head and Eight Bells",
+   "kind": "tavern",
+   "neighborhood": "chelsea",
+   "summary": "Old corner pub on Cheyne Walk by the river, used by painters, watermen and pensioners.",
+   "tags": [
+    "pub",
+    "river",
+    "artists"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "carlyles-house",
+   "name": "Carlyle's House",
+   "kind": "museum",
+   "neighborhood": "chelsea",
+   "summary": "Thomas Carlyle's plain brick house in Cheyne Row, newly opened to visitors with his books, pipes and soundproof study.",
+   "tags": [
+    "writers",
+    "history",
+    "new"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chelsea-public-library",
+   "name": "Chelsea Public Library",
+   "kind": "library",
+   "neighborhood": "chelsea",
+   "summary": "Free library in Manresa Road with a reading room, newspapers and a good shelf of art books for the studio crowd.",
+   "tags": [
+    "books",
+    "free",
+    "art"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-grenadier",
+   "name": "The Grenadier",
+   "kind": "tavern",
+   "neighborhood": "kensington",
+   "summary": "Small pub hidden in Wilton Row mews, said to have been the Guards' officers' mess, with a sentry box outside.",
+   "tags": [
+    "pub",
+    "mews",
+    "hidden"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brompton-oratory",
+   "name": "The Brompton Oratory",
+   "kind": "temple",
+   "neighborhood": "kensington",
+   "summary": "The new Italianate Catholic church on the Brompton Road, known for its music at Sunday high mass.",
+   "tags": [
+    "church",
+    "music",
+    "catholic"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jack-straws-castle",
+   "name": "Jack Straw's Castle",
+   "kind": "inn",
+   "neighborhood": "hampstead",
+   "summary": "Weatherboarded inn at the top of the Heath by the Whitestone Pond, with chops, ale and a view of the whole of London.",
+   "tags": [
+    "pub",
+    "heath",
+    "views"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "English",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hampstead-parish-church",
+   "name": "St John-at-Hampstead",
+   "kind": "temple",
+   "neighborhood": "hampstead",
+   "summary": "The village parish church at the end of Church Row, with Constable buried in the churchyard.",
+   "tags": [
+    "church",
+    "village",
+    "churchyard"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "heath-bathing-ponds",
+   "name": "Hampstead Heath bathing ponds",
+   "kind": "fitness",
+   "neighborhood": "hampstead",
+   "summary": "The old reservoir ponds on the Heath where men bathe before work, in all weathers if they are hardy.",
+   "tags": [
+    "swimming",
+    "ponds",
+    "early"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "richmond-park",
+   "name": "Richmond Park",
+   "kind": "park",
+   "neighborhood": "kew",
+   "summary": "The royal deer park on the hill above Richmond, with herds of red and fallow deer, ponds and long rides for walkers and riders.",
+   "tags": [
+    "deer",
+    "walk",
+    "riding"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maids-of-honour",
+   "name": "Newens' Maids of Honour tea shop",
+   "kind": "cafe",
+   "neighborhood": "kew",
+   "summary": "Bakery and tea room on the Kew Road, famous for the little curd tarts called maids of honour.",
+   "tags": [
+    "tea",
+    "cakes",
+    "outing"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "Tea and cakes",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kew-green",
+   "name": "Kew Green",
+   "kind": "square",
+   "neighborhood": "kew",
+   "summary": "The village green by the gardens' main gate, with cricket on summer Saturdays and St Anne's church at one end.",
+   "tags": [
+    "cricket",
+    "green",
+    "village"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "richmond-boat-hire",
+   "name": "Boat hire at Richmond Bridge",
+   "kind": "attraction",
+   "neighborhood": "kew",
+   "summary": "Boatmen's rafts by the bridge hiring skiffs and punts by the hour for rowing up toward Petersham and Teddington.",
+   "tags": [
+    "boating",
+    "river",
+    "summer"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "ucl",
+   "name": "University College London",
+   "type": "research-university",
+   "neighborhood": "bloomsbury",
+   "size": "medium",
+   "known_for": [
+    "medicine",
+    "engineering",
+    "secular",
+    "admits-women"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kings-college",
+   "name": "King's College London",
+   "type": "research-university",
+   "neighborhood": "strand-covent-garden",
+   "size": "medium",
+   "known_for": [
+    "theology",
+    "engineering",
+    "medicine"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "slade",
+   "name": "Slade School of Fine Art",
+   "type": "art-school",
+   "neighborhood": "bloomsbury",
+   "size": "small",
+   "known_for": [
+    "drawing",
+    "painting",
+    "women-students"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-academy-of-music",
+   "name": "Royal Academy of Music",
+   "type": "music-school",
+   "neighborhood": "mayfair",
+   "size": "small",
+   "known_for": [
+    "piano",
+    "singing",
+    "composition"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lsmw",
+   "name": "London School of Medicine for Women",
+   "type": "medical-school",
+   "neighborhood": "bloomsbury",
+   "size": "small",
+   "known_for": [
+    "medicine",
+    "women-doctors",
+    "royal-free-hospital"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "birkbeck",
+   "name": "Birkbeck Literary and Scientific Institution",
+   "type": "technical-institute",
+   "neighborhood": "fleet-street",
+   "size": "medium",
+   "known_for": [
+    "evening-classes",
+    "working-students",
+    "science"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "clerk",
+   "name": "Office clerk",
+   "sector": "commerce",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Copying letters, keeping ledgers and running errands in a merchant's or solicitor's office from half past nine to six, Saturdays till two.",
+   "themes": [
+    "ledgers",
+    "the senior clerk",
+    "Saturday half-day",
+    "keeping respectable on a small wage"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "bank-clerk",
+   "name": "Bank clerk",
+   "sector": "finance",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "A desk in a City bank, counting, posting and checking figures under strict rules about dress and punctuality.",
+   "themes": [
+    "ledgers",
+    "promotion",
+    "City crowds",
+    "a steady salary"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "typist",
+   "name": "Typist",
+   "sector": "commerce",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Typing letters and documents on a Remington in an office or a typewriting bureau, a new kind of work for young women.",
+   "themes": [
+    "the machine",
+    "carbon copies",
+    "independence",
+    "ABC lunches"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "telegraph-operator",
+   "name": "Telegraph clerk",
+   "sector": "communications",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Sending and receiving messages by Morse sounder at the Central Telegraph Office, on day and night turns.",
+   "themes": [
+    "Morse",
+    "urgent messages",
+    "the instrument room",
+    "night turns"
+   ],
+   "eras": [
+    "victorian"
+   ]
+  },
+  {
+   "id": "postman",
+   "name": "Postman",
+   "sector": "communications",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Up to twelve deliveries a day on a fixed round, starting before seven in the morning.",
+   "themes": [
+    "the round",
+    "weather",
+    "regular faces"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "governess",
+   "name": "Governess",
+   "sector": "education",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Living in with a family to teach their children lessons, music and manners, neither servant nor family.",
+   "themes": [
+    "pupils",
+    "the schoolroom",
+    "loneliness",
+    "references"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "schoolmistress",
+   "name": "Board school teacher",
+   "sector": "education",
+   "schedule": "academic",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Teaching a class of fifty or sixty children reading, writing and arithmetic in a London School Board school.",
+   "themes": [
+    "big classes",
+    "the inspector",
+    "children of the district"
+   ],
+   "eras": [
+    "victorian"
+   ]
+  },
+  {
+   "id": "housemaid",
+   "name": "Housemaid",
+   "sector": "domestic-service",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Up at six to clean grates, carry water and keep a household running, with one afternoon off a week.",
+   "themes": [
+    "the mistress",
+    "the servants' hall",
+    "afternoon off",
+    "other servants"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "cook",
+   "name": "Cook",
+   "sector": "domestic-service",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Running the kitchen of a private house, planning meals with the mistress and ordering from tradesmen.",
+   "themes": [
+    "menus",
+    "tradesmen",
+    "the kitchen maid"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "cabman",
+   "name": "Cabman",
+   "sector": "transport",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Driving a hired hansom from a cab rank, paying the proprietor a daily rent for horse and cab and keeping the rest.",
+   "themes": [
+    "fares",
+    "the horse",
+    "the cab rank",
+    "fog"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "railway-porter",
+   "name": "Railway porter",
+   "sector": "transport",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Handling luggage and parcels on the platforms at a big terminus, relying on tips.",
+   "themes": [
+    "trains",
+    "luggage",
+    "tips"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "constable",
+   "name": "Police constable",
+   "sector": "law-enforcement",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Walking a beat for the Metropolitan Police by day or night, with a lantern, a whistle and a notebook.",
+   "themes": [
+    "the beat",
+    "night duty",
+    "the station sergeant",
+    "lost children"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "nurse",
+   "name": "Hospital nurse",
+   "sector": "healthcare",
+   "schedule": "shift-day",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "A trained nurse on the wards of a voluntary hospital, living in the nurses' home under the matron's rules.",
+   "themes": [
+    "ward rounds",
+    "the sister",
+    "patients",
+    "the nurses' home"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "physician",
+   "name": "Physician",
+   "sector": "healthcare",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$$$",
+   "summary": "A doctor with a consulting room, seeing patients in the morning and making house calls in the afternoon.",
+   "themes": [
+    "patients",
+    "house calls",
+    "the practice",
+    "night calls"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "retail-associate",
+   "name": "Shop assistant",
+   "sector": "retail",
+   "schedule": "shift-day",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Serving behind the counter of a draper's or department store, often living in over the shop, until eight or later.",
+   "themes": [
+    "customers",
+    "long hours",
+    "living in",
+    "the floorwalker"
+   ],
+   "eras": [
+    "victorian"
+   ]
+  },
+  {
+   "id": "seamstress",
+   "name": "Seamstress",
+   "sector": "garment",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Sewing blouses, shirts or mantles in a workroom or at home by the piece.",
+   "themes": [
+    "piecework",
+    "the workroom",
+    "the season rush"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "women"
+  },
+  {
+   "id": "performer",
+   "name": "Music hall performer",
+   "sector": "entertainment",
+   "schedule": "evening",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Singing comic songs or doing a turn on the halls, sometimes at two or three halls a night.",
+   "themes": [
+    "the turn",
+    "the audience",
+    "agents",
+    "cabbing between halls"
+   ],
+   "eras": [
+    "victorian"
+   ]
+  },
+  {
+   "id": "actor",
+   "name": "Actor",
+   "sector": "entertainment",
+   "schedule": "evening",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Playing in a West End company or touring the provinces, with rehearsals by day and performances every evening.",
+   "themes": [
+    "rehearsals",
+    "notices",
+    "the company",
+    "touring"
+   ],
+   "eras": [
+    "victorian"
+   ]
+  },
+  {
+   "id": "journalist",
+   "name": "Journalist",
+   "sector": "press",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Writing paragraphs, reports and columns for a Fleet Street paper, chasing stories by cab and telegraph.",
+   "themes": [
+    "deadlines",
+    "the editor",
+    "Fleet Street taverns",
+    "the night edition"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "compositor",
+   "name": "Compositor",
+   "sector": "press",
+   "schedule": "shift-night",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Setting type by hand for a daily paper, working through the night to make the morning edition.",
+   "themes": [
+    "type",
+    "the chapel",
+    "night work"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "docker",
+   "name": "Docker",
+   "sector": "shipping",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Waiting at the dock gates each morning to be taken on for a day's work unloading ships, at sixpence an hour since the strike of 1889.",
+   "themes": [
+    "the call-on",
+    "cargo",
+    "the union",
+    "uncertain work"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "bartender",
+   "name": "Barmaid or barman",
+   "sector": "hospitality",
+   "schedule": "evening",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Serving beer, spirits and talk behind the bar of a public house or restaurant bar until half past twelve.",
+   "themes": [
+    "regulars",
+    "the landlord",
+    "closing time"
+   ],
+   "eras": [
+    "victorian"
+   ]
+  },
+  {
+   "id": "waiter",
+   "name": "Restaurant waiter",
+   "sector": "hospitality",
+   "schedule": "evening",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Serving tables in a hotel or restaurant, many of the waiters Swiss, German or Italian.",
+   "themes": [
+    "tables",
+    "tips",
+    "the head waiter"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  },
+  {
+   "id": "undergraduate",
+   "name": "Student",
+   "sector": "education",
+   "schedule": "academic",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Attending lectures, laboratories or studio classes at a London college, often while living in lodgings.",
+   "themes": [
+    "lectures",
+    "examinations",
+    "lodgings",
+    "friends"
+   ],
+   "eras": [
+    "victorian"
+   ]
+  },
+  {
+   "id": "detective",
+   "name": "Detective sergeant",
+   "sector": "law-enforcement",
+   "schedule": "flexible",
+   "employment": "freelance",
+   "pay": "$$",
+   "summary": "A plain-clothes officer of the Criminal Investigation Department, working cases from Scotland Yard.",
+   "themes": [
+    "cases",
+    "Scotland Yard",
+    "witnesses",
+    "long days"
+   ],
+   "eras": [
+    "victorian"
+   ],
+   "worked_by": "men"
+  }
+ ],
+ "employers": [
+  {
+   "id": "bank-of-england",
+   "name": "Bank of England",
+   "sector": "finance",
+   "neighborhood": "the-city",
+   "size": "large",
+   "summary": "The central bank on Threadneedle Street, guarded at night by soldiers.",
+   "careers": [
+    "bank-clerk",
+    "clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coutts",
+   "name": "Coutts and Co.",
+   "sector": "finance",
+   "neighborhood": "strand-covent-garden",
+   "size": "medium",
+   "summary": "Private bank of the aristocracy at 59 Strand, where clerks wear frock coats.",
+   "careers": [
+    "bank-clerk",
+    "clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lloyds-of-london",
+   "name": "Lloyd's",
+   "sector": "finance",
+   "neighborhood": "the-city",
+   "size": "medium",
+   "summary": "Underwriters of marine insurance in the Royal Exchange, busy with shipping news.",
+   "careers": [
+    "clerk",
+    "typist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gpo",
+   "name": "General Post Office",
+   "sector": "communications",
+   "neighborhood": "the-city",
+   "size": "large",
+   "summary": "The Post Office headquarters at St Martin's-le-Grand, with the Central Telegraph Office across the road.",
+   "careers": [
+    "postman",
+    "telegraph-operator",
+    "clerk",
+    "typist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lnwr-euston",
+   "name": "London and North Western Railway, Euston",
+   "sector": "transport",
+   "neighborhood": "bloomsbury",
+   "size": "large",
+   "summary": "The great railway company's London terminus and head offices behind the Euston Arch.",
+   "careers": [
+    "railway-porter",
+    "clerk",
+    "telegraph-operator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-india-dock-company",
+   "name": "East and West India Docks Company",
+   "sector": "shipping",
+   "neighborhood": "limehouse",
+   "size": "large",
+   "summary": "Docks and warehouses at Poplar and Limehouse taking on casual labour each morning.",
+   "careers": [
+    "docker",
+    "clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "scotland-yard",
+   "name": "Metropolitan Police, New Scotland Yard",
+   "sector": "law-enforcement",
+   "neighborhood": "westminster",
+   "size": "large",
+   "summary": "Police headquarters in the new building on the Victoria Embankment, home of the Criminal Investigation Department.",
+   "careers": [
+    "constable",
+    "detective",
+    "clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barts",
+   "name": "St Bartholomew's Hospital",
+   "sector": "healthcare",
+   "neighborhood": "the-city",
+   "size": "large",
+   "summary": "Ancient hospital at West Smithfield with a medical school, where Watson first met Holmes in the chemical laboratory.",
+   "careers": [
+    "nurse",
+    "physician"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guys-hospital",
+   "name": "Guy's Hospital",
+   "sector": "healthcare",
+   "neighborhood": "southwark",
+   "size": "large",
+   "summary": "Teaching hospital near London Bridge.",
+   "careers": [
+    "nurse",
+    "physician"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daily-telegraph",
+   "name": "The Daily Telegraph",
+   "sector": "press",
+   "neighborhood": "fleet-street",
+   "size": "medium",
+   "summary": "Penny morning paper in Fleet Street with the biggest sale in the world.",
+   "careers": [
+    "journalist",
+    "compositor",
+    "clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harrods-employer",
+   "name": "Harrods",
+   "sector": "retail",
+   "neighborhood": "kensington",
+   "size": "medium",
+   "summary": "Department store in the Brompton Road, staff living in over the shop.",
+   "careers": [
+    "retail-associate",
+    "clerk",
+    "seamstress"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "liberty-employer",
+   "name": "Liberty and Co.",
+   "sector": "retail",
+   "neighborhood": "mayfair",
+   "size": "medium",
+   "summary": "Regent Street shop for silks and art fabrics with its own dressmaking workroom.",
+   "careers": [
+    "retail-associate",
+    "seamstress"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "savoy",
+   "name": "The Savoy",
+   "sector": "hospitality",
+   "neighborhood": "strand-covent-garden",
+   "size": "medium",
+   "summary": "The Savoy theatre and its new electric-lit hotel by the Embankment, with Escoffier in the kitchen.",
+   "careers": [
+    "waiter",
+    "bartender",
+    "actor",
+    "performer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lyceum-company",
+   "name": "Henry Irving's Lyceum company",
+   "sector": "entertainment",
+   "neighborhood": "strand-covent-garden",
+   "size": "small",
+   "summary": "Irving and Ellen Terry's company at the Lyceum Theatre.",
+   "careers": [
+    "actor"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-school-board",
+   "name": "School Board for London",
+   "sector": "education",
+   "neighborhood": "westminster",
+   "size": "large",
+   "summary": "Runs the board schools across London from offices on the Victoria Embankment.",
+   "careers": [
+    "schoolmistress",
+    "clerk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "doulton",
+   "name": "Doulton and Co., Lambeth",
+   "sector": "manufacturing",
+   "neighborhood": "lambeth",
+   "size": "medium",
+   "summary": "Pottery and drainpipe works on Lambeth High Street, with a studio of women painting art stoneware.",
+   "careers": [
+    "clerk",
+    "seamstress"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "city-commerce",
+   "name": "The City",
+   "neighborhoods": [
+    "the-city"
+   ],
+   "sectors": [
+    "finance",
+    "commerce",
+    "communications",
+    "shipping"
+   ],
+   "summary": "Banks, insurance offices, shipping firms and merchant houses employing armies of clerks.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fleet-street-strand",
+   "name": "Fleet Street and the Strand",
+   "neighborhoods": [
+    "fleet-street",
+    "strand-covent-garden"
+   ],
+   "sectors": [
+    "press",
+    "entertainment",
+    "hospitality",
+    "law"
+   ],
+   "summary": "Newspapers, theatres, hotels, restaurants and the lawyers of the Temple.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-end-households",
+   "name": "West End houses and shops",
+   "neighborhoods": [
+    "mayfair",
+    "kensington",
+    "marylebone"
+   ],
+   "sectors": [
+    "domestic-service",
+    "retail",
+    "garment",
+    "education",
+    "healthcare"
+   ],
+   "summary": "Great houses that need servants and governesses, doctors' consulting rooms, and the shops and dressmakers that serve them.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "docks-and-river",
+   "name": "The docks and the river",
+   "neighborhoods": [
+    "limehouse",
+    "southwark"
+   ],
+   "sectors": [
+    "shipping",
+    "transport",
+    "manufacturing"
+   ],
+   "summary": "Docks, wharves, breweries and warehouses along both banks below London Bridge.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-end-workshops",
+   "name": "East End workshops",
+   "neighborhoods": [
+    "whitechapel"
+   ],
+   "sectors": [
+    "garment",
+    "manufacturing"
+   ],
+   "summary": "Small tailoring and boot-making workshops in Whitechapel and Spitalfields.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Cool and damp: mild summers, raw grey winters, rain spread through the year, and thick yellow coal-smoke fogs from November to February.",
+  "months": [
+   {
+    "high_f": 43,
+    "low_f": 34,
+    "rain_days": 15,
+    "note": "Cold and dark by four; the worst fogs come now."
+   },
+   {
+    "high_f": 44,
+    "low_f": 34,
+    "rain_days": 13,
+    "note": "Raw; February 1895 was bitterly cold, with ice floes on the Thames."
+   },
+   {
+    "high_f": 49,
+    "low_f": 36,
+    "rain_days": 13,
+    "note": "Wind and showers; the Boat Race at the end of the month or in early April."
+   },
+   {
+    "high_f": 55,
+    "low_f": 39,
+    "rain_days": 12,
+    "note": "Showery spring; parks green up."
+   },
+   {
+    "high_f": 62,
+    "low_f": 45,
+    "rain_days": 12,
+    "note": "Mild; the Season begins and the Royal Academy opens."
+   },
+   {
+    "high_f": 68,
+    "low_f": 51,
+    "rain_days": 11,
+    "note": "Warmest dry spell; Derby Day and garden parties."
+   },
+   {
+    "high_f": 72,
+    "low_f": 54,
+    "rain_days": 11,
+    "note": "Warm, sometimes close and smelly by the river."
+   },
+   {
+    "high_f": 70,
+    "low_f": 54,
+    "rain_days": 12,
+    "note": "Society leaves town; Bank Holiday crowds on the Heath."
+   },
+   {
+    "high_f": 65,
+    "low_f": 50,
+    "rain_days": 12,
+    "note": "Mild and settled; Londoners back from the seaside."
+   },
+   {
+    "high_f": 57,
+    "low_f": 45,
+    "rain_days": 14,
+    "note": "Damp and misty; theatres reopen for the autumn."
+   },
+   {
+    "high_f": 49,
+    "low_f": 39,
+    "rain_days": 15,
+    "note": "Fog season starts; gas lamps lit by mid-afternoon."
+   },
+   {
+    "high_f": 45,
+    "low_f": 36,
+    "rain_days": 15,
+    "note": "Cold, wet and foggy; Christmas markets and pantomimes."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "the-season",
+   "name": "The London Season",
+   "months": [
+    5,
+    6,
+    7
+   ],
+   "neighborhood": "mayfair",
+   "summary": "Society comes up to town for balls, dinners, presentations at Court and the afternoon parade in Hyde Park, and every house in Mayfair needs extra servants.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-academy-summer-exhibition",
+   "name": "Royal Academy Summer Exhibition",
+   "months": [
+    5,
+    6,
+    7
+   ],
+   "neighborhood": "mayfair",
+   "summary": "The year's new paintings hung floor to ceiling at Burlington House, and everyone has an opinion.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boat-race",
+   "name": "The University Boat Race",
+   "months": [
+    3,
+    4
+   ],
+   "neighborhood": "chelsea",
+   "summary": "Oxford and Cambridge row from Putney to Mortlake, and crowds wearing dark or light blue line the towpaths and bridges.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "derby-day",
+   "name": "Derby Day",
+   "months": [
+    6
+   ],
+   "neighborhood": null,
+   "summary": "Half of London goes down to Epsom Downs by train, brake and costermonger's cart for the great horse race.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "august-bank-holiday",
+   "name": "August Bank Holiday on Hampstead Heath",
+   "months": [
+    8
+   ],
+   "neighborhood": "hampstead",
+   "summary": "Hundreds of thousands come up to the Heath for swings, donkey rides, coconut shies and picnics.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "promenade-concerts",
+   "name": "Promenade concerts at Queen's Hall",
+   "months": [
+    8,
+    9,
+    10
+   ],
+   "neighborhood": "marylebone",
+   "summary": "Robert Newman and the young conductor Henry Wood begin a season of cheap nightly concerts in August 1895, with a shilling to stand.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guy-fawkes-night",
+   "name": "Guy Fawkes Night",
+   "months": [
+    11
+   ],
+   "neighborhood": null,
+   "summary": "Boys wheel guys through the streets begging pennies, and bonfires and fireworks go up on the fifth of November.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lord-mayors-show",
+   "name": "Lord Mayor's Show",
+   "months": [
+    11
+   ],
+   "neighborhood": "the-city",
+   "summary": "The new Lord Mayor rides in the gilded state coach through the City to the Law Courts, with bands and floats.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "smithfield-christmas",
+   "name": "Christmas at Smithfield and Leadenhall",
+   "months": [
+    12
+   ],
+   "neighborhood": "the-city",
+   "summary": "Geese, turkeys and beef hung in rows for the Christmas trade, and goose clubs paying out.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "christmas-pantomime",
+   "name": "Christmas pantomimes",
+   "months": [
+    12,
+    1
+   ],
+   "neighborhood": "strand-covent-garden",
+   "summary": "Drury Lane and the other big theatres open their pantomimes on Boxing Day, with comedians, a transformation scene and a harlequinade.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "pie-mash-and-eels",
+   "name": "Pie, mash and eels",
+   "kind": "dish",
+   "summary": "Minced-meat pies with mashed potato and green parsley \"liquor\", or stewed and jellied eels, eaten at marble-topped tables in South and East London pie shops.",
+   "places": [
+    "lower-marsh-eel-pie-shop",
+    "the-new-cut"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whelks-and-cockles",
+   "name": "Whelks and cockles",
+   "kind": "dish",
+   "summary": "Saucers of whelks, cockles and mussels with vinegar and pepper, bought from stalls outside pubs and on the market streets on a Saturday night.",
+   "places": [
+    "the-new-cut",
+    "petticoat-lane",
+    "chrisp-street-market"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "baked-potatoes-and-chestnuts",
+   "name": "Baked potatoes and hot chestnuts",
+   "kind": "dish",
+   "summary": "Street sellers with glowing cans sell hot baked potatoes and roast chestnuts for a halfpenny or a penny, as much to warm the hands as to eat.",
+   "places": [],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fried-fish-and-chips",
+   "name": "Fried fish and chips",
+   "kind": "dish",
+   "summary": "Fried fish shops, many kept by Jewish families in the East End, sell fish fried in batter with chipped potatoes, wrapped in paper to carry away.",
+   "places": [
+    "whitechapel"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chop-and-porter",
+   "name": "A chop and a pint of porter",
+   "kind": "dish",
+   "summary": "The City clerk's dinner: a mutton chop or steak from the gridiron with a potato and a pewter pint of porter, in a sawdust-floored chop house.",
+   "places": [
+    "cheshire-cheese",
+    "simpsons-tavern",
+    "ye-olde-cock-tavern",
+    "blandford-street-chop-house"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tea-shop-tea",
+   "name": "A pot of tea at the tea shop",
+   "kind": "drink",
+   "summary": "The new Aerated Bread Company and Lyons tea shops serve tea, buns and poached eggs cheaply, and are respectable places for women to eat alone.",
+   "places": [
+    "abc-cheapside",
+    "lyons-piccadilly"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "half-and-half",
+   "name": "Half-and-half",
+   "kind": "drink",
+   "summary": "A pint drawn half of ale and half of porter, a common order at the public-house bar.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "christmas-pudding",
+   "name": "Christmas pudding",
+   "kind": "dish",
+   "summary": "Households stir the plum pudding on Stir-up Sunday in late November, everyone taking a turn and making a wish, and serve it flaming with brandy on Christmas Day.",
+   "places": [],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hot-cross-buns",
+   "name": "Hot cross buns",
+   "kind": "dish",
+   "summary": "Spiced buns marked with a cross are cried in the streets on Good Friday morning: \"Hot cross buns! One a penny, two a penny!\"",
+   "places": [],
+   "seasons": [
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rhyming-slang",
+   "name": "Rhyming slang",
+   "kind": "saying",
+   "summary": "Cockneys say \"apples and pears\" for stairs and \"plates of meat\" for feet, and often drop the rhyming word so that outsiders are lost.",
+   "places": [
+    "whitechapel",
+    "limehouse"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "money-slang",
+   "name": "A bob, a tanner, a quid",
+   "kind": "saying",
+   "summary": "Everyone counts in slang: a \"bob\" is a shilling, a \"tanner\" sixpence, a \"joey\" fourpence, a \"quid\" a sovereign or pound, and a \"monkey\" five hundred pounds.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peelers-and-bobbies",
+   "name": "Bobbies and coppers",
+   "kind": "saying",
+   "summary": "Police constables are \"bobbies\", \"peelers\" after Sir Robert Peel, or \"coppers\"; a toff is a well-dressed gentleman and a swell a showy one.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pea-souper",
+   "name": "A pea-souper",
+   "kind": "other",
+   "summary": "The thick yellow coal-smoke fogs, also called \"London particulars\", that stop the traffic, put link-boys to work with torches and leave soot on every collar.",
+   "places": [],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "costermongers",
+   "name": "Costermongers",
+   "kind": "shop",
+   "summary": "Costers sell fruit, vegetables and fish from barrows and donkey carts, crying their goods, and dress for best in pearl-buttoned jackets.",
+   "places": [
+    "the-new-cut",
+    "petticoat-lane",
+    "chrisp-street-market",
+    "covent-garden-market"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "muffin-man",
+   "name": "The muffin man",
+   "kind": "custom",
+   "summary": "On winter afternoons the muffin man walks the residential streets ringing a handbell, with a tray of muffins and crumpets on his head for toasting at the fire.",
+   "places": [],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "church-parade",
+   "name": "Church parade",
+   "kind": "custom",
+   "summary": "During the Season, fashionable London walks in Hyde Park near the Achilles statue after Sunday morning service to see and be seen.",
+   "places": [
+    "hyde-park"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "calling-cards",
+   "name": "Calling cards and at-home days",
+   "kind": "custom",
+   "summary": "Ladies of the middle and upper classes leave engraved cards when they call, turn down a corner for a personal visit, and keep a fixed afternoon \"at home\" each week.",
+   "places": [
+    "mayfair",
+    "kensington",
+    "marylebone"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "music-hall-chorus",
+   "name": "Joining in the chorus",
+   "kind": "custom",
+   "summary": "Music hall audiences sing along with the choruses of the comic songs, eat and drink in their seats, and let a turn they dislike know about it.",
+   "places": [
+    "canterbury-music-hall",
+    "peoples-palace"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "appy-ampstead",
+   "name": "'Appy 'Ampstead",
+   "kind": "custom",
+   "summary": "On bank holidays East Enders crowd onto Hampstead Heath for donkey rides, swings, coconut shies and roundabouts.",
+   "places": [
+    "hampstead-heath"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "county-cricket",
+   "name": "Surrey and Middlesex cricket",
+   "kind": "team",
+   "summary": "County cricket at the Oval (Surrey) and Lord's (Middlesex) draws big summer crowds, and W. G. Grace's run-making is the talk of 1895.",
+   "places": [],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "beer",
+   "item": "Pint of beer",
+   "low": 0.17,
+   "high": 0.25,
+   "per": "a pint, 2d.-3d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "loaf",
+   "item": "Quartern loaf",
+   "low": 0.42,
+   "high": 0.5,
+   "per": "4 lb, 5d.-6d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coffee-stall",
+   "item": "Coffee at a stall",
+   "low": 0.08,
+   "high": 0.17,
+   "per": "a mug, 1d.-2d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chophouse",
+   "item": "Chophouse dinner",
+   "low": 1,
+   "high": 2.5,
+   "per": "chop, potatoes, bread and beer",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lodging-house",
+   "item": "Common lodging-house bed",
+   "low": 0.33,
+   "high": 0.5,
+   "per": "a night, 4d.-6d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hotel",
+   "item": "Hotel room",
+   "low": 4,
+   "high": 12,
+   "per": "a night",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "board",
+   "item": "Board and lodging",
+   "low": 15,
+   "high": 25,
+   "per": "a week's board",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hansom",
+   "item": "Hansom cab",
+   "low": 1,
+   "high": 2.5,
+   "per": "a short ride; 1s. the first two miles",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "omnibus",
+   "item": "Omnibus fare",
+   "low": 0.08,
+   "high": 0.5,
+   "per": "one way, 1d.-6d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "newspaper",
+   "item": "Daily paper",
+   "low": 0.04,
+   "high": 0.25,
+   "per": "halfpenny papers to The Times at 3d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "music-hall",
+   "item": "Music-hall seat",
+   "low": 0.5,
+   "high": 3,
+   "per": "gallery to stalls",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "theatre",
+   "item": "West End theatre stall",
+   "low": 7.5,
+   "high": 10.5,
+   "per": "7s. 6d. to half a guinea",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tobacco",
+   "item": "Shag tobacco",
+   "low": 0.25,
+   "high": 0.33,
+   "per": "an ounce, 3d.-4d.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boots",
+   "item": "Working boots",
+   "low": 8,
+   "high": 15,
+   "per": "a pair",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "river",
+   "name": "Thames",
+   "width_km": 0.3,
+   "points": [
+    [
+     51.47,
+     -0.3
+    ],
+    [
+     51.468,
+     -0.215
+    ],
+    [
+     51.48,
+     -0.17
+    ],
+    [
+     51.486,
+     -0.126
+    ],
+    [
+     51.5,
+     -0.121
+    ],
+    [
+     51.508,
+     -0.102
+    ],
+    [
+     51.506,
+     -0.08
+    ],
+    [
+     51.505,
+     -0.055
+    ],
+    [
+     51.507,
+     -0.036
+    ],
+    [
+     51.492,
+     -0.015
+    ]
+   ]
+  }
+ ]
+}

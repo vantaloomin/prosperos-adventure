@@ -1,0 +1,26 @@
+# Inside Program; the checkout's own .gitignore covers everything else.
+
+# Working records are local inputs, not public documentation.
+/docs/*-goal.md
+/docs/**/*-goal.md
+/docs/**/v[0-9]*-*.md
+/docs/v[0-9]*-*.md
+
+# Local companion workspaces, uploads and exports
+/data/
+/backups/
+/exports/
+/imports/
+
+# Build output and generated reports
+/dist/
+/build/
+/test-results/
+/playwright-report/
+/blob-report/
+/logs/
+/tmp/
+/temp/
+
+# Personal city packs (for example private fan cities). Never committed; see docs/world-data.md.
+/private-cities/

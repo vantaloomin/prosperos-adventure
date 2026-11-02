@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "group": "creator-dragons, eternal-dragons, old-gods, new-gods, fey, archdevils or demon-lords",
+    "status": "spent, active, missing, dead, imprisoned or unknown, in the Post-Reform era unless by_era says otherwise",
+    "boons": "what a devotee or bargainer can gain",
+    "price": "what it costs",
+    "guise": "for Eternal Dragons living as mortals: the disguise",
+    "ip": "original or myth; D&D-coined names are already replaced (see canon/names.md and renamed_from)",
+    "hidden": "guise, secret and mortal_life can hold hidden truths; lore.json carries only public text"
+  },
+  "powers": [
+    {
+      "id": "iseullaryax",
+      "name": "Iseullaryax",
+      "epithets": [
+        "the Solar Dragon",
+        "Wyrm of the Burning Crown"
+      ],
+      "group": "creator-dragons",
+      "domain": [
+        "day",
+        "law",
+        "fire",
+        "truth"
+      ],
+      "status": "spent",
+      "appearance": "Remembered in ash-prayers and cathedral mosaics as a colossal serpent of molten gold and obsidian, crowned with a halo of spines like a sun caught mid-burst.",
+      "nature": "Survival through truth, even when truth kills. Loves order, not rulers, and burns tyrant and saint alike once they rot.",
+      "boons": [
+        "sunfire",
+        "purification",
+        "oath-binding",
+        "searing away curses and undead taint"
+      ],
+      "price": "Strips disguises and pretty lies; demands sacrifices made in daylight, witnessed, named and owned.",
+      "worship": "Not a god that answers. Its 'servants' draw on old forms and Eternal Dragons' doctrine.",
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "tatsuyaraga",
+      "name": "Tatsuyaraga",
+      "epithets": [
+        "the Lunar Dragon",
+        "Wyrm of the Night-Tide"
+      ],
+      "group": "creator-dragons",
+      "domain": [
+        "reflection",
+        "tides",
+        "dreams",
+        "change",
+        "thresholds"
+      ],
+      "status": "spent",
+      "appearance": "In the oldest scraps of scripture, a pearl-scaled leviathan with a thousand horned outlines, because nobody agrees on its true shape. It leaves cold awe and salt on the tongue.",
+      "nature": "Survival through change. Patron of the hidden path, the second chance, the lie that saves a life, the secret that topples a tyrant.",
+      "boons": [
+        "illusion and revelation",
+        "prophetic dreams",
+        "moonlit stealth",
+        "turning fortune like a tide"
+      ],
+      "price": "Always memory, identity or comfort.",
+      "worship": "Sailors, midwives, witches and assassins whisper its names to bargain, not to worship.",
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "ghondiir",
+      "name": "Ghondiir",
+      "epithets": [
+        "God King of Dragons"
+      ],
+      "group": "eternal-dragons",
+      "domain": [
+        "dominion"
+      ],
+      "status": "dead",
+      "appearance": "A colossal chromatic behemoth. His name survives half-erased, mostly in draconic memory, as a warning rather than a prayer.",
+      "nature": "Ruled dragonkind by domination and used mortals for labor, comfort and spectacle.",
+      "history": "Killed in his lair on the largest Font by Gor'gel in 1 AOD. His falling body made the Badlands.",
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "zaraxas",
+      "name": "Zaraxas",
+      "epithets": [
+        "the Red"
+      ],
+      "group": "eternal-dragons",
+      "status": "active",
+      "guise": {
+        "name": "Melton Ilvar",
+        "as": "human man",
+        "role": "fifth Ilvar patriarch of the Mossrun Expedition",
+        "cast": "melton-ilvar"
+      },
+      "nature": "Patient, acquisitive, and content to rule invisibly through wealth.",
+      "eras": [
+        "post-reform"
+      ],
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "zeharyth",
+      "name": "Zeharyth",
+      "epithets": [
+        "the Copper"
+      ],
+      "group": "eternal-dragons",
+      "status": "active",
+      "guise": {
+        "name": "Illeniana Zehara, \"Lady Zee\"",
+        "as": "elven woman",
+        "role": "owner of A Pocketful of Zzz's",
+        "cast": "lady-zee"
+      },
+      "nature": "Curious and collecting. Loves objects that survived upheavals, above all anything touched by the Old Gods. Vanishes for a generation or two whenever people notice she does not age.",
+      "origin": "source",
+      "ip": "original",
+      "renamed_from": "Ilnezhara"
+    },
+    {
+      "id": "saradrosk",
+      "name": "Saradrosk",
+      "epithets": [
+        "the White"
+      ],
+      "group": "eternal-dragons",
+      "status": "active",
+      "guise": {
+        "name": "Mistress Sara",
+        "as": "human woman",
+        "role": "founder and hidden hand of the Brotherhood of Man",
+        "cast": "mistress-sara"
+      },
+      "nature": "Cold, patient and certain. Resents the 'Small Gods' for taking the Ley; wants it back under her control to restore draconic breeding and make herself queen of the Eternals.",
+      "origin": "source",
+      "ip": "original",
+      "renamed_from": "Icasaracht"
+    },
+    {
+      "id": "forgrimmorithal",
+      "name": "Forgrimmorithal",
+      "epithets": [
+        "the Green"
+      ],
+      "group": "eternal-dragons",
+      "status": "active",
+      "guise": {
+        "name": "Master Grimm",
+        "as": "dwarf man, a little large for one",
+        "role": "master of the workshop in Dun Aldun",
+        "cast": "master-grimm"
+      },
+      "nature": "Looks almost druidic in dwarf form: green hair, emerald eyes, ivy worked into his clothes and armor. Arms the world for a price.",
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "ryndhallach",
+      "name": "Ryndhallach",
+      "epithets": [
+        "the Crystal"
+      ],
+      "group": "eternal-dragons",
+      "status": "active",
+      "guise": {
+        "name": "Lady Hewlight, the Axe-Widow",
+        "as": "dwarf woman",
+        "role": "an old friend of humans and dwarves",
+        "cast": "lady-hewlight"
+      },
+      "nature": "Truly neutral. Has sided with humans and dwarves through history to keep the Ley healthy and open to those the world deems worthy. Fascinated by mortal company and by human drama in particular.",
+      "origin": "source",
+      "ip": "original",
+      "renamed_from": "Saryndalaghlothtor (guise: Lady Gemcloak, the Axemother)"
+    },
+    {
+      "id": "vymnommyth",
+      "name": "Vymnommyth",
+      "epithets": [
+        "the Black",
+        "God of Rulan Gaan (the cult's own name for him is open)"
+      ],
+      "group": "eternal-dragons",
+      "domain": [
+        "rot and renewal",
+        "protection by poison"
+      ],
+      "status": "active",
+      "nature": "Once feared as a lurking god of the lowlands; time turned terror into doctrine and doctrine into a hungry cult. He drowned the plains into swamp and makes the world around Rulan Gaan hostile to keep it 'pure'.",
+      "worship": "The black baptism: anointing with peat-dark bog mud, sealing vows of kinship and secrecy.",
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "yllevantharyx",
+      "name": "Yllevantharyx",
+      "group": "eternal-dragons",
+      "status": "active",
+      "nature": "The ninth Eternal Dragon, and the reason Petrakyra stays hidden. Protective to the point of smothering, she has kept the wood elves out of every war since the Age of Dragons by keeping them out of the world. She is the last Eternal ever hatched, kindled from Ghondiir's heart in the last years of his reign, and she remembers what was lost when he died.",
+      "origin": "draft",
+      "epithets": [
+        "the Silver"
+      ],
+      "guise": {
+        "name": "Old Mother Yllen",
+        "as": "elven woman, very old",
+        "role": "an elder of Petrakyra whom the wood elves will not speak of to outsiders",
+        "cast": "old-mother-yllen"
+      },
+      "origin_note": "Vanta confirmed a ninth Eternal (2026-10-21); the name, kind and character are a draft."
+    },
+    {
+      "id": "gorgel",
+      "name": "Gor'gel",
+      "epithets": [
+        "God of War",
+        "the Perfect Warrior"
+      ],
+      "group": "old-gods",
+      "domain": [
+        "war",
+        "strength",
+        "defiance"
+      ],
+      "status": "missing",
+      "nature": "A Primordial Orc, viciously clever and brutally strong, who promised to free his people from the dragons and did. The first mortal to ascend. A war god who is fed by war, and has started more than one.",
+      "history": "Killed Ghondiir with a blade of crystallized Ley, ascended on the dragon's heart-blood, and made orcs and humans from his tribe (in the orc telling). In 251 AOD he disguised himself as another god and duped the elf druid Himo Xiloscient into opening the first portal for an invasion of gnolls and demons out of the Badlands: the Gor'gel Deception.",
+      "worship": "Orcs above all. Elves curse his name for the Deception.",
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "morrigan",
+      "name": "Morrigan",
+      "epithets": [
+        "Goddess of Battle"
+      ],
+      "group": "old-gods",
+      "domain": [
+        "battle",
+        "strategy",
+        "prophecy",
+        "ravens"
+      ],
+      "status": "missing",
+      "nature": "Gor'gel's heir: the part of war that thinks, waits and strikes where a kingdom cannot afford it. Ravens gather around her like rumors; she tastes of iron and wet stone.",
+      "boons": [
+        "fury",
+        "the cold clarity to see which sacrifice wins"
+      ],
+      "price": "Somebody always pays, and she chooses who.",
+      "partner": "the-dagda",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "hel",
+      "name": "Hel",
+      "epithets": [
+        "Goddess of the Underworld"
+      ],
+      "group": "old-gods",
+      "domain": [
+        "the dead",
+        "boundaries"
+      ],
+      "status": "missing",
+      "nature": "Rules the quiet country under the world, where the dead are archives, not trophies. Her face tells the truth in two languages, one living, one ruined. A boundary, not a monster.",
+      "boons": [
+        "safe passage",
+        "wards against the restless dead",
+        "one conversation with an ancestor"
+      ],
+      "price": "Every favor comes with a receipt.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "oghma",
+      "name": "Oghma",
+      "epithets": [
+        "God of Knowledge"
+      ],
+      "group": "old-gods",
+      "domain": [
+        "knowledge",
+        "language",
+        "curiosity"
+      ],
+      "status": "missing",
+      "nature": "The living ledger of Vallarith, a calm figure wrapped in script. Loves truth, loves the chase more, and has no patience for lazy certainty.",
+      "boons": [
+        "perfect recall",
+        "reading hidden meaning in speech and sigil",
+        "finding the one book that changes everything"
+      ],
+      "price": "For better or worse, the book changes everything.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "skadi",
+      "name": "Skadi",
+      "epithets": [
+        "God of Nature"
+      ],
+      "group": "old-gods",
+      "domain": [
+        "mountains",
+        "storms",
+        "the wild"
+      ],
+      "status": "missing",
+      "nature": "The mountain's verdict and the long silence before an avalanche. Tolerates civilization only while it behaves.",
+      "boons": [
+        "endurance",
+        "pathfinding",
+        "calm under pressure",
+        "frost and beast-kin"
+      ],
+      "price": "Respect, not romance. The wild punishes those who spread like rot.",
+      "note": "The source calls Skadi 'God'; myth has a goddess. Kept as written (open question).",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "hermod",
+      "name": "Hermod",
+      "epithets": [
+        "God of Luck"
+      ],
+      "group": "old-gods",
+      "domain": [
+        "luck",
+        "roads",
+        "dice",
+        "narrow escapes"
+      ],
+      "status": "missing",
+      "nature": "Courier of coincidence. Fast, rarely laughing, keeps promises like a professional. His luck is a blade up your sleeve, not a blanket.",
+      "boons": [
+        "bending probability",
+        "slipping through impossible gaps",
+        "finding just enough at the worst moment"
+      ],
+      "price": "Pay your debts forward, or Hermod finds you.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "the-dagda",
+      "name": "The Dagda",
+      "epithets": [
+        "God of Magic"
+      ],
+      "group": "old-gods",
+      "domain": [
+        "old craft",
+        "runes",
+        "wards",
+        "enchantment",
+        "shaping the Ley"
+      ],
+      "status": "missing",
+      "nature": "Magic with weight, smelling of smoke, soil and hammered iron. Power is built, tended and paid for. Morrigan's partner.",
+      "boons": [
+        "rune-work",
+        "warding",
+        "enchantment",
+        "shaping Ley currents"
+      ],
+      "price": "Despises reckless spellwork that treats the world as disposable.",
+      "partner": "morrigan",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "freya",
+      "name": "Freya",
+      "epithets": [
+        "Goddess of Life"
+      ],
+      "group": "old-gods",
+      "domain": [
+        "love",
+        "growth",
+        "healing",
+        "fertility"
+      ],
+      "status": "missing",
+      "nature": "Beauty with teeth and a falcon's eye for sickness and hunger. Her mercy is real but not soft.",
+      "boons": [
+        "restoration",
+        "fertility",
+        "renewal",
+        "charm",
+        "calling life back from the edge"
+      ],
+      "price": "Spend the life she gives you fiercely.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "odur",
+      "name": "Odur",
+      "epithets": [
+        "God of the Sun"
+      ],
+      "group": "old-gods",
+      "domain": [
+        "sun",
+        "oaths",
+        "truth",
+        "judgment"
+      ],
+      "status": "missing",
+      "nature": "Sunlight as judgment, the dawn that exposes the night's secrets. Hypocrisy makes his light feel like a brand.",
+      "boons": [
+        "purifying light",
+        "courage",
+        "sunfire against shadow",
+        "revealing lies and glamours"
+      ],
+      "price": "The sun does not negotiate.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "nicana",
+      "name": "Nicana",
+      "epithets": [
+        "Goddess of Light"
+      ],
+      "group": "new-gods",
+      "domain": [
+        "light",
+        "boundaries",
+        "discipline"
+      ],
+      "status": "active",
+      "appearance": "As a goddess, wrapped in ever-moving fibres of the universe's first matter. As a mortal: a shade under average height, lean, tan, amber hair braided tight, unnervingly clear aquamarine eyes, monk calluses and a crescent scar along her left ribs.",
+      "mortal_life": "Monk (Way of the Open Hand), Neutral Good. Raised inside the rules of the Benzaiten Monastery on Ikto Isle, treated as a temptation for her looks, grew cold and precise, and left when neutrality started to look like cowardice. The boundary of her party: the one who stops Aveus. Believes anyone who promises control is already planning a grave.",
+      "relations": {
+        "aveus": "lover, after years of refusing him",
+        "girione": "her first family after the monastery",
+        "cybelia": "sister in all but blood"
+      },
+      "by_era": {
+        "brotherhood": "Mortal, on the road with Girione and Aveus (see personas.json)."
+      },
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ],
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "aveus",
+      "name": "Aveus",
+      "epithets": [
+        "God of Darkness"
+      ],
+      "group": "new-gods",
+      "domain": [
+        "darkness",
+        "strength",
+        "survival"
+      ],
+      "status": "active",
+      "appearance": "Half-orc, broad and over-dense, deep olive-bronze skin, soot-black hair, near-black eyes that light up predatory when angry. Broken nose set wrong, notched ear, an ownership brand on his left shoulder he will kill over.",
+      "mortal_life": "Barbarian (Berserker), Chaotic Neutral with a loyalist bend. Born on the Badlands edge to an orc mother and a human exile father, raised in Unguruk. Killed a devil's body at a war-chief's fire rather than take its deal. Thinks mercy is a luxury bought with someone else's muscles. Loyal to his party, and to Nicana above everything.",
+      "relations": {
+        "nicana": "loved her from the start",
+        "girione": "calls him small, guards him like property",
+        "witarr": "called him hell-blood, came to respect him"
+      },
+      "by_era": {
+        "brotherhood": "Mortal, newly left Unguruk."
+      },
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ],
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "arbiter",
+      "name": "The Arbiter",
+      "epithets": [
+        "the seventh"
+      ],
+      "group": "new-gods",
+      "domain": [
+        "unknown"
+      ],
+      "status": "active",
+      "appearance": "Humanoid, bald, neither man nor woman by any measure the others could find, with bronzed skin darker than any natural hue.",
+      "nature": "Appeared out of nowhere exactly when the party needed a tiebreaker. Some of the others suspected an outsider sent to take a share of the Ley back to its own kind; nothing ever came of it.",
+      "secret": "Mortals do not know the Arbiter exists, and the other gods prefer it that way. After the Reformation the Arbiter folded the Source Font into a pocket realm of its own, leaving a leak above Loch Torogh to keep the world's Ley flowing.",
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ],
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "cybelia",
+      "name": "Cybelia",
+      "epithets": [
+        "Goddess of the Ley",
+        "Goddess of Magic"
+      ],
+      "group": "new-gods",
+      "domain": [
+        "the Ley",
+        "magic",
+        "systems"
+      ],
+      "status": "active",
+      "appearance": "Tall, narrow-shouldered, precise hands, pale skin, cool candle-blonde hair in a severe bun, flat slate-grey eyes since puberty, a trace of elven blood in her cheekbones and ears.",
+      "mortal_life": "Wizard (Order of the Leywright, Brotherhood arcane engineer), Lawful Neutral. Her mother died pouring power into her at birth; raised in an orphanage that locked doors when she passed; taken into Trein's Brotherhood academies. Rose high, learned that Mistress Sara is a dragon, and kept the secret in exchange for the access to steer the Brotherhood away from permanent harm. Worked out how the party could ascend.",
+      "relations": {
+        "nicana": "envy and devotion",
+        "mistress-sara": "a silent bargain"
+      },
+      "note": "The lorebook gives her crimson hair; the newer profile makes her blonde. This draft follows the profile (open-questions.md).",
+      "by_era": {
+        "brotherhood": "Mortal, a senior Brotherhood wizard in Trein."
+      },
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ],
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "tidum",
+      "name": "Tidum",
+      "epithets": [
+        "God of the Wild"
+      ],
+      "group": "new-gods",
+      "domain": [
+        "the wild",
+        "the land",
+        "elementals",
+        "balance"
+      ],
+      "status": "active",
+      "appearance": "As a god, nearly a treant: bark-like skin, green hair and green eyes. As a mortal: tall, rope-lean, weather-darkened, brown hair shot with ash, hazel eyes with a green ring, a grown staff, seed pods and river stones at his throat.",
+      "mortal_life": "Druid (Circle of the Land, Archdruid), True Neutral. Among the first archdruids, made deathless by the land itself as its guardian. Wore a stolen Brotherhood brooch under the Dam to keep doing triage, and hated it. One of the first to know devils had come. Gave his immortality to his apprentice when he joined the ascension, and watched the apprentice die in the first wave of devils.",
+      "worship": "Loggers' and hunters' shrines; Kingswood gives him a chip of the season's first-felled tree.",
+      "by_era": {
+        "pre-reform": "A living, deathless archdruid.",
+        "brotherhood": "Mortal archdruid, tracking the devils' intrusion."
+      },
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "witarr",
+      "name": "Witarr",
+      "epithets": [
+        "God of the Afterlife"
+      ],
+      "group": "new-gods",
+      "domain": [
+        "the dead",
+        "rites",
+        "records",
+        "boundaries"
+      ],
+      "status": "active",
+      "appearance": "As a god, a cleansed human: bright blond hair, crystal blue eyes, and a small emblem of the Abyss on his bicep where the Ley burned the demon blood out. As a mortal: a tiefling with umber skin, swept-back horns, pale gold eyes, a tail belted at the waist, a rope scar at his throat.",
+      "mortal_life": "Cleric (Grave Domain, 'Requiem Warden'), Lawful Neutral. Moved from town to town because horns make towns nervous; survived by keeping records. Did mortuary work because the dead do not spit. Held Convila's graveyard alone against three demons. Joined Nicana to kill the creatures everyone assumed he served. The Ley nearly rejected him.",
+      "by_era": {
+        "brotherhood": "Mortal, a grave-cleric working out of Convila under a Brotherhood brooch."
+      },
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ],
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "girione",
+      "name": "Girione",
+      "epithets": [
+        "God of Mortals"
+      ],
+      "group": "new-gods",
+      "domain": [
+        "mortals",
+        "generosity",
+        "community",
+        "song"
+      ],
+      "status": "active",
+      "appearance": "Halfling, wiry, untameable dark brown hair, sharp hazel eyes, a crooked nose from a bottle and a humorless sailor, a string scar across his left palm, a repaired lute on his back.",
+      "mortal_life": "Bard (College of Lore), Chaotic Good. Ran errands, lifted purses, talked his way out. Wore a Brotherhood brooch for the licence and never trusted it. Found a ledger marking a healers' quarter for cuts as 'low productivity' and stole the crystal shipment for them. Gave his money away faster than he made it. Took the Ley's power for the chance to look after thousands.",
+      "by_era": {
+        "brotherhood": "Mortal, on the road with Nicana and Aveus."
+      },
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ],
+      "origin": "source",
+      "ip": "original"
+    },
+    {
+      "id": "titania",
+      "name": "Titania",
+      "epithets": [
+        "the Seelie Queen",
+        "Lady of Light and Life",
+        "Queen of the Evergreen",
+        "Lady of Flowers"
+      ],
+      "group": "fey",
+      "domain": [
+        "summer",
+        "growth",
+        "beauty",
+        "art"
+      ],
+      "status": "active",
+      "appearance": "A beauty so vast it makes the viewer feel small, dressed for battle: silvery mail under a robe of shifting sun-yellow and pine-green, silver-white hair coiled at the neck, a crown of living leaves, no weapon.",
+      "nature": "Nurturing and generous; nature's fury when scorned. Mab's sister; they have not spoken in ages.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "mab",
+      "name": "Mab",
+      "epithets": [
+        "the Unseelie Queen",
+        "Queen of Air and Darkness"
+      ],
+      "group": "fey",
+      "domain": [
+        "winter",
+        "cold",
+        "shadow",
+        "decay and rebirth"
+      ],
+      "status": "active",
+      "nature": "Titania's opposite and equal. Watches the Outer Realms as well as Faerie, and manipulates mortal events to ends no one can read.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "leanan-sidhe",
+      "name": "The Leanan Sídhe",
+      "epithets": [
+        "the Muse"
+      ],
+      "group": "fey",
+      "domain": [
+        "inspiration",
+        "desire",
+        "longing",
+        "art"
+      ],
+      "status": "active",
+      "nature": "A bridge between the courts, loyal to neither. An empath compelled to inspire love and despair. Her gift is work of great depth; her price is obsession and, for many, a brilliant short life.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "erlking",
+      "name": "The Erlking",
+      "epithets": [
+        "Lord of the Wild Hunt",
+        "God King of Goblins"
+      ],
+      "group": "fey",
+      "domain": [
+        "the hunt",
+        "hunger",
+        "primal violence"
+      ],
+      "status": "active",
+      "nature": "A wild fae outside both courts, holding the spirits of dead hunters, which he calls as great black hounds to ride the wind. Not evil: force without conscience. Tales disagree on whether he preys on children, heralds their deaths, or guards their souls as they leave. Some say he is the queens' equal; he does not brag.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "asmodeus",
+      "name": "Asmodeus",
+      "epithets": [
+        "King of the Nine Hells",
+        "Lord of Nessus"
+      ],
+      "group": "archdevils",
+      "status": "imprisoned",
+      "nature": "Perhaps a true god. Unremarkable to look at but for eyes of flame; an aura that makes nearly anything near him want to kneel. His wounds from his fall into Hell never closed, and every drop of his blood becomes a pit fiend.",
+      "artifacts": [
+        "The Ruby Rod: a four-foot shaft cut from a single ruby, his badge of office and a weapon of terrible power."
+      ],
+      "by_era": {
+        "pre-reform": "Rules from the Black Citadel; plans to heal, pause the Blood War, and win a final war for everything.",
+        "brotherhood": "Leads the Demon Invasion of 3129.",
+        "post-reform": "Torn into eight pieces and buried under the world (hidden truth). The Hells say he still rules; the Black Citadel's throne is in fact empty, and no archdevil dares be the first seen sitting on it."
+      },
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "bel",
+      "name": "Bel",
+      "epithets": [
+        "the Warlord",
+        "Lord of the First",
+        "the Pretender"
+      ],
+      "group": "archdevils",
+      "layer": "Avernus",
+      "status": "active",
+      "nature": "A former pit fiend who took Avernus by betraying his mistress Azazel. Commands the Eight Generals of the Blood War. Trusted by no archdevil but Asmodeus, whom he feeds secrets through the Constable.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "dispater",
+      "name": "Dispater",
+      "epithets": [
+        "the Iron Duke",
+        "Lord of the Second"
+      ],
+      "group": "archdevils",
+      "layer": "Dis",
+      "status": "active",
+      "nature": "Never takes a risk. Barely leaves his Iron Tower, a fortress that is itself a weapon. Allied with Mephistopheles against Beelzebub. His consort Proserpine runs a spy network across all nine Hells.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "mammon",
+      "name": "Mammon",
+      "epithets": [
+        "the Viscount",
+        "Lord of the Third"
+      ],
+      "group": "archdevils",
+      "layer": "Acheron",
+      "status": "active",
+      "nature": "A thirty-foot serpent with a man's torso and a harpoon, ruling from a vast mausoleum over a sinking city. Grovelled first after a failed rebellion and has no allies left in Hell, so he works the Material Plane instead: cults, and economic sabotage against prosperous states.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "agrat",
+      "name": "Agrat",
+      "epithets": [
+        "Lady of the Fourth"
+      ],
+      "group": "archdevils",
+      "layer": "Phlegethos",
+      "status": "active",
+      "nature": "Rules from the Obsidian Palace with a summoned blade of fire. Her father (and rumored consort) Belial rules beside her unofficially. Since her mother's death, close to Naamah, who urges her toward independence.",
+      "origin": "source",
+      "ip": "myth",
+      "renamed_from": "Fierna"
+    },
+    {
+      "id": "belial",
+      "name": "Belial",
+      "epithets": [
+        "Archduke"
+      ],
+      "group": "archdevils",
+      "layer": "Phlegethos",
+      "status": "active",
+      "nature": "Agrat's father and the power behind her throne, trying to keep her close without driving her further away, and weighing moves against Naamah he cannot afford to be seen making.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "andras",
+      "name": "Andras",
+      "epithets": [
+        "Prince of the Fifth"
+      ],
+      "group": "archdevils",
+      "layer": "Stygia",
+      "status": "imprisoned",
+      "nature": "Pale, black-eyed, sharp-toothed, once silk-clad with a rapier. Frozen inside a floating mountain of ice for murdering Asmodeus's consort, Naamah's mother. Asmodeus then gave him Stygia anyway, still frozen; he rules by telepathy through his ice-clerks.",
+      "origin": "source",
+      "ip": "myth",
+      "renamed_from": "Levistus"
+    },
+    {
+      "id": "naamah",
+      "name": "Naamah",
+      "epithets": [
+        "Archduchess of the Sixth"
+      ],
+      "group": "archdevils",
+      "layer": "Malebolge",
+      "status": "active",
+      "nature": "Asmodeus's daughter: copper-skinned, winged, beautiful and formidable. Took Malebolge from the old Countess. Gathers leverage through spies and young cults to win her father's leave to destroy Andras.",
+      "origin": "source",
+      "ip": "myth",
+      "renamed_from": "Glasya"
+    },
+    {
+      "id": "beelzebub",
+      "name": "Beelzebub",
+      "epithets": [
+        "the Slug Archduke",
+        "Lord of the Seventh"
+      ],
+      "group": "archdevils",
+      "layer": "Lethe",
+      "status": "active",
+      "nature": "Once an angel, cast down and made a devil by Asmodeus. Climbed to the seventh Hell and erased all memory of its previous lord. Cursed into a melted slug's body for rebelling. Plots openly against Mephistopheles and in silence against Asmodeus. Lilith is his consort in name only.",
+      "origin": "source",
+      "ip": "myth",
+      "renamed_from": "Baalzebul"
+    },
+    {
+      "id": "mephistopheles",
+      "name": "Mephistopheles",
+      "epithets": [
+        "Archduke of Caina",
+        "Lord of the Eighth"
+      ],
+      "group": "archdevils",
+      "layer": "Caina",
+      "status": "active",
+      "nature": "Nine feet tall, hell-red, horned and winged, in capes of perfect black, with a burning ranseur. Rules from the Rimehold. Obsessed with hellfire, and offering its mastery to grow a mortal cult larger than any other archdevil's. Borrowing power from Dispater and Andras at an alarming rate to do it.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "lilith",
+      "name": "Lilith",
+      "group": "archdevils",
+      "status": "active",
+      "nature": "A fallen celestial turned infernal power broker, with a large mortal following and her own intelligence network. Beelzebub's consort by arrangement, loyal to nobody, climbing.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "proserpine",
+      "name": "Proserpine",
+      "epithets": [
+        "the Iron Maiden"
+      ],
+      "group": "archdevils",
+      "status": "active",
+      "nature": "Dispater's only consort. Her spies cover all nine Hells and beyond; she may be the best-informed creature in the Hells.",
+      "origin": "source",
+      "ip": "myth",
+      "renamed_from": "Lilis"
+    },
+    {
+      "id": "demogorgon",
+      "name": "Demogorgon",
+      "epithets": [
+        "Prince of Demons"
+      ],
+      "group": "demon-lords",
+      "realm": "the Gaping Maw",
+      "status": "active",
+      "nature": "Two-headed chaos and destruction, rage and cunning at once, ruling a storm-ocean of wrecks and nightmare islands.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "orcus",
+      "name": "Orcus",
+      "epithets": [
+        "Lord of Undeath"
+      ],
+      "group": "demon-lords",
+      "realm": "Thanatos",
+      "status": "active",
+      "nature": "Wants every living thing replaced by the dead. Wields a wand of his own name; rules a frozen necropolis layer full of necromancers.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "belphegor",
+      "name": "Belphegor",
+      "epithets": [
+        "Prince of Indulgence"
+      ],
+      "group": "demon-lords",
+      "realm": "the Gilded Layers",
+      "status": "active",
+      "nature": "Once a devil. A master schemer of lust, luxury and excess, whose decadent cities stand in tortured land.",
+      "origin": "source",
+      "ip": "myth",
+      "renamed_from": "Graz'zt"
+    },
+    {
+      "id": "arachne",
+      "name": "Arachne",
+      "epithets": [
+        "the Spinner",
+        "Queen of Spiders"
+      ],
+      "group": "demon-lords",
+      "realm": "the Webbed Deeps",
+      "status": "active",
+      "nature": "Deceit, shadows and spiders. Pulls the strings of the dark elves from a webbed throne.",
+      "origin": "source",
+      "ip": "myth",
+      "renamed_from": "Lolth"
+    },
+    {
+      "id": "baphomet",
+      "name": "Baphomet",
+      "epithets": [
+        "the Horned King"
+      ],
+      "group": "demon-lords",
+      "realm": "the Endless Maze",
+      "status": "active",
+      "nature": "Savagery and the hunt. Turns creatures into beasts and fills his infinite labyrinth with them.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "haggoth",
+      "name": "Haggoth",
+      "epithets": [
+        "the Gnoll Lord"
+      ],
+      "group": "demon-lords",
+      "realm": "the Infinite Layers",
+      "status": "active",
+      "nature": "Hunger, wrath and terror. Made the gnolls and leads them in endless hunts, delighting in the fall of civilizations. The Dramogon tribe lives in his shadow.",
+      "origin": "source",
+      "ip": "original",
+      "renamed_from": "Yeenoghu"
+    }
+  ]
+}

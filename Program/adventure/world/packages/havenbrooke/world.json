@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "id": "havenbrooke",
+  "name": "Havenbrooke",
+  "status": "draft",
+  "genre": "modern fantasy: an adult supernatural university drama",
+  "pitch": "Autumn 2009, a small city in the Finger Lakes. Vampires, lycans, fae, witches and sex demons are citizens under federal law, and the government built a university for them on three ley lines in 1867. Five thousand students, a recession outside the gates, and every institution that ever claimed a person waiting to see who they choose instead.",
+  "default_ruleset": "marvel",
+  "calendar": {
+    "note": "The real Gregorian calendar. The story is set in the real autumn of 2009, with the real recession, phones and prices, plus the esoteric history the source adds. A campaign starts on the first Monday of the fall term unless an era says otherwise.",
+    "start": "2009-08-31T08:00",
+    "terms": [
+      {
+        "id": "summer-2009",
+        "name": "Summer 2009",
+        "start": "2009-05-18",
+        "end": "2009-08-23",
+        "break": true
+      },
+      {
+        "id": "fall-2009",
+        "name": "Fall 2009",
+        "start": "2009-08-24",
+        "end": "2009-12-18"
+      },
+      {
+        "id": "winter-break-2009",
+        "name": "Winter break 2009",
+        "start": "2009-12-19",
+        "end": "2010-01-03",
+        "break": true
+      },
+      {
+        "id": "spring-2010",
+        "name": "Spring 2010",
+        "start": "2010-01-04",
+        "end": "2010-05-14"
+      },
+      {
+        "id": "summer-2010",
+        "name": "Summer 2010",
+        "start": "2010-05-15",
+        "end": "2010-08-22",
+        "break": true
+      },
+      {
+        "id": "fall-2010",
+        "name": "Fall 2010",
+        "start": "2010-08-23",
+        "end": "2010-12-17"
+      },
+      {
+        "id": "spring-2011",
+        "name": "Spring 2011",
+        "start": "2011-01-10",
+        "end": "2011-05-13"
+      },
+      {
+        "id": "fall-2011",
+        "name": "Fall 2011",
+        "start": "2011-08-22",
+        "end": "2011-12-16"
+      },
+      {
+        "id": "spring-2012",
+        "name": "Spring 2012",
+        "start": "2012-01-09",
+        "end": "2012-05-18"
+      }
+    ],
+    "terms_note": "Fall 2009 and Spring 2010 dates are from the source (Season One calendar). Later terms are drafts on the same pattern. The school schedule the game plays from is engine/institutions/havenbrooke.json.",
+    "campaign_eras": {
+      "note": "One world, four school years to start in. Entries carry an \"eras\" list (missing means every era) and \"by_era\" notes where a fact changes. See canon/eras.md.",
+      "default": "sophomore",
+      "eras": [
+        {
+          "id": "freshman-summer",
+          "name": "Summer before sophomore year",
+          "start_date": "2009-06-15",
+          "origin": "source",
+          "summary": "June to August 2009. Housing letters arrive in cream envelopes. The core nine are scattered across five states and one apartment in Ithaca, and the Nexus placement nobody asked for is waiting for them in the fall."
+        },
+        {
+          "id": "sophomore",
+          "name": "Sophomore year",
+          "start_date": "2009-08-31",
+          "origin": "source",
+          "summary": "Fall 2009 to spring 2010, the default. Move-in on the ley node, the Harvest Howl, Kindling founded, @HumanInterest launched, the sealskin theft and the spring equinox rite."
+        },
+        {
+          "id": "junior",
+          "name": "Junior year",
+          "start_date": "2010-08-30",
+          "origin": "source",
+          "summary": "Fall 2010 to spring 2011. The institutions send auditors: a fae court clerk, a DED review board, Kim's mother, the Crane estate. Instagram launches in October."
+        },
+        {
+          "id": "senior",
+          "name": "Senior year",
+          "start_date": "2011-08-29",
+          "origin": "source",
+          "summary": "Fall 2011 to spring 2012. Hearings, severances and a death in the family. Everything built in the first two years gets priced."
+        }
+      ]
+    }
+  },
+  "currency": {
+    "origin": "source",
+    "base": "usd",
+    "note": "Real 2009 US dollars. Prices follow the source's 2009 landscape document: gas about $2.50 a gallon, a pint $3 to $5, a diner meal under $10, a textbook $80 to $150. The Haven town file (world/data/cities/haven.json) holds the price list the game reads.",
+    "denominations": [
+      {
+        "id": "dollar",
+        "name": "US dollar",
+        "symbol": "$",
+        "usd": 1
+      },
+      {
+        "id": "cent",
+        "name": "cent",
+        "per_usd": 100
+      }
+    ],
+    "regional": []
+  },
+  "tiers": {
+    "track": "standing",
+    "defaults": {
+      "start": "local",
+      "ceiling": "realm",
+      "pace": "slow"
+    },
+    "note": "A school-years arc. Local is a name on the third floor; Regional is a name across campus and in Haven; Realm is a name in the esoteric Northeast (the DED, the courts, the Council of Bloodlines). World and Mythic exist for players who push past the source."
+  },
+  "progression": {
+    "origin": "draft",
+    "tracks": [
+      {
+        "id": "grades",
+        "type": "Grades",
+        "name": "Grades",
+        "note": "Kept by the school (engine/institutions/havenbrooke.json): marked work, exams and attendance give a letter grade and a GPA each term. Scholarships ride on it."
+      },
+      {
+        "id": "standing",
+        "type": "Reputation",
+        "name": "Standing",
+        "sets_tier": true,
+        "note": "How far your name has carried: the floor, the campus and Haven, then the esoteric Northeast."
+      },
+      {
+        "id": "bonds",
+        "type": "Bonds",
+        "name": "Bonds",
+        "note": "The people who would drive four hours in the rain for you, and the ones you would drive for. A bonded circle is the top of this track for a kitsune."
+      },
+      {
+        "id": "marvel-growth",
+        "type": "use-based",
+        "name": "Prospero growth",
+        "note": "The engine default: stats used under pressure are marked and rolled at rest."
+      },
+      {
+        "id": "hunger",
+        "type": "Corruption",
+        "name": "Hunger",
+        "dark": true,
+        "note": "For anyone who feeds (demonkin, vampires, some fae). Skipped feeds and unsanctioned ones both raise it; thresholds bring glamour slips, draws that run long and, at the top, a felony."
+      },
+      {
+        "id": "exposure-fatigue",
+        "type": "Corruption",
+        "name": "Exposure fatigue",
+        "dark": true,
+        "note": "For mundane humans living in high magical density. Rises by itself each week on campus and falls on the Evermere protocol; thresholds flatten mood, steal sleep and look like depression."
+      },
+      {
+        "id": "wealth",
+        "type": "Wealth",
+        "name": "Wealth",
+        "note": "Read from the economy, in 2009 dollars."
+      }
+    ]
+  },
+  "death_rule": "Death is possible and final on that branch, but rare: this is a drama, not a war. The common losses are scholarships, relationships, standing and control. Recovery is by branching back to an earlier turn, with new dice.",
+  "intensity_defaults": {
+    "preset": "unflinching",
+    "levels": {
+      "violence": "mature",
+      "sex": "unflinching",
+      "horror": "mature",
+      "cruelty": "mature",
+      "drugs": "mature"
+    },
+    "veils": [],
+    "note": "The source is explicit adult fiction: sex is written as sex. Violence, horror and cruelty sit at mature because the stories are about control and consent more than gore; raise them freely. Vanta set no hard lines. Everyone in this world is an adult; the core nine are twenty."
+  },
+  "tone": {
+    "voice": "intimate",
+    "drama": "uneasy",
+    "note": "Character-first, wry and honest. See canon/tone-and-house-rules.md."
+  },
+  "theme": {
+    "name": "Autumn quad",
+    "palette": {
+      "accent": "#9b3f1c",
+      "background": "#f2ebdf",
+      "surface": "#faf6ef",
+      "text": "#2b221c"
+    }
+  },
+  "personas": {
+    "custom_allowed": true,
+    "file": "personas.json"
+  },
+  "starting_place": {
+    "settlement": "havenbrooke-campus",
+    "place": "nexus-housing",
+    "era": "sophomore",
+    "note": "The Nexus third floor, move-in week. The town the game plays is world/data/cities/haven.json; the campus is part of it."
+  },
+  "assets": {
+    "maps": [
+      {
+        "id": "nexus-third-floor",
+        "file": "assets/maps/nexus-third-floor.jpg",
+        "title": "Nexus Housing, third floor",
+        "note": "The suite floor plan from the source: Unit C at the top, Unit A on the left, Unit B on the right, the common room in the middle and the lobby, elevator and stairs below."
+      }
+    ]
+  }
+}

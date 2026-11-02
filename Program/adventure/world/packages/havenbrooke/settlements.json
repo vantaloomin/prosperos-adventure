@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "kind": "city, town or site",
+    "ruled_by": "a faction id where one governs, otherwise null",
+    "faction": "faction ids with a strong hand here (checked against factions.json)",
+    "notable": "named places, each with the cast id of who to find there, or null",
+    "origin": "source or draft"
+  },
+  "settlements": [
+    {
+      "id": "haven",
+      "name": "Haven, New York",
+      "region": "finger-lakes",
+      "kind": "city",
+      "size": "small city",
+      "ruled_by": "haven-city",
+      "peoples": [
+        "mundane humans",
+        "witches",
+        "fae",
+        "vampires",
+        "lycans",
+        "demonkin"
+      ],
+      "danger_tier": "local",
+      "summary": "About 35,000 year-round residents plus the university's 5,000 students, on the Haven River. A paper-mill town until the 1970s, it now lives on the university, tourism and an artisan scene in the old mills. Downtown is on the west bank, the campus on the east.",
+      "trade": [
+        "the university",
+        "tourism",
+        "artisan studios",
+        "the Crane family's payroll"
+      ],
+      "notable": [
+        {
+          "name": "The Stag & Thistle",
+          "note": "The pub on Main Street. Faculty in the back booths, students up front.",
+          "npc": null
+        },
+        {
+          "name": "Pale Press Coffee",
+          "note": "Magic-neutral by house rule.",
+          "npc": "delia-okonkwo"
+        },
+        {
+          "name": "Drothe's Bookery",
+          "note": "Paperbacks for five dollars; occult texts for whatever Drothe says.",
+          "npc": "drothe"
+        },
+        {
+          "name": "Arrow & Ink",
+          "note": "Tattoos, piercings and, for clients she trusts, enchanted ink.",
+          "npc": "bex-kavanagh"
+        },
+        {
+          "name": "Crane Hill",
+          "note": "The vampire family's estate on the northern ridge.",
+          "npc": "lucian-crane"
+        }
+      ],
+      "access": "Open city. Haven PD has 42 officers, three of them esoteric liaisons.",
+      "hooks": [
+        "The house on Elm Street still rents to seniors.",
+        "Someone has been buying selkie-kin binding texts at Drothe's for four months.",
+        "The Velvet Spire's top floor, which no undergraduate has credibly seen."
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "havenbrooke-campus",
+      "name": "Havenbrooke University",
+      "region": "finger-lakes",
+      "kind": "site",
+      "size": "campus of 5,000",
+      "ruled_by": "havenbrooke-university",
+      "faction": [
+        "havenbrooke-university",
+        "alpha-gamma",
+        "sigma-theta-hex",
+        "phi-sigma-nox"
+      ],
+      "peoples": [
+        "every recognized species",
+        "about 300 mundane humans a year on scholarship"
+      ],
+      "danger_tier": "local",
+      "summary": "Founded by the DED in 1867 on the convergence of three minor ley lines, east of the river. Five teaching platforms, warded buildings, Greek houses with real rituals, and a 20 percent acceptance rate.",
+      "trade": [
+        "education",
+        "clinical care at Evermere and Farrow House",
+        "federal research"
+      ],
+      "notable": [
+        {
+          "name": "Nexus Housing, third floor",
+          "note": "The trefoil suite over a secondary ley node.",
+          "npc": null
+        },
+        {
+          "name": "Vespers Hall",
+          "note": "Built on the strongest node; the equinox rites happen here.",
+          "npc": null
+        },
+        {
+          "name": "Farrow House",
+          "note": "The supervised treatment house with the stained-glass owl.",
+          "npc": "iolana-whitestone"
+        },
+        {
+          "name": "Warden Hall",
+          "note": "MTO, federal instructors and wired rooms.",
+          "npc": "sera-ashworth"
+        }
+      ],
+      "access": "Open grounds; warded buildings; sisters-only and members-only floors in the Greek houses.",
+      "hooks": [
+        "Why the six of them were placed on the Nexus third floor.",
+        "A bitten lycan running recon loops in Ironroot Woods.",
+        "The working name taped inside a fourth-floor locker in Bellweather Hall."
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ithaca",
+      "name": "Ithaca",
+      "region": "finger-lakes",
+      "kind": "town",
+      "size": "college town",
+      "ruled_by": null,
+      "peoples": [
+        "mundane humans",
+        "Cornell students"
+      ],
+      "danger_tier": "local",
+      "summary": "Forty minutes southwest of Haven: specialty shopping, restaurants that charge more than $15 an entree, the nearest bus station and Christine's weekend apartment.",
+      "trade": [
+        "Cornell",
+        "retail"
+      ],
+      "notable": [],
+      "access": "The university shuttle, twice a day.",
+      "hooks": [
+        "Cornell's debate team, the Debate Union's old rival."
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "seneca-lake",
+      "name": "Seneca Lake",
+      "region": "finger-lakes",
+      "kind": "site",
+      "size": "lake shore",
+      "ruled_by": null,
+      "peoples": [
+        "summer renters"
+      ],
+      "danger_tier": "local",
+      "summary": "Rented lake houses with loose dock boards, cold water and cheap fireworks.",
+      "trade": [
+        "wine",
+        "summer rentals"
+      ],
+      "notable": [],
+      "access": "An hour's drive.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "syracuse",
+      "name": "Syracuse",
+      "region": "finger-lakes",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": null,
+      "peoples": [
+        "mundane humans"
+      ],
+      "danger_tier": "local",
+      "summary": "Ninety minutes north: the Amtrak station and Syracuse Hancock airport.",
+      "trade": [
+        "transport"
+      ],
+      "notable": [],
+      "access": "Open.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "new-york",
+      "name": "New York",
+      "region": "new-york-city",
+      "kind": "city",
+      "size": "metropolis",
+      "ruled_by": "ded",
+      "faction": [
+        "council-of-bloodlines"
+      ],
+      "peoples": [
+        "everyone",
+        "about 180,000 registered supernatural residents"
+      ],
+      "danger_tier": "regional",
+      "summary": "Supernatural fashion houses, The Esoteric Standard's offices, WESC's studios and the firms that hire Havenbrooke graduates. Elena Marchetti keeps a West Village apartment and a client list.",
+      "trade": [
+        "fashion",
+        "media",
+        "law",
+        "finance",
+        "enchantment firms"
+      ],
+      "notable": [
+        {
+          "name": "A Manhattan runway",
+          "note": "Where Christine's brands show.",
+          "npc": "elena-marchetti"
+        }
+      ],
+      "access": "Open city; some floors and clubs by bloodline.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "boston",
+      "name": "Boston",
+      "region": "new-england",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": null,
+      "faction": [
+        "corwin-lineage"
+      ],
+      "peoples": [
+        "old witch lineages",
+        "everyone"
+      ],
+      "danger_tier": "regional",
+      "summary": "Old coven money, Brahmin witch families and Genevieve Corwin's ritual consultancy. Delia Okonkwo's first café was here, until 2003.",
+      "trade": [
+        "law",
+        "politics",
+        "ritual consulting"
+      ],
+      "notable": [],
+      "access": "Open.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "salem",
+      "name": "Salem",
+      "region": "new-england",
+      "kind": "town",
+      "size": "town",
+      "ruled_by": "national-coven-registry",
+      "peoples": [
+        "witches"
+      ],
+      "danger_tier": "regional",
+      "summary": "Seat of the National Coven Registry since 1912, and of the Salem Academy ancestral programs Kim turned down.",
+      "trade": [
+        "coven administration"
+      ],
+      "notable": [],
+      "access": "Open.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "providence",
+      "name": "Providence",
+      "region": "new-england",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": null,
+      "faction": [
+        "providence-coven"
+      ],
+      "peoples": [
+        "witches"
+      ],
+      "danger_tier": "regional",
+      "summary": "Home of a senior coven that takes Havenbrooke graduates by invitation. Oriane Dupré went there in 2006.",
+      "trade": [],
+      "notable": [],
+      "access": "By invitation.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "vermont-hometown",
+      "name": "Piper's Vermont town",
+      "region": "new-england",
+      "kind": "town",
+      "size": "small town",
+      "ruled_by": null,
+      "peoples": [
+        "mundane humans"
+      ],
+      "danger_tier": "local",
+      "summary": "Maple-syrup winters, a tired human accountant father, and nowhere a kitsune can keep her tail out.",
+      "trade": [],
+      "notable": [],
+      "access": "Open.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "kessler-hometown",
+      "name": "The Kesslers' town",
+      "region": "mid-atlantic",
+      "kind": "town",
+      "size": "suburb",
+      "ruled_by": null,
+      "peoples": [
+        "mundane humans",
+        "a few registered families"
+      ],
+      "danger_tier": "local",
+      "summary": "Suburban Pennsylvania, on a supernatural registry pipeline. Deirdre Kessler's house, and the Hallwards three doors down.",
+      "trade": [],
+      "notable": [
+        {
+          "name": "Deirdre Kessler's house",
+          "note": "Flashcards, journals, a cycle-tracking spreadsheet.",
+          "npc": "deirdre-kessler"
+        }
+      ],
+      "access": "Open.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "harrisburg",
+      "name": "Harrisburg",
+      "region": "mid-atlantic",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": null,
+      "peoples": [
+        "mundane humans"
+      ],
+      "danger_tier": "local",
+      "summary": "Where \"the people in Harrisburg\", Paula's parents, live and do not call.",
+      "trade": [],
+      "notable": [],
+      "access": "Open.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "philadelphia",
+      "name": "Philadelphia",
+      "region": "mid-atlantic",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": null,
+      "peoples": [
+        "everyone"
+      ],
+      "danger_tier": "local",
+      "summary": "The hospital Christine woke up in at seventeen, with three days missing.",
+      "trade": [],
+      "notable": [],
+      "access": "Open.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "haldane-complex",
+      "name": "The Haldane Complex",
+      "region": "capital",
+      "kind": "site",
+      "size": "federal headquarters",
+      "ruled_by": "ded",
+      "peoples": [
+        "federal staff"
+      ],
+      "danger_tier": "realm",
+      "summary": "The DED's headquarters in Arlington, Virginia, where the classified treaty supplements are kept and the review boards sit.",
+      "trade": [
+        "government"
+      ],
+      "notable": [],
+      "access": "Clearance or summons.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "aelhwynn-grove",
+      "name": "The Aelhwynn eastern grove",
+      "region": "the-courts",
+      "kind": "site",
+      "size": "family grove",
+      "ruled_by": "house-aelhwynn",
+      "faction": "house-aelhwynn",
+      "peoples": [
+        "dryads",
+        "fae"
+      ],
+      "danger_tier": "realm",
+      "summary": "House Aelhwynn's eastern grove, where a three-hundred-year-old oak is registered in fae property records as part of Rina's inheritance.",
+      "trade": [],
+      "notable": [
+        {
+          "name": "Rina's bond-oak",
+          "note": "Her anchor, on paper.",
+          "npc": null
+        }
+      ],
+      "access": "Family and court only.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "cleveland",
+      "name": "Cleveland",
+      "region": "the-midwest",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": null,
+      "peoples": [
+        "mundane humans"
+      ],
+      "danger_tier": "local",
+      "summary": "Michael's mother's two-bedroom apartment, and the reason the bus fare matters.",
+      "trade": [],
+      "notable": [],
+      "access": "Open.",
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "columbus",
+      "name": "Columbus",
+      "region": "the-midwest",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": null,
+      "peoples": [
+        "mundane humans"
+      ],
+      "danger_tier": "local",
+      "summary": "The suburbs Amanda grew up in, and two parents who have not been in one room since she was fifteen.",
+      "trade": [],
+      "notable": [],
+      "access": "Open.",
+      "hooks": [],
+      "origin": "source"
+    }
+  ]
+}

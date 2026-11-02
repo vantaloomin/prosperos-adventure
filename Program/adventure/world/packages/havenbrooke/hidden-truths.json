@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "truth": "what is actually so",
+    "believed": "what most people think",
+    "known_by": "cast ids or descriptions",
+    "surfaces": "ways it can come out in play",
+    "stakes": "what changes if it comes out",
+    "eras": "missing means every era"
+  },
+  "note": "Every entry here is hidden. When the player plays one of the nine, the director treats that lead's own secrets as known to the player character and everyone else's as hidden.",
+  "truths": [
+    {
+      "id": "the-placement",
+      "truth": "The Nexus third-floor placement was not a lottery. Someone arranged for these six to live together over the secondary ley node, and the junction under the building is where it all comes due in senior year. The source deliberately never says who arranged it or why.",
+      "believed": "A housing perk; the co-ed supernatural box ticked in April.",
+      "known_by": [
+        "unknown"
+      ],
+      "surfaces": [
+        "A housing steward too smooth on the phone in July",
+        "A radiator warm in July",
+        "Charms that misfire on the third floor",
+        "Kim mapping the node in junior year"
+      ],
+      "stakes": "Why these six, and who is still watching.",
+      "origin": "source (open by design)"
+    },
+    {
+      "id": "elm-street",
+      "truth": "Freshman year, at a party in the Elm Street house, Jason fed on a girl through a kiss until she was unconscious for eight minutes. He told no one. She does not remember. Christine felt it from three buildings away at 11:47 p.m. and never told him she knew.",
+      "believed": "Jason volunteers at Farrow House because he is conscientious.",
+      "known_by": [
+        "jason-kessler",
+        "christine-kessler"
+      ],
+      "surfaces": [
+        "He will not walk down Elm Street",
+        "He flinches at praise for his control",
+        "Her face on campus"
+      ],
+      "stakes": "A federal consent felony, if anyone ever reported it.",
+      "origin": "source"
+    },
+    {
+      "id": "the-shift-in-the-woods",
+      "truth": "Austin is the only person who has seen Jason fully demon-shifted, horns and heat, in the woods in their last year of high school.",
+      "believed": "Jason only ever glows.",
+      "known_by": [
+        "jason-kessler",
+        "austin-hallward"
+      ],
+      "surfaces": [
+        "Midnight runs together"
+      ],
+      "stakes": "What Jason can become.",
+      "origin": "source"
+    },
+    {
+      "id": "the-tether",
+      "truth": "Last spring Piper pulled an emotional tether with Rina during a six-hour study session and told her things she has never told Jason. Rina thinks it was friendship. Piper counts it as cheating.",
+      "believed": "Close friends.",
+      "known_by": [
+        "piper-marsh"
+      ],
+      "surfaces": [
+        "A tether that lights up again",
+        "Piper apologizing to Rina for nothing"
+      ],
+      "stakes": "Whether Piper's circle is honest from the start.",
+      "origin": "source"
+    },
+    {
+      "id": "the-word-pact",
+      "truth": "Piper and Kim made a drunk pact freshman year: either can say the word and they sleep together, no drama. Neither has said it. Both think about it weekly; Kim has dreamed it in detail.",
+      "believed": "Best friends, nothing more.",
+      "known_by": [
+        "piper-marsh",
+        "kimberly-corwin"
+      ],
+      "surfaces": [
+        "\"Say the word\"",
+        "Rosé"
+      ],
+      "stakes": "The one door Kim has filed under maybe that does not break Michael.",
+      "origin": "source"
+    },
+    {
+      "id": "the-quarter-inch",
+      "truth": "At a freshman party a drunk Rina shifted a goodbye kiss a quarter inch onto the corner of Piper's mouth. Piper noticed and let it pass. Each thinks the other did not register it.",
+      "believed": "Nothing happened.",
+      "known_by": [
+        "piper-marsh",
+        "rina-aldwyn"
+      ],
+      "surfaces": [
+        "A goodbye at a cab door"
+      ],
+      "stakes": "The oldest untouched thread in the series.",
+      "origin": "source"
+    },
+    {
+      "id": "the-wolf-name",
+      "truth": "Austin named his wolf at thirteen and talks to it aloud on bad nights in Ironroot Woods.",
+      "believed": "His wolf is an aspect of him, like most lycans'.",
+      "known_by": [
+        "austin-hallward"
+      ],
+      "surfaces": [
+        "Muttering in the woods"
+      ],
+      "stakes": "House rule: the name is never revealed to anyone, the player included.",
+      "origin": "source"
+    },
+    {
+      "id": "the-turning",
+      "truth": "Paula planned to die the spring she turned. Austin drove four hours through the rain and held her hand through the turning. He is the only one who knows what she looked like when she died and what she said.",
+      "believed": "She chose to turn.",
+      "known_by": [
+        "paula-mercer",
+        "austin-hallward"
+      ],
+      "surfaces": [
+        "Thanksgiving dishes: \"I'm glad you came.\" \"I would have come from anywhere.\""
+      ],
+      "stakes": "Handle with care: counts, check-ins and company, never method.",
+      "origin": "source"
+    },
+    {
+      "id": "the-siphon",
+      "truth": "Paula has been drawing on Austin's emotional signature in small amounts since freshman fall to borrow his warmth. He does not know. She tried stopping over Thanksgiving and lasted eleven days.",
+      "believed": "She is doing better.",
+      "known_by": [
+        "paula-mercer"
+      ],
+      "surfaces": [
+        "Austin more tired after visits",
+        "Her voice dropping to a hum near him"
+      ],
+      "stakes": "It detonates in senior year if nobody stops it.",
+      "origin": "source"
+    },
+    {
+      "id": "the-forgeries",
+      "truth": "Rina is betrothed by contract to Callum Ashveil and is unpicking it with forged signatures and misfiled petitions, helped by an Eastern Seelie archives clerk who owes her. The forgeries sit in a touch-keyed fern planter in her room.",
+      "believed": "She is finishing her degree as her family expects.",
+      "known_by": [
+        "rina-aldwyn",
+        "an Eastern Seelie clerk"
+      ],
+      "surfaces": [
+        "Callum's visit",
+        "A court auditor with an envelope (junior year)"
+      ],
+      "stakes": "Her House, her anchor, her freedom.",
+      "origin": "source"
+    },
+    {
+      "id": "the-anchor",
+      "truth": "Rina's registered anchor is an oak in her family grove, but she is living on the Verdant Grove instead, three closing shifts a week. The substitute will not hold forever.",
+      "believed": "Dryads at Havenbrooke use the Grove; nothing unusual.",
+      "known_by": [
+        "rina-aldwyn"
+      ],
+      "surfaces": [
+        "Withering if the Grove is cut off"
+      ],
+      "stakes": "Severing the anchor kills a dryad by inches unless she re-anchors somewhere.",
+      "origin": "source"
+    },
+    {
+      "id": "the-clearing",
+      "truth": "Last spring Silas Varn, a visiting bitten lycan, asked to tie Rina to a tree with her own vines in Ironroot Woods. She said yes. His second question made her break free and run. She has never told Austin.",
+      "believed": "Rina walks alone in the woods sometimes.",
+      "known_by": [
+        "rina-aldwyn",
+        "silas-varn"
+      ],
+      "surfaces": [
+        "Silas's recon loops near the Grove",
+        "Her dreams of that tree"
+      ],
+      "stakes": "Austin will find the scent before he finds out why.",
+      "origin": "source"
+    },
+    {
+      "id": "the-binding-draft",
+      "truth": "In the erotic pages of her spellbook Kim keeps drafting a binding that would tie her and Michael beyond undoing. It is aimed at herself.",
+      "believed": "Kim is in control.",
+      "known_by": [
+        "kimberly-corwin"
+      ],
+      "surfaces": [
+        "Erased pages",
+        "A page Michael should not read"
+      ],
+      "stakes": "She is afraid she will be the one to leave.",
+      "origin": "source"
+    },
+    {
+      "id": "the-side-chamber",
+      "truth": "Freshman fall, Oriane Dupré walked Kim through equinox prep alone for forty minutes and watched her come twice without touching her or speaking.",
+      "believed": "An ordinary rite.",
+      "known_by": [
+        "kimberly-corwin",
+        "oriane-dupre"
+      ],
+      "surfaces": [
+        "Oriane presiding at the spring equinox"
+      ],
+      "stakes": "What Kim actually hungers for.",
+      "origin": "source"
+    },
+    {
+      "id": "taxes-2009",
+      "truth": "Michael keeps every text in which Kim describes another partner in a phone folder called taxes_2009, backed up to Dropbox, and rereads them looking for the voice she uses for him.",
+      "believed": "He enjoys the kink.",
+      "known_by": [
+        "michael-reeves"
+      ],
+      "surfaces": [
+        "His phone",
+        "The folder name"
+      ],
+      "stakes": "Whether the kink is honesty or a wound.",
+      "origin": "source"
+    },
+    {
+      "id": "the-heartbreak-lock",
+      "truth": "Michael's rib tattoo is an Appalachian heartbreak-lock sigil Bex Kavanagh inked in 2008, her worst year. It has muted his feelings for three semesters and deepened his exposure fatigue. Removing it takes a witch with a trust bond.",
+      "believed": "A drunk freshman tattoo.",
+      "known_by": [
+        "bex-kavanagh (in her logbook)"
+      ],
+      "surfaces": [
+        "The tattoo going warm once the fatigue lifts"
+      ],
+      "stakes": "Who Michael is without it, and whether Kim wants that person.",
+      "origin": "source"
+    },
+    {
+      "id": "exposure-fatigue",
+      "truth": "Since 2005, mundane students have been pulled from classes with depression that was undiagnosed exposure fatigue. Michael has refused the Evermere protocol since orientation.",
+      "believed": "A few human students cannot hack it.",
+      "known_by": [
+        "Evermere intake records"
+      ],
+      "surfaces": [
+        "A tip in Amanda's inbox",
+        "Chancellor Wynne's basement"
+      ],
+      "stakes": "An Oracle exposé, a scholarship at risk, and Michael's file in the set.",
+      "origin": "source"
+    },
+    {
+      "id": "the-arrangements",
+      "truth": "From eighteen until she enrolled, Christine kept a few men who paid her rent, her clothes and the down payment on her Ithaca apartment.",
+      "believed": "Modeling money.",
+      "known_by": [
+        "christine-kessler"
+      ],
+      "surfaces": [
+        "The Ithaca apartment",
+        "An old client"
+      ],
+      "stakes": "Jason has never been told.",
+      "origin": "source"
+    },
+    {
+      "id": "the-practice",
+      "truth": "As teenagers the twins practised the draw on each other, foreheads together, until at fifteen it began to feel like something else and they stopped without a word.",
+      "believed": "Ordinary sibling rivalry.",
+      "known_by": [
+        "jason-kessler",
+        "christine-kessler"
+      ],
+      "surfaces": [
+        "Telepathy at 3 a.m."
+      ],
+      "stakes": "Never spoken of.",
+      "origin": "source"
+    },
+    {
+      "id": "christine-loves-piper",
+      "truth": "Christine is in love with Piper. She thinks her interest is strategy against Jason. Jason has worked it out and not told her.",
+      "believed": "Christine is needling Jason through Piper.",
+      "known_by": [
+        "jason-kessler",
+        "the friend group, half-knowingly"
+      ],
+      "surfaces": [
+        "\"Piper\", without the Darling"
+      ],
+      "stakes": "Never consummated in the source; spoken in senior year.",
+      "origin": "source"
+    },
+    {
+      "id": "amanda-loves-michael",
+      "truth": "Amanda has been in love with Michael since the walk-in freezer last February, and keeps him filed as the friend she would ruin her life for.",
+      "believed": "Work friends.",
+      "known_by": [
+        "amanda-rhodes"
+      ],
+      "surfaces": [
+        "The granola bar in his locker on Mondays",
+        "The freezer jamming again"
+      ],
+      "stakes": "She would not survive being looked at that way, she thinks.",
+      "origin": "source"
+    },
+    {
+      "id": "deirdre-illness",
+      "truth": "Deirdre Kessler has a chronic illness far worse than she has told the twins. In the source she dies in February of senior year.",
+      "believed": "Mom is tired.",
+      "known_by": [
+        "deirdre-kessler"
+      ],
+      "surfaces": [
+        "One dropped hint in sophomore year",
+        "Easter of junior year"
+      ],
+      "stakes": "The series' real loss.",
+      "origin": "source"
+    },
+    {
+      "id": "the-sealskin",
+      "truth": "Evander Crane stole Mairead's sealskin from its warded chest, and Gideon Vale has been buying selkie-kin binding texts at Drothe's for months. There is an older skin in the Crane collection.",
+      "believed": "A theft from a dorm.",
+      "known_by": [
+        "evander-crane",
+        "gideon-vale",
+        "lucian-crane"
+      ],
+      "surfaces": [
+        "Mairead's hair going brittle",
+        "Aurelio three beers in: \"Look three lines down.\"",
+        "Drothe's memory for buyers"
+      ],
+      "stakes": "Sealskin theft is sentenced like attempted murder. Lucian is untouchable; his steward is not.",
+      "origin": "source",
+      "eras": [
+        "sophomore",
+        "junior"
+      ]
+    },
+    {
+      "id": "the-teaching-lineage",
+      "truth": "Silas Varn trains in a bitten-lycan combat lineage built to close space around smaller opponents. Finn Ó Brógáin learned the same lineage from an uncle who did not know what it was for.",
+      "believed": "Visiting athletes come and go.",
+      "known_by": [
+        "silas-varn"
+      ],
+      "surfaces": [
+        "Finn moving the same way in the NSAC bracket"
+      ],
+      "stakes": "Who else was taught it.",
+      "origin": "source"
+    },
+    {
+      "id": "whitestone-1984",
+      "truth": "In 1984 at the DED, Iolana Whitestone tried to build something like Kindling and could not make it work.",
+      "believed": "She is a retired diplomat with tenure.",
+      "known_by": [
+        "iolana-whitestone"
+      ],
+      "surfaces": [
+        "Jason's pitch"
+      ],
+      "stakes": "Her blessing is what makes Kindling exist.",
+      "origin": "source"
+    },
+    {
+      "id": "callum-unwilling",
+      "truth": "Callum Ashveil does not want to force the match, and cannot say so at court without destroying his own position.",
+      "believed": "He is a gracious occupier who means to collect.",
+      "known_by": [
+        "callum-ashveil"
+      ],
+      "surfaces": [
+        "His thin excuses for delay"
+      ],
+      "stakes": "An ally Rina cannot see yet.",
+      "origin": "source"
+    },
+    {
+      "id": "thorne-ashford-blood",
+      "truth": "Professor Thorne-Ashford is half fae, which is not public.",
+      "believed": "A human witch.",
+      "known_by": [
+        "mireille-thorne-ashford"
+      ],
+      "surfaces": [
+        "Her stillness",
+        "Iron"
+      ],
+      "stakes": "Why she holds windows open for other women.",
+      "origin": "source"
+    },
+    {
+      "id": "the-velvet-spire",
+      "truth": "The Velvet Spire runs feeding without a facility licence, classed as an entertainment venue, and nobody has complained yet.",
+      "believed": "A club.",
+      "known_by": [
+        "the owners",
+        "Christine"
+      ],
+      "surfaces": [
+        "The middle-floor booths"
+      ],
+      "stakes": "One complaint shuts it down.",
+      "origin": "source"
+    }
+  ]
+}

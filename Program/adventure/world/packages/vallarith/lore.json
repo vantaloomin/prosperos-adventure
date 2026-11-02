@@ -1,0 +1,2097 @@
+{
+  "schema_version": 1,
+  "note": "Keyword-triggered lorebook entries for the narrator: one per place, region, faction and power (drafted from the structured files) plus concept entries. Nothing here is a hidden truth; disguised dragons get public-only text.",
+  "entries": [
+    {
+      "id": "place-dun-aldun",
+      "title": "Dun Aldun",
+      "category": "place",
+      "keywords": [
+        "Dun Aldun",
+        "Aldun",
+        "dwarven steel",
+        "dwarven smiths",
+        "dwarven capital",
+        "Ley-forged"
+      ],
+      "text": "The Dwarven Empire's capital, cut into the northern mountains. Its smiths work Ley into arms and armor nobody else can match.",
+      "refs": {
+        "settlement": "dun-aldun"
+      }
+    },
+    {
+      "id": "place-mordun",
+      "title": "Mordun",
+      "category": "place",
+      "keywords": [
+        "Mordun"
+      ],
+      "text": "A dwarf-built port on the Gulf of Aldir that humans mostly live in. Dwarven bedrock under human finery; the trade door into the Empire.",
+      "refs": {
+        "settlement": "mordun"
+      }
+    },
+    {
+      "id": "place-rulan-gaan",
+      "title": "Rulan Gaan",
+      "category": "place",
+      "keywords": [
+        "Rulan Gaan"
+      ],
+      "text": "A swamp city in the frozen north, made by the Eternal black dragon Vymnommyth when he drowned the plains. His dwarven cult worships him as a god and keeps outsiders out.",
+      "refs": {
+        "settlement": "rulan-gaan"
+      }
+    },
+    {
+      "id": "place-loch-torogh",
+      "title": "Loch Torogh",
+      "category": "place",
+      "keywords": [
+        "Loch Torogh"
+      ],
+      "text": "A dwarven fishing and trading town on a great lake. The mountains behind it are where mortals found the Ley Font and became the New Gods.",
+      "refs": {
+        "settlement": "loch-torogh"
+      }
+    },
+    {
+      "id": "place-mendle",
+      "title": "Mendle",
+      "category": "place",
+      "keywords": [
+        "Mendle"
+      ],
+      "text": "An old outpost between human and dwarven lands that became the place where deals get done. Its great halls have hosted envoys from as far as Asania.",
+      "refs": {
+        "settlement": "mendle"
+      }
+    },
+    {
+      "id": "place-scullcrossed-islands",
+      "title": "The Scullcrossed Islands",
+      "category": "place",
+      "keywords": [
+        "The Scullcrossed Islands"
+      ],
+      "text": "Rugged pirate islands in the middle of the Gulf of Aldir, home port and fortress of the Dreadfall Corsairs.",
+      "refs": {
+        "settlement": "scullcrossed-islands"
+      }
+    },
+    {
+      "id": "place-trein",
+      "title": "Trein",
+      "category": "place",
+      "keywords": [
+        "Trein",
+        "city of magic",
+        "Ley-lit"
+      ],
+      "text": "The city of magic: Ley-lit cobbles, enchanted everything, and a total dependence on stored crystal. Home of the Brotherhood of Man. Trades across the gulf with Mordun, friendly with Asania, careful to stay out of Cyrel's wars.",
+      "refs": {
+        "settlement": "trein"
+      }
+    },
+    {
+      "id": "place-asania",
+      "title": "Asania",
+      "category": "place",
+      "keywords": [
+        "Asania",
+        "Asanian",
+        "Asanians"
+      ],
+      "text": "Capital of its kingdom on the Asanian Strait. Marble towers, magic on every corner, splendor, and a war with Cyrel that never quite ends. Allied with Trein's sorcerers, wary of Wrenspire.",
+      "refs": {
+        "settlement": "asania"
+      }
+    },
+    {
+      "id": "place-wrenspire",
+      "title": "Wrenspire",
+      "category": "place",
+      "keywords": [
+        "Wrenspire",
+        "Wrenspire engineers"
+      ],
+      "text": "A cliff-top city-state of engineers between the sea cliffs and the ocean, run by a council, building gears, engines and airships without any magic at all. Every curious tinkerer is welcome.",
+      "refs": {
+        "settlement": "wrenspire"
+      }
+    },
+    {
+      "id": "place-cyrel",
+      "title": "Cyrel",
+      "category": "place",
+      "keywords": [
+        "Cyrel"
+      ],
+      "text": "A fortress capital that has never fallen, head of a kingdom of three sister cities. At war with land-hungry Asania and holding the Badlands line through Bastion.",
+      "refs": {
+        "settlement": "cyrel"
+      }
+    },
+    {
+      "id": "place-eriane",
+      "title": "Eriane",
+      "category": "place",
+      "keywords": [
+        "Eriane"
+      ],
+      "text": "Cyrel's larder, on a lake: farms, orchards, vineyards and breweries, loud markets and good food. Humans and halflings live side by side.",
+      "refs": {
+        "settlement": "eriane"
+      }
+    },
+    {
+      "id": "place-kingswood",
+      "title": "Kingswood",
+      "category": "place",
+      "keywords": [
+        "Kingswood"
+      ],
+      "text": "A Cyrel logging town on the Kingsbrook at the edge of the Brynwyr forest. Small fights between loggers and elven wardens, old stories of last stands, and the forbidden Heartwood past the border stones.",
+      "refs": {
+        "settlement": "kingswood"
+      }
+    },
+    {
+      "id": "place-convila",
+      "title": "Convila",
+      "category": "place",
+      "keywords": [
+        "Convila"
+      ],
+      "text": "A lively town between Kingswood and Brynwyr, built on the remains of a larger, older city. Under it lies a crystalline fountain of Ley, sealed long ago by the Convila Pact and spent, or so people say.",
+      "refs": {
+        "settlement": "convila"
+      }
+    },
+    {
+      "id": "place-bastion",
+      "title": "Bastion",
+      "category": "place",
+      "keywords": [
+        "Bastion"
+      ],
+      "text": "The last great fortress between Cyrel and the Badlands. Scarred walls carved with the faces of old heroes, drills from dawn to dark, and a garrison that never gets enough men.",
+      "refs": {
+        "settlement": "bastion"
+      }
+    },
+    {
+      "id": "place-mossrun",
+      "title": "Mossrun",
+      "category": "place",
+      "keywords": [
+        "Mossrun"
+      ],
+      "text": "A company town in the wet mountain valleys north-east of Cyrel, where the Mossrun Expedition struck its first two veins: one of iron, one of crystallized Ley. Five generations later it is a maze of shafts and tailings feeding Cyrel, Mendle and Loch Torogh with iron and selling crystal west to Trein and Asania. The streams around it have gone metallic and the moss it was named for is dying.",
+      "refs": {
+        "settlement": "mossrun"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "place-unguruk-camp",
+      "title": "Unguruk Camp",
+      "category": "place",
+      "keywords": [
+        "Unguruk Camp"
+      ],
+      "text": "The great walled camp in the heart of the Badlands: orcs, half-orcs and human exiles, human craft and orc strength together, sun-baked and loud, with a long grudge against Cyrel.",
+      "refs": {
+        "settlement": "unguruk-camp"
+      }
+    },
+    {
+      "id": "place-adlmyr",
+      "title": "Adlmyr",
+      "category": "place",
+      "keywords": [
+        "Adlmyr"
+      ],
+      "text": "Once Cyrel's pride on the Badlands border. The tribes broke its walls late in the Age of Magic, before the Brotherhood was founded, and the Unguruk tribe has held the skeleton of the fortress ever since as proof of who won.",
+      "refs": {
+        "settlement": "adlmyr"
+      }
+    },
+    {
+      "id": "place-abandoned-keep",
+      "title": "The Abandoned Keep",
+      "category": "place",
+      "keywords": [
+        "The Abandoned Keep",
+        "the Druid's Keep",
+        "Xiloscient's Keep"
+      ],
+      "text": "A ward-keep in the broken hills west of Adlmyr, built by Himo Xiloscient after his stand in 251 AOD, over the place where the horde came through. Elves and Cyrel soldiers garrisoned it in turns for centuries. It was left empty when Adlmyr fell, and its wards have been fading ever since. The Kingswood branch of the Ley runs under it.",
+      "refs": {
+        "settlement": "abandoned-keep"
+      }
+    },
+    {
+      "id": "place-dramogon-range",
+      "title": "The Dramogon range",
+      "category": "place",
+      "keywords": [
+        "The Dramogon range"
+      ],
+      "text": "The northern Badlands, where the gnoll nomads of the Dramogon tribe move their camps with the hunt. The map marks their usual ground below the mountains.",
+      "refs": {
+        "settlement": "dramogon-range"
+      }
+    },
+    {
+      "id": "place-kadragar",
+      "title": "Kadragar",
+      "category": "place",
+      "keywords": [
+        "Kadragar"
+      ],
+      "text": "The goblin tribe's home on the southern Badlands coast by the Sea of Kujuur: beached ships, sand, sea stories, merchants who are also warriors.",
+      "refs": {
+        "settlement": "kadragar"
+      }
+    },
+    {
+      "id": "place-ghondiirs-fall",
+      "title": "Ghondiir's Fall",
+      "category": "place",
+      "keywords": [
+        "Ghondiir's Fall"
+      ],
+      "text": "The heart of the Badlands, where the Dragon King's body came down and his lair's Font now runs under broken ground: the Badlands convergence of the Great Line.",
+      "refs": {
+        "settlement": "ghondiirs-fall"
+      }
+    },
+    {
+      "id": "place-source-font",
+      "title": "The Source Font (the seam)",
+      "category": "place",
+      "keywords": [
+        "The Source Font (the seam)"
+      ],
+      "text": "Where creation began, and where the New Gods ascended. Tradition puts it in the peaks above Loch Torogh, and that is where the Ley pours out strongest. In the Post-Reform era nobody can find the Font itself.",
+      "refs": {
+        "settlement": "source-font"
+      }
+    },
+    {
+      "id": "place-brynwyr",
+      "title": "Brynwyr",
+      "category": "place",
+      "keywords": [
+        "Brynwyr",
+        "high elves"
+      ],
+      "text": "The high elves' forest stronghold on the south-western peninsula, with sylvan cities and warfaring sea-elves on the horizon. Mostly closed and calm; a restless young few wander into human lands.",
+      "refs": {
+        "settlement": "brynwyr"
+      }
+    },
+    {
+      "id": "place-ota-at",
+      "title": "Ota'at",
+      "category": "place",
+      "keywords": [
+        "Ota'at"
+      ],
+      "text": "A village in Bashrat's misty swamps, built on strength and challenge. Not evil, but you would need a stout heart to call it home. Trades warily with the goblins of Kadragar.",
+      "refs": {
+        "settlement": "ota-at"
+      }
+    },
+    {
+      "id": "place-benzaiten-monastery",
+      "title": "Benzaiten Monastery",
+      "category": "place",
+      "keywords": [
+        "Benzaiten Monastery"
+      ],
+      "text": "A stern stone monastery on Ikto Isle where monks of many peoples train in meditation and martial skill and settle conflicts quietly. Alone in the world, it has open contact with the wood elves of Petrakyra.",
+      "refs": {
+        "settlement": "benzaiten-monastery"
+      }
+    },
+    {
+      "id": "place-petrakyra",
+      "title": "Petrakyra",
+      "category": "place",
+      "keywords": [
+        "Petrakyra",
+        "wood elves"
+      ],
+      "text": "The hidden home of the wood elves between sea, forest and mountains. They trade a little with Obirykan across the Kyrana Channel. A steady rumor says an Eternal Dragon lives among them.",
+      "refs": {
+        "settlement": "petrakyra"
+      }
+    },
+    {
+      "id": "place-obirykan",
+      "title": "The Obirykan City States",
+      "category": "place",
+      "keywords": [
+        "The Obirykan City States"
+      ],
+      "text": "A cluster of plutocratic city-states on Etryona behind green walls and prism towers. Wealth is Ley crystal, rank is how much you hold, and the whole society is hooked on owning it.",
+      "refs": {
+        "settlement": "obirykan"
+      }
+    },
+    {
+      "id": "place-gurdalur-stones",
+      "title": "The Gurdalur Stones",
+      "category": "place",
+      "keywords": [
+        "The Gurdalur Stones"
+      ],
+      "text": "A ring of faceless standing stones in Fjallagracht's snow, millennia old, sitting on a Ley branch. They throw a shadow calendar the clans live by: births, marriages, burials and raids.",
+      "refs": {
+        "settlement": "gurdalur-stones"
+      }
+    },
+    {
+      "id": "region-dwarven-empire",
+      "title": "The Dwarven Empire",
+      "category": "region",
+      "keywords": [
+        "The Dwarven Empire",
+        "dwarven lands",
+        "dwarven north",
+        "dwarven gates"
+      ],
+      "text": "The north of the continent, ruled from the mountain city of Dun Aldun. Brutal winters, closed gates and the best steel in the world.",
+      "refs": {
+        "region": "dwarven-empire"
+      }
+    },
+    {
+      "id": "region-torogh-highlands",
+      "title": "The Torogh Highlands",
+      "category": "region",
+      "keywords": [
+        "The Torogh Highlands"
+      ],
+      "text": "Fishing boats, merchant tales and the mountains where seven mortals became gods.",
+      "refs": {
+        "region": "torogh-highlands"
+      }
+    },
+    {
+      "id": "region-gulf-of-aldir",
+      "title": "The Gulf of Aldir",
+      "category": "region",
+      "keywords": [
+        "The Gulf of Aldir"
+      ],
+      "text": "Calm water, rich cargoes and the Scullcrossed Islands squarely on the route. Profit for the bold, a grave for most.",
+      "refs": {
+        "region": "gulf-of-aldir"
+      }
+    },
+    {
+      "id": "region-kingdoms-of-man",
+      "title": "The Kingdoms of Man",
+      "category": "region",
+      "keywords": [
+        "The Kingdoms of Man"
+      ],
+      "text": "The human west: Trein's lit streets, Asania's marble towers and Wrenspire's machines, all leaning on stored power or clever gears.",
+      "refs": {
+        "region": "kingdoms-of-man"
+      }
+    },
+    {
+      "id": "region-kingdom-of-cyrel",
+      "title": "The Kingdom of Cyrel",
+      "category": "region",
+      "keywords": [
+        "The Kingdom of Cyrel"
+      ],
+      "text": "A fortress capital and three sister cities, fighting Asania to the west and the Badlands to the east, and the elves of Brynwyr over the forest.",
+      "refs": {
+        "region": "kingdom-of-cyrel"
+      }
+    },
+    {
+      "id": "region-badlands",
+      "title": "The Badlands",
+      "category": "region",
+      "keywords": [
+        "The Badlands"
+      ],
+      "text": "The Dragon King's corpse-country. Three tribes, endless border war with Cyrel, and the strongest magic on the continent under the most dangerous ground.",
+      "refs": {
+        "region": "badlands"
+      }
+    },
+    {
+      "id": "region-saja-een-bay",
+      "title": "Sa'ja'een Bay",
+      "category": "region",
+      "keywords": [
+        "Sa'ja'een Bay"
+      ],
+      "text": "Bioluminescent water, coral towers, silver mist at dusk and creatures that sing at night.",
+      "refs": {
+        "region": "saja-een-bay"
+      }
+    },
+    {
+      "id": "region-sea-of-kujuur",
+      "title": "The Sea of Kujuur",
+      "category": "region",
+      "keywords": [
+        "The Sea of Kujuur"
+      ],
+      "text": "Rough water around the southern islands, sunken treasure stories and goblin trade fleets.",
+      "refs": {
+        "region": "sea-of-kujuur"
+      }
+    },
+    {
+      "id": "region-bashrat-island",
+      "title": "Bashrat Island",
+      "category": "region",
+      "keywords": [
+        "Bashrat Island"
+      ],
+      "text": "A muggy swamp island between the bay and the sea, home to frogfolk, chaos-toads, naga and lizardfolk, and a market everyone eventually hears about.",
+      "refs": {
+        "region": "bashrat-island"
+      }
+    },
+    {
+      "id": "region-ikto-isle",
+      "title": "Ikto Isle",
+      "category": "region",
+      "keywords": [
+        "Ikto Isle"
+      ],
+      "text": "A quiet island cut off by the rapids, home of the Benzaiten Monastery.",
+      "refs": {
+        "region": "ikto-isle"
+      }
+    },
+    {
+      "id": "region-eastern-forests",
+      "title": "The Eastern Forests",
+      "category": "region",
+      "keywords": [
+        "The Eastern Forests"
+      ],
+      "text": "Old forest beyond the Badlands. Almost nobody comes back with a description.",
+      "refs": {
+        "region": "eastern-forests"
+      }
+    },
+    {
+      "id": "region-etryona",
+      "title": "Etryona",
+      "category": "region",
+      "keywords": [
+        "Etryona"
+      ],
+      "text": "Green walls, prism towers and a society where Ley crystal is money, rank and addiction.",
+      "refs": {
+        "region": "etryona"
+      }
+    },
+    {
+      "id": "region-fjallagracht",
+      "title": "The Fjallagracht Lands",
+      "category": "region",
+      "keywords": [
+        "The Fjallagracht Lands"
+      ],
+      "text": "A frozen island of hard clans whose lives run on the calendar of the Gurdalur Stones.",
+      "refs": {
+        "region": "fjallagracht"
+      }
+    },
+    {
+      "id": "region-dire-sea",
+      "title": "The Dire Sea",
+      "category": "region",
+      "keywords": [
+        "The Dire Sea"
+      ],
+      "text": "The Fjallagracht clans named it for what it takes. Where the Ley branch runs beneath it, the sea throws up Ley squalls: storms with glowing fog that sour compasses and spells alike. Crystal reefs grow on the seabed along the current, and the clans' longships cross only in the summer weeks the Gurdalur calendar marks as safe.",
+      "refs": {
+        "region": "dire-sea"
+      }
+    },
+    {
+      "id": "region-faerie",
+      "title": "Faerie",
+      "category": "region",
+      "keywords": [
+        "Faerie"
+      ],
+      "text": "Two queens, a muse and a hunter. Beauty and danger are one thing there, and time is unreliable.",
+      "refs": {
+        "region": "faerie"
+      }
+    },
+    {
+      "id": "region-nine-hells",
+      "title": "The Nine Hells",
+      "category": "region",
+      "keywords": [
+        "The Nine Hells"
+      ],
+      "text": "Law, contracts and promotion by treachery. See canon/cosmology.md.",
+      "refs": {
+        "region": "nine-hells"
+      }
+    },
+    {
+      "id": "region-abyss",
+      "title": "The Abyss",
+      "category": "region",
+      "keywords": [
+        "The Abyss"
+      ],
+      "text": "Hunger, chaos and the will to unmake creation. See canon/cosmology.md.",
+      "refs": {
+        "region": "abyss"
+      }
+    },
+    {
+      "id": "faction-kingdom-of-asania",
+      "title": "The Kingdom of Asania",
+      "category": "faction",
+      "keywords": [
+        "The Kingdom of Asania",
+        "Asanian army",
+        "Asanian crown"
+      ],
+      "text": "Splendid, magical, land-hungry and always ready for war. Allied with Trein's sorcerers, careful around Wrenspire.",
+      "refs": {
+        "faction": "kingdom-of-asania"
+      }
+    },
+    {
+      "id": "faction-trein-council",
+      "title": "The Lamplighters' Council of Trein",
+      "category": "faction",
+      "keywords": [
+        "The Lamplighters' Council of Trein",
+        "Lamplighters"
+      ],
+      "text": "Trein is governed by the Lamplighters' Council, named for the old duty of keeping the city's Ley-lamps lit. Seven seats: four great mage houses, two merchant houses, and the Guild of Wardwrights who keep the city's wards running. A Lord-Speaker chosen by the seven chairs it. Every seat depends on crystal, so crystal policy is all the council really argues about.",
+      "refs": {
+        "faction": "trein-council"
+      }
+    },
+    {
+      "id": "faction-brotherhood-of-man",
+      "title": "The Brotherhood of Man",
+      "category": "faction",
+      "keywords": [
+        "The Brotherhood of Man"
+      ],
+      "text": "A movement for mortal self-rule founded in Trein in 2984: magic for mortals, no more divine leash. It dammed the Ley in 3001 and licensed what flowed by brooch until the Demon Invasion broke it. In the Post-Reform era it is officially history.",
+      "refs": {
+        "faction": "brotherhood-of-man"
+      }
+    },
+    {
+      "id": "faction-wrenspire-council",
+      "title": "The Wrenspire Council",
+      "category": "faction",
+      "keywords": [
+        "The Wrenspire Council"
+      ],
+      "text": "A high-minded council of engineers running a city that refuses magic, building ships and airships with gears alone.",
+      "refs": {
+        "faction": "wrenspire-council"
+      }
+    },
+    {
+      "id": "faction-stoneheart-clan",
+      "title": "The Stoneheart Clan",
+      "category": "faction",
+      "keywords": [
+        "The Stoneheart Clan"
+      ],
+      "text": "The blue-eyed ruling clan of the Dwarven Empire, descended from Dun Aldun's founders. Fair, hard, and patient through every winter.",
+      "refs": {
+        "faction": "stoneheart-clan"
+      }
+    },
+    {
+      "id": "faction-cult-of-vymnommyth",
+      "title": "The Cult of Vymnommyth",
+      "category": "faction",
+      "keywords": [
+        "The Cult of Vymnommyth"
+      ],
+      "text": "Dwarves who broke from the Empire to worship the Eternal black dragon of Rulan Gaan as a god of rot and renewal, protection through contamination. What preserves you is what poisons you.",
+      "refs": {
+        "faction": "cult-of-vymnommyth"
+      }
+    },
+    {
+      "id": "faction-master-grimms-workshop",
+      "title": "Master Grimm's workshop",
+      "category": "faction",
+      "keywords": [
+        "Master Grimm's workshop"
+      ],
+      "text": "The Dun Aldun smithy of Master Grimm, where most of the world's enchanted weapons and armor are made, with wizards on staff who enchant anything for an enormous price.",
+      "refs": {
+        "faction": "master-grimms-workshop"
+      }
+    },
+    {
+      "id": "faction-mossrun-expedition",
+      "title": "The Mossrun Expedition",
+      "category": "faction",
+      "keywords": [
+        "The Mossrun Expedition"
+      ],
+      "text": "A mining concern grown over five generations from two strikes, one iron and one Ley crystal, into an empire of mines serving several cities. Run by the Ilvar family, whose wives die in childbirth and whose fathers are always dying when the children come home.",
+      "refs": {
+        "faction": "mossrun-expedition"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "faction-cyrel-timber-guild",
+      "title": "The Cyrel Timber Guild",
+      "category": "faction",
+      "keywords": [
+        "The Cyrel Timber Guild"
+      ],
+      "text": "The guild that owns Kingswood's cutting crews and most of its debts. It has bought the Heartwood cutting rights from the town's reeve, in secret.",
+      "refs": {
+        "faction": "cyrel-timber-guild"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "faction-unguruk-tribe",
+      "title": "The Unguruk Tribe",
+      "category": "faction",
+      "keywords": [
+        "The Unguruk Tribe"
+      ],
+      "text": "Orcs, half-orcs and human exiles in a walled camp at the heart of the Badlands. Proud, tough, and nursing a long grudge against Cyrel.",
+      "refs": {
+        "faction": "unguruk-tribe"
+      }
+    },
+    {
+      "id": "faction-dramogon-tribe",
+      "title": "The Dramogon Tribe",
+      "category": "faction",
+      "keywords": [
+        "The Dramogon Tribe"
+      ],
+      "text": "Gnoll-majority nomads of the northern Badlands under the shadow of Haggoth, the Gnoll Lord. Stoic, relentless, silent and everywhere.",
+      "refs": {
+        "faction": "dramogon-tribe"
+      }
+    },
+    {
+      "id": "faction-kadragar-tribe",
+      "title": "The Kadragar Tribe",
+      "category": "faction",
+      "keywords": [
+        "The Kadragar Tribe"
+      ],
+      "text": "Goblin seafarers, merchants and warriors of the southern Badlands coast, running the trade routes to Ota'at. Their god king is the Erlking.",
+      "refs": {
+        "faction": "kadragar-tribe"
+      }
+    },
+    {
+      "id": "faction-brynwyr-high-elves",
+      "title": "The High Elves of Brynwyr",
+      "category": "faction",
+      "keywords": [
+        "The High Elves of Brynwyr"
+      ],
+      "text": "A closed, ancient people defending their forest from Cyrel and its loggers, with wardens on the land and sea-elves on the water.",
+      "refs": {
+        "faction": "brynwyr-high-elves"
+      }
+    },
+    {
+      "id": "faction-petrakyra-wood-elves",
+      "title": "The Wood Elves of Petrakyra",
+      "category": "faction",
+      "keywords": [
+        "The Wood Elves of Petrakyra"
+      ],
+      "text": "A reclusive people who trade sparingly with Obirykan and talk only to the Benzaiten monks. An Eternal Dragon is rumored to live among them.",
+      "refs": {
+        "faction": "petrakyra-wood-elves"
+      }
+    },
+    {
+      "id": "faction-dreadfall-corsairs",
+      "title": "The Dreadfall Corsairs",
+      "category": "faction",
+      "keywords": [
+        "The Dreadfall Corsairs"
+      ],
+      "text": "The pirates of the Scullcrossed Islands. Cruel, rarely survived, and always one ship ahead in the Gulf's arms race.",
+      "refs": {
+        "faction": "dreadfall-corsairs"
+      }
+    },
+    {
+      "id": "faction-benzaiten-monastery",
+      "title": "The Benzaiten Monastery",
+      "category": "faction",
+      "keywords": [
+        "The Benzaiten Monastery"
+      ],
+      "text": "Monks of many peoples on Ikto Isle, training mind and body, resolving conflict quietly. The only outsiders the wood elves of Petrakyra talk to.",
+      "refs": {
+        "faction": "benzaiten-monastery"
+      }
+    },
+    {
+      "id": "faction-fjallagracht-clans",
+      "title": "The Fjallagracht clans",
+      "category": "faction",
+      "keywords": [
+        "The Fjallagracht clans"
+      ],
+      "text": "Three clans hold the frozen island and its sea: Clan Skarth, raiders and fighters; Clan Hvalborg, whalers and longship-builders; and Clan Rimvik, the stone-keepers who read the Gurdalur calendar and so decide when anyone may sail, marry, bury or raid. Rimvik is the smallest clan and the one the others obey.",
+      "refs": {
+        "faction": "fjallagracht-clans"
+      }
+    },
+    {
+      "id": "faction-seelie-court",
+      "title": "The Seelie Court",
+      "category": "faction",
+      "keywords": [
+        "The Seelie Court"
+      ],
+      "text": "Titania's summer court of light, art and wild growth.",
+      "refs": {
+        "faction": "seelie-court"
+      }
+    },
+    {
+      "id": "faction-unseelie-court",
+      "title": "The Unseelie Court",
+      "category": "faction",
+      "keywords": [
+        "The Unseelie Court"
+      ],
+      "text": "Mab's winter court of cold, shadow and the decay that feeds rebirth. Meddles in mortal affairs.",
+      "refs": {
+        "faction": "unseelie-court"
+      }
+    },
+    {
+      "id": "power-iseullaryax",
+      "title": "Iseullaryax",
+      "category": "power",
+      "keywords": [
+        "Iseullaryax",
+        "the Solar Dragon",
+        "Wyrm of the Burning Crown"
+      ],
+      "text": "Iseullaryax, the Solar Dragon, Wyrm of the Burning Crown, is a Creator Dragon. Domain: day, law, fire, truth. Survival through truth, even when truth kills. Loves order, not rulers, and burns tyrant and saint alike once they rot. Gifts: sunfire, purification, oath-binding, searing away curses and undead taint. Price: Strips disguises and pretty lies; demands sacrifices made in daylight, witnessed, named and owned.",
+      "refs": {
+        "power": "iseullaryax"
+      }
+    },
+    {
+      "id": "power-tatsuyaraga",
+      "title": "Tatsuyaraga",
+      "category": "power",
+      "keywords": [
+        "Tatsuyaraga",
+        "the Lunar Dragon",
+        "Wyrm of the Night-Tide"
+      ],
+      "text": "Tatsuyaraga, the Lunar Dragon, Wyrm of the Night-Tide, is a Creator Dragon. Domain: reflection, tides, dreams, change, thresholds. Survival through change. Patron of the hidden path, the second chance, the lie that saves a life, the secret that topples a tyrant. Gifts: illusion and revelation, prophetic dreams, moonlit stealth, turning fortune like a tide. Price: Always memory, identity or comfort.",
+      "refs": {
+        "power": "tatsuyaraga"
+      }
+    },
+    {
+      "id": "power-ghondiir",
+      "title": "Ghondiir",
+      "category": "power",
+      "keywords": [
+        "Ghondiir",
+        "God King of Dragons"
+      ],
+      "text": "Ghondiir, God King of Dragons, is an Eternal Dragon. Domain: dominion. Ruled dragonkind by domination and used mortals for labor, comfort and spectacle.",
+      "refs": {
+        "power": "ghondiir"
+      }
+    },
+    {
+      "id": "power-zaraxas",
+      "title": "Zaraxas",
+      "category": "power",
+      "keywords": [
+        "Zaraxas",
+        "the Red"
+      ],
+      "text": "The red Eternal Dragon. Said to live among mortals in some human shape; nobody can say which.",
+      "refs": {
+        "power": "zaraxas"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "power-zeharyth",
+      "title": "Zeharyth",
+      "category": "power",
+      "keywords": [
+        "Zeharyth",
+        "the Copper"
+      ],
+      "text": "The copper Eternal Dragon, a lover of old things. Said to walk among mortals; nobody can say where.",
+      "refs": {
+        "power": "zeharyth"
+      }
+    },
+    {
+      "id": "power-saradrosk",
+      "title": "Saradrosk",
+      "category": "power",
+      "keywords": [
+        "Saradrosk",
+        "the White"
+      ],
+      "text": "The white Eternal Dragon, cold and patient. Old stories tie her to the Ley and to grudges against the New Gods.",
+      "refs": {
+        "power": "saradrosk"
+      }
+    },
+    {
+      "id": "power-forgrimmorithal",
+      "title": "Forgrimmorithal",
+      "category": "power",
+      "keywords": [
+        "Forgrimmorithal",
+        "the Green"
+      ],
+      "text": "The green Eternal Dragon. Said to live in dwarven country in some disguise.",
+      "refs": {
+        "power": "forgrimmorithal"
+      }
+    },
+    {
+      "id": "power-ryndhallach",
+      "title": "Ryndhallach",
+      "category": "power",
+      "keywords": [
+        "Ryndhallach",
+        "the Crystal"
+      ],
+      "text": "The crystal Eternal Dragon, said to have sided with humans and dwarves in old wars over the Ley.",
+      "refs": {
+        "power": "ryndhallach"
+      }
+    },
+    {
+      "id": "power-vymnommyth",
+      "title": "Vymnommyth",
+      "category": "power",
+      "keywords": [
+        "Vymnommyth",
+        "the Black"
+      ],
+      "text": "Vymnommyth, the Black, God of Rulan Gaan (the cult's own name for him is open), is an Eternal Dragon. Domain: rot and renewal, protection by poison. Once feared as a lurking god of the lowlands; time turned terror into doctrine and doctrine into a hungry cult. He drowned the plains into swamp and makes the world around Rulan Gaan hostile to keep it 'pure'.",
+      "refs": {
+        "power": "vymnommyth"
+      }
+    },
+    {
+      "id": "power-yllevantharyx",
+      "title": "Yllevantharyx",
+      "category": "power",
+      "keywords": [
+        "Yllevantharyx",
+        "the Silver"
+      ],
+      "text": "The silver Eternal Dragon. Rumor has long said a dragon lives among the wood elves of Petrakyra; this is the name the old stories give it.",
+      "refs": {
+        "power": "yllevantharyx"
+      }
+    },
+    {
+      "id": "power-gorgel",
+      "title": "Gor'gel",
+      "category": "power",
+      "keywords": [
+        "Gor'gel",
+        "God of War",
+        "the Perfect Warrior"
+      ],
+      "text": "Gor'gel, God of War, the Perfect Warrior, is one of the missing Old Gods. Domain: war, strength, defiance. A Primordial Orc, viciously clever and brutally strong, who promised to free his people from the dragons and did. The first mortal to ascend. A war god who is fed by war, and has started more than one.",
+      "refs": {
+        "power": "gorgel"
+      }
+    },
+    {
+      "id": "power-morrigan",
+      "title": "Morrigan",
+      "category": "power",
+      "keywords": [
+        "Morrigan",
+        "Goddess of Battle"
+      ],
+      "text": "Morrigan, Goddess of Battle, is one of the missing Old Gods. Domain: battle, strategy, prophecy, ravens. Gor'gel's heir: the part of war that thinks, waits and strikes where a kingdom cannot afford it. Ravens gather around her like rumors; she tastes of iron and wet stone. Gifts: fury, the cold clarity to see which sacrifice wins. Price: Somebody always pays, and she chooses who.",
+      "refs": {
+        "power": "morrigan"
+      }
+    },
+    {
+      "id": "power-hel",
+      "title": "Hel",
+      "category": "power",
+      "keywords": [
+        "Hel",
+        "Goddess of the Underworld"
+      ],
+      "text": "Hel, Goddess of the Underworld, is one of the missing Old Gods. Domain: the dead, boundaries. Rules the quiet country under the world, where the dead are archives, not trophies. Her face tells the truth in two languages, one living, one ruined. A boundary, not a monster. Gifts: safe passage, wards against the restless dead, one conversation with an ancestor. Price: Every favor comes with a receipt.",
+      "refs": {
+        "power": "hel"
+      }
+    },
+    {
+      "id": "power-oghma",
+      "title": "Oghma",
+      "category": "power",
+      "keywords": [
+        "Oghma",
+        "God of Knowledge"
+      ],
+      "text": "Oghma, God of Knowledge, is one of the missing Old Gods. Domain: knowledge, language, curiosity. The living ledger of Vallarith, a calm figure wrapped in script. Loves truth, loves the chase more, and has no patience for lazy certainty. Gifts: perfect recall, reading hidden meaning in speech and sigil, finding the one book that changes everything. Price: For better or worse, the book changes everything.",
+      "refs": {
+        "power": "oghma"
+      }
+    },
+    {
+      "id": "power-skadi",
+      "title": "Skadi",
+      "category": "power",
+      "keywords": [
+        "Skadi",
+        "God of Nature"
+      ],
+      "text": "Skadi, God of Nature, is one of the missing Old Gods. Domain: mountains, storms, the wild. The mountain's verdict and the long silence before an avalanche. Tolerates civilization only while it behaves. Gifts: endurance, pathfinding, calm under pressure, frost and beast-kin. Price: Respect, not romance. The wild punishes those who spread like rot.",
+      "refs": {
+        "power": "skadi"
+      }
+    },
+    {
+      "id": "power-hermod",
+      "title": "Hermod",
+      "category": "power",
+      "keywords": [
+        "Hermod",
+        "God of Luck"
+      ],
+      "text": "Hermod, God of Luck, is one of the missing Old Gods. Domain: luck, roads, dice, narrow escapes. Courier of coincidence. Fast, rarely laughing, keeps promises like a professional. His luck is a blade up your sleeve, not a blanket. Gifts: bending probability, slipping through impossible gaps, finding just enough at the worst moment. Price: Pay your debts forward, or Hermod finds you.",
+      "refs": {
+        "power": "hermod"
+      }
+    },
+    {
+      "id": "power-the-dagda",
+      "title": "The Dagda",
+      "category": "power",
+      "keywords": [
+        "The Dagda",
+        "God of Magic"
+      ],
+      "text": "The Dagda, God of Magic, is one of the missing Old Gods. Domain: old craft, runes, wards, enchantment, shaping the Ley. Magic with weight, smelling of smoke, soil and hammered iron. Power is built, tended and paid for. Morrigan's partner. Gifts: rune-work, warding, enchantment, shaping Ley currents. Price: Despises reckless spellwork that treats the world as disposable.",
+      "refs": {
+        "power": "the-dagda"
+      }
+    },
+    {
+      "id": "power-freya",
+      "title": "Freya",
+      "category": "power",
+      "keywords": [
+        "Freya",
+        "Goddess of Life"
+      ],
+      "text": "Freya, Goddess of Life, is one of the missing Old Gods. Domain: love, growth, healing, fertility. Beauty with teeth and a falcon's eye for sickness and hunger. Her mercy is real but not soft. Gifts: restoration, fertility, renewal, charm, calling life back from the edge. Price: Spend the life she gives you fiercely.",
+      "refs": {
+        "power": "freya"
+      }
+    },
+    {
+      "id": "power-odur",
+      "title": "Odur",
+      "category": "power",
+      "keywords": [
+        "Odur",
+        "God of the Sun"
+      ],
+      "text": "Odur, God of the Sun, is one of the missing Old Gods. Domain: sun, oaths, truth, judgment. Sunlight as judgment, the dawn that exposes the night's secrets. Hypocrisy makes his light feel like a brand. Gifts: purifying light, courage, sunfire against shadow, revealing lies and glamours. Price: The sun does not negotiate.",
+      "refs": {
+        "power": "odur"
+      }
+    },
+    {
+      "id": "power-nicana",
+      "title": "Nicana",
+      "category": "power",
+      "keywords": [
+        "Nicana",
+        "Goddess of Light"
+      ],
+      "text": "Nicana, Goddess of Light, is one of the New Gods. Domain: light, boundaries, discipline. As a goddess, wrapped in ever-moving fibres of the universe's first matter.",
+      "refs": {
+        "power": "nicana"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "power-aveus",
+      "title": "Aveus",
+      "category": "power",
+      "keywords": [
+        "Aveus",
+        "God of Darkness"
+      ],
+      "text": "Aveus, God of Darkness, is one of the New Gods. Domain: darkness, strength, survival. Half-orc, broad and over-dense, deep olive-bronze skin, soot-black hair, near-black eyes that light up predatory when angry. Broken nose set wrong, notched ear, an ownership brand on his left shoulder he will kill over.",
+      "refs": {
+        "power": "aveus"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "power-cybelia",
+      "title": "Cybelia",
+      "category": "power",
+      "keywords": [
+        "Cybelia",
+        "Goddess of the Ley",
+        "Goddess of Magic"
+      ],
+      "text": "Cybelia, Goddess of the Ley, Goddess of Magic, is one of the New Gods. Domain: the Ley, magic, systems. Tall, narrow-shouldered, precise hands, pale skin, cool candle-blonde hair in a severe bun, flat slate-grey eyes since puberty, a trace of elven blood in her cheekbones and ears.",
+      "refs": {
+        "power": "cybelia"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "power-tidum",
+      "title": "Tidum",
+      "category": "power",
+      "keywords": [
+        "Tidum",
+        "God of the Wild"
+      ],
+      "text": "Tidum, God of the Wild, is one of the New Gods. Domain: the wild, the land, elementals, balance. As a god, nearly a treant: bark-like skin, green hair and green eyes.",
+      "refs": {
+        "power": "tidum"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "power-witarr",
+      "title": "Witarr",
+      "category": "power",
+      "keywords": [
+        "Witarr",
+        "God of the Afterlife"
+      ],
+      "text": "Witarr, God of the Afterlife, is one of the New Gods. Domain: the dead, rites, records, boundaries. As a god, a cleansed human: bright blond hair, crystal blue eyes, and a small emblem of the Abyss on his bicep where the Ley burned the demon blood out.",
+      "refs": {
+        "power": "witarr"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "power-girione",
+      "title": "Girione",
+      "category": "power",
+      "keywords": [
+        "Girione",
+        "God of Mortals"
+      ],
+      "text": "Girione, God of Mortals, is one of the New Gods. Domain: mortals, generosity, community, song. Halfling, wiry, untameable dark brown hair, sharp hazel eyes, a crooked nose from a bottle and a humorless sailor, a string scar across his left palm, a repaired lute on his back.",
+      "refs": {
+        "power": "girione"
+      },
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "power-titania",
+      "title": "Titania",
+      "category": "power",
+      "keywords": [
+        "Titania",
+        "the Seelie Queen",
+        "Lady of Light and Life",
+        "Queen of the Evergreen",
+        "Lady of Flowers"
+      ],
+      "text": "Titania, the Seelie Queen, Lady of Light and Life, Queen of the Evergreen, Lady of Flowers, is a power of Faerie. Domain: summer, growth, beauty, art. Nurturing and generous; nature's fury when scorned. Mab's sister; they have not spoken in ages.",
+      "refs": {
+        "power": "titania"
+      }
+    },
+    {
+      "id": "power-mab",
+      "title": "Mab",
+      "category": "power",
+      "keywords": [
+        "Mab",
+        "the Unseelie Queen",
+        "Queen of Air and Darkness"
+      ],
+      "text": "Mab, the Unseelie Queen, Queen of Air and Darkness, is a power of Faerie. Domain: winter, cold, shadow, decay and rebirth. Titania's opposite and equal. Watches the Outer Realms as well as Faerie, and manipulates mortal events to ends no one can read.",
+      "refs": {
+        "power": "mab"
+      }
+    },
+    {
+      "id": "power-leanan-sidhe",
+      "title": "The Leanan Sídhe",
+      "category": "power",
+      "keywords": [
+        "The Leanan Sídhe",
+        "the Muse"
+      ],
+      "text": "The Leanan Sídhe, the Muse, is a power of Faerie. Domain: inspiration, desire, longing, art. A bridge between the courts, loyal to neither. An empath compelled to inspire love and despair. Her gift is work of great depth; her price is obsession and, for many, a brilliant short life.",
+      "refs": {
+        "power": "leanan-sidhe"
+      }
+    },
+    {
+      "id": "power-erlking",
+      "title": "The Erlking",
+      "category": "power",
+      "keywords": [
+        "The Erlking",
+        "Lord of the Wild Hunt",
+        "God King of Goblins"
+      ],
+      "text": "The Erlking, Lord of the Wild Hunt, God King of Goblins, is a power of Faerie. Domain: the hunt, hunger, primal violence. A wild fae outside both courts, holding the spirits of dead hunters, which he calls as great black hounds to ride the wind. Not evil: force without conscience. Tales disagree on whether he preys on children, heralds their deaths, or guards their souls as they leave. Some say he is the queens' equal; he does not brag.",
+      "refs": {
+        "power": "erlking"
+      }
+    },
+    {
+      "id": "power-asmodeus",
+      "title": "Asmodeus",
+      "category": "power",
+      "keywords": [
+        "Asmodeus",
+        "King of the Nine Hells",
+        "Lord of Nessus"
+      ],
+      "text": "Asmodeus, King of the Nine Hells, Lord of Nessus, is an archdevil of the Nine Hells. Perhaps a true god. Unremarkable to look at but for eyes of flame; an aura that makes nearly anything near him want to kneel. His wounds from his fall into Hell never closed, and every drop of his blood becomes a pit fiend. He rules from the Black Citadel in Nessus, and carries the Ruby Rod.",
+      "refs": {
+        "power": "asmodeus"
+      }
+    },
+    {
+      "id": "power-bel",
+      "title": "Bel",
+      "category": "power",
+      "keywords": [
+        "Bel",
+        "the Warlord",
+        "Lord of the First",
+        "the Pretender"
+      ],
+      "text": "Bel, the Warlord, Lord of the First, the Pretender, is an archdevil of the Nine Hells. A former pit fiend who took Avernus by betraying his mistress Azazel. Commands the Eight Generals of the Blood War. Trusted by no archdevil but Asmodeus, whom he feeds secrets through the Constable.",
+      "refs": {
+        "power": "bel"
+      }
+    },
+    {
+      "id": "power-dispater",
+      "title": "Dispater",
+      "category": "power",
+      "keywords": [
+        "Dispater",
+        "the Iron Duke",
+        "Lord of the Second"
+      ],
+      "text": "Dispater, the Iron Duke, Lord of the Second, is an archdevil of the Nine Hells. Never takes a risk. Barely leaves his Iron Tower, a fortress that is itself a weapon. Allied with Mephistopheles against Beelzebub. His consort Proserpine runs a spy network across all nine Hells.",
+      "refs": {
+        "power": "dispater"
+      }
+    },
+    {
+      "id": "power-mammon",
+      "title": "Mammon",
+      "category": "power",
+      "keywords": [
+        "Mammon",
+        "the Viscount",
+        "Lord of the Third"
+      ],
+      "text": "Mammon, the Viscount, Lord of the Third, is an archdevil of the Nine Hells. A thirty-foot serpent with a man's torso and a harpoon, ruling from a vast mausoleum over a sinking city. Grovelled first after a failed rebellion and has no allies left in Hell, so he works the Material Plane instead: cults, and economic sabotage against prosperous states.",
+      "refs": {
+        "power": "mammon"
+      }
+    },
+    {
+      "id": "power-agrat",
+      "title": "Agrat",
+      "category": "power",
+      "keywords": [
+        "Agrat",
+        "Lady of the Fourth"
+      ],
+      "text": "Agrat, Lady of the Fourth, is an archdevil of the Nine Hells. Rules from the Obsidian Palace with a summoned blade of fire. Her father (and rumored consort) Belial rules beside her unofficially. Since her mother's death, close to Naamah, who urges her toward independence.",
+      "refs": {
+        "power": "agrat"
+      }
+    },
+    {
+      "id": "power-belial",
+      "title": "Belial",
+      "category": "power",
+      "keywords": [
+        "Belial",
+        "Archduke"
+      ],
+      "text": "Belial, Archduke, is an archdevil of the Nine Hells. Agrat's father and the power behind her throne, trying to keep her close without driving her further away, and weighing moves against Naamah he cannot afford to be seen making.",
+      "refs": {
+        "power": "belial"
+      }
+    },
+    {
+      "id": "power-andras",
+      "title": "Andras",
+      "category": "power",
+      "keywords": [
+        "Andras",
+        "Prince of the Fifth"
+      ],
+      "text": "Andras, Prince of the Fifth, is an archdevil of the Nine Hells. Pale, black-eyed, sharp-toothed, once silk-clad with a rapier. Frozen inside a floating mountain of ice for murdering Asmodeus's consort, Naamah's mother. Asmodeus then gave him Stygia anyway, still frozen; he rules by telepathy through his ice-clerks.",
+      "refs": {
+        "power": "andras"
+      }
+    },
+    {
+      "id": "power-naamah",
+      "title": "Naamah",
+      "category": "power",
+      "keywords": [
+        "Naamah",
+        "Archduchess of the Sixth"
+      ],
+      "text": "Naamah, Archduchess of the Sixth, is an archdevil of the Nine Hells. Asmodeus's daughter: copper-skinned, winged, beautiful and formidable. Took Malebolge from the old Countess. Gathers leverage through spies and young cults to win her father's leave to destroy Andras.",
+      "refs": {
+        "power": "naamah"
+      }
+    },
+    {
+      "id": "power-beelzebub",
+      "title": "Beelzebub",
+      "category": "power",
+      "keywords": [
+        "Beelzebub",
+        "the Slug Archduke",
+        "Lord of the Seventh"
+      ],
+      "text": "Beelzebub, the Slug Archduke, Lord of the Seventh, is an archdevil of the Nine Hells. Once an angel, cast down and made a devil by Asmodeus. Climbed to the seventh Hell and erased all memory of its previous lord. Cursed into a melted slug's body for rebelling. Plots openly against Mephistopheles and in silence against Asmodeus. Lilith is his consort in name only.",
+      "refs": {
+        "power": "beelzebub"
+      }
+    },
+    {
+      "id": "power-mephistopheles",
+      "title": "Mephistopheles",
+      "category": "power",
+      "keywords": [
+        "Mephistopheles",
+        "Archduke of Caina",
+        "Lord of the Eighth"
+      ],
+      "text": "Mephistopheles, Archduke of Caina, Lord of the Eighth, is an archdevil of the Nine Hells. Nine feet tall, hell-red, horned and winged, in capes of perfect black, with a burning ranseur. Rules from the Rimehold. Obsessed with hellfire, and offering its mastery to grow a mortal cult larger than any other archdevil's. Borrowing power from Dispater and Andras at an alarming rate to do it.",
+      "refs": {
+        "power": "mephistopheles"
+      }
+    },
+    {
+      "id": "power-lilith",
+      "title": "Lilith",
+      "category": "power",
+      "keywords": [
+        "Lilith"
+      ],
+      "text": "Lilith, an archdevil of the Nine Hells, is an archdevil of the Nine Hells. A fallen celestial turned infernal power broker, with a large mortal following and her own intelligence network. Beelzebub's consort by arrangement, loyal to nobody, climbing.",
+      "refs": {
+        "power": "lilith"
+      }
+    },
+    {
+      "id": "power-proserpine",
+      "title": "Proserpine",
+      "category": "power",
+      "keywords": [
+        "Proserpine",
+        "the Iron Maiden"
+      ],
+      "text": "Proserpine, the Iron Maiden, is an archdevil of the Nine Hells. Dispater's only consort. Her spies cover all nine Hells and beyond; she may be the best-informed creature in the Hells.",
+      "refs": {
+        "power": "proserpine"
+      }
+    },
+    {
+      "id": "power-demogorgon",
+      "title": "Demogorgon",
+      "category": "power",
+      "keywords": [
+        "Demogorgon",
+        "Prince of Demons"
+      ],
+      "text": "Demogorgon, Prince of Demons, is a demon lord of the Abyss. Two-headed chaos and destruction, rage and cunning at once, ruling a storm-ocean of wrecks and nightmare islands.",
+      "refs": {
+        "power": "demogorgon"
+      }
+    },
+    {
+      "id": "power-orcus",
+      "title": "Orcus",
+      "category": "power",
+      "keywords": [
+        "Orcus",
+        "Lord of Undeath"
+      ],
+      "text": "Orcus, Lord of Undeath, is a demon lord of the Abyss. Wants every living thing replaced by the dead. Wields a wand of his own name; rules a frozen necropolis layer full of necromancers.",
+      "refs": {
+        "power": "orcus"
+      }
+    },
+    {
+      "id": "power-belphegor",
+      "title": "Belphegor",
+      "category": "power",
+      "keywords": [
+        "Belphegor",
+        "Prince of Indulgence"
+      ],
+      "text": "Belphegor, Prince of Indulgence, is a demon lord of the Abyss. Once a devil. A master schemer of lust, luxury and excess, whose decadent cities stand in tortured land.",
+      "refs": {
+        "power": "belphegor"
+      }
+    },
+    {
+      "id": "power-arachne",
+      "title": "Arachne",
+      "category": "power",
+      "keywords": [
+        "Arachne",
+        "the Spinner",
+        "Queen of Spiders"
+      ],
+      "text": "Arachne, the Spinner, Queen of Spiders, is a demon lord of the Abyss. Deceit, shadows and spiders. Pulls the strings of the dark elves from a webbed throne.",
+      "refs": {
+        "power": "arachne"
+      }
+    },
+    {
+      "id": "power-baphomet",
+      "title": "Baphomet",
+      "category": "power",
+      "keywords": [
+        "Baphomet",
+        "the Horned King"
+      ],
+      "text": "Baphomet, the Horned King, is a demon lord of the Abyss. Savagery and the hunt. Turns creatures into beasts and fills his infinite labyrinth with them.",
+      "refs": {
+        "power": "baphomet"
+      }
+    },
+    {
+      "id": "power-haggoth",
+      "title": "Haggoth",
+      "category": "power",
+      "keywords": [
+        "Haggoth",
+        "the Gnoll Lord"
+      ],
+      "text": "Haggoth, the Gnoll Lord, is a demon lord of the Abyss. Hunger, wrath and terror. Made the gnolls and leads them in endless hunts, delighting in the fall of civilizations. The Dramogon tribe lives in his shadow.",
+      "refs": {
+        "power": "haggoth"
+      }
+    },
+    {
+      "id": "concept-vallarith",
+      "title": "Vallarith",
+      "category": "world",
+      "keywords": [
+        "Vallarith",
+        "the Known World"
+      ],
+      "text": "A brutal continent of endless wars, where magic comes from a physical current called the Ley. The Old Gods are missing, the New Gods are young, the Eternal Dragons cannot breed, and survival comes at the cost of morality.",
+      "source_keys": [
+        "Vallarith, World"
+      ]
+    },
+    {
+      "id": "concept-ley",
+      "title": "The Ley",
+      "category": "magic",
+      "keywords": [
+        "Ley",
+        "Ley Line",
+        "Ley Lines",
+        "magic",
+        "spell",
+        "spells",
+        "the Great Line"
+      ],
+      "text": "The invisible current of power under the world, left over from creation. It has no mind and no preference. Magic borrows from it and gives back; strength depends on how close a Font or line is and on the caster's own limits. The Great Line runs north to south along the eastern mountains. Casting near it is easy; in the thin west it is weak and unreliable.",
+      "source_keys": [
+        "Magic, Ley, Spell"
+      ]
+    },
+    {
+      "id": "concept-fonts",
+      "title": "Fonts",
+      "category": "magic",
+      "keywords": [
+        "Font",
+        "Fonts",
+        "Ley Font"
+      ],
+      "text": "Places where the Ley rises near the surface and magic runs strong. The greatest known are the Source Font in the peaks above Loch Torogh and the Badlands convergence where Ghondiir died."
+    },
+    {
+      "id": "concept-source-font",
+      "title": "The Source Font",
+      "category": "magic",
+      "keywords": [
+        "Source Font",
+        "the Source"
+      ],
+      "text": "Where creation began and every Ley line starts. It cannot be drained, only dammed. The New Gods ascended there; for nearly everyone else, coming close means dissolving into the current without a trace.",
+      "refs": {
+        "settlement": "source-font"
+      }
+    },
+    {
+      "id": "concept-crystal",
+      "title": "Ley crystal",
+      "category": "magic",
+      "keywords": [
+        "Ley crystal",
+        "crystal",
+        "crystals",
+        "crystallized Ley",
+        "Ley mine",
+        "Ley mines"
+      ],
+      "text": "Ley hardened into stone where the current grew too dense: veins, nodules and growths mined as portable power. It keeps wards, lights and healing houses running where the flow is thin. Spent, most of it is lost for good, and mining thins the land's magic permanently. Trein, Asania and Obirykan cannot run without it."
+    },
+    {
+      "id": "concept-brooch",
+      "title": "Brotherhood brooch",
+      "category": "magic",
+      "keywords": [
+        "brooch",
+        "licence",
+        "license",
+        "licensed"
+      ],
+      "text": "A small metal flower pinned inside a coat: under the Dam, a legal licence to draw regulated Ley. Called by those who wore it a collar that jingles politely. In the Post-Reform era it survives in museums and old coats, and Trein's council is talking about licences again."
+    },
+    {
+      "id": "concept-dam",
+      "title": "The Damming of the Ley",
+      "category": "history",
+      "keywords": [
+        "Dam",
+        "the Damming",
+        "damming",
+        "dammed"
+      ],
+      "text": "In 3001 BOM the Brotherhood of Man seized the Ley Font and choked the current at its source. For over a century magic away from the Fonts was nearly gone, and what flowed was licensed and rationed. It ended with the Demon Invasion.",
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ]
+    },
+    {
+      "id": "concept-reformation",
+      "title": "The Reformation",
+      "category": "history",
+      "keywords": [
+        "Reformation",
+        "the Reforming",
+        "Reform"
+      ],
+      "text": "In 3136 the New Gods ended the Demon Invasion by putting every mortal into stasis, unmaking the world and making it again. Things that survived it are rare relics, priced like saints' bones.",
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "concept-invasion",
+      "title": "The Demon Invasion",
+      "category": "history",
+      "keywords": [
+        "Demon Invasion",
+        "the Invasion",
+        "Invasion"
+      ],
+      "text": "In 3129 the devils of the Nine Hells and the demons of the Abyss set aside their war to overrun the Material Plane as a road to the Celestial worlds, with Asmodeus at the head. It broke the Brotherhood and ended with the Reformation.",
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ]
+    },
+    {
+      "id": "concept-ages",
+      "title": "The ages",
+      "category": "history",
+      "keywords": [
+        "Age of Dragons",
+        "Age of Magic",
+        "Age of Man",
+        "AOD",
+        "AOM",
+        "BOM",
+        "RFM"
+      ],
+      "text": "Years count from Ghondiir's death without resetting: the Age of Dragons (from 1 AOD), the Age of Magic (1001 to 3000), the Age of Man (2984 to 3135, opened by the Brotherhood's founding), and the Reformation (from 3136 RFM)."
+    },
+    {
+      "id": "concept-badlands-migration",
+      "title": "The Badlands Migration",
+      "category": "history",
+      "keywords": [
+        "Badlands Migration",
+        "Migration"
+      ],
+      "text": "In 151 AOD humans left the Badlands, driven out by orc wars, and settled the west."
+    },
+    {
+      "id": "concept-ohgnu",
+      "title": "Ohgnu's Invasion",
+      "category": "history",
+      "keywords": [
+        "Ohgnu",
+        "Gor'gel Deception",
+        "Xiloscient",
+        "Himo Xiloscient",
+        "Xiloscient's stand"
+      ],
+      "text": "In 251 AOD a horde of gnolls and demons, with orc and goblin war bands behind it, came out of the Badlands through a portal. The rising is also called the Gor'gel Deception, after the god who tricked someone into opening the door. Himo Xiloscient held Kingswood against it, broke the host, and walled the door inside a keep."
+    },
+    {
+      "id": "concept-eternal-dragons",
+      "title": "The Eternal Dragons",
+      "category": "power",
+      "keywords": [
+        "Eternal Dragon",
+        "Eternal Dragons",
+        "Eternals",
+        "dragon",
+        "dragons"
+      ],
+      "text": "Dragons who received a share of the Creator Dragons' power and outlast ordinary dragons by ages. Most live disguised as mortals; a few prefer freedom. A catastrophe long ago ended their ability to breed, and their line is dwindling. Known names: Ghondiir (dead), Zaraxas, Zeharyth, Saradrosk, Forgrimmorithal, Ryndhallach and Vymnommyth, and a ninth that rumor places among the wood elves.",
+      "source_keys": [
+        "Dragon, Eternal Dragon"
+      ]
+    },
+    {
+      "id": "concept-old-gods",
+      "title": "The Old Gods",
+      "category": "power",
+      "keywords": [
+        "Old Gods",
+        "Old God",
+        "Missing God",
+        "missing gods"
+      ],
+      "text": "The gods who ruled the Material Plane with strength given them by the Eternal Dragons, and who faded into realms of their own making: Gor'gel, Morrigan, Hel, Oghma, Skadi, Hermod, the Dagda, Freya and Odur. They are remembered in oaths, druid chants and decaying relics. Nobody knows if they are dead or coming back.",
+      "source_keys": [
+        "Old God, Missing God"
+      ]
+    },
+    {
+      "id": "concept-new-gods",
+      "title": "The New Gods",
+      "category": "power",
+      "keywords": [
+        "New Gods",
+        "New God",
+        "Baby Gods",
+        "Small Gods"
+      ],
+      "text": "Mortal adventurers who drew on the Ley Font during the Demon Invasion and became gods: Nicana of Light, Aveus of Darkness, Cybelia of the Ley, Tidum of the Wild, Witarr of the Afterlife and Girione of Mortals. They took an active hand in the world, and dragons who resent them call them the Small Gods.",
+      "source_keys": [
+        "New God, Baby God"
+      ],
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "concept-primordial-orcs",
+      "title": "The Primordial Orcs",
+      "category": "people",
+      "keywords": [
+        "Primordial Orc",
+        "Primordial Orcs",
+        "Primordial"
+      ],
+      "text": "The first people, slaves of the dragons under the God King Ghondiir, until one of them, Gor'gel, killed him. Humans and orcs both descend from them, by one story or another.",
+      "source_keys": [
+        "Primordial Orc, Primordial"
+      ]
+    },
+    {
+      "id": "people-humans",
+      "title": "Humans",
+      "category": "people",
+      "keywords": [
+        "human",
+        "humans"
+      ],
+      "text": "The most widespread people, from mountain passes to desert dunes, in every culture, tongue and morality. They run most of the Kingdoms of Man.",
+      "source_keys": [
+        "Human, Humans"
+      ]
+    },
+    {
+      "id": "people-orcs",
+      "title": "Orcs",
+      "category": "people",
+      "keywords": [
+        "orc",
+        "orcs",
+        "half-orc",
+        "half-orcs"
+      ],
+      "text": "The oldest people, most of them in the Badlands, gathered above all at Unguruk Camp. Half-orcs are tested twice: by humans who see a monster, and by orcs who see a compromise.",
+      "source_keys": [
+        "Orc, Orcs"
+      ]
+    },
+    {
+      "id": "people-halflings",
+      "title": "Halflings",
+      "category": "people",
+      "keywords": [
+        "halfling",
+        "halflings"
+      ],
+      "text": "The third common people, welcome almost everywhere, settled nowhere long. The old joke says the first halfling was shrunk by a slighted god; halflings answer by being twice as stubborn.",
+      "source_keys": [
+        "Halfling, Halflings"
+      ]
+    },
+    {
+      "id": "people-elves",
+      "title": "Elves",
+      "category": "people",
+      "keywords": [
+        "elf",
+        "elves",
+        "elven",
+        "high elves",
+        "wood elves",
+        "sea elves",
+        "half-elf",
+        "half-elves"
+      ],
+      "text": "More legend than neighbor. The high elves of Brynwyr and humans have always been at odds; the wood elves of Petrakyra live far east and almost never leave. Half-elves are far more common than true elves and belong to neither.",
+      "source_keys": [
+        "Elf, Elves"
+      ]
+    },
+    {
+      "id": "people-dwarves",
+      "title": "Dwarves",
+      "category": "people",
+      "keywords": [
+        "dwarf",
+        "dwarves",
+        "dwarven"
+      ],
+      "text": "The people of the north: the Dwarven Empire under the Stoneheart Clan, the shared port of Mordun, the lake town of Loch Torogh, and the swamp-cult of Rulan Gaan."
+    },
+    {
+      "id": "people-tieflings",
+      "title": "Tieflings",
+      "category": "people",
+      "keywords": [
+        "tiefling",
+        "tieflings",
+        "hell-blood",
+        "horns"
+      ],
+      "text": "People with fiendish blood in their line. Frightened towns treat horns as proof of treason, which makes most tieflings experts at paperwork and leaving quietly."
+    },
+    {
+      "id": "people-gnolls",
+      "title": "Gnolls",
+      "category": "people",
+      "keywords": [
+        "gnoll",
+        "gnolls"
+      ],
+      "text": "Hyena-headed hunters, made by Haggoth the Gnoll Lord. The Dramogon nomads of the northern Badlands are mostly gnolls."
+    },
+    {
+      "id": "people-goblins",
+      "title": "Goblins",
+      "category": "people",
+      "keywords": [
+        "goblin",
+        "goblins",
+        "goblinoid"
+      ],
+      "text": "Small, quick and commercial. The Kadragar goblins are seafarers and merchants of the southern Badlands coast, and the Erlking is their god king."
+    },
+    {
+      "id": "people-bashrat",
+      "title": "Bashrat's peoples",
+      "category": "people",
+      "keywords": [
+        "frogfolk",
+        "chaos-toad",
+        "chaos-toads",
+        "naga",
+        "lizardfolk"
+      ],
+      "text": "The swamps of Bashrat Island are home to frogfolk with poison skins, hulking chaos-toads, naga and lizardfolk, living by strength and challenge."
+    },
+    {
+      "id": "concept-blood-war",
+      "title": "The Blood War",
+      "category": "cosmology",
+      "keywords": [
+        "Blood War"
+      ],
+      "text": "The endless war between the lawful devils of the Nine Hells and the chaotic demons of the Abyss, with the multiverse as the prize. They have stopped fighting each other only once, for the Demon Invasion."
+    },
+    {
+      "id": "concept-devils",
+      "title": "Devils",
+      "category": "cosmology",
+      "keywords": [
+        "devil",
+        "devils",
+        "archdevil",
+        "archdevils",
+        "pit fiend",
+        "contract",
+        "pact"
+      ],
+      "text": "Lawful evil in a rigid hierarchy: they deal in contracts and corruption, buy souls with power, and climb by treachery or service. They come politely, with paperwork. Their rulers are Bel, Dispater, Mammon, Agrat and Belial, Andras, Naamah, Beelzebub, Mephistopheles and Asmodeus.",
+      "source_keys": [
+        "Devil"
+      ]
+    },
+    {
+      "id": "concept-demons",
+      "title": "Demons",
+      "category": "cosmology",
+      "keywords": [
+        "demon",
+        "demons",
+        "demon lord",
+        "demon lords"
+      ],
+      "text": "Chaotic evil from the infinite layers of the Abyss: hunger, destruction and madness, wanting not to rule the ruins but to unmake creation. Their lords include Demogorgon, Orcus, Belphegor, Arachne, Baphomet and Haggoth.",
+      "source_keys": [
+        "Demon"
+      ]
+    },
+    {
+      "id": "concept-faerie",
+      "title": "Faerie",
+      "category": "cosmology",
+      "keywords": [
+        "Faerie",
+        "fey",
+        "fae",
+        "fairy",
+        "faerie",
+        "Seelie",
+        "Unseelie"
+      ],
+      "text": "A brighter, stranger mirror of the world, soaked in magic and ruled by contradictory laws, poised between dream and nightmare. Every laugh there may be a snare. Its powers are Titania, Mab, the Leanan Sídhe and the Erlking.",
+      "source_keys": [
+        "Fey, Fae, Faerie, Fairy"
+      ]
+    },
+    {
+      "id": "concept-wild-hunt",
+      "title": "The Wild Hunt",
+      "category": "cosmology",
+      "keywords": [
+        "Wild Hunt",
+        "the Hunt",
+        "black hounds"
+      ],
+      "text": "The Erlking's ride: the spirits of dead hunters as great black hounds, running the winds and forests. It sweeps up friend and foe alike."
+    },
+    {
+      "id": "concept-ruby-rod",
+      "title": "The Ruby Rod",
+      "category": "cosmology",
+      "keywords": [
+        "Ruby Rod"
+      ],
+      "text": "Asmodeus's badge of office and weapon: a four-foot shaft cut from a single ruby, as old as time, able to spit vitriol, death and freezing wind."
+    },
+    {
+      "id": "hell-avernus",
+      "title": "Avernus",
+      "category": "cosmology",
+      "keywords": [
+        "Avernus"
+      ],
+      "text": "The first Hell: a burning battlefield littered with wrecked war machines and dead soldiers' souls, the front line of the Blood War. Bel rules it from the Bronze Citadel."
+    },
+    {
+      "id": "hell-dis",
+      "title": "Dis",
+      "category": "cosmology",
+      "keywords": [
+        "Dis",
+        "Iron Tower"
+      ],
+      "text": "The second Hell: an iron city of industry and oppression, ruled by Dispater from his Iron Tower."
+    },
+    {
+      "id": "hell-acheron",
+      "title": "Acheron",
+      "category": "cosmology",
+      "keywords": [
+        "Acheron"
+      ],
+      "text": "The third Hell: a sinking swamp of greed, with Mammon's city teetering above the mire."
+    },
+    {
+      "id": "hell-phlegethos",
+      "title": "Phlegethos",
+      "category": "cosmology",
+      "keywords": [
+        "Phlegethos",
+        "Obsidian Palace"
+      ],
+      "text": "The fourth Hell: fiery wastes and rivers of lava, where Agrat and Belial rule from the Obsidian Palace on a caldera's lip."
+    },
+    {
+      "id": "hell-stygia",
+      "title": "Stygia",
+      "category": "cosmology",
+      "keywords": [
+        "Stygia"
+      ],
+      "text": "The fifth Hell: a frozen sea of bergs and stone fortresses, ruled by Andras from inside a mountain of ice."
+    },
+    {
+      "id": "hell-malebolge",
+      "title": "Malebolge",
+      "category": "cosmology",
+      "keywords": [
+        "Malebolge"
+      ],
+      "text": "The sixth Hell: treacherous ground that rearranges itself like a liar's story, ruled by Naamah."
+    },
+    {
+      "id": "hell-lethe",
+      "title": "Lethe",
+      "category": "cosmology",
+      "keywords": [
+        "Lethe"
+      ],
+      "text": "The seventh Hell: ruins of grand works and labyrinth fortresses where Beelzebub plots. Its previous lord has been erased from every record."
+    },
+    {
+      "id": "hell-caina",
+      "title": "Caina",
+      "category": "cosmology",
+      "keywords": [
+        "Caina",
+        "Rimehold"
+      ],
+      "text": "The eighth Hell: icy mountains and sharp cold minds, ruled by Mephistopheles from the Rimehold, where he experiments with hellfire."
+    },
+    {
+      "id": "hell-nessus",
+      "title": "Nessus",
+      "category": "cosmology",
+      "keywords": [
+        "Nessus",
+        "Black Citadel"
+      ],
+      "text": "The deepest Hell, seat of the Black Citadel, where Asmodeus holds court among the most devious of devilkind."
+    },
+    {
+      "id": "abyss-gaping-maw",
+      "title": "The Gaping Maw",
+      "category": "cosmology",
+      "keywords": [
+        "Gaping Maw"
+      ],
+      "text": "Demogorgon's realm: a storm-wracked ocean of monsters, wrecks and islands of nightmare."
+    },
+    {
+      "id": "abyss-thanatos",
+      "title": "Thanatos",
+      "category": "cosmology",
+      "keywords": [
+        "Thanatos"
+      ],
+      "text": "The 113th layer of the Abyss, Orcus's frozen hellscape of necropolises, ice and the walking dead."
+    },
+    {
+      "id": "abyss-gilded-layers",
+      "title": "The Gilded Layers",
+      "category": "cosmology",
+      "keywords": [
+        "Gilded Layers"
+      ],
+      "text": "Belphegor's three layers (the 45th to 47th): magnificent decadent cities in tortured land, beautiful and treacherous."
+    },
+    {
+      "id": "abyss-webbed-deeps",
+      "title": "The Webbed Deeps",
+      "category": "cosmology",
+      "keywords": [
+        "Webbed Deeps"
+      ],
+      "text": "Arachne's domain: web-strung tunnels and caverns where reality warps and every shadow hides something."
+    },
+    {
+      "id": "abyss-endless-maze",
+      "title": "The Endless Maze",
+      "category": "cosmology",
+      "keywords": [
+        "Endless Maze"
+      ],
+      "text": "Baphomet's 600th layer, a labyrinth without end full of beasts and traps, made for the hunt."
+    },
+    {
+      "id": "abyss-infinite-layers",
+      "title": "The Infinite Layers",
+      "category": "cosmology",
+      "keywords": [
+        "Infinite Layers"
+      ],
+      "text": "A name for the whole Abyss and its endless shifting layers. Haggoth roams them with his packs."
+    },
+    {
+      "id": "concept-convila-pact",
+      "title": "The Convila Pact",
+      "category": "history",
+      "keywords": [
+        "Convila Pact",
+        "the Pact"
+      ],
+      "text": "An old agreement that sealed the crystalline fountain of Ley under Convila. People say its power is long spent."
+    },
+    {
+      "id": "concept-pocketful",
+      "title": "A Pocketful of Zzz's",
+      "category": "place",
+      "keywords": [
+        "Pocketful of Zzz's",
+        "Lady Zee",
+        "Zehara"
+      ],
+      "text": "One of the few great magic shops in the world, in Asania, run by the elven antiquarian Illeniana Zehara, Lady Zee. She buys anything that survived the Reformation, and pays most for relics of the Old Gods.",
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "concept-mossrun",
+      "title": "The Ilvar family",
+      "category": "faction",
+      "keywords": [
+        "Ilvar",
+        "Ilvars",
+        "Melton Ilvar",
+        "Mossrun"
+      ],
+      "text": "The family behind the Mossrun mines. Rich for five generations, and cursed: the wives die in childbirth, the children are sent away to school, and the father is always on his deathbed when they come home.",
+      "eras": [
+        "post-reform"
+      ]
+    },
+    {
+      "id": "concept-black-baptism",
+      "title": "The black baptism",
+      "category": "faith",
+      "keywords": [
+        "black baptism",
+        "Mudfather"
+      ],
+      "text": "The Rulan Gaan cult's rite: anointing with peat-dark bog mud, sealing vows of kinship and secrecy. In Vymnommyth's faith, what preserves you is what contaminates you."
+    },
+    {
+      "id": "concept-gurdalur-calendar",
+      "title": "The Gurdalur calendar",
+      "category": "faith",
+      "keywords": [
+        "Gurdalur",
+        "Gurdalur Stones",
+        "shadow calendar"
+      ],
+      "text": "The faceless standing stones of Fjallagracht cast a shadow calendar the clans live by: births, marriages, burials and raids are all timed to it."
+    },
+    {
+      "id": "concept-master-grimm",
+      "title": "Master Grimm",
+      "category": "person",
+      "keywords": [
+        "Master Grimm",
+        "Grimm"
+      ],
+      "text": "A dwarf master smith of Dun Aldun, green-haired and ivy-trimmed, whose shop makes most of the world's enchanted weapons and armor."
+    },
+    {
+      "id": "concept-mistress-sara",
+      "title": "Mistress Sara",
+      "category": "person",
+      "keywords": [
+        "Mistress Sara",
+        "Sara"
+      ],
+      "text": "The founder of the Brotherhood of Man in Trein, in histories of the Age of Man. Some Trein whispers say a woman by that name has been seen again.",
+      "eras": [
+        "post-reform"
+      ]
+    }
+  ]
+}

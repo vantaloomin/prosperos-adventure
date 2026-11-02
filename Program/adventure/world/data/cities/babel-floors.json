@@ -1,0 +1,540 @@
+{
+ "schema_version": 1,
+ "id": "babel-floors",
+ "name": "the tower",
+ "setting": "original",
+ "era": "fantasy",
+ "category": "fictional",
+ "basis": "Vanta's own world of BABEL, from the Mabry Curve roleplay: a living tower of themed floors wearing the skin of an unreleased full-dive game.",
+ "region": "the tower",
+ "country": "the tower",
+ "timezone": "America/Chicago",
+ "aliases": [],
+ "summary": "Between towns in the tower: the Stair's landings and the floors that are not yet built out as towns, from the Reach above Varrow's wall to the Undercroft four floors down.",
+ "lat": 30.538,
+ "lon": -97.679,
+ "intensity": {
+  "preset": "unflinching",
+  "drama": "eventful",
+  "voice": "pulpy and mythic in a modern frame: omens, weather and System panes, where every win carries a bill and desire is a power with a price"
+ },
+ "currency": {
+  "code": "talent",
+  "symbol": "T",
+  "name": "Talents"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.5
+ },
+ "sources": {
+  "mabry-curve-2026-10": {
+   "kind": "curated",
+   "title": "BABEL written for Prospero's Dungeon from Vanta's Mabry Curve archive",
+   "license": "Vanta's own setting; all rights reserved",
+   "retrieved": "2026-10-22",
+   "note": "Places, people and customs from the Mabry Curve story, hidden files and side cast (dungeon/world/packages/babel/sources.md). Names the story does not give are new."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "the-stair",
+   "name": "the Stair",
+   "summary": "The shaft and its spiral stair between floors.",
+   "vibe": [
+    "stair",
+    "shaft"
+   ],
+   "lat": 30.538,
+   "lon": -97.679,
+   "rent_tier": "low",
+   "housing": [
+    "none"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "varrow-floor",
+   "name": "Varrow",
+   "summary": "Varrow, beyond Hollin's valley.",
+   "vibe": [
+    "hills"
+   ],
+   "lat": 30.528,
+   "lon": -97.679,
+   "rent_tier": "low",
+   "housing": [
+    "none"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-marches",
+   "name": "the Drowned Marches",
+   "summary": "The fen floor, two up.",
+   "vibe": [
+    "fen",
+    "fog"
+   ],
+   "lat": 30.548,
+   "lon": -97.679,
+   "rent_tier": "low",
+   "housing": [
+    "none"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-high-floors",
+   "name": "the high floors",
+   "summary": "The floors above the Bazaar.",
+   "vibe": [
+    "unknown"
+   ],
+   "lat": 30.578,
+   "lon": -97.679,
+   "rent_tier": "low",
+   "housing": [
+    "none"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-low-floors",
+   "name": "the low floors",
+   "summary": "The floors below the Concourse.",
+   "vibe": [
+    "dark"
+   ],
+   "lat": 30.488,
+   "lon": -97.679,
+   "rent_tier": "low",
+   "housing": [
+    "none"
+   ],
+   "walkability": "low",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "the-reach",
+   "name": "the Reach",
+   "kind": "trail",
+   "neighborhood": "varrow-floor",
+   "summary": "Brown hills past the Reachwall with beacon cairns on the ridges, Long Cairn among them, and the giants' fires.",
+   "tags": [
+    "hills",
+    "giants",
+    "beacons"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Long Cairn",
+    "the giants' fire",
+    "the near ridge"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-marches-landing",
+   "name": "the Marches landing",
+   "kind": "landmark",
+   "neighborhood": "the-marches",
+   "summary": "Wet stone, reed thatch and fog where the Stair opens onto the Drowned Marches, and a crier posting the notices that come down the chain.",
+   "tags": [
+    "landing",
+    "fog",
+    "notices"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the crier's board",
+    "the boat stage"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-stilt-villages",
+   "name": "the stilt villages",
+   "kind": "landmark",
+   "neighborhood": "the-marches",
+   "summary": "Black plank causeways on stilts over brown water, lanterns on posts, reed beds higher than a man. Reed and nets for coin.",
+   "tags": [
+    "villages",
+    "causeways",
+    "reed"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the causeway lanterns",
+    "the reed beds",
+    "the net sheds"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-foundry-landing",
+   "name": "the Foundry landing",
+   "kind": "landmark",
+   "neighborhood": "the-high-floors",
+   "summary": "The last whole landing going up: the gate into the Foundry under an arch with chalk on it at knee height, and above it bolt holes where a whole span of the Stair fell into the shaft. The flight below is rotten.",
+   "tags": [
+    "landing",
+    "broken-span",
+    "chalk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the chalk on the arch",
+    "the broken span",
+    "the Foundry gate"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "dry-hollow",
+   "name": "Dry Hollow",
+   "kind": "landmark",
+   "neighborhood": "the-high-floors",
+   "summary": "A boomtown in the beta, where guns work and spells misfire.",
+   "tags": [
+    "frontier",
+    "guns"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "hakuro",
+   "name": "Hakuro",
+   "kind": "landmark",
+   "neighborhood": "the-high-floors",
+   "summary": "A castle town under curfew in the beta.",
+   "tags": [
+    "curfew",
+    "castle"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "lumen-stack",
+   "name": "Lumen Stack",
+   "kind": "landmark",
+   "neighborhood": "the-high-floors",
+   "summary": "A neon arcology in the rain in the beta.",
+   "tags": [
+    "neon",
+    "rain"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "st-agathes",
+   "name": "St. Agathe's",
+   "kind": "landmark",
+   "neighborhood": "the-low-floors",
+   "summary": "A hospital where it is always night. Never go down to St. Agathe's.",
+   "tags": [
+    "hospital",
+    "night",
+    "horror"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the admissions desk",
+    "the wards",
+    "the stairwell"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-catacombs",
+   "name": "the Catacombs",
+   "kind": "landmark",
+   "neighborhood": "the-low-floors",
+   "summary": "Bone galleries under a dead city, where the Margrave's cellar stair comes out.",
+   "tags": [
+    "bones",
+    "galleries"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-ashfields",
+   "name": "the Ashfields",
+   "kind": "landmark",
+   "neighborhood": "the-low-floors",
+   "summary": "A post-war wasteland in the beta, where guns work.",
+   "tags": [
+    "wasteland",
+    "guns"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-undercroft",
+   "name": "the Undercroft",
+   "kind": "landmark",
+   "neighborhood": "the-low-floors",
+   "summary": "Dark-magic depths in the beta.",
+   "tags": [
+    "dark",
+    "magic"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "on-foot",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "Up and down the Stair, about half a day a floor.",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "careers": [],
+ "work_by_gender": false,
+ "employers": [],
+ "career_hubs": [],
+ "climate": null,
+ "annual_events": [],
+ "local_color": [],
+ "names": {
+  "groups": {
+   "concourse": {
+    "feminine": [
+     "Darla",
+     "Ruth Ann",
+     "Marisol",
+     "Osk",
+     "Bettany",
+     "Ines",
+     "Wenda",
+     "Lupe",
+     "Hattie",
+     "Corinne",
+     "Ama",
+     "Greer",
+     "Nadia",
+     "Rosalind",
+     "Tova",
+     "Junie"
+    ],
+    "masculine": [
+     "Hamid",
+     "Danny",
+     "Ed",
+     "Cobb",
+     "Ivo",
+     "Tunde",
+     "Lyle",
+     "Arturo",
+     "Bascom",
+     "Pieter",
+     "Rafe",
+     "Hollis",
+     "Omar",
+     "Desmond",
+     "Clem",
+     "Jakob"
+    ],
+    "neutral": [
+     "Pia",
+     "Sunny",
+     "Ash",
+     "Kit"
+    ],
+    "family": [
+     "Kinney",
+     "Teel",
+     "Oyelaran",
+     "Sallis",
+     "Brask",
+     "Morrow-Hale",
+     "Quist",
+     "Delacroix",
+     "Ambrose",
+     "Okafor",
+     "Lindqvist",
+     "Pruett",
+     "Vasquez",
+     "Hanley",
+     "Stroud",
+     "Achterberg"
+    ]
+   }
+  }
+ },
+ "calendar": "none",
+ "prices": [],
+ "water": [],
+ "notables": [],
+ "town_map": {
+  "style": "none"
+ },
+ "home": false
+}

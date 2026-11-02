@@ -1,0 +1,13 @@
+# Names that read as made up by a language model rather than given to real people. Any name a model
+# writes (a drafted character, someone mentioned in passing) is checked against this list, and the
+# generators never produce one. The lists of popular names must not contain any of them (a test checks).
+# Matching is whole-word, on capitalised words, ignoring case. Several names per line are fine.
+given: Elara Elarra Elaria Lyra Lyralei Lyris Kael Kaelen Kaelan Kaelith Kaelis Kaelor Vex Vexa Seraphina
+given: Seraphine Seraph Aurelia Aurelius Zephyr Zephyra Zephyrine Zephyrus Nyx Nyxa Lysander Elowen Isolde Vesper
+given: Sable Liora Lirael Elysia Elysande Aeliana Aelin Aeris Caelum Caelan Sorin Soren Thalor Valen Varek Varian
+given: Veyra Veyla Kestrel Draven Ravenna Morwen Morgaine Elric Eldric Evander Torin Faelan Ilyra Oriel Quillon
+given: Riven Selvara Sylvara Thessaly Vaela Vaelin Vaelor Valyria Vireo Xylia Zarek Zyra Eryndor Lumen Solenne
+given: Elyndra Corvin Corvus Ezren Maelis Nerith Talwyn Tavian Velia Veyron Mireth Vyra
+surname: Voss Thorne Blackwood Nightshade Ravenscroft Ravenswood Ashbourne Ashgrove Silverwood Stormwind
+surname: Starfall Duskwood Ironwood Shadowmere Wintermere Blackthorne Darkwater Moonshadow Valemont Everhart
+surname: Wolfsbane Ashveil Thornfield Grimsbane Duskryn Nightwhisper Stormborn Brightwater Hollowell

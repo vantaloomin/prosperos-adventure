@@ -1,0 +1,959 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "kind": "city, town, village, fortress, camp, monastery, ruin or site",
+    "size": "hamlet, village, town, city or metropolis",
+    "ley": "local natural density: rich, normal, thin or dead",
+    "ley_dependence": "rich (needs no crystal), adaptive (some crystal), engineered (fails without crystal) or none (does not use the Ley)",
+    "danger_tier": "tier on the shared ladder",
+    "eras": "campaign eras the entry applies to; missing means all three",
+    "by_era": "facts that change by era"
+  },
+  "settlements": [
+    {
+      "id": "dun-aldun",
+      "name": "Dun Aldun",
+      "region": "dwarven-empire",
+      "kind": "city",
+      "size": "metropolis",
+      "ruled_by": "stoneheart-clan",
+      "peoples": [
+        "dwarves"
+      ],
+      "ley": "normal",
+      "ley_dependence": "adaptive",
+      "danger_tier": "local",
+      "summary": "The Dwarven Empire's capital, cut into the northern mountains. Its smiths work Ley into arms and armor nobody else can match.",
+      "trade": [
+        "enchanted arms and armor",
+        "worked stone",
+        "contracts and treaties"
+      ],
+      "notable": [
+        {
+          "name": "Master Grimm's workshop",
+          "note": "Where most of the world's magic weapons and armor come from; resident wizards enchant anything, for an enormous price.",
+          "npc": "master-grimm"
+        },
+        {
+          "name": "The Stoneheart halls",
+          "note": "Seat of the ruling clan."
+        }
+      ],
+      "access": "Only a chosen few non-dwarves see the inner city. Most outsiders deal through Mordun.",
+      "hooks": [
+        "An outsider is offered rare entry, with a contract attached.",
+        "A Grimm-made blade turns up in a corsair's hand."
+      ],
+      "map": {
+        "x": 0.47,
+        "y": 0.2
+      },
+      "origin": "source"
+    },
+    {
+      "id": "mordun",
+      "name": "Mordun",
+      "region": "dwarven-empire",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": "stoneheart-clan",
+      "peoples": [
+        "humans",
+        "dwarves"
+      ],
+      "ley": "thin",
+      "ley_dependence": "adaptive",
+      "danger_tier": "local",
+      "summary": "A dwarf-built port on the Gulf of Aldir that humans mostly live in. Dwarven bedrock under human finery; the trade door into the Empire.",
+      "trade": [
+        "dwarven goods outbound",
+        "grain, cloth and wine inbound",
+        "shipping to Trein and Asania"
+      ],
+      "hooks": [
+        "Corsairs take a convoy carrying a Stoneheart contract.",
+        "A human guild and a dwarven house both claim the same pier."
+      ],
+      "map": {
+        "x": 0.36,
+        "y": 0.22
+      },
+      "origin": "source"
+    },
+    {
+      "id": "rulan-gaan",
+      "name": "Rulan Gaan",
+      "region": "dwarven-empire",
+      "kind": "city",
+      "size": "town",
+      "ruled_by": "cult-of-vymnommyth",
+      "peoples": [
+        "dwarves"
+      ],
+      "ley": "rich",
+      "ley_dependence": "rich",
+      "danger_tier": "realm",
+      "summary": "A swamp city in the frozen north, made by the Eternal black dragon Vymnommyth when he drowned the plains. His dwarven cult worships him as a god and keeps outsiders out.",
+      "notable": [
+        {
+          "name": "The drowned sentinels",
+          "note": "Dead trees that are not quite dead, standing in poisoned water."
+        },
+        {
+          "name": "The black baptism",
+          "note": "Initiates are anointed with peat-dark bog mud, sealing vows of kinship and secrecy."
+        }
+      ],
+      "access": "Closed to anyone outside the cult.",
+      "hooks": [
+        "A cult defector asks for passage south.",
+        "The swamp has crept another mile toward Dun Aldun's road."
+      ],
+      "map": {
+        "x": 0.5,
+        "y": 0.28
+      },
+      "origin": "source"
+    },
+    {
+      "id": "loch-torogh",
+      "name": "Loch Torogh",
+      "region": "torogh-highlands",
+      "kind": "town",
+      "size": "town",
+      "ruled_by": "stoneheart-clan",
+      "peoples": [
+        "dwarves",
+        "humans"
+      ],
+      "ley": "rich",
+      "ley_dependence": "rich",
+      "danger_tier": "local",
+      "summary": "A dwarven fishing and trading town on a great lake. The mountains behind it are where mortals found the Ley Font and became the New Gods.",
+      "trade": [
+        "fish",
+        "lake trade",
+        "pilgrim money (Post-Reform)"
+      ],
+      "by_era": {
+        "pre-reform": "A quiet lake town. The Font in the peaks is a dwarven secret.",
+        "brotherhood": "Brotherhood engineers and guards hold the approach to the Font; the town lives under them.",
+        "post-reform": "Pilgrims come to see where the gods were made. Nobody can find the Font itself."
+      },
+      "hooks": [
+        "A pilgrim hires guides for the peaks and pays in old Brotherhood silver.",
+        "Brotherhood surveyors are measuring the lake."
+      ],
+      "map": {
+        "x": 0.57,
+        "y": 0.39
+      },
+      "origin": "source"
+    },
+    {
+      "id": "mendle",
+      "name": "Mendle",
+      "region": "torogh-highlands",
+      "kind": "town",
+      "size": "town",
+      "ruled_by": null,
+      "peoples": [
+        "humans",
+        "dwarves"
+      ],
+      "ley": "normal",
+      "ley_dependence": "adaptive",
+      "danger_tier": "local",
+      "summary": "An old outpost between human and dwarven lands that became the place where deals get done. Its great halls have hosted envoys from as far as Asania.",
+      "notable": [
+        {
+          "name": "The treaty halls",
+          "note": "Neutral ground by long custom."
+        }
+      ],
+      "hooks": [
+        "A Cyrel and Asanian truce talk needs someone deniable.",
+        "A treaty clause turns out to be written in devil's ink."
+      ],
+      "map": {
+        "x": 0.42,
+        "y": 0.36
+      },
+      "origin": "source"
+    },
+    {
+      "id": "scullcrossed-islands",
+      "name": "The Scullcrossed Islands",
+      "region": "gulf-of-aldir",
+      "kind": "camp",
+      "size": "town",
+      "ruled_by": "dreadfall-corsairs",
+      "peoples": [
+        "humans",
+        "mixed"
+      ],
+      "ley": "thin",
+      "ley_dependence": "none",
+      "danger_tier": "regional",
+      "summary": "Rugged pirate islands in the middle of the Gulf of Aldir, home port and fortress of the Dreadfall Corsairs.",
+      "trade": [
+        "stolen cargo",
+        "ransoms",
+        "black-market crystal"
+      ],
+      "hooks": [
+        "A ransom note arrives for someone the player knows.",
+        "The Corsairs are buying crystal by the crate. Why?"
+      ],
+      "map": {
+        "x": 0.2,
+        "y": 0.2
+      },
+      "origin": "source"
+    },
+    {
+      "id": "trein",
+      "name": "Trein",
+      "region": "kingdoms-of-man",
+      "kind": "city",
+      "size": "metropolis",
+      "ruled_by": "trein-council",
+      "peoples": [
+        "humans",
+        "half-elves",
+        "halflings"
+      ],
+      "ley": "thin",
+      "ley_dependence": "engineered",
+      "danger_tier": "regional",
+      "summary": "The city of magic: Ley-lit cobbles, enchanted everything, and a total dependence on stored crystal. Home of the Brotherhood of Man. Trades across the gulf with Mordun, friendly with Asania, careful to stay out of Cyrel's wars.",
+      "trade": [
+        "licensed magic",
+        "crystal",
+        "scholarship",
+        "magic goods"
+      ],
+      "notable": [
+        {
+          "name": "The Brotherhood halls",
+          "note": "Scrubbed stone, hot metal, the sharp mineral bite of forced Ley density. Underhalls below for flow tests."
+        },
+        {
+          "name": "The licensing office",
+          "note": "Where brooches are issued."
+        }
+      ],
+      "by_era": {
+        "pre-reform": "Already crystal-hungry. Mistress Sara gathers scholars who resent temples and dragons.",
+        "brotherhood": "Capital of the Brotherhood. Brooch law, allocation ledgers, and districts that go dark when supply slips.",
+        "post-reform": "The Brotherhood is officially history. Mistress Sara has quietly revived it, and licence talk is back in the council."
+      },
+      "hooks": [
+        "A healer's quarter has its crystal allocation cut for 'low productivity'.",
+        "A junior Brotherhood clerk wants out and has a ledger to sell."
+      ],
+      "map": {
+        "x": 0.28,
+        "y": 0.33
+      },
+      "origin": "source"
+    },
+    {
+      "id": "asania",
+      "name": "Asania",
+      "region": "kingdoms-of-man",
+      "kind": "city",
+      "size": "metropolis",
+      "ruled_by": "kingdom-of-asania",
+      "peoples": [
+        "humans",
+        "half-elves"
+      ],
+      "ley": "thin",
+      "ley_dependence": "engineered",
+      "danger_tier": "local",
+      "summary": "Capital of its kingdom on the Asanian Strait. Marble towers, magic on every corner, splendor, and a war with Cyrel that never quite ends. Allied with Trein's sorcerers, wary of Wrenspire.",
+      "trade": [
+        "luxury goods",
+        "war contracts",
+        "arcane services"
+      ],
+      "notable": [
+        {
+          "name": "A Pocketful of Zzz's",
+          "note": "A large magic and antiquities shop run by Lady Zee, buying anything that survived the Reformation, above all relics of the Old Gods.",
+          "npc": "lady-zee",
+          "eras": [
+            "post-reform"
+          ]
+        }
+      ],
+      "hooks": [
+        "Lady Zee pays well for a relic and asks no questions, then asks one.",
+        "A war levy falls on the player's purse."
+      ],
+      "map": {
+        "x": 0.4,
+        "y": 0.43
+      },
+      "origin": "source"
+    },
+    {
+      "id": "wrenspire",
+      "name": "Wrenspire",
+      "region": "kingdoms-of-man",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": "wrenspire-council",
+      "peoples": [
+        "gnomes",
+        "halflings",
+        "humans"
+      ],
+      "ley": "thin",
+      "ley_dependence": "none",
+      "danger_tier": "local",
+      "summary": "A cliff-top city-state of engineers between the sea cliffs and the ocean, run by a council, building gears, engines and airships without any magic at all. Every curious tinkerer is welcome.",
+      "trade": [
+        "machines",
+        "clockwork",
+        "airship berths",
+        "patents"
+      ],
+      "hooks": [
+        "A Wrenspire engine runs where Trein's wards fail, and Trein wants it gone.",
+        "An airship goes down over the Badlands with a councillor aboard."
+      ],
+      "map": {
+        "x": 0.26,
+        "y": 0.49
+      },
+      "origin": "source"
+    },
+    {
+      "id": "cyrel",
+      "name": "Cyrel",
+      "region": "kingdom-of-cyrel",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": "kingdom-of-cyrel",
+      "peoples": [
+        "humans",
+        "halflings"
+      ],
+      "ley": "normal",
+      "ley_dependence": "adaptive",
+      "danger_tier": "local",
+      "summary": "A fortress capital that has never fallen, head of a kingdom of three sister cities. At war with land-hungry Asania and holding the Badlands line through Bastion.",
+      "trade": [
+        "timber (from Kingswood)",
+        "food (from Eriane)",
+        "soldiers"
+      ],
+      "hooks": [
+        "The crown needs a victory and does not care how.",
+        "Deserters from Bastion are being hanged at the gates."
+      ],
+      "map": {
+        "x": 0.46,
+        "y": 0.56
+      },
+      "origin": "source"
+    },
+    {
+      "id": "eriane",
+      "name": "Eriane",
+      "region": "kingdom-of-cyrel",
+      "kind": "town",
+      "size": "town",
+      "ruled_by": "kingdom-of-cyrel",
+      "peoples": [
+        "humans",
+        "halflings"
+      ],
+      "ley": "normal",
+      "ley_dependence": "adaptive",
+      "danger_tier": "local",
+      "summary": "Cyrel's larder, on a lake: farms, orchards, vineyards and breweries, loud markets and good food. Humans and halflings live side by side.",
+      "trade": [
+        "grain",
+        "wine",
+        "beer",
+        "produce"
+      ],
+      "hooks": [
+        "Blight in the vineyards, in a year the Ley ran thin.",
+        "Asanian raiders are burning the outer farms."
+      ],
+      "map": {
+        "x": 0.37,
+        "y": 0.55
+      },
+      "origin": "source"
+    },
+    {
+      "id": "kingswood",
+      "name": "Kingswood",
+      "region": "kingdom-of-cyrel",
+      "kind": "town",
+      "size": "town",
+      "ruled_by": "kingdom-of-cyrel",
+      "peoples": [
+        "humans",
+        "half-elves"
+      ],
+      "ley": "rich",
+      "ley_note": "The Heartwood past the treaty stones sits on a Ley convergence, a branch of the Badlands line.",
+      "ley_dependence": "adaptive",
+      "danger_tier": "local",
+      "slice_era": "post-reform",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json (the Milestone 1 slice, set Post-Reform); this entry follows it.",
+      "by_era": {
+        "pre-reform": "The town and Xiloscient's stand exist; Tidum is a living archdruid in these forests, so there is no shrine to him. The slice cast and quest do not apply.",
+        "brotherhood": "As pre-reform, plus brooch licensing; the Heartwood convergence matters as power outside the Dam's control. The slice cast and quest do not apply.",
+        "post-reform": "The Milestone 1 slice as built."
+      },
+      "summary": "A Cyrel logging town on the Kingsbrook at the edge of the Brynwyr forest. Small fights between loggers and elven wardens, old stories of last stands, and the forbidden Heartwood past the border stones.",
+      "currency": "silver crowns",
+      "neighbourhoods": [
+        "The Crossroads",
+        "Mill Row",
+        "Cutters' Camp",
+        "Reeve Hill",
+        "Low Ford",
+        "The Cutting Line"
+      ],
+      "notable": [
+        {
+          "name": "The Cutting Line",
+          "note": "Stump fields, then the treaty border stones, then the Heartwood."
+        },
+        {
+          "name": "The Heartwood",
+          "note": "The forbidden old grove past the stones, on the Ley convergence, guarded by Brynwyr wardens."
+        },
+        {
+          "name": "Shrine of Tidum",
+          "note": "Shrine of the New God of the Wild, kept by Mother Ilse Rook. Linked to the legend of Tidum's apprentice.",
+          "npc": "ilse-rook"
+        },
+        {
+          "name": "The Felled Oak",
+          "note": "Tavern kept by Corin Ashby, fence and informer.",
+          "npc": "corin-ashby"
+        },
+        {
+          "name": "The Sawpit",
+          "note": "Mill Row alehouse."
+        },
+        {
+          "name": "Dunmore's kitchen",
+          "note": "Reeve Hill cookshop."
+        },
+        {
+          "name": "The tally hut",
+          "note": "On the Cutting Line, where the Guild counts every log."
+        },
+        {
+          "name": "The paupers' field",
+          "note": "The Low Ford burial ground."
+        }
+      ],
+      "customs": [
+        "A chip of the first-felled tree of the season goes to Tidum.",
+        "The Night of Stones bread offering.",
+        "Xiloscient's stand: Himo Xiloscient held the town against Ohgnu's horde in 251 AOD.",
+        "Tidum's apprentice: the archdruid's deathless apprentice who died in the first wave of devils."
+      ],
+      "cast": [
+        "aldous-marr",
+        "hesk-varro",
+        "ilse-rook",
+        "corin-ashby",
+        "sereth-of-the-ford",
+        "bram-tolley"
+      ],
+      "hooks": [
+        "The Heartwood contract: the Timber Guild's crews have 7 days of story time to fell the Heartwood; miss it and the wardens burn Cutters' Camp."
+      ],
+      "map": {
+        "x": 0.33,
+        "y": 0.62
+      },
+      "origin": "m1-slice"
+    },
+    {
+      "id": "convila",
+      "name": "Convila",
+      "region": "kingdom-of-cyrel",
+      "kind": "town",
+      "size": "town",
+      "ruled_by": "kingdom-of-cyrel",
+      "peoples": [
+        "humans",
+        "half-elves",
+        "halflings"
+      ],
+      "ley": "normal",
+      "ley_dependence": "adaptive",
+      "danger_tier": "local",
+      "summary": "A lively town between Kingswood and Brynwyr, built on the remains of a larger, older city. Under it lies a crystalline fountain of Ley, sealed long ago by the Convila Pact and spent, or so people say.",
+      "notable": [
+        {
+          "name": "The old city underneath",
+          "note": "Cellars that open into older cellars."
+        },
+        {
+          "name": "The graveyard",
+          "note": "Where Witarr held the line against three demons on the night the Invasion first tested the town (Brotherhood era)."
+        }
+      ],
+      "by_era": {
+        "brotherhood": "A Brotherhood liaison makes Witarr wear his brooch openly. The dead have started coming back with contracts burned into their wrists.",
+        "post-reform": "The graveyard story is a local legend about the God of the Afterlife."
+      },
+      "hooks": [
+        "A cellar collapse opens onto crystal that is not spent at all.",
+        "Someone is buying up the old Pact documents."
+      ],
+      "map": {
+        "x": 0.31,
+        "y": 0.66
+      },
+      "origin": "source"
+    },
+    {
+      "id": "bastion",
+      "name": "Bastion",
+      "region": "kingdom-of-cyrel",
+      "kind": "fortress",
+      "size": "town",
+      "ruled_by": "kingdom-of-cyrel",
+      "peoples": [
+        "humans"
+      ],
+      "ley": "normal",
+      "ley_dependence": "adaptive",
+      "danger_tier": "regional",
+      "summary": "The last great fortress between Cyrel and the Badlands. Scarred walls carved with the faces of old heroes, drills from dawn to dark, and a garrison that never gets enough men.",
+      "notable": [
+        {
+          "name": "The hero walls",
+          "note": "Carvings of the fortress's dead champions."
+        }
+      ],
+      "hooks": [
+        "Deserters are slipping west to Kingswood.",
+        "Unguruk has started building siege works at Adlmyr."
+      ],
+      "map": {
+        "x": 0.51,
+        "y": 0.58
+      },
+      "origin": "source"
+    },
+    {
+      "id": "mossrun",
+      "name": "Mossrun",
+      "region": "kingdom-of-cyrel",
+      "kind": "town",
+      "size": "town",
+      "ruled_by": "mossrun-expedition",
+      "peoples": [
+        "humans",
+        "dwarves",
+        "half-orcs"
+      ],
+      "ley": "rich",
+      "ley_note": "On the western slopes of the mountain wall, close under the Great Line. Mining is thinning it.",
+      "ley_dependence": "rich",
+      "danger_tier": "regional",
+      "eras": [
+        "post-reform"
+      ],
+      "summary": "A company town in the wet mountain valleys north-east of Cyrel, where the Mossrun Expedition struck its first two veins: one of iron, one of crystallized Ley. Five generations later it is a maze of shafts and tailings feeding Cyrel, Mendle and Loch Torogh with iron and selling crystal west to Trein and Asania. The streams around it have gone metallic and the moss it was named for is dying.",
+      "trade": [
+        "iron",
+        "Ley crystal",
+        "mine labor",
+        "company scrip"
+      ],
+      "notable": [
+        {
+          "name": "The Ilvar house",
+          "note": "A tall stone house above the pit-head, where the patriarch is always ill."
+        },
+        {
+          "name": "The Deep Nine",
+          "note": "The newest and deepest shaft, closed to everyone but the patriarch's own crew."
+        }
+      ],
+      "hooks": [
+        "Miners on the Deep Nine have started coming up feverish and warm to the touch.",
+        "A druid wants the crystal workings shut before the valley goes dead."
+      ],
+      "map": {
+        "x": 0.53,
+        "y": 0.47
+      },
+      "origin": "draft",
+      "origin_note": "The source does not place the mines; placed here because Ley crystal forms near the Great Line and the iron feeds Cyrel and the north (Vanta asked, 2026-10-21)."
+    },
+    {
+      "id": "unguruk-camp",
+      "name": "Unguruk Camp",
+      "region": "badlands",
+      "kind": "camp",
+      "size": "city",
+      "ruled_by": "unguruk-tribe",
+      "peoples": [
+        "orcs",
+        "half-orcs",
+        "human exiles"
+      ],
+      "ley": "rich",
+      "ley_dependence": "rich",
+      "danger_tier": "regional",
+      "summary": "The great walled camp in the heart of the Badlands: orcs, half-orcs and human exiles, human craft and orc strength together, sun-baked and loud, with a long grudge against Cyrel.",
+      "hooks": [
+        "A stranger in clean robes has been seen at the war-chief's fire.",
+        "An exile wants word carried home to Cyrel."
+      ],
+      "by_era": {
+        "brotherhood": "Aveus grew up here. A war-chief bargains with a devil for power in exchange for opening the passes; Aveus kills the devil's body and leaves."
+      },
+      "map": {
+        "x": 0.55,
+        "y": 0.69
+      },
+      "origin": "source"
+    },
+    {
+      "id": "adlmyr",
+      "name": "Adlmyr",
+      "region": "badlands",
+      "kind": "ruin",
+      "size": "town",
+      "ruled_by": "unguruk-tribe",
+      "peoples": [
+        "orcs",
+        "half-orcs"
+      ],
+      "ley": "rich",
+      "ley_dependence": "rich",
+      "danger_tier": "regional",
+      "summary": "Once Cyrel's pride on the Badlands border. The tribes broke its walls late in the Age of Magic, before the Brotherhood was founded, and the Unguruk tribe has held the skeleton of the fortress ever since as proof of who won.",
+      "by_era": {
+        "pre-reform": "A Cyrel fortress, standing and garrisoned; it falls before 2984.",
+        "brotherhood": "An Unguruk-held ruin.",
+        "post-reform": "An Unguruk-held ruin."
+      },
+      "hooks": [
+        "Cyrel wants Adlmyr back and will pay anyone who opens a gate."
+      ],
+      "map": {
+        "x": 0.49,
+        "y": 0.65
+      },
+      "origin": "source"
+    },
+    {
+      "id": "abandoned-keep",
+      "name": "The Abandoned Keep",
+      "region": "badlands",
+      "kind": "ruin",
+      "size": "hamlet",
+      "ruled_by": null,
+      "peoples": [],
+      "ley": "rich",
+      "ley_dependence": "none",
+      "danger_tier": "realm",
+      "summary": "A ward-keep in the broken hills west of Adlmyr, built by Himo Xiloscient after his stand in 251 AOD, over the place where the horde came through. Elves and Cyrel soldiers garrisoned it in turns for centuries. It was left empty when Adlmyr fell, and its wards have been fading ever since. The Kingswood branch of the Ley runs under it.",
+      "map": {
+        "x": 0.4,
+        "y": 0.67
+      },
+      "origin": "draft",
+      "aliases": [
+        "the Druid's Keep",
+        "Xiloscient's Keep"
+      ],
+      "notable": [
+        {
+          "name": "The portal scar",
+          "note": "A ring of glassed stone in the keep's lowest court, warm in winter. Gnolls come to lay offerings at it."
+        },
+        {
+          "name": "The ward-stones",
+          "note": "Elven druid-work, cracked and half buried."
+        }
+      ],
+      "by_era": {
+        "pre-reform": "Garrisoned, with elves and Cyrel soldiers taking turns.",
+        "brotherhood": "Abandoned; Brotherhood surveyors measure the Ley under it.",
+        "post-reform": "Abandoned. The wards are almost gone."
+      },
+      "hooks": [
+        "Dramogon gnolls are gathering at the keep under a Haggoth priest.",
+        "A Kingswood elder pays someone to renew the ward-stones before the Night of Stones."
+      ],
+      "origin_note": "On the map with no story; extrapolated from the Gor'gel Deception (Vanta asked, 2026-10-21)."
+    },
+    {
+      "id": "dramogon-range",
+      "name": "The Dramogon range",
+      "region": "badlands",
+      "kind": "camp",
+      "size": "village",
+      "ruled_by": "dramogon-tribe",
+      "peoples": [
+        "gnolls"
+      ],
+      "ley": "normal",
+      "ley_dependence": "none",
+      "danger_tier": "regional",
+      "summary": "The northern Badlands, where the gnoll nomads of the Dramogon tribe move their camps with the hunt. The map marks their usual ground below the mountains.",
+      "hooks": [
+        "A Dramogon hunt crosses into Cyrel after something that fled the Badlands."
+      ],
+      "map": {
+        "x": 0.62,
+        "y": 0.55
+      },
+      "origin": "source"
+    },
+    {
+      "id": "kadragar",
+      "name": "Kadragar",
+      "region": "badlands",
+      "kind": "camp",
+      "size": "town",
+      "ruled_by": "kadragar-tribe",
+      "peoples": [
+        "goblins"
+      ],
+      "ley": "thin",
+      "ley_dependence": "none",
+      "danger_tier": "regional",
+      "summary": "The goblin tribe's home on the southern Badlands coast by the Sea of Kujuur: beached ships, sand, sea stories, merchants who are also warriors.",
+      "trade": [
+        "sea trade to Ota'at",
+        "salvage",
+        "Badlands goods"
+      ],
+      "hooks": [
+        "A goblin captain offers passage to Bashrat for a favor named later."
+      ],
+      "map": {
+        "x": 0.47,
+        "y": 0.82
+      },
+      "origin": "source"
+    },
+    {
+      "id": "ghondiirs-fall",
+      "name": "Ghondiir's Fall",
+      "region": "badlands",
+      "kind": "site",
+      "size": "hamlet",
+      "ruled_by": null,
+      "peoples": [],
+      "ley": "rich",
+      "ley_dependence": "none",
+      "danger_tier": "realm",
+      "summary": "The heart of the Badlands, where the Dragon King's body came down and his lair's Font now runs under broken ground: the Badlands convergence of the Great Line.",
+      "map": {
+        "x": 0.52,
+        "y": 0.66
+      },
+      "origin": "draft",
+      "origin_note": "Gives a place to the convergence on the Ley Line map and to Ghondiir's death at 'the largest Ley Font'."
+    },
+    {
+      "id": "source-font",
+      "name": "The Source Font (the seam)",
+      "region": "torogh-highlands",
+      "kind": "site",
+      "size": "hamlet",
+      "ruled_by": null,
+      "peoples": [],
+      "ley": "rich",
+      "ley_dependence": "none",
+      "danger_tier": "mythic",
+      "summary": "Where creation began, and where the New Gods ascended. Tradition puts it in the peaks above Loch Torogh, and that is where the Ley pours out strongest. In the Post-Reform era nobody can find the Font itself.",
+      "map": {
+        "x": 0.6,
+        "y": 0.33
+      },
+      "origin": "source",
+      "by_era": {
+        "pre-reform": "The Font itself, in the peaks; dwarves keep its location quiet.",
+        "brotherhood": "The Font itself, dammed and guarded by the Brotherhood.",
+        "post-reform": "Only the seam: the Font is gone from the world (hidden truth)."
+      }
+    },
+    {
+      "id": "brynwyr",
+      "name": "Brynwyr",
+      "region": "brynwyr",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": "brynwyr-high-elves",
+      "peoples": [
+        "high elves",
+        "sea elves"
+      ],
+      "ley": "thin",
+      "ley_dependence": "adaptive",
+      "danger_tier": "regional",
+      "summary": "The high elves' forest stronghold on the south-western peninsula, with sylvan cities and warfaring sea-elves on the horizon. Mostly closed and calm; a restless young few wander into human lands.",
+      "hooks": [
+        "A young elf has run away to Kingswood and their family wants them back, alive or not.",
+        "Sea-elf ships are stopping Cyrel timber barges."
+      ],
+      "map": {
+        "x": 0.19,
+        "y": 0.71
+      },
+      "origin": "source"
+    },
+    {
+      "id": "ota-at",
+      "name": "Ota'at",
+      "region": "bashrat-island",
+      "kind": "village",
+      "size": "village",
+      "ruled_by": null,
+      "peoples": [
+        "chaos-toads",
+        "lizardfolk",
+        "frogfolk",
+        "naga"
+      ],
+      "ley": "thin",
+      "ley_dependence": "none",
+      "danger_tier": "regional",
+      "summary": "A village in Bashrat's misty swamps, built on strength and challenge. Not evil, but you would need a stout heart to call it home. Trades warily with the goblins of Kadragar.",
+      "notable": [
+        {
+          "name": "Bashrat market",
+          "note": "Stalls fed by goblin and elven traders, full of odd songs and odder goods."
+        }
+      ],
+      "hooks": [
+        "To trade here you must first win a challenge, and the challenge changes."
+      ],
+      "map": {
+        "x": 0.33,
+        "y": 0.85
+      },
+      "origin": "source"
+    },
+    {
+      "id": "benzaiten-monastery",
+      "name": "Benzaiten Monastery",
+      "region": "ikto-isle",
+      "kind": "monastery",
+      "size": "village",
+      "ruled_by": "benzaiten-monastery",
+      "peoples": [
+        "mixed"
+      ],
+      "ley": "normal",
+      "ley_dependence": "rich",
+      "danger_tier": "local",
+      "summary": "A stern stone monastery on Ikto Isle where monks of many peoples train in meditation and martial skill and settle conflicts quietly. Alone in the world, it has open contact with the wood elves of Petrakyra.",
+      "hooks": [
+        "A monk carries a message from Petrakyra that no one else could deliver.",
+        "A seeker wants to be ferried across the rapids and will not say why."
+      ],
+      "by_era": {
+        "brotherhood": "Nicana trained here before she left to adventure. In the Post-Reform era the monks keep a shrine to her that they pretend is not a shrine."
+      },
+      "map": {
+        "x": 0.6,
+        "y": 0.86
+      },
+      "origin": "source"
+    },
+    {
+      "id": "petrakyra",
+      "name": "Petrakyra",
+      "region": "eastern-forests",
+      "kind": "city",
+      "size": "city",
+      "ruled_by": "petrakyra-wood-elves",
+      "peoples": [
+        "wood elves"
+      ],
+      "ley": "rich",
+      "ley_dependence": "rich",
+      "danger_tier": "realm",
+      "summary": "The hidden home of the wood elves between sea, forest and mountains. They trade a little with Obirykan across the Kyrana Channel. A steady rumor says an Eternal Dragon lives among them.",
+      "hooks": [
+        "An Obirykan trader swears he saw a dragon's shadow over the Petrakyra docks."
+      ],
+      "map": {
+        "x": 0.82,
+        "y": 0.7
+      },
+      "origin": "source"
+    },
+    {
+      "id": "obirykan",
+      "name": "The Obirykan City States",
+      "region": "etryona",
+      "kind": "city",
+      "size": "metropolis",
+      "ruled_by": "obirykan-city-states",
+      "peoples": [
+        "humans"
+      ],
+      "ley": "thin",
+      "ley_dependence": "engineered",
+      "danger_tier": "regional",
+      "summary": "A cluster of plutocratic city-states on Etryona behind green walls and prism towers. Wealth is Ley crystal, rank is how much you hold, and the whole society is hooked on owning it.",
+      "currency": "Ley crystal",
+      "trade": [
+        "crystal",
+        "luxuries",
+        "credit",
+        "Petrakyra goods"
+      ],
+      "hooks": [
+        "A state's vault is short, and someone has to take the blame.",
+        "A crystal debt is called in on the player's ally."
+      ],
+      "map": {
+        "x": 0.88,
+        "y": 0.74
+      },
+      "origin": "source"
+    },
+    {
+      "id": "gurdalur-stones",
+      "name": "The Gurdalur Stones",
+      "region": "fjallagracht",
+      "kind": "site",
+      "size": "village",
+      "ruled_by": "fjallagracht-clans",
+      "peoples": [
+        "humans"
+      ],
+      "ley": "rich",
+      "ley_dependence": "rich",
+      "danger_tier": "regional",
+      "summary": "A ring of faceless standing stones in Fjallagracht's snow, millennia old, sitting on a Ley branch. They throw a shadow calendar the clans live by: births, marriages, burials and raids.",
+      "hooks": [
+        "The stones' shadow fell wrong at midwinter.",
+        "A clan elder wants an outsider to stand in the ring and see what happens."
+      ],
+      "map": {
+        "x": 0.77,
+        "y": 0.31
+      },
+      "origin": "source"
+    }
+  ]
+}

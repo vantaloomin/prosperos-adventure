@@ -1,0 +1,2010 @@
+{
+ "kind": "stage",
+ "milestones": [
+  {
+   "text": "turned up to their first {hobby} session and stayed to the end",
+   "post": "Went. Stayed. Didn't run. Counting that.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got through their first warm-up without giggling",
+   "post": "Warm-ups are silly. Did them anyway, straight-faced.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spoke loud enough to be heard at the back of the room",
+   "post": "Projected! The back row heard me!",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned every name at their first {hobby} meeting",
+   "post": "Know all the names now. Belonging, a bit.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stood up in front of the group for the first time",
+   "post": "Stood up there. Knees wobbly. Did it.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "practised breathing exercises before going on",
+   "post": "Breathe in, breathe out, pretend to be calm.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "signed up for {hobby} before they could talk themselves out of it",
+   "post": "Signed up. Too late to back out now.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "survived their first time in front of an audience",
+   "post": "First time in front of people. Survived.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "performed without needing to look at their notes",
+   "post": "No notes needed. It's all in my head.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made the audience laugh on purpose",
+   "post": "They laughed where I hoped they would.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got through a whole performance without freezing",
+   "post": "No freeze. Just kept going.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "came off stage and immediately wanted to go back on",
+   "post": "Off stage and already want more.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took a note from the group leader and fixed it by the next session",
+   "post": "Took the note. Fixed it. Proud.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stopped shaking before going on",
+   "post": "Hands didn't shake tonight. That's new.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept going smoothly after a small slip",
+   "post": "Messed up a bit, kept going, nobody noticed.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "became a regular at {hobby}",
+   "post": "They know me by name at {hobby} now.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got real applause rather than polite applause",
+   "post": "That was the real clapping. Not the polite kind.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had their performance complimented by a complete stranger",
+   "post": "A stranger said I was good. Framing it.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took on a bigger part than ever before",
+   "post": "Bigger part this time. More to learn, more fun.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found their own stage presence and stopped copying others",
+   "post": "Starting to sound like me up there.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "rescued a moment when someone else went blank",
+   "post": "Covered for a friend. Teamwork.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was trusted to go first and set the tone",
+   "post": "Went first tonight. Set the tone. Nailed it.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked the crowd a little and enjoyed it",
+   "post": "Talked to the crowd. They talked back. Fun.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "performed in front of their biggest audience yet",
+   "post": "Biggest crowd yet. Heart pounding, loved it.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "helped a nervous newcomer get through a first time on stage",
+   "post": "Helped a newcomer through their first night. Paying it forward.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to perform at a special event",
+   "post": "Special event booking. I've been asked!",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "led the group's warm-up",
+   "post": "Led the warm-up. Power is mine.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "performed at a neighbouring town's showcase",
+   "post": "Out-of-town show. Went over well.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got a mention in the local paper for a performance",
+   "post": "Mentioned in the paper. Bought three copies.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "drew some of the same faces back for a second night",
+   "post": "Repeat audience. They came back for me.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "held the room's attention through a long quiet moment",
+   "post": "You could hear a pin drop. On purpose.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took part in a contest and made it to the final round",
+   "post": "Made the final round. Didn't win. Still thrilled.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won first prize at the regional contest",
+   "post": "First prize. Regional. Speechless, ironically.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got a standing ovation",
+   "post": "They stood up. All of them. Still floating.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "headlined the evening's show",
+   "post": "Headliner. My name at the top.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was paid for a performance for the first time",
+   "post": "Paid to perform. Professional, technically.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to direct a show of their own",
+   "post": "Directing now. Terrifying. Exciting.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "performed in the biggest hall in town",
+   "post": "The big hall. Full seats. Unreal.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "brought a whole audience to tears in a good way",
+   "post": "Made a room full of people well up. In a nice way.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was named by a newcomer as the reason for joining",
+   "post": "Someone joined because they saw me. Heart full.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a clip of their performance shared online by a friend",
+   "post": "My friend posted a clip. People liked it. Gulp.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "rehearsed in front of the mirror and then on their phone camera",
+   "post": "Filmed myself rehearsing. Hated it. Learned a lot.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "found their place in the alto section and stayed on their part",
+   "post": "Stuck to my part. Didn't drift to the tune.",
+   "level": 0,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned the first hymn in the choir's book",
+   "post": "First song learned. Many pages to go.",
+   "level": 0,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sang a harmony line while the person beside them sang a different one",
+   "post": "Held my harmony with someone singing another. Brain!",
+   "level": 1,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sang a short solo line in the middle of a choir piece",
+   "post": "Four bars of solo. Held the note. Phew.",
+   "level": 2,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sang with the choir at the midwinter concert",
+   "post": "Midwinter concert. The hall was glowing.",
+   "level": 3,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sang the solo in the choir's big seasonal performance",
+   "post": "The solo was mine. The whole hall listened.",
+   "level": 4,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sang a whole piece in another language without stumbling",
+   "post": "Sang it in Latin. Did not trip once.",
+   "level": 2,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sang with the choir at the harvest celebration",
+   "post": "Harvest songs with the choir. Lovely day.",
+   "level": 1,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was made section leader for their voice part",
+   "post": "Section leader. I hand out the music now.",
+   "level": 3,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to follow the conductor's hands instead of the page",
+   "post": "Eyes on the conductor. It changes everything.",
+   "level": 1,
+   "for": [
+    "choir"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got cast in their first amateur theatre show, as a crowd member",
+   "post": "Cast as Crowd Person Three. Thrilled.",
+   "level": 0,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned their first lines off by heart",
+   "post": "Five lines memorised. Character work begins.",
+   "level": 0,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made their entrance at exactly the right moment every night",
+   "post": "Never missed an entrance. Small brag.",
+   "level": 1,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a speaking role in the season's play",
+   "post": "Speaking part! With a name and everything!",
+   "level": 2,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a supporting role that got its own round of applause",
+   "post": "Mid-show applause for my scene. Wow.",
+   "level": 3,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the lead in the company's big production",
+   "post": "The lead. Still can't believe it.",
+   "level": 4,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "helped paint the scenery and stayed for the dress rehearsal",
+   "post": "Painted trees by day, acted by night.",
+   "level": 2,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a part in the travelling players' show on the green",
+   "post": "Acted on the green. A goat watched. Approved.",
+   "level": 1,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "played the villain in the town hall melodrama and got booed happily",
+   "post": "Booed as the villain. Best compliment there is.",
+   "level": 3,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "frontier"
+   ]
+  },
+  {
+   "text": "got through a whole read-through without losing their place",
+   "post": "Read-through done. Never lost the page.",
+   "level": 1,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stepped in as an understudy at a day's notice",
+   "post": "Understudy to the rescue. One day to learn it.",
+   "level": 3,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "wrote a short play that the company put on",
+   "post": "They staged my play. I sat at the back, beaming.",
+   "level": 4,
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned their part in their first barbershop tag",
+   "post": "My first tag. Four parts, and mine held.",
+   "level": 0,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found out which voice part they sing in the quartet",
+   "post": "I'm a baritone, apparently. News to me.",
+   "level": 0,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "rang their first proper chord with the quartet",
+   "post": "We rang a chord. Goosebumps. Literal.",
+   "level": 1,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sang a full barbershop song with the quartet in public",
+   "post": "Quartet's first song in public. We matched!",
+   "level": 2,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sang with the quartet at a local social",
+   "post": "Quartet at the social. Straw hats on.",
+   "level": 3,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won the barbershop contest with the quartet",
+   "post": "Our quartet won! Four very happy voices.",
+   "level": 4,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "serenaded the bandstand crowd with the quartet on a summer evening",
+   "post": "Bandstand singing. Summer evening. Perfect.",
+   "level": 2,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "held their part steady while the other three tried to pull it off",
+   "post": "Held my line against three others. Stubborn.",
+   "level": 1,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "taught a new tag to a group of beginners",
+   "post": "Taught a tag to beginners. They rang it!",
+   "level": 3,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was invited to sing with the quartet at the mayor's summer fete",
+   "post": "Sang for the mayor. Very fancy. Very nervous.",
+   "level": 4,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "bought a straw boater for their first quartet rehearsal",
+   "post": "Got the hat. Now to learn the singing.",
+   "level": 0,
+   "for": [
+    "barbershop"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "put their name on the open mic list for the first time",
+   "post": "My name is on the list. Too late now.",
+   "level": 0,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played two songs at their first open mic",
+   "post": "Two songs at open mic. Nobody threw anything.",
+   "level": 0,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "became a regular face at the Thursday open mic",
+   "post": "Thursday open mic regular. They save me a seat.",
+   "level": 1,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got asked by the host to play an extra song at open mic",
+   "post": "Host asked for one more. That's never happened.",
+   "level": 2,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "was booked for a proper slot after an open mic",
+   "post": "Open mic led to a real booking. Excited.",
+   "level": 3,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "was asked to host the open mic night",
+   "post": "Hosting open mic now. The circle completes.",
+   "level": 4,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "tried out a brand-new song at open mic",
+   "post": "Debuted a new song. It survived.",
+   "level": 1,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played an original song at open mic for the first time",
+   "post": "My own song, out loud, to strangers. Wow.",
+   "level": 2,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "had their song asked about by name after open mic",
+   "post": "Someone asked what my song was called. It has fans.",
+   "level": 3,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played a full set as the featured act at open mic",
+   "post": "Featured act tonight. Twenty minutes of me.",
+   "level": 4,
+   "for": [
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "did their first five minutes of stand-up and got one big laugh",
+   "post": "Five minutes. One big laugh. I'll take it.",
+   "level": 0,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "wrote their first full page of stand-up material",
+   "post": "A page of jokes. Some might be funny.",
+   "level": 0,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "bombed spectacularly at stand-up and went back the next week",
+   "post": "Bombed. Came back. That's the job.",
+   "level": 1,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got laughs all the way through a full stand-up set",
+   "post": "Laughs the whole way. Stand-up high.",
+   "level": 2,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "was booked as an opener at a comedy club",
+   "post": "Opener at a real comedy club. Gulp.",
+   "level": 3,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "headlined a stand-up night with a full twenty minutes",
+   "post": "Twenty minutes headlining. They laughed. A lot.",
+   "level": 4,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "handled a heckler with a line that got the biggest laugh of the night",
+   "post": "Heckler got handled. Crowd loved it.",
+   "level": 2,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got a laugh from a joke they had rewritten six times",
+   "post": "Draft six of that joke finally landed.",
+   "level": 1,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "did a tight ten minutes at a showcase",
+   "post": "Tight ten at a showcase. Felt sharp.",
+   "level": 3,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won a local stand-up competition",
+   "post": "Won the comedy competition. Very funny. Ha.",
+   "level": 4,
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "survived their first improv class without freezing",
+   "post": "Improv class one. Said yes to everything.",
+   "level": 0,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played their first improv game in front of the class",
+   "post": "First scene. Was a talking cactus. Committed.",
+   "level": 0,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "built a whole improv scene with a partner that made the class laugh",
+   "post": "Made the whole class laugh. With a partner, sure.",
+   "level": 1,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "performed in their first improv show",
+   "post": "Improv show! No script, no fear. Some fear.",
+   "level": 2,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "joined a regular improv troupe",
+   "post": "I'm in a troupe now. We have a name.",
+   "level": 3,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "led a long-form improv scene that the audience still talks about",
+   "post": "People keep mentioning the scene. Glowing.",
+   "level": 4,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept an improv scene going after their partner went blank",
+   "post": "Saved a scene. Yes, and.",
+   "level": 2,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "stopped planning lines ahead and just listened",
+   "post": "Stopped planning. Started listening. Better scenes.",
+   "level": 1,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "taught a warm-up game to the beginners' class",
+   "post": "Taught the beginners a warm-up. They loved it.",
+   "level": 3,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "performed improv at a comedy festival",
+   "post": "Improv at a festival. Big crowd, no script.",
+   "level": 4,
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "sang karaoke for the first time without hiding behind a friend",
+   "post": "Sang karaoke solo. Friend stayed at the table.",
+   "level": 0,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "picked a karaoke song and actually knew the verses",
+   "post": "Knew the verses, not just the chorus. Growth.",
+   "level": 0,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got the whole room singing along at karaoke",
+   "post": "Whole bar sang the chorus with me.",
+   "level": 1,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "nailed a hard high note at karaoke",
+   "post": "Hit the high note. The room gasped.",
+   "level": 2,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won the karaoke night's crowd vote",
+   "post": "Crowd picked me at karaoke. Small trophy, big grin.",
+   "level": 3,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won the city karaoke championship",
+   "post": "Karaoke champion. Not joking.",
+   "level": 4,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "sang a duet at karaoke with a total stranger",
+   "post": "Duet with a stranger. Weirdly great.",
+   "level": 1,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "stopped needing the screen for their go-to karaoke song",
+   "post": "Didn't look at the screen once. Showing off.",
+   "level": 2,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "sang a power ballad that got a cheer before the chorus",
+   "post": "They cheered before the chorus even hit.",
+   "level": 3,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "was asked by the karaoke host to close the night",
+   "post": "Asked to close karaoke night. Huge honour.",
+   "level": 4,
+   "for": [
+    "karaoke"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got through a first rehearsal without hiding at the back",
+   "post": "Didn't hide. Progress.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned a whole part by heart",
+   "post": "Whole part, by heart.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "stood up in front of the group without shaking",
+   "post": "No shaking!",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "turned up to every rehearsal for a month",
+   "post": "Every rehearsal this month.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "found a place in the group",
+   "post": "I belong here.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to project to the back of the hall",
+   "post": "Heard at the back!",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "came off stage wanting to go again",
+   "post": "Want to do it again.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was given a few lines of their own",
+   "post": "I have lines!",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "remembered every cue in a long rehearsal",
+   "post": "Every cue, caught.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "held a long note steady to the end",
+   "post": "Held it.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "got a laugh in exactly the right place",
+   "post": "The laugh came right on time.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "stayed calm when a scene went wrong",
+   "post": "Recovered on stage. Smooth.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to warm up the voice properly",
+   "post": "Warm voice, happy voice.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "earned a nod from the director",
+   "post": "The nod. I got the nod.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was given a bigger part",
+   "post": "Bigger part!",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "performed for a full house",
+   "post": "Full house tonight.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "carried a scene on their own",
+   "post": "Carried the scene.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "sang a short solo",
+   "post": "Short solo. Big feelings.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "helped a nervous newcomer learn a part",
+   "post": "Helping a newcomer.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "performed at a wedding",
+   "post": "Wedding performance.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "got a round of applause mid-performance",
+   "post": "Applause in the middle!",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was given a leading part",
+   "post": "Leading part. Terrified. Thrilled.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "performed at the biggest venue in town",
+   "post": "The big stage.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a performance talked about all over town",
+   "post": "Talk of the town.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to perform at a grand occasion",
+   "post": "Performing at a grand occasion.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "led the warm-up for the whole company",
+   "post": "Led the warm-up.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "toured to the next town with the company",
+   "post": "On tour! Sort of.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had an encore called for",
+   "post": "Encore!",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was given the lead in the season's biggest show",
+   "post": "The lead. The big one.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "brought the house to its feet",
+   "post": "Standing ovation.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to coach the newer performers",
+   "post": "Coaching now.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "performed before honoured guests",
+   "post": "Honoured guests in the audience.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "became the voice everyone listens for",
+   "post": "Everyone listens for my voice now.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was invited to join a well-known company",
+   "post": "Invited to a famous company!",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "gave a performance remembered long after the night",
+   "post": "Remembered long after.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  }
+ ],
+ "sessions": [
+  {
+   "text": "Ran through warm-ups before anything else.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Spent a while going over the tricky bit.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Practised in front of the mirror for a while.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Stayed late to chat with the others.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Worked on speaking more slowly.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Learned a few new lines.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Tried something new and it mostly worked.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Went through the whole thing twice.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Got a useful note from someone more experienced.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Practised breathing to settle the nerves.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Laughed a lot at the others' mistakes, and their own.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Watched the others and picked up a trick or two.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Rehearsed quietly at home afterwards.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Came home tired and happy.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Hummed the parts on the walk home.",
+   "for": [
+    "choir",
+    "barbershop"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Ran lines with a castmate.",
+   "for": [
+    "theatre"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Tested a new joke and scribbled notes on it.",
+   "for": [
+    "stand-up"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Played a few silly games to loosen up.",
+   "for": [
+    "improv"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Picked a new song to try next time.",
+   "for": [
+    "karaoke",
+    "open-mic"
+   ],
+   "eras": [
+    "modern"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,238 @@
+{
+  "about": "What is inside things on the Concourse, rolled the first time the player looks (dungeon/finds.py), in Talents.",
+  "containers": {
+    "chest": {
+      "words": [
+        "chest",
+        "strongbox",
+        "coffer",
+        "trunk",
+        "lockbox",
+        "box"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 4,
+          "coins": [
+            0.2,
+            2.0
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "blanket"
+        },
+        {
+          "weight": 1,
+          "item": "knife"
+        },
+        {
+          "weight": 1,
+          "item": "minor-potion"
+        },
+        {
+          "weight": 2,
+          "note": "a sheaf of Sallis's paper, names and sums and the word SOLD against three of them"
+        },
+        {
+          "weight": 1,
+          "note": "a needle in the hasp, its tip dark with something",
+          "trap": true
+        }
+      ]
+    },
+    "drawer": {
+      "words": [
+        "drawer",
+        "desk",
+        "cupboard",
+        "cabinet",
+        "shelf",
+        "shelves"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 4,
+          "nothing": true
+        },
+        {
+          "weight": 3,
+          "coins": [
+            0.05,
+            0.5
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "chalk"
+        },
+        {
+          "weight": 1,
+          "item": "bandages"
+        },
+        {
+          "weight": 2,
+          "note": "a copy of a page of the Roll with one name circled"
+        },
+        {
+          "weight": 1,
+          "note": "a Texas Longhorns keychain, the keys gone"
+        }
+      ]
+    },
+    "crate": {
+      "words": [
+        "crate",
+        "barrel",
+        "sack",
+        "basket",
+        "cask",
+        "bin"
+      ],
+      "draws": 1,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 3,
+          "item": "waybread"
+        },
+        {
+          "weight": 2,
+          "item": "dried-meat"
+        },
+        {
+          "weight": 1,
+          "item": "lamp-oil"
+        },
+        {
+          "weight": 1,
+          "note": "starter kits, resold, still with someone else's name on the tag"
+        }
+      ]
+    },
+    "body": {
+      "words": [
+        "body",
+        "corpse",
+        "dead man",
+        "dead woman",
+        "the dead"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 4,
+          "coins": [
+            0.1,
+            1.0
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "knife"
+        },
+        {
+          "weight": 1,
+          "item": "guild-token"
+        },
+        {
+          "weight": 2,
+          "note": "a porter's tally of carries with the last one unpaid"
+        },
+        {
+          "weight": 1,
+          "note": "a debt note in a careful clerk hand, for more than the body was worth"
+        }
+      ]
+    },
+    "purse": {
+      "words": [
+        "purse",
+        "pocket",
+        "pockets",
+        "pouch",
+        "coin pouch",
+        "belt pouch"
+      ],
+      "draws": 1,
+      "table": [
+        {
+          "weight": 2,
+          "nothing": true
+        },
+        {
+          "weight": 6,
+          "coins": [
+            0.05,
+            1.0
+          ]
+        },
+        {
+          "weight": 1,
+          "item": "chalk"
+        },
+        {
+          "weight": 1,
+          "note": "a ticket for the lift cage, punched for a floor nobody goes to"
+        }
+      ]
+    },
+    "room": {
+      "words": [
+        "room",
+        "the place",
+        "the hut",
+        "the shed",
+        "the loft",
+        "the cellar"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 2,
+          "coins": [
+            0.1,
+            0.6
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "blanket"
+        },
+        {
+          "weight": 1,
+          "item": "rope"
+        },
+        {
+          "weight": 1,
+          "item": "lantern"
+        },
+        {
+          "weight": 2,
+          "note": "a bedroll still warm, and nobody in it"
+        },
+        {
+          "weight": 1,
+          "note": "names scratched in the plaster, each with a floor number after it"
+        }
+      ]
+    }
+  }
+}

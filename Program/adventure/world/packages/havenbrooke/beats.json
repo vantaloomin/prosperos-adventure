@@ -1,0 +1,581 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "era": "campaign era, or all for a series spine",
+    "kind": "spine, major or capstone",
+    "owners": "cast ids the arc belongs to",
+    "beats": "the stages, in order"
+  },
+  "note": "Vanta's three seasons and prequel as soft arcs for the director (requirements \"The director\"). How hard it steers toward them follows the campaign's hand setting, and it never writes the player's actions: a player who changes things changes them, and good outcomes are not guaranteed. The source's endings are one way it can go. House rules from the source hold whatever happens: Austin's wolf's name is never told, Piper's boutique name stays secret until the end of senior year, Kim never says \"Mom\" until she chooses to.",
+  "arcs": [
+    {
+      "id": "the-bonded-circle",
+      "name": "The bonded circle",
+      "era": "all",
+      "tier": "local",
+      "kind": "spine",
+      "owners": [
+        "piper-marsh"
+      ],
+      "summary": "Series spine A. Season One names Piper's want, Season Two builds it, Season Three prices it and seals a smaller, real form.",
+      "beats": [
+        "Named: Piper admits the want to herself",
+        "Pitched: \"I want to build a bonded circle. You are in it.\"",
+        "A conditional yes from Kim, with Michael as a node he defines",
+        "Built in junior year, wounded by Kim's suite year",
+        "Sealed at the senior equinox, smaller than dreamed"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "institutions-that-claim",
+      "name": "Institutions that claim",
+      "era": "all",
+      "tier": "realm",
+      "kind": "spine",
+      "owners": [
+        "ensemble"
+      ],
+      "summary": "Series spine B: the fae courts, the Boston lineage, the Crane family and the DED. Season One opens each front, Season Two sends auditors, Season Three holds hearings.",
+      "beats": [
+        "Callum's visit; Genevieve's layover; the Crane gala list; Whitestone's 1984",
+        "The auditor, the review board, the cold case",
+        "The hearings, and every claim answered"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "terms-and-conditions",
+      "name": "Terms and Conditions",
+      "era": "freshman-summer",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "jason-kessler",
+        "piper-marsh",
+        "austin-hallward"
+      ],
+      "summary": "The prequel, June to August 2009: housing letters in cream envelopes put Jason and Piper in one Nexus unit, one door, one bedroom. All three couples are sitting on the same news.",
+      "beats": [
+        "Two envelopes in two states",
+        "Austin three doors down",
+        "The phone call both of them rehearse",
+        "The bragging problem: do we tell the others?",
+        "Preview day: a too-smooth steward and a radiator warm in July",
+        "The convergence: everyone had the same secret",
+        "The threshold of move-in"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "kindling",
+      "name": "Kindling",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "jason-kessler"
+      ],
+      "summary": "Jason pitches the support group he has drafted for eleven months; the name collides with the Ember Circle and Whitestone renames it.",
+      "beats": [
+        "The pitch, and Halvers building a paper trail",
+        "Whitestone: \"I attempted something like this in 1984.\"",
+        "First meeting on the Observatory roof: Graham hostile, Iona crying and allowed to finish",
+        "Early-career mistakes: Christine stands up and talks for eleven minutes",
+        "Founded, funded, tested"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-betrothal",
+      "name": "Callum and the betrothal",
+      "era": "sophomore",
+      "tier": "regional",
+      "kind": "major",
+      "owners": [
+        "rina-aldwyn"
+      ],
+      "summary": "Callum arrives unannounced during Rina's Grove shift and stays a gracious week; her forgeries sit seven feet from his tea.",
+      "beats": [
+        "The oolong from a grove she knows by name",
+        "Harper's, without Austin",
+        "\"An old friend visited.\" Austin lets the lie stand.",
+        "Warned; the forgeries continue"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "human-interest",
+      "name": "@HumanInterest",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "amanda-rhodes"
+      ],
+      "summary": "Amanda launches the account she came to Havenbrooke to build, pitching each of the eight in turn and never Michael.",
+      "beats": [
+        "The pitch tour: Austin's one-syllable no, Jason's viral consent refusal, Christine's yes at forty percent",
+        "30,000 followers in three weeks",
+        "\"You're exactly what I hoped you'd be.\"",
+        "An exposure-fatigue tip in her inbox",
+        "Eight hundred words: publish under her own name, and leave Michael's out"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-harvest-howl",
+      "name": "The Harvest Howl",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "ensemble"
+      ],
+      "summary": "The Alpha Gamma and Sigma Theta Hex party on the north practice fields, Halloween Saturday. More mixed-species couples start here than anywhere.",
+      "beats": [
+        "Amanda in camera mode, then a locked bathroom",
+        "Petra: \"You pour for everyone. Who pours for you?\"",
+        "Rina gone into Ironroot Woods for an hour",
+        "Kim's pre-approved Howl scene"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "dethroned",
+      "name": "Dethroned",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "austin-hallward"
+      ],
+      "summary": "Dorian's polite challenge letter; Austin has the votes and does not want the job.",
+      "beats": [
+        "A 3 a.m. dish argument settled in eight minutes",
+        "Paula's floor: \"You don't have to win.\"",
+        "He cedes the presidency"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-feed-swap",
+      "name": "The feed-swap",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "jason-kessler",
+        "piper-marsh"
+      ],
+      "summary": "Piper's standing offer, eleven months on the table, accepted: a negotiated feed-swap with Vivian Corrigan.",
+      "beats": [
+        "Three negotiation meetings and a written protocol",
+        "Night one goes right",
+        "Night two: the channels blur and Piper's hands end it",
+        "Ninety seconds that Jason has to live with"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-scent",
+      "name": "The scent that does not belong",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "austin-hallward",
+        "rina-aldwyn"
+      ],
+      "summary": "Austin maps a bitten lycan's recon loops tightening toward Rina's Grove shifts and finds the name Silas Varn.",
+      "beats": [
+        "Ashworth: \"Let's see what it is before we report it.\"",
+        "Rina: \"Then don't protect me.\"",
+        "Silas expelled; the lineage question left open"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "runway-and-crash",
+      "name": "Runway and crash",
+      "era": "sophomore",
+      "tier": "regional",
+      "kind": "major",
+      "owners": [
+        "christine-kessler",
+        "piper-marsh"
+      ],
+      "summary": "A Manhattan show needs Piper's charm work; five late nights at Stitch Hall; then the lithium drifts and Christine crashes into Thanksgiving.",
+      "beats": [
+        "The hem-pinning scene: \"Hold that.\" \"I know.\"",
+        "The show and the upgraded contract",
+        "A fox tattoo, an unnegotiated feed, a 2 a.m. confession",
+        "Pale Press at 11:17 p.m.: Paula stands up first",
+        "Stabilization, and the dream bleed into Piper's sleep"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ink",
+      "name": "Ink",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "michael-reeves",
+        "kimberly-corwin"
+      ],
+      "summary": "Three weeks on the Evermere protocol and Michael's rib tattoo goes warm; Bex finds the heartbreak lock in her logbook.",
+      "beats": [
+        "\"Go back. Find out.\"",
+        "Bex's apology without reservation",
+        "Removal needs a witch with a trust bond: Kim",
+        "Their first real fight, about him, not the kink"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "nobody-goes-home",
+      "name": "Nobody goes home",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "capstone",
+      "owners": [
+        "ensemble"
+      ],
+      "summary": "Winter break 2009: everyone has a reason not to leave, and Piper makes room without saying so.",
+      "beats": [
+        "Never Have I Ever on Christmas Eve",
+        "Kim arriving on day six through a snowstorm",
+        "The 4 a.m. kitchen"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-proposition",
+      "name": "The proposition",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "piper-marsh",
+        "jason-kessler",
+        "kimberly-corwin"
+      ],
+      "summary": "Piper names the circle to Jason, then pitches it to Kim and Michael. Christine is left out, and the reason matters.",
+      "beats": [
+        "Three calls with Hanae: \"A bonded circle is built, not found.\"",
+        "A typed outline over cold tea",
+        "Jason's yes, sent away for three days, comes back",
+        "Kim's answer drafted and unsent"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "well-see",
+      "name": "We'll see",
+      "era": "sophomore",
+      "tier": "regional",
+      "kind": "major",
+      "owners": [
+        "kimberly-corwin"
+      ],
+      "summary": "Genevieve arrives on a layover that exists on no itinerary, already in touch with Thorne-Ashford about the suite.",
+      "beats": [
+        "Harper's, Michael in Jason's blazer: \"I want to still be in love with her.\"",
+        "Kim interrupts her mother for the first time",
+        "The window held open to the end of junior year"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "sealskin",
+      "name": "Sealskin",
+      "era": "sophomore",
+      "tier": "regional",
+      "kind": "major",
+      "owners": [
+        "austin-hallward",
+        "paula-mercer"
+      ],
+      "summary": "Mairead's sealskin is gone from a chest whose ward never fired. Ashworth puts Austin on it with Bryn Callow.",
+      "beats": [
+        "Her hair going brittle by Saturday",
+        "Aurelio at the Stag & Thistle: \"Look three lines down.\"",
+        "Drothe, paid in a 1974 monograph",
+        "The warded search of Crane Hill; Gideon arrested in Providence",
+        "Scholarships frozen, Phi Sigma Nox under review, a cold-case file on an older skin"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "equinox",
+      "name": "Equinox",
+      "era": "sophomore",
+      "tier": "regional",
+      "kind": "major",
+      "owners": [
+        "kimberly-corwin",
+        "michael-reeves"
+      ],
+      "summary": "The spring rite. The presiding alumna is Oriane Dupré. Season One's cliffhanger.",
+      "beats": [
+        "Kim tells Piper everything at Pale Press",
+        "Kim tells Michael the true shape of it and asks for something new",
+        "The rite"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "lake-effect",
+      "name": "Lake Effect",
+      "era": "sophomore",
+      "tier": "local",
+      "kind": "capstone",
+      "owners": [
+        "ensemble"
+      ],
+      "summary": "A week in a rented house on Seneca Lake before everyone scatters; Kim hands Piper her unsent answer to read.",
+      "beats": [
+        "Conditions spoken: slow, Michael a chosen node, revocable, nothing until fall",
+        "The bark laugh from the porch"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-auditor",
+      "name": "The court auditor",
+      "era": "junior",
+      "tier": "realm",
+      "kind": "major",
+      "owners": [
+        "rina-aldwyn"
+      ],
+      "summary": "Maera Silveth arrives from the Eastern Seelie court. The forgeries are found; the grove is frozen; the withering begins.",
+      "beats": [
+        "An envelope",
+        "Discovery",
+        "The grove frozen"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-review",
+      "name": "The feeding scandal and the DED review",
+      "era": "junior",
+      "tier": "realm",
+      "kind": "major",
+      "owners": [
+        "jason-kessler",
+        "iolana-whitestone",
+        "leona-thrace"
+      ],
+      "summary": "A feeding incident on campus brings a DED review board down on Kindling.",
+      "beats": [
+        "The incident",
+        "Testimony",
+        "The review",
+        "Kindling survives, funded and co-led with Leona"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "kneel",
+      "name": "Kneel",
+      "era": "junior",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "austin-hallward",
+        "petra-dalvik",
+        "rina-aldwyn"
+      ],
+      "summary": "Austin learns to kneel with Petra and hands what he learned to Rina at Petra's graduation.",
+      "beats": [
+        "First knot",
+        "Kneel",
+        "Permission"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-suite",
+      "name": "The suite",
+      "era": "junior",
+      "tier": "regional",
+      "kind": "major",
+      "owners": [
+        "kimberly-corwin"
+      ],
+      "summary": "Kim accepts the ritual-leadership suite on her own terms and steps back from the circle.",
+      "beats": [
+        "Suite",
+        "The erased page",
+        "The quiet"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-older-skin",
+      "name": "The older sealskin",
+      "era": "junior",
+      "tier": "realm",
+      "kind": "major",
+      "owners": [
+        "vivienne-crane",
+        "austin-hallward",
+        "sera-ashworth"
+      ],
+      "summary": "A Crane cracks the cold case. Lucian is wounded, not felled.",
+      "beats": [
+        "Grey eyes",
+        "Repatriation"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "chosen-not-wanted",
+      "name": "Chosen, not wanted",
+      "era": "junior",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "amanda-rhodes",
+        "joaquin-reyes"
+      ],
+      "summary": "Instagram launches on October 6, 2010. Joaquin sees Amanda from the angle where she is real.",
+      "beats": [
+        "New colors",
+        "Audience"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "easter",
+      "name": "Easter",
+      "era": "junior",
+      "tier": "regional",
+      "kind": "major",
+      "owners": [
+        "jason-kessler",
+        "christine-kessler",
+        "deirdre-kessler"
+      ],
+      "summary": "Deirdre's illness comes out at Easter. The summer capstone is at her house in Pennsylvania.",
+      "beats": [
+        "Easter",
+        "Forty days",
+        "Kessler summer"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "severance",
+      "name": "Severance",
+      "era": "senior",
+      "tier": "realm",
+      "kind": "major",
+      "owners": [
+        "rina-aldwyn"
+      ],
+      "summary": "The court hearing in September: Rina is freed and severed, and dying by inches without ground.",
+      "beats": [
+        "Severance",
+        "The problem of ground",
+        "Ground truth"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-re-anchoring",
+      "name": "The re-anchoring",
+      "era": "senior",
+      "tier": "realm",
+      "kind": "major",
+      "owners": [
+        "ensemble",
+        "kimberly-corwin"
+      ],
+      "summary": "The series climax: Rina re-anchors at the junction under Nexus at the spring equinox. The dorm was the destination all along.",
+      "beats": [
+        "Kim maps the junction",
+        "Equinox I: Assembly",
+        "Equinox II: Root"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "siphon",
+      "name": "Siphon",
+      "era": "senior",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "paula-mercer",
+        "austin-hallward"
+      ],
+      "summary": "Paula's siphon comes out. The year is repair: changed, not broken.",
+      "beats": [
+        "Siphon",
+        "Fourteen months, again",
+        "The porch treaty"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "decline",
+      "name": "Deirdre's decline",
+      "era": "senior",
+      "tier": "regional",
+      "kind": "major",
+      "owners": [
+        "jason-kessler",
+        "christine-kessler"
+      ],
+      "summary": "Deirdre dies in February. The twins hold. Her letter stays unopened in the hall drawer.",
+      "beats": [
+        "Decline",
+        "January",
+        "February",
+        "What she left"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "without-a-villain",
+      "name": "Without a villain",
+      "era": "senior",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "kimberly-corwin",
+        "michael-reeves"
+      ],
+      "summary": "Kim and Michael, the steadiest couple, end over winter with nobody to blame.",
+      "beats": [
+        "The conversation",
+        "Aftermaths",
+        "Last winter"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "caps",
+      "name": "Caps",
+      "era": "senior",
+      "tier": "local",
+      "kind": "major",
+      "owners": [
+        "ensemble"
+      ],
+      "summary": "Offers, the shop lease and the boutique name revealed at last, graduation, and the third floor one more time.",
+      "beats": [
+        "Offers",
+        "This",
+        "Caps",
+        "The third floor"
+      ],
+      "origin": "source"
+    }
+  ]
+}

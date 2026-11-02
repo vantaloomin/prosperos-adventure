@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "custom_allowed": true,
+  "note": "Every world allows player-made personas. BABEL's are the four from Halvorsen's, each starting where the tower put them on arrival night; a custom persona is another arrival from the same wave, landing on the Concourse. Stats are Prospero at creation (before any Tether or class); Grant's and Kenzie's are Vanta's sheets, Bri's and Chase's are drafts. Whoever is not the player stays in the world as an autonomous NPC (cast.json). Each persona's `knows` is what the player learns by choosing them; it stays hidden from the others.",
+  "personas": [
+    {
+      "id": "grant-mabry",
+      "name": "Grant Mabry",
+      "concept": "The engineer who built the game the tower is wearing",
+      "starts": "the-concourse",
+      "creation": {
+        "race": "NEPHIL [unstable · conflict], over a Watcher Trace [residual · ancestral]",
+        "class": "garbled [request: KEEPER]",
+        "condition": "Unfinished: the rebuild froze partway; every joint aches and regeneration cannot fix it"
+      },
+      "knows": [
+        "BABEL's systems, as built: the Mabry curve, ranks, Rank Trials, the Waystones, the satchel, the beta floors and their ranks.",
+        "That he designed Tether and cut it in 2024, because playtesters stacked bonds and drained one partner to feed another.",
+        "The sharing fantasy he and Bri only ever talked about, and that he told Chase."
+      ],
+      "origin": "source",
+      "authoritative": "Program/dungeon/world/data/premades/the-concourse.json"
+    },
+    {
+      "id": "kenzie-cole",
+      "name": "Kenzie Cole",
+      "concept": "The younger sister who saw what happened at the coat check",
+      "starts": "the-concourse",
+      "creation": {
+        "race": "AURIC [request: THERIAN]",
+        "class": "garbled [request: CLIMBER]",
+        "condition": "Her tattoos and piercings are gone"
+      },
+      "knows": [
+        "Chase kissed Bri at the coat check minutes before the lights went, and Bri said \"Not here.\"",
+        "Bri bragged to her last Christmas about the fantasy she and Grant share.",
+        "What happened with Chase on July 4, 2025."
+      ],
+      "origin": "source",
+      "authoritative": "Program/dungeon/world/data/premades/the-concourse.json"
+    },
+    {
+      "id": "bri-cole",
+      "name": "Bri Cole",
+      "concept": "The fiancée who came down three floors up, the only one with a real class",
+      "starts": "the-gilded-bazaar",
+      "creation": {
+        "race": "HUMAN, honored at a cost: Past ▒▓░▒▓▒ on her sheet",
+        "class": "BREAKER, honored (Heavy Swing, Brace)"
+      },
+      "knows": [
+        "She let Chase kiss her at the coat check and told him \"Not here.\"",
+        "What she did for money from nineteen, and what bodies trade for.",
+        "That Grant doesn't know what she likes."
+      ],
+      "origin": "source",
+      "authoritative": "Program/dungeon/world/data/premades/the-gilded-bazaar.json"
+    },
+    {
+      "id": "chase-whitaker",
+      "name": "Chase Whitaker",
+      "concept": "The best friend who pen-tested the beta and wants what's Grant's",
+      "starts": "the-gilded-bazaar",
+      "creation": {
+        "race": "THERIAN, wolf line, honored",
+        "class": "garbled [request: CLIMBER], not honored"
+      },
+      "knows": [
+        "Grant told him about the fantasy, and he used it at the coat check.",
+        "The beta's floors, from testing them (the prices have changed).",
+        "Teo from the beta Discord, who always knows the way out.",
+        "What happened with Kenzie on July 4, 2025."
+      ],
+      "origin": "source",
+      "authoritative": "Program/dungeon/world/data/premades/the-gilded-bazaar.json"
+    }
+  ]
+}

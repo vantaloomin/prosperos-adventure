@@ -1,0 +1,1079 @@
+{
+ "schema_version": 1,
+ "id": "the-gilded-bazaar",
+ "name": "the Gilded Bazaar",
+ "setting": "original",
+ "era": "fantasy",
+ "category": "fictional",
+ "basis": "Vanta's own world of BABEL, from the Mabry Curve roleplay: a living tower of themed floors wearing the skin of an unreleased full-dive game.",
+ "region": "Floor Three",
+ "country": "the tower",
+ "timezone": "America/Chicago",
+ "aliases": [
+  "the Bazaar",
+  "the Gilded Bazaar"
+ ],
+ "summary": "The third floor up: a merchant city under a lantern dome that cycles twice in a Concourse day, so its nights are short and it never closes. Spice houses, salons, rooms by the week, fences under the Copper Steps, and a Stair gate one woman owns. BABEL parked its best vendors here; in the tower, everything and everyone has a price.",
+ "lat": 30.558,
+ "lon": -97.679,
+ "intensity": {
+  "preset": "unflinching",
+  "drama": "eventful",
+  "voice": "pulpy and mythic in a modern frame: omens, weather and System panes, where every win carries a bill and desire is a power with a price"
+ },
+ "currency": {
+  "code": "talent",
+  "symbol": "T",
+  "name": "Talents"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.5
+ },
+ "sources": {
+  "mabry-curve-2026-10": {
+   "kind": "curated",
+   "title": "BABEL written for Prospero's Dungeon from Vanta's Mabry Curve archive",
+   "license": "Vanta's own setting; all rights reserved",
+   "retrieved": "2026-10-22",
+   "note": "Places, people and customs from the Mabry Curve story, hidden files and side cast (adventure/world/packages/babel/sources.md). Names the story does not give are new."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "the-lantern-dome",
+   "name": "under the lantern dome",
+   "summary": "The center of the floor under a dome hung with lanterns that brighten and dim twice in a Concourse day: salons, spice houses, and rooms let by the week.",
+   "vibe": [
+    "wealthy",
+    "night",
+    "priced"
+   ],
+   "lat": 30.558,
+   "lon": -97.679,
+   "rent_tier": "very-high",
+   "housing": [
+    "salon-room",
+    "townhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "chairmen"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     40,
+     60
+    ],
+    "one_bedroom": [
+     70,
+     100
+    ],
+    "two_bedroom": [
+     120,
+     180
+    ]
+   }
+  },
+  {
+   "id": "the-spice-rows",
+   "name": "the spice rows",
+   "summary": "Factors' houses and warehouses that smell of clove and pepper, where the floor's money is made and Okonkwo Vale buys his drinks.",
+   "vibe": [
+    "merchant",
+    "fragrant"
+   ],
+   "lat": 30.56,
+   "lon": -97.676,
+   "rent_tier": "high",
+   "housing": [
+    "townhouse",
+    "room-over-shop"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "chairmen"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     30,
+     45
+    ],
+    "one_bedroom": [
+     50,
+     70
+    ],
+    "two_bedroom": [
+     80,
+     120
+    ]
+   }
+  },
+  {
+   "id": "the-copper-steps",
+   "name": "the Copper Steps",
+   "summary": "A broad flight of copper-shod steps down toward the shaft, with fence rows and paper sellers in the arcades under it, and behind them the toll gate onto the Stair.",
+   "vibe": [
+    "fences",
+    "paper",
+    "gate"
+   ],
+   "lat": 30.557,
+   "lon": -97.674,
+   "rent_tier": "low",
+   "housing": [
+    "room-over-shop",
+    "garret"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     10,
+     15
+    ],
+    "one_bedroom": [
+     18,
+     24
+    ],
+    "two_bedroom": [
+     26,
+     36
+    ]
+   }
+  },
+  {
+   "id": "the-wharf",
+   "name": "the freight wharf",
+   "summary": "Cranes and chain-winches on the shaft's edge, where cargo cages load for the floors above and below, and a night crew runs one Sabeen does not own.",
+   "vibe": [
+    "docks",
+    "night",
+    "smuggling"
+   ],
+   "lat": 30.555,
+   "lon": -97.671,
+   "rent_tier": "low",
+   "housing": [
+    "bunkhouse",
+    "garret"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     8,
+     12
+    ],
+    "one_bedroom": [
+     14,
+     20
+    ],
+    "two_bedroom": [
+     22,
+     30
+    ]
+   }
+  }
+ ],
+ "places": [
+  {
+   "id": "the-lantern-room",
+   "name": "the Lantern Room",
+   "kind": "nightlife",
+   "neighborhood": "the-lantern-dome",
+   "summary": "Sabeen Oro's salon: lamps under colored glass, low divans, hostesses and dancers on a polished floor, and private rooms off it, the Blue Room among them, at the girl's choice and a third to the house. Sabeen prices people the way the Bazaar prices everything, and her guests come to watch her do it.",
+   "tags": [
+    "salon",
+    "dancing",
+    "private-rooms"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Sabeen's couch",
+    "the dancing floor",
+    "the Blue Room",
+    "the girls' stair"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-copper-scale",
+   "name": "the Copper Scale",
+   "kind": "inn",
+   "neighborhood": "the-lantern-dome",
+   "summary": "Rooms by the week up three flights: narrow beds with brass frames, a copper basin, one shuttered window on the street. The walls are thin and the neighbors hear everything.",
+   "tags": [
+    "rooms",
+    "thin-walls"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "room 3, top floor, street side",
+    "the stair",
+    "the landlady's hatch"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-spice-exchange",
+   "name": "the spice exchange",
+   "kind": "market",
+   "neighborhood": "the-spice-rows",
+   "summary": "A hall of factors shouting prices for clove, pepper and things that are not spice, under a board that changes faster than anyone can read it.",
+   "tags": [
+    "market",
+    "spice",
+    "prices"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the price board",
+    "the factors' gallery"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-charm-sellers",
+   "name": "the charm sellers",
+   "kind": "shopping",
+   "neighborhood": "the-spice-rows",
+   "summary": "Bazaar charms by grade: copper rings that keep a night from having consequences, hush-beads that muffle words sent over a bond, luck knots. Graded on the ladder, priced to match.",
+   "tags": [
+    "charms",
+    "graded",
+    "contraceptive"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the ring tray",
+    "the hush-beads"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-fence-rows",
+   "name": "the fence rows",
+   "kind": "market",
+   "neighborhood": "the-copper-steps",
+   "summary": "Arcades under the Copper Steps where Pell the Wire and their cousins buy anything, sell anything, and trade in rumor most of all.",
+   "tags": [
+    "fences",
+    "rumors",
+    "stolen"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Pell's table",
+    "the back arcade"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "wicks-paper",
+   "name": "Old Wick's paper",
+   "kind": "shopping",
+   "neighborhood": "the-copper-steps",
+   "summary": "A paper seller under the Steps: maps of floors, letters, bills of sale, and the occasional hand-drawn route someone sold to get up the Stair.",
+   "tags": [
+    "maps",
+    "paper",
+    "routes"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the map drawer"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-stair-gate",
+   "name": "the Stair gate",
+   "kind": "landmark",
+   "neighborhood": "the-copper-steps",
+   "summary": "An old iron cage of a toll booth behind the Copper Steps, onto the Stair. Two Talents up. Down is free, because nobody comes back to pay. The gate is Sabeen Oro's, and Pell's cousin keeps it.",
+   "tags": [
+    "gate",
+    "toll",
+    "stair"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the toll window",
+    "the first flight up"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-freight-wharf",
+   "name": "the freight wharf",
+   "kind": "docks",
+   "neighborhood": "the-wharf",
+   "summary": "Cranes, winches and cargo cages on the shaft's edge. After dome-dark a night crew loads an unlicensed cage for the floors below, and takes passengers for everything they have.",
+   "tags": [
+    "docks",
+    "smuggling",
+    "night-cage"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the night crew's cage",
+    "the foreman's lantern",
+    "the edge"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-crier-post",
+   "name": "the crier's post",
+   "kind": "landmark",
+   "neighborhood": "the-copper-steps",
+   "summary": "Where notices go up for the floor and go down the chain to the others: sales, debts, and the Lantern Room's bounties.",
+   "tags": [
+    "news",
+    "bounties"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-wharf-kitchen",
+   "name": "the wharf kitchen",
+   "kind": "restaurant",
+   "neighborhood": "the-wharf",
+   "summary": "A brazier, a pot and a plank bench where crane crews eat between cages, and the night crew eats before.",
+   "tags": [
+    "crews",
+    "night-cage"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "rice and spiced meat",
+   "spots": [
+    "the plank bench",
+    "the brazier"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "on-foot",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "The dome to the Copper Steps is a quarter hour.",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "chairmen",
+   "name": "Chairmen",
+   "kind": "carriage",
+   "summary": "Sedan chairs for those who pay not to walk.",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "salon-hostess",
+   "name": "Salon hostess",
+   "sector": "salon",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Hostessing, dancing and private rooms at a salon, a third to the house.",
+   "themes": [
+    "the house cut",
+    "clients",
+    "the floor"
+   ],
+   "eras": [
+    "fantasy"
+   ],
+   "adult": true
+  },
+  {
+   "id": "runner",
+   "name": "Runner",
+   "sector": "salon",
+   "schedule": "rotating",
+   "employment": "freelance",
+   "pay": "$$",
+   "summary": "Fetching people and debts down the Stair for a house.",
+   "themes": [
+    "the Stair",
+    "debts",
+    "fetching"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "factor",
+   "name": "Spice factor",
+   "sector": "merchant",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$$",
+   "summary": "Buying and selling spice and other things on the exchange.",
+   "themes": [
+    "prices",
+    "cargo",
+    "clients"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "fence",
+   "name": "Fence",
+   "sector": "criminal",
+   "schedule": "evening",
+   "employment": "freelance",
+   "pay": "$$",
+   "summary": "Buying and selling what nobody asks about.",
+   "themes": [
+    "rumors",
+    "stolen goods",
+    "cousins"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "charm-maker",
+   "name": "Charm maker",
+   "sector": "craft",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$$",
+   "summary": "Making graded Bazaar charms.",
+   "themes": [
+    "grades",
+    "copper",
+    "customers"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "wharf-hand",
+   "name": "Wharf hand",
+   "sector": "docks",
+   "schedule": "shift-night",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Loading cargo cages on the shaft's edge.",
+   "themes": [
+    "the chains",
+    "the drop",
+    "the night crew"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "room-letter",
+   "name": "Room letter",
+   "sector": "lodging",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Letting rooms by the week and hearing through the walls.",
+   "themes": [
+    "rooms",
+    "debts",
+    "thin walls"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  }
+ ],
+ "work_by_gender": false,
+ "employers": [
+  {
+   "id": "the-lantern-room-house",
+   "name": "the Lantern Room",
+   "sector": "salon",
+   "neighborhood": "the-lantern-dome",
+   "size": "medium",
+   "summary": "Sabeen Oro's house.",
+   "careers": [
+    "salon-hostess",
+    "runner"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-exchange",
+   "name": "the spice exchange",
+   "sector": "merchant",
+   "neighborhood": "the-spice-rows",
+   "size": "large",
+   "summary": "The factors' hall.",
+   "careers": [
+    "factor"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-wharf-gangs",
+   "name": "the freight wharf",
+   "sector": "docks",
+   "neighborhood": "the-wharf",
+   "size": "medium",
+   "summary": "The cargo cages.",
+   "careers": [
+    "wharf-hand"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "the-trade",
+   "name": "The trade",
+   "neighborhoods": [
+    "the-lantern-dome",
+    "the-spice-rows"
+   ],
+   "sectors": [
+    "salon",
+    "merchant",
+    "craft"
+   ],
+   "summary": "Money on the Bazaar is made selling what people want, and people.",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Under the lantern dome: warm, fragrant, never dark for long. The dome brightens and dims twice in a Concourse day.",
+  "months": [
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   },
+   {
+    "high_f": 76,
+    "low_f": 64,
+    "rain_days": 1,
+    "note": "Always open."
+   }
+  ],
+  "source": "mabry-curve-2026-10"
+ },
+ "annual_events": [],
+ "local_color": [
+  {
+   "id": "everything-has-a-price",
+   "name": "Everything here has a price",
+   "kind": "saying",
+   "summary": "What Sabeen says, and the floor says after her.",
+   "places": [
+    "the-lantern-room"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "down-is-free",
+   "name": "Down is free",
+   "kind": "saying",
+   "summary": "Two Talents up, down free at the gate, because nobody comes back to pay.",
+   "places": [
+    "the-stair-gate"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "two-sunsets",
+   "name": "Two sunsets",
+   "kind": "custom",
+   "summary": "The Bazaar sees two dome-darks for every Concourse night, so a week here is half a week anywhere else.",
+   "places": [
+    "the-lantern-room"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-third",
+   "name": "A third to the house",
+   "kind": "custom",
+   "summary": "The Lantern Room's cut, and the Bazaar's idea of fair.",
+   "places": [
+    "the-lantern-room"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "copper-chit",
+   "name": "A copper chit",
+   "kind": "rumor",
+   "summary": "A chit stamped with a scale is Sabeen's favor. Keep one long enough and it becomes her debt.",
+   "places": [
+    "the-lantern-room",
+    "the-fence-rows"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "selling-the-turning",
+   "name": "Selling the Turning",
+   "kind": "saying",
+   "summary": "Everybody's selling the Turning this week: any rumor about the new skin goes for good money under the Steps.",
+   "places": [
+    "the-fence-rows"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "names": {
+  "groups": {
+   "bazaar": {
+    "feminine": [
+     "Sabeen",
+     "Nell",
+     "Merrow",
+     "Yasmin",
+     "Odile",
+     "Cressida",
+     "Fenna",
+     "Leocadia",
+     "Iolanthe",
+     "Rue",
+     "Damaris",
+     "Saffi",
+     "Zelie",
+     "Honor"
+    ],
+    "masculine": [
+     "Okonkwo",
+     "Pell",
+     "Wick",
+     "Barnaby",
+     "Casimir",
+     "Tobias",
+     "Emeric",
+     "Haskel",
+     "Quill",
+     "Ravi",
+     "Sorley",
+     "Anselm",
+     "Fitch",
+     "Marek"
+    ],
+    "neutral": [
+     "Dot",
+     "Clove",
+     "Tinker",
+     "Marlo"
+    ],
+    "family": [
+     "Oro",
+     "Vale",
+     "the Wire",
+     "Copperhand",
+     "Saffron",
+     "Lessard",
+     "Marchetti",
+     "Ibekwe",
+     "Duquesne",
+     "Halloran",
+     "Steepwater",
+     "Mendoza",
+     "Achebe",
+     "Varga"
+    ]
+   }
+  }
+ },
+ "calendar": "none",
+ "prices": [
+  {
+   "id": "day-wage",
+   "item": "A wharf hand's day wage",
+   "low": 4,
+   "high": 6,
+   "per": "day",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "room-week",
+   "item": "A week at the Copper Scale",
+   "low": 50,
+   "high": 70,
+   "per": "week",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "sword",
+   "item": "A proper graded sword (E)",
+   "low": 50,
+   "high": 70,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "charm-ring",
+   "item": "A C-grade contraceptive charm ring",
+   "low": 15,
+   "high": 25,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "hush-bead",
+   "item": "A hush-bead",
+   "low": 30,
+   "high": 60,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "toll-up",
+   "item": "The Stair gate, going up",
+   "low": 2,
+   "high": 2,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "toll-down",
+   "item": "The Stair gate, going down",
+   "low": 0,
+   "high": 0,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "private-booking",
+   "item": "A private room at the Lantern Room",
+   "low": 150,
+   "high": 200,
+   "per": "booking",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "night-cage",
+   "item": "Two seats on the night cage",
+   "low": 100,
+   "high": 200,
+   "per": "everything",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "map",
+   "item": "A floor map from Old Wick",
+   "low": 5,
+   "high": 40,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "spice-meal",
+   "item": "A spiced meal (it tastes)",
+   "low": 6,
+   "high": 10,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "water": [],
+ "notables": [
+  {
+   "id": "sabeen-oro",
+   "name": "Sabeen Oro",
+   "given": "Sabeen",
+   "pronouns": "she/her",
+   "age": 52,
+   "place": "the-lantern-room",
+   "role": "room-broker and salon keeper",
+   "staff": true,
+   "about": "Keeps the Lantern Room and prices people the way the Bazaar prices everything. Calls everyone darling. Nobody will say whether she is Lilim.",
+   "wants": "to own whatever is most valuable on the Stair this week",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "merrow",
+   "name": "Merrow",
+   "given": "Merrow",
+   "pronouns": "she/her",
+   "age": 33,
+   "place": "the-lantern-room",
+   "role": "runner",
+   "staff": false,
+   "about": "Sabeen's runner, a sharp-faced climber from Salford in a brown coat with a copper scales pin. Owes the house more than she earns.",
+   "wants": "out from under Sabeen",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "okonkwo-vale",
+   "name": "Okonkwo Vale",
+   "given": "Okonkwo",
+   "pronouns": "he/him",
+   "age": 56,
+   "place": "the-spice-exchange",
+   "role": "spice factor",
+   "staff": false,
+   "about": "A courteous, married Rank C factor who smells of clove and asks Sabeen for the new ones.",
+   "wants": "the new ones",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "pell-the-wire",
+   "name": "Pell the Wire",
+   "given": "Pell",
+   "pronouns": "they/them",
+   "age": 38,
+   "place": "the-fence-rows",
+   "role": "fence",
+   "staff": true,
+   "about": "A light-marked rat-line Therian who buys anything and sells everything, rumors first.",
+   "wants": "the best rumor on the floor",
+   "source": "mabry-curve-2026-10",
+   "kind": "therian"
+  },
+  {
+   "id": "old-wick",
+   "name": "Old Wick",
+   "given": "Wick",
+   "pronouns": "they/them",
+   "age": 71,
+   "place": "wicks-paper",
+   "role": "paper seller",
+   "staff": true,
+   "about": "One-eyed, sells maps and paper, does not haggle with dogs.",
+   "wants": "a good blade",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "nell",
+   "name": "Nell",
+   "given": "Nell",
+   "pronouns": "she/her",
+   "age": 22,
+   "place": "the-lantern-room",
+   "role": "salon girl",
+   "staff": false,
+   "about": "Up from the Varrow cage trade, quick with gossip.",
+   "wants": "never to go back down",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-toll-keeper",
+   "name": "the toll-keeper",
+   "given": "the toll-keeper",
+   "pronouns": "they/them",
+   "age": 45,
+   "place": "the-stair-gate",
+   "role": "gate keeper",
+   "staff": true,
+   "about": "Pell's cousin, in the iron toll booth behind the Copper Steps.",
+   "wants": "two Talents from everyone going up",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-night-foreman",
+   "name": "the night foreman",
+   "given": "the foreman",
+   "pronouns": "they/them",
+   "age": 50,
+   "place": "the-freight-wharf",
+   "role": "smugglers' foreman",
+   "staff": true,
+   "about": "Runs the night cage down the chains and can smell copper on a passenger.",
+   "wants": "the chains open and Sabeen out of them",
+   "source": "mabry-curve-2026-10"
+  }
+ ]
+}

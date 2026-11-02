@@ -1,0 +1,1834 @@
+{
+ "schema_version": 1,
+ "source": {
+  "kind": "curated",
+  "title": "Family traditions and seasonal decorations written for Prospero Dungeon",
+  "license": "CC0-1.0",
+  "retrieved": "2026-10-10",
+  "note": "General knowledge of how families keep holidays. A tradition names a holiday by its id in holidays.json and the calendars it fits."
+ },
+ "traditions": [
+  {
+   "holiday": "thanksgiving",
+   "calendars": [
+    "us"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "sweet potato casserole with marshmallows on top",
+    "a turkey that takes all morning",
+    "cornbread stuffing with sausage",
+    "green bean casserole with the crispy onions",
+    "pecan pie and pumpkin pie, both",
+    "macaroni and cheese baked in the big dish",
+    "cranberry sauce still in the shape of the can",
+    "collard greens that simmer all day"
+   ],
+   "rituals": [
+    "Everyone goes around the table saying one thing they are thankful for.",
+    "The football game is on with the sound low and nobody admits to watching it.",
+    "Leftovers go home in a stack of mismatched containers.",
+    "There is a walk around the block between dinner and pie.",
+    "The kids table never quite goes away, whatever age you are.",
+    "The wishbone gets saved to dry on the windowsill."
+   ]
+  },
+  {
+   "holiday": "christmas-eve",
+   "calendars": [
+    "us"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "a big pot of chili",
+    "seven fishes, or as close as anyone gets",
+    "tamales made the week before",
+    "hot chocolate with too many marshmallows",
+    "a cheese board that is really dinner"
+   ],
+   "rituals": [
+    "Everyone opens one present, always new pajamas.",
+    "A Christmas Eve movie, the same one every year.",
+    "A drive around the neighborhood to look at the lights.",
+    "Midnight service, or at least the early one."
+   ]
+  },
+  {
+   "holiday": "christmas",
+   "calendars": [
+    "us"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "cinnamon rolls from a tube",
+    "a glazed ham with cloves",
+    "prime rib saved for this one day",
+    "a breakfast casserole made the night before",
+    "sugar cookies left over from decorating",
+    "eggnog that someone made from scratch"
+   ],
+   "rituals": [
+    "Stockings come before anything else.",
+    "Presents get opened one at a time so everyone can watch.",
+    "A long afternoon of board games that gets competitive.",
+    "A phone call to the relatives who could not come.",
+    "Wrapping paper fights once the presents are open."
+   ]
+  },
+  {
+   "holiday": "new-years-eve",
+   "calendars": [
+    "us"
+   ],
+   "with": "friends",
+   "main": false,
+   "dishes": [
+    "a tray of pigs in a blanket",
+    "cheap champagne in plastic flutes",
+    "a seven-layer dip",
+    "black-eyed peas for luck the next day"
+   ],
+   "rituals": [
+    "Counting down with the ball drop on TV.",
+    "Everyone writes one resolution and reads it out a year later.",
+    "Pots and pans on the porch at midnight.",
+    "Home before 1 because nobody wants the traffic."
+   ]
+  },
+  {
+   "holiday": "easter",
+   "calendars": [
+    "us"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "deviled eggs with paprika",
+    "a honey-baked ham",
+    "hot cross buns",
+    "carrot cake with cream cheese frosting",
+    "lamb on the grill"
+   ],
+   "rituals": [
+    "An egg hunt in the backyard, even for the adults.",
+    "Church in the morning and brunch after.",
+    "Dyeing eggs at the kitchen table the night before.",
+    "A basket of candy that nobody admits they still want."
+   ]
+  },
+  {
+   "holiday": "independence-day",
+   "calendars": [
+    "us"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "burgers and hot dogs on the grill",
+    "potato salad from the family recipe",
+    "watermelon cut into triangles",
+    "corn on the cob with too much butter",
+    "a flag cake with blueberries and strawberries"
+   ],
+   "rituals": [
+    "Fireworks from the same spot every year.",
+    "Lawn chairs set up hours early for the parade.",
+    "A backyard cookout that runs until dark.",
+    "Sparklers once it gets dark enough."
+   ]
+  },
+  {
+   "holiday": "mothers-day",
+   "calendars": [
+    "us"
+   ],
+   "with": "mom",
+   "main": false,
+   "dishes": [
+    "brunch with mimosas",
+    "a cake from the good bakery",
+    "waffles with strawberries"
+   ],
+   "rituals": [
+    "Brunch out, booked weeks ahead.",
+    "A long phone call, even from out of town.",
+    "Flowers from the farmers market."
+   ]
+  },
+  {
+   "holiday": "fathers-day",
+   "calendars": [
+    "us"
+   ],
+   "with": "dad",
+   "main": false,
+   "dishes": [
+    "steaks on the grill",
+    "a slice of key lime pie",
+    "a cooler of good beer"
+   ],
+   "rituals": [
+    "An afternoon at a ballgame.",
+    "A round of mini golf that gets serious.",
+    "A long phone call, even from out of town."
+   ]
+  },
+  {
+   "holiday": "labor-day",
+   "calendars": [
+    "us"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "a crab feast on newspaper",
+    "grilled sausages with peppers and onions",
+    "peach cobbler"
+   ],
+   "rituals": [
+    "One last cookout before summer is over.",
+    "A day at the lake with the whole family."
+   ]
+  },
+  {
+   "holiday": "christmas",
+   "calendars": [
+    "uk"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "roast turkey with pigs in blankets",
+    "Christmas pudding set alight with brandy",
+    "roast potatoes done in goose fat",
+    "brussels sprouts that one person actually likes",
+    "mince pies by the dozen",
+    "a tin of chocolates on the coffee table"
+   ],
+   "rituals": [
+    "Crackers pulled at the table and paper crowns worn all afternoon.",
+    "The King's speech at three o'clock.",
+    "A walk after lunch whatever the weather.",
+    "A family argument over the board game, every single year."
+   ]
+  },
+  {
+   "holiday": "christmas-eve",
+   "calendars": [
+    "uk"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "a curry from the same takeaway",
+    "mulled wine on the hob",
+    "smoked salmon on brown bread"
+   ],
+   "rituals": [
+    "A carol service by candlelight.",
+    "A mince pie and a carrot left out by the fire.",
+    "A Christmas film nobody can agree on."
+   ]
+  },
+  {
+   "holiday": "boxing-day",
+   "calendars": [
+    "uk"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "turkey sandwiches with stuffing",
+    "bubble and squeak from the leftovers",
+    "cold cuts and pickles"
+   ],
+   "rituals": [
+    "A long muddy walk.",
+    "The football on in the afternoon.",
+    "Visiting the other side of the family."
+   ]
+  },
+  {
+   "holiday": "easter",
+   "calendars": [
+    "uk"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "roast lamb with mint sauce",
+    "simnel cake",
+    "hot cross buns toasted with butter"
+   ],
+   "rituals": [
+    "An egg hunt in the garden.",
+    "Easter eggs from every relative.",
+    "Church in the morning and a roast after."
+   ]
+  },
+  {
+   "holiday": "mothering-sunday",
+   "calendars": [
+    "uk"
+   ],
+   "with": "mom",
+   "main": false,
+   "dishes": [
+    "a Sunday roast out at a pub",
+    "breakfast in bed, slightly burnt toast"
+   ],
+   "rituals": [
+    "Flowers and a card delivered in person.",
+    "A long phone call, even from out of town."
+   ]
+  },
+  {
+   "holiday": "bonfire-night",
+   "calendars": [
+    "uk"
+   ],
+   "with": "friends",
+   "main": false,
+   "dishes": [
+    "jacket potatoes wrapped in foil",
+    "treacle toffee",
+    "parkin",
+    "hot dogs from a stall"
+   ],
+   "rituals": [
+    "The big bonfire and fireworks in the park.",
+    "Sparklers in the back garden."
+   ]
+  },
+  {
+   "holiday": "new-years-eve",
+   "calendars": [
+    "uk"
+   ],
+   "with": "friends",
+   "main": false,
+   "dishes": [
+    "a buffet of crisps and sausage rolls",
+    "fizz at midnight"
+   ],
+   "rituals": [
+    "Watching the fireworks over the Thames on telly.",
+    "Auld Lang Syne in a circle, arms crossed."
+   ]
+  },
+  {
+   "holiday": "pancake-day",
+   "calendars": [
+    "uk"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "pancakes with lemon and sugar",
+    "pancakes with golden syrup"
+   ],
+   "rituals": [
+    "A pancake-flipping contest that always ends on the floor."
+   ]
+  },
+  {
+   "holiday": "seollal",
+   "calendars": [
+    "south-korea"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "tteokguk, rice cake soup",
+    "jeon fried the day before",
+    "galbijjim braised short ribs",
+    "japchae glass noodles",
+    "sikhye rice punch"
+   ],
+   "rituals": [
+    "Sebae bows to the elders, and envelopes of new bills after.",
+    "A long drive to the hometown in holiday traffic.",
+    "Yunnori on the floor after lunch.",
+    "Charye, the ancestral table, set early in the morning."
+   ]
+  },
+  {
+   "holiday": "chuseok",
+   "calendars": [
+    "south-korea"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "songpyeon, half-moon rice cakes",
+    "a whole table of jeon",
+    "pears and persimmons from the market",
+    "galbi on a tabletop grill"
+   ],
+   "rituals": [
+    "Making songpyeon together the night before.",
+    "A visit to the grandparents' graves to tidy them.",
+    "Gift sets of Spam or pears traded between relatives.",
+    "Everyone looks at the full moon and makes a wish."
+   ]
+  },
+  {
+   "holiday": "parents-day",
+   "calendars": [
+    "south-korea"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "a dinner of samgyeopsal",
+    "a cake from the bakery downstairs"
+   ],
+   "rituals": [
+    "Red carnations pinned on the parents.",
+    "A long phone call, even from out of town."
+   ]
+  },
+  {
+   "holiday": "christmas",
+   "calendars": [
+    "south-korea"
+   ],
+   "with": "friends",
+   "main": false,
+   "dishes": [
+    "a Christmas cake from the bakery",
+    "fried chicken delivered"
+   ],
+   "rituals": [
+    "Lights at the department store plazas.",
+    "A small gift exchange with friends."
+   ]
+  },
+  {
+   "holiday": "new-years-eve",
+   "calendars": [
+    "south-korea"
+   ],
+   "with": "friends",
+   "main": false,
+   "dishes": [
+    "tteokbokki and fried snacks",
+    "soju and beer"
+   ],
+   "rituals": [
+    "Watching the Bosingak bell ring on TV.",
+    "Staying up for the first sunrise."
+   ]
+  },
+  {
+   "holiday": "new-years-day",
+   "calendars": [
+    "japan"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "osechi in stacked lacquer boxes",
+    "ozoni soup with mochi",
+    "kuromame sweet black beans",
+    "kamaboko in red and white"
+   ],
+   "rituals": [
+    "Hatsumode, the first shrine visit, in a long line.",
+    "Otoshidama envelopes for the younger ones.",
+    "Nengajo cards read out at the table.",
+    "The whole family dozes at the kotatsu all afternoon."
+   ]
+  },
+  {
+   "holiday": "new-years-eve",
+   "calendars": [
+    "japan"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "toshikoshi soba",
+    "a hot pot",
+    "mikan by the bowlful"
+   ],
+   "rituals": [
+    "The Kohaku song contest on TV.",
+    "The temple bell rung 108 times at midnight.",
+    "The big clean of the house, the oosouji, done in the morning."
+   ]
+  },
+  {
+   "holiday": "obon",
+   "calendars": [
+    "japan"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "somen noodles in ice water",
+    "watermelon cut on the porch",
+    "ohagi rice balls",
+    "cucumber horse and eggplant cow on the altar"
+   ],
+   "rituals": [
+    "A trip back to the hometown on a packed train.",
+    "Lanterns hung to welcome the ancestors home.",
+    "Bon odori dancing in the evening.",
+    "Cleaning the family grave together."
+   ]
+  },
+  {
+   "holiday": "christmas-eve",
+   "calendars": [
+    "japan"
+   ],
+   "with": "friends",
+   "main": false,
+   "dishes": [
+    "a bucket of fried chicken, ordered weeks ahead",
+    "strawberry shortcake from the bakery"
+   ],
+   "rituals": [
+    "A night out to see the illuminations.",
+    "A small gift exchange."
+   ]
+  },
+  {
+   "holiday": "setsubun",
+   "calendars": [
+    "japan"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "an ehomaki roll eaten in silence facing the lucky direction",
+    "roasted soybeans"
+   ],
+   "rituals": [
+    "Mamemaki, throwing beans out the door for luck."
+   ]
+  },
+  {
+   "holiday": "childrens-day",
+   "calendars": [
+    "japan"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "kashiwa mochi",
+    "chimaki"
+   ],
+   "rituals": [
+    "Koinobori carp streamers flying from the balcony."
+   ]
+  },
+  {
+   "holiday": "thanksgiving",
+   "calendars": [
+    "us-1920s",
+    "us-1880s"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "a roast turkey with oyster dressing",
+    "mince pie and pumpkin pie",
+    "creamed onions",
+    "Parker House rolls"
+   ],
+   "rituals": [
+    "Grace said long enough that the food goes cold.",
+    "The whole family crowds into the parlor after dinner.",
+    "A football game in the afternoon, or at least the scores in the paper."
+   ]
+  },
+  {
+   "holiday": "christmas",
+   "calendars": [
+    "us-1920s",
+    "us-1880s"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "roast goose with apple stuffing",
+    "plum pudding",
+    "oranges in every stocking",
+    "molasses cookies"
+   ],
+   "rituals": [
+    "Carols around the piano.",
+    "Stockings hung by the fireplace.",
+    "Church in the morning in their best clothes."
+   ]
+  },
+  {
+   "holiday": "independence-day",
+   "calendars": [
+    "us-1920s",
+    "us-1880s"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "fried chicken in a picnic basket",
+    "lemonade by the pitcher",
+    "peach ice cream turned by hand"
+   ],
+   "rituals": [
+    "A picnic in the park and the band concert.",
+    "Firecrackers set off in the street."
+   ]
+  },
+  {
+   "holiday": "easter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "baked ham with raisin sauce",
+    "colored eggs"
+   ],
+   "rituals": [
+    "The Easter parade in new hats.",
+    "Church in the morning, dinner after."
+   ]
+  },
+  {
+   "holiday": "new-years-eve",
+   "calendars": [
+    "us-1920s"
+   ],
+   "with": "friends",
+   "main": false,
+   "dishes": [
+    "punch that is not entirely lemonade",
+    "oysters on ice"
+   ],
+   "rituals": [
+    "A dance with a band until well past midnight.",
+    "Noisemakers and paper hats at the stroke of twelve."
+   ]
+  },
+  {
+   "holiday": "christmas",
+   "calendars": [
+    "uk-victorian"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "roast goose with sage and onion",
+    "Christmas pudding with a sixpence inside",
+    "mince pies",
+    "a dish of roasted chestnuts"
+   ],
+   "rituals": [
+    "Stir-up Sunday, when everyone stirs the pudding and makes a wish.",
+    "Parlour games after dinner, snapdragon included.",
+    "Carols by the fire.",
+    "Crackers pulled at the table."
+   ]
+  },
+  {
+   "holiday": "boxing-day",
+   "calendars": [
+    "uk-victorian"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "cold goose and pickles",
+    "leftover pudding fried in butter"
+   ],
+   "rituals": [
+    "Christmas boxes for the tradespeople.",
+    "A long walk in the cold."
+   ]
+  },
+  {
+   "holiday": "easter",
+   "calendars": [
+    "uk-victorian"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "roast lamb",
+    "hot cross buns"
+   ],
+   "rituals": [
+    "Church in their best and a family dinner after."
+   ]
+  },
+  {
+   "holiday": "bonfire-night",
+   "calendars": [
+    "uk-victorian"
+   ],
+   "with": "friends",
+   "main": false,
+   "dishes": [
+    "baked potatoes from the embers",
+    "treacle toffee"
+   ],
+   "rituals": [
+    "The guy paraded through the street and onto the bonfire."
+   ]
+  },
+  {
+   "holiday": "shrove-tuesday",
+   "calendars": [
+    "uk-victorian"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "pancakes with lemon and sugar"
+   ],
+   "rituals": [
+    "A pancake race down the lane."
+   ]
+  },
+  {
+   "holiday": "michaelmas",
+   "calendars": [
+    "uk-victorian"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "a Michaelmas goose"
+   ],
+   "rituals": [
+    "The quarter day reckoning of rents and wages, then supper."
+   ]
+  },
+  {
+   "holiday": "christmas",
+   "calendars": [
+    "medieval-england"
+   ],
+   "with": "family",
+   "main": true,
+   "dishes": [
+    "a boar roasted on the spit",
+    "frumenty",
+    "mince pies shaped like a manger",
+    "wassail in the bowl"
+   ],
+   "rituals": [
+    "The Yule log dragged in and kept burning for twelve days.",
+    "Mummers coming to the door.",
+    "Mass at midnight and feasting after."
+   ]
+  },
+  {
+   "holiday": "twelfth-night",
+   "calendars": [
+    "medieval-england"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "the Twelfth cake with a bean baked inside",
+    "spiced ale"
+   ],
+   "rituals": [
+    "Whoever finds the bean is king for the night.",
+    "Wassailing the apple trees."
+   ]
+  },
+  {
+   "holiday": "easter",
+   "calendars": [
+    "medieval-england"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "eggs saved through Lent",
+    "a lamb roasted for the day"
+   ],
+   "rituals": [
+    "Creeping to the cross and then feasting."
+   ]
+  },
+  {
+   "holiday": "midsummer-eve",
+   "calendars": [
+    "medieval-england"
+   ],
+   "with": "friends",
+   "main": false,
+   "dishes": [
+    "honey cakes",
+    "new ale"
+   ],
+   "rituals": [
+    "Bonfires on the hill until dawn.",
+    "Birch and fennel hung over the door."
+   ]
+  },
+  {
+   "holiday": "lammas",
+   "calendars": [
+    "medieval-england"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "the first loaf from the new wheat"
+   ],
+   "rituals": [
+    "The first loaf taken to be blessed."
+   ]
+  },
+  {
+   "holiday": "michaelmas",
+   "calendars": [
+    "medieval-england"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "a goose fattened on the stubble"
+   ],
+   "rituals": [
+    "Rents paid and the harvest reckoned, then a goose supper."
+   ]
+  },
+  {
+   "holiday": "martinmas",
+   "calendars": [
+    "medieval-england"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "salted beef from the slaughter",
+    "new wine"
+   ],
+   "rituals": [
+    "The winter slaughter and a feast before the lean months."
+   ]
+  },
+  {
+   "holiday": "shrove-tuesday",
+   "calendars": [
+    "medieval-england"
+   ],
+   "with": "family",
+   "main": false,
+   "dishes": [
+    "pancakes and fritters to use up the eggs"
+   ],
+   "rituals": [
+    "A football game through the village streets."
+   ]
+  }
+ ],
+ "decorations": [
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a carved pumpkin on the front step"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "fake cobwebs stretched across the window"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a plastic skeleton sitting in a chair by the door"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "orange string lights around the window"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a bowl of candy by the door"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "paper bats taped to the wall"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a grinning jack-o-lantern on the windowsill"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a witch hat hung on the coat hook"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a row of tiny gourds on the table"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a light-up ghost in the window"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a doormat that says Boo"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "black candles on the bookshelf"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a foam tombstone by the steps"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a garland of felt pumpkins over the doorway"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a stack of pumpkins and a hay bale by the entrance"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a skull candle holder on the counter"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "purple lights around the mirror"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a giant spider on the porch light"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a pumpkin carved with the cat's face"
+  },
+  {
+   "season": "halloween",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan",
+    "us-1920s"
+   ],
+   "text": "a scarecrow propped by the door"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a real tree by the window with colored lights"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a small fake tree on the side table"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "white fairy lights along the bookshelf"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "stockings hung over the radiator"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a wreath on the front door"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a string of cards on a ribbon across the wall"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a menorah on the windowsill"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "paper snowflakes taped to the window"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a poinsettia on the kitchen table"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a tiny tree with every ornament from childhood"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a garland with pinecones over the doorway"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "an advent calendar with half the doors open"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a nutcracker on the bookshelf"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "mistletoe hung in the doorway"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a tabletop tree covered in tinsel"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a light-up reindeer on the balcony"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a felt garland in red and green"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "icicle lights along the eaves"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a little village of ceramic houses on the shelf"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a candle arch in the window"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a tree topped with a slightly crooked star"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a bowl of ornaments that never made it onto the tree"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a wreath made of dried oranges"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a blinking star in the window"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us",
+    "uk",
+    "south-korea",
+    "japan"
+   ],
+   "text": "a bottlebrush tree on the counter"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "holly and ivy over the mantel"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "a candlelit tree in the parlor"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "evergreen boughs along the windowsill"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "a kissing bough hung from the ceiling"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "paper chains made at the table"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "a wreath of holly on the door"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "oranges stuck with cloves in a bowl"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "a Yule log ready by the hearth"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "candles in every window"
+  },
+  {
+   "season": "winter",
+   "calendars": [
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian",
+    "medieval-england"
+   ],
+   "text": "popcorn and cranberry garlands on the tree"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a wreath of fall leaves on the door"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a bowl of small pumpkins on the table"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a pot of mums by the steps"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "dried corn hung on the door"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a garland of paper leaves"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a candle that smells like apples"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a cornucopia centerpiece"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a plaid throw over the couch"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a jar of acorns on the shelf"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a gourd lineup on the windowsill"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a sign that says Gather in the kitchen"
+  },
+  {
+   "season": "autumn",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a hay bale with pumpkins on the porch"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "a vase of daffodils"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "pastel eggs in a bowl"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "a wreath of spring flowers on the door"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "a branch hung with painted eggs"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "a ceramic bunny on the shelf"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "tulips on the kitchen table"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "a garland of paper eggs"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "a basket of plastic grass and eggs"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "a pot of hyacinths by the window"
+  },
+  {
+   "season": "spring",
+   "calendars": [
+    "us",
+    "uk",
+    "us-1920s",
+    "us-1880s",
+    "uk-victorian"
+   ],
+   "text": "cherry blossom branches in a tall vase"
+  },
+  {
+   "season": "july",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a flag hanging from the porch"
+  },
+  {
+   "season": "july",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "red, white and blue bunting on the railing"
+  },
+  {
+   "season": "july",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a tin bucket of little flags"
+  },
+  {
+   "season": "july",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "star-shaped string lights on the balcony"
+  },
+  {
+   "season": "july",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a pinwheel stuck in the planter"
+  },
+  {
+   "season": "july",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a striped tablecloth on the table"
+  },
+  {
+   "season": "july",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a wreath of red, white and blue"
+  },
+  {
+   "season": "july",
+   "calendars": [
+    "us",
+    "us-1920s",
+    "us-1880s"
+   ],
+   "text": "a paper star garland"
+  },
+  {
+   "season": "lunar",
+   "calendars": [
+    "south-korea"
+   ],
+   "text": "a bokjumeoni lucky pouch hung by the door"
+  },
+  {
+   "season": "lunar",
+   "calendars": [
+    "south-korea"
+   ],
+   "text": "a calligraphy scroll for the new year"
+  },
+  {
+   "season": "lunar",
+   "calendars": [
+    "south-korea"
+   ],
+   "text": "a bowl of tangerines on the table"
+  },
+  {
+   "season": "lunar",
+   "calendars": [
+    "south-korea"
+   ],
+   "text": "a straw rice scoop hung over the door"
+  },
+  {
+   "season": "lunar",
+   "calendars": [
+    "south-korea"
+   ],
+   "text": "a hanbok laid out for the morning"
+  },
+  {
+   "season": "chuseok",
+   "calendars": [
+    "south-korea"
+   ],
+   "text": "a gift set of pears in the entryway"
+  },
+  {
+   "season": "chuseok",
+   "calendars": [
+    "south-korea"
+   ],
+   "text": "persimmons drying on a string"
+  },
+  {
+   "season": "chuseok",
+   "calendars": [
+    "south-korea"
+   ],
+   "text": "a moon-shaped lantern on the balcony"
+  },
+  {
+   "season": "chuseok",
+   "calendars": [
+    "south-korea"
+   ],
+   "text": "a low table ready for charye"
+  },
+  {
+   "season": "newyear",
+   "calendars": [
+    "japan"
+   ],
+   "text": "a kadomatsu of pine and bamboo by the door"
+  },
+  {
+   "season": "newyear",
+   "calendars": [
+    "japan"
+   ],
+   "text": "a kagami mochi on the shelf"
+  },
+  {
+   "season": "newyear",
+   "calendars": [
+    "japan"
+   ],
+   "text": "a shimekazari rope over the door"
+  },
+  {
+   "season": "newyear",
+   "calendars": [
+    "japan"
+   ],
+   "text": "a small zodiac figure on the shoe cabinet"
+  },
+  {
+   "season": "newyear",
+   "calendars": [
+    "japan"
+   ],
+   "text": "a bowl of mikan on the kotatsu"
+  },
+  {
+   "season": "newyear",
+   "calendars": [
+    "japan"
+   ],
+   "text": "a fresh calendar for the year on the wall"
+  },
+  {
+   "season": "tanabata",
+   "calendars": [
+    "japan"
+   ],
+   "text": "a bamboo branch hung with paper wishes"
+  },
+  {
+   "season": "tanabata",
+   "calendars": [
+    "japan"
+   ],
+   "text": "paper streamers on the balcony"
+  },
+  {
+   "season": "tanabata",
+   "calendars": [
+    "japan"
+   ],
+   "text": "a star garland by the window"
+  },
+  {
+   "season": "tanabata",
+   "calendars": [
+    "japan"
+   ],
+   "text": "a wish written on a tanzaku strip"
+  }
+ ]
+}

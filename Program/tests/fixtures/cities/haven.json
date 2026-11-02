@@ -1,0 +1,2694 @@
+{
+ "schema_version": 1,
+ "id": "haven",
+ "name": "Haven",
+ "setting": "original",
+ "era": "modern",
+ "category": "fictional",
+ "basis": "Vanta's own world of Havenbrooke: modern fantasy in the real autumn of 2009, with supernatural peoples recognized under federal law since 1867. The town, the university and their people are written for Prospero's Dungeon.",
+ "region": "New York",
+ "country": "US",
+ "timezone": "America/New_York",
+ "aliases": [
+  "Haven, New York",
+  "Havenbrooke"
+ ],
+ "summary": "A Finger Lakes mill town of about 35,000 on the Haven River, and Havenbrooke University on the east bank, where five thousand students of every people study over three ley lines. Autumn 2009: recession outside the gates, flip phones inside them.",
+ "lat": 42.71,
+ "lon": -76.415,
+ "intensity": {
+  "preset": "unflinching",
+  "voice": "intimate, wry and adult: a campus drama where comedy and hurt share a page, every institution claims someone, and sex is written as part of who people are",
+  "drama": "uneasy"
+ },
+ "currency": {
+  "code": "USD",
+  "symbol": "$",
+  "name": "US dollars"
+ },
+ "rent_period": "month",
+ "speeds": {
+  "walk": 4.5,
+  "car": 40,
+  "bus": 22
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Haven written for Prospero's Dungeon from Vanta's Havenbrooke material",
+   "license": "Vanta's own setting; all rights reserved",
+   "retrieved": "2026-10-22",
+   "note": "Drawn from the Havenbrooke world and university documents. Prices are typical for upstate New York in 2009. Every business and person named is fictional."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "campus",
+   "name": "Havenbrooke campus",
+   "summary": "The university on the east bank: teaching halls round the Quad, Lantern Way running from the gates to Morrowe Commons, the dorms on the ridge and Ironroot Woods to the west. Three ley lines meet under it.",
+   "vibe": [
+    "campus",
+    "students",
+    "ley-lines",
+    "walkable"
+   ],
+   "lat": 42.712,
+   "lon": -76.408,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     525,
+     650
+    ],
+    "one_bedroom": [
+     625,
+     800
+    ],
+    "two_bedroom": [
+     775,
+     1000
+    ]
+   },
+   "housing": [
+    "dorm",
+    "suite"
+   ],
+   "walkability": "high",
+   "transit": [
+    "campus-shuttle",
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "greek-row",
+   "name": "Greek Row",
+   "summary": "The north edge of campus and the lane off Lantern Way where the fraternity and sorority houses stand, each with its own wards, rules and history.",
+   "vibe": [
+    "greek",
+    "parties",
+    "old-houses"
+   ],
+   "lat": 42.716,
+   "lon": -76.405,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     525,
+     650
+    ],
+    "one_bedroom": [
+     625,
+     800
+    ],
+    "two_bedroom": [
+     775,
+     1000
+    ]
+   },
+   "housing": [
+    "greek-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "campus-shuttle",
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "downtown",
+   "name": "Downtown Haven",
+   "summary": "The west bank: Main Street, Chapel Street and the central plaza, brick storefronts from the 1880s, the pub, the diner, the bookshop and the cafe everyone uses as an office.",
+   "vibe": [
+    "downtown",
+    "walkable",
+    "historic",
+    "shops"
+   ],
+   "lat": 42.708,
+   "lon": -76.418,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     525,
+     650
+    ],
+    "one_bedroom": [
+     625,
+     800
+    ],
+    "two_bedroom": [
+     775,
+     1000
+    ]
+   },
+   "housing": [
+    "apartment-over-shop",
+    "walk-up"
+   ],
+   "walkability": "high",
+   "transit": [
+    "haven-transit",
+    "campus-shuttle",
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-district",
+   "name": "the Mill District",
+   "summary": "The old paper mills south along the river: studios, galleries, loading docks turned into patios, a tattoo shop and the club in the unmarked warehouse.",
+   "vibe": [
+    "artsy",
+    "nightlife",
+    "industrial",
+    "river"
+   ],
+   "lat": 42.701,
+   "lon": -76.415,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     425,
+     550
+    ],
+    "one_bedroom": [
+     525,
+     675
+    ],
+    "two_bedroom": [
+     650,
+     850
+    ]
+   },
+   "housing": [
+    "loft",
+    "warehouse-studio"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "haven-transit",
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-haven",
+   "name": "West Haven",
+   "summary": "Run-down Victorians and Craftsman houses on Elm, Birch and Sycamore, rented to students in groups of four to eight. Cheap, loud, and the plumbing is a rumor.",
+   "vibe": [
+    "students",
+    "parties",
+    "cheap",
+    "old-houses"
+   ],
+   "lat": 42.711,
+   "lon": -76.426,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     425,
+     550
+    ],
+    "one_bedroom": [
+     525,
+     675
+    ],
+    "two_bedroom": [
+     650,
+     850
+    ]
+   },
+   "housing": [
+    "shared-house",
+    "walk-up"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "haven-transit",
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chapel-hill",
+   "name": "Chapel Hill",
+   "summary": "Historic houses climbing the east side between downtown and campus, where faculty live behind porches and good hedges.",
+   "vibe": [
+    "quiet",
+    "historic",
+    "faculty"
+   ],
+   "lat": 42.709,
+   "lon": -76.41,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     650,
+     800
+    ],
+    "one_bedroom": [
+     800,
+     1050
+    ],
+    "two_bedroom": [
+     1000,
+     1400
+    ]
+   },
+   "housing": [
+    "victorian-house",
+    "carriage-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "campus-shuttle",
+    "on-foot"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crane-ridge",
+   "name": "Crane Ridge",
+   "summary": "The wooded northern ridge above West Haven, most of it behind the Crane family's fence. The road up has one gas station and a tavern that closes early.",
+   "vibe": [
+    "wooded",
+    "private",
+    "watched"
+   ],
+   "lat": 42.722,
+   "lon": -76.428,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     650,
+     800
+    ],
+    "one_bedroom": [
+     800,
+     1050
+    ],
+    "two_bedroom": [
+     1000,
+     1400
+    ]
+   },
+   "housing": [
+    "estate",
+    "cottage"
+   ],
+   "walkability": "low",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "aldwright-hall",
+   "name": "Aldwright Hall",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Esoteric Sciences in the oldest building on campus: dark brick, cold stone floors, chalk dust and the smell of misfired spells. The third-floor windows never latch.",
+   "tags": [
+    "esoteric-sciences",
+    "classes",
+    "old"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the echoing stairwell",
+    "Room 312",
+    "the third-floor windows"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "vespers-hall",
+   "name": "Vespers Hall",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "The ritual complex over the strongest ley node: candlelit chambers and spell rings cut into black stone that warms underfoot. Booked weeks ahead.",
+   "tags": [
+    "esoteric-sciences",
+    "ritual",
+    "ley-node"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the great chamber",
+    "the second chamber",
+    "the outer ring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-observatory",
+   "name": "the Old Observatory",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "A stone tower from the founding with an open roof and locked lower floors. People go up to breathe.",
+   "tags": [
+    "quiet",
+    "views",
+    "old"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the roof",
+    "the worn granite steps"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kaelen-hall",
+   "name": "Kaelen Hall",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Interpersonal Dynamics in a converted 1920s sanatorium: a tall atrium, couches in every hallway, lavender and beeswax, and an ethics room that looks out on the cemetery.",
+   "tags": [
+    "interpersonal-dynamics",
+    "classes",
+    "seminars"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the atrium",
+    "Room 204",
+    "the ethics seminar room",
+    "the third-floor clinic"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "warden-hall",
+   "name": "Warden Hall",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Military and Tactical Operations: squat concrete, gun oil from the armory, cameras in the training rooms and classes at seven in the morning.",
+   "tags": [
+    "mto",
+    "classes",
+    "federal",
+    "watched"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the armory desk",
+    "Training Room B",
+    "the briefing room"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "thornewall",
+   "name": "Thornewall",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Mundane Studies in nineties glass and industrial carpet, under a suppression field that hums. Witches get headaches; humans finally relax.",
+   "tags": [
+    "mundane-studies",
+    "classes",
+    "suppression-field"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Lecture Hall 1",
+    "the Ashforth Computing Lab",
+    "the Oracle office in the basement"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mirren-studio",
+   "name": "the Mirren Media Studio",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "The communications studio: a small TV set, two edit bays and the WHAV-FM booth, with a sign that says ON AIR in red.",
+   "tags": [
+    "media",
+    "radio",
+    "classes"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the WHAV-FM booth",
+    "the edit bays",
+    "the green room"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bellweather-hall",
+   "name": "Bellweather Hall",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Supernatural Physiology and Integration: red-brick Georgian with a modern wing, anatomy labs upstairs and a faint smell of preservative.",
+   "tags": [
+    "spi",
+    "classes",
+    "labs"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the anatomy lab",
+    "the warded wing",
+    "the lecture theater"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "farrow-house",
+   "name": "Farrow House",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "The supervised treatment house: a Victorian with a wraparound porch, walls that swallow sound and a stained-glass owl over the waiting room door.",
+   "tags": [
+    "spi",
+    "clinical-hours",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the porch",
+    "the waiting parlor",
+    "the quiet rooms"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chancellor-wynne-library",
+   "name": "Chancellor Wynne Library",
+   "kind": "library",
+   "neighborhood": "campus",
+   "summary": "The main library, whose shelves rearrange overnight to the course schedule. The basement archives need a sponsor and a blood signature.",
+   "tags": [
+    "study",
+    "quiet",
+    "archives"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the reading room",
+    "the basement archives",
+    "the carrels on four"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "verdant-grove",
+   "name": "the Verdant Grove",
+   "kind": "garden",
+   "neighborhood": "campus",
+   "summary": "Four linked ritual greenhouses, warm and humid all year, and an outdoor garden for plants too charged to keep inside. The Enchanters' Guild workshop is at the back.",
+   "tags": [
+    "plants",
+    "dryads",
+    "work"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the fern house",
+    "the enchanters' workshop",
+    "the outdoor beds"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stitch-hall",
+   "name": "Stitch Hall Ateliers",
+   "kind": "workshop",
+   "neighborhood": "campus",
+   "summary": "Fashion studios: fabric to the ceiling, rows of industrial machines and long mirrors, private ateliers upstairs.",
+   "tags": [
+    "fashion",
+    "design",
+    "work"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the shared studio",
+    "the upstairs ateliers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "evermere",
+   "name": "Evermere Health Pavilion",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Six floors of human and supernatural medicine that never close: lycan rooms, fae springs in the sub-basement and consent-warded feeding suites.",
+   "tags": [
+    "health",
+    "feeding-suites",
+    "emergency"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the front desk",
+    "the third-floor lycan rooms",
+    "the fourth-floor feeding suites"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crestfall-arena",
+   "name": "Crestfall Arena",
+   "kind": "stadium",
+   "neighborhood": "campus",
+   "summary": "The athletic complex, reinforced for lycan sparring and aerial fae training. The auxiliary studio is empty at four in the morning.",
+   "tags": [
+    "sport",
+    "training",
+    "crows"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the main floor",
+    "the auxiliary studio",
+    "the north practice fields"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "morrowe-commons",
+   "name": "Morrowe Commons",
+   "kind": "restaurant",
+   "neighborhood": "campus",
+   "summary": "Four floors of lounges, food counters, music rooms and club space under a ward that keeps aura pressure off humans. The bakery opens at six.",
+   "tags": [
+    "dining-hall",
+    "social",
+    "clubs"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "dining hall",
+   "spots": [
+    "the main dining floor",
+    "the bakery counter",
+    "the conference wing",
+    "the music rooms"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "commons-coffee",
+   "name": "the Commons coffee bar",
+   "kind": "cafe",
+   "neighborhood": "campus",
+   "summary": "The coffee counter on the ground floor of Morrowe, with a line at 7:55 and tables nobody gives up after 9.",
+   "tags": [
+    "coffee",
+    "study"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "caldwell-fountain",
+   "name": "Caldwell Fountain Court",
+   "kind": "square",
+   "neighborhood": "campus",
+   "summary": "A plaza round a fountain three degrees colder than the air, with a faint pull that draws confessions out of tired people.",
+   "tags": [
+    "outdoors",
+    "confessions",
+    "meeting-point"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the fountain rim",
+    "the benches under the lindens"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridgewalk-chapel",
+   "name": "Ridgewalk Chapel",
+   "kind": "temple",
+   "neighborhood": "campus",
+   "summary": "A small white clapboard chapel at the western edge of campus: twelve pews, always unlocked, one candle that someone keeps lit.",
+   "tags": [
+    "quiet",
+    "chapel"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-quad",
+   "name": "the Quad and Lantern Way",
+   "kind": "park",
+   "neighborhood": "campus",
+   "summary": "Four acres of green under old oaks, and the gas-lamp path from the gates to Morrowe that everyone calls the runway.",
+   "tags": [
+    "outdoors",
+    "people-watching"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "Lantern Way",
+    "the big oak",
+    "the front gates"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ironroot-woods",
+   "name": "Ironroot Woods",
+   "kind": "trail",
+   "neighborhood": "campus",
+   "summary": "A mile of old-growth forest on the west edge of campus. The trails are kept by day; after dusk the lycans run and the witches gather.",
+   "tags": [
+    "woods",
+    "night",
+    "lycans"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the creek",
+    "the training clearing",
+    "the unmarked paths"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-back-woods",
+   "name": "the back woods",
+   "kind": "trail",
+   "neighborhood": "campus",
+   "summary": "Off the kept trails, in the woods and hills that run west and south of Haven: second-growth forest, old stone walls, hunting stands and no signal.",
+   "tags": [
+    "woods",
+    "wild",
+    "remote"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "a stone wall in the trees",
+    "a deer track",
+    "a rise with a view of the lake"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-cemetery",
+   "name": "the Old Cemetery",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Granite stones behind an overgrown iron fence, older than the university, where some headstones are not where they were last week.",
+   "tags": [
+    "quiet",
+    "eerie",
+    "couples"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nexus-housing",
+   "name": "Nexus Housing",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Upperclass suites with kitchens over a secondary ley node: magic works better, sleep is worse. The third floor is three units round a shared common room.",
+   "tags": [
+    "home",
+    "ley-node",
+    "suites"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the third-floor common room",
+    "Unit A",
+    "Unit B",
+    "Unit C",
+    "the lobby",
+    "the stairwell"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "north-dorm-ridge",
+   "name": "North Dorm Ridge",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Three brutalist towers with reinforced doors and air tuned for demon heat and vampire chill. Humans are told to take the stairs.",
+   "tags": [
+    "dorms",
+    "supernatural-majority"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-quad",
+   "name": "the East Residential Quad",
+   "kind": "landmark",
+   "neighborhood": "campus",
+   "summary": "Three brick dorms round a courtyard used for spell tests, frisbee and breakups, in that order through the day.",
+   "tags": [
+    "dorms",
+    "freshmen"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "alpha-gamma-house",
+   "name": "Alpha Gamma House",
+   "kind": "landmark",
+   "neighborhood": "greek-row",
+   "summary": "A gray three-story Victorian with black trim, a basement nobody outside the pack sees on a full moon, and couches that make human guests feel strange.",
+   "tags": [
+    "lycans",
+    "fraternity",
+    "parties"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the common room",
+    "the porch",
+    "the basement door"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hex-house",
+   "name": "Sigma Theta Hex House",
+   "kind": "landmark",
+   "neighborhood": "greek-row",
+   "summary": "An ivy-covered federal mansion with black shutters, sage and iron in the air, and everything above the grand staircase for sisters only.",
+   "tags": [
+    "witches",
+    "sorority",
+    "wards"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the front parlor",
+    "the grand staircase",
+    "the ritual room"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nox-house",
+   "name": "Phi Sigma Nox House",
+   "kind": "landmark",
+   "neighborhood": "greek-row",
+   "summary": "The vampire-led house: a brick Georgian with heavy curtains, a wine cellar and parties that start after the dining halls close.",
+   "tags": [
+    "vampires",
+    "fraternity",
+    "old-money"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ember-house",
+   "name": "Omicron Phi Ember House",
+   "kind": "landmark",
+   "neighborhood": "greek-row",
+   "summary": "The demonkin house: warm, loud, scented, and very careful about who it lets upstairs.",
+   "tags": [
+    "demonkin",
+    "fraternity",
+    "parties"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "row-snack-bar",
+   "name": "the Row snack bar",
+   "kind": "cafe",
+   "neighborhood": "greek-row",
+   "summary": "A sandwich window at the end of Greek Row that stays open until two on weekends and sells more coffee than food.",
+   "tags": [
+    "late-night",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "sandwiches",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stag-and-thistle",
+   "name": "the Stag & Thistle",
+   "kind": "bar",
+   "neighborhood": "downtown",
+   "summary": "The pub on a Main Street corner: forty taps, scotch eggs and shepherd's pie, faculty in the back booths and students in the front. The owner has never been wrong about an ID.",
+   "tags": [
+    "pub",
+    "beer",
+    "faculty"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "pub food",
+   "spots": [
+    "the back booths",
+    "the front windows",
+    "the bar"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "midnight-gas",
+   "name": "Midnight Gas",
+   "kind": "restaurant",
+   "neighborhood": "downtown",
+   "summary": "The 24-hour diner on North Main: neon, cracked vinyl booths, stewed coffee and pancakes at three in the morning.",
+   "tags": [
+    "diner",
+    "late-night",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "diner",
+   "spots": [
+    "the corner booth",
+    "the counter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pale-press",
+   "name": "Pale Press Coffee",
+   "kind": "cafe",
+   "neighborhood": "downtown",
+   "summary": "A cafe in an old print shop on Prescott Alley: brick, big windows and espresso. No glamours, no charms, no spellwork, by house rule.",
+   "tags": [
+    "coffee",
+    "magic-neutral",
+    "study"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "spots": [
+    "the window bar",
+    "the back room with the old press"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "drothes-bookery",
+   "name": "Drothe's Bookery",
+   "kind": "shopping",
+   "neighborhood": "downtown",
+   "summary": "A two-story used bookshop on Bell Street: five-dollar paperbacks downstairs, occult texts upstairs at whatever price Drothe names.",
+   "tags": [
+    "books",
+    "occult",
+    "browsing"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the narrow stairs",
+    "the occult room",
+    "behind the register"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harpers",
+   "name": "Harper's",
+   "kind": "restaurant",
+   "neighborhood": "downtown",
+   "summary": "The good restaurant at Main and Chapel: white cloths, hurricane candles, a long wine list and the best bread in the Finger Lakes.",
+   "tags": [
+    "fine-dining",
+    "dates"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "new american",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saturday-market",
+   "name": "the Haven Saturday Market",
+   "kind": "market",
+   "neighborhood": "downtown",
+   "summary": "The farmers market in the central plaza, moved into the old meeting hall for winter: produce, cheese, honey and dryad-made preserves.",
+   "tags": [
+    "market",
+    "saturdays",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the dryad co-op stall",
+    "the Saturday bakery",
+    "the cheese table"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "main-street-pizza",
+   "name": "Bianchi's Pizza",
+   "kind": "restaurant",
+   "neighborhood": "downtown",
+   "summary": "A slice counter on Main with a two-slices-and-a-soda special and a jukebox that only takes quarters.",
+   "tags": [
+    "pizza",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haven-cinema",
+   "name": "the Strand",
+   "kind": "venue",
+   "neighborhood": "downtown",
+   "summary": "A single-screen 1920s movie house showing one new release and a midnight cult film on Fridays.",
+   "tags": [
+    "movies",
+    "dates"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haven-bus-stop",
+   "name": "the Main Street bus shelter",
+   "kind": "square",
+   "neighborhood": "downtown",
+   "summary": "Where the Haven Transit buses and the twice-daily shuttle to Ithaca stop, opposite the bank clock.",
+   "tags": [
+    "transit"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pharmacy",
+   "name": "Kessel Drugs",
+   "kind": "shopping",
+   "neighborhood": "downtown",
+   "summary": "The pharmacy and general store on Chapel Street: prescriptions, cold medicine, condoms, phone cards and a photo counter.",
+   "tags": [
+    "pharmacy",
+    "errands"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "velvet-spire",
+   "name": "the Velvet Spire",
+   "kind": "nightlife",
+   "neighborhood": "mill-district",
+   "summary": "The supernatural-friendly club in an unmarked three-story warehouse: DJs below, private booths in the middle, and a members-only top floor.",
+   "tags": [
+    "club",
+    "dancing",
+    "feeding"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the main floor",
+    "the middle-floor booths",
+    "the stairs to the top floor"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arrow-and-ink",
+   "name": "Arrow & Ink",
+   "kind": "shopping",
+   "neighborhood": "mill-district",
+   "summary": "A tattoo and piercing shop on Foundry Lane, lamp-lit, with enchanted ink for clients the owner trusts.",
+   "tags": [
+    "tattoos",
+    "enchanted-ink"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ironworks-collective",
+   "name": "the Ironworks Collective",
+   "kind": "workshop",
+   "neighborhood": "mill-district",
+   "summary": "Eighteen artisan studios on Old Foundry Row, renting bench space with charm infusion included.",
+   "tags": [
+    "art",
+    "studios",
+    "charms"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "foundry-taproom",
+   "name": "the Foundry Taproom",
+   "kind": "bar",
+   "neighborhood": "mill-district",
+   "summary": "A brewpub in an old loading dock with a patio over the river and a band most Thursdays.",
+   "tags": [
+    "beer",
+    "live-music",
+    "river"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "bar food",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "elm-street-houses",
+   "name": "the Elm Street houses",
+   "kind": "landmark",
+   "neighborhood": "west-haven",
+   "summary": "Student rentals on Elm with sagging porches, red cups on the lawn and the party everyone talks about the next morning.",
+   "tags": [
+    "parties",
+    "students",
+    "houses"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "birch-street",
+   "name": "Birch Street",
+   "kind": "landmark",
+   "neighborhood": "west-haven",
+   "summary": "Where Delta Nu Iris and Delta Omicron Theta keep their houses, a block apart and not speaking.",
+   "tags": [
+    "sorority",
+    "houses"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-haven-deli",
+   "name": "Sal's Corner Deli",
+   "kind": "cafe",
+   "neighborhood": "west-haven",
+   "summary": "A corner store and deli on Sycamore with hero sandwiches, cheap beer and a cashier who has seen everything.",
+   "tags": [
+    "deli",
+    "beer",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "deli",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "laundromat",
+   "name": "the Sycamore Laundromat",
+   "kind": "shopping",
+   "neighborhood": "west-haven",
+   "summary": "Coin washers, a broken change machine and the best place in Haven to overhear a breakup.",
+   "tags": [
+    "errands"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chapel-hill-bakery",
+   "name": "Linden Street Bakery",
+   "kind": "cafe",
+   "neighborhood": "chapel-hill",
+   "summary": "A faculty-heavy bakery with scones, quiet tables and a bulletin board of house-sitting jobs.",
+   "tags": [
+    "bakery",
+    "quiet",
+    "faculty"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "spots": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "riverwalk",
+   "name": "the Riverwalk",
+   "kind": "trail",
+   "neighborhood": "chapel-hill",
+   "summary": "Three miles of path along the east bank from downtown past the mills into the hills, with benches, lamps and small docks. Nobody clears the ice.",
+   "tags": [
+    "river",
+    "walks",
+    "running"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the footbridge",
+    "the small docks",
+    "the bench with the view of the ridge"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crane-hill",
+   "name": "Crane Hill",
+   "kind": "landmark",
+   "neighborhood": "crane-ridge",
+   "summary": "The Crane family's fenced and gated estate on the ridge, home to a line of vampires since 1819. Visitors are expected or turned away.",
+   "tags": [
+    "vampires",
+    "estate",
+    "private"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the gatehouse",
+    "the steward's office",
+    "the long drive"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridge-tavern",
+   "name": "the Ridge Road Tavern",
+   "kind": "tavern",
+   "neighborhood": "crane-ridge",
+   "summary": "A low roadhouse at the foot of the ridge where the Cranes' staff drink and students do not, mostly.",
+   "tags": [
+    "locals",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "bar food",
+   "spots": [],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "on-foot",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "Campus is fifteen minutes end to end; downtown is a ten-minute walk over the footbridge.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "campus-shuttle",
+   "name": "The Havenbrooke shuttle",
+   "kind": "bus",
+   "summary": "A free loop from the gates to downtown every twenty minutes until midnight, and twice a day to Ithaca.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haven-transit",
+   "name": "Haven Transit",
+   "kind": "bus",
+   "summary": "Two city bus lines, a dollar a ride, running until nine.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "car",
+   "name": "A car",
+   "kind": "car",
+   "summary": "Most students do not have one, and the ones who do are very popular on Friday.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "enchanter",
+   "name": "Licensed enchanter",
+   "sector": "craft",
+   "schedule": "flexible",
+   "employment": "freelance",
+   "pay": "$$",
+   "summary": "Making and selling charms that carry a DED compliance mark, from a stall, a studio or a dorm room.",
+   "themes": [
+    "charms",
+    "licensing",
+    "customers"
+   ],
+   "eras": [
+    "modern"
+   ],
+   "ages": [
+    22,
+    70
+   ]
+  },
+  {
+   "id": "campus-security",
+   "name": "Campus security officer",
+   "sector": "security",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$$",
+   "summary": "Patrolling Havenbrooke under MTO-trained supervisors and writing up whatever the Dean's office will want in the morning.",
+   "themes": [
+    "patrols",
+    "incident reports",
+    "students"
+   ],
+   "eras": [
+    "modern"
+   ],
+   "ages": [
+    21,
+    70
+   ]
+  },
+  {
+   "id": "ward-technician",
+   "name": "Ward technician",
+   "sector": "esoteric",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Testing, patching and certifying building wards for the university and the town.",
+   "themes": [
+    "wards",
+    "inspections",
+    "old buildings"
+   ],
+   "eras": [
+    "modern"
+   ],
+   "ages": [
+    21,
+    70
+   ]
+  },
+  {
+   "id": "dining-hall-worker",
+   "name": "Dining hall worker",
+   "sector": "food",
+   "schedule": "early",
+   "employment": "rota",
+   "pay": "$",
+   "summary": "Line, dish pit and bakery shifts at Morrowe Commons, mostly students on work-study.",
+   "themes": [
+    "work-study",
+    "early mornings",
+    "regulars"
+   ],
+   "eras": [
+    "modern"
+   ],
+   "ages": [
+    18,
+    70
+   ]
+  }
+ ],
+ "employers": [
+  {
+   "id": "havenbrooke-university",
+   "name": "Havenbrooke University",
+   "sector": "education",
+   "neighborhood": "campus",
+   "size": "large",
+   "summary": "The university and the town's largest employer: faculty, clinics, dining, grounds and security.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "campus-security",
+    "dining-hall-worker",
+    "ward-technician",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "evermere-health",
+   "name": "Evermere Health Pavilion",
+   "sector": "health",
+   "neighborhood": "campus",
+   "size": "medium",
+   "summary": "The campus hospital, open all hours.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "enchanters-guild",
+   "name": "the Student Enchanters' Guild",
+   "sector": "craft",
+   "neighborhood": "campus",
+   "size": "small",
+   "summary": "The guild workshop at the Verdant Grove, which takes student commissions.",
+   "careers": [
+    "enchanter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "midnight-gas-diner",
+   "name": "Midnight Gas",
+   "sector": "food",
+   "neighborhood": "downtown",
+   "size": "small",
+   "summary": "The all-night diner.",
+   "careers": [
+    "line-cook",
+    "server"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stag-and-thistle-pub",
+   "name": "the Stag & Thistle",
+   "sector": "food",
+   "neighborhood": "downtown",
+   "size": "small",
+   "summary": "The pub on Main.",
+   "careers": [
+    "bartender",
+    "server",
+    "line-cook"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pale-press-cafe",
+   "name": "Pale Press Coffee",
+   "sector": "food",
+   "neighborhood": "downtown",
+   "size": "small",
+   "summary": "The magic-neutral cafe.",
+   "careers": [
+    "barista"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "velvet-spire-club",
+   "name": "the Velvet Spire",
+   "sector": "nightlife",
+   "neighborhood": "mill-district",
+   "size": "small",
+   "summary": "The club in the warehouse.",
+   "careers": [
+    "bartender",
+    "performer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crane-estate",
+   "name": "the Crane estate",
+   "sector": "household",
+   "neighborhood": "crane-ridge",
+   "size": "small",
+   "summary": "Groundskeepers, drivers and house staff for the family on the ridge, paid well and told little.",
+   "careers": [
+    "event-planner",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haven-oracle",
+   "name": "the Oracle",
+   "sector": "media",
+   "neighborhood": "campus",
+   "size": "small",
+   "summary": "The student paper, in the Thornewall basement.",
+   "careers": [
+    "journalist",
+    "graphic-designer"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "the-university",
+   "name": "The university",
+   "neighborhoods": [
+    "campus",
+    "greek-row"
+   ],
+   "sectors": [
+    "education",
+    "health",
+    "craft",
+    "security",
+    "esoteric",
+    "media"
+   ],
+   "summary": "Most paychecks in Haven come from Havenbrooke, one way or another.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "main-and-mills",
+   "name": "Main Street and the mills",
+   "neighborhoods": [
+    "downtown",
+    "mill-district"
+   ],
+   "sectors": [
+    "food",
+    "retail",
+    "nightlife",
+    "craft"
+   ],
+   "summary": "Bars, cafes, shops and studios, mostly staffed by students.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Upstate New York: long gray winters with lake-effect snow, a muddy spring, warm wet summers and a short bright fall.",
+  "months": [
+   {
+    "high_f": 30,
+    "low_f": 15,
+    "rain_days": 16,
+    "note": "Lake-effect snow and a gray sky for weeks."
+   },
+   {
+    "high_f": 32,
+    "low_f": 16,
+    "rain_days": 14,
+    "note": "The coldest stretch; the Riverwalk is ice."
+   },
+   {
+    "high_f": 41,
+    "low_f": 24,
+    "rain_days": 14,
+    "note": "Mud and slush; spring term drags."
+   },
+   {
+    "high_f": 54,
+    "low_f": 35,
+    "rain_days": 13,
+    "note": "Rain and the first green."
+   },
+   {
+    "high_f": 66,
+    "low_f": 45,
+    "rain_days": 13,
+    "note": "Finals, then the town empties."
+   },
+   {
+    "high_f": 75,
+    "low_f": 54,
+    "rain_days": 12,
+    "note": "Warm and wet; the lakes fill with summer people."
+   },
+   {
+    "high_f": 80,
+    "low_f": 59,
+    "rain_days": 11,
+    "note": "The warmest month, thunderstorms most afternoons."
+   },
+   {
+    "high_f": 78,
+    "low_f": 57,
+    "rain_days": 11,
+    "note": "Move-in heat at the end of the month."
+   },
+   {
+    "high_f": 70,
+    "low_f": 50,
+    "rain_days": 11,
+    "note": "Clear and cool; the term settles in."
+   },
+   {
+    "high_f": 58,
+    "low_f": 40,
+    "rain_days": 12,
+    "note": "Peak color in the first two weeks, then wind and rain."
+   },
+   {
+    "high_f": 46,
+    "low_f": 32,
+    "rain_days": 14,
+    "note": "Dark at five; first snow."
+   },
+   {
+    "high_f": 35,
+    "low_f": 22,
+    "rain_days": 16,
+    "note": "Snow on the ground for finals."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "move-in",
+   "name": "Move-in week",
+   "months": [
+    8
+   ],
+   "neighborhood": "campus",
+   "summary": "Parents, minivans and housing letters; the dorms fill and the wards get their annual check.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "autumn-equinox",
+   "name": "The autumn equinox rites",
+   "months": [
+    9
+   ],
+   "neighborhood": "campus",
+   "summary": "The covens book every chamber in Vespers Hall; Sigma Theta Hex holds its rite in the largest.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harvest-howl",
+   "name": "The Harvest Howl",
+   "months": [
+    10
+   ],
+   "neighborhood": "campus",
+   "summary": "Alpha Gamma's Halloween bonfire on the north practice fields, the biggest party of the fall.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charm-exhibit",
+   "name": "The winter charm exhibit",
+   "months": [
+    12
+   ],
+   "neighborhood": "campus",
+   "summary": "The Enchanters' Guild shows the term's work at the Verdant Grove the week before finals.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spring-show",
+   "name": "The Creative Collective spring show",
+   "months": [
+    4
+   ],
+   "neighborhood": "mill-district",
+   "summary": "Student art, fashion and music in the Ironworks studios over one weekend.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nsac-bracket",
+   "name": "The NSAC sparring bracket",
+   "months": [
+    2,
+    3
+   ],
+   "neighborhood": "campus",
+   "summary": "Intercollegiate supernatural sparring at Crestfall Arena; the Crows have not won since 1998.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "the-runway",
+   "name": "The runway",
+   "kind": "saying",
+   "summary": "Lantern Way, because everyone sees everyone on it sooner or later.",
+   "places": [
+    "the-quad"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fountain-confessions",
+   "name": "Fountain confessions",
+   "kind": "legend",
+   "summary": "Most breakups and hookups on campus are said to start at Caldwell Fountain, which pulls the truth out of tired people.",
+   "places": [
+    "caldwell-fountain"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moving-headstones",
+   "name": "The moving headstones",
+   "kind": "legend",
+   "summary": "Some stones in the Old Cemetery are a few feet from where they were last week, and a physics major once measured it.",
+   "places": [
+    "old-cemetery"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nexus-dreams",
+   "name": "Nexus dreams",
+   "kind": "rumor",
+   "summary": "Everyone in Nexus Housing dreams harder and sleeps worse, and the housing office does not put that in the brochure.",
+   "places": [
+    "nexus-housing"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "three-am-pancakes",
+   "name": "Three a.m. pancakes",
+   "kind": "dish",
+   "summary": "A short stack and stewed coffee at Midnight Gas after anything at all.",
+   "places": [
+    "midnight-gas"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crows",
+   "name": "The Crestfall Crows",
+   "kind": "team",
+   "summary": "The university teams, loved loudly and expected to lose.",
+   "places": [
+    "crestfall-arena"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mundie",
+   "name": "\"Mundie\"",
+   "kind": "saying",
+   "summary": "What some supernatural students call a non-magical human. Said to their face, it starts fights.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-candle",
+   "name": "The chapel candle",
+   "kind": "legend",
+   "summary": "The candle in Ridgewalk Chapel has been burning since before anyone on staff was hired, and nobody has ever seen it lit.",
+   "places": [
+    "ridgewalk-chapel"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "names": {
+  "mix": {
+   "anglo": 6,
+   "german": 1,
+   "irish": 1.5,
+   "italian": 1,
+   "east-asian": 0.6,
+   "hispanic": 0.6,
+   "black-american": 0.8,
+   "jewish": 0.4,
+   "south-asian": 0.3,
+   "slavic": 0.4
+  },
+  "year": 2009
+ },
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Coffee",
+   "low": 1.5,
+   "high": 3.5,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pint",
+   "item": "Pint of beer",
+   "low": 3,
+   "high": 5,
+   "per": "a pint",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "diner-meal",
+   "item": "Diner meal",
+   "low": 6,
+   "high": 10,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pizza-slice",
+   "item": "Slice of pizza",
+   "low": 1.75,
+   "high": 2.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner-out",
+   "item": "Dinner for two at Harper's",
+   "low": 70,
+   "high": 120,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "club-cover",
+   "item": "Cover at the Velvet Spire",
+   "low": 10,
+   "high": 25,
+   "per": "a night",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "textbook",
+   "item": "Textbook",
+   "low": 80,
+   "high": 150,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "paperback",
+   "item": "Paperback at Drothe's",
+   "low": 5,
+   "high": 5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gas",
+   "item": "Gas",
+   "low": 2.4,
+   "high": 2.7,
+   "per": "a gallon",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bus-nyc",
+   "item": "Bus to New York",
+   "low": 30,
+   "high": 50,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amtrak",
+   "item": "Amtrak from Syracuse to New York",
+   "low": 50,
+   "high": 70,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "phone",
+   "item": "iPhone 3GS",
+   "low": 199,
+   "high": 299,
+   "per": "on a two-year contract",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "laptop",
+   "item": "Laptop",
+   "low": 300,
+   "high": 1000,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "texts",
+   "item": "Unlimited texting",
+   "low": 15,
+   "high": 20,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "song",
+   "item": "Song on iTunes",
+   "low": 0.99,
+   "high": 1.29,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tattoo",
+   "item": "Small tattoo at Arrow & Ink",
+   "low": 60,
+   "high": 150,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charm",
+   "item": "Licensed charm",
+   "low": 15,
+   "high": 80,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "day-wage",
+   "item": "A work-study day",
+   "low": 50,
+   "high": 70,
+   "per": "day",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "river",
+   "name": "Haven River",
+   "width_km": 0.06,
+   "points": [
+    [
+     42.73,
+     -76.412
+    ],
+    [
+     42.718,
+     -76.413
+    ],
+    [
+     42.708,
+     -76.414
+    ],
+    [
+     42.698,
+     -76.416
+    ]
+   ]
+  }
+ ],
+ "notables": [
+  {
+   "id": "delia-okonkwo",
+   "name": "Delia Okonkwo",
+   "given": "Delia",
+   "pronouns": "she/her",
+   "age": 49,
+   "place": "pale-press",
+   "role": "cafe owner",
+   "staff": true,
+   "about": "A witch from an old Boston lineage who opened Pale Press so nobody would have to perform in it. She asks you to leave once, politely.",
+   "wants": "to keep one room in Haven where nobody uses anything on anybody",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bex-kavanagh",
+   "name": "Betsari Kavanagh",
+   "given": "Bex",
+   "pronouns": "she/her",
+   "age": 40,
+   "place": "arrow-and-ink",
+   "role": "tattooist",
+   "staff": true,
+   "about": "An Appalachian-trained witch who tattoos by day and does enchanted ink for people she trusts. Funny, blunt and impossible to rush.",
+   "wants": "one client this month who actually knows what they are asking for",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "drothe",
+   "name": "Drothe",
+   "given": "Drothe",
+   "pronouns": "they/them",
+   "age": 80,
+   "place": "drothes-bookery",
+   "role": "bookseller",
+   "staff": true,
+   "about": "The keeper of the bookshop on Bell Street, a witch nobody can classify. Prices change with their mood and with who is asking.",
+   "wants": "to see which students come upstairs this term, and for what",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gideon-vale",
+   "name": "Gideon Vale",
+   "given": "Mr. Vale",
+   "pronouns": "he/him",
+   "age": 62,
+   "place": "crane-hill",
+   "role": "steward to the Crane family",
+   "staff": true,
+   "about": "A mundane human who has run the Crane household for thirty years and is the only person Haven PD speaks to about the ridge.",
+   "wants": "to keep the family out of the papers through one more election",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mireille-thorne-ashford",
+   "name": "Mireille Thorne-Ashford",
+   "given": "Professor Thorne-Ashford",
+   "pronouns": "she/her",
+   "age": 55,
+   "place": "aldwright-hall",
+   "role": "incantation professor",
+   "staff": true,
+   "about": "Senior incantation faculty and advisor to Sigma Theta Hex. Exacting, unhurried, and more interested in why a working failed than in the student who failed it.",
+   "wants": "one student this year who can hold a working under real pressure",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kasper-innes",
+   "name": "Kasper Innes",
+   "given": "Dr. Innes",
+   "pronouns": "he/him",
+   "age": 70,
+   "kind": "fae",
+   "place": "kaelen-hall",
+   "role": "ethics professor",
+   "staff": true,
+   "about": "Teaches IPD 340, the consent course every SPI and ES student has to pass. Gentle in the lecture hall and merciless in office hours.",
+   "wants": "to make someone in the back row say what they actually think",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marcus-halbrook",
+   "name": "Marcus Halbrook",
+   "given": "Colonel Halbrook",
+   "pronouns": "he/him",
+   "age": 58,
+   "place": "warden-hall",
+   "role": "head of MTO",
+   "staff": true,
+   "about": "A retired colonel, bitten in the line of duty, who runs MTO like a unit and starts every class at seven sharp.",
+   "wants": "a cohort that passes the federal review without anyone getting hurt",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "iolana-whitestone",
+   "name": "Iolana Whitestone",
+   "given": "Professor Whitestone",
+   "pronouns": "she/her",
+   "age": 68,
+   "place": "bellweather-hall",
+   "role": "clinical care professor",
+   "staff": true,
+   "about": "A retired succubus diplomat who teaches SPI 220 and runs the clinical placements at Farrow House.",
+   "wants": "her students to stop being embarrassed by the word hunger",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "samuel-park",
+   "name": "Samuel Park",
+   "given": "Professor Park",
+   "pronouns": "he/him",
+   "age": 55,
+   "place": "thornewall",
+   "role": "computer science professor",
+   "staff": true,
+   "about": "Heads computer science, runs the Ashforth lab and has opinions about everyone's variable names.",
+   "wants": "a student who can make the lab servers stop crashing during the full moon",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "imogen-shaw",
+   "name": "Imogen Shaw",
+   "given": "Professor Shaw",
+   "pronouns": "she/her",
+   "age": 50,
+   "place": "mirren-studio",
+   "role": "communications professor",
+   "staff": true,
+   "about": "Teaches media and communications, ran a newsroom for fifteen years and still edits everything in red pen.",
+   "wants": "one honest story out of her seminar this term",
+   "source": "curated-2026-10"
+  }
+ ],
+ "kinds": {
+  "fae": {
+   "label": "Fae",
+   "lifespan": 700,
+   "words": [
+    "fae",
+    "fey",
+    "sidhe"
+   ],
+   "share": 0
+  },
+  "half-fae": {
+   "label": "Half-fae",
+   "lifespan": 200,
+   "words": [
+    "half-fae",
+    "half fae"
+   ],
+   "share": 0
+  },
+  "kitsune": {
+   "label": "Kitsune",
+   "lifespan": 1000,
+   "words": [
+    "kitsune",
+    "fox fae"
+   ],
+   "share": 0
+  },
+  "dryad": {
+   "label": "Dryad",
+   "lifespan": 400,
+   "words": [
+    "dryad"
+   ],
+   "share": 0
+  },
+  "sylph": {
+   "label": "Sylph",
+   "lifespan": 500,
+   "words": [
+    "sylph"
+   ],
+   "share": 0
+  },
+  "selkie": {
+   "label": "Selkie",
+   "lifespan": 250,
+   "words": [
+    "selkie"
+   ],
+   "share": 0
+  }
+ }
+}

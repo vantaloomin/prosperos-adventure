@@ -1,0 +1,1739 @@
+{
+ "kind": "music",
+ "milestones": [
+  {
+   "text": "played their first full scale without looking at their hands",
+   "post": "One whole scale. Eyes up. Tiny victory.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "practised every day for a whole week for the first time",
+   "post": "Seven days in a row. Who even am I.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to read the first line of a simple tune",
+   "post": "The dots are starting to mean something.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "figured out how to tune {hobby} without help",
+   "post": "Tuned it myself. It even sounds right.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a simple folk tune slowly but correctly",
+   "post": "Slow, but every note was the right one.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finally got through their first lesson without apologising once",
+   "post": "Zero apologies this lesson. Growth.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked out the first few notes of a tune by ear",
+   "post": "Picked out a melody by ear. Felt like magic.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "practised long enough that the neighbours started humming along",
+   "post": "The neighbours know the tune now. Sorry, neighbours.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a whole song start to finish without stopping",
+   "post": "A whole song. No stopping. Small win.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept steady time through an entire piece",
+   "post": "Didn't rush once. Well, almost once.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned five tunes well enough to play them on request",
+   "post": "Five songs in the pocket now. Ask me for one.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played for a couple of friends after supper",
+   "post": "Played for friends. Nobody left. Good sign.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sight-read a short new piece on the first try",
+   "post": "First try on a new piece. Not pretty, but there.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got through a fast passage that had stumped them for weeks",
+   "post": "That run finally fell into place.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "noticed they could play a tune and hum along at the same time",
+   "post": "Playing and humming at once. Brain upgrade.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a duet with their teacher and kept up",
+   "post": "Kept up with my teacher. Mostly.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "joined a small group of players for a regular weekly session",
+   "post": "Got a weekly session with real musicians now.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned a piece fully by heart",
+   "post": "Memorised the whole thing. No sheet needed.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played at a friend's party and got asked for an encore",
+   "post": "They wanted another one. I only had one more.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "improvised a little melody that actually sounded good",
+   "post": "Made something up and it wasn't bad at all.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked out a harmony part to a tune they knew",
+   "post": "Found the harmony on my own. Lovely.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a slow piece with real feeling for the first time",
+   "post": "Played it like I meant it this time.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned a tune from another player just by listening",
+   "post": "Learned it by ear from a friend. Old-school.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got through a whole evening of playing without losing their place",
+   "post": "A whole evening and I never got lost.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a short solo spot at a community gathering",
+   "post": "Played solo for a room full of people. Hands shook. It went fine.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started showing a beginner the basics of {hobby}",
+   "post": "Teaching someone else now. Strange and lovely.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played at a local festival with their group",
+   "post": "Festival day. Tired and happy.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "wrote their first complete original tune",
+   "post": "Wrote a tune. It has a name and everything.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a full set without a single sheet of music",
+   "post": "No sheets, no panic, whole set.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to fill in for a missing player at short notice",
+   "post": "Last-minute stand-in. Pulled it off.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took part in a small music competition and placed respectably",
+   "post": "Didn't win, didn't embarrass myself. Proud.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a wedding tune for a friend's celebration",
+   "post": "Played at a friend's wedding. Nobody cried at my mistakes.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won first place in the local music competition",
+   "post": "First place. Still can't quite believe it.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the featured solo at the big seasonal concert",
+   "post": "The solo was mine tonight. What a night.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was paid to play at an event for the first time",
+   "post": "Got paid to play. Actual money.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had one of their own tunes picked up and played by other musicians",
+   "post": "Heard someone else play my tune. Wild.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "led the whole group through a concert as the front player",
+   "post": "Led the band tonight. Didn't fall apart.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a demanding concert piece all the way through, cleanly",
+   "post": "The hard one. Clean. Start to finish.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to give lessons by a neighbour's family",
+   "post": "Have my own student now. Feels serious.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a full evening's concert of their own",
+   "post": "A whole concert. My name on the notice.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "recorded themselves playing on their phone and actually liked it",
+   "post": "Listened back to my own recording. Not cringing. Huge.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "posted a clip of their playing online and got kind comments",
+   "post": "Strangers said nice things. Internet, you surprise me.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "followed a beginner video lesson all the way to the end",
+   "post": "Finished the whole video lesson. Paused it forty times.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played a set at a café's open stage night",
+   "post": "Café gig. Two people clapped very hard. Loved it.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned their first three chords and switched between them",
+   "post": "G, C, D. That's half of all songs, right?",
+   "level": 0,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stopped the strings buzzing on their first chord",
+   "post": "No buzz! Clean chord! Finally!",
+   "level": 0,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned their first barre chord, after a week of buzzing strings",
+   "post": "F major, you are mine now.",
+   "level": 1,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "strummed a steady rhythm through a whole campfire song",
+   "post": "Kept the strum going for the whole song.",
+   "level": 1,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned a fingerpicking pattern and played a ballad with it",
+   "post": "Fingerpicking unlocked. Fingers confused but happy.",
+   "level": 2,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "backed a singer for a whole evening on guitar",
+   "post": "Played guitar for a singer all night. Felt like a real band.",
+   "level": 3,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a flashy guitar solo at a packed local show",
+   "post": "That solo got a cheer. Still buzzing.",
+   "level": 4,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played guitar on the porch until half the street came by to listen",
+   "post": "Porch concert. Half the town showed up.",
+   "level": 2,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "frontier"
+   ]
+  },
+  {
+   "text": "kept rhythm guitar going through a whole night at a dance hall",
+   "post": "Strummed till the dancers gave up. Not me.",
+   "level": 3,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "learned a song from an online guitar tab",
+   "post": "Tabs online taught me a whole song tonight.",
+   "level": 1,
+   "for": [
+    "guitar"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "locked in with a simple drum beat for a whole minute",
+   "post": "A whole minute in the pocket. Bass life.",
+   "level": 0,
+   "for": [
+    "bass"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to play a root note on every beat of a song",
+   "post": "Root notes. Simple. Important. Me.",
+   "level": 0,
+   "for": [
+    "bass"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned their first walking bass line",
+   "post": "Walking bass. It walks! I walk!",
+   "level": 1,
+   "for": [
+    "bass"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a slap bass groove without fumbling",
+   "post": "Slap bass. Neighbours have feelings about it.",
+   "level": 2,
+   "for": [
+    "bass"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played bass with a band for a full rehearsal without getting lost",
+   "post": "Full rehearsal, never lost. Bass player of the year.",
+   "level": 3,
+   "for": [
+    "bass"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the bass solo everyone talked about after the show",
+   "post": "Bass solo. People noticed the bass. Historic.",
+   "level": 4,
+   "for": [
+    "bass"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned a famous bass line note for note",
+   "post": "That famous riff, note for note. Grinning.",
+   "level": 1,
+   "for": [
+    "bass"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a simple melody with both hands together",
+   "post": "Both hands at once. My brain is sweating.",
+   "level": 0,
+   "for": [
+    "piano"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned where middle C is without counting keys",
+   "post": "Middle C, found instantly. Progress.",
+   "level": 0,
+   "for": [
+    "piano"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played Für Elise's opening section all the way through",
+   "post": "Für Elise, the famous bit. Done.",
+   "level": 1,
+   "for": [
+    "piano"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played Clair de Lune all the way through",
+   "post": "Clair de Lune. Start to finish. Sat in silence after.",
+   "level": 2,
+   "for": [
+    "piano"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the piano at a friend's gathering while everyone sang",
+   "post": "Played while everyone sang. Best kind of noise.",
+   "level": 3,
+   "for": [
+    "piano"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "performed a Chopin nocturne at a small recital",
+   "post": "Chopin at a recital. Nobody coughed during the quiet bit.",
+   "level": 4,
+   "for": [
+    "piano"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a ragtime piece at full speed",
+   "post": "Ragtime at full tilt. Hands still twitching.",
+   "level": 2,
+   "for": [
+    "piano"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "played the piano for the evening's parlour entertainment",
+   "post": "Parlour duty tonight. The guests stayed for more.",
+   "level": 3,
+   "for": [
+    "piano"
+   ],
+   "eras": [
+    "victorian",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "got through a whole hymn without a wrong chord",
+   "post": "One hymn, zero wrong chords.",
+   "level": 1,
+   "for": [
+    "piano"
+   ],
+   "eras": [
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "drew their first long bow stroke without a squeak",
+   "post": "No squeak. Just a note. Beautiful.",
+   "level": 0,
+   "for": [
+    "violin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to hold the bow properly for a whole lesson",
+   "post": "Bow hold held. For an entire hour.",
+   "level": 0,
+   "for": [
+    "violin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played their first tune with vibrato",
+   "post": "Vibrato! It wobbles on purpose now.",
+   "level": 1,
+   "for": [
+    "violin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played in a small string group for the first time",
+   "post": "String group. I'm second violin and loving it.",
+   "level": 2,
+   "for": [
+    "violin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a Vivaldi movement at a community concert",
+   "post": "Vivaldi at the concert. Didn't lose my nerve.",
+   "level": 3,
+   "for": [
+    "violin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the violin solo at the town's big concert",
+   "post": "Solo violin tonight. My hands are still shaking.",
+   "level": 4,
+   "for": [
+    "violin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept their violin in tune through a whole session",
+   "post": "Stayed in tune all session. Rare event.",
+   "level": 1,
+   "for": [
+    "violin"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "scraped out their first recognisable jig on the fiddle",
+   "post": "It was a jig. You could tell. Mostly.",
+   "level": 0,
+   "for": [
+    "fiddle"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the fiddle for a dance and kept the dancers going",
+   "post": "They kept dancing. That means it worked.",
+   "level": 1,
+   "for": [
+    "fiddle"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned a reel by ear from an old fiddler",
+   "post": "Learned a reel by ear from the best fiddler around.",
+   "level": 2,
+   "for": [
+    "fiddle"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "fiddled through a whole barn dance with the band",
+   "post": "Barn dance, all night. Arms are done.",
+   "level": 3,
+   "for": [
+    "fiddle"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won the fiddle contest at the harvest fair",
+   "post": "Won the fiddle contest. Still holding the ribbon.",
+   "level": 4,
+   "for": [
+    "fiddle"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tuned the fiddle by ear for the first time",
+   "post": "Tuned it by ear. Didn't even need help.",
+   "level": 0,
+   "for": [
+    "fiddle"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the fiddle at the village feast and nobody complained",
+   "post": "Fiddled at the feast. Zero complaints.",
+   "level": 1,
+   "for": [
+    "fiddle"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "played fiddle at the saloon's Saturday dance",
+   "post": "Saturday dance fiddler. That's me now.",
+   "level": 2,
+   "for": [
+    "fiddle"
+   ],
+   "eras": [
+    "frontier"
+   ]
+  },
+  {
+   "text": "played open strings on the cello with a clean, steady sound",
+   "post": "Open strings. Deep and steady. Happy.",
+   "level": 0,
+   "for": [
+    "cello"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the prelude from Bach's first cello suite slowly but whole",
+   "post": "Bach, slowly. But all of it.",
+   "level": 1,
+   "for": [
+    "cello"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to shift up the neck without missing the note",
+   "post": "Shifted and landed it. Cello acrobatics.",
+   "level": 1,
+   "for": [
+    "cello"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the cello part in a string quartet rehearsal",
+   "post": "Quartet rehearsal. Cello holds it all together.",
+   "level": 2,
+   "for": [
+    "cello"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played The Swan at a small concert",
+   "post": "The Swan. Some people closed their eyes. Good sign.",
+   "level": 3,
+   "for": [
+    "cello"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a full cello sonata at a recital",
+   "post": "A whole sonata. Arms tired, heart full.",
+   "level": 4,
+   "for": [
+    "cello"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "carried the cello to a lesson without bumping a single doorframe",
+   "post": "The cello and I arrived unharmed. A first.",
+   "level": 0,
+   "for": [
+    "cello"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned their first four chords on the ukulele",
+   "post": "Four chords on the uke. Unstoppable.",
+   "level": 0,
+   "for": [
+    "ukulele"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "strummed a whole ukulele song badly but cheerfully",
+   "post": "Bad but cheerful. Very ukulele.",
+   "level": 0,
+   "for": [
+    "ukulele"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the ukulele at a picnic and got everyone singing",
+   "post": "Picnic singalong. The uke did its job.",
+   "level": 1,
+   "for": [
+    "ukulele"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned a fancy ukulele strum with a triplet in it",
+   "post": "Triplet strum. My wrist is very impressed.",
+   "level": 2,
+   "for": [
+    "ukulele"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a ukulele set at a little local show",
+   "post": "Little uke, big stage. Okay, medium stage.",
+   "level": 3,
+   "for": [
+    "ukulele"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a ukulele solo that made the room go quiet",
+   "post": "Silenced a room with a ukulele. Who knew.",
+   "level": 4,
+   "for": [
+    "ukulele"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "strummed the ukulele through a whole night of dance tunes",
+   "post": "Dance tunes all night on the uke. Fingers buzzing.",
+   "level": 2,
+   "for": [
+    "ukulele"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "played a basic rock beat for a whole minute without losing it",
+   "post": "Boom, tap, boom-boom tap. For a minute!",
+   "level": 0,
+   "for": [
+    "drums"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept their sticks in hand for a whole practice",
+   "post": "Didn't drop a stick once. Pro move.",
+   "level": 0,
+   "for": [
+    "drums"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played their first drum fill and landed back on the beat",
+   "post": "Fill and back on the one. Chef's kiss.",
+   "level": 1,
+   "for": [
+    "drums"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "drummed through a full rehearsal with a band",
+   "post": "Full band rehearsal on drums. Loud and glorious.",
+   "level": 2,
+   "for": [
+    "drums"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "drummed a whole gig at a local bar's music night",
+   "post": "Drummed a whole gig. Ears ringing, grinning.",
+   "level": 3,
+   "for": [
+    "drums"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played a drum solo that got a standing cheer",
+   "post": "Drum solo. Crowd went up. I went up.",
+   "level": 4,
+   "for": [
+    "drums"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played along to a whole song on the playlist without stopping",
+   "post": "Drummed along to a whole song. Neighbours endured.",
+   "level": 1,
+   "for": [
+    "drums"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned their first banjo roll",
+   "post": "One banjo roll. Many to go.",
+   "level": 0,
+   "for": [
+    "banjo"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a whole banjo tune at a steady speed",
+   "post": "Banjo tune, steady speed. Toe tapping guaranteed.",
+   "level": 1,
+   "for": [
+    "banjo"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played banjo with a fiddler and kept up the whole time",
+   "post": "Kept up with the fiddler. Banjo honour intact.",
+   "level": 2,
+   "for": [
+    "banjo"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played banjo at a dance and got the whole room up dancing",
+   "post": "Banjo got them dancing. My job is done.",
+   "level": 3,
+   "for": [
+    "banjo"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won the banjo prize at the county fair",
+   "post": "Banjo prize, county fair. Ribbon on the wall.",
+   "level": 4,
+   "for": [
+    "banjo"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tuned the banjo and kept it tuned for a whole tune",
+   "post": "Stayed in tune for a whole song. Banjo miracle.",
+   "level": 0,
+   "for": [
+    "banjo"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played banjo in a jazz band's rehearsal",
+   "post": "Banjo in a jazz band. Plinky and proud.",
+   "level": 2,
+   "for": [
+    "banjo"
+   ],
+   "eras": [
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "learned to pluck the lute without catching the wrong course",
+   "post": "Plucked the right strings. Lute progress.",
+   "level": 0,
+   "for": [
+    "lute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tuned all the lute's strings in one sitting",
+   "post": "All courses in tune. Took an hour.",
+   "level": 0,
+   "for": [
+    "lute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a simple ballad on the lute for the household",
+   "post": "Lute ballad for the household. They hummed along.",
+   "level": 1,
+   "for": [
+    "lute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "accompanied a singer on the lute at the evening meal",
+   "post": "Played lute for a singer at supper. Lovely evening.",
+   "level": 2,
+   "for": [
+    "lute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the lute in the great hall at a feast",
+   "post": "Lute at the feast. The lord nodded. Probably good.",
+   "level": 3,
+   "for": [
+    "lute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to play the lute for a visiting noble's arrival",
+   "post": "Played for a noble's arrival. Hands steady, just.",
+   "level": 4,
+   "for": [
+    "lute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a lute tune that made the forest go quiet",
+   "post": "Even the birds stopped to listen. Or they were shocked.",
+   "level": 2,
+   "for": [
+    "lute"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "text": "got a clear note out of the flute on the first breath",
+   "post": "A real note! No hissing!",
+   "level": 0,
+   "for": [
+    "flute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "held a steady note on the flute for a whole count of ten",
+   "post": "Ten counts of one note. Breath of steel.",
+   "level": 0,
+   "for": [
+    "flute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a simple flute melody all the way through",
+   "post": "One whole tune on the flute. Light-headed but proud.",
+   "level": 1,
+   "for": [
+    "flute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played flute trills cleanly in a lively tune",
+   "post": "Trills on the flute. Twinkly.",
+   "level": 2,
+   "for": [
+    "flute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played flute with a small ensemble at a gathering",
+   "post": "Flute in the ensemble. My part was audible. Good.",
+   "level": 3,
+   "for": [
+    "flute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played the flute solo at the season's big celebration",
+   "post": "The flute solo was mine. The hall was quiet for it.",
+   "level": 4,
+   "for": [
+    "flute"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "played a wooden flute tune at the village green",
+   "post": "Wooden flute on the green. Children followed me.",
+   "level": 1,
+   "for": [
+    "flute"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "played flute in the town band for the first time",
+   "post": "Town band flautist. There's a hat.",
+   "level": 2,
+   "for": [
+    "flute"
+   ],
+   "eras": [
+    "victorian",
+    "steampunk",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "mixed two songs together without a clash",
+   "post": "Two songs, one mix, no train wreck.",
+   "level": 0,
+   "for": [
+    "djing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "built their first DJ set playlist",
+   "post": "First set planned. Thirty tracks, no idea what I'm doing.",
+   "level": 0,
+   "for": [
+    "djing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "beatmatched two tracks by ear",
+   "post": "Beatmatched by ear. Felt like a wizard.",
+   "level": 1,
+   "for": [
+    "djing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "spun records for two hours at a friend's birthday party",
+   "post": "Two hours of a friend's party. Dancefloor never emptied.",
+   "level": 2,
+   "for": [
+    "djing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "played a set at a local club's early slot",
+   "post": "Early slot at the club. Ten people. They danced.",
+   "level": 3,
+   "for": [
+    "djing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "headlined a night at a local venue",
+   "post": "Headlined. My name on the poster. Shaking.",
+   "level": 4,
+   "for": [
+    "djing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept a dancefloor going through a whole hour of their set",
+   "post": "Full hour, full dancefloor. Mine.",
+   "level": 1,
+   "for": [
+    "djing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "uploaded their first mix online and people listened",
+   "post": "Mix uploaded. People actually listened. Surreal.",
+   "level": 2,
+   "for": [
+    "djing"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "finished a first mix without cutting off the end of a song",
+   "post": "First mix. No songs cut off!",
+   "level": 0,
+   "for": [
+    "mixtapes"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "drew a proper cover for a new mix",
+   "post": "Drew a cover for the new mix.",
+   "level": 1,
+   "for": [
+    "mixtapes"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "made a mix for a friend, who played it the whole drive home",
+   "post": "My mix got played the whole way home.",
+   "level": 2,
+   "for": [
+    "mixtapes"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "made a mix so good that friends asked for copies",
+   "post": "People want copies of my mix.",
+   "level": 3,
+   "for": [
+    "mixtapes"
+   ],
+   "eras": [
+    "modern"
+   ]
+  }
+ ],
+ "sessions": [
+  {
+   "text": "Worked on the same tricky passage for most of an hour.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Played through some old favourites just for fun.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Spent the first ten minutes just tuning up.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Practised scales until they stopped being boring.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Tried a new piece and got through the first page.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Played slowly, then a bit faster, then slowly again.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Hummed the melody all evening afterwards.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Kept time by tapping a foot the whole session.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Took a long break in the middle and came back fresh.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Played quietly so as not to wake anyone.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Ended the session on the one song they know best.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Spent a while making up little tunes.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Went back over last week's lesson.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Played until their fingers asked for a rest.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Noted down a phrase to work on tomorrow.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Recorded a bit of practice on their phone to listen back.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Played along with a favourite record.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Practised a new chord change over and over.",
+   "for": [
+    "guitar",
+    "ukulele",
+    "banjo",
+    "bass"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Worked on keeping the bow straight.",
+   "for": [
+    "violin",
+    "fiddle",
+    "cello"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Practised one tricky fill again and again.",
+   "for": [
+    "drums"
+   ],
+   "eras": [
+    "modern"
+   ]
+  }
+ ]
+}

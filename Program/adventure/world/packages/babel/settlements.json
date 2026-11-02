@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "kind": "city, town, village, fortress, monastery, camp or site",
+    "size": "hamlet, village, town, city or metropolis",
+    "faction": "the faction that holds it, when one does (an id in factions.json)",
+    "safe_zone": "whether a Waystone's Safe Zone covers it (no PvP, regeneration nearby)",
+    "danger_tier": "tier on the shared ladder",
+    "authoritative": "where the game's own data for the town lives, when it has a town file",
+    "origin": "source or draft"
+  },
+  "settlements": [
+    {
+      "id": "the-concourse",
+      "name": "The Concourse",
+      "region": "concourse",
+      "kind": "city",
+      "size": "metropolis",
+      "safe_zone": true,
+      "danger_tier": "local",
+      "peoples": ["natives of every lineage", "climbers from every wave"],
+      "summary": "Floor Zero: the plaza and its great white Waystone, the guild row, the market streets, the east gate onto the Stair. Arrivals land here, sign the Roll, and are sold to before they have stood up.",
+      "trade": ["food that tastes", "starter kits", "guild places", "information about the floors", "debts"],
+      "notable": [
+        {"name": "The Waystone and the Roll", "note": "A white standing stone with light at its heart. Arrivals' names are carved at the top of the Roll as they attune; Nth Floor's maker's mark is cut into its foot.", "npc": null},
+        {"name": "The Landing", "note": "Darla Kinney's guild, in a drained bathhouse at the end of the guild row.", "npc": "darla-kinney"},
+        {"name": "The east gate", "note": "MIND THE STAIR over the arch, and the lift cage on its chains.", "npc": null},
+        {"name": "The Fire Market", "note": "The best trading day of the Concourse's week, along the market streets off the plaza.", "npc": "hamid"}
+      ],
+      "access": "Open to anyone. Leaving it is easy; leaving it owing someone is not.",
+      "hooks": [
+        "An arrival who isn't on the Roll by nightfall.",
+        "A veteran wants to buy what a new arrival knows about the new skin.",
+        "A white ring in a stranger's eyes makes the Landing's quartermaster reach for her hammer."
+      ],
+      "authoritative": "Program/dungeon/world/data/cities/the-concourse.json",
+      "origin": "source"
+    },
+    {
+      "id": "hollin",
+      "name": "Hollin",
+      "region": "varrow",
+      "kind": "town",
+      "size": "village",
+      "faction": "house-corve",
+      "safe_zone": false,
+      "danger_tier": "local",
+      "peoples": ["native Humans"],
+      "summary": "BABEL's starter town, just as the beta drew it: the ford and its stepping stones, the mill and its wheel, a stone bridge, the green with its Waystone and its well. A board by the well reads NO MARKED BEYOND THE FORD BY ORDER OF THE CLOSE.",
+      "trade": ["grain and flour", "small beer", "Close honey", "wool", "the autumn weighing"],
+      "notable": [
+        {"name": "Goodwife Marra's cottage and the mill", "note": "The tutorial quest-giver, who sends climbers after rats in her dead husband's mill cellar.", "npc": "goodwife-marra"},
+        {"name": "Hollin green", "note": "The Waystone, the well and the notice board.", "npc": null},
+        {"name": "The ford", "note": "The Close's line: no Marked beyond it.", "npc": null}
+      ],
+      "access": "The Stair opens onto the hillside above the town. Anyone big, or with white-ringed eyes, will be seen from the cathedral before they reach the well.",
+      "hooks": [
+        "Marra's rats are not rats.",
+        "A Close acolyte runs for the cathedral the moment a giant comes down the landing steps.",
+        "Every autumn the Close weighs the town, and someone does not come home."
+      ],
+      "authoritative": "Program/dungeon/world/data/cities/hollin.json",
+      "origin": "source"
+    },
+    {
+      "id": "saint-aurel",
+      "name": "Saint Aurel and the Close",
+      "region": "varrow",
+      "kind": "monastery",
+      "size": "town",
+      "faction": "the-close",
+      "safe_zone": false,
+      "danger_tier": "regional",
+      "peoples": ["native Humans", "the Lit"],
+      "summary": "A white cathedral on its hill across the valley from the Keep, spires that cost BABEL's environment team a whole quarter. The Close is the cathedral, its cloister, the sisters' house, the guesthouse and the Pens down by the old tannery on the river. In the nave hang the Scales: a black iron beam and two bronze pans big enough to stand in, and a brass arc with a sun at one end and a cracked wall at the other.",
+      "trade": ["weighings", "Mend and absolution", "honey", "the Varrow cage trade"],
+      "notable": [
+        {"name": "The Scales of Saint Aurel", "note": "One does not stand in the pan shod.", "npc": "the-archdeacon"},
+        {"name": "The guesthouse", "note": "Whitewashed cells under tin sun-discs; the last gift's six-foot bed.", "npc": "brother-coll"},
+        {"name": "The Pens", "note": "Where the wanting are kept from the autumn weighing until the cage goes down in spring.", "npc": "brother-tamsin"},
+        {"name": "The old cemetery hives", "note": "Sister Abelone's bees, and the only honey on Varrow that tastes.", "npc": "sister-abelone"}
+      ],
+      "access": "The Close lets in what it means to weigh.",
+      "hooks": [
+        "The Close weighs the big, and keeps what weighs as a gift.",
+        "The Bishop has been on retreat for six years.",
+        "A sister has waited eleven years in vows for a giant."
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "varrow-keep",
+      "name": "Varrow Keep",
+      "region": "varrow",
+      "kind": "fortress",
+      "size": "town",
+      "faction": "house-corve",
+      "safe_zone": false,
+      "danger_tier": "local",
+      "peoples": ["native Humans"],
+      "summary": "Gray and enormous on its hill above Hollin, crowned with pennants: black stag on silver, its people in gray and blue. The Margrave's hall, his solar with his dead wife's harp, the manor wing, the lower barracks, the Cairn tower on the east wall-walk, and under it all a bone-cellar with a stair in it that the beta only ever let climbers walk up.",
+      "trade": ["the Margrave's coin", "Wall wages", "passage on the cellar stair, both ways, for a price"],
+      "notable": [
+        {"name": "The Muster board", "note": "The names of everyone who has stood a season on the Reachwall, and where they came from.", "npc": "edmund-corve"},
+        {"name": "The bone-cellar stair", "note": "A private way off the floor, up and down, kept by the Margrave alone.", "npc": "edmund-corve"},
+        {"name": "The solar", "note": "Lady Aveline's harp, which nobody plays.", "npc": null}
+      ],
+      "access": "The Margrave's road, the Margrave's hall, the Margrave's terms.",
+      "hooks": [
+        "The Margrave offers a season on the Wall, and then his cellar.",
+        "The Muster board has a ringed eye drawn beside one name.",
+        "The Keep and the Close share the valley, uneasily."
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-reachwall",
+      "name": "The Reachwall",
+      "region": "varrow",
+      "kind": "fortress",
+      "size": "village",
+      "faction": "house-corve",
+      "safe_zone": false,
+      "danger_tier": "local",
+      "peoples": ["native Humans", "the Close's gift, when it has one"],
+      "summary": "Thirty feet of fitted stone across the valley head, eight miles up the road from the Keep between the hawthorns, with a rampart walk three abreast and towers every quarter mile. Near the north tower a section came down three winters ago and was rebuilt badly in rubble and timber; the patch is the color of a healed burn.",
+      "trade": ["Wall wages", "labor"],
+      "notable": [
+        {"name": "The north tower and its chapel", "note": "Where a gift's sister keeps his lamp.", "npc": null},
+        {"name": "The patch", "note": "Rubble and timber where the Reach came over three winters back.", "npc": "berit-hode"},
+        {"name": "The ditch", "note": "Where the giants stand when they come to talk.", "npc": null}
+      ],
+      "access": "The Margrave's company marches out at first light and back at dusk.",
+      "hooks": [
+        "Horns at dusk, and a giant walking down the slope alone.",
+        "The patch has to be rebuilt before the cold.",
+        "The Close has had a giant on the Wall for forty years, and lost him last winter."
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "burners-wood",
+      "name": "Burners' Wood",
+      "region": "varrow",
+      "kind": "site",
+      "size": "hamlet",
+      "safe_zone": false,
+      "danger_tier": "local",
+      "peoples": ["charcoal burners"],
+      "summary": "Woods two miles from the Wall, with charcoal clearings in them, where a cart can wait off the road and nobody on the Wall can see it.",
+      "trade": ["charcoal"],
+      "hooks": ["Somebody lures someone off the Wall road with word of their family."],
+      "origin": "source"
+    },
+    {
+      "id": "the-reach",
+      "name": "The Reach",
+      "region": "the-reach",
+      "kind": "site",
+      "size": "hamlet",
+      "faction": "the-reach-giants",
+      "safe_zone": false,
+      "danger_tier": "regional",
+      "peoples": ["Reach giants"],
+      "summary": "The giants' hills: brown slopes, beacon cairns along the ridges, Long Cairn among them, and fires where they sit through the winter.",
+      "trade": [],
+      "hooks": [
+        "The beacons at Long Cairn were lit four nights before the Halvorsen's wave came down.",
+        "The giants are waiting for someone to keep a promise."
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-marches-landing",
+      "name": "The Marches landing",
+      "region": "drowned-marches",
+      "kind": "camp",
+      "size": "hamlet",
+      "safe_zone": false,
+      "danger_tier": "local",
+      "peoples": ["native fen folk", "stranded climbers"],
+      "summary": "Wet stone, reed thatch and fog where the Stair opens onto the Marches. A crier posts the notices that come down the chain from the Bazaar, bounties among them.",
+      "trade": ["passage", "news off the chain", "boats"],
+      "hooks": ["A fresh bounty notice from the Bazaar, posted before the people it names arrive."],
+      "origin": "source"
+    },
+    {
+      "id": "the-stilt-villages",
+      "name": "The stilt villages",
+      "region": "drowned-marches",
+      "kind": "village",
+      "size": "village",
+      "safe_zone": false,
+      "danger_tier": "local",
+      "peoples": ["native fen folk"],
+      "summary": "Villages on stilts joined by black plank causeways over brown water, lanterns on posts, reed beds higher than a man. Work is reed-cutting and nets, paid in coin and in kind.",
+      "trade": ["reed", "eels and fish", "nets", "boats"],
+      "hooks": ["A stranger in an oilskin with a copper pin watches from across the water."],
+      "origin": "draft"
+    },
+    {
+      "id": "the-gilded-bazaar",
+      "name": "The Gilded Bazaar",
+      "region": "gilded-bazaar",
+      "kind": "city",
+      "size": "city",
+      "faction": "the-lantern-room",
+      "safe_zone": false,
+      "danger_tier": "regional",
+      "peoples": ["natives of every lineage", "climbers who came up to sell"],
+      "summary": "A merchant city under a lantern dome that brightens and dims twice in a Concourse day. Spice factors, salons, room-brokers, fences under the Copper Steps, a freight wharf on the shaft's edge, and a Stair gate that one woman owns.",
+      "trade": ["spice", "rooms", "people", "information", "high-end gear", "contraceptive charms"],
+      "notable": [
+        {"name": "The Lantern Room", "note": "Sabeen Oro's salon: hostessing, dancing and private rooms at the girl's choice, a third to the house.", "npc": "sabeen-oro"},
+        {"name": "The Copper Scale", "note": "Rooms by the week; the walls are thin.", "npc": null},
+        {"name": "The Copper Steps", "note": "Fence rows and paper sellers, and behind them the Stair gate.", "npc": "pell-the-wire"},
+        {"name": "The freight wharf", "note": "Where a night crew runs a cargo cage down the chains outside the gate.", "npc": null}
+      ],
+      "access": "Anyone can come up. Going back down is where it gets expensive.",
+      "hooks": [
+        "Sabeen Oro has heard that an arrival wrote the tower's new rules.",
+        "A climber who always knows the way out came through and went up.",
+        "Down is free at the toll, because nobody comes back to pay."
+      ],
+      "authoritative": "Program/dungeon/world/data/cities/the-gilded-bazaar.json",
+      "origin": "source"
+    },
+    {
+      "id": "the-foundry",
+      "name": "The Foundry",
+      "region": "the-foundry",
+      "kind": "city",
+      "size": "city",
+      "safe_zone": false,
+      "danger_tier": "regional",
+      "peoples": [],
+      "summary": "Furnaces and engines, by the beta. Its landing is the last whole one on the way up; the span above it lies in the shaft.",
+      "trade": [],
+      "hooks": ["Chalk on the landing arch: T.R., an arrow, and a tally."],
+      "origin": "source"
+    },
+    {
+      "id": "dry-hollow",
+      "name": "Dry Hollow",
+      "region": "dry-hollow",
+      "kind": "town",
+      "size": "town",
+      "safe_zone": false,
+      "danger_tier": "regional",
+      "peoples": [],
+      "summary": "A boomtown, by the beta, where guns work and spells misfire.",
+      "trade": [],
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "hakuro",
+      "name": "Hakuro",
+      "region": "hakuro",
+      "kind": "town",
+      "size": "town",
+      "safe_zone": false,
+      "danger_tier": "regional",
+      "peoples": [],
+      "summary": "A castle town under curfew, by the beta.",
+      "trade": [],
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "lumen-stack",
+      "name": "Lumen Stack",
+      "region": "lumen-stack",
+      "kind": "city",
+      "size": "metropolis",
+      "safe_zone": false,
+      "danger_tier": "realm",
+      "peoples": [],
+      "summary": "Neon towers in the rain, by the beta.",
+      "trade": [],
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "st-agathes",
+      "name": "St. Agathe's",
+      "region": "st-agathes",
+      "kind": "site",
+      "size": "town",
+      "safe_zone": false,
+      "danger_tier": "local",
+      "peoples": [],
+      "summary": "A hospital where it is always night.",
+      "trade": [],
+      "hooks": ["Somebody's friend went down to St. Agathe's to look for someone and is still on the Roll, and still not back."],
+      "origin": "source"
+    },
+    {
+      "id": "the-catacombs",
+      "name": "The Catacombs",
+      "region": "the-catacombs",
+      "kind": "site",
+      "size": "city",
+      "safe_zone": false,
+      "danger_tier": "regional",
+      "peoples": [],
+      "summary": "Bone galleries under a dead city.",
+      "trade": [],
+      "hooks": ["The Margrave's cellar stair goes down, and he has sent people down it."],
+      "origin": "source"
+    },
+    {
+      "id": "the-ashfields",
+      "name": "The Ashfields",
+      "region": "the-ashfields",
+      "kind": "site",
+      "size": "town",
+      "safe_zone": false,
+      "danger_tier": "regional",
+      "peoples": [],
+      "summary": "A post-war wasteland, by the beta.",
+      "trade": [],
+      "hooks": [],
+      "origin": "source"
+    },
+    {
+      "id": "the-undercroft",
+      "name": "The Undercroft",
+      "region": "the-undercroft",
+      "kind": "site",
+      "size": "city",
+      "safe_zone": false,
+      "danger_tier": "realm",
+      "peoples": [],
+      "summary": "Dark-magic depths, by the beta.",
+      "trade": [],
+      "hooks": [],
+      "origin": "source"
+    }
+  ]
+}

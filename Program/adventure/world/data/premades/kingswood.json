@@ -1,0 +1,64 @@
+{
+  "premades": [
+    {
+      "id": "agna-holt",
+      "name": "Agna Holt",
+      "gender": "woman",
+      "age": 29,
+      "about": "A Cyrel soldier who walked away from Bastion after the night her company was left outside the gate. Deserters hang, so she calls herself a logger now and keeps her sword wrapped in sacking under the bunk. Good in a fight, bad at being told what to do, worse at sleeping.",
+      "stats": {
+        "Mind": 9,
+        "Allure": 7,
+        "Resolve": 12,
+        "Vitality": 16,
+        "Essence": 4,
+        "Luck": 12
+      },
+      "srd52": {
+        "class": "fighter",
+        "species": "human",
+        "background": "soldier"
+      }
+    },
+    {
+      "id": "lirien-of-the-ford",
+      "name": "Lirien of the Ford",
+      "gender": "nonbinary",
+      "age": 61,
+      "about": "Half-elf, born at Low Ford to a mother who never named the father. Too human for Brynwyr, too elven for Kingswood, so they run whatever needs carrying across the stones at night: salt one way, herbs and worse the other. They know the warden paths and owe the wrong people on both sides.",
+      "stats": {
+        "Mind": 11,
+        "Allure": 10,
+        "Resolve": 8,
+        "Vitality": 8,
+        "Essence": 11,
+        "Luck": 12
+      },
+      "srd52": {
+        "class": "rogue",
+        "species": "elf",
+        "background": "criminal"
+      }
+    },
+    {
+      "id": "tobin-pell",
+      "name": "Tobin Pell",
+      "gender": "man",
+      "age": 36,
+      "about": "Tally clerk for the Timber Guild and the storekeeper's useless son. He has skimmed a board in twenty for four years and the factor has started counting behind him. Clever, soft-handed, charming when frightened, and lately very frightened.",
+      "stats": {
+        "Mind": 15,
+        "Allure": 13,
+        "Resolve": 7,
+        "Vitality": 6,
+        "Essence": 7,
+        "Luck": 12
+      },
+      "srd52": {
+        "class": "bard",
+        "species": "human",
+        "background": "sage"
+      }
+    }
+  ]
+}

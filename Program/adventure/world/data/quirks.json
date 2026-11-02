@@ -1,0 +1,405 @@
+{
+ "about": "Townsfolk quirks (dungeon/world/townsfolk.py): text is a subject-less clause ('talks to pigeons'), bio the first-person line their dating profile shows (dungeon/world/dating.py). Add quirks freely.",
+ "quirks": [
+  {
+   "text": "remembers everyone's usual order",
+   "bio": "I will remember your usual order after one visit."
+  },
+  {
+   "text": "hums under their breath",
+   "bio": "I hum under my breath. Sorry in advance."
+  },
+  {
+   "text": "wears the same green scarf every day",
+   "bio": "You will know me by the green scarf."
+  },
+  {
+   "text": "carries a battered notebook everywhere",
+   "bio": "Never without my battered notebook."
+  },
+  {
+   "text": "can't resist a terrible pun",
+   "bio": "Warning: I can't resist a terrible pun."
+  },
+  {
+   "text": "knows every dog in the neighborhood by name",
+   "bio": "I know every dog in the neighborhood by name. The owners, less so."
+  },
+  {
+   "text": "is always running five minutes late",
+   "bio": "I will be five minutes late. I'm working on it."
+  },
+  {
+   "text": "collects odd little trinkets",
+   "bio": "I collect odd little trinkets. Ask me about the best one."
+  },
+  {
+   "text": "names every plant they own",
+   "bio": "Every one of my plants has a name."
+  },
+  {
+   "text": "has an opinion about everyone's shoes",
+   "bio": "I will have an opinion about your shoes."
+  },
+  {
+   "text": "talks to pigeons",
+   "bio": "Yes, I talk to pigeons. They listen."
+  },
+  {
+   "text": "sketches people when they think no one is looking",
+   "bio": "I sketch people when they aren't looking."
+  },
+  {
+   "text": "whistles the same tune all day",
+   "bio": "I whistle the same tune all day and I don't know what it is."
+  },
+  {
+   "text": "keeps sweets in every pocket",
+   "bio": "There are sweets in every one of my pockets."
+  },
+  {
+   "text": "reads the last page of a book first",
+   "bio": "Confession: I read the last page of a book first."
+  },
+  {
+   "text": "counts the steps on every staircase",
+   "bio": "Every staircase gets counted. Ask me how many."
+  },
+  {
+   "text": "always sits facing the door",
+   "bio": "Always sitting facing the door. Old habit."
+  },
+  {
+   "text": "keeps a pencil tucked behind one ear",
+   "bio": "There is a pencil behind my ear. Always."
+  },
+  {
+   "text": "greets every cat like an old friend",
+   "bio": "Every cat I meet gets greeted like an old friend."
+  },
+  {
+   "text": "rates every meal out of ten",
+   "bio": "Your cooking will get a score out of ten. Lovingly."
+  },
+  {
+   "text": "carries a pocketknife and a spare button",
+   "bio": "Need a pocketknife or a spare button? Got both."
+  },
+  {
+   "text": "quotes old proverbs at the oddest moments",
+   "bio": "Expect old proverbs at the oddest moments."
+  },
+  {
+   "text": "can name every bird by its song",
+   "bio": "Hum a birdsong and I can name the bird."
+  },
+  {
+   "text": "taps out rhythms on any surface",
+   "bio": "Tables, knees, steering wheels: I drum on all of them."
+  },
+  {
+   "text": "keeps a jar of buttons nobody may touch",
+   "bio": "My button jar is strictly look, don't touch."
+  },
+  {
+   "text": "never leaves without checking the weather twice",
+   "bio": "Checking the weather twice before leaving. Every time."
+  },
+  {
+   "text": "folds napkins into little animals",
+   "bio": "Give me a napkin and you'll get a little swan back."
+  },
+  {
+   "text": "always knows where the best bread in town is",
+   "bio": "Ask where the best bread in town is. I always know."
+  },
+  {
+   "text": "saves every ticket stub and receipt",
+   "bio": "Every ticket stub and receipt I've ever had is in a box."
+  },
+  {
+   "text": "gives everyone a nickname within a week",
+   "bio": "Within a week, you'll have a nickname. No refunds."
+  },
+  {
+   "text": "drinks tea far too hot for anyone else",
+   "bio": "My tea is hotter than anyone else can stand."
+  },
+  {
+   "text": "has a lucky coin and flips it to decide things",
+   "bio": "Big decisions are made by my lucky coin."
+  },
+  {
+   "text": "apologizes to furniture after bumping into it",
+   "bio": "Sorry, table. Yes, I apologise to furniture."
+  },
+  {
+   "text": "keeps a pressed flower in their wallet",
+   "bio": "A pressed flower lives in my wallet."
+  },
+  {
+   "text": "laughs a beat after everyone else",
+   "bio": "My laugh arrives a beat after everyone else's."
+  },
+  {
+   "text": "rearranges the salt and pepper wherever they sit",
+   "bio": "Salt and pepper will be rearranged wherever I sit."
+  },
+  {
+   "text": "knows a card trick and will show you",
+   "bio": "Got a card trick, and you will be seeing it."
+  },
+  {
+   "text": "writes the date at the top of everything",
+   "bio": "Everything I write gets the date at the top."
+  },
+  {
+   "text": "collects other people's lost gloves",
+   "bio": "Lost a glove? Probably in my collection."
+  },
+  {
+   "text": "speaks to babies as if they were grown-ups",
+   "bio": "Babies get full adult conversation from me."
+  },
+  {
+   "text": "keeps a running tally of every rainy day",
+   "bio": "Keeping a running tally of rainy days. Ask for the count."
+  },
+  {
+   "text": "carries a spare umbrella to lend out",
+   "bio": "Spare umbrella always on hand, ready to lend."
+  },
+  {
+   "text": "always orders the second-cheapest thing",
+   "bio": "Second-cheapest thing on the menu, every time."
+  },
+  {
+   "text": "never sits in the same seat twice",
+   "bio": "Never the same seat twice. Keeps life interesting."
+  },
+  {
+   "text": "keeps lists of favorite words",
+   "bio": "Keeper of lists of favourite words. Tell me yours."
+  },
+  {
+   "text": "tears bread into perfect little squares",
+   "bio": "Bread gets torn into perfect little squares. Don't ask."
+  },
+  {
+   "text": "wears mismatched socks on purpose",
+   "bio": "Mismatched socks, on purpose, always."
+  },
+  {
+   "text": "can fall asleep sitting up anywhere",
+   "bio": "Can nap sitting up anywhere. It's a gift."
+  },
+  {
+   "text": "knows when every bell in town will ring",
+   "bio": "Ask me when the next church bell rings."
+  },
+  {
+   "text": "keeps a small brass bell on their keys",
+   "bio": "You will hear my keys before you see me. Brass bell."
+  },
+  {
+   "text": "salutes every magpie",
+   "bio": "Every magpie gets a salute. Just to be safe."
+  },
+  {
+   "text": "always has a piece of string handy",
+   "bio": "Need string? Always have some."
+  },
+  {
+   "text": "rates strangers' dogs out loud",
+   "bio": "Your dog will be rated out loud. It will score well."
+  },
+  {
+   "text": "keeps a seed packet in every coat",
+   "bio": "Every coat I own has a seed packet in the pocket."
+  },
+  {
+   "text": "memorizes the names on every shop sign without meaning to",
+   "bio": "Accidentally memorised every shop sign in town."
+  },
+  {
+   "text": "says goodnight to the moon",
+   "bio": "Saying goodnight to the moon is part of my routine."
+  },
+  {
+   "text": "can recite every street in the neighborhood in order",
+   "bio": "Can recite every street in the neighbourhood, in order."
+  },
+  {
+   "text": "always pays in exact change",
+   "bio": "Exact change, always. Down to the penny."
+  },
+  {
+   "text": "keeps a tiny sewing kit and fixes other people's hems",
+   "bio": "Your hem is coming down. Hold still, I have a kit."
+  },
+  {
+   "text": "eats dessert first whenever allowed",
+   "bio": "Dessert first whenever allowed. Life is short."
+  },
+  {
+   "text": "sniffs every book before opening it",
+   "bio": "Every book gets a sniff before I open it."
+  },
+  {
+   "text": "taps the doorframe twice on the way out",
+   "bio": "Two taps on the doorframe on the way out. Every door."
+  },
+  {
+   "text": "collects smooth stones from every trip",
+   "bio": "Smooth stones from every trip fill my shelves."
+  },
+  {
+   "text": "draws little suns on the corners of notes",
+   "bio": "My notes come with little suns in the corners."
+  },
+  {
+   "text": "can tie a dozen kinds of knots",
+   "bio": "Can tie a dozen kinds of knots. Useful at parties."
+  },
+  {
+   "text": "keeps a diary of the weather and nothing else",
+   "bio": "My diary is about the weather and nothing else."
+  },
+  {
+   "text": "carries a magnifying glass for no clear reason",
+   "bio": "There's a magnifying glass in my bag. No idea why."
+  },
+  {
+   "text": "knows the birthday of every neighbor's cat",
+   "bio": "Every cat on my street has a birthday I remember."
+  },
+  {
+   "text": "always walks on the sunny side of the street",
+   "bio": "Sunny side of the street, always."
+  },
+  {
+   "text": "cuts sandwiches into triangles and nothing else",
+   "bio": "Sandwiches are triangles. This is not up for debate."
+  },
+  {
+   "text": "saves the puzzle page for later and never finishes it",
+   "bio": "Saving the puzzle page for later. Later never comes."
+  },
+  {
+   "text": "finishes every sentence with a little nod",
+   "bio": "Every sentence I say ends with a little nod."
+  },
+  {
+   "text": "keeps a stash of postcards and sends them to friends across town",
+   "bio": "Expect postcards from me, even from across town."
+  },
+  {
+   "text": "names the pigeons on their windowsill",
+   "bio": "The pigeons on my windowsill all have names."
+  },
+  {
+   "text": "laughs loudest at their own jokes",
+   "bio": "Nobody laughs louder at my jokes than me."
+  },
+  {
+   "text": "keeps an old watch that runs ten minutes fast on purpose",
+   "bio": "My watch runs ten minutes fast, on purpose."
+  },
+  {
+   "text": "can't pass a puddle without hopping over it",
+   "bio": "No puddle goes unhopped on my watch."
+  },
+  {
+   "text": "makes up words and uses them seriously",
+   "bio": "Fluent in words I made up. Very seriously."
+  },
+  {
+   "text": "keeps a jar of honey from every market they visit",
+   "bio": "A jar of honey from every market I visit. The cupboard is full."
+  },
+  {
+   "text": "hums a different tune for every season",
+   "bio": "A different tune for every season. Autumn's is the best."
+  },
+  {
+   "text": "tucks a flower in their buttonhole on Fridays",
+   "bio": "Fridays mean a flower in my buttonhole."
+  },
+  {
+   "text": "tests every chair before sitting down",
+   "bio": "Every chair gets tested before I sit. Trust issues."
+  },
+  {
+   "text": "always has a pocket full of acorns or conkers",
+   "bio": "Pockets usually full of acorns or conkers."
+  },
+  {
+   "text": "greets the morning with a big stretch out the window",
+   "bio": "Mornings start with a big stretch out the window."
+  },
+  {
+   "text": "keeps meticulous notes on every pie they've eaten",
+   "bio": "Meticulous notes on every pie I've eaten. Bring pie."
+  },
+  {
+   "text": "knows a little poem for any occasion",
+   "bio": "Got a little poem for any occasion. Test me."
+  },
+  {
+   "text": "carries a handkerchief embroidered with someone else's initials",
+   "bio": "My handkerchief has someone else's initials. Long story."
+  },
+  {
+   "text": "pats every bench they pass",
+   "bio": "Every bench I pass gets a friendly pat."
+  },
+  {
+   "text": "writes letters with a fountain pen and seals them with wax",
+   "bio": "Letters from me come in fountain pen and sealing wax."
+  },
+  {
+   "text": "is suspicious of all soup",
+   "bio": "Deeply suspicious of all soup."
+  },
+  {
+   "text": "keeps a pebble in their pocket for luck",
+   "bio": "A lucky pebble rides in my pocket."
+  },
+  {
+   "text": "only drinks from one particular chipped mug",
+   "bio": "One chipped mug. Only that one."
+  },
+  {
+   "text": "stops to read every notice board",
+   "bio": "Can't pass a notice board without reading all of it."
+  },
+  {
+   "text": "carries a small notebook of overheard sayings",
+   "bio": "Careful what you say. My notebook of overheard sayings is hungry."
+  },
+  {
+   "text": "always arrives with something baked",
+   "bio": "Never arrive anywhere without something baked."
+  },
+  {
+   "text": "counts under their breath when nervous",
+   "bio": "When nervous, I count under my breath."
+  },
+  {
+   "text": "keeps a little music box by the window and winds it nightly",
+   "bio": "Winding my little music box is how every night ends."
+  },
+  {
+   "text": "puts a coin in every fountain",
+   "bio": "A coin goes into every fountain I pass."
+  },
+  {
+   "text": "refuses to step on cracks in the pavement",
+   "bio": "Watch me avoid every crack in the pavement."
+  },
+  {
+   "text": "folds every letter into thirds, exactly",
+   "bio": "Letters get folded into thirds. Exactly thirds."
+  }
+ ]
+}

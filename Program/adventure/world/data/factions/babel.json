@@ -1,0 +1,352 @@
+{
+ "about": "BABEL's factions in play (dungeon/factions.py), from dungeon/world/packages/babel/factions.json: the powers with a hand on the travel map, the clocks they run from arrival day, and the jobs they give. Holds are travel nodes (dungeon/world/data/travel/babel.json). Drafts for Vanta to keep, change or cut.",
+ "world": "babel",
+ "pace": 25,
+ "factions": [
+  {
+   "id": "the-landing",
+   "name": "The Landing",
+   "kind": "guild",
+   "tier": 1,
+   "summary": "Darla Kinney's guild of veterans from before the Turning, small, poor and proud, living in a drained bathhouse at the end of the guild row.",
+   "goals": [
+    "Get their people past Rank D under the new rules",
+    "Get leverage on the Turning before the big guilds do"
+   ],
+   "holds": [
+    "the-concourse"
+   ],
+   "rivals": [
+    "the-market-rows"
+   ],
+   "allies": [],
+   "clocks": [
+    {
+     "id": "crack-the-rank-trials",
+     "name": "Crack the Rank Trials",
+     "segments": 6,
+     "done": "The Landing works out what the new Rank Trials want. Two of Darla's people pass to D in one week, and every guild on the row wants to know how."
+    },
+    {
+     "id": "teagues-eyes",
+     "name": "Teague's eyes come back to the Landing",
+     "segments": 4,
+     "done": "Darla stops pretending she does not see the white ring. She calls the one who wears it into the bathhouse and asks, flatly, what they remember about the Reach."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "escort-to-the-cage",
+     "title": "Escort a new wave to the cage",
+     "days": 1,
+     "wages": 2,
+     "standing": 1,
+     "giver": "Darla Kinney",
+     "hook": "The Landing needs a strong back to walk six frightened arrivals from the Waystone to Cobb's cage and see them onto Varrow before dark.",
+     "truth": "Two of the six are Marked, and Darla knows what the Close does with the Marked. She is sending them anyway, because the Landing owes Varrow a debt in bodies.",
+     "missed": "The six went up without an escort. Only four reached Hollin.",
+     "ties": [
+      {
+       "kind": "faction",
+       "ref": "the-close"
+      },
+      {
+       "kind": "npc",
+       "ref": "Cobb"
+      }
+     ]
+    },
+    {
+     "id": "the-empty-bunk",
+     "title": "The empty bunk",
+     "days": 4,
+     "wages": 3,
+     "standing": 1,
+     "giver": "a Landing veteran",
+     "hook": "A Landing veteran wants someone to find out who took the kit from a bunk nobody sleeps in, and bring it back without telling Darla.",
+     "truth": "The bunk was Teague's. Darla cleared it herself, and hid what she found in the bathhouse cistern.",
+     "missed": "The kit stays lost. The veteran stops talking to the character.",
+     "ties": [
+      {
+       "kind": "clue",
+       "ref": "Teague's kit"
+      },
+      {
+       "kind": "npc",
+       "ref": "Darla Kinney"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-market-rows",
+   "name": "The market rows",
+   "kind": "crew",
+   "tier": 1,
+   "summary": "Whoever collects the stall rent on the Concourse's fire-market rows, and remembers who was late.",
+   "goals": [
+    "Collect the stall rent",
+    "Know every new arrival worth something"
+   ],
+   "holds": [
+    "the-concourse"
+   ],
+   "rivals": [
+    "the-landing"
+   ],
+   "allies": [
+    "the-copper-steps"
+   ],
+   "clocks": [
+    {
+     "id": "a-cart-that-cant-pay",
+     "name": "A cart that can't pay its rent",
+     "segments": 4,
+     "done": "The rows take Hamid's cart for back rent. His skewers turn up a week later on another man's grill, and Hamid turns up nowhere."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "collect-from-hamid",
+     "title": "Collect from Hamid",
+     "days": 2,
+     "wages": 3,
+     "standing": 1,
+     "giver": "a rent collector",
+     "hook": "The rows want a climber to stand behind the collector while he leans on a skewer seller who is two weeks behind.",
+     "truth": "Hamid is behind because he paid a dead climber's debt out of pity. The collector knows and is leaning harder for it.",
+     "missed": "The collector went alone and broke Hamid's grill.",
+     "ties": [
+      {
+       "kind": "npc",
+       "ref": "Hamid"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-close",
+   "name": "The Close of Saint Aurel",
+   "kind": "church",
+   "tier": 2,
+   "summary": "Varrow's church on the white hill, which weighs every giant who comes up the Stair, keeps what the Scales find, and runs the Pens.",
+   "goals": [
+    "Weigh every giant who comes up the Stair",
+    "Hold its compact with the Keep, on its own terms",
+    "Never let another Wakeful pass unweighed"
+   ],
+   "holds": [
+    "hollin"
+   ],
+   "rivals": [
+    "house-corve",
+    "the-reach-giants"
+   ],
+   "allies": [],
+   "clocks": [
+    {
+     "id": "the-autumn-weighing",
+     "name": "The autumn weighing of Hollin",
+     "segments": 6,
+     "done": "The Close comes down the hill with the Scales and weighs Hollin, door by door. Whoever is found wanting goes to the Pens, and the Keep does not stop it."
+    },
+    {
+     "id": "a-new-gift-for-the-wall",
+     "name": "A new gift for the Wall",
+     "segments": 4,
+     "done": "The Close gives a gift to the Wall: a Marked climber, bound, walked out to the Reachwall and left there for the giants."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "the-pens-ledger",
+     "title": "The Pens ledger",
+     "days": 3,
+     "wages": 4,
+     "standing": 1,
+     "giver": "Brother Coll",
+     "hook": "Brother Coll wants someone he does not know to copy a page of the Pens ledger, so it cannot be traced to him.",
+     "truth": "The page shows where the Marked go after the Pens: down the Margrave's stair, sold, and the price is entered as a tithe.",
+     "missed": "Coll copied it himself. He is not at the infirmary anymore.",
+     "ties": [
+      {
+       "kind": "clue",
+       "ref": "the Pens ledger"
+      },
+      {
+       "kind": "npc",
+       "ref": "Brother Coll"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "house-corve",
+   "name": "House Corve",
+   "kind": "house",
+   "tier": 1,
+   "summary": "The Margrave of Varrow and his household, who hold the Keep and the Reachwall and owe the Close more souls than he will pay.",
+   "goals": [
+    "Hold the Wall under his own banner",
+    "Stop paying the Close in souls"
+   ],
+   "holds": [
+    "hollin"
+   ],
+   "rivals": [
+    "the-close",
+    "the-reach-giants"
+   ],
+   "allies": [],
+   "clocks": [
+    {
+     "id": "patch-the-wall",
+     "name": "Patch the Wall before the cold",
+     "segments": 6,
+     "done": "The breach in the Reachwall is patched with timber and stone before the frost. It will hold one winter, and Captain Hode says so to the Margrave's face."
+    },
+    {
+     "id": "refuse-the-tithe",
+     "name": "Refuse the tithe at the first frost",
+     "segments": 8,
+     "done": "The Margrave refuses the Close its tithe in front of the whole valley. The bells stop, the Keep bars its gate, and Hollin has to pick a side."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "a-season-on-the-wall",
+     "title": "A season on the Wall",
+     "days": 30,
+     "wages": 40,
+     "standing": 2,
+     "giver": "Captain Berit Hode",
+     "hook": "The Margrave is hiring climbers to stand his Wall until the first frost, paid in his coin, with his cellar stair at the end of it.",
+     "truth": "The cellar stair goes up, past the Wall, toward the Marches. The Bishop went down it, and so did Teague.",
+     "missed": "The Wall was short a pair of hands when the Reach came over.",
+     "ties": [
+      {
+       "kind": "faction",
+       "ref": "the-reach-giants"
+      },
+      {
+       "kind": "npc",
+       "ref": "Captain Berit Hode"
+      }
+     ],
+     "tier": 2
+    }
+   ]
+  },
+  {
+   "id": "the-reach-giants",
+   "name": "The Reach giants",
+   "kind": "tribe",
+   "tier": 2,
+   "summary": "Feral Nephil on the moor past the Reachwall, who remember a Wakeful who promised them the stair.",
+   "goals": [
+    "Climb out of the Reach",
+    "Find the Wakeful who promised them the stair"
+   ],
+   "holds": [
+    "the-reach"
+   ],
+   "rivals": [
+    "the-close",
+    "house-corve"
+   ],
+   "allies": [],
+   "clocks": [
+    {
+     "id": "the-cold-comes",
+     "name": "The cold comes, and they come over",
+     "segments": 8,
+     "done": "The first frost, and the Reach comes over the Wall in the dark. Men die on the patch. The giants call one name the whole night: Brother."
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "the-lantern-room",
+   "name": "The Lantern Room",
+   "kind": "salon",
+   "tier": 2,
+   "summary": "Sabeen Oro's house under the Bazaar's great dome, which sells company, buys debts and collects them.",
+   "goals": [
+    "Own the arrival who wrote the new rules",
+    "Collect every debt"
+   ],
+   "holds": [
+    "the-gilded-bazaar"
+   ],
+   "rivals": [
+    "the-night-cage"
+   ],
+   "allies": [
+    "the-copper-steps",
+    "the-market-rows"
+   ],
+   "clocks": [
+    {
+     "id": "fetch-the-engineer",
+     "name": "Fetch the engineer to the Lantern Room",
+     "segments": 6,
+     "done": "Sabeen's runner brings the engineer up the Stair to the Bazaar, by a debt, a lie or a halter, and Sabeen sits him down and asks what the new rules are for."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "a-letter-down-the-stair",
+     "title": "A letter down the Stair",
+     "days": 5,
+     "wages": 6,
+     "standing": 1,
+     "giver": "Sabeen Oro",
+     "hook": "Sabeen wants a sealed letter carried down to Hollin and put in one person's hand, and pays in advance.",
+     "truth": "The letter is a contract with the reader's name already on it. Reading it to the end is signing.",
+     "missed": "Sabeen sent her own runner instead, who carried more than a letter.",
+     "ties": [
+      {
+       "kind": "npc",
+       "ref": "Sabeen Oro"
+      },
+      {
+       "kind": "item",
+       "ref": "the sealed letter"
+      }
+     ],
+     "tier": 2
+    }
+   ]
+  },
+  {
+   "id": "the-copper-steps",
+   "name": "The Copper Steps",
+   "kind": "crew",
+   "tier": 1,
+   "summary": "The fences and rumor-brokers of the Bazaar's stair-gate, who buy every story about the Turning first.",
+   "goals": [
+    "Buy every rumor about the Turning first",
+    "Sell it to everyone"
+   ],
+   "holds": [
+    "the-gilded-bazaar"
+   ],
+   "rivals": [],
+   "allies": [
+    "the-lantern-room"
+   ],
+   "clocks": [
+    {
+     "id": "the-bounty-board",
+     "name": "A bounty board goes down the chain",
+     "segments": 4,
+     "done": "The Copper Steps post a bounty on the Bazaar's defaulters, and it goes down the Stair ahead of them, floor by floor."
+    }
+   ],
+   "jobs": []
+  }
+ ]
+}

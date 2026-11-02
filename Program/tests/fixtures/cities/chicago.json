@@ -1,0 +1,7530 @@
+{
+ "schema_version": 1,
+ "id": "chicago",
+ "name": "Chicago",
+ "region": "Illinois",
+ "country": "US",
+ "timezone": "America/Chicago",
+ "aliases": [
+  "Chi-Town",
+  "Chitown",
+  "The Windy City",
+  "Chicago, IL",
+  "Chicagoland",
+  "City of Big Shoulders"
+ ],
+ "summary": "The big city of the Midwest on Lake Michigan: a skyline of landmark architecture along the river, free lakefront beaches, the elevated L, blues and improv, deep-dish and Italian beef, and neighborhoods with fierce loyalties from Rogers Park to the South Side.",
+ "lat": 41.88,
+ "lon": -87.63,
+ "speeds": {
+  "walk": 4.5,
+  "car": 24,
+  "rideshare": 24,
+  "bus": 12,
+  "subway": 28,
+  "commuter-rail": 50,
+  "water-taxi": 12,
+  "bike-share": 14
+ },
+ "names": {
+  "mix": {
+   "hispanic": 2.9,
+   "black-american": 2.8,
+   "anglo": 2.3,
+   "slavic": 0.9,
+   "irish": 0.8,
+   "italian": 0.6,
+   "east-asian": 0.6,
+   "south-asian": 0.5,
+   "jewish": 0.4,
+   "arabic": 0.3,
+   "west-african": 0.2,
+   "caribbean": 0.1
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Chicago places and neighborhoods written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Well-known public places, institutions and employers from general knowledge. Businesses open and close and rents move: treat this as a snapshot for fiction. Rents are rounded estimates of typical asking ranges, not listings. Coordinates are approximate neighborhood centers."
+  },
+  "curated-climate-2026-10": {
+   "kind": "curated",
+   "title": "Approximate monthly climate for Chicago (O'Hare and Midway)",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Rounded values in line with NOAA 1991-2020 normals; refresh with scripts/world when network access to NOAA is available."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "the-loop",
+   "name": "The Loop",
+   "summary": "The downtown ringed by the elevated tracks: trading floors on LaSalle, the theater district on State and Randolph, Millennium Park and the Art Institute on Michigan Avenue.",
+   "vibe": [
+    "business",
+    "central",
+    "architecture",
+    "cultural"
+   ],
+   "lat": 41.881,
+   "lon": -87.629,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2000
+    ],
+    "one_bedroom": [
+     1900,
+     2700
+    ],
+    "two_bedroom": [
+     2700,
+     3900
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "converted-office",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "blue",
+    "brown",
+    "green",
+    "orange",
+    "pink",
+    "metra",
+    "cta-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "river-north",
+   "name": "River North",
+   "summary": "Galleries turned into steakhouses, clubs and glassy rental towers north of the river, with the Merchandise Mart and the tourist deep-dish rooms.",
+   "vibe": [
+    "nightlife",
+    "young-professional",
+    "dining",
+    "central"
+   ],
+   "lat": 41.892,
+   "lon": -87.633,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1600,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2900,
+     4300
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "loft",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "brown",
+    "purple",
+    "cta-bus",
+    "water-taxi",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "streeterville",
+   "name": "Streeterville",
+   "summary": "High-rises between the Magnificent Mile and the lake, home to Navy Pier, the Northwestern hospital campus and its medical students.",
+   "vibe": [
+    "upscale",
+    "medical",
+    "lakefront",
+    "touristy"
+   ],
+   "lat": 41.893,
+   "lon": -87.62,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1600,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2800
+    ],
+    "two_bedroom": [
+     2800,
+     4200
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "cta-bus",
+    "water-taxi",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gold-coast",
+   "name": "Gold Coast",
+   "summary": "Old money mansions and doorman co-ops off Lake Shore Drive, with Oak Street boutiques and the late-night Rush and Division bar strip a block away.",
+   "vibe": [
+    "affluent",
+    "historic",
+    "lakefront",
+    "nightlife"
+   ],
+   "lat": 41.905,
+   "lon": -87.628,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1400,
+     1900
+    ],
+    "one_bedroom": [
+     1900,
+     2800
+    ],
+    "two_bedroom": [
+     2800,
+     4500
+    ]
+   },
+   "housing": [
+    "co-op",
+    "brownstone",
+    "apartment-tower",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "brown",
+    "purple",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lincoln-park",
+   "name": "Lincoln Park & Old Town",
+   "summary": "Leafy greystones and brick two-flats around the free zoo and the big lakefront park, with DePaul students, Steppenwolf and Second City on Wells Street.",
+   "vibe": [
+    "leafy",
+    "young-professional",
+    "park",
+    "comedy"
+   ],
+   "lat": 41.921,
+   "lon": -87.648,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1300,
+     1700
+    ],
+    "one_bedroom": [
+     1700,
+     2400
+    ],
+    "two_bedroom": [
+     2400,
+     3500
+    ]
+   },
+   "housing": [
+    "greystone",
+    "two-flat",
+    "condo",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "brown",
+    "purple",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakeview",
+   "name": "Lakeview & Wrigleyville",
+   "summary": "Vintage courtyard buildings, the ivy at Wrigley Field and its bars, and Northalsted, the city's historic LGBTQ+ neighborhood.",
+   "vibe": [
+    "sports",
+    "bars",
+    "lgbtq-friendly",
+    "young-professional"
+   ],
+   "lat": 41.943,
+   "lon": -87.654,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1200,
+     1600
+    ],
+    "one_bedroom": [
+     1500,
+     2100
+    ],
+    "two_bedroom": [
+     2100,
+     3000
+    ]
+   },
+   "housing": [
+    "courtyard-building",
+    "two-flat",
+    "apartment",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "brown",
+    "purple",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wicker-park",
+   "name": "Wicker Park & Bucktown",
+   "summary": "The six-corner crossroads of Milwaukee, North and Damen: boutiques, record shops, cocktail bars and the elevated 606 trail, once the heart of Polish Chicago.",
+   "vibe": [
+    "hip",
+    "shopping",
+    "nightlife",
+    "arts"
+   ],
+   "lat": 41.909,
+   "lon": -87.677,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1300,
+     1700
+    ],
+    "one_bedroom": [
+     1600,
+     2300
+    ],
+    "two_bedroom": [
+     2200,
+     3200
+    ]
+   },
+   "housing": [
+    "two-flat",
+    "loft",
+    "apartment",
+    "single-family"
+   ],
+   "walkability": "high",
+   "transit": [
+    "blue",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ukrainian-village",
+   "name": "Ukrainian Village & West Town",
+   "summary": "Gold-domed churches, Ukrainian bakeries and dive bars along Chicago Avenue, with old workers' cottages between them.",
+   "vibe": [
+    "historic",
+    "dive-bars",
+    "music",
+    "church"
+   ],
+   "lat": 41.899,
+   "lon": -87.684,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1150,
+     1500
+    ],
+    "one_bedroom": [
+     1450,
+     1950
+    ],
+    "two_bedroom": [
+     1900,
+     2700
+    ]
+   },
+   "housing": [
+    "two-flat",
+    "workers-cottage",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "blue",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "logan-square",
+   "name": "Logan Square",
+   "summary": "Wide boulevards and greystones around the eagle-topped Centennial Monument, with a Sunday farmers market, a strong Latino history and a young, creative crowd.",
+   "vibe": [
+    "boulevards",
+    "hip",
+    "food",
+    "changing"
+   ],
+   "lat": 41.923,
+   "lon": -87.708,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1100,
+     1450
+    ],
+    "one_bedroom": [
+     1400,
+     1900
+    ],
+    "two_bedroom": [
+     1800,
+     2600
+    ]
+   },
+   "housing": [
+    "greystone",
+    "two-flat",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "blue",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "humboldt-park",
+   "name": "Humboldt Park",
+   "summary": "The center of Puerto Rican Chicago: a vast park with a lagoon and boathouse, and Paseo Boricua on Division Street between two giant steel flags.",
+   "vibe": [
+    "puerto-rican",
+    "park",
+    "community",
+    "affordable"
+   ],
+   "lat": 41.902,
+   "lon": -87.721,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     900,
+     1200
+    ],
+    "one_bedroom": [
+     1100,
+     1500
+    ],
+    "two_bedroom": [
+     1400,
+     2000
+    ]
+   },
+   "housing": [
+    "two-flat",
+    "greystone",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-loop",
+   "name": "West Loop & Fulton Market",
+   "summary": "Meatpacking warehouses turned into Restaurant Row, tech offices and hotels, with the United Center to the west and the commuter stations to the east.",
+   "vibe": [
+    "dining",
+    "tech",
+    "new-build",
+    "nightlife"
+   ],
+   "lat": 41.885,
+   "lon": -87.65,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1700,
+     2200
+    ],
+    "one_bedroom": [
+     2100,
+     3000
+    ],
+    "two_bedroom": [
+     3000,
+     4400
+    ]
+   },
+   "housing": [
+    "loft",
+    "apartment-tower",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "blue",
+    "green",
+    "pink",
+    "metra",
+    "cta-bus",
+    "water-taxi",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "little-italy",
+   "name": "Little Italy & University Village",
+   "summary": "Taylor Street's red-sauce restaurants and lemonade stands beside the UIC campus and the Illinois Medical District hospitals.",
+   "vibe": [
+    "students",
+    "medical",
+    "italian",
+    "historic"
+   ],
+   "lat": 41.869,
+   "lon": -87.66,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1100,
+     1500
+    ],
+    "one_bedroom": [
+     1400,
+     1900
+    ],
+    "two_bedroom": [
+     1800,
+     2600
+    ]
+   },
+   "housing": [
+    "apartment",
+    "student-housing",
+    "rowhouse",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "blue",
+    "pink",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pilsen",
+   "name": "Pilsen",
+   "summary": "Mexican Chicago's cultural heart: murals on every viaduct, panaderias and taquerias along 18th Street and old Bohemian brick buildings full of artists' studios.",
+   "vibe": [
+    "mexican",
+    "arts",
+    "murals",
+    "changing"
+   ],
+   "lat": 41.857,
+   "lon": -87.66,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1300
+    ],
+    "one_bedroom": [
+     1200,
+     1650
+    ],
+    "two_bedroom": [
+     1500,
+     2200
+    ]
+   },
+   "housing": [
+    "two-flat",
+    "workers-cottage",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "pink",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "little-village",
+   "name": "Little Village",
+   "summary": "La Villita: 26th Street, one of the busiest Mexican shopping streets in the country, under a welcome arch, with families in brick bungalows and two-flats.",
+   "vibe": [
+    "mexican",
+    "family",
+    "shopping",
+    "affordable"
+   ],
+   "lat": 41.845,
+   "lon": -87.712,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     850,
+     1100
+    ],
+    "one_bedroom": [
+     1000,
+     1350
+    ],
+    "two_bedroom": [
+     1300,
+     1800
+    ]
+   },
+   "housing": [
+    "two-flat",
+    "bungalow",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "pink",
+    "cta-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chinatown",
+   "name": "Chinatown",
+   "summary": "Wentworth Avenue and the newer Chinatown Square under the red gate, with dim sum, bakeries and Ping Tom park on the river.",
+   "vibe": [
+    "chinese",
+    "food",
+    "family",
+    "riverside"
+   ],
+   "lat": 41.852,
+   "lon": -87.632,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1350
+    ],
+    "one_bedroom": [
+     1250,
+     1700
+    ],
+    "two_bedroom": [
+     1600,
+     2300
+    ]
+   },
+   "housing": [
+    "apartment",
+    "townhouse",
+    "two-flat"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "orange",
+    "cta-bus",
+    "water-taxi",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-loop",
+   "name": "South Loop & Museum Campus",
+   "summary": "Former rail yards turned towers and townhouses, with Printers Row, Columbia College students and the museums and Soldier Field on the lake.",
+   "vibe": [
+    "museums",
+    "lakefront",
+    "students",
+    "new-build"
+   ],
+   "lat": 41.862,
+   "lon": -87.624,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1400,
+     1850
+    ],
+    "one_bedroom": [
+     1700,
+     2400
+    ],
+    "two_bedroom": [
+     2400,
+     3500
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "loft",
+    "townhouse",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "orange",
+    "green",
+    "metra",
+    "south-shore",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bronzeville",
+   "name": "Bronzeville",
+   "summary": "The \"Black Metropolis\" of the Great Migration: greystones and mansions along King Drive, the jazz and blues history of 47th Street, and the IIT campus to the west.",
+   "vibe": [
+    "historic",
+    "black-history",
+    "architecture",
+    "changing"
+   ],
+   "lat": 41.823,
+   "lon": -87.617,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1300
+    ],
+    "one_bedroom": [
+     1150,
+     1600
+    ],
+    "two_bedroom": [
+     1500,
+     2200
+    ]
+   },
+   "housing": [
+    "greystone",
+    "two-flat",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "green",
+    "red",
+    "metra",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hyde-park",
+   "name": "Hyde Park",
+   "summary": "The University of Chicago's gothic quads, bookstores and co-op flats between Washington Park and the lake, a famously integrated, intellectual corner of the South Side.",
+   "vibe": [
+    "academic",
+    "students",
+    "lakefront",
+    "bookish"
+   ],
+   "lat": 41.795,
+   "lon": -87.594,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1050,
+     1400
+    ],
+    "one_bedroom": [
+     1300,
+     1800
+    ],
+    "two_bedroom": [
+     1800,
+     2600
+    ]
+   },
+   "housing": [
+    "apartment",
+    "courtyard-building",
+    "co-op",
+    "student-housing"
+   ],
+   "walkability": "high",
+   "transit": [
+    "metra",
+    "south-shore",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bridgeport",
+   "name": "Bridgeport",
+   "summary": "Old Irish South Side, home of five mayors and the White Sox, now mixed with Chinese and Mexican families, art spaces and corner taverns.",
+   "vibe": [
+    "working-class",
+    "sports",
+    "historic",
+    "taverns"
+   ],
+   "lat": 41.838,
+   "lon": -87.647,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     900,
+     1200
+    ],
+    "one_bedroom": [
+     1100,
+     1500
+    ],
+    "two_bedroom": [
+     1400,
+     2000
+    ]
+   },
+   "housing": [
+    "workers-cottage",
+    "two-flat",
+    "bungalow"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "red",
+    "orange",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "andersonville",
+   "name": "Andersonville",
+   "summary": "The old Swedish strip of Clark Street: independent shops, Belgian beer, a large LGBTQ+ community and a water tower painted with the Swedish flag.",
+   "vibe": [
+    "independent-shops",
+    "lgbtq-friendly",
+    "swedish",
+    "neighbourly"
+   ],
+   "lat": 41.98,
+   "lon": -87.668,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1100,
+     1450
+    ],
+    "one_bedroom": [
+     1350,
+     1850
+    ],
+    "two_bedroom": [
+     1800,
+     2600
+    ]
+   },
+   "housing": [
+    "courtyard-building",
+    "two-flat",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "uptown",
+   "name": "Uptown",
+   "summary": "Grand old theaters and ballrooms, the Green Mill, Vietnamese Argyle Street and Montrose Beach, in one of the most mixed neighborhoods in the city.",
+   "vibe": [
+    "music",
+    "diverse",
+    "historic",
+    "lakefront"
+   ],
+   "lat": 41.966,
+   "lon": -87.655,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1350
+    ],
+    "one_bedroom": [
+     1250,
+     1700
+    ],
+    "two_bedroom": [
+     1650,
+     2400
+    ]
+   },
+   "housing": [
+    "courtyard-building",
+    "apartment",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "red",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rogers-park",
+   "name": "Rogers Park & West Ridge",
+   "summary": "The far North Side by the lake: Loyola's campus, small beaches at the end of nearly every street, and Devon Avenue's South Asian shops to the west.",
+   "vibe": [
+    "diverse",
+    "lakefront",
+    "students",
+    "affordable"
+   ],
+   "lat": 42.005,
+   "lon": -87.672,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     900,
+     1200
+    ],
+    "one_bedroom": [
+     1100,
+     1500
+    ],
+    "two_bedroom": [
+     1400,
+     2000
+    ]
+   },
+   "housing": [
+    "courtyard-building",
+    "apartment",
+    "two-flat"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "red",
+    "purple",
+    "metra",
+    "cta-bus",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "evanston",
+   "name": "Evanston",
+   "summary": "The first suburb north on the lake: Northwestern University, a walkable downtown, big old houses and fenced beaches that charge a summer token.",
+   "vibe": [
+    "suburban",
+    "college-town",
+    "lakefront",
+    "leafy"
+   ],
+   "lat": 42.045,
+   "lon": -87.688,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1150,
+     1500
+    ],
+    "one_bedroom": [
+     1450,
+     1950
+    ],
+    "two_bedroom": [
+     1900,
+     2800
+    ]
+   },
+   "housing": [
+    "apartment",
+    "single-family",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "purple",
+    "metra",
+    "cta-bus",
+    "pace",
+    "divvy"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oak-park",
+   "name": "Oak Park",
+   "summary": "The village just west of the city line, with the world's largest collection of Frank Lloyd Wright buildings, Hemingway's birthplace and tree-lined family streets.",
+   "vibe": [
+    "suburban",
+    "architecture",
+    "family",
+    "leafy"
+   ],
+   "lat": 41.885,
+   "lon": -87.785,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1050,
+     1400
+    ],
+    "one_bedroom": [
+     1300,
+     1800
+    ],
+    "two_bedroom": [
+     1700,
+     2500
+    ]
+   },
+   "housing": [
+    "single-family",
+    "apartment",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "green",
+    "blue",
+    "metra",
+    "pace"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "red",
+   "name": "CTA Red Line",
+   "kind": "subway",
+   "summary": "The busiest L line, 24 hours a day, from Howard through the State Street subway to 95th Street, stopping at Wrigley Field and the White Sox park.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blue",
+   "name": "CTA Blue Line",
+   "kind": "subway",
+   "summary": "A 24-hour line from O'Hare Airport through Logan Square, Wicker Park and the Dearborn subway to the Loop and on west to Forest Park.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brown",
+   "name": "CTA Brown Line",
+   "kind": "subway",
+   "summary": "Elevated line from Kimball through Ravenswood, Lakeview and Old Town around the Loop, the classic rattling ride past back porches.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green",
+   "name": "CTA Green Line",
+   "kind": "subway",
+   "summary": "From Oak Park and the West Side over Lake Street through the Loop and south through Bronzeville.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "orange",
+   "name": "CTA Orange Line",
+   "kind": "subway",
+   "summary": "From Midway Airport past Bridgeport and Chinatown to the Loop.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pink",
+   "name": "CTA Pink Line",
+   "kind": "subway",
+   "summary": "From Cicero through Little Village and Pilsen to the Loop.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "purple",
+   "name": "CTA Purple Line",
+   "kind": "subway",
+   "summary": "From Linden in Wilmette through Evanston to Howard, with rush-hour express trains running on to the Loop.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "metra",
+   "name": "Metra",
+   "kind": "commuter-rail",
+   "summary": "Commuter rail from Union Station, Ogilvie, LaSalle Street and Millennium Station to the suburbs, including the Electric line to Hyde Park.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-shore",
+   "name": "South Shore Line",
+   "kind": "commuter-rail",
+   "summary": "The interurban from Millennium Station through Hyde Park to Gary and South Bend in Indiana.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cta-bus",
+   "name": "CTA buses",
+   "kind": "bus",
+   "summary": "A grid of bus routes on nearly every major street, including the lakefront express buses along Lake Shore Drive.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pace",
+   "name": "Pace suburban buses",
+   "kind": "bus",
+   "summary": "Buses across the suburbs, including Evanston and Oak Park.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "water-taxi",
+   "name": "Chicago Water Taxi and Shoreline water taxis",
+   "kind": "water-taxi",
+   "summary": "River boats between the commuter stations, Michigan Avenue and Chinatown, and lake taxis between Navy Pier and the Museum Campus in summer.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "divvy",
+   "name": "Divvy",
+   "kind": "bike-share",
+   "summary": "Blue bikes and e-bikes docked across the city and Evanston.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "art-institute",
+   "name": "Art Institute of Chicago",
+   "kind": "museum",
+   "neighborhood": "the-loop",
+   "summary": "One of the great art museums, guarded by two bronze lions: Seurat's \"La Grande Jatte\", \"Nighthawks\", \"American Gothic\" and the Thorne miniature rooms.",
+   "tags": [
+    "art",
+    "iconic",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "millennium-park",
+   "name": "Millennium Park",
+   "kind": "park",
+   "neighborhood": "the-loop",
+   "summary": "Cloud Gate (the Bean), the Crown Fountain faces that spit water at children, gardens and free summer concerts at the Pritzker Pavilion.",
+   "tags": [
+    "iconic",
+    "free",
+    "sculpture",
+    "concerts"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maggie-daley-park",
+   "name": "Maggie Daley Park",
+   "kind": "park",
+   "neighborhood": "the-loop",
+   "summary": "Playgrounds and climbing walls in summer and a looping ice-skating ribbon in winter, just east of Millennium Park.",
+   "tags": [
+    "skating",
+    "kids",
+    "climbing"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "buckingham-fountain",
+   "name": "Buckingham Fountain",
+   "kind": "landmark",
+   "neighborhood": "the-loop",
+   "summary": "The great tiered fountain in Grant Park, with water shows on the hour and a lit display after dark in the warm months.",
+   "tags": [
+    "fountain",
+    "grant-park",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-riverwalk",
+   "name": "Chicago Riverwalk",
+   "kind": "landmark",
+   "neighborhood": "the-loop",
+   "summary": "A promenade along the main branch of the river under the bridges, with wine bars, kayak rentals and tour boats.",
+   "tags": [
+    "waterfront",
+    "walk",
+    "drinks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "architecture-river-cruise",
+   "name": "Architecture river cruise",
+   "kind": "attraction",
+   "neighborhood": "the-loop",
+   "summary": "A ninety-minute boat tour down the river with a guide naming every tower, from the Wrigley Building to Willis Tower.",
+   "tags": [
+    "architecture",
+    "boat",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "willis-tower-skydeck",
+   "name": "Skydeck at Willis Tower",
+   "kind": "attraction",
+   "neighborhood": "the-loop",
+   "summary": "Glass boxes on the 103rd floor of the tower everyone still calls the Sears Tower.",
+   "tags": [
+    "views",
+    "iconic",
+    "touristy"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-cultural-center",
+   "name": "Chicago Cultural Center",
+   "kind": "museum",
+   "neighborhood": "the-loop",
+   "summary": "The old public library, free to enter, with the world's largest Tiffany glass dome, exhibitions and lunchtime concerts.",
+   "tags": [
+    "free",
+    "architecture",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-theatre",
+   "name": "Chicago Theatre",
+   "kind": "venue",
+   "neighborhood": "the-loop",
+   "summary": "The 1921 movie palace under the famous red CHICAGO marquee on State Street, now for comedians and concerts.",
+   "tags": [
+    "theater",
+    "iconic",
+    "concerts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "symphony-center",
+   "name": "Symphony Center",
+   "kind": "venue",
+   "neighborhood": "the-loop",
+   "summary": "Home of the Chicago Symphony Orchestra on Michigan Avenue across from the Art Institute.",
+   "tags": [
+    "classical",
+    "music"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "goodman-theatre",
+   "name": "Goodman Theatre",
+   "kind": "venue",
+   "neighborhood": "the-loop",
+   "summary": "The city's oldest nonprofit theater, in the Randolph Street theater district, with a \"Christmas Carol\" every December.",
+   "tags": [
+    "theater"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harold-washington-library",
+   "name": "Harold Washington Library Center",
+   "kind": "library",
+   "neighborhood": "the-loop",
+   "summary": "The huge central public library with owls on the roof, a winter garden on the ninth floor and free music studios.",
+   "tags": [
+    "books",
+    "free",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-berghoff",
+   "name": "The Berghoff",
+   "kind": "restaurant",
+   "neighborhood": "the-loop",
+   "summary": "German restaurant on Adams Street since 1898, with its own root beer, schnitzel and a standing bar.",
+   "tags": [
+    "historic",
+    "german",
+    "beer"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "intelligentsia-millennium",
+   "name": "Intelligentsia Coffee (Randolph Street)",
+   "kind": "cafe",
+   "neighborhood": "the-loop",
+   "summary": "The Chicago roaster's downtown bar by Millennium Park, full of office workers before nine.",
+   "tags": [
+    "coffee",
+    "commuters"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pizzeria-uno",
+   "name": "Pizzeria Uno",
+   "kind": "restaurant",
+   "neighborhood": "river-north",
+   "summary": "The 1943 basement room where deep-dish began, at Ohio and Wabash; expect a wait and a forty-minute bake.",
+   "tags": [
+    "deep-dish",
+    "historic",
+    "pizza"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lou-malnatis-river-north",
+   "name": "Lou Malnati's (River North)",
+   "kind": "restaurant",
+   "neighborhood": "river-north",
+   "summary": "The local favorite for deep-dish with a buttery crust and a sausage patty that covers the whole pie.",
+   "tags": [
+    "deep-dish",
+    "pizza"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "portillos-river-north",
+   "name": "Portillo's (River North)",
+   "kind": "restaurant",
+   "neighborhood": "river-north",
+   "summary": "Big, loud, fast hot dogs, Italian beef and chocolate cake shakes in a Prohibition-themed hall.",
+   "tags": [
+    "hot-dogs",
+    "italian-beef",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "chicago-street-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mr-beef",
+   "name": "Mr. Beef on Orleans",
+   "kind": "restaurant",
+   "neighborhood": "river-north",
+   "summary": "A no-frills Italian beef counter, decades older than the TV show it inspired.",
+   "tags": [
+    "italian-beef",
+    "cheap",
+    "counter"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "chicago-street-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "frontera-grill",
+   "name": "Frontera Grill",
+   "kind": "restaurant",
+   "neighborhood": "river-north",
+   "summary": "Rick Bayless's regional Mexican restaurant on Clark Street, with moles and margaritas.",
+   "tags": [
+    "mexican",
+    "celebrated"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gene-georgetti",
+   "name": "Gene & Georgetti",
+   "kind": "restaurant",
+   "neighborhood": "river-north",
+   "summary": "Old-school steakhouse in a frame house under the L since 1941, with tuxedoed waiters.",
+   "tags": [
+    "steak",
+    "historic",
+    "special-occasion"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "coworkers",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "steakhouse",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "andys-jazz-club",
+   "name": "Andy's Jazz Club",
+   "kind": "nightlife",
+   "neighborhood": "river-north",
+   "summary": "Long-running jazz room on Hubbard Street with two sets a night and a supper menu.",
+   "tags": [
+    "jazz",
+    "live-music"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-bank-club",
+   "name": "East Bank Club",
+   "kind": "fitness",
+   "neighborhood": "river-north",
+   "summary": "A huge riverside athletic club with pools, courts and a well-known members' scene.",
+   "tags": [
+    "gym",
+    "pool",
+    "upscale"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "art-on-the-mart",
+   "name": "Art on the Mart",
+   "kind": "attraction",
+   "neighborhood": "river-north",
+   "summary": "Projected digital art across the river face of the Merchandise Mart after dark, best watched from the Riverwalk.",
+   "tags": [
+    "art",
+    "free",
+    "night"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "navy-pier",
+   "name": "Navy Pier",
+   "kind": "attraction",
+   "neighborhood": "streeterville",
+   "summary": "A long pier into the lake with the Centennial Wheel, boat tours, a children's museum and summer fireworks.",
+   "tags": [
+    "iconic",
+    "touristy",
+    "lake",
+    "kids"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mca-chicago",
+   "name": "Museum of Contemporary Art",
+   "kind": "museum",
+   "neighborhood": "streeterville",
+   "summary": "Contemporary art museum off Michigan Avenue, with a summer farmers market on its plaza.",
+   "tags": [
+    "art",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "360-chicago",
+   "name": "360 Chicago",
+   "kind": "attraction",
+   "neighborhood": "streeterville",
+   "summary": "The observation deck on the 94th floor of the former John Hancock Center, with the tilting TILT windows.",
+   "tags": [
+    "views",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ohio-street-beach",
+   "name": "Ohio Street Beach",
+   "kind": "beach",
+   "neighborhood": "streeterville",
+   "summary": "A small sheltered beach by Navy Pier where open-water swimmers train along the buoy line.",
+   "tags": [
+    "swimming",
+    "lake"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-shakespeare",
+   "name": "Chicago Shakespeare Theater",
+   "kind": "venue",
+   "neighborhood": "streeterville",
+   "summary": "Thrust-stage theater at Navy Pier doing Shakespeare and musicals.",
+   "tags": [
+    "theater"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "water-tower",
+   "name": "Water Tower and Magnificent Mile",
+   "kind": "shopping",
+   "neighborhood": "streeterville",
+   "summary": "The castle-like 1869 Water Tower that survived the Great Fire, and the flagship stores of North Michigan Avenue around it.",
+   "tags": [
+    "shopping",
+    "historic",
+    "touristy"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "billy-goat-tavern",
+   "name": "Billy Goat Tavern",
+   "kind": "bar",
+   "neighborhood": "streeterville",
+   "summary": "Underground grill-and-bar on lower Michigan Avenue, of the \"cheezborger, cheezborger\" sketch and the Cubs curse.",
+   "tags": [
+    "historic",
+    "dive",
+    "burgers"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "starbucks-reserve-roastery",
+   "name": "Starbucks Reserve Roastery",
+   "kind": "cafe",
+   "neighborhood": "streeterville",
+   "summary": "Five floors of roasting machines, bars and tourists on the Magnificent Mile.",
+   "tags": [
+    "coffee",
+    "touristy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oak-street-beach",
+   "name": "Oak Street Beach",
+   "kind": "beach",
+   "neighborhood": "gold-coast",
+   "summary": "Sand right under the high-rises where Lake Shore Drive bends, busy and glamorous on hot weekends.",
+   "tags": [
+    "swimming",
+    "lake",
+    "people-watching"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gibsons",
+   "name": "Gibsons Bar & Steakhouse",
+   "kind": "restaurant",
+   "neighborhood": "gold-coast",
+   "summary": "Rush Street steakhouse with huge martinis, slabs of cake and a well-dressed crowd.",
+   "tags": [
+    "steak",
+    "see-and-be-seen"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "steakhouse",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rush-and-division",
+   "name": "Rush and Division",
+   "kind": "nightlife",
+   "neighborhood": "gold-coast",
+   "summary": "The \"Viagra Triangle\" strip of bars and clubs where Rush meets Division and Elm, loud until late.",
+   "tags": [
+    "clubs",
+    "party",
+    "bars"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "original-pancake-house",
+   "name": "The Original Pancake House (Bellevue)",
+   "kind": "restaurant",
+   "neighborhood": "gold-coast",
+   "summary": "Weekend lines for the oven-baked apple pancake and the Dutch baby.",
+   "tags": [
+    "brunch",
+    "line"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "american-breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "surgical-science-museum",
+   "name": "International Museum of Surgical Science",
+   "kind": "museum",
+   "neighborhood": "gold-coast",
+   "summary": "Odd, absorbing medical history in a lakefront mansion: trepanned skulls, iron lungs and amputation kits.",
+   "tags": [
+    "quirky",
+    "history",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "newberry-library",
+   "name": "Newberry Library",
+   "kind": "library",
+   "neighborhood": "gold-coast",
+   "summary": "Independent research library facing Washington Square, the old \"Bughouse Square\" of soapbox speakers.",
+   "tags": [
+    "books",
+    "history",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "giordanos-rush",
+   "name": "Giordano's (Rush Street)",
+   "kind": "restaurant",
+   "neighborhood": "gold-coast",
+   "summary": "Stuffed pizza with a top crust and a cheese pull for the photos.",
+   "tags": [
+    "deep-dish",
+    "pizza"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lincoln-park-zoo",
+   "name": "Lincoln Park Zoo",
+   "kind": "attraction",
+   "neighborhood": "lincoln-park",
+   "summary": "A free zoo in the park since 1868, with gorillas, lions and ZooLights in winter.",
+   "tags": [
+    "animals",
+    "free",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lincoln-park-conservatory",
+   "name": "Lincoln Park Conservatory",
+   "kind": "park",
+   "neighborhood": "lincoln-park",
+   "summary": "Victorian glass houses of palms, ferns and orchids, warm and green in January.",
+   "tags": [
+    "plants",
+    "free",
+    "winter-escape"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "north-avenue-beach",
+   "name": "North Avenue Beach",
+   "kind": "beach",
+   "neighborhood": "lincoln-park",
+   "summary": "The big volleyball beach with a boat-shaped beach house and the skyline view south.",
+   "tags": [
+    "volleyball",
+    "swimming",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakefront-trail",
+   "name": "Lakefront Trail",
+   "kind": "trail",
+   "neighborhood": "lincoln-park",
+   "summary": "Eighteen miles of separated paths for runners and cyclists along the lake from Ardmore to 71st Street.",
+   "tags": [
+    "running",
+    "cycling",
+    "lake"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "second-city",
+   "name": "The Second City",
+   "kind": "venue",
+   "neighborhood": "lincoln-park",
+   "summary": "The improv and sketch theater on Wells Street that trained generations of comedians, with a free improv set after the late show.",
+   "tags": [
+    "comedy",
+    "improv",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "steppenwolf",
+   "name": "Steppenwolf Theatre",
+   "kind": "venue",
+   "neighborhood": "lincoln-park",
+   "summary": "Ensemble theater on Halsted Street known for intense, actor-driven productions.",
+   "tags": [
+    "theater"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kingston-mines",
+   "name": "Kingston Mines",
+   "kind": "nightlife",
+   "neighborhood": "lincoln-park",
+   "summary": "Two stages of blues alternating all night on Halsted Street, open until four on weekends.",
+   "tags": [
+    "blues",
+    "live-music",
+    "late"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-history-museum",
+   "name": "Chicago History Museum",
+   "kind": "museum",
+   "neighborhood": "lincoln-park",
+   "summary": "The city's story from the Great Fire to the Cubs, with the first L car and a Chicago-style hot dog \"sensory\" exhibit.",
+   "tags": [
+    "history",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wieners-circle",
+   "name": "The Wiener's Circle",
+   "kind": "restaurant",
+   "neighborhood": "lincoln-park",
+   "summary": "Late-night char-dogs on Clark Street, where customers and staff trade insults across the counter at 2 a.m.",
+   "tags": [
+    "hot-dogs",
+    "late-night",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "chicago-street-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-town-ale-house",
+   "name": "Old Town Ale House",
+   "kind": "bar",
+   "neighborhood": "lincoln-park",
+   "summary": "A beloved dive across from Second City, its walls hung with the owner's satirical paintings.",
+   "tags": [
+    "dive",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "alinea",
+   "name": "Alinea",
+   "kind": "restaurant",
+   "neighborhood": "lincoln-park",
+   "summary": "Grant Achatz's tasting-menu restaurant, theatrical and very expensive, on Halsted Street.",
+   "tags": [
+    "tasting-menu",
+    "special-occasion"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "modern-american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bourgeois-pig",
+   "name": "The Bourgeois Pig Cafe",
+   "kind": "cafe",
+   "neighborhood": "lincoln-park",
+   "summary": "Creaky Victorian coffeehouse on Fullerton full of DePaul students and literary-named sandwiches.",
+   "tags": [
+    "coffee",
+    "students",
+    "study"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wrigley-field",
+   "name": "Wrigley Field",
+   "kind": "stadium",
+   "neighborhood": "lakeview",
+   "summary": "The Cubs' 1914 ballpark with ivy on the outfield walls, a hand-turned scoreboard and rooftop bleachers across the street.",
+   "tags": [
+    "baseball",
+    "iconic",
+    "sports"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "murphys-bleachers",
+   "name": "Murphy's Bleachers",
+   "kind": "bar",
+   "neighborhood": "lakeview",
+   "summary": "The bar across from the Wrigley bleacher gate, packed before and after every game.",
+   "tags": [
+    "baseball",
+    "beer",
+    "crowded"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ann-sather",
+   "name": "Ann Sather",
+   "kind": "restaurant",
+   "neighborhood": "lakeview",
+   "summary": "Swedish diner on Belmont famous for its gooey cinnamon rolls and lingonberry pancakes.",
+   "tags": [
+    "brunch",
+    "swedish",
+    "cinnamon-rolls"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "swedish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pats-pizza",
+   "name": "Pat's Pizza",
+   "kind": "restaurant",
+   "neighborhood": "lakeview",
+   "summary": "Thin, crackly tavern-style pizza cut into squares, made on Lincoln Avenue since 1950.",
+   "tags": [
+    "tavern-style",
+    "pizza",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "metro-chicago",
+   "name": "Metro",
+   "kind": "venue",
+   "neighborhood": "lakeview",
+   "summary": "The rock club on Clark Street where generations of bands played on their way up, with Smart Bar dance club in the basement.",
+   "tags": [
+    "live-music",
+    "rock",
+    "dancing"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "music-box-theatre",
+   "name": "Music Box Theatre",
+   "kind": "venue",
+   "neighborhood": "lakeview",
+   "summary": "1929 movie palace on Southport with a twinkling ceiling, an organist, repertory and art films.",
+   "tags": [
+    "cinema",
+    "classic-films"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sidetrack",
+   "name": "Sidetrack",
+   "kind": "nightlife",
+   "neighborhood": "lakeview",
+   "summary": "Huge Northalsted gay bar with video screens, show-tune nights and a rooftop.",
+   "tags": [
+    "lgbtq",
+    "show-tunes",
+    "party"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "intelligentsia-broadway",
+   "name": "Intelligentsia Coffee (Broadway)",
+   "kind": "cafe",
+   "neighborhood": "lakeview",
+   "summary": "The original cafe of the Chicago roaster, on Broadway near Belmont.",
+   "tags": [
+    "coffee",
+    "laptops"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakeview-ymca",
+   "name": "Lakeview YMCA",
+   "kind": "fitness",
+   "neighborhood": "lakeview",
+   "summary": "A neighborhood Y on Marshfield with a pool, classes and an older, friendly membership.",
+   "tags": [
+    "gym",
+    "pool",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-606",
+   "name": "The 606 (Bloomingdale Trail)",
+   "kind": "trail",
+   "neighborhood": "wicker-park",
+   "summary": "An old elevated rail line turned into a trail for joggers, bikes and strollers, running west to Humboldt Park.",
+   "tags": [
+    "running",
+    "cycling",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "myopic-books",
+   "name": "Myopic Books",
+   "kind": "shopping",
+   "neighborhood": "wicker-park",
+   "summary": "Three cramped floors of used books on Milwaukee Avenue, quiet by house rule.",
+   "tags": [
+    "books",
+    "used"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "big-star",
+   "name": "Big Star",
+   "kind": "restaurant",
+   "neighborhood": "wicker-park",
+   "summary": "Taqueria and whiskey bar in an old gas station across from the Damen Blue Line, with a crowded summer patio.",
+   "tags": [
+    "tacos",
+    "patio",
+    "whiskey"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "violet-hour",
+   "name": "The Violet Hour",
+   "kind": "bar",
+   "neighborhood": "wicker-park",
+   "summary": "Speakeasy-style cocktail bar behind a mural-covered wall with no sign, with high-backed chairs and house rules.",
+   "tags": [
+    "cocktails",
+    "speakeasy"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "map-room",
+   "name": "The Map Room",
+   "kind": "bar",
+   "neighborhood": "wicker-park",
+   "summary": "Bucktown travelers' tavern with a deep beer list, maps and globes, and coffee in the mornings.",
+   "tags": [
+    "beer",
+    "cozy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wormhole-coffee",
+   "name": "Wormhole Coffee",
+   "kind": "cafe",
+   "neighborhood": "wicker-park",
+   "summary": "Milwaukee Avenue coffee shop decorated with 1980s movie props, including a DeLorean.",
+   "tags": [
+    "coffee",
+    "quirky",
+    "laptops"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "midtown-athletic-club",
+   "name": "Midtown Athletic Club",
+   "kind": "fitness",
+   "neighborhood": "wicker-park",
+   "summary": "A large club on Elston Avenue with indoor tennis, pools and a rooftop.",
+   "tags": [
+    "gym",
+    "tennis",
+    "pool"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "subterranean",
+   "name": "Subterranean",
+   "kind": "venue",
+   "neighborhood": "wicker-park",
+   "summary": "A two-level club near the six corners for indie bands, hip-hop and open mics.",
+   "tags": [
+    "live-music",
+    "hip-hop"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "empty-bottle",
+   "name": "Empty Bottle",
+   "kind": "venue",
+   "neighborhood": "ukrainian-village",
+   "summary": "The scuffed indie and punk club on Western Avenue, with cheap beer and shows most nights.",
+   "tags": [
+    "live-music",
+    "indie",
+    "dive"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ukrainian-national-museum",
+   "name": "Ukrainian National Museum",
+   "kind": "museum",
+   "neighborhood": "ukrainian-village",
+   "summary": "Folk art, pysanky eggs and the history of the community, on Chicago Avenue.",
+   "tags": [
+    "history",
+    "folk-art"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-nicholas-cathedral",
+   "name": "St. Nicholas Ukrainian Catholic Cathedral",
+   "kind": "landmark",
+   "neighborhood": "ukrainian-village",
+   "summary": "A cathedral topped with thirteen copper domes for Christ and the apostles, with Byzantine mosaics inside.",
+   "tags": [
+    "church",
+    "architecture"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "anns-bakery",
+   "name": "Ann's Bakery & Deli",
+   "kind": "market",
+   "neighborhood": "ukrainian-village",
+   "summary": "Ukrainian bakery and deli for poppy-seed rolls, pierogi and smoked meats to take home.",
+   "tags": [
+    "bakery",
+    "ukrainian",
+    "deli"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "ukrainian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rainbo-club",
+   "name": "Rainbo Club",
+   "kind": "bar",
+   "neighborhood": "ukrainian-village",
+   "summary": "An old Division Street dive with a photo booth and a long history with local artists and musicians.",
+   "tags": [
+    "dive",
+    "photo-booth"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "star-lounge",
+   "name": "Star Lounge Coffee Bar",
+   "kind": "cafe",
+   "neighborhood": "ukrainian-village",
+   "summary": "Neighborhood espresso bar on Chicago Avenue with a pressed-tin ceiling.",
+   "tags": [
+    "coffee",
+    "neighbourly"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sportsmans-club",
+   "name": "Sportsman's Club",
+   "kind": "bar",
+   "neighborhood": "ukrainian-village",
+   "summary": "A corner tavern on Chicago Avenue with a tiki-lit back patio and a short list of cocktails.",
+   "tags": [
+    "patio",
+    "cocktails",
+    "tavern"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lula-cafe",
+   "name": "Lula Cafe",
+   "kind": "restaurant",
+   "neighborhood": "logan-square",
+   "summary": "The neighborhood restaurant that helped make Logan Square a food destination, seasonal and relaxed since 1999.",
+   "tags": [
+    "brunch",
+    "seasonal"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "longman-and-eagle",
+   "name": "Longman & Eagle",
+   "kind": "restaurant",
+   "neighborhood": "logan-square",
+   "summary": "Whiskey-heavy gastropub with rooms upstairs and a long brunch.",
+   "tags": [
+    "whiskey",
+    "brunch",
+    "gastropub"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "logan-theatre",
+   "name": "Logan Theatre",
+   "kind": "venue",
+   "neighborhood": "logan-square",
+   "summary": "A restored 1915 neighborhood cinema with cheap tickets and a bar in the lobby.",
+   "tags": [
+    "cinema",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "logan-square-farmers-market",
+   "name": "Logan Square Farmers Market",
+   "kind": "market",
+   "neighborhood": "logan-square",
+   "summary": "Sunday market on the boulevard with produce, tamales and live music, moving indoors in winter.",
+   "tags": [
+    "farmers-market",
+    "sunday",
+    "food"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "centennial-monument",
+   "name": "Illinois Centennial Monument",
+   "kind": "landmark",
+   "neighborhood": "logan-square",
+   "summary": "The eagle-topped column at the center of the square, ringed by boulevards and greystones.",
+   "tags": [
+    "boulevards",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "revolution-brewing",
+   "name": "Revolution Brewing Brewpub",
+   "kind": "bar",
+   "neighborhood": "logan-square",
+   "summary": "The local brewery's first pub on Milwaukee Avenue, with raised-fist tap handles and bacon-fat popcorn.",
+   "tags": [
+    "beer",
+    "brewpub"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-whistler",
+   "name": "The Whistler",
+   "kind": "bar",
+   "neighborhood": "logan-square",
+   "summary": "Small cocktail bar with free live jazz and experimental music most nights.",
+   "tags": [
+    "cocktails",
+    "live-music",
+    "jazz"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "humboldt-park-lagoon",
+   "name": "Humboldt Park",
+   "kind": "park",
+   "neighborhood": "humboldt-park",
+   "summary": "A 200-acre park with a lagoon, Prairie-style boathouse, rose garden and summer barbecues blasting salsa and reggaeton.",
+   "tags": [
+    "lagoon",
+    "picnics",
+    "community"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "humboldt-park-beach",
+   "name": "Humboldt Park Beach",
+   "kind": "beach",
+   "neighborhood": "humboldt-park",
+   "summary": "An inland swimming lagoon with a sand beach and lifeguards in summer.",
+   "tags": [
+    "swimming",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "paseo-boricua",
+   "name": "Paseo Boricua",
+   "kind": "landmark",
+   "neighborhood": "humboldt-park",
+   "summary": "Division Street between two 59-foot steel Puerto Rican flags, lined with murals, bakeries and social clubs.",
+   "tags": [
+    "puerto-rican",
+    "murals",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nmprac",
+   "name": "National Museum of Puerto Rican Arts & Culture",
+   "kind": "museum",
+   "neighborhood": "humboldt-park",
+   "summary": "Exhibitions and classes in the park's old horse stables.",
+   "tags": [
+    "art",
+    "puerto-rican",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-colao",
+   "name": "Café Colao",
+   "kind": "cafe",
+   "neighborhood": "humboldt-park",
+   "summary": "Puerto Rican bakery on Division for café con leche, quesitos and pastelillos.",
+   "tags": [
+    "coffee",
+    "bakery",
+    "puerto-rican"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "puerto-rican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "papas-cache-sabroso",
+   "name": "Papa's Cache Sabroso",
+   "kind": "restaurant",
+   "neighborhood": "humboldt-park",
+   "summary": "Counter-service Puerto Rican food, best known for the jibarito made with fried plantains for bread.",
+   "tags": [
+    "jibarito",
+    "cheap",
+    "puerto-rican"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "puerto-rican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "girl-and-the-goat",
+   "name": "Girl & the Goat",
+   "kind": "restaurant",
+   "neighborhood": "west-loop",
+   "summary": "Stephanie Izard's loud, shareable-plates room that set off Randolph Street's restaurant boom.",
+   "tags": [
+    "celebrated",
+    "sharing"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "modern-american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "au-cheval",
+   "name": "Au Cheval",
+   "kind": "restaurant",
+   "neighborhood": "west-loop",
+   "summary": "Diner-style bar with a famous double cheeseburger and long waits.",
+   "tags": [
+    "burgers",
+    "line",
+    "late-night"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "time-out-market",
+   "name": "Time Out Market Chicago",
+   "kind": "market",
+   "neighborhood": "west-loop",
+   "summary": "A Fulton Market food hall of local chefs' stalls with a rooftop bar.",
+   "tags": [
+    "food-hall",
+    "groups"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lou-mitchells",
+   "name": "Lou Mitchell's",
+   "kind": "restaurant",
+   "neighborhood": "west-loop",
+   "summary": "A Route 66 breakfast diner near Union Station since 1923 that hands out Milk Duds and donut holes to the queue.",
+   "tags": [
+    "breakfast",
+    "historic",
+    "diner"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "american-breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sawada-coffee",
+   "name": "Sawada Coffee",
+   "kind": "cafe",
+   "neighborhood": "west-loop",
+   "summary": "Military-latte coffee bar in a warehouse off Green Street.",
+   "tags": [
+    "coffee",
+    "matcha"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "union-station",
+   "name": "Chicago Union Station",
+   "kind": "landmark",
+   "neighborhood": "west-loop",
+   "summary": "The Beaux-Arts Great Hall under a barrel-vault skylight, still busy with Amtrak and Metra.",
+   "tags": [
+    "architecture",
+    "trains",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "united-center",
+   "name": "United Center",
+   "kind": "stadium",
+   "neighborhood": "west-loop",
+   "summary": "Arena of the Bulls and Blackhawks, with the Michael Jordan statue out front and big touring concerts.",
+   "tags": [
+    "basketball",
+    "hockey",
+    "concerts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haymarket-pub",
+   "name": "Haymarket Pub & Brewery",
+   "kind": "bar",
+   "neighborhood": "west-loop",
+   "summary": "Brewpub near the site of the 1886 Haymarket rally, with beer brewed on site.",
+   "tags": [
+    "beer",
+    "brewpub",
+    "history"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marios-lemonade",
+   "name": "Mario's Italian Lemonade",
+   "kind": "restaurant",
+   "neighborhood": "little-italy",
+   "summary": "A summer-only Taylor Street stand scooping Italian ice since 1954, with a line on hot evenings.",
+   "tags": [
+    "italian-ice",
+    "summer",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "dessert",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "als-beef-taylor",
+   "name": "Al's #1 Italian Beef (Taylor Street)",
+   "kind": "restaurant",
+   "neighborhood": "little-italy",
+   "summary": "The original Al's counter, where people eat beef sandwiches standing at the ledge in the \"Italian stance\".",
+   "tags": [
+    "italian-beef",
+    "historic",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "chicago-street-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jims-original",
+   "name": "Jim's Original",
+   "kind": "restaurant",
+   "neighborhood": "little-italy",
+   "summary": "Walk-up stand by the expressway serving Maxwell Street Polish sausages with grilled onions and free fries, nearly around the clock.",
+   "tags": [
+    "polish-sausage",
+    "late-night",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "chicago-street-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "conte-di-savoia",
+   "name": "Conte di Savoia",
+   "kind": "market",
+   "neighborhood": "little-italy",
+   "summary": "Italian grocery and deli on Taylor Street for imported pasta, cheeses and sub sandwiches.",
+   "tags": [
+    "deli",
+    "italian",
+    "groceries"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hull-house-museum",
+   "name": "Jane Addams Hull-House Museum",
+   "kind": "museum",
+   "neighborhood": "little-italy",
+   "summary": "The settlement house of the social reformer, now on the UIC campus, with free tours and soup lunches.",
+   "tags": [
+    "history",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tufanos",
+   "name": "Tufano's Vernon Park Tap",
+   "kind": "restaurant",
+   "neighborhood": "little-italy",
+   "summary": "A family-run red-sauce tavern since the 1930s, with chalkboard specials and old-neighborhood regulars.",
+   "tags": [
+    "italian",
+    "historic",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maxwell-street-market",
+   "name": "Maxwell Street Market",
+   "kind": "market",
+   "neighborhood": "little-italy",
+   "summary": "The descendant of the old open-air market where Chicago blues was played on the street, now a Sunday market of tools, clothes and tacos.",
+   "tags": [
+    "flea-market",
+    "tacos",
+    "sunday"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "national-museum-mexican-art",
+   "name": "National Museum of Mexican Art",
+   "kind": "museum",
+   "neighborhood": "pilsen",
+   "summary": "A free museum in Harrison Park with a large collection and a famous Day of the Dead exhibition every autumn.",
+   "tags": [
+    "art",
+    "free",
+    "mexican"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pilsen-murals",
+   "name": "18th Street murals",
+   "kind": "landmark",
+   "neighborhood": "pilsen",
+   "summary": "Murals on viaducts, schools and storefronts along 16th and 18th streets, from Aztec themes to labor history.",
+   "tags": [
+    "murals",
+    "walk",
+    "art"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-jumping-bean",
+   "name": "Café Jumping Bean",
+   "kind": "cafe",
+   "neighborhood": "pilsen",
+   "summary": "Long-running 18th Street coffeehouse covered in local art, with tortas and chess players.",
+   "tags": [
+    "coffee",
+    "art",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "carnitas-uruapan",
+   "name": "Carnitas Uruapan",
+   "kind": "restaurant",
+   "neighborhood": "pilsen",
+   "summary": "Family-run since 1975, selling carnitas by the pound with tortillas, salsa and chicharrón.",
+   "tags": [
+    "tacos",
+    "carnitas",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "thalia-hall",
+   "name": "Thalia Hall",
+   "kind": "venue",
+   "neighborhood": "pilsen",
+   "summary": "An 1892 Bohemian opera hall at 18th and Allport, restored for concerts.",
+   "tags": [
+    "live-music",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pilsen-community-books",
+   "name": "Pilsen Community Books",
+   "kind": "shopping",
+   "neighborhood": "pilsen",
+   "summary": "Used and new bookshop on 18th Street with readings and a strong Latinx shelf.",
+   "tags": [
+    "books",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "little-village-arch",
+   "name": "Little Village Arch",
+   "kind": "landmark",
+   "neighborhood": "little-village",
+   "summary": "The tiled \"Bienvenidos a Little Village\" arch with its clock over 26th Street.",
+   "tags": [
+    "mexican",
+    "photo"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "26th-street",
+   "name": "26th Street",
+   "kind": "shopping",
+   "neighborhood": "little-village",
+   "summary": "A mile of quinceañera dress shops, botas, paleterías and the Discount Mall, busiest on weekends.",
+   "tags": [
+    "shopping",
+    "mexican",
+    "paletas"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "el-milagro",
+   "name": "Taquería El Milagro",
+   "kind": "restaurant",
+   "neighborhood": "little-village",
+   "summary": "Cafeteria-style tacos and tamales beside the tortilla factory on 26th Street.",
+   "tags": [
+    "tacos",
+    "cheap",
+    "tortillas"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "douglass-park",
+   "name": "Douglass Park",
+   "kind": "park",
+   "neighborhood": "little-village",
+   "summary": "A big West Side park with a lagoon and soccer fields busy every weekend.",
+   "tags": [
+    "soccer",
+    "picnics"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mi-tierra",
+   "name": "Mi Tierra",
+   "kind": "restaurant",
+   "neighborhood": "little-village",
+   "summary": "Big family restaurant on 26th with mariachis on weekend nights and enormous margaritas.",
+   "tags": [
+    "mexican",
+    "mariachi",
+    "groups"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ping-tom-park",
+   "name": "Ping Tom Memorial Park",
+   "kind": "park",
+   "neighborhood": "chinatown",
+   "summary": "Riverside park with a pagoda, a water taxi stop and dragon boats in summer.",
+   "tags": [
+    "riverside",
+    "kids",
+    "dragon-boats"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ping-tom-fieldhouse",
+   "name": "Ping Tom Park Fieldhouse",
+   "kind": "fitness",
+   "neighborhood": "chinatown",
+   "summary": "Park district fieldhouse with an indoor pool, gym and cheap classes.",
+   "tags": [
+    "pool",
+    "gym",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chinatown-gate",
+   "name": "Chinatown Gate and Wentworth Avenue",
+   "kind": "landmark",
+   "neighborhood": "chinatown",
+   "summary": "The red gate at Cermak and Wentworth, with herbalists, bakeries and the Pui Tak Center beyond.",
+   "tags": [
+    "walk",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chinatown-square",
+   "name": "Chinatown Square",
+   "kind": "shopping",
+   "neighborhood": "chinatown",
+   "summary": "Two-story outdoor mall with zodiac statues, bubble tea, hot pot and karaoke.",
+   "tags": [
+    "shopping",
+    "bubble-tea"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chiu-quon-bakery",
+   "name": "Chiu Quon Bakery",
+   "kind": "cafe",
+   "neighborhood": "chinatown",
+   "summary": "Wentworth Avenue bakery since 1986 for egg tarts, pineapple buns and barbecue pork buns.",
+   "tags": [
+    "bakery",
+    "cheap",
+    "pastries"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "chinese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "minghin",
+   "name": "MingHin Cuisine",
+   "kind": "restaurant",
+   "neighborhood": "chinatown",
+   "summary": "Busy Cantonese room with weekend dim sum carts of dumplings and turnip cakes.",
+   "tags": [
+    "dim-sum",
+    "groups",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cantonese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lao-sze-chuan",
+   "name": "Lao Sze Chuan",
+   "kind": "restaurant",
+   "neighborhood": "chinatown",
+   "summary": "Fiery Sichuan dishes like dry chili chicken, a Chinatown staple.",
+   "tags": [
+    "spicy",
+    "groups"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "sichuan",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chinatown-library",
+   "name": "Chinatown Branch Library",
+   "kind": "library",
+   "neighborhood": "chinatown",
+   "summary": "A rounded glass library with a central atrium, open since 2015.",
+   "tags": [
+    "books",
+    "architecture",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "field-museum",
+   "name": "Field Museum",
+   "kind": "museum",
+   "neighborhood": "south-loop",
+   "summary": "Natural history on the lakefront: Sue the T. rex, the Egyptian tomb and halls of dioramas.",
+   "tags": [
+    "dinosaurs",
+    "rainy-day",
+    "kids",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shedd-aquarium",
+   "name": "Shedd Aquarium",
+   "kind": "attraction",
+   "neighborhood": "south-loop",
+   "summary": "Lakefront aquarium with beluga whales, a Caribbean reef and a view back to the skyline.",
+   "tags": [
+    "animals",
+    "rainy-day",
+    "kids"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "adler-planetarium",
+   "name": "Adler Planetarium",
+   "kind": "museum",
+   "neighborhood": "south-loop",
+   "summary": "Planetarium at the end of the Museum Campus peninsula, with the best skyline view in the city.",
+   "tags": [
+    "space",
+    "views",
+    "kids"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "soldier-field",
+   "name": "Soldier Field",
+   "kind": "stadium",
+   "neighborhood": "south-loop",
+   "summary": "The Bears' lakefront stadium inside its old colonnades, also home to the Chicago Fire.",
+   "tags": [
+    "football",
+    "soccer",
+    "sports"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "12th-street-beach",
+   "name": "12th Street Beach",
+   "kind": "beach",
+   "neighborhood": "south-loop",
+   "summary": "A small curving beach behind the Adler, quieter than the North Side beaches.",
+   "tags": [
+    "swimming",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "buddy-guys-legends",
+   "name": "Buddy Guy's Legends",
+   "kind": "nightlife",
+   "neighborhood": "south-loop",
+   "summary": "Blues club on Wabash owned by the guitarist, with Cajun food and bands every night.",
+   "tags": [
+    "blues",
+    "live-music",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "cajun",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jazz-showcase",
+   "name": "Jazz Showcase",
+   "kind": "nightlife",
+   "neighborhood": "south-loop",
+   "summary": "A serious jazz room near Dearborn Station that has booked touring greats since 1947.",
+   "tags": [
+    "jazz",
+    "live-music"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "glessner-house",
+   "name": "Glessner House",
+   "kind": "museum",
+   "neighborhood": "south-loop",
+   "summary": "A fortress-like 1887 Richardson house on Prairie Avenue, once the city's millionaires' row.",
+   "tags": [
+    "architecture",
+    "history"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eleven-city-diner",
+   "name": "Eleven City Diner",
+   "kind": "restaurant",
+   "neighborhood": "south-loop",
+   "summary": "Jewish deli and diner on Wabash with pastrami, matzo ball soup and egg creams.",
+   "tags": [
+    "deli",
+    "brunch"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "victory-monument",
+   "name": "Victory Monument",
+   "kind": "landmark",
+   "neighborhood": "bronzeville",
+   "summary": "Memorial to the Black 8th Illinois regiment of the First World War, at 35th and King Drive.",
+   "tags": [
+    "history",
+    "black-history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bronzeville-walk-of-fame",
+   "name": "Bronzeville Walk of Fame",
+   "kind": "landmark",
+   "neighborhood": "bronzeville",
+   "summary": "Plaques along King Drive honoring Louis Armstrong, Ida B. Wells, Gwendolyn Brooks and other residents.",
+   "tags": [
+    "history",
+    "black-history",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-bee-library",
+   "name": "Chicago Bee Branch Library",
+   "kind": "library",
+   "neighborhood": "bronzeville",
+   "summary": "A public library in the art deco home of the Chicago Bee, a Black newspaper of the 1920s.",
+   "tags": [
+    "books",
+    "history",
+    "architecture"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peachs",
+   "name": "Peach's Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "bronzeville",
+   "summary": "Southern breakfast on 47th Street: shrimp and grits, salmon croquettes and a weekend crowd after church.",
+   "tags": [
+    "brunch",
+    "soul-food"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "soul-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gallery-guichard",
+   "name": "Gallery Guichard",
+   "kind": "museum",
+   "neighborhood": "bronzeville",
+   "summary": "Gallery of art from the African diaspora on 47th Street, with openings that turn into parties.",
+   "tags": [
+    "art",
+    "black-history"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "31st-street-beach",
+   "name": "31st Street Beach",
+   "kind": "beach",
+   "neighborhood": "bronzeville",
+   "summary": "A family beach by the harbor, with a pier, picnic lawns and a cafe in the beach house.",
+   "tags": [
+    "swimming",
+    "family",
+    "harbor"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "museum-science-industry",
+   "name": "Museum of Science and Industry",
+   "kind": "museum",
+   "neighborhood": "hyde-park",
+   "summary": "The last big building of the 1893 World's Fair, holding a coal mine, a German U-boat and a working tornado.",
+   "tags": [
+    "science",
+    "kids",
+    "rainy-day",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "robie-house",
+   "name": "Frederick C. Robie House",
+   "kind": "museum",
+   "neighborhood": "hyde-park",
+   "summary": "Frank Lloyd Wright's long, low Prairie house on the university campus, open for tours.",
+   "tags": [
+    "architecture",
+    "wright"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "promontory-point",
+   "name": "Promontory Point",
+   "kind": "park",
+   "neighborhood": "hyde-park",
+   "summary": "A stepped limestone peninsula for swimming off the rocks, bonfires and a long skyline view north.",
+   "tags": [
+    "lake",
+    "views",
+    "picnics"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seminary-co-op",
+   "name": "Seminary Co-op Bookstores",
+   "kind": "shopping",
+   "neighborhood": "hyde-park",
+   "summary": "The scholarly co-op bookstore and 57th Street Books, the neighborhood's two serious bookshops.",
+   "tags": [
+    "books",
+    "academic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "plein-air-cafe",
+   "name": "Plein Air Cafe",
+   "kind": "cafe",
+   "neighborhood": "hyde-park",
+   "summary": "Light-filled cafe next to the Robie House, with students and lecturers on laptops.",
+   "tags": [
+    "coffee",
+    "students"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "medici-on-57th",
+   "name": "Medici on 57th",
+   "kind": "restaurant",
+   "neighborhood": "hyde-park",
+   "summary": "Carved-up wooden booths, pizza, burgers and a bakery next door, a student haunt since 1963.",
+   "tags": [
+    "students",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "valois",
+   "name": "Valois Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "hyde-park",
+   "summary": "A 53rd Street cafeteria (\"See Your Food\") with cheap breakfast, a long counter and everyone from cops to professors.",
+   "tags": [
+    "breakfast",
+    "cheap",
+    "cafeteria"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "american-breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "isac-museum",
+   "name": "ISAC Museum",
+   "kind": "museum",
+   "neighborhood": "hyde-park",
+   "summary": "The University of Chicago's free museum of the ancient Near East, with a 40-ton winged bull from Khorsabad.",
+   "tags": [
+    "history",
+    "free",
+    "archaeology"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dusable-museum",
+   "name": "DuSable Black History Museum",
+   "kind": "museum",
+   "neighborhood": "hyde-park",
+   "summary": "One of the oldest museums of African American history, in Washington Park.",
+   "tags": [
+    "history",
+    "black-history"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jackson-park",
+   "name": "Jackson Park and the Garden of the Phoenix",
+   "kind": "park",
+   "neighborhood": "hyde-park",
+   "summary": "Olmsted's lagoons and wooded island from the 1893 fair, with a Japanese garden.",
+   "tags": [
+    "garden",
+    "walk",
+    "birds"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rate-field",
+   "name": "Rate Field",
+   "kind": "stadium",
+   "neighborhood": "bridgeport",
+   "summary": "The White Sox ballpark at 35th Street, long called Comiskey and then Guaranteed Rate Field, with Maxwell Street Polishes at the stands.",
+   "tags": [
+    "baseball",
+    "sports"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marias",
+   "name": "Maria's Packaged Goods & Community Bar",
+   "kind": "bar",
+   "neighborhood": "bridgeport",
+   "summary": "A liquor store in front and a craft-beer bar in back, a model of the new Bridgeport.",
+   "tags": [
+    "beer",
+    "neighbourly"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bridgeport-coffee",
+   "name": "Bridgeport Coffee",
+   "kind": "cafe",
+   "neighborhood": "bridgeport",
+   "summary": "A corner coffee shop on Morgan Street that roasts its own beans.",
+   "tags": [
+    "coffee",
+    "neighbourly"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "duck-inn",
+   "name": "The Duck Inn",
+   "kind": "restaurant",
+   "neighborhood": "bridgeport",
+   "summary": "Tavern-meets-restaurant with a rotisserie duck and a duck-fat hot dog.",
+   "tags": [
+    "hot-dogs",
+    "cocktails"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "palmisano-park",
+   "name": "Palmisano Park",
+   "kind": "park",
+   "neighborhood": "bridgeport",
+   "summary": "A former limestone quarry turned into a park with a fishing pond, terraced paths and a hilltop skyline view.",
+   "tags": [
+    "views",
+    "walk",
+    "fishing"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ramova",
+   "name": "Ramova Theatre",
+   "kind": "venue",
+   "neighborhood": "bridgeport",
+   "summary": "A 1929 Spanish-style movie palace on Halsted, reopened as a music venue with a brewery and the old grill next door.",
+   "tags": [
+    "live-music",
+    "historic",
+    "beer"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "swedish-american-museum",
+   "name": "Swedish American Museum",
+   "kind": "museum",
+   "neighborhood": "andersonville",
+   "summary": "Small museum on Clark Street about Swedish immigrants, with a children's museum upstairs.",
+   "tags": [
+    "history",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hopleaf",
+   "name": "Hopleaf",
+   "kind": "bar",
+   "neighborhood": "andersonville",
+   "summary": "Belgian beer bar with a long list, mussels and frites and no kids allowed.",
+   "tags": [
+    "beer",
+    "belgian",
+    "mussels"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "belgian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "women-and-children-first",
+   "name": "Women & Children First",
+   "kind": "shopping",
+   "neighborhood": "andersonville",
+   "summary": "A feminist bookstore since 1979, with readings and a strong LGBTQ+ section.",
+   "tags": [
+    "books",
+    "feminist",
+    "readings"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coffee-studio",
+   "name": "The Coffee Studio",
+   "kind": "cafe",
+   "neighborhood": "andersonville",
+   "summary": "Small, serious coffee bar on Clark Street with seats in the window.",
+   "tags": [
+    "coffee",
+    "neighbourly"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "big-jones",
+   "name": "Big Jones",
+   "kind": "restaurant",
+   "neighborhood": "andersonville",
+   "summary": "Southern heritage cooking with a well-loved brunch of beignets and fried chicken.",
+   "tags": [
+    "southern",
+    "brunch"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "southern",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "simons-tavern",
+   "name": "Simon's Tavern",
+   "kind": "bar",
+   "neighborhood": "andersonville",
+   "summary": "Old Swedish tavern with a neon fish sign that serves its own glögg in winter.",
+   "tags": [
+    "dive",
+    "swedish",
+    "glogg"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green-mill",
+   "name": "Green Mill Cocktail Lounge",
+   "kind": "nightlife",
+   "neighborhood": "uptown",
+   "summary": "A 1907 jazz lounge where Capone had a booth, with live jazz nightly and the Uptown Poetry Slam on Sundays.",
+   "tags": [
+    "jazz",
+    "historic",
+    "cocktails"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aragon-ballroom",
+   "name": "Aragon Ballroom",
+   "kind": "venue",
+   "neighborhood": "uptown",
+   "summary": "A 1926 Spanish-courtyard ballroom with a starry ceiling, now for big rock and electronic shows.",
+   "tags": [
+    "live-music",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "riviera-theatre",
+   "name": "Riviera Theatre",
+   "kind": "venue",
+   "neighborhood": "uptown",
+   "summary": "A former movie palace at Broadway and Lawrence hosting mid-size concerts.",
+   "tags": [
+    "live-music"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "montrose-beach",
+   "name": "Montrose Beach and the Magic Hedge",
+   "kind": "beach",
+   "neighborhood": "uptown",
+   "summary": "The city's biggest beach, with a dog beach, a fishing pier and a bird sanctuary famous for spring migration.",
+   "tags": [
+    "swimming",
+    "birding",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tank-noodle",
+   "name": "Tank Noodle",
+   "kind": "restaurant",
+   "neighborhood": "uptown",
+   "summary": "Big, busy pho and bánh mì restaurant at Argyle and Broadway.",
+   "tags": [
+    "pho",
+    "cheap",
+    "vietnamese"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "vietnamese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ba-le",
+   "name": "Ba Le Sandwiches",
+   "kind": "restaurant",
+   "neighborhood": "uptown",
+   "summary": "Bakery and bánh mì shop on Broadway with French bread baked in house.",
+   "tags": [
+    "banh-mi",
+    "cheap",
+    "bakery"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "vietnamese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "carols-pub",
+   "name": "Carol's Pub",
+   "kind": "bar",
+   "neighborhood": "uptown",
+   "summary": "Late-night honky-tonk on Clark Street with a house country band and karaoke nights.",
+   "tags": [
+    "country",
+    "dive",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "first-ascent-uptown",
+   "name": "First Ascent Uptown",
+   "kind": "fitness",
+   "neighborhood": "uptown",
+   "summary": "A climbing gym for bouldering and ropes, with yoga and a fitness floor.",
+   "tags": [
+    "climbing",
+    "gym",
+    "yoga"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "loyola-beach",
+   "name": "Loyola Beach",
+   "kind": "beach",
+   "neighborhood": "rogers-park",
+   "summary": "The largest Rogers Park beach, along a seawall covered in community murals.",
+   "tags": [
+    "swimming",
+    "murals",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lifeline-theatre",
+   "name": "Lifeline Theatre",
+   "kind": "venue",
+   "neighborhood": "rogers-park",
+   "summary": "Small theater on Glenwood Avenue staging adaptations of novels and family shows.",
+   "tags": [
+    "theater",
+    "kids"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "glenwood-sunday-market",
+   "name": "Glenwood Sunday Market",
+   "kind": "market",
+   "neighborhood": "rogers-park",
+   "summary": "Farmers market on a closed street beside the Morse L stop.",
+   "tags": [
+    "farmers-market",
+    "sunday"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "devon-avenue",
+   "name": "Devon Avenue",
+   "kind": "shopping",
+   "neighborhood": "rogers-park",
+   "summary": "The South Asian shopping street of West Ridge: sari shops, jewellers, sweets counters and halal butchers.",
+   "tags": [
+    "south-asian",
+    "shopping",
+    "walk"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "udupi-palace",
+   "name": "Udupi Palace",
+   "kind": "restaurant",
+   "neighborhood": "rogers-park",
+   "summary": "South Indian vegetarian restaurant on Devon for dosas and thalis.",
+   "tags": [
+    "vegetarian",
+    "dosas"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "south-indian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sabri-nihari",
+   "name": "Sabri Nihari",
+   "kind": "restaurant",
+   "neighborhood": "rogers-park",
+   "summary": "Pakistani restaurant on Devon known for nihari stew and grilled meats.",
+   "tags": [
+    "halal",
+    "spicy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pakistani",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "patel-brothers",
+   "name": "Patel Brothers",
+   "kind": "market",
+   "neighborhood": "rogers-park",
+   "summary": "The original Patel Brothers on Devon, an Indian grocery that grew into a national chain.",
+   "tags": [
+    "groceries",
+    "south-asian"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-glenwood",
+   "name": "The Glenwood",
+   "kind": "bar",
+   "neighborhood": "rogers-park",
+   "summary": "Friendly neighborhood bar by the Morse stop, popular with the area's LGBTQ+ residents.",
+   "tags": [
+    "neighbourly",
+    "lgbtq"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "northwestern-lakefill",
+   "name": "Northwestern Lakefill",
+   "kind": "park",
+   "neighborhood": "evanston",
+   "summary": "Lawns and rocks on landfill at the edge of the campus, with a view of the skyline down the shore.",
+   "tags": [
+    "lake",
+    "students",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "block-museum",
+   "name": "Block Museum of Art",
+   "kind": "museum",
+   "neighborhood": "evanston",
+   "summary": "Northwestern's free art museum, with a film series in its auditorium.",
+   "tags": [
+    "art",
+    "free",
+    "film"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grosse-point-lighthouse",
+   "name": "Grosse Point Lighthouse",
+   "kind": "landmark",
+   "neighborhood": "evanston",
+   "summary": "An 1873 lighthouse with gardens at the north end of town, open for summer tours.",
+   "tags": [
+    "history",
+    "lake"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "evanston-beaches",
+   "name": "Evanston beaches",
+   "kind": "beach",
+   "neighborhood": "evanston",
+   "summary": "A string of lakefront beaches that charge a seasonal token, quieter than the city's.",
+   "tags": [
+    "swimming",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bennisons-bakery",
+   "name": "Bennison's Bakery",
+   "kind": "cafe",
+   "neighborhood": "evanston",
+   "summary": "Old-fashioned downtown Evanston bakery with coffee, pastries and birthday cakes.",
+   "tags": [
+    "bakery",
+    "coffee"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mcgaw-ymca",
+   "name": "McGaw YMCA",
+   "kind": "fitness",
+   "neighborhood": "evanston",
+   "summary": "Evanston's big Y, with pools, weights and youth sports.",
+   "tags": [
+    "gym",
+    "pool",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "space-evanston",
+   "name": "SPACE",
+   "kind": "venue",
+   "neighborhood": "evanston",
+   "summary": "A listening room for folk, roots and jazz, with pizza from the attached restaurant.",
+   "tags": [
+    "live-music",
+    "folk"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "edzos",
+   "name": "Edzo's Burger Shop",
+   "kind": "restaurant",
+   "neighborhood": "evanston",
+   "summary": "Griddled burgers, hand-cut fries and milkshakes, popular with Northwestern students.",
+   "tags": [
+    "burgers",
+    "cheap",
+    "students"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wright-home-and-studio",
+   "name": "Frank Lloyd Wright Home and Studio",
+   "kind": "museum",
+   "neighborhood": "oak-park",
+   "summary": "Where the architect lived and worked for twenty years, with walking tours past his early houses.",
+   "tags": [
+    "architecture",
+    "wright",
+    "tours"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "unity-temple",
+   "name": "Unity Temple",
+   "kind": "landmark",
+   "neighborhood": "oak-park",
+   "summary": "Wright's concrete 1908 church, a World Heritage Site, still used by its congregation.",
+   "tags": [
+    "architecture",
+    "wright"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hemingway-birthplace",
+   "name": "Ernest Hemingway Birthplace Museum",
+   "kind": "museum",
+   "neighborhood": "oak-park",
+   "summary": "The Queen Anne house where the writer was born in 1899.",
+   "tags": [
+    "literature",
+    "history"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oak-park-farmers-market",
+   "name": "Oak Park Farmers Market",
+   "kind": "market",
+   "neighborhood": "oak-park",
+   "summary": "Saturday-morning market with church-made donuts that sell out early.",
+   "tags": [
+    "farmers-market",
+    "donuts"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lake-theatre",
+   "name": "Lake Theatre",
+   "kind": "venue",
+   "neighborhood": "oak-park",
+   "summary": "An art deco cinema on Lake Street in downtown Oak Park.",
+   "tags": [
+    "cinema",
+    "art-deco"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "poor-phils",
+   "name": "Poor Phil's",
+   "kind": "bar",
+   "neighborhood": "oak-park",
+   "summary": "Neighborhood oyster bar and grill with a big patio in downtown Oak Park.",
+   "tags": [
+    "oysters",
+    "patio"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "uchicago",
+   "name": "University of Chicago",
+   "type": "research-university",
+   "neighborhood": "hyde-park",
+   "size": "large",
+   "known_for": [
+    "economics",
+    "physics",
+    "law",
+    "medicine",
+    "social-sciences",
+    "research"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "northwestern",
+   "name": "Northwestern University",
+   "type": "research-university",
+   "neighborhood": "evanston",
+   "size": "large",
+   "known_for": [
+    "journalism",
+    "theater",
+    "engineering",
+    "business",
+    "music"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "northwestern-chicago",
+   "name": "Northwestern University (Chicago campus)",
+   "type": "medical-school",
+   "neighborhood": "streeterville",
+   "size": "medium",
+   "known_for": [
+    "medicine",
+    "law",
+    "nursing"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "loyola",
+   "name": "Loyola University Chicago",
+   "type": "private-university",
+   "neighborhood": "rogers-park",
+   "size": "large",
+   "known_for": [
+    "nursing",
+    "business",
+    "law",
+    "social-work"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "depaul",
+   "name": "DePaul University",
+   "type": "private-university",
+   "neighborhood": "lincoln-park",
+   "size": "large",
+   "known_for": [
+    "business",
+    "computing",
+    "theater",
+    "music"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "uic",
+   "name": "University of Illinois Chicago",
+   "type": "public-university",
+   "neighborhood": "little-italy",
+   "size": "large",
+   "known_for": [
+    "medicine",
+    "pharmacy",
+    "engineering",
+    "nursing",
+    "architecture"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "columbia-college",
+   "name": "Columbia College Chicago",
+   "type": "art-school",
+   "neighborhood": "south-loop",
+   "size": "medium",
+   "known_for": [
+    "film",
+    "music",
+    "photography",
+    "comedy-writing"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saic",
+   "name": "School of the Art Institute of Chicago",
+   "type": "art-school",
+   "neighborhood": "the-loop",
+   "size": "medium",
+   "known_for": [
+    "fine-art",
+    "fashion",
+    "sculpture",
+    "art-history"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "iit",
+   "name": "Illinois Institute of Technology",
+   "type": "technical-institute",
+   "neighborhood": "bronzeville",
+   "size": "medium",
+   "known_for": [
+    "architecture",
+    "engineering",
+    "design",
+    "computer-science"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harold-washington-college",
+   "name": "Harold Washington College",
+   "type": "community-college",
+   "neighborhood": "the-loop",
+   "size": "medium",
+   "known_for": [
+    "transfer",
+    "business",
+    "art"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "truman-college",
+   "name": "Truman College",
+   "type": "community-college",
+   "neighborhood": "uptown",
+   "size": "medium",
+   "known_for": [
+    "nursing",
+    "english-as-a-second-language",
+    "transfer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "roosevelt",
+   "name": "Roosevelt University",
+   "type": "private-university",
+   "neighborhood": "the-loop",
+   "size": "small",
+   "known_for": [
+    "music",
+    "performing-arts",
+    "social-justice"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "northwestern-medicine",
+   "name": "Northwestern Memorial Hospital",
+   "sector": "healthcare",
+   "neighborhood": "streeterville",
+   "size": "large",
+   "summary": "The flagship of Northwestern Medicine, among the busiest hospitals in the Midwest.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lurie-childrens",
+   "name": "Ann & Robert H. Lurie Children's Hospital",
+   "sector": "healthcare",
+   "neighborhood": "streeterville",
+   "size": "large",
+   "summary": "Children's hospital tower in Streeterville.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rush",
+   "name": "Rush University Medical Center",
+   "sector": "healthcare",
+   "neighborhood": "little-italy",
+   "size": "large",
+   "summary": "Academic hospital with a butterfly-shaped tower in the Illinois Medical District.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "uchicago-medicine",
+   "name": "University of Chicago Medicine",
+   "sector": "healthcare",
+   "neighborhood": "hyde-park",
+   "size": "large",
+   "summary": "Academic medical center and the South Side's adult trauma center.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "medical-researcher",
+    "biotech-scientist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "uchicago-employer",
+   "name": "University of Chicago",
+   "sector": "education",
+   "neighborhood": "hyde-park",
+   "size": "large",
+   "summary": "Faculty, research and staff jobs on the Hyde Park campus.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "medical-researcher",
+    "data-analyst",
+    "biologist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "northwestern-employer",
+   "name": "Northwestern University",
+   "sector": "education",
+   "neighborhood": "evanston",
+   "size": "large",
+   "summary": "The university's Evanston campus.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "software-engineer",
+    "biologist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "united-airlines",
+   "name": "United Airlines",
+   "sector": "transportation",
+   "neighborhood": "the-loop",
+   "size": "large",
+   "summary": "Airline headquartered in Willis Tower, with its biggest hub at O'Hare.",
+   "careers": [
+    "data-analyst",
+    "software-engineer",
+    "financial-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cme-group",
+   "name": "CME Group",
+   "sector": "finance",
+   "neighborhood": "the-loop",
+   "size": "large",
+   "summary": "The futures exchange, descended from the Board of Trade and the Mercantile Exchange, headquartered on Wacker Drive.",
+   "careers": [
+    "financial-analyst",
+    "software-engineer",
+    "data-analyst",
+    "finance-banker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "northern-trust",
+   "name": "Northern Trust",
+   "sector": "finance",
+   "neighborhood": "the-loop",
+   "size": "large",
+   "summary": "Wealth management and custody bank on LaSalle Street.",
+   "careers": [
+    "finance-banker",
+    "financial-analyst",
+    "accountant",
+    "software-engineer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kirkland-ellis",
+   "name": "Kirkland & Ellis",
+   "sector": "legal",
+   "neighborhood": "the-loop",
+   "size": "large",
+   "summary": "Large law firm headquartered in the Loop.",
+   "careers": [
+    "paralegal",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "exelon",
+   "name": "Exelon and ComEd",
+   "sector": "energy",
+   "neighborhood": "the-loop",
+   "size": "large",
+   "summary": "The utility holding company and the electric company that serves northern Illinois.",
+   "careers": [
+    "financial-analyst",
+    "data-analyst",
+    "construction-trades",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hyatt",
+   "name": "Hyatt Hotels",
+   "sector": "hospitality",
+   "neighborhood": "the-loop",
+   "size": "large",
+   "summary": "Hotel company headquartered on the river at Riverside Plaza.",
+   "careers": [
+    "marketing-coordinator",
+    "accountant",
+    "data-analyst",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "palmer-house",
+   "name": "Palmer House Hilton",
+   "sector": "hospitality",
+   "neighborhood": "the-loop",
+   "size": "large",
+   "summary": "A grand 1870s hotel with a painted lobby ceiling, where the brownie was invented.",
+   "careers": [
+    "hotel-front-desk",
+    "event-planner",
+    "line-cook",
+    "server",
+    "bartender"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-of-chicago",
+   "name": "City of Chicago",
+   "sector": "government",
+   "neighborhood": "the-loop",
+   "size": "large",
+   "summary": "City departments around City Hall on LaSalle Street.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "accountant",
+    "paralegal"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cps",
+   "name": "Chicago Public Schools",
+   "sector": "education",
+   "neighborhood": "the-loop",
+   "size": "large",
+   "summary": "The third-largest school district in the country, with headquarters on Madison Street.",
+   "careers": [
+    "teacher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cta",
+   "name": "Chicago Transit Authority",
+   "sector": "transportation",
+   "neighborhood": "west-loop",
+   "size": "large",
+   "summary": "Runs the L and the buses from its headquarters on Lake Street.",
+   "careers": [
+    "government-analyst",
+    "construction-trades",
+    "data-analyst",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mcdonalds-hq",
+   "name": "McDonald's headquarters",
+   "sector": "food",
+   "neighborhood": "west-loop",
+   "size": "large",
+   "summary": "The company's global headquarters in Fulton Market, with a test kitchen and a ground-floor restaurant.",
+   "careers": [
+    "marketing-coordinator",
+    "data-analyst",
+    "software-engineer",
+    "graphic-designer",
+    "ux-designer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "google-chicago",
+   "name": "Google Chicago",
+   "sector": "technology",
+   "neighborhood": "west-loop",
+   "size": "large",
+   "summary": "Engineering and sales offices in a former cold-storage building in Fulton Market.",
+   "careers": [
+    "software-engineer",
+    "ux-designer",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "united-center-employer",
+   "name": "United Center",
+   "sector": "entertainment",
+   "neighborhood": "west-loop",
+   "size": "medium",
+   "summary": "Arena for the Bulls, the Blackhawks and big concerts.",
+   "careers": [
+    "event-planner",
+    "bartender",
+    "server",
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "navy-pier-employer",
+   "name": "Navy Pier",
+   "sector": "tourism",
+   "neighborhood": "streeterville",
+   "size": "medium",
+   "summary": "Restaurants, rides, boat tours and events on the pier.",
+   "careers": [
+    "event-planner",
+    "server",
+    "line-cook",
+    "tour-guide",
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-public-media",
+   "name": "Chicago Public Media",
+   "sector": "media",
+   "neighborhood": "streeterville",
+   "size": "medium",
+   "summary": "WBEZ and the Chicago Sun-Times, with studios at Navy Pier.",
+   "careers": [
+    "journalist",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lyric-opera",
+   "name": "Lyric Opera of Chicago",
+   "sector": "entertainment",
+   "neighborhood": "the-loop",
+   "size": "medium",
+   "summary": "The opera company at the Civic Opera House on Wacker Drive.",
+   "careers": [
+    "musician",
+    "performer",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "steppenwolf-employer",
+   "name": "Steppenwolf Theatre Company",
+   "sector": "entertainment",
+   "neighborhood": "lincoln-park",
+   "size": "small",
+   "summary": "Ensemble theater company on Halsted Street.",
+   "careers": [
+    "actor",
+    "performer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "second-city-employer",
+   "name": "The Second City",
+   "sector": "entertainment",
+   "neighborhood": "lincoln-park",
+   "size": "medium",
+   "summary": "Comedy theater and training center with resident and touring companies.",
+   "careers": [
+    "actor",
+    "performer",
+    "bartender",
+    "server"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ballys-chicago",
+   "name": "Bally's Chicago",
+   "sector": "hospitality",
+   "neighborhood": "river-north",
+   "size": "medium",
+   "summary": "The city's first casino, opened in the old Medinah Temple while a permanent one is built.",
+   "careers": [
+    "casino-dealer",
+    "bartender",
+    "server",
+    "line-cook"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "field-museum-employer",
+   "name": "Field Museum",
+   "sector": "education",
+   "neighborhood": "south-loop",
+   "size": "medium",
+   "summary": "Natural history museum with research collections and scientists on staff.",
+   "careers": [
+    "biologist",
+    "tour-guide",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cubs",
+   "name": "Chicago Cubs",
+   "sector": "entertainment",
+   "neighborhood": "lakeview",
+   "size": "medium",
+   "summary": "The baseball club and its Wrigley Field game-day staff.",
+   "careers": [
+    "marketing-coordinator",
+    "event-planner",
+    "bartender",
+    "server"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "loop-business",
+   "name": "The Loop and the river",
+   "neighborhoods": [
+    "the-loop",
+    "river-north",
+    "west-loop"
+   ],
+   "sectors": [
+    "finance",
+    "legal",
+    "government",
+    "transportation",
+    "energy",
+    "hospitality"
+   ],
+   "summary": "Trading firms and banks on LaSalle Street, law firms, corporate headquarters along the river and City Hall.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fulton-market",
+   "name": "Fulton Market",
+   "neighborhoods": [
+    "west-loop"
+   ],
+   "sectors": [
+    "technology",
+    "food",
+    "business"
+   ],
+   "summary": "Old meatpacking blocks now holding corporate headquarters, tech offices and startups.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "medical-district",
+   "name": "Hospital campuses",
+   "neighborhoods": [
+    "streeterville",
+    "little-italy",
+    "hyde-park"
+   ],
+   "sectors": [
+    "healthcare",
+    "biotech",
+    "education"
+   ],
+   "summary": "Northwestern Medicine in Streeterville, Rush and UI Health in the Illinois Medical District, and UChicago Medicine on the South Side.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "campuses",
+   "name": "University campuses",
+   "neighborhoods": [
+    "hyde-park",
+    "evanston",
+    "lincoln-park",
+    "rogers-park"
+   ],
+   "sectors": [
+    "education"
+   ],
+   "summary": "UChicago, Northwestern, DePaul and Loyola.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakefront-culture",
+   "name": "Museums and venues",
+   "neighborhoods": [
+    "south-loop",
+    "the-loop",
+    "streeterville"
+   ],
+   "sectors": [
+    "entertainment",
+    "tourism",
+    "hospitality",
+    "education"
+   ],
+   "summary": "The Museum Campus, the theater district, Navy Pier and the hotels around them.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Humid continental: long, cold, windy winters with lake-effect snow, a short spring, hot and humid summers with thunderstorms, and a crisp, golden autumn. The lake keeps the shore cooler in spring and summer.",
+  "months": [
+   {
+    "high_f": 32,
+    "low_f": 18,
+    "rain_days": 11,
+    "note": "Bitter cold and wind off the lake; subzero snaps and snow most weeks."
+   },
+   {
+    "high_f": 36,
+    "low_f": 21,
+    "rain_days": 9,
+    "note": "Still frozen; the lake edge piles up with ice."
+   },
+   {
+    "high_f": 47,
+    "low_f": 30,
+    "rain_days": 11,
+    "note": "Raw and changeable; a spring storm can still bring heavy snow."
+   },
+   {
+    "high_f": 59,
+    "low_f": 40,
+    "rain_days": 12,
+    "note": "Cool and wet; cold lake breezes along the shore."
+   },
+   {
+    "high_f": 70,
+    "low_f": 50,
+    "rain_days": 12,
+    "note": "Patios and beaches open; it can be 80 inland and 55 by the lake."
+   },
+   {
+    "high_f": 80,
+    "low_f": 60,
+    "rain_days": 11,
+    "note": "Warm and humid; afternoon thunderstorms."
+   },
+   {
+    "high_f": 85,
+    "low_f": 66,
+    "rain_days": 10,
+    "note": "Hottest month; muggy heat waves and crowded beaches."
+   },
+   {
+    "high_f": 83,
+    "low_f": 65,
+    "rain_days": 9,
+    "note": "Hot and humid; the lake is warmest for swimming."
+   },
+   {
+    "high_f": 76,
+    "low_f": 57,
+    "rain_days": 9,
+    "note": "Warm days, cooler nights; the best weather of the year."
+   },
+   {
+    "high_f": 63,
+    "low_f": 45,
+    "rain_days": 10,
+    "note": "Crisp; leaves turn and the first frost arrives."
+   },
+   {
+    "high_f": 49,
+    "low_f": 33,
+    "rain_days": 10,
+    "note": "Gray and windy; the first snow flurries."
+   },
+   {
+    "high_f": 36,
+    "low_f": 22,
+    "rain_days": 10,
+    "note": "Cold, dark and snowy; the Hawk wind arrives."
+   }
+  ],
+  "source": "curated-climate-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "st-patricks-river",
+   "name": "St. Patrick's Day river dyeing and parade",
+   "months": [
+    3
+   ],
+   "neighborhood": "the-loop",
+   "summary": "The river is dyed bright green on the Saturday before St. Patrick's Day, followed by a parade on Columbus Drive.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cubs-opening-day",
+   "name": "Cubs Opening Day",
+   "months": [
+    3,
+    4
+   ],
+   "neighborhood": "lakeview",
+   "summary": "Wrigleyville bars open at dawn for the first home game, often in snow flurries.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blues-fest",
+   "name": "Chicago Blues Festival",
+   "months": [
+    6
+   ],
+   "neighborhood": "the-loop",
+   "summary": "Free blues festival in Millennium Park, the largest of its kind.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "printers-row-lit-fest",
+   "name": "Printers Row Lit Fest",
+   "months": [
+    6
+   ],
+   "neighborhood": "south-loop",
+   "summary": "Book tents, author talks and used-book dealers along Dearborn Street.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-pride",
+   "name": "Chicago Pride Parade and Pride Fest",
+   "months": [
+    6
+   ],
+   "neighborhood": "lakeview",
+   "summary": "Northalsted street fest and a huge Sunday parade through Lakeview.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "puerto-rican-fest",
+   "name": "Puerto Rican People's Parade and Fiesta Boricua",
+   "months": [
+    6,
+    9
+   ],
+   "neighborhood": "humboldt-park",
+   "summary": "Parade, music and food in and around Humboldt Park, with flags on every car.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grant-park-music-festival",
+   "name": "Grant Park Music Festival",
+   "months": [
+    6,
+    7,
+    8
+   ],
+   "neighborhood": "the-loop",
+   "summary": "Free classical concerts at the Pritzker Pavilion, with picnics on the lawn.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lollapalooza",
+   "name": "Lollapalooza",
+   "months": [
+    7,
+    8
+   ],
+   "neighborhood": "the-loop",
+   "summary": "Four days of rock, pop and EDM across Grant Park in late July or early August.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "air-and-water-show",
+   "name": "Chicago Air and Water Show",
+   "months": [
+    8
+   ],
+   "neighborhood": "lincoln-park",
+   "summary": "Jets and stunt planes over North Avenue Beach, rattling windows all along the lakefront.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jazz-fest",
+   "name": "Chicago Jazz Festival",
+   "months": [
+    8,
+    9
+   ],
+   "neighborhood": "the-loop",
+   "summary": "Free jazz festival in Millennium Park over Labor Day weekend.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mexican-independence-parade",
+   "name": "26th Street Mexican Independence Day Parade",
+   "months": [
+    9
+   ],
+   "neighborhood": "little-village",
+   "summary": "Floats, horses, flags and honking cars on 26th Street around September 16.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "taste-of-chicago",
+   "name": "Taste of Chicago",
+   "months": [
+    9
+   ],
+   "neighborhood": "the-loop",
+   "summary": "Food stalls from local restaurants in Grant Park; long a July event, it now usually runs in September.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-marathon",
+   "name": "Chicago Marathon",
+   "months": [
+    10
+   ],
+   "neighborhood": "the-loop",
+   "summary": "A flat, fast course through 29 neighborhoods from Grant Park, with crowds cheering in Pilsen, Chinatown and Boystown.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "open-house-chicago",
+   "name": "Open House Chicago",
+   "months": [
+    10
+   ],
+   "neighborhood": "the-loop",
+   "summary": "A weekend of free entry to buildings normally closed to the public, from penthouses to churches.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lights-festival",
+   "name": "Magnificent Mile Lights Festival",
+   "months": [
+    11
+   ],
+   "neighborhood": "streeterville",
+   "summary": "A parade and the lighting of the trees along Michigan Avenue the weekend before Thanksgiving.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "christkindlmarket",
+   "name": "Christkindlmarket",
+   "months": [
+    11,
+    12
+   ],
+   "neighborhood": "the-loop",
+   "summary": "German-style Christmas market in Daley Plaza with mulled wine in collectable boot mugs.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zoolights",
+   "name": "ZooLights",
+   "months": [
+    11,
+    12,
+    1
+   ],
+   "neighborhood": "lincoln-park",
+   "summary": "Millions of lights across Lincoln Park Zoo on winter evenings.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bears-season",
+   "name": "Bears football season",
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1
+   ],
+   "neighborhood": "south-loop",
+   "summary": "Sunday game days, tailgates in the Soldier Field lots and Monday moods across the city.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "deep-dish",
+   "name": "Deep-dish pizza",
+   "kind": "dish",
+   "summary": "A tall, buttery crust baked in a pan, filled with cheese and sausage and topped with chunky tomato sauce; locals eat it for visitors and occasions more than every week.",
+   "places": [
+    "pizzeria-uno",
+    "lou-malnatis-river-north",
+    "giordanos-rush"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tavern-style",
+   "name": "Tavern-style pizza",
+   "kind": "dish",
+   "summary": "The pizza Chicagoans actually eat most: thin, crackly crust cut into squares (\"party cut\"), and the corner pieces are fought over.",
+   "places": [
+    "pats-pizza"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "italian-beef",
+   "name": "Italian beef",
+   "kind": "dish",
+   "summary": "Thin-sliced roast beef soaked in jus on a long roll, topped with sweet peppers or hot giardiniera; order it \"dipped\" or \"wet\" and eat it leaning over the counter.",
+   "places": [
+    "als-beef-taylor",
+    "mr-beef",
+    "portillos-river-north"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-dog",
+   "name": "Chicago-style hot dog",
+   "kind": "dish",
+   "summary": "An all-beef dog on a poppy-seed bun \"dragged through the garden\": yellow mustard, neon relish, onion, tomato, pickle spear, sport peppers and celery salt. Never ketchup.",
+   "places": [
+    "portillos-river-north",
+    "wieners-circle"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maxwell-street-polish",
+   "name": "Maxwell Street Polish",
+   "kind": "dish",
+   "summary": "A grilled Polish sausage with grilled onions and mustard, from the old Maxwell Street market.",
+   "places": [
+    "jims-original",
+    "rate-field"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jibarito",
+   "name": "Jibarito",
+   "kind": "dish",
+   "summary": "A Chicago Puerto Rican invention: steak, garlic mayo, lettuce and tomato between two flattened fried plantains.",
+   "places": [
+    "papas-cache-sabroso"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "paczki",
+   "name": "Pączki Day",
+   "kind": "custom",
+   "summary": "On Fat Tuesday, Polish bakeries sell out of rich filled doughnuts (pączki) from before dawn, and offices fill with boxes of them.",
+   "places": [],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "garrett-mix",
+   "name": "Chicago Mix popcorn",
+   "kind": "dish",
+   "summary": "Caramel and cheese popcorn mixed in one bag, sold by Garrett Popcorn shops downtown with lines out the door.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "malort",
+   "name": "Malört",
+   "kind": "drink",
+   "summary": "A bitter wormwood liqueur that locals pour for visitors to watch their faces, then drink themselves as a point of pride.",
+   "places": [
+    "rainbo-club",
+    "old-town-ale-house"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-style",
+   "name": "Old Style",
+   "kind": "drink",
+   "summary": "The cheap lager on corner-tavern signs and at Wrigley for decades; tall cans of it signal an old-school bar.",
+   "places": [
+    "murphys-bleachers"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-bean",
+   "name": "\"The Bean\"",
+   "kind": "saying",
+   "summary": "Nobody calls Anish Kapoor's Cloud Gate by its name; it is the Bean, and meeting \"at the Bean\" is a standard plan downtown.",
+   "places": [
+    "millennium-park"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dibs",
+   "name": "Dibs",
+   "kind": "custom",
+   "summary": "After a snowstorm, people who dig out a street parking space claim it with a lawn chair, a cone or an old ironing board, and moving someone's dibs starts feuds.",
+   "places": [],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-l",
+   "name": "\"The L\"",
+   "kind": "saying",
+   "summary": "The trains are the L, whether elevated or underground, and lines go by color; directions are given as \"take the Red to Belmont\".",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lake-shore-drive",
+   "name": "\"Lake Shore Drive\"",
+   "kind": "saying",
+   "summary": "The lakefront highway is still Lake Shore Drive to locals, officially renamed for Jean Baptiste Point DuSable in 2021, and directions are given as \"the lake is east\".",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-hawk",
+   "name": "\"The Hawk\"",
+   "kind": "saying",
+   "summary": "The bitter winter wind off the lake, as in \"the Hawk is out today\".",
+   "places": [],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pop",
+   "name": "\"Pop\", \"Jewels\" and \"the Ryan\"",
+   "kind": "saying",
+   "summary": "Soda is pop, Jewel-Osco is \"the Jewels\", and expressways go by names: the Kennedy, the Dan Ryan, the Eisenhower.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "north-south-side",
+   "name": "Cubs or Sox",
+   "kind": "custom",
+   "summary": "Baseball loyalty roughly follows the city map: the North Side for the Cubs, the South Side for the White Sox, and switching sides is not done.",
+   "places": [
+    "wrigley-field",
+    "rate-field"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakefront",
+   "name": "Lakefront summer",
+   "kind": "custom",
+   "summary": "The first warm weekend, everyone heads to the lake: beaches, the trail, volleyball and grills along twenty-six miles of mostly public shore.",
+   "places": [
+    "north-avenue-beach",
+    "montrose-beach",
+    "lakefront-trail",
+    "promontory-point"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cubs",
+   "name": "Chicago Cubs",
+   "kind": "team",
+   "summary": "The North Side baseball team at Wrigley Field, whose 2016 World Series ended a 108-year wait; fans sing \"Go Cubs Go\" after wins and fly a W flag.",
+   "places": [
+    "wrigley-field",
+    "murphys-bleachers"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "white-sox",
+   "name": "Chicago White Sox",
+   "kind": "team",
+   "summary": "The South Side baseball team in Bridgeport, with a working-class, no-nonsense fan base.",
+   "places": [
+    "rate-field"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bears",
+   "name": "Chicago Bears",
+   "kind": "team",
+   "summary": "\"Da Bears\": the NFL team at Soldier Field, followed with grim devotion through long, cold seasons.",
+   "places": [
+    "soldier-field"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bulls-blackhawks",
+   "name": "Bulls and Blackhawks",
+   "kind": "team",
+   "summary": "The basketball and hockey teams share the United Center; the Jordan-era Bulls and the 2010s Blackhawks are still talked about.",
+   "places": [
+    "united-center"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blues-and-improv",
+   "name": "Blues and improv",
+   "kind": "other",
+   "summary": "Chicago blues came up from the Delta through the South Side, and improv comedy grew up here too; both are still played nightly.",
+   "places": [
+    "kingston-mines",
+    "buddy-guys-legends",
+    "second-city"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Coffee",
+   "low": 2.5,
+   "high": 4,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Latte",
+   "low": 5,
+   "high": 7,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "breakfast-sandwich",
+   "item": "Breakfast sandwich",
+   "low": 6,
+   "high": 10,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheap-lunch",
+   "item": "Cheap lunch",
+   "low": 12,
+   "high": 18,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner",
+   "item": "Mid-range dinner",
+   "low": 35,
+   "high": 60,
+   "per": "for one",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beer",
+   "item": "Pint of beer",
+   "low": 7,
+   "high": 10,
+   "per": "a pint",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocktail",
+   "item": "Cocktail",
+   "low": 14,
+   "high": 18,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries",
+   "low": 75,
+   "high": 120,
+   "per": "a week, one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "transit",
+   "item": "CTA fare",
+   "low": 2.25,
+   "high": 2.5,
+   "per": "one ride, bus or L",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rideshare",
+   "item": "Rideshare across town",
+   "low": 15,
+   "high": 32,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movie",
+   "item": "Movie ticket",
+   "low": 12,
+   "high": 18,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gym",
+   "item": "Gym membership",
+   "low": 30,
+   "high": 70,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "deep-dish",
+   "item": "Deep-dish pizza",
+   "low": 25,
+   "high": 45,
+   "per": "a large to share",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "italian-beef",
+   "item": "Italian beef sandwich",
+   "low": 9,
+   "high": 14,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicago-dog",
+   "item": "Chicago-style hot dog",
+   "low": 4,
+   "high": 7,
+   "per": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "sea",
+   "name": "Lake Michigan",
+   "side": "east",
+   "width_km": 6
+  },
+  {
+   "kind": "river",
+   "name": "Chicago River",
+   "width_km": 0.08,
+   "points": [
+    [
+     41.889,
+     -87.612
+    ],
+    [
+     41.887,
+     -87.625
+    ],
+    [
+     41.887,
+     -87.637
+    ],
+    [
+     41.896,
+     -87.642
+    ],
+    [
+     41.91,
+     -87.65
+    ],
+    [
+     41.93,
+     -87.664
+    ],
+    [
+     41.955,
+     -87.685
+    ],
+    [
+     41.975,
+     -87.7
+    ]
+   ]
+  },
+  {
+   "kind": "river",
+   "name": "South Branch",
+   "width_km": 0.07,
+   "points": [
+    [
+     41.887,
+     -87.637
+    ],
+    [
+     41.872,
+     -87.638
+    ],
+    [
+     41.857,
+     -87.64
+    ],
+    [
+     41.845,
+     -87.655
+    ],
+    [
+     41.84,
+     -87.68
+    ]
+   ]
+  }
+ ]
+}

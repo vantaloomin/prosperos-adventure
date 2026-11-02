@@ -1,0 +1,7 @@
+{
+ "about": "The Concourse's premade characters (dungeon/campaign.py): the two of the four from Halvorsen's who came down at the Waystone. Base Prospero sheets at creation, from Vanta's Mabry Curve archive (world/packages/babel/personas.json).",
+ "premades": [
+  {"id": "grant-mabry", "name": "Grant Mabry", "gender": "man", "age": 34, "about": "Lead systems engineer on BABEL, the full-dive game the tower is now wearing, pulled out of his own launch party with a ring in his pocket. He knows every curve and rank table by heart and is about to learn which of them the tower kept. The rebuild froze partway through him: his race reads unstable, his class reads garbled, and every joint aches in a way regeneration will not touch. His fiancee came down three floors up, with his best friend.", "stats": {"Mind": 12, "Allure": 7, "Resolve": 8, "Vitality": 14, "Essence": 11, "Luck": 7}},
+  {"id": "kenzie-cole", "name": "Kenzie Cole", "gender": "woman", "age": 20, "about": "Bri's younger sister, a college junior who came to the party for the open bar and saw too much at the coat check minutes before the lights went. She asked the tower for a beast lineage and got a golden one she did not ask for; her tattoos and piercings did not make the trip. Funny, sharp and loyal to Grant in a way she has not looked at closely, carrying two secrets that are not hers to tell.", "stats": {"Mind": 10, "Allure": 12, "Resolve": 8, "Vitality": 13, "Essence": 9, "Luck": 9}}
+ ]
+}

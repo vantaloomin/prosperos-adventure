@@ -1,0 +1,67 @@
+{
+ "about": "Havenbrooke's woods on foot (dungeon/hexes.py, requirements \"### Hex crawl\"): a hex crawl of one-mile hexes into the woods and hills west and south of Haven, entered from Ironroot Woods or the Riverwalk. No hexes are authored; the land is generated from the campaign seed and goes on as far as anyone walks. Trips between towns stay on Havenbrooke's roads (travel/havenbrooke.json). Walking eats nothing from the pack, as everywhere in Havenbrooke.",
+ "world": "havenbrooke",
+ "travel": "hex",
+ "hexes": "havenbrooke-woods",
+ "hex_map": {
+  "miles": 1,
+  "generate": {
+   "span": 24,
+   "water": 0.22,
+   "frontier": ["haven-woods", "haven-woods", "deep-woods"],
+   "swap": {"plains": "forest", "waste": "plains", "mountains": "hills"}
+  },
+  "names": {"plains": "an overgrown field", "forest": "the woods", "hills": "the wooded hills", "water": "a lake", "marsh": "a beaver swamp"}
+ },
+ "wild": {"id": "the-back-woods", "name": "the back woods", "region": "haven-woods", "city": "haven", "place": "the-back-woods", "safe": false},
+ "hours_a_day": 5,
+ "walk_hours": 2,
+ "road_cards": false,
+ "odds": {"none": 0, "low": 10, "medium": 25, "high": 45},
+ "food": [],
+ "nodes": [
+  {"id": "ironroot-trailhead", "name": "Ironroot Woods", "region": "haven-woods", "city": "haven", "place": "ironroot-woods", "safe": true, "map": {"x": 0.4, "y": 0.5}},
+  {"id": "riverwalk-end", "name": "the Riverwalk", "region": "haven-woods", "city": "haven", "place": "riverwalk", "safe": true, "map": {"x": 0.55, "y": 0.58}}
+ ],
+ "routes": [],
+ "regions": {
+  "haven-woods": {"name": "the woods round Haven", "danger": "low", "cards": null, "tier": 1},
+  "deep-woods": {"name": "the deep woods", "danger": "medium", "cards": null, "tier": 2}
+ },
+ "encounters": {
+  "haven-woods": [
+   {"weight": 3, "text": "Two students from Warden Hall on a map-and-compass exercise, arguing about which way is west."},
+   {"weight": 2, "text": "A hunter's tree stand, empty, with a thermos left on the seat and still warm."},
+   {"weight": 2, "text": "An old stone wall running straight through the trees, from when all of this was farms."},
+   {"weight": 2, "action": "keep footing on the wet leaves going down the gully", "difficulty": "normal", "threat": "The leaves go out from under the character halfway down the gully. Mud to the waist and a turned ankle."},
+   {"weight": 1, "action": "notice the warding marks on the trees before crossing them", "difficulty": "normal", "threat": "The character walks through a coven's ward line without seeing it. Every hair stands up, and somebody, somewhere, now knows."}
+  ],
+  "deep-woods": [
+   {"weight": 2, "text": "A clearing with a ring of flattened grass, as if something large sleeps here, and paw prints the size of a hand."},
+   {"weight": 2, "text": "No phone signal, and the trees all look alike."},
+   {"weight": 2, "action": "get out of the way of the pack running through", "difficulty": "hard", "threat": {"text": "Lycans on a run come through the trees fast and do not stop for anyone in the way.", "foe": {"name": "running lycan", "count": 2, "vitality": 14, "resolve": 12, "weapon": 1, "wants": "drive_off"}}},
+   {"weight": 1, "action": "leave the lights in the trees alone", "difficulty": "hard", "threat": "Small lights in the trees lead the character off the path and leave them in the dark, an hour from anywhere, with no idea how."}
+  ]
+ },
+ "camp": {
+  "haven-woods": [
+   {"weight": 3, "text": "Coyotes yipping across the valley, and the lights of Haven far off below."},
+   {"weight": 2, "action": "pick a dry spot before the rain", "difficulty": "normal", "threat": "Rain all night. Nobody sleeps."}
+  ],
+  "deep-woods": [
+   {"weight": 2, "text": "Howling, close, and then nothing at all until dawn."},
+   {"weight": 1, "action": "wake before whatever is circling the camp comes in", "difficulty": "hard", "threat": {"text": "A feral lycan, alone and not right, comes into the firelight.", "foe": {"name": "feral lycan", "count": 1, "vitality": 16, "resolve": 12, "weapon": 1, "wants": "kill", "horror": true}}}
+  ]
+ },
+ "sites": {
+  "odds": 7,
+  "owners": ["Halloran", "Duffy", "Petrie", "Lutz", "Mapes", "Orcutt", "Van Slyke", "Bogardus", "Teeter", "Schoonmaker"],
+  "any": [
+   {"weight": 3, "kind": "ruin", "visible": true, "names": ["the {owner} farm cellar hole", "{owner}'s barn", "the old {owner} sawmill"], "text": "What is left of a farm the woods took back: a cellar hole, lilacs gone wild, a stone chimney standing on its own."},
+   {"weight": 2, "kind": "camp", "visible": true, "names": ["{owner}'s hunting camp", "a party spot"], "text": "A camp people come back to: a fire ring, crushed cans, a tarp strung between trees and initials carved in a beech."},
+   {"weight": 2, "kind": "shrine", "visible": false, "names": ["the witches' clearing", "the stone circle above {owner} Creek"], "text": "A clearing nobody stumbles on by accident: stones set in a ring, burnt herbs, and the feeling of being looked at."},
+   {"weight": 2, "kind": "lair", "visible": false, "intensity": {"horror": 2}, "names": ["the den under the ledge", "the hollow at {owner}'s Gulf"], "text": "A den dug under a rock ledge, the ground worn bare, bones of deer and something with a collar on it."},
+   {"weight": 1, "kind": "cave", "visible": false, "names": ["{owner}'s Cave", "the old quarry adit"], "text": "An old quarry tunnel into the hillside, gated once; the gate hangs open now and the air from it is cold."}
+  ]
+ }
+}

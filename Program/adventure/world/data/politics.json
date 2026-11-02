@@ -1,0 +1,8498 @@
+{
+ "schema_version": 1,
+ "source": {
+  "kind": "curated",
+  "title": "Local politics banks written for Prospero's Companion",
+  "license": "CC0-1.0",
+  "retrieved": "2026-10-28",
+  "url": null,
+  "note": "Ported from Prospero's Companion (#457) with Dungeon's own `world_kinds`."
+ },
+ "eras": {
+  "modern": "modern",
+  "other": "modern",
+  "future": "future",
+  "jazz-age": "jazz",
+  "victorian": "victorian",
+  "steampunk": "victorian",
+  "frontier": "frontier",
+  "medieval": "medieval",
+  "fantasy": "fantasy"
+ },
+ "styles": {
+  "modern": {
+   "office": [
+    "mayor"
+   ],
+   "office2": [
+    "council member",
+    "police chief",
+    "school superintendent",
+    "parks commissioner",
+    "city treasurer"
+   ],
+   "institutions": [
+    "children's home",
+    "community center",
+    "public library",
+    "animal shelter",
+    "food bank",
+    "youth league",
+    "senior center",
+    "public pool"
+   ],
+   "trades": [
+    "bus drivers",
+    "nurses",
+    "teachers",
+    "delivery riders",
+    "sanitation workers",
+    "hotel staff"
+   ]
+  },
+  "future": {
+   "office": [
+    "captain"
+   ],
+   "office2": [
+    "quartermaster",
+    "chief engineer",
+    "council chair",
+    "security chief",
+    "deck steward"
+   ],
+   "institutions": [
+    "creche",
+    "school deck",
+    "medical bay",
+    "garden ring",
+    "archive",
+    "commons hall"
+   ],
+   "trades": [
+    "recyclers",
+    "hydroponics crews",
+    "maintenance crews",
+    "galley staff",
+    "pilots"
+   ]
+  },
+  "jazz": {
+   "office": [
+    "mayor"
+   ],
+   "office2": [
+    "alderman",
+    "police commissioner",
+    "ward boss",
+    "city treasurer",
+    "judge"
+   ],
+   "institutions": [
+    "orphanage",
+    "free hospital",
+    "settlement house",
+    "public library",
+    "soup kitchen",
+    "children's fund"
+   ],
+   "trades": [
+    "dockworkers",
+    "garment workers",
+    "streetcar men",
+    "bakers",
+    "teamsters"
+   ]
+  },
+  "victorian": {
+   "office": [
+    "mayor"
+   ],
+   "office2": [
+    "alderman",
+    "magistrate",
+    "vestry clerk",
+    "police superintendent",
+    "Poor Law guardian"
+   ],
+   "institutions": [
+    "orphanage",
+    "workhouse",
+    "ragged school",
+    "infirmary",
+    "almshouse",
+    "public baths"
+   ],
+   "trades": [
+    "match girls",
+    "dockers",
+    "cabmen",
+    "gas workers",
+    "tailors"
+   ]
+  },
+  "frontier": {
+   "office": [
+    "mayor"
+   ],
+   "office2": [
+    "sheriff",
+    "judge",
+    "railroad agent",
+    "land agent",
+    "marshal"
+   ],
+   "institutions": [
+    "orphanage",
+    "schoolhouse",
+    "church fund",
+    "doctor's fund",
+    "widows' fund"
+   ],
+   "trades": [
+    "cowhands",
+    "miners",
+    "freighters",
+    "railroad men",
+    "blacksmiths"
+   ]
+  },
+  "medieval": {
+   "office": [
+    "reeve"
+   ],
+   "office2": [
+    "bailiff",
+    "lord's steward",
+    "guildmaster",
+    "sheriff",
+    "abbot"
+   ],
+   "institutions": [
+    "foundling house",
+    "almshouse",
+    "leper house",
+    "hospice",
+    "poor box"
+   ],
+   "trades": [
+    "bakers",
+    "weavers",
+    "masons",
+    "carters",
+    "brewers"
+   ]
+  },
+  "fantasy": {
+   "office": [
+    "magistrate"
+   ],
+   "office2": [
+    "guildmaster",
+    "captain of the watch",
+    "high priest",
+    "harbormaster",
+    "treasurer"
+   ],
+   "institutions": [
+    "orphanage",
+    "healers' house",
+    "poorhouse",
+    "temple school",
+    "widows' fund"
+   ],
+   "trades": [
+    "bakers",
+    "dockhands",
+    "carters",
+    "weavers",
+    "brewers"
+   ]
+  }
+ },
+ "questions": {
+  "modern": [
+   {
+    "id": "housing-crisis",
+    "title": "Housing costs",
+    "question": "Should the city build homes on its own land, even in the nicer neighborhoods?",
+    "sides": [
+     {
+      "name": "Build homes",
+      "stand": "build homes everywhere",
+      "jobs": [
+       "labor",
+       "arts",
+       "care"
+      ],
+      "words": [
+       "idealist",
+       "rebel"
+      ],
+      "backers": [
+       "workers",
+       "reform"
+      ]
+     },
+     {
+      "name": "Protect neighborhoods",
+      "stand": "keep neighborhoods as they are",
+      "jobs": [
+       "trade"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "locals",
+       "establishment"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Rents rose again this month.",
+      0
+     ],
+     [
+      "A new block was turned down after neighbors objected.",
+      1
+     ],
+     [
+      "A family in {hood} was priced out after twenty years.",
+      0
+     ],
+     [
+      "Builders say the rules are too tight.",
+      0
+     ],
+     [
+      "A packed council meeting ran past midnight.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "bike-lanes",
+    "title": "Bike lanes",
+    "question": "Should parking spaces make way for bike lanes?",
+    "sides": [
+     {
+      "name": "More lanes",
+      "stand": "put in lanes",
+      "jobs": [
+       "arts",
+       "learned"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "reform"
+      ]
+     },
+     {
+      "name": "Keep parking",
+      "stand": "keep parking",
+      "jobs": [
+       "trade",
+       "labor"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "business",
+       "locals"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A cyclist was hit in {hood}.",
+      0
+     ],
+     [
+      "Shop owners say lanes are killing trade.",
+      1
+     ],
+     [
+      "A new lane opened downtown.",
+      0
+     ]
+    ]
+   },
+   {
+    "id": "policing",
+    "title": "The police budget",
+    "question": "Should the city spend more on police or on everything else?",
+    "sides": [
+     {
+      "name": "Spend it elsewhere",
+      "stand": "spend it on schools and clinics",
+      "jobs": [
+       "care",
+       "learned",
+       "arts"
+      ],
+      "words": [
+       "idealist",
+       "rebel"
+      ],
+      "backers": [
+       "reform",
+       "radical"
+      ]
+     },
+     {
+      "name": "More police",
+      "stand": "spend more on police",
+      "jobs": [
+       "law",
+       "trade"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "law",
+       "establishment"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Break-ins are up in {hood}.",
+      1
+     ],
+     [
+      "An arrest was filmed and shared everywhere.",
+      0
+     ],
+     [
+      "The budget vote is coming.",
+      0
+     ]
+    ]
+   },
+   {
+    "id": "short-lets",
+    "title": "Holiday rentals",
+    "question": "Should holiday rentals be limited?",
+    "sides": [
+     {
+      "name": "Limit them",
+      "stand": "limit them",
+      "jobs": [
+       "labor",
+       "care"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "locals",
+       "reform"
+      ]
+     },
+     {
+      "name": "Leave them",
+      "stand": "leave owners alone",
+      "jobs": [
+       "trade"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "business"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Half a street in {hood} is holiday rentals now.",
+      0
+     ],
+     [
+      "Owners say the money keeps them afloat.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "automation",
+    "title": "Machines taking jobs",
+    "question": "Should companies pay a tax for every job a machine takes?",
+    "sides": [
+     {
+      "name": "Tax it",
+      "stand": "tax the machines",
+      "jobs": [
+       "labor"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "workers"
+      ]
+     },
+     {
+      "name": "No tax",
+      "stand": "let companies get on with it",
+      "jobs": [
+       "trade",
+       "learned"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "business"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A warehouse let half its staff go.",
+      0
+     ],
+     [
+      "A new firm opened with almost nobody working there.",
+      0
+     ],
+     [
+      "Prices fell at the shops.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "climate",
+    "title": "The heat",
+    "question": "Should the city ban cars from the center on hot days?",
+    "sides": [
+     {
+      "name": "Ban them",
+      "stand": "ban them on hot days",
+      "jobs": [
+       "care",
+       "learned"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "reform"
+      ]
+     },
+     {
+      "name": "Leave the roads open",
+      "stand": "keep the roads open",
+      "jobs": [
+       "labor",
+       "trade"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "business"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Another record hot day.",
+      0
+     ],
+     [
+      "Deliveries were stuck outside the center.",
+      1
+     ]
+    ]
+   }
+  ],
+  "jazz": [
+   {
+    "id": "prohibition",
+    "title": "Prohibition",
+    "question": "Should the country stay dry?",
+    "years": [
+     1920,
+     1933
+    ],
+    "sides": [
+     {
+      "name": "Wet",
+      "stand": "see Prohibition repealed",
+      "jobs": [
+       "drink",
+       "arts",
+       "labor"
+      ],
+      "words": [
+       "party",
+       "rebel"
+      ],
+      "backers": [
+       "outlaws",
+       "workers",
+       "radical"
+      ]
+     },
+     {
+      "name": "Dry",
+      "stand": "keep the country dry",
+      "jobs": [
+       "church",
+       "law",
+       "care"
+      ],
+      "words": [
+       "devout",
+       "cautious"
+      ],
+      "backers": [
+       "church",
+       "law",
+       "reform"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Prohibition agents raided a club in {hood}.",
+      1
+     ],
+     [
+      "A batch of bad liquor sent people to the hospital.",
+      1
+     ],
+     [
+      "A judge was seen drinking at {place}.",
+      0
+     ],
+     [
+      "Gangs fought over the trade in {hood}.",
+      1
+     ],
+     [
+      "A padlocked club reopened next door under a new name.",
+      0
+     ],
+     [
+      "A preacher led a march against the speakeasies.",
+      1
+     ]
+    ],
+    "real": true
+   },
+   {
+    "id": "immigration",
+    "title": "Closing the door",
+    "question": "Should the country keep letting immigrants in?",
+    "years": [
+     1917,
+     1930
+    ],
+    "sides": [
+     {
+      "name": "Keep the door open",
+      "stand": "keep the door open",
+      "jobs": [
+       "labor",
+       "learned"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "workers",
+       "radical"
+      ]
+     },
+     {
+      "name": "Close it",
+      "stand": "close the door",
+      "jobs": [
+       "official"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "tradition",
+       "locals"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A ship was turned back at the harbor.",
+      1
+     ],
+     [
+      "Families in {hood} wait on news of relatives.",
+      0
+     ]
+    ],
+    "real": true
+   },
+   {
+    "id": "the-machine",
+    "title": "The machine at City Hall",
+    "question": "Should the party machine keep running the city?",
+    "sides": [
+     {
+      "name": "Clean house",
+      "stand": "throw the machine out",
+      "jobs": [
+       "learned",
+       "trade"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "reform"
+      ]
+     },
+     {
+      "name": "The machine delivers",
+      "stand": "keep the machine; it looks after people",
+      "jobs": [
+       "labor",
+       "official"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "establishment",
+       "workers"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A ward boss handed out coal in {hood}.",
+      1
+     ],
+     [
+      "A reform candidate was beaten up.",
+      1
+     ],
+     [
+      "The paper printed who got the city jobs.",
+      0
+     ]
+    ]
+   },
+   {
+    "id": "unions",
+    "title": "The unions",
+    "question": "Should workers be free to join a union?",
+    "sides": [
+     {
+      "name": "Union",
+      "stand": "let workers organize",
+      "jobs": [
+       "labor"
+      ],
+      "words": [
+       "idealist",
+       "rebel"
+      ],
+      "backers": [
+       "workers",
+       "radical"
+      ]
+     },
+     {
+      "name": "Open shop",
+      "stand": "keep unions out",
+      "jobs": [
+       "trade"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "business"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A strike closed a works in {hood}.",
+      0
+     ],
+     [
+      "Strikebreakers were brought in by train.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "women-modern",
+    "title": "The new woman",
+    "question": "Should young women live as freely as young men?",
+    "sides": [
+     {
+      "name": "Let them",
+      "stand": "let young women live as they like",
+      "jobs": [
+       "arts"
+      ],
+      "words": [
+       "rebel",
+       "party"
+      ],
+      "backers": [
+       "radical"
+      ]
+     },
+     {
+      "name": "Mind the old ways",
+      "stand": "keep to the old ways",
+      "jobs": [
+       "church"
+      ],
+      "words": [
+       "devout",
+       "cautious"
+      ],
+      "backers": [
+       "church",
+       "tradition"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A dance marathon in {hood} scandalized the papers.",
+      0
+     ],
+     [
+      "A preacher railed against bobbed hair.",
+      1
+     ]
+    ]
+   }
+  ],
+  "victorian": [
+   {
+    "id": "suffrage",
+    "title": "Votes for women",
+    "question": "Should women have the vote?",
+    "sides": [
+     {
+      "name": "Suffragists",
+      "stand": "see women given the vote",
+      "jobs": [
+       "learned",
+       "care",
+       "arts"
+      ],
+      "words": [
+       "idealist",
+       "rebel"
+      ],
+      "backers": [
+       "reform",
+       "radical"
+      ]
+     },
+     {
+      "name": "Antis",
+      "stand": "keep the vote as it is",
+      "jobs": [
+       "official",
+       "church"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "tradition",
+       "establishment"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A suffrage meeting filled the hall at {place}.",
+      0
+     ],
+     [
+      "A petition was laughed out of the chamber.",
+      1
+     ],
+     [
+      "A woman chained herself to the railings.",
+      0
+     ]
+    ]
+   },
+   {
+    "id": "temperance",
+    "title": "Temperance",
+    "question": "Should the drink trade be curbed?",
+    "sides": [
+     {
+      "name": "Temperance",
+      "stand": "curb the drink trade",
+      "jobs": [
+       "church",
+       "care"
+      ],
+      "words": [
+       "devout"
+      ],
+      "backers": [
+       "church",
+       "reform"
+      ]
+     },
+     {
+      "name": "Leave the trade",
+      "stand": "leave the trade alone",
+      "jobs": [
+       "drink",
+       "labor"
+      ],
+      "words": [
+       "party"
+      ],
+      "backers": [
+       "business",
+       "workers"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A temperance band played outside {place}.",
+      0
+     ],
+     [
+      "A gin shop in {hood} was fined.",
+      0
+     ],
+     [
+      "Brewers paid for a free supper.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "factory-acts",
+    "title": "The hours bill",
+    "question": "Should the working day be limited by law?",
+    "sides": [
+     {
+      "name": "Ten hours",
+      "stand": "limit the day",
+      "jobs": [
+       "labor",
+       "care"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "workers",
+       "reform"
+      ]
+     },
+     {
+      "name": "Free trade",
+      "stand": "leave it to masters and men",
+      "jobs": [
+       "trade"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "business"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A mill hand collapsed at the end of a shift.",
+      0
+     ],
+     [
+      "Masters say it will ruin them.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "home-rule",
+    "title": "Home rule",
+    "question": "Should the far province govern itself?",
+    "sides": [
+     {
+      "name": "Home rule",
+      "stand": "let them govern themselves",
+      "jobs": [
+       "learned",
+       "labor"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "radical",
+       "reform"
+      ]
+     },
+     {
+      "name": "Union",
+      "stand": "keep the union whole",
+      "jobs": [
+       "official",
+       "law"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "tradition",
+       "establishment"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A speech on home rule drew a crowd and a riot.",
+      0
+     ],
+     [
+      "The bill was thrown out again.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "sanitation",
+    "title": "The great stink",
+    "question": "Should rates rise to pay for drains and clean water?",
+    "sides": [
+     {
+      "name": "Drains",
+      "stand": "pay for drains",
+      "jobs": [
+       "care",
+       "learned"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "reform"
+      ]
+     },
+     {
+      "name": "Low rates",
+      "stand": "keep rates down",
+      "jobs": [
+       "trade"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "business"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Cholera in {hood}.",
+      0
+     ],
+     [
+      "Ratepayers met to protest the cost.",
+      1
+     ]
+    ]
+   }
+  ],
+  "frontier": [
+   {
+    "id": "railroad",
+    "title": "The railroad",
+    "question": "Should the town give land to bring the railroad through?",
+    "sides": [
+     {
+      "name": "Bring it",
+      "stand": "give the land and bring the railroad",
+      "jobs": [
+       "trade"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "business"
+      ]
+     },
+     {
+      "name": "Not at that price",
+      "stand": "keep the land",
+      "jobs": [
+       "farm"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "locals"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Surveyors were seen west of town.",
+      0
+     ],
+     [
+      "A rancher refused to sell.",
+      1
+     ],
+     [
+      "A rival town offered more land.",
+      0
+     ]
+    ]
+   },
+   {
+    "id": "statehood",
+    "title": "Statehood",
+    "question": "Should the territory seek statehood?",
+    "sides": [
+     {
+      "name": "Statehood",
+      "stand": "become a state",
+      "jobs": [
+       "trade",
+       "learned"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "establishment",
+       "business"
+      ]
+     },
+     {
+      "name": "Stay a territory",
+      "stand": "stay as we are",
+      "jobs": [
+       "farm"
+      ],
+      "words": [
+       "cautious",
+       "rebel"
+      ],
+      "backers": [
+       "locals",
+       "outlaws"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A convention was called.",
+      0
+     ],
+     [
+      "Ranchers say taxes would ruin them.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "range",
+    "title": "Fencing the range",
+    "question": "Should the open range be fenced?",
+    "sides": [
+     {
+      "name": "Fence it",
+      "stand": "fence the land",
+      "jobs": [
+       "farm",
+       "trade"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "business"
+      ]
+     },
+     {
+      "name": "Keep it open",
+      "stand": "keep the range open",
+      "jobs": [
+       "farm",
+       "labor"
+      ],
+      "words": [
+       "rebel"
+      ],
+      "backers": [
+       "locals",
+       "outlaws"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Fences were cut overnight.",
+      1
+     ],
+     [
+      "A herd died at a fenced water hole.",
+      1
+     ],
+     [
+      "A homesteader was threatened.",
+      0
+     ]
+    ]
+   },
+   {
+    "id": "temperance-west",
+    "title": "Closing the saloons",
+    "question": "Should the saloons be closed?",
+    "sides": [
+     {
+      "name": "Close them",
+      "stand": "close the saloons",
+      "jobs": [
+       "church",
+       "care"
+      ],
+      "words": [
+       "devout"
+      ],
+      "backers": [
+       "church",
+       "reform"
+      ]
+     },
+     {
+      "name": "Keep them",
+      "stand": "keep the saloons",
+      "jobs": [
+       "drink",
+       "farm",
+       "labor"
+      ],
+      "words": [
+       "party"
+      ],
+      "backers": [
+       "business",
+       "outlaws"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A woman with a hatchet smashed up a saloon.",
+      0
+     ],
+     [
+      "A shooting at {place}.",
+      0
+     ],
+     [
+      "Saloon keepers raised money for the town.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "land-claims",
+    "title": "The land office",
+    "question": "Is the land office favoring the big outfits?",
+    "sides": [
+     {
+      "name": "It is",
+      "stand": "see the land office cleaned up",
+      "jobs": [
+       "farm"
+      ],
+      "words": [
+       "rebel"
+      ],
+      "backers": [
+       "locals",
+       "reform"
+      ]
+     },
+     {
+      "name": "It is not",
+      "stand": "trust the land office",
+      "jobs": [
+       "official",
+       "trade"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "establishment",
+       "business"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A claim was jumped.",
+      0
+     ],
+     [
+      "The land agent dined with the big rancher.",
+      0
+     ]
+    ]
+   }
+  ],
+  "medieval": [
+   {
+    "id": "crown-tax",
+    "title": "The crown's new tax",
+    "question": "Should the town pay the crown's new war tax?",
+    "sides": [
+     {
+      "name": "Refuse it",
+      "stand": "refuse the tax",
+      "jobs": [
+       "trade",
+       "farm",
+       "labor"
+      ],
+      "words": [
+       "rebel"
+      ],
+      "backers": [
+       "guild",
+       "workers",
+       "locals"
+      ]
+     },
+     {
+      "name": "Pay it",
+      "stand": "pay what the crown asks",
+      "jobs": [
+       "official",
+       "law"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "crown",
+       "law"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "The tax collectors came through {hood}.",
+      1
+     ],
+     [
+      "A collector was beaten and sent off.",
+      0
+     ],
+     [
+      "Soldiers were seen on the road.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "charter",
+    "title": "The town charter",
+    "question": "Should the town buy a charter to govern itself?",
+    "sides": [
+     {
+      "name": "Buy the charter",
+      "stand": "buy the charter",
+      "jobs": [
+       "trade"
+      ],
+      "words": [
+       "practical",
+       "rebel"
+      ],
+      "backers": [
+       "guild",
+       "business"
+      ]
+     },
+     {
+      "name": "Stay with the lord",
+      "stand": "stay under the lord",
+      "jobs": [
+       "farm",
+       "official"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "crown",
+       "tradition"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "The guilds met in secret.",
+      0
+     ],
+     [
+      "The lord's steward warned against it.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "church-lands",
+    "title": "The abbey's land",
+    "question": "Should the abbey keep its fields tax-free?",
+    "sides": [
+     {
+      "name": "Tax the abbey",
+      "stand": "tax the abbey",
+      "jobs": [
+       "farm",
+       "trade"
+      ],
+      "words": [
+       "rebel"
+      ],
+      "backers": [
+       "workers",
+       "crown"
+      ]
+     },
+     {
+      "name": "Leave the abbey",
+      "stand": "leave the abbey alone",
+      "jobs": [
+       "church"
+      ],
+      "words": [
+       "devout"
+      ],
+      "backers": [
+       "church",
+       "tradition"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "The abbey fenced off a common field.",
+      0
+     ],
+     [
+      "The abbot fed the poor at the gate.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "the-war",
+    "title": "The war abroad",
+    "question": "Should the town send men to the king's war?",
+    "sides": [
+     {
+      "name": "Send them",
+      "stand": "answer the king's call",
+      "jobs": [
+       "law",
+       "official"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "crown"
+      ]
+     },
+     {
+      "name": "Keep them home",
+      "stand": "keep our people home",
+      "jobs": [
+       "farm",
+       "labor",
+       "care"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "locals",
+       "church"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A herald read the king's summons in {hood}.",
+      0
+     ],
+     [
+      "Word came of a lost battle.",
+      1
+     ]
+    ]
+   }
+  ],
+  "fantasy": [
+   {
+    "id": "old-peoples",
+    "title": "The old peoples",
+    "question": "Should the old peoples be welcome in town as equals?",
+    "sides": [
+     {
+      "name": "Welcome them",
+      "stand": "welcome them as equals",
+      "jobs": [
+       "learned",
+       "arts"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "reform",
+       "radical"
+      ]
+     },
+     {
+      "name": "Keep apart",
+      "stand": "keep to our own",
+      "jobs": [
+       "labor",
+       "farm"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "tradition",
+       "locals"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A fight at {place} between townsfolk and travelers.",
+      1
+     ],
+     [
+      "An elder of the old peoples spoke in the square.",
+      0
+     ]
+    ]
+   },
+   {
+    "id": "magic-tax",
+    "title": "Taxing magic",
+    "question": "Should magic-workers pay a tax to the crown?",
+    "sides": [
+     {
+      "name": "Tax them",
+      "stand": "tax them",
+      "jobs": [
+       "official"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "crown",
+       "establishment"
+      ]
+     },
+     {
+      "name": "Leave them",
+      "stand": "leave them be",
+      "jobs": [
+       "learned"
+      ],
+      "words": [
+       "rebel"
+      ],
+      "backers": [
+       "radical"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A tax collector visited a hedge-witch in {hood}.",
+      0
+     ],
+     [
+      "A healer refused to pay and kept working.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "war-rumor",
+    "title": "Rumors of war",
+    "question": "Should the town arm itself against the empire across the water?",
+    "sides": [
+     {
+      "name": "Arm",
+      "stand": "arm and be ready",
+      "jobs": [
+       "law",
+       "labor"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "law",
+       "crown"
+      ]
+     },
+     {
+      "name": "Trade, not war",
+      "stand": "keep trading and keep the peace",
+      "jobs": [
+       "trade"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "business",
+       "guild"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Sails were seen off the coast.",
+      0
+     ],
+     [
+      "A trade treaty was signed.",
+      1
+     ],
+     [
+      "Spies were taken in {hood}.",
+      0
+     ]
+    ]
+   },
+   {
+    "id": "temple-power",
+    "title": "The temple's power",
+    "question": "Should the temple have a say in the town's laws?",
+    "sides": [
+     {
+      "name": "No say",
+      "stand": "keep the temple out of the law",
+      "jobs": [
+       "learned",
+       "trade"
+      ],
+      "words": [
+       "rebel"
+      ],
+      "backers": [
+       "reform",
+       "business"
+      ]
+     },
+     {
+      "name": "A say",
+      "stand": "give the temple its say",
+      "jobs": [
+       "church"
+      ],
+      "words": [
+       "devout"
+      ],
+      "backers": [
+       "church",
+       "tradition"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "The high priest spoke against a new law.",
+      1
+     ],
+     [
+      "A temple court sentenced a merchant.",
+      1
+     ],
+     [
+      "A merchant refused to pay the temple.",
+      0
+     ]
+    ]
+   }
+  ],
+  "future": [
+   {
+    "id": "rationing",
+    "title": "The ration",
+    "question": "Should the ration be cut to build up the reserves?",
+    "sides": [
+     {
+      "name": "Cut it",
+      "stand": "cut the ration and build reserves",
+      "jobs": [
+       "official"
+      ],
+      "words": [
+       "cautious",
+       "practical"
+      ],
+      "backers": [
+       "establishment"
+      ]
+     },
+     {
+      "name": "Keep it",
+      "stand": "keep the ration",
+      "jobs": [
+       "labor",
+       "care"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "workers"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A crop failed in the farm rings.",
+      0
+     ],
+     [
+      "The reserve figures were posted.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "destination",
+    "title": "Where we're going",
+    "question": "Should the course be changed for the closer world?",
+    "sides": [
+     {
+      "name": "Change course",
+      "stand": "change course",
+      "jobs": [
+       "learned",
+       "labor"
+      ],
+      "words": [
+       "rebel"
+      ],
+      "backers": [
+       "radical"
+      ]
+     },
+     {
+      "name": "Keep course",
+      "stand": "keep to the plan",
+      "jobs": [
+       "official"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "establishment",
+       "tradition"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "New readings came in about the closer world.",
+      0
+     ],
+     [
+      "The founders' charter was read aloud.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "births",
+    "title": "Birth permits",
+    "question": "Should birth permits be eased?",
+    "sides": [
+     {
+      "name": "Ease them",
+      "stand": "ease them",
+      "jobs": [
+       "care"
+      ],
+      "words": [
+       "idealist"
+      ],
+      "backers": [
+       "workers",
+       "reform"
+      ]
+     },
+     {
+      "name": "Keep them tight",
+      "stand": "keep them as they are",
+      "jobs": [
+       "official",
+       "learned"
+      ],
+      "words": [
+       "practical"
+      ],
+      "backers": [
+       "establishment"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "A couple was refused a permit.",
+      0
+     ],
+     [
+      "Air figures came in lower than hoped.",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "crew-vs-command",
+    "title": "Who runs the ship",
+    "question": "Should the crew council have the final word over command?",
+    "sides": [
+     {
+      "name": "Crew council",
+      "stand": "give the council the final word",
+      "jobs": [
+       "labor"
+      ],
+      "words": [
+       "rebel"
+      ],
+      "backers": [
+       "workers",
+       "radical"
+      ]
+     },
+     {
+      "name": "Command",
+      "stand": "leave command in charge",
+      "jobs": [
+       "law",
+       "official"
+      ],
+      "words": [
+       "cautious"
+      ],
+      "backers": [
+       "establishment",
+       "law"
+      ]
+     }
+    ],
+    "beats": [
+     [
+      "Command overruled the council.",
+      0
+     ],
+     [
+      "A fault was fixed fast on command's order.",
+      1
+     ]
+    ]
+   }
+  ]
+ },
+ "factions": {
+  "modern": [
+   {
+    "id": "council-majority",
+    "name": "The council majority",
+    "kind": "party",
+    "tags": [
+     "establishment"
+    ],
+    "pull": 4,
+    "jobs": [
+     "official"
+    ]
+   },
+   {
+    "id": "reform-slate",
+    "name": "The reform slate",
+    "kind": "party",
+    "tags": [
+     "reform",
+     "radical"
+    ],
+    "pull": 2,
+    "jobs": [
+     "learned"
+    ]
+   },
+   {
+    "id": "neighborhood-association",
+    "name": "The neighborhood associations",
+    "kind": "society",
+    "tags": [
+     "locals",
+     "tradition"
+    ],
+    "pull": 3
+   },
+   {
+    "id": "business-council",
+    "name": "The business council",
+    "kind": "business",
+    "tags": [
+     "business"
+    ],
+    "pull": 4,
+    "jobs": [
+     "trade"
+    ]
+   },
+   {
+    "id": "trades-union",
+    "name": "The union",
+    "kind": "union",
+    "tags": [
+     "workers"
+    ],
+    "pull": 3,
+    "jobs": [
+     "labor"
+    ]
+   },
+   {
+    "id": "police-union",
+    "name": "The police union",
+    "kind": "union",
+    "tags": [
+     "law"
+    ],
+    "pull": 3,
+    "jobs": [
+     "law"
+    ]
+   },
+   {
+    "id": "faith-coalition",
+    "name": "The faith coalition",
+    "kind": "church",
+    "tags": [
+     "church"
+    ],
+    "pull": 2,
+    "jobs": [
+     "church"
+    ]
+   }
+  ],
+  "jazz": [
+   {
+    "id": "the-machine",
+    "name": "The machine",
+    "kind": "party",
+    "tags": [
+     "establishment"
+    ],
+    "pull": 5,
+    "jobs": [
+     "official"
+    ]
+   },
+   {
+    "id": "reformers",
+    "name": "The reformers",
+    "kind": "party",
+    "tags": [
+     "reform"
+    ],
+    "pull": 2,
+    "jobs": [
+     "learned"
+    ]
+   },
+   {
+    "id": "dry-league",
+    "name": "The Dry League",
+    "kind": "society",
+    "tags": [
+     "church",
+     "reform"
+    ],
+    "pull": 3,
+    "jobs": [
+     "church"
+    ]
+   },
+   {
+    "id": "the-outfit",
+    "name": "The outfit",
+    "kind": "gang",
+    "tags": [
+     "outlaws"
+    ],
+    "pull": 4,
+    "jobs": [
+     "drink"
+    ]
+   },
+   {
+    "id": "dockworkers",
+    "name": "The dockworkers' union",
+    "kind": "union",
+    "tags": [
+     "workers"
+    ],
+    "pull": 3,
+    "jobs": [
+     "labor"
+    ]
+   },
+   {
+    "id": "chamber",
+    "name": "The chamber of commerce",
+    "kind": "business",
+    "tags": [
+     "business"
+    ],
+    "pull": 4,
+    "jobs": [
+     "trade"
+    ]
+   },
+   {
+    "id": "the-force",
+    "name": "The police",
+    "kind": "law",
+    "tags": [
+     "law"
+    ],
+    "pull": 3,
+    "jobs": [
+     "law"
+    ]
+   }
+  ],
+  "victorian": [
+   {
+    "id": "liberals",
+    "name": "The Liberal club",
+    "kind": "party",
+    "tags": [
+     "reform"
+    ],
+    "pull": 3,
+    "jobs": [
+     "learned"
+    ]
+   },
+   {
+    "id": "conservatives",
+    "name": "The Conservative club",
+    "kind": "party",
+    "tags": [
+     "establishment",
+     "tradition"
+    ],
+    "pull": 4,
+    "jobs": [
+     "official"
+    ]
+   },
+   {
+    "id": "temperance-society",
+    "name": "The temperance society",
+    "kind": "society",
+    "tags": [
+     "church",
+     "reform"
+    ],
+    "pull": 2,
+    "jobs": [
+     "church"
+    ]
+   },
+   {
+    "id": "suffrage-society",
+    "name": "The suffrage society",
+    "kind": "society",
+    "tags": [
+     "radical",
+     "reform"
+    ],
+    "pull": 2,
+    "jobs": [
+     "care"
+    ]
+   },
+   {
+    "id": "trade-unions",
+    "name": "The trade unions",
+    "kind": "union",
+    "tags": [
+     "workers"
+    ],
+    "pull": 3,
+    "jobs": [
+     "labor"
+    ]
+   },
+   {
+    "id": "brewers",
+    "name": "The brewers' interest",
+    "kind": "business",
+    "tags": [
+     "business"
+    ],
+    "pull": 4,
+    "jobs": [
+     "drink",
+     "trade"
+    ]
+   },
+   {
+    "id": "the-church",
+    "name": "The established church",
+    "kind": "church",
+    "tags": [
+     "church",
+     "tradition"
+    ],
+    "pull": 3,
+    "jobs": [
+     "church"
+    ]
+   }
+  ],
+  "frontier": [
+   {
+    "id": "cattlemen",
+    "name": "The cattlemen's association",
+    "kind": "business",
+    "tags": [
+     "business",
+     "establishment"
+    ],
+    "pull": 5,
+    "jobs": [
+     "farm"
+    ]
+   },
+   {
+    "id": "homesteaders",
+    "name": "The homesteaders",
+    "kind": "society",
+    "tags": [
+     "locals",
+     "workers"
+    ],
+    "pull": 2,
+    "jobs": [
+     "farm"
+    ]
+   },
+   {
+    "id": "railroad",
+    "name": "The railroad men",
+    "kind": "business",
+    "tags": [
+     "business"
+    ],
+    "pull": 4,
+    "jobs": [
+     "trade"
+    ]
+   },
+   {
+    "id": "law-and-order",
+    "name": "The law and order committee",
+    "kind": "law",
+    "tags": [
+     "law",
+     "establishment"
+    ],
+    "pull": 3,
+    "jobs": [
+     "law"
+    ]
+   },
+   {
+    "id": "saloon-crowd",
+    "name": "The saloon crowd",
+    "kind": "gang",
+    "tags": [
+     "outlaws"
+    ],
+    "pull": 2,
+    "jobs": [
+     "drink"
+    ]
+   },
+   {
+    "id": "ladies-league",
+    "name": "The ladies' league",
+    "kind": "society",
+    "tags": [
+     "church",
+     "reform"
+    ],
+    "pull": 2,
+    "jobs": [
+     "church",
+     "care"
+    ]
+   }
+  ],
+  "medieval": [
+   {
+    "id": "the-crown",
+    "name": "The crown's men",
+    "kind": "crown",
+    "tags": [
+     "crown",
+     "establishment"
+    ],
+    "pull": 5,
+    "jobs": [
+     "official"
+    ]
+   },
+   {
+    "id": "the-guilds",
+    "name": "The guilds",
+    "kind": "guild",
+    "tags": [
+     "guild",
+     "business"
+    ],
+    "pull": 4,
+    "jobs": [
+     "trade"
+    ]
+   },
+   {
+    "id": "the-abbey",
+    "name": "The abbey",
+    "kind": "church",
+    "tags": [
+     "church",
+     "tradition"
+    ],
+    "pull": 4,
+    "jobs": [
+     "church"
+    ]
+   },
+   {
+    "id": "the-watch",
+    "name": "The watch",
+    "kind": "law",
+    "tags": [
+     "law"
+    ],
+    "pull": 3,
+    "jobs": [
+     "law"
+    ]
+   },
+   {
+    "id": "commoners",
+    "name": "The commons",
+    "kind": "society",
+    "tags": [
+     "workers",
+     "locals"
+    ],
+    "pull": 2,
+    "jobs": [
+     "labor",
+     "farm"
+    ]
+   },
+   {
+    "id": "outlaws",
+    "name": "The outlaws in the woods",
+    "kind": "gang",
+    "tags": [
+     "outlaws",
+     "radical"
+    ],
+    "pull": 1
+   }
+  ],
+  "fantasy": [
+   {
+    "id": "the-council",
+    "name": "The town council",
+    "kind": "party",
+    "tags": [
+     "establishment"
+    ],
+    "pull": 4,
+    "jobs": [
+     "official"
+    ]
+   },
+   {
+    "id": "merchant-guilds",
+    "name": "The merchant guilds",
+    "kind": "guild",
+    "tags": [
+     "guild",
+     "business"
+    ],
+    "pull": 4,
+    "jobs": [
+     "trade"
+    ]
+   },
+   {
+    "id": "the-temple",
+    "name": "The temple",
+    "kind": "church",
+    "tags": [
+     "church",
+     "tradition"
+    ],
+    "pull": 3,
+    "jobs": [
+     "church"
+    ]
+   },
+   {
+    "id": "the-watch",
+    "name": "The watch",
+    "kind": "law",
+    "tags": [
+     "law"
+    ],
+    "pull": 3,
+    "jobs": [
+     "law"
+    ]
+   },
+   {
+    "id": "mages-circle",
+    "name": "The circle of mages",
+    "kind": "society",
+    "tags": [
+     "radical"
+    ],
+    "pull": 2,
+    "jobs": [
+     "learned"
+    ]
+   },
+   {
+    "id": "thieves-guild",
+    "name": "The thieves' guild",
+    "kind": "gang",
+    "tags": [
+     "outlaws"
+    ],
+    "pull": 2,
+    "jobs": [
+     "drink"
+    ]
+   },
+   {
+    "id": "dock-brotherhood",
+    "name": "The dock brotherhood",
+    "kind": "union",
+    "tags": [
+     "workers",
+     "locals"
+    ],
+    "pull": 2,
+    "jobs": [
+     "labor"
+    ]
+   }
+  ],
+  "future": [
+   {
+    "id": "command",
+    "name": "Command",
+    "kind": "command",
+    "tags": [
+     "establishment",
+     "law"
+    ],
+    "pull": 5,
+    "jobs": [
+     "official",
+     "law"
+    ]
+   },
+   {
+    "id": "engineering",
+    "name": "Engineering",
+    "kind": "department",
+    "tags": [
+     "workers"
+    ],
+    "pull": 4,
+    "jobs": [
+     "labor"
+    ]
+   },
+   {
+    "id": "crew-council",
+    "name": "The crew council",
+    "kind": "party",
+    "tags": [
+     "workers",
+     "reform"
+    ],
+    "pull": 3
+   },
+   {
+    "id": "science",
+    "name": "The science division",
+    "kind": "department",
+    "tags": [
+     "radical"
+    ],
+    "pull": 3,
+    "jobs": [
+     "learned"
+    ]
+   },
+   {
+    "id": "founders",
+    "name": "The founders' circle",
+    "kind": "society",
+    "tags": [
+     "tradition"
+    ],
+    "pull": 2
+   },
+   {
+    "id": "traders",
+    "name": "The traders' row",
+    "kind": "business",
+    "tags": [
+     "business"
+    ],
+    "pull": 2,
+    "jobs": [
+     "trade"
+    ]
+   }
+  ]
+ },
+ "world_kinds": {
+  "realm": [
+   "crown",
+   "establishment",
+   "law"
+  ],
+  "government": [
+   "establishment",
+   "law"
+  ],
+  "town": [
+   "establishment"
+  ],
+  "institution": [
+   "establishment",
+   "tradition"
+  ],
+  "company": [
+   "business",
+   "guild"
+  ],
+  "guild": [
+   "guild",
+   "business"
+  ],
+  "family": [
+   "establishment",
+   "business"
+  ],
+  "house": [
+   "establishment",
+   "tradition"
+  ],
+  "church": [
+   "church",
+   "tradition"
+  ],
+  "press": [
+   "reform"
+  ],
+  "sorority": [
+   "tradition",
+   "locals"
+  ],
+  "fraternity": [
+   "tradition",
+   "locals"
+  ],
+  "crew": [
+   "workers",
+   "outlaws"
+  ],
+  "tribe": [
+   "locals",
+   "tradition"
+  ],
+  "salon": [
+   "radical",
+   "reform"
+  ],
+  "cult": [
+   "radical",
+   "outlaws"
+  ],
+  "gang": [
+   "outlaws"
+  ],
+  "union": [
+   "workers",
+   "locals"
+  ],
+  "party": [
+   "establishment"
+  ],
+  "army": [
+   "law",
+   "establishment"
+  ],
+  "order": [
+   "church",
+   "law"
+  ]
+ },
+ "world_tags": {
+  "brynwyr-high-elves": [
+   "tradition"
+  ],
+  "unguruk-tribe": [
+   "outlaws"
+  ],
+  "havenbrooke-university": [
+   "establishment",
+   "tradition",
+   "reform"
+  ]
+ },
+ "relations": {
+  "rivals": [
+   [
+    "establishment",
+    "reform"
+   ],
+   [
+    "establishment",
+    "radical"
+   ],
+   [
+    "law",
+    "outlaws"
+   ],
+   [
+    "business",
+    "workers"
+   ],
+   [
+    "church",
+    "outlaws"
+   ],
+   [
+    "church",
+    "radical"
+   ],
+   [
+    "crown",
+    "guild"
+   ],
+   [
+    "tradition",
+    "radical"
+   ],
+   [
+    "reform",
+    "outlaws"
+   ]
+  ],
+  "allies": [
+   [
+    "establishment",
+    "business"
+   ],
+   [
+    "establishment",
+    "law"
+   ],
+   [
+    "church",
+    "tradition"
+   ],
+   [
+    "reform",
+    "radical"
+   ],
+   [
+    "workers",
+    "locals"
+   ],
+   [
+    "crown",
+    "church"
+   ],
+   [
+    "crown",
+    "law"
+   ],
+   [
+    "guild",
+    "business"
+   ]
+  ]
+ },
+ "local": [
+  {
+   "id": "orphanage-funds",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The {office} and the {institution} money",
+   "question": "Did the {office} skim money meant for the {institution}?",
+   "sides": [
+    {
+     "name": "Out with them",
+     "stand": "see the {office} answer for it",
+     "jobs": [
+      "care",
+      "learned",
+      "church"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "church"
+     ]
+    },
+    {
+     "name": "Stands by them",
+     "stand": "leave the {office} be until there is proof",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "People whisper that money for the {institution} never reached it.",
+    "open": "Ledgers from the {institution} show sums gone missing on the {office}'s watch.",
+    "heated": "A crowd gathers outside the {institution}; the {office} is called to answer.",
+    "won": "The {office} steps down and the {institution} gets its money back.",
+    "lost": "The {office} is cleared, and the talk turns sour on the accusers.",
+    "fizzled": "Nobody can prove anything, and the {institution} limps on."
+   }
+  },
+  {
+   "id": "roads-contract",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "Who got the paving contract",
+   "question": "Did the {office2} hand the road contract to a friend?",
+   "sides": [
+    {
+     "name": "Wants it rebid",
+     "stand": "see the contract opened up again",
+     "jobs": [
+      "labor",
+      "trade"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "business"
+     ]
+    },
+    {
+     "name": "Let it stand",
+     "stand": "let the work go ahead as awarded",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The firm paving {hood} belongs to the {office2}'s brother-in-law, people say.",
+    "open": "The paper prints who owns the paving firm.",
+    "heated": "Half-finished roads in {hood} make it everyone's business.",
+    "won": "The contract is torn up and put out to bid again.",
+    "lost": "The contract stands and the roads get finished.",
+    "fizzled": "The roads get finished and nobody asks any more."
+   }
+  },
+  {
+   "id": "watch-bribes",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Paying off the {office2}",
+   "question": "Are shopkeepers in {hood} paying the {office2} to look the other way?",
+   "sides": [
+    {
+     "name": "Clean it up",
+     "stand": "clean out whoever is taking money",
+     "jobs": [
+      "trade",
+      "learned"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform"
+     ]
+    },
+    {
+     "name": "Leave it be",
+     "stand": "keep things as they are; it keeps the peace",
+     "jobs": [
+      "law"
+     ],
+     "words": [
+      "practical",
+      "cautious"
+     ],
+     "backers": [
+      "establishment",
+      "outlaws"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A shopkeeper in {hood} lets slip what they pay each month.",
+    "open": "Someone names names in the paper.",
+    "heated": "A shop that refused to pay is smashed up overnight.",
+    "won": "The {office2} is replaced and the payments stop.",
+    "lost": "Nothing changes; the shopkeepers keep paying.",
+    "fizzled": "The talk dies down and so do the names."
+   }
+  },
+  {
+   "id": "tax-rise",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The new levy",
+   "question": "Should the {office} raise a new levy to pay for the {institution}?",
+   "sides": [
+    {
+     "name": "For the levy",
+     "stand": "pay a bit more and keep the {institution} going",
+     "jobs": [
+      "care",
+      "learned"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "church"
+     ]
+    },
+    {
+     "name": "Against it",
+     "stand": "keep the money in people's pockets",
+     "jobs": [
+      "trade",
+      "farm"
+     ],
+     "words": [
+      "practical",
+      "cautious"
+     ],
+     "backers": [
+      "business",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Word is the {office} wants a new levy.",
+    "open": "The levy is put up for a vote.",
+    "heated": "Shopkeepers threaten to close in protest.",
+    "won": "The levy passes and the {institution} is saved.",
+    "lost": "The levy fails; the {institution} cuts back.",
+    "fizzled": "The vote is put off and the levy forgotten."
+   }
+  },
+  {
+   "id": "lost-ledger",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The missing ledger",
+   "question": "Who took the {office2}'s account book, and what was in it?",
+   "sides": [
+    {
+     "name": "Wants it found",
+     "stand": "see the books opened to everyone",
+     "jobs": [
+      "learned",
+      "trade"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform"
+     ]
+    },
+    {
+     "name": "Drop it",
+     "stand": "let it lie; nothing good comes of digging",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "An account book went missing from the {office2}'s office.",
+    "open": "{person} says they have seen pages from it.",
+    "heated": "Torn pages turn up nailed to doors in {hood}.",
+    "won": "The book is found and the {office2} has some explaining to do.",
+    "lost": "The book stays lost and {person} is called a liar.",
+    "fizzled": "Nobody finds it and nobody asks."
+   }
+  },
+  {
+   "id": "pension-cuts",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "future"
+   ],
+   "title": "Cutting the old-age fund",
+   "question": "Should the {office} cut the fund that keeps old workers fed?",
+   "sides": [
+    {
+     "name": "Keep the fund",
+     "stand": "leave the old workers' fund alone",
+     "jobs": [
+      "labor",
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "church"
+     ]
+    },
+    {
+     "name": "Cut it",
+     "stand": "cut it back before it sinks the budget",
+     "jobs": [
+      "trade",
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "There is talk of cuts to the old workers' fund.",
+    "open": "The {office} names the cuts.",
+    "heated": "Old workers march on the {office}'s door.",
+    "won": "The cuts are dropped.",
+    "lost": "The cuts go through.",
+    "fizzled": "The cuts are put off for another year."
+   }
+  },
+  {
+   "id": "rigged-weights",
+   "styles": [
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy",
+    "jazz"
+   ],
+   "title": "Short weights at the market",
+   "question": "Are the {trade} cheating buyers with short weights?",
+   "sides": [
+    {
+     "name": "Check the scales",
+     "stand": "have every scale checked",
+     "jobs": [
+      "labor",
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "church"
+     ]
+    },
+    {
+     "name": "Trust the trade",
+     "stand": "let the {trade} keep their own scales",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "guild",
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A loaf weighed at home comes up short.",
+    "open": "The {office2} is asked to test the market scales.",
+    "heated": "A fight breaks out at a stall in {hood}.",
+    "won": "Every scale is checked and two stalls are shut.",
+    "lost": "The {trade} are cleared and the complaint looks petty.",
+    "fizzled": "People just weigh things at home now."
+   }
+  },
+  {
+   "id": "bought-election",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "A bought vote",
+   "question": "Did the {office} win by buying votes in {hood}?",
+   "sides": [
+    {
+     "name": "Wants a recount",
+     "stand": "see the vote counted again",
+     "jobs": [
+      "learned"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform"
+     ]
+    },
+    {
+     "name": "The vote stands",
+     "stand": "accept the result and move on",
+     "jobs": [
+      "official",
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "People in {hood} say they were paid to vote.",
+    "open": "The paper prints how many votes {hood} cast, more than it has people.",
+    "heated": "A recount is demanded at the courthouse.",
+    "won": "A recount is ordered and the result is overturned.",
+    "lost": "The result stands and the matter is closed.",
+    "fizzled": "Nobody pays for a recount and it all blows over."
+   }
+  },
+  {
+   "id": "gambling-den",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "fantasy"
+   ],
+   "title": "The back room at {place}",
+   "question": "Should the back-room gambling at {place} be shut down?",
+   "sides": [
+    {
+     "name": "Shut it down",
+     "stand": "close the back room for good",
+     "jobs": [
+      "church",
+      "care"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "reform",
+      "law"
+     ]
+    },
+    {
+     "name": "Let them play",
+     "stand": "let people spend their own money",
+     "jobs": [
+      "drink",
+      "arts"
+     ],
+     "words": [
+      "party",
+      "rebel"
+     ],
+     "backers": [
+      "outlaws"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Everyone knows there is a game in the back of {place}.",
+    "open": "A man loses his house at the tables, and the paper says where.",
+    "heated": "The {office2} is seen at the tables.",
+    "won": "The back room is closed.",
+    "lost": "The game goes on, more open than ever.",
+    "fizzled": "The game moves somewhere else and the fuss with it."
+   },
+   "places": [
+    "bar",
+    "tavern",
+    "nightlife",
+    "restaurant",
+    "inn"
+   ]
+  },
+  {
+   "id": "charity-ball",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "Where the ball money went",
+   "question": "Did the charity ball's money really go to the {institution}?",
+   "sides": [
+    {
+     "name": "Wants answers",
+     "stand": "see the accounts published",
+     "jobs": [
+      "learned",
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform"
+     ]
+    },
+    {
+     "name": "Leave the committee alone",
+     "stand": "trust the committee; they are good people",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment",
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The ball raised a fortune, but the {institution} saw little of it.",
+    "open": "The committee will not show its books.",
+    "heated": "Two committee members fall out in public.",
+    "won": "The books are opened and the money is paid over.",
+    "lost": "The committee is cleared.",
+    "fizzled": "Next year's ball is quietly cancelled."
+   }
+  },
+  {
+   "id": "harbor-fees",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "fantasy",
+    "medieval",
+    "frontier"
+   ],
+   "title": "The new dock fees",
+   "question": "Should the {office} double the fees at the docks?",
+   "sides": [
+    {
+     "name": "Raise them",
+     "stand": "make the shippers pay their share",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    },
+    {
+     "name": "Leave them",
+     "stand": "keep the fees where they are",
+     "jobs": [
+      "trade",
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "business",
+      "workers",
+      "guild"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The {office} wants more from the docks.",
+    "open": "The new fees are posted.",
+    "heated": "Ships start unloading somewhere cheaper.",
+    "won": "The fees go up and the city's coffers fill.",
+    "lost": "The fees are dropped after a week of empty quays.",
+    "fizzled": "The fees are halved and everyone grumbles."
+   }
+  },
+  {
+   "id": "fire-fund",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The fire brigade fund",
+   "question": "Where did the money for the new fire engine go?",
+   "sides": [
+    {
+     "name": "Wants it back",
+     "stand": "see the money found and the engine bought",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "workers"
+     ]
+    },
+    {
+     "name": "Patience",
+     "stand": "wait; these things take time",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The fire brigade is still waiting for its engine.",
+    "open": "The money was spent, the paper says, but not on an engine.",
+    "heated": "A fire in {hood} burns longer than it should have.",
+    "won": "The engine is bought at last.",
+    "lost": "The brigade is told to make do.",
+    "fizzled": "The engine arrives a year late and nobody remembers why."
+   }
+  },
+  {
+   "id": "pocketed-fines",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Fines that went missing",
+   "question": "Has the {office2} been pocketing the fines?",
+   "sides": [
+    {
+     "name": "Investigate",
+     "stand": "have the fines counted",
+     "jobs": [
+      "learned",
+      "trade"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform"
+     ]
+    },
+    {
+     "name": "Nonsense",
+     "stand": "leave the {office2} to do the job",
+     "jobs": [
+      "law",
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "law",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Fines are paid, but the city's books do not show them.",
+    "open": "{person} shows a receipt that was never entered.",
+    "heated": "The {office2} threatens to sue.",
+    "won": "The {office2} is let go and the money paid back.",
+    "lost": "The {office2} keeps the post.",
+    "fizzled": "Nobody checks and the fines keep coming."
+   }
+  },
+  {
+   "id": "salt-monopoly",
+   "styles": [
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Who sells the salt",
+   "question": "Should one house keep the right to sell all the salt?",
+   "sides": [
+    {
+     "name": "Open it up",
+     "stand": "let anyone sell salt",
+     "jobs": [
+      "trade",
+      "labor"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "business",
+      "workers"
+     ]
+    },
+    {
+     "name": "Keep the charter",
+     "stand": "keep the old charter as it is",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "crown",
+      "guild"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Salt is dearer than last year and everyone knows why.",
+    "open": "A peddler is fined for selling salt in {hood}.",
+    "heated": "Salt carts are overturned at the gate.",
+    "won": "The charter is broken and salt gets cheaper.",
+    "lost": "The charter is upheld.",
+    "fizzled": "Salt stays dear and people stop complaining."
+   }
+  },
+  {
+   "id": "ration-skimming",
+   "styles": [
+    "future"
+   ],
+   "title": "Skimming the ration stores",
+   "question": "Is someone in supply taking more than their share?",
+   "sides": [
+    {
+     "name": "Audit the stores",
+     "stand": "have every ration counted",
+     "jobs": [
+      "labor",
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "workers"
+     ]
+    },
+    {
+     "name": "Trust supply",
+     "stand": "let supply run its own stores",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The stores are coming up short, people say.",
+    "open": "The {office2} admits the counts do not add up.",
+    "heated": "Crew in {hood} refuse their shift until there is an answer.",
+    "won": "An audit finds the leak and plugs it.",
+    "lost": "Supply is cleared and the counts are blamed on a fault.",
+    "fizzled": "The counts come right on their own and the talk stops."
+   }
+  },
+  {
+   "id": "tram-line",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "future"
+   ],
+   "title": "The new line through {hood}",
+   "question": "Should the new line run straight through {hood}?",
+   "sides": [
+    {
+     "name": "Build it",
+     "stand": "build the line and bring the city closer",
+     "jobs": [
+      "trade",
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business",
+      "establishment"
+     ]
+    },
+    {
+     "name": "Not through {hood}",
+     "stand": "keep {hood} as it is",
+     "jobs": [
+      "arts",
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "Surveyors are seen measuring streets in {hood}.",
+    "open": "The plans are posted: the line runs right through {hood}.",
+    "heated": "Residents of {hood} block the surveyors.",
+    "won": "The line is approved and work begins.",
+    "lost": "The line is moved elsewhere.",
+    "fizzled": "The plans are shelved for now."
+   }
+  },
+  {
+   "id": "demolition",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "Tearing down {place}",
+   "question": "Should {place} come down to make room for something new?",
+   "sides": [
+    {
+     "name": "Tear it down",
+     "stand": "clear it and build something better",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Save it",
+     "stand": "keep {place} standing",
+     "jobs": [
+      "arts",
+      "learned"
+     ],
+     "words": [
+      "cautious",
+      "idealist"
+     ],
+     "backers": [
+      "locals",
+      "tradition"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "A buyer is said to want {place}.",
+    "open": "The sale of {place} is announced.",
+    "heated": "People chain themselves to the doors of {place}.",
+    "won": "{place} comes down.",
+    "lost": "{place} is saved, for now.",
+    "fizzled": "The buyer loses interest."
+   }
+  },
+  {
+   "id": "new-tower",
+   "styles": [
+    "modern",
+    "future"
+   ],
+   "title": "The tower over {hood}",
+   "question": "Should a tall tower go up in {hood}?",
+   "sides": [
+    {
+     "name": "Build it",
+     "stand": "build up and make room for more people",
+     "jobs": [
+      "trade",
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Too tall",
+     "stand": "keep {hood} low and light",
+     "jobs": [
+      "arts"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "A developer has bought a corner in {hood}.",
+    "open": "The plans show a tower three times the height of anything near it.",
+    "heated": "A packed meeting in {hood} turns to shouting.",
+    "won": "The tower is approved.",
+    "lost": "The tower is turned down.",
+    "fizzled": "The developer goes quiet and the corner stays empty."
+   }
+  },
+  {
+   "id": "park-sale",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "Selling the green in {hood}",
+   "question": "Should the city sell the green in {hood} to builders?",
+   "sides": [
+    {
+     "name": "Sell it",
+     "stand": "sell it and spend the money on the city",
+     "jobs": [
+      "trade",
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business",
+      "establishment"
+     ]
+    },
+    {
+     "name": "Keep it green",
+     "stand": "keep the green for everyone",
+     "jobs": [
+      "care",
+      "arts"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals",
+      "reform"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "A builder has been seen walking the green in {hood}.",
+    "open": "The {office} puts the green up for sale.",
+    "heated": "Children's games are staged on the green every evening in protest.",
+    "won": "The green is sold.",
+    "lost": "The sale is stopped.",
+    "fizzled": "Nobody bids and the green stays."
+   }
+  },
+  {
+   "id": "rent-cap",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "Capping rents",
+   "question": "Should the city cap how much rents can rise?",
+   "sides": [
+    {
+     "name": "Cap them",
+     "stand": "put a cap on rents",
+     "jobs": [
+      "labor",
+      "arts",
+      "care"
+     ],
+     "words": [
+      "idealist",
+      "rebel"
+     ],
+     "backers": [
+      "workers",
+      "reform"
+     ]
+    },
+    {
+     "name": "No cap",
+     "stand": "let landlords set their own rents",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Rents in {hood} jumped again this month.",
+    "open": "A cap is proposed at City Hall.",
+    "heated": "Tenants in {hood} stop paying rent together.",
+    "won": "The cap passes.",
+    "lost": "The cap is voted down.",
+    "fizzled": "The cap is sent to a committee and never comes back."
+   }
+  },
+  {
+   "id": "mill-river",
+   "styles": [
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy",
+    "jazz"
+   ],
+   "title": "The mill on the river",
+   "question": "Should the new mill be allowed to dam the river?",
+   "sides": [
+    {
+     "name": "Build the mill",
+     "stand": "let the mill go up and bring the work",
+     "jobs": [
+      "labor",
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Leave the river",
+     "stand": "keep the river running free",
+     "jobs": [
+      "farm"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "There is talk of a new mill upriver.",
+    "open": "The mill's owners ask for the right to dam the river.",
+    "heated": "Fishermen and farmers block the road to the site.",
+    "won": "The mill is built.",
+    "lost": "The dam is refused.",
+    "fizzled": "The mill's money dries up and the plan with it."
+   }
+  },
+  {
+   "id": "wall-repairs",
+   "styles": [
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Mending the walls",
+   "question": "Should everyone be made to give a week's work to mend the walls?",
+   "sides": [
+    {
+     "name": "Mend them",
+     "stand": "mend the walls before trouble comes",
+     "jobs": [
+      "law",
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "crown",
+      "law"
+     ]
+    },
+    {
+     "name": "Pay for it",
+     "stand": "hire masons instead of taking people's work",
+     "jobs": [
+      "labor",
+      "trade",
+      "farm"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "workers",
+      "guild"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Stones are falling from the wall by {hood}.",
+    "open": "The {office} calls for a week's work from every household.",
+    "heated": "Whole streets fail to turn up.",
+    "won": "The walls are mended by the town's own hands.",
+    "lost": "Masons are hired instead.",
+    "fizzled": "The work is put off until spring."
+   }
+  },
+  {
+   "id": "bridge",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "A new bridge",
+   "question": "Should the city build a new bridge to {hood}?",
+   "sides": [
+    {
+     "name": "Build it",
+     "stand": "build the bridge",
+     "jobs": [
+      "trade",
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Not worth it",
+     "stand": "spend the money on what we already have",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment",
+      "church"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "There is talk of a bridge to {hood}.",
+    "open": "Plans for the bridge are shown at {place}.",
+    "heated": "The cost doubles, and so does the arguing.",
+    "won": "The bridge is approved.",
+    "lost": "The bridge is dropped.",
+    "fizzled": "The plans gather dust."
+   }
+  },
+  {
+   "id": "slum-clearance",
+   "styles": [
+    "victorian",
+    "jazz",
+    "modern"
+   ],
+   "title": "Clearing the old blocks in {hood}",
+   "question": "Should the oldest blocks in {hood} be cleared?",
+   "sides": [
+    {
+     "name": "Clear them",
+     "stand": "clear them and build decent homes",
+     "jobs": [
+      "care",
+      "official"
+     ],
+     "words": [
+      "idealist",
+      "practical"
+     ],
+     "backers": [
+      "reform",
+      "establishment"
+     ]
+    },
+    {
+     "name": "Leave people be",
+     "stand": "leave people in their homes",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals",
+      "workers"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "Inspectors are seen in the old blocks of {hood}.",
+    "open": "The blocks are declared unfit.",
+    "heated": "Families refuse to leave.",
+    "won": "The blocks are cleared.",
+    "lost": "The clearance is called off.",
+    "fizzled": "The work is put off another year."
+   }
+  },
+  {
+   "id": "new-ring",
+   "styles": [
+    "future"
+   ],
+   "title": "Opening the new ring",
+   "question": "Should the empty ring be opened for families, or kept for cargo?",
+   "sides": [
+    {
+     "name": "Open it",
+     "stand": "open it for families",
+     "jobs": [
+      "care",
+      "arts"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "reform"
+     ]
+    },
+    {
+     "name": "Keep it for cargo",
+     "stand": "keep it for cargo and spare parts",
+     "jobs": [
+      "labor",
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The sealed ring has been checked over, people say.",
+    "open": "The {office} asks for views on the ring.",
+    "heated": "Families camp at the ring's hatch.",
+    "won": "The ring is opened for homes.",
+    "lost": "The ring is kept for cargo.",
+    "fizzled": "The question is put off until the next refit."
+   }
+  },
+  {
+   "id": "market-move",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Moving the market",
+   "question": "Should the market move out of {hood}?",
+   "sides": [
+    {
+     "name": "Move it",
+     "stand": "move it somewhere bigger",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    },
+    {
+     "name": "Keep it here",
+     "stand": "keep the market where it has always been",
+     "jobs": [
+      "trade",
+      "farm"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals",
+      "tradition",
+      "guild"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "The {office} thinks the market has outgrown {hood}.",
+    "open": "A new site is named.",
+    "heated": "Stallholders refuse to pack up.",
+    "won": "The market moves.",
+    "lost": "The market stays.",
+    "fizzled": "Nobody moves and nobody makes them."
+   }
+  },
+  {
+   "id": "sewer-plan",
+   "styles": [
+    "victorian",
+    "jazz",
+    "modern"
+   ],
+   "title": "The great sewer",
+   "question": "Should the city borrow to build a proper sewer?",
+   "sides": [
+    {
+     "name": "Build it",
+     "stand": "build it and be done with the stink",
+     "jobs": [
+      "care",
+      "learned"
+     ],
+     "words": [
+      "idealist",
+      "practical"
+     ],
+     "backers": [
+      "reform"
+     ]
+    },
+    {
+     "name": "Too costly",
+     "stand": "not borrow the city into ruin",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "business",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The smell in {hood} is worse than any summer before.",
+    "open": "An engineer's plan is put before the city.",
+    "heated": "Fever in {hood} turns the argument.",
+    "won": "The loan is raised and digging begins.",
+    "lost": "The plan is thrown out.",
+    "fizzled": "A smaller plan is made instead."
+   }
+  },
+  {
+   "id": "lighthouse",
+   "styles": [
+    "victorian",
+    "frontier",
+    "fantasy",
+    "medieval",
+    "jazz"
+   ],
+   "title": "Who pays for the light",
+   "question": "Should the merchants or the city pay to keep the harbor light?",
+   "sides": [
+    {
+     "name": "Merchants pay",
+     "stand": "make the merchants pay for their own light",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "establishment"
+     ]
+    },
+    {
+     "name": "City pays",
+     "stand": "have the city pay for the light",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business",
+      "guild"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The harbor light went dark two nights running.",
+    "open": "The keeper says nobody has paid him.",
+    "heated": "A boat runs aground in the dark.",
+    "won": "The merchants agree to pay.",
+    "lost": "The city takes it on.",
+    "fizzled": "The keeper pays for oil himself, for now."
+   }
+  },
+  {
+   "id": "tavern-hours",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Closing time",
+   "question": "Should the taverns close earlier?",
+   "sides": [
+    {
+     "name": "Close earlier",
+     "stand": "close the taverns earlier",
+     "jobs": [
+      "church",
+      "care"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "reform"
+     ]
+    },
+    {
+     "name": "Leave the hours",
+     "stand": "leave the hours alone",
+     "jobs": [
+      "drink",
+      "arts"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "business",
+      "workers"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "There have been fights outside {place} every week.",
+    "open": "Earlier closing is proposed.",
+    "heated": "The tavern keepers organize.",
+    "won": "Closing time comes an hour earlier.",
+    "lost": "The hours stay as they are.",
+    "fizzled": "The fights stop and so does the talk."
+   },
+   "places": [
+    "bar",
+    "tavern",
+    "nightlife",
+    "inn"
+   ]
+  },
+  {
+   "id": "sunday-trading",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "Opening on the day of rest",
+   "question": "Should shops be allowed to open on the day of rest?",
+   "sides": [
+    {
+     "name": "Let them open",
+     "stand": "let shops open if they want",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Keep it closed",
+     "stand": "keep the day of rest",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A shop in {hood} opened its doors on the day of rest.",
+    "open": "The {office} is asked to rule on it.",
+    "heated": "Sermons across the city take aim at the shop.",
+    "won": "Shops may open.",
+    "lost": "Shops stay shut.",
+    "fizzled": "Everyone goes back to how it was."
+   }
+  },
+  {
+   "id": "theater-show",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "The show at {place}",
+   "question": "Should the scandalous show at {place} be stopped?",
+   "sides": [
+    {
+     "name": "Stop it",
+     "stand": "close the show down",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "tradition"
+     ]
+    },
+    {
+     "name": "Let it run",
+     "stand": "let people decide for themselves",
+     "jobs": [
+      "arts"
+     ],
+     "words": [
+      "rebel",
+      "party"
+     ],
+     "backers": [
+      "radical"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Everyone is talking about the show at {place}.",
+    "open": "A preacher names it from the pulpit.",
+    "heated": "Crowds of both sides fill the street outside.",
+    "won": "The show is closed.",
+    "lost": "The show runs on, sold out.",
+    "fizzled": "The show ends its run and the fuss with it."
+   },
+   "places": [
+    "venue",
+    "theater",
+    "nightlife",
+    "event",
+    "attraction"
+   ]
+  },
+  {
+   "id": "dog-ban",
+   "styles": [
+    "modern",
+    "victorian",
+    "jazz"
+   ],
+   "title": "Dogs in the park",
+   "question": "Should dogs be banned from the park in {hood}?",
+   "sides": [
+    {
+     "name": "Ban them",
+     "stand": "keep the park dog-free",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ]
+    },
+    {
+     "name": "Let them run",
+     "stand": "let dogs run in the park",
+     "words": [
+      "party"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A child was knocked over by a dog in {hood}.",
+    "open": "A ban is proposed.",
+    "heated": "Dog owners march through the park.",
+    "won": "Dogs are banned.",
+    "lost": "Dogs stay.",
+    "fizzled": "People keep their dogs on leads and the matter is dropped."
+   }
+  },
+  {
+   "id": "curfew",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "A curfew for the young",
+   "question": "Should the young be kept off the streets after dark?",
+   "sides": [
+    {
+     "name": "Curfew",
+     "stand": "keep the young indoors after dark",
+     "jobs": [
+      "law",
+      "church"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "law",
+      "establishment"
+     ]
+    },
+    {
+     "name": "No curfew",
+     "stand": "leave the young alone",
+     "jobs": [
+      "arts"
+     ],
+     "words": [
+      "rebel",
+      "party"
+     ],
+     "backers": [
+      "radical"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "There has been trouble at night in {hood}.",
+    "open": "The {office2} asks for a curfew.",
+    "heated": "The young gather in the streets in defiance.",
+    "won": "The curfew comes in.",
+    "lost": "The curfew is voted down.",
+    "fizzled": "The trouble stops and the curfew is forgotten."
+   }
+  },
+  {
+   "id": "festival-cancel",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Calling off the fair",
+   "question": "Should this year's fair be called off?",
+   "sides": [
+    {
+     "name": "Call it off",
+     "stand": "save the money and the trouble",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious",
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    },
+    {
+     "name": "Hold the fair",
+     "stand": "hold the fair as always",
+     "jobs": [
+      "trade",
+      "arts"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "locals",
+      "tradition",
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The fair costs more every year, people say.",
+    "open": "The {office} says it may be called off.",
+    "heated": "Stallholders and players march together.",
+    "won": "The fair is called off.",
+    "lost": "The fair goes ahead.",
+    "fizzled": "A smaller fair is held."
+   }
+  },
+  {
+   "id": "statue",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "The statue in {hood}",
+   "question": "Should the old statue in {hood} come down?",
+   "sides": [
+    {
+     "name": "Take it down",
+     "stand": "take it down",
+     "jobs": [
+      "arts",
+      "learned"
+     ],
+     "words": [
+      "idealist",
+      "rebel"
+     ],
+     "backers": [
+      "radical",
+      "reform"
+     ]
+    },
+    {
+     "name": "Leave it",
+     "stand": "leave history where it stands",
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Someone painted over the statue's plaque in {hood}.",
+    "open": "A petition asks for it to come down.",
+    "heated": "A guard is put on the statue at night.",
+    "won": "The statue is taken down.",
+    "lost": "The statue stays.",
+    "fizzled": "The paint is cleaned off and so is the matter."
+   }
+  },
+  {
+   "id": "dress-rules",
+   "styles": [
+    "jazz",
+    "victorian",
+    "fantasy",
+    "medieval"
+   ],
+   "title": "What may be worn in public",
+   "question": "Should the new fashions be banned in public?",
+   "sides": [
+    {
+     "name": "Ban them",
+     "stand": "keep decent dress on the streets",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "tradition"
+     ]
+    },
+    {
+     "name": "Let people dress",
+     "stand": "let people wear what they like",
+     "jobs": [
+      "arts"
+     ],
+     "words": [
+      "rebel",
+      "party"
+     ],
+     "backers": [
+      "radical"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A new fashion has the old folks scandalized.",
+    "open": "A ban is put before the {office}.",
+    "heated": "The young wear it all the more.",
+    "won": "A ban comes in.",
+    "lost": "The ban is laughed out of the chamber.",
+    "fizzled": "The fashion passes before the ban does."
+   }
+  },
+  {
+   "id": "noise-law",
+   "styles": [
+    "modern",
+    "future",
+    "jazz"
+   ],
+   "title": "The noise in {hood}",
+   "question": "Should the music in {hood} stop at ten?",
+   "sides": [
+    {
+     "name": "Quiet at ten",
+     "stand": "have quiet at ten",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    },
+    {
+     "name": "Let it play",
+     "stand": "let {hood} keep its nights",
+     "jobs": [
+      "arts",
+      "drink"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Neighbors in {hood} are fed up with the late nights.",
+    "open": "A ten o'clock rule is proposed.",
+    "heated": "The clubs in {hood} play louder in protest.",
+    "won": "Quiet at ten becomes the rule.",
+    "lost": "The music plays on.",
+    "fizzled": "A deal is struck: quiet at midnight."
+   }
+  },
+  {
+   "id": "preacher",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The street preacher",
+   "question": "Should the new preacher be let to preach in the square?",
+   "sides": [
+    {
+     "name": "Let them preach",
+     "stand": "let them say their piece",
+     "jobs": [
+      "learned"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "radical"
+     ]
+    },
+    {
+     "name": "Move them on",
+     "stand": "move the preacher on",
+     "jobs": [
+      "church",
+      "law"
+     ],
+     "words": [
+      "cautious",
+      "devout"
+     ],
+     "backers": [
+      "church",
+      "law"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A new preacher draws a crowd in {hood}.",
+    "open": "The {office2} tells the preacher to move on.",
+    "heated": "Followers fill the square.",
+    "won": "The preacher keeps the square.",
+    "lost": "The preacher is moved on.",
+    "fizzled": "The preacher leaves town on their own."
+   }
+  },
+  {
+   "id": "wedding-rules",
+   "styles": [
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The lord's marriage fee",
+   "question": "Should couples still pay the old fee to marry?",
+   "sides": [
+    {
+     "name": "End the fee",
+     "stand": "end the marriage fee",
+     "jobs": [
+      "labor",
+      "farm"
+     ],
+     "words": [
+      "rebel",
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "church"
+     ]
+    },
+    {
+     "name": "Keep the custom",
+     "stand": "keep the old custom",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "crown",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A couple in {hood} could not pay the fee to marry.",
+    "open": "The priest marries them anyway.",
+    "heated": "The steward demands the fee.",
+    "won": "The fee is ended.",
+    "lost": "The fee stays.",
+    "fizzled": "The fee is quietly forgotten."
+   }
+  },
+  {
+   "id": "gaming-hall",
+   "styles": [
+    "future",
+    "modern"
+   ],
+   "title": "The game hall",
+   "question": "Should the new game hall be allowed to stay open all night?",
+   "sides": [
+    {
+     "name": "Close at night",
+     "stand": "close it at night",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "reform"
+     ]
+    },
+    {
+     "name": "Let it run",
+     "stand": "let it stay open",
+     "jobs": [
+      "arts"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The new game hall in {hood} never closes.",
+    "open": "Parents complain to the {office2}.",
+    "heated": "A fight at the hall turns it into a cause.",
+    "won": "The hall closes at midnight.",
+    "lost": "It stays open all night.",
+    "fizzled": "The hall goes out of fashion."
+   }
+  },
+  {
+   "id": "strike",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "future"
+   ],
+   "title": "The {trade} strike",
+   "question": "Should the {trade} get the raise they are striking for?",
+   "sides": [
+    {
+     "name": "Give the raise",
+     "stand": "give them the raise",
+     "jobs": [
+      "labor",
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "radical"
+     ]
+    },
+    {
+     "name": "Hold the line",
+     "stand": "hold the line on wages",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The {trade} are talking about walking out.",
+    "open": "The {trade} walk out.",
+    "heated": "Strikebreakers are brought in and there are scuffles.",
+    "won": "The {trade} win their raise.",
+    "lost": "The strike breaks and they go back for nothing.",
+    "fizzled": "They go back with half of what they asked."
+   }
+  },
+  {
+   "id": "guild-entry",
+   "styles": [
+    "medieval",
+    "fantasy",
+    "victorian"
+   ],
+   "title": "Who may join the {trade}",
+   "question": "Should the {trade} let in newcomers without the old fees?",
+   "sides": [
+    {
+     "name": "Open the doors",
+     "stand": "let anyone skilled join",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "rebel",
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "radical"
+     ]
+    },
+    {
+     "name": "Keep the fees",
+     "stand": "keep the old fees and the old ways",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "guild",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A skilled newcomer was turned away by the {trade}.",
+    "open": "The newcomer works anyway, and is fined.",
+    "heated": "Their shop in {hood} is smashed.",
+    "won": "The fees are dropped.",
+    "lost": "The fees stay.",
+    "fizzled": "The newcomer leaves town."
+   }
+  },
+  {
+   "id": "child-work",
+   "styles": [
+    "victorian",
+    "jazz",
+    "frontier"
+   ],
+   "title": "Children in the works",
+   "question": "Should children under twelve be kept out of the works?",
+   "sides": [
+    {
+     "name": "Keep them out",
+     "stand": "keep children out of the works",
+     "jobs": [
+      "care",
+      "learned",
+      "church"
+     ],
+     "words": [
+      "idealist",
+      "devout"
+     ],
+     "backers": [
+      "reform",
+      "church"
+     ]
+    },
+    {
+     "name": "Families need the wages",
+     "stand": "let families decide",
+     "jobs": [
+      "trade",
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A child was hurt at a works in {hood}.",
+    "open": "A rule is proposed.",
+    "heated": "Owners say they will close if it passes.",
+    "won": "Children are kept out.",
+    "lost": "The rule fails.",
+    "fizzled": "A softer rule passes."
+   }
+  },
+  {
+   "id": "shop-hours-work",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "Shorter days for shop workers",
+   "question": "Should shop workers get a shorter day?",
+   "sides": [
+    {
+     "name": "Shorter day",
+     "stand": "give them a shorter day",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "reform"
+     ]
+    },
+    {
+     "name": "Leave it",
+     "stand": "leave it to the shops",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Shop workers in {hood} are working twelve-hour days.",
+    "open": "A shorter day is proposed.",
+    "heated": "Shop workers shut the doors at six in protest.",
+    "won": "The shorter day comes in.",
+    "lost": "The proposal fails.",
+    "fizzled": "A few shops agree on their own."
+   }
+  },
+  {
+   "id": "machines",
+   "styles": [
+    "victorian",
+    "jazz",
+    "modern",
+    "future"
+   ],
+   "title": "The new machines",
+   "question": "Should the new machines be let into the works?",
+   "sides": [
+    {
+     "name": "Bring them in",
+     "stand": "bring in the machines",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Keep the jobs",
+     "stand": "keep people's jobs",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "workers"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "There is talk of machines that do the work of ten.",
+    "open": "The first machines arrive at a works in {hood}.",
+    "heated": "One is smashed overnight.",
+    "won": "The machines stay.",
+    "lost": "The machines are sent back.",
+    "fizzled": "A few machines, and nobody let go."
+   }
+  },
+  {
+   "id": "outsiders-work",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Newcomers taking work",
+   "question": "Are newcomers taking work from people in {hood}?",
+   "sides": [
+    {
+     "name": "Welcome them",
+     "stand": "welcome the newcomers",
+     "jobs": [
+      "learned",
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "church"
+     ]
+    },
+    {
+     "name": "Locals first",
+     "stand": "put locals first for work",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "There are new faces looking for work in {hood}.",
+    "open": "A hiring hall turns newcomers away.",
+    "heated": "A brawl outside the hall.",
+    "won": "The newcomers are welcomed.",
+    "lost": "Locals first becomes the rule.",
+    "fizzled": "Everyone finds work and the talk stops."
+   }
+  },
+  {
+   "id": "mine-safety",
+   "styles": [
+    "victorian",
+    "frontier",
+    "jazz",
+    "fantasy"
+   ],
+   "title": "The mine collapse",
+   "question": "Should the mine be shut until it is made safe?",
+   "sides": [
+    {
+     "name": "Shut it",
+     "stand": "shut it until it is safe",
+     "jobs": [
+      "labor",
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "church"
+     ]
+    },
+    {
+     "name": "Keep it open",
+     "stand": "keep it open; people need the work",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A tunnel came down at the mine; nobody was hurt this time.",
+    "open": "Miners refuse to go down.",
+    "heated": "A second fall.",
+    "won": "The mine shuts for repairs.",
+    "lost": "The mine stays open.",
+    "fizzled": "Repairs are made without closing."
+   }
+  },
+  {
+   "id": "night-shift",
+   "styles": [
+    "future"
+   ],
+   "title": "The extra night shift",
+   "question": "Should everyone take a turn on the extra night shift?",
+   "sides": [
+    {
+     "name": "Share it",
+     "stand": "share the shift fairly",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers"
+     ]
+    },
+    {
+     "name": "Pay for it",
+     "stand": "pay volunteers instead",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A new shift is being added, people hear.",
+    "open": "The rota is posted.",
+    "heated": "Half the crew trade shifts in protest.",
+    "won": "Everyone takes a turn.",
+    "lost": "Volunteers are paid.",
+    "fizzled": "The extra shift is dropped."
+   }
+  },
+  {
+   "id": "apprentice-pay",
+   "styles": [
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Paying apprentices",
+   "question": "Should apprentices be paid a wage?",
+   "sides": [
+    {
+     "name": "Pay them",
+     "stand": "give apprentices a wage",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "radical"
+     ]
+    },
+    {
+     "name": "Board is enough",
+     "stand": "keep board and bed as their pay",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "guild",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "An apprentice ran away from a workshop in {hood}.",
+    "open": "Apprentices meet in secret.",
+    "heated": "Apprentices down tools.",
+    "won": "Apprentices are paid.",
+    "lost": "Nothing changes.",
+    "fizzled": "A few masters pay on their own."
+   }
+  },
+  {
+   "id": "company-store",
+   "styles": [
+    "frontier",
+    "jazz",
+    "victorian"
+   ],
+   "title": "The company store",
+   "question": "Should workers be paid in coin instead of store credit?",
+   "sides": [
+    {
+     "name": "Pay in coin",
+     "stand": "pay workers in coin",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "rebel",
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "reform"
+     ]
+    },
+    {
+     "name": "Keep the store",
+     "stand": "keep the company store",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Store prices went up again.",
+    "open": "Workers ask to be paid in coin.",
+    "heated": "The store's windows are broken.",
+    "won": "Workers are paid in coin.",
+    "lost": "The store stays.",
+    "fizzled": "Half coin, half credit."
+   }
+  },
+  {
+   "id": "watch-patrols",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "More patrols in {hood}",
+   "question": "Should {hood} get more patrols at night?",
+   "sides": [
+    {
+     "name": "More patrols",
+     "stand": "have more patrols",
+     "jobs": [
+      "law",
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "law",
+      "establishment"
+     ]
+    },
+    {
+     "name": "Not needed",
+     "stand": "not be watched day and night",
+     "jobs": [
+      "arts"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "radical",
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "There were two break-ins in {hood} this week.",
+    "open": "The {office2} asks for more patrols.",
+    "heated": "A patrol roughs up a young resident.",
+    "won": "Patrols are doubled.",
+    "lost": "Patrols stay as they were.",
+    "fizzled": "The break-ins stop and so does the talk."
+   }
+  },
+  {
+   "id": "quarantine",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The fever ward",
+   "question": "Should {hood} be closed off until the fever passes?",
+   "sides": [
+    {
+     "name": "Close it off",
+     "stand": "close it off",
+     "jobs": [
+      "care",
+      "learned"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment",
+      "reform"
+     ]
+    },
+    {
+     "name": "Keep it open",
+     "stand": "keep it open; people must work",
+     "jobs": [
+      "trade",
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business",
+      "locals"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "A fever is going around {hood}.",
+    "open": "Doctors ask for {hood} to be closed off.",
+    "heated": "People slip out at night.",
+    "won": "{hood} is closed off until it passes.",
+    "lost": "{hood} stays open.",
+    "fizzled": "The fever passes on its own."
+   }
+  },
+  {
+   "id": "vaccination",
+   "styles": [
+    "victorian",
+    "jazz",
+    "modern"
+   ],
+   "title": "Making the jabs compulsory",
+   "question": "Should every child have the jab?",
+   "sides": [
+    {
+     "name": "Make it the rule",
+     "stand": "make it compulsory",
+     "jobs": [
+      "care",
+      "learned"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "reform"
+     ]
+    },
+    {
+     "name": "Families choose",
+     "stand": "leave it to families",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "cautious",
+      "rebel"
+     ],
+     "backers": [
+      "tradition",
+      "church"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "There was an outbreak at a school in {hood}.",
+    "open": "A rule is proposed.",
+    "heated": "Parents march.",
+    "won": "The jab becomes the rule.",
+    "lost": "The rule is dropped.",
+    "fizzled": "Clinics open and most go anyway."
+   }
+  },
+  {
+   "id": "gallows",
+   "styles": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ],
+   "title": "The hanging",
+   "question": "Should the thief taken in {hood} hang?",
+   "sides": [
+    {
+     "name": "Show mercy",
+     "stand": "spare them",
+     "jobs": [
+      "church",
+      "care"
+     ],
+     "words": [
+      "idealist",
+      "devout"
+     ],
+     "backers": [
+      "church",
+      "reform"
+     ]
+    },
+    {
+     "name": "Hang them",
+     "stand": "see the law carried out",
+     "jobs": [
+      "law",
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "law",
+      "crown"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A thief was taken in {hood}.",
+    "open": "The judge says the thief will hang.",
+    "heated": "Crowds gather at the gallows, for and against.",
+    "won": "The thief is spared and sent away.",
+    "lost": "The thief hangs.",
+    "fizzled": "The thief escapes before it comes to that."
+   }
+  },
+  {
+   "id": "guns-in-town",
+   "styles": [
+    "frontier"
+   ],
+   "title": "Guns in town",
+   "question": "Should guns be checked at the edge of town?",
+   "sides": [
+    {
+     "name": "Check them",
+     "stand": "check guns at the edge of town",
+     "jobs": [
+      "law",
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "law",
+      "establishment"
+     ]
+    },
+    {
+     "name": "Keep them",
+     "stand": "keep their guns",
+     "jobs": [
+      "farm",
+      "labor"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "outlaws",
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A shot was fired in {place} last night.",
+    "open": "The {office2} wants guns checked.",
+    "heated": "Cowhands ride in armed anyway.",
+    "won": "Guns are checked at the edge of town.",
+    "lost": "Guns stay.",
+    "fizzled": "The rule exists but nobody follows it."
+   }
+  },
+  {
+   "id": "water-supply",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The bad water",
+   "question": "Should the city pay to clean the water in {hood}?",
+   "sides": [
+    {
+     "name": "Clean it",
+     "stand": "pay to clean it",
+     "jobs": [
+      "care",
+      "learned"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "locals"
+     ]
+    },
+    {
+     "name": "Boil it",
+     "stand": "have people boil it",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The water in {hood} tastes wrong.",
+    "open": "A doctor says it is making people sick.",
+    "heated": "People queue at the clean pumps across town.",
+    "won": "The water is cleaned.",
+    "lost": "People are told to boil it.",
+    "fizzled": "The taste goes away on its own."
+   }
+  },
+  {
+   "id": "air-system",
+   "styles": [
+    "future"
+   ],
+   "title": "The air scrubbers",
+   "question": "Should {hood} wait its turn for new air scrubbers?",
+   "sides": [
+    {
+     "name": "Fix them now",
+     "stand": "fix {hood}'s scrubbers now",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals",
+      "workers"
+     ],
+     "locals": true
+    },
+    {
+     "name": "Wait their turn",
+     "stand": "keep to the repair schedule",
+     "jobs": [
+      "official",
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The air in {hood} feels thin.",
+    "open": "Readings show {hood} is below safe levels.",
+    "heated": "Crew from {hood} fill the {office}'s corridor.",
+    "won": "{hood} gets new scrubbers at once.",
+    "lost": "They wait their turn.",
+    "fizzled": "A patch holds for now."
+   }
+  },
+  {
+   "id": "lamps",
+   "styles": [
+    "victorian",
+    "jazz",
+    "frontier",
+    "fantasy",
+    "medieval"
+   ],
+   "title": "Lights on the street",
+   "question": "Should {hood} get street lamps?",
+   "sides": [
+    {
+     "name": "Light it",
+     "stand": "light the streets",
+     "jobs": [
+      "trade",
+      "care"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "reform",
+      "business"
+     ]
+    },
+    {
+     "name": "Not at that cost",
+     "stand": "not pay for lamps",
+     "jobs": [
+      "farm"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A woman was robbed in the dark in {hood}.",
+    "open": "Lamps are proposed.",
+    "heated": "Residents light their own lanterns in protest.",
+    "won": "Lamps go up.",
+    "lost": "The lamps are refused.",
+    "fizzled": "A few lamps, on the main street only."
+   }
+  },
+  {
+   "id": "pound",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Stray animals",
+   "question": "Should strays in {hood} be rounded up?",
+   "sides": [
+    {
+     "name": "Round them up",
+     "stand": "round up the strays",
+     "jobs": [
+      "law",
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    },
+    {
+     "name": "Leave them",
+     "stand": "leave them be",
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A pack of strays has been seen in {hood}.",
+    "open": "The {office2} orders a round-up.",
+    "heated": "Residents hide the strays.",
+    "won": "The strays are rounded up.",
+    "lost": "The strays stay.",
+    "fizzled": "The strays move on."
+   }
+  },
+  {
+   "id": "witch-trial",
+   "styles": [
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The healer accused",
+   "question": "Is the healer in {hood} a witch?",
+   "sides": [
+    {
+     "name": "Stand by the healer",
+     "stand": "stand by the healer",
+     "jobs": [
+      "care",
+      "farm"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals"
+     ]
+    },
+    {
+     "name": "Try them",
+     "stand": "have the healer tried",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A child the healer treated fell sick.",
+    "open": "A priest speaks against the healer.",
+    "heated": "A crowd gathers at the healer's door.",
+    "won": "The healer is cleared and stays.",
+    "lost": "The healer is driven out.",
+    "fizzled": "The healer quietly leaves."
+   }
+  },
+  {
+   "id": "mayor-recall",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "Calling for the {office} to go",
+   "question": "Should the {office} be voted out early?",
+   "sides": [
+    {
+     "name": "Recall",
+     "stand": "see the {office} gone",
+     "jobs": [
+      "learned",
+      "trade"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "reform",
+      "radical"
+     ]
+    },
+    {
+     "name": "Let them serve",
+     "stand": "let them serve out the term",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Signatures are being gathered against the {office}.",
+    "open": "The recall petition is handed in.",
+    "heated": "Rival rallies on the same night.",
+    "won": "The {office} is voted out.",
+    "lost": "The {office} survives the vote.",
+    "fizzled": "Not enough signatures."
+   }
+  },
+  {
+   "id": "election-vote",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "The race for {office2}",
+   "question": "Should {person} win the race for {office2}?",
+   "sides": [
+    {
+     "name": "For {person}",
+     "stand": "see {person} win",
+     "jobs": [
+      "labor",
+      "arts"
+     ],
+     "words": [
+      "rebel",
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "workers"
+     ]
+    },
+    {
+     "name": "For the incumbent",
+     "stand": "keep the one who already has it",
+     "jobs": [
+      "official",
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "{person} is thinking about running for {office2}.",
+    "open": "{person} announces.",
+    "heated": "The debate at {place} turns ugly.",
+    "won": "{person} wins.",
+    "lost": "{person} loses.",
+    "fizzled": "{person} drops out."
+   }
+  },
+  {
+   "id": "council-seats",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Who sits on the council",
+   "question": "Should {hood} get its own seat on the council?",
+   "sides": [
+    {
+     "name": "Give them a seat",
+     "stand": "give {hood} a seat",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals",
+      "reform"
+     ],
+     "locals": true
+    },
+    {
+     "name": "Keep it as it is",
+     "stand": "keep the council as it is",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "People in {hood} feel unheard.",
+    "open": "A petition for a seat goes to the {office}.",
+    "heated": "{hood} refuses to pay its dues until heard.",
+    "won": "{hood} gets its seat.",
+    "lost": "The petition is refused.",
+    "fizzled": "The petition is lost in committee."
+   }
+  },
+  {
+   "id": "lords-heir",
+   "styles": [
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The lord's heir",
+   "question": "Should the elder or the younger child inherit the lord's seat?",
+   "sides": [
+    {
+     "name": "The younger",
+     "stand": "see the younger child inherit",
+     "jobs": [
+      "labor",
+      "arts"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "radical"
+     ]
+    },
+    {
+     "name": "The elder",
+     "stand": "keep to the custom: the elder",
+     "jobs": [
+      "official",
+      "church"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "crown",
+      "tradition",
+      "church"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The old lord is ailing, and people whisper about which child.",
+    "open": "The younger child is seen with the guild masters.",
+    "heated": "Retainers of both come to blows in {hood}.",
+    "won": "The younger is named heir.",
+    "lost": "The elder is named heir.",
+    "fizzled": "The lord recovers and the question waits."
+   }
+  },
+  {
+   "id": "new-sheriff",
+   "styles": [
+    "frontier",
+    "medieval"
+   ],
+   "title": "The new {office2}",
+   "question": "Should the outsider be made {office2}?",
+   "sides": [
+    {
+     "name": "The outsider",
+     "stand": "give the outsider the job",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business",
+      "reform"
+     ]
+    },
+    {
+     "name": "One of our own",
+     "stand": "keep it to someone local",
+     "jobs": [
+      "farm",
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "An outsider has been asking about the {office2}'s post.",
+    "open": "The outsider is nominated.",
+    "heated": "The locals' man calls the outsider out.",
+    "won": "The outsider gets the post.",
+    "lost": "A local man gets the post.",
+    "fizzled": "The post stays empty."
+   }
+  },
+  {
+   "id": "captain-term",
+   "styles": [
+    "future"
+   ],
+   "title": "The {office}'s term",
+   "question": "Should the {office} serve another term?",
+   "sides": [
+    {
+     "name": "Time for a change",
+     "stand": "have a new {office}",
+     "jobs": [
+      "labor",
+      "arts"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "reform",
+      "workers"
+     ]
+    },
+    {
+     "name": "Another term",
+     "stand": "keep the {office}",
+     "jobs": [
+      "official",
+      "law"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The {office}'s term is nearly up.",
+    "open": "A challenger stands.",
+    "heated": "Crew argue in the mess for a week.",
+    "won": "A new {office} is chosen.",
+    "lost": "The {office} stays on.",
+    "fizzled": "The vote is put off until after the refit."
+   }
+  },
+  {
+   "id": "women-vote",
+   "styles": [
+    "victorian",
+    "frontier"
+   ],
+   "title": "Women on the town vote",
+   "question": "Should women vote in town elections?",
+   "sides": [
+    {
+     "name": "Let them vote",
+     "stand": "let women vote",
+     "jobs": [
+      "learned",
+      "care"
+     ],
+     "words": [
+      "idealist",
+      "rebel"
+     ],
+     "backers": [
+      "reform",
+      "radical"
+     ]
+    },
+    {
+     "name": "Not yet",
+     "stand": "keep things as they are",
+     "jobs": [
+      "official",
+      "church"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Women of {hood} are holding meetings.",
+    "open": "A petition goes to the {office}.",
+    "heated": "A march through {hood}.",
+    "won": "Women may vote in town elections.",
+    "lost": "The petition is refused.",
+    "fizzled": "The matter is put off a year."
+   }
+  },
+  {
+   "id": "elf-seat",
+   "styles": [
+    "fantasy"
+   ],
+   "title": "A seat for the other peoples",
+   "question": "Should the other peoples living in town get a voice on the council?",
+   "sides": [
+    {
+     "name": "Give them a voice",
+     "stand": "give them a voice",
+     "jobs": [
+      "learned",
+      "arts"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "radical"
+     ]
+    },
+    {
+     "name": "Not their town",
+     "stand": "keep it as it is",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition",
+      "crown"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Folk of other peoples in {hood} want a say.",
+    "open": "A petition is read before the {office}.",
+    "heated": "Insults are painted on doors in {hood}.",
+    "won": "They get a seat.",
+    "lost": "The petition is refused.",
+    "fizzled": "The question is left for another year."
+   }
+  },
+  {
+   "id": "feuding-families",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The feud in {hood}",
+   "question": "Who is in the right in the feud between two families in {hood}?",
+   "sides": [
+    {
+     "name": "The newcomers",
+     "stand": "side with the newer family",
+     "jobs": [
+      "arts",
+      "labor"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "radical"
+     ]
+    },
+    {
+     "name": "The old family",
+     "stand": "side with the old family",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition",
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Two families in {hood} are no longer speaking.",
+    "open": "Their quarrel goes before the {office2}.",
+    "heated": "A wedding between them is called off.",
+    "won": "The newcomers win the case.",
+    "lost": "The old family wins the case.",
+    "fizzled": "The families make peace on their own."
+   }
+  },
+  {
+   "id": "foreign-ship",
+   "styles": [
+    "fantasy",
+    "medieval",
+    "victorian",
+    "jazz",
+    "frontier"
+   ],
+   "title": "The foreign ship in harbor",
+   "question": "Should the foreign ship be let to trade here?",
+   "sides": [
+    {
+     "name": "Let it trade",
+     "stand": "let it trade",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Send it off",
+     "stand": "send it on its way",
+     "jobs": [
+      "law",
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A ship flying strange colors has anchored off {hood}.",
+    "open": "Its captain asks to trade.",
+    "heated": "Dockworkers refuse to unload it.",
+    "won": "It trades and sails with full holds.",
+    "lost": "It is sent away.",
+    "fizzled": "It sails off before anyone decides."
+   }
+  },
+  {
+   "id": "refugees",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The people at the gate",
+   "question": "Should the city take in the people fleeing trouble elsewhere?",
+   "sides": [
+    {
+     "name": "Take them in",
+     "stand": "take them in",
+     "jobs": [
+      "church",
+      "care"
+     ],
+     "words": [
+      "idealist",
+      "devout"
+     ],
+     "backers": [
+      "church",
+      "reform"
+     ]
+    },
+    {
+     "name": "Turn them away",
+     "stand": "look after our own first",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Word comes of trouble upriver, and of people on the move.",
+    "open": "The first of them arrive in {hood}.",
+    "heated": "There is not enough bread to go round.",
+    "won": "They are taken in.",
+    "lost": "They are sent on.",
+    "fizzled": "Most move on of their own accord."
+   }
+  },
+  {
+   "id": "rival-town",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The rival town's market",
+   "question": "Should the city fight the rival town's new market?",
+   "sides": [
+    {
+     "name": "Fight it",
+     "stand": "fight it with lower tolls",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Leave it",
+     "stand": "let them have it",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The next town over is opening a market of its own.",
+    "open": "Traders start going there instead.",
+    "heated": "A brawl between the two towns' carters.",
+    "won": "Tolls come down and traders come back.",
+    "lost": "Traders keep going.",
+    "fizzled": "Both markets get by."
+   }
+  },
+  {
+   "id": "border-tax",
+   "styles": [
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The toll at the gate",
+   "question": "Should the toll at the gate be doubled?",
+   "sides": [
+    {
+     "name": "Double it",
+     "stand": "double the toll",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "crown"
+     ]
+    },
+    {
+     "name": "Keep it",
+     "stand": "keep it as it is",
+     "jobs": [
+      "trade",
+      "farm"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "guild",
+      "business",
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The steward is said to want more from the gate.",
+    "open": "The new toll is posted.",
+    "heated": "Carts queue for a mile; some turn back.",
+    "won": "The toll is doubled.",
+    "lost": "The toll stays.",
+    "fizzled": "The toll goes up a little."
+   }
+  },
+  {
+   "id": "smugglers",
+   "styles": [
+    "victorian",
+    "jazz",
+    "fantasy",
+    "medieval",
+    "frontier"
+   ],
+   "title": "Smugglers on the shore",
+   "question": "Should the {office2} crack down on the smugglers?",
+   "sides": [
+    {
+     "name": "Crack down",
+     "stand": "crack down on them",
+     "jobs": [
+      "law"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "law",
+      "establishment"
+     ]
+    },
+    {
+     "name": "Look away",
+     "stand": "look the other way; everyone buys from them",
+     "jobs": [
+      "drink",
+      "trade"
+     ],
+     "words": [
+      "party",
+      "rebel"
+     ],
+     "backers": [
+      "outlaws"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Cheap goods keep turning up in {hood}.",
+    "open": "The {office2} vows to catch the smugglers.",
+    "heated": "A raid on {place} comes up empty.",
+    "won": "The smugglers are caught.",
+    "lost": "The smugglers carry on.",
+    "fizzled": "The smugglers move up the coast."
+   }
+  },
+  {
+   "id": "dock-section",
+   "styles": [
+    "future"
+   ],
+   "title": "Visitors at the dock",
+   "question": "Should visiting ships' crews be let off at the dock?",
+   "sides": [
+    {
+     "name": "Let them off",
+     "stand": "let them off",
+     "jobs": [
+      "trade",
+      "drink"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Keep them aboard",
+     "stand": "keep them aboard their own ship",
+     "jobs": [
+      "law",
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "law",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A ship has asked to dock.",
+    "open": "The {office} asks for views.",
+    "heated": "A fight with a visiting crew in {hood}.",
+    "won": "Visitors are let off.",
+    "lost": "Visitors stay aboard.",
+    "fizzled": "They leave before it is decided."
+   }
+  },
+  {
+   "id": "school-close",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "future"
+   ],
+   "title": "Closing the school in {hood}",
+   "question": "Should the school in {hood} close?",
+   "sides": [
+    {
+     "name": "Close it",
+     "stand": "close it and send children elsewhere",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    },
+    {
+     "name": "Keep it open",
+     "stand": "keep it open",
+     "jobs": [
+      "care",
+      "learned"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals",
+      "reform"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "The school in {hood} is half empty, people say.",
+    "open": "The {office2} names it for closing.",
+    "heated": "Parents sit in the classrooms.",
+    "won": "The school closes.",
+    "lost": "The school stays open.",
+    "fizzled": "The school gets one more year."
+   }
+  },
+  {
+   "id": "library-books",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "The banned book",
+   "question": "Should the library take the controversial book off its shelves?",
+   "sides": [
+    {
+     "name": "Keep it",
+     "stand": "keep it on the shelves",
+     "jobs": [
+      "learned",
+      "arts"
+     ],
+     "words": [
+      "idealist",
+      "rebel"
+     ],
+     "backers": [
+      "radical",
+      "reform"
+     ]
+    },
+    {
+     "name": "Take it off",
+     "stand": "take it off the shelves",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A parent complained about a book at the library.",
+    "open": "A list of books to remove is drawn up.",
+    "heated": "People queue to borrow it.",
+    "won": "The book stays.",
+    "lost": "The book is removed.",
+    "fizzled": "The book is put behind the desk."
+   }
+  },
+  {
+   "id": "university-land",
+   "styles": [
+    "modern",
+    "victorian",
+    "jazz"
+   ],
+   "title": "The college buys {hood}",
+   "question": "Should the college be let to buy up {hood}?",
+   "sides": [
+    {
+     "name": "Let it grow",
+     "stand": "let the college grow",
+     "jobs": [
+      "learned"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Not our homes",
+     "stand": "keep homes in {hood}",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "The college has been buying houses in {hood}.",
+    "open": "Plans for a new hall are shown.",
+    "heated": "Students and residents clash.",
+    "won": "The college grows.",
+    "lost": "The plans are stopped.",
+    "fizzled": "A smaller hall goes up."
+   }
+  },
+  {
+   "id": "scholars-ban",
+   "styles": [
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The scholar's book",
+   "question": "Should the scholar's new book be burned?",
+   "sides": [
+    {
+     "name": "Let it be read",
+     "stand": "let it be read",
+     "jobs": [
+      "learned"
+     ],
+     "words": [
+      "idealist",
+      "rebel"
+     ],
+     "backers": [
+      "radical"
+     ]
+    },
+    {
+     "name": "Burn it",
+     "stand": "burn it",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A scholar's book is being copied in secret.",
+    "open": "The temple names it dangerous.",
+    "heated": "Copies are seized in {hood}.",
+    "won": "The book is read openly.",
+    "lost": "The book is burned in the square.",
+    "fizzled": "The scholar leaves town with it."
+   }
+  },
+  {
+   "id": "museum-piece",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "Selling the museum's treasure",
+   "question": "Should the museum sell its treasure to pay its debts?",
+   "sides": [
+    {
+     "name": "Sell it",
+     "stand": "sell it and keep the doors open",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    },
+    {
+     "name": "Keep it",
+     "stand": "keep it for the city",
+     "jobs": [
+      "learned",
+      "arts"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The museum is in debt, people hear.",
+    "open": "A buyer is named.",
+    "heated": "Crowds fill the museum for a last look.",
+    "won": "It is sold.",
+    "lost": "It stays.",
+    "fizzled": "A rich patron pays the debt."
+   }
+  },
+  {
+   "id": "language-school",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "Lessons in the old tongue",
+   "question": "Should the school teach in the old tongue as well?",
+   "sides": [
+    {
+     "name": "Teach it",
+     "stand": "teach it",
+     "jobs": [
+      "learned",
+      "arts"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals",
+      "tradition"
+     ]
+    },
+    {
+     "name": "One language",
+     "stand": "keep to one language",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Parents in {hood} want lessons in the old tongue.",
+    "open": "The {office2} is asked.",
+    "heated": "A meeting at {place} gets heated.",
+    "won": "Lessons begin.",
+    "lost": "The request is refused.",
+    "fizzled": "An evening class is set up privately."
+   }
+  },
+  {
+   "id": "archive-records",
+   "styles": [
+    "future"
+   ],
+   "title": "Opening the old logs",
+   "question": "Should the founding logs be opened to everyone?",
+   "sides": [
+    {
+     "name": "Open them",
+     "stand": "open them",
+     "jobs": [
+      "learned"
+     ],
+     "words": [
+      "idealist",
+      "rebel"
+     ],
+     "backers": [
+      "radical",
+      "reform"
+     ]
+    },
+    {
+     "name": "Keep them sealed",
+     "stand": "keep them sealed",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Someone says the founding logs hold something embarrassing.",
+    "open": "A request to open them is made.",
+    "heated": "Pages leak.",
+    "won": "The logs are opened.",
+    "lost": "They stay sealed.",
+    "fizzled": "A summary is released instead."
+   }
+  },
+  {
+   "id": "temple-roof",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The temple roof",
+   "question": "Should the city pay to fix the temple roof?",
+   "sides": [
+    {
+     "name": "Pay for it",
+     "stand": "pay for it",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout"
+     ],
+     "backers": [
+      "church",
+      "tradition"
+     ]
+    },
+    {
+     "name": "Let the faithful pay",
+     "stand": "let the faithful pay for their own roof",
+     "jobs": [
+      "trade",
+      "learned"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "reform",
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The temple roof leaks onto the altar.",
+    "open": "The priests ask the city for money.",
+    "heated": "Sermons and shouting at {place}.",
+    "won": "The city pays.",
+    "lost": "The faithful pay.",
+    "fizzled": "A patron pays."
+   }
+  },
+  {
+   "id": "feast-day",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The feast day off",
+   "question": "Should the feast day be a day off for everyone?",
+   "sides": [
+    {
+     "name": "Day off",
+     "stand": "give everyone the day off",
+     "jobs": [
+      "church",
+      "labor"
+     ],
+     "words": [
+      "devout",
+      "party"
+     ],
+     "backers": [
+      "church",
+      "workers"
+     ]
+    },
+    {
+     "name": "Work as usual",
+     "stand": "keep it a working day",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The feast day falls on a market day this year.",
+    "open": "The priests ask for a day off.",
+    "heated": "Shops that stay open are shamed.",
+    "won": "Everyone gets the day.",
+    "lost": "It stays a working day.",
+    "fizzled": "Half a day off."
+   }
+  },
+  {
+   "id": "new-faith",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The new faith",
+   "question": "Should the new faith be let to build a hall in {hood}?",
+   "sides": [
+    {
+     "name": "Let them build",
+     "stand": "let them build",
+     "jobs": [
+      "learned"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "radical",
+      "reform"
+     ]
+    },
+    {
+     "name": "Not here",
+     "stand": "keep them out of {hood}",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Followers of a new faith meet in a house in {hood}.",
+    "open": "They ask to build a hall.",
+    "heated": "Their meeting house is stoned.",
+    "won": "They build their hall.",
+    "lost": "They are refused.",
+    "fizzled": "They meet quietly at home."
+   }
+  },
+  {
+   "id": "tithe",
+   "styles": [
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The tithe",
+   "question": "Should the tithe be cut this year after the bad harvest?",
+   "sides": [
+    {
+     "name": "Cut it",
+     "stand": "cut the tithe",
+     "jobs": [
+      "farm",
+      "labor"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "workers",
+      "locals"
+     ]
+    },
+    {
+     "name": "Pay it in full",
+     "stand": "pay it in full",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout"
+     ],
+     "backers": [
+      "church",
+      "crown"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The harvest was poor.",
+    "open": "Farmers ask for the tithe to be cut.",
+    "heated": "Tithe carts are turned back at the gate.",
+    "won": "The tithe is cut.",
+    "lost": "The tithe is paid in full.",
+    "fizzled": "It is paid late."
+   }
+  },
+  {
+   "id": "bells",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The early bells",
+   "question": "Should the temple bells stop ringing before dawn?",
+   "sides": [
+    {
+     "name": "Stop them",
+     "stand": "let people sleep",
+     "jobs": [
+      "arts",
+      "labor"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "locals"
+     ]
+    },
+    {
+     "name": "Keep ringing",
+     "stand": "keep the bells",
+     "jobs": [
+      "church"
+     ],
+     "words": [
+      "devout",
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "People in {hood} complain about the early bells.",
+    "open": "A petition goes to the priests.",
+    "heated": "Someone muffles the bells overnight.",
+    "won": "The bells ring later.",
+    "lost": "The bells ring as always.",
+    "fizzled": "The bells ring a little softer."
+   }
+  },
+  {
+   "id": "mage-license",
+   "styles": [
+    "fantasy"
+   ],
+   "title": "Licensing magic",
+   "question": "Should anyone working magic in town need a license?",
+   "sides": [
+    {
+     "name": "License it",
+     "stand": "license it",
+     "jobs": [
+      "law",
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "law",
+      "establishment"
+     ]
+    },
+    {
+     "name": "Leave it free",
+     "stand": "leave it free",
+     "jobs": [
+      "learned",
+      "arts"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "radical"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A spell went wrong in {hood}.",
+    "open": "The {office} proposes licenses.",
+    "heated": "Hedge-witches refuse to register.",
+    "won": "Licenses come in.",
+    "lost": "The idea is dropped.",
+    "fizzled": "A license exists but nobody asks for one."
+   }
+  },
+  {
+   "id": "monster-bounty",
+   "styles": [
+    "fantasy",
+    "medieval"
+   ],
+   "title": "The beast outside town",
+   "question": "Should the town pay a bounty for the beast outside the walls?",
+   "sides": [
+    {
+     "name": "Pay the bounty",
+     "stand": "pay the bounty",
+     "jobs": [
+      "farm"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "locals"
+     ]
+    },
+    {
+     "name": "Wait and see",
+     "stand": "not throw money at rumors",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Sheep are missing from the fields.",
+    "open": "A farmer says he saw something huge.",
+    "heated": "A child goes missing for a night.",
+    "won": "A bounty is paid and the beast is killed.",
+    "lost": "No bounty, and the attacks stop on their own.",
+    "fizzled": "Nobody ever sees it again."
+   }
+  },
+  {
+   "id": "dragon-tribute",
+   "styles": [
+    "fantasy"
+   ],
+   "title": "The old tribute",
+   "question": "Should the town keep paying the old tribute to keep the peace?",
+   "sides": [
+    {
+     "name": "Stop paying",
+     "stand": "stop paying",
+     "jobs": [
+      "labor",
+      "farm"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "radical",
+      "workers"
+     ]
+    },
+    {
+     "name": "Keep paying",
+     "stand": "keep paying",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The tribute is due again.",
+    "open": "Some say it is time to stop.",
+    "heated": "The tribute cart is stopped at the gate.",
+    "won": "The tribute stops.",
+    "lost": "The tribute is paid.",
+    "fizzled": "A smaller tribute is paid."
+   }
+  },
+  {
+   "id": "watch-captain",
+   "styles": [
+    "fantasy",
+    "medieval"
+   ],
+   "title": "The captain of the watch",
+   "question": "Is the captain of the watch too hard on {hood}?",
+   "sides": [
+    {
+     "name": "Rein them in",
+     "stand": "rein in the captain",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "locals"
+     ],
+     "locals": true
+    },
+    {
+     "name": "Back the captain",
+     "stand": "back the captain",
+     "jobs": [
+      "law",
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "law",
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The watch has been rough in {hood}.",
+    "open": "A beating is witnessed.",
+    "heated": "Stones are thrown at a patrol.",
+    "won": "The captain is reined in.",
+    "lost": "The captain is backed.",
+    "fizzled": "Things calm down on their own."
+   }
+  },
+  {
+   "id": "gravity-hours",
+   "styles": [
+    "future"
+   ],
+   "title": "Spin-down hours",
+   "question": "Should the ring spin down for repairs during the day shift?",
+   "sides": [
+    {
+     "name": "Day shift",
+     "stand": "do it in the day",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "workers"
+     ]
+    },
+    {
+     "name": "Night shift",
+     "stand": "do it at night",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Repairs need the ring spun down.",
+    "open": "The schedule is posted.",
+    "heated": "Complaints flood the {office2}.",
+    "won": "Repairs happen by day.",
+    "lost": "Repairs happen by night.",
+    "fizzled": "The repairs are put off."
+   }
+  },
+  {
+   "id": "ai-officer",
+   "styles": [
+    "future"
+   ],
+   "title": "Handing watch to the computer",
+   "question": "Should the ship's computer take over the night watch?",
+   "sides": [
+    {
+     "name": "Let it",
+     "stand": "let the computer take it",
+     "jobs": [
+      "learned"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Keep people on watch",
+     "stand": "keep people on watch",
+     "jobs": [
+      "law",
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "workers",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The {office2} says the computer could keep watch.",
+    "open": "A trial is proposed.",
+    "heated": "A false alarm on the trial night.",
+    "won": "The computer takes the watch.",
+    "lost": "People keep the watch.",
+    "fizzled": "The trial is extended."
+   }
+  },
+  {
+   "id": "hydroponics",
+   "styles": [
+    "future"
+   ],
+   "title": "The hydroponics ration",
+   "question": "Should fresh food go first to children and the sick?",
+   "sides": [
+    {
+     "name": "Children first",
+     "stand": "feed children and the sick first",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "reform",
+      "church"
+     ]
+    },
+    {
+     "name": "Equal shares",
+     "stand": "keep equal shares for all",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "workers"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The new crop came in small.",
+    "open": "The {office} asks how to share it.",
+    "heated": "Arguments in the galley.",
+    "won": "Children and the sick come first.",
+    "lost": "Equal shares for all.",
+    "fizzled": "The next crop is bigger and it doesn't matter."
+   }
+  },
+  {
+   "id": "market-day",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "A second market day",
+   "question": "Should the market open twice a week?",
+   "sides": [
+    {
+     "name": "Twice a week",
+     "stand": "have two market days",
+     "jobs": [
+      "trade",
+      "farm"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Once is enough",
+     "stand": "keep one market day",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition",
+      "guild"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Stallholders want another day.",
+    "open": "A second day is proposed.",
+    "heated": "Shops near the square object loudly.",
+    "won": "A second market day begins.",
+    "lost": "One day stays.",
+    "fizzled": "A trial month is agreed."
+   }
+  },
+  {
+   "id": "toll-bridge",
+   "styles": [
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy",
+    "jazz"
+   ],
+   "title": "The bridge toll",
+   "question": "Should the bridge toll be dropped?",
+   "sides": [
+    {
+     "name": "Drop it",
+     "stand": "drop the toll",
+     "jobs": [
+      "labor",
+      "farm"
+     ],
+     "words": [
+      "rebel"
+     ],
+     "backers": [
+      "workers",
+      "locals"
+     ]
+    },
+    {
+     "name": "Keep it",
+     "stand": "keep the toll",
+     "jobs": [
+      "official",
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment",
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The toll went up again.",
+    "open": "People ask for it to be dropped.",
+    "heated": "A carter crashes the toll gate.",
+    "won": "The toll is dropped.",
+    "lost": "The toll stays.",
+    "fizzled": "The toll is halved."
+   }
+  },
+  {
+   "id": "cemetery",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The full graveyard",
+   "question": "Should the new graveyard go in {hood}?",
+   "sides": [
+    {
+     "name": "Put it there",
+     "stand": "put it in {hood}",
+     "jobs": [
+      "church",
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "church",
+      "establishment"
+     ]
+    },
+    {
+     "name": "Not here",
+     "stand": "put it somewhere else",
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "The old graveyard is full.",
+    "open": "{hood} is named for the new one.",
+    "heated": "Residents of {hood} block the gates.",
+    "won": "The graveyard goes in {hood}.",
+    "lost": "Another site is found.",
+    "fizzled": "The old one is made to do."
+   }
+  },
+  {
+   "id": "cart-ban",
+   "styles": [
+    "victorian",
+    "jazz",
+    "modern",
+    "frontier"
+   ],
+   "title": "Traffic on the main street",
+   "question": "Should carts and cars be kept off the main street?",
+   "sides": [
+    {
+     "name": "Keep them off",
+     "stand": "keep them off",
+     "jobs": [
+      "trade",
+      "arts"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals",
+      "reform"
+     ]
+    },
+    {
+     "name": "Let them through",
+     "stand": "let traffic through",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Someone was knocked down on the main street.",
+    "open": "A ban is proposed.",
+    "heated": "Drivers honk outside the {office}'s window.",
+    "won": "The street is closed to traffic.",
+    "lost": "Traffic stays.",
+    "fizzled": "A trial weekend is held."
+   }
+  },
+  {
+   "id": "noise-smithy",
+   "styles": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ],
+   "title": "The smithy's hours",
+   "question": "Should the smiths stop hammering after dusk?",
+   "sides": [
+    {
+     "name": "Stop at dusk",
+     "stand": "stop at dusk",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ]
+    },
+    {
+     "name": "Work when needed",
+     "stand": "work when the work is there",
+     "jobs": [
+      "labor",
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "guild"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Neighbors complain about the hammering.",
+    "open": "The {office} is asked to rule.",
+    "heated": "A smith keeps working out of spite.",
+    "won": "Smithies stop at dusk.",
+    "lost": "The smiths keep their hours.",
+    "fizzled": "The smiths move a little out of town."
+   }
+  },
+  {
+   "id": "wells",
+   "styles": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ],
+   "title": "The new well",
+   "question": "Should {hood} get its own well?",
+   "sides": [
+    {
+     "name": "Dig it",
+     "stand": "dig a well in {hood}",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    },
+    {
+     "name": "Share the old one",
+     "stand": "share the old one",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Queues at the old well grow longer.",
+    "open": "{hood} asks for its own.",
+    "heated": "A fight at the old well.",
+    "won": "The well is dug.",
+    "lost": "No new well.",
+    "fizzled": "The digging finds nothing."
+   }
+  },
+  {
+   "id": "trees",
+   "styles": [
+    "modern",
+    "victorian",
+    "jazz"
+   ],
+   "title": "The old trees on {hood}'s avenue",
+   "question": "Should the old trees in {hood} be cut down?",
+   "sides": [
+    {
+     "name": "Cut them",
+     "stand": "cut them and widen the street",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    },
+    {
+     "name": "Save them",
+     "stand": "save the trees",
+     "jobs": [
+      "arts",
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "Notices are pinned to the trees in {hood}.",
+    "open": "The felling date is set.",
+    "heated": "People climb the trees.",
+    "won": "The trees come down.",
+    "lost": "The trees are saved.",
+    "fizzled": "Half of them are saved."
+   }
+  },
+  {
+   "id": "pub-license",
+   "styles": [
+    "modern",
+    "victorian",
+    "jazz"
+   ],
+   "title": "A license for {place}",
+   "question": "Should {place} be given a liquor license?",
+   "sides": [
+    {
+     "name": "Grant it",
+     "stand": "grant it",
+     "jobs": [
+      "drink",
+      "trade"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Refuse it",
+     "stand": "refuse it",
+     "jobs": [
+      "church",
+      "care"
+     ],
+     "words": [
+      "cautious",
+      "devout"
+     ],
+     "backers": [
+      "church",
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "{place} has applied for a license.",
+    "open": "Neighbors object.",
+    "heated": "A packed hearing.",
+    "won": "The license is granted.",
+    "lost": "The license is refused.",
+    "fizzled": "The application is withdrawn."
+   },
+   "places": [
+    "cafe",
+    "restaurant",
+    "venue",
+    "shopping"
+   ]
+  },
+  {
+   "id": "cleaners",
+   "styles": [
+    "modern",
+    "future"
+   ],
+   "title": "Who cleans {hood}",
+   "question": "Should {hood}'s cleaning be handed to a private firm?",
+   "sides": [
+    {
+     "name": "Hand it over",
+     "stand": "hand it over and save money",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Keep it public",
+     "stand": "keep it public",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "workers"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Bins in {hood} have not been emptied in a week.",
+    "open": "A private firm is proposed.",
+    "heated": "Cleaners walk out.",
+    "won": "A private firm takes over.",
+    "lost": "The work stays public.",
+    "fizzled": "The bins get emptied and the talk stops."
+   }
+  },
+  {
+   "id": "carnival",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "The traveling show",
+   "question": "Should the traveling show be let to pitch in {hood}?",
+   "sides": [
+    {
+     "name": "Let it pitch",
+     "stand": "let it pitch",
+     "jobs": [
+      "arts",
+      "trade"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "Send it on",
+     "stand": "send it on",
+     "jobs": [
+      "church",
+      "law"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A traveling show is camped outside town.",
+    "open": "It asks to pitch in {hood}.",
+    "heated": "A purse goes missing at its first night.",
+    "won": "It pitches and stays a week.",
+    "lost": "It is sent on.",
+    "fizzled": "It leaves before anyone decides."
+   }
+  },
+  {
+   "id": "naming",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "What to call the new square",
+   "question": "Should the new square be named after {person}?",
+   "sides": [
+    {
+     "name": "After {person}",
+     "stand": "name it after {person}",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals"
+     ]
+    },
+    {
+     "name": "Something else",
+     "stand": "name it something else",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "{person}'s name is suggested for the new square.",
+    "open": "A vote is called.",
+    "heated": "Old grudges about {person} come out.",
+    "won": "The square is named for {person}.",
+    "lost": "It gets another name.",
+    "fizzled": "Everyone just calls it the new square."
+   }
+  },
+  {
+   "id": "statue-hero",
+   "styles": [
+    "fantasy",
+    "medieval"
+   ],
+   "title": "A statue for the hero",
+   "question": "Should the town raise a statue to {person}?",
+   "sides": [
+    {
+     "name": "Raise it",
+     "stand": "raise it",
+     "jobs": [
+      "labor",
+      "arts"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals"
+     ]
+    },
+    {
+     "name": "Not them",
+     "stand": "not raise it",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "People talk of a statue for {person}.",
+    "open": "A sculptor is named.",
+    "heated": "Old stories about {person} are dug up.",
+    "won": "The statue goes up.",
+    "lost": "The statue is refused.",
+    "fizzled": "A plaque goes up instead."
+   }
+  },
+  {
+   "id": "stall-rent",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Stall rents at the market",
+   "question": "Should stall rents go up?",
+   "sides": [
+    {
+     "name": "Keep them",
+     "stand": "keep the rents",
+     "jobs": [
+      "trade",
+      "farm"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals",
+      "workers"
+     ]
+    },
+    {
+     "name": "Raise them",
+     "stand": "raise them to pay for repairs",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Repairs to the market are due.",
+    "open": "Higher rents are proposed.",
+    "heated": "Stallholders close for a day.",
+    "won": "Rents stay.",
+    "lost": "Rents go up.",
+    "fizzled": "Rents go up a little."
+   }
+  },
+  {
+   "id": "hospital-wing",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "future"
+   ],
+   "title": "The new hospital wing",
+   "question": "Should the new wing go to {hood} or the center?",
+   "sides": [
+    {
+     "name": "In {hood}",
+     "stand": "build it in {hood}",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    },
+    {
+     "name": "In the center",
+     "stand": "build it in the center",
+     "jobs": [
+      "official",
+      "learned"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A new wing is promised.",
+    "open": "Two sites are named.",
+    "heated": "{hood} fills the meeting hall.",
+    "won": "The wing goes to {hood}.",
+    "lost": "The wing goes to the center.",
+    "fizzled": "The wing is put off."
+   }
+  },
+  {
+   "id": "street-sellers",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "Street sellers in {hood}",
+   "question": "Should street sellers be cleared from {hood}?",
+   "sides": [
+    {
+     "name": "Clear them",
+     "stand": "clear them",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "business",
+      "law"
+     ]
+    },
+    {
+     "name": "Let them sell",
+     "stand": "let them sell",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "locals"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Shopkeepers complain about street sellers.",
+    "open": "The {office2} orders them cleared.",
+    "heated": "Sellers come back the next day.",
+    "won": "The sellers are cleared.",
+    "lost": "The sellers stay.",
+    "fizzled": "Sellers get set pitches."
+   }
+  },
+  {
+   "id": "sports-ground",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "A new ground for the team",
+   "question": "Should the city help pay for a new ground?",
+   "sides": [
+    {
+     "name": "Help pay",
+     "stand": "help pay for it",
+     "jobs": [
+      "labor",
+      "trade"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "business",
+      "locals"
+     ]
+    },
+    {
+     "name": "Not with our money",
+     "stand": "not spend city money on it",
+     "jobs": [
+      "learned",
+      "care"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "reform"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The team wants a new ground.",
+    "open": "The {office} is asked for money.",
+    "heated": "Fans march on City Hall.",
+    "won": "The city pays its share.",
+    "lost": "The city refuses.",
+    "fizzled": "The team stays where it is."
+   }
+  },
+  {
+   "id": "ferry",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "fantasy",
+    "medieval",
+    "frontier"
+   ],
+   "title": "The ferry to {hood}",
+   "question": "Should the ferry to {hood} be stopped?",
+   "sides": [
+    {
+     "name": "Keep it",
+     "stand": "keep the ferry",
+     "jobs": [
+      "labor"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    },
+    {
+     "name": "Stop it",
+     "stand": "stop it and save the money",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The ferry loses money, people say.",
+    "open": "Its last day is named.",
+    "heated": "People from {hood} fill the last sailings.",
+    "won": "The ferry stays.",
+    "lost": "The ferry stops.",
+    "fizzled": "It runs on fewer days."
+   }
+  },
+  {
+   "id": "tannery",
+   "styles": [
+    "medieval",
+    "fantasy",
+    "victorian",
+    "frontier"
+   ],
+   "title": "The stinking works",
+   "question": "Should the stinking works be moved out of {hood}?",
+   "sides": [
+    {
+     "name": "Move it",
+     "stand": "move it out",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    },
+    {
+     "name": "It stays",
+     "stand": "leave it; it gives work",
+     "jobs": [
+      "labor",
+      "trade"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "guild",
+      "business"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The smell from the works in {hood} is worse than ever.",
+    "open": "Residents ask for it to move.",
+    "heated": "The works' windows are smashed.",
+    "won": "The works moves.",
+    "lost": "The works stays.",
+    "fizzled": "A wall is built round it."
+   }
+  },
+  {
+   "id": "pier",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian"
+   ],
+   "title": "Rebuilding the pier",
+   "question": "Should the old pier be rebuilt or pulled down?",
+   "sides": [
+    {
+     "name": "Rebuild it",
+     "stand": "rebuild it",
+     "jobs": [
+      "arts",
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition",
+      "locals"
+     ]
+    },
+    {
+     "name": "Pull it down",
+     "stand": "pull it down",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "establishment"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The pier is closed after a storm.",
+    "open": "Two plans are put forward.",
+    "heated": "A crowd walks out onto it in protest.",
+    "won": "The pier is rebuilt.",
+    "lost": "The pier comes down.",
+    "fizzled": "It stays closed."
+   }
+  },
+  {
+   "id": "clock-tower",
+   "styles": [
+    "modern",
+    "future",
+    "jazz",
+    "victorian",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "The broken clock",
+   "question": "Should the city pay to fix the town clock?",
+   "sides": [
+    {
+     "name": "Fix it",
+     "stand": "fix it",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition"
+     ]
+    },
+    {
+     "name": "Not worth it",
+     "stand": "spend the money elsewhere",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "practical"
+     ],
+     "backers": [
+      "reform"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "The town clock stopped.",
+    "open": "The repair bill is read out.",
+    "heated": "Someone sets it to the wrong time as a joke.",
+    "won": "The clock is fixed.",
+    "lost": "The clock stays stopped.",
+    "fizzled": "A volunteer fixes it."
+   }
+  },
+  {
+   "id": "night-market",
+   "styles": [
+    "modern",
+    "future",
+    "jazz"
+   ],
+   "title": "A night market in {hood}",
+   "question": "Should {hood} get a night market?",
+   "sides": [
+    {
+     "name": "Yes",
+     "stand": "have a night market",
+     "jobs": [
+      "trade",
+      "arts"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "business"
+     ]
+    },
+    {
+     "name": "No",
+     "stand": "keep {hood} quiet at night",
+     "jobs": [
+      "care"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "locals"
+     ],
+     "locals": true
+    }
+   ],
+   "beats": {
+    "whispers": "Traders want a night market in {hood}.",
+    "open": "A trial is proposed.",
+    "heated": "Residents complain after the first night.",
+    "won": "The night market stays.",
+    "lost": "It is stopped.",
+    "fizzled": "It runs once a month."
+   }
+  },
+  {
+   "id": "grain-store",
+   "styles": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ],
+   "title": "Opening the grain store",
+   "question": "Should the grain store be opened early this winter?",
+   "sides": [
+    {
+     "name": "Open it",
+     "stand": "open it now",
+     "jobs": [
+      "labor",
+      "farm"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "workers",
+      "church"
+     ]
+    },
+    {
+     "name": "Keep it shut",
+     "stand": "keep it for the hard months",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "establishment",
+      "crown"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Bread is dear already.",
+    "open": "People ask for the store to be opened.",
+    "heated": "A crowd gathers at the store doors.",
+    "won": "The store is opened.",
+    "lost": "It stays shut.",
+    "fizzled": "A little is let out."
+   }
+  },
+  {
+   "id": "horse-racing",
+   "styles": [
+    "victorian",
+    "frontier",
+    "jazz",
+    "medieval",
+    "fantasy"
+   ],
+   "title": "Racing on the high street",
+   "question": "Should racing on the high street be banned?",
+   "sides": [
+    {
+     "name": "Ban it",
+     "stand": "ban it",
+     "jobs": [
+      "care",
+      "church"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "church",
+      "law"
+     ]
+    },
+    {
+     "name": "Keep it",
+     "stand": "keep the races",
+     "jobs": [
+      "drink",
+      "farm"
+     ],
+     "words": [
+      "party"
+     ],
+     "backers": [
+      "locals",
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "A rider fell at the high street race.",
+    "open": "A ban is proposed.",
+    "heated": "Riders race at night in defiance.",
+    "won": "Racing is banned.",
+    "lost": "Racing stays.",
+    "fizzled": "The race moves to the field."
+   }
+  },
+  {
+   "id": "immigrant-quarter",
+   "styles": [
+    "modern",
+    "jazz",
+    "victorian",
+    "frontier"
+   ],
+   "title": "Signs in {hood}",
+   "question": "Should shop signs in {hood} have to be in the city's own language?",
+   "sides": [
+    {
+     "name": "Let them be",
+     "stand": "let shops write what they like",
+     "jobs": [
+      "trade"
+     ],
+     "words": [
+      "idealist"
+     ],
+     "backers": [
+      "locals",
+      "reform"
+     ],
+     "locals": true
+    },
+    {
+     "name": "One language",
+     "stand": "have one language on signs",
+     "jobs": [
+      "official"
+     ],
+     "words": [
+      "cautious"
+     ],
+     "backers": [
+      "tradition"
+     ]
+    }
+   ],
+   "beats": {
+    "whispers": "Someone complained about signs in {hood}.",
+    "open": "A rule is proposed.",
+    "heated": "Shops in {hood} add more signs.",
+    "won": "Shops keep their signs.",
+    "lost": "The rule passes.",
+    "fizzled": "Signs in both languages."
+   }
+  }
+ ],
+ "jobs": {
+  "law": "police|officer|constable|sheriff|marshal|deputy|watch(?:man)?|guard|judge|lawyer|magistrate|bailiff|detective|security",
+  "drink": "bartender|barkeep|brewer|tavern|innkeeper|vintner|distiller|bootlegger|sommelier|bar owner|publican",
+  "church": "priest|vicar|minister|pastor|nun|chaplain|cleric|monk|rabbi|imam|preacher|deacon|abbot|missionary",
+  "trade": "merchant|shopkeeper|owner|proprietor|trader|banker|broker|investor|landlord|developer|dealer|grocer|manager",
+  "labor": "dock|laborer|labourer|factory|miner|carter|porter|builder|mechanic|cook|server|clerk|driver|plumber|electrician|warehouse|janitor|cleaner|technician|crew",
+  "learned": "teacher|professor|librarian|scholar|scientist|doctor|journalist|writer|reporter|engineer|student|researcher",
+  "care": "nurse|carer|caregiver|social worker|nanny|governess|midwife|healer|therapist|counsel",
+  "arts": "artist|musician|actor|actress|dancer|painter|poet|singer|designer|photographer|DJ|fiddler|player",
+  "official": "alderman|council|official|civil servant|politician|mayor|steward|clerk of|registrar|administrator|reeve",
+  "farm": "farmer|rancher|shepherd|dairy|fisher|cowhand|herder|gardener|grower"
+ },
+ "words": {
+  "devout": "devout|religious|faithful|pious|church-?going|spiritual",
+  "rebel": "rebel\\w*|anti-authority|rule-?breaker|free[- ]spirited|outlaw|punk|defiant|irreverent",
+  "cautious": "cautious|careful|conservative|traditional|old-fashioned|reserved|proper",
+  "idealist": "idealis\\w+|activist|justice|principled|compassionate|kind-hearted|caring|generous|empath\\w+",
+  "practical": "practical|pragmatic|business-?minded|ambitious|driven|shrewd|calculating",
+  "party": "party|partier|drinker|nightlife|hedonist|fun-loving|wild"
+ },
+ "tempers": {
+  "strong": [
+   "gruff",
+   "driven",
+   "chatty"
+  ],
+  "mild": [
+   "easygoing",
+   "dreamy",
+   "shy"
+  ],
+  "strong_flaws": [
+   "stubborn",
+   "temper",
+   "grudge",
+   "reckless",
+   "proud"
+  ],
+  "change": [
+   "adventure",
+   "escape",
+   "recognition"
+  ],
+  "keep": [
+   "security",
+   "quiet",
+   "belonging"
+  ]
+ }
+}

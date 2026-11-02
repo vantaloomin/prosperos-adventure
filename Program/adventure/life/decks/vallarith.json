@@ -1,0 +1,3630 @@
+{
+ "about": "Vallarith's Life Cards (dungeon/life/cards.py, docs/life-cards.md): events drawn into town days, roads, rests and off-page beats with the seeded dice. `chance` is the odds in percent that a scene draws anything, by drama level (0 quiet, 1 uneasy, 2 eventful, 3 merciless); `drama` is the lowest level a card turns up at; `intensity` is the level each category must be at for the card to happen; `topics` are veil topics; `truth` is the hidden fact, `seen` what the character perceives and `accuracy` how far to trust it; `effects` are for code. The d100 tables follow Prospero's Study's Encounter, Obstacle, Foreshadowing, Direct Challenge, Opportunity and Hooks tables, which Companion's everyday tables left out.",
+ "world": "vallarith",
+ "chance": {
+  "town": [
+   25,
+   35,
+   50,
+   65
+  ],
+  "road": [
+   30,
+   40,
+   55,
+   70
+  ],
+  "rest": [
+   10,
+   15,
+   25,
+   35
+  ],
+  "beat": [
+   50,
+   60,
+   75,
+   90
+  ]
+ },
+ "repeat_days": 30,
+ "tables_weight": 120,
+ "cards": [
+  {
+   "id": "bad-water",
+   "title": "Bad water",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 8,
+   "truth": "A cistern in {town} went foul from a dead dog wedged in the outflow.",
+   "seen": "Half the street says the {faction} poisoned the well. Folk are drinking ale at breakfast rather than draw water.",
+   "accuracy": "false",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "drink",
+     "shift": 40,
+     "days": 5
+    },
+    {
+     "kind": "rumor",
+     "about": "faction",
+     "true": false
+    }
+   ]
+  },
+  {
+   "id": "hanging-day",
+   "title": "Hanging day",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "intensity": {
+    "violence": 1,
+    "cruelty": 1
+   },
+   "topics": [
+    "execution"
+   ],
+   "truth": "{town} hanged three men for stealing grain from the tithe barn. One of them never touched it.",
+   "seen": "Three men hanged in the square at noon. The crowd ate pies and threw the crusts at the bodies.",
+   "accuracy": "partial",
+   "pressure": "The quietest one's wife stops strangers in the street to ask who really took the grain.",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 10
+    }
+   ]
+  },
+  {
+   "id": "cheap-bread",
+   "title": "Cheap bread",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 10,
+   "truth": "A grain barge from Eriane came in early and flooded the market.",
+   "seen": "Bread is cheap this week. Even the beggars by the gate have whole loaves.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "food",
+     "shift": -30,
+     "days": 7
+    }
+   ]
+  },
+  {
+   "id": "early-tithe",
+   "title": "The tithe comes early",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "where": [
+    "cyrel"
+   ],
+   "intensity": {
+    "cruelty": 1
+   },
+   "truth": "The lord's men came a month early for the war tithe, because the lord lost at cards.",
+   "seen": "Soldiers are going door to door for the war tithe, a month early. A house that can't pay gives a son to Bastion.",
+   "accuracy": "partial",
+   "pressure": "A widow on your street asks you to hide her boy in your room until they've gone.",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": -2
+    }
+   ]
+  },
+  {
+   "id": "drunk-bonesetter",
+   "title": "The bonesetter drinks",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 6,
+   "needs": [
+    "injured"
+   ],
+   "truth": "The only bonesetter in {town} has been drinking since his daughter died of the flux.",
+   "seen": "The bonesetter's hands shake until his first cup. After the third they shake again, worse.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "medicine",
+     "shift": 25,
+     "days": 14
+    }
+   ]
+  },
+  {
+   "id": "purse-in-the-straw",
+   "title": "A purse in the straw",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 6,
+   "truth": "{pc} found a purse hidden in a stable's straw. It belongs to a man who has killed over less.",
+   "seen": "You found a fat purse tucked into a stable's straw. Nobody has come asking for it. Yet.",
+   "accuracy": "partial",
+   "pressure": "Spend it, or find out whose it was before he finds out who has it.",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": 5
+    }
+   ]
+  },
+  {
+   "id": "cellar-crystal",
+   "title": "Crystal under the cellar",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "truth": "A cooper found a vein of crystallized Ley under his cellar and told his brother, who told everyone.",
+   "seen": "Everybody is talking about the cooper's cellar. Men with picks have started knocking on his door after dark.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "ley",
+     "shift": -20,
+     "days": 10
+    },
+    {
+     "kind": "clock",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "grey-recruiter",
+   "title": "The man in grey",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 6,
+   "intensity": {
+    "cruelty": 1
+   },
+   "topics": [
+    "child-harm"
+   ],
+   "truth": "A Brotherhood of Man speaker is buying Ley-gifted children for the schools in Trein. Few of them write home.",
+   "seen": "A smiling man in grey is paying parents good silver to send their gifted children to school in Trein.",
+   "accuracy": "partial",
+   "pressure": "A mother asks you whether the schools are real.",
+   "effects": []
+  },
+  {
+   "id": "sweating-fever",
+   "title": "Fever in the lower town",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 6,
+   "intensity": {
+    "horror": 1
+   },
+   "topics": [
+    "disease"
+   ],
+   "truth": "Sweating fever came in on a barge crew. It takes the old first.",
+   "seen": "The lower town has chalk crosses on the doors. The watch won't go in, and the priests charge to.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "medicine",
+     "shift": 80,
+     "days": 21
+    },
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 7
+    }
+   ]
+  },
+  {
+   "id": "cut-tincture",
+   "title": "Bad tincture",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 5,
+   "needs": [
+    "injured"
+   ],
+   "truth": "The apothecary cut his willow tincture with lamp oil to stretch it. Three of his customers have gone blind.",
+   "seen": "The apothecary's tincture smells of the lamp. Someone outside his shop is shouting about his eyes.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "medicine",
+     "shift": 40,
+     "days": 14
+    }
+   ]
+  },
+  {
+   "id": "green-duel",
+   "title": "A duel at dawn",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "intensity": {
+    "violence": 1
+   },
+   "truth": "Two merchant sons fought over a debt and the loser bled out. His family blames the winner's second, {npc}.",
+   "seen": "A young man died on the green this morning. His family has hired men to find {npc}.",
+   "accuracy": "true",
+   "pressure": "{npc} begs you to get them out of {town} before nightfall.",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 1
+    }
+   ]
+  },
+  {
+   "id": "free-bones",
+   "title": "A priest of Girione",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "A halfling priest of Girione is setting bones for free, paid for with coin he skims from his bishop.",
+   "seen": "A halfling priest is setting bones for free behind the temple of Girione. The queue goes round the block.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "medicine",
+     "shift": -30,
+     "days": 7
+    }
+   ]
+  },
+  {
+   "id": "press-gang",
+   "title": "The press gang",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 6,
+   "where": [
+    "cyrel",
+    "asania"
+   ],
+   "intensity": {
+    "violence": 1
+   },
+   "truth": "A press gang is working the taverns to fill the levy for the Asanian front.",
+   "seen": "Men are going missing from the taverns after dark. Their friends say the army took them.",
+   "accuracy": "true",
+   "pressure": "A drunk you shared a table with last night is being dragged off by his collar.",
+   "effects": []
+  },
+  {
+   "id": "sold-debt",
+   "title": "Your debt was sold",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 8,
+   "needs": [
+    "debt"
+   ],
+   "truth": "{pc}'s creditor sold the debt on to a moneylender who collects with knives.",
+   "seen": "A stranger knows exactly what you owe and to whom. He says you owe him now, and he's less patient.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 14
+    }
+   ]
+  },
+  {
+   "id": "married-want",
+   "title": "A married interest",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "sex": 1
+   },
+   "truth": "{npc}, married and bored, has decided to have {pc} and is arranging it.",
+   "seen": "{npc} keeps finding reasons to be wherever you are. Their spouse has started finding reasons too.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "npc",
+     "axis": "desire",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "madams-book",
+   "title": "The madam's book",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "sex": 1
+   },
+   "truth": "The bathhouse madam kept a book of which officials visit and what they pay for. Someone stole it.",
+   "seen": "The bathhouse madam is offering a fortune for a missing book, and won't say what's written in it.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 5
+    }
+   ]
+  },
+  {
+   "id": "ears-for-silver",
+   "title": "Ears for silver",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 5,
+   "where": [
+    "cyrel",
+    "badlands"
+   ],
+   "intensity": {
+    "violence": 2,
+    "cruelty": 2
+   },
+   "topics": [
+    "mutilation"
+   ],
+   "truth": "Bastion pays a bounty on gnoll ears. Some hunters have started cutting them off half-orc farmhands.",
+   "seen": "Bounty men are cashing in ears at the garrison. A half-orc farmhand from the east road hasn't come home.",
+   "accuracy": "true",
+   "pressure": "The farmhand's mother asks you to find him.",
+   "effects": []
+  },
+  {
+   "id": "small-thief",
+   "title": "A small thief",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 6,
+   "intensity": {
+    "cruelty": 1
+   },
+   "topics": [
+    "child-harm"
+   ],
+   "truth": "A thin girl lifted {pc}'s purse for a gang boss who beats the children who come back empty.",
+   "seen": "Your purse is gone. You remember a thin girl bumping you near the fish stalls.",
+   "accuracy": "true",
+   "pressure": "When you find her, she has bruises that weren't there this morning.",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": -1
+    }
+   ]
+  },
+  {
+   "id": "funeral-feast",
+   "title": "A funeral feast",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "A rich family buried their grandfather and fed half of {town} to show they could.",
+   "seen": "There's free food at the merchant's funeral. Nobody at the tables looks sad.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "supply",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "midwife",
+   "title": "They want a witch",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "violence": 2,
+    "cruelty": 2,
+    "horror": 1
+   },
+   "topics": [
+    "execution"
+   ],
+   "truth": "A run of stillbirths has the parish hunting for a witch. The likeliest target is the Ley-gifted midwife who caught most of those babies.",
+   "seen": "There's a crowd outside the midwife's house with torches, and a priest who won't look anyone in the eye.",
+   "accuracy": "true",
+   "pressure": "Stand with her, or let the crowd have her.",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 1
+    }
+   ]
+  },
+  {
+   "id": "soft-lender",
+   "title": "A fair offer",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "horror": 1
+   },
+   "truth": "A devil of Mammon's court, dressed as a moneylender, is buying souls in {town}, one desperate family at a time.",
+   "seen": "A soft-spoken lender gives loans with no interest at all. He asks only that you sign in your own blood.",
+   "accuracy": "partial",
+   "pressure": "Someone you like has already signed.",
+   "effects": [
+    {
+     "kind": "clock",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "faceless-goddess",
+   "title": "Nicana's statue",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 6,
+   "truth": "A drunk soldier hacked the face off Nicana's statue on a bet.",
+   "seen": "Nicana's statue in the square has no face this morning. The priests say Aveus's faithful did it.",
+   "accuracy": "false",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "faction",
+     "true": false
+    }
+   ]
+  },
+  {
+   "id": "tannery-pit",
+   "title": "Strength night",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "violence": 2
+   },
+   "truth": "The faithful of Aveus hold pit fights under the tannery. The loser serves the winner for a year.",
+   "seen": "Someone pressed a token into your hand: a black fist, an hour, and the word tannery.",
+   "accuracy": "true",
+   "pressure": "The purse is a year's wages. So is the price of losing.",
+   "effects": []
+  },
+  {
+   "id": "bond-dice-debt",
+   "title": "What {bond} owes",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 6,
+   "needs": [
+    "bond"
+   ],
+   "truth": "{bond} lost money at dice to a man who now wants it back in favors, starting with {pc}.",
+   "seen": "{bond} has been jumpy for days and won't say why. A man you don't know keeps waving at them.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "bond",
+     "days": 10
+    }
+   ]
+  },
+  {
+   "id": "bond-confession",
+   "title": "Something {bond} did",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "needs": [
+    "bond"
+   ],
+   "truth": "Years ago {bond} sold a friend to the watch to save their own neck. Drink brought it out.",
+   "seen": "Late and drunk, {bond} tells you about a friend they sold to the watch, and asks if you'd have done the same.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "bond",
+     "axis": "trust",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "bond-cold",
+   "title": "{bond} goes cold",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 5,
+   "needs": [
+    "bond"
+   ],
+   "truth": "{bond} saw {pc} with {npc} and decided it meant more than it did.",
+   "seen": "{bond} is short with you today and won't say why.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "bond",
+     "axis": "affection",
+     "shift": -1
+    },
+    {
+     "kind": "feeling",
+     "who": "bond",
+     "axis": "trust",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "poor-likeness",
+   "title": "Your face on the wall",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "needs": [
+    "wanted"
+   ],
+   "truth": "The watch posted a bounty on {pc}, with a sketch that gets the scar on the wrong side.",
+   "seen": "A watchman is nailing up a sketch of you by the gate. It's a poor likeness. For now.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "pc",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "fence-talks",
+   "title": "The fence is talking",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 5,
+   "needs": [
+    "wanted"
+   ],
+   "truth": "The watch raided the fence's shop, and he's giving them names to keep his hands.",
+   "seen": "The fence's shop is boarded up. His wife says he's at the barracks, and that he's talking.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "pc",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "harvest-fair",
+   "title": "Harvest fair",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "where": [
+    "cyrel"
+   ],
+   "truth": "Eriane's harvest fair brought wine, fiddlers and every pickpocket in the kingdom.",
+   "seen": "There are fiddlers in every square and the wine is nearly free. Keep a hand on your purse.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "drink",
+     "shift": -20,
+     "days": 3
+    }
+   ]
+  },
+  {
+   "id": "bread-riot",
+   "title": "Bread riot",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "violence": 2
+   },
+   "truth": "The bakers' guild hoarded grain to lift the price. The crowd burned their hall, and the watch answered with crossbows.",
+   "seen": "The bakers' guild hall is burning and there are bodies in the street. The watch fired into the crowd.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "food",
+     "shift": 60,
+     "days": 10
+    },
+    {
+     "kind": "clock",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "adlmyr-veteran",
+   "title": "The veteran",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 6,
+   "where": [
+    "cyrel",
+    "badlands"
+   ],
+   "truth": "The legless beggar at the gate ran from Adlmyr a week before it fell. He lost his legs to frostbite in a ditch.",
+   "seen": "A legless beggar at the gate tells anyone who'll listen how he lost his legs holding Adlmyr's wall.",
+   "accuracy": "false",
+   "effects": []
+  },
+  {
+   "id": "dying-parent",
+   "title": "A letter from home",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 5,
+   "truth": "{pc}'s parent is dying, and the land goes to whichever child is at the bedside when they go.",
+   "seen": "A letter from home, three weeks old: your parent is dying, and your brother has already moved in.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 20
+    }
+   ]
+  },
+  {
+   "id": "square-auction",
+   "title": "Chained in the square",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "cruelty": 2
+   },
+   "topics": [
+    "slavery"
+   ],
+   "truth": "Slavers from the south sold a coffle of war captives in the square. The town charter allows it.",
+   "seen": "A line of chained people is being auctioned by the well. Some still wear Cyrel's colors.",
+   "accuracy": "true",
+   "pressure": "One of them knows your name and says it loudly.",
+   "effects": []
+  },
+  {
+   "id": "pepper-stew",
+   "title": "A real cook",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "A cook from Mordun took over the tavern kitchen. Her pepper stew is worth the walk.",
+   "seen": "People are walking across {town} for the new cook's pepper stew, and the tavern is warm and loud.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": -1
+    }
+   ]
+  },
+  {
+   "id": "ward-lamps",
+   "title": "The lamps go dim",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 5,
+   "truth": "Crystal mining in the hills has thinned the local Ley, and spells are failing at the edges.",
+   "seen": "The ward lamps keep guttering, and the hedge witch says her charms have gone weak this month.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "ley",
+     "shift": 50,
+     "days": 30
+    }
+   ]
+  },
+  {
+   "id": "picks-under-church",
+   "title": "Picks under the floor",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "horror": 1
+   },
+   "truth": "A cult believes a piece of Asmodeus lies under {town} and has been tunneling beneath the old church.",
+   "seen": "Folk on Church Lane hear picks under their floors at night. The priest says it's rats.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "clock",
+     "shift": 1
+    },
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 14
+    }
+   ]
+  },
+  {
+   "id": "the-muse",
+   "title": "The muse",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 3,
+   "weight": 3,
+   "intensity": {
+    "horror": 1
+   },
+   "topics": [
+    "self-harm"
+   ],
+   "truth": "{npc}, a painter, has caught the Leanan Sidhe's eye. The work is brilliant and it is killing them.",
+   "seen": "{npc}'s paintings sell for more every week. They haven't eaten or slept in days, and they're happy.",
+   "accuracy": "partial",
+   "effects": []
+  },
+  {
+   "id": "ley-dust",
+   "title": "Ley dust",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "drugs": 2
+   },
+   "topics": [
+    "addiction"
+   ],
+   "truth": "Someone is selling crushed Ley crystal to snort. It makes a user feel like a god for an hour and burns out the nose and the nerve.",
+   "seen": "Half the dock hands have red-rimmed nostrils and bright eyes. They call it a pinch of the Font.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "ley",
+     "shift": 30,
+     "days": 14
+    }
+   ]
+  },
+  {
+   "id": "rent-doubled",
+   "title": "The rent doubles",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "A soldier offered the landlord twice the rent for {pc}'s room, and the landlord took it.",
+   "seen": "Your landlord wants double the rent by the end of the week, or the room goes to a soldier.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": -2
+    }
+   ]
+  },
+  {
+   "id": "shaved-weight",
+   "title": "Short weight",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "The grain seller's weights are shaved, and {pc} has been paying for air.",
+   "seen": "The sack of meal you bought is light. The seller swears on Girione's name it isn't.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": -1
+    },
+    {
+     "kind": "supply",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "hungry-deserters",
+   "title": "Deserters",
+   "scenes": [
+    "road"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 8,
+   "where": [
+    "cyrel",
+    "badlands"
+   ],
+   "intensity": {
+    "violence": 1
+   },
+   "truth": "Five deserters from Bastion, starving, mean to rob the next traveler and are ashamed of it.",
+   "seen": "Five ragged men in army boots block the road. Their leader asks, almost politely, for your purse.",
+   "accuracy": "true",
+   "pressure": "Feed them, fight them, or turn them in for the bounty.",
+   "effects": [
+    {
+     "kind": "fight",
+     "foes": "deserters"
+    }
+   ]
+  },
+  {
+   "id": "hanging-oak",
+   "title": "The hanging oak",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 6,
+   "intensity": {
+    "horror": 1
+   },
+   "topics": [
+    "execution"
+   ],
+   "truth": "Toll-takers hanged a merchant family from a roadside oak as a lesson for anyone who doesn't pay.",
+   "seen": "Four bodies hang from an oak by the road, a board nailed under them: PAY.",
+   "accuracy": "true",
+   "effects": []
+  },
+  {
+   "id": "pilgrim-fire",
+   "title": "Pilgrims",
+   "scenes": [
+    "road"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "Pilgrims bound for Benzaiten share their fire and their food and ask nothing back.",
+   "seen": "A band of pilgrims waves you over to their fire. They have bread and a kettle on.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "supply",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "well-child",
+   "title": "A burned farm",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 5,
+   "where": [
+    "cyrel",
+    "badlands"
+   ],
+   "intensity": {
+    "violence": 1
+   },
+   "truth": "Unguruk raiders burned the farm two days ago and took the stock. The farmer's son is hiding in the well.",
+   "seen": "The farmhouse is ash. Something down the well is crying.",
+   "accuracy": "true",
+   "effects": []
+  },
+  {
+   "id": "wild-hunt",
+   "title": "Hounds on the wind",
+   "scenes": [
+    "road",
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 3,
+   "weight": 3,
+   "where": [
+    "brynwyr",
+    "fjallagracht",
+    "cyrel"
+   ],
+   "intensity": {
+    "horror": 2
+   },
+   "truth": "The Erlking rides tonight, and the Wild Hunt takes whoever runs.",
+   "seen": "Black hounds are baying somewhere above the trees, and the horses won't go on.",
+   "accuracy": "true",
+   "pressure": "Run, hide, or stand still and hope.",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "double-toll",
+   "title": "The toll bridge",
+   "scenes": [
+    "road"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 8,
+   "truth": "A minor lord doubled his bridge toll to pay his war levy. His men pocket half.",
+   "seen": "The toll on the bridge is double what the last traveler told you. The men collecting it are bored and armed.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": -1
+    }
+   ]
+  },
+  {
+   "id": "dead-courier",
+   "title": "A dead courier",
+   "scenes": [
+    "road"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "truth": "A courier lies dead in the ditch with sealed letters for the {faction}. His killers missed them.",
+   "seen": "A courier's body in the ditch, still warm. His satchel holds letters under a seal you know.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "faction",
+     "days": 5
+    }
+   ]
+  },
+  {
+   "id": "gnoll-sign",
+   "title": "Gnoll sign",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 6,
+   "where": [
+    "badlands",
+    "cyrel"
+   ],
+   "intensity": {
+    "violence": 1
+   },
+   "truth": "A Dramogon hunting party is shadowing the road, looking for stragglers.",
+   "seen": "Gnoll tracks cross the road twice in an hour. Something laughs, a long way off.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fight",
+     "foes": "gnolls"
+    }
+   ]
+  },
+  {
+   "id": "broken-axle",
+   "title": "A broken axle",
+   "scenes": [
+    "road"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "A Mordun merchant's wagon has a broken axle. He pays well for help, and better for silence about his cargo.",
+   "seen": "A merchant waves you down beside a tilted wagon. His crates clink, and they hum.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": 2
+    }
+   ]
+  },
+  {
+   "id": "black-sails",
+   "title": "Black sails",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 5,
+   "where": [
+    "gulf"
+   ],
+   "intensity": {
+    "violence": 2
+   },
+   "topics": [
+    "slavery"
+   ],
+   "truth": "Dreadfall Corsairs raided a coastal hamlet and took everyone strong enough to row.",
+   "seen": "Smoke over the hamlet ahead, and a black-sailed ship pulling out past the point.",
+   "accuracy": "true",
+   "effects": []
+  },
+  {
+   "id": "tidum-shrine",
+   "title": "A wayside shrine",
+   "scenes": [
+    "road"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 6,
+   "truth": "A shrine to Tidum holds offerings of coin, bread and a good knife. Taking them angers no god, only the poor who left them.",
+   "seen": "A moss-grown shrine to Tidum, heaped with offerings. Nobody is watching.",
+   "accuracy": "true",
+   "pressure": "Take what you need, or leave it.",
+   "effects": []
+  },
+  {
+   "id": "refugee-column",
+   "title": "Refugees",
+   "scenes": [
+    "road"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "where": [
+    "cyrel",
+    "asania"
+   ],
+   "topics": [
+    "disease"
+   ],
+   "truth": "Families fleeing the Asanian front clog the road, and a cough is running through them.",
+   "seen": "A column of refugees fills the road for a mile. They ask for water, and some of them are coughing.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "food",
+     "shift": 20,
+     "days": 10
+    }
+   ]
+  },
+  {
+   "id": "glass-rain",
+   "title": "Glass rain",
+   "scenes": [
+    "road",
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 4,
+   "truth": "A surge in the local Ley crystallized the rain into fine shards.",
+   "seen": "The rain turns to glittering grit that cuts, and the air hums like a struck bell.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "wound",
+     "level": "Grazed"
+    },
+    {
+     "kind": "time",
+     "hours": 4
+    }
+   ]
+  },
+  {
+   "id": "a-day-behind",
+   "title": "Someone on your trail",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 6,
+   "needs": [
+    "wanted"
+   ],
+   "truth": "A bounty hunter has picked up {pc}'s trail and is a day behind.",
+   "seen": "An innkeeper mentions a man was asking after you yesterday. He paid for the answer.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "pursuer",
+     "days": 1
+    }
+   ]
+  },
+  {
+   "id": "waystation-cellar",
+   "title": "The empty waystation",
+   "scenes": [
+    "road"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 6,
+   "truth": "The waystation is abandoned. Its well is sweet, and smugglers left a stash in the cellar.",
+   "seen": "An abandoned waystation with a good well. The cellar door has a new lock.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "supply",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "green-bread",
+   "title": "An empty village",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "horror": 2
+   },
+   "truth": "Ghouls took the village one family at a time. They sleep in the cellars by day.",
+   "seen": "Doors open, tables set, nobody home. The bread on the tables is green.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fight",
+     "foes": "undead"
+    }
+   ]
+  },
+  {
+   "id": "caravan-guards",
+   "title": "A caravan needs guards",
+   "scenes": [
+    "road"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 6,
+   "truth": "A caravan master lost two guards to fever and needs swords to the next town.",
+   "seen": "A caravan master offers you a week's pay to ride with his wagons to the next town.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 6
+    }
+   ]
+  },
+  {
+   "id": "kadragar-traders",
+   "title": "Kadragar traders",
+   "scenes": [
+    "road"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 6,
+   "where": [
+    "badlands",
+    "kujuur"
+   ],
+   "truth": "Kadragar goblins are selling salt fish and stolen Cyrellian swords cheap.",
+   "seen": "Goblin traders have laid out salt fish and a rack of good swords. One still has a dead man's name on the grip.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "arms",
+     "shift": -30,
+     "days": 3
+    }
+   ]
+  },
+  {
+   "id": "stoneheart-patrol",
+   "title": "A Stoneheart patrol",
+   "scenes": [
+    "road"
+   ],
+   "tone": "grey",
+   "drama": 0,
+   "weight": 6,
+   "where": [
+    "dwarfholds"
+   ],
+   "truth": "A Stoneheart patrol is checking papers. Travelers without them are turned back, or held.",
+   "seen": "Dwarves in blue-enameled mail stop you at the pass and ask to see your papers.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "time",
+     "hours": 3
+    }
+   ]
+  },
+  {
+   "id": "marsh-procession",
+   "title": "To the marsh",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 4,
+   "where": [
+    "dwarfholds"
+   ],
+   "intensity": {
+    "cruelty": 2,
+    "horror": 1
+   },
+   "topics": [
+    "sacrifice"
+   ],
+   "truth": "Vymnommyth's faithful are marching a bound outsider into the swamp as an offering.",
+   "seen": "Dwarves in black scale cloaks drag a bound man toward the marsh. He is shouting in your language.",
+   "accuracy": "true",
+   "pressure": "There are eleven of them.",
+   "effects": []
+  },
+  {
+   "id": "wolves",
+   "title": "Eyes past the fire",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "intensity": {
+    "violence": 1
+   },
+   "truth": "A hungry pack has been following the smell of the cookpot.",
+   "seen": "Eyes shine past the firelight, low to the ground, more of them every time you look.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fight",
+     "foes": "beasts"
+    }
+   ]
+  },
+  {
+   "id": "light-fingers",
+   "title": "Light fingers",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "Someone crept into camp in the small hours and took food and a knife.",
+   "seen": "You wake to find a pack slit open, the bread gone and the good knife with it.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "supply",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "buried-heart",
+   "title": "The same dream",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "intensity": {
+    "horror": 1
+   },
+   "truth": "{pc} dreamed of a heart beating under the earth. Others who sleep near the pieces of Asmodeus dream it too.",
+   "seen": "You dreamed of a heart beating somewhere under the ground. When you wake, you can still feel it.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "clear-night",
+   "title": "A clear night",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 10,
+   "truth": "A clear, still night. {pc} sleeps well for once.",
+   "seen": "The stars are out, nothing stirs, and you wake rested.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": -1
+    }
+   ]
+  },
+  {
+   "id": "fireside-talk",
+   "title": "Talk by the fire",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "needs": [
+    "bond"
+   ],
+   "truth": "{bond} talked late into the night about home and the people they left there.",
+   "seen": "{bond} talks late into the night about home. It's the most you've heard them say.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "bond",
+     "axis": "affection",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "wet-boots",
+   "title": "Wet boots",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 5,
+   "needs": [
+    "bond",
+    "party"
+   ],
+   "truth": "{bond} left camp to meet someone they don't want {pc} to know about.",
+   "seen": "{bond}'s bedroll is cold an hour before dawn. They come back with wet boots and no story.",
+   "accuracy": "partial",
+   "effects": []
+  },
+  {
+   "id": "soaked",
+   "title": "Soaked through",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "Rain all night. Nothing stays dry.",
+   "seen": "It rains all night. The fire dies, and so does the bread.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "supply",
+     "shift": -1
+    },
+    {
+     "kind": "time",
+     "hours": 2
+    }
+   ]
+  },
+  {
+   "id": "scout-at-fire",
+   "title": "A stranger at the fire",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "truth": "A woman asking to share the fire is a scout for a bandit crew, counting the gear.",
+   "seen": "A woman asks to share your fire. She's good company, and she asks a lot about where you're headed.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "pursuer",
+     "days": 1
+    }
+   ]
+  },
+  {
+   "id": "knives-in-the-dark",
+   "title": "Knives in the dark",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "violence": 2
+   },
+   "truth": "Bandits followed the camp's smoke and came in at the darkest hour.",
+   "seen": "Someone trips over the guy rope, swears, and then there are knives everywhere.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fight",
+     "foes": "bandits"
+    }
+   ]
+  },
+  {
+   "id": "old-battlefield",
+   "title": "The dead get up",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 3,
+   "weight": 3,
+   "intensity": {
+    "horror": 2,
+    "violence": 1
+   },
+   "truth": "The camp sits on an old battlefield, and Orcus's touch has stirred what's buried there.",
+   "seen": "The ground moves under your bedroll. Then a hand comes up through it.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fight",
+     "foes": "undead"
+    },
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "loved-voice",
+   "title": "A voice in the trees",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "horror": 1
+   },
+   "truth": "An Unseelie lure is trying to draw {pc} out of camp with the voice of someone they love.",
+   "seen": "Someone you love is calling your name from the trees. They can't possibly be here.",
+   "accuracy": "false",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "killing-cold",
+   "title": "Killing cold",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 7,
+   "where": [
+    "fjallagracht",
+    "dwarfholds"
+   ],
+   "truth": "The temperature fell hard after dark, and the fuel ran out before dawn.",
+   "seen": "The cold gets into your bones and stays. Your fingers won't close properly until noon.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "wound",
+     "level": "Grazed"
+    },
+    {
+     "kind": "supply",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "swamp-fever",
+   "title": "Swamp fever",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 6,
+   "where": [
+    "kujuur"
+   ],
+   "topics": [
+    "disease"
+   ],
+   "truth": "Bashrat's midges carry a shaking fever.",
+   "seen": "You wake shaking and soaked, though the night was warm.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "wound",
+     "level": "Hurt"
+    }
+   ]
+  },
+  {
+   "id": "sleeping-watch",
+   "title": "The watch slept",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "needs": [
+    "party"
+   ],
+   "truth": "Whoever had the watch fell asleep. Nothing came, this time.",
+   "seen": "You wake at dawn and the one on watch is snoring, spear in their lap.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "npc",
+     "axis": "trust",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "shared-blankets",
+   "title": "Against the cold",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 5,
+   "needs": [
+    "bond"
+   ],
+   "intensity": {
+    "sex": 1
+   },
+   "truth": "{bond} crawled into {pc}'s blankets against the cold, and didn't leave when it warmed.",
+   "seen": "Sometime in the night {bond} crawls under your blankets for the warmth. They're still there at dawn.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "bond",
+     "axis": "desire",
+     "shift": 1
+    },
+    {
+     "kind": "feeling",
+     "who": "bond",
+     "axis": "affection",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "beat-knifed",
+   "title": "Knifed in a brawl",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 10,
+   "intensity": {
+    "violence": 1
+   },
+   "truth": "{them} took a knife in a tavern brawl and is laid up with it.",
+   "seen": "Word is {them} got cut in some tavern fight. Nobody agrees on how bad.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "wounded"
+    }
+   ]
+  },
+  {
+   "id": "beat-boots",
+   "title": "Killed for their boots",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 3,
+   "weight": 3,
+   "intensity": {
+    "violence": 2
+   },
+   "truth": "{them} was murdered on the road for their boots and purse.",
+   "seen": "A traveler mentions a body by the road with no boots. The description sounds like {them}.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "dead"
+    }
+   ]
+  },
+  {
+   "id": "beat-taken",
+   "title": "Taken",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "cruelty": 2
+   },
+   "topics": [
+    "slavery"
+   ],
+   "truth": "{them} was taken by slavers and sold south.",
+   "seen": "Nobody has seen {them} in a week. Their door was found standing open.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "captured"
+    }
+   ]
+  },
+  {
+   "id": "beat-bought",
+   "title": "Bought",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 5,
+   "truth": "The {faction} paid {them} to report on {pc}, and {them} took the money.",
+   "seen": "Someone mentions {them} has come into money lately, and bought a good coat.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "turned"
+    }
+   ]
+  },
+  {
+   "id": "beat-steady-work",
+   "title": "Steady work",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 10,
+   "truth": "{them} landed steady work and a dry room.",
+   "seen": "Someone says {them} is doing well these days.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "them",
+     "axis": "trust",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "beat-robbed",
+   "title": "Robbed in their sleep",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "{them} was robbed of everything they owned while they slept off a drink.",
+   "seen": "Someone says {them} is sleeping in a stable since they lost their purse.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "them",
+     "axis": "trust",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "beat-turned-out",
+   "title": "Turned out",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "{them} lost their place when their master's nephew wanted it.",
+   "seen": "Word is {them} is out of work and looking for anything that pays.",
+   "accuracy": "true",
+   "effects": []
+  },
+  {
+   "id": "beat-lover",
+   "title": "A new lover",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "truth": "{them} has taken up with {npc}.",
+   "seen": "Word is {them} is sharing a bed with {npc}, of all people.",
+   "accuracy": "partial",
+   "effects": []
+  },
+  {
+   "id": "beat-borrowed",
+   "title": "Borrowed against tomorrow",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 6,
+   "truth": "{them} borrowed heavily from a man who doesn't forgive.",
+   "seen": "Someone saw {them} going into the moneylender's twice in one week.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "indebted"
+    }
+   ]
+  },
+  {
+   "id": "beat-grey-robes",
+   "title": "Grey robes",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 5,
+   "truth": "{them} joined the Brotherhood of Man and gave it everything they own.",
+   "seen": "{them} has been seen in grey robes, handing out pamphlets in the square.",
+   "accuracy": "true",
+   "effects": []
+  },
+  {
+   "id": "beat-seal",
+   "title": "A seal on the palm",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 3,
+   "weight": 3,
+   "intensity": {
+    "horror": 1
+   },
+   "truth": "{them} signed a devil's contract to save someone they love.",
+   "seen": "{them} has a new scar on their palm, shaped like a wax seal, and they keep that hand closed.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "indebted"
+    }
+   ]
+  },
+  {
+   "id": "beat-fire",
+   "title": "Out of the fire",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "good",
+   "drama": 1,
+   "weight": 6,
+   "truth": "{them} pulled two children out of a burning house and is the talk of the town.",
+   "seen": "Everyone is telling the story of {them} and the burning house, and it grows each time.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "them",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "beat-informer",
+   "title": "Called an informer",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "truth": "{them} has done nothing, but a rival spread word that they inform for the watch.",
+   "seen": "People are saying {them} informs for the watch.",
+   "accuracy": "false",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "them",
+     "true": false
+    }
+   ]
+  },
+  {
+   "id": "beat-fever",
+   "title": "Fever",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 6,
+   "topics": [
+    "disease"
+   ],
+   "truth": "{them} has the sweating fever.",
+   "seen": "Someone says {them} is sick. Someone else says dying.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "sick"
+    }
+   ]
+  },
+  {
+   "id": "beat-mushroom-ring",
+   "title": "Danced away",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "horror": 1
+   },
+   "truth": "{them} stepped into a fey ring and can't find the way back. Time runs strangely where they are.",
+   "seen": "{them} is missing. A shepherd saw them dancing alone in a field at dusk, to no music.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "missing"
+    }
+   ]
+  },
+  {
+   "id": "beat-settled-score",
+   "title": "A score settled",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "violence": 2
+   },
+   "truth": "{them} found the man who ruined their family and killed him in his own kitchen.",
+   "seen": "Word is {them} is wanted for a killing.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "wanted"
+    }
+   ]
+  },
+  {
+   "id": "beat-pressed",
+   "title": "Pressed",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 5,
+   "where": [
+    "cyrel",
+    "asania"
+   ],
+   "truth": "{them} was pressed into the levy and marched to the front.",
+   "seen": "{them}'s landlady says soldiers came for them. She kept their things, and their rent.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "conscripted"
+    }
+   ]
+  },
+  {
+   "id": "beat-what-you-said",
+   "title": "What you said",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "truth": "{them} heard that {pc} mocked them behind their back. {pc} never said it.",
+   "seen": "{them} has heard something about you. Whatever it was, you didn't say it.",
+   "accuracy": "false",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "them",
+     "axis": "trust",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "beat-letter",
+   "title": "A slow letter",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "{them} wrote to {pc}. The letter will arrive late, and opened.",
+   "seen": "A letter from {them} reaches you, weeks old. The seal has been lifted and pressed back down.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "them",
+     "axis": "affection",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "beat-hand",
+   "title": "The thief-taker",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "violence": 2,
+    "cruelty": 2
+   },
+   "topics": [
+    "mutilation"
+   ],
+   "truth": "{them} lost a hand to a thief-taker's justice for a theft someone else did.",
+   "seen": "{them} has a stump where their left hand was. They don't talk about it.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "wounded"
+    }
+   ]
+  },
+  {
+   "id": "beat-escape",
+   "title": "Out of the chains",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "good",
+   "drama": 1,
+   "weight": 6,
+   "needs": [
+    "captive"
+   ],
+   "intensity": {
+    "violence": 1
+   },
+   "truth": "{them} got out. It cost them two fingers and a guard's life.",
+   "seen": "A ragged figure who looks a lot like {them} was seen on the north road, heading your way.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "freed"
+    }
+   ]
+  },
+  {
+   "id": "beat-dust",
+   "title": "A pinch of the Font",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "drugs": 2
+   },
+   "topics": [
+    "addiction"
+   ],
+   "truth": "{them} has taken to Ley dust and is spending everything on it.",
+   "seen": "{them} has red-rimmed eyes and a new laugh, and owes money all over town.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "addicted"
+    }
+   ]
+  },
+  {
+   "id": "beat-married-money",
+   "title": "Married for money",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 5,
+   "truth": "{them} married a rich widow twice their age for her warehouse.",
+   "seen": "{them} is married. To money, by the sound of it.",
+   "accuracy": "true",
+   "effects": []
+  },
+  {
+   "id": "beat-hung-out",
+   "title": "Hung out to dry",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 4,
+   "truth": "The {faction} sold {them} to the watch to cover its own tracks.",
+   "seen": "{them} is in the cells, and the {faction} says it has never heard of them.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "captured"
+    },
+    {
+     "kind": "reputation",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "beat-your-secret",
+   "title": "Your secret",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 4,
+   "truth": "{them} found out what {pc} has been hiding, and is deciding what it's worth.",
+   "seen": "{them} has been asking odd questions about where you were last spring.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "them",
+     "axis": "fear",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "beat-rising",
+   "title": "Rising",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 6,
+   "truth": "{them} rose in the {faction} and now has people of their own.",
+   "seen": "Word is {them} has a title now, and a pair of bodyguards.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "them",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "beat-named-you",
+   "title": "They named you",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 3,
+   "weight": 3,
+   "truth": "Facing the rope, {them} gave the watch {pc}'s name to save their own neck.",
+   "seen": "{them} walked out of the cells free, and the watch is asking about you.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "turned"
+    },
+    {
+     "kind": "rumor",
+     "about": "pc",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "heartwood-whisper",
+   "title": "Something under the Heartwood",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 3,
+   "where": [
+    "cyrel"
+   ],
+   "intensity": {
+    "horror": 1
+   },
+   "truth": "Something under the Heartwood reached up through {pc}'s sleep and offered them what they want most. Part of them said yes.",
+   "seen": "{pc} wakes with sap under their nails and iron in their mouth, from a dream of an open hand that offered everything.",
+   "accuracy": "partial",
+   "pressure": null,
+   "effects": [
+    {
+     "kind": "corruption",
+     "shift": 1
+    },
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  }
+ ],
+ "tables": {
+  "road": {
+   "name": "The road",
+   "from": "encounter",
+   "die": 100,
+   "rows": [
+    {
+     "id": "road-1",
+     "low": 1,
+     "high": 30,
+     "kind": "event",
+     "child": "travellers"
+    },
+    {
+     "id": "road-2",
+     "low": 31,
+     "high": 55,
+     "kind": "event",
+     "child": "hazards"
+    },
+    {
+     "id": "road-3",
+     "low": 56,
+     "high": 75,
+     "kind": "event",
+     "child": "signs"
+    },
+    {
+     "id": "road-4",
+     "low": 76,
+     "high": 90,
+     "kind": "event",
+     "child": "threats"
+    },
+    {
+     "id": "road-5",
+     "low": 91,
+     "high": 100,
+     "kind": "event",
+     "child": "finds"
+    }
+   ],
+   "scene": "road"
+  },
+  "travellers": {
+   "name": "Travellers",
+   "from": "encounter",
+   "die": 10,
+   "rows": [
+    {
+     "id": "travellers-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "A tinker",
+     "tone": "good",
+     "drama": 0,
+     "truth": "A Wrenspire tinker selling clockwork mousetraps and two-week-old news.",
+     "seen": "A gnome with a cart of clockwork mousetraps falls in beside you, talking.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "travellers-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "A patrol",
+     "tone": "grey",
+     "drama": 0,
+     "where": [
+      "cyrel"
+     ],
+     "truth": "A Cyrel patrol wants papers, and a coin for not looking at them too closely.",
+     "seen": "Soldiers stop you and ask for papers. Their sergeant rubs his thumb and finger together.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "coin",
+       "wages": -1
+      }
+     ]
+    },
+    {
+     "id": "travellers-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "A priest walking alone",
+     "tone": "good",
+     "drama": 0,
+     "truth": "A priest of Witarr walks to bury the dead of a village with no priest.",
+     "seen": "A blond priest with an Abyss tattoo on his arm asks to walk with you as far as the crossroads.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "travellers-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "A wedding party",
+     "tone": "good",
+     "drama": 0,
+     "truth": "A farm wedding is walking from the temple, drunk and generous.",
+     "seen": "A wedding party spills across the road and won't let you pass without a cup.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "stress",
+       "amount": -1
+      }
+     ]
+    },
+    {
+     "id": "travellers-5",
+     "low": 5,
+     "high": 5,
+     "kind": "event",
+     "title": "A mourning cart",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "The coffin on the cart holds stolen Ley crystal, not a body.",
+     "seen": "A cart carries a coffin. The mourners are armed and keep looking back the way they came.",
+     "accuracy": "false",
+     "effects": []
+    },
+    {
+     "id": "travellers-6",
+     "low": 6,
+     "high": 6,
+     "kind": "event",
+     "title": "Driven cattle",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "The men driving the herd stole it from a farm you passed yesterday.",
+     "seen": "Four riders drive thirty head of cattle hard down the road. Nobody returns your greeting.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "travellers-7",
+     "low": 7,
+     "high": 7,
+     "kind": "event",
+     "title": "A runaway",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "A half-elf woman is running from a Brynwyr marriage her family sold her into.",
+     "seen": "A half-elf woman with a good cloak and no luggage asks if she can walk with you.",
+     "accuracy": "true",
+     "pressure": "Riders with her family's colors are a day behind.",
+     "effects": []
+    },
+    {
+     "id": "travellers-8",
+     "low": 8,
+     "high": 8,
+     "kind": "event",
+     "title": "Gnoll exiles",
+     "tone": "grey",
+     "drama": 1,
+     "where": [
+      "badlands"
+     ],
+     "truth": "Gnolls cast out of Dramogon are starving and want to trade, not fight.",
+     "seen": "Three thin gnolls stand off the road with their hands open, holding out a pelt.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "travellers-9",
+     "low": 9,
+     "high": 9,
+     "kind": "event",
+     "title": "A chain gang",
+     "tone": "bad",
+     "drama": 1,
+     "intensity": {
+      "cruelty": 1
+     },
+     "truth": "Convicts mend the road under the lash. Half of them are debtors, not thieves.",
+     "seen": "Men in chains break stones on the roadside. The overseer's whip has a lead tip.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "travellers-10",
+     "low": 10,
+     "high": 10,
+     "kind": "event",
+     "title": "A witch-finder",
+     "tone": "grey",
+     "drama": 1,
+     "needs": [
+      "caster"
+     ],
+     "truth": "A witch-finder hunts the Ley-gifted for a bounty from the parish.",
+     "seen": "A man in a wide hat asks if you've met anyone who makes candles light without flint.",
+     "accuracy": "true",
+     "effects": []
+    }
+   ]
+  },
+  "hazards": {
+   "name": "Hazards",
+   "from": "obstacle",
+   "die": 10,
+   "rows": [
+    {
+     "id": "hazard-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "A washed-out ford",
+     "tone": "bad",
+     "drama": 0,
+     "truth": "Rain upstream took the ford.",
+     "seen": "The ford is a brown torrent today.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "time",
+       "hours": 6
+      }
+     ]
+    },
+    {
+     "id": "hazard-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "A lame horse",
+     "tone": "bad",
+     "drama": 0,
+     "truth": "A stone bruise. The horse needs a day.",
+     "seen": "Your horse is favoring a foreleg.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "time",
+       "hours": 8
+      }
+     ]
+    },
+    {
+     "id": "hazard-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "A fallen tree",
+     "tone": "grey",
+     "drama": 0,
+     "truth": "A storm-felled oak blocks the road.",
+     "seen": "An oak lies across the road, roots and all.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "time",
+       "hours": 2
+      }
+     ]
+    },
+    {
+     "id": "hazard-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "The wrong fork",
+     "tone": "bad",
+     "drama": 0,
+     "truth": "The milestone was turned around, on purpose.",
+     "seen": "By noon you realise the road is going the wrong way.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "time",
+       "hours": 4
+      }
+     ]
+    },
+    {
+     "id": "hazard-5",
+     "low": 5,
+     "high": 5,
+     "kind": "event",
+     "title": "Bad water",
+     "tone": "bad",
+     "drama": 0,
+     "truth": "The stream is fouled by a dead animal upstream.",
+     "seen": "The water tastes of iron and something worse. Your gut agrees.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "supply",
+       "shift": -1
+      }
+     ]
+    },
+    {
+     "id": "hazard-6",
+     "low": 6,
+     "high": 6,
+     "kind": "event",
+     "title": "A rockslide",
+     "tone": "bad",
+     "drama": 1,
+     "intensity": {
+      "violence": 1
+     },
+     "truth": "Loose scree came down the cut.",
+     "seen": "The hillside comes down with a roar.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "wound",
+       "level": "Hurt"
+      }
+     ]
+    },
+    {
+     "id": "hazard-7",
+     "low": 7,
+     "high": 7,
+     "kind": "event",
+     "title": "Ley-sick ground",
+     "tone": "bad",
+     "drama": 1,
+     "needs": [
+      "caster"
+     ],
+     "truth": "A mined-out vein nearby makes spells misfire.",
+     "seen": "Your magic feels slippery here, and the grass grows in spirals.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hazard-8",
+     "low": 8,
+     "high": 8,
+     "kind": "event",
+     "title": "Fog",
+     "tone": "grey",
+     "drama": 0,
+     "truth": "Fog off the low ground. Nothing to do but wait or risk it.",
+     "seen": "Fog comes down so thick you can't see your own boots.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "time",
+       "hours": 3
+      }
+     ]
+    },
+    {
+     "id": "hazard-9",
+     "low": 9,
+     "high": 9,
+     "kind": "event",
+     "title": "Sucking bog",
+     "tone": "bad",
+     "drama": 0,
+     "where": [
+      "kujuur"
+     ],
+     "truth": "The causeway sank in the wet season.",
+     "seen": "The path drops into black bog to the knee.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "supply",
+       "shift": -1
+      }
+     ]
+    },
+    {
+     "id": "hazard-10",
+     "low": 10,
+     "high": 10,
+     "kind": "event",
+     "title": "A burned bridge",
+     "tone": "bad",
+     "drama": 1,
+     "truth": "Someone burned the bridge to slow whoever is behind them.",
+     "seen": "The bridge is charred stumps, still smoking.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "time",
+       "hours": 12
+      }
+     ]
+    }
+   ]
+  },
+  "signs": {
+   "name": "Signs",
+   "from": "clue",
+   "die": 10,
+   "rows": [
+    {
+     "id": "sign-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "Crows over the hill",
+     "tone": "grey",
+     "drama": 0,
+     "truth": "There was a battle over the hill two days ago.",
+     "seen": "Crows by the hundred circle something over the next hill.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "sign-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "Fresh graves",
+     "tone": "grey",
+     "drama": 0,
+     "truth": "A family buried its dead by the road and moved on.",
+     "seen": "Five fresh graves by the road, marked with sticks.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "sign-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "A trampled banner",
+     "tone": "grey",
+     "drama": 0,
+     "where": [
+      "cyrel",
+      "badlands"
+     ],
+     "truth": "A Cyrel company was routed here.",
+     "seen": "A Cyrel banner lies trampled into the mud.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "sign-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "Claw marks",
+     "tone": "bad",
+     "drama": 1,
+     "truth": "Something large marks its ground on these trees.",
+     "seen": "Deep claw marks on the trees, higher than you can reach.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "sign-5",
+     "low": 5,
+     "high": 5,
+     "kind": "event",
+     "title": "A warning cairn",
+     "tone": "grey",
+     "drama": 0,
+     "where": [
+      "badlands"
+     ],
+     "truth": "The cairn marks Unguruk ground. Crossing it means a fight.",
+     "seen": "A cairn of stones topped with an orc-carved skull.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "sign-6",
+     "low": 6,
+     "high": 6,
+     "kind": "event",
+     "title": "Glass trees",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "Ley crystallized in the wood. The vein underneath is worth a fortune.",
+     "seen": "A stand of birches has turned partly to glass, and it chimes in the wind.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "sign-7",
+     "low": 7,
+     "high": 7,
+     "kind": "event",
+     "title": "A boot in the road",
+     "tone": "bad",
+     "drama": 1,
+     "intensity": {
+      "horror": 1,
+      "violence": 1
+     },
+     "truth": "A patrol lost a man here to something that eats.",
+     "seen": "A soldier's boot lies in the road. There's still a foot in it.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "sign-8",
+     "low": 8,
+     "high": 8,
+     "kind": "event",
+     "title": "An overturned cart",
+     "tone": "grey",
+     "drama": 0,
+     "truth": "Raiders hit a family cart here. Nobody came back for it.",
+     "seen": "An overturned cart, a doll in the mud beside it.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "sign-9",
+     "low": 9,
+     "high": 9,
+     "kind": "event",
+     "title": "Smoke on the horizon",
+     "tone": "grey",
+     "drama": 0,
+     "truth": "A village is burning a day's walk on.",
+     "seen": "A column of black smoke stands on the horizon ahead.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "sign-10",
+     "low": 10,
+     "high": 10,
+     "kind": "event",
+     "title": "Red mile marker",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "Aveus's faithful paint their meeting places red.",
+     "seen": "Someone has painted the mile marker blood red, and recently.",
+     "accuracy": "true",
+     "effects": []
+    }
+   ]
+  },
+  "threats": {
+   "name": "Threats",
+   "from": "direct-challenge",
+   "die": 10,
+   "rows": [
+    {
+     "id": "threat-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "Bandits",
+     "tone": "bad",
+     "drama": 1,
+     "intensity": {
+      "violence": 1
+     },
+     "truth": "Bandits working the road for anyone alone.",
+     "seen": "Men step out of the trees with crossbows.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "bandits"
+      }
+     ]
+    },
+    {
+     "id": "threat-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "A gnoll pack",
+     "tone": "bad",
+     "drama": 1,
+     "where": [
+      "badlands",
+      "cyrel"
+     ],
+     "intensity": {
+      "violence": 2
+     },
+     "truth": "A Dramogon pack hunts the road.",
+     "seen": "Laughter in the brush, closing on both sides.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "gnolls"
+      }
+     ]
+    },
+    {
+     "id": "threat-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "An orc war band",
+     "tone": "bad",
+     "drama": 2,
+     "where": [
+      "badlands"
+     ],
+     "intensity": {
+      "violence": 2
+     },
+     "truth": "An Unguruk war band rides for the border.",
+     "seen": "Drums, and dust, and riders.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "orcs"
+      }
+     ]
+    },
+    {
+     "id": "threat-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "An owlbear",
+     "tone": "bad",
+     "drama": 1,
+     "intensity": {
+      "violence": 1
+     },
+     "truth": "An owlbear guards a kill near the road.",
+     "seen": "A hoot, then a roar that shakes the leaves.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "beasts"
+      }
+     ]
+    },
+    {
+     "id": "threat-5",
+     "low": 5,
+     "high": 5,
+     "kind": "event",
+     "title": "Ghouls",
+     "tone": "bad",
+     "drama": 2,
+     "intensity": {
+      "horror": 1,
+      "violence": 1
+     },
+     "truth": "Ghouls from a fallen village hunt at dusk.",
+     "seen": "Grey shapes on all fours, moving too fast.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "undead"
+      }
+     ]
+    },
+    {
+     "id": "threat-6",
+     "low": 6,
+     "high": 6,
+     "kind": "event",
+     "title": "Deserters",
+     "tone": "bad",
+     "drama": 1,
+     "intensity": {
+      "violence": 1
+     },
+     "truth": "Deserters with nothing to lose.",
+     "seen": "Ragged men in army boots draw steel.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "deserters"
+      }
+     ]
+    },
+    {
+     "id": "threat-7",
+     "low": 7,
+     "high": 7,
+     "kind": "event",
+     "title": "A shore party",
+     "tone": "bad",
+     "drama": 2,
+     "where": [
+      "gulf"
+     ],
+     "intensity": {
+      "violence": 2
+     },
+     "truth": "Dreadfall Corsairs ashore for water and captives.",
+     "seen": "A longboat on the beach, and men with hooks coming up the dunes.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "corsairs"
+      }
+     ]
+    },
+    {
+     "id": "threat-8",
+     "low": 8,
+     "high": 8,
+     "kind": "event",
+     "title": "A troll under the bridge",
+     "tone": "bad",
+     "drama": 2,
+     "intensity": {
+      "violence": 2
+     },
+     "truth": "A troll has made the bridge its larder.",
+     "seen": "The bridge planks are gnawed.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "beasts"
+      }
+     ]
+    },
+    {
+     "id": "threat-9",
+     "low": 9,
+     "high": 9,
+     "kind": "event",
+     "title": "Bounty men",
+     "tone": "bad",
+     "drama": 1,
+     "needs": [
+      "wanted"
+     ],
+     "intensity": {
+      "violence": 1
+     },
+     "truth": "Hunters after the price on {pc}'s head.",
+     "seen": "Three riders, and one holds up your likeness.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "hunters"
+      }
+     ]
+    },
+    {
+     "id": "threat-10",
+     "low": 10,
+     "high": 10,
+     "kind": "event",
+     "title": "A collector",
+     "tone": "bad",
+     "drama": 3,
+     "intensity": {
+      "horror": 2,
+      "violence": 1
+     },
+     "truth": "A devil come to collect on a contract, and not fussy whose.",
+     "seen": "A man in a fine coat waits in the road. His shadow has horns.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "fight",
+       "foes": "fiend"
+      }
+     ]
+    }
+   ]
+  },
+  "finds": {
+   "name": "Finds",
+   "from": "find",
+   "die": 10,
+   "rows": [
+    {
+     "id": "find-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "An abandoned pack",
+     "tone": "good",
+     "drama": 0,
+     "truth": "A pack dropped in a hurry.",
+     "seen": "A pack in the ditch, still full.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "supply",
+       "shift": 1
+      }
+     ]
+    },
+    {
+     "id": "find-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "A Ley crystal",
+     "tone": "good",
+     "drama": 0,
+     "truth": "A thumb-sized crystal washed out of the bank.",
+     "seen": "Something glints in the stream bed.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "coin",
+       "wages": 3
+      }
+     ]
+    },
+    {
+     "id": "find-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "A good camp",
+     "tone": "good",
+     "drama": 0,
+     "truth": "A dry, hidden hollow with a spring.",
+     "seen": "A sheltered hollow with clean water.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "stress",
+       "amount": -1
+      }
+     ]
+    },
+    {
+     "id": "find-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "A dead knight's sword",
+     "tone": "good",
+     "drama": 1,
+     "truth": "A knight died here alone. The sword is good steel.",
+     "seen": "A skeleton in rusted mail still holds a fine sword.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "coin",
+       "wages": 2
+      }
+     ]
+    },
+    {
+     "id": "find-5",
+     "low": 5,
+     "high": 5,
+     "kind": "event",
+     "title": "Wild honey",
+     "tone": "good",
+     "drama": 0,
+     "truth": "A hive in a hollow tree.",
+     "seen": "Bees in a dead oak, and the smell of honey.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "supply",
+       "shift": 1
+      }
+     ]
+    },
+    {
+     "id": "find-6",
+     "low": 6,
+     "high": 6,
+     "kind": "event",
+     "title": "A shortcut",
+     "tone": "good",
+     "drama": 0,
+     "truth": "A drover's track saves half a day.",
+     "seen": "A shepherd points you to a faster track.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "time",
+       "hours": -4
+      }
+     ]
+    },
+    {
+     "id": "find-7",
+     "low": 7,
+     "high": 7,
+     "kind": "event",
+     "title": "A smuggler cache",
+     "tone": "good",
+     "drama": 0,
+     "truth": "Smugglers cache coin under a marked stone.",
+     "seen": "A stone with a chalk mark, loose.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "coin",
+       "wages": 2
+      }
+     ]
+    },
+    {
+     "id": "find-8",
+     "low": 8,
+     "high": 8,
+     "kind": "event",
+     "title": "A kind farmer",
+     "tone": "good",
+     "drama": 0,
+     "truth": "A farmer shares what little she has.",
+     "seen": "A farmer waves you in for soup.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "supply",
+       "shift": 1
+      }
+     ]
+    },
+    {
+     "id": "find-9",
+     "low": 9,
+     "high": 9,
+     "kind": "event",
+     "title": "Healing herbs",
+     "tone": "good",
+     "drama": 0,
+     "truth": "Woundwort grows thick by the stream.",
+     "seen": "You spot woundwort along the bank.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "market",
+       "goods": "medicine",
+       "shift": -10,
+       "days": 7
+      }
+     ]
+    },
+    {
+     "id": "find-10",
+     "low": 10,
+     "high": 10,
+     "kind": "event",
+     "title": "A scrap of map",
+     "tone": "good",
+     "drama": 1,
+     "truth": "A map scrap marks a cache in Adlmyr's old armory.",
+     "seen": "A scrap of map in a dead man's boot, with an X near Adlmyr.",
+     "accuracy": "true",
+     "effects": [
+      {
+       "kind": "rumor",
+       "about": "place",
+       "true": true
+      }
+     ]
+    }
+   ]
+  },
+  "hooks": {
+   "name": "Hooks",
+   "from": "hooks",
+   "die": 20,
+   "rows": [
+    {
+     "id": "hook-1",
+     "low": 1,
+     "high": 1,
+     "kind": "event",
+     "title": "The only witness",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "{pc} is the only one who saw {npc} push the reeve's son into the river.",
+     "seen": "You saw {npc} push the reeve's son into the river. Nobody else did.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-2",
+     "low": 2,
+     "high": 2,
+     "kind": "event",
+     "title": "Paid in a crime",
+     "tone": "bad",
+     "drama": 1,
+     "needs": [
+      "debt"
+     ],
+     "truth": "Someone {pc} owes wants the debt paid in a crime.",
+     "seen": "An old creditor wants paying, and not in coin.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-3",
+     "low": 3,
+     "high": 3,
+     "kind": "event",
+     "title": "A name and a place",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "A dying man gave {pc} a name and a place and died before saying why.",
+     "seen": "A dying stranger grips your sleeve, says a name and a street, and goes.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-4",
+     "low": 4,
+     "high": 4,
+     "kind": "event",
+     "title": "Kill a good man",
+     "tone": "grey",
+     "drama": 2,
+     "intensity": {
+      "violence": 1
+     },
+     "truth": "{npc} offers a year's wages to kill a priest who has done nothing but good.",
+     "seen": "{npc} offers you a year's wages to kill a priest. By every account, a kind one.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-5",
+     "low": 5,
+     "high": 5,
+     "kind": "event",
+     "title": "A body in your room",
+     "tone": "bad",
+     "drama": 2,
+     "intensity": {
+      "violence": 1
+     },
+     "truth": "Someone killed a stranger in {pc}'s rented room and sent for the watch.",
+     "seen": "You wake to a dead stranger on your floor and boots on the stairs.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-6",
+     "low": 6,
+     "high": 6,
+     "kind": "event",
+     "title": "A sealed box",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "{npc} pays {pc} to carry a sealed box to Trein and never open it.",
+     "seen": "{npc} offers good money to carry a sealed box to Trein, unopened.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-7",
+     "low": 7,
+     "high": 7,
+     "kind": "event",
+     "title": "Mistaken",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "A stranger mistakes {pc} for the killer they hired.",
+     "seen": "A nervous man presses half a purse on you and says the rest comes when it's done.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-8",
+     "low": 8,
+     "high": 8,
+     "kind": "event",
+     "title": "A test",
+     "tone": "grey",
+     "drama": 1,
+     "intensity": {
+      "violence": 1,
+      "cruelty": 1
+     },
+     "truth": "The {faction} offers {pc} a place, if they break a shopkeeper's arm first.",
+     "seen": "The {faction} will take you in. First, a shopkeeper who won't pay needs a lesson.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-9",
+     "low": 9,
+     "high": 9,
+     "kind": "event",
+     "title": "A ransom",
+     "tone": "bad",
+     "drama": 1,
+     "truth": "{npc}'s daughter has been taken, and they want {pc} to carry the ransom.",
+     "seen": "{npc} begs you to carry a ransom. They don't trust the watch.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-10",
+     "low": 10,
+     "high": 10,
+     "kind": "event",
+     "title": "The heir",
+     "tone": "grey",
+     "drama": 2,
+     "truth": "A lawyer insists {pc} is heir to a dead lord's lands. The lord's brother disagrees.",
+     "seen": "A lawyer says you've inherited land. The dead lord's brother sends his regards with a knife.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-11",
+     "low": 11,
+     "high": 11,
+     "kind": "event",
+     "title": "A deserter's map",
+     "tone": "grey",
+     "drama": 1,
+     "where": [
+      "cyrel",
+      "badlands"
+     ],
+     "truth": "A deserter has a map to the hidden armory under Adlmyr.",
+     "seen": "A deserter offers to sell you a map of Adlmyr's old armory.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-12",
+     "low": 12,
+     "high": 12,
+     "kind": "event",
+     "title": "Before the witch-finder",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "A Ley-gifted woman needs out of {town} before the witch-finder comes.",
+     "seen": "A woman asks you to get her out of {town} tonight, and won't say why.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-13",
+     "low": 13,
+     "high": 13,
+     "kind": "event",
+     "title": "A forged writ",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "{npc} wants a forged writ delivered to the garrison.",
+     "seen": "{npc} wants a letter carried to the garrison commander. The seal looks almost right.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-14",
+     "low": 14,
+     "high": 14,
+     "kind": "event",
+     "title": "A broken seal",
+     "tone": "grey",
+     "drama": 2,
+     "truth": "A priest breaks the seal of confession: {npc} means to murder their spouse.",
+     "seen": "A shaking priest tells you what {npc} confessed, and begs you to stop it.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-15",
+     "low": 15,
+     "high": 15,
+     "kind": "event",
+     "title": "An old enemy",
+     "tone": "bad",
+     "drama": 1,
+     "truth": "Someone from {pc}'s past is in {town}, and remembers.",
+     "seen": "A face across the market you hoped never to see again. They've seen you too.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-16",
+     "low": 16,
+     "high": 16,
+     "kind": "event",
+     "title": "A shard of the axe",
+     "tone": "grey",
+     "drama": 1,
+     "truth": "A shard of Gor'gel's crystal axe was stolen from the temple.",
+     "seen": "The temple's holiest relic is gone, and three different people want you to find it.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-17",
+     "low": 17,
+     "high": 17,
+     "kind": "event",
+     "title": "The plague cart",
+     "tone": "grey",
+     "drama": 2,
+     "intensity": {
+      "horror": 1
+     },
+     "topics": [
+      "disease"
+     ],
+     "truth": "The plague-cart driver takes the living too, for a fee.",
+     "seen": "The plague cart rattles past. Something in the pile is moving.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-18",
+     "low": 18,
+     "high": 18,
+     "kind": "event",
+     "title": "Bones under the floor",
+     "tone": "bad",
+     "drama": 2,
+     "intensity": {
+      "horror": 1
+     },
+     "truth": "Work on the inn turned up bones, and the innkeeper wants them gone.",
+     "seen": "The innkeeper offers free rooms for a month if you'll carry some sacks out of town tonight.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-19",
+     "low": 19,
+     "high": 19,
+     "kind": "event",
+     "title": "The captain's bargain",
+     "tone": "grey",
+     "drama": 2,
+     "topics": [
+      "slavery"
+     ],
+     "truth": "A Kadragar captain offers passage for silence about her hold.",
+     "seen": "A goblin captain will take you anywhere, free, if you never ask what's below decks.",
+     "accuracy": "true",
+     "effects": []
+    },
+    {
+     "id": "hook-20",
+     "low": 20,
+     "high": 20,
+     "kind": "event",
+     "title": "Dying fathers",
+     "tone": "grey",
+     "drama": 3,
+     "truth": "Melton Ilvar's agent wants {pc} to find a son. The son's father is dying, as every father in that line has died, young.",
+     "seen": "A well-paid agent wants a missing heir found before his father dies. He says it's urgent; it always is.",
+     "accuracy": "true",
+     "effects": []
+    }
+   ],
+   "scene": "town"
+  }
+ }
+}

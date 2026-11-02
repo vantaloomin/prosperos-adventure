@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "id": "babel",
+  "name": "BABEL",
+  "status": "draft",
+  "genre": "dark adult LitRPG isekai: a living tower dressed up as a video game",
+  "pitch": "A tower of themed floors that has pulled people out of the world for generations, each wave greeted in a different disguise. This wave it wears BABEL, the unreleased full-dive game one of its new arrivals helped build. The rules on the screen are his rules, until they aren't: lives are hidden, the System lies by leaving things out, and desire, taboo, power exchange and broken vows are a secret source of power that changes whoever uses it and binds whoever they use it on.",
+  "default_ruleset": "marvel",
+  "source": "Vanta's Mabry Curve roleplay archive (see sources.md). Nothing here is copied from the story files; every entry is rewritten.",
+  "calendar": {
+    "origin": "source",
+    "note": "The tower has no calendar of its own that climbers can read. Climbers keep Earth reckoning from the night they were taken; natives count by bells (Lauds at dawn, the noon bell, vespers at dusk), by feast days (Lammas) and by seasons (the first frost). Every floor keeps its own clock against the Concourse's (floor_clocks).",
+    "campaign_start": {
+      "origin": "source",
+      "earth": "2026-10-17T21:45:00",
+      "tower": "2026-10-18T08:00:00",
+      "note": "The lights go out at Halvorsen's Chophouse in Round Rock, Texas, at about a quarter to ten on Saturday, October 17, 2026. The arrivals come down on the Concourse on a Fire Market morning; the story clock starts there (Program/dungeon/world/data/tiers/babel.json `start`)."
+    },
+    "floor_clocks": {
+      "origin": "source",
+      "note": "Days on that floor for each day on the Concourse. Only these are known; the rest are open. The engine runs one story clock, so this is for the narrator and the off-page beats for now.",
+      "concourse": 1,
+      "varrow": 1,
+      "drowned-marches": 1,
+      "gilded-bazaar": 2
+    },
+    "bells": [
+      {"id": "lauds", "name": "Lauds", "when": "dawn"},
+      {"id": "first-bell", "name": "first bell", "when": "the first lift of the morning on the Concourse"},
+      {"id": "noon-bell", "name": "the noon bell", "when": "midday"},
+      {"id": "vespers", "name": "vespers", "when": "dusk"}
+    ]
+  },
+  "currency": {
+    "origin": "source",
+    "base": "talent",
+    "name": "Talents",
+    "symbol": "T",
+    "note": "The System's coin, good on every floor and kept in the satchel. A new arrival's satchel holds 25. A skewer cart and its morning's stock cost 30; a week at the Copper Scale and a decent sword cost about 120 between them. Natives on some floors keep their own coin as well (Varrow's harpers are paid in silver).",
+    "regional": [
+      {"region": "varrow", "medium": "Talents, and Varrow silver for wages and small things"},
+      {"region": "gilded-bazaar", "medium": "Talents, and people: everything and everyone has a price"},
+      {"region": "drowned-marches", "medium": "Talents, reed, nets and favors"}
+    ]
+  },
+  "tiers": {
+    "track": "rank",
+    "defaults": {"start": "local", "ceiling": "mythic", "pace": "steady"},
+    "ladder": {
+      "local": ["Unranked", "F", "E"],
+      "regional": ["D", "C"],
+      "realm": ["B", "A"],
+      "world": ["S", "SS"],
+      "mythic": ["SSS", "Ultra"]
+    },
+    "note": "BABEL's letter ranks mapped onto the shared tier ladder. Floors keep the rank the beta recommended for them (regions.json `beta_rank`); the tower does not scale to the climber."
+  },
+  "progression": {
+    "origin": "source",
+    "tracks": [
+      {
+        "id": "rank",
+        "type": "XP",
+        "name": "Rank",
+        "sets_tier": true,
+        "note": "One XP bar per rank on the Mabry curve (low ranks fill fast, high ones compress hard). A full bar unlocks a solo Rank Trial at a Waystone; passing resets the bar to zero, and a fresh rank is glass. Discoveries, quests, kills and floor clears pay XP. Items share the ladder."
+      },
+      {
+        "id": "marvel-growth",
+        "type": "use-based",
+        "name": "Prospero growth",
+        "note": "The engine default: stats used under pressure are marked and rolled at rest. Training banks points the same way (a day of hauling stone banks Vitality)."
+      },
+      {
+        "id": "skill-mastery",
+        "type": "use-based",
+        "name": "Skill mastery",
+        "note": "Each skill climbs Novice, Adept, Expert, Master, Grandmaster by use, shown as a percentage of its tier."
+      },
+      {
+        "id": "resonance",
+        "type": "Corruption",
+        "name": "Resonance",
+        "dark": true,
+        "hidden": true,
+        "note": "Desire, taboo, power exchange, betrayal and broken vows pay power the System never mentions. Each payment changes the user (corruption) and ties or changes the partner (binding). Thresholds grant Resonance skills (Oath-Scar, Dominion, Forbidden Fruit) and leave marks others can read on a full status pane."
+      },
+      {
+        "id": "binding",
+        "type": "Bonds",
+        "name": "Tethers",
+        "dark": true,
+        "note": "A Tether shares stats, pain and feeling between two people at a share that rises and falls with what passes between them. The tower revived the system BABEL cut, and dropped the rule that both partners must agree."
+      },
+      {
+        "id": "wealth",
+        "type": "Wealth",
+        "name": "Talents",
+        "note": "Read from the economy."
+      }
+    ]
+  },
+  "death_rule": "Death is always possible and always final on that branch. In the tower lives are finite, hidden and only rumored, so no climber knows how many they have left; a climber at 0% of a fresh rank is glass, and the next death is the last by the rule BABEL taught them. Recovery is by branching back to an earlier turn, with new dice.",
+  "intensity_defaults": {
+    "preset": "unflinching",
+    "levels": {
+      "violence": "unflinching",
+      "sex": "unflinching",
+      "horror": "unflinching",
+      "cruelty": "unflinching",
+      "drugs": "mature"
+    },
+    "veils": [],
+    "note": "BABEL is explicit by design: desire and taboo are part of the tower's machinery, and the cast's sharing and power-exchange threads are central. Adults only, always. Drugs sit at mature only because the source has little on them."
+  },
+  "tone": {
+    "voice": "pulpy",
+    "drama": "eventful",
+    "note": "An 80s fantasy register in a modern frame: omens and weather, mythic similes on mundane things, a cosmic register when the world breaks, grounded in modern texture (Slack, kerning, Topo Chico). See canon/tone-and-house-rules.md."
+  },
+  "theme": {
+    "name": "Tower glass",
+    "palette": {
+      "accent": "#5cc8d8",
+      "background": "#0f121b",
+      "surface": "#161a26",
+      "text": "#dde4f0"
+    }
+  },
+  "house_rules": {
+    "origin": "source",
+    "rolls": "hidden",
+    "system_panes": "Status windows and System pop-ups are shown as code blocks. Fields the character cannot read yet are garbled, never left out.",
+    "telepathy": "Anything sent on purpose over a party link or a Tether is written in italic guillemets; a thought that leaks or is overheard stays in single-quoted italics.",
+    "two_steps_forward": "Every win carries a bill; no scene resolves cleanly; failure sticks.",
+    "note": "See canon/tone-and-house-rules.md."
+  },
+  "personas": {
+    "custom_allowed": true,
+    "file": "personas.json",
+    "note": "Play any of the four from Halvorsen's, or make your own arrival from the same wave."
+  },
+  "starting_place": {
+    "settlement": "the-concourse",
+    "note": "The arrivals land on the Concourse, Floor Zero, half a block from the Waystone. Bri and Chase come down three floors up, on the Gilded Bazaar. Authoritative town data: Program/dungeon/world/data/cities/the-concourse.json, hollin.json and the-gilded-bazaar.json."
+  }
+}

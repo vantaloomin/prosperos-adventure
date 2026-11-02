@@ -1,0 +1,439 @@
+{
+ "about": "Havenbrooke's factions in play (dungeon/factions.py, dungeon/jobs.py): drawn from dungeon/world/packages/havenbrooke/factions.json, with clocks and jobs written for play. Drafts for Vanta to keep, change or cut.",
+ "world": "havenbrooke",
+ "pace": 20,
+ "factions": [
+  {
+   "id": "havenbrooke-university",
+   "name": "Havenbrooke University",
+   "kind": "institution",
+   "tier": 2,
+   "summary": "The university on the east bank: five platforms, five thousand students, and a Dean of Student Life who reads the Oracle first thing.",
+   "goals": [
+    "Keep its students alive, enrolled and out of the papers",
+    "Keep the DED and the Crane money happy"
+   ],
+   "holds": [
+    "haven"
+   ],
+   "rivals": [
+    "the-oracle"
+   ],
+   "allies": [
+    "ded",
+    "crane-family"
+   ],
+   "clocks": [
+    {
+     "id": "nox-review",
+     "name": "Phi Sigma Nox administrative review",
+     "segments": 4,
+     "done": "The university puts Phi Sigma Nox on probation after its review: no parties for a term, and a Crane on the phone to the president the same afternoon."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "ra-cover",
+     "title": "Cover a floor",
+     "days": 3,
+     "wages": 2,
+     "standing": 1,
+     "giver": "the residence life office",
+     "hook": "Residence Life needs someone to cover an RA's rounds on North Dorm Ridge for three nights.",
+     "truth": "The RA is not sick. She is in Evermere after a feed went wrong, and the office wants it kept quiet.",
+     "missed": "Nobody walked the floor, and a fight on the fourth floor went on for an hour before security came.",
+     "ties": [
+      {
+       "kind": "npc",
+       "ref": "the absent RA"
+      },
+      {
+       "kind": "clue",
+       "ref": "the Evermere admission"
+      }
+     ]
+    },
+    {
+     "id": "archive-pull",
+     "title": "A pull from the basement archives",
+     "days": 5,
+     "wages": 2,
+     "standing": 1,
+     "giver": "a professor in Bellweather",
+     "hook": "A professor needs a box of 1984 integration files pulled from the library basement and copied before Friday.",
+     "truth": "The box holds Whitestone's notes on the group she tried to found in 1984, and the reason it was shut down.",
+     "missed": "The files went back unread, and the professor found someone else who was not so careful with them.",
+     "ties": [
+      {
+       "kind": "item",
+       "ref": "the 1984 box"
+      },
+      {
+       "kind": "npc",
+       "ref": "Iolana Whitestone"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haven-city",
+   "name": "City of Haven",
+   "kind": "town",
+   "tier": 1,
+   "summary": "The city government and Haven PD, whose long arrangement with the university and the Cranes is mostly about who does not call whom.",
+   "goals": [
+    "Keep town and gown from fighting",
+    "Keep the tourists coming"
+   ],
+   "holds": [
+    "haven"
+   ],
+   "rivals": [],
+   "allies": [
+    "havenbrooke-university"
+   ],
+   "clocks": [
+    {
+     "id": "noise-ordinance",
+     "name": "The West Haven noise ordinance",
+     "segments": 4,
+     "done": "The city council passes the West Haven noise ordinance: house parties on Elm and Birch end at midnight, and Haven PD starts writing tickets to the tenants by name."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "flyers",
+     "title": "Flyers for the mayor",
+     "days": 2,
+     "wages": 1,
+     "standing": 1,
+     "giver": "the mayor's campaign office",
+     "hook": "The mayor's re-election office pays cash for anyone who will paper the campus with flyers before the vote.",
+     "truth": "The flyers were printed at a shop owned by a Crane company, and the opposing candidate knows it.",
+     "missed": "The flyers stayed in their boxes, and the campaign office remembers who took the money.",
+     "ties": [
+      {
+       "kind": "faction",
+       "ref": "crane-family"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "crane-family",
+   "name": "The Crane family",
+   "kind": "family",
+   "tier": 3,
+   "summary": "The vampire family on the ridge above Haven since 1819: two scholarships a year, a seat on the Council of Bloodlines and a steward who answers the phone.",
+   "goals": [
+    "Stay untouchable",
+    "Keep the collection",
+    "Keep Vivienne on the diplomatic track"
+   ],
+   "holds": [
+    "haven",
+    "boston"
+   ],
+   "rivals": [
+    "the-oracle"
+   ],
+   "allies": [
+    "havenbrooke-university",
+    "phi-sigma-nox"
+   ],
+   "clocks": [
+    {
+     "id": "scholarships-frozen",
+     "name": "Scholarships frozen",
+     "segments": 4,
+     "done": "The Crane scholarships are frozen \"pending review\", and two mundane sophomores get letters saying their spring tuition is now their own."
+    },
+    {
+     "id": "older-sealskin",
+     "name": "The older sealskin",
+     "segments": 6,
+     "done": "A sealskin from the Crane collection turns up in a Boston auction catalog, and a selkie family in Maine recognizes the markings."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "gala-staff",
+     "title": "Staff the Crane gala",
+     "days": 2,
+     "wages": 3,
+     "standing": 1,
+     "tier": 2,
+     "giver": "Gideon Vale",
+     "hook": "The Crane steward is hiring students to pour and carry at the family's fall gala on the ridge, cash, discretion expected.",
+     "truth": "The gala is where the family decides whose scholarships survive the year, and the staff hear more than the guests.",
+     "missed": "The gala went on without the help, and Mr. Vale does not ask twice.",
+     "ties": [
+      {
+       "kind": "npc",
+       "ref": "Gideon Vale"
+      },
+      {
+       "kind": "clue",
+       "ref": "the guest list"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sigma-theta-hex",
+   "name": "Sigma Theta Hex",
+   "kind": "sorority",
+   "tier": 2,
+   "summary": "The witch sorority off Lantern Way, with custody of the great ring in Vespers Hall and alumnae in three senators' offices.",
+   "goals": [
+    "Magical excellence",
+    "Mastery of the campus ley lines"
+   ],
+   "holds": [
+    "haven"
+   ],
+   "rivals": [
+    "phi-sigma-nox"
+   ],
+   "allies": [
+    "alpha-gamma"
+   ],
+   "clocks": [
+    {
+     "id": "ritual-suite",
+     "name": "The ritual-leadership suite",
+     "segments": 6,
+     "done": "Sigma Theta Hex names its ritual-leadership suite for next year, and the name on the letter is a surprise to everyone, including the sister who got it."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "equinox-prep",
+     "title": "Prepare the equinox ring",
+     "days": 3,
+     "wages": 2,
+     "standing": 1,
+     "giver": "a Hex officer",
+     "hook": "Sigma Theta Hex needs the great ring in Vespers Hall cleaned, salted and chalked before the equinox, by hands that are not a sister's.",
+     "truth": "Someone scratched a break into the ring last week. Whoever prepares it will either find it or be blamed for it.",
+     "missed": "The ring went unprepared, and the rite was moved, and the sisters know whose name was on the sign-up sheet.",
+     "ties": [
+      {
+       "kind": "clue",
+       "ref": "the scratched ring"
+      },
+      {
+       "kind": "faction",
+       "ref": "sigma-theta-hex"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "alpha-gamma",
+   "name": "Alpha Gamma",
+   "kind": "fraternity",
+   "tier": 1,
+   "summary": "The lycan-heavy fraternity on the north edge of campus: a chosen family, full-moon ceremonies in the basement and the Harvest Howl every Halloween.",
+   "goals": [
+    "A chosen family for brothers who need one",
+    "Careers in defense agencies"
+   ],
+   "holds": [
+    "haven"
+   ],
+   "rivals": [
+    "phi-sigma-nox"
+   ],
+   "allies": [
+    "sigma-theta-hex"
+   ],
+   "clocks": [
+    {
+     "id": "leadership",
+     "name": "Leadership challenge",
+     "segments": 4,
+     "done": "Alpha Gamma holds its leadership vote, and the house has a new president by midnight and a hole in the common-room wall by one."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "howl-setup",
+     "title": "Set up the Harvest Howl",
+     "days": 3,
+     "wages": 1,
+     "standing": 1,
+     "giver": "the Alpha Gamma social chair",
+     "hook": "Alpha Gamma needs hands to build the Howl bonfire on the north fields and string the lights before Saturday.",
+     "truth": "The permit from the university was never filed, and someone in the house is hoping it gets noticed.",
+     "missed": "The bonfire went up crooked and late, and the brothers know who said they would help.",
+     "ties": [
+      {
+       "kind": "faction",
+       "ref": "alpha-gamma"
+      },
+      {
+       "kind": "clue",
+       "ref": "the missing permit"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-oracle",
+   "name": "The Havenbrooke Oracle",
+   "kind": "press",
+   "tier": 1,
+   "summary": "The weekly student paper in the Thornewall basement, mundane-majority, with an editor who prints what costs someone something.",
+   "goals": [
+    "Print what costs someone something"
+   ],
+   "holds": [
+    "haven"
+   ],
+   "rivals": [
+    "crane-family",
+    "havenbrooke-university"
+   ],
+   "allies": [],
+   "clocks": [
+    {
+     "id": "fatigue-story",
+     "name": "The exposure-fatigue story",
+     "segments": 4,
+     "done": "The Oracle runs its exposure-fatigue story on the front page, with numbers from Evermere that nobody was supposed to have."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "photos",
+     "title": "Photos for the Oracle",
+     "days": 2,
+     "wages": 1,
+     "standing": 1,
+     "giver": "Kwame Adjei",
+     "hook": "The Oracle needs photos of the Senate budget hearing, and a second pair of ears in the room.",
+     "truth": "The budget moves money from the Kindling pilot into a Phi Sigma Nox heritage fund, and nobody plans to say so out loud.",
+     "missed": "The Oracle ran the story without the photos, and got a number wrong that the Senate will not let it forget.",
+     "ties": [
+      {
+       "kind": "npc",
+       "ref": "Kwame Adjei"
+      },
+      {
+       "kind": "clue",
+       "ref": "the budget line"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ded",
+   "name": "The Department of Esoteric Development",
+   "kind": "government",
+   "tier": 4,
+   "summary": "The federal body that licenses, inspects, prosecutes and hires: the biggest single employer of Havenbrooke graduates.",
+   "goals": [
+    "Keep the Esoteric Development Code enforced",
+    "Keep the classified supplements classified"
+   ],
+   "holds": [
+    "haven",
+    "new-york"
+   ],
+   "rivals": [],
+   "allies": [
+    "havenbrooke-university"
+   ],
+   "clocks": [
+    {
+     "id": "feeding-review",
+     "name": "Feeding-scandal review",
+     "segments": 6,
+     "done": "The DED announces a federal review of feeding consent on three campuses, Havenbrooke first, and the field office in Syracuse starts taking statements."
+    }
+   ],
+   "jobs": [
+    {
+     "id": "ded-intern",
+     "title": "A day at the field office",
+     "days": 3,
+     "wages": 2,
+     "standing": 1,
+     "tier": 2,
+     "giver": "the DED field office",
+     "hook": "The DED field office wants student volunteers to sit in on intake interviews for a week, for a line on the resume.",
+     "truth": "One of the intake files is about someone on the third floor of Nexus.",
+     "missed": "The volunteer slot went to someone else, who read the file.",
+     "ties": [
+      {
+       "kind": "faction",
+       "ref": "ded"
+      },
+      {
+       "kind": "clue",
+       "ref": "the intake file"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "corwin-lineage",
+   "name": "The Corwin lineage",
+   "kind": "family",
+   "tier": 3,
+   "summary": "A Boston witch family with three senators, a federal judge and a ritual consultancy, and a daughter at Havenbrooke not doing what was planned.",
+   "goals": [
+    "Bring Kim back on track"
+   ],
+   "holds": [
+    "boston"
+   ],
+   "rivals": [],
+   "allies": [
+    "sigma-theta-hex"
+   ],
+   "clocks": [
+    {
+     "id": "the-plan",
+     "name": "The family plan",
+     "segments": 6,
+     "done": "Genevieve Corwin books a suite at Harper's for the weekend and sends the dinner invitation to the whole third floor."
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "house-aelhwynn",
+   "name": "House Aelhwynn",
+   "kind": "family",
+   "tier": 3,
+   "summary": "A fae house that runs on betrothals and aesthetic compliance, with an oak registered as part of its daughter.",
+   "goals": [
+    "See Rina married to Callum Ashveil",
+    "Keep the grove and its alliance"
+   ],
+   "holds": [
+    "new-york"
+   ],
+   "rivals": [],
+   "allies": [],
+   "clocks": [
+    {
+     "id": "betrothal-due",
+     "name": "The betrothal comes due",
+     "segments": 8,
+     "done": "House Aelhwynn sets a date. The invitations are printed on bark paper and delivered by hand, and one arrives at Nexus Unit B."
+    }
+   ],
+   "jobs": []
+  }
+ ]
+}

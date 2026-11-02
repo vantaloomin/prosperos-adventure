@@ -1,0 +1,894 @@
+{
+ "about": "Default backdrops (dungeon/art.py backdrop): pictures of generic places, shown behind the story when nobody has made a picture of the place. Made once with scripts/art/backdrops.py (Windows/backdrops.bat); the images are assets/backdrops/<id>.webp, and <id>-night.webp for an outdoor one. A backdrop is picked by a place's own `backdrop`, then a hex site or terrain, a blank lot's entry, the most shared tags, the kind, the street, the default. Faction emblems (`emblems`, by faction id, in `emblem_style`) and item icons (`icons`: by item id, the ids in `items`, or a whole `category`, in `icon_style`) are made by scripts/art/icons.py into assets/emblems and assets/icons (dungeon/icons.py).",
+ "backdrop_style": "Photorealistic 35mm photograph, natural light, autumn 2009 in a small upstate New York college town, period-accurate details (no smartphones, 2000s cars and signage), wide establishing shot",
+ "backdrop_avoid": "people, figures, text, lettering, signs with words, watermark, logo",
+ "keyart": {"prompt": "Key art for a modern fantasy university drama. Golden hour in late October 2009 on a gothic-revival stone college quad on a hill above a long Finger Lakes lake; a clock tower, ivy gone red, maples shedding orange leaves over brick paths; faint violet light glowing up through the cracks of three crossing paths like buried lines of power; one lone student with a backpack walking away from the camera, small in frame. Warm, melancholy, a little uncanny. Open sky in the upper left third.", "avoid": "text, lettering, words, title, logo, watermark, readable interface text"},
+ "backdrops": [
+  {
+   "id": "esoteric-classroom",
+   "tags": [
+    "esoteric-sciences",
+    "ritual",
+    "ley-node"
+   ],
+   "prompt": "A university classroom for the esoteric sciences in an old collegiate gothic building: tiered oak desks, a chalkboard covered in sigils and equations, a chalk circle on the floor, candles and brass instruments on a side table, tall leaded windows."
+  },
+  {
+   "id": "seminar-room",
+   "tags": [
+    "seminars",
+    "interpersonal-dynamics"
+   ],
+   "prompt": "A small university seminar room: one long table with a dozen chairs, a whiteboard, a projector screen, bookshelves, radiator under a tall window onto autumn trees."
+  },
+  {
+   "id": "lecture-hall",
+   "tags": [
+    "classes",
+    "mto",
+    "federal"
+   ],
+   "prompt": "A university lecture hall: tiered rows of folding desks curving down to a lectern, a projector and pull-down screen, chalkboards, wood panelling, empty between classes."
+  },
+  {
+   "id": "classroom",
+   "tags": [
+    "mundane-studies",
+    "suppression-field"
+   ],
+   "prompt": "An ordinary college classroom in 2009: rows of tablet-arm desks, a whiteboard with half-erased notes, an overhead projector cart, fluorescent lights, a window onto the quad."
+  },
+  {
+   "id": "science-lab",
+   "tags": [
+    "labs",
+    "spi",
+    "clinical-hours"
+   ],
+   "prompt": "A university science lab: black resin benches with sinks and gas taps, fume hoods, glassware, microscopes, safety posters, a few beige 2009 desktop computers."
+  },
+  {
+   "id": "art-studio",
+   "tags": [
+    "fashion",
+    "design",
+    "art",
+    "studios",
+    "charms"
+   ],
+   "prompt": "A university design studio: big work tables, dress forms with draped fabric, sewing machines, mood boards on corkboard walls, rolls of fabric, north light from tall windows."
+  },
+  {
+   "id": "media-studio",
+   "tags": [
+    "media",
+    "radio"
+   ],
+   "prompt": "A college radio and media studio: a mixing desk, microphones on boom arms, foam panels, an ON AIR light, CRT monitors and a 2009 iMac, cables everywhere."
+  },
+  {
+   "id": "auditorium",
+   "tags": [
+    "auditorium",
+    "theatre",
+    "assembly",
+    "concerts"
+   ],
+   "prompt": "A university auditorium: a wide proscenium stage with red velvet curtains, rows of upholstered seats sloping down, a balcony, stage lights rigged above, house lights half up."
+  },
+  {
+   "id": "library",
+   "kinds": [
+    "library"
+   ],
+   "tags": [
+    "study",
+    "archives"
+   ],
+   "prompt": "A grand university library reading room: long oak tables with green banker's lamps, tall bookcases with ladders, a coffered ceiling, card catalogue drawers, quiet afternoon light."
+  },
+  {
+   "id": "dining-hall",
+   "tags": [
+    "dining-hall",
+    "social",
+    "clubs"
+   ],
+   "prompt": "A university dining hall: long tables under a vaulted ceiling with banners, a cafeteria serving line with trays, a salad bar, club flyers on a notice board."
+  },
+  {
+   "id": "campus-coffee",
+   "tags": [
+    "coffee",
+    "study"
+   ],
+   "prompt": "A campus coffee bar: a counter with an espresso machine and pastry case, mismatched armchairs, students' laptops left on tables (2009 models), flyers for open-mic night."
+  },
+  {
+   "id": "quad",
+   "kinds": [
+    "park"
+   ],
+   "tags": [
+    "outdoors",
+    "people-watching",
+    "campus"
+   ],
+   "outdoor": true,
+   "prompt": "A college quad in autumn: brick and stone gothic halls around a lawn, paths crossing under old oaks and maples, fallen leaves, iron lamp posts, benches."
+  },
+  {
+   "id": "fountain-court",
+   "kinds": [
+    "square"
+   ],
+   "tags": [
+    "confessions",
+    "meeting-point"
+   ],
+   "outdoor": true,
+   "prompt": "A stone fountain court on a college campus: a carved fountain in a paved square, benches, ivy on brick walls, lamp posts."
+  },
+  {
+   "id": "campus-chapel",
+   "kinds": [
+    "temple"
+   ],
+   "tags": [
+    "chapel"
+   ],
+   "prompt": "Inside a small collegiate chapel: dark wooden pews, stained glass, an organ, candles on the altar."
+  },
+  {
+   "id": "arena",
+   "kinds": [
+    "stadium"
+   ],
+   "tags": [
+    "sport",
+    "training"
+   ],
+   "prompt": "A university sports arena: a hardwood court and tiered bleachers, banners hanging from steel rafters, a scoreboard, empty seats."
+  },
+  {
+   "id": "health-center",
+   "tags": [
+    "health",
+    "emergency",
+    "feeding-suites"
+   ],
+   "prompt": "A university health center: a clean waiting area with plastic chairs, a reception window, an exam room beyond with a paper-covered table and a blood pressure cuff."
+  },
+  {
+   "id": "greenhouse",
+   "kinds": [
+    "garden"
+   ],
+   "tags": [
+    "plants",
+    "dryads"
+   ],
+   "prompt": "A Victorian glass greenhouse on a campus: iron frames, misted glass, rows of strange lush plants, vines climbing the ironwork, watering cans."
+  },
+  {
+   "id": "observatory",
+   "tags": [
+    "views",
+    "observatory"
+   ],
+   "prompt": "An old campus observatory: a domed room with a brass telescope, star charts on the walls, a spiral stair, the dome slit open to the sky."
+  },
+  {
+   "id": "dorm-room",
+   "tags": [
+    "dorms",
+    "freshmen",
+    "suites"
+   ],
+   "prompt": "A shared college dorm room in 2009: two lofted beds, desks with a laptop and a lava lamp, posters, a mini fridge, string lights, clothes on the floor."
+  },
+  {
+   "id": "dorm-hallway",
+   "tags": [
+    "supernatural-majority"
+   ],
+   "prompt": "A college dorm hallway: doors decorated with whiteboards and photos, a bulletin board, a fire door, scuffed linoleum, a laundry basket left out."
+  },
+  {
+   "id": "suite-common-room",
+   "tags": [
+    "home"
+   ],
+   "prompt": "A dorm suite common room: a worn couch and beanbags, a TV with a game console, pizza boxes, a kitchenette."
+  },
+  {
+   "id": "frat-house",
+   "tags": [
+    "fraternity",
+    "parties"
+   ],
+   "prompt": "A fraternity house living room during a party: red cups, a beer pong table, string lights, a sound system, Greek letters on the wall, no people."
+  },
+  {
+   "id": "sorority-house",
+   "tags": [
+    "sorority",
+    "wards",
+    "witches"
+   ],
+   "prompt": "A sorority house parlour: a grand staircase, framed composite photos, a piano, tasteful sofas, candles, a ward symbol carved discreetly over the door."
+  },
+  {
+   "id": "estate",
+   "tags": [
+    "estate",
+    "old-money",
+    "vampires"
+   ],
+   "outdoor": true,
+   "prompt": "An old-money hillside estate at the edge of a college town: a gated stone mansion, a long drive, clipped hedges, dark windows."
+  },
+  {
+   "id": "party-house",
+   "tags": [
+    "houses",
+    "students"
+   ],
+   "outdoor": true,
+   "prompt": "A run-down off-campus party house: a sagging porch with a couch on it, a keg, Christmas lights, an overgrown yard on a street of old houses."
+  },
+  {
+   "id": "house",
+   "lots": [
+    "house"
+   ],
+   "outdoor": true,
+   "prompt": "A modest two-storey wooden house on a small-town street, a front porch, a maple in the yard, a 2005 sedan in the drive."
+  },
+  {
+   "id": "apartment",
+   "lots": [
+    "apartments"
+   ],
+   "prompt": "A small cheap apartment in 2009: a futon, a kitchenette, a boxy TV, blinds half open, laundry on a chair."
+  },
+  {
+   "id": "vacant-lot",
+   "lots": [
+    "vacant"
+   ],
+   "outdoor": true,
+   "prompt": "A vacant lot in a small town: weeds, a chain-link fence, a faded For Sale sign, a shopping cart."
+  },
+  {
+   "id": "main-street",
+   "street": true,
+   "kinds": [
+    "landmark"
+   ],
+   "default": true,
+   "outdoor": true,
+   "prompt": "The main street of a small upstate New York college town in autumn 2009: brick storefronts with awnings, parked cars of the era, a clock on the bank, leaves in the gutter."
+  },
+  {
+   "id": "diner",
+   "kinds": [
+    "restaurant"
+   ],
+   "tags": [
+    "diner",
+    "late-night"
+   ],
+   "lots": [
+    "diner"
+   ],
+   "prompt": "An all-night American diner: chrome counter with stools, red vinyl booths, a pie case, a coffee pot on a warmer, neon in the window."
+  },
+  {
+   "id": "pizza",
+   "tags": [
+    "pizza"
+   ],
+   "lots": [
+    "pizza"
+   ],
+   "prompt": "A small-town pizza place: a counter with slices under heat lamps, red checked tables, a soda fridge, menus on the wall."
+  },
+  {
+   "id": "fine-dining",
+   "tags": [
+    "fine-dining",
+    "dates"
+   ],
+   "prompt": "An upscale restaurant in a small town: white tablecloths, candles, wine glasses, dark wood, soft light."
+  },
+  {
+   "id": "pub",
+   "kinds": [
+    "bar",
+    "tavern"
+   ],
+   "tags": [
+    "pub",
+    "beer",
+    "live-music"
+   ],
+   "lots": [
+    "bar"
+   ],
+   "prompt": "A college-town pub: a long wooden bar with taps, booths, a dartboard, sports on a TV in the corner, warm light."
+  },
+  {
+   "id": "nightclub",
+   "kinds": [
+    "nightlife"
+   ],
+   "tags": [
+    "club",
+    "dancing",
+    "feeding"
+   ],
+   "prompt": "A nightclub: a dance floor under coloured lights and haze, a DJ booth, a bar with backlit bottles, velvet booths, no people."
+  },
+  {
+   "id": "coffee-shop",
+   "kinds": [
+    "cafe"
+   ],
+   "tags": [
+    "magic-neutral"
+   ],
+   "prompt": "An independent coffee shop in a small town: a chalkboard menu, an espresso machine, wooden tables, art on brick walls."
+  },
+  {
+   "id": "bakery",
+   "tags": [
+    "bakery"
+   ],
+   "prompt": "A small-town bakery: a glass case of pastries and breads, a few cafe tables, morning light."
+  },
+  {
+   "id": "deli",
+   "tags": [
+    "deli"
+   ],
+   "lots": [
+    "deli"
+   ],
+   "prompt": "A corner deli: a sandwich counter with a meat slicer, a beer cooler, chips racks, a lottery sign."
+  },
+  {
+   "id": "bookstore",
+   "kinds": [
+    "shopping"
+   ],
+   "tags": [
+    "books",
+    "occult",
+    "browsing"
+   ],
+   "prompt": "An old used bookshop with an occult section: crowded shelves to the ceiling, crystals and candles by the register, a cat, a reading chair."
+  },
+  {
+   "id": "pharmacy",
+   "tags": [
+    "pharmacy",
+    "errands"
+   ],
+   "prompt": "A small-town pharmacy: aisles of 2009 packaging, a pharmacy counter at the back, a photo kiosk."
+  },
+  {
+   "id": "laundromat",
+   "lots": [
+    "laundromat"
+   ],
+   "prompt": "A laundromat: rows of washers and dryers, plastic chairs, a folding table, a change machine, flickering fluorescent light."
+  },
+  {
+   "id": "cinema",
+   "kinds": [
+    "venue"
+   ],
+   "tags": [
+    "movies"
+   ],
+   "prompt": "An old single-screen movie theatre: a marquee, a ticket booth, a lobby with a popcorn machine and posters."
+  },
+  {
+   "id": "bus-shelter",
+   "tags": [
+    "transit",
+    "travel"
+   ],
+   "outdoor": true,
+   "prompt": "A bus shelter on a small-town main street: a plexiglass shelter, a timetable, a bench, a bus stop sign."
+  },
+  {
+   "id": "farmers-market",
+   "kinds": [
+    "market"
+   ],
+   "tags": [
+    "saturdays"
+   ],
+   "outdoor": true,
+   "prompt": "A Saturday farmers market in a town square: tents with apples, pumpkins and cider, hay bales, autumn leaves."
+  },
+  {
+   "id": "tattoo-parlor",
+   "lots": [
+    "tattoo"
+   ],
+   "tags": [
+    "tattoos",
+    "enchanted-ink"
+   ],
+   "prompt": "A tattoo parlor: a reclined chair, flash art covering the walls, an ink station, a neon sign."
+  },
+  {
+   "id": "convenience-store",
+   "lots": [
+    "convenience"
+   ],
+   "prompt": "A convenience store at night: bright aisles of snacks, a slushie machine, a counter with scratch cards."
+  },
+  {
+   "id": "barber",
+   "lots": [
+    "barber"
+   ],
+   "prompt": "An old-fashioned barbershop: two chairs, a barber pole, mirrors, combs in blue disinfectant."
+  },
+  {
+   "id": "pawn-shop",
+   "lots": [
+    "pawn"
+   ],
+   "prompt": "A pawn shop: guitars hanging, glass cases of jewellery and watches, TVs on shelves, bars on the windows."
+  },
+  {
+   "id": "liquor-store",
+   "lots": [
+    "liquor"
+   ],
+   "prompt": "A liquor store: shelves of bottles, a beer cooler wall, a counter behind plexiglass."
+  },
+  {
+   "id": "thrift-store",
+   "lots": [
+    "thrift"
+   ],
+   "prompt": "A thrift store: racks of clothes, shelves of old dishes and toys, a bin of records."
+  },
+  {
+   "id": "hardware-store",
+   "lots": [
+    "hardware"
+   ],
+   "prompt": "A small-town hardware store: aisles of tools and bins of nails, paint chips, a popcorn machine by the till."
+  },
+  {
+   "id": "garage",
+   "lots": [
+    "garage"
+   ],
+   "prompt": "A car repair garage: a car on a lift, tool chests, oil stains, a calendar on the wall."
+  },
+  {
+   "id": "church",
+   "lots": [
+    "church"
+   ],
+   "outdoor": true,
+   "prompt": "A white clapboard New England church: a steeple, a lawn with a sign, autumn trees."
+  },
+  {
+   "id": "office",
+   "lots": [
+    "office"
+   ],
+   "prompt": "A small-town office: cubicle desks with beige computers, a water cooler, filing cabinets, blinds."
+  },
+  {
+   "id": "massage-parlor",
+   "lots": [
+    "massage"
+   ],
+   "outdoor": true,
+   "prompt": "A massage parlor storefront at night: a neon OPEN sign, blacked-out windows, a buzzer door, a waiting room with a fish tank inside."
+  },
+  {
+   "id": "trap-house",
+   "lots": [
+    "trap"
+   ],
+   "outdoor": true,
+   "prompt": "A boarded-up house in a rough part of town: plywood over the windows, a sagging porch, trash in the yard, a single light on behind a sheet."
+  },
+  {
+   "id": "woods",
+   "kinds": [
+    "trail"
+   ],
+   "tags": [
+    "woods",
+    "wild",
+    "remote",
+    "lycans"
+   ],
+   "terrains": [
+    "forest"
+   ],
+   "outdoor": true,
+   "prompt": "Dark mixed woods of the Finger Lakes in autumn: maples and hemlocks, a leaf-covered trail, a stone wall running through the trees."
+  },
+  {
+   "id": "riverwalk",
+   "tags": [
+    "river",
+    "walks",
+    "running"
+   ],
+   "outdoor": true,
+   "prompt": "A riverwalk path in a small town: a paved path along a river, old mill buildings, benches, autumn trees."
+  },
+  {
+   "id": "cemetery",
+   "tags": [
+    "eerie",
+    "couples",
+    "cemetery"
+   ],
+   "outdoor": true,
+   "prompt": "An old town cemetery: weathered slate headstones, a wrought iron fence, huge old trees, leaves."
+  },
+  {
+   "id": "country-road",
+   "terrains": [
+    "road",
+    "plains",
+    "hills"
+   ],
+   "outdoor": true,
+   "prompt": "A two-lane country road in upstate New York: farm fields and woods, a mailbox, telephone poles."
+  },
+  {
+   "id": "lake-house",
+   "tags": [
+    "lake"
+   ],
+   "outdoor": true,
+   "prompt": "A lake house on a Finger Lake: a wooden cottage, a dock, an aluminium canoe, the lake beyond."
+  },
+  {
+   "id": "swamp",
+   "terrains": [
+    "marsh",
+    "water"
+   ],
+   "outdoor": true,
+   "prompt": "A wooded swamp: standing water, dead trees, cattails, mist."
+  },
+  {
+   "id": "cellar-hole",
+   "sites": [
+    "ruin"
+   ],
+   "outdoor": true,
+   "prompt": "The remains of an old farm in the woods: a stone cellar hole, a lone chimney, wild lilacs."
+  },
+  {
+   "id": "hunting-camp",
+   "sites": [
+    "camp"
+   ],
+   "outdoor": true,
+   "prompt": "A hunting camp in the woods: a fire ring, a tarp strung between trees, beer cans, initials carved in a beech."
+  },
+  {
+   "id": "stone-circle",
+   "sites": [
+    "shrine"
+   ],
+   "outdoor": true,
+   "prompt": "A hidden clearing in the woods: a ring of standing stones, burnt herbs, a strange stillness."
+  },
+  {
+   "id": "den",
+   "sites": [
+    "lair"
+   ],
+   "outdoor": true,
+   "prompt": "A den dug under a rock ledge in the woods: bare worn earth, deer bones, a dog collar."
+  },
+  {
+   "id": "quarry-tunnel",
+   "sites": [
+    "cave"
+   ],
+   "outdoor": true,
+   "prompt": "An old quarry tunnel into a hillside, a rusted gate hanging open, cold darkness inside."
+  }
+ ],
+ "emblem_style": "An emblem for an organization in a 2009 American college town where magic is regulated by law: a crisp seal, crest, patch or logo mark, clean flat design with a subtle print texture, centered and filling the frame, on a transparent background",
+ "emblem_avoid": "text, letters, numbers, words, readable labels, brand logos, watermark, signature, background scene, frame border, people, hands",
+ "emblems": [
+  {
+   "id": "ded",
+   "prompt": "A round federal agency seal: an eagle holding an olive branch and a balanced pair of scales, a small five-pointed star above, in navy blue and gold."
+  },
+  {
+   "id": "federal-esoteric-court",
+   "prompt": "A round federal court seal: seven stars around a gavel crossed with an oak wand, in black and silver."
+  },
+  {
+   "id": "havenbrooke-university",
+   "prompt": "A university crest shield: an open book beneath a lantern and a crow in flight, in black and umber with gold trim, collegiate heraldry."
+  },
+  {
+   "id": "haven-city",
+   "prompt": "A round small-town city seal: a clock tower over a river bridge framed by autumn maple leaves, in green and cream."
+  },
+  {
+   "id": "council-of-bloodlines",
+   "prompt": "A round seal: twelve small drops of blood in a ring around a black rose, dark crimson with silver edging; an old-money vampire council."
+  },
+  {
+   "id": "crane-family",
+   "prompt": "An elegant family crest: a crane standing on one leg on a hilltop, silver on oxblood red, a subtle fang shape in the crest's mantling; an old vampire family."
+  },
+  {
+   "id": "national-coven-registry",
+   "prompt": "An official seal: a pentacle in a circle with a quill and a key crossed beneath it, in deep purple and silver, institutional."
+  },
+  {
+   "id": "corwin-lineage",
+   "prompt": "A Boston old-money family crest: a raven perched on a closed book over a five-pointed star, in navy and gold, refined."
+  },
+  {
+   "id": "providence-coven",
+   "prompt": "A silver crescent moon cradling an anchor on a deep blue roundel ringed with small stars; an exclusive senior coven."
+  },
+  {
+   "id": "lycan-assembly",
+   "prompt": "A wolf's head in profile howling at a full moon, inside a strong round badge in charcoal and amber; a national lycan organization."
+  },
+  {
+   "id": "fae-heritage-council",
+   "prompt": "Butterfly-like fae wings framing an oak leaf and a pair of scales, in soft green and gold; a diplomatic council emblem."
+  },
+  {
+   "id": "eastern-seelie",
+   "prompt": "A golden sun made of leaves over a stylized coastline and a ribbon-bound scroll, in green and gold; a fae court archive seal."
+  },
+  {
+   "id": "house-aelhwynn",
+   "prompt": "An ornate fae house sigil: a silver swan with wings of flowering vine, in pale lilac and silver, delicate and aristocratic."
+  },
+  {
+   "id": "vhen-morrath",
+   "prompt": "A hearth fire in an iron grate framed by a pair of curling demonic horns, in black, ember orange and deep rose; an old demon family's mark."
+  },
+  {
+   "id": "alpha-gamma",
+   "prompt": "A fraternity crest shield: a wolf's paw print under a full moon, flanked by pine branches, in forest green and silver."
+  },
+  {
+   "id": "phi-sigma-nox",
+   "prompt": "A fraternity crest: a black bat with folded wings over a crescent moon and a wine goblet, in black, burgundy and gold, tailored and old."
+  },
+  {
+   "id": "sigma-theta-hex",
+   "prompt": "A sorority crest: a spell circle of sigils around two crescent moons back to back, in plum and silver."
+  },
+  {
+   "id": "delta-nu-iris",
+   "prompt": "A sorority crest: an iris flower with butterfly wings in a ring of garden leaves, in lavender and soft green."
+  },
+  {
+   "id": "omicron-phi-ember",
+   "prompt": "A society crest: a single ember flame inside a ring, in black and glowing orange-red, sleek and discreet."
+  },
+  {
+   "id": "kappa-rho-sigma",
+   "prompt": "A preppy fraternity crest: a laurel wreath around a shield with a key and a chevron, in navy and gold, ambitious and careerist."
+  },
+  {
+   "id": "delta-omicron-theta",
+   "prompt": "A scrappy DIY zine-style badge: a film reel and a microphone crossed over a star, photocopied black ink with a pop of red."
+  },
+  {
+   "id": "phi-alpha-mu",
+   "prompt": "A house crest: hands of many different skin tones joined in a circle around a dinner plate, in warm teal and gold."
+  },
+  {
+   "id": "kindling",
+   "prompt": "A small hand-drawn emblem of a carefully built campfire, logs stacked in a neat cabin shape around a steady flame, warm orange on cream."
+  },
+  {
+   "id": "integration-society",
+   "prompt": "A friendly club badge: a rooftop observatory dome under a crescent moon and stars, in navy and pale yellow."
+  },
+  {
+   "id": "hexenkreis",
+   "prompt": "A society crest: a ring of seven candles around a witch's athame dagger, in charcoal and violet."
+  },
+  {
+   "id": "student-enchanters-guild",
+   "prompt": "A student club badge: a sparkling charmed ring and a jeweler's loupe over two crossed wands, in teal and copper."
+  },
+  {
+   "id": "the-oracle",
+   "prompt": "A student newspaper emblem: an open eye inside a printing press roller, black ink on newsprint grey."
+  },
+  {
+   "id": "crestfall-crows",
+   "prompt": "A college sports logo: a fierce black crow with spread wings and gripping talons, in black and umber, bold athletic mascot style."
+  }
+ ],
+ "icon_style": "A single object, photorealistic product photograph in soft studio light, period-accurate for 2009, three-quarter view, the whole object centered in frame, on a transparent background",
+ "icon_avoid": "text, letters, numbers, words, readable labels, brand logos, watermark, signature, background scene, frame border, people, hands",
+ "icons": [
+  {
+   "id": "coffee-to-go",
+   "prompt": "A paper coffee cup with a plastic lid and a cardboard sleeve, plain."
+  },
+  {
+   "id": "sandwich",
+   "prompt": "A deli sandwich on a hoagie roll, half wrapped in white paper."
+  },
+  {
+   "id": "energy-drink",
+   "prompt": "A slim blue and silver energy drink can."
+  },
+  {
+   "id": "ramen",
+   "prompt": "A cardboard case of instant ramen packs with one pack on top."
+  },
+  {
+   "id": "beer-case",
+   "prompt": "A long cardboard thirty-rack of cheap light beer cans in blue and white."
+  },
+  {
+   "id": "cold-medicine",
+   "prompt": "A box of cold medicine with a blister pack of capsules."
+  },
+  {
+   "id": "painkillers",
+   "prompt": "A white plastic bottle of ibuprofen with a few brown tablets beside it."
+  },
+  {
+   "id": "first-aid-kit",
+   "prompt": "A small red soft-case first aid kit with a white cross."
+  },
+  {
+   "id": "condoms",
+   "prompt": "A small cardboard box of condoms with a couple of foil wrappers beside it."
+  },
+  {
+   "id": "phone-card",
+   "prompt": "A plastic prepaid phone card with a scratch-off strip."
+  },
+  {
+   "id": "flip-phone",
+   "prompt": "A silver flip phone from the 2000s, half open."
+  },
+  {
+   "id": "iphone",
+   "prompt": "A black 2009 touchscreen smartphone with a single round home button, the screen dark."
+  },
+  {
+   "id": "laptop",
+   "prompt": "A black plastic 2009 laptop, half open, the screen dark."
+  },
+  {
+   "id": "backpack",
+   "prompt": "A navy blue student backpack."
+  },
+  {
+   "id": "notebook",
+   "prompt": "A spiral-bound college-ruled notebook."
+  },
+  {
+   "id": "textbook",
+   "prompt": "A thick used college textbook with a worn cover and highlighter tabs."
+  },
+  {
+   "id": "umbrella",
+   "prompt": "A closed black folding umbrella."
+  },
+  {
+   "id": "winter-coat",
+   "prompt": "A charcoal puffer winter coat."
+  },
+  {
+   "id": "hoodie",
+   "prompt": "A black and umber college hoodie with a crow on the chest."
+  },
+  {
+   "id": "sage-bundle",
+   "prompt": "A bundle of dried white sage tied with red string."
+  },
+  {
+   "id": "chalk",
+   "prompt": "A fat stick of white ritual chalk with a faint glowing dust on it."
+  },
+  {
+   "id": "licensed-charm",
+   "prompt": "A small silver charm pendant with an official stamped hallmark tag tied on."
+  },
+  {
+   "id": "blood-pack",
+   "prompt": "A clear medical bag of donor blood with a white label."
+  },
+  {
+   "id": "pepper-spray",
+   "prompt": "A small black pepper spray canister on a keyring."
+  },
+  {
+   "id": "silver-knife",
+   "prompt": "An open silver folding pocketknife with a mother-of-pearl handle."
+  },
+  {
+   "id": "fae-euphoric",
+   "prompt": "A tiny corked glass vial of shimmering iridescent liquid."
+  },
+  {
+   "id": "truck-keys",
+   "prompt": "A truck key with a worn black rubber head on a ring with a bottle opener."
+  },
+  {
+   "id": "audi-keys",
+   "prompt": "A sleek black key fob for a luxury sedan on a leather loop."
+  },
+  {
+   "id": "shuttle-pass",
+   "prompt": "A plastic student ID card on a lanyard."
+  },
+  {
+   "id": "kind-food",
+   "category": "food",
+   "prompt": "A brown paper grocery bag with bread and fruit"
+  },
+  {
+   "id": "kind-gear",
+   "category": "gear",
+   "prompt": "A canvas messenger bag"
+  },
+  {
+   "id": "kind-clothing",
+   "category": "clothing",
+   "prompt": "A folded flannel shirt on folded jeans"
+  },
+  {
+   "id": "kind-weapon",
+   "category": "weapon",
+   "prompt": "A folding pocketknife beside a small canister"
+  },
+  {
+   "id": "kind-tool",
+   "category": "tool",
+   "prompt": "A pen on a pad of sticky notes"
+  },
+  {
+   "id": "kind-remedy",
+   "category": "remedy",
+   "prompt": "A plastic pill bottle and an adhesive bandage"
+  },
+  {
+   "id": "kind-curio",
+   "category": "curio",
+   "prompt": "A small crystal pendant on a chain"
+  },
+  {
+   "id": "kind-trade",
+   "category": "trade",
+   "prompt": "A taped cardboard shipping box"
+  },
+  {
+   "id": "kind-service",
+   "category": "service",
+   "prompt": "A paper receipt with a pen across it"
+  }
+ ]
+}

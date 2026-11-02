@@ -1,0 +1,917 @@
+{
+ "about": "Default backdrops (dungeon/art.py backdrop): pictures of generic places, shown behind the story when nobody has made a picture of the place. Made once with scripts/art/backdrops.py (Windows/backdrops.bat); the images are assets/backdrops/<id>.webp, and <id>-night.webp for an outdoor one. A backdrop is picked by a place's own `backdrop`, then a hex site or terrain, a blank lot's entry, the most shared tags, the kind, the street, the default. Faction emblems (`emblems`, by faction id, in `emblem_style`) and item icons (`icons`: by item id, the ids in `items`, or a whole `category`, in `icon_style`) are made by scripts/art/icons.py into assets/emblems and assets/icons (dungeon/icons.py).",
+ "backdrop_style": "Painterly fantasy oil illustration, visible brushwork, natural light, a grounded low-magic medieval world, wide establishing shot",
+ "backdrop_avoid": "people, figures, text, lettering, signs with words, watermark, logo",
+ "keyart": {"prompt": "Key art for a grimdark fantasy world. A broken stone keep on a black crag above an endless dark pine forest in storm light; far off, the bleached ribs of a dead dragon half-buried in a hillside; a pale river of ley light runs across the clouded sky like a seam of molten silver; a small lone cloaked rider on a muddy road in the foreground for scale, seen from behind. Brooding, cold, beautiful and hostile. Open dark sky in the upper left third.", "avoid": "text, lettering, words, title, logo, watermark, readable interface text"},
+ "backdrops": [
+  {
+   "id": "tavern",
+   "kinds": [
+    "tavern"
+   ],
+   "tags": [
+    "ale",
+    "rumours",
+    "rumors"
+   ],
+   "prompt": "The common room of a timber-framed village tavern: a long hearth with a cauldron, scarred oak tables and benches, tankards and dice left on a table, smoke-dark beams hung with herbs, a stair up to rented rooms."
+  },
+  {
+   "id": "alehouse",
+   "lots": [
+    "alehouse"
+   ],
+   "tags": [
+    "small-beer",
+    "mill-hands",
+    "spirits"
+   ],
+   "prompt": "A cramped back-street alehouse: a few barrels on trestles, a plank bar, stools, rushes on a packed-earth floor, one small shuttered window and a smoky tallow lamp."
+  },
+  {
+   "id": "rented-room",
+   "tags": [
+    "rooms",
+    "lodgings"
+   ],
+   "prompt": "A plain rented room above a tavern: a straw-tick bed with a wool blanket, a washstand with a jug and basin, a wooden chest, a small leaded window with morning light, rough plaster walls."
+  },
+  {
+   "id": "inn",
+   "kinds": [
+    "inn"
+   ],
+   "tags": [
+    "stable",
+    "travellers",
+    "riders"
+   ],
+   "outdoor": true,
+   "prompt": "The yard of a coaching inn on a forest road: a two-storey timber inn with a swinging sign, a stable block with horses' stalls, a water trough, a cart with its shafts down, mud and straw."
+  },
+  {
+   "id": "bunkhouse",
+   "tags": [
+    "crews",
+    "rough",
+    "cheap",
+    "barracks",
+    "soldiers"
+   ],
+   "prompt": "A rough loggers' bunkhouse: rows of plank bunks with straw pallets, boots and axes by the door, wet clothes hung over a pot-bellied iron stove, a long trestle table with tin plates."
+  },
+  {
+   "id": "stable",
+   "lots": [
+    "stable"
+   ],
+   "prompt": "Inside a village livery stable: stalls with a few horses, hay in the loft above, harness and saddles on pegs, a wheelbarrow and pitchfork, dust in the light from the open doors."
+  },
+  {
+   "id": "market",
+   "kinds": [
+    "market"
+   ],
+   "tags": [
+    "market",
+    "bargains",
+    "gossip"
+   ],
+   "outdoor": true,
+   "prompt": "A busy market square in a medieval timber town: canvas-awninged stalls of vegetables, cloth, pots and live hens, a stone well in the middle, timber-framed houses all around, carts parked at the edge, empty of people for the moment."
+  },
+  {
+   "id": "general-store",
+   "kinds": [
+    "shopping"
+   ],
+   "tags": [
+    "general-store",
+    "supplies",
+    "credit"
+   ],
+   "lots": [
+    "store"
+   ],
+   "prompt": "A frontier general store: shelves of rope, lanterns, sacks of flour and salt, barrels of nails, hanging pots and boots, a counter with scales and a ledger, a cat asleep on a sack."
+  },
+  {
+   "id": "baker",
+   "lots": [
+    "baker"
+   ],
+   "prompt": "A village bakery at dawn: a domed brick oven glowing, round loaves cooling on racks, flour on a long wooden table, peels and baskets, a half door opening onto the street."
+  },
+  {
+   "id": "butcher",
+   "lots": [
+    "butcher"
+   ],
+   "prompt": "A medieval butcher's shop front: cuts of meat and strings of sausages on iron hooks, a heavy block table and cleavers, sawdust on the floor, a stone counter open to the street."
+  },
+  {
+   "id": "chandler",
+   "lots": [
+    "chandler"
+   ],
+   "prompt": "A chandler's shop: bundles of tallow and beeswax candles hanging from the beams, coils of rope, lamp oil in stoneware jars, a dipping vat in the back."
+  },
+  {
+   "id": "tailor",
+   "lots": [
+    "tailor"
+   ],
+   "prompt": "A tailor's shop: bolts of wool and linen on shelves, a cutting table with shears and chalk, a half-made doublet on a wooden dummy, a window seat with good light for sewing."
+  },
+  {
+   "id": "apothecary",
+   "lots": [
+    "apothecary"
+   ],
+   "tags": [
+    "cures"
+   ],
+   "prompt": "An apothecary's shop: walls of small wooden drawers and labelled clay jars, dried herbs hanging, a mortar and pestle and brass scales on the counter, a still bubbling in the back."
+  },
+  {
+   "id": "moneylender",
+   "lots": [
+    "moneylender"
+   ],
+   "tags": [
+    "money",
+    "contracts",
+    "lender",
+    "debt"
+   ],
+   "prompt": "A moneylender's counting room: a heavy iron-bound chest, a desk with ledgers, an abacus and stacks of coin, a barred window, a strongbox bolted to the floor."
+  },
+  {
+   "id": "cookshop",
+   "kinds": [
+    "restaurant"
+   ],
+   "lots": [
+    "cookshop"
+   ],
+   "tags": [
+    "stew",
+    "pies",
+    "street-food"
+   ],
+   "outdoor": true,
+   "prompt": "An open-air cook fire for working crews: a big iron pot of stew over a fire pit, a lean-to roof, trestle tables and stumps for seats, wooden bowls stacked, smoke drifting through the trees."
+  },
+  {
+   "id": "smithy",
+   "lots": [
+    "smith"
+   ],
+   "tags": [
+    "smith",
+    "weapons",
+    "arms",
+    "forge"
+   ],
+   "prompt": "A village blacksmith's forge: a glowing coal hearth with a leather bellows, an anvil on a stump, hammers and tongs racked on the wall, a quench barrel, horseshoes and a half-finished blade, sparks and smoke."
+  },
+  {
+   "id": "carpenter",
+   "lots": [
+    "carpenter"
+   ],
+   "tags": [
+    "repair",
+    "labor"
+   ],
+   "prompt": "A carpenter's workshop: a long workbench with planes, chisels and saws, wood shavings on the floor, chairs and a cart wheel half-built, timber stacked against the walls."
+  },
+  {
+   "id": "cooper",
+   "lots": [
+    "cooper"
+   ],
+   "outdoor": true,
+   "prompt": "A cooper's yard: barrels in every stage of making, iron hoops stacked, a fire to bend the staves, mallets and adzes on a bench."
+  },
+  {
+   "id": "cobbler",
+   "lots": [
+    "cobbler"
+   ],
+   "prompt": "A cobbler's cramped shop: lasts and boots on shelves, leather hides, an awl and thread on a low bench, a window onto a muddy street."
+  },
+  {
+   "id": "weaver",
+   "lots": [
+    "weaver"
+   ],
+   "prompt": "A weaver's cottage workshop: a big wooden floor loom with half-woven cloth, spindles and baskets of dyed wool, skeins drying from the rafters."
+  },
+  {
+   "id": "workshop",
+   "kinds": [
+    "workshop"
+   ],
+   "prompt": "A general craftsman's workshop in a timber town: workbenches, tools on pegs, a hearth, raw materials piled in corners, the big doors open to the yard."
+  },
+  {
+   "id": "sawmill",
+   "tags": [
+    "sawmill",
+    "mill"
+   ],
+   "outdoor": true,
+   "prompt": "A water-powered sawmill on a forest river: a great wheel turning, a long saw frame, logs on rollers, sawdust heaped everywhere, timber stacked to dry."
+  },
+  {
+   "id": "timber-yard",
+   "tags": [
+    "timber",
+    "storage",
+    "logging"
+   ],
+   "outdoor": true,
+   "prompt": "Riverside timber yards: long stacks of cut logs and planks under rough sheds, a crane of beams and rope, tally marks on posts, forest beyond."
+  },
+  {
+   "id": "tannery",
+   "tags": [
+    "tannery",
+    "hides",
+    "stink"
+   ],
+   "outdoor": true,
+   "prompt": "A tannery at the edge of town: stone pits of murky liquid, hides stretched on frames, scraping beams, barrels of bark, a stream running brown."
+  },
+  {
+   "id": "charcoal-kilns",
+   "tags": [
+    "smoke",
+    "charcoal",
+    "kilns"
+   ],
+   "prompt": "Charcoal kilns in a clearing at night: earth-covered mounds smouldering, glowing vents, stacked cordwood, a rough hut, smoke against dark trees."
+  },
+  {
+   "id": "shrine",
+   "lots": [
+    "shrine"
+   ],
+   "tags": [
+    "shrine",
+    "new-gods"
+   ],
+   "outdoor": true,
+   "prompt": "A small roadside shrine in a village: a carved wooden figure under a shingled roof, candles and offerings of flowers and bread, a stone basin of water."
+  },
+  {
+   "id": "chapel",
+   "tags": [
+    "chapel",
+    "quiet",
+    "vows",
+    "sisters"
+   ],
+   "prompt": "The inside of a small stone chapel: plain wooden pews, a simple altar with candles, a narrow window throwing a shaft of light, worn flagstones."
+  },
+  {
+   "id": "temple",
+   "kinds": [
+    "temple"
+   ],
+   "prompt": "The nave of a stone temple to the New Gods: carved pillars, painted banners, a raised altar with a brazier, long benches, light through high windows."
+  },
+  {
+   "id": "infirmary",
+   "tags": [
+    "healing",
+    "mend",
+    "health"
+   ],
+   "prompt": "A healer's house: cots with clean linen, shelves of salves and bandages, a hearth with a kettle of herbs, a table with knives and needles laid out."
+  },
+  {
+   "id": "reeves-hall",
+   "tags": [
+    "law",
+    "tithe",
+    "records",
+    "hall",
+    "lord",
+    "muster"
+   ],
+   "prompt": "A town hall of a frontier timber town: a long hall with a raised table for the reeve, a ledger and tithe chest, benches for petitioners, the town's banner on the wall."
+  },
+  {
+   "id": "guild-office",
+   "kinds": [
+    "guildhall"
+   ],
+   "tags": [
+    "guild",
+    "guilds"
+   ],
+   "prompt": "A trade guild's office: a desk piled with contracts and wax seals, maps of timber rights pinned to the wall, a strongbox, a good carpet, a window over the river."
+  },
+  {
+   "id": "watch-post",
+   "tags": [
+    "lock-up",
+    "watch",
+    "prison"
+   ],
+   "prompt": "A town watch post and lock-up: a small stone building with a barred cell, spears in a rack, a table with a lamp and dice, a notice board by the door."
+  },
+  {
+   "id": "stone-houses",
+   "tags": [
+    "wealth",
+    "walls",
+    "private",
+    "estate"
+   ],
+   "outdoor": true,
+   "prompt": "The quiet street of the rich in a timber town: stone houses behind garden walls, glazed windows, iron gates, a well-kept lane with no mud."
+  },
+  {
+   "id": "cottage",
+   "lots": [
+    "home"
+   ],
+   "tags": [
+    "home"
+   ],
+   "prompt": "Inside a poor family's cottage: one room with a hearth, a pot hanging, a table and stools, a box bed with a curtain, a loft ladder, a few clay pots on a shelf."
+  },
+  {
+   "id": "tenement",
+   "lots": [
+    "tenement"
+   ],
+   "prompt": "A crowded tenement room in a town: several straw pallets on the floor, washing on a line, a tiny brazier, a cracked shutter onto a narrow alley."
+  },
+  {
+   "id": "empty-house",
+   "lots": [
+    "empty"
+   ],
+   "prompt": "An empty abandoned house in a town: a collapsed roof beam, cobwebs, a broken table, leaves blown in, light through holes in the thatch."
+  },
+  {
+   "id": "dice-den",
+   "lots": [
+    "dice"
+   ],
+   "tags": [
+    "gambling"
+   ],
+   "prompt": "A back room for gambling: a round table under a hanging lamp, dice and scattered coins, cards, cups of spirits, a heavy curtain over the door."
+  },
+  {
+   "id": "bawdy-house",
+   "lots": [
+    "bawdy"
+   ],
+   "tags": [
+    "private-rooms",
+    "salon"
+   ],
+   "prompt": "The parlour of a medieval bawdy house: red curtains, cushions and low couches, a wine jug and cups, candles, a stair going up to private rooms, no people."
+  },
+  {
+   "id": "smoke-den",
+   "lots": [
+    "den"
+   ],
+   "prompt": "A dim smoke den: low cushioned pallets along the walls, long pipes and a brazier, haze in the air, a beaded curtain, a single lantern."
+  },
+  {
+   "id": "fight-pit",
+   "tags": [
+    "fights",
+    "crowd"
+   ],
+   "outdoor": true,
+   "prompt": "A fighting pit in a clearing of stumps: a ring of trampled earth roped off, a few benches and stumps for a crowd, a betting board nailed to a post, torches."
+  },
+  {
+   "id": "village-green",
+   "kinds": [
+    "square"
+   ],
+   "tags": [
+    "central",
+    "news",
+    "hiring",
+    "notices"
+   ],
+   "outdoor": true,
+   "prompt": "A village green in a forest town: grass worn by feet, a notice post, a stone well, timber houses and a tavern around it, an old oak at the edge."
+  },
+  {
+   "id": "river-landing",
+   "kinds": [
+    "docks"
+   ],
+   "tags": [
+    "river",
+    "arrivals",
+    "trade",
+    "docks"
+   ],
+   "outdoor": true,
+   "prompt": "A river barge landing: a timber wharf, flat barges tied up, crates and barrels, a crane, the town rising behind on the bank."
+  },
+  {
+   "id": "ford",
+   "tags": [
+    "crossing",
+    "ford"
+   ],
+   "outdoor": true,
+   "prompt": "A shallow river ford through a forest: stones breaking the water, a muddy track down each bank, willows and reeds, the far bank in shadow."
+  },
+  {
+   "id": "graveyard",
+   "kinds": [
+    "garden"
+   ],
+   "tags": [
+    "graves",
+    "grief"
+   ],
+   "outdoor": true,
+   "prompt": "A paupers' graveyard: rough wooden markers and mounds of earth, long grass, a low stone wall, a leaning yew tree, crows."
+  },
+  {
+   "id": "border-stones",
+   "tags": [
+    "border",
+    "treaty"
+   ],
+   "outdoor": true,
+   "prompt": "Old border stones at the edge of a dark forest: carved standing stones in a line, moss and lichen, a treaty mark cut into one, the trees beyond too close and too dark."
+  },
+  {
+   "id": "road",
+   "terrains": [
+    "road"
+   ],
+   "kinds": [
+    "trail"
+   ],
+   "default": true,
+   "outdoor": true,
+   "prompt": "A forest road through a medieval kingdom: two wheel ruts in mud, tall trees, a milestone, light through the canopy."
+  },
+  {
+   "id": "plains",
+   "terrains": [
+    "plains"
+   ],
+   "outdoor": true,
+   "prompt": "Open rolling grassland under a big sky, a few lone trees, a distant line of hills."
+  },
+  {
+   "id": "forest",
+   "terrains": [
+    "forest"
+   ],
+   "tags": [
+    "woods"
+   ],
+   "outdoor": true,
+   "prompt": "A dense temperate forest: old oaks and beeches, ferns, a faint deer path, shafts of light."
+  },
+  {
+   "id": "heartwood",
+   "tags": [
+    "ley",
+    "elves",
+    "forbidden",
+    "wild"
+   ],
+   "outdoor": true,
+   "prompt": "An ancient enchanted forest: enormous moss-covered trees, roots like walls, a faint green glow of ley lines in the earth, mist, absolute stillness."
+  },
+  {
+   "id": "hills",
+   "terrains": [
+    "hills"
+   ],
+   "outdoor": true,
+   "prompt": "Rough grassy hills with outcrops of grey stone, a sheep track, wind bending the grass, a cairn on a crest."
+  },
+  {
+   "id": "mountains",
+   "terrains": [
+    "mountains"
+   ],
+   "outdoor": true,
+   "prompt": "High mountains: a rocky pass under snowy peaks, scree slopes, a thin trail, cloud below."
+  },
+  {
+   "id": "waste",
+   "terrains": [
+    "waste"
+   ],
+   "outdoor": true,
+   "prompt": "A badlands waste: cracked dry earth, bare rock, dead trees, a heat haze over the distance."
+  },
+  {
+   "id": "marsh",
+   "terrains": [
+    "marsh"
+   ],
+   "outdoor": true,
+   "prompt": "A fen and marsh: reeds and black pools, a rotting boardwalk, mist low over the water, a heron."
+  },
+  {
+   "id": "coast",
+   "terrains": [
+    "water"
+   ],
+   "outdoor": true,
+   "prompt": "A wild rocky coastline: grey sea, waves breaking on dark rocks, a gull-haunted headland."
+  },
+  {
+   "id": "ruin",
+   "sites": [
+    "ruin"
+   ],
+   "outdoor": true,
+   "prompt": "A ruined stone tower from an older age on a hill: fallen walls, a stair climbing to nothing, ivy, a dark cellar mouth among the stones."
+  },
+  {
+   "id": "wild-shrine",
+   "sites": [
+    "shrine"
+   ],
+   "outdoor": true,
+   "prompt": "A forgotten shrine in the wilds: a cut standing stone with a worn carving, old offerings and a fresh one, a ring of trampled grass."
+  },
+  {
+   "id": "cave",
+   "sites": [
+    "cave"
+   ],
+   "outdoor": true,
+   "prompt": "A cave mouth behind brush on a hillside: cold dark opening, old soot on the rock above it."
+  },
+  {
+   "id": "lair",
+   "sites": [
+    "lair"
+   ],
+   "outdoor": true,
+   "prompt": "A beast's lair: a hollow under rocks littered with cracked bones, torn hide, huge clawed tracks in the mud."
+  },
+  {
+   "id": "battlefield",
+   "sites": [
+    "battlefield"
+   ],
+   "outdoor": true,
+   "prompt": "An old battlefield gone to grass: rows of low barrows, a rusted blade and a broken shield in the turf, crows."
+  },
+  {
+   "id": "camp",
+   "sites": [
+    "camp"
+   ],
+   "outdoor": true,
+   "prompt": "A camp in the wilds: a ring of stones round a cold fire, a lean-to of branches, a cookpot, a bedroll."
+  },
+  {
+   "id": "hamlet",
+   "sites": [
+    "hamlet"
+   ],
+   "kinds": [
+    "hamlet"
+   ],
+   "outdoor": true,
+   "prompt": "A tiny hamlet in a clearing: three thatched cottages, a vegetable plot, a pig pen, smoke from one chimney, forest all around."
+  },
+  {
+   "id": "town-street",
+   "street": true,
+   "kinds": [
+    "landmark"
+   ],
+   "outdoor": true,
+   "prompt": "A muddy street in a timber-framed medieval town: overhanging upper storeys, shop signs, a gutter down the middle, a cart and barrels."
+  }
+ ],
+ "emblem_style": "A heraldic emblem for a faction in a grounded low-magic medieval fantasy world, painted like an illuminated manuscript device: flat heraldic shapes, oil-paint texture, aged gold leaf and earthy pigments, centered and filling the frame, on a transparent background",
+ "emblem_avoid": "text, letters, numbers, words, readable labels, brand logos, watermark, signature, background scene, frame border, people, hands",
+ "emblems": [
+  {
+   "id": "kingdom-of-cyrel",
+   "prompt": "A grey stone tower with three battlements, one for each sister city, above crossed felling axes on a deep green field; a stubborn fortress kingdom at war."
+  },
+  {
+   "id": "kingdom-of-asania",
+   "prompt": "A rearing golden lion wreathed in violet arcane flame on a royal crimson field, ornate and splendid; a rich, magical, warlike kingdom."
+  },
+  {
+   "id": "trein-council",
+   "prompt": "A tall street lamp burning with pale blue magical light, ringed by seven small stars, on a midnight blue field; a city ruled by mage houses."
+  },
+  {
+   "id": "brotherhood-of-man",
+   "prompt": "An open mortal hand raised beneath a plain white circle on a grey field, austere and secular, the border worked in a faint pattern like white dragon scales."
+  },
+  {
+   "id": "wrenspire-council",
+   "prompt": "A brass cogwheel crowned by a small wren with outspread wings above a stylized airship hull, on a slate blue field; a city of engineers who refuse magic."
+  },
+  {
+   "id": "stoneheart-clan",
+   "prompt": "A carved granite heart set with a single blue gem under a dwarven crown of square-cut stone, on an iron grey field; austere dwarven heraldry."
+  },
+  {
+   "id": "cult-of-vymnommyth",
+   "prompt": "A black dragon coiled around a rotting seed that sprouts a green shoot, dripping green-black ichor, on a sickly olive field; a dwarven cult of rot and renewal."
+  },
+  {
+   "id": "master-grimms-workshop",
+   "prompt": "A hammer and anvil wreathed in green dragon flame, a green dragon's eye glowing on the anvil's face; the maker's mark of a legendary smithy."
+  },
+  {
+   "id": "mossrun-expedition",
+   "prompt": "A miner's pick crossed with a shovel over a split boulder showing a vein of iron and a glowing pale blue crystal; a mining company's mark."
+  },
+  {
+   "id": "cyrel-timber-guild",
+   "prompt": "A felled oak trunk with a two-man saw across it and an iron key below, on a brown field; the seal of a timber guild that holds its crews' debts."
+  },
+  {
+   "id": "unguruk-tribe",
+   "prompt": "A crude tusked skull painted in red ochre on a stretched hide shield, framed by a palisade of sharpened stakes; an orc war banner."
+  },
+  {
+   "id": "dramogon-tribe",
+   "prompt": "A gaunt hyena-headed gnoll howling, painted in black and bone white on sand-colored hide, ringed by claw marks; a nomad war totem."
+  },
+  {
+   "id": "kadragar-tribe",
+   "prompt": "A longship prow carved as a grinning antlered king's head over silver waves on a sea-green field; the mark of goblin seafarers and traders."
+  },
+  {
+   "id": "brynwyr-high-elves",
+   "prompt": "A silver ancient tree whose roots become waves, a strung longbow across its trunk, on a deep forest green field; elegant elven heraldry."
+  },
+  {
+   "id": "petrakyra-wood-elves",
+   "prompt": "A ring of woven living vines and moss around a coiled dragon's tail half hidden in leaves, in muted greens and browns; a reclusive wood-elf sign."
+  },
+  {
+   "id": "obirykan-city-states",
+   "prompt": "A cluster of faceted pale blue crystals on a merchant's balance scale, gilt on a purple field; the arms of plutocrat city-states."
+  },
+  {
+   "id": "dreadfall-corsairs",
+   "prompt": "A cracked skull with two crossed cutlasses through it over a black sail torn by shot, on a blood-red field; a pirate flag."
+  },
+  {
+   "id": "benzaiten-monastery",
+   "prompt": "A calm lotus floating on a still circle of water inside a ring of brushed ink, in soft indigo and white; a monastery seal."
+  },
+  {
+   "id": "fjallagracht-clans",
+   "prompt": "Three standing stones under a frozen star, a longship and a whale's tail carved beneath them, in ice blue and iron; a northern clans' rune-stone emblem."
+  },
+  {
+   "id": "seelie-court",
+   "prompt": "A radiant golden sun woven from blooming flowers and butterfly wings, in summer gold and green; the sigil of a faerie summer court."
+  },
+  {
+   "id": "unseelie-court",
+   "prompt": "A pale crescent moon of frost and thorns with a dead branch putting out one new bud, in silver and deep violet; the sigil of a faerie winter court."
+  },
+  {
+   "id": "nine-hells",
+   "prompt": "A barbed infernal seal like a devil's contract stamped in wax: a horned crown over a chain of nine links, in black iron and burning red."
+  },
+  {
+   "id": "abyss",
+   "prompt": "A gaping fanged maw spiralling into darkness, ringed by teeth and writhing tentacles, in black and sulphur red; a demonic sigil."
+  }
+ ],
+ "icon_style": "A single object as an inventory icon for a grounded low-magic medieval fantasy world, painterly oil illustration with visible brushwork and warm natural light, three-quarter view, the whole object centered in frame, on a transparent background",
+ "icon_avoid": "text, letters, numbers, words, readable labels, brand logos, watermark, signature, background scene, frame border, people, hands",
+ "icons": [
+  {
+   "id": "bread",
+   "prompt": "A round loaf of dark rye bread with a cracked crust."
+  },
+  {
+   "id": "dried-meat",
+   "prompt": "Strips of dried mutton tied with twine on a scrap of cloth."
+  },
+  {
+   "id": "cheese",
+   "prompt": "A wedge of hard pale cheese with a waxed rind."
+  },
+  {
+   "id": "ale-jug",
+   "prompt": "A brown stoneware jug of ale with a cork stopper."
+  },
+  {
+   "id": "waterskin",
+   "prompt": "A leather waterskin with a wooden stopper and a carrying strap."
+  },
+  {
+   "id": "rope",
+   "prompt": "A coil of thick hemp rope."
+  },
+  {
+   "id": "lantern",
+   "prompt": "A hooded iron lantern with a shutter, a small flame inside."
+  },
+  {
+   "id": "lamp-oil",
+   "prompt": "A small corked clay flask of lamp oil."
+  },
+  {
+   "id": "flint",
+   "prompt": "A piece of flint beside a C-shaped fire steel."
+  },
+  {
+   "id": "blanket",
+   "prompt": "A folded grey wool blanket tied with a leather strap."
+  },
+  {
+   "id": "sack",
+   "prompt": "An empty hemp sack tied at the neck."
+  },
+  {
+   "id": "snare-wire",
+   "prompt": "A coil of thin brass snare wire with a running loop at one end."
+  },
+  {
+   "id": "chalk",
+   "prompt": "A stick of white chalk."
+  },
+  {
+   "id": "whetstone",
+   "prompt": "A grey whetstone worn smooth in the middle."
+  },
+  {
+   "id": "candles",
+   "prompt": "A bundle of six tallow candles tied with string."
+  },
+  {
+   "id": "bandages",
+   "prompt": "A rolled linen bandage."
+  },
+  {
+   "id": "poultice",
+   "prompt": "A comfrey poultice: green leaves folded into a cloth bound with twine."
+  },
+  {
+   "id": "cloak",
+   "prompt": "A folded brown oiled wool cloak with a bronze clasp."
+  },
+  {
+   "id": "boots",
+   "prompt": "A pair of hobnailed leather boots."
+  },
+  {
+   "id": "gloves",
+   "prompt": "A pair of worn leather work gloves."
+  },
+  {
+   "id": "knife",
+   "prompt": "A plain belt knife in a leather sheath."
+  },
+  {
+   "id": "hatchet",
+   "prompt": "A small hatchet with an ash handle."
+  },
+  {
+   "id": "felling-axe",
+   "prompt": "A long-handled felling axe with a heavy steel head."
+  },
+  {
+   "id": "crowbar",
+   "prompt": "An iron crowbar, a little rusted."
+  },
+  {
+   "id": "sword",
+   "prompt": "A plain arming sword with a leather-wrapped grip, unadorned."
+  },
+  {
+   "id": "cudgel",
+   "prompt": "A knobbed ash cudgel."
+  },
+  {
+   "id": "ledger-book",
+   "prompt": "A closed clerk's ledger book bound in brown leather with a brass clasp."
+  },
+  {
+   "id": "salt",
+   "prompt": "A small open cloth bag of coarse grey salt."
+  },
+  {
+   "id": "plum-spirit",
+   "prompt": "A green glass bottle of plum spirit with a wax-sealed cork."
+  },
+  {
+   "id": "warden-arrow",
+   "prompt": "A single arrow with grey goose fletching and a leaf-shaped head."
+  },
+  {
+   "id": "lodging",
+   "items": [
+    "fireside-floor",
+    "bunk-night",
+    "private-room"
+   ],
+   "prompt": "A straw-stuffed bed with a wool blanket, an iron room key on it."
+  },
+  {
+   "id": "meal",
+   "items": [
+    "hot-meal",
+    "stew-bowl"
+   ],
+   "prompt": "A wooden bowl of steaming stew with a heel of bread and a wooden spoon."
+  },
+  {
+   "id": "ale-mug",
+   "prompt": "A wooden tankard of foaming ale."
+  },
+  {
+   "id": "hot-bath",
+   "prompt": "A wooden bathtub of steaming water with a folded linen towel on its rim."
+  },
+  {
+   "id": "stabling",
+   "prompt": "A horseshoe on a forkful of hay."
+  },
+  {
+   "id": "heartwood-guide",
+   "prompt": "A walking staff with a strip of red cloth tied on as a trail marker."
+  },
+  {
+   "id": "laundry",
+   "items": [
+    "laundry",
+    "mending"
+   ],
+   "prompt": "A folded linen shirt with a needle and thread on it."
+  },
+  {
+   "id": "repair",
+   "prompt": "A smith's hammer resting on a mended blade."
+  },
+  {
+   "id": "kind-food",
+   "category": "food",
+   "prompt": "A small basket of bread, cheese and apples"
+  },
+  {
+   "id": "kind-gear",
+   "category": "gear",
+   "prompt": "A leather traveller's pack with a bedroll strapped on top"
+  },
+  {
+   "id": "kind-clothing",
+   "category": "clothing",
+   "prompt": "A folded tunic with a leather belt coiled on it"
+  },
+  {
+   "id": "kind-weapon",
+   "category": "weapon",
+   "prompt": "A sheathed short sword crossed with a dagger"
+  },
+  {
+   "id": "kind-tool",
+   "category": "tool",
+   "prompt": "A hammer, chisel and pliers on an open leather roll"
+  },
+  {
+   "id": "kind-remedy",
+   "category": "remedy",
+   "prompt": "A small clay pot of salve beside a sprig of herbs"
+  },
+  {
+   "id": "kind-curio",
+   "category": "curio",
+   "prompt": "A strange carved bone charm on a cord"
+  },
+  {
+   "id": "kind-trade",
+   "category": "trade",
+   "prompt": "A bolt of cloth beside a sealed earthenware jar"
+  },
+  {
+   "id": "kind-service",
+   "category": "service",
+   "prompt": "A brass bell on a wooden inn counter beside a candle"
+  }
+ ]
+}

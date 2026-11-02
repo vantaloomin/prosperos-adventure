@@ -1,0 +1,696 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "tier": "local, regional or realm on the shared ladder",
+    "seat": "a settlement id",
+    "clock_seeds": "progress clocks the faction can run (dungeon/factions.py); the engine copy is world/data/factions/havenbrooke.json",
+    "eras": "campaign eras the faction exists in; missing means all",
+    "origin": "source or draft"
+  },
+  "factions": [
+    {
+      "id": "ded",
+      "name": "The Department of Esoteric Development",
+      "kind": "government",
+      "tier": "realm",
+      "seat": "haldane-complex",
+      "summary": "The federal body that regulates magic, species activities and interspecies relations, founded in 1863. Five divisions: Field Operations, Regulatory Affairs, Licensing and Certification, Research, and Community Affairs. It opened Havenbrooke in 1867 and still reviews every MTO syllabus.",
+      "goals": [
+        "Keep the Esoteric Development Code enforced",
+        "Place Havenbrooke graduates in its field offices",
+        "Keep the classified supplements classified"
+      ],
+      "methods": [
+        "licensing",
+        "review boards",
+        "field agents",
+        "funding pilots it likes"
+      ],
+      "rivals": [],
+      "allies": [
+        "havenbrooke-university",
+        "federal-esoteric-court"
+      ],
+      "clock_seeds": [
+        {
+          "name": "Feeding-scandal review",
+          "segments": 6
+        },
+        {
+          "name": "The Kindling pilot",
+          "segments": 6
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "federal-esoteric-court",
+      "name": "The Federal Esoteric Court",
+      "kind": "court",
+      "tier": "realm",
+      "seat": "haldane-complex",
+      "summary": "Seven judges who settle conflicts between federal law and the internal law of the fae courts, the covens and the old vampire families. It meets four times a year in closed session.",
+      "goals": [
+        "Keep the parallel legal systems from colliding"
+      ],
+      "methods": [
+        "closed hearings",
+        "precedent"
+      ],
+      "rivals": [],
+      "allies": [
+        "ded"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "havenbrooke-university",
+      "name": "Havenbrooke University",
+      "kind": "institution",
+      "tier": "regional",
+      "seat": "havenbrooke-campus",
+      "summary": "A federal integration college turned autonomous university: five teaching platforms, about 5,000 students, a 20 percent acceptance rate and a charter that has loosened since 1954. Missed or failed work costs standing here, and scholarships ride on grades.",
+      "goals": [
+        "Keep its students alive, enrolled and out of the papers",
+        "Keep the DED and the Crane money happy",
+        "Graduate integration, not just degrees"
+      ],
+      "methods": [
+        "grades",
+        "scholarships",
+        "housing placements",
+        "wards",
+        "quiet administrative review"
+      ],
+      "rivals": [],
+      "allies": [
+        "ded",
+        "crane-family"
+      ],
+      "clock_seeds": [
+        {
+          "name": "Phi Sigma Nox administrative review",
+          "segments": 4
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "haven-city",
+      "name": "City of Haven",
+      "kind": "town",
+      "tier": "local",
+      "seat": "haven",
+      "summary": "The city government and Haven PD: 42 officers, three of them esoteric liaisons, and a long habit of calling the university before anyone else.",
+      "goals": [
+        "Keep town and gown from fighting",
+        "Keep the tourists coming"
+      ],
+      "methods": [
+        "the police",
+        "zoning",
+        "the market"
+      ],
+      "rivals": [],
+      "allies": [
+        "havenbrooke-university"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "council-of-bloodlines",
+      "name": "The Council of Bloodlines",
+      "kind": "species body",
+      "tier": "realm",
+      "seat": "new-york",
+      "summary": "Twelve seats for the old vampire families of North America, each with a territory. Lucian Crane holds New England. Born vampires run it; turned ones are tolerated.",
+      "goals": [
+        "Keep territorial agreements",
+        "Keep the born above the turned",
+        "Keep vampire business internal"
+      ],
+      "methods": [
+        "territory",
+        "money",
+        "patience"
+      ],
+      "rivals": [],
+      "allies": [
+        "crane-family"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "crane-family",
+      "name": "The Crane family",
+      "kind": "family",
+      "tier": "regional",
+      "seat": "haven",
+      "summary": "The vampire family that has held Crane Hill above Haven since 1819, founded Phi Sigma Nox in 1874 and funds two university scholarships a year. The university answers their calls. Some of their collection is not legal.",
+      "goals": [
+        "Stay untouchable",
+        "Keep the collection",
+        "Keep Vivienne on the diplomatic track"
+      ],
+      "methods": [
+        "money",
+        "scholarships",
+        "stewards who take the fall",
+        "two centuries of patience"
+      ],
+      "rivals": [
+        "ded"
+      ],
+      "allies": [
+        "phi-sigma-nox",
+        "council-of-bloodlines"
+      ],
+      "clock_seeds": [
+        {
+          "name": "Scholarships frozen",
+          "segments": 4
+        },
+        {
+          "name": "The older sealskin",
+          "segments": 6
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "national-coven-registry",
+      "name": "The National Coven Registry",
+      "kind": "species body",
+      "tier": "realm",
+      "seat": "salem",
+      "summary": "Founded in Salem in 1912. It registers covens and lineages, and arbitrates between them before the DED has to.",
+      "goals": [
+        "Keep witchcraft respected and a little misunderstood",
+        "Keep the lineages registered"
+      ],
+      "methods": [
+        "registration",
+        "arbitration"
+      ],
+      "rivals": [],
+      "allies": [
+        "sigma-theta-hex",
+        "corwin-lineage"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "corwin-lineage",
+      "name": "The Corwin lineage",
+      "kind": "family",
+      "tier": "regional",
+      "seat": "boston",
+      "summary": "A third-generation Boston witch family with three senators, a federal judge and Genevieve Corwin's private ritual consultancy behind it. It expected Kim at Salem Academy.",
+      "goals": [
+        "Bring Kim back on track",
+        "Put her in the ritual-leadership suite on the family's terms"
+      ],
+      "methods": [
+        "phone calls to faculty",
+        "layovers that exist on no itinerary",
+        "\"We'll see\""
+      ],
+      "rivals": [],
+      "allies": [
+        "sigma-theta-hex"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "providence-coven",
+      "name": "The Providence coven",
+      "kind": "coven",
+      "tier": "regional",
+      "seat": "providence",
+      "summary": "A senior coven that recruits Havenbrooke's best witches by invitation. Oriane Dupré is one of its seniors.",
+      "goals": [
+        "Recruit the best of each class"
+      ],
+      "methods": [
+        "invitations",
+        "presiding at rites"
+      ],
+      "rivals": [],
+      "allies": [
+        "sigma-theta-hex"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "lycan-assembly",
+      "name": "The Lycan Assembly",
+      "kind": "species body",
+      "tier": "realm",
+      "seat": "new-york",
+      "summary": "Founded in 1952 to speak for born and bitten lycans nationally. Born packs dominate it; bitten lycans grumble.",
+      "goals": [
+        "Keep the bite legal and regulated",
+        "Stop underground conversions"
+      ],
+      "methods": [
+        "elders",
+        "stabilization programs"
+      ],
+      "rivals": [],
+      "allies": [
+        "alpha-gamma"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "fae-heritage-council",
+      "name": "The Fae Heritage Council",
+      "kind": "species body",
+      "tier": "realm",
+      "seat": "new-york",
+      "summary": "The American face of the fae courts, for dealing with human law.",
+      "goals": [
+        "Protect fae custom inside US law"
+      ],
+      "methods": [
+        "diplomats",
+        "back channels"
+      ],
+      "rivals": [],
+      "allies": [
+        "eastern-seelie"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "eastern-seelie",
+      "name": "The Eastern Seelie court",
+      "kind": "court",
+      "tier": "realm",
+      "seat": "aelhwynn-grove",
+      "summary": "The Seelie court of the eastern seaboard and its archives, where betrothals, anchor bonds and inheritances are recorded. One of its clerks owes Rina a favor.",
+      "goals": [
+        "Keep the records true",
+        "Keep alliances binding"
+      ],
+      "methods": [
+        "clerks",
+        "auditors",
+        "hearings"
+      ],
+      "rivals": [],
+      "allies": [
+        "house-aelhwynn"
+      ],
+      "clock_seeds": [
+        {
+          "name": "The court audit",
+          "segments": 6
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "house-aelhwynn",
+      "name": "House Aelhwynn",
+      "kind": "family",
+      "tier": "regional",
+      "seat": "aelhwynn-grove",
+      "summary": "Rina's family, a mid-tier fae house that runs on betrothals, alliances and aesthetic compliance. It promised her to a sylph diplomat when she was a child.",
+      "goals": [
+        "See Rina married to Callum Ashveil",
+        "Keep the grove and its alliance"
+      ],
+      "methods": [
+        "betrothal contracts",
+        "anchor bonds",
+        "property records"
+      ],
+      "rivals": [],
+      "allies": [
+        "eastern-seelie"
+      ],
+      "clock_seeds": [
+        {
+          "name": "The betrothal comes due",
+          "segments": 8
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "vhen-morrath",
+      "name": "The Vhen-Morrath line",
+      "kind": "family",
+      "tier": "regional",
+      "seat": "new-york",
+      "summary": "An old incubus and succubus family, \"the line of the first hearth\". Demon families have no national body, so a line is its own law. Jason, Christine and Aurelio Marchant are all of it.",
+      "goals": [
+        "Keep its children in the diplomatic pipeline",
+        "Keep its business in the family"
+      ],
+      "methods": [
+        "marriages",
+        "Senate staffers",
+        "family vernacular"
+      ],
+      "rivals": [],
+      "allies": [
+        "phi-sigma-nox"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "alpha-gamma",
+      "name": "Alpha Gamma",
+      "kind": "fraternity",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "The lycan-heavy supernatural fraternity, with species-diversity rules, full-moon ceremonies in the basement and a bonded-brothers ritual in Ironroot Woods. It co-hosts the Harvest Howl.",
+      "goals": [
+        "A chosen family for brothers who need one",
+        "Careers in defence agencies"
+      ],
+      "methods": [
+        "pack loyalty",
+        "Sunday chapter meetings",
+        "the Howl"
+      ],
+      "rivals": [
+        "phi-sigma-nox"
+      ],
+      "allies": [
+        "sigma-theta-hex"
+      ],
+      "clock_seeds": [
+        {
+          "name": "Leadership challenge",
+          "segments": 4
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "phi-sigma-nox",
+      "name": "Phi Sigma Nox",
+      "kind": "fraternity",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "The oldest supernatural fraternity, chartered in 1874 with two Cranes on its council. Vampire-heavy, tailored, patient, with four galas a year and a cellar library of occult texts.",
+      "goals": [
+        "Heritage over recruitment",
+        "Long-planned influence"
+      ],
+      "methods": [
+        "bloodline invitations",
+        "galas",
+        "sponsors"
+      ],
+      "rivals": [
+        "alpha-gamma"
+      ],
+      "allies": [
+        "crane-family",
+        "vhen-morrath"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "sigma-theta-hex",
+      "name": "Sigma Theta Hex",
+      "kind": "sorority",
+      "tier": "regional",
+      "seat": "havenbrooke-campus",
+      "summary": "The witch sorority: thirty to forty sisters, line-sister pairings, a private ritual tongue, custody of Vespers Hall's largest spell ring and an alumnae network in business, politics and academia.",
+      "goals": [
+        "Magical excellence",
+        "Influence after graduation",
+        "Mastery of the campus ley lines"
+      ],
+      "methods": [
+        "rites",
+        "grooming leaders",
+        "secrecy"
+      ],
+      "rivals": [],
+      "allies": [
+        "alpha-gamma",
+        "national-coven-registry"
+      ],
+      "clock_seeds": [
+        {
+          "name": "The ritual-leadership suite",
+          "segments": 6
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "delta-nu-iris",
+      "name": "Delta Nu Iris",
+      "kind": "sorority",
+      "tier": "local",
+      "seat": "haven",
+      "summary": "The fae sorority, chartered 1921, in a Craftsman on Birch Street with a back garden of anchor-ground and plants that are illegal in New York State. An informal back channel to the courts.",
+      "goals": [
+        "Preserve fae practice",
+        "Help sisters with betrothals and anchors"
+      ],
+      "methods": [
+        "mutual aid",
+        "interpreters"
+      ],
+      "rivals": [],
+      "allies": [
+        "fae-heritage-council"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "omicron-phi-ember",
+      "name": "Omicron Phi Ember (the Ember Circle)",
+      "kind": "society",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "The co-ed society for demonkin and others who must feed, founded in 1952. Its rush includes a formal hunger assessment, it meets Tuesday nights in Bellweather and it keeps no house.",
+      "goals": [
+        "Ethical feeding",
+        "Mutual support"
+      ],
+      "methods": [
+        "peer counselling",
+        "hunger assessments"
+      ],
+      "rivals": [],
+      "allies": [
+        "kindling"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "kappa-rho-sigma",
+      "name": "Kappa Rho Sigma",
+      "kind": "fraternity",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "The mundane-human men's fraternity, chartered 1901, which excludes witches and lives inside Thornewall's suppression field on purpose. Unapologetically careerist.",
+      "goals": [
+        "Networks strong enough for mundane graduates to compete"
+      ],
+      "methods": [
+        "a 3.7 GPA",
+        "alumni at the DED"
+      ],
+      "rivals": [
+        "delta-omicron-theta"
+      ],
+      "allies": [],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "delta-omicron-theta",
+      "name": "Delta Omicron Theta",
+      "kind": "society",
+      "tier": "local",
+      "seat": "haven",
+      "summary": "The co-ed mundane-human house on Birch Street, founded 1976: a zine, a podcast, a 48-hour film project and better parties than the gated houses.",
+      "goals": [
+        "The full college experience for mundane students"
+      ],
+      "methods": [
+        "parties",
+        "media"
+      ],
+      "rivals": [],
+      "allies": [
+        "phi-alpha-mu"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "phi-alpha-mu",
+      "name": "Phi Alpha Mu",
+      "kind": "society",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "The integration house, chartered in 1964, open across species and practice, with rotating community dinners and the Integration Ambassadors behind it.",
+      "goals": [
+        "Integration as a skill that can be taught"
+      ],
+      "methods": [
+        "dinners",
+        "mentoring"
+      ],
+      "rivals": [],
+      "allies": [
+        "delta-omicron-theta"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "kindling",
+      "name": "Kindling",
+      "kind": "support group",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "Jason's support group for students learning to live with their appetites, named by Whitestone: \"a fire that is built, not caught\". It meets on the Old Observatory rooftop. It does not exist yet at the start of sophomore year.",
+      "goals": [
+        "Somewhere to say the worst thing out loud",
+        "A DED pilot"
+      ],
+      "methods": [
+        "weekly meetings",
+        "a group journal"
+      ],
+      "rivals": [
+        "integration-society"
+      ],
+      "allies": [
+        "omicron-phi-ember"
+      ],
+      "clock_seeds": [],
+      "origin": "source",
+      "eras": [
+        "sophomore",
+        "junior",
+        "senior"
+      ]
+    },
+    {
+      "id": "integration-society",
+      "name": "The Integration Society",
+      "kind": "club",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "A loose monthly meet-up on the Observatory roof for students managing appetite, shift or cycles, run by Adrien Halvers.",
+      "goals": [
+        "Keep the format informal"
+      ],
+      "methods": [
+        "no agenda"
+      ],
+      "rivals": [
+        "kindling"
+      ],
+      "allies": [],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "hexenkreis",
+      "name": "Hexenkreis",
+      "kind": "club",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "The advanced witch practice society, Wednesday evenings in Vespers Hall's second chamber.",
+      "goals": [
+        "Collaborative castings no witch can manage alone"
+      ],
+      "methods": [
+        "shared grimoire work"
+      ],
+      "rivals": [],
+      "allies": [
+        "sigma-theta-hex"
+      ],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "student-enchanters-guild",
+      "name": "The Student Enchanters' Guild",
+      "kind": "club",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "Charm and enchantment students, in a workshop inside the Verdant Grove; Piper is vice-chair.",
+      "goals": [
+        "The annual charm exhibit"
+      ],
+      "methods": [
+        "workshops"
+      ],
+      "rivals": [],
+      "allies": [],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "the-oracle",
+      "name": "The Havenbrooke Oracle",
+      "kind": "press",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "The weekly student paper, mundane-majority by tradition, in a basement under Thornewall. Kwame Adjei edits it.",
+      "goals": [
+        "Print what costs someone something"
+      ],
+      "methods": [
+        "op-eds",
+        "records requests"
+      ],
+      "rivals": [],
+      "allies": [],
+      "clock_seeds": [
+        {
+          "name": "The exposure-fatigue story",
+          "segments": 4
+        }
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "crestfall-crows",
+      "name": "The Crestfall Crows",
+      "kind": "athletics",
+      "tier": "local",
+      "seat": "havenbrooke-campus",
+      "summary": "Havenbrooke athletics in the fifteen-school NSAC: lycan rugby (nine titles in twelve years), fae aerial combat, track, mixed fencing and club swimming. Black and umber.",
+      "goals": [
+        "Win the NSAC"
+      ],
+      "methods": [
+        "practice",
+        "suppression fields"
+      ],
+      "rivals": [],
+      "allies": [],
+      "clock_seeds": [],
+      "origin": "source"
+    }
+  ]
+}

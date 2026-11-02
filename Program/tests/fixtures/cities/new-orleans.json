@@ -1,0 +1,7810 @@
+{
+ "schema_version": 1,
+ "id": "new-orleans",
+ "name": "New Orleans",
+ "region": "Louisiana",
+ "country": "US",
+ "timezone": "America/Chicago",
+ "aliases": [
+  "NOLA",
+  "The Big Easy",
+  "Crescent City",
+  "New Orleans, LA",
+  "Nawlins"
+ ],
+ "summary": "A port city in a bend of the Mississippi, below sea level behind its levees, where Creole and Cajun cooking, brass bands, Carnival krewes, second lines and a calendar packed with festivals shape ordinary life as much as any job does.",
+ "lat": 29.95,
+ "lon": -90.07,
+ "speeds": {
+  "walk": 4.5,
+  "car": 26,
+  "rideshare": 26,
+  "bus": 12,
+  "streetcar": 11,
+  "ferry": 10,
+  "bike-share": 13
+ },
+ "names": {
+  "mix": {
+   "black-american": 6,
+   "anglo": 3,
+   "hispanic": 0.9,
+   "italian": 0.5,
+   "irish": 0.4,
+   "east-asian": 0.4,
+   "caribbean": 0.2,
+   "jewish": 0.2,
+   "arabic": 0.2,
+   "south-asian": 0.1
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "New Orleans places and neighborhoods written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Well-known public places, institutions, festivals and employers from general knowledge, covering Orleans Parish plus Metairie in neighboring Jefferson Parish. Businesses open and close, festival dates move and rents change: treat this as a snapshot for fiction. Rents are rounded estimates of typical asking ranges, not listings. Coordinates are approximate neighborhood centers."
+  },
+  "curated-climate-2026-10": {
+   "kind": "curated",
+   "title": "Approximate monthly climate for New Orleans (Louis Armstrong International Airport area)",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Rounded values in line with NOAA 1991-2020 normals; refresh with scripts/world when network access to NOAA is available. Hurricane season runs June to November."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "french-quarter",
+   "name": "French Quarter",
+   "summary": "The Vieux Carré: cast-iron balconies, courtyards and Creole townhouses around Jackson Square, with Bourbon Street's neon on one side and quiet residential blocks of locals toward Esplanade.",
+   "vibe": [
+    "historic",
+    "nightlife",
+    "touristy",
+    "music",
+    "architecture"
+   ],
+   "lat": 29.958,
+   "lon": -90.065,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1300,
+     1800
+    ],
+    "one_bedroom": [
+     1500,
+     2300
+    ],
+    "two_bedroom": [
+     2100,
+     3200
+    ]
+   },
+   "housing": [
+    "creole-townhouse",
+    "apartment",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "riverfront",
+    "rampart",
+    "canal",
+    "ferry",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marigny",
+   "name": "Faubourg Marigny",
+   "summary": "Colorful Creole cottages downriver from the Quarter, with Frenchmen Street's jazz clubs at one end and St. Claude Avenue's bars and galleries at the other.",
+   "vibe": [
+    "music",
+    "nightlife",
+    "lgbtq-friendly",
+    "artsy",
+    "historic"
+   ],
+   "lat": 29.964,
+   "lon": -90.054,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1100,
+     1500
+    ],
+    "one_bedroom": [
+     1300,
+     1800
+    ],
+    "two_bedroom": [
+     1700,
+     2500
+    ]
+   },
+   "housing": [
+    "creole-cottage",
+    "shotgun",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "rampart",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bywater",
+   "name": "Bywater",
+   "summary": "Painted shotgun houses, murals and a riverfront park, home to artists, musicians and a few too many new short-term rentals, with backyard wine bars and po-boy corners.",
+   "vibe": [
+    "artsy",
+    "quirky",
+    "riverfront",
+    "music"
+   ],
+   "lat": 29.963,
+   "lon": -90.04,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1050,
+     1450
+    ],
+    "one_bedroom": [
+     1250,
+     1750
+    ],
+    "two_bedroom": [
+     1650,
+     2400
+    ]
+   },
+   "housing": [
+    "shotgun",
+    "creole-cottage",
+    "warehouse-loft"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "treme",
+   "name": "Tremé",
+   "summary": "Among the oldest Black neighborhoods in the country, home of Congo Square, brass bands, Sunday second lines and Mardi Gras Indian gangs, with Creole cottages along leafy streets.",
+   "vibe": [
+    "historic",
+    "music",
+    "black-culture",
+    "second-lines"
+   ],
+   "lat": 29.966,
+   "lon": -90.071,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1300
+    ],
+    "one_bedroom": [
+     1100,
+     1500
+    ],
+    "two_bedroom": [
+     1400,
+     2000
+    ]
+   },
+   "housing": [
+    "creole-cottage",
+    "shotgun",
+    "double"
+   ],
+   "walkability": "high",
+   "transit": [
+    "rampart",
+    "canal",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seventh-ward",
+   "name": "Seventh Ward",
+   "summary": "Historically the heart of Creole of color New Orleans, home to generations of plasterers, carpenters and musicians, with fried chicken counters, Bayou Road shops and the Claiborne Avenue underpass where Mardi Gras Indians meet.",
+   "vibe": [
+    "historic",
+    "creole",
+    "working-class",
+    "black-culture"
+   ],
+   "lat": 29.976,
+   "lon": -90.06,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     800,
+     1100
+    ],
+    "one_bedroom": [
+     950,
+     1300
+    ],
+    "two_bedroom": [
+     1200,
+     1700
+    ]
+   },
+   "housing": [
+    "shotgun",
+    "double",
+    "creole-cottage"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mid-city",
+   "name": "Mid-City",
+   "summary": "A big, mixed neighborhood of raised doubles and bungalows between Canal Street and City Park, with the Canal streetcar, old Creole-Italian restaurants and the hospital district at its downtown edge.",
+   "vibe": [
+    "family",
+    "food",
+    "park",
+    "neighbourly"
+   ],
+   "lat": 29.975,
+   "lon": -90.095,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1350
+    ],
+    "one_bedroom": [
+     1150,
+     1600
+    ],
+    "two_bedroom": [
+     1500,
+     2100
+    ]
+   },
+   "housing": [
+    "double",
+    "raised-cottage",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "canal",
+    "jet",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bayou-st-john",
+   "name": "Bayou St. John",
+   "summary": "Faubourg St. John and the Esplanade Ridge: big old houses and oak-shaded streets on a slow bayou where people paddle, picnic and walk to Jazz Fest at the Fair Grounds.",
+   "vibe": [
+    "leafy",
+    "historic",
+    "waterside",
+    "festival"
+   ],
+   "lat": 29.981,
+   "lon": -90.087,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1050,
+     1400
+    ],
+    "one_bedroom": [
+     1250,
+     1700
+    ],
+    "two_bedroom": [
+     1650,
+     2300
+    ]
+   },
+   "housing": [
+    "raised-cottage",
+    "double",
+    "single-family"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "canal",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cbd",
+   "name": "CBD and Warehouse District",
+   "summary": "Office towers along Poydras, the Superdome and Smoothie King Center, museums and galleries in converted warehouses on Julia Street, convention hotels and the ferry at the foot of Canal Street.",
+   "vibe": [
+    "business",
+    "museums",
+    "sports",
+    "central",
+    "arts"
+   ],
+   "lat": 29.948,
+   "lon": -90.07,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1300,
+     1800
+    ],
+    "one_bedroom": [
+     1550,
+     2300
+    ],
+    "two_bedroom": [
+     2100,
+     3200
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "warehouse-loft",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "st-charles",
+    "canal",
+    "riverfront",
+    "rampart",
+    "ferry",
+    "jet",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lower-garden-district",
+   "name": "Lower Garden District",
+   "summary": "Faded Greek Revival mansions split into apartments around Coliseum Square, with the young, bar-hopping stretch of Magazine Street and the film stages by the river.",
+   "vibe": [
+    "young-professional",
+    "bars",
+    "historic",
+    "shopping"
+   ],
+   "lat": 29.938,
+   "lon": -90.075,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1150,
+     1500
+    ],
+    "one_bedroom": [
+     1300,
+     1800
+    ],
+    "two_bedroom": [
+     1700,
+     2500
+    ]
+   },
+   "housing": [
+    "converted-mansion",
+    "apartment",
+    "double"
+   ],
+   "walkability": "high",
+   "transit": [
+    "st-charles",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "garden-district",
+   "name": "Garden District",
+   "summary": "Grand antebellum houses behind iron fences and magnolias, Commander's Palace across from Lafayette Cemetery, and the St. Charles streetcar rattling under the oaks.",
+   "vibe": [
+    "affluent",
+    "historic",
+    "leafy",
+    "architecture"
+   ],
+   "lat": 29.928,
+   "lon": -90.084,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1250,
+     1700
+    ],
+    "one_bedroom": [
+     1450,
+     2100
+    ],
+    "two_bedroom": [
+     2000,
+     3000
+    ]
+   },
+   "housing": [
+    "mansion",
+    "double",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "st-charles",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "irish-channel",
+   "name": "Irish Channel",
+   "summary": "Shotgun doubles between Magazine Street and the river, built for Irish and German dockworkers, now a mix of old families and newcomers, with corner bars and the cabbage-throwing St. Patrick's parade.",
+   "vibe": [
+    "historic",
+    "bars",
+    "neighbourly",
+    "riverfront"
+   ],
+   "lat": 29.921,
+   "lon": -90.079,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1100,
+     1450
+    ],
+    "one_bedroom": [
+     1250,
+     1700
+    ],
+    "two_bedroom": [
+     1700,
+     2400
+    ]
+   },
+   "housing": [
+    "shotgun",
+    "double"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "central-city",
+   "name": "Central City",
+   "summary": "A historic Black neighborhood around Oretha Castle Haley Boulevard, the old Dryades Street shopping strip, now home to arts centers, the Jazz Market and Uptown's Super Sunday Indian gathering.",
+   "vibe": [
+    "historic",
+    "black-culture",
+    "changing",
+    "arts"
+   ],
+   "lat": 29.938,
+   "lon": -90.088,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     850,
+     1150
+    ],
+    "one_bedroom": [
+     1000,
+     1350
+    ],
+    "two_bedroom": [
+     1250,
+     1750
+    ]
+   },
+   "housing": [
+    "shotgun",
+    "double",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "st-charles",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "uptown",
+   "name": "Uptown",
+   "summary": "Oak-lined avenues between St. Charles and the river: Tulane and Loyola, Audubon Park and Zoo, snowball stands, Tipitina's and the parade route that turns into a neighborhood picnic every Carnival.",
+   "vibe": [
+    "leafy",
+    "students",
+    "family",
+    "music",
+    "parades"
+   ],
+   "lat": 29.92,
+   "lon": -90.105,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1100,
+     1450
+    ],
+    "one_bedroom": [
+     1250,
+     1750
+    ],
+    "two_bedroom": [
+     1650,
+     2500
+    ]
+   },
+   "housing": [
+    "double",
+    "single-family",
+    "apartment",
+    "student-housing"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "st-charles",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "carrollton",
+   "name": "Carrollton and Riverbend",
+   "summary": "Where the St. Charles streetcar turns onto Carrollton Avenue: Oak Street's shops and music bars, the levee path, student renters and old Creole cottages near the river bend.",
+   "vibe": [
+    "students",
+    "music",
+    "riverfront",
+    "neighbourly"
+   ],
+   "lat": 29.944,
+   "lon": -90.128,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1350
+    ],
+    "one_bedroom": [
+     1150,
+     1550
+    ],
+    "two_bedroom": [
+     1500,
+     2100
+    ]
+   },
+   "housing": [
+    "double",
+    "shotgun",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "st-charles",
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "freret",
+   "name": "Freret",
+   "summary": "A once-shuttered commercial street near the universities, revived as a strip of burger joints, cocktail bars and po-boy counters with a big spring street festival.",
+   "vibe": [
+    "food",
+    "students",
+    "bars",
+    "changing"
+   ],
+   "lat": 29.932,
+   "lon": -90.106,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1300
+    ],
+    "one_bedroom": [
+     1150,
+     1550
+    ],
+    "two_bedroom": [
+     1500,
+     2100
+    ]
+   },
+   "housing": [
+    "double",
+    "shotgun"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "broadmoor",
+   "name": "Broadmoor and Gert Town",
+   "summary": "A low-lying, close-knit neighborhood that famously organised to rebuild itself after Katrina, next to Gert Town and the Xavier University campus.",
+   "vibe": [
+    "family",
+    "community",
+    "affordable",
+    "students"
+   ],
+   "lat": 29.946,
+   "lon": -90.106,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     900,
+     1200
+    ],
+    "one_bedroom": [
+     1050,
+     1400
+    ],
+    "two_bedroom": [
+     1350,
+     1850
+    ]
+   },
+   "housing": [
+    "double",
+    "single-family",
+    "raised-cottage"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "rta-bus",
+    "blue-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gentilly",
+   "name": "Gentilly",
+   "summary": "A middle-class, majority-Black district of ranch houses and 1920s bungalows on the ridge toward the lake, home to Dillard, SUNO and the University of New Orleans.",
+   "vibe": [
+    "family",
+    "suburban",
+    "black-culture",
+    "campus"
+   ],
+   "lat": 30.005,
+   "lon": -90.06,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     850,
+     1100
+    ],
+    "one_bedroom": [
+     950,
+     1300
+    ],
+    "two_bedroom": [
+     1200,
+     1650
+    ]
+   },
+   "housing": [
+    "single-family",
+    "bungalow",
+    "ranch"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rta-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakeview",
+   "name": "Lakeview",
+   "summary": "Quiet lakeside streets of raised new houses rebuilt after the levee breaches flooded it in 2005, with a small main street on Harrison Avenue and the seawall on Lake Pontchartrain.",
+   "vibe": [
+    "family",
+    "quiet",
+    "suburban",
+    "lakefront"
+   ],
+   "lat": 30.005,
+   "lon": -90.105,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1000,
+     1300
+    ],
+    "one_bedroom": [
+     1200,
+     1600
+    ],
+    "two_bedroom": [
+     1600,
+     2200
+    ]
+   },
+   "housing": [
+    "single-family",
+    "raised-house",
+    "apartment"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rta-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "algiers-point",
+   "name": "Algiers Point",
+   "summary": "A small-town corner of the West Bank, a five-minute ferry ride from the Quarter, with Victorian cottages, a levee view of the skyline and a couple of beloved bars.",
+   "vibe": [
+    "quiet",
+    "historic",
+    "riverfront",
+    "small-town"
+   ],
+   "lat": 29.954,
+   "lon": -90.053,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1250
+    ],
+    "one_bedroom": [
+     1100,
+     1500
+    ],
+    "two_bedroom": [
+     1450,
+     2000
+    ]
+   },
+   "housing": [
+    "victorian",
+    "shotgun",
+    "creole-cottage"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "ferry",
+    "rta-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lower-ninth-ward",
+   "name": "Lower Ninth Ward and Holy Cross",
+   "summary": "Downriver past the Industrial Canal: Holy Cross's steamboat houses on the levee, Fats Domino's home and the still-rebuilding blocks and wetlands of the Lower Ninth.",
+   "vibe": [
+    "historic",
+    "resilient",
+    "riverfront",
+    "community"
+   ],
+   "lat": 29.962,
+   "lon": -90.015,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     750,
+     1000
+    ],
+    "one_bedroom": [
+     850,
+     1150
+    ],
+    "two_bedroom": [
+     1050,
+     1450
+    ]
+   },
+   "housing": [
+    "single-family",
+    "shotgun",
+    "raised-house"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rta-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-orleans-east",
+   "name": "New Orleans East",
+   "summary": "Sprawling suburban-style subdivisions east of the Industrial Canal, a large Black middle class and, in Village de l'Est, the Vietnamese community around Mary Queen of Vietnam with its bakeries and backyard gardens.",
+   "vibe": [
+    "suburban",
+    "vietnamese",
+    "family",
+    "black-culture"
+   ],
+   "lat": 30.03,
+   "lon": -89.96,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     750,
+     1000
+    ],
+    "one_bedroom": [
+     850,
+     1150
+    ],
+    "two_bedroom": [
+     1050,
+     1450
+    ]
+   },
+   "housing": [
+    "single-family",
+    "ranch",
+    "apartment"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rta-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "metairie",
+   "name": "Metairie",
+   "summary": "The big suburb just over the parish line in Jefferson Parish: ranch houses, Lakeside mall, the Saints' training base, Ochsner's main campus and its own Carnival parades.",
+   "vibe": [
+    "suburban",
+    "family",
+    "shopping"
+   ],
+   "lat": 29.99,
+   "lon": -90.15,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1250
+    ],
+    "one_bedroom": [
+     1100,
+     1450
+    ],
+    "two_bedroom": [
+     1400,
+     1900
+    ]
+   },
+   "housing": [
+    "single-family",
+    "ranch",
+    "apartment"
+   ],
+   "walkability": "low",
+   "transit": [
+    "jet"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "st-charles",
+   "name": "St. Charles streetcar",
+   "kind": "streetcar",
+   "summary": "The green, wooden-seated streetcars in service since the 1920s, running from Canal Street up St. Charles Avenue past the mansions, universities and parade route to Carrollton.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canal",
+   "name": "Canal streetcar",
+   "kind": "streetcar",
+   "summary": "Red streetcars from the river up Canal Street to the cemeteries, with a branch up Carrollton Avenue to City Park and the art museum.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "riverfront",
+   "name": "Riverfront streetcar",
+   "kind": "streetcar",
+   "summary": "A short red line along the river from the French Market past the aquarium to the Convention Center.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rampart",
+   "name": "Rampart-St. Claude streetcar",
+   "kind": "streetcar",
+   "summary": "Red streetcars from the Union Passenger Terminal along Rampart Street on the edge of the Quarter and Tremé to Elysian Fields.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ferry",
+   "name": "Algiers Point ferry",
+   "kind": "ferry",
+   "summary": "The Canal Street ferry across the Mississippi to Algiers Point, a few minutes each way and a cheap river view.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rta-bus",
+   "name": "RTA buses",
+   "kind": "bus",
+   "summary": "The New Orleans Regional Transit Authority bus network, the main way around for people without cars outside the streetcar corridors.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jet",
+   "name": "Jefferson Transit (JeT)",
+   "kind": "bus",
+   "summary": "Jefferson Parish buses linking Metairie to Mid-City and downtown New Orleans.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blue-bikes",
+   "name": "Blue Bikes",
+   "kind": "bike-share",
+   "summary": "The city's electric-assist bike share, docked across the older, flat neighborhoods near the river.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "jackson-square",
+   "name": "Jackson Square",
+   "kind": "landmark",
+   "neighborhood": "french-quarter",
+   "summary": "The old Place d'Armes in front of the cathedral, ringed by fortune tellers, painters hanging work on the iron fence and brass bands busking for tips.",
+   "tags": [
+    "iconic",
+    "street-performers",
+    "historic",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-louis-cathedral",
+   "name": "St. Louis Cathedral",
+   "kind": "landmark",
+   "neighborhood": "french-quarter",
+   "summary": "The triple-spired white cathedral over Jackson Square, the oldest continuously active Catholic cathedral in the United States, with Mass, weddings and free visits between services.",
+   "tags": [
+    "church",
+    "iconic",
+    "architecture"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-du-monde",
+   "name": "Café du Monde",
+   "kind": "cafe",
+   "neighborhood": "french-quarter",
+   "summary": "Open-air coffee stand at the French Market since 1862, serving beignets under drifts of powdered sugar and café au lait with chicory.",
+   "tags": [
+    "beignets",
+    "chicory-coffee",
+    "iconic"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "beignets",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "french-market",
+   "name": "French Market",
+   "kind": "market",
+   "neighborhood": "french-quarter",
+   "summary": "Colonnaded market sheds along the river with a flea market, food stalls, pralines and hot sauce, and the Creole Tomato Festival in June.",
+   "tags": [
+    "market",
+    "flea-market",
+    "food"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "preservation-hall",
+   "name": "Preservation Hall",
+   "kind": "venue",
+   "neighborhood": "french-quarter",
+   "summary": "A worn, candlelit room on St. Peter Street where traditional New Orleans jazz has been played nightly since 1961; short sets, mostly standing room, no bar.",
+   "tags": [
+    "jazz",
+    "live-music",
+    "historic",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bourbon-street",
+   "name": "Bourbon Street",
+   "kind": "nightlife",
+   "neighborhood": "french-quarter",
+   "summary": "Thirteen blocks of neon, balcony bead-throwing, cover bands, strip clubs and drinks in plastic go-cups; locals mostly pass through on the way somewhere else.",
+   "tags": [
+    "party",
+    "touristy",
+    "neon",
+    "go-cups"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cabildo",
+   "name": "The Cabildo",
+   "kind": "museum",
+   "neighborhood": "french-quarter",
+   "summary": "Louisiana State Museum in the Spanish colonial seat of government where the Louisiana Purchase was signed, with Napoleon's death mask.",
+   "tags": [
+    "history",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hnoc",
+   "name": "The Historic New Orleans Collection",
+   "kind": "museum",
+   "neighborhood": "french-quarter",
+   "summary": "Free galleries on Royal and Chartres streets covering three centuries of the city, with maps, paintings and rotating exhibitions.",
+   "tags": [
+    "history",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "galatoires",
+   "name": "Galatoire's",
+   "kind": "restaurant",
+   "neighborhood": "french-quarter",
+   "summary": "Bourbon Street Creole grand dame since 1905, where jacketed regulars hold long Friday lunches that run into the evening.",
+   "tags": [
+    "creole",
+    "old-line",
+    "friday-lunch",
+    "special-occasion"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "antoines",
+   "name": "Antoine's",
+   "kind": "restaurant",
+   "neighborhood": "french-quarter",
+   "summary": "Founded in 1840, the city's oldest family-run restaurant, with a warren of dining rooms hung with Carnival memorabilia and the original oysters Rockefeller.",
+   "tags": [
+    "creole",
+    "historic",
+    "special-occasion"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "acme-oyster-house",
+   "name": "Acme Oyster House",
+   "kind": "restaurant",
+   "neighborhood": "french-quarter",
+   "summary": "Iberville Street oyster bar with shuckers working the marble counter and a line out the door for chargrilled oysters.",
+   "tags": [
+    "oysters",
+    "seafood",
+    "line"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "napoleon-house",
+   "name": "Napoleon House",
+   "kind": "bar",
+   "neighborhood": "french-quarter",
+   "summary": "Crumbling 200-year-old building on Chartres Street with classical music, Pimm's Cups and warm muffulettas.",
+   "tags": [
+    "pimms-cup",
+    "muffuletta",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole-italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lafittes-blacksmith-shop",
+   "name": "Lafitte's Blacksmith Shop",
+   "kind": "bar",
+   "neighborhood": "french-quarter",
+   "summary": "Candlelit bar in an eighteenth-century cottage at the quiet end of Bourbon, with a piano player and purple daiquiris.",
+   "tags": [
+    "historic",
+    "candlelit",
+    "piano"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pat-obriens",
+   "name": "Pat O'Brien's",
+   "kind": "bar",
+   "neighborhood": "french-quarter",
+   "summary": "Home of the rum Hurricane, with a flaming fountain in the courtyard and duelling pianos in the back room.",
+   "tags": [
+    "hurricanes",
+    "piano-bar",
+    "courtyard"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-lafitte-in-exile",
+   "name": "Café Lafitte in Exile",
+   "kind": "bar",
+   "neighborhood": "french-quarter",
+   "summary": "One of the oldest gay bars in the country, with a wraparound balcony over Bourbon that fills during Southern Decadence.",
+   "tags": [
+    "lgbtq",
+    "balcony",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coops-place",
+   "name": "Coop's Place",
+   "kind": "restaurant",
+   "neighborhood": "french-quarter",
+   "summary": "Dim, loud Decatur Street bar kitchen serving rabbit and sausage jambalaya and fried chicken late into the night.",
+   "tags": [
+    "cajun",
+    "late-night",
+    "dive"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "cajun",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woldenberg-park",
+   "name": "Woldenberg Park and the Moonwalk",
+   "kind": "park",
+   "neighborhood": "french-quarter",
+   "summary": "Riverfront lawns and a boardwalk where people watch ships and the Algiers ferry, and where French Quarter Fest puts its biggest stages.",
+   "tags": [
+    "riverfront",
+    "walk",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "steamboat-natchez",
+   "name": "Steamboat Natchez",
+   "kind": "attraction",
+   "neighborhood": "french-quarter",
+   "summary": "A sternwheeler with a steam calliope offering harbor cruises and evening jazz dinner cruises from the Toulouse Street wharf.",
+   "tags": [
+    "river",
+    "cruise",
+    "jazz"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jazz-museum",
+   "name": "New Orleans Jazz Museum",
+   "kind": "museum",
+   "neighborhood": "french-quarter",
+   "summary": "Museum in the Old U.S. Mint on Esplanade with instruments, recordings and a performance hall; the Satchmo SummerFest stage sits on its lawn.",
+   "tags": [
+    "jazz",
+    "music",
+    "rainy-day",
+    "history"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-street",
+   "name": "Royal Street galleries and antiques",
+   "kind": "shopping",
+   "neighborhood": "french-quarter",
+   "summary": "Blocks of antique dealers, galleries and street musicians, closed to cars by day on the busiest stretch.",
+   "tags": [
+    "antiques",
+    "galleries",
+    "buskers",
+    "walk"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "faulkner-house-books",
+   "name": "Faulkner House Books",
+   "kind": "shopping",
+   "neighborhood": "french-quarter",
+   "summary": "Tiny bookshop in Pirate Alley in the house where William Faulkner lived in 1925.",
+   "tags": [
+    "books",
+    "literary",
+    "small"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "frenchmen-street",
+   "name": "Frenchmen Street",
+   "kind": "nightlife",
+   "neighborhood": "marigny",
+   "summary": "Three blocks of music clubs where brass bands play on the corner and you can hear jazz, funk and blues through every open door.",
+   "tags": [
+    "live-music",
+    "jazz",
+    "brass-bands",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spotted-cat",
+   "name": "The Spotted Cat Music Club",
+   "kind": "bar",
+   "neighborhood": "marigny",
+   "summary": "Small, packed, cash-only club on Frenchmen with swing and trad jazz bands and couples dancing in the narrow space before the bar.",
+   "tags": [
+    "jazz",
+    "swing-dancing",
+    "cash-only"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "snug-harbor",
+   "name": "Snug Harbor Jazz Bistro",
+   "kind": "venue",
+   "neighborhood": "marigny",
+   "summary": "Frenchmen's sit-down modern jazz room, with two seated sets a night upstairs and a steak-and-burger dining room below.",
+   "tags": [
+    "jazz",
+    "seated",
+    "dinner"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dba-new-orleans",
+   "name": "d.b.a.",
+   "kind": "venue",
+   "neighborhood": "marigny",
+   "summary": "Long, dark bar with a deep beer and whiskey list and a stage for brass bands, funk and blues most nights.",
+   "tags": [
+    "live-music",
+    "beer",
+    "whiskey"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "frenchmen-art-market",
+   "name": "Frenchmen Art Market",
+   "kind": "market",
+   "neighborhood": "marigny",
+   "summary": "Evening open-air market of local artists' prints, jewelry and oddities under string lights between the clubs.",
+   "tags": [
+    "art",
+    "night-market",
+    "local-makers"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "washington-square-park",
+   "name": "Washington Square Park",
+   "kind": "park",
+   "neighborhood": "marigny",
+   "summary": "Fenced green square at the end of Frenchmen with dog walkers, picnics and the odd festival stage.",
+   "tags": [
+    "dogs",
+    "picnic",
+    "neighbourhood"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-rose-nicaud",
+   "name": "Café Rose Nicaud",
+   "kind": "cafe",
+   "neighborhood": "marigny",
+   "summary": "Frenchmen Street coffeehouse named for an enslaved woman who bought her freedom selling coffee in the French Market, with breakfast and vegetarian lunches.",
+   "tags": [
+    "coffee",
+    "breakfast",
+    "history"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "buffas",
+   "name": "Buffa's",
+   "kind": "restaurant",
+   "neighborhood": "marigny",
+   "summary": "Esplanade Avenue bar and back room with red beans, burgers and piano jazz, open around the clock for musicians coming off gigs.",
+   "tags": [
+    "red-beans",
+    "late-night",
+    "piano",
+    "dive"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "genes-po-boys",
+   "name": "Gene's Po-Boys",
+   "kind": "restaurant",
+   "neighborhood": "marigny",
+   "summary": "The hot-pink corner building at Elysian Fields and St. Claude, known for hot sausage po-boys and daiquiris at any hour.",
+   "tags": [
+    "po-boys",
+    "daiquiris",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "po-boys",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marigny-opera-house",
+   "name": "Marigny Opera House",
+   "kind": "venue",
+   "neighborhood": "marigny",
+   "summary": "A deconsecrated 1850s church used for chamber music, dance and small festival shows under its high ceilings.",
+   "tags": [
+    "classical",
+    "dance",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nola-boulder-lounge",
+   "name": "New Orleans Boulder Lounge",
+   "kind": "fitness",
+   "neighborhood": "marigny",
+   "summary": "Bouldering gym in a St. Claude Avenue warehouse with yoga classes and an after-work crowd of climbers.",
+   "tags": [
+    "climbing",
+    "bouldering",
+    "yoga"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crescent-park",
+   "name": "Crescent Park",
+   "kind": "park",
+   "neighborhood": "bywater",
+   "summary": "Long riverside park reached over the rusty arched \"Rusty Rainbow\" bridge, with wharf sheds, a dog run and skyline views back to the CBD.",
+   "tags": [
+    "riverfront",
+    "running",
+    "dogs",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bacchanal",
+   "name": "Bacchanal Wine",
+   "kind": "bar",
+   "neighborhood": "bywater",
+   "summary": "Wine shop with a ramshackle backyard where you pick a bottle and cheese inside, then sit under the lights to small plates and live jazz.",
+   "tags": [
+    "wine",
+    "backyard",
+    "live-music"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "mediterranean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "elizabeths",
+   "name": "Elizabeth's",
+   "kind": "restaurant",
+   "neighborhood": "bywater",
+   "summary": "Upstairs-downstairs neighborhood brunch spot near the levee, famous for praline bacon and its \"Real Food Done Real Good\" sign.",
+   "tags": [
+    "brunch",
+    "praline-bacon",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-joint",
+   "name": "The Joint",
+   "kind": "restaurant",
+   "neighborhood": "bywater",
+   "summary": "Smokehouse in a Mazant Street cottage with ribs, pulled pork and peanut butter pie on a back patio.",
+   "tags": [
+    "barbecue",
+    "patio",
+    "casual"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "barbecue",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saturn-bar",
+   "name": "Saturn Bar",
+   "kind": "bar",
+   "neighborhood": "bywater",
+   "summary": "St. Claude Avenue dive decorated with decades of junk art, with DJs, local bands and a crowd of artists and musicians.",
+   "tags": [
+    "dive-bar",
+    "art",
+    "live-music"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pizza-delicious",
+   "name": "Pizza Delicious",
+   "kind": "restaurant",
+   "neighborhood": "bywater",
+   "summary": "New York-style pizza by the slice on Piety Street, grown from a once-a-week pop-up into a neighborhood hangout.",
+   "tags": [
+    "pizza",
+    "casual",
+    "patio"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bywater-bakery",
+   "name": "Bywater Bakery",
+   "kind": "cafe",
+   "neighborhood": "bywater",
+   "summary": "Neighborhood bakery on Dauphine Street for coffee, king cakes in Carnival and a bulletin board of local goings-on, with music on weekends.",
+   "tags": [
+    "bakery",
+    "king-cake",
+    "coffee",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "parleaux-beer-lab",
+   "name": "Parleaux Beer Lab",
+   "kind": "bar",
+   "neighborhood": "bywater",
+   "summary": "Small brewery with a big backyard of picnic tables, food pop-ups and dogs.",
+   "tags": [
+    "brewery",
+    "backyard",
+    "dogs"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "euclid-records",
+   "name": "Euclid Records",
+   "kind": "shopping",
+   "neighborhood": "bywater",
+   "summary": "Two floors of new and used vinyl heavy on local jazz, funk and bounce, with in-store sets during festival season.",
+   "tags": [
+    "records",
+    "music",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stallings-st-claude",
+   "name": "Stallings St. Claude Recreation Center",
+   "kind": "fitness",
+   "neighborhood": "bywater",
+   "summary": "City-run recreation center with a pool, gym and youth leagues on St. Claude Avenue.",
+   "tags": [
+    "pool",
+    "gym",
+    "rec-center"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "congo-square",
+   "name": "Congo Square in Louis Armstrong Park",
+   "kind": "park",
+   "neighborhood": "treme",
+   "summary": "The plaza where enslaved and free people of African descent gathered on Sundays to drum and dance, now inside Armstrong Park with its lagoon and statues of musicians.",
+   "tags": [
+    "history",
+    "drumming",
+    "black-history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "backstreet-museum",
+   "name": "Backstreet Cultural Museum",
+   "kind": "museum",
+   "neighborhood": "treme",
+   "summary": "Small museum of Mardi Gras Indian suits, Baby Dolls, Skull and Bone gang costumes and social aid and pleasure club regalia.",
+   "tags": [
+    "mardi-gras-indians",
+    "black-history",
+    "costumes"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-augustine-church",
+   "name": "St. Augustine Church",
+   "kind": "landmark",
+   "neighborhood": "treme",
+   "summary": "Built in 1841, one of the oldest Black Catholic parishes in the country, with the Tomb of the Unknown Slave beside it and a gospel Mass on Sundays.",
+   "tags": [
+    "church",
+    "history",
+    "black-history"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dooky-chase",
+   "name": "Dooky Chase's Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "treme",
+   "summary": "Leah Chase's Creole restaurant, a civil rights meeting place hung with Black art, known for its lunch buffet and Holy Thursday gumbo z'herbes.",
+   "tags": [
+    "creole",
+    "history",
+    "lunch-buffet"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "willie-maes",
+   "name": "Willie Mae's Scotch House",
+   "kind": "restaurant",
+   "neighborhood": "treme",
+   "summary": "Corner restaurant on St. Ann Street with a cult following for its wet-battered fried chicken and butter beans.",
+   "tags": [
+    "fried-chicken",
+    "soul-food",
+    "line"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "soul-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mahalia-jackson-theater",
+   "name": "Mahalia Jackson Theater",
+   "kind": "venue",
+   "neighborhood": "treme",
+   "summary": "The performing arts hall in Armstrong Park, home to the opera and ballet seasons and touring shows.",
+   "tags": [
+    "theater",
+    "opera",
+    "ballet"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kermits-mother-in-law",
+   "name": "Kermit's Tremé Mother-in-Law Lounge",
+   "kind": "bar",
+   "neighborhood": "treme",
+   "summary": "Trumpeter Kermit Ruffins's lounge in Ernie K-Doe's old bar on Claiborne, with murals outside and Kermit often cooking for the crowd.",
+   "tags": [
+    "live-music",
+    "trumpet",
+    "murals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "noaam",
+   "name": "New Orleans African American Museum",
+   "kind": "museum",
+   "neighborhood": "treme",
+   "summary": "Museum in the Meilleur-Goldthwaite House and its grounds telling the story of Black New Orleans, from Tremé's free people of color onward.",
+   "tags": [
+    "history",
+    "black-history",
+    "art"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lafitte-greenway",
+   "name": "Lafitte Greenway",
+   "kind": "trail",
+   "neighborhood": "treme",
+   "summary": "Paved path along an old canal and rail line from Armstrong Park to Mid-City, with ball fields and Blue Bikes along the way.",
+   "tags": [
+    "cycling",
+    "running",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "treme-recreation-center",
+   "name": "Tremé Recreation Community Center",
+   "kind": "fitness",
+   "neighborhood": "treme",
+   "summary": "City recreation center with an indoor pool, gym floor and after-school programs in the heart of Tremé.",
+   "tags": [
+    "pool",
+    "gym",
+    "rec-center"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lil-dizzys",
+   "name": "Li'l Dizzy's Café",
+   "kind": "restaurant",
+   "neighborhood": "seventh-ward",
+   "summary": "Esplanade Avenue Creole soul kitchen run by the Baquet family, with a weekday lunch buffet, fried chicken and trout Baquet.",
+   "tags": [
+    "creole",
+    "soul-food",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mchardys",
+   "name": "McHardy's Chicken & Fixin'",
+   "kind": "restaurant",
+   "neighborhood": "seventh-ward",
+   "summary": "Takeout counter on Broad Street whose fried chicken boxes turn up at every party, wake and second line.",
+   "tags": [
+    "fried-chicken",
+    "takeout",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "fried-chicken",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pagoda-cafe",
+   "name": "Pagoda Café",
+   "kind": "cafe",
+   "neighborhood": "seventh-ward",
+   "summary": "Coffee, breakfast tacos and lemonade from a pagoda-roofed former laundry with a shady patio near Bayou Road.",
+   "tags": [
+    "coffee",
+    "patio",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "community-book-center",
+   "name": "Community Book Center",
+   "kind": "shopping",
+   "neighborhood": "seventh-ward",
+   "summary": "Black-owned bookstore on Bayou Road since 1983, a gathering place for readings and conversation.",
+   "tags": [
+    "books",
+    "black-owned",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hunters-field",
+   "name": "Hunter's Field",
+   "kind": "park",
+   "neighborhood": "seventh-ward",
+   "summary": "Neighborhood ball field and playground on Claiborne where the downtown Mardi Gras Indian gangs gather to start Super Sunday.",
+   "tags": [
+    "sports",
+    "playground",
+    "mardi-gras-indians"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "claiborne-underpass",
+   "name": "Claiborne Avenue underpass",
+   "kind": "landmark",
+   "neighborhood": "seventh-ward",
+   "summary": "Under the I-10, whose building in the 1960s cut down the oaks of the old Black main street, the concrete pillars are painted with murals and the neutral ground fills with families and Indians on Mardi Gras Day.",
+   "tags": [
+    "murals",
+    "history",
+    "mardi-gras"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-park",
+   "name": "City Park",
+   "kind": "park",
+   "neighborhood": "mid-city",
+   "summary": "A park bigger than Central Park, draped in live oaks centuries old, with lagoons, paddle boats, a golf course, festival grounds and families picnicking under the Singing Oak.",
+   "tags": [
+    "live-oaks",
+    "lagoons",
+    "picnic",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "noma",
+   "name": "New Orleans Museum of Art",
+   "kind": "museum",
+   "neighborhood": "mid-city",
+   "summary": "The city's art museum at the head of City Park, with a Degas painted in New Orleans, photography, Louisiana art and Friday night programs.",
+   "tags": [
+    "art",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "besthoff-sculpture-garden",
+   "name": "Sydney and Walda Besthoff Sculpture Garden",
+   "kind": "garden",
+   "neighborhood": "mid-city",
+   "summary": "Free sculpture garden beside the art museum, with winding paths, lagoons and big outdoor works under the oaks.",
+   "tags": [
+    "art",
+    "free",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "botanical-garden",
+   "name": "New Orleans Botanical Garden",
+   "kind": "garden",
+   "neighborhood": "mid-city",
+   "summary": "Art Deco gardens in City Park with a conservatory, a garden train layout and plants that like the swampy heat.",
+   "tags": [
+    "plants",
+    "quiet",
+    "walk"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "carousel-gardens",
+   "name": "Carousel Gardens Amusement Park",
+   "kind": "attraction",
+   "neighborhood": "mid-city",
+   "summary": "Small amusement park in City Park around a century-old wooden carousel, the centerpiece of Celebration in the Oaks lights in winter.",
+   "tags": [
+    "kids",
+    "carousel",
+    "rides"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-park-tennis",
+   "name": "City Park Tennis Center",
+   "kind": "fitness",
+   "neighborhood": "mid-city",
+   "summary": "Public tennis center with dozens of hard and clay courts, lessons and leagues.",
+   "tags": [
+    "tennis",
+    "lessons"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mandinas",
+   "name": "Mandina's",
+   "kind": "restaurant",
+   "neighborhood": "mid-city",
+   "summary": "Canal Street Creole-Italian institution since 1932: turtle soup, trout amandine, red beans on Monday and a busy bar of regulars.",
+   "tags": [
+    "creole-italian",
+    "old-school",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole-italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "liuzzas",
+   "name": "Liuzza's Restaurant & Bar",
+   "kind": "restaurant",
+   "neighborhood": "mid-city",
+   "summary": "Corner neighborhood joint serving frozen fishbowl mugs of beer, fried pickles and the \"Frenchuletta\".",
+   "tags": [
+    "po-boys",
+    "frozen-mugs",
+    "neighbourhood"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole-italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rock-n-bowl",
+   "name": "Rock 'n' Bowl",
+   "kind": "venue",
+   "neighborhood": "mid-city",
+   "summary": "Bowling alley and dance hall on Carrollton where couples two-step and jitterbug to zydeco and swamp pop between frames.",
+   "tags": [
+    "zydeco",
+    "bowling",
+    "dancing"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "angelo-brocato",
+   "name": "Angelo Brocato",
+   "kind": "cafe",
+   "neighborhood": "mid-city",
+   "summary": "Sicilian gelato, cannoli and spumoni parlour founded in 1905 and still run by the family, with fig cookies for St. Joseph's Day.",
+   "tags": [
+    "gelato",
+    "cannoli",
+    "dessert",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian-pastry",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pandoras-snowballs",
+   "name": "Pandora's Snowballs",
+   "kind": "cafe",
+   "neighborhood": "mid-city",
+   "summary": "Neighborhood snowball stand on North Carrollton with a long syrup board and a line of kids and parents on hot afternoons.",
+   "tags": [
+    "snowballs",
+    "dessert",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "snowballs",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ruby-slipper-mid-city",
+   "name": "Ruby Slipper Café",
+   "kind": "restaurant",
+   "neighborhood": "mid-city",
+   "summary": "The first location of the local brunch chain, opened after Katrina, with bananas Foster pain perdu and shrimp and grits.",
+   "tags": [
+    "brunch",
+    "breakfast",
+    "line"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "creole-brunch",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crescent-city-steaks",
+   "name": "Crescent City Steaks",
+   "kind": "restaurant",
+   "neighborhood": "mid-city",
+   "summary": "Family-run steakhouse on Broad Street since 1934 with curtained private booths and steaks sizzling in butter.",
+   "tags": [
+    "steak",
+    "old-school",
+    "booths"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "steakhouse",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ralphs-on-the-park",
+   "name": "Ralph's on the Park",
+   "kind": "restaurant",
+   "neighborhood": "mid-city",
+   "summary": "Contemporary Creole restaurant facing City Park's oaks, a favorite for anniversaries and jazz brunch.",
+   "tags": [
+    "creole",
+    "brunch",
+    "park-views"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cypress-grove-cemetery",
+   "name": "Cypress Grove and Greenwood cemeteries",
+   "kind": "landmark",
+   "neighborhood": "mid-city",
+   "summary": "Cities of above-ground tombs at the end of the Canal streetcar line, including the firemen's monuments.",
+   "tags": [
+    "cemetery",
+    "history",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "parkway-bakery",
+   "name": "Parkway Bakery & Tavern",
+   "kind": "restaurant",
+   "neighborhood": "bayou-st-john",
+   "summary": "Po-boy shop on the bayou since 1911, with roast beef debris dripping gravy, fried shrimp and a line on Saturdays.",
+   "tags": [
+    "po-boys",
+    "roast-beef",
+    "iconic"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "po-boys",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pitot-house",
+   "name": "Pitot House",
+   "kind": "museum",
+   "neighborhood": "bayou-st-john",
+   "summary": "A raised Creole colonial plantation house from about 1799 on the bayou, open for tours.",
+   "tags": [
+    "history",
+    "architecture",
+    "house-museum"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fair-grinds",
+   "name": "Fair Grinds Coffeehouse",
+   "kind": "cafe",
+   "neighborhood": "bayou-st-john",
+   "summary": "Community coffeehouse a block from the Fair Grounds, full of neighbors, laptops and flyers for the next fundraiser.",
+   "tags": [
+    "coffee",
+    "community",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-degas",
+   "name": "Café Degas",
+   "kind": "restaurant",
+   "neighborhood": "bayou-st-john",
+   "summary": "French bistro on Esplanade built around a pecan tree that grows through the enclosed porch.",
+   "tags": [
+    "french",
+    "bistro",
+    "romantic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "french",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bayou-st-john-water",
+   "name": "Bayou St. John",
+   "kind": "park",
+   "neighborhood": "bayou-st-john",
+   "summary": "The slow bayou itself, lined with grass banks for picnics and kayak and paddleboard launches, busy with crawfish boils and festivals in spring.",
+   "tags": [
+    "kayaking",
+    "picnic",
+    "waterside"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pals-lounge",
+   "name": "Pal's Lounge",
+   "kind": "bar",
+   "neighborhood": "bayou-st-john",
+   "summary": "Cozy neighborhood bar with strong drinks, a pool table and a bathroom wallpapered in vintage pin-ups.",
+   "tags": [
+    "neighbourhood-bar",
+    "pool",
+    "cocktails"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "liuzzas-by-the-track",
+   "name": "Liuzza's by the Track",
+   "kind": "restaurant",
+   "neighborhood": "bayou-st-john",
+   "summary": "Tiny corner bar and kitchen by the Fair Grounds, famous for barbecue shrimp po-boys and gumbo, mobbed during Jazz Fest.",
+   "tags": [
+    "po-boys",
+    "gumbo",
+    "jazz-fest"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fair-grounds",
+   "name": "Fair Grounds Race Course",
+   "kind": "stadium",
+   "neighborhood": "bayou-st-john",
+   "summary": "Historic racetrack with thoroughbred racing from Thanksgiving to March and the infield that hosts Jazz Fest.",
+   "tags": [
+    "horse-racing",
+    "festivals",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-louis-cemetery-3",
+   "name": "St. Louis Cemetery No. 3",
+   "kind": "landmark",
+   "neighborhood": "bayou-st-john",
+   "summary": "Rows of white family tombs and society vaults on Esplanade by the bayou, open to visitors without a guide.",
+   "tags": [
+    "cemetery",
+    "history",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wwii-museum",
+   "name": "The National WWII Museum",
+   "kind": "museum",
+   "neighborhood": "cbd",
+   "summary": "Sprawling museum of the Second World War, with Higgins boats built in New Orleans, aircraft hung in a glass pavilion and a 4D film.",
+   "tags": [
+    "history",
+    "rainy-day",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ogden-museum",
+   "name": "Ogden Museum of Southern Art",
+   "kind": "museum",
+   "neighborhood": "cbd",
+   "summary": "Southern art from folk to contemporary, with Thursday evening concerts in the atrium.",
+   "tags": [
+    "art",
+    "southern",
+    "live-music"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "contemporary-arts-center",
+   "name": "Contemporary Arts Center",
+   "kind": "venue",
+   "neighborhood": "cbd",
+   "summary": "Warehouse arts center for exhibitions, dance, theater and talks on Camp Street.",
+   "tags": [
+    "art",
+    "theater",
+    "contemporary"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "audubon-aquarium",
+   "name": "Audubon Aquarium",
+   "kind": "attraction",
+   "neighborhood": "cbd",
+   "summary": "Riverfront aquarium at the foot of Canal Street with a Gulf of Mexico oil-rig tank, an Amazon gallery and white alligators.",
+   "tags": [
+    "animals",
+    "rainy-day",
+    "kids"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "caesars-new-orleans",
+   "name": "Caesars New Orleans",
+   "kind": "nightlife",
+   "neighborhood": "cbd",
+   "summary": "The casino at the foot of Canal Street, for decades Harrah's and renamed Caesars after a 2024 remodel, with tables, slots and a hotel tower.",
+   "tags": [
+    "casino",
+    "late-night"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "superdome",
+   "name": "Caesars Superdome",
+   "kind": "stadium",
+   "neighborhood": "cbd",
+   "summary": "The giant dome where the Saints play, the Sugar Bowl and Bayou Classic are held and Essence Fest fills the nights each July.",
+   "tags": [
+    "football",
+    "saints",
+    "concerts",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "smoothie-king-center",
+   "name": "Smoothie King Center",
+   "kind": "stadium",
+   "neighborhood": "cbd",
+   "summary": "Arena beside the Superdome where the Pelicans play and touring concerts stop.",
+   "tags": [
+    "basketball",
+    "pelicans",
+    "concerts"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saenger-theatre",
+   "name": "Saenger Theatre",
+   "kind": "venue",
+   "neighborhood": "cbd",
+   "summary": "Restored 1927 movie palace on Canal Street with a ceiling of twinkling stars, now staging Broadway tours and concerts.",
+   "tags": [
+    "theater",
+    "broadway",
+    "historic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cochon",
+   "name": "Cochon",
+   "kind": "restaurant",
+   "neighborhood": "cbd",
+   "summary": "Donald Link's Warehouse District Cajun restaurant with wood-fired oyster roasts, boudin and rabbit and dumplings; the Butcher counter next door does sandwiches.",
+   "tags": [
+    "cajun",
+    "pork",
+    "boudin"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cajun",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "emerils",
+   "name": "Emeril's",
+   "kind": "restaurant",
+   "neighborhood": "cbd",
+   "summary": "Emeril Lagasse's flagship in a Tchoupitoulas warehouse, now run as a tasting menu by his son.",
+   "tags": [
+    "fine-dining",
+    "special-occasion"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mothers-restaurant",
+   "name": "Mother's Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "cbd",
+   "summary": "Cafeteria-style Poydras Street counter since 1938, known for the \"Ferdi\" ham and debris po-boy and jambalaya.",
+   "tags": [
+    "po-boys",
+    "cafeteria",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rouses-cbd",
+   "name": "Rouses Market downtown",
+   "kind": "market",
+   "neighborhood": "cbd",
+   "summary": "The downtown branch of the Louisiana grocery chain, with a hot bar, boiled seafood in season and king cakes stacked by the door in Carnival.",
+   "tags": [
+    "grocery",
+    "king-cake",
+    "lunch"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lafayette-square",
+   "name": "Lafayette Square",
+   "kind": "park",
+   "neighborhood": "cbd",
+   "summary": "Shady downtown square across from Gallier Hall where office workers eat lunch and the free Wednesday at the Square concerts run in spring.",
+   "tags": [
+    "lunch",
+    "concerts",
+    "shade"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crescent-city-farmers-market",
+   "name": "Crescent City Farmers Market",
+   "kind": "market",
+   "neighborhood": "cbd",
+   "summary": "Saturday-morning market in the Warehouse District with Creole tomatoes, satsumas, Gulf shrimp and a chef demo.",
+   "tags": [
+    "farmers-market",
+    "saturday",
+    "produce"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mammoth-espresso",
+   "name": "Mammoth Espresso",
+   "kind": "cafe",
+   "neighborhood": "cbd",
+   "summary": "Small, serious coffee bar in the Warehouse District for office workers and convention visitors.",
+   "tags": [
+    "coffee",
+    "espresso",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mardi-gras-world",
+   "name": "Mardi Gras World",
+   "kind": "attraction",
+   "neighborhood": "cbd",
+   "summary": "Blaine Kern's float warehouses by the Convention Center, where artists build and paint the papier-mâché figures for dozens of krewes.",
+   "tags": [
+    "carnival",
+    "floats",
+    "tours"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ferry-terminal-canal",
+   "name": "Canal Street ferry landing",
+   "kind": "landmark",
+   "neighborhood": "cbd",
+   "summary": "The riverfront terminal for the Algiers Point ferry, with the Spanish Plaza fountain beside it and big ships passing close.",
+   "tags": [
+    "river",
+    "views",
+    "ferry"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coliseum-square",
+   "name": "Coliseum Square",
+   "kind": "park",
+   "neighborhood": "lower-garden-district",
+   "summary": "Long, oak-shaded park surrounded by Greek Revival mansions, used by dog walkers and the neighborhood's fall art fair.",
+   "tags": [
+    "dogs",
+    "shade",
+    "architecture"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "courtyard-brewery",
+   "name": "Courtyard Brewery",
+   "kind": "bar",
+   "neighborhood": "lower-garden-district",
+   "summary": "Small brewery taproom with a gravel yard for food trucks, dogs and long afternoons.",
+   "tags": [
+    "brewery",
+    "food-trucks",
+    "dogs"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "steins-deli",
+   "name": "Stein's Market & Deli",
+   "kind": "restaurant",
+   "neighborhood": "lower-garden-district",
+   "summary": "Magazine Street deli making Philadelphia-style hoagies and Reubens, with a fridge of craft beer.",
+   "tags": [
+    "deli",
+    "sandwiches",
+    "beer"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "french-truck-coffee",
+   "name": "French Truck Coffee",
+   "kind": "cafe",
+   "neighborhood": "lower-garden-district",
+   "summary": "Local roaster that began delivering beans from a yellow truck, with a busy cafe on Magazine Street.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "avenue-pub",
+   "name": "The Avenue Pub",
+   "kind": "bar",
+   "neighborhood": "lower-garden-district",
+   "summary": "Twenty-four-hour beer bar on St. Charles with a serious tap list and an upstairs balcony over the parade route.",
+   "tags": [
+    "beer",
+    "balcony",
+    "parade-route"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "juans-flying-burrito",
+   "name": "Juan's Flying Burrito",
+   "kind": "restaurant",
+   "neighborhood": "lower-garden-district",
+   "summary": "Loud, tattooed \"Creole taqueria\" on Magazine with big burritos and cheap margaritas.",
+   "tags": [
+    "burritos",
+    "casual",
+    "margaritas"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "tex-mex",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "commanders-palace",
+   "name": "Commander's Palace",
+   "kind": "restaurant",
+   "neighborhood": "garden-district",
+   "summary": "The turquoise-and-white Victorian where the Brennan family serves turtle soup, bread pudding soufflé and twenty-five-cent weekday lunch martinis, with a jazz brunch on weekends.",
+   "tags": [
+    "creole",
+    "jazz-brunch",
+    "special-occasion",
+    "iconic"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coquette",
+   "name": "Coquette",
+   "kind": "restaurant",
+   "neighborhood": "garden-district",
+   "summary": "Southern bistro in an old corner grocery on Magazine and Washington with a changing menu and a good bar.",
+   "tags": [
+    "southern",
+    "bistro",
+    "cocktails"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "southern",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "garden-district-houses",
+   "name": "Garden District house walk",
+   "kind": "landmark",
+   "neighborhood": "garden-district",
+   "summary": "Self-guided walk past the mansions of Prytania and First streets, with their cast-iron fences, raised galleries and famous former residents.",
+   "tags": [
+    "architecture",
+    "walk",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "garden-district-book-shop",
+   "name": "Garden District Book Shop",
+   "kind": "shopping",
+   "neighborhood": "garden-district",
+   "summary": "Independent bookshop in The Rink, an old skating rink turned shops, strong on local writers and signed editions.",
+   "tags": [
+    "books",
+    "local-authors"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "magazine-street-shops",
+   "name": "Magazine Street shops",
+   "kind": "shopping",
+   "neighborhood": "garden-district",
+   "summary": "Six miles of boutiques, vintage shops, galleries and cafés from the Lower Garden District to Audubon Park.",
+   "tags": [
+    "boutiques",
+    "vintage",
+    "walk"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lafayette-cemetery-1",
+   "name": "Lafayette Cemetery No. 1",
+   "kind": "landmark",
+   "neighborhood": "garden-district",
+   "summary": "Walled 1833 city of tombs across from Commander's Palace; its gates have spent long stretches closed for repairs, but the vaults rise over the walls on Washington Avenue.",
+   "tags": [
+    "cemetery",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "traceys",
+   "name": "Tracey's",
+   "kind": "bar",
+   "neighborhood": "irish-channel",
+   "summary": "Irish Channel corner bar with roast beef po-boys, Saints games on every screen and the end of the St. Patrick's parade at its door.",
+   "tags": [
+    "sports-bar",
+    "po-boys",
+    "irish"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "po-boys",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mahonys",
+   "name": "Mahony's Po-Boys",
+   "kind": "restaurant",
+   "neighborhood": "irish-channel",
+   "summary": "Magazine Street po-boy shop in an old cottage, known for fried green tomato and shrimp remoulade po-boys and a porch to eat them on.",
+   "tags": [
+    "po-boys",
+    "porch",
+    "casual"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "po-boys",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-mary-assumption",
+   "name": "St. Mary's Assumption Church",
+   "kind": "landmark",
+   "neighborhood": "irish-channel",
+   "summary": "Towering German Baroque church built by the neighborhood's German Catholics, with the shrine of Blessed Francis Xavier Seelos.",
+   "tags": [
+    "church",
+    "architecture",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "urban-south",
+   "name": "Urban South Brewery",
+   "kind": "bar",
+   "neighborhood": "irish-channel",
+   "summary": "Warehouse brewery on Tchoupitoulas with a big family- and dog-friendly taproom.",
+   "tags": [
+    "brewery",
+    "family-friendly",
+    "dogs"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "irish-channel-blocks",
+   "name": "Irish Channel shotgun blocks",
+   "kind": "landmark",
+   "neighborhood": "irish-channel",
+   "summary": "Streets of nineteenth-century shotgun doubles in candy colors, with neighbors on stoops and porches.",
+   "tags": [
+    "architecture",
+    "walk",
+    "neighbourhood"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sofab",
+   "name": "Southern Food & Beverage Museum",
+   "kind": "museum",
+   "neighborhood": "central-city",
+   "summary": "Museum of Southern food and drink on Oretha Castle Haley, home to the Museum of the American Cocktail and cooking demos.",
+   "tags": [
+    "food",
+    "cocktails",
+    "history"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-reconcile",
+   "name": "Café Reconcile",
+   "kind": "restaurant",
+   "neighborhood": "central-city",
+   "summary": "Lunch restaurant run as a training program for young people entering hospitality, serving red beans, fried fish and bread pudding.",
+   "tags": [
+    "lunch",
+    "community",
+    "soul-food"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ashe-cultural-arts",
+   "name": "Ashé Cultural Arts Center",
+   "kind": "venue",
+   "neighborhood": "central-city",
+   "summary": "Black arts center in a former department store with performances, exhibitions and community gatherings.",
+   "tags": [
+    "arts",
+    "black-culture",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jazz-market",
+   "name": "New Orleans Jazz Market",
+   "kind": "venue",
+   "neighborhood": "central-city",
+   "summary": "The New Orleans Jazz Orchestra's home in a converted department store, with concerts and a bar.",
+   "tags": [
+    "jazz",
+    "concerts"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "central-city-bbq",
+   "name": "Central City BBQ",
+   "kind": "restaurant",
+   "neighborhood": "central-city",
+   "summary": "Smoked brisket and ribs on a huge patio with yard games and Saints games on the big screen.",
+   "tags": [
+    "barbecue",
+    "patio",
+    "sports"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "barbecue",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "al-davis-park",
+   "name": "A.L. Davis Park",
+   "kind": "park",
+   "neighborhood": "central-city",
+   "summary": "Neighborhood park on Washington Avenue where the Uptown Mardi Gras Indian gangs gather on Super Sunday in their new suits.",
+   "tags": [
+    "mardi-gras-indians",
+    "playground",
+    "community"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dryades-ymca",
+   "name": "Dryades YMCA",
+   "kind": "fitness",
+   "neighborhood": "central-city",
+   "summary": "Historic YMCA founded in 1905 for Black New Orleanians, still running a gym, pool and youth programs.",
+   "tags": [
+    "gym",
+    "pool",
+    "history"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "audubon-park",
+   "name": "Audubon Park",
+   "kind": "park",
+   "neighborhood": "uptown",
+   "summary": "Oak-shaded park across from Tulane and Loyola with a paved loop full of runners and strollers, a lagoon of egrets and a golf course.",
+   "tags": [
+    "running",
+    "live-oaks",
+    "birds",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "audubon-zoo",
+   "name": "Audubon Zoo",
+   "kind": "attraction",
+   "neighborhood": "uptown",
+   "summary": "The city zoo with a Louisiana Swamp exhibit of alligators and Cajun houseboats, jaguars and a splash park.",
+   "tags": [
+    "animals",
+    "kids",
+    "swamp"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-fly",
+   "name": "The Fly",
+   "kind": "park",
+   "neighborhood": "uptown",
+   "summary": "Riverside lawn behind the zoo where students and families picnic, play frisbee and watch ships and sunsets on the Mississippi.",
+   "tags": [
+    "riverfront",
+    "sunset",
+    "picnic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "audubon-golf",
+   "name": "Audubon Park Golf Course",
+   "kind": "fitness",
+   "neighborhood": "uptown",
+   "summary": "Short public course inside Audubon Park with a clubhouse and lagoon views.",
+   "tags": [
+    "golf",
+    "outdoors"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tipitinas",
+   "name": "Tipitina's",
+   "kind": "venue",
+   "neighborhood": "uptown",
+   "summary": "Napoleon Avenue music hall named for Professor Longhair's song, with his bust by the door and funk, brass and Cajun dances on the bill.",
+   "tags": [
+    "live-music",
+    "funk",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hansens-sno-bliz",
+   "name": "Hansen's Sno-Bliz",
+   "kind": "cafe",
+   "neighborhood": "uptown",
+   "summary": "Snowball stand on Tchoupitoulas since 1939, shaving ice on a homemade machine and dousing it in house syrups.",
+   "tags": [
+    "snowballs",
+    "historic",
+    "dessert"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "snowballs",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "le-bon-temps-roule",
+   "name": "Le Bon Temps Roulé",
+   "kind": "bar",
+   "neighborhood": "uptown",
+   "summary": "Magazine Street neighborhood bar with a pool table and free live music in the back room, including a long-running Thursday brass band.",
+   "tags": [
+    "live-music",
+    "brass-band",
+    "pool"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "casamentos",
+   "name": "Casamento's",
+   "kind": "restaurant",
+   "neighborhood": "uptown",
+   "summary": "Tiled oyster bar on Magazine since 1919 that closes for the hot months when oysters are thin, serving oyster loaves on thick white bread.",
+   "tags": [
+    "oysters",
+    "historic",
+    "seasonal"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "domilises",
+   "name": "Domilise's Po-Boy & Bar",
+   "kind": "restaurant",
+   "neighborhood": "uptown",
+   "summary": "Family po-boy shop in a yellow house on Annunciation Street, with Barq's root beer and shrimp and roast beef po-boys.",
+   "tags": [
+    "po-boys",
+    "old-school",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "po-boys",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clancys",
+   "name": "Clancy's",
+   "kind": "restaurant",
+   "neighborhood": "uptown",
+   "summary": "White-tablecloth Uptown bistro where locals order smoked soft-shell crab and fried oysters with brie.",
+   "tags": [
+    "creole",
+    "locals",
+    "fine-dining"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pascals-manale",
+   "name": "Pascal's Manale",
+   "kind": "restaurant",
+   "neighborhood": "uptown",
+   "summary": "Napoleon Avenue restaurant since 1913 that claims barbecue shrimp, cooked in a peppery butter sauce for dunking bread, plus an oyster bar.",
+   "tags": [
+    "bbq-shrimp",
+    "oysters",
+    "old-school"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole-italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hey-cafe",
+   "name": "Hey! Café",
+   "kind": "cafe",
+   "neighborhood": "uptown",
+   "summary": "Magazine Street coffee shop that roasts its own beans in the room, with comfy chairs and a regular crowd of students.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tulane-campus",
+   "name": "Tulane and Loyola campuses",
+   "kind": "landmark",
+   "neighborhood": "uptown",
+   "summary": "Neighboring campuses on St. Charles Avenue facing Audubon Park, with Gibson Hall, Holy Name of Jesus church and the streetcar stop out front.",
+   "tags": [
+    "campus",
+    "architecture",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oak-street",
+   "name": "Oak Street",
+   "kind": "shopping",
+   "neighborhood": "carrollton",
+   "summary": "Small-town main street of shops, bars and cafés off Carrollton, home of the Po-Boy Festival.",
+   "tags": [
+    "main-street",
+    "shops",
+    "walk"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jacques-imos",
+   "name": "Jacques-Imo's Café",
+   "kind": "restaurant",
+   "neighborhood": "carrollton",
+   "summary": "Loud, colorful Oak Street restaurant reached through the bar, known for shrimp and alligator sausage cheesecake.",
+   "tags": [
+    "creole",
+    "funky",
+    "loud"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maple-leaf-bar",
+   "name": "Maple Leaf Bar",
+   "kind": "venue",
+   "neighborhood": "carrollton",
+   "summary": "Pressed-tin-ceilinged music bar where Rebirth Brass Band has played Tuesday nights for decades.",
+   "tags": [
+    "brass-band",
+    "funk",
+    "late-night"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cooter-browns",
+   "name": "Cooter Brown's Tavern & Oyster Bar",
+   "kind": "bar",
+   "neighborhood": "carrollton",
+   "summary": "Riverbend bar by the levee with hundreds of beers, oysters on the half shell and a gallery of celebrity caricatures.",
+   "tags": [
+    "beer",
+    "oysters",
+    "sports"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "plum-street-snoball",
+   "name": "Plum Street Snoball",
+   "kind": "cafe",
+   "neighborhood": "carrollton",
+   "summary": "Neighborhood snowball stand serving towering cups, including the famous ones in Chinese takeout boxes.",
+   "tags": [
+    "snowballs",
+    "dessert",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "snowballs",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "camellia-grill",
+   "name": "Camellia Grill",
+   "kind": "restaurant",
+   "neighborhood": "carrollton",
+   "summary": "White-columned diner at the streetcar turn where waiters in bow ties serve omelettes and chocolate freezes at the counter.",
+   "tags": [
+    "diner",
+    "counter",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "levee-path",
+   "name": "Mississippi River levee path",
+   "kind": "trail",
+   "neighborhood": "carrollton",
+   "summary": "Paved path along the top of the levee from the Fly upriver, used by runners and cyclists, with ships passing below.",
+   "tags": [
+    "running",
+    "cycling",
+    "river",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "college-inn",
+   "name": "Ye Olde College Inn",
+   "kind": "restaurant",
+   "neighborhood": "carrollton",
+   "summary": "Neighborhood restaurant since the 1930s, with po-boys and Creole plates and vegetables from its own urban farm.",
+   "tags": [
+    "po-boys",
+    "creole",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cure",
+   "name": "Cure",
+   "kind": "bar",
+   "neighborhood": "freret",
+   "summary": "The cocktail bar in an old firehouse that helped revive Freret Street and the city's craft cocktail scene.",
+   "tags": [
+    "cocktails",
+    "craft",
+    "date-night"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "company-burger",
+   "name": "The Company Burger",
+   "kind": "restaurant",
+   "neighborhood": "freret",
+   "summary": "Smashed double burgers with house condiments, no substitutions and a cold beer.",
+   "tags": [
+    "burgers",
+    "casual"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "burgers",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dat-dog",
+   "name": "Dat Dog",
+   "kind": "restaurant",
+   "neighborhood": "freret",
+   "summary": "The original location of the local hot dog shop with alligator and crawfish sausages and a big upstairs deck.",
+   "tags": [
+    "hot-dogs",
+    "deck",
+    "casual"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "hot-dogs",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "high-hat-cafe",
+   "name": "High Hat Café",
+   "kind": "restaurant",
+   "neighborhood": "freret",
+   "summary": "Delta-style café with fried catfish, pimento cheese and a long happy hour.",
+   "tags": [
+    "southern",
+    "catfish",
+    "happy-hour"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "southern",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "freret-strip",
+   "name": "Freret Street corridor",
+   "kind": "nightlife",
+   "neighborhood": "freret",
+   "summary": "A walkable stretch of bars, restaurants and a monthly market between Napoleon and Jefferson, busy with students on weekends.",
+   "tags": [
+    "bars",
+    "students",
+    "walk"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rosa-keller-library",
+   "name": "Rosa F. Keller Library & Community Center",
+   "kind": "library",
+   "neighborhood": "broadmoor",
+   "summary": "Branch library rebuilt by the neighborhood after Katrina in an old mansion and a modern wing, with meeting rooms and homework help.",
+   "tags": [
+    "books",
+    "community",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zony-mash",
+   "name": "Zony Mash Beer Project",
+   "kind": "bar",
+   "neighborhood": "broadmoor",
+   "summary": "Brewery in the restored Gem Theater on Broad Street, with a kitchen, trivia and a family-friendly taproom.",
+   "tags": [
+    "brewery",
+    "historic",
+    "trivia"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "xavier-chapel",
+   "name": "Xavier University campus",
+   "kind": "landmark",
+   "neighborhood": "broadmoor",
+   "summary": "The green-roofed campus of the only historically Black Catholic university in the country, with the St. Katharine Drexel Chapel.",
+   "tags": [
+    "campus",
+    "architecture",
+    "hbcu"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rosenwald-rec",
+   "name": "Rosenwald Recreation Center",
+   "kind": "fitness",
+   "neighborhood": "broadmoor",
+   "summary": "City recreation center on Broad Street with a gym, fields and youth sports.",
+   "tags": [
+    "gym",
+    "youth-sports",
+    "rec-center"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "washington-avenue-neutral-ground",
+   "name": "Washington Avenue neutral ground",
+   "kind": "park",
+   "neighborhood": "broadmoor",
+   "summary": "Wide grassy median where neighbors walk dogs, kids ride bikes and Sunday second lines pass.",
+   "tags": [
+    "walk",
+    "dogs",
+    "second-lines"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dillard-campus",
+   "name": "Dillard University",
+   "kind": "landmark",
+   "neighborhood": "gentilly",
+   "summary": "White-columned buildings around a long oak avenue on the campus of the historically Black university on Gentilly Boulevard.",
+   "tags": [
+    "campus",
+    "hbcu",
+    "live-oaks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pontchartrain-park",
+   "name": "Pontchartrain Park",
+   "kind": "park",
+   "neighborhood": "gentilly",
+   "summary": "Park and neighborhood built in the 1950s as the first suburb for Black homeowners in the city, with ball fields and a lagoon.",
+   "tags": [
+    "history",
+    "playground",
+    "sports"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bartholomew-golf",
+   "name": "Joseph M. Bartholomew Sr. Golf Course",
+   "kind": "fitness",
+   "neighborhood": "gentilly",
+   "summary": "Public course in Pontchartrain Park named for the Black golf architect who designed courses he was barred from playing.",
+   "tags": [
+    "golf",
+    "history"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakefront-arena",
+   "name": "UNO Lakefront Arena",
+   "kind": "venue",
+   "neighborhood": "gentilly",
+   "summary": "University arena by the lake for basketball, graduations, concerts and touring shows.",
+   "tags": [
+    "concerts",
+    "basketball"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gentilly-terrace",
+   "name": "Gentilly Terrace bungalows",
+   "kind": "landmark",
+   "neighborhood": "gentilly",
+   "summary": "Blocks of 1910s and 1920s Arts and Crafts and Spanish revival bungalows set on the old ridge.",
+   "tags": [
+    "architecture",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sammys-deli",
+   "name": "Sammy's Food Service & Deli",
+   "kind": "restaurant",
+   "neighborhood": "gentilly",
+   "summary": "Elysian Fields deli and po-boy shop feeding Gentilly lunch crowds, students and church groups.",
+   "tags": [
+    "po-boys",
+    "plate-lunch",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "po-boys",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakefront-seawall",
+   "name": "Lakeshore Drive seawall",
+   "kind": "park",
+   "neighborhood": "lakeview",
+   "summary": "Miles of stepped concrete seawall on Lake Pontchartrain for sunsets, fishing, cycling and grills on holiday weekends.",
+   "tags": [
+    "lakefront",
+    "sunset",
+    "fishing",
+    "cycling"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-basin-lighthouse",
+   "name": "New Canal Lighthouse",
+   "kind": "landmark",
+   "neighborhood": "lakeview",
+   "summary": "Rebuilt nineteenth-century lighthouse at the end of the old New Basin Canal, with a small museum on the lake and its storms.",
+   "tags": [
+    "lakefront",
+    "history",
+    "views"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mondo",
+   "name": "Mondo",
+   "kind": "restaurant",
+   "neighborhood": "lakeview",
+   "summary": "Susan Spicer's easygoing Harrison Avenue restaurant with wood-fired pizza and global plates.",
+   "tags": [
+    "pizza",
+    "family",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "global",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "velvet-cactus",
+   "name": "The Velvet Cactus",
+   "kind": "restaurant",
+   "neighborhood": "lakeview",
+   "summary": "Tex-Mex with a sprawling courtyard of string lights and frozen margaritas.",
+   "tags": [
+    "tex-mex",
+    "courtyard",
+    "margaritas"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "tex-mex",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "parlays",
+   "name": "Parlay's",
+   "kind": "bar",
+   "neighborhood": "lakeview",
+   "summary": "Lakeview neighborhood bar on Harrison Avenue for cold beer, darts and every LSU and Saints game.",
+   "tags": [
+    "neighbourhood-bar",
+    "sports"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakeview-brew",
+   "name": "Lakeview Brew Coffee Café",
+   "kind": "cafe",
+   "neighborhood": "lakeview",
+   "summary": "Neighborhood café for coffee, pastries and lunch salads on Harrison Avenue.",
+   "tags": [
+    "coffee",
+    "pastries",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harrison-avenue",
+   "name": "Harrison Avenue",
+   "kind": "shopping",
+   "neighborhood": "lakeview",
+   "summary": "Lakeview's main street of shops, cafés and restaurants, rebuilt after the 2005 flood.",
+   "tags": [
+    "main-street",
+    "errands"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "congregation-coffee",
+   "name": "Congregation Coffee Roasters",
+   "kind": "cafe",
+   "neighborhood": "algiers-point",
+   "summary": "Algiers Point's coffee roaster and café, a short walk from the ferry landing.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-point-bar",
+   "name": "Old Point Bar",
+   "kind": "bar",
+   "neighborhood": "algiers-point",
+   "summary": "Neighborhood bar by the levee with live music on weekends and a crowd of locals who all know each other.",
+   "tags": [
+    "live-music",
+    "local",
+    "neighbourhood-bar"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "algiers-levee",
+   "name": "Algiers Point levee",
+   "kind": "park",
+   "neighborhood": "algiers-point",
+   "summary": "Grassy levee top and path with the best view of the downtown skyline across the river, crowded for Fourth of July fireworks.",
+   "tags": [
+    "views",
+    "riverfront",
+    "sunset"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tout-de-suite",
+   "name": "Tout de Suite Café",
+   "kind": "cafe",
+   "neighborhood": "algiers-point",
+   "summary": "Casual café in an old corner store serving breakfast, sandwiches and coffee to neighbors.",
+   "tags": [
+    "breakfast",
+    "coffee",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dry-dock-cafe",
+   "name": "Dry Dock Café",
+   "kind": "restaurant",
+   "neighborhood": "algiers-point",
+   "summary": "Seafood and po-boy spot by the ferry landing, a stop for commuters and day-trippers.",
+   "tags": [
+    "seafood",
+    "po-boys",
+    "ferry"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "algiers-courthouse",
+   "name": "Algiers Courthouse",
+   "kind": "landmark",
+   "neighborhood": "algiers-point",
+   "summary": "Red-brick 1896 courthouse facing the river, a landmark for anyone stepping off the ferry.",
+   "tags": [
+    "architecture",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "algiers-point-library",
+   "name": "Cita Dennis Hubbell Library",
+   "kind": "library",
+   "neighborhood": "algiers-point",
+   "summary": "Small branch library in Algiers Point with story times and a reading garden.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "steamboat-houses",
+   "name": "Doullut Steamboat Houses",
+   "kind": "landmark",
+   "neighborhood": "lower-ninth-ward",
+   "summary": "Two early twentieth-century houses built by a riverboat pilot to look like steamboats, by the Holy Cross levee.",
+   "tags": [
+    "architecture",
+    "quirky",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holy-cross-levee",
+   "name": "Holy Cross levee",
+   "kind": "park",
+   "neighborhood": "lower-ninth-ward",
+   "summary": "Quiet levee top with river views back to the city, popular with walkers, fishers and photographers.",
+   "tags": [
+    "riverfront",
+    "walk",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fats-domino-house",
+   "name": "Fats Domino's house",
+   "kind": "landmark",
+   "neighborhood": "lower-ninth-ward",
+   "summary": "The yellow-and-black home and studio on Caffin Avenue that Antoine \"Fats\" Domino kept in the neighborhood he never left.",
+   "tags": [
+    "music",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-dauphine",
+   "name": "Café Dauphine",
+   "kind": "restaurant",
+   "neighborhood": "lower-ninth-ward",
+   "summary": "Family-owned Creole soul restaurant serving stuffed shrimp, gumbo and fried chicken to a neighborhood with few sit-down spots.",
+   "tags": [
+    "creole",
+    "soul-food",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "creole",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lower-ninth-living-museum",
+   "name": "Lower Ninth Ward Living Museum",
+   "kind": "museum",
+   "neighborhood": "lower-ninth-ward",
+   "summary": "Small museum in a house telling the neighborhood's story from plantation land to the 2005 flood and return.",
+   "tags": [
+    "history",
+    "katrina",
+    "community"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sankofa-wetland-park",
+   "name": "Sankofa Wetland Park",
+   "kind": "park",
+   "neighborhood": "lower-ninth-ward",
+   "summary": "Restored wetland park with trails, birdwatching and a nature classroom, built to soak up stormwater.",
+   "tags": [
+    "wetlands",
+    "birds",
+    "trail"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dong-phuong",
+   "name": "Dong Phuong Bakery & Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "new-orleans-east",
+   "summary": "Vietnamese bakery whose bread is in banh mi and po-boys across the city and whose king cakes sell out in minutes every Carnival.",
+   "tags": [
+    "banh-mi",
+    "king-cake",
+    "bakery",
+    "vietnamese"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "vietnamese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "versailles-market",
+   "name": "Village de l'Est Saturday market",
+   "kind": "market",
+   "neighborhood": "new-orleans-east",
+   "summary": "Early Saturday morning market where Vietnamese growers sell herbs, greens, live ducks and snacks.",
+   "tags": [
+    "market",
+    "vietnamese",
+    "produce",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mary-queen-of-vietnam",
+   "name": "Mary Queen of Vietnam Church",
+   "kind": "landmark",
+   "neighborhood": "new-orleans-east",
+   "summary": "The parish at the heart of the Vietnamese community, which led its return after Katrina, with Tet celebrations on its grounds.",
+   "tags": [
+    "church",
+    "vietnamese",
+    "community"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "joe-brown-rec",
+   "name": "Joe W. Brown Recreation Center",
+   "kind": "fitness",
+   "neighborhood": "new-orleans-east",
+   "summary": "Large city recreation center and park with a natatorium, tennis courts and walking paths.",
+   "tags": [
+    "pool",
+    "tennis",
+    "rec-center"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bayou-sauvage",
+   "name": "Bayou Sauvage Urban National Wildlife Refuge",
+   "kind": "park",
+   "neighborhood": "new-orleans-east",
+   "summary": "One of the largest urban wildlife refuges in the country, with boardwalks over marsh full of herons and alligators.",
+   "tags": [
+    "wildlife",
+    "birds",
+    "boardwalk",
+    "nature"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chef-menteur-strip",
+   "name": "Chef Menteur Highway pho shops",
+   "kind": "restaurant",
+   "neighborhood": "new-orleans-east",
+   "summary": "Strip-mall Vietnamese restaurants and bakeries along Chef Menteur and Alcee Fortier serving pho, bun and banh xeo.",
+   "tags": [
+    "pho",
+    "vietnamese",
+    "casual"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "vietnamese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "morning-call",
+   "name": "Morning Call",
+   "kind": "cafe",
+   "neighborhood": "metairie",
+   "summary": "Old-school coffee stand that moved out from the French Market in 1974, with beignets you sugar yourself at the counter.",
+   "tags": [
+    "beignets",
+    "chicory-coffee",
+    "old-school"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "beignets",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lakeside-shopping-center",
+   "name": "Lakeside Shopping Center",
+   "kind": "shopping",
+   "neighborhood": "metairie",
+   "summary": "The region's big indoor mall on Causeway Boulevard, where Carnival parade-goers find bathrooms.",
+   "tags": [
+    "mall",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lafreniere-park",
+   "name": "Lafreniere Park",
+   "kind": "park",
+   "neighborhood": "metairie",
+   "summary": "Big Jefferson Parish park with a lake, walking loop, dog park and a holiday lights display.",
+   "tags": [
+    "walk",
+    "dogs",
+    "playground"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dragos",
+   "name": "Drago's Seafood Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "metairie",
+   "summary": "The Croatian-American family restaurant that invented charbroiled oysters, sizzling with garlic butter and parmesan.",
+   "tags": [
+    "charbroiled-oysters",
+    "seafood"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "deanies-bucktown",
+   "name": "Deanie's Seafood Bucktown",
+   "kind": "restaurant",
+   "neighborhood": "metairie",
+   "summary": "Family seafood house in the old fishing village of Bucktown, serving boiled seafood and fried platters with complimentary new potatoes.",
+   "tags": [
+    "seafood",
+    "boiled-seafood",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ochsner-fitness",
+   "name": "Ochsner Fitness Center",
+   "kind": "fitness",
+   "neighborhood": "metairie",
+   "summary": "Large medical fitness club with pools, classes and physical therapy.",
+   "tags": [
+    "gym",
+    "pool",
+    "classes"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "martin-wine-cellar",
+   "name": "Martin Wine Cellar",
+   "kind": "market",
+   "neighborhood": "metairie",
+   "summary": "Wine shop and deli with a sandwich counter and tasting events.",
+   "tags": [
+    "wine",
+    "deli"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "tulane",
+   "name": "Tulane University",
+   "type": "research-university",
+   "neighborhood": "uptown",
+   "size": "large",
+   "known_for": [
+    "medicine",
+    "public-health",
+    "architecture",
+    "law",
+    "business",
+    "research"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tulane-medicine",
+   "name": "Tulane University School of Medicine",
+   "type": "medical-school",
+   "neighborhood": "cbd",
+   "size": "medium",
+   "known_for": [
+    "medicine",
+    "public-health",
+    "tropical-medicine"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lsu-health",
+   "name": "LSU Health New Orleans",
+   "type": "medical-school",
+   "neighborhood": "cbd",
+   "size": "medium",
+   "known_for": [
+    "medicine",
+    "nursing",
+    "dentistry",
+    "allied-health"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "loyola",
+   "name": "Loyola University New Orleans",
+   "type": "private-university",
+   "neighborhood": "uptown",
+   "size": "medium",
+   "known_for": [
+    "music-industry",
+    "law",
+    "mass-communication",
+    "business"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "xavier",
+   "name": "Xavier University of Louisiana",
+   "type": "private-university",
+   "neighborhood": "broadmoor",
+   "size": "medium",
+   "known_for": [
+    "hbcu",
+    "pharmacy",
+    "pre-med",
+    "sciences"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dillard",
+   "name": "Dillard University",
+   "type": "liberal-arts-college",
+   "neighborhood": "gentilly",
+   "size": "small",
+   "known_for": [
+    "hbcu",
+    "nursing",
+    "public-health",
+    "film"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "uno",
+   "name": "University of New Orleans",
+   "type": "public-university",
+   "neighborhood": "gentilly",
+   "size": "medium",
+   "known_for": [
+    "engineering",
+    "naval-architecture",
+    "hospitality",
+    "film",
+    "business"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "suno",
+   "name": "Southern University at New Orleans",
+   "type": "public-university",
+   "neighborhood": "gentilly",
+   "size": "small",
+   "known_for": [
+    "hbcu",
+    "social-work",
+    "education",
+    "business"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "delgado",
+   "name": "Delgado Community College",
+   "type": "community-college",
+   "neighborhood": "mid-city",
+   "size": "large",
+   "known_for": [
+    "nursing",
+    "culinary-arts",
+    "trades",
+    "transfer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nocca",
+   "name": "New Orleans Center for Creative Arts",
+   "type": "art-school",
+   "neighborhood": "marigny",
+   "size": "small",
+   "known_for": [
+    "jazz",
+    "theater",
+    "visual-arts",
+    "culinary-arts",
+    "dance"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "notre-dame-seminary",
+   "name": "Notre Dame Seminary",
+   "type": "seminary",
+   "neighborhood": "carrollton",
+   "size": "small",
+   "known_for": [
+    "theology",
+    "priesthood"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "ochsner",
+   "name": "Ochsner Medical Center",
+   "sector": "healthcare",
+   "neighborhood": "metairie",
+   "size": "large",
+   "summary": "The flagship campus of Louisiana's largest health system on Jefferson Highway, just over the parish line.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher",
+    "social-worker",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "umc-new-orleans",
+   "name": "University Medical Center New Orleans (LCMC Health)",
+   "sector": "healthcare",
+   "neighborhood": "cbd",
+   "size": "large",
+   "summary": "LCMC Health's Level I trauma center and teaching hospital in the medical district on Canal Street.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "childrens-hospital",
+   "name": "Children's Hospital New Orleans (LCMC Health)",
+   "sector": "healthcare",
+   "neighborhood": "uptown",
+   "size": "large",
+   "summary": "The region's children's hospital on the river end of Henry Clay Avenue.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "va-new-orleans",
+   "name": "Southeast Louisiana Veterans Health Care System",
+   "sector": "healthcare",
+   "neighborhood": "cbd",
+   "size": "large",
+   "summary": "The VA medical center in the downtown medical district.",
+   "careers": [
+    "registered-nurse",
+    "pharmacist",
+    "social-worker",
+    "physician-resident"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tulane-employer",
+   "name": "Tulane University",
+   "sector": "education",
+   "neighborhood": "uptown",
+   "size": "large",
+   "summary": "One of the city's largest private employers, with the Uptown campus and the downtown medical school.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "medical-researcher",
+    "data-analyst",
+    "software-engineer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "port-of-new-orleans",
+   "name": "Port of New Orleans",
+   "sector": "logistics",
+   "neighborhood": "uptown",
+   "size": "large",
+   "summary": "Container, breakbulk and cruise terminals along the river, including the Napoleon Avenue container terminal.",
+   "careers": [
+    "port-logistics",
+    "government-analyst",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "entergy",
+   "name": "Entergy",
+   "sector": "energy",
+   "neighborhood": "cbd",
+   "size": "large",
+   "summary": "The Fortune 500 utility headquartered in a tower on Loyola Avenue.",
+   "careers": [
+    "financial-analyst",
+    "data-analyst",
+    "accountant",
+    "software-engineer",
+    "construction-trades"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "caesars-employer",
+   "name": "Caesars New Orleans",
+   "sector": "hospitality",
+   "neighborhood": "cbd",
+   "size": "large",
+   "summary": "The Canal Street casino and hotel, long known as Harrah's.",
+   "careers": [
+    "casino-dealer",
+    "bartender",
+    "line-cook",
+    "server",
+    "hotel-front-desk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "superdome-employer",
+   "name": "Caesars Superdome and Smoothie King Center",
+   "sector": "entertainment",
+   "neighborhood": "cbd",
+   "size": "large",
+   "summary": "The stadium and arena run for the state, staffing game days, concerts, Essence Fest and the Sugar Bowl.",
+   "careers": [
+    "event-planner",
+    "server",
+    "bartender",
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saints-pelicans",
+   "name": "New Orleans Saints and Pelicans",
+   "sector": "sports",
+   "neighborhood": "metairie",
+   "size": "medium",
+   "summary": "The NFL and NBA franchises, with their front offices and training base in Metairie.",
+   "careers": [
+    "marketing-coordinator",
+    "fitness-trainer",
+    "data-analyst",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hotel-monteleone",
+   "name": "Hotel Monteleone",
+   "sector": "hospitality",
+   "neighborhood": "french-quarter",
+   "size": "medium",
+   "summary": "Family-owned Royal Street hotel since 1886, home of the revolving Carousel Bar.",
+   "careers": [
+    "hotel-front-desk",
+    "bartender",
+    "server",
+    "line-cook",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "roosevelt-hotel",
+   "name": "The Roosevelt New Orleans",
+   "sector": "hospitality",
+   "neighborhood": "cbd",
+   "size": "medium",
+   "summary": "Grand hotel off Canal Street with the Sazerac Bar and a famous Christmas lobby.",
+   "careers": [
+    "hotel-front-desk",
+    "bartender",
+    "server",
+    "line-cook",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "convention-center",
+   "name": "Ernest N. Morial Convention Center",
+   "sector": "hospitality",
+   "neighborhood": "cbd",
+   "size": "large",
+   "summary": "One of the biggest convention halls in the country, stretching along the river.",
+   "careers": [
+    "event-planner",
+    "line-cook",
+    "server",
+    "construction-trades"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "commanders-employer",
+   "name": "Commander's Palace",
+   "sector": "hospitality",
+   "neighborhood": "garden-district",
+   "size": "small",
+   "summary": "The Brennan family restaurant that has trained generations of the city's chefs and servers.",
+   "careers": [
+    "line-cook",
+    "server",
+    "bartender"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "audubon-institute",
+   "name": "Audubon Nature Institute",
+   "sector": "tourism",
+   "neighborhood": "uptown",
+   "size": "medium",
+   "summary": "Runs the zoo, aquarium, insectarium and Louisiana nature centers.",
+   "careers": [
+    "biologist",
+    "tour-guide",
+    "event-planner",
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "michoud",
+   "name": "NASA Michoud Assembly Facility",
+   "sector": "aerospace",
+   "neighborhood": "new-orleans-east",
+   "size": "large",
+   "summary": "Vast rocket factory where contractors build core stages for NASA's Space Launch System.",
+   "careers": [
+    "defense-engineer",
+    "software-engineer",
+    "construction-trades",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "second-line-stages",
+   "name": "Second Line Stages",
+   "sector": "film",
+   "neighborhood": "lower-garden-district",
+   "size": "medium",
+   "summary": "Sound stages by the river serving the film and television productions drawn by Louisiana's tax credits.",
+   "careers": [
+    "actor",
+    "performer",
+    "graphic-designer",
+    "construction-trades",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-of-new-orleans",
+   "name": "City of New Orleans",
+   "sector": "government",
+   "neighborhood": "cbd",
+   "size": "large",
+   "summary": "City agencies around City Hall on Perdido Street.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nola-public-schools",
+   "name": "NOLA Public Schools",
+   "sector": "education",
+   "neighborhood": "central-city",
+   "size": "large",
+   "summary": "The public school system, almost entirely run as charter schools, with campuses across the city.",
+   "careers": [
+    "teacher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pan-american-life",
+   "name": "Pan-American Life Insurance Group",
+   "sector": "finance",
+   "neighborhood": "cbd",
+   "size": "medium",
+   "summary": "Insurance company headquartered in New Orleans since 1911.",
+   "careers": [
+    "financial-analyst",
+    "accountant",
+    "data-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "times-picayune",
+   "name": "The Times-Picayune | The New Orleans Advocate",
+   "sector": "media",
+   "neighborhood": "cbd",
+   "size": "small",
+   "summary": "The city's daily newspaper and website.",
+   "careers": [
+    "journalist",
+    "graphic-designer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wwoz",
+   "name": "WWOZ 90.7 FM",
+   "sector": "media",
+   "neighborhood": "french-quarter",
+   "size": "small",
+   "summary": "Listener-supported community radio for jazz and heritage music, broadcasting from the French Market.",
+   "careers": [
+    "journalist",
+    "musician"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rouses",
+   "name": "Rouses Markets",
+   "sector": "retail",
+   "neighborhood": "cbd",
+   "size": "large",
+   "summary": "The family-owned Louisiana grocery chain with stores across the city and suburbs.",
+   "careers": [
+    "retail-associate",
+    "baker",
+    "line-cook"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boh-bros",
+   "name": "Boh Bros. Construction",
+   "sector": "construction",
+   "neighborhood": "broadmoor",
+   "size": "medium",
+   "summary": "Century-old New Orleans contractor for bridges, levees and roads.",
+   "careers": [
+    "construction-trades"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "medical-district",
+   "name": "Medical district and Ochsner",
+   "neighborhoods": [
+    "cbd",
+    "mid-city",
+    "metairie",
+    "uptown"
+   ],
+   "sectors": [
+    "healthcare",
+    "biotech",
+    "education"
+   ],
+   "summary": "University Medical Center, the VA, the Tulane and LSU medical schools downtown, Touro and Children's Uptown and Ochsner on Jefferson Highway.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "downtown-offices",
+   "name": "Downtown offices",
+   "neighborhoods": [
+    "cbd"
+   ],
+   "sectors": [
+    "finance",
+    "legal",
+    "energy",
+    "government",
+    "media"
+   ],
+   "summary": "Law firms, oil and gas offices, banks and city government along Poydras Street.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tourism",
+   "name": "Hotels, restaurants and music",
+   "neighborhoods": [
+    "french-quarter",
+    "cbd",
+    "marigny",
+    "garden-district"
+   ],
+   "sectors": [
+    "hospitality",
+    "entertainment",
+    "tourism"
+   ],
+   "summary": "The biggest employer by far: hotels, restaurants, bars, tours, music clubs, the convention center and festival work.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "river-and-port",
+   "name": "River, port and shipyards",
+   "neighborhoods": [
+    "uptown",
+    "irish-channel",
+    "algiers-point",
+    "lower-ninth-ward",
+    "new-orleans-east"
+   ],
+   "sectors": [
+    "logistics",
+    "manufacturing",
+    "aerospace",
+    "construction"
+   ],
+   "summary": "Wharves, shipyards and fabrication shops along the river and the Industrial Canal, and the Michoud rocket plant in the East.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "campuses",
+   "name": "Universities",
+   "neighborhoods": [
+    "uptown",
+    "gentilly",
+    "broadmoor",
+    "mid-city"
+   ],
+   "sectors": [
+    "education"
+   ],
+   "summary": "Tulane, Loyola, Xavier, Dillard, UNO, SUNO and Delgado.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "film",
+   "name": "Film and television",
+   "neighborhoods": [
+    "lower-garden-district",
+    "cbd",
+    "new-orleans-east"
+   ],
+   "sectors": [
+    "film",
+    "entertainment"
+   ],
+   "summary": "Sound stages and location shoots that come and go with Louisiana's film tax credits.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Humid subtropical: long, hot, very humid summers with near-daily afternoon storms, mild short winters with occasional cold snaps, and hurricane season from June through November.",
+  "months": [
+   {
+    "high_f": 62,
+    "low_f": 44,
+    "rain_days": 10,
+    "note": "Mild and damp; Carnival season begins."
+   },
+   {
+    "high_f": 66,
+    "low_f": 47,
+    "rain_days": 9,
+    "note": "Parade weather is a gamble: warm or a cold snap."
+   },
+   {
+    "high_f": 73,
+    "low_f": 53,
+    "rain_days": 8,
+    "note": "Azaleas, crawfish season and festivals begin."
+   },
+   {
+    "high_f": 79,
+    "low_f": 59,
+    "rain_days": 7,
+    "note": "Festival season; warm and mostly dry."
+   },
+   {
+    "high_f": 86,
+    "low_f": 67,
+    "rain_days": 8,
+    "note": "Heat and humidity build; snowball stands busy."
+   },
+   {
+    "high_f": 90,
+    "low_f": 73,
+    "rain_days": 13,
+    "note": "Hurricane season opens; afternoon downpours."
+   },
+   {
+    "high_f": 91,
+    "low_f": 75,
+    "rain_days": 15,
+    "note": "Hottest, wettest month; streets flood fast."
+   },
+   {
+    "high_f": 91,
+    "low_f": 75,
+    "rain_days": 14,
+    "note": "Sweltering; peak hurricane watching begins."
+   },
+   {
+    "high_f": 88,
+    "low_f": 72,
+    "rain_days": 10,
+    "note": "Still hot; height of hurricane season."
+   },
+   {
+    "high_f": 80,
+    "low_f": 62,
+    "rain_days": 7,
+    "note": "First cool front brings relief; festivals return."
+   },
+   {
+    "high_f": 71,
+    "low_f": 52,
+    "rain_days": 7,
+    "note": "Pleasant and dry; hurricane season ends."
+   },
+   {
+    "high_f": 64,
+    "low_f": 46,
+    "rain_days": 9,
+    "note": "Mild, gray; Christmas lights in the oaks."
+   }
+  ],
+  "source": "curated-climate-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "twelfth-night",
+   "name": "Twelfth Night",
+   "months": [
+    1
+   ],
+   "neighborhood": "french-quarter",
+   "summary": "Carnival opens on January 6: the Joan of Arc parade winds through the Quarter, the Phunny Phorty Phellows ride the St. Charles streetcar and the first king cakes are cut.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "krewe-du-vieux",
+   "name": "Krewe du Vieux",
+   "months": [
+    1,
+    2
+   ],
+   "neighborhood": "marigny",
+   "summary": "A bawdy, satirical walking parade of hand-pulled floats and brass bands through the Marigny and the Quarter, weeks before Mardi Gras.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chewbacchus",
+   "name": "Krewe of Chewbacchus",
+   "months": [
+    1,
+    2
+   ],
+   "neighborhood": "marigny",
+   "summary": "A science-fiction walking parade of homemade costumes, droids and glowing throws on St. Claude Avenue.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "carnival-parades",
+   "name": "Uptown Carnival parades",
+   "months": [
+    1,
+    2,
+    3
+   ],
+   "neighborhood": "uptown",
+   "summary": "For about two weeks before Mardi Gras, krewes like Muses, Nyx, Bacchus and Orpheus roll down St. Charles; families stake out the neutral ground with ladders, tents and grills.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "endymion",
+   "name": "Endymion",
+   "months": [
+    2,
+    3
+   ],
+   "neighborhood": "mid-city",
+   "summary": "The Saturday super-krewe that rolls through Mid-City, where neighbors camp along Orleans Avenue and Canal Street from the night before.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lundi-gras",
+   "name": "Lundi Gras",
+   "months": [
+    2,
+    3
+   ],
+   "neighborhood": "cbd",
+   "summary": "The Monday before Mardi Gras, when Zulu and Rex arrive by river and Orpheus rolls through the night.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mardi-gras-day",
+   "name": "Mardi Gras Day",
+   "months": [
+    2,
+    3
+   ],
+   "neighborhood": null,
+   "summary": "Fat Tuesday: Zulu and Rex parade from dawn, the Société de Sainte Anne walks in costume from Bywater, Mardi Gras Indians meet in the streets and at midnight the police sweep Bourbon Street to begin Lent.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-josephs-day",
+   "name": "St. Joseph's Day altars",
+   "months": [
+    3
+   ],
+   "neighborhood": null,
+   "summary": "On March 19, Italian-American families and churches build tiered altars of breads, cookies and fava beans open to anyone, and the Mardi Gras Indians come out at night.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "super-sunday",
+   "name": "Super Sunday",
+   "months": [
+    3
+   ],
+   "neighborhood": "central-city",
+   "summary": "The Sunday nearest St. Joseph's Day, when Mardi Gras Indian gangs parade in their new beaded suits, Uptown from A.L. Davis Park and downtown from Hunter's Field.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "irish-channel-parade",
+   "name": "Irish Channel St. Patrick's parade",
+   "months": [
+    3
+   ],
+   "neighborhood": "irish-channel",
+   "summary": "Marching clubs trade paper flowers for kisses and floats throw cabbages, carrots and potatoes for Irish stew.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tennessee-williams-fest",
+   "name": "Tennessee Williams & New Orleans Literary Festival",
+   "months": [
+    3
+   ],
+   "neighborhood": "french-quarter",
+   "summary": "Readings, plays and a Stanley-and-Stella shouting contest in Jackson Square.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wednesday-at-the-square",
+   "name": "Wednesday at the Square",
+   "months": [
+    3,
+    4,
+    5
+   ],
+   "neighborhood": "cbd",
+   "summary": "Free after-work concerts in Lafayette Square each spring.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "french-quarter-fest",
+   "name": "French Quarter Festival",
+   "months": [
+    4
+   ],
+   "neighborhood": "french-quarter",
+   "summary": "Four free days of local music on stages from Jackson Square to the riverfront, with food booths from neighborhood restaurants.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jazz-fest",
+   "name": "New Orleans Jazz & Heritage Festival",
+   "months": [
+    4,
+    5
+   ],
+   "neighborhood": "bayou-st-john",
+   "summary": "Two weekends at the Fair Grounds: a dozen stages of jazz, gospel, blues, brass, zydeco and pop, crawfish Monica and Mardi Gras Indians in the Heritage Square.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bayou-boogaloo",
+   "name": "Mid-City Bayou Boogaloo",
+   "months": [
+    5
+   ],
+   "neighborhood": "bayou-st-john",
+   "summary": "A music festival on the banks of Bayou St. John, with people floating to the stages on homemade rafts.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "creole-tomato-fest",
+   "name": "Creole Tomato Festival",
+   "months": [
+    6
+   ],
+   "neighborhood": "french-quarter",
+   "summary": "A French Market weekend celebrating the summer's first local tomatoes with cooking demos, Bloody Marys and music.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "essence-fest",
+   "name": "Essence Festival of Culture",
+   "months": [
+    7
+   ],
+   "neighborhood": "cbd",
+   "summary": "Over the Fourth of July weekend, nights of R&B and hip-hop concerts in the Superdome and daytime talks and markets at the Convention Center.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "running-of-the-bulls",
+   "name": "San Fermín in Nueva Orleans",
+   "months": [
+    7
+   ],
+   "neighborhood": "cbd",
+   "summary": "A New Orleans take on Pamplona where roller derby skaters with plastic bats chase runners dressed in white and red.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "satchmo-summerfest",
+   "name": "Satchmo SummerFest",
+   "months": [
+    8
+   ],
+   "neighborhood": "french-quarter",
+   "summary": "A weekend for Louis Armstrong's birthday at the Old U.S. Mint, with trumpet tributes, seminars and a jazz Mass and second line.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "white-linen-night",
+   "name": "White Linen Night",
+   "months": [
+    8
+   ],
+   "neighborhood": "cbd",
+   "summary": "Julia Street galleries open their doors on a hot August Saturday and the crowd wears white; Dirty Linen Night follows on Royal Street.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southern-decadence",
+   "name": "Southern Decadence",
+   "months": [
+    8,
+    9
+   ],
+   "neighborhood": "french-quarter",
+   "summary": "Labor Day weekend LGBTQ+ festival with a walking parade, balcony parties and huge crowds around Bourbon and St. Ann.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "second-line-season",
+   "name": "Second line season",
+   "months": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "neighborhood": null,
+   "summary": "Almost every Sunday from late summer to early summer, a social aid and pleasure club parades for hours through its neighborhood behind a brass band, with a crowd dancing along.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saints-season",
+   "name": "Saints football season",
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1
+   ],
+   "neighborhood": "cbd",
+   "summary": "Black-and-gold Sundays: tailgates, \"Who Dat\" chants, church let out early and the Superdome shaking.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pelicans-season",
+   "name": "Pelicans basketball season",
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "neighborhood": "cbd",
+   "summary": "NBA nights at the Smoothie King Center.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "voodoo-fest",
+   "name": "Voodoo Music + Arts Experience",
+   "months": [
+    10
+   ],
+   "neighborhood": "mid-city",
+   "summary": "A Halloween-weekend rock, hip-hop and electronic festival held in City Park in most years since 1999, with costumes encouraged.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "halloween-in-the-quarter",
+   "name": "Halloween in the Quarter",
+   "months": [
+    10
+   ],
+   "neighborhood": "french-quarter",
+   "summary": "The Krewe of Boo parade rolls, and on Halloween night the Quarter and Frenchmen Street fill with elaborate costumes.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "all-saints-day",
+   "name": "All Saints' Day",
+   "months": [
+    11
+   ],
+   "neighborhood": null,
+   "summary": "Families whitewash and tidy their tombs and bring flowers to the cemeteries on November 1.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "po-boy-fest",
+   "name": "Oak Street Po-Boy Festival",
+   "months": [
+    11
+   ],
+   "neighborhood": "carrollton",
+   "summary": "A Sunday when restaurants line Oak Street selling creative po-boys to crowds with music stages.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bayou-classic",
+   "name": "Bayou Classic",
+   "months": [
+    11
+   ],
+   "neighborhood": "cbd",
+   "summary": "Grambling and Southern play their Thanksgiving weekend football rivalry in the Superdome, with a battle of the bands and a parade.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "celebration-in-the-oaks",
+   "name": "Celebration in the Oaks",
+   "months": [
+    11,
+    12,
+    1
+   ],
+   "neighborhood": "mid-city",
+   "summary": "City Park strings its live oaks with holiday lights and opens the carousel and rides at night.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "reveillon",
+   "name": "Réveillon dinners",
+   "months": [
+    12
+   ],
+   "neighborhood": "french-quarter",
+   "summary": "Restaurants offer prix-fixe Christmas Réveillon menus revived from the old Creole tradition of a feast after midnight Mass.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sugar-bowl",
+   "name": "Allstate Sugar Bowl",
+   "months": [
+    12,
+    1
+   ],
+   "neighborhood": "cbd",
+   "summary": "The New Year's college football bowl game in the Superdome, with fans of both teams filling the Quarter.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "holidays": [
+  {
+   "id": "twelfth-night",
+   "name": "Twelfth Night",
+   "kind": "observance",
+   "summary": "The start of Carnival season, when the first king cakes appear.",
+   "month": 1,
+   "day": 6
+  },
+  {
+   "id": "lundi-gras",
+   "name": "Lundi Gras",
+   "kind": "observance",
+   "summary": "The Monday before Mardi Gras; many schools are already out and Zulu and Rex arrive on the riverfront.",
+   "easter": -48
+  },
+  {
+   "id": "mardi-gras",
+   "name": "Mardi Gras",
+   "kind": "public",
+   "summary": "Fat Tuesday, a legal holiday in New Orleans: offices and schools close and the whole city is in costume or on a parade route.",
+   "easter": -47
+  },
+  {
+   "id": "ash-wednesday",
+   "name": "Ash Wednesday",
+   "kind": "observance",
+   "summary": "The first day of Lent, with ashes on foreheads and the hangover of Carnival; Friday fish fries follow until Easter.",
+   "easter": -46
+  },
+  {
+   "id": "st-josephs-day",
+   "name": "St. Joseph's Day",
+   "kind": "observance",
+   "summary": "Altars open in homes and churches and Mardi Gras Indians come out at night.",
+   "month": 3,
+   "day": 19
+  },
+  {
+   "id": "good-friday",
+   "name": "Good Friday",
+   "kind": "public",
+   "summary": "A Louisiana state holiday; state offices close.",
+   "easter": -2
+  },
+  {
+   "id": "all-saints-day",
+   "name": "All Saints' Day",
+   "kind": "observance",
+   "summary": "A day for tending family tombs.",
+   "month": 11,
+   "day": 1
+  }
+ ],
+ "local_color": [
+  {
+   "id": "king-cake",
+   "name": "King cake",
+   "kind": "dish",
+   "summary": "A ring of braided brioche or Danish dough, iced in purple, green and gold and hiding a small plastic baby; whoever gets the baby buys the next one. Eaten only between Twelfth Night and Mardi Gras.",
+   "places": [
+    "dong-phuong",
+    "bywater-bakery",
+    "rouses-cbd"
+   ],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "red-beans-monday",
+   "name": "Red beans and rice on Monday",
+   "kind": "dish",
+   "summary": "Monday was wash day, so a pot of red beans with ham bone simmered all day; restaurants and families still serve it every Monday.",
+   "places": [
+    "buffas",
+    "mandinas"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crawfish-boil",
+   "name": "Crawfish boil",
+   "kind": "custom",
+   "summary": "Sacks of live crawfish boiled with cayenne, corn, potatoes and garlic, dumped onto newspaper-covered tables in backyards and parks for an afternoon of peeling and beer.",
+   "places": [
+    "bayou-st-john-water"
+   ],
+   "seasons": [
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "po-boy",
+   "name": "Po-boy",
+   "kind": "dish",
+   "summary": "A long sandwich on light, crackly French bread, filled with fried shrimp or oysters, or roast beef in gravy; \"dressed\" means with lettuce, tomato, pickles and mayo.",
+   "places": [
+    "parkway-bakery",
+    "domilises",
+    "mahonys",
+    "mothers-restaurant"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gumbo",
+   "name": "Gumbo",
+   "kind": "dish",
+   "summary": "A dark roux stew of seafood or chicken and andouille over rice, thickened with okra or filé; every family argues its own version is right.",
+   "places": [
+    "dooky-chase",
+    "liuzzas-by-the-track"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "muffuletta",
+   "name": "Muffuletta",
+   "kind": "dish",
+   "summary": "A round Sicilian sesame loaf piled with salami, ham, provolone and olive salad, born in the French Quarter's Italian groceries; a quarter is a meal.",
+   "places": [
+    "napoleon-house"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beignets",
+   "name": "Beignets and café au lait",
+   "kind": "dish",
+   "summary": "Square fried doughnuts buried in powdered sugar, eaten with milky coffee cut with chicory root; locals go early or late to dodge the line.",
+   "places": [
+    "cafe-du-monde",
+    "morning-call"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "snowball",
+   "name": "Snowball",
+   "kind": "dish",
+   "summary": "Ice shaved as fine as snow and soaked in syrup, often with condensed milk or a scoop of ice cream inside; stands open in spring and close when it cools.",
+   "places": [
+    "hansens-sno-bliz",
+    "plum-street-snoball",
+    "pandoras-snowballs"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yakamein",
+   "name": "Yakamein",
+   "kind": "dish",
+   "summary": "Beef noodle soup with soy, hot sauce and a boiled egg, sold from coolers at second lines and called \"Old Sober\" for what it does after a long night.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charbroiled-oysters",
+   "name": "Charbroiled oysters",
+   "kind": "dish",
+   "summary": "Oysters grilled on the half shell with garlic butter and cheese until they sizzle, eaten with French bread to mop up the butter.",
+   "places": [
+    "dragos",
+    "acme-oyster-house"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bbq-shrimp",
+   "name": "Barbecue shrimp",
+   "kind": "dish",
+   "summary": "Not barbecue at all: head-on Gulf shrimp baked in butter, black pepper and Worcestershire, with bread for the sauce.",
+   "places": [
+    "pascals-manale"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "banh-mi",
+   "name": "Banh mi",
+   "kind": "dish",
+   "summary": "Vietnamese sandwiches on the same light, crusty bread as a po-boy; in the East they are often simply called Vietnamese po-boys.",
+   "places": [
+    "dong-phuong",
+    "chef-menteur-strip"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sazerac",
+   "name": "Sazerac",
+   "kind": "drink",
+   "summary": "Rye whiskey, Peychaud's bitters and sugar in an absinthe-rinsed glass, the city's official cocktail.",
+   "places": [
+    "napoleon-house"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hurricane",
+   "name": "Hurricane",
+   "kind": "drink",
+   "summary": "A sweet red rum punch in a tall curved glass, invented at Pat O'Brien's and mostly drunk by visitors.",
+   "places": [
+    "pat-obriens"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "go-cup",
+   "name": "Go-cups",
+   "kind": "custom",
+   "summary": "Drinking on the street is legal in plastic cups, so bars hand you one on the way out and parades, second lines and walks home all come with a drink in hand.",
+   "places": [
+    "bourbon-street",
+    "frenchmen-street"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daiquiri-shops",
+   "name": "Drive-through daiquiri shops",
+   "kind": "shop",
+   "summary": "Frozen daiquiris spin in rows of machines at strip-mall shops, some with drive-through windows; the lid has to stay taped over the straw hole.",
+   "places": [
+    "genes-po-boys"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "where-yat",
+   "name": "\"Where y'at?\"",
+   "kind": "saying",
+   "summary": "The local \"how are you\", answered with \"awright\"; the broad Yat accent sounds closer to Brooklyn than to the Deep South.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "making-groceries",
+   "name": "\"Making groceries\"",
+   "kind": "saying",
+   "summary": "What New Orleanians call going grocery shopping, from the French \"faire son marché\".",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "neutral-ground",
+   "name": "\"Neutral ground\"",
+   "kind": "saying",
+   "summary": "The grassy median of a boulevard, named for the strip of Canal Street that divided the Creole and American sides of town; where you stand for parades.",
+   "places": [
+    "washington-avenue-neutral-ground"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lagniappe",
+   "name": "Lagniappe",
+   "kind": "saying",
+   "summary": "A little something extra thrown in for free, like a thirteenth beignet or an extra scoop, and anything extra in general.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yeah-you-right",
+   "name": "\"Yeah you right\"",
+   "kind": "saying",
+   "summary": "Emphatic agreement, often heard as \"yeah you rite\".",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "second-line",
+   "name": "Second lines",
+   "kind": "custom",
+   "summary": "Behind a social aid and pleasure club and its brass band comes the \"second line\" of anyone who joins in, dancing for hours through the neighborhood with stops at bars along the route; jazz funerals end the same way.",
+   "places": [
+    "treme",
+    "central-city",
+    "seventh-ward"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "krewes-throws",
+   "name": "Krewes and throws",
+   "kind": "custom",
+   "summary": "Carnival clubs called krewes build floats and toss beads, cups and doubloons; the prized throws are hand-decorated Zulu coconuts and Muses shoes, and families keep parade ladders for the kids.",
+   "places": [
+    "mardi-gras-world"
+   ],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mardi-gras-indians",
+   "name": "Mardi Gras Indians",
+   "kind": "custom",
+   "summary": "Black New Orleanians in gangs led by a Big Chief sew elaborate beaded and feathered suits all year, then meet in the street on Mardi Gras, St. Joseph's night and Super Sunday to chant and see who is prettiest.",
+   "places": [
+    "backstreet-museum",
+    "hunters-field",
+    "al-davis-park"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-joseph-altar",
+   "name": "St. Joseph's altars and lucky beans",
+   "kind": "custom",
+   "summary": "Visitors to a St. Joseph's altar take home a blessed fava bean for the wallet, said to keep you from going broke.",
+   "places": [
+    "angelo-brocato"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hurricane-prep",
+   "name": "Hurricane season",
+   "kind": "custom",
+   "summary": "From June to November people watch the tropics, keep water and batteries in, learn the contraflow route, and either evacuate or hold a hurricane party when a storm comes.",
+   "places": [],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "who-dat",
+   "name": "New Orleans Saints",
+   "kind": "team",
+   "summary": "The NFL team, whose fans chant \"Who dat say dey gonna beat dem Saints?\"; the 2010 Super Bowl win after Katrina is still the city's happiest memory.",
+   "places": [
+    "superdome"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pelicans",
+   "name": "New Orleans Pelicans",
+   "kind": "team",
+   "summary": "The NBA team at the Smoothie King Center.",
+   "places": [
+    "smoothie-king-center"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brass-bands",
+   "name": "Brass bands",
+   "kind": "other",
+   "summary": "Rebirth, the Dirty Dozen, Hot 8, the Soul Rebels and dozens of younger bands play second lines, club nights and street corners.",
+   "places": [
+    "maple-leaf-bar",
+    "frenchmen-street",
+    "le-bon-temps-roule"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Coffee",
+   "low": 2.5,
+   "high": 4,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Latte",
+   "low": 4.5,
+   "high": 6.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beignets",
+   "item": "Beignets",
+   "low": 4,
+   "high": 6,
+   "per": "an order of three",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "po-boy",
+   "item": "Po-boy",
+   "low": 12,
+   "high": 20,
+   "per": "a full-size shrimp or roast beef",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheap-lunch",
+   "item": "Cheap lunch",
+   "low": 11,
+   "high": 18,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner",
+   "item": "Mid-range dinner",
+   "low": 35,
+   "high": 60,
+   "per": "for one",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beer",
+   "item": "Pint of beer",
+   "low": 5,
+   "high": 8,
+   "per": "a pint",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocktail",
+   "item": "Cocktail",
+   "low": 12,
+   "high": 16,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daiquiri",
+   "item": "Frozen daiquiri",
+   "low": 7,
+   "high": 14,
+   "per": "a large cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries",
+   "low": 75,
+   "high": 115,
+   "per": "a week, one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "transit",
+   "item": "Streetcar or bus fare",
+   "low": 1.25,
+   "high": 1.25,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jazzy-pass",
+   "item": "Jazzy Pass",
+   "low": 3,
+   "high": 3,
+   "per": "a day of unlimited rides",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ferry",
+   "item": "Algiers ferry fare",
+   "low": 2,
+   "high": 2,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rideshare",
+   "item": "Rideshare across town",
+   "low": 12,
+   "high": 28,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movie",
+   "item": "Movie ticket",
+   "low": 12,
+   "high": 16,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gym",
+   "item": "Gym membership",
+   "low": 30,
+   "high": 70,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "snowball",
+   "item": "Snowball",
+   "low": 3,
+   "high": 7,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crawfish",
+   "item": "Boiled crawfish",
+   "low": 5,
+   "high": 10,
+   "per": "a pound, by season",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "king-cake",
+   "item": "King cake",
+   "low": 20,
+   "high": 45,
+   "per": "a whole cake",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "music-cover",
+   "item": "Club cover on Frenchmen",
+   "low": 0,
+   "high": 20,
+   "per": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "sea",
+   "name": "Lake Pontchartrain",
+   "side": "north",
+   "width_km": 8
+  },
+  {
+   "kind": "river",
+   "name": "Mississippi River",
+   "width_km": 0.7,
+   "points": [
+    [
+     29.95,
+     -90.16
+    ],
+    [
+     29.935,
+     -90.14
+    ],
+    [
+     29.917,
+     -90.12
+    ],
+    [
+     29.913,
+     -90.093
+    ],
+    [
+     29.923,
+     -90.068
+    ],
+    [
+     29.945,
+     -90.061
+    ],
+    [
+     29.956,
+     -90.058
+    ],
+    [
+     29.958,
+     -90.046
+    ],
+    [
+     29.952,
+     -90.03
+    ],
+    [
+     29.95,
+     -90.008
+    ]
+   ]
+  }
+ ]
+}

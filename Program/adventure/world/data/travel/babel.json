@@ -1,0 +1,787 @@
+{
+ "about": "BABEL's travel map (dungeon/travel.py): the tower's floors joined by the Stair, Cobb's lift cage between the Concourse and Varrow, and the broken span above the Foundry; each leg with its hours on foot, terrain and danger, each floor's encounters on the way in and at a camp off the Safe Zones (dungeon/rest.py), and its tier from the floor's beta rank. A node is a whole town (the Concourse, Hollin, the Gilded Bazaar) or a floor landing (dungeon/world/data/cities/babel-floors.json). Positions stack the floors on the map: up is up. Region cards are null: the BABEL deck (dungeon/life/decks/babel.json) draws everywhere.",
+ "travel": "roads",
+ "hours_a_day": 10,
+ "odds": {
+  "none": 0,
+  "low": 15,
+  "medium": 30,
+  "high": 50
+ },
+ "food": [
+  "waybread",
+  "dried-meat",
+  "skewer"
+ ],
+ "nodes": [
+  {
+   "id": "the-concourse",
+   "name": "the Concourse",
+   "region": "concourse",
+   "city": "the-concourse",
+   "place": "the-waystone",
+   "safe": true,
+   "map": {
+    "x": 0.5,
+    "y": 0.55
+   }
+  },
+  {
+   "id": "hollin",
+   "name": "Hollin",
+   "region": "varrow",
+   "city": "hollin",
+   "place": "the-landing-steps",
+   "safe": true,
+   "map": {
+    "x": 0.45,
+    "y": 0.49
+   }
+  },
+  {
+   "id": "the-reach",
+   "name": "the Reach",
+   "region": "the-reach",
+   "city": "babel-floors",
+   "place": "the-reach",
+   "safe": false,
+   "map": {
+    "x": 0.62,
+    "y": 0.49
+   }
+  },
+  {
+   "id": "the-marches-landing",
+   "name": "the Marches landing",
+   "region": "drowned-marches",
+   "city": "babel-floors",
+   "place": "the-marches-landing",
+   "safe": false,
+   "map": {
+    "x": 0.5,
+    "y": 0.43
+   }
+  },
+  {
+   "id": "the-stilt-villages",
+   "name": "the stilt villages",
+   "region": "drowned-marches",
+   "city": "babel-floors",
+   "place": "the-stilt-villages",
+   "safe": true,
+   "map": {
+    "x": 0.6,
+    "y": 0.43
+   }
+  },
+  {
+   "id": "the-gilded-bazaar",
+   "name": "the Gilded Bazaar",
+   "region": "gilded-bazaar",
+   "city": "the-gilded-bazaar",
+   "place": "the-stair-gate",
+   "safe": true,
+   "map": {
+    "x": 0.5,
+    "y": 0.37
+   }
+  },
+  {
+   "id": "the-foundry-landing",
+   "name": "the Foundry landing",
+   "region": "the-foundry",
+   "city": "babel-floors",
+   "place": "the-foundry-landing",
+   "safe": false,
+   "map": {
+    "x": 0.5,
+    "y": 0.31
+   }
+  },
+  {
+   "id": "dry-hollow",
+   "name": "Dry Hollow",
+   "region": "dry-hollow",
+   "city": "babel-floors",
+   "place": "dry-hollow",
+   "safe": false,
+   "map": {
+    "x": 0.5,
+    "y": 0.25
+   }
+  },
+  {
+   "id": "hakuro",
+   "name": "Hakuro",
+   "region": "hakuro",
+   "city": "babel-floors",
+   "place": "hakuro",
+   "safe": true,
+   "map": {
+    "x": 0.5,
+    "y": 0.19
+   }
+  },
+  {
+   "id": "lumen-stack",
+   "name": "the Lumen Stack",
+   "region": "lumen-stack",
+   "city": "babel-floors",
+   "place": "lumen-stack",
+   "safe": false,
+   "map": {
+    "x": 0.5,
+    "y": 0.13
+   }
+  },
+  {
+   "id": "st-agathes",
+   "name": "St. Agathe's",
+   "region": "st-agathes",
+   "city": "babel-floors",
+   "place": "st-agathes",
+   "safe": false,
+   "map": {
+    "x": 0.5,
+    "y": 0.61
+   }
+  },
+  {
+   "id": "the-catacombs",
+   "name": "the Catacombs",
+   "region": "the-catacombs",
+   "city": "babel-floors",
+   "place": "the-catacombs",
+   "safe": false,
+   "map": {
+    "x": 0.5,
+    "y": 0.67
+   }
+  },
+  {
+   "id": "the-ashfields",
+   "name": "the Ashfields",
+   "region": "the-ashfields",
+   "city": "babel-floors",
+   "place": "the-ashfields",
+   "safe": false,
+   "map": {
+    "x": 0.5,
+    "y": 0.73
+   }
+  },
+  {
+   "id": "the-undercroft",
+   "name": "the Undercroft",
+   "region": "the-undercroft",
+   "city": "babel-floors",
+   "place": "the-undercroft",
+   "safe": false,
+   "map": {
+    "x": 0.5,
+    "y": 0.79
+   }
+  }
+ ],
+ "routes": [
+  {
+   "from": "the-concourse",
+   "to": "hollin",
+   "hours": 1,
+   "terrain": "Cobb's lift cage",
+   "danger": "none"
+  },
+  {
+   "from": "hollin",
+   "to": "the-reach",
+   "hours": 6,
+   "terrain": "the road north past the Reachwall",
+   "danger": "high"
+  },
+  {
+   "from": "hollin",
+   "to": "the-marches-landing",
+   "hours": 5,
+   "terrain": "the Stair",
+   "danger": "low"
+  },
+  {
+   "from": "the-marches-landing",
+   "to": "the-stilt-villages",
+   "hours": 4,
+   "terrain": "the causeways",
+   "danger": "medium"
+  },
+  {
+   "from": "the-marches-landing",
+   "to": "the-gilded-bazaar",
+   "hours": 5,
+   "terrain": "the Stair",
+   "danger": "low"
+  },
+  {
+   "from": "the-gilded-bazaar",
+   "to": "the-foundry-landing",
+   "hours": 5,
+   "terrain": "the Stair",
+   "danger": "medium"
+  },
+  {
+   "from": "the-foundry-landing",
+   "to": "dry-hollow",
+   "hours": 12,
+   "terrain": "the broken span",
+   "danger": "high"
+  },
+  {
+   "from": "dry-hollow",
+   "to": "hakuro",
+   "hours": 6,
+   "terrain": "the Stair",
+   "danger": "medium"
+  },
+  {
+   "from": "hakuro",
+   "to": "lumen-stack",
+   "hours": 6,
+   "terrain": "the Stair",
+   "danger": "medium"
+  },
+  {
+   "from": "the-concourse",
+   "to": "st-agathes",
+   "hours": 4,
+   "terrain": "the Stair down",
+   "danger": "low"
+  },
+  {
+   "from": "st-agathes",
+   "to": "the-catacombs",
+   "hours": 5,
+   "terrain": "the Stair down",
+   "danger": "medium"
+  },
+  {
+   "from": "the-catacombs",
+   "to": "the-ashfields",
+   "hours": 6,
+   "terrain": "the Stair down",
+   "danger": "high"
+  },
+  {
+   "from": "the-ashfields",
+   "to": "the-undercroft",
+   "hours": 6,
+   "terrain": "the Stair down",
+   "danger": "high"
+  }
+ ],
+ "encounters": {
+  "concourse": [
+   {
+    "weight": 3,
+    "text": "A porter string coming up with salt, singing a counting song."
+   },
+   {
+    "weight": 2,
+    "text": "A party of new-wave climbers arguing about whether the exit is up or down."
+   }
+  ],
+  "varrow": [
+   {
+    "weight": 3,
+    "text": "Cobb says \"Up one. Varrow. Mind how you go,\" the way he says it to everyone."
+   },
+   {
+    "weight": 2,
+    "text": "A Keep rider on the valley road, who looks the character over for the Mark."
+   },
+   {
+    "weight": 1,
+    "action": "keep clear of the Close's men checking necks at the ford",
+    "difficulty": "normal",
+    "threat": "Two of the Close's men want to see the character's throat, and do not ask nicely."
+   }
+  ],
+  "the-reach": [
+   {
+    "weight": 2,
+    "text": "A footprint in the frost as long as a man is tall."
+   },
+   {
+    "weight": 3,
+    "action": "stay downwind of the giants crossing the moor",
+    "difficulty": "hard",
+    "threat": {
+     "text": "A Reach giant smells the character and comes, slow and certain, across the heather.",
+     "foe": {
+      "name": "Reach giant",
+      "count": 1,
+      "vitality": 24,
+      "resolve": 14,
+      "weapon": 3,
+      "wants": "kill"
+     }
+    }
+   }
+  ],
+  "drowned-marches": [
+   {
+    "weight": 3,
+    "text": "Lights out on the water that are not lanterns, keeping pace and then going out."
+   },
+   {
+    "weight": 2,
+    "action": "keep to the marked causeway in the fog",
+    "difficulty": "normal",
+    "threat": {
+     "text": "The causeway ends in black water and something under it moves.",
+     "foe": {
+      "name": "marsh lurker",
+      "count": 2,
+      "vitality": 12,
+      "resolve": 8,
+      "weapon": 1,
+      "wants": "kill"
+     }
+    }
+   },
+   {
+    "weight": 2,
+    "action": "get past the landing toll without paying twice",
+    "difficulty": "normal",
+    "threat": {
+     "text": "Three washed-out climbers hold the landing and want a toll in Talents, and a look in the satchel.",
+     "foe": {
+      "name": "landing tough",
+      "count": 3,
+      "vitality": 10,
+      "resolve": 9,
+      "weapon": 1,
+      "wants": "rob"
+     }
+    }
+   }
+  ],
+  "gilded-bazaar": [
+   {
+    "weight": 3,
+    "text": "A crier on the Copper Steps shouting the day's exchange rates for gifts and bonds."
+   },
+   {
+    "weight": 2,
+    "text": "A Lantern Room girl coming down to buy thread, who smiles at everybody."
+   },
+   {
+    "weight": 2,
+    "action": "get past the landing toll without paying twice",
+    "difficulty": "normal",
+    "threat": {
+     "text": "Three washed-out climbers hold the landing and want a toll in Talents, and a look in the satchel.",
+     "foe": {
+      "name": "landing tough",
+      "count": 3,
+      "vitality": 10,
+      "resolve": 9,
+      "weapon": 1,
+      "wants": "rob"
+     }
+    }
+   }
+  ],
+  "the-foundry": [
+   {
+    "weight": 2,
+    "text": "The heat comes up the Stair a full landing before the Foundry does."
+   },
+   {
+    "weight": 2,
+    "action": "get across the slag gallery before the vents breathe",
+    "difficulty": "hard",
+    "threat": "A vent breathes out across the gallery, and the air itself burns."
+   },
+   {
+    "weight": 2,
+    "action": "slip past the forge-things guarding the landing",
+    "difficulty": "hard",
+    "threat": {
+     "text": "Something of iron and coals unfolds from the wall of the landing.",
+     "foe": {
+      "name": "forge-thing",
+      "count": 2,
+      "vitality": 16,
+      "resolve": 12,
+      "weapon": 2,
+      "wants": "kill"
+     }
+    }
+   }
+  ],
+  "dry-hollow": [
+   {
+    "weight": 2,
+    "text": "Chalked initials and a tally on the last pillar of the broken span."
+   },
+   {
+    "weight": 3,
+    "action": "find water on the dry floor before it finds the character first",
+    "difficulty": "hard",
+    "threat": "The water runs out a day early on a floor without shade."
+   }
+  ],
+  "hakuro": [
+   {
+    "weight": 3,
+    "text": "Paper lanterns on the landing and a gatekeeper who bows and asks for the character's rank."
+   },
+   {
+    "weight": 1,
+    "action": "keep out of a duel that is none of the character's business",
+    "difficulty": "normal",
+    "threat": {
+     "text": "Two swordsmen on the landing decide the character will do as a witness, or as a third.",
+     "foe": {
+      "name": "Hakuro duelist",
+      "count": 1,
+      "vitality": 14,
+      "resolve": 14,
+      "weapon": 2,
+      "wants": "kill"
+     }
+    }
+   }
+  ],
+  "lumen-stack": [
+   {
+    "weight": 2,
+    "text": "Light pouring down the Stair from above, so bright it has a sound."
+   },
+   {
+    "weight": 3,
+    "action": "keep the eyes covered and the feet on the stair",
+    "difficulty": "hard",
+    "threat": "The light gets in under the eyelids and the character cannot find the next step."
+   }
+  ],
+  "st-agathes": [
+   {
+    "weight": 3,
+    "text": "A shrine on the landing with a burnt-down candle and a note in a climber's hand."
+   },
+   {
+    "weight": 2,
+    "action": "get past the shamblers on the lower landing",
+    "difficulty": "normal",
+    "threat": {
+     "text": "The dead of St. Agathe's are on the stair, and they have heard the character.",
+     "foe": {
+      "name": "shambler",
+      "count": 3,
+      "vitality": 10,
+      "resolve": 6,
+      "weapon": 1,
+      "wants": "kill"
+     }
+    }
+   }
+  ],
+  "the-catacombs": [
+   {
+    "weight": 3,
+    "action": "find the way through the bone halls without waking them",
+    "difficulty": "hard",
+    "threat": {
+     "text": "The bones in the walls start to move as the character passes.",
+     "foe": {
+      "name": "ossuary guardian",
+      "count": 2,
+      "vitality": 14,
+      "resolve": 10,
+      "weapon": 2,
+      "wants": "kill"
+     }
+    }
+   },
+   {
+    "weight": 1,
+    "text": "A party's gear laid out neatly on a landing, and no party."
+   }
+  ],
+  "the-ashfields": [
+   {
+    "weight": 3,
+    "action": "cross the ash before the wind lifts it",
+    "difficulty": "hard",
+    "threat": "The wind comes up and the ash with it, and the character breathes it."
+   },
+   {
+    "weight": 2,
+    "action": "keep clear of the ash-walkers",
+    "difficulty": "hard",
+    "threat": {
+     "text": "Gray shapes rise out of the drifts.",
+     "foe": {
+      "name": "ash-walker",
+      "count": 3,
+      "vitality": 12,
+      "resolve": 10,
+      "weapon": 2,
+      "wants": "kill"
+     }
+    }
+   }
+  ],
+  "the-undercroft": [
+   {
+    "weight": 3,
+    "action": "go down without being heard by what lives at the bottom",
+    "difficulty": "hard",
+    "threat": {
+     "text": "Something enormous turns over in the dark below, and listens.",
+     "foe": {
+      "name": "undercroft thing",
+      "count": 1,
+      "vitality": 28,
+      "resolve": 18,
+      "weapon": 4,
+      "wants": "kill"
+     }
+    }
+   },
+   {
+    "weight": 1,
+    "text": "Old stonework down here, older than the tower's, with letters nobody reads."
+   }
+  ]
+ },
+ "world": "babel",
+ "regions": {
+  "concourse": {
+   "danger": "none",
+   "cards": null,
+   "tier": 1
+  },
+  "varrow": {
+   "danger": "low",
+   "cards": null,
+   "tier": 1
+  },
+  "the-reach": {
+   "danger": "high",
+   "cards": null,
+   "tier": 2
+  },
+  "drowned-marches": {
+   "danger": "medium",
+   "cards": null,
+   "tier": 1
+  },
+  "gilded-bazaar": {
+   "danger": "low",
+   "cards": null,
+   "tier": 2
+  },
+  "the-foundry": {
+   "danger": "high",
+   "cards": null,
+   "tier": 2
+  },
+  "dry-hollow": {
+   "danger": "high",
+   "cards": null,
+   "tier": 2
+  },
+  "hakuro": {
+   "danger": "medium",
+   "cards": null,
+   "tier": 2
+  },
+  "lumen-stack": {
+   "danger": "high",
+   "cards": null,
+   "tier": 3
+  },
+  "st-agathes": {
+   "danger": "medium",
+   "cards": null,
+   "tier": 1
+  },
+  "the-catacombs": {
+   "danger": "high",
+   "cards": null,
+   "tier": 2
+  },
+  "the-ashfields": {
+   "danger": "high",
+   "cards": null,
+   "tier": 2
+  },
+  "the-undercroft": {
+   "danger": "high",
+   "cards": null,
+   "tier": 3
+  }
+ },
+ "camp": {
+  "concourse": [
+   {
+    "weight": 3,
+    "text": "The Concourse never quite goes quiet; somebody sings by the Stone all night."
+   }
+  ],
+  "varrow": [
+   {
+    "weight": 2,
+    "action": "keep the fire from showing to the Keep's night riders",
+    "difficulty": "normal",
+    "threat": "Riders from the Keep come down on the fire, asking whose the character is."
+   },
+   {
+    "weight": 2,
+    "text": "Bells from Saint Aurel at the night office, very far off."
+   }
+  ],
+  "the-reach": [
+   {
+    "weight": 3,
+    "action": "keep the fire small enough that the giants do not come to it",
+    "difficulty": "hard",
+    "threat": {
+     "text": "A giant comes to the fire to warm its hands, and stays, and gets hungry.",
+     "foe": {
+      "name": "Reach giant",
+      "count": 1,
+      "vitality": 24,
+      "resolve": 14,
+      "weapon": 3,
+      "wants": "kill"
+     }
+    }
+   }
+  ],
+  "drowned-marches": [
+   {
+    "weight": 2,
+    "action": "find a hummock dry enough to sleep on",
+    "difficulty": "normal",
+    "threat": "The water rises in the night and everything is soaked."
+   },
+   {
+    "weight": 1,
+    "action": "keep watch for what comes out of the reeds",
+    "difficulty": "normal",
+    "threat": {
+     "text": "Something comes out of the reeds toward the sleepers.",
+     "foe": {
+      "name": "marsh lurker",
+      "count": 2,
+      "vitality": 12,
+      "resolve": 8,
+      "weapon": 1,
+      "wants": "kill"
+     }
+    }
+   }
+  ],
+  "gilded-bazaar": [
+   {
+    "weight": 2,
+    "action": "keep the satchel close in the Bazaar's night",
+    "difficulty": "normal",
+    "threat": "Somebody light-fingered goes through the satchel in the dark."
+   }
+  ],
+  "the-foundry": [
+   {
+    "weight": 3,
+    "action": "find a landing cool enough to sleep on",
+    "difficulty": "hard",
+    "threat": "The heat keeps everyone awake, sweating, until the shakes start."
+   }
+  ],
+  "dry-hollow": [
+   {
+    "weight": 3,
+    "action": "keep the water covered from the thirsty things of the floor",
+    "difficulty": "hard",
+    "threat": "Something drank the water in the night and left tracks around the skins."
+   }
+  ],
+  "hakuro": [
+   {
+    "weight": 3,
+    "text": "The gatekeeper brings tea at midnight and does not say why."
+   }
+  ],
+  "lumen-stack": [
+   {
+    "weight": 3,
+    "action": "find dark enough to sleep in",
+    "difficulty": "hard",
+    "threat": "There is no dark here, and no sleep."
+   }
+  ],
+  "st-agathes": [
+   {
+    "weight": 2,
+    "action": "bar the landing against the dead",
+    "difficulty": "normal",
+    "threat": {
+     "text": "Hands at the barricade in the small hours.",
+     "foe": {
+      "name": "shambler",
+      "count": 3,
+      "vitality": 10,
+      "resolve": 6,
+      "weapon": 1,
+      "wants": "kill"
+     }
+    }
+   }
+  ],
+  "the-catacombs": [
+   {
+    "weight": 3,
+    "action": "sleep without the bones hearing it",
+    "difficulty": "hard",
+    "threat": {
+     "text": "Rattling in the walls all night, and closer each time the fire dips.",
+     "foe": {
+      "name": "ossuary guardian",
+      "count": 2,
+      "vitality": 14,
+      "resolve": 10,
+      "weapon": 2,
+      "wants": "kill"
+     }
+    }
+   }
+  ],
+  "the-ashfields": [
+   {
+    "weight": 3,
+    "action": "keep the ash out of the lungs while sleeping",
+    "difficulty": "hard",
+    "threat": "The ash settles on the sleepers and everyone wakes coughing gray."
+   }
+  ],
+  "the-undercroft": [
+   {
+    "weight": 3,
+    "action": "rest without being heard",
+    "difficulty": "hard",
+    "threat": {
+     "text": "The thing at the bottom has come up to look.",
+     "foe": {
+      "name": "undercroft thing",
+      "count": 1,
+      "vitality": 28,
+      "resolve": 18,
+      "weapon": 4,
+      "wants": "kill"
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,7096 @@
+{
+ "schema_version": 1,
+ "id": "jeju",
+ "name": "Jeju",
+ "region": "Jeju Province",
+ "country": "South Korea",
+ "timezone": "Asia/Seoul",
+ "aliases": [
+  "Jeju Island",
+  "Jejudo",
+  "Jeju-do",
+  "Jeju-si",
+  "Jeju City",
+  "Cheju",
+  "Cheju-do",
+  "Seogwipo",
+  "Jeju Special Self-Governing Province",
+  "Jeju, South Korea"
+ ],
+ "summary": "South Korea's volcanic island province, taken here as one city: Jeju City on the north coast, Seogwipo on the south and the beach and farming towns around the shore, under Hallasan. Known for black pork, tangerines, women divers, oreum hikes, the Olle trails and endless ocean-view cafes.",
+ "lat": 33.38,
+ "lon": 126.55,
+ "currency": {
+  "code": "KRW",
+  "symbol": "₩",
+  "name": "South Korean won"
+ },
+ "speeds": {
+  "walk": 4.5,
+  "car": 40,
+  "rideshare": 38,
+  "bus": 22,
+  "ferry": 15,
+  "bike-share": 14
+ },
+ "names": {
+  "mix": {
+   "anglo": 1,
+   "east-asian": 0.04
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Jeju places and neighborhoods written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Well-known public places, institutions and employers from general knowledge, covering the whole island: Jeju City, Seogwipo and the coastal and inland towns people treat as parts of it. Where a street holds many small shops (black pork restaurants, beach cafes, noraebang) the record describes the strip rather than naming one business. Businesses open and close and rents move: treat this as a snapshot for fiction. Korean leases usually mean a large deposit (jeonse, or wolse with a smaller deposit plus monthly rent); rents here are rounded monthly wolse estimates for a modest deposit, not listings. Names use Revised Romanization. Coordinates are approximate area centers."
+  },
+  "curated-climate-2026-10": {
+   "kind": "curated",
+   "title": "Approximate monthly climate for Jeju City",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Rounded values in line with Korea Meteorological Administration 1991-2020 normals for Jeju City; Seogwipo on the south coast runs a degree or two warmer in winter and Hallasan is far colder and snowier. Rain days count days with measurable rain or snow."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "old-jeju",
+   "name": "Old Jeju City (Wondosim)",
+   "summary": "The historic heart of Jeju City around Gwandeokjeong pavilion and Dongmun Market: low concrete blocks, an underground arcade, noodle and black pork streets and an older crowd.",
+   "vibe": [
+    "historic",
+    "markets",
+    "food",
+    "central"
+   ],
+   "lat": 33.511,
+   "lon": 126.526,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     400000,
+     650000
+    ],
+    "one_bedroom": [
+     550000,
+     850000
+    ],
+    "two_bedroom": [
+     800000,
+     1300000
+    ]
+   },
+   "housing": [
+    "one-room",
+    "villa",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tapdong",
+   "name": "Tapdong and the Jeju Port seafront",
+   "summary": "The seawall promenade, Tapdong Square, the ferry port and Sarabong peak, with raw-fish restaurants, hotels and a waterfront festival ground.",
+   "vibe": [
+    "waterfront",
+    "nightlife",
+    "touristy",
+    "sunsets"
+   ],
+   "lat": 33.518,
+   "lon": 126.535,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     450000,
+     700000
+    ],
+    "one_bedroom": [
+     650000,
+     950000
+    ],
+    "two_bedroom": [
+     1000000,
+     1600000
+    ]
+   },
+   "housing": [
+    "one-room",
+    "officetel",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ido",
+   "name": "Ido and City Hall",
+   "summary": "Busy residential blocks around Jeju City Hall, where the streets behind the hall fill with student bars, study cafes, PC bangs and late-night snack shops.",
+   "vibe": [
+    "students",
+    "nightlife",
+    "residential",
+    "central"
+   ],
+   "lat": 33.5,
+   "lon": 126.532,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     400000,
+     650000
+    ],
+    "one_bedroom": [
+     600000,
+     900000
+    ],
+    "two_bedroom": [
+     1000000,
+     1600000
+    ]
+   },
+   "housing": [
+    "one-room",
+    "villa",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sinjeju",
+   "name": "Sinjeju (Yeon-dong and Nohyeong)",
+   "summary": "The newer downtown planned in the 1980s: the provincial government, duty-free stores, Jeju Dream Tower, Nuwemaru Street's bars and the most apartment towers on the island.",
+   "vibe": [
+    "business",
+    "shopping",
+    "nightlife",
+    "high-rise"
+   ],
+   "lat": 33.487,
+   "lon": 126.487,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     550000,
+     850000
+    ],
+    "one_bedroom": [
+     800000,
+     1200000
+    ],
+    "two_bedroom": [
+     1300000,
+     2200000
+    ]
+   },
+   "housing": [
+    "officetel",
+    "apartment",
+    "one-room"
+   ],
+   "walkability": "high",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "airport-limousine"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ara",
+   "name": "Ara and Jeju National University",
+   "summary": "The inland university district on the slope up toward Hallasan: the national university and its hospital, student one-rooms, new apartment complexes and the Jeju Science Park tech campus.",
+   "vibe": [
+    "students",
+    "academic",
+    "leafy",
+    "new-build"
+   ],
+   "lat": 33.458,
+   "lon": 126.56,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     380000,
+     600000
+    ],
+    "one_bedroom": [
+     550000,
+     850000
+    ],
+    "two_bedroom": [
+     1000000,
+     1600000
+    ]
+   },
+   "housing": [
+    "one-room",
+    "student-housing",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "airport",
+   "name": "Yongdam, Dodu and the airport",
+   "summary": "The coast either side of Jeju International Airport: Yongduam rock, the Yongdam coastal road's plane-spotting cafes, rainbow seawalls at Dodu and Iho Tewoo beach.",
+   "vibe": [
+    "waterfront",
+    "cafes",
+    "airport",
+    "sunsets"
+   ],
+   "lat": 33.51,
+   "lon": 126.495,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     500000,
+     750000
+    ],
+    "one_bedroom": [
+     700000,
+     1000000
+    ],
+    "two_bedroom": [
+     1100000,
+     1700000
+    ]
+   },
+   "housing": [
+    "one-room",
+    "villa",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "airport-limousine",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aewol",
+   "name": "Aewol",
+   "summary": "The cafe coast west of the city: a cliff path lined with ocean-view cafes, Gwakji beach, pensions and holiday rentals, and the grassy oreum inland where the fire festival is held.",
+   "vibe": [
+    "cafes",
+    "coastal",
+    "trendy",
+    "touristy"
+   ],
+   "lat": 33.463,
+   "lon": 126.312,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     550000,
+     850000
+    ],
+    "one_bedroom": [
+     800000,
+     1150000
+    ],
+    "two_bedroom": [
+     1200000,
+     2000000
+    ]
+   },
+   "housing": [
+    "villa",
+    "detached-house",
+    "pension"
+   ],
+   "walkability": "low",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hallim",
+   "name": "Hallim",
+   "summary": "A working harbour town on the northwest coast with a five-day market, fishing boats, the ferry to Biyangdo and quiet farm villages climbing inland.",
+   "vibe": [
+    "harbour",
+    "local",
+    "quiet",
+    "affordable"
+   ],
+   "lat": 33.413,
+   "lon": 126.266,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     380000,
+     600000
+    ],
+    "one_bedroom": [
+     550000,
+     800000
+    ],
+    "two_bedroom": [
+     800000,
+     1300000
+    ]
+   },
+   "housing": [
+    "villa",
+    "detached-house",
+    "stone-house"
+   ],
+   "walkability": "low",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hyeopjae",
+   "name": "Hyeopjae and Geumneung beaches",
+   "summary": "Two shallow, glass-green beaches facing Biyangdo, beside Hallim Park, with guesthouses, beach cafes and a summer crowd.",
+   "vibe": [
+    "beach",
+    "touristy",
+    "summer",
+    "cafes"
+   ],
+   "lat": 33.394,
+   "lon": 126.24,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     450000,
+     750000
+    ],
+    "one_bedroom": [
+     650000,
+     950000
+    ],
+    "two_bedroom": [
+     1000000,
+     1600000
+    ]
+   },
+   "housing": [
+    "pension",
+    "villa",
+    "stone-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hamdeok",
+   "name": "Hamdeok",
+   "summary": "A turquoise beach and Seoubong peak half an hour east of the city, with big glass cafes, seafood restaurants and a growing number of apartments for commuters.",
+   "vibe": [
+    "beach",
+    "cafes",
+    "family",
+    "coastal"
+   ],
+   "lat": 33.543,
+   "lon": 126.669,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     450000,
+     750000
+    ],
+    "one_bedroom": [
+     650000,
+     950000
+    ],
+    "two_bedroom": [
+     1000000,
+     1600000
+    ]
+   },
+   "housing": [
+    "villa",
+    "apartment",
+    "pension"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gimnyeong",
+   "name": "Gimnyeong and Woljeong-ri",
+   "summary": "Stone-walled fishing villages on the northeast coast whose white-sand beaches turned into a strip of surf shops and beach cafes, near the Manjanggul lava tube.",
+   "vibe": [
+    "beach",
+    "surf",
+    "cafes",
+    "village"
+   ],
+   "lat": 33.556,
+   "lon": 126.775,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     450000,
+     750000
+    ],
+    "one_bedroom": [
+     650000,
+     950000
+    ],
+    "two_bedroom": [
+     950000,
+     1500000
+    ]
+   },
+   "housing": [
+    "stone-house",
+    "detached-house",
+    "pension"
+   ],
+   "walkability": "low",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gujwa",
+   "name": "Sehwa, Hado and Jongdal (Gujwa)",
+   "summary": "The haenyeo coast: diving villages, the Jeju Haenyeo Museum, a five-day market at Sehwa, and oreum and forest inland.",
+   "vibe": [
+    "haenyeo",
+    "village",
+    "coastal",
+    "quiet"
+   ],
+   "lat": 33.522,
+   "lon": 126.86,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     380000,
+     620000
+    ],
+    "one_bedroom": [
+     550000,
+     850000
+    ],
+    "two_bedroom": [
+     800000,
+     1300000
+    ]
+   },
+   "housing": [
+    "stone-house",
+    "detached-house",
+    "villa"
+   ],
+   "walkability": "low",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seongsan",
+   "name": "Seongsan",
+   "summary": "The eastern tip under Seongsan Ilchulbong (Sunrise Peak): tour buses by day, galchi and black pork restaurants, Seopjikoji's headland and the ferry port for Udo.",
+   "vibe": [
+    "touristy",
+    "harbour",
+    "sunrise",
+    "coastal"
+   ],
+   "lat": 33.462,
+   "lon": 126.932,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     400000,
+     650000
+    ],
+    "one_bedroom": [
+     550000,
+     850000
+    ],
+    "two_bedroom": [
+     800000,
+     1300000
+    ]
+   },
+   "housing": [
+    "villa",
+    "detached-house",
+    "pension"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car",
+    "udo-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "udo",
+   "name": "Udo",
+   "summary": "A small cow-shaped island fifteen minutes by ferry from Seongsan: coral-sand beaches, peanut fields, haenyeo and electric scooters full of day visitors.",
+   "vibe": [
+    "island",
+    "beach",
+    "village",
+    "touristy"
+   ],
+   "lat": 33.505,
+   "lon": 126.953,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     350000,
+     550000
+    ],
+    "one_bedroom": [
+     500000,
+     750000
+    ],
+    "two_bedroom": [
+     700000,
+     1100000
+    ]
+   },
+   "housing": [
+    "stone-house",
+    "detached-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "udo-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pyoseon",
+   "name": "Pyoseon",
+   "summary": "A wide, shallow southeast beach beside the Jeju Folk Village, with resort hotels, seafood restaurants and the thatched Seongeup village inland.",
+   "vibe": [
+    "beach",
+    "folk",
+    "quiet",
+    "family"
+   ],
+   "lat": 33.326,
+   "lon": 126.836,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     350000,
+     600000
+    ],
+    "one_bedroom": [
+     500000,
+     800000
+    ],
+    "two_bedroom": [
+     750000,
+     1200000
+    ]
+   },
+   "housing": [
+    "detached-house",
+    "villa",
+    "stone-house"
+   ],
+   "walkability": "low",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "namwon",
+   "name": "Namwon and Wimi",
+   "summary": "Tangerine country on the south coast: orchards behind black stone walls and windbreak trees, camellia gardens, farm cafes and the Keunyeong cliff path.",
+   "vibe": [
+    "farms",
+    "tangerines",
+    "quiet",
+    "coastal"
+   ],
+   "lat": 33.279,
+   "lon": 126.718,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     350000,
+     580000
+    ],
+    "one_bedroom": [
+     500000,
+     780000
+    ],
+    "two_bedroom": [
+     750000,
+     1200000
+    ]
+   },
+   "housing": [
+    "detached-house",
+    "stone-house",
+    "villa"
+   ],
+   "walkability": "low",
+   "transit": [
+    "island-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seogwipo",
+   "name": "Seogwipo old town",
+   "summary": "The south-coast city center above its harbour: Maeil Olle Market, Lee Jung-seop Street, waterfalls a short walk from the bus terminal and Saeseom islet.",
+   "vibe": [
+    "historic",
+    "markets",
+    "waterfalls",
+    "arts"
+   ],
+   "lat": 33.249,
+   "lon": 126.562,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     400000,
+     650000
+    ],
+    "one_bedroom": [
+     580000,
+     880000
+    ],
+    "two_bedroom": [
+     900000,
+     1400000
+    ]
+   },
+   "housing": [
+    "one-room",
+    "villa",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car",
+    "airport-limousine"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-seogwipo",
+   "name": "New Seogwipo, Gangjeong and Beophwan",
+   "summary": "The newer half of Seogwipo west of the old town: apartment blocks around the World Cup stadium, Oedolgae rock, the Beophwan haenyeo village and Yakcheonsa temple.",
+   "vibe": [
+    "residential",
+    "coastal",
+    "sports",
+    "family"
+   ],
+   "lat": 33.247,
+   "lon": 126.51,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     450000,
+     700000
+    ],
+    "one_bedroom": [
+     650000,
+     950000
+    ],
+    "two_bedroom": [
+     1000000,
+     1600000
+    ]
+   },
+   "housing": [
+    "apartment",
+    "villa",
+    "one-room"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car",
+    "airport-limousine"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jungmun",
+   "name": "Jungmun Resort",
+   "summary": "The planned resort zone on the south coast: big hotels, the convention center, Jungmun Saekdal surf beach, waterfalls, gardens and columnar-joint cliffs.",
+   "vibe": [
+    "resort",
+    "beach",
+    "touristy",
+    "upscale"
+   ],
+   "lat": 33.248,
+   "lon": 126.412,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     550000,
+     850000
+    ],
+    "one_bedroom": [
+     800000,
+     1200000
+    ],
+    "two_bedroom": [
+     1200000,
+     2000000
+    ]
+   },
+   "housing": [
+    "officetel",
+    "villa",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car",
+    "airport-limousine"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daejeong",
+   "name": "Daejeong and Moseulpo",
+   "summary": "The windy southwest: Moseulpo harbour's yellowtail restaurants, Songaksan and Sanbangsan, wartime sites on the Alddreu airfield, the ferries to Gapado and Marado, and the international schools of Global Education City inland.",
+   "vibe": [
+    "harbour",
+    "windy",
+    "history",
+    "schools"
+   ],
+   "lat": 33.218,
+   "lon": 126.252,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     420000,
+     680000
+    ],
+    "one_bedroom": [
+     650000,
+     1000000
+    ],
+    "two_bedroom": [
+     1100000,
+     2000000
+    ]
+   },
+   "housing": [
+    "villa",
+    "apartment",
+    "detached-house"
+   ],
+   "walkability": "low",
+   "transit": [
+    "island-bus",
+    "express-bus",
+    "taxi",
+    "rental-car",
+    "island-ferries"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "foothills",
+   "name": "Bonggae, Gyorae and the Hallasan foothills",
+   "summary": "Forest and pasture on the slopes east of Hallasan: the April 3rd Peace Park, cedar forests, Saryeoni path, the Seongpanak trailhead and the native-chicken restaurants of Gyorae.",
+   "vibe": [
+    "forest",
+    "hiking",
+    "quiet",
+    "history"
+   ],
+   "lat": 33.44,
+   "lon": 126.64,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     450000,
+     700000
+    ],
+    "one_bedroom": [
+     650000,
+     950000
+    ],
+    "two_bedroom": [
+     1000000,
+     1600000
+    ]
+   },
+   "housing": [
+    "detached-house",
+    "villa",
+    "townhouse"
+   ],
+   "walkability": "low",
+   "transit": [
+    "island-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gasi",
+   "name": "Gasi-ri and the eastern ranchland",
+   "summary": "Open grassland, horse ranches and soft oreum in inland Pyoseon-myeon, where the Noksan-ro road turns yellow with canola in spring and the hills silver with eulalia grass in autumn.",
+   "vibe": [
+    "ranches",
+    "oreum",
+    "rural",
+    "quiet"
+   ],
+   "lat": 33.365,
+   "lon": 126.745,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     330000,
+     520000
+    ],
+    "one_bedroom": [
+     480000,
+     720000
+    ],
+    "two_bedroom": [
+     700000,
+     1100000
+    ]
+   },
+   "housing": [
+    "detached-house",
+    "stone-house"
+   ],
+   "walkability": "low",
+   "transit": [
+    "island-bus",
+    "taxi",
+    "rental-car"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "island-bus",
+   "name": "Jeju island bus network",
+   "kind": "bus",
+   "summary": "Blue trunk and green local buses covering both cities and every coastal village, with cheap flat fares and free transfers within 40 minutes by card; slow in the countryside and thin late at night.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "express-bus",
+   "name": "Red express buses",
+   "kind": "bus",
+   "summary": "Limited-stop red buses linking the airport and Jeju City with Seogwipo, Jungmun, Seongsan, Pyoseon and the west coast over the cross-island roads.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "airport-limousine",
+   "name": "Airport Limousine Bus 600",
+   "kind": "bus",
+   "summary": "Coach-style buses from the airport to the Jungmun resort hotels and Seogwipo, with room for luggage.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "udo-ferry",
+   "name": "Udo ferry",
+   "kind": "ferry",
+   "summary": "Car ferries from Seongsan port to Udo's two harbours every half hour or so in daylight; a fifteen-minute crossing that stops in high winds.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "island-ferries",
+   "name": "Gapado and Marado ferries",
+   "kind": "ferry",
+   "summary": "Small passenger boats from Moseulpo's Unjin port and the Songaksan pier to Gapado and Marado, the southernmost point of Korea; often cancelled in rough seas.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "taxi",
+   "name": "Taxis (hailed or by app)",
+   "kind": "rideshare",
+   "summary": "Taxis are cheap by Western standards and most are called by app; in the countryside they can take a while to arrive and fewer run late.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rental-car",
+   "name": "Rental cars",
+   "kind": "car",
+   "summary": "Most visitors and many residents drive: rental lots crowd the roads near the airport and most beaches, oreum and farm cafes are hard to reach any other way.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rental-bikes",
+   "name": "Rental bikes and the round-island bike path",
+   "kind": "bike-share",
+   "summary": "Bikes and e-bikes hired by the day from shops in the towns, and a signed cycle route of about 230 km around the coast, ridden over three or four days with certification booths along the way.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "dongmun-market",
+   "name": "Dongmun Market",
+   "kind": "market",
+   "neighborhood": "old-jeju",
+   "summary": "Jeju's oldest permanent market: stalls of hairtail, abalone, tangerines and omegi rice cakes by day, and a night market of black pork skewers, tangerine juice and fried snacks after dark.",
+   "tags": [
+    "food",
+    "night-market",
+    "tangerines",
+    "iconic"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gwandeokjeong",
+   "name": "Gwandeokjeong Pavilion and Jeju Mokgwana",
+   "kind": "landmark",
+   "neighborhood": "old-jeju",
+   "summary": "A fifteenth-century pavilion and the rebuilt compound of the old Jeju governor's office, with dol hareubang at the gate.",
+   "tags": [
+    "history",
+    "joseon",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "samseonghyeol",
+   "name": "Samseonghyeol",
+   "kind": "landmark",
+   "neighborhood": "old-jeju",
+   "summary": "The shrine around three holes in the ground where, in the island's founding myth, the first ancestors of the Go, Yang and Bu clans rose from the earth.",
+   "tags": [
+    "myth",
+    "history",
+    "garden"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-folklore-museum",
+   "name": "Jeju Folklore and Natural History Museum",
+   "kind": "museum",
+   "neighborhood": "old-jeju",
+   "summary": "Displays on volcanic geology, sea life, thatched houses, haenyeo gear and island rituals beside Sinsan Park.",
+   "tags": [
+    "history",
+    "nature",
+    "rainy-day",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chilseong-ro",
+   "name": "Chilseong-ro shopping street",
+   "kind": "shopping",
+   "neighborhood": "old-jeju",
+   "summary": "The old downtown shopping street under an arched roof, with clothing, cosmetics and shoe shops.",
+   "tags": [
+    "shopping",
+    "covered",
+    "old-school"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jungang-underground-mall",
+   "name": "Jungang underground shopping arcade",
+   "kind": "shopping",
+   "neighborhood": "old-jeju",
+   "summary": "A long tunnel of small clothing, phone-case and accessory shops under the Jungang rotary, handy on rainy days.",
+   "tags": [
+    "shopping",
+    "rainy-day",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "black-pork-street",
+   "name": "Black pork street",
+   "kind": "restaurant",
+   "neighborhood": "old-jeju",
+   "summary": "A row of barbecue restaurants grilling thick slabs of Jeju black pork over charcoal, dipped in bubbling anchovy sauce, with soju on every table.",
+   "tags": [
+    "black-pork",
+    "bbq",
+    "soju",
+    "groups"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "noodle-street",
+   "name": "Guksu Munhwa Geori (Noodle Street)",
+   "kind": "restaurant",
+   "neighborhood": "old-jeju",
+   "summary": "A stretch near Samseonghyeol of gogi-guksu shops ladling thick wheat noodles into pork-bone broth topped with sliced boiled pork.",
+   "tags": [
+    "gogi-guksu",
+    "noodles",
+    "cheap-eats",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-town-cafes",
+   "name": "Old-town cafes in converted houses",
+   "kind": "cafe",
+   "neighborhood": "old-jeju",
+   "summary": "Small cafes in renovated 1970s houses and tangerine warehouses on the lanes around Gwandeokjeong, many with hallabong drinks.",
+   "tags": [
+    "coffee",
+    "quiet",
+    "retro"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sanjicheon",
+   "name": "Sanjicheon stream",
+   "kind": "park",
+   "neighborhood": "old-jeju",
+   "summary": "A stone-banked stream running down to the harbour through the old town, lit up at night with a walking path and stepping stones.",
+   "tags": [
+    "walk",
+    "night-lights",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-town-jjimjilbang",
+   "name": "Old-town jjimjilbang and bathhouse",
+   "kind": "fitness",
+   "neighborhood": "old-jeju",
+   "summary": "A neighborhood bathhouse with hot and cold pools, scrub attendants and a heated floor upstairs for napping in matching cotton outfits.",
+   "tags": [
+    "sauna",
+    "spa",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dongmun-pocha",
+   "name": "Dongmun pojangmacha",
+   "kind": "bar",
+   "neighborhood": "old-jeju",
+   "summary": "Tented street bars and tiny pubs near the market serving soju, makgeolli, grilled fish and spicy stews until late.",
+   "tags": [
+    "soju",
+    "pocha",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tapdong-promenade",
+   "name": "Tapdong seafront promenade",
+   "kind": "park",
+   "neighborhood": "tapdong",
+   "summary": "A long seawall walk and square where families skate, people fish and the city comes to watch the sunset over the harbour.",
+   "tags": [
+    "waterfront",
+    "walk",
+    "sunset",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sarabong",
+   "name": "Sarabong Peak",
+   "kind": "trail",
+   "neighborhood": "tapdong",
+   "summary": "A small volcanic cone behind the port with a pavilion at the top, a fifteen-minute climb known for sunsets over the harbour.",
+   "tags": [
+    "oreum",
+    "sunset",
+    "views",
+    "short-hike"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-national-museum",
+   "name": "Jeju National Museum",
+   "kind": "museum",
+   "neighborhood": "tapdong",
+   "summary": "The national museum's island branch: Tamna kingdom relics, Joseon maps and the history of the island's trade.",
+   "tags": [
+    "history",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kim-man-deok-hall",
+   "name": "Kim Man-deok Memorial Hall",
+   "kind": "museum",
+   "neighborhood": "tapdong",
+   "summary": "A museum honouring the eighteenth-century Jeju merchant who spent her fortune buying grain for the island during a famine.",
+   "tags": [
+    "history",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tapdong-raw-fish",
+   "name": "Tapdong raw-fish restaurants",
+   "kind": "restaurant",
+   "neighborhood": "tapdong",
+   "summary": "Seafront restaurants with tanks of flatfish, rockfish and abalone out front, served as hoe with lettuce, garlic and a spicy fish stew to finish.",
+   "tags": [
+    "seafood",
+    "hoe",
+    "groups"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tapdong-cafes",
+   "name": "Tapdong seafront cafes",
+   "kind": "cafe",
+   "neighborhood": "tapdong",
+   "summary": "Franchise and independent cafes with second-floor windows over the seawall.",
+   "tags": [
+    "coffee",
+    "sea-view"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tapdong-pubs",
+   "name": "Tapdong chicken-and-beer pubs",
+   "kind": "bar",
+   "neighborhood": "tapdong",
+   "summary": "Hof bars near the square serving fried chicken and draft beer, with outdoor tables in summer.",
+   "tags": [
+    "chimaek",
+    "beer",
+    "groups"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woodang-library",
+   "name": "Woodang Library",
+   "kind": "library",
+   "neighborhood": "tapdong",
+   "summary": "A public library on the slope of Sarabong with reading rooms students fill during exam season.",
+   "tags": [
+    "books",
+    "study",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-hall-bars",
+   "name": "Bars behind Jeju City Hall",
+   "kind": "nightlife",
+   "neighborhood": "ido",
+   "summary": "The island's busiest student nightlife: lanes of pubs, cheap soju bars, karaoke and late snack shops behind City Hall.",
+   "tags": [
+    "students",
+    "soju",
+    "late-night",
+    "groups"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ido-noraebang",
+   "name": "Ido noraebang rooms",
+   "kind": "nightlife",
+   "neighborhood": "ido",
+   "summary": "Private karaoke rooms rented by the hour, with tambourines, a big song book and coin booths for two.",
+   "tags": [
+    "karaoke",
+    "groups",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ido-pc-bang",
+   "name": "Ido PC bangs",
+   "kind": "nightlife",
+   "neighborhood": "ido",
+   "summary": "Round-the-clock gaming rooms with fast PCs, ramyeon and fried rice ordered to your seat.",
+   "tags": [
+    "games",
+    "late-night",
+    "pc-bang"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ido-study-cafes",
+   "name": "Study cafes around City Hall",
+   "kind": "cafe",
+   "neighborhood": "ido",
+   "summary": "Coffee shops and hourly study cafes full of students and job seekers with laptops.",
+   "tags": [
+    "coffee",
+    "study",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haejangguk-shops",
+   "name": "Haejangguk breakfast shops",
+   "kind": "restaurant",
+   "neighborhood": "ido",
+   "summary": "Early-opening shops serving Jeju-style hangover soup of beef, bean sprouts and congealed blood, a habit of shift workers and the morning after.",
+   "tags": [
+    "breakfast",
+    "soup",
+    "hangover"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sinsan-park",
+   "name": "Sinsan Park",
+   "kind": "park",
+   "neighborhood": "ido",
+   "summary": "A big green park of pine and cherry trees between the old town and City Hall, with a walking loop and outdoor exercise machines.",
+   "tags": [
+    "walk",
+    "cherry-blossom",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ido-gyms",
+   "name": "Ido neighborhood gyms",
+   "kind": "fitness",
+   "neighborhood": "ido",
+   "summary": "Health clubs above shops with monthly passes, a weights floor and group spin or pilates classes.",
+   "tags": [
+    "gym",
+    "pilates"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ido-chicken",
+   "name": "Ido fried-chicken and tteokbokki shops",
+   "kind": "restaurant",
+   "neighborhood": "ido",
+   "summary": "Small shops doing fried chicken, tteokbokki and gimbap for delivery and eat-in, open late.",
+   "tags": [
+    "chicken",
+    "cheap-eats",
+    "delivery"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nuwemaru-street",
+   "name": "Nuwemaru Street",
+   "kind": "nightlife",
+   "neighborhood": "sinjeju",
+   "summary": "A pedestrian street of bars, clubs, karaoke, cosmetics shops and late barbecue in Yeon-dong, busy with young locals and visitors.",
+   "tags": [
+    "nightlife",
+    "karaoke",
+    "shopping"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "baojian-street",
+   "name": "Baojian Street",
+   "kind": "shopping",
+   "neighborhood": "sinjeju",
+   "summary": "A Yeon-dong street of restaurants, cosmetics and souvenir shops with signs in Korean and Chinese, built around tour groups.",
+   "tags": [
+    "shopping",
+    "chinese",
+    "cosmetics"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dream-tower",
+   "name": "Jeju Dream Tower",
+   "kind": "attraction",
+   "neighborhood": "sinjeju",
+   "summary": "The island's tallest building: a Grand Hyatt hotel, a foreigners-only casino, shopping, restaurants and a rooftop lounge looking over the city to Hallasan.",
+   "tags": [
+    "views",
+    "hotel",
+    "shopping",
+    "rooftop"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nexon-computer-museum",
+   "name": "Nexon Computer Museum",
+   "kind": "museum",
+   "neighborhood": "sinjeju",
+   "summary": "A museum of computers, consoles and Korean online games, with a floor of playable machines.",
+   "tags": [
+    "games",
+    "tech",
+    "rainy-day",
+    "kids"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "halla-arboretum",
+   "name": "Halla Arboretum",
+   "kind": "garden",
+   "neighborhood": "sinjeju",
+   "summary": "A free arboretum at the edge of Sinjeju with native trees, a bamboo grove, greenhouses and a short oreum trail locals walk after work.",
+   "tags": [
+    "nature",
+    "walk",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shilla-duty-free",
+   "name": "Shilla Duty Free Jeju",
+   "kind": "shopping",
+   "neighborhood": "sinjeju",
+   "summary": "A large duty-free store for cosmetics, luxury goods and liquor, busy with Chinese and domestic tour groups.",
+   "tags": [
+    "duty-free",
+    "cosmetics",
+    "luxury"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "emart-sinjeju",
+   "name": "E-Mart Sinjeju",
+   "kind": "shopping",
+   "neighborhood": "sinjeju",
+   "summary": "A big-box hypermarket for groceries, household goods and island souvenirs at supermarket prices.",
+   "tags": [
+    "groceries",
+    "souvenirs"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sinjeju-bbq",
+   "name": "Yeon-dong black pork barbecue",
+   "kind": "restaurant",
+   "neighborhood": "sinjeju",
+   "summary": "Busy barbecue restaurants for after-work black pork, galbi and cold noodles, with long waits on Fridays.",
+   "tags": [
+    "black-pork",
+    "bbq",
+    "groups"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sinjeju-cafes",
+   "name": "Sinjeju dessert cafes",
+   "kind": "cafe",
+   "neighborhood": "sinjeju",
+   "summary": "Bakeries and dessert cafes with hallabong cakes, injeolmi bingsu and large window seats.",
+   "tags": [
+    "coffee",
+    "dessert",
+    "bingsu"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sinjeju-24h-gyms",
+   "name": "Sinjeju 24-hour gyms",
+   "kind": "fitness",
+   "neighborhood": "sinjeju",
+   "summary": "Big health clubs with weights, cardio, pilates studios and personal trainers, open around the clock.",
+   "tags": [
+    "gym",
+    "personal-training",
+    "pilates"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-sports-complex",
+   "name": "Jeju Sports Complex",
+   "kind": "fitness",
+   "neighborhood": "sinjeju",
+   "summary": "The city's public sports park with a running track, swimming pool, gyms and courts; joggers circle it at dawn.",
+   "tags": [
+    "running",
+    "swimming",
+    "public"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "halla-library",
+   "name": "Halla Library",
+   "kind": "library",
+   "neighborhood": "sinjeju",
+   "summary": "The island's big public library on the edge of Ora, with reading rooms, a children's floor and a lawn.",
+   "tags": [
+    "books",
+    "study",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jnu-cherry-road",
+   "name": "Jeju National University cherry road",
+   "kind": "park",
+   "neighborhood": "ara",
+   "summary": "The entrance road to the national university, a tunnel of king cherry blossoms for a week or two in spring and a shady walk the rest of the year.",
+   "tags": [
+    "cherry-blossom",
+    "walk",
+    "campus"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jnu-gate-eats",
+   "name": "University-gate cheap eats",
+   "kind": "restaurant",
+   "neighborhood": "ara",
+   "summary": "Kimbap, tonkatsu, jjigae and set-meal shops near the main gate priced for students.",
+   "tags": [
+    "cheap-eats",
+    "students",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ara-cafes",
+   "name": "Ara-dong cafes",
+   "kind": "cafe",
+   "neighborhood": "ara",
+   "summary": "Quiet cafes on the hill road with views down to the sea, where students study through the afternoon.",
+   "tags": [
+    "coffee",
+    "study",
+    "views"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ara-hof",
+   "name": "Student hof bars near the main gate",
+   "kind": "bar",
+   "neighborhood": "ara",
+   "summary": "Cheap beer, fried chicken and soju bars where department dinners and club nights end.",
+   "tags": [
+    "students",
+    "beer",
+    "groups"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gwaneumsa",
+   "name": "Gwaneumsa Temple",
+   "kind": "temple",
+   "neighborhood": "ara",
+   "summary": "The island's head temple of the Jogye Buddhist order, in the forest on Hallasan's north slope, with rows of stone Buddhas and temple-stay programs.",
+   "tags": [
+    "temple",
+    "buddhist",
+    "forest",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gwaneumsa-trail",
+   "name": "Gwaneumsa Trail to Hallasan",
+   "kind": "trail",
+   "neighborhood": "ara",
+   "summary": "The steeper of the two summit trails, through deep valleys to Baengnokdam crater lake; summit hikers must book online and start early.",
+   "tags": [
+    "hallasan",
+    "summit",
+    "hiking",
+    "reservation"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ara-climbing-gym",
+   "name": "Ara climbing and pilates studios",
+   "kind": "fitness",
+   "neighborhood": "ara",
+   "summary": "Small bouldering gyms and pilates studios popular with students and young hospital staff.",
+   "tags": [
+    "climbing",
+    "pilates"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yongduam",
+   "name": "Yongduam Rock",
+   "kind": "landmark",
+   "neighborhood": "airport",
+   "summary": "A lava rock shaped like a dragon's head rising from the sea, a few minutes from the airport, with haenyeo selling seafood on the rocks nearby.",
+   "tags": [
+    "iconic",
+    "coast",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yongdam-coast-cafes",
+   "name": "Yongdam coastal road cafes",
+   "kind": "cafe",
+   "neighborhood": "airport",
+   "summary": "Ocean-view cafes along the seaside road where planes pass low overhead on their way into the airport.",
+   "tags": [
+    "coffee",
+    "sea-view",
+    "planes",
+    "sunset"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "iho-tewoo",
+   "name": "Iho Tewoo Beach",
+   "kind": "beach",
+   "neighborhood": "airport",
+   "summary": "The closest beach to the city, with red and white horse-shaped lighthouses on the breakwater and a pine grove for camping.",
+   "tags": [
+    "beach",
+    "lighthouses",
+    "sunset"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dodubong",
+   "name": "Dodubong Peak",
+   "kind": "trail",
+   "neighborhood": "airport",
+   "summary": "A small oreum beside the runway: a ten-minute climb to watch planes land against the sea.",
+   "tags": [
+    "oreum",
+    "planes",
+    "views",
+    "short-hike"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rainbow-seawall",
+   "name": "Iho-Dodu rainbow coastal road",
+   "kind": "landmark",
+   "neighborhood": "airport",
+   "summary": "A stretch of seawall painted in rainbow stripes, a favourite stop for photos and an evening walk.",
+   "tags": [
+    "photos",
+    "walk",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yongdam-abalone",
+   "name": "Yongdam seafood and abalone porridge restaurants",
+   "kind": "restaurant",
+   "neighborhood": "airport",
+   "summary": "Seafood restaurants near the coast road serving jeonbok-juk, grilled okdom and seafood hotpot to arriving and departing visitors.",
+   "tags": [
+    "abalone",
+    "seafood",
+    "porridge"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "airport-convenience",
+   "name": "Twenty-four-hour convenience stores",
+   "kind": "shopping",
+   "neighborhood": "airport",
+   "summary": "CU and GS25 stores on every other corner, for triangle kimbap, instant ramyeon with hot water, tangerine chocolate and a seat by the window.",
+   "tags": [
+    "convenience",
+    "late-night",
+    "snacks"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "handam-coastal-walk",
+   "name": "Handam Coastal Walk",
+   "kind": "trail",
+   "neighborhood": "aewol",
+   "summary": "A paved path along black lava rocks from Gwakji beach to Aewol harbour, past the cafes the coast is known for.",
+   "tags": [
+    "coast",
+    "walk",
+    "sunset",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aewol-cafe-street",
+   "name": "Aewol cafe coast",
+   "kind": "cafe",
+   "neighborhood": "aewol",
+   "summary": "Big ocean-view cafes stacked along the cliffs with terraces, bakery counters and long weekend waits.",
+   "tags": [
+    "coffee",
+    "sea-view",
+    "sunset",
+    "instagram"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gwakji-beach",
+   "name": "Gwakji Beach",
+   "kind": "beach",
+   "neighborhood": "aewol",
+   "summary": "A sandy beach with a rock-walled freshwater spring pool locals dip in on hot days.",
+   "tags": [
+    "beach",
+    "swimming",
+    "spring-water"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saebyeol-oreum",
+   "name": "Saebyeol Oreum",
+   "kind": "trail",
+   "neighborhood": "aewol",
+   "summary": "A grassy volcanic cone in inland Aewol, home of the Jeju Fire Festival and silver with eulalia grass in autumn.",
+   "tags": [
+    "oreum",
+    "grassland",
+    "sunset",
+    "short-hike"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aewol-seafood",
+   "name": "Aewol seafood ramyeon and jeonbok spots",
+   "kind": "restaurant",
+   "neighborhood": "aewol",
+   "summary": "Casual restaurants near the harbour doing seafood ramyeon, abalone stone-pot rice and grilled mackerel.",
+   "tags": [
+    "seafood",
+    "abalone",
+    "ramyeon"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aewol-sunset-bars",
+   "name": "Aewol sunset pubs",
+   "kind": "bar",
+   "neighborhood": "aewol",
+   "summary": "A few pubs and wine bars with terraces facing west over the sea.",
+   "tags": [
+    "sunset",
+    "wine",
+    "beer"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gwakji-paddleboard",
+   "name": "Gwakji paddleboard and kayak rentals",
+   "kind": "fitness",
+   "neighborhood": "aewol",
+   "summary": "Stand-up paddleboard and clear kayak rentals off the beach in calm summer weather.",
+   "tags": [
+    "sup",
+    "kayak",
+    "water"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hallim-five-day-market",
+   "name": "Hallim five-day market",
+   "kind": "market",
+   "neighborhood": "hallim",
+   "summary": "An open-air market held on dates ending in 4 and 9, with farm produce, fish, tools, plants and food stalls.",
+   "tags": [
+    "market",
+    "local",
+    "food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hallim-port-restaurants",
+   "name": "Hallim harbour seafood restaurants",
+   "kind": "restaurant",
+   "neighborhood": "hallim",
+   "summary": "Fishermen's restaurants by the harbour serving hairtail, mackerel and seafood stew.",
+   "tags": [
+    "seafood",
+    "harbour",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "biyangdo",
+   "name": "Biyangdo",
+   "kind": "attraction",
+   "neighborhood": "hallim",
+   "summary": "A small islet reached by a fifteen-minute ferry from Hallim port, with a coastal loop, a lighthouse peak and abalone porridge shops.",
+   "tags": [
+    "island",
+    "ferry",
+    "walk"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "geumoreum",
+   "name": "Geumoreum",
+   "kind": "trail",
+   "neighborhood": "hallim",
+   "summary": "An inland oreum with a crater pond at the top, paragliders launching off the rim and wide views of the west coast.",
+   "tags": [
+    "oreum",
+    "paragliding",
+    "sunset"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "isidore-ranch",
+   "name": "Saint Isidore Ranch",
+   "kind": "attraction",
+   "neighborhood": "hallim",
+   "summary": "A ranch started by an Irish missionary priest after the war, with pasture, a chapel, the roofless Tesiphon-style hut and grazing horses.",
+   "tags": [
+    "ranch",
+    "history",
+    "photos"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hallim-harbour-cafes",
+   "name": "Hallim harbour cafes",
+   "kind": "cafe",
+   "neighborhood": "hallim",
+   "summary": "Converted warehouses and fishermen's houses turned into cafes facing the harbour.",
+   "tags": [
+    "coffee",
+    "harbour",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hyeopjae-beach",
+   "name": "Hyeopjae Beach",
+   "kind": "beach",
+   "neighborhood": "hyeopjae",
+   "summary": "Shallow, glass-green water and white sand facing Biyangdo, one of the most photographed beaches on the island.",
+   "tags": [
+    "beach",
+    "swimming",
+    "sunset",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "geumneung-beach",
+   "name": "Geumneung Beach",
+   "kind": "beach",
+   "neighborhood": "hyeopjae",
+   "summary": "Hyeopjae's quieter neighbour with a campsite in the pines and black rocks at low tide.",
+   "tags": [
+    "beach",
+    "camping",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hallim-park",
+   "name": "Hallim Park",
+   "kind": "garden",
+   "neighborhood": "hyeopjae",
+   "summary": "A long-running botanical park with palm avenues, lava caves, a bonsai garden and seasonal flower shows.",
+   "tags": [
+    "garden",
+    "caves",
+    "flowers"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hyeopjae-cafes",
+   "name": "Hyeopjae beach cafes",
+   "kind": "cafe",
+   "neighborhood": "hyeopjae",
+   "summary": "Cafes and gelato counters across the coast road with window seats over the water.",
+   "tags": [
+    "coffee",
+    "sea-view",
+    "dessert"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hyeopjae-noodles",
+   "name": "Hyeopjae noodle and seafood shops",
+   "kind": "restaurant",
+   "neighborhood": "hyeopjae",
+   "summary": "Gogi-guksu, seafood pancake and grilled fish restaurants on the road behind the beach.",
+   "tags": [
+    "noodles",
+    "seafood",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hyeopjae-guesthouse-bars",
+   "name": "Hyeopjae guesthouse bars",
+   "kind": "bar",
+   "neighborhood": "hyeopjae",
+   "summary": "Guesthouse party nights and small beach bars that fill with young travellers in summer.",
+   "tags": [
+    "beer",
+    "travellers",
+    "summer"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hamdeok-beach",
+   "name": "Hamdeok Beach",
+   "kind": "beach",
+   "neighborhood": "hamdeok",
+   "summary": "A family beach of turquoise shallows and a wooden bridge over the rocks, a short drive from the city.",
+   "tags": [
+    "beach",
+    "swimming",
+    "family"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seoubong",
+   "name": "Seoubong Peak",
+   "kind": "trail",
+   "neighborhood": "hamdeok",
+   "summary": "A low headland oreum beside the beach, yellow with canola in spring, with a trail along the sea cliffs.",
+   "tags": [
+    "oreum",
+    "canola",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hamdeok-cafes",
+   "name": "Hamdeok glass-box cafes",
+   "kind": "cafe",
+   "neighborhood": "hamdeok",
+   "summary": "Large modern cafes right on the sand with floor-to-ceiling windows and bakery counters.",
+   "tags": [
+    "coffee",
+    "sea-view",
+    "bakery"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hamdeok-seafood",
+   "name": "Hamdeok seafood restaurants",
+   "kind": "restaurant",
+   "neighborhood": "hamdeok",
+   "summary": "Hairtail stew, abalone hotpot and grilled tilefish near the beach parking lots.",
+   "tags": [
+    "seafood",
+    "galchi",
+    "abalone"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hamdeok-beach-bar",
+   "name": "Hamdeok beach pubs",
+   "kind": "bar",
+   "neighborhood": "hamdeok",
+   "summary": "Fried chicken and beer on terraces facing the water, busy on warm nights.",
+   "tags": [
+    "beer",
+    "chimaek",
+    "summer"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bukchon-memorial",
+   "name": "Neobeunsungi 4.3 Memorial Hall",
+   "kind": "museum",
+   "neighborhood": "hamdeok",
+   "summary": "A quiet memorial in Bukchon village to the hundreds of villagers killed in January 1949 during the April 3rd events, with a memorial path through the field where children's graves stand.",
+   "tags": [
+    "history",
+    "memorial",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hamdeok-surf",
+   "name": "Hamdeok paddleboard rentals",
+   "kind": "fitness",
+   "neighborhood": "hamdeok",
+   "summary": "Paddleboards and snorkel gear rented by the hour off the beach in summer.",
+   "tags": [
+    "sup",
+    "snorkel",
+    "water"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woljeongri-beach",
+   "name": "Woljeongri Beach",
+   "kind": "beach",
+   "neighborhood": "gimnyeong",
+   "summary": "A white-sand beach with a row of cafes and windmills offshore, popular for beginner surfing.",
+   "tags": [
+    "beach",
+    "surf",
+    "cafes"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gimnyeong-beach",
+   "name": "Gimnyeong Beach",
+   "kind": "beach",
+   "neighborhood": "gimnyeong",
+   "summary": "Clear water over white sand and black rock beside the village harbour, with a campsite.",
+   "tags": [
+    "beach",
+    "snorkel",
+    "camping"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "manjanggul",
+   "name": "Manjanggul Lava Tube",
+   "kind": "attraction",
+   "neighborhood": "gimnyeong",
+   "summary": "A UNESCO-listed lava tube where a kilometre of cool, dripping tunnel is open to walk, ending at a tall lava column.",
+   "tags": [
+    "cave",
+    "unesco",
+    "rainy-day",
+    "geology"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woljeongri-cafes",
+   "name": "Woljeong-ri beach cafes",
+   "kind": "cafe",
+   "neighborhood": "gimnyeong",
+   "summary": "Cafes with chairs facing the sea, the strip that made Woljeong-ri famous.",
+   "tags": [
+    "coffee",
+    "sea-view",
+    "instagram"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woljeongri-eats",
+   "name": "Woljeong-ri burger and seafood spots",
+   "kind": "restaurant",
+   "neighborhood": "gimnyeong",
+   "summary": "Burger joints, poke bowls and seafood ramyeon for surfers and day-trippers.",
+   "tags": [
+    "burgers",
+    "seafood",
+    "casual"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woljeongri-bars",
+   "name": "Woljeong-ri beach bars",
+   "kind": "bar",
+   "neighborhood": "gimnyeong",
+   "summary": "A few bars with outdoor seating and live music on summer weekends.",
+   "tags": [
+    "beer",
+    "live-music",
+    "summer"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "woljeongri-surf",
+   "name": "Woljeong-ri surf schools",
+   "kind": "fitness",
+   "neighborhood": "gimnyeong",
+   "summary": "Board rentals and beginner lessons when the northeast swell is up.",
+   "tags": [
+    "surf",
+    "lessons",
+    "water"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gimnyeong-maze-park",
+   "name": "Gimnyeong Maze Park",
+   "kind": "attraction",
+   "neighborhood": "gimnyeong",
+   "summary": "A hedge maze in the shape of the island, planted by a long-time foreign resident, with resident cats.",
+   "tags": [
+    "maze",
+    "kids",
+    "cats"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "olle-route-20",
+   "name": "Olle Route 20",
+   "kind": "trail",
+   "neighborhood": "gimnyeong",
+   "summary": "An Olle trail section from Gimnyeong along the stone-walled fishing villages and beaches to the Haenyeo Museum.",
+   "tags": [
+    "olle",
+    "coast",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haenyeo-museum",
+   "name": "Jeju Haenyeo Museum",
+   "kind": "museum",
+   "neighborhood": "gujwa",
+   "summary": "A museum of the island's women divers: their tools, rubber suits, songs, the 1932 haenyeo uprising and their lives today.",
+   "tags": [
+    "haenyeo",
+    "history",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sehwa-beach",
+   "name": "Sehwa Beach",
+   "kind": "beach",
+   "neighborhood": "gujwa",
+   "summary": "A small, calm beach with clear water and a handful of cafes and craft stalls along the coast road.",
+   "tags": [
+    "beach",
+    "quiet",
+    "swimming"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sehwa-market",
+   "name": "Sehwa five-day market",
+   "kind": "market",
+   "neighborhood": "gujwa",
+   "summary": "A village market on dates ending in 5 and 0 with fish, vegetables, plants and food stalls.",
+   "tags": [
+    "market",
+    "local",
+    "food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haenyeo-kitchen",
+   "name": "Haenyeo's Kitchen",
+   "kind": "restaurant",
+   "neighborhood": "gujwa",
+   "summary": "A dining theatre in a former fish market in Jongdal-ri where haenyeo tell their stories and serve the seafood they gather.",
+   "tags": [
+    "haenyeo",
+    "seafood",
+    "show"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hado-haenyeo-house",
+   "name": "Hado haenyeo house",
+   "kind": "restaurant",
+   "neighborhood": "gujwa",
+   "summary": "A plain village co-op restaurant run by the diving collective, serving conch, sea urchin, abalone porridge and seafood noodles.",
+   "tags": [
+    "haenyeo",
+    "seafood",
+    "abalone"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sehwa-cafes",
+   "name": "Sehwa seaside cafes",
+   "kind": "cafe",
+   "neighborhood": "gujwa",
+   "summary": "Small cafes and bookshops along the coast road with ocean views and a slower pace than Woljeong-ri.",
+   "tags": [
+    "coffee",
+    "sea-view",
+    "books"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bijarim",
+   "name": "Bijarim Forest",
+   "kind": "park",
+   "neighborhood": "gujwa",
+   "summary": "An old forest of nutmeg yew trees, some centuries old, with a red volcanic gravel path.",
+   "tags": [
+    "forest",
+    "walk",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yongnuni-oreum",
+   "name": "Yongnuni Oreum",
+   "kind": "trail",
+   "neighborhood": "gujwa",
+   "summary": "A soft green oreum with a triple crater that looks like a dragon's eyes from above, reopened after years of rest.",
+   "tags": [
+    "oreum",
+    "views",
+    "sunrise"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "darangshi-oreum",
+   "name": "Darangshi Oreum",
+   "kind": "trail",
+   "neighborhood": "gujwa",
+   "summary": "The \"queen of oreum\": a steep climb to a perfectly round crater rim with views over the eastern cones.",
+   "tags": [
+    "oreum",
+    "views",
+    "hike"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ilchulbong",
+   "name": "Seongsan Ilchulbong",
+   "kind": "landmark",
+   "neighborhood": "seongsan",
+   "summary": "Sunrise Peak: a tuff cone rising straight from the sea, climbed by stairs in about half an hour; a UNESCO World Heritage site.",
+   "tags": [
+    "unesco",
+    "sunrise",
+    "iconic",
+    "hike"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seongsan-haenyeo-show",
+   "name": "Haenyeo diving demonstration at Ilchulbong",
+   "kind": "attraction",
+   "neighborhood": "seongsan",
+   "summary": "Haenyeo sing, dive and sell their catch on the rocks at the foot of the peak most afternoons, weather permitting.",
+   "tags": [
+    "haenyeo",
+    "seafood",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gwangchigi-beach",
+   "name": "Gwangchigi Beach",
+   "kind": "beach",
+   "neighborhood": "seongsan",
+   "summary": "A wide shelf of mossy lava rock and sand exposed at low tide, with Ilchulbong mirrored in the pools.",
+   "tags": [
+    "beach",
+    "tidepools",
+    "photos"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seopjikoji",
+   "name": "Seopjikoji",
+   "kind": "landmark",
+   "neighborhood": "seongsan",
+   "summary": "A grassy headland with a small lighthouse, canola in spring and views back to Ilchulbong.",
+   "tags": [
+    "coast",
+    "walk",
+    "canola"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aqua-planet",
+   "name": "Aqua Planet Jeju",
+   "kind": "attraction",
+   "neighborhood": "seongsan",
+   "summary": "A large aquarium at Seopjikoji with a giant ocean tank, sea mammals and a haenyeo exhibit.",
+   "tags": [
+    "aquarium",
+    "kids",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seongsan-galchi",
+   "name": "Seongsan hairtail and black pork restaurants",
+   "kind": "restaurant",
+   "neighborhood": "seongsan",
+   "summary": "Restaurants below the peak serving whole grilled hairtail, spicy galchi-jorim and black pork to the tour buses and the locals after them.",
+   "tags": [
+    "galchi",
+    "black-pork",
+    "seafood"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seongsan-cafes",
+   "name": "Ilchulbong view cafes",
+   "kind": "cafe",
+   "neighborhood": "seongsan",
+   "summary": "Rooftop and window cafes facing the peak, open early for people coming down from sunrise.",
+   "tags": [
+    "coffee",
+    "views",
+    "sunrise"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seongsan-pubs",
+   "name": "Seongsan-ri pubs",
+   "kind": "bar",
+   "neighborhood": "seongsan",
+   "summary": "A handful of beer pubs and seafood pochas for guesthouse guests staying over for the sunrise.",
+   "tags": [
+    "beer",
+    "travellers",
+    "soju"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "udobong",
+   "name": "Udobong and the lighthouse park",
+   "kind": "trail",
+   "neighborhood": "udo",
+   "summary": "A green hill at the south end of Udo with grazing horses, a lighthouse and views back to Seongsan.",
+   "tags": [
+    "views",
+    "walk",
+    "horses"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seobin-baeksa",
+   "name": "Seobin Baeksa (coral sand beach)",
+   "kind": "beach",
+   "neighborhood": "udo",
+   "summary": "A beach of crushed white red-algae nodules, not sand, with turquoise water.",
+   "tags": [
+    "beach",
+    "swimming",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hagosudong-beach",
+   "name": "Hagosudong Beach",
+   "kind": "beach",
+   "neighborhood": "udo",
+   "summary": "Udo's calm east-side beach, shallow and good for paddling.",
+   "tags": [
+    "beach",
+    "family",
+    "swimming"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "geommeolle",
+   "name": "Geommeolle Beach and Dongangyeonggul cave",
+   "kind": "beach",
+   "neighborhood": "udo",
+   "summary": "A tiny black-sand cove under the cliffs, with a sea cave you can walk into at low tide.",
+   "tags": [
+    "beach",
+    "cave",
+    "cliffs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "udo-peanut-cafes",
+   "name": "Udo peanut ice cream cafes",
+   "kind": "cafe",
+   "neighborhood": "udo",
+   "summary": "Cafes selling soft-serve topped with Udo's small local peanuts, and peanut lattes.",
+   "tags": [
+    "dessert",
+    "peanuts",
+    "coffee"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "udo-seafood",
+   "name": "Udo seafood noodle and abalone restaurants",
+   "kind": "restaurant",
+   "neighborhood": "udo",
+   "summary": "Restaurants near the ferry landing doing seafood jjamppong, conch and abalone dishes.",
+   "tags": [
+    "seafood",
+    "noodles",
+    "abalone"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pyoseon-beach",
+   "name": "Pyoseon Beach",
+   "kind": "beach",
+   "neighborhood": "pyoseon",
+   "summary": "A huge, shallow tidal beach that becomes a round lagoon at high tide, beside the Haevichi resort.",
+   "tags": [
+    "beach",
+    "tidal",
+    "family"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-folk-village",
+   "name": "Jeju Folk Village",
+   "kind": "museum",
+   "neighborhood": "pyoseon",
+   "summary": "An open-air museum of over a hundred relocated thatched houses, shrines and stone walls from across the island.",
+   "tags": [
+    "history",
+    "thatched-houses",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seongeup-village",
+   "name": "Seongeup Folk Village",
+   "kind": "landmark",
+   "neighborhood": "pyoseon",
+   "summary": "A lived-in inland village of thatched stone houses, old trees and dol hareubang, the island's old district seat.",
+   "tags": [
+    "history",
+    "village",
+    "dol-hareubang"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pyoseon-seafood",
+   "name": "Pyoseon seafood and haemul ttukbaegi",
+   "kind": "restaurant",
+   "neighborhood": "pyoseon",
+   "summary": "Seafood stews bubbling in earthenware pots, grilled fish and abalone near the beach.",
+   "tags": [
+    "seafood",
+    "stew",
+    "abalone"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pyoseon-cafes",
+   "name": "Pyoseon beach cafes",
+   "kind": "cafe",
+   "neighborhood": "pyoseon",
+   "summary": "Quiet cafes near the beach and folk village, some in old stone houses.",
+   "tags": [
+    "coffee",
+    "quiet",
+    "stone-house"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "keunyeong",
+   "name": "Keunyeong coastal path",
+   "kind": "trail",
+   "neighborhood": "namwon",
+   "summary": "A cliff-top path through pine and camellia above black lava, part of an Olle route, with a viewpoint where the trees frame a map of the Korean peninsula.",
+   "tags": [
+    "olle",
+    "cliffs",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tangerine-farm-cafes",
+   "name": "Tangerine orchard cafes",
+   "kind": "cafe",
+   "neighborhood": "namwon",
+   "summary": "Farm cafes inside the orchards serving fresh juice, tangerine cakes and hallabong lattes among the trees.",
+   "tags": [
+    "tangerines",
+    "farm",
+    "coffee"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tangerine-picking",
+   "name": "Tangerine picking farms",
+   "kind": "attraction",
+   "neighborhood": "namwon",
+   "summary": "Family farms that let visitors pick a basket of mandarins from the trees in season.",
+   "tags": [
+    "tangerines",
+    "farm",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wimi-camellia",
+   "name": "Wimi camellia colony",
+   "kind": "garden",
+   "neighborhood": "namwon",
+   "summary": "A dense windbreak of camellia trees planted by one villager over decades, blooming red in midwinter.",
+   "tags": [
+    "camellia",
+    "flowers",
+    "quiet"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "namwon-guksu",
+   "name": "Namwon noodle and seafood shops",
+   "kind": "restaurant",
+   "neighborhood": "namwon",
+   "summary": "Village restaurants doing gogi-guksu, momguk and grilled fish for farmers at lunch.",
+   "tags": [
+    "noodles",
+    "local",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "olle-market",
+   "name": "Seogwipo Maeil Olle Market",
+   "kind": "market",
+   "neighborhood": "seogwipo",
+   "summary": "A covered market with a stream down the middle: tangerines, hairtail, raw-fish platters, fried chicken, omegi tteok and street food.",
+   "tags": [
+    "food",
+    "tangerines",
+    "street-food",
+    "iconic"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lee-jung-seop-street",
+   "name": "Lee Jung-seop Street and Art Museum",
+   "kind": "museum",
+   "neighborhood": "seogwipo",
+   "summary": "The painter's small thatched room from his refugee year in Seogwipo, a museum of his work and a sloping street of craft markets and cafes.",
+   "tags": [
+    "art",
+    "history",
+    "crafts"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheonjiyeon",
+   "name": "Cheonjiyeon Falls",
+   "kind": "attraction",
+   "neighborhood": "seogwipo",
+   "summary": "A waterfall at the end of a short subtropical gorge walk, lit up and open into the evening.",
+   "tags": [
+    "waterfall",
+    "walk",
+    "night"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeongbang",
+   "name": "Jeongbang Falls",
+   "kind": "attraction",
+   "neighborhood": "seogwipo",
+   "summary": "A waterfall that drops straight into the sea, reached by steps down to the rocks.",
+   "tags": [
+    "waterfall",
+    "coast",
+    "iconic"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saeseom",
+   "name": "Saeseom islet and Saeyeongyo bridge",
+   "kind": "landmark",
+   "neighborhood": "seogwipo",
+   "summary": "A footbridge shaped like a sail from Seogwipo harbour to a small wooded islet with a loop path.",
+   "tags": [
+    "walk",
+    "harbour",
+    "night-lights",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jaguri-park",
+   "name": "Jaguri Park",
+   "kind": "park",
+   "neighborhood": "seogwipo",
+   "summary": "A seaside park with sculptures inspired by Lee Jung-seop and a view of the islands off the harbour.",
+   "tags": [
+    "park",
+    "art",
+    "sea-view"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seogwipo-harbour-restaurants",
+   "name": "Seogwipo harbour hairtail restaurants",
+   "kind": "restaurant",
+   "neighborhood": "seogwipo",
+   "summary": "Restaurants near the harbour serving galchi-guk, grilled hairtail and raw-fish platters.",
+   "tags": [
+    "galchi",
+    "seafood",
+    "harbour"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lee-jung-seop-cafes",
+   "name": "Cafes around Lee Jung-seop Street",
+   "kind": "cafe",
+   "neighborhood": "seogwipo",
+   "summary": "Small cafes, bookshops and tangerine dessert counters on the art street.",
+   "tags": [
+    "coffee",
+    "art",
+    "dessert"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seogwipo-pocha",
+   "name": "Seogwipo old-town pubs and pochas",
+   "kind": "bar",
+   "neighborhood": "seogwipo",
+   "summary": "Soju bars and small pubs on the streets above the harbour, with raw fish to go from the market.",
+   "tags": [
+    "soju",
+    "pocha",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seogwipo-jjimjilbang",
+   "name": "Seogwipo jjimjilbang",
+   "kind": "fitness",
+   "neighborhood": "seogwipo",
+   "summary": "A big bathhouse and sauna with hot pools, a sleeping hall and snack bar, open around the clock.",
+   "tags": [
+    "sauna",
+    "spa",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "olle-center",
+   "name": "Jeju Olle Tourist Center",
+   "kind": "landmark",
+   "neighborhood": "seogwipo",
+   "summary": "The Olle trail foundation's center where Route 6 ends and Route 7 begins, with maps, passports for stamping, a cafe and a guesthouse.",
+   "tags": [
+    "olle",
+    "walking",
+    "information"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "citrus-museum",
+   "name": "Seogwipo Citrus Museum",
+   "kind": "museum",
+   "neighborhood": "seogwipo",
+   "summary": "A museum of citrus growing with greenhouses, a tangerine orchard and the winter citrus festival.",
+   "tags": [
+    "tangerines",
+    "farm",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oedolgae",
+   "name": "Oedolgae Rock",
+   "kind": "landmark",
+   "neighborhood": "new-seogwipo",
+   "summary": "A lone sea stack off a pine-covered coast on Olle Route 7, one of the best-loved walks on the island.",
+   "tags": [
+    "coast",
+    "olle",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "olle-route-7",
+   "name": "Olle Route 7",
+   "kind": "trail",
+   "neighborhood": "new-seogwipo",
+   "summary": "An Olle section from Seogwipo past Oedolgae along lava coast and pebble beaches to Wolpyeong, past Beophwan harbour.",
+   "tags": [
+    "olle",
+    "coast",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yakcheonsa",
+   "name": "Yakcheonsa Temple",
+   "kind": "temple",
+   "neighborhood": "new-seogwipo",
+   "summary": "A huge, modern temple hall above the sea at Daepo, with a giant seated Buddha inside and a spring believed to heal.",
+   "tags": [
+    "temple",
+    "buddhist",
+    "sea-view"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "world-cup-stadium",
+   "name": "Jeju World Cup Stadium",
+   "kind": "stadium",
+   "neighborhood": "new-seogwipo",
+   "summary": "The 2002 World Cup stadium with a sail-shaped roof, home ground of Jeju SK FC.",
+   "tags": [
+    "football",
+    "sports"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beophwan-haenyeo-house",
+   "name": "Beophwan haenyeo seafood houses",
+   "kind": "restaurant",
+   "neighborhood": "new-seogwipo",
+   "summary": "Seafood shacks by Beophwan harbour where the village diving collective sells sea urchin, conch and raw fish.",
+   "tags": [
+    "haenyeo",
+    "seafood",
+    "harbour"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-seogwipo-cafes",
+   "name": "Gangjeong and Beophwan cafes",
+   "kind": "cafe",
+   "neighborhood": "new-seogwipo",
+   "summary": "Neighborhood and ocean-view cafes between the apartment blocks and the coast.",
+   "tags": [
+    "coffee",
+    "sea-view"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-seogwipo-bars",
+   "name": "New Seogwipo chicken and beer pubs",
+   "kind": "bar",
+   "neighborhood": "new-seogwipo",
+   "summary": "Hof bars and barbecue restaurants on the commercial streets near the stadium.",
+   "tags": [
+    "chimaek",
+    "beer",
+    "groups"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "family"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-seogwipo-gyms",
+   "name": "New Seogwipo gyms",
+   "kind": "fitness",
+   "neighborhood": "new-seogwipo",
+   "summary": "Gyms and pilates studios above the shops on the main roads.",
+   "tags": [
+    "gym",
+    "pilates"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jungmun-saekdal",
+   "name": "Jungmun Saekdal Beach",
+   "kind": "beach",
+   "neighborhood": "jungmun",
+   "summary": "A golden-sand beach under the resort hotels and the island's best-known surf break; the winter penguin swim is held here.",
+   "tags": [
+    "beach",
+    "surf",
+    "resort"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jungmun-surf",
+   "name": "Jungmun surf schools",
+   "kind": "fitness",
+   "neighborhood": "jungmun",
+   "summary": "Board rentals and lessons for the summer swell at Saekdal beach.",
+   "tags": [
+    "surf",
+    "lessons"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheonjeyeon",
+   "name": "Cheonjeyeon Falls",
+   "kind": "attraction",
+   "neighborhood": "jungmun",
+   "summary": "Three tiers of waterfalls in a forested gorge crossed by a high arched bridge.",
+   "tags": [
+    "waterfall",
+    "walk",
+    "bridge"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jusangjeolli",
+   "name": "Jusangjeolli Cliff",
+   "kind": "landmark",
+   "neighborhood": "jungmun",
+   "summary": "Hexagonal basalt columns stacked along the shore at Daepo, pounded by waves.",
+   "tags": [
+    "geology",
+    "coast",
+    "iconic"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yeomiji",
+   "name": "Yeomiji Botanical Garden",
+   "kind": "garden",
+   "neighborhood": "jungmun",
+   "summary": "A big glasshouse of tropical and desert plants with outdoor gardens, good on wet days.",
+   "tags": [
+    "garden",
+    "greenhouse",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "teddy-bear-museum",
+   "name": "Teddy Bear Museum Jeju",
+   "kind": "museum",
+   "neighborhood": "jungmun",
+   "summary": "A museum of teddy bears in historical scenes and costumes, a long-time stop on family trips.",
+   "tags": [
+    "kids",
+    "rainy-day",
+    "kitsch"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "camellia-hill",
+   "name": "Camellia Hill",
+   "kind": "garden",
+   "neighborhood": "jungmun",
+   "summary": "A large camellia garden inland from Jungmun, pink and red in winter and blue with hydrangeas in early summer.",
+   "tags": [
+    "flowers",
+    "camellia",
+    "photos"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "winter",
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "icc-jeju",
+   "name": "International Convention Center Jeju",
+   "kind": "venue",
+   "neighborhood": "jungmun",
+   "summary": "The convention center on the cliffs, host of summits, conferences and concerts.",
+   "tags": [
+    "conventions",
+    "concerts"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jungmun-hotel-dining",
+   "name": "Jungmun resort hotel restaurants",
+   "kind": "restaurant",
+   "neighborhood": "jungmun",
+   "summary": "Buffets, Korean set menus and hotel bars in the big resorts above the beach.",
+   "tags": [
+    "hotel",
+    "buffet",
+    "special-occasion"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jungmun-cafes",
+   "name": "Jungmun ocean-view cafes",
+   "kind": "cafe",
+   "neighborhood": "jungmun",
+   "summary": "Cafes on the coast road and olle path with terraces facing the sea.",
+   "tags": [
+    "coffee",
+    "sea-view",
+    "terrace"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jungmun-lounges",
+   "name": "Jungmun resort lounges",
+   "kind": "bar",
+   "neighborhood": "jungmun",
+   "summary": "Hotel lounges and a few pubs with live music and cocktails, quiet by city standards.",
+   "tags": [
+    "cocktails",
+    "hotel",
+    "live-music"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moseulpo-bangeo",
+   "name": "Moseulpo yellowtail restaurants",
+   "kind": "restaurant",
+   "neighborhood": "daejeong",
+   "summary": "Harbour restaurants serving fat winter bangeo (yellowtail) as thick raw slices and steamed with soy, plus mackerel the rest of the year.",
+   "tags": [
+    "seafood",
+    "bangeo",
+    "harbour"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "songaksan",
+   "name": "Songaksan",
+   "kind": "trail",
+   "neighborhood": "daejeong",
+   "summary": "A low coastal crater with a cliff path, grazing horses and wartime caves dug into the shore below by forced labour under Japanese rule.",
+   "tags": [
+    "oreum",
+    "coast",
+    "history",
+    "horses"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "alddreu-airfield",
+   "name": "Alddreu Airfield",
+   "kind": "landmark",
+   "neighborhood": "daejeong",
+   "summary": "Concrete hangars left in the fields from a Japanese wartime air base, near memorials to people killed there in 1950; a sobering walk among the garlic fields.",
+   "tags": [
+    "history",
+    "memorial",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marado-gapado",
+   "name": "Gapado and Marado",
+   "kind": "attraction",
+   "neighborhood": "daejeong",
+   "summary": "Ferries to two flat islands: Gapado with barley fields in spring, and Marado, Korea's southernmost point, famous for jajangmyeon restaurants.",
+   "tags": [
+    "island",
+    "ferry",
+    "walk"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sanbangsan",
+   "name": "Sanbangsan and Yongmeori Coast",
+   "kind": "landmark",
+   "neighborhood": "daejeong",
+   "summary": "A lava dome with a cave temple, above a layered sandstone coast shaped like a dragon's head.",
+   "tags": [
+    "geology",
+    "temple",
+    "coast"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chusa-museum",
+   "name": "Jeju Chusa Museum",
+   "kind": "museum",
+   "neighborhood": "daejeong",
+   "summary": "The exile house of the calligrapher Kim Jeong-hui and a museum of his work, in a building echoing his painting Sehando.",
+   "tags": [
+    "calligraphy",
+    "history",
+    "architecture"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "osulloc-tea-museum",
+   "name": "O'sulloc Tea Museum",
+   "kind": "museum",
+   "neighborhood": "daejeong",
+   "summary": "A tea house and museum among the green tea fields near Global Education City, with green-tea ice cream and roll cake.",
+   "tags": [
+    "tea",
+    "fields",
+    "dessert"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daejeong-market",
+   "name": "Daejeong five-day market",
+   "kind": "market",
+   "neighborhood": "daejeong",
+   "summary": "A market in Moseulpo on dates ending in 1 and 6 with fish, garlic, vegetables and food stalls.",
+   "tags": [
+    "market",
+    "local",
+    "food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moseulpo-cafes",
+   "name": "Moseulpo and Hamo cafes",
+   "kind": "cafe",
+   "neighborhood": "daejeong",
+   "summary": "Small cafes in old houses by the harbour and windy coast.",
+   "tags": [
+    "coffee",
+    "quiet",
+    "harbour"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moseulpo-pocha",
+   "name": "Moseulpo harbour pochas",
+   "kind": "bar",
+   "neighborhood": "daejeong",
+   "summary": "Seafood pochas and soju bars by the port where boat crews and teachers from the international schools both turn up.",
+   "tags": [
+    "soju",
+    "seafood",
+    "harbour"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peace-park",
+   "name": "Jeju April 3rd Peace Park",
+   "kind": "museum",
+   "neighborhood": "foothills",
+   "summary": "The national memorial to the islanders killed in the violence of 1947-1954, estimated at 14,000 to 30,000, with a museum, memorial altar and walls of names; a place for quiet.",
+   "tags": [
+    "history",
+    "memorial",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeolmul-forest",
+   "name": "Jeolmul Natural Recreation Forest",
+   "kind": "park",
+   "neighborhood": "foothills",
+   "summary": "A cedar forest with boardwalks, a spring and a short oreum climb, cool in summer.",
+   "tags": [
+    "forest",
+    "walk",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "saryeoni",
+   "name": "Saryeoni Forest Path",
+   "kind": "trail",
+   "neighborhood": "foothills",
+   "summary": "A long, flat path of red volcanic gravel through cedar and broadleaf forest, at its best in rain or mist.",
+   "tags": [
+    "forest",
+    "walk",
+    "mist"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seongpanak",
+   "name": "Seongpanak Trail to Hallasan",
+   "kind": "trail",
+   "neighborhood": "foothills",
+   "summary": "The longer, gentler trail to the summit of Hallasan and its crater lake: a full day, booked online in advance, with cut-off times at the shelter.",
+   "tags": [
+    "hallasan",
+    "summit",
+    "hiking",
+    "reservation"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-stone-park",
+   "name": "Jeju Stone Park",
+   "kind": "museum",
+   "neighborhood": "foothills",
+   "summary": "A vast outdoor park and museum of lava rocks, stone grandfathers and the island's myths of the giant goddess Seolmundae Halmang.",
+   "tags": [
+    "myth",
+    "stone",
+    "architecture"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sangumburi",
+   "name": "Sangumburi Crater",
+   "kind": "landmark",
+   "neighborhood": "foothills",
+   "summary": "A broad, forested crater with silver grass and a walking loop around the rim.",
+   "tags": [
+    "crater",
+    "walk",
+    "grassland"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ecoland",
+   "name": "Eco Land Theme Park",
+   "kind": "attraction",
+   "neighborhood": "foothills",
+   "summary": "A small steam-style train looping through gotjawal forest with stops at a lake and gardens.",
+   "tags": [
+    "train",
+    "kids",
+    "forest"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gyorae-chicken",
+   "name": "Gyorae native-chicken restaurants",
+   "kind": "restaurant",
+   "neighborhood": "foothills",
+   "summary": "A village known for native chicken: hotpot, chicken sashimi for the brave and porridge to finish.",
+   "tags": [
+    "chicken",
+    "hotpot",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "forest-cafes",
+   "name": "Forest-edge cafes",
+   "kind": "cafe",
+   "neighborhood": "foothills",
+   "summary": "Cafes in glass boxes and old farmhouses at the edge of the forest, popular after a walk.",
+   "tags": [
+    "coffee",
+    "forest",
+    "quiet"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "noksan-ro",
+   "name": "Noksan-ro canola and cherry road",
+   "kind": "landmark",
+   "neighborhood": "gasi",
+   "summary": "A country road where canola fields and cherry blossoms bloom together in early spring.",
+   "tags": [
+    "canola",
+    "cherry-blossom",
+    "drive"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ttarabi-oreum",
+   "name": "Ttarabi Oreum",
+   "kind": "trail",
+   "neighborhood": "gasi",
+   "summary": "A gentle oreum with three craters, the \"queen\" of the eastern cones for its curves and autumn eulalia grass.",
+   "tags": [
+    "oreum",
+    "grassland",
+    "sunset"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gasi-horse-riding",
+   "name": "Gasi-ri horse ranches",
+   "kind": "attraction",
+   "neighborhood": "gasi",
+   "summary": "Ranches offering short rides on Jeju ponies and larger horses across the grassland.",
+   "tags": [
+    "horses",
+    "riding",
+    "ranch"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gasi-dombe-gogi",
+   "name": "Gasi-ri dombe-gogi restaurants",
+   "kind": "restaurant",
+   "neighborhood": "gasi",
+   "summary": "Village restaurants serving boiled pork sliced onto a wooden board, blood sausage and momguk.",
+   "tags": [
+    "pork",
+    "local",
+    "momguk"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "korean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ranch-cafes",
+   "name": "Ranch-country cafes",
+   "kind": "cafe",
+   "neighborhood": "gasi",
+   "summary": "Cafes in converted barns and farmhouses looking out on oreum and grazing horses.",
+   "tags": [
+    "coffee",
+    "views",
+    "horses"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "jnu",
+   "name": "Jeju National University",
+   "type": "public-university",
+   "neighborhood": "ara",
+   "size": "large",
+   "known_for": [
+    "marine-science",
+    "agriculture",
+    "tourism",
+    "veterinary-medicine",
+    "engineering"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jnu-medicine",
+   "name": "Jeju National University School of Medicine",
+   "type": "medical-school",
+   "neighborhood": "ara",
+   "size": "small",
+   "known_for": [
+    "medicine",
+    "nursing"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-halla",
+   "name": "Jeju Halla University",
+   "type": "community-college",
+   "neighborhood": "sinjeju",
+   "size": "medium",
+   "known_for": [
+    "nursing",
+    "hospitality",
+    "tourism",
+    "health-sciences"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "jeju-provincial-government",
+   "name": "Jeju Special Self-Governing Provincial Government",
+   "sector": "government",
+   "neighborhood": "sinjeju",
+   "size": "large",
+   "summary": "The provincial government, which runs most public services on the island from its offices in Yeon-dong.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-office-of-education",
+   "name": "Jeju Provincial Office of Education",
+   "sector": "education",
+   "neighborhood": "sinjeju",
+   "size": "large",
+   "summary": "Runs the island's public schools, from village elementary schools to city high schools.",
+   "careers": [
+    "teacher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jnu-hospital",
+   "name": "Jeju National University Hospital",
+   "sector": "healthcare",
+   "neighborhood": "ara",
+   "size": "large",
+   "summary": "The island's main teaching hospital and trauma center.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "halla-hospital",
+   "name": "Jeju Halla General Hospital",
+   "sector": "healthcare",
+   "neighborhood": "sinjeju",
+   "size": "large",
+   "summary": "A large private general hospital with a busy emergency room.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "pharmacist",
+    "physician-resident"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seogwipo-medical-center",
+   "name": "Seogwipo Medical Center",
+   "sector": "healthcare",
+   "neighborhood": "seogwipo",
+   "size": "medium",
+   "summary": "The public hospital for the south of the island.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "pharmacist",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jnu-employer",
+   "name": "Jeju National University",
+   "sector": "education",
+   "neighborhood": "ara",
+   "size": "large",
+   "summary": "Faculty, research and staff jobs at the national university, strong in marine science and subtropical farming.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "medical-researcher",
+    "biologist",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kakao",
+   "name": "Kakao (Jeju head office)",
+   "sector": "technology",
+   "neighborhood": "ara",
+   "size": "medium",
+   "summary": "The internet company's registered head office, Space.1, in Jeju Science Park; most of its staff work near Seoul, but some teams are based here.",
+   "careers": [
+    "software-engineer",
+    "ux-designer",
+    "data-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-air",
+   "name": "Jeju Air",
+   "sector": "transport",
+   "neighborhood": "airport",
+   "size": "large",
+   "summary": "The low-cost airline founded with the province, with its registered head office in Jeju and a base at the airport.",
+   "careers": [
+    "marketing-coordinator",
+    "data-analyst",
+    "accountant",
+    "software-engineer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-airport",
+   "name": "Jeju International Airport",
+   "sector": "transport",
+   "neighborhood": "airport",
+   "size": "large",
+   "summary": "One of the busiest domestic airports in the world, with ground staff, shops, cafes and cargo handlers.",
+   "careers": [
+    "retail-associate",
+    "barista",
+    "port-logistics",
+    "line-cook"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dream-tower-employer",
+   "name": "Jeju Dream Tower",
+   "sector": "hospitality",
+   "neighborhood": "sinjeju",
+   "size": "large",
+   "summary": "The Grand Hyatt hotel, foreigners-only casino, restaurants and shops in Jeju's tallest tower.",
+   "careers": [
+    "casino-dealer",
+    "hotel-front-desk",
+    "line-cook",
+    "server",
+    "bartender",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shilla-jeju",
+   "name": "The Shilla Jeju",
+   "sector": "hospitality",
+   "neighborhood": "jungmun",
+   "size": "large",
+   "summary": "A long-established luxury resort hotel above Jungmun beach.",
+   "careers": [
+    "hotel-front-desk",
+    "event-planner",
+    "line-cook",
+    "server",
+    "bartender",
+    "lifeguard"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lotte-hotel-jeju",
+   "name": "Lotte Hotel Jeju",
+   "sector": "hospitality",
+   "neighborhood": "jungmun",
+   "size": "large",
+   "summary": "A big resort hotel in Jungmun with windmill-themed gardens and a pool complex.",
+   "careers": [
+    "hotel-front-desk",
+    "line-cook",
+    "server",
+    "bartender",
+    "lifeguard"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haevichi",
+   "name": "Haevichi Hotel and Resort Jeju",
+   "sector": "hospitality",
+   "neighborhood": "pyoseon",
+   "size": "medium",
+   "summary": "A resort hotel on Pyoseon beach.",
+   "careers": [
+    "hotel-front-desk",
+    "line-cook",
+    "server"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "icc-jeju-employer",
+   "name": "International Convention Center Jeju",
+   "sector": "hospitality",
+   "neighborhood": "jungmun",
+   "size": "small",
+   "summary": "Conference and event staff for summits, trade shows and concerts.",
+   "careers": [
+    "event-planner",
+    "tour-guide"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shilla-duty-free-employer",
+   "name": "Shilla Duty Free Jeju",
+   "sector": "retail",
+   "neighborhood": "sinjeju",
+   "size": "medium",
+   "summary": "Sales staff, many speaking Chinese or Japanese, for the duty-free trade.",
+   "careers": [
+    "retail-associate",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jpdc",
+   "name": "Jeju Province Development Corporation (Jeju Samdasoo)",
+   "sector": "manufacturing",
+   "neighborhood": "foothills",
+   "size": "medium",
+   "summary": "The provincial company that bottles Samdasoo spring water from the lava aquifer at its plant in Gyorae and makes tangerine juice.",
+   "careers": [
+    "data-analyst",
+    "marketing-coordinator",
+    "port-logistics",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "orion-yongamsu",
+   "name": "Orion Jeju Yongamsu",
+   "sector": "manufacturing",
+   "neighborhood": "gujwa",
+   "size": "small",
+   "summary": "A bottling plant for lava-seawater drinking water in Gujwa.",
+   "careers": [
+    "port-logistics",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-bank",
+   "name": "Jeju Bank",
+   "sector": "finance",
+   "neighborhood": "old-jeju",
+   "size": "medium",
+   "summary": "The island's own regional bank, headquartered in the old town.",
+   "careers": [
+    "accountant",
+    "financial-analyst",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kbs-jeju",
+   "name": "KBS Jeju",
+   "sector": "media",
+   "neighborhood": "sinjeju",
+   "size": "small",
+   "summary": "The public broadcaster's Jeju station, making island news and radio.",
+   "careers": [
+    "journalist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "international-schools",
+   "name": "Global Education City international schools",
+   "sector": "education",
+   "neighborhood": "daejeong",
+   "size": "medium",
+   "summary": "Boarding and day schools taught in English, including NLCS Jeju, Branksome Hall Asia, KIS Jeju and St. Johnsbury Academy Jeju, with many foreign teachers.",
+   "careers": [
+    "teacher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-olle-foundation",
+   "name": "Jeju Olle Foundation",
+   "sector": "tourism",
+   "neighborhood": "seogwipo",
+   "size": "small",
+   "summary": "The non-profit that marks and maintains the Olle trails and runs the walking festival.",
+   "careers": [
+    "tour-guide",
+    "event-planner",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "citrus-cooperatives",
+   "name": "Citrus growers' cooperatives",
+   "sector": "agriculture",
+   "neighborhood": "namwon",
+   "size": "large",
+   "summary": "Farm co-ops that grade, pack and sell the tangerine, hallabong and cheonhyehyang crops from thousands of family orchards.",
+   "careers": [
+    "citrus-farmer",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fisheries-cooperatives",
+   "name": "Seongsan and Moseulpo fisheries cooperatives",
+   "sector": "fishing",
+   "neighborhood": "seongsan",
+   "size": "medium",
+   "summary": "Suhyup co-ops that run the fish auctions and supply the boats and haenyeo collectives.",
+   "careers": [
+    "fishing-crew",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-district-court",
+   "name": "Jeju District Court",
+   "sector": "legal",
+   "neighborhood": "ido",
+   "size": "medium",
+   "summary": "The island's courthouse near City Hall, with the prosecutors' office and law offices around it.",
+   "careers": [
+    "paralegal",
+    "government-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-naval-base",
+   "name": "ROK Navy Jeju base",
+   "sector": "defense",
+   "neighborhood": "new-seogwipo",
+   "size": "medium",
+   "summary": "The naval base at Gangjeong, opened in 2016 after years of village protest, which shares its harbour with cruise ships.",
+   "careers": [
+    "military-sailor",
+    "defense-engineer"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "jeju-city-center",
+   "name": "Jeju City government and business district",
+   "neighborhoods": [
+    "sinjeju",
+    "old-jeju",
+    "ido",
+    "airport"
+   ],
+   "sectors": [
+    "government",
+    "finance",
+    "retail",
+    "media",
+    "healthcare",
+    "transport",
+    "legal",
+    "real-estate",
+    "construction",
+    "creative"
+   ],
+   "summary": "The provincial offices, courts, banks, hospitals, duty-free stores, design studios, real-estate offices, builders and airport jobs in Jeju City.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ara-campus",
+   "name": "Ara campus and Jeju Science Park",
+   "neighborhoods": [
+    "ara"
+   ],
+   "sectors": [
+    "education",
+    "healthcare",
+    "technology",
+    "biotech"
+   ],
+   "summary": "The national university, its hospital and the tech and bio companies of the science park.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "resort-coast",
+   "name": "South-coast resorts",
+   "neighborhoods": [
+    "jungmun",
+    "seogwipo",
+    "new-seogwipo",
+    "pyoseon",
+    "seongsan"
+   ],
+   "sectors": [
+    "hospitality",
+    "tourism",
+    "entertainment",
+    "recreation"
+   ],
+   "summary": "Resort hotels, the convention center, tour companies and attractions that employ much of the south of the island.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "farms-and-harbours",
+   "name": "Orchards, farms and harbours",
+   "neighborhoods": [
+    "namwon",
+    "hallim",
+    "daejeong",
+    "gujwa",
+    "foothills",
+    "gasi"
+   ],
+   "sectors": [
+    "agriculture",
+    "fishing",
+    "manufacturing"
+   ],
+   "summary": "Tangerine orchards, garlic and vegetable fields, ranches, fishing ports and the island's bottled-water plants.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "citrus-farmer",
+   "name": "Tangerine farmer",
+   "sector": "agriculture",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Tending a family tangerine or hallabong orchard: pruning in spring, spraying and thinning in summer, and the long harvest from late autumn into winter.",
+   "themes": [
+    "the harvest",
+    "the weather",
+    "co-op prices",
+    "the greenhouse",
+    "family help"
+   ]
+  },
+  {
+   "id": "fishing-crew",
+   "name": "Fishing boat crew",
+   "sector": "fishing",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Working the hairtail, mackerel or yellowtail boats out of Seongsan, Hallim or Moseulpo, then the early auction at the harbour.",
+   "themes": [
+    "the catch",
+    "the weather",
+    "the auction",
+    "the crew"
+   ]
+  }
+ ],
+ "climate": {
+  "summary": "Humid subtropical and very windy: mild, grey winters with northwest winds and occasional snow showers, a warm spring, the jangma rains from mid-June into July, a hot and humid August with typhoons possible into September, and a clear, mild autumn. Hallasan is much colder and snow-capped in winter.",
+  "months": [
+   {
+    "high_f": 48,
+    "low_f": 38,
+    "rain_days": 15,
+    "note": "Coldest month; windy, grey, snow on Hallasan."
+   },
+   {
+    "high_f": 51,
+    "low_f": 40,
+    "rain_days": 12,
+    "note": "Chilly; camellias and early canola."
+   },
+   {
+    "high_f": 57,
+    "low_f": 45,
+    "rain_days": 11,
+    "note": "Canola and the first cherry blossoms."
+   },
+   {
+    "high_f": 65,
+    "low_f": 52,
+    "rain_days": 10,
+    "note": "Mild spring; cherry blossoms early in the month."
+   },
+   {
+    "high_f": 72,
+    "low_f": 60,
+    "rain_days": 10,
+    "note": "Warm and green; azaleas on Hallasan."
+   },
+   {
+    "high_f": 78,
+    "low_f": 67,
+    "rain_days": 12,
+    "note": "Humid; the jangma rains arrive mid-month."
+   },
+   {
+    "high_f": 85,
+    "low_f": 76,
+    "rain_days": 12,
+    "note": "Hot and sticky; beaches open."
+   },
+   {
+    "high_f": 87,
+    "low_f": 77,
+    "rain_days": 13,
+    "note": "Hottest month; typhoons possible."
+   },
+   {
+    "high_f": 80,
+    "low_f": 70,
+    "rain_days": 11,
+    "note": "Warm; typhoon season tails off."
+   },
+   {
+    "high_f": 72,
+    "low_f": 61,
+    "rain_days": 7,
+    "note": "Clear and mild; silver grass on the oreum."
+   },
+   {
+    "high_f": 62,
+    "low_f": 50,
+    "rain_days": 10,
+    "note": "Cool; tangerine harvest begins."
+   },
+   {
+    "high_f": 52,
+    "low_f": 41,
+    "rain_days": 14,
+    "note": "Windy and damp; tangerines everywhere."
+   }
+  ],
+  "source": "curated-climate-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "penguin-swim",
+   "name": "Jeju Penguin Swim",
+   "months": [
+    1
+   ],
+   "neighborhood": "jungmun",
+   "summary": "Hundreds of people in costumes run into the winter sea at Jungmun Saekdal beach to start the year.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seongsan-sunrise-festival",
+   "name": "Seongsan Sunrise Festival",
+   "months": [
+    12,
+    1
+   ],
+   "neighborhood": "seongsan",
+   "summary": "New Year's Eve into New Year's Day at Ilchulbong, with music, a bonfire and a crowd climbing for the first sunrise of the year.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seollal-visits",
+   "name": "Seollal family visits",
+   "months": [
+    1,
+    2
+   ],
+   "neighborhood": null,
+   "summary": "Over the lunar new year, families gather at the eldest relative's home for ancestral rites, rice-cake soup and bows to elders; flights to and from the island sell out.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fire-festival",
+   "name": "Jeju Fire Festival",
+   "months": [
+    3
+   ],
+   "neighborhood": "aewol",
+   "summary": "A spring festival at Saebyeol Oreum rooted in the old practice of burning pasture to clear pests; the hillside burning itself has been scaled back or called off in dry years.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canola-festival",
+   "name": "Jeju Canola Flower Festival",
+   "months": [
+    3,
+    4
+   ],
+   "neighborhood": "gasi",
+   "summary": "Fields of yellow canola and cherry blossoms along Noksan-ro, with photo spots, food stalls and music.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cherry-blossom-festival",
+   "name": "Jeju cherry blossom festival",
+   "months": [
+    3,
+    4
+   ],
+   "neighborhood": "old-jeju",
+   "summary": "King cherry trees, a species native to Hallasan, bloom along Jeonnong-ro and the university road, with night lights and stalls.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "april-3-memorial",
+   "name": "April 3rd memorial day",
+   "months": [
+    4
+   ],
+   "neighborhood": "foothills",
+   "summary": "On April 3 the island remembers those killed in the 1947-1954 violence with a national memorial ceremony at the Peace Park; families visit, and it is a day for quiet rather than celebration.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haenyeo-festival",
+   "name": "Jeju Haenyeo Festival",
+   "months": [
+    9,
+    10
+   ],
+   "neighborhood": "gujwa",
+   "summary": "A festival at the Haenyeo Museum honouring the women divers, with diving demonstrations, songs and seafood.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chuseok-visits",
+   "name": "Chuseok homecoming",
+   "months": [
+    9,
+    10
+   ],
+   "neighborhood": null,
+   "summary": "At the harvest festival families gather, tend ancestors' graves in the fields, and make songpyeon; the island fills with visiting relatives.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seogwipo-chilsimni-festival",
+   "name": "Seogwipo Chilsimni Festival",
+   "months": [
+    9,
+    10
+   ],
+   "neighborhood": "seogwipo",
+   "summary": "Seogwipo's city festival, named for the \"seventy li\" of its coast, with parades, concerts and food stalls.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tamna-cultural-festival",
+   "name": "Tamna Cultural Festival",
+   "months": [
+    10
+   ],
+   "neighborhood": "tapdong",
+   "summary": "The island's big traditional culture festival, with folk performances, shaman rituals, a street parade and Jeju dialect contests.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "olle-walking-festival",
+   "name": "Jeju Olle Walking Festival",
+   "months": [
+    10,
+    11
+   ],
+   "neighborhood": "seogwipo",
+   "summary": "Several days of group walks along Olle routes, with village food and performances at the rest stops.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "autumn-marathons",
+   "name": "Autumn road races",
+   "months": [
+    10,
+    11
+   ],
+   "neighborhood": null,
+   "summary": "Marathons, ultramarathons and fun runs around the island's coast roads draw runners from the mainland in the cool season.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bangeo-festival",
+   "name": "Moseulpo Yellowtail Festival",
+   "months": [
+    11
+   ],
+   "neighborhood": "daejeong",
+   "summary": "A harbour festival when the winter yellowtail come in, with fish-catching contests and raw-fish tastings.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tangerine-festival",
+   "name": "Seogwipo Citrus Festival",
+   "months": [
+    11,
+    12
+   ],
+   "neighborhood": "seogwipo",
+   "summary": "A winter festival around the citrus harvest with picking, juicing and tangerine-everything food.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "black-pork",
+   "name": "Heukdwaeji (black pork)",
+   "kind": "dish",
+   "summary": "Jeju's black-haired pigs give thick, fatty pork grilled at the table and dipped in melted myeolchi-jeot, a bubbling anchovy sauce, with lettuce, garlic and kimchi.",
+   "places": [
+    "black-pork-street",
+    "sinjeju-bbq",
+    "seongsan-galchi"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gogi-guksu",
+   "name": "Gogi-guksu",
+   "kind": "dish",
+   "summary": "Thick noodles in milky pork-bone broth topped with slices of boiled pork, a cheap, filling island lunch.",
+   "places": [
+    "noodle-street",
+    "hyeopjae-noodles",
+    "namwon-guksu"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeonbok-juk",
+   "name": "Jeonbok-juk (abalone porridge)",
+   "kind": "dish",
+   "summary": "Rice porridge cooked with abalone and its green innards, a gentle breakfast or recovery meal.",
+   "places": [
+    "yongdam-abalone",
+    "hado-haenyeo-house",
+    "aewol-seafood"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "momguk",
+   "name": "Momguk",
+   "kind": "dish",
+   "summary": "A thick pork-bone soup with sargassum seaweed, once served at village weddings and funerals.",
+   "places": [
+    "gasi-dombe-gogi",
+    "namwon-guksu"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "galchi",
+   "name": "Galchi (hairtail)",
+   "kind": "dish",
+   "summary": "Silver hairtail is grilled whole, braised in a spicy galchi-jorim, or simmered with pumpkin in a clear galchi-guk that only Jeju makes.",
+   "places": [
+    "seongsan-galchi",
+    "seogwipo-harbour-restaurants",
+    "hamdeok-seafood"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bingtteok",
+   "name": "Bingtteok and omegi-tteok",
+   "kind": "dish",
+   "summary": "Market snacks: thin buckwheat crepes rolled around seasoned radish, and millet rice cakes coated in red beans.",
+   "places": [
+    "dongmun-market",
+    "olle-market"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tangerines",
+   "name": "Tangerines everywhere",
+   "kind": "dish",
+   "summary": "Gamgyul mandarins fill every market and roadside stand in winter, followed by bumpy hallabong and cheonhyehyang; neighbours hand them out by the box.",
+   "places": [
+    "olle-market",
+    "dongmun-market",
+    "tangerine-farm-cafes"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hallabong-drinks",
+   "name": "Hallabong ade and tangerine lattes",
+   "kind": "drink",
+   "summary": "Cafes all over the island sell hallabong juice, ade and tangerine-flavoured lattes and cakes.",
+   "places": [
+    "tangerine-farm-cafes",
+    "aewol-cafe-street",
+    "sinjeju-cafes"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hallasan-soju",
+   "name": "Hallasan soju",
+   "kind": "drink",
+   "summary": "The island's own soju, made with Jeju water; locals often ask for it by name, and the original is stronger than most mainland brands.",
+   "places": [
+    "black-pork-street",
+    "dongmun-pocha"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "udo-peanut",
+   "name": "Udo peanut ice cream",
+   "kind": "dish",
+   "summary": "Soft-serve covered in crushed local peanuts, the thing everyone eats on a day trip to Udo.",
+   "places": [
+    "udo-peanut-cafes"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "honjeo-opsye",
+   "name": "\"Honjeo opsye\"",
+   "kind": "saying",
+   "summary": "Jeju dialect for \"welcome, come quickly\", painted on signs at the airport and port; the dialect is hard for mainlanders to follow and is now taught to keep it alive.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pokssak-sogatsuda",
+   "name": "\"Pokssak sogatsuda\"",
+   "kind": "saying",
+   "summary": "Jeju dialect for \"you worked so hard\", a warm thanks to someone after a long effort.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "samda",
+   "name": "Samda: the three abundances",
+   "kind": "custom",
+   "summary": "Jeju is called the island of three abundances, wind, stones and women, and of three absences: no thieves, no beggars and no gates.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeongnang",
+   "name": "Jeongnang gate poles",
+   "kind": "custom",
+   "summary": "Instead of gates, old houses set three wooden poles across the entrance: how many are down says whether the family is home or away for long.",
+   "places": [
+    "seongeup-village",
+    "jeju-folk-village"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dol-hareubang",
+   "name": "Dol hareubang",
+   "kind": "other",
+   "summary": "Stone grandfathers carved from lava, with bulging eyes and hands on their belly, stand at old town gates and in miniature in every souvenir shop.",
+   "places": [
+    "gwandeokjeong",
+    "seongeup-village",
+    "jeju-stone-park"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "batdam",
+   "name": "Batdam stone walls",
+   "kind": "other",
+   "summary": "Black lava-stone walls stacked without mortar wrap every field and grave, gapped so the wind blows through rather than knocking them down.",
+   "places": [
+    "namwon",
+    "gimnyeong",
+    "gasi"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "olle",
+   "name": "Olle",
+   "kind": "other",
+   "summary": "In Jeju dialect an olle is the narrow lane from the street to a house; the name was given to the long-distance walking routes that circle the island, marked with blue and orange ribbons.",
+   "places": [
+    "olle-center",
+    "olle-route-7",
+    "olle-route-20"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haenyeo",
+   "name": "Haenyeo",
+   "kind": "custom",
+   "summary": "Women divers, many in their sixties and seventies, who free-dive for conch, abalone, sea urchin and seaweed under collective rules; listed by UNESCO as intangible heritage.",
+   "places": [
+    "haenyeo-museum",
+    "seongsan-haenyeo-show",
+    "beophwan-haenyeo-house"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "singugan",
+   "name": "Singugan moving week",
+   "kind": "custom",
+   "summary": "Islanders traditionally move house only in the week from late January into early February when the household gods are said to be away, and the movers are booked solid.",
+   "places": [],
+   "seasons": [
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gwendang",
+   "name": "Gwendang",
+   "kind": "custom",
+   "summary": "The web of relatives and in-laws on the island; at weddings and funerals the whole gwendang turns up, and people joke that everyone on Jeju is related.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-horses",
+   "name": "Jeju horses",
+   "kind": "other",
+   "summary": "Small Jeju ponies, a protected breed, and racehorses graze the eastern grasslands and the slopes of Hallasan.",
+   "places": [
+    "gasi-horse-riding",
+    "udobong",
+    "songaksan"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oreum",
+   "name": "Oreum",
+   "kind": "other",
+   "summary": "The island has some 360 small volcanic cones; climbing one at sunrise or sunset is a weekend habit.",
+   "places": [
+    "darangshi-oreum",
+    "saebyeol-oreum",
+    "ttarabi-oreum"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "five-day-markets",
+   "name": "Five-day markets",
+   "kind": "shop",
+   "summary": "Town markets held on fixed dates every five days, with farm produce, fish, seedlings and food stalls, still the way many villages shop.",
+   "places": [
+    "hallim-five-day-market",
+    "sehwa-market",
+    "daejeong-market"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "convenience-stores",
+   "name": "Convenience-store life",
+   "kind": "shop",
+   "summary": "CU, GS25 and 7-Eleven stores everywhere sell lunch boxes, triangle kimbap, Jeju-only snacks and cheap beer to drink at the tables outside.",
+   "places": [
+    "airport-convenience"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jeju-sk-fc",
+   "name": "Jeju SK FC",
+   "kind": "team",
+   "summary": "The island's K League football club, long known as Jeju United, plays in orange at the World Cup stadium in Seogwipo.",
+   "places": [
+    "world-cup-stadium"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Americano",
+   "low": 3000,
+   "high": 5500,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Latte",
+   "low": 4500,
+   "high": 7000,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hallabong-ade",
+   "item": "Hallabong ade or juice",
+   "low": 6000,
+   "high": 8500,
+   "per": "a glass at a cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheap-lunch",
+   "item": "Cheap lunch",
+   "low": 8000,
+   "high": 12000,
+   "per": "gogi-guksu, kimbap or a set meal",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner",
+   "item": "Mid-range dinner",
+   "low": 20000,
+   "high": 40000,
+   "per": "for one",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "black-pork",
+   "item": "Black pork barbecue",
+   "low": 22000,
+   "high": 32000,
+   "per": "a serving of about 150-200 g",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abalone-porridge",
+   "item": "Abalone porridge",
+   "low": 14000,
+   "high": 20000,
+   "per": "a bowl",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "soju",
+   "item": "Soju",
+   "low": 5000,
+   "high": 6000,
+   "per": "a bottle at a restaurant",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beer",
+   "item": "Draft beer",
+   "low": 4500,
+   "high": 8000,
+   "per": "a 500 ml glass",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocktail",
+   "item": "Cocktail",
+   "low": 13000,
+   "high": 20000,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries",
+   "low": 70000,
+   "high": 120000,
+   "per": "a week, one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "transit",
+   "item": "Island bus fare",
+   "low": 1150,
+   "high": 1200,
+   "per": "one way; card or cash",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "taxi",
+   "item": "Taxi across Jeju City",
+   "low": 7000,
+   "high": 15000,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "udo-ferry",
+   "item": "Udo ferry",
+   "low": 10000,
+   "high": 14000,
+   "per": "round trip with island entry fee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movie",
+   "item": "Movie ticket",
+   "low": 14000,
+   "high": 16000,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gym",
+   "item": "Gym membership",
+   "low": 50000,
+   "high": 100000,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jjimjilbang",
+   "item": "Jjimjilbang entry",
+   "low": 10000,
+   "high": 16000,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tangerines",
+   "item": "Box of tangerines",
+   "low": 15000,
+   "high": 35000,
+   "per": "about 5 kg, by grade and season",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wage",
+   "item": "Day's wage",
+   "low": 90000,
+   "high": 130000,
+   "per": "a day of ordinary full-time work",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "sea",
+   "name": "Jeju Strait",
+   "side": "north",
+   "width_km": 6
+  },
+  {
+   "kind": "sea",
+   "name": "East China Sea",
+   "side": "south",
+   "width_km": 6
+  }
+ ]
+}

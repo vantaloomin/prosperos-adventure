@@ -1,0 +1,39 @@
+{
+  "_about": "Physical description banks for dungeon/world/looks.py. Height, build, hair, eye colour and one feature come from dungeon/world/dating.py so Matchlight cards and pictures agree. Weights are relative.",
+  "face": {"oval": 30, "round": 15, "heart-shaped": 14, "square": 13, "long": 10, "diamond-shaped": 8, "soft, rectangular": 10},
+  "jaw": {"a soft jawline": 25, "a defined jawline": 22, "a strong, square jaw": 10, "a rounded chin": 15,
+          "a pointed chin": 10, "a cleft chin": 5, "high cheekbones and a narrow chin": 13},
+  "nose": {"a straight nose": 30, "a small button nose": 12, "a slightly upturned nose": 12, "a Roman nose": 8,
+           "a broad nose": 12, "a long, narrow nose": 8, "a nose with a slight bump": 10, "a rounded nose": 8},
+  "eye_shape": {
+    "east": {"almond-shaped": 35, "monolid": 35, "hooded": 15, "upturned": 15},
+    "default": {"almond-shaped": 32, "round": 18, "hooded": 15, "deep-set": 12, "upturned": 10, "downturned": 8, "wide-set": 5}
+  },
+  "skin": {
+    "east": {"fair": 20, "light": 30, "light olive": 20, "warm beige": 20, "tan": 10},
+    "south": {"warm tan": 15, "light brown": 30, "medium brown": 35, "deep brown": 20},
+    "african": {"medium brown": 25, "brown": 30, "deep brown": 30, "dark brown": 15},
+    "latin": {"fair": 10, "light olive": 20, "olive": 20, "tan": 25, "light brown": 20, "medium brown": 5},
+    "arab": {"light": 10, "light olive": 30, "olive": 35, "tan": 20, "light brown": 5},
+    "celtic": {"very fair": 30, "fair": 45, "light": 20, "light olive": 5},
+    "european": {"very fair": 5, "fair": 40, "light": 30, "light olive": 15, "olive": 10},
+    "default": {"fair": 20, "light": 15, "olive": 15, "tan": 15, "light brown": 15, "medium brown": 10, "deep brown": 10}
+  },
+  "_bmi": "Body mass index each build sits around (centre, spread). Weight is worked out from height and this, then held to bmi_limits, so a roll never pairs a height with an implausible weight.",
+  "bmi": {"slim": [19.5, 1.0], "petite": [20.0, 1.0], "lean": [21.0, 1.0], "wiry": [20.5, 1.0], "tall and lean": [21.0, 1.0],
+          "average": [23.5, 1.5], "athletic": [24.0, 1.5], "broad-shouldered": [25.5, 1.5], "curvy": [26.0, 1.5],
+          "soft": [27.0, 1.5], "stocky": [28.0, 1.5], "full-figured": [30.0, 1.5], "heavyset": [31.5, 1.5]},
+  "bmi_limits": [18.0, 34.0],
+  "build_words": {"average": "medium-build", "soft": "soft-figured", "tall and lean": "lean"},
+  "heritage_words": {
+    "korea": ["korean"], "japan": ["japanese"], "chinese": ["chinese", "taiwanese", "cantonese"],
+    "vietnam": ["vietnamese"], "philippines": ["filipino", "filipina", "filipinx"], "east-asian": ["asian"],
+    "india": ["indian", "pakistani", "bangladeshi", "punjabi", "tamil", "gujarati", "nepali", "sri lankan"],
+    "nigeria": ["nigerian", "yoruba", "igbo"], "ghana": ["ghanaian"], "black": ["african american", "black american", "black british", "african", "kenyan", "ethiopian", "somali", "afro"],
+    "haiti": ["haitian"], "jamaica": ["jamaican", "trinidadian", "caribbean"],
+    "mexic": ["mexican", "chicana", "chicano"], "hispanic": ["latina", "latino", "latinx", "latine", "hispanic", "puerto rican", "cuban", "colombian", "dominican", "salvadoran", "guatemalan", "peruvian", "venezuelan", "brazilian", "argentinian", "argentine"],
+    "arab": ["arab", "lebanese", "egyptian", "syrian", "palestinian", "iraqi", "moroccan", "persian", "iranian", "turkish"],
+    "irish": ["irish", "scottish", "scots", "welsh", "cornish", "redhead"],
+    "english": ["english", "british", "french", "german", "polish", "russian", "ukrainian", "italian", "spanish", "greek", "dutch", "swedish", "norwegian", "danish", "jewish", "portuguese", "czech", "hungarian"]
+  }
+}

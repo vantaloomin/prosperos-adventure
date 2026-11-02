@@ -1,0 +1,120 @@
+{
+ "about": "How the insides of Vallarith's rolled hex sites are laid out the first time they are entered (dungeon/delving.py generated): per site kind, how many rooms, on which levels, and what the rooms, passages, foes, hazards and loot are drawn from. Entries with `intensity` only come up at those levels or higher, as site entries do.",
+ "kinds": {
+  "ruin": {
+   "style": "ruin", "rooms": [4, 7],
+   "levels": [{"id": "ground", "name": "Among the walls"}, {"id": "cellars", "name": "The cellars", "from": 0.5}],
+   "entrance": {"name": "The broken doorway", "kind": "gate", "size": "room", "light": "lit", "summary": "A doorway with no door, the lintel cracked across. Weeds grow up through the threshold."},
+   "rooms_table": [
+    {"weight": 3, "level": "ground", "name": "the roofless hall", "kind": "hall", "size": "hall", "light": "lit", "summary": "A long hall open to the sky, the hearth at one end full of old leaves.", "features": ["a cold hearth", "a fallen beam"]},
+    {"weight": 2, "level": "ground", "name": "the tower stump", "kind": "stair", "size": "cramped", "light": "dim", "summary": "The base of a tower, its stair climbing a few turns and stopping in the air.", "features": ["a stair to nothing", "arrow slits"]},
+    {"weight": 2, "level": "ground", "name": "the chapel", "kind": "shrine", "size": "room", "light": "dim", "summary": "A small chapel, the altar stone split and the god's face chiselled off it.", "features": ["a defaced altar", "names cut in the pews"]},
+    {"weight": 2, "level": "ground", "name": "the kitchens", "kind": "kitchen", "size": "room", "light": "dim", "summary": "Kitchens with a collapsed bread oven and a well covered by a rotten lid.", "features": ["a covered well", "pots rusted together"]},
+    {"weight": 3, "level": "cellars", "name": "the wine cellar", "kind": "cellar", "size": "room", "light": "dark", "summary": "Racks of broken bottles and a sour smell that never left.", "features": ["broken racks", "a stain on the floor"]},
+    {"weight": 2, "level": "cellars", "name": "the cells", "kind": "cell", "size": "cramped", "light": "dark", "summary": "Three cells with their doors hanging open, chains still bolted to the walls.", "features": ["chains on the walls", "scratched tallies"]},
+    {"weight": 1, "level": "cellars", "name": "the old vault", "kind": "vault", "size": "room", "light": "dark", "summary": "A vault older than the house above it, the stones cut in a way nobody cuts them any more.", "features": ["older stonework", "a niche with something in it"]}
+   ],
+   "passages": [{"weight": 4, "kind": "open"}, {"weight": 3, "kind": "door"}, {"weight": 1, "kind": "door", "lock": {"difficulty": "normal"}}, {"weight": 1, "kind": "secret", "hidden": true}],
+   "down": {"kind": "stairs", "summary": "steps going down into the dark"},
+   "foe_odds": 35,
+   "foes": [
+    {"weight": 3, "foe": {"name": "outlaw", "count": 2, "vitality": 10, "resolve": 8, "weapon": 1, "wants": "rob"}},
+    {"weight": 2, "foe": {"name": "giant rat", "count": 3, "vitality": 4, "resolve": 6, "weapon": 0, "wants": "kill"}},
+    {"weight": 1, "intensity": {"horror": 2}, "foe": {"name": "restless dead", "count": 1, "vitality": 12, "resolve": 18, "weapon": 1, "wants": "kill", "horror": true}}
+   ],
+   "hazard_odds": 15,
+   "hazards": [
+    {"weight": 2, "action": "cross the rotten floor without going through it", "difficulty": "normal", "threat": "The boards give way and the character drops into the dark below, landing hard among the rubble."},
+    {"weight": 1, "action": "get past without bringing the wall down", "difficulty": "hard", "threat": "Stones come down from the wall top in a slide of dust and mortar."}
+   ],
+   "loot_odds": 30,
+   "loot": ["rope", "candles", "knife", "salt", "whetstone", "lantern", "crowbar"],
+   "wanders": [
+    {"weight": 3, "text": "Something moves in the rubble, a fox or a rat, and is gone."},
+    {"weight": 2, "text": "The wind finds a gap in the walls and moans through it."},
+    {"weight": 1, "action": "hear the others who use the ruin before they come in", "difficulty": "normal", "threat": {"text": "Outlaws come in by another way, and stop dead at the sight of the character.", "foe": {"name": "outlaw", "count": 2, "vitality": 10, "resolve": 8, "weapon": 1, "wants": "rob"}}}
+   ]
+  },
+  "cave": {
+   "style": "cave", "rooms": [3, 6],
+   "levels": [{"id": "upper", "name": "The upper cave"}, {"id": "deep", "name": "The deep", "from": 0.6}],
+   "entrance": {"name": "The cave mouth", "kind": "mouth", "size": "room", "light": "dim", "summary": "The mouth of the cave, cold air breathing out of it, old soot on the roof."},
+   "rooms_table": [
+    {"weight": 3, "level": "upper", "name": "the dripping gallery", "kind": "cavern", "size": "hall", "light": "dark", "summary": "A long gallery where water drips from a hundred points into shallow pools.", "features": ["shallow pools", "flowstone like melted wax"]},
+    {"weight": 2, "level": "upper", "name": "the bone pocket", "kind": "den", "size": "cramped", "light": "dark", "summary": "A low pocket off the passage, the floor deep in small bones.", "features": ["a floor of small bones", "a low roof"]},
+    {"weight": 2, "level": "upper", "name": "the painted chamber", "kind": "shrine", "size": "room", "light": "dark", "summary": "A chamber whose walls are covered in old red handprints and running animals.", "features": ["red handprints", "running animals painted on the rock"]},
+    {"weight": 3, "level": "deep", "name": "the black pool", "kind": "pool", "size": "cavern", "light": "dark", "summary": "A wide chamber taken up by still black water. It is impossible to tell how deep it is.", "features": ["still black water", "an echo that comes back wrong"]},
+    {"weight": 2, "level": "deep", "name": "the narrows", "kind": "passage", "size": "cramped", "light": "dark", "summary": "The rock closes in until it is a squeeze to go on.", "features": ["a tight squeeze", "scratches on the rock at shoulder height"]}
+   ],
+   "passages": [{"weight": 5, "kind": "open"}, {"weight": 2, "kind": "crawl"}, {"weight": 1, "kind": "water"}, {"weight": 1, "kind": "crawl", "hidden": true}],
+   "down": {"kind": "shaft", "summary": "a drop down a chimney in the rock"},
+   "foe_odds": 30,
+   "foes": [
+    {"weight": 3, "foe": {"name": "cave bear", "count": 1, "vitality": 20, "resolve": 10, "weapon": 2, "wants": "kill"}},
+    {"weight": 2, "foe": {"name": "giant spider", "count": 2, "vitality": 8, "resolve": 10, "weapon": 1, "wants": "kill"}},
+    {"weight": 1, "intensity": {"horror": 3}, "foe": {"name": "pale thing from the deep", "count": 1, "vitality": 14, "resolve": 20, "weapon": 1, "wants": "kill", "horror": true}}
+   ],
+   "hazard_odds": 25,
+   "hazards": [
+    {"weight": 2, "action": "climb the wet rock without slipping", "difficulty": "normal", "threat": "A foot goes out on the wet rock and the character falls, hard, against the stone."},
+    {"weight": 1, "action": "keep their nerve in the squeeze", "difficulty": "hard", "threat": "Wedged in the rock in the dark, panic takes hold, and it is a long time before they can move again."}
+   ],
+   "loot_odds": 20,
+   "loot": ["rope", "flint", "knife", "candles"],
+   "wanders": [
+    {"weight": 3, "text": "Water drips somewhere, slow as a clock."},
+    {"weight": 2, "text": "Bats pour past overhead in a rush of leather and are gone."},
+    {"weight": 1, "action": "keep the light burning in the draught", "difficulty": "normal", "threat": "A cold breath of air puts the light out, and the dark is total."}
+   ]
+  },
+  "lair": {
+   "style": "cave", "rooms": [2, 4],
+   "levels": [],
+   "entrance": {"name": "The way into the lair", "kind": "mouth", "size": "room", "light": "dim", "summary": "A trampled way in between rocks, bones cracked for marrow scattered across it."},
+   "rooms_table": [
+    {"weight": 3, "name": "the den", "kind": "den", "size": "room", "light": "dark", "summary": "The den itself: a hollow of flattened bedding and a stink that sticks to clothes.", "features": ["flattened bedding", "a pile of picked bones"]},
+    {"weight": 2, "name": "the larder", "kind": "larder", "size": "cramped", "light": "dark", "summary": "Where the beast keeps what it has not eaten yet.", "features": ["half-eaten carcasses", "a torn pack among them"]},
+    {"weight": 1, "name": "the back hollow", "kind": "cavern", "size": "room", "light": "dark", "summary": "A hollow behind the den, quieter, where the young are kept.", "features": ["small tracks", "a nest of hair and grass"]}
+   ],
+   "passages": [{"weight": 4, "kind": "open"}, {"weight": 1, "kind": "crawl"}],
+   "foe_odds": 80,
+   "foes": [
+    {"weight": 2, "foe": {"name": "dire wolf", "count": 2, "vitality": 12, "resolve": 10, "weapon": 1, "wants": "kill"}},
+    {"weight": 1, "intensity": {"horror": 2}, "foe": {"name": "ghoul", "count": 2, "vitality": 12, "resolve": 14, "weapon": 1, "wants": "kill", "horror": true}}
+   ],
+   "hazard_odds": 0, "hazards": [],
+   "loot_odds": 40,
+   "loot": ["knife", "rope", "boots", "cloak", "sack"],
+   "wanders": [
+    {"weight": 2, "text": "A low growl from somewhere deeper in, and then quiet."},
+    {"weight": 1, "action": "be gone before the beast comes back to its lair", "difficulty": "normal", "threat": {"text": "The lair's owner comes back, and finds the character in its home.", "foe": {"name": "dire wolf", "count": 1, "vitality": 14, "resolve": 12, "weapon": 1, "wants": "kill"}}}
+   ]
+  },
+  "battlefield": {
+   "style": "crypt", "rooms": [2, 4],
+   "levels": [],
+   "entrance": {"name": "The barrow door", "kind": "door", "size": "cramped", "light": "dim", "summary": "The stone door of a barrow, pushed half open some time ago by someone who wanted in."},
+   "rooms_table": [
+    {"weight": 3, "name": "the burial passage", "kind": "passage", "size": "cramped", "light": "dark", "summary": "A low stone passage lined with niches, each with its sleeper.", "features": ["niches with the dead in them", "grave goods long taken"]},
+    {"weight": 2, "name": "the captain's chamber", "kind": "tomb", "size": "room", "light": "dark", "summary": "A round chamber where a war captain lies on a stone bier in rusted mail.", "features": ["a stone bier", "rusted mail on the bones"]},
+    {"weight": 1, "name": "the ossuary", "kind": "ossuary", "size": "room", "light": "dark", "summary": "Bones stacked to the roof in patterns, skulls in rows facing the door.", "features": ["skulls in rows", "bones in patterns"]}
+   ],
+   "passages": [{"weight": 4, "kind": "open"}, {"weight": 1, "kind": "secret", "hidden": true}],
+   "foe_odds": 25,
+   "foes": [
+    {"weight": 1, "intensity": {"horror": 2}, "foe": {"name": "barrow dead", "count": 2, "vitality": 10, "resolve": 16, "weapon": 1, "wants": "kill", "horror": true}},
+    {"weight": 1, "foe": {"name": "grave robber", "count": 2, "vitality": 10, "resolve": 8, "weapon": 1, "wants": "rob"}}
+   ],
+   "hazard_odds": 20,
+   "hazards": [
+    {"weight": 1, "action": "go in without disturbing the dead", "difficulty": "normal", "threat": "A niche gives way and its sleeper spills out across the floor, and with it the sense of being watched."}
+   ],
+   "loot_odds": 30,
+   "loot": ["knife", "sword", "candles"],
+   "wanders": [
+    {"weight": 2, "text": "Somewhere in the barrow a bone settles with a small dry click."},
+    {"weight": 1, "text": "The light gutters, though there is no draught."}
+   ]
+  }
+ }
+}

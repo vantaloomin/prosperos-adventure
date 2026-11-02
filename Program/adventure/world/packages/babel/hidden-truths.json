@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "truth": "what is actually so",
+    "believed": "what most people think instead",
+    "known_by": "cast or faction ids, or descriptions, of who knows",
+    "surfaces": "ways it can come out in play",
+    "stakes": "what changes if the player learns it",
+    "origin": "source (Vanta's Mabry Curve archive) or draft; Mabry Curve marks some of its own as proposed, and they are canon unless contradicted"
+  },
+  "truths": [
+    {
+      "id": "the-tower-wears-skins",
+      "truth": "The tower has pulled people out of the world in waves for generations, and dresses itself up for each wave. Before the Turning it called itself the Long House and greeted arrivals like a tent preacher (Welcome, child, to the Long House) with numbered levels. Five weeks before the Halvorsen's wave it reskinned itself as BABEL. Who built it, and why it lies, is unknown.",
+      "believed": "Natives call the change the Turning and think the Stone simply started talking like a hotel concierge. New arrivals think they are inside a game.",
+      "known_by": ["darla-kinney", "the veterans from before the Turning", "rachel-ostrowski"],
+      "surfaces": ["veterans' nameplates showing old levels beside letter ranks", "a native who remembers the old greeting", "Merrow, who came up when the game was still the game"],
+      "stakes": "Nothing Grant knows about BABEL is safe to trust, and the studio may be how the tower reaches Earth.",
+      "origin": "source"
+    },
+    {
+      "id": "the-usher-is-rachel",
+      "truth": "The Usher, BABEL's Steward under another name, is voiced by Rachel Ostrowski, trapped in the System. She sees every scene on every floor and can nudge (a dream, a bug-report answer) at a cost to herself: each nudge burns a memory or a word she can no longer say.",
+      "believed": "The Usher is a canned onboarding voice.",
+      "known_by": ["rachel-ostrowski"],
+      "surfaces": ["a dream that is one of her real memories, ending wrong", "an answer through the beta's bug reporter (two taps behind the left ear)", "the Usher's voice going lowercase and clipped"],
+      "stakes": "Someone on the inside is watching, and helping costs her herself.",
+      "origin": "source"
+    },
+    {
+      "id": "lives-are-hidden",
+      "truth": "In the tower lives are finite and hidden. BABEL's rule (respawn at your last Waystone, lose a quarter of the bar, permadeath at zero) is what arrivals believe; the tower's own count is never shown and only rumored.",
+      "believed": "Death works the way BABEL's onboarding says.",
+      "known_by": ["the System"],
+      "surfaces": ["a veteran who died twice and came back once", "the Landing's dead from the first week after the Turning"],
+      "stakes": "Every death is a gamble with unknown stakes.",
+      "origin": "source"
+    },
+    {
+      "id": "the-migration-made-them-glass",
+      "truth": "The Turning migrated every veteran's old level onto BABEL's letter ranks with the Mabry curve, at 0% of the new bar: glass. The Landing buried people in the first week. Rank Trials must be unlocked at a Stone, which no veteran has done because the old skin had none; that is why nobody has ranked past D since.",
+      "believed": "The veterans think the new skin simply stopped letting them climb.",
+      "known_by": ["grant-mabry, once he sees a nameplate"],
+      "surfaces": ["Lv 14 ▸ Rank D over Darla's head", "a veteran asking why nobody ranks past D"],
+      "stakes": "Grant's own curve is laid over other people's lives, and his knowledge is worth a great deal.",
+      "origin": "source"
+    },
+    {
+      "id": "resonance",
+      "truth": "Desire grants forbidden power. Taboo, emotional bonds, power exchange, betrayal and broken vows pay XP and skills the System never advertises (Kindled, Afterglow, Surrender, Dominion, Forbidden Fruit, Oath-Scar, Afterimage, Shared Skin, Sacrament). The cost is corruption, which changes the user, and binding, which ties or changes the partner. An engagement counts as a vow.",
+      "believed": "BABEL disabled Resonance XP; testers who saw XP arrive at strange moments called it a bug.",
+      "known_by": ["the System", "sabeen-oro, in part (the vow-breakers always know their price)"],
+      "surfaces": ["XP arriving at a strange moment", "a Resonance line garbled on a sheet", "Oath-Scar visible on a full status pane"],
+      "stakes": "The fastest power in the tower comes from the things the cast most wants and fears.",
+      "origin": "source"
+    },
+    {
+      "id": "tether-is-back",
+      "truth": "Tether, the bond system Grant designed and cut, is live. A Tether shares stats, pain and feeling at a share weighed by what passes between the partners (honesty, danger, touch and desire raise it; hurt and withdrawal lower it). The rewritten code dropped consent: a request lands on an open target (an untuned link and active desire toward the requester) whether or not they know. A new Tether locks for about a day, pulling against the lock tightens it, and a mutual Tether is a vow in the tower's accounting. A Command laid on one partner is carried down the line to the other.",
+      "believed": "Tether was cut from BABEL in 2024.",
+      "known_by": ["the System", "the-close (it has used Tethers for forty years)", "rachel-ostrowski"],
+      "surfaces": ["a hook behind the breastbone that swings toward whoever weighs most", "a party link that leaks stray thoughts", "a Command that lands on two people"],
+      "stakes": "Anyone can be bound, and binding is the tower's favorite leash.",
+      "origin": "source"
+    },
+    {
+      "id": "tether-is-older-than-babel",
+      "truth": "The Close's sisters have spoken mind to mind with their gifts for at least forty years of Varrow time. BABEL's Tether was never original: the tower had it first, and Grant's design may be a copy of something he half remembered or was fed. The code nobody wrote is the tower writing itself into the build.",
+      "believed": "Grant wrote Tether v1 in the winter of 2023.",
+      "known_by": ["the System", "edmund-corve, without knowing what it means"],
+      "surfaces": ["the Margrave remembering Hask and Maud talking silently at his table", "a garbled line that appeared on dev accounts in 2025"],
+      "stakes": "The studio and the tower are connected, and nobody knows which way.",
+      "origin": "source"
+    },
+    {
+      "id": "the-scales-read-the-tether",
+      "truth": "The Scales of Saint Aurel read a giant's Tether field. A source reads as a gift (the needle points to the sun); an empty field reads as judgment (the cracked wall). The Close fills what it finds empty: it binds the giant to one of its vowed sisters, and through her his strength runs into the Close. A gift is kept for life: a cell, a lamp, a name read at Lammas, and a sister. A pending Tether request may read as spoken for while it lasts.",
+      "believed": "The weighing judges a soul before God.",
+      "known_by": ["the-archdeacon", "sister-ide", "sister-maud", "rachel-ostrowski"],
+      "surfaces": ["Brother Coll explaining what kept means", "Sister Maud trimming a dead giant's lamp", "a sister waiting eleven years for a giant"],
+      "stakes": "A giant who walks into Saint Aurel unbound walks out leashed.",
+      "origin": "source"
+    },
+    {
+      "id": "the-reach-are-nephil",
+      "truth": "The Reach giants are Nephil gone feral: giants with no Tether, no sister and no vows, grown past any lineage cap. A Close gift is a giant bound to a sister and set on the Wall to hold back his own kind, which is why an empty field reads as judgment. Nephil may sense each other; a Watcher Trace draws them.",
+      "believed": "Monsters out of the hills.",
+      "known_by": ["the-reach-giants", "the-archdeacon, by doctrine"],
+      "surfaces": ["a giant on the ridge looking at one climber in particular", "a giant at the ditch saying Brother", "a Nephil learning the Reach tongue in his sleep"],
+      "stakes": "The tower's giants and the climber's lineage are one people, and the Wall is a cage.",
+      "origin": "source"
+    },
+    {
+      "id": "the-confusion",
+      "truth": "Under the tower's BABEL skin is the older story it is named for: the confusion of tongues. Floors have their own languages; the Reach giants want to be whole again, as before the Confusion. A Nephil can be taught their tongue in his sleep on a spaced-repetition curve, by something that is listening. The Hidden class Speaker of the First Tongue holds a word that changes what something is.",
+      "believed": "Floor languages are just flavor; the Tongues skill handles them.",
+      "known_by": ["the-reach-giants", "the System"],
+      "surfaces": ["a skill note: ▒▒▒▒▒▒▒▒ is listening", "Babel Word, a Speaker skill that makes nearby speech unintelligible"],
+      "stakes": "Language itself is a power in the tower.",
+      "origin": "source"
+    },
+    {
+      "id": "teague",
+      "truth": "Teague held the Unique Watcher lineage before Grant's Trace. He ate at the Landing's cookfire for two years, went up to Varrow with Darla's people three years ago, passed the Close unweighed because his papers were in order and his friends were kind, stood a season on the Reachwall with Darla, sat at the Reach giants' fire and promised to open the Margrave's stair so they could climb out, and went up the cellar stair with Darla to open it from the top. Darla came back alone. The Reach came over the north tower two nights later looking for him and killed twelve men.",
+      "believed": "Darla says he was a man who couldn't keep his eyes to himself, and went up to look at some more.",
+      "known_by": ["darla-kinney", "edmund-corve, in part", "ruth-ann-teel, in part", "the-reach-giants"],
+      "surfaces": ["Ruth Ann Teel's hammer", "Pia's slate: ASK HER ABOUT TEAGUE", "the Muster board", "Hamid's warning", "the empty bunk in the Keep barracks", "a giant calling a ringed-eyed climber the Wakeful's son"],
+      "stakes": "Whoever carries the white ring inherits Teague's debts, his promises and his enemies.",
+      "origin": "source"
+    },
+    {
+      "id": "darlas-lead-is-false",
+      "truth": "Darla tells new arrivals that people missing from the Roll come down one floor off, almost always up, on Varrow. She doesn't know where they are. She says it to keep a useful arrival under her roof and in her debt overnight. The Halvorsen's wave's missing two are on the Gilded Bazaar, three floors up.",
+      "believed": "Off-Roll arrivals land on Varrow.",
+      "known_by": ["darla-kinney (that she doesn't know)", "rachel-ostrowski (where they are)"],
+      "surfaces": ["Rachel in a dream: they're up three", "a rumor down the cage traffic"],
+      "stakes": "The search for Bri and Chase starts on a lie that happens to point the right way.",
+      "origin": "source"
+    },
+    {
+      "id": "the-rats-are-people",
+      "truth": "BABEL's Varrow tutorial, rats in the mill cellar for Goodwife Marra, skins a real thing: Marked refugees hiding in Aldo's dry cellar waiting for the cage down. The Close pays a Talent a head for Marked found on its side of the ford, more for the furred. Whoever drew Varrow for the build knew the real floor.",
+      "believed": "It's a starter quest.",
+      "known_by": ["goodwife-marra", "the Marked of Varrow"],
+      "surfaces": ["a bite from something in the cellar that is not a rat", "Marra dropping the quest script"],
+      "stakes": "The tutorial is a moral choice, and BABEL's flavor text was drawn from life.",
+      "origin": "source"
+    },
+    {
+      "id": "the-compact-and-the-tithe",
+      "truth": "Since the Margrave's grandfather, the Close has kept its gift on the Keep's Wall, and in return every autumn at the cold it weighs Hollin's people. Those found wanting go to the Pens under Saint Aurel and down the cage in spring: the Varrow cage trade, whose buyers pay the Archdeacon in Talents. If the Keep keeps the Close's gifts past the first frost against the Close's will, the tithe doubles to forty souls.",
+      "believed": "Hollin knows about the weighing and the Pens. It does not ask where the cage goes.",
+      "known_by": ["the-archdeacon", "edmund-corve"],
+      "surfaces": ["Nell on the Bazaar, up from the Varrow cage trade", "Lady Aveline's harp", "the double tithe on the back sheet of a recall letter"],
+      "stakes": "The Close is a slaver, and the Margrave has been paying it.",
+      "origin": "source"
+    },
+    {
+      "id": "the-margraves-stair-trade",
+      "truth": "The Keep's bone-cellar stair opens onto the real Stair shaft, a private way off Varrow that bypasses the east-gate lift, up and down. In fourteen years the Margrave has sent forty-one people down it, people the Scales would have taken, for coin, labor or years on the Wall, and three up, Teague the third. The Bishop went down it six years ago, alone, and left a sealed letter.",
+      "believed": "In the beta the cellar stair only went up. The Close thinks Teague went into the hills.",
+      "known_by": ["edmund-corve", "darla-kinney", "the-bishop"],
+      "surfaces": ["the Margrave slipping: the people I've sent down it", "the Muster board's of the Stair"],
+      "stakes": "There is a way off Varrow that the Close does not control, and the Margrave's price for it.",
+      "origin": "source"
+    },
+    {
+      "id": "the-consort",
+      "truth": "The Hidden class Consort holds any number of Tethers at once. The Consort draws every bound partner's stats at that bond's share, stacked, and is a conduit: stats and skills can pass through him from one partner to another, partially and at a lower tier, while compulsions and wounds cannot be routed away. It is the exploit Grant cut Tether over, made into a class. A spoke is a door: a Command laid on a bound partner travels in through the hub. The Bishop foretold a Consort would come up the Stair bound to one and able to bind more.",
+      "believed": "Consort was a beta forum rumor; Grant told three testers it didn't exist.",
+      "known_by": ["the System", "the-bishop", "the-archdeacon, from the Bishop's letter"],
+      "surfaces": ["a garbled Bonds and Conduit line on a class pane", "a second seeking hook", "a partner's skill turning up in another's hands"],
+      "stakes": "Whoever learns what a Consort is will want to be one of his spokes, or to own him.",
+      "origin": "source"
+    },
+    {
+      "id": "the-coat-check",
+      "truth": "Minutes before the lights went at Halvorsen's, Chase found Bri alone in the hallway by the coat check, told her Grant had talked about what they like, and kissed her with his hand on the back of her neck. She let him. When she pushed him off it was \"Not here,\" not \"no\". Kenzie saw it from the end of the hallway, holding two drinks, one for Grant.",
+      "believed": "Grant believes his fiancée and his best friend are just missing.",
+      "known_by": ["bri-cole", "chase-whitaker", "kenzie-cole"],
+      "surfaces": ["a Watcher flash of a hand on the back of a neck and black hair coming loose", "Kenzie refusing to talk about Bri", "the gin and tonic that was his"],
+      "stakes": "The search for Bri is also a search for what she chose.",
+      "origin": "source"
+    },
+    {
+      "id": "the-bazaar-sells-names",
+      "truth": "Whoever comes down on the Gilded Bazaar is unranked on a D floor with almost nothing, in the one city built on pricing bodies and desire, and every rumor about the Turning is for sale there. Pell the Wire buys anything; Sabeen Oro buys from Pell. The arrival who wrote the new rules is the most valuable man on the Concourse, and once his name is sold, everyone on the Bazaar wants to own him.",
+      "believed": "Climbers think the Bazaar is a vendor floor.",
+      "known_by": ["sabeen-oro", "pell-the-wire"],
+      "surfaces": ["a bounty board posted down the chain", "a runner with a copper scales pin", "a copper chit stamped with a scale"],
+      "stakes": "The Halvorsen's wave can be bought and sold before they find each other.",
+      "origin": "source"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "about": "What is inside things in Hollin, rolled the first time the player looks (dungeon/finds.py), in Talents. Hollin keeps no catalog of its own, so what is found is coin and what the narrator describes.",
+  "containers": {
+    "chest": {
+      "words": [
+        "chest",
+        "strongbox",
+        "coffer",
+        "trunk",
+        "lockbox",
+        "box"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 4,
+          "coins": [
+            0.2,
+            1.5
+          ]
+        },
+        {
+          "weight": 2,
+          "note": "a bill of sale for a person, signed by a Close clerk, the price in Talents"
+        },
+        {
+          "weight": 2,
+          "note": "a gauntlet wrapped in blue cloth, its mate long gone"
+        },
+        {
+          "weight": 1,
+          "note": "a fall-trap in the lid that snaps shut on the wrist",
+          "trap": true
+        }
+      ]
+    },
+    "drawer": {
+      "words": [
+        "drawer",
+        "desk",
+        "cupboard",
+        "cabinet",
+        "shelf",
+        "shelves"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 4,
+          "nothing": true
+        },
+        {
+          "weight": 3,
+          "coins": [
+            0.05,
+            0.4
+          ]
+        },
+        {
+          "weight": 2,
+          "note": "a page of the Muster with three names struck through and one added in a new hand"
+        },
+        {
+          "weight": 1,
+          "note": "a tin sun-disc, the Close's, prised off a door"
+        }
+      ]
+    },
+    "crate": {
+      "words": [
+        "crate",
+        "barrel",
+        "sack",
+        "basket",
+        "cask",
+        "bin"
+      ],
+      "draws": 1,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 2,
+          "note": "sacks of grain, and under them a child's mitten"
+        },
+        {
+          "weight": 2,
+          "note": "salt pork for the Wall kitchen"
+        },
+        {
+          "weight": 1,
+          "note": "a nest of rats, real ones, who object"
+        }
+      ]
+    },
+    "body": {
+      "words": [
+        "body",
+        "corpse",
+        "dead man",
+        "dead woman",
+        "the dead"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 4,
+          "coins": [
+            0.1,
+            0.8
+          ]
+        },
+        {
+          "weight": 2,
+          "note": "the Keep's gray-and-blue livery, the stag cut off the breast"
+        },
+        {
+          "weight": 1,
+          "note": "a Close token that would pay a Talent to whoever brought this one in"
+        }
+      ]
+    },
+    "purse": {
+      "words": [
+        "purse",
+        "pocket",
+        "pockets",
+        "pouch",
+        "coin pouch",
+        "belt pouch"
+      ],
+      "draws": 1,
+      "table": [
+        {
+          "weight": 2,
+          "nothing": true
+        },
+        {
+          "weight": 6,
+          "coins": [
+            0.05,
+            0.6
+          ]
+        },
+        {
+          "weight": 1,
+          "note": "a twist of Sister Abelone's honeycomb in wax paper"
+        }
+      ]
+    },
+    "room": {
+      "words": [
+        "room",
+        "the place",
+        "the hut",
+        "the shed",
+        "the loft",
+        "the cellar"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 2,
+          "coins": [
+            0.1,
+            0.5
+          ]
+        },
+        {
+          "weight": 2,
+          "note": "scratches low on the wall, counting days, then stopping"
+        },
+        {
+          "weight": 1,
+          "note": "a cold draught from behind a shelf of jars, where the cellar goes further than it should"
+        }
+      ]
+    }
+  }
+}

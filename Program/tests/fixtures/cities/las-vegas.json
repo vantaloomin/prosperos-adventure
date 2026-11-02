@@ -1,0 +1,5481 @@
+{
+ "schema_version": 1,
+ "id": "las-vegas",
+ "name": "Las Vegas",
+ "region": "Nevada",
+ "country": "US",
+ "timezone": "America/Los_Angeles",
+ "aliases": [
+  "Vegas",
+  "Sin City",
+  "Las Vegas, NV",
+  "LV"
+ ],
+ "summary": "A desert metro in the Mojave built around the casino resorts of the Strip, with a 24-hour hospitality economy, sprawling master-planned suburbs and red-rock country on its edges.",
+ "lat": 36.17,
+ "lon": -115.14,
+ "speeds": {
+  "walk": 4.5,
+  "car": 35,
+  "rideshare": 35,
+  "bus": 12,
+  "monorail": 20
+ },
+ "names": {
+  "mix": {
+   "anglo": 3.5,
+   "hispanic": 3,
+   "black-american": 1.2,
+   "east-asian": 1.2,
+   "italian": 0.3,
+   "irish": 0.3,
+   "jewish": 0.3,
+   "south-asian": 0.2,
+   "slavic": 0.2,
+   "caribbean": 0.1
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Las Vegas places and neighborhoods written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "Well-known public places, institutions and employers from general knowledge. Businesses open and close and rents move: treat this as a snapshot for fiction. Rents are rounded estimates of typical asking ranges, not listings. Coordinates are approximate neighborhood centers."
+  },
+  "curated-climate-2026-10": {
+   "kind": "curated",
+   "title": "Approximate monthly climate for Las Vegas (Harry Reid International Airport)",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "Rounded values in line with NOAA 1991-2020 normals; refresh with scripts/world when network access to NOAA is available. Summer heat is extreme (often above 110F in July) and most summer rain falls in brief monsoon storms from July to September."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "the-strip",
+   "name": "The Strip (Paradise)",
+   "summary": "Las Vegas Boulevard's megaresorts, casinos, arenas and high-rise condo towers in unincorporated Paradise, busy around the clock.",
+   "vibe": [
+    "touristy",
+    "nightlife",
+    "24-hour",
+    "casinos",
+    "iconic"
+   ],
+   "lat": 36.114,
+   "lon": -115.173,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1300,
+     1900
+    ],
+    "one_bedroom": [
+     1600,
+     2600
+    ],
+    "two_bedroom": [
+     2300,
+     4000
+    ]
+   },
+   "housing": [
+    "high-rise-condo",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "deuce",
+    "monorail",
+    "rtc-bus",
+    "rideshare",
+    "walk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "convention-center",
+   "name": "Convention Center and Paradise Road",
+   "summary": "The blocks east of the Strip around the Las Vegas Convention Center, with older condos, apartments and off-Strip hotels.",
+   "vibe": [
+    "business",
+    "conventions",
+    "central"
+   ],
+   "lat": 36.131,
+   "lon": -115.152,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1300
+    ],
+    "one_bedroom": [
+     1150,
+     1550
+    ],
+    "two_bedroom": [
+     1450,
+     2000
+    ]
+   },
+   "housing": [
+    "apartment",
+    "condo",
+    "high-rise-condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "monorail",
+    "rtc-bus",
+    "rideshare",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "downtown",
+   "name": "Downtown and Fremont Street",
+   "summary": "The original casino district under the Fremont Street canopy, plus Fremont East bars, city and county offices, and Symphony Park.",
+   "vibe": [
+    "historic",
+    "nightlife",
+    "casinos",
+    "gritty",
+    "central"
+   ],
+   "lat": 36.17,
+   "lon": -115.141,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     900,
+     1300
+    ],
+    "one_bedroom": [
+     1100,
+     1600
+    ],
+    "two_bedroom": [
+     1400,
+     2100
+    ]
+   },
+   "housing": [
+    "apartment",
+    "high-rise-condo",
+    "loft"
+   ],
+   "walkability": "high",
+   "transit": [
+    "deuce",
+    "rtc-bus",
+    "rideshare",
+    "walk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arts-district",
+   "name": "Arts District (18b)",
+   "summary": "Former industrial blocks south of downtown turned galleries, antique shops, craft bars and restaurants, with new apartment buildings.",
+   "vibe": [
+    "arts",
+    "bars",
+    "food",
+    "up-and-coming"
+   ],
+   "lat": 36.158,
+   "lon": -115.152,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1350
+    ],
+    "one_bedroom": [
+     1150,
+     1650
+    ],
+    "two_bedroom": [
+     1500,
+     2200
+    ]
+   },
+   "housing": [
+    "apartment",
+    "loft",
+    "bungalow"
+   ],
+   "walkability": "high",
+   "transit": [
+    "deuce",
+    "rtc-bus",
+    "rideshare",
+    "walk"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chinatown",
+   "name": "Chinatown (Spring Mountain Road)",
+   "summary": "Miles of strip-mall restaurants along Spring Mountain Road west of the Strip, many open late for casino workers and chefs.",
+   "vibe": [
+    "food",
+    "diverse",
+    "late-night",
+    "asian"
+   ],
+   "lat": 36.126,
+   "lon": -115.197,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     850,
+     1100
+    ],
+    "one_bedroom": [
+     1000,
+     1350
+    ],
+    "two_bedroom": [
+     1250,
+     1700
+    ]
+   },
+   "housing": [
+    "apartment",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "rtc-bus",
+    "car",
+    "rideshare"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "medical-district",
+   "name": "Medical District",
+   "summary": "The hospital cluster around University Medical Center near Charleston Boulevard and US 95, with older ranch homes and apartments.",
+   "vibe": [
+    "medical",
+    "working-class",
+    "central"
+   ],
+   "lat": 36.16,
+   "lon": -115.168,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     800,
+     1050
+    ],
+    "one_bedroom": [
+     950,
+     1300
+    ],
+    "two_bedroom": [
+     1200,
+     1650
+    ]
+   },
+   "housing": [
+    "apartment",
+    "single-family"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "rtc-bus",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "university-district",
+   "name": "University District",
+   "summary": "The area around UNLV on Maryland Parkway, with student apartments, cheap eats and midcentury houses.",
+   "vibe": [
+    "students",
+    "academic",
+    "affordable"
+   ],
+   "lat": 36.108,
+   "lon": -115.143,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     800,
+     1050
+    ],
+    "one_bedroom": [
+     950,
+     1300
+    ],
+    "two_bedroom": [
+     1200,
+     1650
+    ]
+   },
+   "housing": [
+    "apartment",
+    "student-housing",
+    "single-family"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "rtc-bus",
+    "car",
+    "rideshare"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eastside",
+   "name": "East Las Vegas",
+   "summary": "Working-class east valley of ranch homes and apartments, with a large Latino community and taquerias along Fremont and Charleston.",
+   "vibe": [
+    "diverse",
+    "affordable",
+    "working-class",
+    "latino"
+   ],
+   "lat": 36.16,
+   "lon": -115.09,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     750,
+     1000
+    ],
+    "one_bedroom": [
+     900,
+     1200
+    ],
+    "two_bedroom": [
+     1100,
+     1550
+    ]
+   },
+   "housing": [
+    "single-family",
+    "apartment",
+    "mobile-home"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rtc-bus",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "north-las-vegas",
+   "name": "North Las Vegas",
+   "summary": "A separate city of newer subdivisions, warehouses and older neighborhoods, next to Nellis Air Force Base.",
+   "vibe": [
+    "affordable",
+    "suburban",
+    "military",
+    "industrial"
+   ],
+   "lat": 36.22,
+   "lon": -115.12,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     800,
+     1050
+    ],
+    "one_bedroom": [
+     950,
+     1300
+    ],
+    "two_bedroom": [
+     1250,
+     1700
+    ]
+   },
+   "housing": [
+    "single-family",
+    "apartment",
+    "townhouse"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rtc-bus",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "centennial-hills",
+   "name": "Centennial Hills",
+   "summary": "Northwest suburbs of stucco subdivisions and shopping centers on the road toward Mount Charleston.",
+   "vibe": [
+    "suburban",
+    "family",
+    "quiet"
+   ],
+   "lat": 36.275,
+   "lon": -115.265,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1300
+    ],
+    "one_bedroom": [
+     1200,
+     1550
+    ],
+    "two_bedroom": [
+     1500,
+     2000
+    ]
+   },
+   "housing": [
+    "single-family",
+    "apartment",
+    "casita"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rtc-bus",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "summerlin",
+   "name": "Summerlin",
+   "summary": "A large master-planned community on the west edge of the valley with trails, parks, a ballpark and Downtown Summerlin, beside Red Rock Canyon.",
+   "vibe": [
+    "master-planned",
+    "affluent",
+    "family",
+    "outdoorsy"
+   ],
+   "lat": 36.165,
+   "lon": -115.32,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1150,
+     1500
+    ],
+    "one_bedroom": [
+     1350,
+     1850
+    ],
+    "two_bedroom": [
+     1700,
+     2500
+    ]
+   },
+   "housing": [
+    "master-planned",
+    "single-family",
+    "townhouse",
+    "apartment",
+    "casita"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rtc-bus",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spring-valley",
+   "name": "Spring Valley",
+   "summary": "Central-west suburbs of apartment complexes and tract homes, where Chinatown's restaurants spill west along Spring Mountain and Rainbow.",
+   "vibe": [
+    "suburban",
+    "diverse",
+    "affordable"
+   ],
+   "lat": 36.108,
+   "lon": -115.245,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     900,
+     1150
+    ],
+    "one_bedroom": [
+     1050,
+     1400
+    ],
+    "two_bedroom": [
+     1350,
+     1800
+    ]
+   },
+   "housing": [
+    "apartment",
+    "single-family",
+    "condo"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rtc-bus",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "enterprise",
+   "name": "Southwest (Enterprise)",
+   "summary": "The fast-growing southwest valley of master-planned subdivisions like Mountain's Edge, plus data centers and warehouses.",
+   "vibe": [
+    "suburban",
+    "new-build",
+    "family"
+   ],
+   "lat": 36.025,
+   "lon": -115.24,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1300
+    ],
+    "one_bedroom": [
+     1200,
+     1600
+    ],
+    "two_bedroom": [
+     1500,
+     2100
+    ]
+   },
+   "housing": [
+    "master-planned",
+    "single-family",
+    "apartment",
+    "casita"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rtc-bus",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southern-highlands",
+   "name": "Southern Highlands",
+   "summary": "A master-planned community at the south end of the valley built around a private golf club, with gated enclaves.",
+   "vibe": [
+    "affluent",
+    "gated",
+    "golf",
+    "quiet"
+   ],
+   "lat": 35.995,
+   "lon": -115.2,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1150,
+     1450
+    ],
+    "one_bedroom": [
+     1300,
+     1750
+    ],
+    "two_bedroom": [
+     1650,
+     2400
+    ]
+   },
+   "housing": [
+    "master-planned",
+    "single-family",
+    "apartment"
+   ],
+   "walkability": "low",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green-valley",
+   "name": "Green Valley (Henderson)",
+   "summary": "Henderson's older master-planned core of parks, schools and shopping centers, popular with families.",
+   "vibe": [
+    "suburban",
+    "family",
+    "safe"
+   ],
+   "lat": 36.035,
+   "lon": -115.085,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1050,
+     1350
+    ],
+    "one_bedroom": [
+     1200,
+     1650
+    ],
+    "two_bedroom": [
+     1550,
+     2200
+    ]
+   },
+   "housing": [
+    "master-planned",
+    "single-family",
+    "apartment",
+    "townhouse"
+   ],
+   "walkability": "low",
+   "transit": [
+    "rtc-bus",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "henderson",
+   "name": "Downtown Henderson",
+   "summary": "Henderson's original town center around Water Street, with newer subdivisions climbing toward the River Mountains.",
+   "vibe": [
+    "suburban",
+    "small-town",
+    "family"
+   ],
+   "lat": 36.03,
+   "lon": -114.982,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1250
+    ],
+    "one_bedroom": [
+     1100,
+     1500
+    ],
+    "two_bedroom": [
+     1450,
+     2000
+    ]
+   },
+   "housing": [
+    "single-family",
+    "apartment",
+    "townhouse"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "rtc-bus",
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lake-las-vegas",
+   "name": "Lake Las Vegas",
+   "summary": "A resort community around a man-made lake at the eastern edge of Henderson, with Mediterranean-style condos and a village of restaurants.",
+   "vibe": [
+    "waterfront",
+    "resort",
+    "quiet",
+    "affluent"
+   ],
+   "lat": 36.105,
+   "lon": -114.928,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1200,
+     1500
+    ],
+    "one_bedroom": [
+     1400,
+     1900
+    ],
+    "two_bedroom": [
+     1800,
+     2700
+    ]
+   },
+   "housing": [
+    "condo",
+    "villa",
+    "single-family"
+   ],
+   "walkability": "low",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boulder-city",
+   "name": "Boulder City",
+   "summary": "A small, quiet town built for the Hoover Dam workers, with no casinos and Lake Mead on its doorstep.",
+   "vibe": [
+    "small-town",
+    "historic",
+    "outdoorsy",
+    "quiet"
+   ],
+   "lat": 35.979,
+   "lon": -114.832,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     900,
+     1150
+    ],
+    "one_bedroom": [
+     1050,
+     1400
+    ],
+    "two_bedroom": [
+     1350,
+     1850
+    ]
+   },
+   "housing": [
+    "single-family",
+    "apartment",
+    "mobile-home"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "car"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "rtc-bus",
+   "name": "RTC Transit buses",
+   "kind": "bus",
+   "summary": "The Regional Transportation Commission's valley-wide bus network, running 24 hours on major routes.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "deuce",
+   "name": "The Deuce",
+   "kind": "bus",
+   "summary": "Double-decker RTC buses running around the clock along the Strip to downtown.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "monorail",
+   "name": "Las Vegas Monorail",
+   "kind": "monorail",
+   "summary": "Elevated line behind the east side of the Strip from MGM Grand to SAHARA, with a stop at the Convention Center.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "car",
+   "name": "Driving",
+   "kind": "car",
+   "summary": "How most residents get around: wide arterials, the I-15 and the 215 beltway, and plentiful parking off the Strip.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rideshare",
+   "name": "Rideshare and taxis",
+   "kind": "rideshare",
+   "summary": "Uber, Lyft and cabs with dedicated pickup areas at every resort and the airport.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "walk",
+   "name": "Walking",
+   "kind": "walk",
+   "summary": "Practical on the Strip and downtown via pedestrian bridges, though distances between resorts are long and summer heat is punishing.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "bellagio-fountains",
+   "name": "Fountains of Bellagio",
+   "kind": "landmark",
+   "neighborhood": "the-strip",
+   "summary": "Free water shows set to music on the lake in front of Bellagio, every half hour or so from the afternoon.",
+   "tags": [
+    "free",
+    "iconic",
+    "romantic",
+    "show"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bellagio-conservatory",
+   "name": "Bellagio Conservatory & Botanical Gardens",
+   "kind": "attraction",
+   "neighborhood": "the-strip",
+   "summary": "Free indoor garden with elaborate floral displays that change with the seasons.",
+   "tags": [
+    "free",
+    "flowers",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "o-cirque",
+   "name": "\"O\" by Cirque du Soleil",
+   "kind": "venue",
+   "neighborhood": "the-strip",
+   "summary": "Long-running water-themed Cirque show staged in and above a pool at Bellagio.",
+   "tags": [
+    "show",
+    "acrobatics",
+    "iconic"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "welcome-sign",
+   "name": "Welcome to Fabulous Las Vegas sign",
+   "kind": "landmark",
+   "neighborhood": "the-strip",
+   "summary": "The 1959 neon sign on the south Strip, with a small parking lot and a queue for photos.",
+   "tags": [
+    "photo-op",
+    "iconic",
+    "neon"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "high-roller",
+   "name": "High Roller",
+   "kind": "attraction",
+   "neighborhood": "the-strip",
+   "summary": "Giant observation wheel at The LINQ with glass cabins and Strip views; a full turn takes about half an hour.",
+   "tags": [
+    "views",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "linq-promenade",
+   "name": "The LINQ Promenade",
+   "kind": "shopping",
+   "neighborhood": "the-strip",
+   "summary": "Open-air street of bars, restaurants and shops between the Strip and the High Roller.",
+   "tags": [
+    "walk",
+    "bars",
+    "shops"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brooklyn-bowl",
+   "name": "Brooklyn Bowl",
+   "kind": "venue",
+   "neighborhood": "the-strip",
+   "summary": "Bowling alley and concert venue on the LINQ Promenade.",
+   "tags": [
+    "live-music",
+    "bowling"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "venetian-canals",
+   "name": "Grand Canal Shoppes gondolas",
+   "kind": "attraction",
+   "neighborhood": "the-strip",
+   "summary": "Gondola rides along indoor canals under a painted sky at The Venetian, with an outdoor canal on the Strip.",
+   "tags": [
+    "romantic",
+    "kitsch",
+    "shopping"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sphere",
+   "name": "Sphere",
+   "kind": "venue",
+   "neighborhood": "the-strip",
+   "summary": "The LED-covered globe behind The Venetian, showing immersive films and concert residencies on a wraparound screen.",
+   "tags": [
+    "concerts",
+    "immersive",
+    "iconic"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "forum-shops",
+   "name": "The Forum Shops at Caesars",
+   "kind": "shopping",
+   "neighborhood": "the-strip",
+   "summary": "Luxury mall at Caesars Palace built like a Roman street, with a spiral escalator and animatronic fountain shows.",
+   "tags": [
+    "luxury",
+    "mall",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bacchanal-buffet",
+   "name": "Bacchanal Buffet",
+   "kind": "restaurant",
+   "neighborhood": "the-strip",
+   "summary": "Caesars Palace's huge buffet with hundreds of dishes across live-cooking stations.",
+   "tags": [
+    "buffet",
+    "splurge"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "buffet",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fashion-show-mall",
+   "name": "Fashion Show Las Vegas",
+   "kind": "shopping",
+   "neighborhood": "the-strip",
+   "summary": "Big indoor mall on the Strip with department stores and a runway in the center court.",
+   "tags": [
+    "mall",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tacos-el-gordo",
+   "name": "Tacos El Gordo",
+   "kind": "restaurant",
+   "neighborhood": "the-strip",
+   "summary": "Tijuana-style taqueria on the north Strip with adobada shaved off the spit, open into the small hours.",
+   "tags": [
+    "tacos",
+    "late-night",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peppermill",
+   "name": "Peppermill Restaurant & Fireside Lounge",
+   "kind": "restaurant",
+   "neighborhood": "the-strip",
+   "summary": "Twenty-four-hour diner and neon-lit lounge with a firepit, unchanged since the 1970s.",
+   "tags": [
+    "24-hour",
+    "retro",
+    "diner"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hash-house-linq",
+   "name": "Hash House A Go Go at The LINQ",
+   "kind": "restaurant",
+   "neighborhood": "the-strip",
+   "summary": "Brunch spot known for enormous portions of farm-style breakfast.",
+   "tags": [
+    "brunch",
+    "huge-portions"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "american-breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "golden-steer",
+   "name": "Golden Steer Steakhouse",
+   "kind": "restaurant",
+   "neighborhood": "the-strip",
+   "summary": "Old-Vegas steakhouse from 1958 with red leather booths and tableside Caesar salad.",
+   "tags": [
+    "steak",
+    "old-vegas",
+    "retro"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "steakhouse",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "t-mobile-arena",
+   "name": "T-Mobile Arena",
+   "kind": "stadium",
+   "neighborhood": "the-strip",
+   "summary": "Home of the Vegas Golden Knights, also used for big concerts and fights.",
+   "tags": [
+    "hockey",
+    "concerts",
+    "sports"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "allegiant-stadium",
+   "name": "Allegiant Stadium",
+   "kind": "stadium",
+   "neighborhood": "the-strip",
+   "summary": "Domed home of the Las Vegas Raiders and UNLV football, just west of I-15 from Mandalay Bay.",
+   "tags": [
+    "football",
+    "concerts",
+    "sports"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shark-reef",
+   "name": "Shark Reef Aquarium",
+   "kind": "attraction",
+   "neighborhood": "the-strip",
+   "summary": "Aquarium at Mandalay Bay with a walk-through shark tunnel.",
+   "tags": [
+    "animals",
+    "kids",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "strat-skypod",
+   "name": "The STRAT SkyPod",
+   "kind": "attraction",
+   "neighborhood": "the-strip",
+   "summary": "Observation deck atop the STRAT tower at the north end of the Strip, with thrill rides on the roof.",
+   "tags": [
+    "views",
+    "thrill-rides"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "area15",
+   "name": "AREA15 and Omega Mart",
+   "kind": "attraction",
+   "neighborhood": "the-strip",
+   "summary": "Immersive art and entertainment complex just west of the Strip, anchored by Meow Wolf's Omega Mart.",
+   "tags": [
+    "immersive",
+    "art",
+    "quirky"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pinball-hall-of-fame",
+   "name": "Pinball Hall of Fame",
+   "kind": "attraction",
+   "neighborhood": "the-strip",
+   "summary": "Warehouse of playable vintage pinball and arcade machines near the Welcome sign.",
+   "tags": [
+    "arcade",
+    "retro",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fremont-street-experience",
+   "name": "Fremont Street Experience",
+   "kind": "landmark",
+   "neighborhood": "downtown",
+   "summary": "Pedestrian mall of old casinos under a huge LED canopy with nightly light shows, buskers and a zipline.",
+   "tags": [
+    "neon",
+    "free",
+    "street-performers",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mob-museum",
+   "name": "The Mob Museum",
+   "kind": "museum",
+   "neighborhood": "downtown",
+   "summary": "National museum of organised crime and law enforcement in the former federal courthouse, with a speakeasy and distillery downstairs.",
+   "tags": [
+    "history",
+    "crime",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "neon-museum",
+   "name": "The Neon Museum",
+   "kind": "museum",
+   "neighborhood": "downtown",
+   "summary": "Outdoor \"Neon Boneyard\" of rescued casino signs, best on the evening guided tours when some are relit.",
+   "tags": [
+    "neon",
+    "history",
+    "photo-op"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "container-park",
+   "name": "Downtown Container Park",
+   "kind": "shopping",
+   "neighborhood": "downtown",
+   "summary": "Small boutiques and bars in stacked shipping containers behind a fire-breathing praying mantis sculpture.",
+   "tags": [
+    "boutiques",
+    "quirky",
+    "kids"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "atomic-liquors",
+   "name": "Atomic Liquors",
+   "kind": "bar",
+   "neighborhood": "downtown",
+   "summary": "Fremont East bar that dates to the 1950s, billed as the oldest freestanding bar in the city.",
+   "tags": [
+    "bar",
+    "historic",
+    "craft-beer"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "circa-stadium-swim",
+   "name": "Stadium Swim at Circa",
+   "kind": "attraction",
+   "neighborhood": "downtown",
+   "summary": "Tiered pool amphitheater at Circa resort facing a giant screen showing live sports.",
+   "tags": [
+    "pool",
+    "sports",
+    "party"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "smith-center",
+   "name": "The Smith Center for the Performing Arts",
+   "kind": "venue",
+   "neighborhood": "downtown",
+   "summary": "Art deco performing arts center in Symphony Park hosting touring Broadway, the symphony and the ballet.",
+   "tags": [
+    "theater",
+    "broadway",
+    "classical"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "discovery-childrens-museum",
+   "name": "Discovery Children's Museum",
+   "kind": "museum",
+   "neighborhood": "downtown",
+   "summary": "Three floors of hands-on exhibits in Symphony Park.",
+   "tags": [
+    "kids",
+    "rainy-day",
+    "science"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "publicus",
+   "name": "PublicUs",
+   "kind": "cafe",
+   "neighborhood": "downtown",
+   "summary": "Airy Fremont East coffee shop and bakery popular for laptop mornings.",
+   "tags": [
+    "coffee",
+    "pastries",
+    "brunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "esthers-kitchen",
+   "name": "Esther's Kitchen",
+   "kind": "restaurant",
+   "neighborhood": "arts-district",
+   "summary": "Arts District Italian restaurant known for house-made pasta and sourdough.",
+   "tags": [
+    "pasta",
+    "local-favorite"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "velveteen-rabbit",
+   "name": "Velveteen Rabbit",
+   "kind": "bar",
+   "neighborhood": "arts-district",
+   "summary": "Moody craft cocktail bar with a patio in the Arts District.",
+   "tags": [
+    "cocktails",
+    "patio"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arts-factory",
+   "name": "Arts Factory",
+   "kind": "attraction",
+   "neighborhood": "arts-district",
+   "summary": "Converted building of galleries and studios at the heart of 18b and its First Friday art walk.",
+   "tags": [
+    "art",
+    "galleries",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pho-kim-long",
+   "name": "Pho Kim Long",
+   "kind": "restaurant",
+   "neighborhood": "chinatown",
+   "summary": "Vietnamese noodle house on Spring Mountain Road open around the clock.",
+   "tags": [
+    "pho",
+    "24-hour",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "vietnamese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "raku",
+   "name": "Raku",
+   "kind": "restaurant",
+   "neighborhood": "chinatown",
+   "summary": "Small Japanese robata grill famous for house-made tofu, open late and popular with off-duty chefs.",
+   "tags": [
+    "japanese",
+    "late-night",
+    "chef-favorite"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "japanese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chinatown-plaza",
+   "name": "Chinatown Plaza",
+   "kind": "shopping",
+   "neighborhood": "chinatown",
+   "summary": "The original 1990s Chinatown mall on Spring Mountain Road, with a gate, Asian grocers and restaurants.",
+   "tags": [
+    "food",
+    "groceries",
+    "asian"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "herbs-and-rye",
+   "name": "Herbs & Rye",
+   "kind": "bar",
+   "neighborhood": "chinatown",
+   "summary": "Dim, award-winning cocktail bar on West Sahara with half-price steaks at happy hour.",
+   "tags": [
+    "cocktails",
+    "steak",
+    "happy-hour"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lotus-of-siam",
+   "name": "Lotus of Siam",
+   "kind": "restaurant",
+   "neighborhood": "university-district",
+   "summary": "Celebrated Thai restaurant known for Northern Thai dishes and a long riesling list.",
+   "tags": [
+    "thai",
+    "local-favorite"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "thai",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ellis-island",
+   "name": "Ellis Island Casino & Brewery",
+   "kind": "bar",
+   "neighborhood": "convention-center",
+   "summary": "Locals' casino off the Strip with a brewery, karaoke lounge and a cheap steak special.",
+   "tags": [
+    "karaoke",
+    "brewery",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "thomas-and-mack",
+   "name": "Thomas & Mack Center",
+   "kind": "stadium",
+   "neighborhood": "university-district",
+   "summary": "UNLV's arena for Runnin' Rebels basketball and the National Finals Rodeo.",
+   "tags": [
+    "basketball",
+    "rodeo",
+    "sports"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barrick-museum",
+   "name": "Marjorie Barrick Museum of Art",
+   "kind": "museum",
+   "neighborhood": "university-district",
+   "summary": "Free contemporary art museum on the UNLV campus.",
+   "tags": [
+    "art",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "springs-preserve",
+   "name": "Springs Preserve",
+   "kind": "museum",
+   "neighborhood": "medical-district",
+   "summary": "Desert gardens, trails and museums at the site of the springs where Las Vegas began.",
+   "tags": [
+    "nature",
+    "history",
+    "kids"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "premium-outlets-north",
+   "name": "Las Vegas North Premium Outlets",
+   "kind": "shopping",
+   "neighborhood": "medical-district",
+   "summary": "Large open-air outlet mall just west of downtown.",
+   "tags": [
+    "outlets",
+    "bargains"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "freeds-bakery",
+   "name": "Freed's Bakery",
+   "kind": "cafe",
+   "neighborhood": "eastside",
+   "summary": "Family bakery since the 1950s, known for elaborate custom cakes.",
+   "tags": [
+    "cakes",
+    "pastries",
+    "family-run"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wetlands-park",
+   "name": "Clark County Wetlands Park",
+   "kind": "park",
+   "neighborhood": "eastside",
+   "summary": "Ponds, cottonwoods and trails along the Las Vegas Wash with a nature center and good birdwatching.",
+   "tags": [
+    "nature",
+    "birds",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "red-rock-canyon",
+   "name": "Red Rock Canyon National Conservation Area",
+   "kind": "park",
+   "neighborhood": "summerlin",
+   "summary": "Red sandstone cliffs on a 13-mile scenic loop drive with hiking and climbing, minutes from Summerlin.",
+   "tags": [
+    "hiking",
+    "climbing",
+    "scenic-drive",
+    "desert"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "las-vegas-ballpark",
+   "name": "Las Vegas Ballpark",
+   "kind": "stadium",
+   "neighborhood": "summerlin",
+   "summary": "Minor-league home of the Las Vegas Aviators, with a pool beyond the outfield.",
+   "tags": [
+    "baseball",
+    "sports",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "downtown-summerlin",
+   "name": "Downtown Summerlin",
+   "kind": "shopping",
+   "neighborhood": "summerlin",
+   "summary": "Open-air shopping and dining district at the center of Summerlin.",
+   "tags": [
+    "shops",
+    "restaurants",
+    "walk"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "summerlin-farmers-market",
+   "name": "Downtown Summerlin Farmers Market",
+   "kind": "market",
+   "neighborhood": "summerlin",
+   "summary": "Weekly farmers market with produce, baked goods and food stalls.",
+   "tags": [
+    "farmers-market",
+    "food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "floyd-lamb-park",
+   "name": "Floyd Lamb Park at Tule Springs",
+   "kind": "park",
+   "neighborhood": "centennial-hills",
+   "summary": "Shady historic ranch park with ponds, peacocks and old cottonwoods.",
+   "tags": [
+    "picnic",
+    "ponds",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mount-charleston",
+   "name": "Mount Charleston",
+   "kind": "trail",
+   "neighborhood": "centennial-hills",
+   "summary": "Pine forest trails in the Spring Mountains, about 45 minutes from the northwest valley and markedly cooler, with winter snow.",
+   "tags": [
+    "hiking",
+    "mountains",
+    "snow",
+    "cool-escape"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "craig-ranch-park",
+   "name": "Craig Ranch Regional Park",
+   "kind": "park",
+   "neighborhood": "north-las-vegas",
+   "summary": "Large park in North Las Vegas with a skate park, dog parks and an outdoor amphitheater.",
+   "tags": [
+    "park",
+    "dogs",
+    "concerts"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "valley-of-fire",
+   "name": "Valley of Fire State Park",
+   "kind": "trail",
+   "neighborhood": "north-las-vegas",
+   "summary": "Red sandstone formations and petroglyphs about an hour northeast of the city.",
+   "tags": [
+    "hiking",
+    "desert",
+    "day-trip"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ethel-m",
+   "name": "Ethel M Chocolates factory and cactus garden",
+   "kind": "attraction",
+   "neighborhood": "green-valley",
+   "summary": "Chocolate factory with a free botanical cactus garden that is lit up for the holidays.",
+   "tags": [
+    "chocolate",
+    "free",
+    "garden"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-district-gvr",
+   "name": "The District at Green Valley Ranch",
+   "kind": "shopping",
+   "neighborhood": "green-valley",
+   "summary": "Walkable shopping street beside the Green Valley Ranch resort.",
+   "tags": [
+    "shops",
+    "restaurants"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "water-street",
+   "name": "Water Street District",
+   "kind": "landmark",
+   "neighborhood": "henderson",
+   "summary": "Henderson's small historic main street with an events plaza, restaurants and a weekly farmers market.",
+   "tags": [
+    "main-street",
+    "events"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sloan-canyon",
+   "name": "Sloan Canyon National Conservation Area",
+   "kind": "trail",
+   "neighborhood": "henderson",
+   "summary": "Desert hiking south of Henderson to a canyon of ancient petroglyphs.",
+   "tags": [
+    "hiking",
+    "petroglyphs",
+    "desert"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "river-mountains-loop",
+   "name": "River Mountains Loop Trail",
+   "kind": "trail",
+   "neighborhood": "henderson",
+   "summary": "Paved 34-mile loop linking Henderson, Boulder City and Lake Mead.",
+   "tags": [
+    "cycling",
+    "running",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lake-las-vegas-village",
+   "name": "MonteLago Village",
+   "kind": "landmark",
+   "neighborhood": "lake-las-vegas",
+   "summary": "Lakeside village of restaurants, paddleboard and boat rentals at Lake Las Vegas.",
+   "tags": [
+    "waterfront",
+    "paddleboard",
+    "quiet"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hoover-dam",
+   "name": "Hoover Dam",
+   "kind": "landmark",
+   "neighborhood": "boulder-city",
+   "summary": "The 1930s concrete dam on the Colorado River at the Arizona line, with tours and a bypass bridge walkway.",
+   "tags": [
+    "history",
+    "engineering",
+    "views",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lake-mead",
+   "name": "Lake Mead National Recreation Area",
+   "kind": "park",
+   "neighborhood": "boulder-city",
+   "summary": "Reservoir behind the dam for boating, kayaking and swimming at Boulder Beach, with the bathtub ring of drought visible.",
+   "tags": [
+    "lake",
+    "boating",
+    "swimming"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "historic-railroad-trail",
+   "name": "Historic Railroad Trail",
+   "kind": "trail",
+   "neighborhood": "boulder-city",
+   "summary": "Flat gravel trail through five railroad tunnels above Lake Mead toward Hoover Dam; bighorn sheep are often seen.",
+   "tags": [
+    "hiking",
+    "history",
+    "wildlife"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seven-magic-mountains",
+   "name": "Seven Magic Mountains",
+   "kind": "landmark",
+   "neighborhood": "southern-highlands",
+   "summary": "Ugo Rondinone's stacks of day-glo painted boulders in the desert off I-15, about 20 minutes south of the valley.",
+   "tags": [
+    "art",
+    "photo-op",
+    "desert"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hofbrauhaus-las-vegas",
+   "name": "Hofbräuhaus Las Vegas",
+   "kind": "restaurant",
+   "neighborhood": "convention-center",
+   "summary": "Munich beer-hall replica on Paradise Road with oompah bands, pretzels and steins.",
+   "tags": [
+    "beer-hall",
+    "german",
+    "live-music"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "family"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "german",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "battistas",
+   "name": "Battista's Hole in the Wall",
+   "kind": "restaurant",
+   "neighborhood": "convention-center",
+   "summary": "Old-school Italian restaurant behind the Strip since 1970, with an accordion player and free house wine.",
+   "tags": [
+    "italian",
+    "old-school",
+    "kitschy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "westgate-las-vegas",
+   "name": "Westgate Las Vegas",
+   "kind": "landmark",
+   "neighborhood": "convention-center",
+   "summary": "The former Las Vegas Hilton beside the convention center, where Elvis played hundreds of shows, with a huge sportsbook.",
+   "tags": [
+    "casino",
+    "elvis",
+    "sportsbook"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "winchester-park",
+   "name": "Winchester Dondero Cultural Center",
+   "kind": "park",
+   "neighborhood": "convention-center",
+   "summary": "County park and cultural center with a playground, gallery, classes and a small theater.",
+   "tags": [
+    "playground",
+    "arts",
+    "classes"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "main-street-antiques",
+   "name": "Main Street antique row",
+   "kind": "shopping",
+   "neighborhood": "arts-district",
+   "summary": "Blocks of vintage and antique shops selling midcentury furniture, casino memorabilia and old neon.",
+   "tags": [
+    "vintage",
+    "antiques",
+    "browsing"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "makers-and-finders",
+   "name": "Makers & Finders",
+   "kind": "cafe",
+   "neighborhood": "arts-district",
+   "summary": "Latin-inspired coffee bar and brunch spot in the Arts District.",
+   "tags": [
+    "coffee",
+    "brunch",
+    "latin"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "latin",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "99-ranch-las-vegas",
+   "name": "99 Ranch Market",
+   "kind": "market",
+   "neighborhood": "chinatown",
+   "summary": "Big Asian supermarket anchoring a Spring Mountain Road plaza, with a bakery and hot food counters.",
+   "tags": [
+    "grocery",
+    "asian"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ping-pang-pong",
+   "name": "Ping Pang Pong",
+   "kind": "restaurant",
+   "neighborhood": "chinatown",
+   "summary": "Locals' dim sum restaurant inside the Gold Coast casino, packed for weekend lunches.",
+   "tags": [
+    "dim-sum",
+    "chinese",
+    "locals"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "chinese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lorenzi-park",
+   "name": "Lorenzi Park",
+   "kind": "park",
+   "neighborhood": "medical-district",
+   "summary": "City park with a duck pond, tennis courts, a playground and a walking loop.",
+   "tags": [
+    "pond",
+    "playground",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dona-maria-tamales",
+   "name": "Doña Maria Tamales",
+   "kind": "restaurant",
+   "neighborhood": "medical-district",
+   "summary": "Family Mexican restaurant on Charleston Boulevard famous for its tamales since the 1980s.",
+   "tags": [
+    "tamales",
+    "mexican",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "mexican",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-las-vegas-library",
+   "name": "West Las Vegas Library",
+   "kind": "library",
+   "neighborhood": "medical-district",
+   "summary": "Historic Westside branch library with a theater and African American collections.",
+   "tags": [
+    "books",
+    "theater",
+    "black-history"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clark-county-library",
+   "name": "Clark County Library",
+   "kind": "library",
+   "neighborhood": "university-district",
+   "summary": "Large library on Flamingo Road near UNLV with a theater and art gallery.",
+   "tags": [
+    "books",
+    "study",
+    "theater"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crown-and-anchor",
+   "name": "Crown & Anchor British Pub",
+   "kind": "bar",
+   "neighborhood": "university-district",
+   "summary": "Twenty-four-hour British pub near UNLV with fish and chips and football on the TVs.",
+   "tags": [
+    "pub",
+    "british",
+    "late-night"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "british-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-las-vegas-library",
+   "name": "East Las Vegas Library",
+   "kind": "library",
+   "neighborhood": "eastside",
+   "summary": "Branch library with bilingual programs, computers and a busy children's room.",
+   "tags": [
+    "books",
+    "bilingual",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "frenchman-mountain",
+   "name": "Frenchman Mountain",
+   "kind": "trail",
+   "neighborhood": "eastside",
+   "summary": "Steep, rocky hike up the mountain at the valley's east edge for a view over the whole city.",
+   "tags": [
+    "hiking",
+    "views",
+    "sunrise"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "commercial-center",
+   "name": "Commercial Center",
+   "kind": "shopping",
+   "neighborhood": "eastside",
+   "summary": "Aging 1960s shopping center on East Sahara, home to cheap Asian restaurants and some of the city's oldest gay bars.",
+   "tags": [
+    "cheap-eats",
+    "lgbtq",
+    "retro"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "huntridge-tavern",
+   "name": "Huntridge Tavern",
+   "kind": "bar",
+   "neighborhood": "eastside",
+   "summary": "Classic dive bar at Charleston and Maryland Parkway with cheap drinks and video poker.",
+   "tags": [
+    "dive-bar",
+    "video-poker",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aliante-nature-park",
+   "name": "Aliante Nature Discovery Park",
+   "kind": "park",
+   "neighborhood": "north-las-vegas",
+   "summary": "Park with a lake, dinosaur-themed playground and walking paths.",
+   "tags": [
+    "lake",
+    "playground",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "alexander-library",
+   "name": "Alexander Library",
+   "kind": "library",
+   "neighborhood": "north-las-vegas",
+   "summary": "North Las Vegas branch library with study rooms and computers.",
+   "tags": [
+    "books",
+    "study",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aliante-casino",
+   "name": "Aliante Casino",
+   "kind": "nightlife",
+   "neighborhood": "north-las-vegas",
+   "summary": "Locals casino with a movie theater, bars and a buffet.",
+   "tags": [
+    "casino",
+    "locals",
+    "movies"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tule-springs",
+   "name": "Tule Springs Fossil Beds National Monument",
+   "kind": "trail",
+   "neighborhood": "north-las-vegas",
+   "summary": "Open desert washes where Ice Age mammoth and camel fossils were found, with simple trailheads.",
+   "tags": [
+    "fossils",
+    "desert",
+    "hiking"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "centennial-hills-library",
+   "name": "Centennial Hills Library",
+   "kind": "library",
+   "neighborhood": "centennial-hills",
+   "summary": "Big suburban branch library with a YMCA next door.",
+   "tags": [
+    "books",
+    "kids",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "centennial-hills-park",
+   "name": "Centennial Hills Park",
+   "kind": "park",
+   "neighborhood": "centennial-hills",
+   "summary": "Large city park with an amphitheater, fields, playgrounds and a dog park.",
+   "tags": [
+    "playground",
+    "dogs",
+    "sports"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "santa-fe-station",
+   "name": "Santa Fe Station",
+   "kind": "nightlife",
+   "neighborhood": "centennial-hills",
+   "summary": "Northwest locals casino with a bowling center, cinema and bars.",
+   "tags": [
+    "casino",
+    "bowling",
+    "locals"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gilcrease-orchard",
+   "name": "Gilcrease Orchard",
+   "kind": "market",
+   "neighborhood": "centennial-hills",
+   "summary": "Pick-your-own orchard and farm stand with apples, pumpkins and cider doughnuts in autumn.",
+   "tags": [
+    "u-pick",
+    "pumpkins",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "fall",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "honey-salt",
+   "name": "Honey Salt",
+   "kind": "restaurant",
+   "neighborhood": "summerlin",
+   "summary": "Neighborhood farm-to-table restaurant on Rampart, popular for brunch.",
+   "tags": [
+    "brunch",
+    "seasonal",
+    "local"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "summerlin-library",
+   "name": "Summerlin Library",
+   "kind": "library",
+   "neighborhood": "summerlin",
+   "summary": "Branch library with a performing arts theater and gallery.",
+   "tags": [
+    "books",
+    "theater",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sahara-west-library",
+   "name": "Sahara West Library",
+   "kind": "library",
+   "neighborhood": "spring-valley",
+   "summary": "Large branch library with a gallery and many study rooms.",
+   "tags": [
+    "books",
+    "study",
+    "art"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "desert-breeze-park",
+   "name": "Desert Breeze Park",
+   "kind": "park",
+   "neighborhood": "spring-valley",
+   "summary": "County park with a community center, aquatic complex, skate park and dog park.",
+   "tags": [
+    "pool",
+    "skate",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spring-valley-library",
+   "name": "Spring Valley Library",
+   "kind": "library",
+   "neighborhood": "spring-valley",
+   "summary": "Neighborhood branch library with story times and computers.",
+   "tags": [
+    "books",
+    "kids",
+    "computers"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "orleans-arena",
+   "name": "Orleans Arena",
+   "kind": "venue",
+   "neighborhood": "spring-valley",
+   "summary": "Mid-sized arena at the Orleans casino for concerts, rodeo finals and college tournaments.",
+   "tags": [
+    "concerts",
+    "sports"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "orleans-bowling",
+   "name": "Orleans Bowling Center",
+   "kind": "fitness",
+   "neighborhood": "spring-valley",
+   "summary": "Big locals bowling center inside the Orleans, with leagues and late-night games.",
+   "tags": [
+    "bowling",
+    "leagues",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shang-artisan-noodle",
+   "name": "Shang Artisan Noodle",
+   "kind": "restaurant",
+   "neighborhood": "spring-valley",
+   "summary": "Strip-mall noodle shop on Flamingo where the beef noodle soup comes with noodles hand-pulled to order.",
+   "tags": [
+    "noodles",
+    "cheap",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "chinese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mountains-edge-park",
+   "name": "Mountain's Edge Regional Park",
+   "kind": "park",
+   "neighborhood": "enterprise",
+   "summary": "Large park with fields, playgrounds and a dog park at the foot of the southwest hills.",
+   "tags": [
+    "playground",
+    "dogs",
+    "sports"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "exploration-peak",
+   "name": "Exploration Peak Park",
+   "kind": "trail",
+   "neighborhood": "enterprise",
+   "summary": "Park with a short summit trail and views over the southwest valley.",
+   "tags": [
+    "hiking",
+    "views",
+    "playground"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "enterprise-library",
+   "name": "Enterprise Library",
+   "kind": "library",
+   "neighborhood": "enterprise",
+   "summary": "Branch library serving the southwest suburbs.",
+   "tags": [
+    "books",
+    "kids",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "windmill-library",
+   "name": "Windmill Library",
+   "kind": "library",
+   "neighborhood": "enterprise",
+   "summary": "Branch library with a large children's area and study rooms.",
+   "tags": [
+    "books",
+    "kids",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "town-square-las-vegas",
+   "name": "Town Square Las Vegas",
+   "kind": "shopping",
+   "neighborhood": "enterprise",
+   "summary": "Open-air shopping and restaurant center with a cinema and a children's park.",
+   "tags": [
+    "shopping",
+    "cinema",
+    "restaurants"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yard-house-town-square",
+   "name": "Yard House at Town Square",
+   "kind": "bar",
+   "neighborhood": "enterprise",
+   "summary": "Big sports-bar restaurant at Town Square with a long wall of draft taps and a busy happy hour.",
+   "tags": [
+    "beer",
+    "happy-hour",
+    "sports"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "m-resort",
+   "name": "M Resort",
+   "kind": "nightlife",
+   "neighborhood": "southern-highlands",
+   "summary": "Locals resort casino at the south end of Las Vegas Boulevard with a pool deck and lounge views up the valley.",
+   "tags": [
+    "casino",
+    "views",
+    "locals"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "studio-b-buffet",
+   "name": "Studio B Buffet",
+   "kind": "restaurant",
+   "neighborhood": "southern-highlands",
+   "summary": "The M Resort's buffet, a locals' favorite with free beer and wine.",
+   "tags": [
+    "buffet",
+    "locals"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "buffet",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-point-bowling",
+   "name": "South Point Bowling Center",
+   "kind": "fitness",
+   "neighborhood": "southern-highlands",
+   "summary": "Large bowling center at the South Point casino, open around the clock.",
+   "tags": [
+    "bowling",
+    "leagues",
+    "late-night"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "silverado-ranch-park",
+   "name": "Silverado Ranch Park",
+   "kind": "park",
+   "neighborhood": "southern-highlands",
+   "summary": "County park with fields, playgrounds and shaded picnic areas.",
+   "tags": [
+    "playground",
+    "sports",
+    "picnic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "paseo-verde-library",
+   "name": "Paseo Verde Library",
+   "kind": "library",
+   "neighborhood": "green-valley",
+   "summary": "Henderson branch library with a gallery and a park next door.",
+   "tags": [
+    "books",
+    "kids",
+    "art"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sunset-park",
+   "name": "Sunset Park",
+   "kind": "park",
+   "neighborhood": "green-valley",
+   "summary": "Big county park with a pond, disc golf, volleyball and dog runs.",
+   "tags": [
+    "pond",
+    "disc-golf",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green-valley-ranch",
+   "name": "Green Valley Ranch Resort",
+   "kind": "nightlife",
+   "neighborhood": "green-valley",
+   "summary": "Henderson locals resort with a casino, pool scene and restaurants.",
+   "tags": [
+    "casino",
+    "pool",
+    "locals"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "henderson-bird-preserve",
+   "name": "Henderson Bird Viewing Preserve",
+   "kind": "park",
+   "neighborhood": "henderson",
+   "summary": "Ponds at the water-treatment plant where hundreds of bird species stop over; free and quiet.",
+   "tags": [
+    "birds",
+    "nature",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gibson-library",
+   "name": "James I. Gibson Library",
+   "kind": "library",
+   "neighborhood": "henderson",
+   "summary": "Henderson's central branch library near Water Street.",
+   "tags": [
+    "books",
+    "kids",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "emerald-island-casino",
+   "name": "Emerald Island Casino",
+   "kind": "nightlife",
+   "neighborhood": "henderson",
+   "summary": "Small Irish-themed locals casino on Water Street with video poker, a bar and a cheap grill.",
+   "tags": [
+    "casino",
+    "locals",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lake-las-vegas-water-sports",
+   "name": "Lake Las Vegas Water Sports",
+   "kind": "fitness",
+   "neighborhood": "lake-las-vegas",
+   "summary": "Kayak, paddleboard and pedal-boat rentals on the lake.",
+   "tags": [
+    "kayaking",
+    "paddleboard"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "reflection-bay-golf",
+   "name": "Reflection Bay Golf Club",
+   "kind": "fitness",
+   "neighborhood": "lake-las-vegas",
+   "summary": "Jack Nicklaus-designed public golf course along the lakeshore.",
+   "tags": [
+    "golf",
+    "views"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lake-las-vegas-path",
+   "name": "Lake Las Vegas lakeside path",
+   "kind": "trail",
+   "neighborhood": "lake-las-vegas",
+   "summary": "Walking path around the lake past the village and its bridges.",
+   "tags": [
+    "walk",
+    "lake",
+    "running"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "luna-rossa",
+   "name": "Luna Rossa",
+   "kind": "restaurant",
+   "neighborhood": "lake-las-vegas",
+   "summary": "Italian restaurant in MonteLago Village with a patio over the water and pasta made in-house.",
+   "tags": [
+    "italian",
+    "lakeside",
+    "patio"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "northshore-road",
+   "name": "Northshore Road scenic drive",
+   "kind": "landmark",
+   "neighborhood": "lake-las-vegas",
+   "summary": "Desert drive from Lake Las Vegas into Lake Mead National Recreation Area, past red rock and coves.",
+   "tags": [
+    "scenic-drive",
+    "desert",
+    "views"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boulder-dam-brewing",
+   "name": "Boulder Dam Brewing Company",
+   "kind": "restaurant",
+   "neighborhood": "boulder-city",
+   "summary": "Small-town brewpub with a patio, pub food and dam-themed beers.",
+   "tags": [
+    "brewery",
+    "patio",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boulder-city-library",
+   "name": "Boulder City Library",
+   "kind": "library",
+   "neighborhood": "boulder-city",
+   "summary": "The town's friendly public library, a short walk from the historic district.",
+   "tags": [
+    "books",
+    "kids",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boulder-dam-hotel",
+   "name": "Boulder Dam Hotel and Museum",
+   "kind": "museum",
+   "neighborhood": "boulder-city",
+   "summary": "Historic 1930s hotel with a small museum on the building of the dam.",
+   "tags": [
+    "history",
+    "museum",
+    "hotel"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bellagio-patisserie",
+   "name": "Bellagio Patisserie",
+   "kind": "cafe",
+   "neighborhood": "the-strip",
+   "summary": "Pastry shop at Bellagio, formerly Jean Philippe, with a tall chocolate fountain in the window.",
+   "tags": [
+    "pastry",
+    "chocolate",
+    "dessert"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "french-pastry",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mothership-coffee",
+   "name": "Mothership Coffee Roasters",
+   "kind": "cafe",
+   "neighborhood": "green-valley",
+   "summary": "Henderson roaster's airy coffee shop with pastries and a patio.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coffee-cup-boulder-city",
+   "name": "The Coffee Cup",
+   "kind": "cafe",
+   "neighborhood": "boulder-city",
+   "summary": "Small diner on Nevada Way known for big breakfasts and a line of Hoover Dam visitors.",
+   "tags": [
+    "breakfast",
+    "diner",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "american-breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "donut-bar",
+   "name": "Donut Bar",
+   "kind": "cafe",
+   "neighborhood": "downtown",
+   "summary": "Downtown doughnut shop that often sells out of its oversized doughnuts by late morning.",
+   "tags": [
+    "doughnuts",
+    "line",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bagel-cafe",
+   "name": "The Bagel Cafe",
+   "kind": "cafe",
+   "neighborhood": "summerlin",
+   "summary": "Long-running Jewish deli and bakery on Buffalo Drive for bagels, breakfast and sandwiches.",
+   "tags": [
+    "bagels",
+    "deli",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "red-rock-climbing-center",
+   "name": "Red Rock Climbing Center",
+   "kind": "fitness",
+   "neighborhood": "summerlin",
+   "summary": "Climbing gym on West Charleston used by local climbers training for Red Rock Canyon.",
+   "tags": [
+    "climbing",
+    "bouldering",
+    "yoga"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "centennial-hills-ymca",
+   "name": "Centennial Hills YMCA",
+   "kind": "fitness",
+   "neighborhood": "centennial-hills",
+   "summary": "Northwest Y beside the library, with indoor and outdoor pools and a gym.",
+   "tags": [
+    "gym",
+    "pool",
+    "classes"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "henderson-multigen",
+   "name": "Henderson Multigenerational Center",
+   "kind": "fitness",
+   "neighborhood": "henderson",
+   "summary": "City recreation center with pools, a climbing wall, a track and fitness classes.",
+   "tags": [
+    "rec-center",
+    "pool",
+    "classes"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mayweather-boxing",
+   "name": "Mayweather Boxing Club",
+   "kind": "fitness",
+   "neighborhood": "chinatown",
+   "summary": "Floyd Mayweather's boxing gym west of the Strip, where pros train and the public can take classes.",
+   "tags": [
+    "boxing",
+    "training"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "unlv",
+   "name": "University of Nevada, Las Vegas",
+   "type": "research-university",
+   "neighborhood": "university-district",
+   "size": "large",
+   "known_for": [
+    "hospitality",
+    "gaming",
+    "engineering",
+    "nursing",
+    "business"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "unlv-medicine",
+   "name": "Kirk Kerkorian School of Medicine at UNLV",
+   "type": "medical-school",
+   "neighborhood": "medical-district",
+   "size": "small",
+   "known_for": [
+    "medicine",
+    "residency-training"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "unlv-law",
+   "name": "William S. Boyd School of Law",
+   "type": "research-university",
+   "neighborhood": "university-district",
+   "size": "small",
+   "known_for": [
+    "law",
+    "gaming-law"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "csn-charleston",
+   "name": "College of Southern Nevada (Charleston campus)",
+   "type": "community-college",
+   "neighborhood": "spring-valley",
+   "size": "large",
+   "known_for": [
+    "health-sciences",
+    "transfer",
+    "hospitality"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "csn-north",
+   "name": "College of Southern Nevada (North Las Vegas campus)",
+   "type": "community-college",
+   "neighborhood": "north-las-vegas",
+   "size": "large",
+   "known_for": [
+    "transfer",
+    "automotive",
+    "trades"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "csn-henderson",
+   "name": "College of Southern Nevada (Henderson campus)",
+   "type": "community-college",
+   "neighborhood": "henderson",
+   "size": "medium",
+   "known_for": [
+    "transfer",
+    "nursing"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nevada-state",
+   "name": "Nevada State University",
+   "type": "public-university",
+   "neighborhood": "henderson",
+   "size": "medium",
+   "known_for": [
+    "nursing",
+    "education",
+    "psychology"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "touro-nevada",
+   "name": "Touro University Nevada",
+   "type": "medical-school",
+   "neighborhood": "green-valley",
+   "size": "small",
+   "known_for": [
+    "osteopathic-medicine",
+    "physician-assistant",
+    "nursing"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "roseman",
+   "name": "Roseman University of Health Sciences",
+   "type": "medical-school",
+   "neighborhood": "green-valley",
+   "size": "small",
+   "known_for": [
+    "pharmacy",
+    "nursing",
+    "dental-medicine"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "mgm-resorts",
+   "name": "MGM Resorts International",
+   "sector": "hospitality",
+   "neighborhood": "the-strip",
+   "size": "large",
+   "summary": "Runs Bellagio, MGM Grand, Aria, Mandalay Bay and other Strip resorts; the largest private employer in the state.",
+   "careers": [
+    "casino-dealer",
+    "hotel-front-desk",
+    "bartender",
+    "server",
+    "line-cook",
+    "event-planner",
+    "data-analyst",
+    "accountant",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "caesars",
+   "name": "Caesars Entertainment",
+   "sector": "hospitality",
+   "neighborhood": "the-strip",
+   "size": "large",
+   "summary": "Operates Caesars Palace, The LINQ, Paris, Harrah's and other Strip resorts.",
+   "careers": [
+    "casino-dealer",
+    "hotel-front-desk",
+    "bartender",
+    "server",
+    "line-cook",
+    "event-planner",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wynn",
+   "name": "Wynn Las Vegas and Encore",
+   "sector": "hospitality",
+   "neighborhood": "the-strip",
+   "size": "large",
+   "summary": "Luxury resort pair on the north Strip with high-end shops and nightlife.",
+   "careers": [
+    "casino-dealer",
+    "hotel-front-desk",
+    "bartender",
+    "server",
+    "line-cook",
+    "retail-associate",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "venetian",
+   "name": "The Venetian Resort",
+   "sector": "hospitality",
+   "neighborhood": "the-strip",
+   "size": "large",
+   "summary": "All-suite resort with a casino, shopping canals and a large expo hall.",
+   "careers": [
+    "casino-dealer",
+    "hotel-front-desk",
+    "server",
+    "line-cook",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "resorts-world",
+   "name": "Resorts World Las Vegas",
+   "sector": "hospitality",
+   "neighborhood": "the-strip",
+   "size": "large",
+   "summary": "Newer north Strip resort with a casino, three Hilton hotels and a food hall.",
+   "careers": [
+    "casino-dealer",
+    "hotel-front-desk",
+    "bartender",
+    "server",
+    "line-cook"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "station-casinos",
+   "name": "Station Casinos (Red Rock Resorts)",
+   "sector": "hospitality",
+   "neighborhood": "summerlin",
+   "size": "large",
+   "summary": "Locals' casino company headquartered in Summerlin, running Red Rock, Green Valley Ranch, Durango and others.",
+   "careers": [
+    "casino-dealer",
+    "bartender",
+    "server",
+    "line-cook",
+    "accountant",
+    "financial-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cirque-du-soleil",
+   "name": "Cirque du Soleil resident shows",
+   "sector": "entertainment",
+   "neighborhood": "the-strip",
+   "size": "medium",
+   "summary": "Several permanent Cirque productions in Strip resort theaters, with artists, musicians and technical crews.",
+   "careers": [
+    "performer",
+    "musician",
+    "actor"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lvcva",
+   "name": "Las Vegas Convention and Visitors Authority",
+   "sector": "tourism",
+   "neighborhood": "convention-center",
+   "size": "medium",
+   "summary": "Runs the Las Vegas Convention Center and markets the city to visitors and trade shows.",
+   "careers": [
+    "event-planner",
+    "marketing-coordinator",
+    "government-analyst",
+    "tour-guide"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harry-reid-airport",
+   "name": "Harry Reid International Airport",
+   "sector": "logistics",
+   "neighborhood": "the-strip",
+   "size": "large",
+   "summary": "The county-run airport just east of the south Strip, with airline, cargo, concession and security jobs.",
+   "careers": [
+    "port-logistics",
+    "retail-associate",
+    "server"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "allegiant-air",
+   "name": "Allegiant Air",
+   "sector": "aviation",
+   "neighborhood": "summerlin",
+   "size": "medium",
+   "summary": "Low-cost airline headquartered in Summerlin.",
+   "careers": [
+    "data-analyst",
+    "software-engineer",
+    "financial-analyst",
+    "accountant",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "switch",
+   "name": "Switch",
+   "sector": "technology",
+   "neighborhood": "enterprise",
+   "size": "medium",
+   "summary": "Data center company with large campuses in the southwest valley.",
+   "careers": [
+    "software-engineer",
+    "data-analyst",
+    "construction-trades"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zappos",
+   "name": "Zappos",
+   "sector": "technology",
+   "neighborhood": "downtown",
+   "size": "medium",
+   "summary": "Online shoe and clothing retailer headquartered in the old City Hall downtown.",
+   "careers": [
+    "software-engineer",
+    "ux-designer",
+    "graphic-designer",
+    "marketing-coordinator",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "raiders",
+   "name": "Las Vegas Raiders",
+   "sector": "sports",
+   "neighborhood": "henderson",
+   "size": "medium",
+   "summary": "NFL team with its headquarters and practice facility in Henderson.",
+   "careers": [
+    "fitness-trainer",
+    "marketing-coordinator",
+    "event-planner",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "umc",
+   "name": "University Medical Center of Southern Nevada",
+   "sector": "healthcare",
+   "neighborhood": "medical-district",
+   "size": "large",
+   "summary": "The county public hospital with the state's only Level I trauma center, and UNLV's main teaching hospital.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sunrise-hospital",
+   "name": "Sunrise Hospital and Medical Center",
+   "sector": "healthcare",
+   "neighborhood": "university-district",
+   "size": "large",
+   "summary": "Large HCA hospital on Maryland Parkway with a children's hospital.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-rose-dominican",
+   "name": "Dignity Health St. Rose Dominican",
+   "sector": "healthcare",
+   "neighborhood": "green-valley",
+   "size": "large",
+   "summary": "Catholic hospital group with several campuses in Henderson.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "pharmacist",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lou-ruvo-center",
+   "name": "Cleveland Clinic Lou Ruvo Center for Brain Health",
+   "sector": "healthcare",
+   "neighborhood": "downtown",
+   "size": "small",
+   "summary": "Neurology clinic and research center in a Frank Gehry building in Symphony Park.",
+   "careers": [
+    "medical-researcher",
+    "registered-nurse"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "unlv-employer",
+   "name": "UNLV",
+   "sector": "education",
+   "neighborhood": "university-district",
+   "size": "large",
+   "summary": "Faculty, research and staff jobs at the main university campus.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "medical-researcher",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ccsd",
+   "name": "Clark County School District",
+   "sector": "education",
+   "neighborhood": "spring-valley",
+   "size": "large",
+   "summary": "One of the largest school districts in the country, chronically short of teachers.",
+   "careers": [
+    "teacher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clark-county",
+   "name": "Clark County government and courts",
+   "sector": "government",
+   "neighborhood": "downtown",
+   "size": "large",
+   "summary": "County agencies at the Government Center and the Regional Justice Center downtown; the county also governs the Strip.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "accountant",
+    "paralegal"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-of-las-vegas",
+   "name": "City of Las Vegas",
+   "sector": "government",
+   "neighborhood": "downtown",
+   "size": "medium",
+   "summary": "City Hall and municipal departments on Main Street.",
+   "careers": [
+    "government-analyst",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nellis-afb",
+   "name": "Nellis Air Force Base",
+   "sector": "defense",
+   "neighborhood": "north-las-vegas",
+   "size": "large",
+   "summary": "Major Air Force base for advanced fighter training, with civilian and contractor engineering jobs.",
+   "careers": [
+    "defense-engineer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "review-journal",
+   "name": "Las Vegas Review-Journal",
+   "sector": "media",
+   "neighborhood": "downtown",
+   "size": "small",
+   "summary": "The state's largest daily newspaper.",
+   "careers": [
+    "journalist"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "strip-resorts",
+   "name": "The Strip resorts",
+   "neighborhoods": [
+    "the-strip"
+   ],
+   "sectors": [
+    "hospitality",
+    "entertainment",
+    "tourism",
+    "retail",
+    "fitness",
+    "recreation"
+   ],
+   "summary": "Tens of thousands of casino, hotel, kitchen, spa, pool and show jobs running 24 hours a day.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "convention-corridor",
+   "name": "Convention Center and Paradise Road",
+   "neighborhoods": [
+    "convention-center",
+    "the-strip"
+   ],
+   "sectors": [
+    "hospitality",
+    "business",
+    "tourism"
+   ],
+   "summary": "Trade-show work around the Las Vegas Convention Center and resort expo halls.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "downtown-core",
+   "name": "Downtown and the Arts District",
+   "neighborhoods": [
+    "downtown",
+    "arts-district"
+   ],
+   "sectors": [
+    "government",
+    "legal",
+    "media",
+    "technology",
+    "hospitality",
+    "creative"
+   ],
+   "summary": "City and county offices, the courts, Fremont Street casinos, tech offices and small creative studios.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "medical-hub",
+   "name": "Medical District and UNLV",
+   "neighborhoods": [
+    "medical-district",
+    "university-district"
+   ],
+   "sectors": [
+    "healthcare",
+    "education",
+    "biotech"
+   ],
+   "summary": "UMC, the UNLV medical school and nearby hospitals, plus the main university campus.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "summerlin-corporate",
+   "name": "Summerlin offices",
+   "neighborhoods": [
+    "summerlin",
+    "centennial-hills"
+   ],
+   "sectors": [
+    "business",
+    "finance",
+    "technology",
+    "real-estate",
+    "aviation"
+   ],
+   "summary": "Corporate headquarters, banks and real-estate offices in the west valley.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "henderson-hub",
+   "name": "Henderson",
+   "neighborhoods": [
+    "henderson",
+    "green-valley"
+   ],
+   "sectors": [
+    "healthcare",
+    "education",
+    "sports",
+    "real-estate",
+    "retail"
+   ],
+   "summary": "Hospitals, health sciences schools, the Raiders' headquarters and fast-growing suburban retail.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southwest-industrial",
+   "name": "Southwest warehouses and data centers",
+   "neighborhoods": [
+    "enterprise",
+    "spring-valley"
+   ],
+   "sectors": [
+    "logistics",
+    "technology",
+    "construction"
+   ],
+   "summary": "Distribution centers, data centers and home building in the growing southwest valley.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "north-valley",
+   "name": "Nellis and North Las Vegas",
+   "neighborhoods": [
+    "north-las-vegas"
+   ],
+   "sectors": [
+    "defense",
+    "logistics",
+    "manufacturing",
+    "construction"
+   ],
+   "summary": "The air base, industrial parks and warehouses along I-15 north.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Hot desert: very hot, dry summers with brief monsoon storms, mild sunny winters with cold nights, and very little rain at any time of year.",
+  "months": [
+   {
+    "high_f": 58,
+    "low_f": 40,
+    "rain_days": 3,
+    "note": "Coolest month; sunny days, chilly nights."
+   },
+   {
+    "high_f": 63,
+    "low_f": 44,
+    "rain_days": 4,
+    "note": "Mild and dry; occasional windy storms."
+   },
+   {
+    "high_f": 71,
+    "low_f": 50,
+    "rain_days": 3,
+    "note": "Pleasant; spring wind gusts."
+   },
+   {
+    "high_f": 79,
+    "low_f": 57,
+    "rain_days": 2,
+    "note": "Warm and dry; prime hiking season ends."
+   },
+   {
+    "high_f": 89,
+    "low_f": 67,
+    "rain_days": 1,
+    "note": "Hot; pool season opens."
+   },
+   {
+    "high_f": 99,
+    "low_f": 76,
+    "rain_days": 1,
+    "note": "Very hot and bone dry."
+   },
+   {
+    "high_f": 105,
+    "low_f": 82,
+    "rain_days": 2,
+    "note": "Hottest month; 110F days and monsoon storms."
+   },
+   {
+    "high_f": 103,
+    "low_f": 81,
+    "rain_days": 3,
+    "note": "Extreme heat; monsoon flash floods possible."
+   },
+   {
+    "high_f": 95,
+    "low_f": 73,
+    "rain_days": 2,
+    "note": "Still hot; monsoon fades."
+   },
+   {
+    "high_f": 81,
+    "low_f": 60,
+    "rain_days": 2,
+    "note": "Warm, sunny and comfortable."
+   },
+   {
+    "high_f": 67,
+    "low_f": 47,
+    "rain_days": 2,
+    "note": "Mild days, cool nights."
+   },
+   {
+    "high_f": 57,
+    "low_f": 39,
+    "rain_days": 3,
+    "note": "Cool; occasional freezing nights."
+   }
+  ],
+  "source": "curated-climate-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "ces",
+   "name": "CES",
+   "months": [
+    1
+   ],
+   "neighborhood": "convention-center",
+   "summary": "The giant consumer electronics trade show fills the Convention Center and hotels in early January.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chinese-new-year",
+   "name": "Chinese New Year in Chinatown",
+   "months": [
+    1,
+    2
+   ],
+   "neighborhood": "chinatown",
+   "summary": "Lion dances and celebrations on Spring Mountain Road, with decorations at Strip resorts.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "first-friday",
+   "name": "First Friday",
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "neighborhood": "arts-district",
+   "summary": "Monthly evening art walk with open galleries, food trucks and live music.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nascar-weekends",
+   "name": "NASCAR at Las Vegas Motor Speedway",
+   "months": [
+    3,
+    10
+   ],
+   "neighborhood": "north-las-vegas",
+   "summary": "Cup Series race weekends in spring and autumn at the speedway in the northeast valley.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "aviators-season",
+   "name": "Aviators baseball season",
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "neighborhood": "summerlin",
+   "summary": "Triple-A baseball nights at Las Vegas Ballpark.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "edc",
+   "name": "Electric Daisy Carnival",
+   "months": [
+    5
+   ],
+   "neighborhood": "north-las-vegas",
+   "summary": "Huge three-night electronic music festival at Las Vegas Motor Speedway.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "punk-rock-bowling",
+   "name": "Punk Rock Bowling",
+   "months": [
+    5
+   ],
+   "neighborhood": "downtown",
+   "summary": "Memorial Day weekend punk festival downtown with a bowling tournament.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "raiders-season",
+   "name": "Raiders football season",
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1
+   ],
+   "neighborhood": "the-strip",
+   "summary": "NFL game days at Allegiant Stadium.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "golden-knights-season",
+   "name": "Golden Knights hockey season",
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "neighborhood": "the-strip",
+   "summary": "NHL games with elaborate pregame shows at T-Mobile Arena.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sema",
+   "name": "SEMA Show",
+   "months": [
+    11
+   ],
+   "neighborhood": "convention-center",
+   "summary": "Car customisation trade show that brings custom builds to the Convention Center.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "f1-grand-prix",
+   "name": "Las Vegas Grand Prix",
+   "months": [
+    11
+   ],
+   "neighborhood": "the-strip",
+   "summary": "Formula 1 night race on a street circuit along the Strip, with weeks of road closures.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nfr",
+   "name": "National Finals Rodeo",
+   "months": [
+    12
+   ],
+   "neighborhood": "university-district",
+   "summary": "Ten nights of championship rodeo at the Thomas & Mack Center, with cowboy events across town.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-years-eve",
+   "name": "New Year's Eve on the Strip",
+   "months": [
+    12
+   ],
+   "neighborhood": "the-strip",
+   "summary": "The Strip closes to cars for crowds and rooftop fireworks at midnight.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "locals-avoid-the-strip",
+   "name": "Locals avoid the Strip",
+   "kind": "custom",
+   "summary": "Residents mostly stay off Las Vegas Boulevard except to take visitors out, see a show or go to work, and plan routes around its traffic.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "locals-casinos",
+   "name": "Locals casinos",
+   "kind": "custom",
+   "summary": "Neighborhood casinos off the Strip draw residents with cheaper food, bowling, movie theaters and player's club deals, and are where many people actually gamble.",
+   "places": [
+    "santa-fe-station",
+    "green-valley-ranch",
+    "aliante-casino",
+    "m-resort",
+    "orleans-bowling",
+    "south-point-bowling"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grocery-store-slots",
+   "name": "Slots everywhere",
+   "kind": "custom",
+   "summary": "Slot and video poker machines stand in grocery stores, gas stations and the airport, and locals stop noticing them within a week.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "locals-discounts",
+   "name": "Locals discounts",
+   "kind": "custom",
+   "summary": "Many shows, restaurants and attractions give a discount to anyone with a Nevada ID, so \"Are you a local?\" is a common question at the counter.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nevada-pronunciation",
+   "name": "Saying \"Nevada\"",
+   "kind": "saying",
+   "summary": "Locals say it with the middle sound of \"bad\" (ne-VAD-a), and notice at once when someone says ne-VAH-da.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dry-heat",
+   "name": "\"But it's a dry heat\"",
+   "kind": "saying",
+   "summary": "The standard half-joking reply about summer days over 40 degrees Celsius; low humidity does help, until it does not.",
+   "places": [],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "summer-heat-habits",
+   "name": "Summer heat habits",
+   "kind": "custom",
+   "summary": "In summer people hunt for shaded parking, use windshield shades, keep a towel for the steering wheel and do outdoor exercise before sunrise.",
+   "places": [],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "twenty-four-hour-town",
+   "name": "A 24-hour town",
+   "kind": "custom",
+   "summary": "Bars, casinos, gyms and some grocery stores never close, and so many people work swing and graveyard shifts that dinner at 3 a.m. is normal.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "glitter-gulch",
+   "name": "Glitter Gulch",
+   "kind": "saying",
+   "summary": "The old nickname for the neon-lit casino blocks of Fremont Street downtown, the Las Vegas of before the megaresorts.",
+   "places": [
+    "fremont-street-experience"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shrimp-cocktail",
+   "name": "Downtown shrimp cocktail",
+   "kind": "dish",
+   "summary": "The cheap shrimp cocktail in a tall glass, sold for decades by downtown casinos as a lure, is a piece of old Vegas many locals still order.",
+   "places": [
+    "fremont-street-experience"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "buffets",
+   "name": "Buffets",
+   "kind": "dish",
+   "summary": "All-you-can-eat buffets are a Las Vegas institution, from lavish Strip spreads to cheaper ones in locals casinos.",
+   "places": [
+    "bacchanal-buffet",
+    "studio-b-buffet"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "steak-special",
+   "name": "Ellis Island steak special",
+   "kind": "dish",
+   "summary": "Ellis Island's cheap steak dinner special, a few blocks off the Strip, has long been one of the best-known locals bargains in town.",
+   "places": [
+    "ellis-island"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "adobada-tacos",
+   "name": "Adobada tacos",
+   "kind": "dish",
+   "summary": "Tijuana-style tacos of marinated pork carved from a spit, eaten standing up at busy taco shops late at night.",
+   "places": [
+    "tacos-el-gordo"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spring-mountain-road",
+   "name": "Chinatown on Spring Mountain",
+   "kind": "dish",
+   "summary": "Spring Mountain Road west of the Strip is a long strip of Asian restaurants where chefs and casino workers go after their shifts.",
+   "places": [
+    "chinatown",
+    "chinatown-plaza",
+    "raku",
+    "pho-kim-long",
+    "ping-pang-pong"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "vegas-golden-knights",
+   "name": "Vegas Golden Knights",
+   "kind": "team",
+   "summary": "The NHL team that reached the Stanley Cup final in its first season (2018) and won the Cup in 2023, playing at T-Mobile Arena.",
+   "places": [
+    "t-mobile-arena"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "las-vegas-raiders",
+   "name": "Las Vegas Raiders",
+   "kind": "team",
+   "summary": "The NFL team moved from Oakland in 2020 and plays at Allegiant Stadium, with many visiting fans on game days.",
+   "places": [
+    "allegiant-stadium"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "las-vegas-aces",
+   "name": "Las Vegas Aces",
+   "kind": "team",
+   "summary": "The WNBA team, champions in 2022 and 2023, playing at Michelob Ultra Arena at Mandalay Bay.",
+   "places": [],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "las-vegas-aviators",
+   "name": "Las Vegas Aviators",
+   "kind": "team",
+   "summary": "The Triple-A minor league baseball team plays in Summerlin at Las Vegas Ballpark.",
+   "places": [
+    "las-vegas-ballpark"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "unlv-rebels",
+   "name": "UNLV Runnin' Rebels",
+   "kind": "team",
+   "summary": "UNLV basketball, national champions in 1990, plays at the Thomas & Mack Center, and the city still remembers the Tarkanian years.",
+   "places": [
+    "thomas-and-mack"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Coffee",
+   "low": 2.5,
+   "high": 4.5,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Latte",
+   "low": 5,
+   "high": 7.5,
+   "per": "more on the Strip",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "breakfast-sandwich",
+   "item": "Breakfast sandwich",
+   "low": 6,
+   "high": 10,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheap-lunch",
+   "item": "Cheap lunch",
+   "low": 11,
+   "high": 18,
+   "per": "off-Strip",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner",
+   "item": "Mid-range dinner",
+   "low": 35,
+   "high": 70,
+   "per": "for one, off-Strip to Strip",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beer",
+   "item": "Pint of beer",
+   "low": 7,
+   "high": 12,
+   "per": "off-Strip to Strip",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocktail",
+   "item": "Cocktail",
+   "low": 14,
+   "high": 25,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries",
+   "low": 75,
+   "high": 110,
+   "per": "a week, one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bus",
+   "item": "RTC bus fare",
+   "low": 2,
+   "high": 6,
+   "per": "one ride; Strip routes cost more",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "monorail",
+   "item": "Monorail ride",
+   "low": 5.5,
+   "high": 5.5,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rideshare",
+   "item": "Rideshare across town",
+   "low": 15,
+   "high": 35,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "buffet",
+   "item": "Casino buffet",
+   "low": 30,
+   "high": 80,
+   "per": "dinner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "show",
+   "item": "Show ticket",
+   "low": 60,
+   "high": 200,
+   "per": "a Strip production show",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gym",
+   "item": "Gym membership",
+   "low": 25,
+   "high": 60,
+   "per": "a month",
+   "source": "curated-2026-10"
+  }
+ ]
+}

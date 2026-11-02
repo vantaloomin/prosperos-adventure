@@ -1,0 +1,6943 @@
+{
+ "schema_version": 1,
+ "id": "new-york",
+ "name": "New York",
+ "region": "New York",
+ "country": "US",
+ "timezone": "America/New_York",
+ "aliases": [
+  "NYC",
+  "New York City",
+  "The Big Apple",
+  "New York, NY"
+ ],
+ "summary": "The largest city in the United States: five boroughs of dense neighborhoods tied together by a 24-hour subway, home to Wall Street, Broadway, world-class museums and food from everywhere.",
+ "lat": 40.71,
+ "lon": -74.01,
+ "speeds": {
+  "walk": 4.5,
+  "car": 18,
+  "rideshare": 18,
+  "bus": 10,
+  "subway": 25,
+  "ferry": 20,
+  "commuter-rail": 50,
+  "bike-share": 13
+ },
+ "names": {
+  "mix": {
+   "hispanic": 3,
+   "anglo": 2.5,
+   "black-american": 2,
+   "jewish": 1.2,
+   "east-asian": 1.5,
+   "italian": 0.9,
+   "irish": 0.7,
+   "caribbean": 1,
+   "south-asian": 0.7,
+   "slavic": 0.6,
+   "arabic": 0.3,
+   "west-african": 0.4
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "New York places and neighborhoods written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "Well-known public places, institutions and employers from general knowledge. Businesses open and close and rents move fast here: treat this as a snapshot for fiction. Rents are rounded estimates of typical 2025 asking ranges, not listings. Coordinates are approximate neighborhood centers."
+  },
+  "curated-climate-2026-10": {
+   "kind": "curated",
+   "title": "Approximate monthly climate for New York (Central Park)",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "Rounded values in line with NOAA 1991-2020 normals for Central Park; refresh with scripts/world when network access to NOAA is available."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "financial-district",
+   "name": "Financial District",
+   "summary": "Wall Street, the World Trade Center and City Hall at the southern tip of Manhattan, with ferries leaving from the Battery.",
+   "vibe": [
+    "business",
+    "historic",
+    "waterfront",
+    "touristy"
+   ],
+   "lat": 40.707,
+   "lon": -74.009,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3200,
+     4000
+    ],
+    "one_bedroom": [
+     4200,
+     5500
+    ],
+    "two_bedroom": [
+     5800,
+     8500
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "converted-office",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "path",
+    "nyc-ferry",
+    "staten-island-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "soho",
+   "name": "SoHo",
+   "summary": "Cast-iron loft buildings and cobbled side streets packed with flagship shops and galleries.",
+   "vibe": [
+    "shopping",
+    "architecture",
+    "upscale",
+    "artsy"
+   ],
+   "lat": 40.723,
+   "lon": -74.0,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3300,
+     4300
+    ],
+    "one_bedroom": [
+     4300,
+     6000
+    ],
+    "two_bedroom": [
+     6000,
+     9500
+    ]
+   },
+   "housing": [
+    "loft",
+    "walk-up",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lower-east-side",
+   "name": "Lower East Side",
+   "summary": "Old tenement blocks of immigrant history, now mixing delis, galleries and late-night bars, next to Chinatown.",
+   "vibe": [
+    "historic",
+    "nightlife",
+    "food",
+    "gritty"
+   ],
+   "lat": 40.715,
+   "lon": -73.987,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     2700,
+     3500
+    ],
+    "one_bedroom": [
+     3400,
+     4600
+    ],
+    "two_bedroom": [
+     4300,
+     6200
+    ]
+   },
+   "housing": [
+    "tenement",
+    "walk-up",
+    "public-housing",
+    "new-build"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "nyc-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-village",
+   "name": "East Village",
+   "summary": "Walk-up apartments, cheap eats, dive bars and NYU students around Tompkins Square Park and St. Marks Place.",
+   "vibe": [
+    "students",
+    "nightlife",
+    "food",
+    "punk-history"
+   ],
+   "lat": 40.727,
+   "lon": -73.984,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     2700,
+     3500
+    ],
+    "one_bedroom": [
+     3400,
+     4600
+    ],
+    "two_bedroom": [
+     4300,
+     6200
+    ]
+   },
+   "housing": [
+    "walk-up",
+    "tenement"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "greenwich-village",
+   "name": "Greenwich Village",
+   "summary": "Crooked tree-lined streets of townhouses, jazz clubs and cafes around Washington Square and NYU, running west into the West Village.",
+   "vibe": [
+    "historic",
+    "lgbtq-friendly",
+    "jazz",
+    "students",
+    "leafy"
+   ],
+   "lat": 40.733,
+   "lon": -74.002,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3200,
+     4200
+    ],
+    "one_bedroom": [
+     4200,
+     5800
+    ],
+    "two_bedroom": [
+     5800,
+     9000
+    ]
+   },
+   "housing": [
+    "walk-up",
+    "townhouse",
+    "prewar-apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "path"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chelsea",
+   "name": "Chelsea",
+   "summary": "Art galleries, the High Line, Chelsea Market and big tech offices on the West Side between the Meatpacking District and Hudson Yards.",
+   "vibe": [
+    "art",
+    "lgbtq-friendly",
+    "tech",
+    "upscale"
+   ],
+   "lat": 40.746,
+   "lon": -74.001,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3200,
+     4100
+    ],
+    "one_bedroom": [
+     4300,
+     5600
+    ],
+    "two_bedroom": [
+     5800,
+     8500
+    ]
+   },
+   "housing": [
+    "walk-up",
+    "apartment-tower",
+    "public-housing"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "path"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "flatiron",
+   "name": "Flatiron and Union Square",
+   "summary": "Startup offices and showrooms around the Flatiron Building, Madison Square Park and the Union Square Greenmarket.",
+   "vibe": [
+    "tech",
+    "business",
+    "food",
+    "central"
+   ],
+   "lat": 40.74,
+   "lon": -73.99,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3200,
+     4100
+    ],
+    "one_bedroom": [
+     4300,
+     5600
+    ],
+    "two_bedroom": [
+     5800,
+     8500
+    ]
+   },
+   "housing": [
+    "loft",
+    "prewar-apartment",
+    "apartment-tower"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "path"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kips-bay",
+   "name": "Kips Bay and Murray Hill",
+   "summary": "East Side blocks of mid-rise apartments beside the hospital row on First Avenue, popular with young professionals and medical staff.",
+   "vibe": [
+    "medical",
+    "young-professional",
+    "practical"
+   ],
+   "lat": 40.743,
+   "lon": -73.978,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     2900,
+     3600
+    ],
+    "one_bedroom": [
+     3700,
+     4700
+    ],
+    "two_bedroom": [
+     4800,
+     6800
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "walk-up",
+    "co-op"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "nyc-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "midtown",
+   "name": "Midtown",
+   "summary": "The skyscraper core: Times Square, the Theater District, Rockefeller Center, Grand Central and Penn Station, busiest on weekdays.",
+   "vibe": [
+    "business",
+    "touristy",
+    "theater",
+    "central"
+   ],
+   "lat": 40.755,
+   "lon": -73.984,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3000,
+     3900
+    ],
+    "one_bedroom": [
+     4000,
+     5200
+    ],
+    "two_bedroom": [
+     5300,
+     7800
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "path",
+    "lirr",
+    "metro-north"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hudson-yards",
+   "name": "Hudson Yards",
+   "summary": "A new district of glass towers, offices and a mall built over the West Side rail yards.",
+   "vibe": [
+    "new-build",
+    "corporate",
+    "upscale"
+   ],
+   "lat": 40.754,
+   "lon": -74.001,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3800,
+     4800
+    ],
+    "one_bedroom": [
+     5000,
+     6800
+    ],
+    "two_bedroom": [
+     7500,
+     11000
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "condo"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "lirr",
+    "citi-bike"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "upper-west-side",
+   "name": "Upper West Side",
+   "summary": "Prewar apartment buildings and brownstones between Central Park and Riverside Park, with Lincoln Center and the Natural History Museum.",
+   "vibe": [
+    "family",
+    "cultural",
+    "leafy",
+    "residential"
+   ],
+   "lat": 40.787,
+   "lon": -73.975,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     2600,
+     3300
+    ],
+    "one_bedroom": [
+     3500,
+     4700
+    ],
+    "two_bedroom": [
+     4800,
+     7500
+    ]
+   },
+   "housing": [
+    "prewar-apartment",
+    "brownstone",
+    "co-op"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "upper-east-side",
+   "name": "Upper East Side",
+   "summary": "Museum Mile on Fifth Avenue, Park Avenue co-ops and busier rental blocks toward the East River, plus a cluster of major hospitals.",
+   "vibe": [
+    "affluent",
+    "museums",
+    "medical",
+    "residential"
+   ],
+   "lat": 40.773,
+   "lon": -73.957,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     2400,
+     3100
+    ],
+    "one_bedroom": [
+     3200,
+     4300
+    ],
+    "two_bedroom": [
+     4300,
+     6800
+    ]
+   },
+   "housing": [
+    "co-op",
+    "prewar-apartment",
+    "walk-up",
+    "townhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "nyc-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "morningside-heights",
+   "name": "Morningside Heights",
+   "summary": "The academic neighborhood around Columbia University and the Cathedral of St. John the Divine.",
+   "vibe": [
+    "academic",
+    "students",
+    "quiet"
+   ],
+   "lat": 40.808,
+   "lon": -73.962,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2100,
+     2800
+    ],
+    "one_bedroom": [
+     2800,
+     3600
+    ],
+    "two_bedroom": [
+     3400,
+     4800
+    ]
+   },
+   "housing": [
+    "prewar-apartment",
+    "student-housing"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harlem",
+   "name": "Harlem",
+   "summary": "Brownstone blocks with deep African American and Latino cultural history, centered on 125th Street and the Apollo.",
+   "vibe": [
+    "historic",
+    "music",
+    "brownstones",
+    "food"
+   ],
+   "lat": 40.811,
+   "lon": -73.946,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2000,
+     2600
+    ],
+    "one_bedroom": [
+     2500,
+     3300
+    ],
+    "two_bedroom": [
+     3100,
+     4300
+    ]
+   },
+   "housing": [
+    "brownstone",
+    "prewar-apartment",
+    "public-housing"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "metro-north"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "williamsburg",
+   "name": "Williamsburg",
+   "summary": "Former warehouses turned waterfront towers, bars, music venues and restaurants one subway stop from Manhattan, with a large Hasidic community to the south.",
+   "vibe": [
+    "nightlife",
+    "young-professional",
+    "waterfront",
+    "food",
+    "music"
+   ],
+   "lat": 40.714,
+   "lon": -73.957,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3000,
+     3800
+    ],
+    "one_bedroom": [
+     3800,
+     4900
+    ],
+    "two_bedroom": [
+     4700,
+     6800
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "walk-up",
+    "loft"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "nyc-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dumbo",
+   "name": "DUMBO",
+   "summary": "Cobbled streets of converted warehouses under the Manhattan and Brooklyn Bridges, beside Brooklyn Bridge Park.",
+   "vibe": [
+    "views",
+    "waterfront",
+    "upscale",
+    "photogenic"
+   ],
+   "lat": 40.703,
+   "lon": -73.989,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3400,
+     4200
+    ],
+    "one_bedroom": [
+     4300,
+     5800
+    ],
+    "two_bedroom": [
+     6000,
+     8500
+    ]
+   },
+   "housing": [
+    "loft",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "nyc-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "downtown-brooklyn",
+   "name": "Downtown Brooklyn",
+   "summary": "Brooklyn's civic and office center, now dense with rental towers, beside Fort Greene, Barclays Center and BAM.",
+   "vibe": [
+    "business",
+    "new-build",
+    "central",
+    "students"
+   ],
+   "lat": 40.693,
+   "lon": -73.987,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     3000,
+     3700
+    ],
+    "one_bedroom": [
+     3700,
+     4700
+    ],
+    "two_bedroom": [
+     4700,
+     6300
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "brownstone"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "lirr"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "park-slope",
+   "name": "Park Slope",
+   "summary": "Brownstone streets of young families sloping down from Prospect Park.",
+   "vibe": [
+    "family",
+    "leafy",
+    "brownstones",
+    "park"
+   ],
+   "lat": 40.672,
+   "lon": -73.977,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     2400,
+     3100
+    ],
+    "one_bedroom": [
+     3100,
+     4100
+    ],
+    "two_bedroom": [
+     3900,
+     5700
+    ]
+   },
+   "housing": [
+    "brownstone",
+    "walk-up"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bushwick",
+   "name": "Bushwick",
+   "summary": "Warehouses covered in murals, artist lofts, late-night clubs and a long-standing Latino community.",
+   "vibe": [
+    "arts",
+    "nightlife",
+    "street-art",
+    "affordable"
+   ],
+   "lat": 40.697,
+   "lon": -73.918,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2000,
+     2600
+    ],
+    "one_bedroom": [
+     2500,
+     3300
+    ],
+    "two_bedroom": [
+     3000,
+     4000
+    ]
+   },
+   "housing": [
+    "walk-up",
+    "loft",
+    "rowhouse"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coney-island",
+   "name": "Coney Island",
+   "summary": "The seaside amusement district at the end of the subway lines, quiet in winter and packed on summer weekends.",
+   "vibe": [
+    "beach",
+    "amusements",
+    "seaside",
+    "affordable"
+   ],
+   "lat": 40.575,
+   "lon": -73.985,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1600,
+     2100
+    ],
+    "one_bedroom": [
+     1900,
+     2500
+    ],
+    "two_bedroom": [
+     2300,
+     3100
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "public-housing"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "subway",
+    "mta-bus"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "astoria",
+   "name": "Astoria",
+   "summary": "A diverse, food-loving neighborhood of Greek tavernas, beer gardens and two-family houses near the East River.",
+   "vibe": [
+    "diverse",
+    "food",
+    "young-professional",
+    "neighbourly"
+   ],
+   "lat": 40.764,
+   "lon": -73.923,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     2100,
+     2700
+    ],
+    "one_bedroom": [
+     2500,
+     3300
+    ],
+    "two_bedroom": [
+     3000,
+     4000
+    ]
+   },
+   "housing": [
+    "walk-up",
+    "two-family-house",
+    "apartment"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "nyc-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "long-island-city",
+   "name": "Long Island City",
+   "summary": "Glass towers on the Queens waterfront with Manhattan skyline views, plus warehouses, film studios and MoMA PS1.",
+   "vibe": [
+    "new-build",
+    "views",
+    "waterfront",
+    "arts"
+   ],
+   "lat": 40.746,
+   "lon": -73.949,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     3200,
+     3900
+    ],
+    "one_bedroom": [
+     4000,
+     5000
+    ],
+    "two_bedroom": [
+     5200,
+     7200
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "nyc-ferry",
+    "lirr"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "flushing",
+   "name": "Flushing",
+   "summary": "A busy Chinese and Korean commercial center around Main Street, beside Flushing Meadows Corona Park with Citi Field and the US Open grounds.",
+   "vibe": [
+    "diverse",
+    "food",
+    "busy",
+    "family"
+   ],
+   "lat": 40.759,
+   "lon": -73.83,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1800,
+     2400
+    ],
+    "one_bedroom": [
+     2200,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     3600
+    ]
+   },
+   "housing": [
+    "apartment",
+    "co-op",
+    "single-family"
+   ],
+   "walkability": "high",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "lirr"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "concourse",
+   "name": "Concourse",
+   "summary": "Art Deco apartment houses along the Grand Concourse, a short walk from Yankee Stadium.",
+   "vibe": [
+    "historic",
+    "sports",
+    "art-deco",
+    "affordable"
+   ],
+   "lat": 40.828,
+   "lon": -73.922,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1600,
+     2100
+    ],
+    "one_bedroom": [
+     1900,
+     2500
+    ],
+    "two_bedroom": [
+     2300,
+     3100
+    ]
+   },
+   "housing": [
+    "prewar-apartment",
+    "public-housing"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "citi-bike",
+    "metro-north"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "belmont",
+   "name": "Belmont (Arthur Avenue)",
+   "summary": "The Bronx's Little Italy of bakeries, butchers and red-sauce restaurants, between Fordham University and the Bronx Zoo.",
+   "vibe": [
+    "food",
+    "italian",
+    "students",
+    "neighbourly"
+   ],
+   "lat": 40.855,
+   "lon": -73.887,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1500,
+     2000
+    ],
+    "one_bedroom": [
+     1800,
+     2400
+    ],
+    "two_bedroom": [
+     2200,
+     2900
+    ]
+   },
+   "housing": [
+    "walk-up",
+    "two-family-house",
+    "apartment"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "subway",
+    "mta-bus",
+    "metro-north"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "subway",
+   "name": "New York City Subway",
+   "kind": "subway",
+   "summary": "The 24-hour MTA subway, with lettered and numbered lines across Manhattan, Brooklyn, Queens and the Bronx.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mta-bus",
+   "name": "MTA New York City buses",
+   "kind": "bus",
+   "summary": "Local, Select Bus Service and express routes in all five boroughs; slow in Manhattan traffic.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nyc-ferry",
+   "name": "NYC Ferry",
+   "kind": "ferry",
+   "summary": "East River and harbor ferry routes linking Wall Street, Midtown, Brooklyn, Queens, the Bronx and the Rockaways.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "staten-island-ferry",
+   "name": "Staten Island Ferry",
+   "kind": "ferry",
+   "summary": "Free 24-hour ferry from Whitehall Terminal to St. George, passing the Statue of Liberty.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "path",
+   "name": "PATH",
+   "kind": "subway",
+   "summary": "Port Authority trains from Lower Manhattan and Sixth Avenue to Hoboken, Jersey City and Newark.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lirr",
+   "name": "Long Island Rail Road",
+   "kind": "commuter-rail",
+   "summary": "Commuter rail from Penn Station, Grand Central Madison and Atlantic Terminal through Queens to Long Island.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "metro-north",
+   "name": "Metro-North Railroad",
+   "kind": "commuter-rail",
+   "summary": "Commuter rail from Grand Central through Harlem and the Bronx to Westchester and Connecticut.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "citi-bike",
+   "name": "Citi Bike",
+   "kind": "bike-share",
+   "summary": "Docked bike share, including e-bikes, across Manhattan and much of Brooklyn, Queens and the Bronx.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "statue-of-liberty",
+   "name": "Statue of Liberty and Ellis Island",
+   "kind": "landmark",
+   "neighborhood": "financial-district",
+   "summary": "Ferries from Battery Park to Liberty Island and the Ellis Island immigration museum.",
+   "tags": [
+    "iconic",
+    "history",
+    "ferry"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "911-memorial",
+   "name": "9/11 Memorial & Museum",
+   "kind": "museum",
+   "neighborhood": "financial-district",
+   "summary": "Twin reflecting pools in the footprints of the towers, with an underground museum.",
+   "tags": [
+    "history",
+    "memorial",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "staten-island-ferry-ride",
+   "name": "Staten Island Ferry ride",
+   "kind": "attraction",
+   "neighborhood": "financial-district",
+   "summary": "A free harbor crossing with views of the skyline and the Statue of Liberty.",
+   "tags": [
+    "free",
+    "views",
+    "water"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dead-rabbit",
+   "name": "The Dead Rabbit",
+   "kind": "bar",
+   "neighborhood": "financial-district",
+   "summary": "Irish-style taproom and cocktail parlour on Water Street, a regular on world best-bar lists.",
+   "tags": [
+    "cocktails",
+    "irish",
+    "pub"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "soho-shopping",
+   "name": "SoHo shopping streets",
+   "kind": "shopping",
+   "neighborhood": "soho",
+   "summary": "Flagship stores and boutiques along Broadway, Prince and Spring Streets.",
+   "tags": [
+    "fashion",
+    "boutiques",
+    "walk"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "balthazar",
+   "name": "Balthazar",
+   "kind": "restaurant",
+   "neighborhood": "soho",
+   "summary": "Long-running Parisian-style brasserie on Spring Street with a bakery next door.",
+   "tags": [
+    "brasserie",
+    "brunch",
+    "classic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "french",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "katzs",
+   "name": "Katz's Delicatessen",
+   "kind": "restaurant",
+   "neighborhood": "lower-east-side",
+   "summary": "Cavernous deli on Houston Street serving hand-cut pastrami since the nineteenth century.",
+   "tags": [
+    "deli",
+    "pastrami",
+    "iconic",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "russ-and-daughters",
+   "name": "Russ & Daughters",
+   "kind": "restaurant",
+   "neighborhood": "lower-east-side",
+   "summary": "Family-run \"appetizing\" shop on Houston Street for bagels, lox and smoked fish since 1914.",
+   "tags": [
+    "bagels",
+    "smoked-fish",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-appetizing",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "essex-market",
+   "name": "Essex Market",
+   "kind": "market",
+   "neighborhood": "lower-east-side",
+   "summary": "Public market hall with butchers, cheesemongers and lunch counters, now in a modern building on Delancey Street.",
+   "tags": [
+    "food",
+    "market",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mcsorleys",
+   "name": "McSorley's Old Ale House",
+   "kind": "bar",
+   "neighborhood": "east-village",
+   "summary": "Sawdust-floored saloon dating to the 1850s that serves only its own light or dark ale.",
+   "tags": [
+    "historic",
+    "dive",
+    "beer"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "veselka",
+   "name": "Veselka",
+   "kind": "restaurant",
+   "neighborhood": "east-village",
+   "summary": "Ukrainian diner on Second Avenue known for pierogi and borscht, open from breakfast to late.",
+   "tags": [
+    "diner",
+    "pierogi",
+    "late-night"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "ukrainian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "venieros",
+   "name": "Veniero's Pasticceria",
+   "kind": "cafe",
+   "neighborhood": "east-village",
+   "summary": "Italian pastry shop and cafe on East 11th Street dating to the 1890s.",
+   "tags": [
+    "dessert",
+    "cannoli",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian-pastry",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "washington-square-park",
+   "name": "Washington Square Park",
+   "kind": "park",
+   "neighborhood": "greenwich-village",
+   "summary": "The arch, the fountain, chess players, buskers and NYU students.",
+   "tags": [
+    "people-watching",
+    "music",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "joes-pizza",
+   "name": "Joe's Pizza",
+   "kind": "restaurant",
+   "neighborhood": "greenwich-village",
+   "summary": "Classic New York slice counter on Carmine Street, open since 1975.",
+   "tags": [
+    "pizza",
+    "slice",
+    "quick"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stonewall-inn",
+   "name": "The Stonewall Inn",
+   "kind": "bar",
+   "neighborhood": "greenwich-village",
+   "summary": "Gay bar on Christopher Street where the 1969 uprising began, now part of a national monument.",
+   "tags": [
+    "lgbtq",
+    "history",
+    "bar"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "caffe-reggio",
+   "name": "Caffe Reggio",
+   "kind": "cafe",
+   "neighborhood": "greenwich-village",
+   "summary": "Dim, art-filled MacDougal Street coffeehouse open since 1927.",
+   "tags": [
+    "coffee",
+    "historic",
+    "cosy"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "italian-cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitney-museum",
+   "name": "Whitney Museum of American Art",
+   "kind": "museum",
+   "neighborhood": "greenwich-village",
+   "summary": "Modern and contemporary American art in a Renzo Piano building at the foot of the High Line.",
+   "tags": [
+    "art",
+    "terraces",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "high-line",
+   "name": "The High Line",
+   "kind": "park",
+   "neighborhood": "chelsea",
+   "summary": "Elevated park on an old freight rail line running from the Meatpacking District to Hudson Yards.",
+   "tags": [
+    "walk",
+    "views",
+    "gardens",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chelsea-market",
+   "name": "Chelsea Market",
+   "kind": "market",
+   "neighborhood": "chelsea",
+   "summary": "Food hall in the old Nabisco factory, with tech offices upstairs.",
+   "tags": [
+    "food-hall",
+    "rainy-day",
+    "touristy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chelsea-piers",
+   "name": "Chelsea Piers",
+   "kind": "fitness",
+   "neighborhood": "chelsea",
+   "summary": "Hudson River sports complex with a gym, golf range, ice rinks and climbing walls.",
+   "tags": [
+    "gym",
+    "sports",
+    "skating"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "union-square-greenmarket",
+   "name": "Union Square Greenmarket",
+   "kind": "market",
+   "neighborhood": "flatiron",
+   "summary": "The city's best-known farmers' market, four days a week.",
+   "tags": [
+    "farmers-market",
+    "local",
+    "food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "madison-square-park",
+   "name": "Madison Square Park",
+   "kind": "park",
+   "neighborhood": "flatiron",
+   "summary": "Small park facing the Flatiron Building, with rotating public art and the original Shake Shack.",
+   "tags": [
+    "park",
+    "art",
+    "burgers"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "strand-bookstore",
+   "name": "Strand Book Store",
+   "kind": "shopping",
+   "neighborhood": "flatiron",
+   "summary": "Huge independent bookshop at Broadway and 12th Street, famous for \"18 miles of books\".",
+   "tags": [
+    "books",
+    "rainy-day",
+    "browse"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "times-square",
+   "name": "Times Square",
+   "kind": "landmark",
+   "neighborhood": "midtown",
+   "summary": "Neon billboards, crowds and costumed characters at the crossroads of the Theater District.",
+   "tags": [
+    "iconic",
+    "touristy",
+    "lights"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "broadway-theatres",
+   "name": "Broadway theaters",
+   "kind": "venue",
+   "neighborhood": "midtown",
+   "summary": "Around forty large theaters in the blocks around Times Square staging musicals and plays eight times a week.",
+   "tags": [
+    "theater",
+    "musicals",
+    "iconic"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rockefeller-center",
+   "name": "Rockefeller Center",
+   "kind": "landmark",
+   "neighborhood": "midtown",
+   "summary": "Art Deco complex with the Top of the Rock observation deck, a winter ice rink and the Christmas tree.",
+   "tags": [
+    "art-deco",
+    "views",
+    "skating",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "empire-state-building",
+   "name": "Empire State Building",
+   "kind": "attraction",
+   "neighborhood": "midtown",
+   "summary": "Art Deco skyscraper with open-air observation decks on the 86th floor.",
+   "tags": [
+    "views",
+    "iconic",
+    "art-deco"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grand-central",
+   "name": "Grand Central Terminal",
+   "kind": "landmark",
+   "neighborhood": "midtown",
+   "summary": "Beaux-Arts rail terminal with a celestial ceiling, a food hall and the Whispering Gallery.",
+   "tags": [
+    "architecture",
+    "trains",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grand-central-oyster-bar",
+   "name": "Grand Central Oyster Bar",
+   "kind": "restaurant",
+   "neighborhood": "midtown",
+   "summary": "Vaulted, tiled seafood restaurant beneath Grand Central, open since 1913.",
+   "tags": [
+    "oysters",
+    "historic",
+    "seafood"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moma",
+   "name": "Museum of Modern Art",
+   "kind": "museum",
+   "neighborhood": "midtown",
+   "summary": "Major modern art collection on West 53rd Street, from Van Gogh's \"The Starry Night\" to contemporary design.",
+   "tags": [
+    "art",
+    "iconic",
+    "rainy-day"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "madison-square-garden",
+   "name": "Madison Square Garden",
+   "kind": "stadium",
+   "neighborhood": "midtown",
+   "summary": "Arena above Penn Station, home of the Knicks and Rangers and a major concert venue.",
+   "tags": [
+    "basketball",
+    "hockey",
+    "concerts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "edge-observation-deck",
+   "name": "Edge",
+   "kind": "attraction",
+   "neighborhood": "hudson-yards",
+   "summary": "Glass-floored outdoor observation deck jutting from the 100th floor of 30 Hudson Yards.",
+   "tags": [
+    "views",
+    "thrill",
+    "sunset"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "central-park",
+   "name": "Central Park",
+   "kind": "park",
+   "neighborhood": "upper-west-side",
+   "summary": "The 843-acre park between the Upper West and Upper East Sides, with lakes, meadows, a reservoir loop and the Delacorte Theater.",
+   "tags": [
+    "park",
+    "running",
+    "iconic",
+    "boating"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amnh",
+   "name": "American Museum of Natural History",
+   "kind": "museum",
+   "neighborhood": "upper-west-side",
+   "summary": "Dinosaur halls, the blue whale and the Hayden Planetarium on Central Park West.",
+   "tags": [
+    "science",
+    "dinosaurs",
+    "kids",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lincoln-center",
+   "name": "Lincoln Center",
+   "kind": "venue",
+   "neighborhood": "upper-west-side",
+   "summary": "Performing arts campus for the Metropolitan Opera, New York Philharmonic, New York City Ballet and Juilliard.",
+   "tags": [
+    "opera",
+    "ballet",
+    "classical",
+    "fountain"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "levain-bakery",
+   "name": "Levain Bakery",
+   "kind": "cafe",
+   "neighborhood": "upper-west-side",
+   "summary": "Basement bakery on West 74th Street known for enormous six-ounce cookies.",
+   "tags": [
+    "cookies",
+    "bakery",
+    "line"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-met",
+   "name": "The Metropolitan Museum of Art",
+   "kind": "museum",
+   "neighborhood": "upper-east-side",
+   "summary": "One of the world's great art museums, on Fifth Avenue at the edge of Central Park, with a summer rooftop garden.",
+   "tags": [
+    "art",
+    "iconic",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guggenheim",
+   "name": "Solomon R. Guggenheim Museum",
+   "kind": "museum",
+   "neighborhood": "upper-east-side",
+   "summary": "Frank Lloyd Wright's spiralling museum of modern and contemporary art.",
+   "tags": [
+    "art",
+    "architecture",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bemelmans-bar",
+   "name": "Bemelmans Bar",
+   "kind": "bar",
+   "neighborhood": "upper-east-side",
+   "summary": "Piano bar in the Carlyle Hotel with murals by the creator of \"Madeline\".",
+   "tags": [
+    "cocktails",
+    "piano",
+    "classic"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-john-the-divine",
+   "name": "Cathedral of St. John the Divine",
+   "kind": "landmark",
+   "neighborhood": "morningside-heights",
+   "summary": "Vast, still-unfinished Episcopal cathedral on Amsterdam Avenue.",
+   "tags": [
+    "architecture",
+    "quiet",
+    "history"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "apollo-theater",
+   "name": "Apollo Theater",
+   "kind": "venue",
+   "neighborhood": "harlem",
+   "summary": "Historic 125th Street theater famous for its Wednesday Amateur Night.",
+   "tags": [
+    "music",
+    "history",
+    "comedy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sylvias",
+   "name": "Sylvia's",
+   "kind": "restaurant",
+   "neighborhood": "harlem",
+   "summary": "Soul food restaurant on Lenox Avenue since 1962, with a Sunday gospel brunch.",
+   "tags": [
+    "soul-food",
+    "brunch",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "soul-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "smorgasburg",
+   "name": "Smorgasburg Williamsburg",
+   "kind": "market",
+   "neighborhood": "williamsburg",
+   "summary": "Saturday outdoor food market on the waterfront with dozens of vendors and skyline views.",
+   "tags": [
+    "food",
+    "waterfront",
+    "weekend"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peter-luger",
+   "name": "Peter Luger Steak House",
+   "kind": "restaurant",
+   "neighborhood": "williamsburg",
+   "summary": "Old-school German-style steakhouse under the Williamsburg Bridge, open since 1887.",
+   "tags": [
+    "steak",
+    "historic",
+    "old-school"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "coworkers",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "steakhouse",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "devocion",
+   "name": "Devoción",
+   "kind": "cafe",
+   "neighborhood": "williamsburg",
+   "summary": "Skylit Colombian coffee roastery with a green wall.",
+   "tags": [
+    "coffee",
+    "roastery",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brooklyn-bridge",
+   "name": "Brooklyn Bridge walk",
+   "kind": "landmark",
+   "neighborhood": "dumbo",
+   "summary": "The 1883 suspension bridge's elevated promenade from DUMBO to City Hall.",
+   "tags": [
+    "iconic",
+    "walk",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brooklyn-bridge-park",
+   "name": "Brooklyn Bridge Park",
+   "kind": "park",
+   "neighborhood": "dumbo",
+   "summary": "Piers turned into lawns, sports fields and Jane's Carousel along the Brooklyn waterfront.",
+   "tags": [
+    "waterfront",
+    "views",
+    "sunset"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "julianas",
+   "name": "Juliana's",
+   "kind": "restaurant",
+   "neighborhood": "dumbo",
+   "summary": "Coal-fired pizzeria at the foot of the Brooklyn Bridge.",
+   "tags": [
+    "pizza",
+    "coal-oven"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barclays-center",
+   "name": "Barclays Center",
+   "kind": "stadium",
+   "neighborhood": "downtown-brooklyn",
+   "summary": "Arena at Atlantic Avenue, home of the Brooklyn Nets and big concerts.",
+   "tags": [
+    "basketball",
+    "concerts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "juniors",
+   "name": "Junior's",
+   "kind": "restaurant",
+   "neighborhood": "downtown-brooklyn",
+   "summary": "Diner on Flatbush Avenue Extension famous for its cheesecake since 1950.",
+   "tags": [
+    "cheesecake",
+    "diner",
+    "classic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "prospect-park",
+   "name": "Prospect Park",
+   "kind": "park",
+   "neighborhood": "park-slope",
+   "summary": "Brooklyn's great park by the designers of Central Park, with the Long Meadow, a lake and Saturday Grand Army Plaza Greenmarket.",
+   "tags": [
+    "park",
+    "running",
+    "picnic",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "house-of-yes",
+   "name": "House of Yes",
+   "kind": "nightlife",
+   "neighborhood": "bushwick",
+   "summary": "Club and performance space with aerialists, costumed theme nights and dancing until late.",
+   "tags": [
+    "dancing",
+    "costumes",
+    "queer-friendly"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "robertas",
+   "name": "Roberta's",
+   "kind": "restaurant",
+   "neighborhood": "bushwick",
+   "summary": "Wood-fired pizza in a cinderblock building that helped put Bushwick on the food map.",
+   "tags": [
+    "pizza",
+    "garden"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coney-island-beach",
+   "name": "Coney Island Beach and Boardwalk",
+   "kind": "beach",
+   "neighborhood": "coney-island",
+   "summary": "Wide public sand beach and wooden boardwalk with lifeguards in season.",
+   "tags": [
+    "beach",
+    "boardwalk",
+    "swimming"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "luna-park",
+   "name": "Luna Park and the Cyclone",
+   "kind": "attraction",
+   "neighborhood": "coney-island",
+   "summary": "Amusement park rides beside the 1927 Cyclone wooden roller coaster and the Wonder Wheel.",
+   "tags": [
+    "rides",
+    "retro",
+    "thrill"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nathans-famous",
+   "name": "Nathan's Famous",
+   "kind": "restaurant",
+   "neighborhood": "coney-island",
+   "summary": "The original 1916 hot dog stand on Surf Avenue, site of the Fourth of July eating contest.",
+   "tags": [
+    "hot-dogs",
+    "historic",
+    "quick"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "hot-dogs",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "museum-of-the-moving-image",
+   "name": "Museum of the Moving Image",
+   "kind": "museum",
+   "neighborhood": "astoria",
+   "summary": "Film, television and video game museum with a cinema, beside Kaufman Astoria Studios.",
+   "tags": [
+    "film",
+    "games",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bohemian-hall",
+   "name": "Bohemian Hall & Beer Garden",
+   "kind": "bar",
+   "neighborhood": "astoria",
+   "summary": "Czech beer hall with a big tree-shaded garden, open since 1910.",
+   "tags": [
+    "beer-garden",
+    "historic",
+    "outdoor"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "czech",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moma-ps1",
+   "name": "MoMA PS1",
+   "kind": "museum",
+   "neighborhood": "long-island-city",
+   "summary": "Contemporary art in a former public school, with summer courtyard parties.",
+   "tags": [
+    "art",
+    "contemporary",
+    "experimental"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "flushing-meadows-corona-park",
+   "name": "Flushing Meadows Corona Park",
+   "kind": "park",
+   "neighborhood": "flushing",
+   "summary": "Former World's Fair grounds with the Unisphere, the Queens Museum and lakes.",
+   "tags": [
+    "park",
+    "unisphere",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "usta-tennis-center",
+   "name": "USTA Billie Jean King National Tennis Center",
+   "kind": "stadium",
+   "neighborhood": "flushing",
+   "summary": "Home of the US Open, with Arthur Ashe Stadium at its center.",
+   "tags": [
+    "tennis",
+    "sports"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "citi-field",
+   "name": "Citi Field",
+   "kind": "stadium",
+   "neighborhood": "flushing",
+   "summary": "The New York Mets' ballpark beside Flushing Meadows.",
+   "tags": [
+    "baseball",
+    "sports"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yankee-stadium",
+   "name": "Yankee Stadium",
+   "kind": "stadium",
+   "neighborhood": "concourse",
+   "summary": "The Yankees' ballpark on 161st Street, with Monument Park beyond the outfield.",
+   "tags": [
+    "baseball",
+    "sports",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arthur-avenue-market",
+   "name": "Arthur Avenue Retail Market",
+   "kind": "market",
+   "neighborhood": "belmont",
+   "summary": "Indoor Italian market from the 1940s with butchers, a cigar roller and sandwich counters.",
+   "tags": [
+    "food",
+    "italian",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bronx-zoo",
+   "name": "Bronx Zoo",
+   "kind": "attraction",
+   "neighborhood": "belmont",
+   "summary": "One of the largest city zoos in the country, in Bronx Park beside Belmont.",
+   "tags": [
+    "animals",
+    "kids",
+    "big"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fraunces-tavern",
+   "name": "Fraunces Tavern",
+   "kind": "restaurant",
+   "neighborhood": "financial-district",
+   "summary": "Colonial-era tavern where Washington said farewell to his officers, now a pub and restaurant above a small museum.",
+   "tags": [
+    "historic",
+    "pub",
+    "museum"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-battery",
+   "name": "The Battery",
+   "kind": "park",
+   "neighborhood": "financial-district",
+   "summary": "Harbor-front park at Manhattan's tip with gardens, a bikeway, the SeaGlass Carousel and lunch-break benches.",
+   "tags": [
+    "waterfront",
+    "gardens",
+    "lunch-break"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stone-street",
+   "name": "Stone Street",
+   "kind": "nightlife",
+   "neighborhood": "financial-district",
+   "summary": "Cobblestone lane lined with pubs whose picnic tables fill with after-work Wall Street crowds.",
+   "tags": [
+    "after-work",
+    "outdoor-drinking",
+    "cobblestones"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "coworkers",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fanelli-cafe",
+   "name": "Fanelli Cafe",
+   "kind": "bar",
+   "neighborhood": "soho",
+   "summary": "Old corner saloon on Prince Street, a bar since the nineteenth century, with burgers and checked tablecloths.",
+   "tags": [
+    "historic",
+    "pub",
+    "burgers"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mcnally-jackson-soho",
+   "name": "McNally Jackson Books",
+   "kind": "shopping",
+   "neighborhood": "soho",
+   "summary": "Independent bookstore on Prince Street with deep fiction shelves and author readings.",
+   "tags": [
+    "books",
+    "readings",
+    "indie"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dominique-ansel",
+   "name": "Dominique Ansel Bakery",
+   "kind": "cafe",
+   "neighborhood": "soho",
+   "summary": "French bakery on Spring Street, home of the Cronut and a pretty back garden.",
+   "tags": [
+    "bakery",
+    "pastry",
+    "cronut"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "french-bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "housing-works-bookstore",
+   "name": "Housing Works Bookstore Cafe",
+   "kind": "cafe",
+   "neighborhood": "soho",
+   "summary": "Volunteer-run used bookstore and cafe on Crosby Street whose proceeds support people with HIV and homelessness.",
+   "tags": [
+    "books",
+    "used",
+    "coffee",
+    "charity"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tenement-museum",
+   "name": "Tenement Museum",
+   "kind": "museum",
+   "neighborhood": "lower-east-side",
+   "summary": "Guided tours through restored Orchard Street tenement apartments of immigrant families.",
+   "tags": [
+    "history",
+    "immigration",
+    "tours"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seward-park",
+   "name": "Seward Park",
+   "kind": "park",
+   "neighborhood": "lower-east-side",
+   "summary": "Neighborhood park with a playground, chess tables and handball courts, beside the old Forward Building.",
+   "tags": [
+    "playground",
+    "chess",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "seward-park-library",
+   "name": "NYPL Seward Park Library",
+   "kind": "library",
+   "neighborhood": "lower-east-side",
+   "summary": "Historic Carnegie branch library facing the park, busy with students and Chinese-language readers.",
+   "tags": [
+    "books",
+    "study",
+    "historic"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mercury-lounge",
+   "name": "Mercury Lounge",
+   "kind": "venue",
+   "neighborhood": "lower-east-side",
+   "summary": "Small, long-running rock club on Houston Street where many bands play their first New York shows.",
+   "tags": [
+    "live-music",
+    "indie",
+    "rock"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kossars",
+   "name": "Kossar's Bagels & Bialys",
+   "kind": "cafe",
+   "neighborhood": "lower-east-side",
+   "summary": "Old Grand Street bakery making bialys and bagels since the 1930s.",
+   "tags": [
+    "bagels",
+    "bakery",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tompkins-square-park",
+   "name": "Tompkins Square Park",
+   "kind": "park",
+   "neighborhood": "east-village",
+   "summary": "The East Village's backyard: dog run, basketball, chess, a Saturday Greenmarket and buskers.",
+   "tags": [
+    "dogs",
+    "local",
+    "greenmarket"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ottendorfer-library",
+   "name": "NYPL Ottendorfer Library",
+   "kind": "library",
+   "neighborhood": "east-village",
+   "summary": "One of the oldest public library buildings in Manhattan, an ornate branch on Second Avenue.",
+   "tags": [
+    "books",
+    "historic",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bh-dairy",
+   "name": "B&H Dairy",
+   "kind": "restaurant",
+   "neighborhood": "east-village",
+   "summary": "Narrow kosher dairy lunch counter serving blintzes, pierogi and challah toast since the 1940s.",
+   "tags": [
+    "lunch-counter",
+    "cheap",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-dairy",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "momofuku-noodle-bar",
+   "name": "Momofuku Noodle Bar",
+   "kind": "restaurant",
+   "neighborhood": "east-village",
+   "summary": "David Chang's ramen and pork-bun counter on First Avenue.",
+   "tags": [
+    "ramen",
+    "buns"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "asian-american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "comedy-cellar",
+   "name": "Comedy Cellar",
+   "kind": "venue",
+   "neighborhood": "greenwich-village",
+   "summary": "Basement comedy club on MacDougal Street where well-known comics drop in unannounced.",
+   "tags": [
+    "comedy",
+    "late-night"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jefferson-market-library",
+   "name": "NYPL Jefferson Market Library",
+   "kind": "library",
+   "neighborhood": "greenwich-village",
+   "summary": "Victorian Gothic former courthouse turned branch library, with a garden next door.",
+   "tags": [
+    "books",
+    "architecture",
+    "garden"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chelsea-galleries",
+   "name": "Chelsea gallery district",
+   "kind": "museum",
+   "neighborhood": "chelsea",
+   "summary": "Hundreds of free contemporary art galleries in old warehouses between Tenth and Eleventh Avenues.",
+   "tags": [
+    "art",
+    "free",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cookshop",
+   "name": "Cookshop",
+   "kind": "restaurant",
+   "neighborhood": "chelsea",
+   "summary": "Seasonal American restaurant on Tenth Avenue by the High Line, a neighborhood brunch favorite.",
+   "tags": [
+    "brunch",
+    "seasonal",
+    "patio"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "muhlenberg-library",
+   "name": "NYPL Muhlenberg Library",
+   "kind": "library",
+   "neighborhood": "chelsea",
+   "summary": "Branch library on West 23rd Street with computers, study tables and kids' programs.",
+   "tags": [
+    "books",
+    "quiet",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shake-shack-madison-square",
+   "name": "Shake Shack Madison Square Park",
+   "kind": "restaurant",
+   "neighborhood": "flatiron",
+   "summary": "The original burger kiosk in the park, with a lunchtime line and outdoor tables.",
+   "tags": [
+    "burgers",
+    "outdoor",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "burgers",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "eataly-flatiron",
+   "name": "Eataly Flatiron",
+   "kind": "market",
+   "neighborhood": "flatiron",
+   "summary": "Big Italian food hall and grocery on Fifth Avenue with counters for pasta, pizza and espresso.",
+   "tags": [
+    "italian",
+    "grocery",
+    "food-hall"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-town-bar",
+   "name": "Old Town Bar",
+   "kind": "bar",
+   "neighborhood": "flatiron",
+   "summary": "Wood-panelled 1890s tavern on East 18th Street with booths, burgers and a dumbwaiter.",
+   "tags": [
+    "historic",
+    "pub",
+    "burgers"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kips-bay-library",
+   "name": "NYPL Kips Bay Library",
+   "kind": "library",
+   "neighborhood": "kips-bay",
+   "summary": "Neighborhood branch library on Third Avenue used by students and hospital staff.",
+   "tags": [
+    "books",
+    "quiet",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kalustyans",
+   "name": "Kalustyan's",
+   "kind": "market",
+   "neighborhood": "kips-bay",
+   "summary": "Packed spice and specialty grocery on Lexington Avenue's \"Curry Hill\", with a small upstairs deli.",
+   "tags": [
+    "grocery",
+    "spices",
+    "indian"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-vartan-park",
+   "name": "St. Vartan Park",
+   "kind": "park",
+   "neighborhood": "kips-bay",
+   "summary": "Neighborhood park with a playground, ball courts and a turf field on First Avenue.",
+   "tags": [
+    "playground",
+    "sports",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sarges-deli",
+   "name": "Sarge's Deli",
+   "kind": "restaurant",
+   "neighborhood": "kips-bay",
+   "summary": "Old-school Jewish deli on Third Avenue in Murray Hill with towering pastrami sandwiches.",
+   "tags": [
+    "deli",
+    "pastrami",
+    "old-school"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "petes-tavern",
+   "name": "Pete's Tavern",
+   "kind": "bar",
+   "neighborhood": "kips-bay",
+   "summary": "Gramercy saloon that claims to be the oldest continuously operating bar in the city.",
+   "tags": [
+    "historic",
+    "pub"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bryant-park",
+   "name": "Bryant Park",
+   "kind": "park",
+   "neighborhood": "midtown",
+   "summary": "Midtown's lunchtime lawn behind the library, with movable chairs, a carousel and a winter skating rink.",
+   "tags": [
+    "lunch-break",
+    "lawn",
+    "skating"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nypl-schwarzman",
+   "name": "New York Public Library main branch",
+   "kind": "library",
+   "neighborhood": "midtown",
+   "summary": "The Beaux-Arts Stephen A. Schwarzman Building with its stone lions and the Rose Main Reading Room.",
+   "tags": [
+    "books",
+    "architecture",
+    "quiet",
+    "iconic"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mercado-little-spain",
+   "name": "Mercado Little Spain",
+   "kind": "restaurant",
+   "neighborhood": "hudson-yards",
+   "summary": "José Andrés's Spanish food hall under the Hudson Yards towers, with tapas counters and a bar.",
+   "tags": [
+    "food-hall",
+    "tapas"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "spanish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-shed",
+   "name": "The Shed",
+   "kind": "venue",
+   "neighborhood": "hudson-yards",
+   "summary": "Arts center with a sliding shell hosting exhibitions, concerts and performances.",
+   "tags": [
+    "arts",
+    "performance"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shops-at-hudson-yards",
+   "name": "The Shops at Hudson Yards",
+   "kind": "shopping",
+   "neighborhood": "hudson-yards",
+   "summary": "Multi-level mall of chain stores and restaurants, a warm place to walk in winter.",
+   "tags": [
+    "mall",
+    "errands"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bella-abzug-park",
+   "name": "Bella Abzug Park",
+   "kind": "park",
+   "neighborhood": "hudson-yards",
+   "summary": "Narrow mid-block park running north from Hudson Yards with lawns, fountains and food kiosks.",
+   "tags": [
+    "lawn",
+    "lunch-break",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "zabars",
+   "name": "Zabar's",
+   "kind": "market",
+   "neighborhood": "upper-west-side",
+   "summary": "Crowded Broadway gourmet grocery for smoked fish, coffee and cheese, with a cafe counter next door.",
+   "tags": [
+    "grocery",
+    "deli",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barney-greengrass",
+   "name": "Barney Greengrass",
+   "kind": "restaurant",
+   "neighborhood": "upper-west-side",
+   "summary": "The \"Sturgeon King\", an Amsterdam Avenue appetizing shop and restaurant for lox and eggs.",
+   "tags": [
+    "brunch",
+    "smoked-fish",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "riverside-park",
+   "name": "Riverside Park",
+   "kind": "park",
+   "neighborhood": "upper-west-side",
+   "summary": "Long Hudson-front park with running paths, dog runs and playgrounds below Riverside Drive.",
+   "tags": [
+    "running",
+    "waterfront",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "carl-schurz-park",
+   "name": "Carl Schurz Park",
+   "kind": "park",
+   "neighborhood": "upper-east-side",
+   "summary": "Quiet riverside park by Gracie Mansion with a promenade over the East River and a busy dog run.",
+   "tags": [
+    "waterfront",
+    "dogs",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lexington-candy-shop",
+   "name": "Lexington Candy Shop",
+   "kind": "restaurant",
+   "neighborhood": "upper-east-side",
+   "summary": "Luncheonette from 1925 with a soda fountain, egg creams and diner breakfasts.",
+   "tags": [
+    "diner",
+    "historic",
+    "milkshakes"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jg-melon",
+   "name": "J.G. Melon",
+   "kind": "bar",
+   "neighborhood": "upper-east-side",
+   "summary": "Cash-only corner pub on Third Avenue famous for its burgers and cottage fries.",
+   "tags": [
+    "burgers",
+    "pub",
+    "classic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "67th-street-library",
+   "name": "NYPL 67th Street Library",
+   "kind": "library",
+   "neighborhood": "upper-east-side",
+   "summary": "Carnegie branch library on East 67th Street.",
+   "tags": [
+    "books",
+    "quiet",
+    "historic"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "toms-restaurant-morningside",
+   "name": "Tom's Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "morningside-heights",
+   "summary": "Columbia students' diner on Broadway, whose sign was used as Monk's Café on Seinfeld.",
+   "tags": [
+    "diner",
+    "students",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hungarian-pastry-shop",
+   "name": "Hungarian Pastry Shop",
+   "kind": "cafe",
+   "neighborhood": "morningside-heights",
+   "summary": "Dim, cozy cafe on Amsterdam Avenue where Columbia students write papers over pastries for hours.",
+   "tags": [
+    "pastry",
+    "study",
+    "students"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "hungarian-pastry",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "book-culture",
+   "name": "Book Culture",
+   "kind": "shopping",
+   "neighborhood": "morningside-heights",
+   "summary": "Independent bookstore near Columbia with academic titles, fiction and readings.",
+   "tags": [
+    "books",
+    "students",
+    "indie"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "morningside-park",
+   "name": "Morningside Park",
+   "kind": "park",
+   "neighborhood": "morningside-heights",
+   "summary": "Steep cliffside park between the Heights and Harlem with a pond, ball fields and a Saturday farmers market.",
+   "tags": [
+    "local",
+    "playground",
+    "farmers-market"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "riverside-church",
+   "name": "Riverside Church",
+   "kind": "landmark",
+   "neighborhood": "morningside-heights",
+   "summary": "Gothic church tower over the Hudson with a famous carillon and a long activist history.",
+   "tags": [
+    "architecture",
+    "history",
+    "music"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schomburg-center",
+   "name": "Schomburg Center for Research in Black Culture",
+   "kind": "library",
+   "neighborhood": "harlem",
+   "summary": "NYPL research library and exhibition space on Malcolm X Boulevard devoted to the African diaspora.",
+   "tags": [
+    "books",
+    "black-history",
+    "exhibits"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marcus-garvey-park",
+   "name": "Marcus Garvey Park",
+   "kind": "park",
+   "neighborhood": "harlem",
+   "summary": "Rocky park with a fire watchtower, an amphitheater for summer concerts and a Saturday drum circle.",
+   "tags": [
+    "music",
+    "playground",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "amy-ruths",
+   "name": "Amy Ruth's",
+   "kind": "restaurant",
+   "neighborhood": "harlem",
+   "summary": "Soul food restaurant on West 116th Street known for chicken and waffles named after famous Harlemites.",
+   "tags": [
+    "soul-food",
+    "chicken-and-waffles"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "soul-food",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "red-rooster",
+   "name": "Red Rooster",
+   "kind": "restaurant",
+   "neighborhood": "harlem",
+   "summary": "Marcus Samuelsson's Lenox Avenue restaurant with comfort food, a lively bar and live music downstairs.",
+   "tags": [
+    "soul-food",
+    "live-music",
+    "brunch"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american-southern",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mccarren-park",
+   "name": "McCarren Park",
+   "kind": "park",
+   "neighborhood": "williamsburg",
+   "summary": "Williamsburg and Greenpoint's shared park with a running track, a big public pool and a Saturday Greenmarket.",
+   "tags": [
+    "running",
+    "pool",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brooklyn-brewery",
+   "name": "Brooklyn Brewery",
+   "kind": "bar",
+   "neighborhood": "williamsburg",
+   "summary": "Brewery taproom on North 11th Street with weekend tours and long shared tables.",
+   "tags": [
+    "brewery",
+    "beer",
+    "tours"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "domino-park",
+   "name": "Domino Park",
+   "kind": "park",
+   "neighborhood": "williamsburg",
+   "summary": "Waterfront park beside the old Domino Sugar refinery with a taco stand, volleyball and skyline views.",
+   "tags": [
+    "waterfront",
+    "views",
+    "volleyball"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "janes-carousel",
+   "name": "Jane's Carousel",
+   "kind": "attraction",
+   "neighborhood": "dumbo",
+   "summary": "Restored 1920s carousel in a glass pavilion on the river below the Brooklyn Bridge.",
+   "tags": [
+    "carousel",
+    "kids",
+    "views"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grimaldis",
+   "name": "Grimaldi's",
+   "kind": "restaurant",
+   "neighborhood": "dumbo",
+   "summary": "Coal-oven pizzeria under the Brooklyn Bridge with a line of visitors outside.",
+   "tags": [
+    "pizza",
+    "touristy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brooklyn-heights-promenade",
+   "name": "Brooklyn Heights Promenade",
+   "kind": "landmark",
+   "neighborhood": "downtown-brooklyn",
+   "summary": "Esplanade above the BQE with the classic view of Lower Manhattan.",
+   "tags": [
+    "views",
+    "walk",
+    "skyline"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fort-greene-park",
+   "name": "Fort Greene Park",
+   "kind": "park",
+   "neighborhood": "downtown-brooklyn",
+   "summary": "Hilly park with tennis courts, a Saturday Greenmarket and the Prison Ship Martyrs' Monument.",
+   "tags": [
+    "tennis",
+    "greenmarket",
+    "dogs"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bam",
+   "name": "Brooklyn Academy of Music",
+   "kind": "venue",
+   "neighborhood": "downtown-brooklyn",
+   "summary": "Performing arts center with theater, dance, opera and a repertory cinema.",
+   "tags": [
+    "theater",
+    "film",
+    "dance"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dekalb-market-hall",
+   "name": "DeKalb Market Hall",
+   "kind": "market",
+   "neighborhood": "downtown-brooklyn",
+   "summary": "Basement food hall under City Point with dozens of counters, including a Katz's outpost.",
+   "tags": [
+    "food-hall",
+    "lunch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brooklyn-central-library",
+   "name": "Brooklyn Public Library Central Library",
+   "kind": "library",
+   "neighborhood": "park-slope",
+   "summary": "Art Deco main library at Grand Army Plaza with a cafe and big reading rooms.",
+   "tags": [
+    "books",
+    "architecture",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grand-army-plaza-greenmarket",
+   "name": "Grand Army Plaza Greenmarket",
+   "kind": "market",
+   "neighborhood": "park-slope",
+   "summary": "Saturday farmers market at the park's main entrance, the neighborhood's weekly grocery run.",
+   "tags": [
+    "farmers-market",
+    "saturday",
+    "produce"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "community-bookstore",
+   "name": "Community Bookstore",
+   "kind": "shopping",
+   "neighborhood": "park-slope",
+   "summary": "Long-running independent bookstore on Seventh Avenue with a resident cat.",
+   "tags": [
+    "books",
+    "indie",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "union-hall",
+   "name": "Union Hall",
+   "kind": "bar",
+   "neighborhood": "park-slope",
+   "summary": "Fifth Avenue bar with indoor bocce courts, fireplaces and a basement venue for comedy and music.",
+   "tags": [
+    "bocce",
+    "comedy",
+    "live-music"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "toms-restaurant-brooklyn",
+   "name": "Tom's Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "park-slope",
+   "summary": "Prospect Heights diner open since the 1930s, known for lemon-ricotta pancakes and weekend lines.",
+   "tags": [
+    "diner",
+    "breakfast",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "american-diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brooklyn-botanic-garden",
+   "name": "Brooklyn Botanic Garden",
+   "kind": "garden",
+   "neighborhood": "park-slope",
+   "summary": "Garden beside Prospect Park with a Japanese hill-and-pond garden and spring cherry blossoms.",
+   "tags": [
+    "flowers",
+    "cherry-blossoms",
+    "quiet"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maria-hernandez-park",
+   "name": "Maria Hernandez Park",
+   "kind": "park",
+   "neighborhood": "bushwick",
+   "summary": "Neighborhood park with a dog run, handball courts and weekend vendors.",
+   "tags": [
+    "dogs",
+    "local",
+    "playground"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bushwick-collective",
+   "name": "The Bushwick Collective",
+   "kind": "landmark",
+   "neighborhood": "bushwick",
+   "summary": "Blocks of large street murals around Troutman Street and Saint Nicholas Avenue, repainted regularly.",
+   "tags": [
+    "street-art",
+    "walk",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bushwick-library",
+   "name": "Brooklyn Public Library Bushwick Branch",
+   "kind": "library",
+   "neighborhood": "bushwick",
+   "summary": "Restored Carnegie branch library on Bushwick Avenue.",
+   "tags": [
+    "books",
+    "historic",
+    "kids"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "totonnos",
+   "name": "Totonno's Pizzeria Napolitano",
+   "kind": "restaurant",
+   "neighborhood": "coney-island",
+   "summary": "Coal-oven pizzeria on Neptune Avenue run by the same family since 1924.",
+   "tags": [
+    "pizza",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maimonides-park",
+   "name": "Maimonides Park",
+   "kind": "stadium",
+   "neighborhood": "coney-island",
+   "summary": "Minor-league ballpark of the Brooklyn Cyclones by the boardwalk, with summer fireworks nights.",
+   "tags": [
+    "baseball",
+    "cheap",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ny-aquarium",
+   "name": "New York Aquarium",
+   "kind": "attraction",
+   "neighborhood": "coney-island",
+   "summary": "Aquarium on the boardwalk with sea lions, sharks and penguins.",
+   "tags": [
+    "animals",
+    "kids"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coney-island-library",
+   "name": "Brooklyn Public Library Coney Island Branch",
+   "kind": "library",
+   "neighborhood": "coney-island",
+   "summary": "Neighborhood branch library on Mermaid Avenue.",
+   "tags": [
+    "books",
+    "kids",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "astoria-park",
+   "name": "Astoria Park",
+   "kind": "park",
+   "neighborhood": "astoria",
+   "summary": "Riverside park under the Hell Gate and RFK bridges with the city's biggest public pool, a track and tennis courts.",
+   "tags": [
+    "pool",
+    "running",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "taverna-kyclades",
+   "name": "Taverna Kyclades",
+   "kind": "restaurant",
+   "neighborhood": "astoria",
+   "summary": "Busy Ditmars Boulevard Greek seafood taverna with grilled octopus and long waits.",
+   "tags": [
+    "greek",
+    "seafood"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "greek",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "socrates-sculpture-park",
+   "name": "Socrates Sculpture Park",
+   "kind": "park",
+   "neighborhood": "astoria",
+   "summary": "Riverfront outdoor sculpture park with free summer movies and a weekend market.",
+   "tags": [
+    "art",
+    "waterfront",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gantry-plaza",
+   "name": "Gantry Plaza State Park",
+   "kind": "park",
+   "neighborhood": "long-island-city",
+   "summary": "Waterfront park with restored rail gantries, the Pepsi-Cola sign and Midtown skyline views.",
+   "tags": [
+    "waterfront",
+    "views",
+    "skyline"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hunters-point-library",
+   "name": "Hunters Point Library",
+   "kind": "library",
+   "neighborhood": "long-island-city",
+   "summary": "Queens Public Library branch in a striking concrete building by the river with skyline-facing windows.",
+   "tags": [
+    "books",
+    "architecture",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "manducatis",
+   "name": "Manducatis",
+   "kind": "restaurant",
+   "neighborhood": "long-island-city",
+   "summary": "Old family-run Italian restaurant on Jackson Avenue with home-style cooking and a deep wine cellar.",
+   "tags": [
+    "italian",
+    "old-school",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dutch-kills",
+   "name": "Dutch Kills",
+   "kind": "bar",
+   "neighborhood": "long-island-city",
+   "summary": "Dim cocktail bar on Jackson Avenue with hand-cut ice and wooden booths.",
+   "tags": [
+    "cocktails",
+    "speakeasy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "flushing-library",
+   "name": "Queens Public Library at Flushing",
+   "kind": "library",
+   "neighborhood": "flushing",
+   "summary": "One of the busiest libraries in the country, with books in Chinese, Korean and many other languages.",
+   "tags": [
+    "books",
+    "multilingual",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "queens-botanical-garden",
+   "name": "Queens Botanical Garden",
+   "kind": "garden",
+   "neighborhood": "flushing",
+   "summary": "Neighborhood botanical garden with a rose garden, an arboretum and seasonal festivals.",
+   "tags": [
+    "flowers",
+    "quiet",
+    "kids"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "queens-museum",
+   "name": "Queens Museum",
+   "kind": "museum",
+   "neighborhood": "flushing",
+   "summary": "Museum in Flushing Meadows famous for the Panorama, a scale model of every building in the city.",
+   "tags": [
+    "art",
+    "history",
+    "rainy-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-world-mall",
+   "name": "New World Mall food court",
+   "kind": "market",
+   "neighborhood": "flushing",
+   "summary": "Basement food court with stalls for hand-pulled noodles, dumplings and malatang, beside a large Asian supermarket.",
+   "tags": [
+    "food-court",
+    "chinese",
+    "grocery"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "chinese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nan-xiang",
+   "name": "Nan Xiang Xiao Long Bao",
+   "kind": "restaurant",
+   "neighborhood": "flushing",
+   "summary": "Busy soup-dumpling restaurant on Prince Street.",
+   "tags": [
+    "dumplings",
+    "chinese"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "shanghainese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "joyce-kilmer-park",
+   "name": "Joyce Kilmer Park",
+   "kind": "park",
+   "neighborhood": "concourse",
+   "summary": "Green square on the Grand Concourse opposite the courthouse with the Lorelei fountain.",
+   "tags": [
+    "local",
+    "benches",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bronx-museum",
+   "name": "Bronx Museum of the Arts",
+   "kind": "museum",
+   "neighborhood": "concourse",
+   "summary": "Free contemporary art museum on the Grand Concourse focused on artists of color and Bronx stories.",
+   "tags": [
+    "art",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yankee-tavern",
+   "name": "Yankee Tavern",
+   "kind": "bar",
+   "neighborhood": "concourse",
+   "summary": "Old bar near the stadium, packed before and after Yankees games.",
+   "tags": [
+    "sports",
+    "game-day",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american-pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "court-deli",
+   "name": "Court Deli",
+   "kind": "restaurant",
+   "neighborhood": "concourse",
+   "summary": "Long-running deli on East 161st Street serving pastrami and corned beef to jurors, lawyers and fans.",
+   "tags": [
+    "deli",
+    "lunch",
+    "game-day"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "jewish-deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bronx-terminal-market",
+   "name": "Bronx Terminal Market",
+   "kind": "shopping",
+   "neighborhood": "concourse",
+   "summary": "Big-box shopping center by the Major Deegan for groceries and errands.",
+   "tags": [
+    "errands",
+    "mall"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dominicks",
+   "name": "Dominick's",
+   "kind": "restaurant",
+   "neighborhood": "belmont",
+   "summary": "Arthur Avenue institution with no menus, no bills and communal tables; the waiters tell you what there is.",
+   "tags": [
+    "italian",
+    "old-school"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "madonia-brothers",
+   "name": "Madonia Brothers Bakery",
+   "kind": "cafe",
+   "neighborhood": "belmont",
+   "summary": "Family bakery since 1918 known for olive bread and cannoli filled to order.",
+   "tags": [
+    "bakery",
+    "cannoli"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "italian-bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nybg",
+   "name": "New York Botanical Garden",
+   "kind": "garden",
+   "neighborhood": "belmont",
+   "summary": "Huge garden with a Victorian glasshouse, old-growth forest and the holiday train show.",
+   "tags": [
+    "flowers",
+    "forest",
+    "holiday"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "belmont-library",
+   "name": "NYPL Belmont Library",
+   "kind": "library",
+   "neighborhood": "belmont",
+   "summary": "Branch library with the Enrico Fermi Cultural Center's Italian-American collection.",
+   "tags": [
+    "books",
+    "italian",
+    "history"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "orwashers",
+   "name": "Orwasher's Bakery",
+   "kind": "cafe",
+   "neighborhood": "upper-east-side",
+   "summary": "East 78th Street bread bakery founded in 1916, known for rye, challah and filled doughnuts.",
+   "tags": [
+    "bakery",
+    "historic",
+    "bread"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "omonia-cafe",
+   "name": "Omonia Cafe",
+   "kind": "cafe",
+   "neighborhood": "astoria",
+   "summary": "Greek pastry shop and cafe on Broadway since the 1970s, open late for baklava, galaktoboureko and frappés.",
+   "tags": [
+    "greek",
+    "pastry",
+    "dessert"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "greek-pastry",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brooklyn-roasting",
+   "name": "Brooklyn Roasting Company",
+   "kind": "cafe",
+   "neighborhood": "dumbo",
+   "summary": "Roaster's big cafe on Jay Street under the Manhattan Bridge, with long tables for laptops.",
+   "tags": [
+    "coffee",
+    "roastery",
+    "laptop"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cafe-grumpy-chelsea",
+   "name": "Café Grumpy",
+   "kind": "cafe",
+   "neighborhood": "chelsea",
+   "summary": "Local coffee roaster's original shop on West 20th Street.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-side-ymca",
+   "name": "West Side YMCA",
+   "kind": "fitness",
+   "neighborhood": "upper-west-side",
+   "summary": "Big 1930 Y on West 63rd Street off Central Park, with two pools, a running track and courts.",
+   "tags": [
+    "gym",
+    "pool",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harlem-ymca",
+   "name": "Harlem YMCA",
+   "kind": "fitness",
+   "neighborhood": "harlem",
+   "summary": "Historic Y on West 135th Street, a Harlem Renaissance meeting place, with a pool and gym.",
+   "tags": [
+    "gym",
+    "pool",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "asser-levy",
+   "name": "Asser Levy Recreation Center",
+   "kind": "fitness",
+   "neighborhood": "kips-bay",
+   "summary": "City rec center in a 1908 bathhouse on East 23rd Street, with indoor and outdoor pools and a weight room.",
+   "tags": [
+    "rec-center",
+    "pool",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mccarren-park-pool",
+   "name": "McCarren Park Pool",
+   "kind": "fitness",
+   "neighborhood": "williamsburg",
+   "summary": "Huge 1936 public pool, reopened in 2012, free to use in summer.",
+   "tags": [
+    "pool",
+    "swimming",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "astoria-park-pool",
+   "name": "Astoria Park Pool",
+   "kind": "fitness",
+   "neighborhood": "astoria",
+   "summary": "The city's oldest and largest public pool, built in 1936 under the Triborough Bridge.",
+   "tags": [
+    "pool",
+    "swimming",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "park-slope-armory-ymca",
+   "name": "Park Slope Armory YMCA",
+   "kind": "fitness",
+   "neighborhood": "park-slope",
+   "summary": "Y in a converted armory on Eighth Avenue, with a pool and an indoor track.",
+   "tags": [
+    "gym",
+    "pool",
+    "track"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gleasons-gym",
+   "name": "Gleason's Gym",
+   "kind": "fitness",
+   "neighborhood": "dumbo",
+   "summary": "Boxing gym founded in the Bronx in 1937 and in Dumbo since the 1980s, open to amateurs as well as pros.",
+   "tags": [
+    "boxing",
+    "historic",
+    "training"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "columbia",
+   "name": "Columbia University",
+   "type": "research-university",
+   "neighborhood": "morningside-heights",
+   "size": "large",
+   "known_for": [
+    "ivy-league",
+    "journalism",
+    "law",
+    "business",
+    "engineering",
+    "research"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nyu",
+   "name": "New York University",
+   "type": "research-university",
+   "neighborhood": "greenwich-village",
+   "size": "large",
+   "known_for": [
+    "film",
+    "business",
+    "law",
+    "arts",
+    "research"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ccny",
+   "name": "The City College of New York (CUNY)",
+   "type": "public-university",
+   "neighborhood": "harlem",
+   "size": "large",
+   "known_for": [
+    "engineering",
+    "architecture",
+    "sciences"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hunter",
+   "name": "Hunter College (CUNY)",
+   "type": "public-university",
+   "neighborhood": "upper-east-side",
+   "size": "large",
+   "known_for": [
+    "nursing",
+    "education",
+    "social-work",
+    "liberal-arts"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "baruch",
+   "name": "Baruch College (CUNY)",
+   "type": "public-university",
+   "neighborhood": "kips-bay",
+   "size": "large",
+   "known_for": [
+    "business",
+    "accounting",
+    "public-affairs"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-tech",
+   "name": "New York City College of Technology (CUNY)",
+   "type": "technical-institute",
+   "neighborhood": "downtown-brooklyn",
+   "size": "medium",
+   "known_for": [
+    "engineering-technology",
+    "architecture",
+    "hospitality",
+    "nursing"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "laguardia-cc",
+   "name": "LaGuardia Community College (CUNY)",
+   "type": "community-college",
+   "neighborhood": "long-island-city",
+   "size": "large",
+   "known_for": [
+    "health-sciences",
+    "business",
+    "adult-education"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "juilliard",
+   "name": "The Juilliard School",
+   "type": "music-school",
+   "neighborhood": "upper-west-side",
+   "size": "small",
+   "known_for": [
+    "music",
+    "dance",
+    "drama"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-school",
+   "name": "The New School (Parsons)",
+   "type": "private-university",
+   "neighborhood": "greenwich-village",
+   "size": "medium",
+   "known_for": [
+    "fashion-design",
+    "design",
+    "social-research",
+    "jazz"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fit",
+   "name": "Fashion Institute of Technology (SUNY)",
+   "type": "art-school",
+   "neighborhood": "chelsea",
+   "size": "medium",
+   "known_for": [
+    "fashion-design",
+    "merchandising",
+    "textiles",
+    "illustration"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cooper-union",
+   "name": "The Cooper Union",
+   "type": "technical-institute",
+   "neighborhood": "east-village",
+   "size": "small",
+   "known_for": [
+    "engineering",
+    "architecture",
+    "fine-art"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fordham",
+   "name": "Fordham University",
+   "type": "private-university",
+   "neighborhood": "belmont",
+   "size": "large",
+   "known_for": [
+    "business",
+    "law",
+    "liberal-arts",
+    "jesuit"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weill-cornell-medicine",
+   "name": "Weill Cornell Medicine",
+   "type": "medical-school",
+   "neighborhood": "upper-east-side",
+   "size": "medium",
+   "known_for": [
+    "medicine",
+    "biomedical-research"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "nyu-langone",
+   "name": "NYU Langone Health",
+   "sector": "healthcare",
+   "neighborhood": "kips-bay",
+   "size": "large",
+   "summary": "Academic medical center on First Avenue and one of the city's largest employers.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mount-sinai",
+   "name": "The Mount Sinai Hospital",
+   "sector": "healthcare",
+   "neighborhood": "upper-east-side",
+   "size": "large",
+   "summary": "Flagship hospital and medical school on Fifth Avenue at 100th Street, facing Central Park.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nyp-weill-cornell",
+   "name": "NewYork-Presbyterian/Weill Cornell Medical Center",
+   "sector": "healthcare",
+   "neighborhood": "upper-east-side",
+   "size": "large",
+   "summary": "Large teaching hospital on York Avenue.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "msk",
+   "name": "Memorial Sloan Kettering Cancer Center",
+   "sector": "healthcare",
+   "neighborhood": "upper-east-side",
+   "size": "large",
+   "summary": "Cancer hospital and research institute on the East Side.",
+   "careers": [
+    "registered-nurse",
+    "medical-researcher",
+    "biotech-scientist",
+    "pharmacist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jpmorgan-chase",
+   "name": "JPMorgan Chase",
+   "sector": "finance",
+   "neighborhood": "midtown",
+   "size": "large",
+   "summary": "The largest US bank, headquartered in a new tower at 270 Park Avenue.",
+   "careers": [
+    "finance-banker",
+    "financial-analyst",
+    "software-engineer",
+    "data-analyst",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "goldman-sachs",
+   "name": "Goldman Sachs",
+   "sector": "finance",
+   "neighborhood": "financial-district",
+   "size": "large",
+   "summary": "Investment bank headquartered at 200 West Street by the Hudson.",
+   "careers": [
+    "finance-banker",
+    "financial-analyst",
+    "software-engineer",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bloomberg-lp",
+   "name": "Bloomberg L.P.",
+   "sector": "media",
+   "neighborhood": "midtown",
+   "size": "large",
+   "summary": "Financial data and news company at 731 Lexington Avenue.",
+   "careers": [
+    "software-engineer",
+    "data-analyst",
+    "journalist",
+    "financial-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "google-nyc",
+   "name": "Google New York",
+   "sector": "technology",
+   "neighborhood": "chelsea",
+   "size": "large",
+   "summary": "Google's largest office outside California, at 111 Eighth Avenue and nearby buildings on the West Side.",
+   "careers": [
+    "software-engineer",
+    "ux-designer",
+    "data-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "meta-nyc",
+   "name": "Meta New York",
+   "sector": "technology",
+   "neighborhood": "hudson-yards",
+   "size": "large",
+   "summary": "Engineering and sales offices around Hudson Yards and the Farley Building.",
+   "careers": [
+    "software-engineer",
+    "ux-designer",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nyt",
+   "name": "The New York Times",
+   "sector": "media",
+   "neighborhood": "midtown",
+   "size": "large",
+   "summary": "Newsroom and digital teams in the Times Building on Eighth Avenue.",
+   "careers": [
+    "journalist",
+    "graphic-designer",
+    "software-engineer",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "conde-nast",
+   "name": "Condé Nast",
+   "sector": "media",
+   "neighborhood": "financial-district",
+   "size": "large",
+   "summary": "Magazine publisher of Vogue and The New Yorker, based at One World Trade Center.",
+   "careers": [
+    "journalist",
+    "fashion-assistant",
+    "graphic-designer",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ralph-lauren",
+   "name": "Ralph Lauren",
+   "sector": "fashion",
+   "neighborhood": "midtown",
+   "size": "large",
+   "summary": "Fashion house with headquarters and design studios on Madison Avenue.",
+   "careers": [
+    "fashion-assistant",
+    "graphic-designer",
+    "marketing-coordinator",
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "macys-herald-square",
+   "name": "Macy's Herald Square",
+   "sector": "retail",
+   "neighborhood": "midtown",
+   "size": "large",
+   "summary": "The flagship department store on 34th Street, which also produces the Thanksgiving Day Parade.",
+   "careers": [
+    "retail-associate",
+    "fashion-assistant",
+    "event-planner",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shubert-organization",
+   "name": "The Shubert Organization",
+   "sector": "entertainment",
+   "neighborhood": "midtown",
+   "size": "medium",
+   "summary": "Owner and operator of many Broadway theaters.",
+   "careers": [
+    "actor",
+    "performer",
+    "musician",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "msg-entertainment",
+   "name": "Madison Square Garden Entertainment",
+   "sector": "entertainment",
+   "neighborhood": "midtown",
+   "size": "large",
+   "summary": "Runs the Garden, Radio City Music Hall and the Rockettes' Christmas Spectacular.",
+   "careers": [
+    "performer",
+    "event-planner",
+    "bartender",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "marriott-marquis",
+   "name": "New York Marriott Marquis",
+   "sector": "hospitality",
+   "neighborhood": "midtown",
+   "size": "large",
+   "summary": "Huge Times Square hotel with convention space and a revolving restaurant.",
+   "careers": [
+    "hotel-front-desk",
+    "event-planner",
+    "line-cook",
+    "server",
+    "bartender"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ushg",
+   "name": "Union Square Hospitality Group",
+   "sector": "hospitality",
+   "neighborhood": "flatiron",
+   "size": "medium",
+   "summary": "Restaurant group behind Gramercy Tavern and The Modern.",
+   "careers": [
+    "line-cook",
+    "server",
+    "bartender",
+    "baker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nyc-public-schools",
+   "name": "New York City Public Schools",
+   "sector": "education",
+   "neighborhood": "financial-district",
+   "size": "large",
+   "summary": "The country's largest school district, run from the Tweed Courthouse.",
+   "careers": [
+    "teacher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nyc-government",
+   "name": "City of New York",
+   "sector": "government",
+   "neighborhood": "financial-district",
+   "size": "large",
+   "summary": "City agencies around City Hall and the Municipal Building.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "accountant",
+    "paralegal"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mta",
+   "name": "Metropolitan Transportation Authority",
+   "sector": "government",
+   "neighborhood": "financial-district",
+   "size": "large",
+   "summary": "Runs the subway, buses and commuter railroads from offices at 2 Broadway.",
+   "careers": [
+    "government-analyst",
+    "construction-trades",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "port-authority",
+   "name": "Port Authority of New York and New Jersey",
+   "sector": "logistics",
+   "neighborhood": "financial-district",
+   "size": "large",
+   "summary": "Runs the airports, bridges, tunnels, PATH and the region's container ports.",
+   "careers": [
+    "port-logistics",
+    "construction-trades",
+    "government-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "skadden",
+   "name": "Skadden, Arps, Slate, Meagher & Flom",
+   "sector": "legal",
+   "neighborhood": "hudson-yards",
+   "size": "large",
+   "summary": "Large law firm headquartered at One Manhattan West.",
+   "careers": [
+    "paralegal"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "columbia-employer",
+   "name": "Columbia University",
+   "sector": "education",
+   "neighborhood": "morningside-heights",
+   "size": "large",
+   "summary": "Faculty, research and staff jobs on the Morningside campus.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "medical-researcher",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nyu-employer",
+   "name": "New York University",
+   "sector": "education",
+   "neighborhood": "greenwich-village",
+   "size": "large",
+   "summary": "Faculty, research and staff jobs around Washington Square.",
+   "careers": [
+    "professor",
+    "graduate-student"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "midtown-core",
+   "name": "Midtown business district",
+   "neighborhoods": [
+    "midtown",
+    "hudson-yards"
+   ],
+   "sectors": [
+    "finance",
+    "legal",
+    "media",
+    "entertainment",
+    "hospitality",
+    "tourism",
+    "real-estate",
+    "construction"
+   ],
+   "summary": "Corporate headquarters, law firms, Broadway, hotels and new towers from Hudson Yards to Park Avenue.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wall-street",
+   "name": "Financial District and Civic Center",
+   "neighborhoods": [
+    "financial-district"
+   ],
+   "sectors": [
+    "finance",
+    "government",
+    "legal",
+    "media"
+   ],
+   "summary": "Banks, insurers, city government and the World Trade Center offices.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "silicon-alley",
+   "name": "Silicon Alley",
+   "neighborhoods": [
+    "flatiron",
+    "chelsea",
+    "soho"
+   ],
+   "sectors": [
+    "technology",
+    "creative",
+    "business",
+    "media"
+   ],
+   "summary": "Big tech offices on the West Side and startups around Flatiron and Union Square.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "garment-district",
+   "name": "Garment District and fashion",
+   "neighborhoods": [
+    "midtown",
+    "chelsea"
+   ],
+   "sectors": [
+    "creative",
+    "fashion",
+    "retail"
+   ],
+   "summary": "Showrooms, design studios and fabric shops in the West 30s, near FIT and Herald Square.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-side-medical",
+   "name": "East Side hospital corridor",
+   "neighborhoods": [
+    "upper-east-side",
+    "kips-bay"
+   ],
+   "sectors": [
+    "healthcare",
+    "biotech",
+    "education"
+   ],
+   "summary": "Hospital rows along York and First Avenues, plus the Alexandria Center for Life Science.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "outer-borough-centers",
+   "name": "Downtown Brooklyn and Long Island City",
+   "neighborhoods": [
+    "downtown-brooklyn",
+    "long-island-city"
+   ],
+   "sectors": [
+    "technology",
+    "creative",
+    "government",
+    "education",
+    "logistics",
+    "construction"
+   ],
+   "summary": "Back offices, courts, colleges, film studios and warehouses just across the East River.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Humid subtropical: hot, humid summers with thunderstorms, pleasant springs and autumns, and cold winters with a few snowstorms most years.",
+  "months": [
+   {
+    "high_f": 39,
+    "low_f": 27,
+    "rain_days": 11,
+    "note": "Coldest month; snow and icy wind off the rivers."
+   },
+   {
+    "high_f": 42,
+    "low_f": 29,
+    "rain_days": 10,
+    "note": "Cold and gray; the snowiest month on average."
+   },
+   {
+    "high_f": 50,
+    "low_f": 35,
+    "rain_days": 11,
+    "note": "Changeable; early blossoms late in the month."
+   },
+   {
+    "high_f": 62,
+    "low_f": 45,
+    "rain_days": 11,
+    "note": "Cherry blossoms and spring showers."
+   },
+   {
+    "high_f": 72,
+    "low_f": 55,
+    "rain_days": 11,
+    "note": "Mild and green; outdoor dining fills up."
+   },
+   {
+    "high_f": 80,
+    "low_f": 64,
+    "rain_days": 10,
+    "note": "Warm; beaches open Memorial Day weekend."
+   },
+   {
+    "high_f": 85,
+    "low_f": 70,
+    "rain_days": 10,
+    "note": "Hottest month; muggy subway platforms."
+   },
+   {
+    "high_f": 84,
+    "low_f": 69,
+    "rain_days": 10,
+    "note": "Hot and humid; many locals leave town."
+   },
+   {
+    "high_f": 76,
+    "low_f": 62,
+    "rain_days": 9,
+    "note": "Warm early, crisper later."
+   },
+   {
+    "high_f": 65,
+    "low_f": 51,
+    "rain_days": 9,
+    "note": "Crisp, often sunny autumn."
+   },
+   {
+    "high_f": 54,
+    "low_f": 42,
+    "rain_days": 9,
+    "note": "Cool; leaves turn in the parks."
+   },
+   {
+    "high_f": 44,
+    "low_f": 33,
+    "rain_days": 11,
+    "note": "Cold; holiday windows and lights."
+   }
+  ],
+  "source": "curated-climate-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "fashion-week",
+   "name": "New York Fashion Week",
+   "months": [
+    2,
+    9
+   ],
+   "neighborhood": null,
+   "summary": "Runway shows and showroom presentations at venues around Manhattan each February and September.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tribeca-festival",
+   "name": "Tribeca Festival",
+   "months": [
+    6
+   ],
+   "neighborhood": null,
+   "summary": "Film festival with premieres and talks, centered on Tribeca in Lower Manhattan.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nyc-pride-march",
+   "name": "NYC Pride March",
+   "months": [
+    6
+   ],
+   "neighborhood": "greenwich-village",
+   "summary": "The last Sunday in June, ending in the Village near the Stonewall Inn.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mermaid-parade",
+   "name": "Mermaid Parade",
+   "months": [
+    6
+   ],
+   "neighborhood": "coney-island",
+   "summary": "Costumed summer parade along the Coney Island boardwalk.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shakespeare-in-the-park",
+   "name": "Shakespeare in the Park",
+   "months": [
+    6,
+    7,
+    8
+   ],
+   "neighborhood": "upper-west-side",
+   "summary": "Free Public Theater productions at the Delacorte Theater in Central Park.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "summerstage",
+   "name": "SummerStage",
+   "months": [
+    6,
+    7,
+    8
+   ],
+   "neighborhood": null,
+   "summary": "Outdoor concerts in city parks, with its main stage in Central Park.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "us-open",
+   "name": "US Open tennis",
+   "months": [
+    8,
+    9
+   ],
+   "neighborhood": "flushing",
+   "summary": "Two weeks of Grand Slam tennis around Labor Day at Flushing Meadows.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-indian-day-parade",
+   "name": "West Indian American Day Carnival",
+   "months": [
+    9
+   ],
+   "neighborhood": null,
+   "summary": "Labor Day parade of Caribbean costumes and soca along Eastern Parkway in Brooklyn.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "village-halloween-parade",
+   "name": "Village Halloween Parade",
+   "months": [
+    10
+   ],
+   "neighborhood": "greenwich-village",
+   "summary": "Night-time costume parade up Sixth Avenue on October 31.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nyc-marathon",
+   "name": "New York City Marathon",
+   "months": [
+    11
+   ],
+   "neighborhood": "upper-west-side",
+   "summary": "Runners cross all five boroughs on the first Sunday of November and finish in Central Park.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "macys-parade",
+   "name": "Macy's Thanksgiving Day Parade",
+   "months": [
+    11
+   ],
+   "neighborhood": "midtown",
+   "summary": "Giant balloons travel from Central Park West to Herald Square on Thanksgiving morning.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rockefeller-tree",
+   "name": "Rockefeller Center Christmas Tree",
+   "months": [
+    11,
+    12,
+    1
+   ],
+   "neighborhood": "midtown",
+   "summary": "The tree is raised in November, lit in early December and stays up into January.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-years-eve-times-square",
+   "name": "New Year's Eve in Times Square",
+   "months": [
+    12
+   ],
+   "neighborhood": "midtown",
+   "summary": "The ball drop at midnight, watched by huge crowds penned in from mid-afternoon.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "bacon-egg-and-cheese",
+   "name": "Bacon, egg and cheese",
+   "kind": "dish",
+   "summary": "The bodega breakfast: bacon, a fried egg and American cheese on a roll, ordered as \"salt, pepper, ketchup\" and eaten walking to the train.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bodega",
+   "name": "Bodegas",
+   "kind": "shop",
+   "summary": "Corner delis that stay open late or all night, with a grill at the back, coffee, lottery tickets, everything from cat food to cold medicine, and often a resident cat.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-slice",
+   "name": "A slice",
+   "kind": "dish",
+   "summary": "Thin, wide New York pizza sold by the slice from a counter, folded in half lengthwise to eat on the move.",
+   "places": [
+    "joes-pizza"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bagel-and-schmear",
+   "name": "Bagel with a schmear",
+   "kind": "dish",
+   "summary": "Boiled-then-baked bagels with cream cheese, or with lox, onion and capers from an appetizing store; locals have strong views on toasting.",
+   "places": [
+    "russ-and-daughters",
+    "zabars",
+    "barney-greengrass",
+    "kossars"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pastrami-on-rye",
+   "name": "Pastrami on rye",
+   "kind": "dish",
+   "summary": "Hot pastrami piled high on rye with mustard and a sour pickle on the side, the signature order at the old Jewish delis.",
+   "places": [
+    "katzs",
+    "sarges-deli",
+    "court-deli"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chicken-over-rice",
+   "name": "Chicken over rice",
+   "kind": "dish",
+   "summary": "The halal cart plate: chopped chicken or lamb over yellow rice with lettuce, white sauce and hot sauce, sold from street carts on Midtown corners.",
+   "places": [
+    "midtown"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "black-and-white-cookie",
+   "name": "Black-and-white cookie",
+   "kind": "dish",
+   "summary": "A big, soft, cakey cookie iced half vanilla and half chocolate, sold in delis and bakeries across the city.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "egg-cream",
+   "name": "Egg cream",
+   "kind": "drink",
+   "summary": "A soda-fountain drink with neither egg nor cream: chocolate syrup, milk and seltzer stirred until it foams.",
+   "places": [
+    "lexington-candy-shop"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coffee-regular",
+   "name": "\"Coffee regular\"",
+   "kind": "saying",
+   "summary": "At a deli or coffee cart, \"regular\" means with milk and sugar, not plain black.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "walking-etiquette",
+   "name": "Sidewalk etiquette",
+   "kind": "custom",
+   "summary": "Walk fast, keep to the right, never stop dead at the top of subway stairs, and step to the side before checking your phone or map.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "on-line",
+   "name": "\"On line\"",
+   "kind": "saying",
+   "summary": "New Yorkers wait \"on line\" rather than \"in line\", whether at the deli, the DMV or a sample sale.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-city",
+   "name": "\"The city\"",
+   "kind": "saying",
+   "summary": "To people in Brooklyn, Queens, the Bronx and Staten Island, \"going into the city\" means going to Manhattan.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stoop-life",
+   "name": "Stoop sitting and stoop sales",
+   "kind": "custom",
+   "summary": "Brownstone stoops become front porches in warm weather, with neighbors talking, kids playing and weekend stoop sales of books and old clothes.",
+   "places": [
+    "park-slope",
+    "harlem"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yankees",
+   "name": "New York Yankees",
+   "kind": "team",
+   "summary": "The Bronx Bombers play baseball at Yankee Stadium; their pinstripes and interlocking NY are seen worldwide.",
+   "places": [
+    "yankee-stadium"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mets",
+   "name": "New York Mets",
+   "kind": "team",
+   "summary": "Queens's National League baseball team plays at Citi Field in Flushing, with fans used to suffering and loyal anyway.",
+   "places": [
+    "citi-field"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "knicks",
+   "name": "New York Knicks",
+   "kind": "team",
+   "summary": "The NBA team plays at Madison Square Garden, where courtside seats draw celebrities and a long wait for a title is part of the identity.",
+   "places": [
+    "madison-square-garden"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rangers",
+   "name": "New York Rangers",
+   "kind": "team",
+   "summary": "One of the NHL's Original Six, playing hockey at Madison Square Garden.",
+   "places": [
+    "madison-square-garden"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nets",
+   "name": "Brooklyn Nets",
+   "kind": "team",
+   "summary": "The NBA team that moved from New Jersey to Barclays Center in 2012, wearing black and white.",
+   "places": [
+    "barclays-center"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "liberty",
+   "name": "New York Liberty",
+   "kind": "team",
+   "summary": "The WNBA team plays at Barclays Center and won its first championship in 2024.",
+   "places": [
+    "barclays-center"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "giants-and-jets",
+   "name": "Giants and Jets",
+   "kind": "team",
+   "summary": "Both of New York's NFL teams play across the Hudson at MetLife Stadium in New Jersey, and fans of each look down on the other.",
+   "places": [],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Deli coffee",
+   "low": 2,
+   "high": 3.5,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Latte",
+   "low": 5.5,
+   "high": 7.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bagel",
+   "item": "Bagel with cream cheese",
+   "low": 4,
+   "high": 7,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pizza-slice",
+   "item": "Pizza slice",
+   "low": 1.5,
+   "high": 4.5,
+   "per": "a plain slice",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheap-lunch",
+   "item": "Cheap lunch",
+   "low": 13,
+   "high": 20,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner",
+   "item": "Mid-range dinner",
+   "low": 45,
+   "high": 80,
+   "per": "for one",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beer",
+   "item": "Pint of beer",
+   "low": 8,
+   "high": 11,
+   "per": "a pint",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocktail",
+   "item": "Cocktail",
+   "low": 16,
+   "high": 22,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries",
+   "low": 90,
+   "high": 140,
+   "per": "a week, one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "transit",
+   "item": "Subway or bus fare",
+   "low": 2.9,
+   "high": 3,
+   "per": "one way",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rideshare",
+   "item": "Rideshare across town",
+   "low": 20,
+   "high": 40,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movie",
+   "item": "Movie ticket",
+   "low": 18,
+   "high": 24,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gym",
+   "item": "Gym membership",
+   "low": 30,
+   "high": 120,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haircut",
+   "item": "Haircut",
+   "low": 30,
+   "high": 60,
+   "per": "",
+   "source": "curated-2026-10"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "ironsworn",
+ "name": "Ironsworn",
+ "ruleset": "ironsworn",
+ "version": "datasworn 0.0.10",
+ "source": {
+  "document": "Ironsworn Rulebook (2019), as structured by Datasworn",
+  "url": "https://www.npmjs.com/package/@datasworn/ironsworn-classic/v/0.0.10",
+  "repository": "https://github.com/rsek/datasworn",
+  "file": "classic.json",
+  "sha256": "a101b49064ed5a1ad7725db18a4ca6fbfe616e3ec92710e329c06d34fe37d206"
+ },
+ "license": {
+  "id": "CC-BY-4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "This work is based on Ironsworn (found at www.ironswornrpg.com), created by Shawn Tomkin, and licensed for our use under the Creative Commons Attribution 4.0 International license (creativecommons.org/licenses/by/4.0/). Structured data from Datasworn by rsek, also under CC BY 4.0."
+ },
+ "changes": ["None: classic.json is the Datasworn package's file as published."],
+ "resolution": {
+  "die": "d6 + stat against two d10 challenge dice",
+  "outcome_mapping": {
+   "strong_hit": "success",
+   "strong_hit_match": "critical_success",
+   "weak_hit": "success_cost",
+   "miss": "failure",
+   "miss_match": "critical_failure"
+  }
+ }
+}

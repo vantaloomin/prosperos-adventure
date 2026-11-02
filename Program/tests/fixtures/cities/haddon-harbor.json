@@ -1,0 +1,5020 @@
+{
+ "schema_version": 1,
+ "id": "haddon-harbor",
+ "name": "Haddon Harbor",
+ "setting": "original",
+ "era": "modern",
+ "basis": "Original setting written for Prospero Dungeon, modeled on real Maine coastal towns.",
+ "region": "Maine",
+ "country": "US",
+ "timezone": "America/New_York",
+ "aliases": [
+  "Haddon Harbor, Maine",
+  "Haddon Harbor, ME"
+ ],
+ "summary": "A harbor town of about nine thousand on the Maine coast, where the lobster boats leave before dawn, the diner keeps a wall of regulars' mugs, town meeting runs late every March and everyone knows everyone, including what they said at the last select board meeting.",
+ "lat": 43.97,
+ "lon": -69.3,
+ "speeds": {
+  "walk": 4.5,
+  "car": 40,
+  "bus": 22,
+  "ferry": 15,
+  "bike-share": 14
+ },
+ "names": {
+  "mix": {
+   "anglo": 7,
+   "irish": 2,
+   "french-canadian": 1.5,
+   "italian": 0.8,
+   "jewish": 0.2,
+   "slavic": 0.2,
+   "hispanic": 0.3,
+   "black-american": 0.2,
+   "east-asian": 0.2,
+   "south-asian": 0.15,
+   "arabic": 0.1,
+   "west-african": 0.1
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "Haddon Harbor, an original setting written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Invented town with no real counterpart; every business, institution and person named is fictional. Its texture follows ordinary life in midcoast Maine harbor towns: working waterfronts and lobstering co-ops, town meeting, bean suppers, grange halls, summer people, mud season and island ferries. Rents are rounded typical asking ranges for a small Maine town in 2026. Climate is rounded from midcoast Maine normals."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "the-green",
+   "name": "Main Street and the Green",
+   "summary": "The middle of town: a sloping green with a bandstand and a war memorial, white Congregational steeple at the top, and two blocks of brick and clapboard shopfronts running down to the water. Flats over the shops, and nobody crosses the street without being stopped for a chat.",
+   "vibe": [
+    "downtown",
+    "walkable",
+    "historic",
+    "shops",
+    "everyone-knows-everyone"
+   ],
+   "lat": 43.97,
+   "lon": -69.3,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     950,
+     1250
+    ],
+    "one_bedroom": [
+     1150,
+     1550
+    ],
+    "two_bedroom": [
+     1450,
+     1950
+    ]
+   },
+   "housing": [
+    "apartment-over-shop",
+    "federal-house",
+    "condo"
+   ],
+   "walkability": "high",
+   "transit": [
+    "summer-shuttle",
+    "library-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-harbor",
+   "name": "The Harbor",
+   "summary": "The working waterfront below Main Street: the town fish pier, the lobster co-op, bait barrels, stacked traps, the ferry slip and a harbor full of boats on moorings. Busy at four in the morning and again at four in the afternoon, when the boats come in.",
+   "vibe": [
+    "working-waterfront",
+    "lobster",
+    "boats",
+    "early-risers"
+   ],
+   "lat": 43.9662,
+   "lon": -69.2958,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     975,
+     1300
+    ],
+    "one_bedroom": [
+     1200,
+     1600
+    ],
+    "two_bedroom": [
+     1500,
+     2000
+    ]
+   },
+   "housing": [
+    "apartment-over-shop",
+    "cape",
+    "converted-loft"
+   ],
+   "walkability": "high",
+   "transit": [
+    "summer-shuttle",
+    "tarbox-ferry",
+    "library-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-end",
+   "name": "Mill End",
+   "summary": "Where the Mill River drops over the falls into the tide: the long brick Kendall Mill, which made shoes until 1987, is now studios, a brewery, a dance school and a climbing gym, with worker housing in the old mill tenements up the hill.",
+   "vibe": [
+    "arts",
+    "makers",
+    "riverside",
+    "young",
+    "brick"
+   ],
+   "lat": 43.9742,
+   "lon": -69.3062,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     900,
+     1200
+    ],
+    "one_bedroom": [
+     1100,
+     1450
+    ],
+    "two_bedroom": [
+     1350,
+     1800
+    ]
+   },
+   "housing": [
+    "mill-loft",
+    "tenement-apartment",
+    "triple-decker"
+   ],
+   "walkability": "high",
+   "transit": [
+    "library-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "packard-hill",
+   "name": "Packard Hill",
+   "summary": "The hill above the harbor where the sea captains built: big square houses with widow's walks, the old Packard House Inn on its lawn, an eighteenth-century burying ground and the best sledding slope in town.",
+   "vibe": [
+    "historic",
+    "views",
+    "quiet",
+    "old-houses",
+    "inns"
+   ],
+   "lat": 43.9722,
+   "lon": -69.2928,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1100,
+     1450
+    ],
+    "one_bedroom": [
+     1350,
+     1800
+    ],
+    "two_bedroom": [
+     1750,
+     2500
+    ]
+   },
+   "housing": [
+    "captains-house",
+    "carriage-house-flat",
+    "inn-rooms"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "summer-shuttle"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "college-street",
+   "name": "College Street",
+   "summary": "The north end of the village around Whitcomb College: brick halls and a sloping quad, porches stacked with bikes, faculty houses with overgrown gardens and a pocket of cheap food that stays open after nine.",
+   "vibe": [
+    "college",
+    "students",
+    "leafy",
+    "porches"
+   ],
+   "lat": 43.9782,
+   "lon": -69.302,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     925,
+     1250
+    ],
+    "one_bedroom": [
+     1150,
+     1500
+    ],
+    "two_bedroom": [
+     1500,
+     1950
+    ]
+   },
+   "housing": [
+    "shared-house",
+    "apartment",
+    "faculty-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "library-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "birch-meadow",
+   "name": "Birch Meadow",
+   "summary": "The newer side of town off the Augusta road: cul-de-sacs of capes and colonials built from the nineties onward, basketball hoops over garages, the elementary school and a park full of strollers on Saturday mornings.",
+   "vibe": [
+    "suburban",
+    "families",
+    "newer",
+    "quiet"
+   ],
+   "lat": 43.985,
+   "lon": -69.315,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1000,
+     1300
+    ],
+    "one_bedroom": [
+     1250,
+     1600
+    ],
+    "two_bedroom": [
+     1650,
+     2250
+    ]
+   },
+   "housing": [
+    "cape",
+    "colonial",
+    "townhouse"
+   ],
+   "walkability": "low",
+   "transit": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridge-road",
+   "name": "Ridge Road",
+   "summary": "The farms and orchards on the high ground inland: stone walls, apple trees, a sugarhouse, the grange hall and the fairgrounds, with honor-system stands at the ends of driveways and a view of the bay from the top of Higgins Hill.",
+   "vibe": [
+    "rural",
+    "farms",
+    "orchards",
+    "stone-walls"
+   ],
+   "lat": 44.005,
+   "lon": -69.32,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     800,
+     1050
+    ],
+    "one_bedroom": [
+     950,
+     1300
+    ],
+    "two_bedroom": [
+     1250,
+     1700
+    ]
+   },
+   "housing": [
+    "farmhouse",
+    "ell-apartment",
+    "mobile-home"
+   ],
+   "walkability": "low",
+   "transit": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ledge-point",
+   "name": "Ledge Point",
+   "summary": "The rocky point at the mouth of the harbor, with the white lighthouse, the keeper's house museum, tide pools, a small sand cove and a road of shingled summer cottages that go dark after Columbus Day.",
+   "vibe": [
+    "lighthouse",
+    "scenic",
+    "summer",
+    "rocky-shore"
+   ],
+   "lat": 43.95,
+   "lon": -69.282,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1100,
+     1500
+    ],
+    "one_bedroom": [
+     1350,
+     1850
+    ],
+    "two_bedroom": [
+     1750,
+     2600
+    ]
+   },
+   "housing": [
+    "summer-cottage",
+    "cape"
+   ],
+   "walkability": "low",
+   "transit": [
+    "summer-shuttle"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "long-pond",
+   "name": "Long Pond",
+   "summary": "A clear six-mile lake north of town ringed with camps on dirt roads, two old summer camps for children, a town beach and a store that sells crawlers, coffee and pie. In winter the ice-fishing shacks come out.",
+   "vibe": [
+    "lake",
+    "camps",
+    "summer",
+    "woods",
+    "loons"
+   ],
+   "lat": 44.015,
+   "lon": -69.29,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     800,
+     1050
+    ],
+    "one_bedroom": [
+     950,
+     1300
+    ],
+    "two_bedroom": [
+     1250,
+     1750
+    ]
+   },
+   "housing": [
+    "lake-camp",
+    "cabin",
+    "year-round-camp"
+   ],
+   "walkability": "low",
+   "transit": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "route-1",
+   "name": "The Route 1 Strip",
+   "summary": "Route 1 where it skirts the village: the grocery, the hardware store, the gym, the ice arena, candlepin lanes and a coffee shack, with plenty of parking and the only traffic light in town.",
+   "vibe": [
+    "practical",
+    "errands",
+    "car-oriented",
+    "local"
+   ],
+   "lat": 43.99,
+   "lon": -69.3,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     850,
+     1100
+    ],
+    "one_bedroom": [
+     1000,
+     1350
+    ],
+    "two_bedroom": [
+     1300,
+     1700
+    ]
+   },
+   "housing": [
+    "apartment",
+    "duplex",
+    "motel-conversion"
+   ],
+   "walkability": "low",
+   "transit": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-haddon",
+   "name": "South Haddon",
+   "summary": "The neighboring village down the peninsula: a white church, a general store with a porch bench, a town landing full of skiffs and a salt marsh where the land trust keeps the trails mown. Quieter than town, and proud of it.",
+   "vibe": [
+    "village",
+    "rural",
+    "saltwater",
+    "quiet"
+   ],
+   "lat": 43.935,
+   "lon": -69.32,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     875,
+     1150
+    ],
+    "one_bedroom": [
+     1050,
+     1400
+    ],
+    "two_bedroom": [
+     1350,
+     1850
+    ]
+   },
+   "housing": [
+    "cape",
+    "farmhouse",
+    "cottage"
+   ],
+   "walkability": "low",
+   "transit": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-island",
+   "name": "Tarbox Island",
+   "summary": "An island forty minutes out by ferry with about two hundred people all year and many more in summer: a lobster wharf, one store, a community hall, a one-room school and a loop road where everyone waves.",
+   "vibe": [
+    "island",
+    "remote",
+    "lobster",
+    "close-knit",
+    "summer"
+   ],
+   "lat": 43.925,
+   "lon": -69.25,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     850,
+     1150
+    ],
+    "one_bedroom": [
+     1000,
+     1400
+    ],
+    "two_bedroom": [
+     1300,
+     1900
+    ]
+   },
+   "housing": [
+    "island-house",
+    "cottage",
+    "cape"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "tarbox-ferry"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dyers-cove",
+   "name": "Dyer's Cove",
+   "summary": "The cove south of the fish pier where the Hatch boatyard has built and stored boats for four generations, with the marina, the community sailing dock, the Legion post and small houses whose yards hold more boats than cars.",
+   "vibe": [
+    "boatyard",
+    "working",
+    "marina",
+    "tight-knit"
+   ],
+   "lat": 43.962,
+   "lon": -69.305,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     875,
+     1150
+    ],
+    "one_bedroom": [
+     1050,
+     1400
+    ],
+    "two_bedroom": [
+     1350,
+     1800
+    ]
+   },
+   "housing": [
+    "cape",
+    "bungalow",
+    "duplex"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "summer-shuttle",
+    "library-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-end",
+   "name": "West End",
+   "summary": "Older neighborhood of triple-deckers and capes west of the village, with the hospital, the high school and its field, Cobb Pond for skating, an Italian market and the pub where the nurses go after a shift.",
+   "vibe": [
+    "residential",
+    "working",
+    "hospital",
+    "schools"
+   ],
+   "lat": 43.972,
+   "lon": -69.315,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     875,
+     1150
+    ],
+    "one_bedroom": [
+     1050,
+     1400
+    ],
+    "two_bedroom": [
+     1350,
+     1800
+    ]
+   },
+   "housing": [
+    "triple-decker",
+    "cape",
+    "duplex"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "library-bikes"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "back-shore",
+   "name": "The Back Shore",
+   "summary": "The ocean side of the peninsula: a cliff path over granite ledges, a cobble beach, the nine-hole links, a chapel that only opens in summer and long-held family cottages with names painted on boards.",
+   "vibe": [
+    "oceanfront",
+    "scenic",
+    "summer",
+    "walks"
+   ],
+   "lat": 43.958,
+   "lon": -69.278,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1200,
+     1600
+    ],
+    "one_bedroom": [
+     1500,
+     2100
+    ],
+    "two_bedroom": [
+     2000,
+     3000
+    ]
+   },
+   "housing": [
+    "shingle-cottage",
+    "summer-house"
+   ],
+   "walkability": "low",
+   "transit": [
+    "summer-shuttle"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "bluebird-diner",
+   "name": "Bluebird Diner",
+   "kind": "restaurant",
+   "neighborhood": "the-green",
+   "summary": "The diner everyone goes to: a narrow room of red stools, six booths and a wall of regulars' mugs on pegs. Blueberry pancakes, hash from scratch, and town business settled at the counter before seven.",
+   "tags": [
+    "diner",
+    "breakfast",
+    "mug-wall",
+    "regulars",
+    "cash-friendly"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spruce-street-bakery",
+   "name": "Spruce Street Bakery",
+   "kind": "cafe",
+   "neighborhood": "the-green",
+   "summary": "A bakery just off Main with a line out the door by eight for morning buns, whoopie pies, sourdough and a molasses doughnut that sells out by ten. Two small tables and a bench in the sun.",
+   "tags": [
+    "bakery",
+    "pastries",
+    "bread",
+    "morning"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fog-bell-books",
+   "name": "Fog Bell Books",
+   "kind": "shopping",
+   "neighborhood": "the-green",
+   "summary": "An independent bookshop in a former bank, with the vault kept as the children's room, staff picks written by hand, a shelf of Maine authors and an armchair nobody is ever asked to leave.",
+   "tags": [
+    "books",
+    "independent",
+    "readings",
+    "cozy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "anchor-tavern",
+   "name": "The Anchor Tavern",
+   "kind": "bar",
+   "neighborhood": "the-green",
+   "summary": "The pub at the bottom of Main: low beams, local drafts, a good haddock sandwich and Tuesday trivia night, where the same four teams have been fighting over the top spot for years.",
+   "tags": [
+    "pub",
+    "trivia",
+    "local-beer",
+    "pub-food"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cappellis-pizza",
+   "name": "Cappelli's Pizza",
+   "kind": "restaurant",
+   "neighborhood": "the-green",
+   "summary": "The pizza and sub shop on Main, run by the same family since 1962: thin-crust pies, Italian sandwiches, and Friday night pickups for half the town.",
+   "tags": [
+    "pizza",
+    "subs",
+    "takeout",
+    "family-run"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pizza",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haddon-town-hall",
+   "name": "Haddon Harbor Town Hall",
+   "kind": "landmark",
+   "neighborhood": "the-green",
+   "summary": "A white clapboard hall from 1871 with a second-floor meeting room, creaking benches and a portrait of every first selectman. Select board meetings on Monday nights can get heated over parking, moorings or the school budget.",
+   "tags": [
+    "civic",
+    "meetings",
+    "historic",
+    "local-politics"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "abbott-library",
+   "name": "Abbott Memorial Library",
+   "kind": "library",
+   "neighborhood": "the-green",
+   "summary": "The town library in a granite building with a reading room, a fireplace, a seed library, lending bikes, story time on Wednesdays and a book sale every August that empties the basement.",
+   "tags": [
+    "library",
+    "quiet",
+    "story-time",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "main-street-pharmacy",
+   "name": "Main Street Pharmacy",
+   "kind": "shopping",
+   "neighborhood": "the-green",
+   "summary": "An old-fashioned pharmacy with a soda fountain at the back where the pharmacist's family still makes frappes and lime rickeys, and a greeting-card rack that has not changed in decades.",
+   "tags": [
+    "pharmacy",
+    "soda-fountain",
+    "old-fashioned"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "upstairs-yoga",
+   "name": "Upstairs Yoga",
+   "kind": "fitness",
+   "neighborhood": "the-green",
+   "summary": "A sunny yoga studio over the pharmacy, up a steep flight of stairs, with early flow classes, a gentle class popular with retirees and community classes by donation on Sundays.",
+   "tags": [
+    "yoga",
+    "classes",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "town-green",
+   "name": "The Town Green",
+   "kind": "park",
+   "neighborhood": "the-green",
+   "summary": "The green at the head of Main Street, with a bandstand for Thursday concerts, the war memorial, old elms, the Christmas tree in December and somebody walking a dog across it at any hour.",
+   "tags": [
+    "green",
+    "bandstand",
+    "concerts",
+    "heart-of-town"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "farmers-market",
+   "name": "Haddon Harbor Farmers Market",
+   "kind": "market",
+   "neighborhood": "the-green",
+   "summary": "Saturday mornings on the green from May to October: farm vegetables, blueberries, goat cheese, smoked fish, maple syrup, flowers, bread and a fiddler by the bandstand.",
+   "tags": [
+    "farmers-market",
+    "local-food",
+    "saturdays"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "first-parish-vestry",
+   "name": "First Parish Vestry",
+   "kind": "venue",
+   "neighborhood": "the-green",
+   "summary": "The supper hall under the Congregational church, with long tables and a pass-through kitchen: bean suppers on the first Saturday, the strawberry supper in June and every funeral reception in town.",
+   "tags": [
+    "church-supper",
+    "bean-supper",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "elmwood-theatre",
+   "name": "Elmwood Theatre",
+   "kind": "venue",
+   "neighborhood": "the-green",
+   "summary": "A single-screen cinema from 1926 kept open by a nonprofit: second-run films, Wednesday five-dollar nights, real butter on the popcorn and a stage for the community players' winter show.",
+   "tags": [
+    "cinema",
+    "theatre",
+    "nonprofit",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "central-fire-station",
+   "name": "Central Fire Station",
+   "kind": "landmark",
+   "neighborhood": "the-green",
+   "summary": "Home of the volunteer fire department behind the town hall, with two engines, a ladder truck, a noon whistle and the Sunday pancake breakfasts that pay for new gear.",
+   "tags": [
+    "fire-station",
+    "volunteers",
+    "pancake-breakfast"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "town-fish-pier",
+   "name": "Town Fish Pier",
+   "kind": "docks",
+   "neighborhood": "the-harbor",
+   "summary": "The town pier where lobster boats tie up to unload, sell bait and take on fuel. The best seat in town at four in the afternoon, on an upturned crate, watching the boats come in.",
+   "tags": [
+    "working-waterfront",
+    "boats",
+    "lobster",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lobster-co-op",
+   "name": "Haddon Harbor Lobster Co-op",
+   "kind": "market",
+   "neighborhood": "the-harbor",
+   "summary": "The lobstering co-op's wharf store, where you buy lobsters, crab meat and clams straight off the boats at the boat price, and someone will cook them for you in the steamer out back.",
+   "tags": [
+    "lobster",
+    "seafood",
+    "co-op",
+    "off-the-boat"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coombs-wharf-shack",
+   "name": "Coombs Wharf Lobster Shack",
+   "kind": "restaurant",
+   "neighborhood": "the-harbor",
+   "summary": "A shack on pilings with picnic tables over the water: lobster rolls with butter or mayo (a matter of family loyalty), steamers, corn and blueberry pie. Open Memorial Day to Columbus Day and always a line.",
+   "tags": [
+    "lobster-roll",
+    "waterfront",
+    "picnic-tables",
+    "seasonal"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-galley",
+   "name": "The Galley",
+   "kind": "restaurant",
+   "neighborhood": "the-harbor",
+   "summary": "A breakfast counter that opens at four for the lobster crews: eggs, home fries, coffee in heavy mugs and the marine forecast on the radio. Closes at noon, when the cook goes fishing.",
+   "tags": [
+    "breakfast",
+    "early",
+    "working-waterfront"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "diner",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ferry-landing-coffee",
+   "name": "Ferry Landing Coffee Cart",
+   "kind": "cafe",
+   "neighborhood": "the-harbor",
+   "summary": "A coffee cart at the ferry slip pouring drip coffee, iced coffee and hot chocolate for island commuters, with doughnuts from the bakery until they run out.",
+   "tags": [
+    "coffee",
+    "cart",
+    "ferry",
+    "seasonal"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-ropewalk",
+   "name": "The Ropewalk",
+   "kind": "restaurant",
+   "neighborhood": "the-harbor",
+   "summary": "The anniversary restaurant: a long room in an old rope-making shed with a view of the moorings, local oysters, halibut, a short wine list and reservations needed in August.",
+   "tags": [
+    "date-night",
+    "seafood",
+    "waterfront",
+    "special-occasion"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "new-england",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-walk",
+   "name": "Harbor Walk",
+   "kind": "trail",
+   "neighborhood": "the-harbor",
+   "summary": "A boardwalk and gravel path along the waterfront from the fish pier to Dyer's Cove, with benches donated in memory of half the town and a view of every boat on its mooring.",
+   "tags": [
+    "waterfront",
+    "walking",
+    "benches",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schooner-meadowlark",
+   "name": "Schooner Meadowlark",
+   "kind": "attraction",
+   "neighborhood": "the-harbor",
+   "summary": "A two-masted wooden schooner that takes passengers out for two-hour sails around the islands, past seals and the lighthouse, with a sunset sail on Fridays.",
+   "tags": [
+    "sailing",
+    "schooner",
+    "tourists",
+    "sunset"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-marine-supply",
+   "name": "Harbor Marine Supply",
+   "kind": "shopping",
+   "neighborhood": "the-harbor",
+   "summary": "A chandlery where rope, oilskins, buoy paint, wool socks and boat gossip are all on offer; locals buy their winter boots here, not at the mall.",
+   "tags": [
+    "chandlery",
+    "boots",
+    "boats",
+    "practical"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbormasters-float",
+   "name": "Harbormaster's Float",
+   "kind": "landmark",
+   "neighborhood": "the-harbor",
+   "summary": "The little shingled office on the float where the harbormaster keeps the mooring list (twenty years long), lends a dinghy, and chalks the tide times on a board.",
+   "tags": [
+    "harbor",
+    "tides",
+    "moorings"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kendall-mill-studios",
+   "name": "Kendall Mill Studios",
+   "kind": "attraction",
+   "neighborhood": "mill-end",
+   "summary": "Four floors of the old shoe mill turned into painters', potters', weavers' and woodworkers' studios, open on second Fridays with wine in paper cups, and all weekend in November for open studios.",
+   "tags": [
+    "art",
+    "studios",
+    "makers",
+    "open-studios"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weir-street-roasters",
+   "name": "Weir Street Coffee Roasters",
+   "kind": "cafe",
+   "neighborhood": "mill-end",
+   "summary": "A roaster in the mill's old boiler room, with the roasting drum behind glass, long tables for laptops, a cardamom bun worth the walk and the falls roaring outside.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "laptops",
+    "riverside"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-river-brewing",
+   "name": "Mill River Brewing Co.",
+   "kind": "bar",
+   "neighborhood": "mill-end",
+   "summary": "The brewery taproom in the mill's dye house: pale ales and a stout named after the noon whistle, a food truck in the yard, dogs welcome and a river deck in summer.",
+   "tags": [
+    "brewery",
+    "taproom",
+    "dog-friendly",
+    "deck"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kendall-mill-dance",
+   "name": "Kendall Mill School of Dance",
+   "kind": "fitness",
+   "neighborhood": "mill-end",
+   "summary": "A dance school on the mill's top floor with sprung maple floors: ballet and tap for children, adult tap on Tuesday nights, and the June recital that fills the high school auditorium.",
+   "tags": [
+    "dance",
+    "classes",
+    "children",
+    "recital"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-falls-park",
+   "name": "Mill Falls Park",
+   "kind": "park",
+   "neighborhood": "mill-end",
+   "summary": "A small park on the riverbank at the foot of the falls, with a fish ladder where people gather in May to watch the alewives run, and a bench everyone uses for proposals.",
+   "tags": [
+    "river",
+    "falls",
+    "alewives",
+    "picnics"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-carding-room",
+   "name": "The Carding Room",
+   "kind": "venue",
+   "neighborhood": "mill-end",
+   "summary": "An events room in the mill with iron columns and big windows: contra dances on second Saturdays, folk and bluegrass concerts, a winter film series and wedding receptions in between.",
+   "tags": [
+    "music",
+    "contra-dance",
+    "concerts",
+    "events"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weir-street-noodles",
+   "name": "Weir Street Noodle Shop",
+   "kind": "restaurant",
+   "neighborhood": "mill-end",
+   "summary": "A counter with eight stools serving pho, ramen and dumplings to artists, students and nurses, with a line at lunch and a chalkboard special that changes with whatever came off the boats.",
+   "tags": [
+    "noodles",
+    "lunch",
+    "casual"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "asian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kendall-clay",
+   "name": "Kendall Clay Co-op",
+   "kind": "workshop",
+   "neighborhood": "mill-end",
+   "summary": "A shared pottery studio with wheels, kilns and evening classes, where beginners make lopsided mugs for the diner's mug wall.",
+   "tags": [
+    "pottery",
+    "classes",
+    "makers"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boiler-house-climbing",
+   "name": "Boiler House Climbing",
+   "kind": "fitness",
+   "neighborhood": "mill-end",
+   "summary": "A bouldering gym in the mill's old boiler house, with walls up to the coal chute and a regular Thursday crowd of college students, boatbuilders and a retired dentist who out-climbs them all.",
+   "tags": [
+    "climbing",
+    "bouldering",
+    "gym"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "packard-house-inn",
+   "name": "Packard House Inn",
+   "kind": "inn",
+   "neighborhood": "packard-hill",
+   "summary": "The old inn at the top of the hill, a sea captain's house of 1820 with later wings, a wraparound porch of rocking chairs, wide-board floors, a Sunday brunch and weddings on the lawn all summer.",
+   "tags": [
+    "inn",
+    "historic",
+    "porch",
+    "brunch",
+    "weddings"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "packard-tap-room",
+   "name": "The Tap Room at the Packard",
+   "kind": "bar",
+   "neighborhood": "packard-hill",
+   "summary": "The inn's low-ceilinged tavern with a fireplace, a few local beers, a good chowder and a regular crowd of locals who have had the same table on Fridays for twenty years.",
+   "tags": [
+    "tavern",
+    "fireplace",
+    "chowder",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "new-england",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "packard-hill-lookout",
+   "name": "Packard Hill Lookout",
+   "kind": "park",
+   "neighborhood": "packard-hill",
+   "summary": "The open top of the hill with a bench and a view over the harbor to the islands: sunrise in summer, the sledding run in winter and fireworks on the Fourth.",
+   "tags": [
+    "views",
+    "sledding",
+    "sunrise"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-burying-ground",
+   "name": "Old Burying Ground",
+   "kind": "landmark",
+   "neighborhood": "packard-hill",
+   "summary": "The town's first cemetery, with slate stones carved with willows and ships, many for sailors lost at sea; the historical society gives lantern tours in October.",
+   "tags": [
+    "historic",
+    "cemetery",
+    "quiet",
+    "lantern-tours"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "three-chimneys-bnb",
+   "name": "Three Chimneys Bed & Breakfast",
+   "kind": "inn",
+   "neighborhood": "packard-hill",
+   "summary": "A five-room bed and breakfast in a captain's house, known for its blueberry-stuffed French toast and for the hosts knowing exactly which beach is quiet that day.",
+   "tags": [
+    "bed-and-breakfast",
+    "breakfast",
+    "historic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "historical-society",
+   "name": "Haddon Harbor Historical Society",
+   "kind": "museum",
+   "neighborhood": "packard-hill",
+   "summary": "A small museum in a captain's house: ship portraits, a shoe from every year the mill ran, the town's old fire bell and a volunteer who will tell you who built your house.",
+   "tags": [
+    "history",
+    "maritime",
+    "volunteers"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-brendans-hall",
+   "name": "St. Brendan's Parish Hall",
+   "kind": "venue",
+   "neighborhood": "packard-hill",
+   "summary": "The Catholic parish hall on the far side of the hill, with Thursday bingo, a St. Patrick's corned beef supper and the Italian Christmas Eve fish dinner that the parish has served since the 1950s.",
+   "tags": [
+    "bingo",
+    "suppers",
+    "parish",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitcomb-quad",
+   "name": "Whitcomb Quad",
+   "kind": "park",
+   "neighborhood": "college-street",
+   "summary": "The sloping lawn at the heart of Whitcomb College, ringed by brick halls and old oaks, with frisbees in September, a snow sculpture contest in February and the town walking through it on the way to everything.",
+   "tags": [
+    "campus",
+    "lawn",
+    "oaks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kimball-pool",
+   "name": "Kimball Pool",
+   "kind": "fitness",
+   "neighborhood": "college-street",
+   "summary": "The college pool in the athletic center, open to town residents for early lap swim and Saturday family swim. The masters group swims at six whatever the weather outside.",
+   "tags": [
+    "pool",
+    "swimming",
+    "lap-swim",
+    "family-swim"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hathaway-museum",
+   "name": "Hathaway Museum of Art",
+   "kind": "museum",
+   "neighborhood": "college-street",
+   "summary": "Whitcomb College's free art museum: Maine landscapes, a room of folk portraits, student shows in the spring and a Thursday evening opening with cheese cubes and earnest conversation.",
+   "tags": [
+    "art",
+    "free",
+    "college"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "college-street-coffee",
+   "name": "College Street Coffee",
+   "kind": "cafe",
+   "neighborhood": "college-street",
+   "summary": "A cafe in an old hardware store with tin ceilings, mismatched chairs, open mic on Wednesday and students writing theses beside retired professors doing the crossword.",
+   "tags": [
+    "coffee",
+    "students",
+    "open-mic",
+    "study"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-night-owl",
+   "name": "The Night Owl",
+   "kind": "restaurant",
+   "neighborhood": "college-street",
+   "summary": "A late-night grilled cheese and tomato soup counter that stays open until one on weekends, the only food in town after ten, staffed by students and loved by nurses coming off the late shift.",
+   "tags": [
+    "late-night",
+    "grilled-cheese",
+    "students",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitcomb-boathouse",
+   "name": "Whitcomb Boathouse",
+   "kind": "fitness",
+   "neighborhood": "college-street",
+   "summary": "The college boathouse on the Mill River estuary, home of the crew and the town rowing club, which takes beginners out in old eights at six in the morning from April to October.",
+   "tags": [
+    "rowing",
+    "river",
+    "club",
+    "early"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitcomb-chapel",
+   "name": "Whitcomb Chapel",
+   "kind": "venue",
+   "neighborhood": "college-street",
+   "summary": "A granite chapel that is now the college's concert hall: the orchestra, the a cappella groups, visiting string quartets and a carol sing in December that the town never misses.",
+   "tags": [
+    "concerts",
+    "classical",
+    "carols",
+    "college"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spin-again-records",
+   "name": "Spin Again Records",
+   "kind": "shopping",
+   "neighborhood": "college-street",
+   "summary": "A secondhand record and tape shop in a basement, with a listening chair, a free bin, local band flyers and an owner with opinions about every album you pick up.",
+   "tags": [
+    "records",
+    "music",
+    "secondhand"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "birch-meadow-park",
+   "name": "Birch Meadow Park",
+   "kind": "park",
+   "neighborhood": "birch-meadow",
+   "summary": "A neighborhood park with a big wooden playground the parents built in a weekend, a splash pad, a ball field and a skating rink the fire department floods in January.",
+   "tags": [
+    "playground",
+    "splash-pad",
+    "families"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "meadow-variety",
+   "name": "Meadow Variety",
+   "kind": "market",
+   "neighborhood": "birch-meadow",
+   "summary": "The neighborhood store: milk, scratch tickets, breakfast sandwiches, and Italian sandwiches on soft rolls with pickles and olives, wrapped in paper for the beach.",
+   "tags": [
+    "convenience",
+    "italian-sandwich",
+    "breakfast"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "birch-meadow-courts",
+   "name": "Birch Meadow Courts",
+   "kind": "fitness",
+   "neighborhood": "birch-meadow",
+   "summary": "Four pickleball courts and two tennis courts that are never empty after five, with a sign-up board and a fierce morning league of retirees.",
+   "tags": [
+    "pickleball",
+    "tennis",
+    "outdoor"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "meadow-community-garden",
+   "name": "Birch Meadow Community Garden",
+   "kind": "garden",
+   "neighborhood": "birch-meadow",
+   "summary": "Forty raised beds behind the elementary school, with a shared tool shed, a zucchini giveaway table in August and a waiting list.",
+   "tags": [
+    "garden",
+    "community",
+    "vegetables"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "golden-harbor-chinese",
+   "name": "Golden Harbor Chinese Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "birch-meadow",
+   "summary": "The Chinese-American restaurant in the little plaza: crab rangoon, pu pu platters, a lounge with a fish tank, and Christmas Eve takeout orders that start in November.",
+   "tags": [
+    "chinese-american",
+    "takeout",
+    "family"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "chinese-american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "birch-meadow-dog-park",
+   "name": "Birch Meadow Dog Park",
+   "kind": "park",
+   "neighborhood": "birch-meadow",
+   "summary": "A fenced acre of pines where the same dog owners meet every morning, know each dog's name and not always each other's.",
+   "tags": [
+    "dogs",
+    "community",
+    "morning"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "higgins-hill-orchard",
+   "name": "Higgins Hill Orchard",
+   "kind": "market",
+   "neighborhood": "ridge-road",
+   "summary": "A hillside orchard with pick-your-own apples in the fall, cider pressed in the barn, cider doughnuts, a corn maze and a view down to the bay from the top row of Macouns.",
+   "tags": [
+    "orchard",
+    "apples",
+    "cider-doughnuts",
+    "pick-your-own"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "farm",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridge-road-farm-stand",
+   "name": "Ridge Road Farm Stand",
+   "kind": "market",
+   "neighborhood": "ridge-road",
+   "summary": "An honor-system stand at the end of a farm driveway: eggs in the cooler, sweet corn, pies on Saturdays, flowers in buckets and a cash box nobody has ever locked.",
+   "tags": [
+    "farm-stand",
+    "honor-system",
+    "eggs",
+    "corn"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "farm",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridge-road-antiques",
+   "name": "Ridge Road Antique Barn",
+   "kind": "shopping",
+   "neighborhood": "ridge-road",
+   "summary": "Three floors of a cow barn packed with dealers' booths: lobster buoys, quilts, oyster plates, old tools and furniture that needs a truck. Bring cash and time.",
+   "tags": [
+    "antiques",
+    "barn",
+    "browsing"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tibbetts-sugarhouse",
+   "name": "Tibbetts Sugarhouse",
+   "kind": "attraction",
+   "neighborhood": "ridge-road",
+   "summary": "A family sugarhouse that boils sap from four thousand taps, with steam pouring out the roof in March, syrup on snow for children and maple cream sold from the house all year.",
+   "tags": [
+    "maple",
+    "sugarhouse",
+    "farm"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "family",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bickford-dairy-bar",
+   "name": "Bickford Dairy Bar",
+   "kind": "restaurant",
+   "neighborhood": "ridge-road",
+   "summary": "A dairy farm's ice cream window with picnic tables facing the cows: black raspberry, maple walnut, kiddie cones bigger than the kiddies, and a line every hot evening.",
+   "tags": [
+    "ice-cream",
+    "farm",
+    "summer-evenings"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "ice-cream",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridge-grange-hall",
+   "name": "Ridge Grange Hall",
+   "kind": "venue",
+   "neighborhood": "ridge-road",
+   "summary": "The grange hall on the crossroads, with a stage and a sprung floor: contra dances, a winter farmers market on Saturdays, community suppers and the 4-H show.",
+   "tags": [
+    "grange",
+    "community",
+    "dances",
+    "winter-market"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ridge-road-veterinary",
+   "name": "Ridge Road Veterinary Clinic",
+   "kind": "vet",
+   "neighborhood": "ridge-road",
+   "summary": "The town vet in a converted farmhouse, treating dogs, cats, goats and the occasional cow, with pet supplies in the front room and a waiting room where everyone compares notes on their animals.",
+   "tags": [
+    "veterinarian",
+    "animals",
+    "practical"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haddon-fairgrounds",
+   "name": "Haddon Harbor Fairgrounds",
+   "kind": "venue",
+   "neighborhood": "ridge-road",
+   "summary": "The fairgrounds with the exhibition barns, a half-mile track and the pie tent: busy for the harvest fair in September and used for the ox pull, the dog show and the flea market the rest of the season.",
+   "tags": [
+    "fair",
+    "agricultural",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ledge-point-light",
+   "name": "Ledge Point Light",
+   "kind": "landmark",
+   "neighborhood": "ledge-point",
+   "summary": "A white brick lighthouse from 1857 on the granite at the harbor mouth, with a red-roofed keeper's house, a foghorn the town hears on thick nights, and the best sunsets on this side of the bay.",
+   "tags": [
+    "lighthouse",
+    "views",
+    "photos",
+    "sunset"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "keepers-house-museum",
+   "name": "Keeper's House Museum",
+   "kind": "museum",
+   "neighborhood": "ledge-point",
+   "summary": "The lighthouse keeper's house kept as a museum, with logbooks, the old Fresnel lens, a keeper's kitchen and a climb to the lantern on summer Saturdays.",
+   "tags": [
+    "lighthouse",
+    "history",
+    "maritime"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ledge-point-park",
+   "name": "Ledge Point Park",
+   "kind": "park",
+   "neighborhood": "ledge-point",
+   "summary": "Lawns and ledges around the lighthouse with picnic tables, tide pools full of periwinkles and crabs, and a bench where people scatter ashes and watch boats.",
+   "tags": [
+    "tide-pools",
+    "picnics",
+    "rocky-shore"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sand-cove-beach",
+   "name": "Sand Cove Beach",
+   "kind": "beach",
+   "neighborhood": "ledge-point",
+   "summary": "A small crescent of real sand on a coast of rocks, cold enough to make your ankles ache even in August, with families on towels and teenagers daring each other to swim to the float.",
+   "tags": [
+    "beach",
+    "swimming",
+    "cold-water"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "keepers-kitchen",
+   "name": "The Keeper's Kitchen",
+   "kind": "cafe",
+   "neighborhood": "ledge-point",
+   "summary": "A summer cafe in the old oil house by the lighthouse: coffee, blueberry muffins, crab rolls and lemonade at tables on the grass.",
+   "tags": [
+    "cafe",
+    "seasonal",
+    "lighthouse"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ledge-point-trail",
+   "name": "Ledge Point Trail",
+   "kind": "trail",
+   "neighborhood": "ledge-point",
+   "summary": "A rough two-mile trail through spruce and over ledges from the cottages to the lighthouse, with a fog bell you can hear from the woods and raspberries in late July.",
+   "tags": [
+    "hiking",
+    "spruce",
+    "ocean-views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ledge-point-chowder-house",
+   "name": "Ledge Point Chowder House",
+   "kind": "restaurant",
+   "neighborhood": "ledge-point",
+   "summary": "A shingled summer restaurant on the point road: haddock chowder, fried clams, a fish fry on Fridays and a deck that catches the last of the sun.",
+   "tags": [
+    "chowder",
+    "fried-clams",
+    "deck",
+    "seasonal"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "long-pond-town-beach",
+   "name": "Long Pond Town Beach",
+   "kind": "beach",
+   "neighborhood": "long-pond",
+   "summary": "A sandy town beach on the pond with a lifeguard chair, a roped swim area, a raft to swim out to and warm, clear water that tempts the people who will not swim in the ocean.",
+   "tags": [
+    "lake",
+    "swimming",
+    "lifeguard",
+    "families"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "camp-hemlock",
+   "name": "Camp Hemlock",
+   "kind": "attraction",
+   "neighborhood": "long-pond",
+   "summary": "A children's summer camp since 1921, with cabins, canoes, a dining hall and an end-of-summer song night that former campers come back for decades later.",
+   "tags": [
+    "summer-camp",
+    "canoes",
+    "tradition"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "camp-tall-pines",
+   "name": "Camp Tall Pines",
+   "kind": "attraction",
+   "neighborhood": "long-pond",
+   "summary": "A day camp on the north shore with swimming, archery and sailing lessons for town children, and family open house nights with a campfire.",
+   "tags": [
+    "day-camp",
+    "campfire",
+    "children"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "long-pond-store",
+   "name": "Long Pond Store",
+   "kind": "cafe",
+   "neighborhood": "long-pond",
+   "summary": "A general store on the pond road selling coffee, crawlers, gas, whoopie pies, hand-cut fries and slices of pie, with a porch where camp people trade news about loons and water levels.",
+   "tags": [
+    "general-store",
+    "coffee",
+    "pie",
+    "porch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "long-pond-boat-rentals",
+   "name": "Long Pond Boat Rentals",
+   "kind": "attraction",
+   "neighborhood": "long-pond",
+   "summary": "Canoes, kayaks and paddleboards by the hour from a dock by the store, with a map of the coves where the loons nest.",
+   "tags": [
+    "canoe",
+    "kayak",
+    "paddleboard",
+    "lake"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "loon-cove-trail",
+   "name": "Loon Cove Trail",
+   "kind": "trail",
+   "neighborhood": "long-pond",
+   "summary": "A three-mile woods walk along the east shore of the pond to a quiet cove, flat and needle-soft, good for snowshoes in winter.",
+   "tags": [
+    "woods",
+    "lake",
+    "snowshoe"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grays-market",
+   "name": "Gray's Market",
+   "kind": "market",
+   "neighborhood": "route-1",
+   "summary": "The town grocery, family owned: a good meat counter, local milk, a deli that knows your order, and the bulletin board by the door that is the real town newspaper.",
+   "tags": [
+    "grocery",
+    "deli",
+    "bulletin-board",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hobbs-hardware",
+   "name": "Hobbs Hardware",
+   "kind": "shopping",
+   "neighborhood": "route-1",
+   "summary": "The hardware store, with a popcorn machine by the register, a coffee pot for contractors, keys cut while you wait, bins of nails sold by the pound and a clerk who can tell you exactly what you need.",
+   "tags": [
+    "hardware",
+    "popcorn",
+    "practical",
+    "advice"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-fitness",
+   "name": "Harbor Fitness",
+   "kind": "fitness",
+   "neighborhood": "route-1",
+   "summary": "A plain, friendly gym in the old bowling supply building, with free weights, a spin room, early classes for lobster crews and a front desk that knows everyone's schedule.",
+   "tags": [
+    "gym",
+    "classes",
+    "early"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haddon-ice-arena",
+   "name": "Haddon Harbor Ice Arena",
+   "kind": "fitness",
+   "neighborhood": "route-1",
+   "summary": "The community ice rink: youth hockey before dawn, public skate on Saturday afternoons, adult pickup on Sunday nights and the high school team's home ice, with a snack bar and a cold bench.",
+   "tags": [
+    "ice-rink",
+    "skating",
+    "hockey"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "winter",
+    "fall",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "route-1-coffee-shack",
+   "name": "Route 1 Coffee Shack",
+   "kind": "cafe",
+   "neighborhood": "route-1",
+   "summary": "A drive-through coffee hut in the grocery lot with a walk-up window, a dog biscuit for every dog in the car and a punch card everybody has three of.",
+   "tags": [
+    "coffee",
+    "drive-through",
+    "quick"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "captains-catch",
+   "name": "Captain's Catch",
+   "kind": "restaurant",
+   "neighborhood": "route-1",
+   "summary": "A fried-seafood takeout window with picnic tables beside the parking lot: clam strips, haddock baskets, onion rings and a crab roll, open from April to October.",
+   "tags": [
+    "fried-seafood",
+    "takeout",
+    "picnic-tables"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "auxiliary-thrift-shop",
+   "name": "Hospital Auxiliary Thrift Shop",
+   "kind": "shopping",
+   "neighborhood": "route-1",
+   "summary": "The thrift shop run by hospital volunteers, where summer people's cast-offs end up: wool sweaters, cast iron, board games with most of the pieces and a bag sale on the last Saturday.",
+   "tags": [
+    "thrift",
+    "volunteers",
+    "bargains"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "route-1-candlepin",
+   "name": "Route 1 Candlepin Lanes",
+   "kind": "venue",
+   "neighborhood": "route-1",
+   "summary": "Twelve lanes of candlepin, the skinny-pin, small-ball bowling of New England, with league nights, birthday parties, cheap pitchers and a scoreboard that still needs a pencil.",
+   "tags": [
+    "bowling",
+    "candlepin",
+    "leagues",
+    "retro"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-haddon-store",
+   "name": "South Haddon General Store",
+   "kind": "cafe",
+   "neighborhood": "south-haddon",
+   "summary": "A general store with a porch bench, a woodstove, coffee, breakfast sandwiches, pie by the slice and a post office counter at the back, where the village checks in every morning.",
+   "tags": [
+    "general-store",
+    "coffee",
+    "post-office",
+    "porch"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tide-mill-restaurant",
+   "name": "Tide Mill Restaurant",
+   "kind": "restaurant",
+   "neighborhood": "south-haddon",
+   "summary": "A farm-to-table restaurant in a restored tide mill over the marsh, with a short menu that changes daily and a waiting list people from the city drive up for.",
+   "tags": [
+    "farm-to-table",
+    "special-occasion",
+    "marsh-views"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "new-american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-haddon-landing",
+   "name": "South Haddon Town Landing",
+   "kind": "docks",
+   "neighborhood": "south-haddon",
+   "summary": "A gravel ramp and a float where skiffs and kayaks put in, with a bench, a view up the river and someone always digging clams on the flats at low tide.",
+   "tags": [
+    "landing",
+    "clamming",
+    "kayaks"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-haddon-common",
+   "name": "South Haddon Common",
+   "kind": "park",
+   "neighborhood": "south-haddon",
+   "summary": "The village common with a gazebo, a horse trough turned flower bed and the white Union church, where the village holds its own Fourth of July and its own opinions.",
+   "tags": [
+    "village-green",
+    "gazebo",
+    "church"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pratt-marsh-preserve",
+   "name": "Pratt Marsh Preserve",
+   "kind": "trail",
+   "neighborhood": "south-haddon",
+   "summary": "Land trust trails and a boardwalk across the salt marsh, with herons, ospreys on the nesting platform, and a blind where birders sit in silence at dawn.",
+   "tags": [
+    "marsh",
+    "birding",
+    "boardwalk",
+    "land-trust"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-rusty-hinge",
+   "name": "The Rusty Hinge",
+   "kind": "bar",
+   "neighborhood": "south-haddon",
+   "summary": "The village tavern in a former blacksmith shop: a pool table, two drafts, a jukebox and a cribbage tournament on Wednesday nights that the same retired lobstering couple wins every year.",
+   "tags": [
+    "tavern",
+    "cribbage",
+    "pool",
+    "locals"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "pub",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-ferry-landing",
+   "name": "Tarbox Ferry Landing",
+   "kind": "docks",
+   "neighborhood": "tarbox-island",
+   "summary": "The island ferry slip, where trucks, groceries, mail and gossip come ashore, and half the island turns up to meet the last boat on Friday.",
+   "tags": [
+    "ferry",
+    "island-life",
+    "landing"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-island-store",
+   "name": "Tarbox Island Store",
+   "kind": "cafe",
+   "neighborhood": "tarbox-island",
+   "summary": "The one store on the island: groceries, hardware, coffee, chowder on Fridays, a lending shelf of paperbacks and the only public phone. Closed Sunday afternoons.",
+   "tags": [
+    "island-store",
+    "coffee",
+    "chowder",
+    "groceries"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-community-hall",
+   "name": "Tarbox Community Hall",
+   "kind": "venue",
+   "neighborhood": "tarbox-island",
+   "summary": "The island's hall above the school, for potluck suppers, town meeting, square dances in summer and a talent show every February that is the best entertainment of the winter.",
+   "tags": [
+    "community",
+    "potluck",
+    "dances"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-loop-road",
+   "name": "Tarbox Loop Road",
+   "kind": "trail",
+   "neighborhood": "tarbox-island",
+   "summary": "Seven miles of narrow road around the island past lobster gear, spruce and the open ocean side, walked or biked by summer people and driven very slowly by islanders who wave at all of them.",
+   "tags": [
+    "island",
+    "walking",
+    "cycling",
+    "ocean-views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-lobster-wharf",
+   "name": "Tarbox Lobster Wharf",
+   "kind": "market",
+   "neighborhood": "tarbox-island",
+   "summary": "The island lobstering co-op's wharf, where you can buy lobsters from the tank and eat them at a picnic table on the pier while the boats unload beside you.",
+   "tags": [
+    "lobster",
+    "co-op",
+    "wharf"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-island-inn",
+   "name": "Tarbox Island Inn",
+   "kind": "inn",
+   "neighborhood": "tarbox-island",
+   "summary": "A rambling summer inn above the harbor with rocking chairs facing the mainland, family-style dinners and rooms with no locks and no televisions.",
+   "tags": [
+    "inn",
+    "island",
+    "summer",
+    "family-style"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "new-england",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-long-beach",
+   "name": "Tarbox Long Beach",
+   "kind": "beach",
+   "neighborhood": "tarbox-island",
+   "summary": "A long sand beach on the far side of the island, often empty, with sea glass at the tide line and cold surf.",
+   "tags": [
+    "beach",
+    "sea-glass",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dyers-cove-marina",
+   "name": "Dyer's Cove Marina",
+   "kind": "docks",
+   "neighborhood": "dyers-cove",
+   "summary": "The marina beside the boatyard, with sailboats and lobster boats side by side, a fuel dock, showers for cruising sailors and boat shrink-wrap glowing white in the yard all winter.",
+   "tags": [
+    "marina",
+    "boats",
+    "sailing"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boatyard-grill",
+   "name": "The Boatyard Grill",
+   "kind": "restaurant",
+   "neighborhood": "dyers-cove",
+   "summary": "A bar and grill upstairs at the marina, with burgers, fish tacos and a deck over the floats; boatbuilders at lunch, sailors at sunset, and a locals' night on Thursdays in winter.",
+   "tags": [
+    "grill",
+    "deck",
+    "marina",
+    "locals-night"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "american",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "community-sailing",
+   "name": "Haddon Harbor Community Sailing",
+   "kind": "fitness",
+   "neighborhood": "dyers-cove",
+   "summary": "A nonprofit sailing center with small boats for lessons, adult evening races on Wednesdays and kids learning to capsize on purpose in July.",
+   "tags": [
+    "sailing",
+    "lessons",
+    "racing",
+    "nonprofit"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cove-variety",
+   "name": "Cove Variety",
+   "kind": "market",
+   "neighborhood": "dyers-cove",
+   "summary": "A corner store that opens at five for the boatyard crews: breakfast pizza, coffee, bait, lottery tickets and the best-informed person in town behind the counter.",
+   "tags": [
+    "convenience",
+    "breakfast-pizza",
+    "early"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "deli",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "legion-post",
+   "name": "American Legion Post 41",
+   "kind": "bar",
+   "neighborhood": "dyers-cove",
+   "summary": "The Legion post on the cove road, with cheap drafts, a meat raffle on Saturdays, the Memorial Day breakfast and a hall rented for every retirement party and baby shower in town.",
+   "tags": [
+    "legion",
+    "cheap-drinks",
+    "meat-raffle",
+    "community"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-paddle",
+   "name": "Harbor Paddle",
+   "kind": "attraction",
+   "neighborhood": "dyers-cove",
+   "summary": "Sea kayak rentals and guided paddles from the cove out to the seal ledges and around Ledge Point, with sunrise trips for the keen.",
+   "tags": [
+    "kayaking",
+    "guided",
+    "seals"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "high-school-field",
+   "name": "Haddon Harbor High School Field",
+   "kind": "stadium",
+   "neighborhood": "west-end",
+   "summary": "The high school field with aluminium bleachers and a concession stand run by the boosters: Friday night football under the lights, soccer in the rain, and the Fourth of July fireworks launched from the far end.",
+   "tags": [
+    "high-school",
+    "football",
+    "friday-nights",
+    "boosters"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cobb-pond",
+   "name": "Cobb Pond",
+   "kind": "park",
+   "neighborhood": "west-end",
+   "summary": "A small pond the fire department tests and flags for skating each winter, with a warming hut, a bonfire barrel, cocoa sold by the eighth grade and boot prints from every child in town.",
+   "tags": [
+    "skating",
+    "pond",
+    "warming-hut",
+    "winter"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kearneys-pub",
+   "name": "Kearney's Pub",
+   "kind": "bar",
+   "neighborhood": "west-end",
+   "summary": "An Irish pub across from the hospital, with a Guinness poured slowly, shepherd's pie, a session on Sunday afternoons and a corner where night nurses unwind at eight in the morning.",
+   "tags": [
+    "irish-pub",
+    "session",
+    "nurses"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "irish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rizzos-market",
+   "name": "Rizzo's Market",
+   "kind": "market",
+   "neighborhood": "west-end",
+   "summary": "An Italian grocery and deli from the days when Italian stonecutters worked the quarries: imported pasta, homemade sausage, Italian sandwiches and a Christmas order of baccala.",
+   "tags": [
+    "italian",
+    "deli",
+    "sausage",
+    "family-run"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-spin-cycle",
+   "name": "The Spin Cycle",
+   "kind": "cafe",
+   "neighborhood": "west-end",
+   "summary": "A laundromat with an espresso machine and a pastry case, where a wash, a latte and the local paper make a Sunday morning, and the bulletin board sells everything from firewood to kittens.",
+   "tags": [
+    "laundromat",
+    "coffee",
+    "bulletin-board"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "coffee",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-end-rec-center",
+   "name": "West End Recreation Center",
+   "kind": "fitness",
+   "neighborhood": "west-end",
+   "summary": "The town rec center in an old school gym: pickup basketball, Zumba, a senior walking club in winter and after-school programs that half the parents in town depend on.",
+   "tags": [
+    "gym",
+    "basketball",
+    "community",
+    "seniors"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "back-shore-path",
+   "name": "Back Shore Path",
+   "kind": "trail",
+   "neighborhood": "back-shore",
+   "summary": "A public right of way along the cliffs, over granite ledges and past summer cottages' lawns, with surf booming below in a storm and wild roses in June.",
+   "tags": [
+    "cliff-walk",
+    "ocean",
+    "walking",
+    "views"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cobble-beach",
+   "name": "Cobble Beach",
+   "kind": "beach",
+   "neighborhood": "back-shore",
+   "summary": "A steep beach of rounded stones that roar when the waves pull back, good for skipping stones and a bracing dip, and for the New Year's Day plunge.",
+   "tags": [
+    "beach",
+    "stones",
+    "polar-plunge"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beach-plum-cafe",
+   "name": "The Beach Plum",
+   "kind": "cafe",
+   "neighborhood": "back-shore",
+   "summary": "A summer cafe in a shingled cottage with coffee, scones, lobster salad on croissants and beach plum jam, and Adirondack chairs facing the open ocean.",
+   "tags": [
+    "cafe",
+    "seasonal",
+    "ocean-views"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "back-shore-links",
+   "name": "Back Shore Links",
+   "kind": "attraction",
+   "neighborhood": "back-shore",
+   "summary": "A nine-hole golf course from the 1890s on the ocean bluff, windy, cheap after four, and played by retired lobstering families and summer people in the same foursome.",
+   "tags": [
+    "golf",
+    "ocean",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "back-shore-chapel",
+   "name": "Back Shore Chapel",
+   "kind": "landmark",
+   "neighborhood": "back-shore",
+   "summary": "A tiny shingled chapel open only in July and August, with Sunday services, the windows open to the sound of the surf, and a lot of small weddings.",
+   "tags": [
+    "chapel",
+    "weddings",
+    "seasonal",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family",
+    "date"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "back-shore-lobster-pound",
+   "name": "Back Shore Lobster Pound",
+   "kind": "restaurant",
+   "neighborhood": "back-shore",
+   "summary": "A lobster pound on the cove where you pick your lobster from the tank, they steam it in seawater over a wood fire, and you eat it at a picnic table with your own bottle of wine.",
+   "tags": [
+    "lobster",
+    "byob",
+    "picnic-tables",
+    "sunset"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "seafood",
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "summer-shuttle",
+   "name": "Harbor Summer Shuttle",
+   "kind": "bus",
+   "summary": "A free open-sided shuttle bus run by the town from late June to Labor Day, looping every half hour from Main Street to the harbor, Packard Hill, Dyer's Cove, Ledge Point and the Back Shore.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-ferry",
+   "name": "Tarbox Island Ferry",
+   "kind": "ferry",
+   "summary": "The car ferry from the town pier to Tarbox Island, forty minutes each way, four round trips a day in winter and seven in summer, with reservations for cars and a deckhand who knows every islander's order.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "library-bikes",
+   "name": "Library loaner bikes",
+   "kind": "bike-share",
+   "summary": "Sturdy town bikes borrowed with a library card from racks at the library, the harbor, the college, the mill and the hospital, April to November.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "car",
+   "name": "Car",
+   "kind": "car",
+   "summary": "How most people get around beyond the village: Route 1, the Augusta road and the back roads to the pond, the farms and South Haddon.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "walk",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "The village, the harbor, the mill and the college are all within a fifteen-minute walk of the green.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "whitcomb-college",
+   "name": "Whitcomb College",
+   "type": "liberal-arts-college",
+   "neighborhood": "college-street",
+   "size": "small",
+   "known_for": [
+    "liberal-arts",
+    "marine-biology",
+    "environmental-studies",
+    "creative-writing",
+    "music",
+    "rowing"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "whitcomb-college-employer",
+   "name": "Whitcomb College",
+   "sector": "education",
+   "neighborhood": "college-street",
+   "size": "medium",
+   "summary": "A liberal arts college of about 1,800 students and the town's largest employer after the hospital: faculty, a small marine lab, dining, grounds and admissions.",
+   "careers": [
+    "professor",
+    "biologist",
+    "data-analyst",
+    "marketing-coordinator",
+    "event-planner",
+    "accountant",
+    "software-engineer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sewall-memorial-hospital",
+   "name": "Sewall Memorial Hospital",
+   "sector": "healthcare",
+   "neighborhood": "west-end",
+   "size": "medium",
+   "summary": "A community hospital with an emergency department, a birthing center and clinics that serve the whole peninsula and the islands.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "social-worker",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hatch-boatyard",
+   "name": "Hatch Boatyard",
+   "sector": "marine-trades",
+   "neighborhood": "dyers-cove",
+   "size": "medium",
+   "summary": "A family boatyard in its fourth generation, building wooden and composite lobster boats, storing and repairing yachts and running the marina.",
+   "careers": [
+    "boatbuilder",
+    "construction-trades",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kendall-mill",
+   "name": "Kendall Mill",
+   "sector": "arts",
+   "neighborhood": "mill-end",
+   "size": "small",
+   "summary": "The old shoe mill, now owned by a nonprofit that rents studios, runs the events room and shares a floor with a small design firm and a software startup.",
+   "careers": [
+    "graphic-designer",
+    "ux-designer",
+    "musician",
+    "software-engineer",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haddon-harbor-schools",
+   "name": "Haddon Harbor School Department",
+   "sector": "education",
+   "neighborhood": "west-end",
+   "size": "medium",
+   "summary": "The town's schools: the elementary in Birch Meadow, the middle and high schools in the West End, and the one-room school on Tarbox Island.",
+   "careers": [
+    "teacher",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lobster-co-op-employer",
+   "name": "Haddon Harbor Lobster Co-op",
+   "sector": "fishing",
+   "neighborhood": "the-harbor",
+   "size": "small",
+   "summary": "The lobstering co-op owned by about sixty boats, buying their catch, selling bait and fuel, and shipping lobster by truck to Boston and beyond.",
+   "careers": [
+    "lobster-fisher",
+    "port-logistics",
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "packard-house-employer",
+   "name": "Packard House Inn",
+   "sector": "hospitality",
+   "neighborhood": "packard-hill",
+   "size": "small",
+   "summary": "The old inn on the hill with its tavern and wedding lawn, busy all summer and quiet but open all winter.",
+   "careers": [
+    "innkeeper",
+    "hotel-front-desk",
+    "server",
+    "line-cook",
+    "bartender",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "town-of-haddon-harbor",
+   "name": "Town of Haddon Harbor",
+   "sector": "government",
+   "neighborhood": "the-green",
+   "size": "medium",
+   "summary": "The town office, public works, the harbormaster, the library, the rec department and the summer lifeguards at the town beaches.",
+   "careers": [
+    "government-analyst",
+    "accountant",
+    "lifeguard",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hobbs-hardware-employer",
+   "name": "Hobbs Hardware",
+   "sector": "retail",
+   "neighborhood": "route-1",
+   "size": "small",
+   "summary": "The family hardware store, which also runs the lumber yard behind it and delivers to the island on Tuesdays.",
+   "careers": [
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "granite-coast-savings",
+   "name": "Granite Coast Savings Bank",
+   "sector": "finance",
+   "neighborhood": "the-green",
+   "size": "medium",
+   "summary": "A regional savings bank with its headquarters in the brick block on Main Street and branches up and down the coast.",
+   "careers": [
+    "finance-banker",
+    "financial-analyst",
+    "accountant",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mill-river-brewing-employer",
+   "name": "Mill River Brewing Co.",
+   "sector": "food",
+   "neighborhood": "mill-end",
+   "size": "small",
+   "summary": "The brewery in the mill, which brews, cans and ships its beer around New England and runs the taproom.",
+   "careers": [
+    "bartender",
+    "line-cook",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "grays-market-employer",
+   "name": "Gray's Market",
+   "sector": "retail",
+   "neighborhood": "route-1",
+   "size": "small",
+   "summary": "The family grocery, with a bakery and deli counter that start before dawn.",
+   "careers": [
+    "retail-associate",
+    "baker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haddon-harbor-register",
+   "name": "The Haddon Harbor Register",
+   "sector": "media",
+   "neighborhood": "the-green",
+   "size": "small",
+   "summary": "The weekly town paper, founded in 1858, with a newsroom of four, a police log everyone reads first and a website that went up in 2009.",
+   "careers": [
+    "journalist",
+    "graphic-designer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "higgins-hill-employer",
+   "name": "Higgins Hill Orchard",
+   "sector": "agriculture",
+   "neighborhood": "ridge-road",
+   "size": "small",
+   "summary": "The orchard and farm store, with a few year-round hands and a crowd of pickers and cider makers in the fall.",
+   "careers": [
+    "orchard-farmer",
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-and-hill-realty",
+   "name": "Harbor & Hill Realty",
+   "sector": "real-estate",
+   "neighborhood": "the-green",
+   "size": "small",
+   "summary": "The busiest estate agency in town, selling summer cottages and finding winter rentals.",
+   "careers": [
+    "real-estate-agent"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schooner-meadowlark-employer",
+   "name": "Schooner Meadowlark",
+   "sector": "tourism",
+   "neighborhood": "the-harbor",
+   "size": "small",
+   "summary": "The windjammer day-sail business, hiring a captain, mates and guides every summer.",
+   "careers": [
+    "tour-guide"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "main-street-hub",
+   "name": "Main Street shops and offices",
+   "neighborhoods": [
+    "the-green",
+    "packard-hill"
+   ],
+   "sectors": [
+    "retail",
+    "hospitality",
+    "government",
+    "finance",
+    "media",
+    "real-estate",
+    "food"
+   ],
+   "summary": "The town office, the bank, the paper, the shops, the inns and the restaurants around the green.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "waterfront-hub",
+   "name": "The waterfront",
+   "neighborhoods": [
+    "the-harbor",
+    "dyers-cove",
+    "tarbox-island"
+   ],
+   "sectors": [
+    "fishing",
+    "marine-trades",
+    "tourism",
+    "logistics",
+    "recreation"
+   ],
+   "summary": "The fish pier, the co-ops, the boatyard, the marina, the ferry and the summer boat businesses.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "college-and-hospital-hub",
+   "name": "The college and the hospital",
+   "neighborhoods": [
+    "college-street",
+    "west-end"
+   ],
+   "sectors": [
+    "education",
+    "healthcare",
+    "social-services"
+   ],
+   "summary": "Whitcomb College, Sewall Memorial Hospital and the schools.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "route-1-hub",
+   "name": "Route 1 and the farms",
+   "neighborhoods": [
+    "route-1",
+    "ridge-road",
+    "mill-end"
+   ],
+   "sectors": [
+    "retail",
+    "agriculture",
+    "construction",
+    "fitness",
+    "arts",
+    "technology"
+   ],
+   "summary": "The grocery, the hardware store and lumber yard, the gym, the farms and the mill's studios and small firms.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "lobster-fisher",
+   "name": "Lobster fisher",
+   "sector": "fishing",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Hauls traps from a lobster boat, as a sternman or with a boat and a license of their own, out before dawn and back mid-afternoon.",
+   "themes": [
+    "weather",
+    "the boat",
+    "trap limits",
+    "prices at the co-op",
+    "early mornings",
+    "the sea"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "id": "boatbuilder",
+   "name": "Boatbuilder",
+   "sector": "marine-trades",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Builds and repairs wooden and fibreglass boats at the boatyard: lofting, planking, glassing, painting and launching in spring.",
+   "themes": [
+    "craft",
+    "launch day",
+    "winter storage",
+    "sawdust and resin",
+    "old-timers"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "id": "innkeeper",
+   "name": "Innkeeper",
+   "sector": "hospitality",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Runs an inn or a bed and breakfast: cooking breakfast, turning rooms, answering guests' questions and surviving August.",
+   "themes": [
+    "guests",
+    "breakfast",
+    "the season",
+    "old houses",
+    "reviews"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "id": "orchard-farmer",
+   "name": "Orchard farmer",
+   "sector": "agriculture",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Works an orchard and farm: pruning in winter, spraying and mowing in summer, picking and pressing cider in the fall.",
+   "themes": [
+    "weather",
+    "harvest",
+    "the farm stand",
+    "frost",
+    "the seasons"
+   ],
+   "eras": [
+    "modern"
+   ]
+  }
+ ],
+ "climate": {
+  "summary": "Midcoast Maine: cold, snowy winters, a muddy spring, short warm summers cooled by the sea and fog, and a long golden fall. Nor'easters bring snow or rain at any time from November to April.",
+  "months": [
+   {
+    "high_f": 31,
+    "low_f": 13,
+    "rain_days": 11,
+    "note": "Coldest month; the harbor steams with sea smoke on still mornings."
+   },
+   {
+    "high_f": 34,
+    "low_f": 15,
+    "rain_days": 10,
+    "note": "Snow on the ground, skating on Cobb Pond and the winter carnival."
+   },
+   {
+    "high_f": 41,
+    "low_f": 24,
+    "rain_days": 11,
+    "note": "Sugaring season; snow, sleet and the first thaw."
+   },
+   {
+    "high_f": 52,
+    "low_f": 34,
+    "rain_days": 12,
+    "note": "Mud season; ice goes out on Long Pond and the boats go back in."
+   },
+   {
+    "high_f": 63,
+    "low_f": 43,
+    "rain_days": 13,
+    "note": "Lilacs, black flies and the alewife run."
+   },
+   {
+    "high_f": 72,
+    "low_f": 52,
+    "rain_days": 12,
+    "note": "Fog mornings and long evenings; the summer people arrive."
+   },
+   {
+    "high_f": 78,
+    "low_f": 58,
+    "rain_days": 10,
+    "note": "Warmest month; the water is still cold."
+   },
+   {
+    "high_f": 77,
+    "low_f": 57,
+    "rain_days": 10,
+    "note": "Lobster festival weather; busy and bright."
+   },
+   {
+    "high_f": 69,
+    "low_f": 49,
+    "rain_days": 10,
+    "note": "Clear and crisp; the best month, locals say."
+   },
+   {
+    "high_f": 57,
+    "low_f": 38,
+    "rain_days": 11,
+    "note": "Peak foliage and apple picking; the cottages close."
+   },
+   {
+    "high_f": 46,
+    "low_f": 30,
+    "rain_days": 12,
+    "note": "Gray and windy; boats come out of the water."
+   },
+   {
+    "high_f": 36,
+    "low_f": 20,
+    "rain_days": 12,
+    "note": "Dark by four; first snow and the lighting of the green."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "polar-plunge",
+   "name": "New Year's Day Plunge",
+   "months": [
+    1
+   ],
+   "neighborhood": "back-shore",
+   "summary": "Hundreds run into the sea at Cobble Beach at noon on New Year's Day in costumes, raising money for the food pantry, then thaw out at the Legion.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "winter-carnival",
+   "name": "Winter Carnival",
+   "months": [
+    2
+   ],
+   "neighborhood": "west-end",
+   "summary": "A weekend of skating races on Cobb Pond, snow sculptures on the quad, a chili cook-off at the rec center, a smelt fry and the crowning of a carnival king and queen from the senior class.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "town-meeting-day",
+   "name": "Town Meeting Day",
+   "months": [
+    3
+   ],
+   "neighborhood": "the-green",
+   "summary": "The annual open town meeting in the high school gym, where every voter can stand up and argue over the budget, the harbor moorings and the new fire truck, usually until long after supper.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maple-weekend",
+   "name": "Maple Weekend",
+   "months": [
+    3
+   ],
+   "neighborhood": "ridge-road",
+   "summary": "The sugarhouses open their doors on the fourth weekend of March for syrup tastings, pancake breakfasts, sugar on snow and muddy boots.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ice-out-contest",
+   "name": "Long Pond Ice-Out Contest",
+   "months": [
+    4
+   ],
+   "neighborhood": "long-pond",
+   "summary": "The town bets a dollar a guess on the day and hour the ice goes out on Long Pond, judged from the store porch; the winner splits the pot with the volunteer fire department.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "alewife-run",
+   "name": "Alewife Run",
+   "months": [
+    5
+   ],
+   "neighborhood": "mill-end",
+   "summary": "When the alewives run up the fish ladder at the falls, schools bring classes, ospreys circle and the mill holds a smoked-fish breakfast.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "commencement",
+   "name": "Whitcomb Commencement",
+   "months": [
+    5
+   ],
+   "neighborhood": "college-street",
+   "summary": "Graduation on the quad, with every inn booked, the bakery sold out and parents photographing the lighthouse.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blessing-of-the-fleet",
+   "name": "Blessing of the Fleet",
+   "months": [
+    6
+   ],
+   "neighborhood": "the-harbor",
+   "summary": "Lobster boats dressed in flags parade past the fish pier to be blessed by the clergy of every church in town, and a wreath is laid for those lost at sea.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "strawberry-supper",
+   "name": "Strawberry Supper",
+   "months": [
+    6
+   ],
+   "neighborhood": "the-green",
+   "summary": "The First Parish strawberry supper, with ham, potato salad, baked beans and shortcake on biscuits, two sittings and a line down the church steps.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fourth-of-july-parade",
+   "name": "Fourth of July Parade",
+   "months": [
+    7
+   ],
+   "neighborhood": "the-green",
+   "summary": "Fire engines, the high school band, floats on hay wagons, kids on decorated bikes and the lobster boat on a trailer that wins every year, with fireworks over the harbor that night.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-regatta",
+   "name": "Harbor Regatta",
+   "months": [
+    7
+   ],
+   "neighborhood": "dyers-cove",
+   "summary": "A weekend of sailboat races off Dyer's Cove for every kind of boat, from children in prams to old wooden yachts, ending with a cookout at the boatyard.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lobster-festival",
+   "name": "Haddon Harbor Lobster Festival",
+   "months": [
+    8
+   ],
+   "neighborhood": "the-harbor",
+   "summary": "Four days of lobster dinners, a parade, a crate race across floating lobster crates, the sea goddess pageant and a midway on the waterfront.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tarbox-island-day",
+   "name": "Tarbox Island Day",
+   "months": [
+    8
+   ],
+   "neighborhood": "tarbox-island",
+   "summary": "The island hosts the mainland for one day: an extra ferry, a lobster bake, boat races, a fun run around the loop road and a dance in the community hall.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harvest-fair",
+   "name": "Haddon Harbor Harvest Fair",
+   "months": [
+    9
+   ],
+   "neighborhood": "ridge-road",
+   "summary": "The agricultural fair at the fairgrounds: ox pulling, 4-H barns, the giant pumpkin weigh-in, fried dough, and the pie contest whose results the Register prints in full.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "head-of-the-mill",
+   "name": "Head of the Mill",
+   "months": [
+    10
+   ],
+   "neighborhood": "college-street",
+   "summary": "The college regatta, a rowing race up the Mill River estuary that brings crews from across New England and a crowd with blankets on the bank.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "halloween-on-main",
+   "name": "Halloween on Main Street",
+   "months": [
+    10
+   ],
+   "neighborhood": "the-green",
+   "summary": "The shops hand out candy, Main Street closes to cars, the historical society gives lantern tours of the burying ground and the costume parade ends at the bandstand.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "open-studios",
+   "name": "Kendall Mill Open Studios",
+   "months": [
+    11
+   ],
+   "neighborhood": "mill-end",
+   "summary": "Every studio in the mill opens on the weekend before Thanksgiving, with makers selling their work and the brewery pouring a winter ale.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "first-snow-breakfast",
+   "name": "First Snow Pancake Breakfast",
+   "months": [
+    11,
+    12
+   ],
+   "neighborhood": "the-green",
+   "summary": "On the Saturday after the first real snowfall, the volunteer firefighters serve pancakes and sausages at the Central Fire Station; the phone tree spreads the word the night before.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lighting-of-the-green",
+   "name": "Lighting of the Green",
+   "months": [
+    12
+   ],
+   "neighborhood": "the-green",
+   "summary": "On the first Saturday of December the town gathers on the green for carols, cocoa and the lighting of the tree, and the harbor boats light up their rigging.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "mug-wall",
+   "name": "The mug wall",
+   "kind": "custom",
+   "summary": "Regulars at the Bluebird keep their own mug on a numbered peg behind the counter. Getting a peg takes years; when a regular dies, their mug is retired to a shelf over the door.",
+   "places": [
+    "bluebird-diner"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "phone-tree",
+   "name": "The town phone tree",
+   "kind": "custom",
+   "summary": "Snow days, lost dogs, power cuts, a fire at the pier, a casserole needed for a family in trouble: news goes out on the phone tree, each person calling the next three, faster than any app.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "honor-farm-stand",
+   "name": "Honor-system farm stands",
+   "kind": "custom",
+   "summary": "Eggs, corn and pies sit unattended at the ends of driveways with a cash box or a jar. People leave exact change, or an IOU on the notepad, and settle up next time.",
+   "places": [
+    "ridge-road-farm-stand",
+    "ridge-road"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "police-log",
+   "name": "Reading the police log",
+   "kind": "custom",
+   "summary": "Everyone turns first to the police log in the Register on Thursday: loose cows, a suspicious kayak, a raccoon in the bank, and guessing who the unnamed caller was.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "swap-shop",
+   "name": "The swap shop",
+   "kind": "custom",
+   "summary": "A shed at the town transfer station where people leave what still works and take what they need; plenty of furniture in town has been through it twice.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "town-meeting-arguments",
+   "name": "Town meeting arguments",
+   "kind": "custom",
+   "summary": "People settle in for town meeting with a thermos and a sandwich, knowing the article about the moorings or the school roof will take two hours and someone will quote the 1974 vote.",
+   "places": [
+    "haddon-town-hall"
+   ],
+   "seasons": [
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bean-supper",
+   "name": "Bean supper",
+   "kind": "dish",
+   "summary": "Baked beans slow-cooked in a crock with salt pork and molasses, with brown bread, coleslaw, hot dogs and pie: the first-Saturday supper at the church and the grange.",
+   "places": [
+    "first-parish-vestry",
+    "ridge-grange-hall"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lobster-roll",
+   "name": "The lobster roll argument",
+   "kind": "dish",
+   "summary": "Lobster on a buttered, toasted split-top roll, served with mayonnaise or with warm butter. Families, and marriages, have firm positions.",
+   "places": [
+    "coombs-wharf-shack",
+    "lobster-co-op"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whoopie-pie",
+   "name": "Whoopie pie",
+   "kind": "dish",
+   "summary": "Two soft chocolate cakes around a thick white filling, the state treat, sold by every bakery, store and church sale.",
+   "places": [
+    "spruce-street-bakery",
+    "long-pond-store"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "red-hot-dogs",
+   "name": "Red hot dogs",
+   "kind": "dish",
+   "summary": "Bright red natural-casing hot dogs that snap when you bite them, served at bean suppers, ball games and the fair.",
+   "places": [
+    "high-school-field",
+    "haddon-fairgrounds"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "italian-sandwich",
+   "name": "Italian sandwich",
+   "kind": "dish",
+   "summary": "A Maine Italian: ham, American cheese, onions, green peppers, tomatoes, pickles and black olives on a soft roll with oil, salt and pepper.",
+   "places": [
+    "meadow-variety",
+    "rizzos-market",
+    "cove-variety"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "blueberry-pie",
+   "name": "Wild blueberry pie",
+   "kind": "dish",
+   "summary": "Pie made with the small wild blueberries raked on the barrens, best in August and judged harshly at the harvest fair.",
+   "places": [
+    "coombs-wharf-shack",
+    "ridge-road-farm-stand"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cider-doughnuts",
+   "name": "Cider doughnuts",
+   "kind": "dish",
+   "summary": "Warm doughnuts made with boiled cider and rolled in cinnamon sugar, sold in paper bags at the orchard all fall.",
+   "places": [
+    "higgins-hill-orchard"
+   ],
+   "seasons": [
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "moxie",
+   "name": "Moxie",
+   "kind": "drink",
+   "summary": "The bitter, old-fashioned soda that older people swear by and newcomers try exactly once.",
+   "places": [
+    "main-street-pharmacy",
+    "long-pond-store"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "frappe",
+   "name": "A frappe",
+   "kind": "drink",
+   "summary": "A thick milkshake made with ice cream; in this town a \"milkshake\" is just flavored milk, and the soda fountain will ask which you meant.",
+   "places": [
+    "main-street-pharmacy",
+    "bickford-dairy-bar"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ayuh",
+   "name": "\"Ayuh\"",
+   "kind": "saying",
+   "summary": "Yes, or I agree, or I heard you, depending on the tone; heard on the fish pier more than on College Street.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wicked",
+   "name": "\"Wicked\"",
+   "kind": "saying",
+   "summary": "Very: wicked good, wicked cold, wicked busy in August.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "from-away",
+   "name": "\"From away\"",
+   "kind": "saying",
+   "summary": "Anyone not born here, however long they have lived in town. Their children are from away too, some say.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dooryard",
+   "name": "\"Dooryard\"",
+   "kind": "saying",
+   "summary": "The yard by the kitchen door where trucks, traps and firewood live: \"Pull into the dooryard.\"",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "upta-camp",
+   "name": "\"Upta camp\"",
+   "kind": "saying",
+   "summary": "At the family's cabin on Long Pond, where people go every summer weekend and are unreachable.",
+   "places": [
+    "long-pond"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mud-season",
+   "name": "Mud season",
+   "kind": "other",
+   "summary": "The weeks in April when the frost comes out of the ground, dirt roads turn to soup, posted roads close to heavy trucks and everyone owns two pairs of boots.",
+   "places": [
+    "ridge-road",
+    "long-pond"
+   ],
+   "seasons": [
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "noon-whistle",
+   "name": "The noon whistle",
+   "kind": "custom",
+   "summary": "The fire station whistle sounds at noon every day; people check their watches against it and newcomers jump.",
+   "places": [
+    "central-fire-station"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "steering-wheel-wave",
+   "name": "The steering-wheel wave",
+   "kind": "custom",
+   "summary": "On the back roads drivers lift two fingers off the wheel at every passing car, and on Tarbox Island a whole hand.",
+   "places": [
+    "ridge-road",
+    "tarbox-island"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "harbor-high-clippers",
+   "name": "Harbor High Clippers",
+   "kind": "team",
+   "summary": "The high school teams in navy and gold; Friday night football under the lights and the Thanksgiving game against South Haddon's old rivals draw the whole town.",
+   "places": [
+    "high-school-field",
+    "haddon-ice-arena"
+   ],
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitcomb-ospreys",
+   "name": "Whitcomb Ospreys",
+   "kind": "team",
+   "summary": "The college teams, best known for rowing and women's hockey; townspeople line the bank for the Head of the Mill.",
+   "places": [
+    "whitcomb-boathouse",
+    "haddon-ice-arena"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hardware-popcorn",
+   "name": "Hardware store popcorn",
+   "kind": "shop",
+   "summary": "Hobbs Hardware gives away popcorn by the register and coffee to contractors, and will sell you one screw if one is all you need.",
+   "places": [
+    "hobbs-hardware"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "coffee",
+   "item": "Cup of coffee",
+   "low": 2.25,
+   "high": 4.5,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Latte",
+   "low": 4.5,
+   "high": 6,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "diner-breakfast",
+   "item": "Diner breakfast",
+   "low": 9,
+   "high": 16,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lobster-roll",
+   "item": "Lobster roll",
+   "low": 28,
+   "high": 42,
+   "per": "market price",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lobster",
+   "item": "Live lobster at the co-op",
+   "low": 7,
+   "high": 14,
+   "per": "a pound, by season",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pint",
+   "item": "Pint of local beer",
+   "low": 7,
+   "high": 9,
+   "per": "a pint",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pizza",
+   "item": "Large pizza",
+   "low": 16,
+   "high": 24,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner-out",
+   "item": "Dinner out",
+   "low": 25,
+   "high": 75,
+   "per": "a person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "A week's groceries",
+   "low": 110,
+   "high": 180,
+   "per": "one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ferry",
+   "item": "Tarbox Island ferry",
+   "low": 7,
+   "high": 12,
+   "per": "a passenger round trip",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ferry-car",
+   "item": "Tarbox Island ferry with a car",
+   "low": 35,
+   "high": 55,
+   "per": "round trip",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "inn-night",
+   "item": "Night at an inn",
+   "low": 160,
+   "high": 380,
+   "per": "a room, winter to August",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movie",
+   "item": "Elmwood Theatre ticket",
+   "low": 5,
+   "high": 10,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bean-supper",
+   "item": "Church bean supper",
+   "low": 12,
+   "high": 15,
+   "per": "a plate with pie",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "heating-oil",
+   "item": "Heating oil",
+   "low": 3.5,
+   "high": 4.5,
+   "per": "a gallon",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "firewood",
+   "item": "Cord of firewood",
+   "low": 300,
+   "high": 400,
+   "per": "a cord, cut and split",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "transfer-station",
+   "item": "Transfer station sticker",
+   "low": 25,
+   "high": 40,
+   "per": "a year",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gas",
+   "item": "Gasoline",
+   "low": 3.2,
+   "high": 3.9,
+   "per": "a gallon",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "sea",
+   "name": "Penobscot Bay",
+   "side": "east",
+   "width_km": 3
+  },
+  {
+   "kind": "river",
+   "name": "Mill River",
+   "width_km": 0.06,
+   "points": [
+    [
+     43.996,
+     -69.332
+    ],
+    [
+     43.986,
+     -69.319
+    ],
+    [
+     43.978,
+     -69.31
+    ],
+    [
+     43.974,
+     -69.305
+    ],
+    [
+     43.969,
+     -69.3
+    ],
+    [
+     43.965,
+     -69.293
+    ]
+   ]
+  },
+  {
+   "kind": "lake",
+   "name": "Long Pond",
+   "width_km": 1.2,
+   "points": [
+    [
+     44.026,
+     -69.284
+    ]
+   ]
+  }
+ ]
+}

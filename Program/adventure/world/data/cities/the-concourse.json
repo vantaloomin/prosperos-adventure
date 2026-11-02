@@ -1,0 +1,1463 @@
+{
+ "schema_version": 1,
+ "id": "the-concourse",
+ "name": "the Concourse",
+ "setting": "original",
+ "era": "fantasy",
+ "category": "fictional",
+ "basis": "Vanta's own world of BABEL, from the Mabry Curve roleplay: a living tower of themed floors wearing the skin of an unreleased full-dive game.",
+ "region": "Floor Zero",
+ "country": "the tower",
+ "timezone": "America/Chicago",
+ "aliases": [
+  "Floor Zero",
+  "the Concourse"
+ ],
+ "summary": "Floor Zero of the tower, where the arrivals land: a city under a gold-veined dome so high it has weather, with the great white Waystone in its plaza, the guild row, the market streets and the east gate onto the Stair. A Safe Zone covers all of it. Since the Turning it looks almost exactly like BABEL's Floor Zero.",
+ "lat": 30.508,
+ "lon": -97.679,
+ "intensity": {
+  "preset": "unflinching",
+  "drama": "eventful",
+  "voice": "pulpy and mythic in a modern frame: omens, weather and System panes, where every win carries a bill and desire is a power with a price"
+ },
+ "currency": {
+  "code": "talent",
+  "symbol": "T",
+  "name": "Talents"
+ },
+ "rent_period": "week",
+ "speeds": {
+  "walk": 4.5
+ },
+ "sources": {
+  "mabry-curve-2026-10": {
+   "kind": "curated",
+   "title": "BABEL written for Prospero's Dungeon from Vanta's Mabry Curve archive",
+   "license": "Vanta's own setting; all rights reserved",
+   "retrieved": "2026-10-22",
+   "note": "Places, people and customs from the Mabry Curve story, hidden files and side cast (dungeon/world/packages/babel/sources.md). Names the story does not give are new."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "waystone-plaza",
+   "name": "the Waystone plaza",
+   "summary": "The broad round plaza at the heart of Floor Zero, with the great white Waystone in the middle and the Roll carved at its top. Arrivals stand here looking up at the dome; everyone else stands here looking at the arrivals.",
+   "vibe": [
+    "central",
+    "safe-zone",
+    "busy"
+   ],
+   "lat": 30.508,
+   "lon": -97.679,
+   "rent_tier": "high",
+   "housing": [
+    "room-over-shop",
+    "garret"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     20,
+     30
+    ],
+    "one_bedroom": [
+     35,
+     50
+    ],
+    "two_bedroom": [
+     60,
+     90
+    ]
+   }
+  },
+  {
+   "id": "the-market-streets",
+   "name": "the market streets",
+   "summary": "Stall-packed streets running off the plaza under banners and cookfire smoke, at their fullest on Fire Market day: skewers, cloth, starter kits, maps of floors that may not look like that any more.",
+   "vibe": [
+    "market",
+    "loud",
+    "cheap"
+   ],
+   "lat": 30.509999999999998,
+   "lon": -97.681,
+   "rent_tier": "mid",
+   "housing": [
+    "room-over-shop",
+    "stall-loft"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot",
+    "porters"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     10,
+     15
+    ],
+    "one_bedroom": [
+     18,
+     25
+    ],
+    "two_bedroom": [
+     30,
+     45
+    ]
+   }
+  },
+  {
+   "id": "guild-row",
+   "name": "the guild row",
+   "summary": "A street of guild halls east of the plaza, tall narrow fronts with banners hung from the upper windows, most faded past reading. The Landing is the last and least impressive.",
+   "vibe": [
+    "guilds",
+    "veterans",
+    "faded"
+   ],
+   "lat": 30.509,
+   "lon": -97.676,
+   "rent_tier": "mid",
+   "housing": [
+    "guild-hall",
+    "garret"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     12,
+     18
+    ],
+    "one_bedroom": [
+     20,
+     30
+    ],
+    "two_bedroom": [
+     35,
+     50
+    ]
+   }
+  },
+  {
+   "id": "the-east-gate",
+   "name": "the east gate",
+   "summary": "The gate onto the Stair, with MIND THE STAIR painted over the arch in the oldest lettering on the floor and the lift cage swinging on its chains beyond. Porters, toll touts and people saying goodbye.",
+   "vibe": [
+    "gate",
+    "travel",
+    "goodbyes"
+   ],
+   "lat": 30.5095,
+   "lon": -97.673,
+   "rent_tier": "low",
+   "housing": [
+    "bunkhouse",
+    "garret"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "on-foot",
+    "the-lift-cage"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     6,
+     10
+    ],
+    "one_bedroom": [
+     12,
+     16
+    ],
+    "two_bedroom": [
+     18,
+     26
+    ]
+   }
+  },
+  {
+   "id": "the-lamp-quarter",
+   "name": "the Lamp Quarter",
+   "summary": "Lodging houses, cook-shops and taprooms in the lanes behind the market, lit all night by lamps on brackets: where climbers sleep when they are not in a guild, and where natives sell the only food that tastes.",
+   "vibe": [
+    "lodgings",
+    "night",
+    "rough"
+   ],
+   "lat": 30.506,
+   "lon": -97.678,
+   "rent_tier": "low",
+   "housing": [
+    "lodging-house",
+    "bunkhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "on-foot"
+   ],
+   "source": "mabry-curve-2026-10",
+   "rent": {
+    "studio": [
+     5,
+     8
+    ],
+    "one_bedroom": [
+     10,
+     14
+    ],
+    "two_bedroom": [
+     16,
+     22
+    ]
+   }
+  }
+ ],
+ "places": [
+  {
+   "id": "the-waystone",
+   "name": "the Concourse Waystone",
+   "kind": "landmark",
+   "neighborhood": "waystone-plaza",
+   "summary": "A great white standing stone with light at its heart. Touch it to attune: your return point, the quest board, a class confirmed. The Roll of arrivals is carved at the top, newest first; Nth Floor's maker's mark, NF, is cut small into its foot.",
+   "tags": [
+    "waystone",
+    "safe-zone",
+    "the-roll",
+    "quests"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the Roll",
+    "the quest board",
+    "the maker's mark at the foot",
+    "the steps where arrivals sit"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-plaza",
+   "name": "the plaza",
+   "kind": "square",
+   "neighborhood": "waystone-plaza",
+   "summary": "Flagstones worn smooth around the Stone, the dome far overhead with weather in it and bells hung in the haze. Plate armor, rags, and now and then a Texas Longhorns hoodie.",
+   "tags": [
+    "central",
+    "crowds",
+    "news"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the Stone's shadow",
+    "the criers' corner",
+    "the edge of the market"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "hamids-cart",
+   "name": "Hamid's skewer cart",
+   "kind": "restaurant",
+   "neighborhood": "the-market-streets",
+   "summary": "A charcoal cart half a block from the plaza, meat on iron forks over coals, and Hamid in his leather apron daring you to complain. Plain meat: to a climber it tastes of ash.",
+   "tags": [
+    "street-food",
+    "fire-market"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "skewers",
+   "spots": [
+    "the coals",
+    "the awning"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "fire-market-rows",
+   "name": "the Fire Market rows",
+   "kind": "market",
+   "neighborhood": "the-market-streets",
+   "summary": "The market streets on Fire Market day, the best trading day of the week: stalls three deep, starter kits resold, cloth, lamps, maps, and debts changing hands.",
+   "tags": [
+    "market",
+    "fire-market",
+    "bargains",
+    "debts"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the map sellers",
+    "the kit stalls",
+    "the rent men's table"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "brask-and-daughters",
+   "name": "Brask and Daughters",
+   "kind": "shopping",
+   "neighborhood": "the-market-streets",
+   "summary": "Armorers and outfitters with a stall front and a forge behind: blades, mail, packs, and gear graded on BABEL's ladder since the Turning, which the Brask daughters resent.",
+   "tags": [
+    "arms",
+    "gear",
+    "graded"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the blade rack",
+    "the forge",
+    "the grading slate"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-landing",
+   "name": "the Landing",
+   "kind": "guildhall",
+   "neighborhood": "guild-row",
+   "summary": "Darla Kinney's guild in a squat domed bathhouse of green-veined marble, its bronze plaque scratched over in block capitals. The pools are drained: bedrolls in the shallow end, a long table in the deep end, a cookfire in the old hot bath venting through a hole in the dome, fish mosaics missing tiles like teeth. It still smells faintly of chlorine.",
+   "tags": [
+    "guild",
+    "veterans",
+    "safe-zone"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the long table in the deep end",
+    "the shallow end",
+    "the hot-bath cookfire",
+    "the bronze door"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-guild-halls",
+   "name": "the guild halls",
+   "kind": "guildhall",
+   "neighborhood": "guild-row",
+   "summary": "Bigger guilds than the Landing, behind faded banners: halls that recruit arrivals on the plaza, buy what they know about the floors, and do not like a veteran guild getting ahead of them on the Turning.",
+   "tags": [
+    "guilds",
+    "recruiting"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the recruiting table",
+    "the trophy wall"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-gate-arch",
+   "name": "the east gate",
+   "kind": "landmark",
+   "neighborhood": "the-east-gate",
+   "summary": "The arch onto the Stair, MIND THE STAIR over it. Beyond, the shaft as wide as a stadium, the stair spiraling its wall and the iron lift cage on its chains. The operator in the leather cap calls the floors.",
+   "tags": [
+    "gate",
+    "stair",
+    "travel"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the arch",
+    "the cage landing",
+    "the first step down",
+    "the operator's lever"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-porters-yard",
+   "name": "the porters' yard",
+   "kind": "workshop",
+   "neighborhood": "the-east-gate",
+   "summary": "Where porters wait for loads going up or down the Stair, and where you can hire one, or a guide, or someone who says he is a guide.",
+   "tags": [
+    "hiring",
+    "porters",
+    "guides"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "osks-kitchen",
+   "name": "Osk's Kitchen",
+   "kind": "restaurant",
+   "neighborhood": "the-lamp-quarter",
+   "summary": "A cook-shop run by a native Cook whose dishes carry a System effect, so they are the only meals on the street that taste of anything to a climber. There is always a queue of the Unhungry, and Osk charges for it.",
+   "tags": [
+    "buff-food",
+    "unhungry",
+    "queue"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "buff food",
+   "spots": [
+    "the counter",
+    "the slate of today's buffs",
+    "the back table"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-tap-and-tally",
+   "name": "the Tap and Tally",
+   "kind": "tavern",
+   "neighborhood": "the-lamp-quarter",
+   "summary": "A low taproom where natives drink and climbers come for the talk, since the beer is ash in their mouths. Dice, gossip about the floors, and a board of the missing.",
+   "tags": [
+    "tavern",
+    "rumors",
+    "dice",
+    "missing"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "tavern",
+   "spots": [
+    "the board of the missing",
+    "the dice table",
+    "the bar"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-pallet-house",
+   "name": "the Pallet House",
+   "kind": "inn",
+   "neighborhood": "the-lamp-quarter",
+   "summary": "A lodging house of straw pallets by the night or the week, for arrivals with no guild, a few Talents, and nobody to vouch for them.",
+   "tags": [
+    "lodgings",
+    "cheap"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "sallis-counting-house",
+   "name": "Sallis's counting house",
+   "kind": "shopping",
+   "neighborhood": "the-lamp-quarter",
+   "summary": "Ivo Sallis lends Talents against what you will be worth, and writes it down. His terms are fair the first week.",
+   "tags": [
+    "lender",
+    "debt",
+    "contracts"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-scriveners-stall",
+   "name": "the scrivener's stall",
+   "kind": "shopping",
+   "neighborhood": "waystone-plaza",
+   "summary": "A native with good eyes and a ladder who will search the Roll for a name, copy it out, and tell you how long it has been there, for a Talent. For more, she will tell you who else has asked.",
+   "tags": [
+    "the-roll",
+    "information",
+    "missing"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the ladder",
+    "the copy book"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-water-sellers",
+   "name": "the water sellers",
+   "kind": "market",
+   "neighborhood": "waystone-plaza",
+   "summary": "Natives with yokes and dippers working the edge of the plaza, selling cups of water to arrivals who have not yet learned they do not need it.",
+   "tags": [
+    "water",
+    "new-wave"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "spots": [
+    "the plaza steps",
+    "the trough"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-guild-mess",
+   "name": "the guild mess",
+   "kind": "restaurant",
+   "neighborhood": "guild-row",
+   "summary": "A long room off the guild row where any registered climber can eat at a common table, and every guild on the row listens in.",
+   "tags": [
+    "guilds",
+    "rumors",
+    "common-table"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "stew and bread",
+   "spots": [
+    "the common table",
+    "the hatch"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-gate-tea-stall",
+   "name": "the gate tea stall",
+   "kind": "cafe",
+   "neighborhood": "the-east-gate",
+   "summary": "A tin-roofed stall under the arch where porters drink strong tea before a carry and the touts work the line.",
+   "tags": [
+    "porters",
+    "tea",
+    "touts"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "tea",
+   "spots": [
+    "the bench under the arch",
+    "the kettle"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "on-foot",
+   "name": "On foot",
+   "kind": "walk",
+   "summary": "The plaza to the east gate is a quarter hour.",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "porters",
+   "name": "Porters",
+   "kind": "walk",
+   "summary": "For a Talent a load.",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-lift-cage",
+   "name": "The lift cage",
+   "kind": "tram",
+   "summary": "Up one to Varrow or down one to St. Agathe's, from the east gate, to Waystones you have touched.",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "stall-keeper",
+   "name": "Stall keeper",
+   "sector": "market",
+   "schedule": "early",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Running a cart or a stall on the market streets, and paying the rows their rent.",
+   "themes": [
+    "the rows",
+    "Fire Market",
+    "rent"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "cook-shop-cook",
+   "name": "Cook",
+   "sector": "food",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Cooking food with a System effect, the only meals climbers can taste.",
+   "themes": [
+    "buffs",
+    "the Unhungry",
+    "queues"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "porter",
+   "name": "Stair porter",
+   "sector": "travel",
+   "schedule": "early",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Carrying loads up and down the Stair for whoever pays.",
+   "themes": [
+    "the Stair",
+    "loads",
+    "tolls"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "cage-hand",
+   "name": "Cage hand",
+   "sector": "travel",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Working the lift cage's chains and lever.",
+   "themes": [
+    "the cage",
+    "the drop",
+    "floors"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "guild-climber",
+   "name": "Guild climber",
+   "sector": "guild",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$$",
+   "summary": "Climbing for a guild: escorts, quests, floor runs, and sharing what comes back.",
+   "themes": [
+    "ranks",
+    "escorts",
+    "the Turning"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "scrivener",
+   "name": "Scrivener",
+   "sector": "information",
+   "schedule": "shift-day",
+   "employment": "freelance",
+   "pay": "$",
+   "summary": "Copying the Roll, writing letters and contracts for those who cannot.",
+   "themes": [
+    "the Roll",
+    "letters",
+    "secrets"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "armorer",
+   "name": "Armorer",
+   "sector": "craft",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Forging and fitting arms and armor, graded on the ladder.",
+   "themes": [
+    "the forge",
+    "grades",
+    "customers"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "lodging-keeper",
+   "name": "Lodging keeper",
+   "sector": "lodging",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$",
+   "summary": "Renting pallets and rooms by the night.",
+   "themes": [
+    "arrivals",
+    "debts",
+    "thin walls"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "rent-collector",
+   "name": "Rent man",
+   "sector": "market",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Collecting the market rows' stall rents.",
+   "themes": [
+    "the rows",
+    "debts",
+    "standing near carts"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  }
+ ],
+ "work_by_gender": false,
+ "employers": [
+  {
+   "id": "the-landing-guild",
+   "name": "the Landing",
+   "sector": "guild",
+   "neighborhood": "guild-row",
+   "size": "small",
+   "summary": "Darla Kinney's guild of veterans from before the Turning.",
+   "careers": [
+    "guild-climber"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-big-guilds",
+   "name": "the guild halls",
+   "sector": "guild",
+   "neighborhood": "guild-row",
+   "size": "large",
+   "summary": "The bigger guilds on the row.",
+   "careers": [
+    "guild-climber",
+    "scrivener"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-rows",
+   "name": "the market rows",
+   "sector": "market",
+   "neighborhood": "the-market-streets",
+   "size": "large",
+   "summary": "Whoever controls the stall rents.",
+   "careers": [
+    "stall-keeper",
+    "rent-collector"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-east-gate-crew",
+   "name": "the east gate",
+   "sector": "travel",
+   "neighborhood": "the-east-gate",
+   "size": "medium",
+   "summary": "The cage and the porters.",
+   "careers": [
+    "cage-hand",
+    "porter"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "osks",
+   "name": "Osk's Kitchen",
+   "sector": "food",
+   "neighborhood": "the-lamp-quarter",
+   "size": "small",
+   "summary": "The cook-shop with food that tastes.",
+   "careers": [
+    "cook-shop-cook"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "brask",
+   "name": "Brask and Daughters",
+   "sector": "craft",
+   "neighborhood": "the-market-streets",
+   "size": "small",
+   "summary": "Armorers and outfitters.",
+   "careers": [
+    "armorer"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "the-market",
+   "name": "The market and the gate",
+   "neighborhoods": [
+    "the-market-streets",
+    "the-east-gate",
+    "the-lamp-quarter"
+   ],
+   "sectors": [
+    "market",
+    "travel",
+    "food",
+    "lodging",
+    "craft"
+   ],
+   "summary": "Most native wages on the Concourse come from selling to climbers or carrying for them.",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Under the dome: mild, smoky, with its own weather high up. Rain falls from the haze some days and never reaches the plaza dry.",
+  "months": [
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 4,
+    "note": "The dome is gray for days at a time."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 4,
+    "note": "Haze rain."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 5,
+    "note": "The bells ring in the weather."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 5,
+    "note": "Warm smoke."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 4,
+    "note": "Clear high up."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 3,
+    "note": "The cookfire smoke hangs low."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 3,
+    "note": "Bright."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 3,
+    "note": "Bright."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 4,
+    "note": "Mist in the bells."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 5,
+    "note": "Rain from the haze."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 5,
+    "note": "Gray."
+   },
+   {
+    "high_f": 70,
+    "low_f": 58,
+    "rain_days": 4,
+    "note": "Gray and close."
+   }
+  ],
+  "source": "mabry-curve-2026-10"
+ },
+ "annual_events": [],
+ "local_color": [
+  {
+   "id": "fire-market",
+   "name": "Fire Market",
+   "kind": "custom",
+   "summary": "The best trading day of the week. Cookfires never go out and the rows collect double.",
+   "places": [
+    "fire-market-rows",
+    "hamids-cart"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "mind-the-stair",
+   "name": "Mind the stair",
+   "kind": "saying",
+   "summary": "What the Concourse says instead of goodbye, from the words over the east gate.",
+   "places": [
+    "the-gate-arch"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "down-somewhere-worse",
+   "name": "Down somewhere worse",
+   "kind": "saying",
+   "summary": "Anyone not on the Roll by nightfall came down somewhere worse, or did not come down.",
+   "places": [
+    "the-waystone"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-unhungry",
+   "name": "The Unhungry",
+   "kind": "custom",
+   "summary": "Natives sell climbers food they cannot taste and drink they do not need, and climbers buy it anyway, for the company.",
+   "places": [
+    "the-tap-and-tally",
+    "osks-kitchen"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "new-wave",
+   "name": "New wave",
+   "kind": "saying",
+   "summary": "Said with a sigh whenever an arrival does something stupid, or flashes red in a Safe Zone.",
+   "places": [
+    "the-plaza"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-white-ring",
+   "name": "The white ring",
+   "kind": "rumor",
+   "summary": "Old natives look twice at white-ringed eyes. Ask why and they say a big one came down in an earlier wave, and something bad followed.",
+   "places": [
+    "hamids-cart"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "the-long-house",
+   "name": "The Long House",
+   "kind": "legend",
+   "summary": "Before the Turning, the Stone greeted arrivals like a tent preacher: Welcome, child, to the Long House.",
+   "places": [
+    "the-waystone"
+   ],
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "never-st-agathes",
+   "name": "Never go down to St. Agathe's",
+   "kind": "saying",
+   "summary": "Every veteran's first piece of advice.",
+   "places": [
+    "the-gate-arch"
+   ],
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "names": {
+  "groups": {
+   "concourse": {
+    "feminine": [
+     "Darla",
+     "Ruth Ann",
+     "Marisol",
+     "Osk",
+     "Bettany",
+     "Ines",
+     "Wenda",
+     "Lupe",
+     "Hattie",
+     "Corinne",
+     "Ama",
+     "Greer",
+     "Nadia",
+     "Rosalind",
+     "Tova",
+     "Junie"
+    ],
+    "masculine": [
+     "Hamid",
+     "Danny",
+     "Ed",
+     "Cobb",
+     "Ivo",
+     "Tunde",
+     "Lyle",
+     "Arturo",
+     "Bascom",
+     "Pieter",
+     "Rafe",
+     "Hollis",
+     "Omar",
+     "Desmond",
+     "Clem",
+     "Jakob"
+    ],
+    "neutral": [
+     "Pia",
+     "Sunny",
+     "Ash",
+     "Kit"
+    ],
+    "family": [
+     "Kinney",
+     "Teel",
+     "Oyelaran",
+     "Sallis",
+     "Brask",
+     "Morrow-Hale",
+     "Quist",
+     "Delacroix",
+     "Ambrose",
+     "Okafor",
+     "Lindqvist",
+     "Pruett",
+     "Vasquez",
+     "Hanley",
+     "Stroud",
+     "Achterberg"
+    ]
+   }
+  }
+ },
+ "calendar": "none",
+ "prices": [
+  {
+   "id": "skewer",
+   "item": "Skewer of charcoal meat",
+   "low": 0.3,
+   "high": 0.5,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "buff-meal",
+   "item": "Meal at Osk's (it tastes)",
+   "low": 3,
+   "high": 6,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "ale",
+   "item": "Mug of ale",
+   "low": 0.2,
+   "high": 0.4,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "pallet",
+   "item": "Pallet at the Pallet House",
+   "low": 1,
+   "high": 2,
+   "per": "night",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "room",
+   "item": "Room in the Lamp Quarter",
+   "low": 3,
+   "high": 5,
+   "per": "night",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "porter",
+   "item": "A porter",
+   "low": 1,
+   "high": 2,
+   "per": "load",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "cage",
+   "item": "The lift cage",
+   "low": 2,
+   "high": 2,
+   "per": "one way",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "sword",
+   "item": "A plain graded sword (F)",
+   "low": 30,
+   "high": 50,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "roll-search",
+   "item": "A search of the Roll",
+   "low": 1,
+   "high": 1,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "day-wage",
+   "item": "A porter's day wage",
+   "low": 2,
+   "high": 3,
+   "per": "day",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "starter-kit",
+   "item": "A resold starter satchel",
+   "low": 15,
+   "high": 25,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "cart",
+   "item": "A skewer cart and a morning's stock",
+   "low": 30,
+   "high": 30,
+   "per": "",
+   "source": "mabry-curve-2026-10"
+  }
+ ],
+ "water": [],
+ "notables": [
+  {
+   "id": "hamid",
+   "name": "Hamid",
+   "given": "Hamid",
+   "pronouns": "he/him",
+   "age": 58,
+   "place": "hamids-cart",
+   "role": "skewer seller",
+   "staff": true,
+   "about": "Runs a skewer cart by the plaza and refers to himself in the third person. He owes the market rows his stall rent and fears big arrivals with white-ringed eyes.",
+   "wants": "to make his Fire Market take",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "darla-kinney",
+   "name": "Darla Kinney",
+   "given": "Darla",
+   "pronouns": "she/her",
+   "age": 55,
+   "place": "the-landing",
+   "role": "head of the Landing",
+   "staff": true,
+   "about": "A veteran from before the Turning in a Dallas Cowboys jacket, Lv 14 ▸ Rank D. Wants leverage on the new skin, and lies to keep useful people close.",
+   "wants": "someone who understands the new skin before the guilds do",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "ruth-ann-teel",
+   "name": "Ruth Ann Teel",
+   "given": "Ruth Ann",
+   "pronouns": "she/her",
+   "age": 49,
+   "place": "the-landing",
+   "role": "quartermaster and smith",
+   "staff": true,
+   "about": "A Delver who has kept the Landing's stores for eleven years and watched a man named Teague over its cookfire for two.",
+   "wants": "to be believed about Teague",
+   "source": "mabry-curve-2026-10",
+   "kind": "delver"
+  },
+  {
+   "id": "danny-oyelaran",
+   "name": "Danny Oyelaran",
+   "given": "Danny",
+   "pronouns": "he/him",
+   "age": 24,
+   "place": "the-landing",
+   "role": "climber",
+   "staff": false,
+   "about": "The Landing's newest, a rabbit-eared Therian at 31% of F.",
+   "wants": "to rank up before the rules change again",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "sister-pia",
+   "name": "Sister Pia",
+   "given": "Pia",
+   "pronouns": "she/her",
+   "age": 40,
+   "place": "the-landing",
+   "role": "climber and Keeper",
+   "staff": false,
+   "about": "A mouthless Hollow who talks on a slate and knows Darla is hiding something.",
+   "wants": "someone to ask Darla about Teague",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "osk",
+   "name": "Osk Lindqvist",
+   "given": "Osk",
+   "pronouns": "she/her",
+   "age": 47,
+   "place": "osks-kitchen",
+   "role": "cook",
+   "staff": true,
+   "about": "A native Cook whose food tastes to climbers. She knows every arrival who has eaten at her counter and what they could afford.",
+   "wants": "to be paid what her cooking is worth",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "cobb",
+   "name": "Cobb",
+   "given": "Cobb",
+   "pronouns": "he/him",
+   "age": 62,
+   "place": "the-gate-arch",
+   "role": "cage operator",
+   "staff": true,
+   "about": "The operator in the leather cap who calls the floors. He has seen everyone go up, and knows who came back.",
+   "wants": "a quiet shift",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "ivo-sallis",
+   "name": "Ivo Sallis",
+   "given": "Ivo",
+   "pronouns": "he/him",
+   "age": 44,
+   "place": "sallis-counting-house",
+   "role": "lender",
+   "staff": true,
+   "about": "Lends Talents to arrivals against what they will be worth, at terms that are fair for a week.",
+   "wants": "the engineer's debt",
+   "source": "mabry-curve-2026-10"
+  },
+  {
+   "id": "greer-brask",
+   "name": "Greer Brask",
+   "given": "Greer",
+   "pronouns": "she/her",
+   "age": 36,
+   "place": "brask-and-daughters",
+   "role": "armorer",
+   "staff": true,
+   "about": "The eldest Brask daughter, who grades blades on the ladder and hates doing it.",
+   "wants": "the old way of pricing back",
+   "source": "mabry-curve-2026-10"
+  }
+ ]
+}

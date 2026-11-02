@@ -1,0 +1,286 @@
+{
+ "premades": [
+  {
+   "id": "piper-marsh",
+   "name": "Piper Marsh",
+   "gender": "woman",
+   "age": 20,
+   "about": "A half-kitsune sophomore in Interpersonal Dynamics who sells charms out of the Verdant Grove and apologizes for everything. One red tail that tells the truth when she doesn't. She wants a bonded circle and a shop with her name on it, and she has not told anyone the first part yet. No car: the shuttle, the bus, or a ride from Austin.",
+   "stats": {
+    "Mind": 10,
+    "Allure": 12,
+    "Resolve": 7,
+    "Vitality": 9,
+    "Essence": 12,
+    "Luck": 10
+   },
+   "srd52": {
+    "class": "bard",
+    "species": "elf",
+    "background": "sage"
+   },
+   "enrolled": [
+    {
+     "institution": "havenbrooke-university",
+     "classes": [
+      "ipd-201",
+      "ipd-340",
+      "es-201",
+      "hum-101",
+      "ipd-310"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jason-kessler",
+   "name": "Jason Kessler",
+   "gender": "man",
+   "age": 20,
+   "about": "An incubus sophomore in Supernatural Physiology, a year into the best relationship of his life and still afraid of what he is. He has spent eleven months drafting a support group for people who have to feed. He has a secret from freshman year he has never said out loud. No car: the shuttle, the bus, or a ride from Austin.",
+   "stats": {
+    "Mind": 9,
+    "Allure": 11,
+    "Resolve": 8,
+    "Vitality": 12,
+    "Essence": 12,
+    "Luck": 8
+   },
+   "srd52": {
+    "class": "warlock",
+    "species": "tiefling",
+    "background": "acolyte"
+   },
+   "enrolled": [
+    {
+     "institution": "havenbrooke-university",
+     "classes": [
+      "spi-210",
+      "ipd-340",
+      "spi-220",
+      "hum-101",
+      "spi-clinic"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "austin-hallward",
+   "name": "Austin Hallward",
+   "gender": "man",
+   "age": 20,
+   "about": "A born lycan in Military and Tactical Operations, president of Alpha Gamma for about another month. Big, quiet, asks short questions and means them. Everybody leans on him. He shares a unit with a dryad who is lying to her family, and he has noticed. He drives an old pickup and is the floor's ride anywhere.",
+   "stats": {
+    "Mind": 8,
+    "Allure": 8,
+    "Resolve": 12,
+    "Vitality": 16,
+    "Essence": 8,
+    "Luck": 8
+   },
+   "srd52": {
+    "class": "fighter",
+    "species": "human",
+    "background": "soldier"
+   },
+   "enrolled": [
+    {
+     "institution": "havenbrooke-university",
+     "classes": [
+      "mto-310",
+      "mto-320",
+      "mto-pt",
+      "hum-101"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rina-aldwyn",
+   "name": "Rina Aldwyn",
+   "gender": "woman",
+   "age": 20,
+   "about": "A dryad in Esoteric Sciences, anchored to a three-hundred-year-old oak her family owns, and betrothed to a sylph diplomat she has met four times. She has been forging her family's correspondence since August. She closes at the Grove four nights a week. No car: the shuttle, the bus, or a ride from Austin.",
+   "stats": {
+    "Mind": 10,
+    "Allure": 10,
+    "Resolve": 10,
+    "Vitality": 10,
+    "Essence": 13,
+    "Luck": 7
+   },
+   "srd52": {
+    "class": "druid",
+    "species": "elf",
+    "background": "sage"
+   },
+   "enrolled": [
+    {
+     "institution": "havenbrooke-university",
+     "classes": [
+      "es-250",
+      "es-201",
+      "ipd-340",
+      "es-lab"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kimberly-corwin",
+   "name": "Kimberly Corwin",
+   "gender": "woman",
+   "age": 20,
+   "about": "A Boston lineage witch in Esoteric Sciences who turned down Salem to build something nobody handed her. Precise, funny when she is tired, and more exact the worse things get. Her mother has a plan for her. So does Sigma Theta Hex. No car: the shuttle, the bus, or a ride from Austin.",
+   "stats": {
+    "Mind": 13,
+    "Allure": 9,
+    "Resolve": 10,
+    "Vitality": 9,
+    "Essence": 11,
+    "Luck": 8
+   },
+   "srd52": {
+    "class": "wizard",
+    "species": "human",
+    "background": "sage"
+   },
+   "enrolled": [
+    {
+     "institution": "havenbrooke-university",
+     "classes": [
+      "ess-412",
+      "es-201",
+      "es-lab",
+      "ipd-340"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "michael-reeves",
+   "name": "Michael Reeves",
+   "gender": "man",
+   "age": 20,
+   "about": "A mundane human from Cleveland on a full scholarship in computer science, sharing Unit C with a witch who outranks him in every room but this one. He thinks he is lucky to be here. Exposure fatigue is making him tired in a way he has not mentioned. No car: the shuttle, the bus, or a ride from Austin.",
+   "stats": {
+    "Mind": 17,
+    "Allure": 10,
+    "Resolve": 8,
+    "Vitality": 10,
+    "Essence": 2,
+    "Luck": 13
+   },
+   "srd52": {
+    "class": "rogue",
+    "species": "human",
+    "background": "sage"
+   },
+   "enrolled": [
+    {
+     "institution": "havenbrooke-university",
+     "classes": [
+      "cs-230",
+      "cs-215",
+      "bus-210",
+      "hum-101"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "christine-kessler",
+   "name": "Christine Kessler",
+   "gender": "woman",
+   "age": 20,
+   "about": "Jason's twin, a succubus model in the Interpersonal Dynamics fashion track with a brand liaison and forty percent of the floor's attention at any time. Very good at being wanted. She woke up in a Philadelphia hospital at seventeen with three days missing. She drives a black Audi and lends it to nobody.",
+   "stats": {
+    "Mind": 10,
+    "Allure": 14,
+    "Resolve": 6,
+    "Vitality": 10,
+    "Essence": 12,
+    "Luck": 8
+   },
+   "srd52": {
+    "class": "warlock",
+    "species": "tiefling",
+    "background": "criminal"
+   },
+   "enrolled": [
+    {
+     "institution": "havenbrooke-university",
+     "classes": [
+      "ipd-201",
+      "ipd-260",
+      "ipd-340",
+      "bus-210"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "paula-mercer",
+   "name": "Paula Mercer",
+   "gender": "woman",
+   "age": 20,
+   "about": "A vampire, turned by choice, fourteen months out of the worst year of her life and studying ethics in Interpersonal Dynamics. Dry, careful, kind on purpose. She counts things to stay steady, and her parents in Harrisburg do not call. No car: the shuttle, the bus, or a ride from Austin.",
+   "stats": {
+    "Mind": 11,
+    "Allure": 11,
+    "Resolve": 8,
+    "Vitality": 13,
+    "Essence": 10,
+    "Luck": 7
+   },
+   "srd52": {
+    "class": "rogue",
+    "species": "human",
+    "background": "acolyte"
+   },
+   "enrolled": [
+    {
+     "institution": "havenbrooke-university",
+     "classes": [
+      "ipd-201",
+      "ipd-340",
+      "ipd-310",
+      "spi-220",
+      "hum-101"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "amanda-rhodes",
+   "name": "Amanda Rhodes",
+   "gender": "woman",
+   "age": 20,
+   "about": "A mundane media student from Columbus who came to Havenbrooke to start an account about the people in it, and is about to. Loud, quick and generous, and quieter when it is real. She has a list of everyone on the floor she plans to pitch, and one name is missing from it. No car: the shuttle, the bus, or a ride from Austin.",
+   "stats": {
+    "Mind": 13,
+    "Allure": 16,
+    "Resolve": 8,
+    "Vitality": 10,
+    "Essence": 1,
+    "Luck": 12
+   },
+   "srd52": {
+    "class": "bard",
+    "species": "human",
+    "background": "criminal"
+   },
+   "enrolled": [
+    {
+     "institution": "havenbrooke-university",
+     "classes": [
+      "comm-250",
+      "hum-101",
+      "bus-210",
+      "ipd-201"
+     ]
+    }
+   ]
+  }
+ ]
+}

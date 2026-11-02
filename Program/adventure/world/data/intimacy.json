@@ -1,0 +1,726 @@
+{
+  "_about": "The adult side of life (dungeon/world/intimacy.py): only ever for adults, only ever consensual between adults. Tier 1 is mild, 3 is bold. `text` goes in the person's own prompt after 'Into:'.  The 'qualities' group is who someone is drawn to rather than what they do: rolled on its own, never read as an intimate word in a chat. tests/test_intimacy.py checks every entry against a list of banned themes.",
+  "levels": [
+    {
+      "id": "reserved",
+      "label": "Reserved",
+      "text": "private and old-fashioned about it; it matters, but it stays behind closed doors and is rarely talked about"
+    },
+    {
+      "id": "conventional",
+      "label": "Conventional",
+      "text": "likes what they like and doesn't feel the need to experiment much"
+    },
+    {
+      "id": "curious",
+      "label": "Curious",
+      "text": "open to trying new things with someone they trust"
+    },
+    {
+      "id": "adventurous",
+      "label": "Adventurous",
+      "text": "enjoys exploring and is happy to suggest something new"
+    },
+    {
+      "id": "wild",
+      "label": "Wild",
+      "text": "very open and experimental, and comfortable saying exactly what they want"
+    }
+  ],
+  "drives": [
+    {
+      "id": "low",
+      "label": "Low",
+      "text": "rarely the one to start things; affection and closeness often matter more than sex"
+    },
+    {
+      "id": "average",
+      "label": "Average",
+      "text": "interested about as often as most people"
+    },
+    {
+      "id": "high",
+      "label": "High",
+      "text": "often in the mood and not shy about it"
+    }
+  ],
+  "orientations": [
+    "straight",
+    "gay",
+    "lesbian",
+    "bisexual",
+    "pansexual",
+    "queer",
+    "asexual"
+  ],
+  "interests": [
+    {
+      "id": "slow-romantic",
+      "tier": 1,
+      "group": "romance",
+      "label": "Slow and romantic",
+      "text": "taking it slow, with candles and music on"
+    },
+    {
+      "id": "kissing",
+      "tier": 1,
+      "group": "romance",
+      "label": "Long kisses",
+      "text": "kissing for a long time before anything else"
+    },
+    {
+      "id": "neck-kisses",
+      "tier": 1,
+      "group": "romance",
+      "label": "Neck kisses",
+      "text": "having their neck kissed"
+    },
+    {
+      "id": "cuddling-after",
+      "tier": 1,
+      "group": "romance",
+      "label": "Holding each other after",
+      "text": "being held afterwards and talking"
+    },
+    {
+      "id": "massage",
+      "tier": 1,
+      "group": "romance",
+      "label": "Oil massages",
+      "text": "oil massages that turn into more"
+    },
+    {
+      "id": "shower",
+      "tier": 1,
+      "group": "romance",
+      "label": "Showering together",
+      "text": "showering together"
+    },
+    {
+      "id": "bath",
+      "tier": 1,
+      "group": "romance",
+      "label": "Baths for two",
+      "text": "a long bath for two"
+    },
+    {
+      "id": "morning",
+      "tier": 1,
+      "group": "romance",
+      "label": "Lazy mornings",
+      "text": "lazy mornings in bed before the alarm goes off"
+    },
+    {
+      "id": "another-room",
+      "tier": 1,
+      "group": "romance",
+      "label": "Anywhere but the bed",
+      "text": "getting carried away on the couch or the kitchen counter at home"
+    },
+    {
+      "id": "lights-on",
+      "tier": 1,
+      "group": "romance",
+      "label": "Lights on",
+      "text": "leaving the lights on to see each other"
+    },
+    {
+      "id": "eye-contact",
+      "tier": 1,
+      "group": "romance",
+      "label": "Eye contact",
+      "text": "holding eye contact the whole time"
+    },
+    {
+      "id": "hair-stroking",
+      "tier": 1,
+      "group": "romance",
+      "label": "Hands in their hair",
+      "text": "having their hair stroked and played with"
+    },
+    {
+      "id": "slow-dancing",
+      "tier": 1,
+      "group": "romance",
+      "label": "Slow dancing first",
+      "text": "slow dancing in the living room to start things off"
+    },
+    {
+      "id": "hotel-weekend",
+      "tier": 1,
+      "group": "romance",
+      "label": "Hotel weekends",
+      "text": "booking a hotel room for the weekend"
+    },
+    {
+      "id": "quickies",
+      "tier": 1,
+      "group": "romance",
+      "label": "Quickies",
+      "text": "a quick, urgent tumble before heading out"
+    },
+    {
+      "id": "giving-oral",
+      "tier": 1,
+      "group": "romance",
+      "label": "Giving oral",
+      "text": "giving oral"
+    },
+    {
+      "id": "receiving-oral",
+      "tier": 1,
+      "group": "romance",
+      "label": "Receiving oral",
+      "text": "receiving oral"
+    },
+    {
+      "id": "teasing",
+      "tier": 2,
+      "group": "talk",
+      "label": "Teasing",
+      "text": "being teased and made to wait"
+    },
+    {
+      "id": "saying-it",
+      "tier": 2,
+      "group": "talk",
+      "label": "Saying it out loud",
+      "text": "saying exactly what they want out loud"
+    },
+    {
+      "id": "dirty-talk",
+      "tier": 2,
+      "group": "talk",
+      "label": "Dirty talk",
+      "text": "dirty talk"
+    },
+    {
+      "id": "praise",
+      "tier": 2,
+      "group": "talk",
+      "label": "Praise",
+      "text": "being told how good they are doing"
+    },
+    {
+      "id": "flirty-texts",
+      "tier": 2,
+      "group": "talk",
+      "label": "Flirty texts",
+      "text": "flirty texts during the day about what comes later"
+    },
+    {
+      "id": "voice-notes",
+      "tier": 2,
+      "group": "talk",
+      "label": "Suggestive voice notes",
+      "text": "sending a partner suggestive voice notes"
+    },
+    {
+      "id": "photos-for-partner",
+      "tier": 2,
+      "group": "talk",
+      "label": "Private photos",
+      "text": "trading private photos with a partner they trust"
+    },
+    {
+      "id": "strip-games",
+      "tier": 2,
+      "group": "talk",
+      "label": "Strip games",
+      "text": "strip poker and other games with stakes"
+    },
+    {
+      "id": "sex-dice",
+      "tier": 2,
+      "group": "talk",
+      "label": "Sex dice",
+      "text": "rolling sex dice to decide what comes next"
+    },
+    {
+      "id": "fantasies",
+      "tier": 2,
+      "group": "talk",
+      "label": "Trading fantasies",
+      "text": "trading fantasies and acting one out now and then"
+    },
+    {
+      "id": "mirror",
+      "tier": 2,
+      "group": "talk",
+      "label": "Mirrors",
+      "text": "watching themselves with a partner in a mirror"
+    },
+    {
+      "id": "home-video",
+      "tier": 3,
+      "group": "talk",
+      "label": "Filming themselves",
+      "text": "filming themselves with a partner, kept for the two of them alone"
+    },
+    {
+      "id": "blindfold",
+      "tier": 2,
+      "group": "sensation",
+      "label": "Blindfolds",
+      "text": "wearing a blindfold"
+    },
+    {
+      "id": "ice",
+      "tier": 2,
+      "group": "sensation",
+      "label": "Ice cubes",
+      "text": "ice cubes traced over warm skin"
+    },
+    {
+      "id": "feather",
+      "tier": 2,
+      "group": "sensation",
+      "label": "Feathers",
+      "text": "a feather tickler run over their skin"
+    },
+    {
+      "id": "scratching",
+      "tier": 2,
+      "group": "sensation",
+      "label": "Nails down the back",
+      "text": "nails dragged down their back"
+    },
+    {
+      "id": "biting",
+      "tier": 2,
+      "group": "sensation",
+      "label": "Gentle biting",
+      "text": "being bitten, gently"
+    },
+    {
+      "id": "hair-pulling",
+      "tier": 3,
+      "group": "sensation",
+      "label": "Hair pulling",
+      "text": "having their hair pulled, with permission"
+    },
+    {
+      "id": "wax",
+      "tier": 3,
+      "group": "sensation",
+      "label": "Candle wax",
+      "text": "low-heat massage-candle wax dripped on their skin"
+    },
+    {
+      "id": "vibrator",
+      "tier": 2,
+      "group": "toys",
+      "label": "Vibrators",
+      "text": "using a vibrator with a partner"
+    },
+    {
+      "id": "remote-toy",
+      "tier": 2,
+      "group": "toys",
+      "label": "Remote-control toys",
+      "text": "a remote-control toy with a partner holding the app, at home"
+    },
+    {
+      "id": "toy-shopping",
+      "tier": 2,
+      "group": "toys",
+      "label": "Shopping for toys",
+      "text": "browsing an adult shop together"
+    },
+    {
+      "id": "massage-wand",
+      "tier": 2,
+      "group": "toys",
+      "label": "Massage wands",
+      "text": "a massage wand"
+    },
+    {
+      "id": "strap-on",
+      "tier": 3,
+      "group": "toys",
+      "label": "Strap-ons",
+      "text": "strap-on play"
+    },
+    {
+      "id": "anal",
+      "tier": 3,
+      "group": "toys",
+      "label": "Anal play",
+      "text": "anal play, taken slowly"
+    },
+    {
+      "id": "lingerie",
+      "tier": 1,
+      "group": "roles",
+      "label": "Lingerie",
+      "text": "lingerie, especially stockings and garters"
+    },
+    {
+      "id": "costumes",
+      "tier": 2,
+      "group": "roles",
+      "label": "Costumes",
+      "text": "dressing up in costumes"
+    },
+    {
+      "id": "cosplay",
+      "tier": 2,
+      "group": "roles",
+      "label": "Cosplay",
+      "text": "cosplaying characters they love with a partner"
+    },
+    {
+      "id": "uniforms",
+      "tier": 2,
+      "group": "roles",
+      "label": "Uniforms",
+      "text": "a partner in uniform: firefighter, pilot, nurse"
+    },
+    {
+      "id": "bar-meet",
+      "tier": 2,
+      "group": "roles",
+      "label": "Meeting at a bar",
+      "text": "pretending to meet a partner for the first time at a hotel bar"
+    },
+    {
+      "id": "boss-assistant",
+      "tier": 2,
+      "group": "roles",
+      "label": "Boss and assistant",
+      "text": "boss-and-assistant role-play between adults"
+    },
+    {
+      "id": "doctor-patient",
+      "tier": 2,
+      "group": "roles",
+      "label": "Doctor and patient",
+      "text": "doctor-and-patient role-play between adults"
+    },
+    {
+      "id": "royalty",
+      "tier": 2,
+      "group": "roles",
+      "label": "Royalty and servant",
+      "text": "royalty-and-servant role-play"
+    },
+    {
+      "id": "taking-charge",
+      "tier": 2,
+      "group": "power",
+      "label": "Taking charge",
+      "text": "taking charge"
+    },
+    {
+      "id": "being-led",
+      "tier": 2,
+      "group": "power",
+      "label": "Being led",
+      "text": "letting a partner take charge"
+    },
+    {
+      "id": "pinned",
+      "tier": 2,
+      "group": "power",
+      "label": "Pinned by the wrists",
+      "text": "being pinned down by the wrists"
+    },
+    {
+      "id": "handcuffs",
+      "tier": 2,
+      "group": "power",
+      "label": "Fluffy handcuffs",
+      "text": "fluffy handcuffs"
+    },
+    {
+      "id": "body-worship",
+      "tier": 2,
+      "group": "power",
+      "label": "Body worship",
+      "text": "worshipping a partner's body, or having theirs worshipped"
+    },
+    {
+      "id": "rope",
+      "tier": 3,
+      "group": "power",
+      "label": "Rope bondage",
+      "text": "rope bondage, tied with care and an agreed safeword"
+    },
+    {
+      "id": "shibari",
+      "tier": 3,
+      "group": "power",
+      "label": "Shibari",
+      "text": "shibari, decorative Japanese rope tying"
+    },
+    {
+      "id": "spanking",
+      "tier": 3,
+      "group": "power",
+      "label": "Spanking",
+      "text": "spanking, agreed first"
+    },
+    {
+      "id": "paddle",
+      "tier": 3,
+      "group": "power",
+      "label": "Paddles",
+      "text": "a leather paddle, agreed first"
+    },
+    {
+      "id": "collar",
+      "tier": 3,
+      "group": "power",
+      "label": "A collar",
+      "text": "wearing a collar during play"
+    },
+    {
+      "id": "dom-sub",
+      "tier": 3,
+      "group": "power",
+      "label": "Dominant and submissive",
+      "text": "a dominant and submissive dynamic, negotiated ahead with a safeword"
+    },
+    {
+      "id": "orders",
+      "tier": 3,
+      "group": "power",
+      "label": "Following orders",
+      "text": "being given orders in the bedroom"
+    },
+    {
+      "id": "edging",
+      "tier": 3,
+      "group": "power",
+      "label": "Edging",
+      "text": "edging and being kept on the brink"
+    },
+    {
+      "id": "permission",
+      "tier": 3,
+      "group": "power",
+      "label": "Asking permission",
+      "text": "having to ask before they may finish"
+    },
+    {
+      "id": "chastity",
+      "tier": 3,
+      "group": "power",
+      "label": "Chastity devices",
+      "text": "wearing a chastity device for a partner"
+    },
+    {
+      "id": "feet",
+      "tier": 2,
+      "group": "fetish",
+      "label": "Feet",
+      "text": "feet"
+    },
+    {
+      "id": "heels",
+      "tier": 2,
+      "group": "fetish",
+      "label": "High heels",
+      "text": "high heels"
+    },
+    {
+      "id": "tattoos",
+      "tier": 2,
+      "group": "fetish",
+      "label": "Tattoos and piercings",
+      "text": "a partner's tattoos and piercings"
+    },
+    {
+      "id": "strong-arms",
+      "tier": 1,
+      "group": "fetish",
+      "label": "Strong arms",
+      "text": "strong arms and big hands"
+    },
+    {
+      "id": "deep-voice",
+      "tier": 1,
+      "group": "fetish",
+      "label": "A low voice",
+      "text": "a low voice close to their ear"
+    },
+    {
+      "id": "leather",
+      "tier": 3,
+      "group": "fetish",
+      "label": "Leather",
+      "text": "leather, worn or touched"
+    },
+    {
+      "id": "latex",
+      "tier": 3,
+      "group": "fetish",
+      "label": "Latex",
+      "text": "latex outfits"
+    },
+    {
+      "id": "suits",
+      "tier": 1,
+      "group": "fetish",
+      "label": "A sharp suit",
+      "text": "a partner in a sharp suit"
+    },
+    {
+      "id": "open-relationship",
+      "tier": 3,
+      "group": "styles",
+      "label": "Open relationships",
+      "text": "an open relationship, if everyone agrees"
+    },
+    {
+      "id": "polyamory",
+      "tier": 3,
+      "group": "styles",
+      "label": "Polyamory",
+      "text": "more than one loving relationship, with everyone knowing"
+    },
+    {
+      "id": "threesome",
+      "tier": 3,
+      "group": "styles",
+      "label": "A third person",
+      "text": "inviting a third adult in, if everyone agrees"
+    },
+    {
+      "id": "swinging",
+      "tier": 3,
+      "group": "styles",
+      "label": "Swinging",
+      "text": "swapping partners with another couple, if all four agree"
+    },
+    {
+      "id": "watching-partner",
+      "tier": 3,
+      "group": "styles",
+      "label": "Watching their partner",
+      "text": "watching a partner with someone else, agreed by all"
+    },
+    {
+      "id": "munches",
+      "tier": 3,
+      "group": "styles",
+      "label": "Kink munches",
+      "text": "kink munches: casual meetups at a café to talk with like-minded adults"
+    },
+    {
+      "id": "play-parties",
+      "tier": 3,
+      "group": "styles",
+      "label": "Play parties",
+      "text": "invitation-only play parties at a private club, with strict consent rules"
+    },
+    {
+      "id": "sharp-mind",
+      "tier": 1,
+      "group": "qualities",
+      "label": "A sharp mind",
+      "text": "a sharp mind; clever conversation is half the attraction"
+    },
+    {
+      "id": "quick-wit",
+      "tier": 1,
+      "group": "qualities",
+      "label": "A quick wit",
+      "text": "someone who can make them laugh"
+    },
+    {
+      "id": "confidence",
+      "tier": 1,
+      "group": "qualities",
+      "label": "Quiet confidence",
+      "text": "quiet confidence in a partner"
+    },
+    {
+      "id": "kindness",
+      "tier": 1,
+      "group": "qualities",
+      "label": "Kindness",
+      "text": "kindness, and seeing a partner be good to people"
+    },
+    {
+      "id": "passion",
+      "tier": 1,
+      "group": "qualities",
+      "label": "Talking about what they love",
+      "text": "hearing a partner talk about something they love"
+    },
+    {
+      "id": "competence",
+      "tier": 1,
+      "group": "qualities",
+      "label": "Being good at something",
+      "text": "watching a partner be very good at what they do"
+    },
+    {
+      "id": "late-talks",
+      "tier": 1,
+      "group": "qualities",
+      "label": "Late-night talks",
+      "text": "long late-night talks that drift somewhere closer"
+    },
+    {
+      "id": "listened-to",
+      "tier": 1,
+      "group": "qualities",
+      "label": "Being listened to",
+      "text": "being really listened to"
+    },
+    {
+      "id": "ambition",
+      "tier": 1,
+      "group": "qualities",
+      "label": "Ambition",
+      "text": "a partner with a plan and the drive to see it through"
+    },
+    {
+      "id": "gentle-hands",
+      "tier": 1,
+      "group": "qualities",
+      "label": "Gentleness",
+      "text": "gentleness, and a partner who takes their time"
+    }
+  ],
+  "groups": [
+    {
+      "id": "qualities",
+      "label": "What draws them in"
+    },
+    {
+      "id": "romance",
+      "label": "Romance and touch"
+    },
+    {
+      "id": "talk",
+      "label": "Talk and play"
+    },
+    {
+      "id": "sensation",
+      "label": "Sensation"
+    },
+    {
+      "id": "toys",
+      "label": "Toys"
+    },
+    {
+      "id": "roles",
+      "label": "Role-play and dressing up"
+    },
+    {
+      "id": "power",
+      "label": "Power and restraint"
+    },
+    {
+      "id": "fetish",
+      "label": "Things they find hot"
+    },
+    {
+      "id": "styles",
+      "label": "Relationship styles"
+    }
+  ]
+}

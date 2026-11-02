@@ -1,0 +1,384 @@
+{
+ "about": "Havenbrooke University as an institution (dungeon/institutions.py): terms, classes with their days, hours and rooms in Haven (world/data/cities/haven.json), and its demands. Course numbers from the source where it gives them (ESS 412, IPD 340, MTO 310, SPI 220); the rest, and every meeting time, are drafts.",
+ "institutions": [
+  {
+   "id": "havenbrooke-university",
+   "name": "Havenbrooke University",
+   "city_id": "haven",
+   "faction": "havenbrooke-university",
+   "default": true,
+   "core": [
+    "hum-101",
+    "ipd-201",
+    "ipd-340",
+    "es-201"
+   ],
+   "terms": [
+    {
+     "name": "Fall 2009",
+     "start": "2009-08-24",
+     "end": "2009-12-18"
+    },
+    {
+     "name": "Spring 2010",
+     "start": "2010-01-04",
+     "end": "2010-05-14"
+    },
+    {
+     "name": "Fall 2010",
+     "start": "2010-08-23",
+     "end": "2010-12-17"
+    },
+    {
+     "name": "Spring 2011",
+     "start": "2011-01-10",
+     "end": "2011-05-13"
+    },
+    {
+     "name": "Fall 2011",
+     "start": "2011-08-22",
+     "end": "2011-12-16"
+    },
+    {
+     "name": "Spring 2012",
+     "start": "2012-01-09",
+     "end": "2012-05-18"
+    }
+   ],
+   "classes": [
+    {
+     "id": "hum-101",
+     "name": "Writing the Self",
+     "days": [
+      "mon",
+      "wed"
+     ],
+     "start": "15:00",
+     "end": "16:15",
+     "place_id": "thornewall",
+     "code": "HUM 101",
+     "platform": "Mundane Studies",
+     "credits": 3
+    },
+    {
+     "id": "ipd-201",
+     "name": "Foundations of Interpersonal Dynamics",
+     "days": [
+      "mon",
+      "wed"
+     ],
+     "start": "09:00",
+     "end": "10:15",
+     "place_id": "kaelen-hall",
+     "code": "IPD 201",
+     "platform": "Interpersonal Dynamics",
+     "credits": 3
+    },
+    {
+     "id": "ipd-340",
+     "name": "Consent, Power, and Feeding",
+     "days": [
+      "tue",
+      "thu"
+     ],
+     "start": "10:00",
+     "end": "11:15",
+     "place_id": "kaelen-hall",
+     "code": "IPD 340",
+     "platform": "Interpersonal Dynamics",
+     "instructor": "Dr. Kasper Innes",
+     "credits": 3
+    },
+    {
+     "id": "ipd-260",
+     "name": "Aesthetics and Presence",
+     "days": [
+      "mon",
+      "wed"
+     ],
+     "start": "11:00",
+     "end": "12:15",
+     "place_id": "stitch-hall",
+     "code": "IPD 260",
+     "platform": "Interpersonal Dynamics",
+     "credits": 3
+    },
+    {
+     "id": "ipd-310",
+     "name": "Ethics Seminar: Glamour and Persuasion",
+     "days": [
+      "fri"
+     ],
+     "start": "13:00",
+     "end": "15:30",
+     "place_id": "kaelen-hall",
+     "code": "IPD 310",
+     "platform": "Interpersonal Dynamics",
+     "instructor": "Professor Lenore Vasquez-Ó Briain",
+     "credits": 3
+    },
+    {
+     "id": "es-201",
+     "name": "Foundations of Esoteric Theory",
+     "days": [
+      "mon",
+      "wed",
+      "fri"
+     ],
+     "start": "11:00",
+     "end": "11:50",
+     "place_id": "aldwright-hall",
+     "code": "ES 201",
+     "platform": "Esoteric Sciences",
+     "credits": 3
+    },
+    {
+     "id": "ess-412",
+     "name": "Emotional Resonance in Applied Incantation",
+     "days": [
+      "tue",
+      "thu"
+     ],
+     "start": "13:00",
+     "end": "14:15",
+     "place_id": "aldwright-hall",
+     "code": "ESS 412",
+     "platform": "Esoteric Sciences",
+     "instructor": "Professor Mireille Thorne-Ashford",
+     "credits": 3
+    },
+    {
+     "id": "es-250",
+     "name": "Flora Resonance",
+     "days": [
+      "mon",
+      "wed"
+     ],
+     "start": "10:00",
+     "end": "10:50",
+     "place_id": "verdant-grove",
+     "code": "ES 250",
+     "platform": "Esoteric Sciences",
+     "credits": 3
+    },
+    {
+     "id": "es-lab",
+     "name": "Ritual Mechanics Lab",
+     "days": [
+      "thu"
+     ],
+     "start": "15:00",
+     "end": "17:50",
+     "place_id": "vespers-hall",
+     "code": "ES 205L",
+     "platform": "Esoteric Sciences",
+     "credits": 1
+    },
+    {
+     "id": "mto-310",
+     "name": "Containment Protocols",
+     "days": [
+      "mon",
+      "wed",
+      "fri"
+     ],
+     "start": "07:00",
+     "end": "07:50",
+     "place_id": "warden-hall",
+     "code": "MTO 310",
+     "platform": "Military and Tactical Operations",
+     "instructor": "Colonel Marcus Halbrook",
+     "credits": 3
+    },
+    {
+     "id": "mto-320",
+     "name": "Paranormal Security Practicum",
+     "days": [
+      "tue",
+      "thu"
+     ],
+     "start": "07:00",
+     "end": "08:50",
+     "place_id": "warden-hall",
+     "code": "MTO 320",
+     "platform": "Military and Tactical Operations",
+     "instructor": "Captain Sera Ashworth",
+     "credits": 3
+    },
+    {
+     "id": "mto-pt",
+     "name": "Physical Training",
+     "days": [
+      "tue",
+      "thu"
+     ],
+     "start": "16:00",
+     "end": "17:30",
+     "place_id": "crestfall-arena",
+     "code": "MTO 100",
+     "platform": "Military and Tactical Operations",
+     "credits": 1
+    },
+    {
+     "id": "spi-210",
+     "name": "Comparative Physiology",
+     "days": [
+      "tue",
+      "thu"
+     ],
+     "start": "08:30",
+     "end": "09:45",
+     "place_id": "bellweather-hall",
+     "code": "SPI 210",
+     "platform": "Supernatural Physiology and Integration",
+     "credits": 3
+    },
+    {
+     "id": "spi-220",
+     "name": "Feeding, Regulation, and Relational Practice",
+     "days": [
+      "mon",
+      "wed"
+     ],
+     "start": "13:00",
+     "end": "14:15",
+     "place_id": "bellweather-hall",
+     "code": "SPI 220",
+     "platform": "Supernatural Physiology and Integration",
+     "instructor": "Professor Iolana Whitestone",
+     "credits": 3
+    },
+    {
+     "id": "spi-clinic",
+     "name": "Clinical Hours at Farrow House",
+     "days": [
+      "fri"
+     ],
+     "start": "09:00",
+     "end": "12:00",
+     "place_id": "farrow-house",
+     "code": "SPI 290",
+     "platform": "Supernatural Physiology and Integration",
+     "credits": 1
+    },
+    {
+     "id": "cs-230",
+     "name": "Data Structures",
+     "days": [
+      "mon",
+      "wed",
+      "fri"
+     ],
+     "start": "09:00",
+     "end": "09:50",
+     "place_id": "thornewall",
+     "code": "CS 230",
+     "platform": "Mundane Studies",
+     "instructor": "Professor Samuel Park",
+     "credits": 3
+    },
+    {
+     "id": "cs-215",
+     "name": "Discrete Mathematics",
+     "days": [
+      "tue",
+      "thu"
+     ],
+     "start": "11:30",
+     "end": "12:45",
+     "place_id": "thornewall",
+     "code": "CS 215",
+     "platform": "Mundane Studies",
+     "credits": 3
+    },
+    {
+     "id": "comm-250",
+     "name": "Media Ethics",
+     "days": [
+      "tue",
+      "thu"
+     ],
+     "start": "11:30",
+     "end": "12:45",
+     "place_id": "mirren-studio",
+     "code": "COMM 250",
+     "platform": "Mundane Studies",
+     "instructor": "Professor Imogen Shaw",
+     "credits": 3
+    },
+    {
+     "id": "bus-210",
+     "name": "Principles of Marketing",
+     "days": [
+      "tue",
+      "thu"
+     ],
+     "start": "14:30",
+     "end": "15:45",
+     "place_id": "thornewall",
+     "code": "BUS 210",
+     "platform": "Mundane Studies",
+     "credits": 3
+    }
+   ],
+   "demands": [
+    {
+     "id": "reading-response",
+     "kind": "assignment",
+     "title": "The week's reading responses",
+     "every_days": 7,
+     "due_days": 6,
+     "hook": "A page on each class's reading, due before Monday's first class.",
+     "truth": "",
+     "missed": "The reading responses were never handed in, and two professors noticed.",
+     "weight": 1
+    },
+    {
+     "id": "problem-set",
+     "kind": "assignment",
+     "title": "A problem set or lab write-up",
+     "every_days": 14,
+     "due_days": 10,
+     "hook": "The fortnight's problem set or lab write-up, due a week from Thursday.",
+     "truth": "",
+     "missed": "The write-up was never turned in, and the grade book has a zero in it.",
+     "weight": 2
+    },
+    {
+     "id": "midterms",
+     "kind": "exam",
+     "title": "Midterm exams",
+     "week": 8,
+     "notice_days": 10,
+     "weight": 3,
+     "hook": "Midterms the week of October 19th: a paper or an exam in every class.",
+     "truth": "",
+     "missed": "Midterms came and went without the character, and the Dean of Student Life sent an email."
+    },
+    {
+     "id": "finals",
+     "kind": "exam",
+     "title": "Finals",
+     "week": 16,
+     "notice_days": 14,
+     "weight": 4,
+     "hook": "Finals in the second week of December, and the library open all night.",
+     "truth": "",
+     "missed": "Finals were missed, and the term's grades went in without them."
+    },
+    {
+     "id": "floor-meeting",
+     "kind": "club",
+     "title": "The Nexus floor meeting",
+     "every_days": 14,
+     "due_days": 3,
+     "hook": "The RA wants everyone at the floor meeting in the common room on Wednesday night.",
+     "truth": "The RA has to report who skips.",
+     "missed": "The character skipped the floor meeting, and their name went on the RA's list.",
+     "weight": 1
+    }
+   ],
+   "attendance_weight": 2
+  }
+ ]
+}

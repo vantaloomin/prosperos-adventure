@@ -1,0 +1,122 @@
+[
+ {
+  "id": "acolyte",
+  "name": "Acolyte",
+  "ability_scores": [
+   "int",
+   "wis",
+   "cha"
+  ],
+  "feat": {
+   "name": "Magic Initiate",
+   "option": "Cleric"
+  },
+  "skill_proficiencies": [
+   "Insight",
+   "Religion"
+  ],
+  "tool_proficiency": "Calligrapher’s Supplies",
+  "equipment": "Choose A or B: (A) Calligrapher’s Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP",
+  "equipment_options": {
+   "A": [
+    "Calligrapher’s Supplies",
+    "Book (prayers)",
+    "Holy Symbol",
+    "Parchment (10 sheets)",
+    "Robe",
+    "8 GP"
+   ],
+   "B_gp": 50
+  }
+ },
+ {
+  "id": "criminal",
+  "name": "Criminal",
+  "ability_scores": [
+   "dex",
+   "con",
+   "int"
+  ],
+  "feat": {
+   "name": "Alert"
+  },
+  "skill_proficiencies": [
+   "Sleight of Hand",
+   "Stealth"
+  ],
+  "tool_proficiency": "Thieves’ Tools",
+  "equipment": "Choose A or B: (A) 2 Daggers, Thieves’ Tools, Crowbar, 2 Pouches, Traveler’s Clothes, 16 GP; or (B) 50 GP",
+  "equipment_options": {
+   "A": [
+    "2 Daggers",
+    "Thieves’ Tools",
+    "Crowbar",
+    "2 Pouches",
+    "Traveler’s Clothes",
+    "16 GP"
+   ],
+   "B_gp": 50
+  }
+ },
+ {
+  "id": "sage",
+  "name": "Sage",
+  "ability_scores": [
+   "con",
+   "int",
+   "wis"
+  ],
+  "feat": {
+   "name": "Magic Initiate",
+   "option": "Wizard"
+  },
+  "skill_proficiencies": [
+   "Arcana",
+   "History"
+  ],
+  "tool_proficiency": "Calligrapher’s Supplies",
+  "equipment": "Choose A or B: (A) Quarterstaff, Calligrapher’s Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
+  "equipment_options": {
+   "A": [
+    "Quarterstaff",
+    "Calligrapher’s Supplies",
+    "Book (history)",
+    "Parchment (8 sheets)",
+    "Robe",
+    "8 GP"
+   ],
+   "B_gp": 50
+  }
+ },
+ {
+  "id": "soldier",
+  "name": "Soldier",
+  "ability_scores": [
+   "str",
+   "dex",
+   "con"
+  ],
+  "feat": {
+   "name": "Savage Attacker"
+  },
+  "skill_proficiencies": [
+   "Athletics",
+   "Intimidation"
+  ],
+  "tool_proficiency": "Choose one kind of Gaming Set",
+  "equipment": "Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer’s Kit, Quiver, Traveler’s Clothes, 14 GP; or (B) 50 GP",
+  "equipment_options": {
+   "A": [
+    "Spear",
+    "Shortbow",
+    "20 Arrows",
+    "Gaming Set (same as above)",
+    "Healer’s Kit",
+    "Quiver",
+    "Traveler’s Clothes",
+    "14 GP"
+   ],
+   "B_gp": 50
+  }
+ }
+]

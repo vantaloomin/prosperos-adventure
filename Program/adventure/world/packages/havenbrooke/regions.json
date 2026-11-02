@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "kind": "land or plane (the fae courts are a legal system as much as a place)",
+    "ley": "rich, normal or thin: how much magic the ground holds",
+    "danger_tier": "the region's tier on the shared ladder (local, regional, realm, world, mythic)",
+    "origin": "source or draft"
+  },
+  "regions": [
+    {
+      "id": "finger-lakes",
+      "name": "The Finger Lakes",
+      "kind": "land",
+      "terrain": "long glacial lakes, gorges, vineyards and dairy hills",
+      "ley": "rich",
+      "danger_tier": "local",
+      "ruled_by": [
+        "ded",
+        "crane-family"
+      ],
+      "settlements": [
+        "haven",
+        "havenbrooke-campus",
+        "ithaca",
+        "seneca-lake",
+        "syracuse"
+      ],
+      "summary": "Upstate New York's lake country: long winters, short wet summers, college towns and wine tourists. The esoteric map of the region is Haven, which has had fae settlers since the 1790s and a vampire family on its northern ridge since 1819.",
+      "travel": "Driving is the default. Ithaca is forty minutes from Haven and the university shuttle runs twice a day; Syracuse, with the Amtrak station, is ninety minutes north.",
+      "hazards": [
+        "lake-effect snow from November to March",
+        "black ice on the river path",
+        "deer on the county roads at dusk"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "new-york-city",
+      "name": "New York City",
+      "kind": "land",
+      "terrain": "the city",
+      "ley": "normal",
+      "danger_tier": "regional",
+      "ruled_by": [
+        "ded",
+        "council-of-bloodlines"
+      ],
+      "settlements": [
+        "new-york"
+      ],
+      "summary": "The nearest metropolis, three hours away: about 180,000 registered supernatural residents, the East Coast's supernatural fashion and media houses, and every firm a Havenbrooke graduate hopes will call.",
+      "travel": "Three hours by car down I-81 and I-88 or Route 17; four to five by Greyhound or Trailways from Ithaca ($30 to $50 one way); four and a half by Amtrak from Syracuse ($50 to $70).",
+      "hazards": [
+        "the cost of everything",
+        "bloodline territory lines the tourist maps leave off"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "new-england",
+      "name": "New England",
+      "kind": "land",
+      "terrain": "old towns, coast and hills",
+      "ley": "rich",
+      "danger_tier": "regional",
+      "ruled_by": [
+        "national-coven-registry",
+        "corwin-lineage"
+      ],
+      "settlements": [
+        "boston",
+        "salem",
+        "providence",
+        "vermont-hometown"
+      ],
+      "summary": "Witch country. The National Coven Registry sits in Salem, the old Boston lineages produce senators and judges, and Providence keeps a senior coven that takes Havenbrooke's best by invitation. Lucian Crane holds the New England seat on the Council of Bloodlines.",
+      "travel": "Five to six hours by car to Boston; a long day by bus.",
+      "hazards": [
+        "coven politics",
+        "lineage mothers"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "mid-atlantic",
+      "name": "Pennsylvania and the Mid-Atlantic",
+      "kind": "land",
+      "terrain": "suburbs, small towns and turnpike",
+      "ley": "normal",
+      "danger_tier": "local",
+      "ruled_by": [
+        "ded"
+      ],
+      "settlements": [
+        "kessler-hometown",
+        "harrisburg",
+        "philadelphia"
+      ],
+      "summary": "Home for the Kessler twins, Austin and Paula: a suburban town on a supernatural registry pipeline, a research archivist's house that smells of library paste, and Harrisburg, where Paula's parents stopped calling.",
+      "travel": "Four hours by car through Pennsylvania rain.",
+      "hazards": [],
+      "origin": "source"
+    },
+    {
+      "id": "capital",
+      "name": "Washington and Arlington",
+      "kind": "land",
+      "terrain": "federal city",
+      "ley": "normal",
+      "danger_tier": "realm",
+      "ruled_by": [
+        "ded",
+        "federal-esoteric-court"
+      ],
+      "settlements": [
+        "haldane-complex"
+      ],
+      "summary": "Where the Department of Esoteric Development keeps its headquarters, its classified treaty supplements and its review boards. A student summoned here has done something the government noticed.",
+      "travel": "Six hours by car, or a train from New York.",
+      "hazards": [
+        "hearings",
+        "clearances"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-courts",
+      "name": "The fae courts",
+      "kind": "plane",
+      "terrain": "groves, estates and protocol",
+      "ley": "rich",
+      "danger_tier": "realm",
+      "ruled_by": [
+        "eastern-seelie",
+        "house-aelhwynn"
+      ],
+      "settlements": [
+        "aelhwynn-grove"
+      ],
+      "summary": "Not a place on the road map so much as a legal system with land: the Seelie and Unseelie courts and their regional houses, older than any human law they have agreed to work inside. They reach onto campus through betrothals, anchor bonds and property records.",
+      "travel": "By invitation, or by summons.",
+      "hazards": [
+        "oaths",
+        "betrothal contracts",
+        "audits"
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-midwest",
+      "name": "Ohio and the Midwest",
+      "kind": "land",
+      "terrain": "cities and suburbs",
+      "ley": "thin",
+      "danger_tier": "local",
+      "ruled_by": [],
+      "settlements": [
+        "cleveland",
+        "columbus"
+      ],
+      "summary": "Mundane home ground: Michael's two-bedroom apartment in Cleveland, Amanda's divorced parents in the Columbus suburbs.",
+      "travel": "Six to seven hours by car, or the Greyhound.",
+      "hazards": [],
+      "origin": "source"
+    }
+  ]
+}

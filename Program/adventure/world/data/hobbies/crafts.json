@@ -1,0 +1,2258 @@
+{
+ "kind": "crafts",
+ "milestones": [
+  {
+   "text": "finished their very first {hobby} project, lopsided and entirely theirs",
+   "post": "It's lopsided. It's mine. I'm keeping it.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "cleared a corner of their home just for {hobby}",
+   "post": "Cleared a corner. It's officially a workspace now.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent a whole evening on {hobby} and lost all track of time",
+   "post": "Looked up and three hours had gone. Good sign?",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "bought their first proper set of tools for {hobby}",
+   "post": "New tools. Very shiny. No idea what half of them do.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had to start their first {hobby} project over three times",
+   "post": "Attempt number four. We persist.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "asked an experienced neighbour one question about {hobby} and got a whole afternoon of advice",
+   "post": "Came for one tip, left with twenty.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "gave their first {hobby} attempt to a friend, who was very kind about it",
+   "post": "My friend says they love it. My friend is very kind.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned the names of every basic tool used in {hobby}",
+   "post": "I can name every tool on my bench. Using them is next.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made it through a first week of {hobby} without giving up",
+   "post": "One week in. Still here.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished a {hobby} project without needing to undo a single step",
+   "post": "Nothing to undo. Who am I.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked out a mistake on their own instead of starting over",
+   "post": "Fixed it myself. Felt like a wizard.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made something with {hobby} that someone actually asked for",
+   "post": "Someone requested one. A real request!",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept a steady {hobby} habit going for three months straight",
+   "post": "Three months of showing up. Proud of this one.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "noticed their hands knew the next step before their head did",
+   "post": "My hands are learning faster than I am.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished a handmade birthday gift with an hour to spare",
+   "post": "Made it with an hour to spare. Barely.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started keeping a notebook of {hobby} ideas and measurements",
+   "post": "The notebook is filling up fast.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tried a project a level harder than they felt ready for, and finished it",
+   "post": "Too hard for me, I said. Finished it anyway.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "found their very first attempt in a drawer and laughed at how far they had come",
+   "post": "Found my first try. Oh no. Oh, look how far I've come.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had something of their own making mistaken for shop-bought by a stranger",
+   "post": "'Where'd you buy that?' I made it, thank you.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "designed a {hobby} project from scratch without following anyone else's plan",
+   "post": "My own design. Nobody's instructions but mine.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sold a piece of their own work for the first time",
+   "post": "Someone paid real money for a thing I made.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "taught a friend the basics of {hobby} over one afternoon",
+   "post": "Taught a friend today. Explaining it made me better at it.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished their most ambitious {hobby} project so far, after weeks of evenings",
+   "post": "Weeks of evenings. Worth every one.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got through a whole project without once checking their notes",
+   "post": "No notes needed. All from memory.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "upgraded to a better set of tools, having finally earned them",
+   "post": "Finally got the good tools. I've earned these.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked out their own shortcut for a fiddly step",
+   "post": "Invented a shortcut. Probably not new. Feels new.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "filled a whole shelf with things they had made",
+   "post": "The shelf is full. Need another shelf.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to teach a small beginners' class in {hobby}",
+   "post": "Teaching beginners next week. Nervous and delighted.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "entered a piece in the local fair and came home with a ribbon",
+   "post": "A ribbon! An actual ribbon!",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took on their first paid commission",
+   "post": "First commission. Someone trusts me with this.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a piece put on display for the whole town to see",
+   "post": "My work is on display. Trying to act casual.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent a weekend helping a beginner rescue a project gone wrong",
+   "post": "Rescued a beginner's project. Paying it forward.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made a set of six matching pieces, each one as good as the last",
+   "post": "Six of them and they all match. Consistency at last.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "became the one to ask about {hobby}, the person who knows",
+   "post": "Apparently I'm the one people ask now.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished a piece they would have called impossible a year ago",
+   "post": "A year ago this was impossible. Now it's on my table.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sold out of everything they brought to a market stall",
+   "post": "Sold out by noon. Went home with an empty basket.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won first prize at a regional show",
+   "post": "First prize. Still not over it.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was commissioned for a piece meant to be handed down for generations",
+   "post": "Making something meant to outlast me. No pressure.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a waiting list for their work",
+   "post": "There is a waiting list. For my work. Wild.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished a masterwork that took the better part of a year",
+   "post": "Most of a year. It's done. I might weep.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was invited to judge the beginners' section of the local fair",
+   "post": "Judging beginners this year. Being very kind about it.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took on an apprentice who wanted to learn {hobby} properly",
+   "post": "I have an apprentice. When did that happen?",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a piece chosen as the town's gift to a visiting dignitary",
+   "post": "The town gave my piece to a visiting dignitary. Mine!",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made a piece their old teacher called better than anything the teacher had made",
+   "post": "My old teacher says I've surpassed them. Speechless.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "put on a small show of nothing but their own work",
+   "post": "A whole show of my work. People came!",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got the clay to stay centred on the wheel for a full ten seconds",
+   "post": "Ten whole seconds of centred clay. Big day.",
+   "level": 0,
+   "for": [
+    "pottery"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "made their first bowl, which leans as if listening for something",
+   "post": "My first bowl leans. I love it anyway.",
+   "level": 0,
+   "for": [
+    "pottery"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "pulled up walls that stayed even all the way round",
+   "post": "Even walls. The wheel and I are friends now.",
+   "level": 1,
+   "for": [
+    "pottery"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "trimmed a foot ring neat enough to sign their initials inside",
+   "post": "Signed the bottom. It felt official.",
+   "level": 1,
+   "for": [
+    "pottery"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "glazed a set of four mugs that all came out of the kiln the same colour",
+   "post": "Four mugs, one colour. The kiln was kind.",
+   "level": 2,
+   "for": [
+    "pottery"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "sold their first mug at the studio's holiday sale",
+   "post": "A stranger will drink tea from my mug. Thrilled.",
+   "level": 3,
+   "for": [
+    "pottery"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "threw the tallest vase in the studio that term, in one go",
+   "post": "Tallest pot in the studio this term.",
+   "level": 4,
+   "for": [
+    "pottery"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "knitted their first scarf, which grew steadily wider as it went",
+   "post": "My scarf is a trapezoid. It is still a scarf.",
+   "level": 0,
+   "for": [
+    "knitting"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "learned to cast on without looking at the instructions",
+   "post": "Cast on from memory. Small win.",
+   "level": 0,
+   "for": [
+    "knitting"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "turned the heel of their first sock",
+   "post": "Turned a heel. Sorcery.",
+   "level": 1,
+   "for": [
+    "knitting"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "knitted a pair of mittens that actually match",
+   "post": "Two mittens, same size. Unheard of.",
+   "level": 1,
+   "for": [
+    "knitting"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "finished a cabled sweater that fits",
+   "post": "It fits. It actually fits.",
+   "level": 2,
+   "for": [
+    "knitting"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "knitted a lace shawl fine enough to pass through a ring",
+   "post": "Through the ring it went. I'm unbearable now.",
+   "level": 3,
+   "for": [
+    "knitting"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "won the knitting prize at the county fair with a colourwork blanket",
+   "post": "Blue ribbon for the blanket. Still grinning.",
+   "level": 4,
+   "for": [
+    "knitting"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "crocheted their first granny square, which came out more of a granny circle",
+   "post": "It was meant to be a square.",
+   "level": 0,
+   "for": [
+    "crochet"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "learned to keep their chain stitches all the same size",
+   "post": "My chains are even now. Mostly.",
+   "level": 0,
+   "for": [
+    "crochet"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "stitched forty granny squares together into a whole blanket",
+   "post": "Forty squares, one blanket.",
+   "level": 1,
+   "for": [
+    "crochet"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "crocheted a lace doily fine enough to frame",
+   "post": "Framed my doily. Yes, really.",
+   "level": 2,
+   "for": [
+    "crochet"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "worked out their own pattern for a crocheted collar and wrote it down",
+   "post": "My own collar pattern. Keeping it forever.",
+   "level": 3,
+   "for": [
+    "crochet"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "crocheted a christening gown in fine cotton thread that became a family heirloom",
+   "post": "Fine thread, many evenings, one heirloom.",
+   "level": 4,
+   "for": [
+    "crochet"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian"
+   ]
+  },
+  {
+   "text": "stitched their first initial onto a handkerchief",
+   "post": "One letter. Very wobbly. Very proud.",
+   "level": 0,
+   "for": [
+    "embroidery"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to make a French knot that stays put",
+   "post": "French knots: conquered.",
+   "level": 0,
+   "for": [
+    "embroidery"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "embroidered a sampler with the whole alphabet on it",
+   "post": "A to Z in thread. Done.",
+   "level": 1,
+   "for": [
+    "embroidery"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stitched a spray of flowers in satin stitch so smooth it shines",
+   "post": "Satin stitch that actually shines.",
+   "level": 2,
+   "for": [
+    "embroidery"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "embroidered a cushion cover as a commission for a neighbour",
+   "post": "First stitched commission. A cushion!",
+   "level": 3,
+   "for": [
+    "embroidery"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "finished an embroidered wall hanging that took a full year of evenings",
+   "post": "A year of stitches. It's on the wall.",
+   "level": 4,
+   "for": [
+    "embroidery"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sewed a perfectly straight seam on the first try",
+   "post": "A straight seam. Who knew.",
+   "level": 0,
+   "for": [
+    "sewing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "made their first apron from a single length of cotton",
+   "post": "Made an apron. Wearing it to cook.",
+   "level": 0,
+   "for": [
+    "sewing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "set in a sleeve without a single pucker",
+   "post": "No puckers in the sleeve. Smug.",
+   "level": 1,
+   "for": [
+    "sewing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "made a whole shirt from a pattern, buttonholes and all",
+   "post": "A full shirt. Buttons and all.",
+   "level": 2,
+   "for": [
+    "sewing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "altered a friend's coat until it fit like a made-to-measure one",
+   "post": "Took in a coat. It fits like it was made for them.",
+   "level": 3,
+   "for": [
+    "sewing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "made a tailored suit from scratch, lining and all",
+   "post": "A full suit, lined. My best work yet.",
+   "level": 4,
+   "for": [
+    "sewing"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "pieced their first quilt block with all the corners meeting",
+   "post": "Corners meet! Mostly!",
+   "level": 0,
+   "for": [
+    "quilting"
+   ],
+   "eras": [
+    "frontier",
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "hand-quilted a whole square with tiny, even stitches",
+   "post": "Tiny stitches, all the same size.",
+   "level": 1,
+   "for": [
+    "quilting"
+   ],
+   "eras": [
+    "frontier",
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished a small quilt for a neighbour's new baby",
+   "post": "Small quilt for a small person.",
+   "level": 1,
+   "for": [
+    "quilting"
+   ],
+   "eras": [
+    "frontier",
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "finished a full-size quilt in a star pattern",
+   "post": "A whole star quilt. My fingers are tired.",
+   "level": 2,
+   "for": [
+    "quilting"
+   ],
+   "eras": [
+    "frontier",
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "helped run a quilting bee and kept the whole frame moving",
+   "post": "Ran the bee. Nobody ran out of thread.",
+   "level": 3,
+   "for": [
+    "quilting"
+   ],
+   "eras": [
+    "frontier",
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "won the quilt prize at the county fair",
+   "post": "Best quilt at the fair. Mine!",
+   "level": 4,
+   "for": [
+    "quilting"
+   ],
+   "eras": [
+    "frontier",
+    "modern",
+    "jazz-age"
+   ]
+  },
+  {
+   "text": "built their first box, and the lid nearly fits",
+   "post": "The lid almost closes. Calling it rustic.",
+   "level": 0,
+   "for": [
+    "woodworking"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "frontier",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "learned to saw along a line instead of somewhere near it",
+   "post": "On the line, not near it. Progress.",
+   "level": 0,
+   "for": [
+    "woodworking"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "frontier",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "cut their first dovetail joint that held without glue",
+   "post": "A dovetail that holds. Feels like magic.",
+   "level": 1,
+   "for": [
+    "woodworking"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "frontier",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "built a bookshelf that stands level on its own",
+   "post": "Level shelves. Every book is safe.",
+   "level": 2,
+   "for": [
+    "woodworking"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "frontier",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "built a rocking chair that rocks evenly",
+   "post": "It rocks. In the good way.",
+   "level": 3,
+   "for": [
+    "woodworking"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "frontier",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "built a dining table that seats ten, starting from rough planks",
+   "post": "Ten chairs round a table I made.",
+   "level": 4,
+   "for": [
+    "woodworking"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "frontier",
+    "steampunk"
+   ]
+  },
+  {
+   "text": "whittled their first spoon, which holds about one sip",
+   "post": "Holds one sip of soup. It's a start.",
+   "level": 0,
+   "for": [
+    "woodcarving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "learned to keep their knife sharp enough to lift clean curls off a pine stick",
+   "post": "Sharp knife, clean curls.",
+   "level": 0,
+   "for": [
+    "woodcarving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "carved a little bird that everyone could tell was a bird",
+   "post": "People guessed 'bird' first try.",
+   "level": 1,
+   "for": [
+    "woodcarving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "carved a set of four bowls from a single fallen log",
+   "post": "One log, four bowls.",
+   "level": 2,
+   "for": [
+    "woodcarving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "carved the painted sign that now hangs over the baker's shop",
+   "post": "My sign hangs over the bakery now.",
+   "level": 3,
+   "for": [
+    "woodcarving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "carved a whole set of chess pieces, each with its own face",
+   "post": "Thirty-two little faces. Done at last.",
+   "level": 4,
+   "for": [
+    "woodcarving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "stitched their first leather pouch with a proper saddle stitch",
+   "post": "Small pouch. Big feelings.",
+   "level": 0,
+   "for": [
+    "leatherwork"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "dyed a piece of leather evenly, without a single streak",
+   "post": "No streaks. A first.",
+   "level": 1,
+   "for": [
+    "leatherwork"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "tooled a pattern of leaves into a belt",
+   "post": "My belt has leaves on it now.",
+   "level": 1,
+   "for": [
+    "leatherwork"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "made a satchel sturdy enough to carry every day",
+   "post": "Carrying a bag I made. Every day.",
+   "level": 2,
+   "for": [
+    "leatherwork"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "made a pair of boots that fit",
+   "post": "Boots. Made by me. Fit by some miracle.",
+   "level": 3,
+   "for": [
+    "leatherwork"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "made a saddle that an old rider praised",
+   "post": "Saddle's done. The horse seems to approve too.",
+   "level": 4,
+   "for": [
+    "leatherwork"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "modern"
+   ]
+  },
+  {
+   "text": "made their first pair of earrings from wire and beads",
+   "post": "Wearing my own earrings today.",
+   "level": 0,
+   "for": [
+    "jewelry"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to open and close jump rings without bending them out of shape",
+   "post": "Jump rings behave now.",
+   "level": 0,
+   "for": [
+    "jewelry"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "soldered a silver ring closed without melting it",
+   "post": "Ring soldered. Ring not melted.",
+   "level": 1,
+   "for": [
+    "jewelry"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "set a stone in a bezel that holds tight",
+   "post": "Stone set. It's not going anywhere.",
+   "level": 2,
+   "for": [
+    "jewelry"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "sold a whole tray of rings at a craft fair",
+   "post": "Empty tray, happy maker.",
+   "level": 3,
+   "for": [
+    "jewelry"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "made a commissioned necklace for a friend's milestone birthday",
+   "post": "A necklace for a big birthday. Nervous handover.",
+   "level": 4,
+   "for": [
+    "jewelry"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "painted their first miniature, mostly within the lines",
+   "post": "Mostly within the lines. Mostly.",
+   "level": 0,
+   "for": [
+    "miniatures"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to thin their paints instead of using them straight from the pot",
+   "post": "Thin your paints, they said. They were right.",
+   "level": 0,
+   "for": [
+    "miniatures"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "painted a tiny face with both eyes looking the same way",
+   "post": "Both eyes point the same way. Huge.",
+   "level": 1,
+   "for": [
+    "miniatures"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "finished a whole squad of ten figures in matching colours",
+   "post": "Ten little soldiers, all matching.",
+   "level": 2,
+   "for": [
+    "miniatures"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "placed third in the painting contest at the local game shop",
+   "post": "Third place! A tiny trophy for tiny art.",
+   "level": 3,
+   "for": [
+    "miniatures"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won best painted figure at a regional convention",
+   "post": "Best in show. For a figure smaller than my thumb.",
+   "level": 4,
+   "for": [
+    "miniatures"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "took apart an old pocket watch and put it back together with only two spare parts",
+   "post": "Two parts left over. It still ticks?",
+   "level": 0,
+   "for": [
+    "tinkering"
+   ],
+   "eras": [
+    "steampunk",
+    "victorian"
+   ]
+  },
+  {
+   "text": "learned the name of every wheel in a clock movement",
+   "post": "Escapement, pallet, crown wheel. I know words now.",
+   "level": 0,
+   "for": [
+    "tinkering"
+   ],
+   "eras": [
+    "steampunk",
+    "victorian"
+   ]
+  },
+  {
+   "text": "got a stopped mantel clock ticking again",
+   "post": "The mantel clock ticks again. Bliss.",
+   "level": 1,
+   "for": [
+    "tinkering"
+   ],
+   "eras": [
+    "steampunk",
+    "victorian"
+   ]
+  },
+  {
+   "text": "built a little clockwork mouse that runs the length of the table",
+   "post": "My mouse runs! Startled the cat.",
+   "level": 2,
+   "for": [
+    "tinkering"
+   ],
+   "eras": [
+    "steampunk",
+    "victorian"
+   ]
+  },
+  {
+   "text": "mended a neighbour's music box so it plays the whole tune again",
+   "post": "The music box plays again. They teared up.",
+   "level": 3,
+   "for": [
+    "tinkering"
+   ],
+   "eras": [
+    "steampunk",
+    "victorian"
+   ]
+  },
+  {
+   "text": "built a clockwork automaton that pours a cup of tea",
+   "post": "It pours tea. It actually pours tea.",
+   "level": 4,
+   "for": [
+    "tinkering"
+   ],
+   "eras": [
+    "steampunk",
+    "victorian"
+   ]
+  },
+  {
+   "text": "wove their first strip of cloth on a small loom, edges wandering",
+   "post": "The edges wander. The cloth exists.",
+   "level": 0,
+   "for": [
+    "weaving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "learned to warp a loom without tangling the threads",
+   "post": "Warped the loom with no tangles.",
+   "level": 0,
+   "for": [
+    "weaving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "wove a plain table runner with straight edges",
+   "post": "Straight edges at last.",
+   "level": 1,
+   "for": [
+    "weaving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "wove a blanket in a twill pattern",
+   "post": "Twill! Diagonal lines on purpose!",
+   "level": 2,
+   "for": [
+    "weaving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "sold a whole bolt of their cloth at the market",
+   "post": "Sold a whole bolt. Proud and a bit sad to see it go.",
+   "level": 3,
+   "for": [
+    "weaving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "wove a tapestry showing the village at harvest time",
+   "post": "The whole village in thread. Took all winter.",
+   "level": 4,
+   "for": [
+    "weaving"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier"
+   ]
+  },
+  {
+   "text": "finished a first small project and kept it",
+   "post": "Small, wonky, mine.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to read a pattern without guessing",
+   "post": "The pattern makes sense now.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "unpicked a mistake and did it again properly",
+   "post": "Undid it. Did it right.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "set up a proper corner for tools and materials",
+   "post": "My own corner. Everything in reach.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "made something small for the house",
+   "post": "Made it, using it.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "worked out which materials are worth paying more for",
+   "post": "Good materials, fewer tears.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to keep tools sharp and clean",
+   "post": "Sharp, clean, ready.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "made a gift that gets used every day",
+   "post": "It gets used! Daily!",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "finished a project in time for a feast day",
+   "post": "Ready in time. Barely.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "mended something instead of throwing it away",
+   "post": "Mended, not replaced.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "worked out a technique from watching an old hand",
+   "post": "Learned it by watching. Quietly.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "made a matching pair on the first attempt",
+   "post": "A pair that actually matches.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "used up the last of a big bundle of materials",
+   "post": "Not a scrap wasted.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "finished something useful for the kitchen",
+   "post": "Useful. That's the best kind.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to make something for a christening",
+   "post": "Made for a christening. Precious.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "sold a piece at the market for the first time",
+   "post": "Sold at the market. First time.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "took on a piece far harder than anything before",
+   "post": "Way harder than anything yet. Doing it anyway.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "repaired an old family piece so it can be used again",
+   "post": "Old piece, new life.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "made something for every person at the table",
+   "post": "One for everyone. Took weeks.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "invented a small trick that saves time",
+   "post": "Little trick, big difference.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "made a piece with no pattern at all",
+   "post": "No pattern. All mine.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to make a piece for the church",
+   "post": "For the church. Careful work.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a piece admired at the fair",
+   "post": "Admired at the fair. Glowing.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "took orders from three households in one month",
+   "post": "Three orders in a month.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "taught the basics to a small circle of beginners",
+   "post": "Taught a little circle. Loved it.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "made a piece fine enough to be kept for best",
+   "post": "Too good to use every day.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "finished the biggest piece ever attempted",
+   "post": "Biggest yet. Done.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won first prize at the harvest fair",
+   "post": "First prize. Ribbon and all.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had a piece chosen as a wedding gift for a grand family",
+   "post": "A wedding gift for a grand family. My work.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked to take on an apprentice",
+   "post": "An apprentice. Me, a teacher.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "made a piece that will outlast its maker",
+   "post": "This one will last longer than me.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was known around town for the quality of their work",
+   "post": "Known for it now.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had an old master of the craft ask how a piece was done",
+   "post": "The master asked me how. Unreal.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "filled the first page of a new scrapbook",
+   "post": "First page done. It looks so cute.",
+   "level": 0,
+   "for": [
+    "scrapbooking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "finished a whole scrapbook of a summer",
+   "post": "A whole summer in one book.",
+   "level": 1,
+   "for": [
+    "scrapbooking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "made a scrapbook as a present and watched it get opened",
+   "post": "They opened it and went quiet. Good quiet.",
+   "level": 2,
+   "for": [
+    "scrapbooking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "ran a scrapbooking night for friends at home",
+   "post": "Scrapbook night at mine. Glue everywhere.",
+   "level": 3,
+   "for": [
+    "scrapbooking"
+   ],
+   "eras": [
+    "modern"
+   ]
+  }
+ ],
+ "sessions": [
+  {
+   "text": "Finished one small part and called it a good evening.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Spent most of the time tidying the workspace, which counts.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Undid an hour's work, then redid it better.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Made steady progress with nothing to show for it yet.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Hummed the whole time without noticing.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Measured twice, then a third time to be sure.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Sorted the scraps into piles that might be useful someday.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Got stuck on one fiddly step and slept on it.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Tried a new technique and liked it more than expected.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Worked by the window to catch the last of the light.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Lost track of time and missed tea.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Started something new before finishing the old thing. Again.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Kept it simple and enjoyed every minute.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Showed the work in progress to a friend, who asked good questions.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Fixed a small mistake nobody else would ever notice.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Laid out everything for tomorrow before stopping.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Took it slow and got it right.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Sketched out a plan for the next project.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  }
+ ]
+}

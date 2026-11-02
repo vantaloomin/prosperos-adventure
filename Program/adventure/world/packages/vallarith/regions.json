@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "kind": "land, sea, island or plane",
+    "ley": "rich, normal, thin or dead: the natural density, from the Ley Line map",
+    "danger_tier": "the region's tier on the shared ladder (local, regional, realm, world, mythic); it does not scale with the player",
+    "eras": "campaign eras the entry applies to; missing means all three",
+    "by_era": "facts that change by era"
+  },
+  "regions": [
+    {
+      "id": "dwarven-empire",
+      "name": "The Dwarven Empire",
+      "kind": "land",
+      "terrain": "high mountains, cold valleys, a forested western shore on the Gulf of Aldir",
+      "ley": "normal",
+      "ley_note": "Thin in the west around Mordun, rising to rich along the eastern peaks where the Great Line runs.",
+      "danger_tier": "regional",
+      "ruled_by": [
+        "stoneheart-clan"
+      ],
+      "settlements": [
+        "dun-aldun",
+        "mordun",
+        "rulan-gaan"
+      ],
+      "summary": "The north of the continent, ruled from the mountain city of Dun Aldun. Brutal winters, closed gates and the best steel in the world.",
+      "travel": "Outsiders come in by sea through Mordun or overland from Mendle. Mountain passes close in winter.",
+      "hazards": [
+        "winter passes",
+        "Rulan Gaan cultists on the eastern roads",
+        "avalanches"
+      ],
+      "map": {
+        "x": 0.46,
+        "y": 0.22
+      },
+      "origin": "source"
+    },
+    {
+      "id": "torogh-highlands",
+      "name": "The Torogh Highlands",
+      "kind": "land",
+      "terrain": "a great lake under a wall of snow peaks",
+      "ley": "rich",
+      "ley_note": "The northern convergence of the Great Line. Tradition puts the Source Font in the peaks above the loch.",
+      "danger_tier": "regional",
+      "danger_note": "The lake shore is local. The high peaks are mythic: nobody who goes looking for the Source Font comes back the same.",
+      "ruled_by": [
+        "stoneheart-clan"
+      ],
+      "settlements": [
+        "loch-torogh",
+        "mendle",
+        "source-font"
+      ],
+      "summary": "Fishing boats, merchant tales and the mountains where seven mortals became gods.",
+      "travel": "Roads run west to Mendle and the human kingdoms; the peaks have no roads at all.",
+      "hazards": [
+        "Ley storms on the heights",
+        "pilgrims and fanatics",
+        "Brotherhood surveyors (Post-Reform)"
+      ],
+      "map": {
+        "x": 0.57,
+        "y": 0.37
+      },
+      "origin": "source"
+    },
+    {
+      "id": "gulf-of-aldir",
+      "name": "The Gulf of Aldir",
+      "kind": "sea",
+      "terrain": "a sheltered gulf with a pirate archipelago in the middle",
+      "ley": "thin",
+      "danger_tier": "regional",
+      "ruled_by": [
+        "dreadfall-corsairs"
+      ],
+      "settlements": [
+        "scullcrossed-islands"
+      ],
+      "summary": "Calm water, rich cargoes and the Scullcrossed Islands squarely on the route. Profit for the bold, a grave for most.",
+      "travel": "The Trein to Mordun run is the busiest shipping lane on the map.",
+      "hazards": [
+        "Dreadfall Corsairs",
+        "convoy politics",
+        "wreckers"
+      ],
+      "map": {
+        "x": 0.26,
+        "y": 0.25
+      },
+      "origin": "source"
+    },
+    {
+      "id": "kingdoms-of-man",
+      "name": "The Kingdoms of Man",
+      "kind": "land",
+      "terrain": "the temperate western lowlands: farmland, rivers, sea cliffs",
+      "ley": "thin",
+      "ley_note": "Far from the Great Line. The west runs on crystal.",
+      "danger_tier": "local",
+      "ruled_by": [
+        "kingdom-of-asania",
+        "trein-council",
+        "wrenspire-council"
+      ],
+      "settlements": [
+        "trein",
+        "asania",
+        "wrenspire"
+      ],
+      "summary": "The human west: Trein's lit streets, Asania's marble towers and Wrenspire's machines, all leaning on stored power or clever gears.",
+      "travel": "Good roads from Trein south through Asania to Wrenspire and east to Cyrel.",
+      "hazards": [
+        "the Cyrel war front",
+        "licence patrols (Brotherhood and Post-Reform)",
+        "crystal shortages"
+      ],
+      "map": {
+        "x": 0.33,
+        "y": 0.42
+      },
+      "origin": "source"
+    },
+    {
+      "id": "kingdom-of-cyrel",
+      "name": "The Kingdom of Cyrel",
+      "kind": "land",
+      "terrain": "lake country, farmland and logging forest, rising to the Badlands escarpment in the east",
+      "ley": "normal",
+      "ley_note": "A Badlands branch current reaches west under Kingswood and Convila.",
+      "danger_tier": "local",
+      "danger_note": "Local in the heartland, regional along the Asanian front and the Badlands line.",
+      "ruled_by": [
+        "kingdom-of-cyrel"
+      ],
+      "settlements": [
+        "cyrel",
+        "eriane",
+        "kingswood",
+        "convila",
+        "bastion",
+        "mossrun"
+      ],
+      "summary": "A fortress capital and three sister cities, fighting Asania to the west and the Badlands to the east, and the elves of Brynwyr over the forest.",
+      "travel": "Roads link Cyrel, Eriane, Kingswood and Convila; Bastion sits on the eastern road.",
+      "hazards": [
+        "Asanian raids",
+        "Badlands war parties",
+        "Brynwyr wardens on the forest edge"
+      ],
+      "map": {
+        "x": 0.42,
+        "y": 0.58
+      },
+      "origin": "source"
+    },
+    {
+      "id": "badlands",
+      "name": "The Badlands",
+      "kind": "land",
+      "terrain": "shattered mountains, dry basins, dead trees, sand",
+      "ley": "rich",
+      "ley_note": "The Badlands convergence, where Ghondiir died, is one of the richest points on the Great Line.",
+      "danger_tier": "realm",
+      "ruled_by": [
+        "unguruk-tribe",
+        "dramogon-tribe",
+        "kadragar-tribe"
+      ],
+      "settlements": [
+        "unguruk-camp",
+        "adlmyr",
+        "abandoned-keep",
+        "dramogon-range",
+        "kadragar",
+        "ghondiirs-fall"
+      ],
+      "summary": "The Dragon King's corpse-country. Three tribes, endless border war with Cyrel, and the strongest magic on the continent under the most dangerous ground.",
+      "travel": "No roads, only tribal routes, wells and the old Adlmyr road. Water is the currency of passage.",
+      "hazards": [
+        "thirst",
+        "tribal war parties",
+        "gnoll hunts",
+        "Ley surges at the convergence",
+        "things from Ghondiir's bones"
+      ],
+      "map": {
+        "x": 0.5,
+        "y": 0.7
+      },
+      "origin": "source"
+    },
+    {
+      "id": "brynwyr",
+      "name": "Brynwyr",
+      "kind": "land",
+      "terrain": "old forest on the south-western peninsula, sea cliffs and harbors",
+      "ley": "thin",
+      "danger_tier": "regional",
+      "ruled_by": [
+        "brynwyr-high-elves"
+      ],
+      "settlements": [
+        "brynwyr"
+      ],
+      "summary": "The high elves' forest realm and fleet. Closed, proud, and at war with Cyrel's loggers over every tree.",
+      "travel": "Humans enter by invitation or by trespass. The treaty stones at Kingswood mark the line.",
+      "hazards": [
+        "wardens",
+        "sea-elf patrols",
+        "elven law"
+      ],
+      "map": {
+        "x": 0.17,
+        "y": 0.72
+      },
+      "origin": "source"
+    },
+    {
+      "id": "saja-een-bay",
+      "name": "Sa'ja'een Bay",
+      "kind": "sea",
+      "terrain": "a warm bay of glowing water and coral towers",
+      "ley": "thin",
+      "danger_tier": "local",
+      "settlements": [],
+      "summary": "Bioluminescent water, coral towers, silver mist at dusk and creatures that sing at night.",
+      "hazards": [
+        "reefs",
+        "mist"
+      ],
+      "map": {
+        "x": 0.23,
+        "y": 0.8
+      },
+      "origin": "source"
+    },
+    {
+      "id": "sea-of-kujuur",
+      "name": "The Sea of Kujuur",
+      "kind": "sea",
+      "terrain": "the open southern sea",
+      "ley": "thin",
+      "danger_tier": "regional",
+      "ruled_by": [
+        "kadragar-tribe"
+      ],
+      "settlements": [],
+      "summary": "Rough water around the southern islands, sunken treasure stories and goblin trade fleets.",
+      "hazards": [
+        "storms",
+        "goblin tolls",
+        "wrecks"
+      ],
+      "map": {
+        "x": 0.4,
+        "y": 0.92
+      },
+      "origin": "source"
+    },
+    {
+      "id": "bashrat-island",
+      "name": "Bashrat Island",
+      "kind": "island",
+      "terrain": "hot swamp, mist, mangrove and singing wildlife",
+      "ley": "thin",
+      "danger_tier": "regional",
+      "settlements": [
+        "ota-at"
+      ],
+      "summary": "A muggy swamp island between the bay and the sea, home to frogfolk, chaos-toads, naga and lizardfolk, and a market everyone eventually hears about.",
+      "travel": "Goblin ships from Kadragar and elven ships from Brynwyr.",
+      "hazards": [
+        "poison",
+        "swamp fever",
+        "challenge customs"
+      ],
+      "map": {
+        "x": 0.27,
+        "y": 0.88
+      },
+      "origin": "source"
+    },
+    {
+      "id": "ikto-isle",
+      "name": "Ikto Isle",
+      "kind": "island",
+      "terrain": "a small rocky isle past the Mi Cho Rapids",
+      "ley": "normal",
+      "ley_note": "The Great Line passes close on its way out to sea.",
+      "danger_tier": "local",
+      "settlements": [
+        "benzaiten-monastery"
+      ],
+      "summary": "A quiet island cut off by the rapids, home of the Benzaiten Monastery.",
+      "travel": "Only boats that know the Mi Cho Rapids, which means the monks' own.",
+      "hazards": [
+        "the Mi Cho Rapids"
+      ],
+      "map": {
+        "x": 0.6,
+        "y": 0.87
+      },
+      "origin": "source"
+    },
+    {
+      "id": "eastern-forests",
+      "name": "The Eastern Forests",
+      "kind": "land",
+      "terrain": "deep forest and lakes between the Badlands mountains and the sea",
+      "ley": "rich",
+      "ley_note": "The Great Line runs through them south-east to the sea.",
+      "danger_tier": "realm",
+      "ruled_by": [
+        "petrakyra-wood-elves"
+      ],
+      "settlements": [
+        "petrakyra"
+      ],
+      "summary": "Old forest beyond the Badlands. Almost nobody comes back with a description.",
+      "travel": "Through the Badlands or by sea; the wood elves allow neither.",
+      "hazards": [
+        "wood-elf wardens",
+        "Ley-warped beasts",
+        "getting lost"
+      ],
+      "map": {
+        "x": 0.74,
+        "y": 0.68
+      },
+      "origin": "source"
+    },
+    {
+      "id": "etryona",
+      "name": "Etryona",
+      "kind": "island",
+      "terrain": "a green island behind city walls, across the Kyrana Channel",
+      "ley": "thin",
+      "danger_tier": "regional",
+      "ruled_by": [
+        "obirykan-city-states"
+      ],
+      "settlements": [
+        "obirykan"
+      ],
+      "summary": "Green walls, prism towers and a society where Ley crystal is money, rank and addiction.",
+      "travel": "The Kyrana Channel is hostile water; Obirykan ships trade with Petrakyra and few others.",
+      "hazards": [
+        "the Kyrana Channel",
+        "debt",
+        "crystal duels"
+      ],
+      "map": {
+        "x": 0.86,
+        "y": 0.75
+      },
+      "origin": "source"
+    },
+    {
+      "id": "fjallagracht",
+      "name": "The Fjallagracht Lands",
+      "kind": "island",
+      "terrain": "snow, ice and mountain on an island across the Dire Sea",
+      "ley": "rich",
+      "ley_note": "A branch current from the northern convergence runs out to the Gurdalur Stones.",
+      "danger_tier": "regional",
+      "ruled_by": [
+        "fjallagracht-clans"
+      ],
+      "settlements": [
+        "gurdalur-stones"
+      ],
+      "summary": "A frozen island of hard clans whose lives run on the calendar of the Gurdalur Stones.",
+      "travel": "Across the Dire Sea in the short summer.",
+      "hazards": [
+        "blizzards",
+        "the Dire Sea",
+        "cold"
+      ],
+      "map": {
+        "x": 0.79,
+        "y": 0.35
+      },
+      "origin": "source"
+    },
+    {
+      "id": "dire-sea",
+      "name": "The Dire Sea",
+      "kind": "sea",
+      "terrain": "cold, deep northern water between the continent and Fjallagracht",
+      "ley": "rich",
+      "danger_tier": "regional",
+      "settlements": [],
+      "summary": "The Fjallagracht clans named it for what it takes. Where the Ley branch runs beneath it, the sea throws up Ley squalls: storms with glowing fog that sour compasses and spells alike. Crystal reefs grow on the seabed along the current, and the clans' longships cross only in the summer weeks the Gurdalur calendar marks as safe.",
+      "map": {
+        "x": 0.7,
+        "y": 0.45
+      },
+      "origin": "draft",
+      "ley_note": "The branch current from the northern convergence runs under the sea to the Gurdalur Stones. Ley under water does not circulate cleanly.",
+      "travel": "Fjallagracht longships in the summer windows; nobody else on purpose.",
+      "hazards": [
+        "Ley squalls",
+        "crystal reefs that open hulls",
+        "cold",
+        "wrecks that still carry crystal"
+      ],
+      "origin_note": "Named on the map only; extrapolated from the Ley Line map (Vanta asked, 2026-10-21)."
+    },
+    {
+      "id": "faerie",
+      "name": "Faerie",
+      "kind": "plane",
+      "terrain": "a brighter, stranger mirror of the world",
+      "ley": "rich",
+      "danger_tier": "world",
+      "ruled_by": [
+        "seelie-court",
+        "unseelie-court"
+      ],
+      "settlements": [],
+      "summary": "Two queens, a muse and a hunter. Beauty and danger are one thing there, and time is unreliable.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "nine-hells",
+      "name": "The Nine Hells",
+      "kind": "plane",
+      "terrain": "nine layers from Avernus to Nessus",
+      "ley": "dead",
+      "danger_tier": "mythic",
+      "ruled_by": [
+        "nine-hells"
+      ],
+      "settlements": [],
+      "summary": "Law, contracts and promotion by treachery. See canon/cosmology.md.",
+      "origin": "source",
+      "ip": "myth"
+    },
+    {
+      "id": "abyss",
+      "name": "The Abyss",
+      "kind": "plane",
+      "terrain": "endless layers of chaos",
+      "ley": "dead",
+      "danger_tier": "mythic",
+      "ruled_by": [
+        "abyss"
+      ],
+      "settlements": [],
+      "summary": "Hunger, chaos and the will to unmake creation. See canon/cosmology.md.",
+      "origin": "source",
+      "ip": "myth"
+    }
+  ]
+}

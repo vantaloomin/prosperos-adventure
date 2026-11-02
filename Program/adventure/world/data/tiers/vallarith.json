@@ -1,0 +1,8 @@
+{
+ "about": "Vallarith's tier track (dungeon/tiers.py): renown, the name the character makes, on the shared ladder; the arc and pace a campaign starts with unless the player picks others.",
+ "track": "renown",
+ "name": "Renown",
+ "arc": "classic",
+ "pace": "steady",
+ "words": ["known on their own street", "a name along the Cyrel road", "a name at court in Cyrel", "a name across Vallarith", "a name the gods know"]
+}

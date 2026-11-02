@@ -1,0 +1,2094 @@
+{
+ "kind": "growing",
+ "milestones": [
+  {
+   "text": "spent a whole morning reading up before touching anything",
+   "post": "Did the reading. Now the doing. Probably.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "bought far more supplies than a beginner could possibly need",
+   "post": "In my defence, everything looked useful.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "asked a neighbour for advice and got an hour-long lecture, gratefully received",
+   "post": "Learned more in an hour over the fence than in a week of guessing.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started a little notebook to keep track of what they were doing",
+   "post": "Page one of the notebook. Very official.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made every beginner mistake in the first week, one after another",
+   "post": "Collected the full set of beginner mistakes. Onward.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got up early just to check on everything before work",
+   "post": "Up before the alarm to check on everything. Who am I.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned the difference between patience and neglect, the hard way",
+   "post": "Turns out 'leave it alone' and 'forget about it' are different things.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "lost their first attempt entirely and started again the very next day",
+   "post": "Start again. That's the whole trick, apparently.",
+   "level": 0,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept everything going strong through a whole season",
+   "post": "A full season and nothing lost. Quietly thrilled.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "worked out a weekly routine that actually stuck",
+   "post": "Routine found. Weekends sorted.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "swapped tips with an old hand at the market and came away with a new trick",
+   "post": "Market chat turned into a masterclass.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stopped fussing at every small change and learned to wait and watch",
+   "post": "New skill: not fussing. Hardest one yet.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spotted a problem early and sorted it before it spread",
+   "post": "Caught it early. Felt like a detective.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "filled their first notebook and started a second",
+   "post": "Notebook number two. Things are getting serious.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "explained the basics to a curious friend without looking anything up",
+   "post": "Explained it all to a friend from memory. Progress.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "went a whole month without a single disaster",
+   "post": "One month, zero disasters. Somebody write it down.",
+   "level": 1,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had a week where everything they touched seemed to thrive",
+   "post": "Everything's thriving. Not touching anything in case it stops.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "planned the whole next season on paper over a winter evening",
+   "post": "Next year, mapped out on one sheet of paper. Ambitious.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got asked for advice by someone who had just started",
+   "post": "Someone asked ME for advice. Tried to look wise.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "rescued something everyone else would have given up on",
+   "post": "Brought it back from the brink. Stubbornness pays.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "made a simple tool of their own that worked better than the shop-bought one",
+   "post": "Made it myself. Works better. Insufferable about it.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept records for a full year and finally saw the patterns",
+   "post": "A year of notes and suddenly it all makes sense.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "stopped following the book to the letter and started trusting their own judgement",
+   "post": "Ignored the book today. Was right. Don't tell the book.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent a whole day with a seasoned expert and came home full of plans",
+   "post": "One day with an expert, three pages of notes, a head full of plans.",
+   "level": 2,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won a ribbon at the local show",
+   "post": "A ribbon! A real one. Pinned to the wall already.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "gave a short talk to the local society and answered every question",
+   "post": "Gave the talk. Survived the questions. Mostly enjoyed it.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spent a season showing a complete beginner the ropes",
+   "post": "Showing a newcomer the ropes. Remembering how lost I was.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was trusted with a friend's whole setup for a month away",
+   "post": "Minding someone else's pride and joy. No pressure.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had their work admired by an old hand who rarely praises anything",
+   "post": "The grumpiest expert I know said 'not bad'. Framing it.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "turned last year's failed experiment into a method that works every time",
+   "post": "Last year's flop is this year's method.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "shared their surplus with the whole street",
+   "post": "Too much of a good thing. The neighbours are not complaining.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "set up a second spot when the first one ran out of room",
+   "post": "Ran out of room. Expanded. No regrets.",
+   "level": 3,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took first place at the regional show",
+   "post": "First place. I keep checking the card to make sure.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was invited to judge a category at the village show",
+   "post": "Judging this year instead of entering. Strange and lovely.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "had the local paper print a piece about their work",
+   "post": "In the paper! My mother bought five copies.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "modern",
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier"
+   ]
+  },
+  {
+   "text": "wrote a little guide for beginners that the local society now hands out",
+   "post": "My beginner's guide is now the official one. Wild.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "hosted an open day and had a line of visitors at the gate",
+   "post": "People queued to see it. Actual people. A queue.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was asked to lead the workshop they once attended as a nervous beginner",
+   "post": "Full circle: teaching the class I took on day one.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "realised they could not remember the last time something went wrong",
+   "post": "Can't remember my last real mistake. Saying that is surely a mistake.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "was told by a newcomer that it all started with watching over the fence",
+   "post": "Someone started because of me. Best compliment there is.",
+   "level": 4,
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "planted their first row of seeds and checked on it twice before lunch",
+   "post": "Seeds in. Watching the soil like it owes me money.",
+   "level": 0,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "dug their first garden bed, mostly by stubbornness",
+   "post": "One bed dug. Earned my supper.",
+   "level": 0,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "weeded with great enthusiasm and pulled up half the carrots",
+   "post": "Weeded with gusto. Removed the carrots. Lesson learned.",
+   "level": 0,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "pulled their first proper radish and held it up like a trophy",
+   "post": "Behold: one radish. Grown by me.",
+   "level": 1,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got the tomatoes staked before the first storm, for once",
+   "post": "Tomatoes staked in time. Gold star for me.",
+   "level": 1,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "started a compost heap that actually turned into compost",
+   "post": "The compost is composting. Never been prouder of rot.",
+   "level": 1,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "grew a sunflower taller than the garden fence",
+   "post": "Sunflower now taller than the fence. Taller than me, too.",
+   "level": 1,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept the slugs off the lettuces for a whole season",
+   "post": "Not a single lettuce lost to slugs. Victory is crunchy.",
+   "level": 2,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "saved seeds from their own plants for next year",
+   "post": "Next year's garden is in these little paper envelopes.",
+   "level": 2,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "grew enough beans to give bags of them away",
+   "post": "Bean surplus. Knock on the door and receive beans.",
+   "level": 2,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won second prize for their marrow at the village show",
+   "post": "Second-best marrow in the village. I'll take it.",
+   "level": 3,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "planned and planted a border that flowered from spring to autumn",
+   "post": "Something in flower every single month. Planned it that way.",
+   "level": 3,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "helped a neighbour dig and plan a first vegetable patch",
+   "post": "Helped next door start their patch. The garden gang grows.",
+   "level": 3,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won best in show for their roses",
+   "post": "Best in show. The roses deserve the credit. Mostly.",
+   "level": 4,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "fed the household from the garden for an entire summer",
+   "post": "Haven't bought a vegetable since June.",
+   "level": 4,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "opened their garden to visitors for the parish open day",
+   "post": "Sixty visitors walked through my garden today. Exhausted, glowing.",
+   "level": 4,
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "brought home their first pothos and gave it a name",
+   "post": "Meet Gerald. Gerald is a pothos. Gerald must thrive.",
+   "level": 0,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "drowned their first succulent with kindness and learned what root rot looks like",
+   "post": "Farewell, little succulent. Loved too much, too wetly.",
+   "level": 0,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "downloaded a plant care app and set three watering reminders for one plant",
+   "post": "Three reminders, one plant. Taking no chances.",
+   "level": 0,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "repotted a plant for the first time without wrecking the kitchen",
+   "post": "Repotted. Kitchen floor mostly survived.",
+   "level": 1,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "rooted a cutting in a jar of water and watched the roots appear",
+   "post": "Roots! In the jar! A new plant from a bit of old plant.",
+   "level": 1,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "moved every pot around to find the right light, and it worked",
+   "post": "Rearranged the flat around the plants. Worth it.",
+   "level": 1,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got their sulky fiddle-leaf fig to put out a new leaf",
+   "post": "The fiddle-leaf fig grew a leaf. Notoriously dramatic plant, calm for once.",
+   "level": 2,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "built a little shelf with grow lights for the darkest corner",
+   "post": "Grow light shelf done. The corner now glows purple.",
+   "level": 2,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "beat a fungus gnat invasion without losing a single pot",
+   "post": "Gnats defeated. The plants and I prevail.",
+   "level": 2,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "identified a friend's mystery plant from the leaves alone",
+   "post": "Named the mystery plant at a glance. Plant detective.",
+   "level": 2,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got a cutting swap going in the break room at work",
+   "post": "Cutting swap at work. Fifteen people came.",
+   "level": 3,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "coaxed a clearance-shelf orchid into blooming again",
+   "post": "The clearance orchid bloomed. Second chances work.",
+   "level": 3,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "had their plant shelf featured on the local plant shop's online page",
+   "post": "My shelf, on the plant shop's page. Famous among ferns.",
+   "level": 3,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "grew a monstera so big it needed its own corner",
+   "post": "The monstera has its own corner now. It pays no rent.",
+   "level": 4,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "was asked to run a repotting workshop at the plant shop",
+   "post": "Taught twelve strangers to repot. Nobody dropped anything.",
+   "level": 4,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept over sixty plants thriving through a whole winter",
+   "post": "Sixty-two plants, one winter, zero losses.",
+   "level": 4,
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "bought their first little juniper and stared at it for an hour",
+   "post": "First bonsai. Too scared to cut anything.",
+   "level": 0,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "made their first cut and then spent an evening checking it was the right one",
+   "post": "First snip. Then a long, careful read. It was fine.",
+   "level": 0,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "went along to a beginners' evening at the bonsai club",
+   "post": "First club night. Everyone whispers around the trees.",
+   "level": 0,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "wired a branch for the first time without snapping it",
+   "post": "Wired a branch. It bent, it didn't snap. Breathing again.",
+   "level": 1,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "kept their juniper happy through its first winter",
+   "post": "Survived the winter together, me and the juniper.",
+   "level": 1,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "moved their tree into a proper shallow bonsai pot",
+   "post": "New pot. The tree looks suddenly serious.",
+   "level": 1,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "pinched back the new growth at exactly the right time, for once",
+   "post": "Timed the pinching perfectly. The tree seems pleased.",
+   "level": 1,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "styled a cheap nursery shrub into something that looked like a tiny old tree",
+   "post": "Bought a shrub, made a tree. Feels like magic.",
+   "level": 2,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "learned to tell when a tree needs water just by the weight of the pot",
+   "post": "I can tell it's thirsty by lifting it now. Weird skill.",
+   "level": 2,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "started a maple from seed with a ten-year plan",
+   "post": "A maple seedling and a plan for 2036. Patience is the hobby.",
+   "level": 2,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "showed a tree at the club's spring exhibition",
+   "post": "My little juniper, on a real display table.",
+   "level": 3,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "talked a newer member through wiring a first branch",
+   "post": "Helped someone wire their first branch. Their hands shook. Mine did too, once.",
+   "level": 3,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "got a compliment on their tree's roots from the club's oldest member",
+   "post": "The club's oldest member liked my roots. Floating.",
+   "level": 3,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "won best tree in show at the regional bonsai exhibition",
+   "post": "Best in show. Six years of tiny decisions.",
+   "level": 4,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "gave a live styling demonstration at the club",
+   "post": "Did a live styling demo. The tree cooperated, thankfully.",
+   "level": 4,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "watched a tree they grew from a cutting finally look truly ancient",
+   "post": "Seven years from a twig. It looks centuries old now.",
+   "level": 4,
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "watched their first hive inspection with their heart in their throat",
+   "post": "First inspection. Ten thousand bees and one very still person.",
+   "level": 0,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "built their first hive box, slightly crooked",
+   "post": "Hive box built. It leans a little. The bees don't mind.",
+   "level": 0,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to move slowly and calmly around the hive",
+   "post": "Slow hands, calm breath. Bees like it, I like it.",
+   "level": 0,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "tasted honey straight from the comb at their mentor's hive",
+   "post": "Honey from the comb. Now I understand why people do this.",
+   "level": 0,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "spotted the queen on their own for the first time",
+   "post": "Found the queen! Long body, total confidence.",
+   "level": 1,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "got their colony through its first winter",
+   "post": "They made it through the winter. Buzzing in the spring sun.",
+   "level": 1,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "lit the smoker on the first try and kept it going the whole inspection",
+   "post": "Smoker lit first time. Small victories, cool smoke.",
+   "level": 1,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "took off their first jars of honey",
+   "post": "Our own honey. Tastes like the whole summer.",
+   "level": 2,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "caught a swarm from a neighbour's hedge in a basket",
+   "post": "Caught a swarm in a basket. The neighbour cheered from a safe distance.",
+   "level": 2,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "learned to tell a calm hive from an unsettled one by the sound alone",
+   "post": "I can hear when they're happy now. Hard to explain.",
+   "level": 2,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "split a strong colony into two thriving hives",
+   "post": "One hive is now two. Bee real estate expanding.",
+   "level": 3,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "sold honey at the market and ran out by noon",
+   "post": "Sold out by noon. Should have brought more jars.",
+   "level": 3,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "showed a nervous friend inside a hive without a single flinch",
+   "post": "Opened the hive for a friend. They stayed calm, so did I.",
+   "level": 3,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "won first prize for their honey at the county show",
+   "post": "First prize honey. The bees did the work, I did the jars.",
+   "level": 4,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "kept six colonies strong through a hard winter",
+   "post": "Six hives, one long winter, all alive. Proud beekeeper.",
+   "level": 4,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "became the one neighbours call to collect swarms all season",
+   "post": "Swarm call number nine this year. I am the bee person now.",
+   "level": 4,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "planted a first bed of thyme, sage and mint by the kitchen door",
+   "post": "Thyme, sage and mint by the door. A start.",
+   "level": 0,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "learned to tell chamomile from mayweed, eventually",
+   "post": "Chamomile, not mayweed. Probably. Fairly sure.",
+   "level": 0,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "hung their first bundles of herbs to dry from the rafters",
+   "post": "Bundles drying from the rafters. The house smells wonderful.",
+   "level": 0,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "kept the mint from swallowing the whole bed",
+   "post": "The mint has been contained. For now.",
+   "level": 1,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "brewed a chamomile tea from flowers they grew themselves",
+   "post": "Tea from my own chamomile. Tastes like a quiet evening.",
+   "level": 1,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "started a book of pressed leaves with notes beside each one",
+   "post": "Pressed my first leaves into the herb book. Very scholarly.",
+   "level": 1,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "swapped seeds with a traveller at the market",
+   "post": "Traded seeds with a stranger. New herbs to try.",
+   "level": 1,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "grew a whole bed of lavender and sold bundles to the neighbours",
+   "post": "Lavender bundles all round. The lane smells lovely.",
+   "level": 2,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "laid out a proper knot of beds, each herb in its place",
+   "post": "Every herb has a home now. Neat little rows.",
+   "level": 2,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "made a batch of lavender soap from their own flowers",
+   "post": "Lavender soap, from flower to bar. Smells like June.",
+   "level": 2,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "was asked by the cook at the big house to supply herbs every week",
+   "post": "The big house wants my herbs every week. Honoured.",
+   "level": 3,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "taught the neighbours' children to name every herb in the bed",
+   "post": "The children can name all twelve herbs now. Proud teacher.",
+   "level": 3,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "dried and labelled a whole season's harvest in neat jars",
+   "post": "Forty jars, all labelled. The pantry looks like an apothecary.",
+   "level": 3,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "had cuttings from their garden asked for by people from the next village",
+   "post": "Visitors from two villages over, asking for cuttings.",
+   "level": 4,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "won the herb prize at the harvest fair",
+   "post": "Best herbs at the harvest fair. The rosemary is delighted.",
+   "level": 4,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "kept a herb garden so fine that the local apothecary came to study it",
+   "post": "The apothecary took notes in MY garden today.",
+   "level": 4,
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "kept a first row of seedlings alive to harvest",
+   "post": "They lived! All of them!",
+   "level": 0,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned which weeds to pull and which to leave",
+   "post": "Weed or not weed. I know now.",
+   "level": 0,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "dug a new bed by hand",
+   "post": "New bed, dug by hand.",
+   "level": 0,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "grew something from seed and ate it",
+   "post": "Seed to plate.",
+   "level": 0,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned when to plant by watching the weather",
+   "post": "Watching the sky now.",
+   "level": 0,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "kept the garden going through a dry spell",
+   "post": "Watered through the dry spell.",
+   "level": 1,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "saved seed from a favourite plant",
+   "post": "Saving seed for next year.",
+   "level": 1,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had the first flowers of the year in the house",
+   "post": "First flowers on the table.",
+   "level": 1,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to tell when a crop is ready by touch",
+   "post": "Ready by feel.",
+   "level": 1,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "grew plenty to share along the street",
+   "post": "Plenty to share.",
+   "level": 2,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "planted a new bed laid out to a plan of their own",
+   "post": "My own plan, planted.",
+   "level": 2,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "got a fussy plant to flower at last",
+   "post": "It flowered! Finally!",
+   "level": 2,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had passers-by stop to admire the garden",
+   "post": "People stop to look now.",
+   "level": 2,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "grew a whole bed of herbs for the kitchen",
+   "post": "Herbs for days.",
+   "level": 2,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won a prize for a vegetable at the fair",
+   "post": "Prize vegetable. Ribbon pinned up.",
+   "level": 3,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "grew enough to keep the kitchen supplied all summer",
+   "post": "Didn't buy greens all summer.",
+   "level": 3,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was asked for advice by a neighbour starting out",
+   "post": "Advice-giver now.",
+   "level": 3,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "brought a neglected plot back to life",
+   "post": "Neglected plot, back to life.",
+   "level": 3,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had the garden opened for visitors",
+   "post": "Garden open to visitors!",
+   "level": 4,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "grew a rare plant others had given up on",
+   "post": "The rare one thrives here.",
+   "level": 4,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "won best garden in town",
+   "post": "Best garden in town!",
+   "level": 4,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "became the one the whole street asks about plants",
+   "post": "The street's plant person.",
+   "level": 4,
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "opened the hive for the first time without fuss",
+   "post": "First look inside. Calm.",
+   "level": 0,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "learned to move slowly around the bees",
+   "post": "Slow and calm. The bees like that.",
+   "level": 0,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "took a first small harvest of honey",
+   "post": "First honey. Sticky everything.",
+   "level": 1,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "spotted the queen without help",
+   "post": "Found the queen myself.",
+   "level": 1,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "caught a swarm and settled it in a new hive",
+   "post": "Caught a swarm!",
+   "level": 2,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "got the bees through a hard winter",
+   "post": "Every hive made it through.",
+   "level": 2,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "sold honey at the market",
+   "post": "Honey for sale.",
+   "level": 3,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "had enough honey to give a jar to everyone at the table",
+   "post": "Honey for everyone.",
+   "level": 3,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "kept a whole row of thriving hives",
+   "post": "A row of hives, all humming.",
+   "level": 4,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  },
+  {
+   "text": "was called in to help with a neighbour's swarm",
+   "post": "Called in for a swarm.",
+   "level": 4,
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "jazz-age",
+    "victorian",
+    "steampunk",
+    "frontier",
+    "medieval",
+    "fantasy"
+   ]
+  }
+ ],
+ "sessions": [
+  {
+   "text": "Pottered about for longer than they meant to.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Wrote a few notes in their little book afterwards.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Found the whole thing quietly calming.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Spent a while just watching, which counts too.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Did the small jobs nobody else would notice.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Lost track of time in the best way.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Made a mental list of what to do next time.",
+   "for": [
+    "any"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Came back inside with soil under their fingernails.",
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Pulled weeds until the bed looked tidy again.",
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Watered everything in the cool of the morning.",
+   "for": [
+    "gardening",
+    "herbs"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Planted out a few seedlings before the sun got high.",
+   "for": [
+    "gardening"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Turned every pot a quarter turn toward the light.",
+   "for": [
+    "houseplants",
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Checked the soil of every pot with a fingertip.",
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Wiped the dust off the big leaves, one by one.",
+   "for": [
+    "houseplants"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Trimmed a few shoots, then sat back to look for a long while.",
+   "for": [
+    "bonsai"
+   ],
+   "eras": [
+    "modern"
+   ]
+  },
+  {
+   "text": "Watched the bees come and go from the entrance for a while.",
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Moved slowly and kept everything calm.",
+   "for": [
+    "beekeeping"
+   ],
+   "eras": [
+    "any"
+   ]
+  },
+  {
+   "text": "Cut a handful of sprigs for the kitchen.",
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  },
+  {
+   "text": "Tied up a few bundles to dry.",
+   "for": [
+    "herbs"
+   ],
+   "eras": [
+    "medieval",
+    "fantasy",
+    "frontier",
+    "victorian"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,811 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "stats": "Prospero: Mind, Allure, Resolve, Vitality, Essence, Luck, 1 to 30 with 10 an ordinary adult. Null where another file is the authority.",
+    "tier": "the NPC's weight on the shared ladder",
+    "secret": "hidden from the player character; an importer should mark it hidden",
+    "eras": "campaign eras the NPC appears in; missing means post-reform only for this file",
+    "origin": "source, m1-slice or draft"
+  },
+  "default_eras": [
+    "post-reform"
+  ],
+  "cast": [
+    {
+      "id": "mistress-sara",
+      "name": "Mistress Sara",
+      "role": "Founder and hidden hand of the Brotherhood of Man",
+      "settlement": "trein",
+      "faction": "brotherhood-of-man",
+      "eras": [
+        "pre-reform",
+        "brotherhood",
+        "post-reform"
+      ],
+      "tier": "mythic",
+      "stats": null,
+      "look": "A calm woman in pale fabrics, with steady hands and teeth that are a little too perfect; in lamplight they have an opal sheen.",
+      "voice": "Quiet, unhurried, precise. Asks questions she already knows the answers to. Praise from her sounds like classification.",
+      "wants": [
+        "Control of the Source Font",
+        "To breed again",
+        "To be queen of the Eternal Dragons"
+      ],
+      "fears": [
+        "The New Gods noticing her too soon",
+        "Clever mortals who keep their heads"
+      ],
+      "secret": "She is the Eternal White Dragon Saradrosk.",
+      "relationships": {
+        "cybelia": "Knew her secret and kept it, in the Brotherhood era. Sara considered her a clever mouse."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "melton-ilvar",
+      "name": "Melton Ilvar",
+      "role": "Fifth-generation patriarch of the Mossrun Expedition",
+      "faction": "mossrun-expedition",
+      "tier": "mythic",
+      "stats": null,
+      "look": "A wealthy merchant in his prime, always about to be ill.",
+      "voice": "Genial, generous, forgettable on purpose.",
+      "wants": [
+        "More mines",
+        "More wealth",
+        "The secret kept"
+      ],
+      "fears": [
+        "An heir who comes home early"
+      ],
+      "secret": "He is the Eternal Red Dragon Zaraxas, and has been every Ilvar patriarch since he murdered Aldon Ilvar. Each time, he marries, adopts an orphaned baby, lets the wife 'die in childbirth', sends the child away to be educated, and is dying when the child returns.",
+      "relationships": {
+        "edith-ilvar": "his current heir"
+      },
+      "origin": "source",
+      "settlement": "mossrun"
+    },
+    {
+      "id": "edith-ilvar",
+      "name": "Edith Ilvar",
+      "role": "Ilvar heir, called home from her schooling because her father is dying",
+      "faction": "mossrun-expedition",
+      "tier": "regional",
+      "stats": {
+        "Mind": 14,
+        "Allure": 12,
+        "Resolve": 11,
+        "Vitality": 9,
+        "Essence": 8,
+        "Luck": 10
+      },
+      "voice": "Educated, dry, a little too observant for her own good.",
+      "wants": [
+        "To see her father before he dies",
+        "To know why every Ilvar wife died"
+      ],
+      "fears": [
+        "The family curse",
+        "Being married off before she understands the business"
+      ],
+      "secret": "She has found a portrait of her great-great-grandfather, and it is her father's face.",
+      "relationships": {
+        "melton-ilvar": "her father, as far as she knows"
+      },
+      "origin": "draft",
+      "look": "Twenty-two, ink on her cuffs, her mother's portrait in a locket, and the Ilvar habit of standing very still when she is listening.",
+      "settlement": "mossrun"
+    },
+    {
+      "id": "lady-zee",
+      "name": "Illeniana Zehara, \"Lady Zee\"",
+      "role": "Owner of A Pocketful of Zzz's",
+      "settlement": "asania",
+      "tier": "mythic",
+      "stats": null,
+      "look": "An elven woman of indeterminate age, always dressed a season ahead of fashion, rings on every finger.",
+      "voice": "Warm, delighted, quick to bargain, slow to let go of a thing she wants.",
+      "wants": [
+        "Relics that survived the Reformation, above all from the Old Gods",
+        "A good story with every object"
+      ],
+      "fears": [
+        "Being noticed not aging"
+      ],
+      "secret": "She is the Eternal Copper Dragon Zeharyth. She vanishes for a generation or two whenever whispers start, and opens again in a new city. Her shop was in Trein before Asania.",
+      "origin": "source"
+    },
+    {
+      "id": "master-grimm",
+      "name": "Master Grimm",
+      "role": "Master of the workshop that makes most of the world's enchanted arms",
+      "settlement": "dun-aldun",
+      "faction": "master-grimms-workshop",
+      "tier": "mythic",
+      "stats": null,
+      "look": "A dwarf a little too big for a dwarf, with stark green hair, emerald eyes, and ivy worked into his clothes and armor. Looks more like a druid than a smith.",
+      "voice": "Gruff, exacting, says the price before the hello.",
+      "wants": [
+        "The best work in the world to come from his shop",
+        "To know where it all goes"
+      ],
+      "fears": [
+        "Saradrosk winning"
+      ],
+      "secret": "He is the Eternal Green Dragon Forgrimmorithal.",
+      "origin": "source"
+    },
+    {
+      "id": "lady-hewlight",
+      "name": "Lady Hewlight, the Axe-Widow",
+      "role": "A dwarven matron who turns up in history whenever the Ley is in danger",
+      "tier": "mythic",
+      "stats": null,
+      "voice": "Fond, nosy, delighted by human drama; neutral to the bone.",
+      "wants": [
+        "The Ley healthy and open to those the world deems worthy",
+        "Good company"
+      ],
+      "fears": [
+        "Anyone damming the Ley again"
+      ],
+      "secret": "She is the Eternal Crystal Dragon Ryndhallach.",
+      "origin": "source",
+      "origin_note": "Her current home is not in the source."
+    },
+    {
+      "id": "aldous-marr",
+      "name": "Reeve Aldous Marr",
+      "role": "Reeve of Kingswood",
+      "settlement": "kingswood",
+      "tier": "local",
+      "stats": null,
+      "secret": "In debt to the Cyrel Timber Guild; has secretly sold the Heartwood cutting rights.",
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json"
+    },
+    {
+      "id": "hesk-varro",
+      "name": "Hesk Varro",
+      "role": "Mill foreman, Kingswood",
+      "settlement": "kingswood",
+      "tier": "local",
+      "stats": null,
+      "note": "His brother was killed by an elf arrow.",
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json"
+    },
+    {
+      "id": "ilse-rook",
+      "name": "Mother Ilse Rook",
+      "role": "Keeper of the Shrine of Tidum, Kingswood",
+      "settlement": "kingswood",
+      "tier": "local",
+      "stats": null,
+      "secret": "Knows what lies under the Heartwood's Ley convergence.",
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json"
+    },
+    {
+      "id": "corin-ashby",
+      "name": "Corin Ashby",
+      "role": "Keeper of the Felled Oak, fence and informer",
+      "settlement": "kingswood",
+      "tier": "local",
+      "stats": null,
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json"
+    },
+    {
+      "id": "mag-hollin",
+      "name": "Mag Hollin",
+      "role": "Keeper of Mother Mag's at Low Ford, fence",
+      "settlement": "kingswood",
+      "tier": "local",
+      "stats": null,
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json"
+    },
+    {
+      "id": "sereth-of-the-ford",
+      "name": "Sereth of the Ford",
+      "role": "Half-elf herb seller, 142 years old",
+      "settlement": "kingswood",
+      "tier": "local",
+      "stats": null,
+      "secret": "A Brynwyr warden's eyes in town.",
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json"
+    },
+    {
+      "id": "bram-tolley",
+      "name": "Sergeant Bram Tolley",
+      "role": "Sergeant of the Cyrel watch, Kingswood",
+      "settlement": "kingswood",
+      "tier": "local",
+      "stats": null,
+      "origin": "m1-slice",
+      "authoritative": "Program/dungeon/world/data/cities/kingswood.json"
+    },
+    {
+      "id": "odo-fennick",
+      "name": "Lord-Commander Odo Fennick",
+      "role": "Commander of Bastion",
+      "settlement": "bastion",
+      "faction": "kingdom-of-cyrel",
+      "tier": "regional",
+      "stats": {
+        "Mind": 13,
+        "Allure": 9,
+        "Resolve": 17,
+        "Vitality": 14,
+        "Essence": 6,
+        "Luck": 9
+      },
+      "voice": "Short sentences, no adjectives. Counts everything: men, arrows, days.",
+      "wants": [
+        "Two hundred more men",
+        "Adlmyr back before he dies"
+      ],
+      "fears": [
+        "The day Unguruk stops raiding and starts besieging"
+      ],
+      "secret": "Has been quietly letting some deserters go, because hanging them empties his walls faster.",
+      "origin": "draft",
+      "look": "Sixty, grey stubble, one shoulder higher than the other from an old spear wound, and a ledger always under his arm."
+    },
+    {
+      "id": "murga-hollowtooth",
+      "name": "Murga Hollowtooth",
+      "role": "War-chief of the Unguruk tribe",
+      "settlement": "unguruk-camp",
+      "faction": "unguruk-tribe",
+      "tier": "regional",
+      "stats": {
+        "Mind": 12,
+        "Allure": 13,
+        "Resolve": 16,
+        "Vitality": 18,
+        "Essence": 7,
+        "Luck": 11
+      },
+      "voice": "Laughs at threats, remembers insults for twenty years, speaks Cyrellian better than she lets on.",
+      "wants": [
+        "Bastion's walls down",
+        "Respect from Cyrel, in writing"
+      ],
+      "fears": [
+        "Becoming the war-chief who sold the passes to a devil, as one did in Aveus's day"
+      ],
+      "secret": "A polite stranger in clean robes has visited her fire twice. She has not said no yet.",
+      "origin": "draft",
+      "look": "A tall orc in a coat of Cyrel officers' buttons, with a gap where her left canine was knocked out in a challenge she won anyway."
+    },
+    {
+      "id": "nettle-skabb",
+      "name": "Captain Nettle Skabb",
+      "role": "Goblin trader-captain of Kadragar",
+      "settlement": "kadragar",
+      "faction": "kadragar-tribe",
+      "tier": "regional",
+      "stats": {
+        "Mind": 13,
+        "Allure": 14,
+        "Resolve": 11,
+        "Vitality": 10,
+        "Essence": 8,
+        "Luck": 16
+      },
+      "voice": "Haggles in three languages at once, swears by the Erlking's hounds.",
+      "wants": [
+        "The Ota'at run without tolls",
+        "A Wrenspire compass"
+      ],
+      "fears": [
+        "The Wild Hunt, which she has heard once"
+      ],
+      "origin": "draft",
+      "look": "A goblin in a sea-stained admiral's coat three sizes too big, with brass rings in both ears and a compass she cannot read."
+    },
+    {
+      "id": "piers-ockley",
+      "name": "Under-Registrar Piers Ockley",
+      "role": "Trein licensing clerk and Brotherhood cell member",
+      "settlement": "trein",
+      "faction": "brotherhood-of-man",
+      "tier": "local",
+      "stats": {
+        "Mind": 14,
+        "Allure": 9,
+        "Resolve": 8,
+        "Vitality": 7,
+        "Essence": 12,
+        "Luck": 10
+      },
+      "voice": "Quotes slogans when nervous. Ink on his hands, zeal that has not met consequences.",
+      "wants": [
+        "Magic for mortals",
+        "To be noticed by Mistress Sara"
+      ],
+      "fears": [
+        "That the old Brotherhood ledgers are true"
+      ],
+      "secret": "Keeps a copy of the cell's member list in his boot.",
+      "origin": "draft",
+      "look": "Thin, young, too-bright eyes, a Brotherhood flower pin he has polished smooth."
+    },
+    {
+      "id": "benedek-sorrel",
+      "name": "Court Arcanist Benedek Sorrel",
+      "role": "War mage of the Asanian court",
+      "settlement": "asania",
+      "faction": "kingdom-of-asania",
+      "tier": "regional",
+      "stats": {
+        "Mind": 16,
+        "Allure": 13,
+        "Resolve": 12,
+        "Vitality": 8,
+        "Essence": 18,
+        "Luck": 9
+      },
+      "voice": "Elegant, impatient with anyone slower, talks about the war like a chess problem.",
+      "wants": [
+        "A crystal stockpile big enough to end the Cyrel war",
+        "A seat on Trein's council"
+      ],
+      "fears": [
+        "A shortage in mid-campaign"
+      ],
+      "secret": "Has been buying Brotherhood-made valves through a Trein middleman.",
+      "origin": "draft",
+      "look": "Silver-haired, beautifully dressed, crystal chips sewn into his cuffs like buttons."
+    },
+    {
+      "id": "agathe-fumbridge",
+      "name": "Councillor Agathe Fumbridge",
+      "role": "Gnome engineer on the Wrenspire Council",
+      "settlement": "wrenspire",
+      "faction": "wrenspire-council",
+      "tier": "regional",
+      "stats": {
+        "Mind": 18,
+        "Allure": 10,
+        "Resolve": 13,
+        "Vitality": 7,
+        "Essence": 3,
+        "Luck": 12
+      },
+      "voice": "Thinks out loud, draws on whatever is nearest, distrusts anything that glows.",
+      "wants": [
+        "An airship route over the Badlands",
+        "Wrenspire free of Trein's crystal"
+      ],
+      "fears": [
+        "That magic is simply better and she is wasting her life"
+      ],
+      "origin": "draft",
+      "look": "A gnome with goggles pushed into her hair, burn scars on both forearms and pencil behind each ear."
+    },
+    {
+      "id": "jory-keel",
+      "name": "Captain Jory Keel",
+      "role": "Captain of the Dreadfall Corsairs' flagship",
+      "settlement": "scullcrossed-islands",
+      "faction": "dreadfall-corsairs",
+      "tier": "regional",
+      "stats": {
+        "Mind": 12,
+        "Allure": 14,
+        "Resolve": 15,
+        "Vitality": 15,
+        "Essence": 6,
+        "Luck": 15
+      },
+      "voice": "Soft-spoken, courteous, and the cruellest person on the Gulf.",
+      "wants": [
+        "The Mordun convoys",
+        "A Grimm-forged fleet armament"
+      ],
+      "fears": [
+        "Dying old"
+      ],
+      "origin": "draft",
+      "look": "Small, neat, clean-shaven, with a reader's spectacles and a hook-bladed knife he never takes off."
+    },
+    {
+      "id": "tetsu-imura",
+      "name": "Abbot Tetsu Imura",
+      "role": "Abbot of the Benzaiten Monastery",
+      "settlement": "benzaiten-monastery",
+      "faction": "benzaiten-monastery",
+      "tier": "regional",
+      "stats": {
+        "Mind": 15,
+        "Allure": 11,
+        "Resolve": 19,
+        "Vitality": 13,
+        "Essence": 15,
+        "Luck": 10
+      },
+      "voice": "Answers questions with tasks. Laughs at the right moments and only then.",
+      "wants": [
+        "Balance",
+        "The Petrakyra bond kept"
+      ],
+      "fears": [
+        "Being asked to choose a side"
+      ],
+      "secret": "Knows that the dragon of Petrakyra is Old Mother Yllen, and keeps a shrine to Nicana, who trained here as a girl, that he pretends is a garden.",
+      "origin": "draft",
+      "look": "Old, bald, barefoot, with knuckles like walnuts and a laugh that arrives a moment late."
+    },
+    {
+      "id": "sabine-orrell",
+      "name": "Vault-Mistress Sabine Orrell",
+      "role": "Keeper of one Obirykan state's crystal vault",
+      "settlement": "obirykan",
+      "faction": "obirykan-city-states",
+      "tier": "regional",
+      "stats": {
+        "Mind": 15,
+        "Allure": 15,
+        "Resolve": 12,
+        "Vitality": 8,
+        "Essence": 11,
+        "Luck": 11
+      },
+      "voice": "Speaks in weights and percentages; wears her rank in carats at her throat.",
+      "wants": [
+        "Her vault full",
+        "A rival state's vault empty"
+      ],
+      "fears": [
+        "The audit"
+      ],
+      "secret": "Her vault is short, and she knows which of her deputies took it.",
+      "origin": "draft",
+      "look": "Tall, severe, a necklace of graded crystals at her throat that marks her rank to the carat."
+    },
+    {
+      "id": "sees-twice",
+      "name": "Sees-Twice",
+      "role": "Lizardfolk elder of Ota'at, keeper of the market's challenges",
+      "settlement": "ota-at",
+      "tier": "regional",
+      "stats": {
+        "Mind": 13,
+        "Allure": 8,
+        "Resolve": 16,
+        "Vitality": 15,
+        "Essence": 10,
+        "Luck": 10
+      },
+      "voice": "Blunt to the point of rudeness; respects only what has been tested.",
+      "wants": [
+        "Ota'at left alone",
+        "Good challengers"
+      ],
+      "fears": [
+        "Elves buying the market"
+      ],
+      "origin": "draft",
+      "look": "A grey-scaled lizardfolk elder missing one eye, wearing a necklace of the teeth of challengers."
+    },
+    {
+      "id": "haldric-brannoch",
+      "name": "Mudfather Haldric Brannoch",
+      "role": "High priest of the Cult of Vymnommyth",
+      "settlement": "rulan-gaan",
+      "faction": "cult-of-vymnommyth",
+      "tier": "realm",
+      "stats": {
+        "Mind": 13,
+        "Allure": 15,
+        "Resolve": 18,
+        "Vitality": 12,
+        "Essence": 17,
+        "Luck": 9
+      },
+      "voice": "Gentle and paternal, and talks about poison the way other priests talk about grace.",
+      "wants": [
+        "The swamp to reach Dun Aldun",
+        "Converts"
+      ],
+      "fears": [
+        "Outsiders' clean water"
+      ],
+      "origin": "draft",
+      "look": "A white-bearded dwarf with mud-black hands to the elbow and a kind, tired face."
+    },
+    {
+      "id": "gudrun-stoneheart",
+      "name": "Thane Gudrun Stoneheart",
+      "role": "Head of the Stoneheart Clan, ruler of the Dwarven Empire",
+      "settlement": "dun-aldun",
+      "faction": "stoneheart-clan",
+      "tier": "realm",
+      "stats": {
+        "Mind": 15,
+        "Allure": 12,
+        "Resolve": 19,
+        "Vitality": 13,
+        "Essence": 9,
+        "Luck": 10
+      },
+      "look": "The clan's blue eyes, grey braids, a winter coat she never takes off indoors.",
+      "voice": "Fair, slow, final. Every sentence sounds like a ruling.",
+      "wants": [
+        "The Empire whole",
+        "Rulan Gaan contained"
+      ],
+      "fears": [
+        "Master Grimm leaving"
+      ],
+      "secret": "Suspects Master Grimm is not a dwarf. Has decided not to know.",
+      "origin": "draft"
+    },
+    {
+      "id": "old-mother-yllen",
+      "name": "Old Mother Yllen",
+      "role": "An elder of Petrakyra",
+      "settlement": "petrakyra",
+      "faction": "petrakyra-wood-elves",
+      "eras": [
+        "pre-reform",
+        "brotherhood",
+        "post-reform"
+      ],
+      "tier": "mythic",
+      "stats": null,
+      "look": "An elven woman so old her skin has gone the color of birch bark, with silver eyes and a walking stick she does not need.",
+      "voice": "Soft, motherly, absolutely immovable. Calls everyone 'child', including kings.",
+      "wants": [
+        "Petrakyra left out of the world",
+        "The brood-fire back, if it can be had without war"
+      ],
+      "fears": [
+        "Saradrosk finding her",
+        "Her elves learning what she is"
+      ],
+      "secret": "She is Yllevantharyx the Silver, the ninth Eternal Dragon.",
+      "relationships": {
+        "tetsu-imura": "the only outsider she writes to"
+      },
+      "origin": "draft"
+    },
+    {
+      "id": "wendel-ashcombe",
+      "name": "Wendel Ashcombe",
+      "role": "Junior Brotherhood clerk in Trein",
+      "settlement": "trein",
+      "faction": "brotherhood-of-man",
+      "eras": [
+        "brotherhood"
+      ],
+      "tier": "local",
+      "stats": {
+        "Mind": 12,
+        "Allure": 8,
+        "Resolve": 9,
+        "Vitality": 8,
+        "Essence": 11,
+        "Luck": 10
+      },
+      "look": "Barely old enough to shave, ink-stained hands, eyes too bright.",
+      "voice": "Quotes slogans when frightened: 'Magic for mortals. No more gods.'",
+      "wants": [
+        "To believe the Brotherhood is good"
+      ],
+      "fears": [
+        "Finding out what the ledgers mean"
+      ],
+      "secret": "Nicana let him live, and he has started copying the allocation ledgers for someone he hopes will use them well.",
+      "origin": "draft",
+      "origin_note": "The unnamed clerk in Nicana's story."
+    },
+    {
+      "id": "royce-fallow",
+      "name": "Alderman Royce Fallow",
+      "role": "Brotherhood patron in Trein",
+      "settlement": "trein",
+      "faction": "brotherhood-of-man",
+      "eras": [
+        "brotherhood"
+      ],
+      "tier": "regional",
+      "stats": {
+        "Mind": 13,
+        "Allure": 14,
+        "Resolve": 10,
+        "Vitality": 7,
+        "Essence": 9,
+        "Luck": 12
+      },
+      "look": "Fat, beringed, beaming, smelling of expensive wine.",
+      "voice": "Talks about self-determination with his mouth full.",
+      "wants": [
+        "Songs about mortal greatness",
+        "His allocation numbers to look good"
+      ],
+      "fears": [
+        "Being blamed for a shortage"
+      ],
+      "secret": "His ledger marks a healers' quarter for cuts as 'low productivity'. Girione robbed his storeroom.",
+      "origin": "draft",
+      "origin_note": "The unnamed patron in Girione's story."
+    },
+    {
+      "id": "humbert-lisle",
+      "name": "Liaison Humbert Lisle",
+      "role": "Brotherhood liaison in Convila",
+      "settlement": "convila",
+      "faction": "brotherhood-of-man",
+      "eras": [
+        "brotherhood"
+      ],
+      "tier": "local",
+      "stats": {
+        "Mind": 11,
+        "Allure": 10,
+        "Resolve": 7,
+        "Vitality": 7,
+        "Essence": 8,
+        "Luck": 11
+      },
+      "look": "Thin, perfumed, with a ledger-clerk's stoop.",
+      "voice": "Smiles while he threatens. 'See, the system works.'",
+      "wants": [
+        "Order, on paper"
+      ],
+      "fears": [
+        "Demons",
+        "Being seen near the tiefling"
+      ],
+      "origin": "draft",
+      "origin_note": "The unnamed liaison in Witarr's story."
+    },
+    {
+      "id": "dorruk-long-speech",
+      "name": "Dorruk Long-Speech",
+      "role": "War-chief of Unguruk who bargained with a devil",
+      "settlement": "unguruk-camp",
+      "faction": "unguruk-tribe",
+      "eras": [
+        "brotherhood"
+      ],
+      "tier": "regional",
+      "stats": {
+        "Mind": 11,
+        "Allure": 15,
+        "Resolve": 9,
+        "Vitality": 16,
+        "Essence": 6,
+        "Luck": 10
+      },
+      "look": "A heavy orc in a bronze-studded harness, fond of a high seat by the fire.",
+      "voice": "Speeches. Always speeches, about strength he talks as if he invented.",
+      "wants": [
+        "Power he does not have to fight for"
+      ],
+      "fears": [
+        "Being challenged and losing"
+      ],
+      "secret": "He agreed to open the passes when the time came, in exchange for borrowed power. Aveus denounced him in front of the tribe.",
+      "origin": "draft",
+      "origin_note": "The unnamed war-chief in Aveus's story."
+    },
+    {
+      "id": "mister-ambry",
+      "name": "Mister Ambry",
+      "role": "A devil in clean robes, offering deals",
+      "eras": [
+        "brotherhood",
+        "post-reform"
+      ],
+      "tier": "realm",
+      "stats": null,
+      "look": "A pleasant man in robes too clean for the Badlands, with soft hands and a sure smile. The air around him feels tight, like the world wrapped in wire.",
+      "voice": "Warm, complimentary, unhurried. Calls refusal 'bravery' to make it sound foolish.",
+      "wants": [
+        "Signatures",
+        "The passes opened"
+      ],
+      "fears": [
+        "Nothing he admits to"
+      ],
+      "secret": "A servant of Mammon. Aveus crushed one of its bodies in the 3120s; it came back. In the Post-Reform era it is the polite stranger at Murga Hollowtooth's fire.",
+      "origin": "draft",
+      "origin_note": "The unnamed devil in Aveus's story, carried forward."
+    },
+    {
+      "id": "ivo-brandt",
+      "name": "Castellan Ivo Brandt",
+      "role": "Commander of Adlmyr",
+      "settlement": "adlmyr",
+      "faction": "kingdom-of-cyrel",
+      "eras": [
+        "pre-reform"
+      ],
+      "tier": "regional",
+      "stats": {
+        "Mind": 12,
+        "Allure": 10,
+        "Resolve": 16,
+        "Vitality": 15,
+        "Essence": 7,
+        "Luck": 8
+      },
+      "look": "Broad, sunburned, with a beard he braids for luck before every sortie.",
+      "voice": "Cheerful in the way of a man who knows the odds.",
+      "wants": [
+        "Reinforcements from Cyrel that never come",
+        "His son kept at Bastion, safe"
+      ],
+      "fears": [
+        "The tribes uniting"
+      ],
+      "secret": "He has been paying the Kadragar for warnings, and the payments have stopped.",
+      "origin": "draft"
+    },
+    {
+      "id": "wenna-callow",
+      "name": "Mother Wenna Callow",
+      "role": "Priestess of Freya in Eriane",
+      "settlement": "eriane",
+      "eras": [
+        "pre-reform"
+      ],
+      "tier": "local",
+      "stats": {
+        "Mind": 12,
+        "Allure": 13,
+        "Resolve": 14,
+        "Vitality": 10,
+        "Essence": 14,
+        "Luck": 9
+      },
+      "look": "Broad-hipped, flour on her apron, a falcon feather in her hair.",
+      "voice": "Warm, then suddenly fierce.",
+      "wants": [
+        "Her goddess to answer as she did when Wenna was young"
+      ],
+      "fears": [
+        "That she is praying to an empty sky"
+      ],
+      "secret": "Her healings have started working only near the lake, where the Ley runs a little stronger. She has told no one.",
+      "origin": "draft"
+    },
+    {
+      "id": "cuthbert-hale",
+      "name": "Magister Cuthbert Hale",
+      "role": "Trein scholar who resents temples and dragons",
+      "settlement": "trein",
+      "eras": [
+        "pre-reform"
+      ],
+      "tier": "regional",
+      "stats": {
+        "Mind": 17,
+        "Allure": 13,
+        "Resolve": 11,
+        "Vitality": 7,
+        "Essence": 14,
+        "Luck": 10
+      },
+      "look": "Long-faced, shabby velvet, pamphlets in every pocket.",
+      "voice": "Gives lectures at dinner. Funny, bitter and convincing.",
+      "wants": [
+        "Magic for mortals, without priests or dragons in the way"
+      ],
+      "fears": [
+        "Dying unread"
+      ],
+      "secret": "Mistress Sara funds his salon. Two centuries on, the salon's heirs will found the Brotherhood.",
+      "relationships": {
+        "mistress-sara": "patron"
+      },
+      "origin": "draft"
+    }
+  ]
+}

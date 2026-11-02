@@ -1,0 +1,164 @@
+{
+ "about": "Vallarith's travel map (dungeon/travel.py, docs/story.md \"Journeys\"): places joined by roads, each road with its hours on foot, terrain and danger, each region's road encounters, and each region's danger and night-camp encounters for resting out in the open (dungeon/rest.py), and the world and region its Life Cards draw from (dungeon/happenings.py). Positions are from the world map (dungeon/world/packages/vallarith/settlements.json). A node is a whole town (its city and arrival place) or a place on the Road (dungeon/world/data/cities/vallarith-road.json). A hex crawl (dungeon/hexes.py): its hexes are world/data/hexes/vallarith.json, and land off the edge of that map is generated in play, in the wilds.",
+ "travel": "hex",
+ "hexes": "vallarith",
+ "wild": {"id": "the-wilds", "name": "the wilds", "region": "wilds", "city": "vallarith-road", "place": "the-wilds", "safe": false},
+ "hours_a_day": 10,
+ "odds": {"none": 0, "low": 15, "medium": 30, "high": 50},
+ "food": ["bread", "dried-meat", "cheese"],
+ "nodes": [
+  {"id": "kingswood", "name": "Kingswood", "region": "kingdom-of-cyrel", "city": "kingswood", "place": "the-green", "safe": true, "map": {"x": 0.33, "y": 0.62}},
+  {"id": "convila", "name": "Convila", "region": "kingdom-of-cyrel", "city": "vallarith-road", "place": "convila", "safe": true, "map": {"x": 0.31, "y": 0.66}},
+  {"id": "eriane", "name": "Eriane", "region": "kingdom-of-cyrel", "city": "vallarith-road", "place": "eriane", "safe": true, "map": {"x": 0.37, "y": 0.55}},
+  {"id": "cyrel", "name": "Cyrel", "region": "kingdom-of-cyrel", "city": "vallarith-road", "place": "cyrel", "safe": true, "famous": true, "map": {"x": 0.46, "y": 0.56}},
+  {"id": "bastion", "name": "Bastion", "region": "kingdom-of-cyrel", "city": "vallarith-road", "place": "bastion", "safe": true, "map": {"x": 0.51, "y": 0.58}},
+  {"id": "mossrun", "name": "Mossrun", "region": "kingdom-of-cyrel", "city": "vallarith-road", "place": "mossrun", "safe": true, "map": {"x": 0.53, "y": 0.47}},
+  {"id": "asania", "name": "Asania", "region": "kingdoms-of-man", "city": "vallarith-road", "place": "asania", "safe": true, "famous": true, "map": {"x": 0.4, "y": 0.43}},
+  {"id": "abandoned-keep", "name": "the Abandoned Keep", "region": "badlands", "city": "vallarith-road", "place": "abandoned-keep", "safe": false, "map": {"x": 0.4, "y": 0.67}},
+  {"id": "adlmyr", "name": "Adlmyr", "region": "badlands", "city": "vallarith-road", "place": "adlmyr", "safe": false, "map": {"x": 0.49, "y": 0.65}},
+  {"id": "brynwyr", "name": "Brynwyr", "region": "brynwyr", "city": "vallarith-road", "place": "brynwyr", "safe": false, "map": {"x": 0.19, "y": 0.71}}
+ ],
+ "routes": [
+  {"from": "kingswood", "to": "convila", "hours": 8, "terrain": "the forest road", "danger": "low"},
+  {"from": "kingswood", "to": "eriane", "hours": 12, "terrain": "the Cyrel road", "danger": "low"},
+  {"from": "eriane", "to": "cyrel", "hours": 14, "terrain": "the Cyrel road", "danger": "low"},
+  {"from": "cyrel", "to": "bastion", "hours": 8, "terrain": "the fortress road", "danger": "medium"},
+  {"from": "cyrel", "to": "mossrun", "hours": 16, "terrain": "the wet mountain valleys", "danger": "medium"},
+  {"from": "eriane", "to": "asania", "hours": 30, "terrain": "the strait road through the war country", "danger": "medium"},
+  {"from": "kingswood", "to": "abandoned-keep", "hours": 10, "terrain": "the broken hills", "danger": "high"},
+  {"from": "abandoned-keep", "to": "adlmyr", "hours": 14, "terrain": "the broken hills", "danger": "high"},
+  {"from": "bastion", "to": "adlmyr", "hours": 12, "terrain": "the Badlands", "danger": "high"},
+  {"from": "convila", "to": "brynwyr", "hours": 24, "terrain": "the old forest past the border stones", "danger": "high"}
+ ],
+ "encounters": {
+  "kingdom-of-cyrel": [
+   {"where": "road", "weight": 3, "text": "A carter going the other way, with news from Cyrel, a sore back and a jug he is willing to share."},
+   {"where": "road", "weight": 2, "text": "A royal patrol stops the character, asks their business, and looks hard at what they carry."},
+   {"where": "road", "weight": 1, "text": "Deserters from the Asanian front, hanged at a crossroads with signs round their necks."},
+   {"where": "road", "weight": 2, "action": "slip past the toll-takers on the road without paying twice", "difficulty": "normal", "threat": "Road wardens who are not wardens stop the character for a crown's toll and a long look into the purse."},
+   {"where": "road", "weight": 2, "action": "spot the bandits' ambush before it springs", "difficulty": "normal", "threat": {"text": "Bandits come out of the ditch on both sides of the road, cudgels up.", "foe": {"name": "road bandit", "count": 2, "vitality": 10, "resolve": 8, "weapon": 0, "wants": "rob"}}},
+   {"where": "wild", "weight": 2, "text": "A poacher's fire in a coppice, still warm, and a brace of rabbits left hanging where they were dropped."},
+   {"where": "wild", "weight": 2, "action": "spot the king's foresters before they spot a stranger in the king's game", "difficulty": "normal", "threat": "Two of the king's foresters with crossbows step out of the trees and want to know what a stranger is doing off the road."}
+  ],
+  "kingdoms-of-man": [
+   {"where": "road", "weight": 3, "text": "A licensed mage's coach thunders past, its brooch-wearing guards watching the ditches."},
+   {"weight": 2, "text": "A village with half its lamps dark: the crystal allocation was cut and nobody says by whom."},
+   {"where": "road", "weight": 2, "action": "keep clear of the press gang working the road for the Asanian army", "difficulty": "normal", "threat": {"text": "An Asanian press gang closes in with a rope and a recruiting sergeant's smile.", "foe": {"name": "press-gang man", "count": 3, "vitality": 10, "resolve": 10, "weapon": 0, "wants": "capture"}}},
+   {"where": "wild", "weight": 2, "text": "A shepherd's hut on the downs, and a shepherd who has not seen a stranger come across the fields in years."},
+   {"where": "wild", "weight": 2, "action": "keep out of sight of the manor's riders", "difficulty": "normal", "threat": "Riders from a manor house come across the field at a canter to see who is trespassing on their lord's land."}
+  ],
+  "badlands": [
+   {"weight": 2, "text": "Old bones and older weapons where the horde came through, picked clean and bleached."},
+   {"weight": 2, "action": "find water before the sun finishes its work", "difficulty": "hard", "threat": "The water runs out a day early. Thirst sets in, and with it the shakes."},
+   {"weight": 3, "action": "see the raiders before they see the character", "difficulty": "hard", "threat": {"text": "Unguruk raiders ride down off the ridge, whooping, blades out.", "foe": {"name": "Unguruk raider", "count": 3, "vitality": 12, "resolve": 12, "weapon": 1, "wants": "kill"}}},
+   {"weight": 1, "action": "stay off the old ground where the wards have failed", "difficulty": "hard", "threat": {"text": "Something long dead and badly buried pulls itself out of the shale.", "foe": {"name": "ward-ghoul", "count": 1, "vitality": 14, "resolve": 20, "weapon": 1, "wants": "kill", "horror": true}}}
+  ],
+  "brynwyr": [
+   {"weight": 2, "text": "Trees older than the kingdom, and a silence so deep the character's own breathing sounds rude."},
+   {"weight": 2, "text": "A young elf, curious and armed, watches from the branches and asks a single question."},
+   {"weight": 3, "action": "keep to the warden path and out of the wardens' sight", "difficulty": "hard", "threat": {"text": "Wardens close in among the trees, unseen, bows drawn.", "foe": {"name": "warden of Brynwyr", "count": 2, "vitality": 12, "resolve": 12, "weapon": 1, "wants": "capture"}}}
+  ],
+  "dwarven-empire": [
+   {"where": "road", "weight": 3, "text": "A dwarven ore train grinds past on iron-shod wheels, its guards counting the character with their eyes."},
+   {"weight": 2, "text": "Cairns on the ridge, each with a name cut into the top stone and a clan mark under it."},
+   {"weight": 2, "action": "find the pass marker before the weather closes in", "difficulty": "hard", "threat": "Cloud comes down over the pass and the cold with it. Fingers stop working; the way down takes half the night."},
+   {"weight": 1, "action": "spot the Rulan Gaan lookouts first", "difficulty": "hard", "threat": {"text": "Rulan Gaan cultists rise out of the scree with hooked spears and painted faces.", "foe": {"name": "Rulan Gaan cultist", "count": 3, "vitality": 11, "resolve": 14, "weapon": 1, "wants": "capture"}}},
+   {"where": "wild", "weight": 2, "text": "A shaft head in the heather, long abandoned, the winch rusted solid and cold air breathing up out of the dark."}
+  ],
+  "torogh-highlands": [
+   {"weight": 3, "text": "The loch below, flat and black, and a boat on it that does not seem to move."},
+   {"weight": 2, "text": "A shepherd and her dogs, who point the way and want nothing for it but news."},
+   {"weight": 2, "action": "keep footing on the wet shale", "difficulty": "normal", "threat": "A slide of wet shale takes the character down twenty feet of slope. Bruised all along one side."},
+   {"weight": 1, "action": "hear the snow cat before it springs", "difficulty": "hard", "threat": {"text": "A snow cat drops off a ledge onto the path, ears flat.", "foe": {"name": "snow cat", "count": 1, "vitality": 13, "resolve": 10, "weapon": 1, "wants": "kill"}}}
+  ],
+  "eastern-forests": [
+   {"weight": 3, "text": "Trees so close the light goes green, and a lake through them that nobody has put on a map."},
+   {"weight": 2, "text": "A charcoal burner's clearing, long abandoned, the kiln cold and full of nesting birds."},
+   {"weight": 2, "action": "keep the sun on the right side", "difficulty": "hard", "threat": "The trees all look the same by noon. Half a day lost walking in a wide circle."},
+   {"weight": 2, "action": "smell the bear before walking into its ground", "difficulty": "hard", "threat": {"text": "A bear comes up out of the ferns, standing, close enough to smell.", "foe": {"name": "forest bear", "count": 1, "vitality": 18, "resolve": 12, "weapon": 1, "wants": "kill"}}},
+   {"weight": 1, "action": "notice the snares before stepping in one", "difficulty": "hard", "threat": {"text": "A snare jerks tight and three hunters in green step out of the trees to see what they caught.", "foe": {"name": "forest hunter", "count": 3, "vitality": 10, "resolve": 11, "weapon": 1, "wants": "capture"}}}
+  ],
+  "wilds": [
+   {"weight": 3, "text": "Country nobody in Kingswood has a name for: open, quiet, and older than the maps."},
+   {"weight": 2, "text": "A standing stone with words cut in a script the character has never seen."},
+   {"weight": 2, "action": "find water before the skins run dry", "difficulty": "hard", "threat": "No stream, no spring, no rain. The skins run dry and thirst sets in."},
+   {"weight": 2, "action": "see the pack before it sees the character", "difficulty": "hard", "threat": {"text": "Grey wolves, a whole pack of them, fanning out through the grass.", "foe": {"name": "grey wolf", "count": 4, "vitality": 9, "resolve": 9, "weapon": 1, "wants": "kill"}}},
+   {"weight": 1, "action": "stay clear of the hollow where the ground is wrong", "difficulty": "hard", "threat": {"text": "Something that was a man once crawls out of the hollow on too many joints.", "foe": {"name": "hollow thing", "count": 1, "vitality": 16, "resolve": 20, "weapon": 1, "wants": "kill", "horror": true}}}
+  ]
+ },
+ "world": "vallarith",
+ "regions": {
+  "kingdom-of-cyrel": {"name": "the Kingdom of Cyrel", "danger": "low", "cards": "cyrel", "tier": 1},
+  "kingdoms-of-man": {"name": "the Kingdoms of Man", "danger": "low", "cards": "asania", "tier": 2},
+  "badlands": {"name": "the Badlands", "danger": "high", "cards": "badlands", "tier": 2},
+  "brynwyr": {"name": "the forest of Brynwyr", "danger": "high", "cards": "brynwyr", "tier": 3},
+  "dwarven-empire": {"name": "the Dwarven Empire", "danger": "medium", "tier": 2},
+  "torogh-highlands": {"name": "the Torogh Highlands", "danger": "medium", "tier": 2},
+  "eastern-forests": {"name": "the eastern forests", "danger": "high", "tier": 3},
+  "wilds": {"name": "the wilds past the maps", "danger": "high", "tier": 3}
+ },
+ "camp": {
+  "kingdom-of-cyrel": [
+   {"weight": 3, "text": "A farm dog barks half the night at something past the firelight, and nothing comes of it."},
+   {"weight": 2, "text": "A shepherd asks to share the fire and talks until he falls asleep in the middle of a sentence."},
+   {"weight": 2, "action": "find a dry hollow before the rain comes in", "difficulty": "normal", "threat": "Rain comes through in the small hours and soaks everything. Nobody sleeps."},
+   {"weight": 2, "action": "wake before the men from the road reach the fire", "difficulty": "normal", "threat": {"text": "Two men from the road creep up on the camp in the dark, knives out.", "foe": {"name": "road thief", "count": 2, "vitality": 9, "resolve": 7, "weapon": 0, "wants": "rob"}}}
+  ],
+  "kingdoms-of-man": [
+   {"weight": 3, "text": "A mage's lamp drifts over the fields at midnight, looking for something, and moves on."},
+   {"weight": 2, "action": "keep the fire hidden from the press gang's night patrol", "difficulty": "normal", "threat": {"text": "An Asanian press gang closes in with a rope and a recruiting sergeant's smile.", "foe": {"name": "press-gang man", "count": 3, "vitality": 10, "resolve": 10, "weapon": 0, "wants": "capture"}}}
+  ],
+  "badlands": [
+   {"weight": 2, "text": "Drums, far off, and then nothing until dawn."},
+   {"weight": 2, "action": "keep the cold off without a fire that shows for miles", "difficulty": "hard", "threat": "The night cold gets into the bones. Nobody sleeps, and morning finds the character stiff and shaking."},
+   {"weight": 3, "action": "hear the raiders before they reach the camp", "difficulty": "hard", "threat": {"text": "Unguruk raiders ride down off the ridge, whooping, blades out.", "foe": {"name": "Unguruk raider", "count": 3, "vitality": 12, "resolve": 12, "weapon": 1, "wants": "kill"}}},
+   {"weight": 1, "action": "keep away from the old ground where the dead walk", "difficulty": "hard", "threat": {"text": "Something long dead and badly buried pulls itself out of the shale.", "foe": {"name": "ward-ghoul", "count": 1, "vitality": 14, "resolve": 20, "weapon": 1, "wants": "kill", "horror": true}}}
+  ],
+  "brynwyr": [
+   {"weight": 2, "text": "Lights move between the trees all night, silent, never coming closer."},
+   {"weight": 1, "action": "find ground the forest does not mind being slept on", "difficulty": "hard", "threat": "Roots, stones and whispering. The forest does not let the character sleep."},
+   {"weight": 3, "action": "stay out of the wardens' sight", "difficulty": "hard", "threat": {"text": "Wardens close in among the trees, unseen, bows drawn.", "foe": {"name": "warden of Brynwyr", "count": 2, "vitality": 12, "resolve": 12, "weapon": 1, "wants": "capture"}}}
+  ],
+  "dwarven-empire": [
+   {"weight": 3, "text": "Wind all night, and the stars very close."},
+   {"weight": 2, "action": "build a wall of stones against the wind", "difficulty": "hard", "threat": "The cold gets in under everything. Morning finds the character grey and shaking."},
+   {"weight": 1, "action": "wake before the cultists reach the fire", "difficulty": "hard", "threat": {"text": "Rulan Gaan cultists come out of the dark with nets and hooked spears.", "foe": {"name": "Rulan Gaan cultist", "count": 3, "vitality": 11, "resolve": 14, "weapon": 1, "wants": "capture"}}}
+  ],
+  "torogh-highlands": [
+   {"weight": 3, "text": "Something big moves on the loch in the night, and the water slaps the stones for an hour after."},
+   {"weight": 2, "action": "find a dry spot out of the wind", "difficulty": "normal", "threat": "Rain off the loch soaks everything. Nobody sleeps."},
+   {"weight": 1, "action": "hear the snow cat on the rocks above", "difficulty": "hard", "threat": {"text": "A snow cat comes down to the firelight, hungry enough not to care about it.", "foe": {"name": "snow cat", "count": 1, "vitality": 13, "resolve": 10, "weapon": 1, "wants": "kill"}}}
+  ],
+  "eastern-forests": [
+   {"weight": 3, "text": "Owls, and something else answering them that is not an owl."},
+   {"weight": 2, "action": "hang the food out of reach", "difficulty": "normal", "threat": "Something gets into the pack in the night. A day's food is gone and the rest is torn open."},
+   {"weight": 1, "action": "wake before the bear reaches the camp", "difficulty": "hard", "threat": {"text": "A bear comes into the camp after the food and does not leave when shouted at.", "foe": {"name": "forest bear", "count": 1, "vitality": 18, "resolve": 12, "weapon": 1, "wants": "kill"}}}
+  ],
+  "wilds": [
+   {"weight": 3, "text": "Lights on the horizon that are not a town, moving slowly, then gone."},
+   {"weight": 2, "action": "keep the fire small and hidden", "difficulty": "hard", "threat": "Eyes at the edge of the firelight all night. Nobody sleeps."},
+   {"weight": 1, "action": "hear the pack circling", "difficulty": "hard", "threat": {"text": "The wolves come in low from three sides at once.", "foe": {"name": "grey wolf", "count": 4, "vitality": 9, "resolve": 9, "weapon": 1, "wants": "kill"}}}
+  ]
+ },
+ "sites": {
+  "odds": 7,
+  "owners": ["Hob", "Dunstan", "Wat", "Agnes", "Brill", "Tull", "Hatch", "Gammer", "Pike", "Orme", "Sallow", "Kettle", "Merrow", "Fenn", "Crake", "Dobbin"],
+  "any": [
+   {"weight": 3, "kind": "ruin", "visible": true, "names": ["{owner}'s Tower", "the old keep at {owner}'s Rise", "the burnt hall of {owner}"], "text": "A ruin from before the Reform: fallen walls, a stair going up to nothing, and cellars that go further down than they should."},
+   {"weight": 2, "kind": "shrine", "visible": false, "names": ["the {owner} stone", "{owner}'s well", "the hanged-man shrine"], "text": "A shrine to a god nobody names any more: a cut stone, old offerings, and new ones that someone left not long ago."},
+   {"weight": 2, "kind": "cave", "visible": false, "names": ["{owner}'s Hole", "the dripping cave", "the long cave under {owner}'s Knoll"], "text": "A cave mouth behind brush, cold air breathing out of it, with old soot on the roof from fires long out."},
+   {"weight": 2, "kind": "lair", "visible": false, "intensity": {"horror": 2}, "names": ["the bone ground", "the {owner} den", "the gnawed hollow"], "text": "A lair: bones cracked for marrow, a smell that sticks to clothes, and tracks too big for wolves."},
+   {"weight": 1, "kind": "battlefield", "visible": true, "names": ["{owner}'s Field", "the field of crows", "the rusting ground"], "text": "An old battlefield gone to grass, the barrows in rows and the odd rusted blade turned up by the plough nobody uses here."},
+   {"weight": 2, "kind": "camp", "visible": true, "names": ["{owner}'s camp", "a charcoal burners' camp", "a deserters' camp"], "text": "A camp of people who would rather not be found: smoke, lean dogs, and watchers who saw the character first."},
+   {"weight": 2, "kind": "hamlet", "visible": true, "names": ["{owner}'s End", "Little {owner}", "{owner}'s Ford"], "text": "A hamlet that is on no map: a handful of houses, a well, and people who stop talking when a stranger walks in."}
+  ],
+  "badlands": [
+   {"weight": 3, "kind": "ruin", "visible": true, "names": ["the ward-fort at {owner}'s Gap", "the broken ward tower", "{owner}'s Watch"], "text": "One of the old ward forts from the horde wars, the wards long failed, the gate down, and something living in the gatehouse."},
+   {"weight": 2, "kind": "camp", "visible": true, "intensity": {"violence": 2}, "names": ["an Unguruk camp", "a raiders' camp"], "text": "A raiders' camp: hide tents, horses on a picket line, and trophies on poles."},
+   {"weight": 1, "kind": "lair", "visible": false, "intensity": {"horror": 2}, "names": ["the shale pits", "the dead ground"], "text": "Ground where the wards failed badly: the shale is warm, nothing grows, and the dead do not stay down."}
+  ],
+  "wilds": [
+   {"weight": 2, "kind": "ruin", "visible": true, "names": ["the black spire", "the toppled towers", "the stone ring"], "text": "Stonework older than anything in the Kingdoms, in a style nobody in Kingswood would recognise."}
+  ]
+ }
+}

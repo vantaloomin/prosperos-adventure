@@ -1,0 +1,1328 @@
+{
+  "_about": "How a wedding goes (dungeon/life/wedding_customs.py), for weddings in the companion's circle and their own: `customs` by the city's calendar (dungeon/world/catalog.calendar_id) or else its era group (dungeon/life/admin.era_group): the words, the order of the day, venue words and place kinds (`else`: the kinds when the city has none of those, for a church wedding in a town without a church), the church's closed seasons the old eras keep (`closed`), the weekday (0 Monday) and hours, months engaged and guests by size, the budget in months of take-home by size and the share paid, the ring, how one asks, what they wear by pronoun, and the planning on the calendar.",
+  "customs": {
+    "us": {
+      "word": "wedding",
+      "wed": "married",
+      "ceremony": "the ceremony first, then the reception",
+      "moments": [
+        "the vows",
+        "the first kiss as a married couple",
+        "photos with the guests",
+        "the toasts",
+        "the first dance",
+        "cutting the cake"
+      ],
+      "venues": {
+        "words": "chapel|church|garden|hall|hotel|inn|manor|estate|conservatory|ballroom|terrace|winery|barn|lodge|loft|mansion|pavilion",
+        "kinds": [
+          "garden",
+          "landmark",
+          "venue",
+          "museum",
+          "restaurant",
+          "temple",
+          "park",
+          "inn"
+        ]
+      },
+      "day": 5,
+      "at": "15:00",
+      "until": "23:00",
+      "months": {
+        "small": [
+          4,
+          7
+        ],
+        "proper": [
+          9,
+          14
+        ],
+        "big": [
+          12,
+          18
+        ]
+      },
+      "guests": {
+        "small": [
+          20,
+          40
+        ],
+        "proper": [
+          80,
+          130
+        ],
+        "big": [
+          160,
+          240
+        ]
+      },
+      "budget": {
+        "small": 1.5,
+        "proper": 5,
+        "big": 10
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 1.0,
+        "rings": [
+          "a thin gold band with a tiny diamond",
+          "a gold ring with a small round diamond",
+          "a platinum ring with a solitaire diamond",
+          "a platinum ring with a large diamond set in a halo"
+        ]
+      },
+      "ask": "down on one knee, with the ring",
+      "attire": {
+        "she": "a white wedding dress",
+        "he": "a dark wedding suit with a flower in the buttonhole",
+        "they": "a tailored cream wedding suit with a flower pinned on"
+      },
+      "prep": [
+        {
+          "key": "venue",
+          "title": "Book the wedding venue",
+          "done": "booked the wedding venue",
+          "after": 10,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "attire",
+          "title": "Wedding outfit shopping",
+          "done": "went shopping for a wedding outfit",
+          "before": 150,
+          "minutes": 150,
+          "out": true
+        },
+        {
+          "key": "invites",
+          "title": "Send the wedding invitations",
+          "done": "sent out the wedding invitations",
+          "before": 60,
+          "minutes": 90,
+          "out": false
+        },
+        {
+          "key": "cake",
+          "title": "Wedding cake tasting",
+          "done": "went to a wedding cake tasting",
+          "before": 45,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "fitting",
+          "title": "Final fitting for the wedding",
+          "done": "had a final fitting for the wedding",
+          "before": 14,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "seating",
+          "title": "Wedding seating plan",
+          "done": "worked out the wedding seating plan",
+          "before": 7,
+          "minutes": 90,
+          "out": false
+        }
+      ]
+    },
+    "uk": {
+      "word": "wedding",
+      "wed": "married",
+      "ceremony": "the ceremony first, then the wedding breakfast and the evening do",
+      "moments": [
+        "the vows",
+        "signing the register",
+        "confetti outside",
+        "the wedding breakfast",
+        "the speeches",
+        "the first dance",
+        "cutting the cake"
+      ],
+      "venues": {
+        "words": "chapel|church|garden|hall|hotel|inn|manor|estate|terrace|barn|lodge|registry|register office|pavilion",
+        "kinds": [
+          "garden",
+          "landmark",
+          "venue",
+          "museum",
+          "restaurant",
+          "temple",
+          "park",
+          "inn"
+        ]
+      },
+      "day": 5,
+      "at": "14:00",
+      "until": "23:00",
+      "months": {
+        "small": [
+          4,
+          7
+        ],
+        "proper": [
+          10,
+          15
+        ],
+        "big": [
+          12,
+          20
+        ]
+      },
+      "guests": {
+        "small": [
+          20,
+          40
+        ],
+        "proper": [
+          70,
+          110
+        ],
+        "big": [
+          140,
+          200
+        ]
+      },
+      "budget": {
+        "small": 1.5,
+        "proper": 5,
+        "big": 9
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 0.8,
+        "rings": [
+          "a thin gold band with a tiny diamond",
+          "a gold ring with a small diamond",
+          "a platinum ring with a solitaire diamond",
+          "a platinum ring with a large sapphire and diamonds"
+        ]
+      },
+      "ask": "down on one knee, with the ring",
+      "attire": {
+        "she": "a white wedding dress",
+        "he": "a morning suit with a flower in the buttonhole",
+        "they": "a tailored pale grey wedding suit with a flower pinned on"
+      },
+      "prep": [
+        {
+          "key": "venue",
+          "title": "Book the wedding venue",
+          "done": "booked the wedding venue",
+          "after": 10,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "attire",
+          "title": "Wedding outfit shopping",
+          "done": "went shopping for a wedding outfit",
+          "before": 150,
+          "minutes": 150,
+          "out": true
+        },
+        {
+          "key": "invites",
+          "title": "Send the wedding invitations",
+          "done": "sent out the wedding invitations",
+          "before": 60,
+          "minutes": 90,
+          "out": false
+        },
+        {
+          "key": "cake",
+          "title": "Wedding cake tasting",
+          "done": "went to a wedding cake tasting",
+          "before": 45,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "fitting",
+          "title": "Final fitting for the wedding",
+          "done": "had a final fitting for the wedding",
+          "before": 14,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "seating",
+          "title": "Wedding seating plan",
+          "done": "worked out the wedding seating plan",
+          "before": 7,
+          "minutes": 90,
+          "out": false
+        }
+      ]
+    },
+    "japan": {
+      "word": "wedding",
+      "wed": "married",
+      "ceremony": "the ceremony first, then the reception (hirōen)",
+      "moments": [
+        "the vows",
+        "the sake sharing (san-san-kudo)",
+        "photos with the families",
+        "the speeches from the bosses and friends",
+        "cutting the cake",
+        "the letter read to the parents"
+      ],
+      "venues": {
+        "words": "shrine|chapel|hotel|hall|garden|terrace|kaikan",
+        "kinds": [
+          "temple",
+          "garden",
+          "landmark",
+          "venue",
+          "restaurant",
+          "park"
+        ]
+      },
+      "day": 5,
+      "at": "11:00",
+      "until": "17:00",
+      "months": {
+        "small": [
+          4,
+          7
+        ],
+        "proper": [
+          8,
+          12
+        ],
+        "big": [
+          10,
+          14
+        ]
+      },
+      "guests": {
+        "small": [
+          15,
+          30
+        ],
+        "proper": [
+          50,
+          80
+        ],
+        "big": [
+          90,
+          140
+        ]
+      },
+      "budget": {
+        "small": 1.5,
+        "proper": 6,
+        "big": 10
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 0.8,
+        "rings": [
+          "a slim platinum band with a tiny diamond",
+          "a platinum ring with a small diamond",
+          "a platinum ring with a brilliant-cut diamond",
+          "a platinum ring with a large diamond and a pavé band"
+        ]
+      },
+      "ask": "with the ring, simply and seriously",
+      "attire": {
+        "she": "a white wedding dress",
+        "he": "a white tuxedo",
+        "they": "a tailored white wedding suit"
+      },
+      "prep": [
+        {
+          "key": "venue",
+          "title": "Book the wedding hall",
+          "done": "booked the wedding hall",
+          "after": 10,
+          "minutes": 90,
+          "out": true
+        },
+        {
+          "key": "yuino",
+          "title": "Engagement meeting with both families",
+          "done": "had the engagement meeting with both families",
+          "after": 40,
+          "minutes": 150,
+          "out": true
+        },
+        {
+          "key": "attire",
+          "title": "Wedding outfit fitting",
+          "done": "went to a wedding outfit fitting",
+          "before": 120,
+          "minutes": 120,
+          "out": true
+        },
+        {
+          "key": "invites",
+          "title": "Send the wedding invitations",
+          "done": "sent out the wedding invitations",
+          "before": 75,
+          "minutes": 90,
+          "out": false
+        },
+        {
+          "key": "menu",
+          "title": "Reception menu tasting",
+          "done": "went to the reception menu tasting",
+          "before": 40,
+          "minutes": 90,
+          "out": true
+        },
+        {
+          "key": "seating",
+          "title": "Reception seating plan",
+          "done": "worked out the reception seating plan",
+          "before": 10,
+          "minutes": 90,
+          "out": false
+        }
+      ]
+    },
+    "south-korea": {
+      "word": "wedding",
+      "wed": "married",
+      "ceremony": "the ceremony in the wedding hall, then the buffet, and the pyebaek with the family",
+      "moments": [
+        "walking in",
+        "the vows",
+        "the bows to the parents",
+        "photos with everyone",
+        "the buffet",
+        "the pyebaek in hanbok"
+      ],
+      "venues": {
+        "words": "hall|hotel|chapel|church|garden|convention|terrace",
+        "kinds": [
+          "venue",
+          "landmark",
+          "garden",
+          "restaurant",
+          "temple",
+          "park"
+        ]
+      },
+      "day": 5,
+      "at": "12:00",
+      "until": "16:00",
+      "months": {
+        "small": [
+          3,
+          6
+        ],
+        "proper": [
+          6,
+          10
+        ],
+        "big": [
+          8,
+          12
+        ]
+      },
+      "guests": {
+        "small": [
+          30,
+          60
+        ],
+        "proper": [
+          150,
+          250
+        ],
+        "big": [
+          300,
+          450
+        ]
+      },
+      "budget": {
+        "small": 1.5,
+        "proper": 4,
+        "big": 8
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 0.8,
+        "rings": [
+          "a slim gold couple ring",
+          "a gold ring with a small diamond",
+          "a platinum ring with a solitaire diamond",
+          "a platinum ring with a large diamond"
+        ]
+      },
+      "ask": "with the ring, at a lovely spot",
+      "attire": {
+        "she": "a white wedding dress",
+        "he": "a dark tuxedo",
+        "they": "a tailored white wedding suit"
+      },
+      "prep": [
+        {
+          "key": "venue",
+          "title": "Book the wedding hall",
+          "done": "booked the wedding hall",
+          "after": 10,
+          "minutes": 90,
+          "out": true
+        },
+        {
+          "key": "sanggyeonrye",
+          "title": "Dinner with both families",
+          "done": "had dinner with both families",
+          "after": 30,
+          "minutes": 150,
+          "out": true
+        },
+        {
+          "key": "photos",
+          "title": "Studio wedding photo shoot",
+          "done": "had the studio wedding photo shoot",
+          "before": 75,
+          "minutes": 240,
+          "out": true
+        },
+        {
+          "key": "invites",
+          "title": "Send the wedding invitations",
+          "done": "sent out the wedding invitations",
+          "before": 45,
+          "minutes": 60,
+          "out": false
+        },
+        {
+          "key": "hanbok",
+          "title": "Hanbok fitting for the pyebaek",
+          "done": "had a hanbok fitting for the pyebaek",
+          "before": 30,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "fitting",
+          "title": "Final dress and suit fitting",
+          "done": "had a final fitting for the wedding",
+          "before": 10,
+          "minutes": 60,
+          "out": true
+        }
+      ]
+    },
+    "us-1920s": {
+      "word": "wedding",
+      "wed": "married",
+      "ceremony": "the church service first, then the wedding breakfast and the dancing",
+      "closed": [
+        "advent",
+        "lent"
+      ],
+      "moments": [
+        "the vows",
+        "rice thrown on the church steps",
+        "the wedding breakfast",
+        "the toasts",
+        "the band and the first dance",
+        "cutting the cake"
+      ],
+      "venues": {
+        "words": "church|chapel|cathedral|hotel|hall|garden|ballroom|inn",
+        "kinds": [
+          "temple"
+        ],
+        "else": [
+          "temple",
+          "landmark",
+          "venue",
+          "restaurant",
+          "garden",
+          "inn"
+        ]
+      },
+      "day": 5,
+      "at": "11:00",
+      "until": "18:00",
+      "months": {
+        "small": [
+          2,
+          4
+        ],
+        "proper": [
+          4,
+          8
+        ],
+        "big": [
+          6,
+          10
+        ]
+      },
+      "guests": {
+        "small": [
+          15,
+          30
+        ],
+        "proper": [
+          60,
+          100
+        ],
+        "big": [
+          150,
+          250
+        ]
+      },
+      "budget": {
+        "small": 1,
+        "proper": 3,
+        "big": 7
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 1.0,
+        "rings": [
+          "a thin gold band",
+          "a gold ring with a small diamond chip",
+          "a platinum ring with a filigree setting and a diamond",
+          "a platinum ring with a large old-cut diamond"
+        ]
+      },
+      "ask": "down on one knee, with the ring",
+      "attire": {
+        "she": "a white drop-waist wedding dress with a long veil",
+        "he": "a black morning coat with a white flower in the buttonhole",
+        "they": "a pale grey suit with a white flower pinned on"
+      },
+      "prep": [
+        {
+          "key": "banns",
+          "title": "See the minister about the wedding",
+          "done": "saw the minister about the wedding",
+          "after": 10,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "announce",
+          "title": "Put the engagement notice in the paper",
+          "done": "put the engagement notice in the paper",
+          "after": 5,
+          "minutes": 30,
+          "out": true
+        },
+        {
+          "key": "attire",
+          "title": "Wedding clothes at the dressmaker's",
+          "done": "went to the dressmaker's about the wedding clothes",
+          "before": 60,
+          "minutes": 120,
+          "out": true
+        },
+        {
+          "key": "invites",
+          "title": "Send the wedding invitations",
+          "done": "sent out the wedding invitations",
+          "before": 40,
+          "minutes": 90,
+          "out": false
+        },
+        {
+          "key": "fitting",
+          "title": "Final fitting for the wedding",
+          "done": "had a final fitting for the wedding",
+          "before": 10,
+          "minutes": 60,
+          "out": true
+        }
+      ]
+    },
+    "us-1880s": {
+      "word": "wedding",
+      "wed": "wed",
+      "ceremony": "the service first, then a supper and a dance",
+      "closed": [
+        "advent",
+        "lent"
+      ],
+      "moments": [
+        "the vows",
+        "the ring",
+        "the wedding supper",
+        "the fiddler and the first dance",
+        "cutting the cake"
+      ],
+      "venues": {
+        "words": "church|chapel|hall|hotel|grange|ranch|meeting house|inn",
+        "kinds": [
+          "temple",
+          "landmark",
+          "venue",
+          "inn",
+          "tavern",
+          "garden",
+          "square"
+        ]
+      },
+      "day": 6,
+      "at": "11:00",
+      "until": "18:00",
+      "months": {
+        "small": [
+          1,
+          3
+        ],
+        "proper": [
+          3,
+          6
+        ],
+        "big": [
+          5,
+          9
+        ]
+      },
+      "guests": {
+        "small": [
+          10,
+          25
+        ],
+        "proper": [
+          40,
+          80
+        ],
+        "big": [
+          100,
+          160
+        ]
+      },
+      "budget": {
+        "small": 0.5,
+        "proper": 1.5,
+        "big": 4
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 0.6,
+        "rings": [
+          "a plain gold band",
+          "a gold band with a small garnet",
+          "a gold ring with a small diamond",
+          "a gold ring with a fine diamond"
+        ]
+      },
+      "ask": "plainly, with the ring",
+      "attire": {
+        "she": "a best dress of dark silk with a lace collar",
+        "he": "a black frock coat and a string tie",
+        "they": "a dark frock coat with a flower pinned on"
+      },
+      "prep": [
+        {
+          "key": "parson",
+          "title": "See the preacher about the wedding",
+          "done": "saw the preacher about the wedding",
+          "after": 10,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "attire",
+          "title": "Wedding clothes at the dressmaker's",
+          "done": "went to the dressmaker's about the wedding clothes",
+          "before": 40,
+          "minutes": 120,
+          "out": true
+        },
+        {
+          "key": "word",
+          "title": "Send word to friends and family",
+          "done": "sent word of the wedding to friends and family",
+          "before": 30,
+          "minutes": 60,
+          "out": false
+        },
+        {
+          "key": "supper",
+          "title": "Arrange the wedding supper",
+          "done": "arranged the wedding supper",
+          "before": 10,
+          "minutes": 90,
+          "out": true
+        }
+      ]
+    },
+    "uk-victorian": {
+      "word": "wedding",
+      "wed": "wed",
+      "ceremony": "the church service in the morning, then the wedding breakfast",
+      "closed": [
+        "advent",
+        "lent"
+      ],
+      "moments": [
+        "the vows",
+        "signing the register",
+        "rice thrown at the church door",
+        "the wedding breakfast",
+        "the toasts",
+        "cutting the cake"
+      ],
+      "venues": {
+        "words": "church|chapel|cathedral|abbey|st\\.? |hall",
+        "kinds": [
+          "temple"
+        ],
+        "else": [
+          "temple",
+          "landmark",
+          "venue",
+          "garden",
+          "inn"
+        ]
+      },
+      "day": 1,
+      "at": "10:00",
+      "until": "15:00",
+      "months": {
+        "small": [
+          2,
+          4
+        ],
+        "proper": [
+          4,
+          8
+        ],
+        "big": [
+          6,
+          12
+        ]
+      },
+      "guests": {
+        "small": [
+          10,
+          25
+        ],
+        "proper": [
+          40,
+          70
+        ],
+        "big": [
+          100,
+          160
+        ]
+      },
+      "budget": {
+        "small": 0.8,
+        "proper": 2.5,
+        "big": 6
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 0.8,
+        "rings": [
+          "a plain gold band",
+          "a gold ring set with a small pearl",
+          "a gold ring set with a garnet and seed pearls",
+          "a gold ring set with a diamond and sapphires"
+        ]
+      },
+      "ask": "earnestly, with the ring",
+      "attire": {
+        "she": "a white silk wedding gown with a long veil and orange blossom",
+        "he": "a dark frock coat with a white flower in the buttonhole",
+        "they": "a dark frock coat with a white flower pinned on"
+      },
+      "prep": [
+        {
+          "key": "banns",
+          "title": "Have the banns read at church",
+          "done": "had the banns read at church",
+          "after": 14,
+          "minutes": 90,
+          "out": true
+        },
+        {
+          "key": "attire",
+          "title": "Wedding clothes at the dressmaker's",
+          "done": "went to the dressmaker's about the wedding clothes",
+          "before": 60,
+          "minutes": 120,
+          "out": true
+        },
+        {
+          "key": "invites",
+          "title": "Write the wedding invitations",
+          "done": "wrote out the wedding invitations",
+          "before": 30,
+          "minutes": 120,
+          "out": false
+        },
+        {
+          "key": "breakfast",
+          "title": "Order the wedding breakfast",
+          "done": "ordered the wedding breakfast",
+          "before": 14,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "fitting",
+          "title": "Final fitting for the wedding",
+          "done": "had a final fitting for the wedding",
+          "before": 7,
+          "minutes": 60,
+          "out": true
+        }
+      ]
+    },
+    "medieval-england": {
+      "word": "wedding",
+      "wed": "wed",
+      "ceremony": "the vows at the church door first, then the mass and the wedding feast",
+      "closed": [
+        "advent-epiphany",
+        "septuagesima"
+      ],
+      "moments": [
+        "the vows at the church door",
+        "the ring",
+        "the wedding mass",
+        "the feast",
+        "the minstrels and the dancing"
+      ],
+      "venues": {
+        "words": "church|chapel|abbey|cathedral|hall|castle|great hall|priory",
+        "kinds": [
+          "temple"
+        ],
+        "else": [
+          "temple",
+          "landmark",
+          "guildhall",
+          "inn",
+          "tavern",
+          "square"
+        ]
+      },
+      "day": 6,
+      "at": "10:00",
+      "until": "18:00",
+      "months": {
+        "small": [
+          1,
+          3
+        ],
+        "proper": [
+          2,
+          5
+        ],
+        "big": [
+          4,
+          8
+        ]
+      },
+      "guests": {
+        "small": [
+          10,
+          25
+        ],
+        "proper": [
+          40,
+          80
+        ],
+        "big": [
+          100,
+          200
+        ]
+      },
+      "budget": {
+        "small": 0.5,
+        "proper": 2,
+        "big": 5
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 0.5,
+        "rings": [
+          "a plain silver ring",
+          "a gold ring engraved with a posy",
+          "a gold ring set with a small garnet",
+          "a gold ring set with a ruby"
+        ]
+      },
+      "ask": "earnestly, with a ring, as a pledge",
+      "attire": {
+        "she": "a best gown of blue wool with flowers in the hair",
+        "he": "a fine tunic and a cloak with a silver brooch",
+        "they": "a fine tunic and a cloak with flowers pinned on"
+      },
+      "prep": [
+        {
+          "key": "banns",
+          "title": "Have the banns cried at church",
+          "done": "had the banns cried at church",
+          "after": 14,
+          "minutes": 90,
+          "out": true
+        },
+        {
+          "key": "attire",
+          "title": "Wedding clothes from the seamstress",
+          "done": "went to the seamstress about the wedding clothes",
+          "before": 30,
+          "minutes": 120,
+          "out": true
+        },
+        {
+          "key": "feast",
+          "title": "Arrange the wedding feast",
+          "done": "arranged the wedding feast",
+          "before": 14,
+          "minutes": 120,
+          "out": true
+        }
+      ]
+    },
+    "modern": {
+      "word": "wedding",
+      "wed": "married",
+      "ceremony": "the ceremony first, then the party",
+      "moments": [
+        "the vows",
+        "the first kiss as a married couple",
+        "photos with the guests",
+        "the speeches",
+        "the first dance",
+        "cutting the cake"
+      ],
+      "venues": {
+        "words": "chapel|church|garden|hall|hotel|inn|manor|estate|conservatory|ballroom|terrace|lodge|pavilion",
+        "kinds": [
+          "garden",
+          "landmark",
+          "venue",
+          "museum",
+          "restaurant",
+          "temple",
+          "park",
+          "inn"
+        ]
+      },
+      "day": 5,
+      "at": "15:00",
+      "until": "23:00",
+      "months": {
+        "small": [
+          4,
+          7
+        ],
+        "proper": [
+          9,
+          14
+        ],
+        "big": [
+          12,
+          18
+        ]
+      },
+      "guests": {
+        "small": [
+          20,
+          40
+        ],
+        "proper": [
+          70,
+          120
+        ],
+        "big": [
+          150,
+          220
+        ]
+      },
+      "budget": {
+        "small": 1.5,
+        "proper": 5,
+        "big": 9
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 0.8,
+        "rings": [
+          "a thin gold band with a tiny stone",
+          "a gold ring with a small diamond",
+          "a platinum ring with a solitaire diamond",
+          "a platinum ring with a large diamond"
+        ]
+      },
+      "ask": "with the ring",
+      "attire": {
+        "she": "a white wedding dress",
+        "he": "a dark wedding suit with a flower in the buttonhole",
+        "they": "a tailored cream wedding suit with a flower pinned on"
+      },
+      "prep": [
+        {
+          "key": "venue",
+          "title": "Book the wedding venue",
+          "done": "booked the wedding venue",
+          "after": 10,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "attire",
+          "title": "Wedding outfit shopping",
+          "done": "went shopping for a wedding outfit",
+          "before": 150,
+          "minutes": 150,
+          "out": true
+        },
+        {
+          "key": "invites",
+          "title": "Send the wedding invitations",
+          "done": "sent out the wedding invitations",
+          "before": 60,
+          "minutes": 90,
+          "out": false
+        },
+        {
+          "key": "cake",
+          "title": "Wedding cake tasting",
+          "done": "went to a wedding cake tasting",
+          "before": 45,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "fitting",
+          "title": "Final fitting for the wedding",
+          "done": "had a final fitting for the wedding",
+          "before": 14,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "seating",
+          "title": "Wedding seating plan",
+          "done": "worked out the wedding seating plan",
+          "before": 7,
+          "minutes": 90,
+          "out": false
+        }
+      ]
+    },
+    "industrial": {
+      "word": "wedding",
+      "wed": "wed",
+      "ceremony": "the service first, then the wedding breakfast",
+      "moments": [
+        "the vows",
+        "signing the register",
+        "rice thrown at the door",
+        "the wedding breakfast",
+        "the toasts",
+        "cutting the cake"
+      ],
+      "venues": {
+        "words": "church|chapel|cathedral|hall|hotel|guild",
+        "kinds": [
+          "temple",
+          "landmark",
+          "venue",
+          "guildhall",
+          "restaurant",
+          "garden",
+          "inn"
+        ]
+      },
+      "day": 5,
+      "at": "11:00",
+      "until": "17:00",
+      "months": {
+        "small": [
+          2,
+          4
+        ],
+        "proper": [
+          4,
+          8
+        ],
+        "big": [
+          6,
+          10
+        ]
+      },
+      "guests": {
+        "small": [
+          10,
+          25
+        ],
+        "proper": [
+          40,
+          80
+        ],
+        "big": [
+          100,
+          180
+        ]
+      },
+      "budget": {
+        "small": 0.8,
+        "proper": 2.5,
+        "big": 6
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 0.8,
+        "rings": [
+          "a plain gold band",
+          "a gold ring set with a small pearl",
+          "a gold ring set with a garnet",
+          "a gold ring set with a diamond"
+        ]
+      },
+      "ask": "earnestly, with the ring",
+      "attire": {
+        "she": "a white wedding gown with a long veil",
+        "he": "a dark frock coat with a white flower in the buttonhole",
+        "they": "a dark frock coat with a white flower pinned on"
+      },
+      "prep": [
+        {
+          "key": "banns",
+          "title": "See the minister about the wedding",
+          "done": "saw the minister about the wedding",
+          "after": 14,
+          "minutes": 60,
+          "out": true
+        },
+        {
+          "key": "attire",
+          "title": "Wedding clothes at the dressmaker's",
+          "done": "went to the dressmaker's about the wedding clothes",
+          "before": 60,
+          "minutes": 120,
+          "out": true
+        },
+        {
+          "key": "invites",
+          "title": "Write the wedding invitations",
+          "done": "wrote out the wedding invitations",
+          "before": 30,
+          "minutes": 120,
+          "out": false
+        },
+        {
+          "key": "fitting",
+          "title": "Final fitting for the wedding",
+          "done": "had a final fitting for the wedding",
+          "before": 7,
+          "minutes": 60,
+          "out": true
+        }
+      ]
+    },
+    "old": {
+      "word": "wedding",
+      "wed": "wed",
+      "ceremony": "the vows first, then the feast",
+      "moments": [
+        "the vows",
+        "the ring",
+        "the feast",
+        "the toasts",
+        "the music and the dancing"
+      ],
+      "venues": {
+        "words": "temple|shrine|chapel|church|hall|garden|grove|castle|palace|inn|guild",
+        "kinds": [
+          "temple",
+          "garden",
+          "landmark",
+          "guildhall",
+          "venue",
+          "inn",
+          "tavern",
+          "square",
+          "park"
+        ]
+      },
+      "day": 5,
+      "at": "12:00",
+      "until": "20:00",
+      "months": {
+        "small": [
+          2,
+          4
+        ],
+        "proper": [
+          3,
+          6
+        ],
+        "big": [
+          5,
+          9
+        ]
+      },
+      "guests": {
+        "small": [
+          10,
+          25
+        ],
+        "proper": [
+          40,
+          80
+        ],
+        "big": [
+          100,
+          180
+        ]
+      },
+      "budget": {
+        "small": 0.5,
+        "proper": 2,
+        "big": 5
+      },
+      "share": 0.5,
+      "ring": {
+        "months": 0.5,
+        "rings": [
+          "a plain silver ring",
+          "a silver ring set with a small stone",
+          "a gold ring set with a small stone",
+          "a gold ring set with a fine gem"
+        ]
+      },
+      "ask": "earnestly, with a ring",
+      "attire": {
+        "she": "a fine festive gown with flowers in the hair",
+        "he": "a fine festive coat with a flower pinned on",
+        "they": "a fine festive coat with flowers pinned on"
+      },
+      "prep": [
+        {
+          "key": "word",
+          "title": "Send word of the wedding",
+          "done": "sent word of the wedding to friends and family",
+          "after": 10,
+          "minutes": 60,
+          "out": false
+        },
+        {
+          "key": "attire",
+          "title": "Wedding clothes from the tailor",
+          "done": "went to the tailor about the wedding clothes",
+          "before": 30,
+          "minutes": 120,
+          "out": true
+        },
+        {
+          "key": "feast",
+          "title": "Arrange the wedding feast",
+          "done": "arranged the wedding feast",
+          "before": 14,
+          "minutes": 120,
+          "out": true
+        }
+      ]
+    }
+  }
+}

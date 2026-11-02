@@ -1,0 +1,3388 @@
+{
+ "schema_version": 1,
+ "id": "emerald-city",
+ "name": "The Emerald City",
+ "setting": "fictional",
+ "era": "fantasy",
+ "basis": "Drawn only from L. Frank Baum's Oz books (The Wonderful Wizard of Oz, 1900, and its sequels through the 1920s), which are public domain in the US. Nothing from the 1939 MGM film or later adaptations. Everyday districts, shops and taverns are invented in Baum's spirit and marked as such.",
+ "region": "Land of Oz",
+ "country": "Oz",
+ "timezone": "America/Chicago",
+ "aliases": [
+  "Emerald City",
+  "City of Emeralds",
+  "Emerald City of Oz"
+ ],
+ "summary": "The green capital at the centre of Oz, where the yellow brick road ends: green marble streets set with emeralds, Ozma's palace, and (as Baum counts it) 9,654 buildings and 57,318 people who work half the time and play half the time, with no money at all.",
+ "lat": 38.5,
+ "lon": -98.0,
+ "currency": {
+  "code": "none",
+  "symbol": "",
+  "name": "no money (Oz has none)"
+ },
+ "rent_period": "month",
+ "speeds": {
+  "walk": 4.5,
+  "carriage": 9
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "The Emerald City of Oz written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-05",
+   "note": "Canon details (the green spectacles locked on at the gates in the first book, the Guardian of the Gates, the palace, Ozma's rule, the tiny Royal Army, the Wizard as a humbug, the four countries, the yellow brick road, and the rule of no money with half work and half play from The Road to Oz and The Emerald City of Oz) come from Baum's public-domain books only. In the first book a girl buys green lemonade with green pennies; this file follows the later books, where Oz has no money. Districts, shops, taverns, schools, festivals and coordinates are invented for fiction and placed on a fixed anchor in central Kansas. Climate is invented: Baum gives Oz gentle, pleasant weather."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "palace-grounds",
+   "name": "Palace Grounds",
+   "summary": "The Royal Palace at the centre of the city, with its gardens, fountains and servants' quarters; Ozma rules from here.",
+   "vibe": [
+    "royal",
+    "gardens",
+    "central",
+    "grand"
+   ],
+   "lat": 38.5,
+   "lon": -98.0,
+   "rent_tier": "very-high",
+   "rent": null,
+   "housing": [
+    "palace-quarters",
+    "garden-cottage"
+   ],
+   "walkability": "high",
+   "transit": [
+    "green-streets"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gate-quarter",
+   "name": "Gate Quarter",
+   "summary": "The streets just inside the great gate, where the Guardian of the Gates keeps the gatehouse and visitors from the yellow brick road first walk in.",
+   "vibe": [
+    "gateway",
+    "busy",
+    "visitors"
+   ],
+   "lat": 38.5,
+   "lon": -97.982,
+   "rent_tier": "high",
+   "rent": null,
+   "housing": [
+    "green-marble-house",
+    "flat-above-shop"
+   ],
+   "walkability": "high",
+   "transit": [
+    "green-streets",
+    "market-wagons"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-square",
+   "name": "Market Square",
+   "summary": "An everyday city district around a broad square where wagons from all four countries unload fruit, grain and cloth.",
+   "vibe": [
+    "market",
+    "food",
+    "central",
+    "busy"
+   ],
+   "lat": 38.494,
+   "lon": -97.992,
+   "rent_tier": "mid",
+   "rent": null,
+   "housing": [
+    "flat-above-shop",
+    "green-marble-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "green-streets",
+    "market-wagons"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cutters-row",
+   "name": "Cutters' Row",
+   "summary": "An everyday city district of long workshops where emerald cutters and goldsmiths shape the stones that are set into the city's walls and pavements.",
+   "vibe": [
+    "craft",
+    "workshops",
+    "quiet"
+   ],
+   "lat": 38.507,
+   "lon": -97.991,
+   "rent_tier": "mid",
+   "rent": null,
+   "housing": [
+    "rowhouse",
+    "flat-above-shop"
+   ],
+   "walkability": "high",
+   "transit": [
+    "green-streets"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oven-street",
+   "name": "Oven Street",
+   "summary": "An everyday city district of bakehouses, dairies and kitchens that smells of bread before sunrise.",
+   "vibe": [
+    "food",
+    "early-risers",
+    "neighbourly"
+   ],
+   "lat": 38.489,
+   "lon": -98.004,
+   "rent_tier": "mid",
+   "rent": null,
+   "housing": [
+    "rowhouse",
+    "flat-above-shop"
+   ],
+   "walkability": "high",
+   "transit": [
+    "green-streets"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "needle-hill",
+   "name": "Needle Hill",
+   "summary": "An everyday city district of tailors, dyers and weavers on a low rise, with green cloth drying on lines between the houses.",
+   "vibe": [
+    "craft",
+    "textiles",
+    "hilly"
+   ],
+   "lat": 38.511,
+   "lon": -98.01,
+   "rent_tier": "mid",
+   "rent": null,
+   "housing": [
+    "rowhouse",
+    "green-marble-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "green-streets"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bookbinders-close",
+   "name": "Bookbinders' Close",
+   "summary": "An everyday city district of small streets around the public reading room, the schoolhouse and a few binderies.",
+   "vibe": [
+    "quiet",
+    "bookish",
+    "leafy"
+   ],
+   "lat": 38.496,
+   "lon": -98.013,
+   "rent_tier": "high",
+   "rent": null,
+   "housing": [
+    "green-marble-house",
+    "rowhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "green-streets"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pump-square",
+   "name": "Pump Square",
+   "summary": "An everyday city district of houses around an old green-tiled pump, with a bathhouse, a bandstand and children everywhere.",
+   "vibe": [
+    "family",
+    "neighbourly",
+    "residential"
+   ],
+   "lat": 38.485,
+   "lon": -97.99,
+   "rent_tier": "mid",
+   "rent": null,
+   "housing": [
+    "green-marble-house",
+    "rowhouse"
+   ],
+   "walkability": "high",
+   "transit": [
+    "green-streets"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "winkie-street",
+   "name": "Winkie Street",
+   "summary": "An everyday city district on the west side where tinsmiths and metalworkers from the yellow Winkie Country have set up shop.",
+   "vibe": [
+    "craft",
+    "metalwork",
+    "winkie"
+   ],
+   "lat": 38.502,
+   "lon": -98.025,
+   "rent_tier": "low",
+   "rent": null,
+   "housing": [
+    "rowhouse",
+    "flat-above-shop"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "green-streets",
+    "market-wagons"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "quadling-lane",
+   "name": "Quadling Lane",
+   "summary": "An everyday city district on the south side where families from the red Quadling Country live in houses with red shutters among the green.",
+   "vibe": [
+    "quadling",
+    "family",
+    "residential"
+   ],
+   "lat": 38.477,
+   "lon": -98.003,
+   "rent_tier": "low",
+   "rent": null,
+   "housing": [
+    "cottage",
+    "rowhouse"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "green-streets",
+    "market-wagons"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gillikin-gardens",
+   "name": "Gillikin Gardens",
+   "summary": "An everyday district on the north edge with allotments and purple-trimmed cottages built by families from the Gillikin Country.",
+   "vibe": [
+    "gardens",
+    "gillikin",
+    "quiet",
+    "family"
+   ],
+   "lat": 38.523,
+   "lon": -98.002,
+   "rent_tier": "low",
+   "rent": null,
+   "housing": [
+    "cottage",
+    "garden-cottage"
+   ],
+   "walkability": "low",
+   "transit": [
+    "green-streets",
+    "market-wagons"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barracks-corner",
+   "name": "Barracks Corner",
+   "summary": "A few streets beside the Royal Army's barracks, which are much too big for an army that has always had more officers than privates.",
+   "vibe": [
+    "quiet",
+    "military",
+    "residential"
+   ],
+   "lat": 38.505,
+   "lon": -97.998,
+   "rent_tier": "mid",
+   "rent": null,
+   "housing": [
+    "rowhouse",
+    "green-marble-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "green-streets"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yellow-brick-road",
+   "name": "Yellow Brick Road farms",
+   "summary": "Farmland outside the east gate along the yellow brick road, where blue Munchkin Country begins to give way to green fields and orchards.",
+   "vibe": [
+    "rural",
+    "farms",
+    "munchkin",
+    "roadside"
+   ],
+   "lat": 38.503,
+   "lon": -97.945,
+   "rent_tier": "low",
+   "rent": null,
+   "housing": [
+    "farmhouse",
+    "cottage"
+   ],
+   "walkability": "low",
+   "transit": [
+    "market-wagons"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "green-streets",
+   "name": "The green marble streets",
+   "kind": "walk",
+   "summary": "Nearly everyone walks: the city is compact and its paved streets run straight from the palace to the gates.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-wagons",
+   "name": "Farm and market wagons",
+   "kind": "carriage",
+   "summary": "Slow wagons bringing produce in along the yellow brick road and the other country roads give anyone a lift for nothing.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "royal-palace",
+   "name": "The Royal Palace",
+   "kind": "landmark",
+   "neighborhood": "palace-grounds",
+   "summary": "Ozma's palace of green marble and emeralds, with long halls open to the people on audience days.",
+   "tags": [
+    "royal",
+    "iconic",
+    "canon"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "throne-room",
+   "name": "The Throne Room",
+   "kind": "attraction",
+   "neighborhood": "palace-grounds",
+   "summary": "The domed room with the green marble throne where the Wizard once fooled visitors with a great head and a ball of fire, and where Ozma now hears requests.",
+   "tags": [
+    "royal",
+    "history",
+    "canon"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-gardens",
+   "name": "The Royal Gardens",
+   "kind": "garden",
+   "neighborhood": "palace-grounds",
+   "summary": "The palace gardens of flowers, fountains and fruit trees, open for anyone to walk in.",
+   "tags": [
+    "gardens",
+    "fountains",
+    "canon"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "great-gate",
+   "name": "The great gate",
+   "kind": "landmark",
+   "neighborhood": "gate-quarter",
+   "summary": "The tall gate studded with emeralds where the yellow brick road ends and the Guardian of the Gates greets travellers.",
+   "tags": [
+    "gate",
+    "iconic",
+    "canon"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gatehouse-spectacles",
+   "name": "The Guardian's gatehouse",
+   "kind": "attraction",
+   "neighborhood": "gate-quarter",
+   "summary": "The small room in the city wall full of green spectacles in boxes, where visitors in the old days had a pair locked on before entering.",
+   "tags": [
+    "history",
+    "spectacles",
+    "canon"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yellow-brick-road-walk",
+   "name": "The yellow brick road",
+   "kind": "trail",
+   "neighborhood": "yellow-brick-road",
+   "summary": "The road of yellow brick running east from the gate between fences and fields, good for a long walk out of the city.",
+   "tags": [
+    "walk",
+    "road",
+    "canon"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "balloon-yard",
+   "name": "The balloon yard",
+   "kind": "landmark",
+   "neighborhood": "palace-grounds",
+   "summary": "The open yard before the palace where the Wizard once cast off in his silk balloon and left without Dorothy.",
+   "tags": [
+    "history",
+    "humbug",
+    "canon"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-army-parade-ground",
+   "name": "The Royal Army parade ground",
+   "kind": "square",
+   "neighborhood": "barracks-corner",
+   "summary": "A gravel square where the city's tiny army drills, which rarely takes long.",
+   "tags": [
+    "army",
+    "canon",
+    "square"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-square-stalls",
+   "name": "Market Square stalls",
+   "kind": "market",
+   "neighborhood": "market-square",
+   "summary": "Everyday city market of covered stalls where farmers from the four countries hand out apples, cheese, cabbages and bolts of cloth to anyone who needs them.",
+   "tags": [
+    "market",
+    "produce",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "produce",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green-pump-bathhouse",
+   "name": "Pump Square bathhouse",
+   "kind": "fitness",
+   "neighborhood": "pump-square",
+   "summary": "Everyday city bathhouse with a warm green-tiled pool, a cold plunge and benches for gossip.",
+   "tags": [
+    "bath",
+    "swimming",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "public-reading-room",
+   "name": "Public Reading Room",
+   "kind": "library",
+   "neighborhood": "bookbinders-close",
+   "summary": "Everyday city library: one long room of shelves and green-shaded lamps where anyone may borrow books.",
+   "tags": [
+    "books",
+    "quiet",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "half-moon-tavern",
+   "name": "The Half Moon",
+   "kind": "tavern",
+   "neighborhood": "gate-quarter",
+   "summary": "Everyday city tavern by the gate where travellers off the yellow brick road eat stew and hear the news.",
+   "tags": [
+    "tavern",
+    "travellers",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "stew and bread",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wayfarers-rest",
+   "name": "The Wayfarers' Rest",
+   "kind": "inn",
+   "neighborhood": "gate-quarter",
+   "summary": "Everyday city inn with a dozen rooms, a long table and a landlady who knows every road in Oz.",
+   "tags": [
+    "inn",
+    "travellers",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "roast dinners",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pump-square-bandstand",
+   "name": "Pump Square bandstand",
+   "kind": "venue",
+   "neighborhood": "pump-square",
+   "summary": "Everyday city bandstand where neighbourhood players give concerts on summer evenings.",
+   "tags": [
+    "music",
+    "outdoor",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oven-street-bakehouse",
+   "name": "Hobbs's Bakehouse",
+   "kind": "cafe",
+   "neighborhood": "oven-street",
+   "summary": "Everyday city bakery with benches outside, known for cream buns and warm rye in the early morning.",
+   "tags": [
+    "bakery",
+    "breakfast",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dairy-kitchen",
+   "name": "The Dairy Kitchen",
+   "kind": "restaurant",
+   "neighborhood": "oven-street",
+   "summary": "Everyday city eating house that serves custards, cheese pies and buttermilk at shared tables.",
+   "tags": [
+    "lunch",
+    "dairy",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "dairy and pies",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green-lemonade-stand",
+   "name": "The lemonade stand on Market Square",
+   "kind": "cafe",
+   "neighborhood": "market-square",
+   "summary": "Everyday city stand selling green lemonade and green popcorn, as in the first book, though now for nothing.",
+   "tags": [
+    "snacks",
+    "lemonade",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "lemonade and popcorn",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cutters-arms",
+   "name": "The Cutters' Arms",
+   "kind": "tavern",
+   "neighborhood": "cutters-row",
+   "summary": "Everyday city tavern where emerald cutters meet after work over cider and a game of draughts.",
+   "tags": [
+    "tavern",
+    "games",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "cider and pies",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cutters-row-workshops",
+   "name": "Cutters' Row workshops",
+   "kind": "workshop",
+   "neighborhood": "cutters-row",
+   "summary": "Everyday city workshops with open doors where anyone may watch emeralds being split and polished.",
+   "tags": [
+    "craft",
+    "emeralds",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "needle-hill-cloth-hall",
+   "name": "Needle Hill cloth hall",
+   "kind": "shopping",
+   "neighborhood": "needle-hill",
+   "summary": "Everyday city hall where tailors fit new clothes and hand them out, mostly in a dozen shades of green.",
+   "tags": [
+    "clothes",
+    "tailors",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dye-yard",
+   "name": "The Needle Hill dye yard",
+   "kind": "workshop",
+   "neighborhood": "needle-hill",
+   "summary": "Everyday city dye yard of vats and drying lines, where cloth turns green and visitors usually leave with green fingers.",
+   "tags": [
+    "craft",
+    "dye",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bramble-tearoom",
+   "name": "Bramble's Tearoom",
+   "kind": "cafe",
+   "neighborhood": "bookbinders-close",
+   "summary": "Everyday city tearoom with six tables, raspberry tarts and a cat on the windowsill.",
+   "tags": [
+    "tea",
+    "quiet",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "tea and cakes",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bookbinders-close-green",
+   "name": "The Close green",
+   "kind": "park",
+   "neighborhood": "bookbinders-close",
+   "summary": "Everyday city green with elm trees and benches where people read in the afternoon.",
+   "tags": [
+    "park",
+    "reading",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pump-square-green",
+   "name": "Pump Square",
+   "kind": "square",
+   "neighborhood": "pump-square",
+   "summary": "Everyday city square around the old green-tiled pump, with hopscotch chalked on the marble.",
+   "tags": [
+    "square",
+    "children",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tin-lantern",
+   "name": "The Tin Lantern",
+   "kind": "tavern",
+   "neighborhood": "winkie-street",
+   "summary": "Everyday city tavern run by a Winkie family, with yellow walls, tin mugs and fiddle music on most nights.",
+   "tags": [
+    "tavern",
+    "music",
+    "winkie",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Winkie country cooking",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "winkie-street-tinsmiths",
+   "name": "Winkie Street tinsmiths",
+   "kind": "workshop",
+   "neighborhood": "winkie-street",
+   "summary": "Everyday city workshops where Winkie tinsmiths make pails, lanterns and oil cans.",
+   "tags": [
+    "craft",
+    "tin",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "quadling-kitchen",
+   "name": "Mother Pell's kitchen",
+   "kind": "restaurant",
+   "neighborhood": "quadling-lane",
+   "summary": "Everyday city eating house with red tablecloths, serving Quadling Country dumplings and plum pudding.",
+   "tags": [
+    "dinner",
+    "quadling",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Quadling country cooking",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "quadling-lane-orchard",
+   "name": "Quadling Lane orchard",
+   "kind": "park",
+   "neighborhood": "quadling-lane",
+   "summary": "Everyday city orchard of cherry and pear trees where anyone may pick fruit in season.",
+   "tags": [
+    "orchard",
+    "fruit",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gillikin-allotments",
+   "name": "Gillikin Gardens allotments",
+   "kind": "garden",
+   "neighborhood": "gillikin-gardens",
+   "summary": "Everyday city allotments of vegetable beds and sweet peas, with a shed of shared tools.",
+   "tags": [
+    "gardening",
+    "vegetables",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "purple-plum",
+   "name": "The Purple Plum",
+   "kind": "tavern",
+   "neighborhood": "gillikin-gardens",
+   "summary": "Everyday city tavern with a purple door, plum wine and a skittle alley out back.",
+   "tags": [
+    "tavern",
+    "skittles",
+    "gillikin",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "plum wine and cold meats",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barracks-mess",
+   "name": "The Barracks Mess",
+   "kind": "restaurant",
+   "neighborhood": "barracks-corner",
+   "summary": "Everyday city canteen beside the barracks, open to everyone, serving porridge and fried eggs to soldiers and neighbours.",
+   "tags": [
+    "breakfast",
+    "canteen",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gate-quarter-stables",
+   "name": "Gate Quarter wagon yard",
+   "kind": "square",
+   "neighborhood": "gate-quarter",
+   "summary": "Everyday city yard where market wagons unhitch and drivers trade news from the four countries.",
+   "tags": [
+    "wagons",
+    "news",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-road-orchards",
+   "name": "East Road orchards",
+   "kind": "park",
+   "neighborhood": "yellow-brick-road",
+   "summary": "Everyday orchards along the yellow brick road, with apple trees and a cider press in the fall.",
+   "tags": [
+    "orchard",
+    "country",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "roadside-farm-kitchen",
+   "name": "The Crossroads farm kitchen",
+   "kind": "inn",
+   "neighborhood": "yellow-brick-road",
+   "summary": "Everyday farm kitchen where a Munchkin family feeds travellers at a blue-painted table.",
+   "tags": [
+    "farm",
+    "munchkin",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "Munchkin farm cooking",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "palace-music-hall",
+   "name": "The palace music hall",
+   "kind": "venue",
+   "neighborhood": "palace-grounds",
+   "summary": "Hall in the palace where concerts and dances are held on feast nights, open to all who come.",
+   "tags": [
+    "music",
+    "dancing",
+    "royal"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-wall-walk",
+   "name": "The wall walk",
+   "kind": "trail",
+   "neighborhood": "gillikin-gardens",
+   "summary": "Everyday path along the top of the green city wall with views over all four countries on a clear day.",
+   "tags": [
+    "walk",
+    "views",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ball-field",
+   "name": "Pump Square ball field",
+   "kind": "fitness",
+   "neighborhood": "pump-square",
+   "summary": "Everyday city field for rounders, races and tug-of-war on play days.",
+   "tags": [
+    "games",
+    "sport",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "glass-house",
+   "name": "The Glass House",
+   "kind": "workshop",
+   "neighborhood": "cutters-row",
+   "summary": "Everyday city glassworks where green window glass is blown and anyone can watch from the doorway.",
+   "tags": [
+    "craft",
+    "glass",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-square-puppets",
+   "name": "The Market Square puppet booth",
+   "kind": "venue",
+   "neighborhood": "market-square",
+   "summary": "Everyday city puppet booth giving afternoon shows about Oz history, including the Wizard's humbug.",
+   "tags": [
+    "puppets",
+    "children",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cobblers-yard",
+   "name": "Cobblers' Yard",
+   "kind": "shopping",
+   "neighborhood": "oven-street",
+   "summary": "Everyday city yard of cobblers' benches where shoes are made and mended while you wait.",
+   "tags": [
+    "shoes",
+    "craft",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "history-room",
+   "name": "The Oz history room",
+   "kind": "museum",
+   "neighborhood": "bookbinders-close",
+   "summary": "Everyday city museum of maps of the four countries, old green spectacles and a model of the yellow brick road.",
+   "tags": [
+    "history",
+    "maps",
+    "rainy-day",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "palace-kitchen-door",
+   "name": "The palace kitchen door",
+   "kind": "restaurant",
+   "neighborhood": "palace-grounds",
+   "summary": "Everyday city kitchen door behind the palace where the cooks hand out bowls of soup and warm rolls at noon.",
+   "tags": [
+    "lunch",
+    "soup",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "soup and bread",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fountain-court",
+   "name": "The fountain court",
+   "kind": "square",
+   "neighborhood": "palace-grounds",
+   "summary": "Everyday city courtyard by the palace laundry, with a fountain and stone benches where servants and neighbours eat their lunch.",
+   "tags": [
+    "fountain",
+    "benches",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wheelwrights-yard",
+   "name": "The wheelwright's yard",
+   "kind": "workshop",
+   "neighborhood": "gate-quarter",
+   "summary": "Everyday city yard just inside the gate where wagon wheels and axles cracked on the country roads are mended.",
+   "tags": [
+    "craft",
+    "wagons",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gate-quarter-washhouse",
+   "name": "The travellers' washhouse",
+   "kind": "fitness",
+   "neighborhood": "gate-quarter",
+   "summary": "Everyday city washhouse with hot tubs and clean towels for travellers who arrive dusty from the road.",
+   "tags": [
+    "bath",
+    "travellers",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "apple-cart",
+   "name": "The Apple Cart",
+   "kind": "tavern",
+   "neighborhood": "market-square",
+   "summary": "Everyday city tavern on the corner of Market Square where wagon drivers drink cider and eat cold pork before the long ride home.",
+   "tags": [
+    "tavern",
+    "cider",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "cider and pork",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "weighing-house",
+   "name": "The weighing house",
+   "kind": "landmark",
+   "neighborhood": "market-square",
+   "summary": "Everyday city hall with a great beam scale, where farmers weigh their loads and a clerk writes down what each country sent.",
+   "tags": [
+    "market",
+    "scales",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "polishers-table",
+   "name": "The Polishers' Table",
+   "kind": "restaurant",
+   "neighborhood": "cutters-row",
+   "summary": "Everyday city cookshop where cutters and goldsmiths eat mutton pies and pea soup at one long table at midday.",
+   "tags": [
+    "lunch",
+    "pies",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "pies and soup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cutters-green",
+   "name": "Cutters' green",
+   "kind": "square",
+   "neighborhood": "cutters-row",
+   "summary": "Everyday city patch of grass with a drinking fountain at the end of the row, where apprentices play marbles at noon.",
+   "tags": [
+    "square",
+    "marbles",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oven-street-dairy",
+   "name": "The Oven Street dairy",
+   "kind": "market",
+   "neighborhood": "oven-street",
+   "summary": "Everyday city dairy where milk, butter and soft cheese are handed out from the counter at first light.",
+   "tags": [
+    "milk",
+    "cheese",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "dairy",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "flour-loft",
+   "name": "The flour loft",
+   "kind": "workshop",
+   "neighborhood": "oven-street",
+   "summary": "Everyday city loft where flour from the country mills is sifted and sacked for the bakehouses, and children slide on the empty sacks.",
+   "tags": [
+    "flour",
+    "craft",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-thimble",
+   "name": "The Thimble",
+   "kind": "tavern",
+   "neighborhood": "needle-hill",
+   "summary": "Everyday city tavern of tailors and dyers, small and warm, with green ale and a long argument about cloth every night.",
+   "tags": [
+    "tavern",
+    "tailors",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "ale and toasted cheese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "needle-hill-tea-garden",
+   "name": "Needle Hill tea garden",
+   "kind": "cafe",
+   "neighborhood": "needle-hill",
+   "summary": "Everyday city tea garden on the top of the rise, with a view over the drying lines and lemon cake on a tray.",
+   "tags": [
+    "tea",
+    "views",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "tea and cakes",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "needle-hill-laundry",
+   "name": "The Needle Hill laundry",
+   "kind": "workshop",
+   "neighborhood": "needle-hill",
+   "summary": "Everyday city laundry of coppers and mangles where neighbours wash on Mondays and the steam fogs the windows.",
+   "tags": [
+    "laundry",
+    "neighbours",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "close-bindery",
+   "name": "The Close bindery",
+   "kind": "workshop",
+   "neighborhood": "bookbinders-close",
+   "summary": "Everyday city bindery with its door propped open, where worn library books are restitched and anyone may learn to sew a notebook.",
+   "tags": [
+    "books",
+    "craft",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pump-square-pie-shop",
+   "name": "Mrs Gubbin's pie shop",
+   "kind": "restaurant",
+   "neighborhood": "pump-square",
+   "summary": "Everyday city pie shop on the corner of the square, with pork pies, apple turnovers and a queue of children after school.",
+   "tags": [
+    "pies",
+    "children",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "pies",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "toy-mender",
+   "name": "The toy mender",
+   "kind": "workshop",
+   "neighborhood": "pump-square",
+   "summary": "Everyday city workshop where an old carpenter glues dolls, restrings tops and repaints wooden soldiers for the square's children.",
+   "tags": [
+    "toys",
+    "children",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "yellow-kettle",
+   "name": "The Yellow Kettle",
+   "kind": "cafe",
+   "neighborhood": "winkie-street",
+   "summary": "Everyday city breakfast room run by Winkie tinsmiths' wives, with porridge, fried bread and tea in tin mugs.",
+   "tags": [
+    "breakfast",
+    "winkie",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "breakfast",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "winkie-street-stalls",
+   "name": "Winkie Street stalls",
+   "kind": "market",
+   "neighborhood": "winkie-street",
+   "summary": "Everyday city street market where Winkie farmers hand out yellow apples, honey and buttercup cheese from their carts.",
+   "tags": [
+    "market",
+    "winkie",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "produce",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "winkie-street-baths",
+   "name": "Winkie Street baths",
+   "kind": "fitness",
+   "neighborhood": "winkie-street",
+   "summary": "Everyday city bathhouse with a big tin tub heated from the forge next door, much used by tinsmiths at the end of the day.",
+   "tags": [
+    "bath",
+    "tinsmiths",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "red-shutter",
+   "name": "The Red Shutter",
+   "kind": "tavern",
+   "neighborhood": "quadling-lane",
+   "summary": "Everyday city tavern run by a Quadling family, red-painted inside, with cherry cordial for children and stronger drink for the rest.",
+   "tags": [
+    "tavern",
+    "quadling",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "Quadling country cooking",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "quadling-dance-yard",
+   "name": "The Quadling dance yard",
+   "kind": "venue",
+   "neighborhood": "quadling-lane",
+   "summary": "Everyday city yard strung with red lanterns where families dance the Quadling reels on play-day evenings.",
+   "tags": [
+    "dancing",
+    "music",
+    "quadling",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "quadling-lane-wash-green",
+   "name": "Quadling Lane wash green",
+   "kind": "square",
+   "neighborhood": "quadling-lane",
+   "summary": "Everyday city green where washing is laid out to bleach, with a pump at one end and children at the other.",
+   "tags": [
+    "washing",
+    "children",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gillikin-seed-shed",
+   "name": "The seed shed",
+   "kind": "market",
+   "neighborhood": "gillikin-gardens",
+   "summary": "Everyday city shed where allotment keepers swap seeds, cuttings and spare onions, with the swaps chalked on a board.",
+   "tags": [
+    "gardening",
+    "seeds",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gillikin-oatcake-oven",
+   "name": "The Gillikin oatcake oven",
+   "kind": "cafe",
+   "neighborhood": "gillikin-gardens",
+   "summary": "Everyday city bakehouse with a purple door where Gillikin oatcakes and plum buns come out hot every morning.",
+   "tags": [
+    "bakery",
+    "gillikin",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "bakery",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brass-button",
+   "name": "The Brass Button",
+   "kind": "tavern",
+   "neighborhood": "barracks-corner",
+   "summary": "Everyday city tavern by the barracks where officers outnumber privates at the bar, as they do on the parade ground.",
+   "tags": [
+    "tavern",
+    "army",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "ale and sausages",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "officers-reading-room",
+   "name": "The officers' reading room",
+   "kind": "library",
+   "neighborhood": "barracks-corner",
+   "summary": "Everyday city reading room in a wing of the barracks nobody needs, now open to the whole neighbourhood.",
+   "tags": [
+    "books",
+    "quiet",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barracks-plunge",
+   "name": "The barracks plunge",
+   "kind": "fitness",
+   "neighborhood": "barracks-corner",
+   "summary": "Everyday city cold plunge pool built for an army that never filled it, where the neighbours swim on hot afternoons.",
+   "tags": [
+    "swimming",
+    "cold",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "halfway-well",
+   "name": "The halfway well",
+   "kind": "square",
+   "neighborhood": "yellow-brick-road",
+   "summary": "Everyday roadside well with a bench and a tin cup on a chain, where walkers on the yellow brick road stop to drink.",
+   "tags": [
+    "well",
+    "road",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cider-barn",
+   "name": "The cider barn",
+   "kind": "workshop",
+   "neighborhood": "yellow-brick-road",
+   "summary": "Everyday farm barn with a cider press where neighbours bring apples in the fall and leave with a jug.",
+   "tags": [
+    "cider",
+    "farm",
+    "everyday"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "fall"
+   ],
+   "cuisine": "cider",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "little-schoolhouse",
+   "name": "The Pump Square schoolhouse",
+   "type": "academy",
+   "neighborhood": "pump-square",
+   "size": "small",
+   "known_for": [
+    "reading",
+    "sums",
+    "geography-of-oz"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cutters-guild-school",
+   "name": "The Emerald Cutters' school",
+   "type": "guild-school",
+   "neighborhood": "cutters-row",
+   "size": "small",
+   "known_for": [
+    "gem-cutting",
+    "goldsmithing",
+    "glasswork"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gardeners-school",
+   "name": "The Royal Gardens school",
+   "type": "guild-school",
+   "neighborhood": "palace-grounds",
+   "size": "small",
+   "known_for": [
+    "gardening",
+    "orchards",
+    "beekeeping"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-music-academy",
+   "name": "The City Music Academy",
+   "type": "music-school",
+   "neighborhood": "bookbinders-close",
+   "size": "small",
+   "known_for": [
+    "fiddle",
+    "brass-band",
+    "singing"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "careers": [
+  {
+   "id": "gardener",
+   "name": "Gardener",
+   "sector": "gardens",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Tends beds, fountains and fruit trees in the royal gardens or the city orchards.",
+   "themes": [
+    "seasons",
+    "growing things",
+    "early starts",
+    "outdoors"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "palace-cook",
+   "name": "Palace cook",
+   "sector": "palace",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Cooks in the palace kitchens for the court, its guests and the many feasts.",
+   "themes": [
+    "kitchen heat",
+    "feasts",
+    "teamwork"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "palace-steward",
+   "name": "Palace steward",
+   "sector": "palace",
+   "schedule": "rotating",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Keeps the palace halls, guest rooms and linen in order and looks after visitors.",
+   "themes": [
+    "hospitality",
+    "visitors",
+    "royal routines"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "emerald-cutter",
+   "name": "Emerald cutter",
+   "sector": "crafts",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Splits and polishes emeralds for the city's walls, pavements and jewellery.",
+   "themes": [
+    "patience",
+    "precision",
+    "craft pride"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "goldsmith",
+   "name": "Goldsmith",
+   "sector": "crafts",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Sets emeralds in gold for doors, lamps and brooches.",
+   "themes": [
+    "craft",
+    "fine work",
+    "apprentices"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "baker",
+   "name": "Baker",
+   "sector": "food",
+   "schedule": "early",
+   "employment": "rota",
+   "pay": "$$",
+   "summary": "Bakes the city's bread, buns and pies before dawn.",
+   "themes": [
+    "early mornings",
+    "warm ovens",
+    "regulars"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "tavern-keeper",
+   "name": "Tavern keeper",
+   "sector": "food",
+   "schedule": "evening",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Runs a tavern or inn, keeps the fire and feeds whoever comes in.",
+   "themes": [
+    "company",
+    "stories",
+    "late nights"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "tailor",
+   "name": "Tailor",
+   "sector": "textiles",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Cuts and sews the green clothes nearly everyone in the city wears.",
+   "themes": [
+    "fittings",
+    "fashion",
+    "handwork"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "dyer",
+   "name": "Dyer",
+   "sector": "textiles",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Works the vats that turn cloth a dozen shades of green.",
+   "themes": [
+    "stained hands",
+    "colour",
+    "outdoor work"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "royal-army-soldier",
+   "name": "Soldier of the Royal Army",
+   "sector": "army",
+   "schedule": "flexible",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Serves in the famously tiny Royal Army of Oz, mostly parading and standing guard.",
+   "themes": [
+    "ceremony",
+    "uniforms",
+    "easy duty"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "gate-warden",
+   "name": "Gate warden",
+   "sector": "gates",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$$",
+   "summary": "Helps the Guardian of the Gates welcome travellers and look after the boxes of green spectacles.",
+   "themes": [
+    "visitors",
+    "news",
+    "tradition"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "librarian",
+   "name": "Librarian",
+   "sector": "learning",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Keeps the public reading room and finds books for readers of every age.",
+   "themes": [
+    "books",
+    "quiet",
+    "questions"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "schoolteacher",
+   "name": "Schoolteacher",
+   "sector": "learning",
+   "schedule": "academic",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Teaches the city's children reading, sums and the geography of the four countries.",
+   "themes": [
+    "children",
+    "patience",
+    "lessons"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "musician",
+   "name": "Musician",
+   "sector": "music",
+   "schedule": "evening",
+   "employment": "freelance",
+   "pay": "$$",
+   "summary": "Plays at palace feasts, the bandstand and the taverns.",
+   "themes": [
+    "performing",
+    "practice",
+    "evenings out"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "tinsmith",
+   "name": "Tinsmith",
+   "sector": "crafts",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Makes and mends tin pails, lanterns and oil cans, a trade the Winkies are known for.",
+   "themes": [
+    "metalwork",
+    "repairs",
+    "Winkie pride"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "cobbler",
+   "name": "Cobbler",
+   "sector": "crafts",
+   "schedule": "office",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Makes and mends shoes and boots.",
+   "themes": [
+    "handwork",
+    "regulars",
+    "leather"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "glazier",
+   "name": "Glazier",
+   "sector": "crafts",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Blows and fits the green glass in the city's windows.",
+   "themes": [
+    "heat",
+    "fragile work",
+    "craft"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "street-keeper",
+   "name": "Street keeper",
+   "sector": "city-works",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Sweeps and polishes the green marble streets and resets loose emeralds.",
+   "themes": [
+    "early starts",
+    "neighbourhood",
+    "outdoors"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "carpenter",
+   "name": "Carpenter",
+   "sector": "city-works",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Builds and repairs houses, wagons and market stalls.",
+   "themes": [
+    "building",
+    "tools",
+    "teamwork"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "road-mender",
+   "name": "Road mender",
+   "sector": "city-works",
+   "schedule": "shift-day",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Relays broken yellow bricks and fills the holes in the road outside the gate.",
+   "themes": [
+    "outdoors",
+    "travellers",
+    "hard work"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "healer",
+   "name": "Healer",
+   "sector": "care",
+   "schedule": "rotating",
+   "employment": "rota",
+   "pay": "$$",
+   "summary": "Looks after the sick and the injured at the city's house of healing.",
+   "themes": [
+    "caring",
+    "herbs",
+    "night calls"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "farmer",
+   "name": "Farmer",
+   "sector": "farming",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Grows grain, fruit and vegetables on the farms along the yellow brick road and brings them to market.",
+   "themes": [
+    "seasons",
+    "harvest",
+    "animals"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  },
+  {
+   "id": "market-keeper",
+   "name": "Market keeper",
+   "sector": "food",
+   "schedule": "early",
+   "employment": "staff",
+   "pay": "$$",
+   "summary": "Sets out stalls on Market Square and shares produce out fairly.",
+   "themes": [
+    "people",
+    "produce",
+    "early starts"
+   ],
+   "eras": [
+    "fantasy"
+   ]
+  }
+ ],
+ "employers": [
+  {
+   "id": "royal-palace-household",
+   "name": "The Royal Palace household",
+   "sector": "palace",
+   "neighborhood": "palace-grounds",
+   "size": "large",
+   "summary": "The staff who run Ozma's palace: kitchens, halls, guest rooms and feasts.",
+   "careers": [
+    "palace-cook",
+    "palace-steward",
+    "musician"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-gardens-staff",
+   "name": "The Royal Gardens",
+   "sector": "gardens",
+   "neighborhood": "palace-grounds",
+   "size": "medium",
+   "summary": "Gardeners who keep the palace gardens and the city's orchards and greens.",
+   "careers": [
+    "gardener"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-army",
+   "name": "The Royal Army of Oz",
+   "sector": "army",
+   "neighborhood": "barracks-corner",
+   "size": "small",
+   "summary": "The city's tiny army, which has always had more officers than privates.",
+   "careers": [
+    "royal-army-soldier"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gatehouse",
+   "name": "The Gatehouse of the Emerald City",
+   "sector": "gates",
+   "neighborhood": "gate-quarter",
+   "size": "small",
+   "summary": "The staff of the great gate who greet travellers and keep the green spectacles.",
+   "careers": [
+    "gate-warden"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cutters-row-shops",
+   "name": "The Cutters' Row workshops",
+   "sector": "crafts",
+   "neighborhood": "cutters-row",
+   "size": "medium",
+   "summary": "Everyday city workshops where emeralds are cut and set in gold.",
+   "careers": [
+    "emerald-cutter",
+    "goldsmith"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "glass-house-works",
+   "name": "The Glass House",
+   "sector": "crafts",
+   "neighborhood": "cutters-row",
+   "size": "small",
+   "summary": "Everyday city glassworks making green window glass.",
+   "careers": [
+    "glazier"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oven-street-bakehouses",
+   "name": "The Oven Street bakehouses",
+   "sector": "food",
+   "neighborhood": "oven-street",
+   "size": "medium",
+   "summary": "Everyday city bakehouses that bake for the whole city.",
+   "careers": [
+    "baker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-square-keepers",
+   "name": "The Market Square keepers",
+   "sector": "food",
+   "neighborhood": "market-square",
+   "size": "small",
+   "summary": "Everyday city stallholders who unload the wagons and share out the produce.",
+   "careers": [
+    "market-keeper"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-taverns",
+   "name": "The Half Moon and the Wayfarers' Rest",
+   "sector": "food",
+   "neighborhood": "gate-quarter",
+   "size": "small",
+   "summary": "Everyday city tavern and inn by the gate.",
+   "careers": [
+    "tavern-keeper",
+    "musician"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "needle-hill-cloth",
+   "name": "The Needle Hill cloth hall",
+   "sector": "textiles",
+   "neighborhood": "needle-hill",
+   "size": "medium",
+   "summary": "Everyday city tailors and dyers who clothe the city.",
+   "careers": [
+    "tailor",
+    "dyer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "reading-room",
+   "name": "The Public Reading Room",
+   "sector": "learning",
+   "neighborhood": "bookbinders-close",
+   "size": "small",
+   "summary": "Everyday city library open to everyone.",
+   "careers": [
+    "librarian"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "schoolhouse",
+   "name": "The Pump Square schoolhouse",
+   "sector": "learning",
+   "neighborhood": "pump-square",
+   "size": "small",
+   "summary": "Everyday city school for children of the city.",
+   "careers": [
+    "schoolteacher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "winkie-tinsmiths",
+   "name": "The Winkie Street tinsmiths",
+   "sector": "crafts",
+   "neighborhood": "winkie-street",
+   "size": "small",
+   "summary": "Everyday city tinsmiths' and cobblers' workshops on the west side.",
+   "careers": [
+    "tinsmith",
+    "cobbler"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "street-keepers-lodge",
+   "name": "The Street Keepers' Lodge",
+   "sector": "city-works",
+   "neighborhood": "market-square",
+   "size": "medium",
+   "summary": "Everyday city crew that sweeps the streets, mends houses and keeps up the roads.",
+   "careers": [
+    "street-keeper",
+    "carpenter",
+    "road-mender"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "house-of-healing",
+   "name": "The house of healing",
+   "sector": "care",
+   "neighborhood": "quadling-lane",
+   "size": "small",
+   "summary": "Everyday city house where the sick and injured are looked after; in Oz few people ever die, but they still catch colds and break arms.",
+   "careers": [
+    "healer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "east-road-farms",
+   "name": "The East Road farms",
+   "sector": "farming",
+   "neighborhood": "yellow-brick-road",
+   "size": "medium",
+   "summary": "Everyday farms along the yellow brick road that feed the city.",
+   "careers": [
+    "farmer"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "palace-hub",
+   "name": "The palace and its gardens",
+   "neighborhoods": [
+    "palace-grounds",
+    "barracks-corner"
+   ],
+   "sectors": [
+    "palace",
+    "gardens",
+    "army",
+    "music"
+   ],
+   "summary": "The palace, its gardens and the barracks employ more people than anywhere else in the city.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "workshop-streets",
+   "name": "The workshop streets",
+   "neighborhoods": [
+    "cutters-row",
+    "needle-hill",
+    "winkie-street"
+   ],
+   "sectors": [
+    "crafts",
+    "textiles"
+   ],
+   "summary": "Emerald cutters, goldsmiths, tailors, dyers and tinsmiths work in long open workshops.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "market-and-ovens",
+   "name": "Market and ovens",
+   "neighborhoods": [
+    "market-square",
+    "oven-street",
+    "gate-quarter"
+   ],
+   "sectors": [
+    "food",
+    "city-works",
+    "gates"
+   ],
+   "summary": "Bakers, stallholders, tavern keepers and street crews keep the city fed and clean.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "town-and-country",
+   "name": "Town edge and country",
+   "neighborhoods": [
+    "yellow-brick-road",
+    "gillikin-gardens",
+    "quadling-lane",
+    "pump-square",
+    "bookbinders-close"
+   ],
+   "sectors": [
+    "farming",
+    "care",
+    "learning"
+   ],
+   "summary": "Schools, the reading room, the house of healing and the farms beyond the gate.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Mild and pleasant all year, as Baum describes Oz: warm summers, soft rain, short cool winters with hardly any snow. Values are invented for fiction.",
+  "months": [
+   {
+    "high_f": 52,
+    "low_f": 34,
+    "rain_days": 5,
+    "note": "Coolest month; crisp mornings, rare light snow."
+   },
+   {
+    "high_f": 55,
+    "low_f": 36,
+    "rain_days": 5,
+    "note": "Cool and bright."
+   },
+   {
+    "high_f": 62,
+    "low_f": 42,
+    "rain_days": 7,
+    "note": "First blossoms in the orchards."
+   },
+   {
+    "high_f": 68,
+    "low_f": 48,
+    "rain_days": 8,
+    "note": "Soft spring showers."
+   },
+   {
+    "high_f": 74,
+    "low_f": 54,
+    "rain_days": 8,
+    "note": "Gardens in full flower."
+   },
+   {
+    "high_f": 79,
+    "low_f": 59,
+    "rain_days": 6,
+    "note": "Long warm days."
+   },
+   {
+    "high_f": 82,
+    "low_f": 62,
+    "rain_days": 5,
+    "note": "Warmest month; evenings outdoors."
+   },
+   {
+    "high_f": 81,
+    "low_f": 61,
+    "rain_days": 5,
+    "note": "Warm; the first fruit harvest."
+   },
+   {
+    "high_f": 76,
+    "low_f": 56,
+    "rain_days": 5,
+    "note": "Golden and calm."
+   },
+   {
+    "high_f": 69,
+    "low_f": 48,
+    "rain_days": 5,
+    "note": "Apple pressing; cool nights."
+   },
+   {
+    "high_f": 60,
+    "low_f": 41,
+    "rain_days": 5,
+    "note": "Leaves turn; fires lit in the taverns."
+   },
+   {
+    "high_f": 54,
+    "low_f": 36,
+    "rain_days": 5,
+    "note": "Short cool days."
+   }
+  ],
+  "source": "curated-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "ozma-birthday",
+   "name": "Ozma's birthday",
+   "months": [
+    8
+   ],
+   "neighborhood": "palace-grounds",
+   "summary": "A great party at the palace with guests from all over Oz, as in The Road to Oz; the month here is invented.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "army-review",
+   "name": "Review of the Royal Army",
+   "months": [
+    5
+   ],
+   "neighborhood": "barracks-corner",
+   "summary": "The whole Royal Army parades across its square, which takes a few minutes, and everyone cheers.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spring-planting",
+   "name": "Spring planting days",
+   "months": [
+    3,
+    4
+   ],
+   "neighborhood": "gillikin-gardens",
+   "summary": "Everyone turns out to dig and sow the allotments, orchards and palace beds.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "four-countries-fair",
+   "name": "Four Countries fair",
+   "months": [
+    9
+   ],
+   "neighborhood": "market-square",
+   "summary": "Wagons from the Munchkin, Winkie, Quadling and Gillikin countries fill Market Square with harvest goods in their own colours.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "road-mending",
+   "name": "Road-mending week",
+   "months": [
+    4
+   ],
+   "neighborhood": "yellow-brick-road",
+   "summary": "Volunteers walk out along the yellow brick road to relay broken bricks and fill the holes.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "apple-pressing",
+   "name": "Apple pressing",
+   "months": [
+    10
+   ],
+   "neighborhood": "yellow-brick-road",
+   "summary": "Cider presses run in the East Road orchards and city people walk out to help.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cutters-open-day",
+   "name": "Cutters' open day",
+   "months": [
+    6
+   ],
+   "neighborhood": "cutters-row",
+   "summary": "Workshops on Cutters' Row open fully and apprentices show their first polished stones.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bandstand-summer",
+   "name": "Bandstand evenings",
+   "months": [
+    6,
+    7,
+    8
+   ],
+   "neighborhood": "pump-square",
+   "summary": "Neighbourhood bands play Pump Square on warm evenings.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "midwinter-dance",
+   "name": "Midwinter dance",
+   "months": [
+    12
+   ],
+   "neighborhood": "palace-grounds",
+   "summary": "A night of music and dancing in the palace hall for anyone who comes.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spectacle-day",
+   "name": "Spectacle day",
+   "months": [
+    11
+   ],
+   "neighborhood": "gate-quarter",
+   "summary": "Children borrow green spectacles from the gatehouse for a day to see the city the way visitors once did.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "green-spectacles",
+   "name": "Green spectacles",
+   "kind": "custom",
+   "summary": "In the Wizard's day the Guardian of the Gates locked a pair of green spectacles on every visitor; the custom lapsed under Ozma, but the gatehouse still keeps the box.",
+   "places": [
+    "gatehouse-spectacles",
+    "great-gate"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "no-money",
+   "name": "No money",
+   "kind": "custom",
+   "summary": "There is no money in Oz: people work for the good of all, and take what they need from the shops and storehouses without paying.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green-lemonade",
+   "name": "Green lemonade",
+   "kind": "drink",
+   "summary": "Sold on the streets for green pennies in the Wizard's time, green lemonade is now handed over the counter free to anyone thirsty.",
+   "places": [
+    "green-lemonade-stand"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green-popcorn",
+   "name": "Green popcorn",
+   "kind": "dish",
+   "summary": "Popcorn tinted green, sold from street carts in the Wizard's time and still a favourite of children on market days.",
+   "places": [
+    "green-lemonade-stand",
+    "market-square"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "country-colours",
+   "name": "The colours of the four countries",
+   "kind": "custom",
+   "summary": "Munchkins wear blue, Winkies yellow, Quadlings red and Gillikins purple, and newcomers to the city keep their home colour for a long time.",
+   "places": [
+    "winkie-street",
+    "quadling-lane",
+    "gillikin-gardens"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "no-magic-law",
+   "name": "The law against magic",
+   "kind": "custom",
+   "summary": "By Ozma's decree no one but Glinda and the Wizard may practise magic in Oz, so herb-gatherers and conjurers take care what they do.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nobody-grows-old",
+   "name": "Nobody grows old",
+   "kind": "other",
+   "summary": "Since Oz was made a fairyland, its people do not age or fall ill, so nobody here can quite tell you how old they are.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "no-place-like-home",
+   "name": "\"There is no place like home\"",
+   "kind": "saying",
+   "summary": "Dorothy's words, which the people of the city repeat to homesick travellers and to themselves on returning from a long journey.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "army-of-officers",
+   "name": "The army of officers",
+   "kind": "other",
+   "summary": "The Royal Army of Oz once had twenty-six officers and one private, and the city still jokes about who gives orders to whom.",
+   "places": [
+    "royal-army-parade-ground",
+    "barracks-mess"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "green-whiskers",
+   "name": "The Soldier with the Green Whiskers",
+   "kind": "other",
+   "summary": "The palace's best-known soldier is easy to recognize by his long green beard, and he is the one to ask at the palace door.",
+   "places": [
+    "royal-palace"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "winkie-tinsmith-shops",
+   "name": "Winkie tinsmiths",
+   "kind": "shop",
+   "summary": "Winkie tinsmiths once mended the Tin Woodman, and their shops still make and mend kettles, lanterns, oil-cans and anything else of tin.",
+   "places": [
+    "winkie-street-tinsmiths",
+    "winkie-street"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "purple-plum-wine",
+   "name": "Plum wine",
+   "kind": "drink",
+   "summary": "Gillikin families make a sweet purple wine from their plums and serve it with cold meats.",
+   "places": [
+    "purple-plum"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oatcakes",
+   "name": "Gillikin oatcakes",
+   "kind": "dish",
+   "summary": "Flat oatcakes baked on a griddle, eaten with butter and honey for breakfast or carried in a pocket on a long walk.",
+   "places": [
+    "gillikin-oatcake-oven"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "apple-cider",
+   "name": "New cider",
+   "kind": "drink",
+   "summary": "When the orchards are picked, the cider barns press apples for sweet new cider, sold by the jug from the taverns.",
+   "places": [
+    "cider-barn",
+    "apple-cart",
+    "cutters-arms"
+   ],
+   "seasons": [
+    "fall"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "afternoon-tea",
+   "name": "Tea and cakes",
+   "kind": "custom",
+   "summary": "Many people stop work in the afternoon for tea, cakes and bread and butter, often in a garden or by the window.",
+   "places": [
+    "bramble-tearoom",
+    "needle-hill-tea-garden"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "puppet-shows",
+   "name": "Market-day puppet shows",
+   "kind": "custom",
+   "summary": "Puppeteers on Market Square play out the adventures of Dorothy, the Scarecrow and the Tin Woodman, and children shout warnings at the wicked witch.",
+   "places": [
+    "market-square-puppets"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  }
+ ]
+}

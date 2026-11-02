@@ -1,0 +1,976 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "category": "place, people, magic, law, organization, event or world",
+    "keywords": "words that bring the entry to the narrator",
+    "text": "public knowledge only; secrets live in cast secret fields and hidden-truths.json",
+    "refs": "ids of related settlements and factions"
+  },
+  "entries": [
+    {
+      "id": "havenbrooke-university",
+      "title": "Havenbrooke University",
+      "category": "place",
+      "keywords": [
+        "havenbrooke",
+        "university",
+        "campus"
+      ],
+      "text": "A federal integration college opened by the Department of Esoteric Development in 1867 on the east bank of the Haven River, where three minor ley lines meet. About 5,000 students, a 20 percent acceptance rate and five teaching platforms: Esoteric Sciences, Interpersonal Dynamics, Military and Tactical Operations, Mundane Studies, and Supernatural Physiology and Integration. Majors are declared at the end of sophomore year.",
+      "refs": {
+        "settlement": "havenbrooke-campus",
+        "faction": "havenbrooke-university"
+      }
+    },
+    {
+      "id": "aldwright-hall",
+      "title": "Aldwright Hall",
+      "category": "place",
+      "keywords": [
+        "aldwright"
+      ],
+      "text": "Home of Esoteric Sciences and the oldest building on campus: dark brick, stone floors that never warm, the smell of varnish, chalk and misfired spells. A stairwell carries voices two floors up and lets them out in the women's restroom. The third-floor windows will not latch.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "vespers-hall",
+      "title": "Vespers Hall of Ritual Arts",
+      "category": "place",
+      "keywords": [
+        "vespers"
+      ],
+      "text": "The ritual complex for Esoteric Sciences, built over the campus's strongest ley node. High candlelit chambers and spell rings cut into black stone that warms underfoot. Covens book the chambers weeks ahead; Sigma Theta Hex holds its equinox rites in the largest and keeps custody of its ring. Hexenkreis meets in the second chamber on Wednesdays.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "thornewall",
+      "title": "Thornewall Academic Center",
+      "category": "place",
+      "keywords": [
+        "thornewall"
+      ],
+      "text": "Home of Mundane Studies: nineties glass, industrial carpet, two-hundred-seat lecture halls, and a magical suppression field that hums. Witches get headaches after four hours; mundane students find it the most comfortable building on campus. It was designed to look employable. The Oracle is in its basement.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "kaelen-hall",
+      "title": "Kaelen Hall",
+      "category": "place",
+      "keywords": [
+        "kaelen"
+      ],
+      "text": "Home of Interpersonal Dynamics, a converted 1920s sanatorium with a tall atrium, seminar rooms named after diplomats, couches in every hallway and an intimacy-ethics clinic on the third floor. Lavender and beeswax. The ethics seminar room looks out over the Old Cemetery, which nobody mentions.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "warden-hall",
+      "title": "Warden Hall",
+      "category": "place",
+      "keywords": [
+        "warden"
+      ],
+      "text": "Home of Military and Tactical Operations: squat concrete with no art, gun oil from the armory, federal instructors at odd hours, and training rooms wired for surveillance, so seniors learn to say nothing personal inside. Classes start at 0700.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "bellweather-hall",
+      "title": "Bellweather Hall",
+      "category": "place",
+      "keywords": [
+        "bellweather"
+      ],
+      "text": "Home of Supernatural Physiology and Integration: red-brick Georgian with a modern wing, anatomy and anthropology labs upstairs and a faint smell of preservative that students stop noticing by spring. The Ember Circle meets in a warded wing on Tuesday nights.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "farrow-house",
+      "title": "Farrow House for Mixed Physiology",
+      "category": "place",
+      "keywords": [
+        "farrow"
+      ],
+      "text": "The supervised treatment and training house: a three-storey Victorian with a wraparound porch, lavender and iron filings, walls that swallow sound, and a stained-glass owl over the parlour door where students wait. Staff include witches, fae healers, a retired succubus diplomat and a lycan elder who brings her own coffee. Bitten lycans stabilize here. The Farrow Annex behind it houses students in active treatment.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "chancellor-wynne-library",
+      "title": "Chancellor Wynne Library",
+      "category": "place",
+      "keywords": [
+        "library",
+        "wynne"
+      ],
+      "text": "The main library. Its shelves rearrange overnight to the course schedule, and aura-stabilization wards let demons and humans study side by side. The basement archives need a faculty sponsor and a blood signature; the Night Owls meet down there after 10 p.m.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "verdant-grove",
+      "title": "The Verdant Grove",
+      "category": "place",
+      "keywords": [
+        "verdant grove",
+        "greenhouse"
+      ],
+      "text": "Four linked ritual greenhouses and an outdoor garden for plants too charged to keep indoors. Warm and humid all year, smelling of wet earth and bruised leaves. It serves as a shared anchor for dryad students far from home. The Student Enchanters' Guild has a workshop inside.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "stitch-hall",
+      "title": "Stitch Hall Ateliers",
+      "category": "place",
+      "keywords": [
+        "stitch hall",
+        "atelier"
+      ],
+      "text": "Fashion and design studios for the IPD aesthetics concentration: bolts of fabric to the ceiling, rows of industrial machines, long mirrors and fibre dust in the air. Private ateliers upstairs; a shared studio on the ground floor.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "evermere",
+      "title": "Evermere Health Pavilion",
+      "category": "place",
+      "keywords": [
+        "evermere",
+        "health pavilion",
+        "clinic"
+      ],
+      "text": "Six floors of human and supernatural medicine that never close: healing springs for fae in the sub-basement, reinforced lycan rooms on three, consent-warded feeding suites for vampires on four. Mundane students can ask for the exposure-fatigue protocol; most refuse in September and accept by spring.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "crestfall-arena",
+      "title": "Crestfall Arena",
+      "category": "place",
+      "keywords": [
+        "crestfall",
+        "arena"
+      ],
+      "text": "The athletic complex, reinforced for lycan sparring and aerial fae training, sound-dampened, smelling of chalk and old equipment. The auxiliary studio hosts fencing and, at 4 a.m., whoever needs an empty room. The north practice fields behind it host the Harvest Howl.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "morrowe-commons",
+      "title": "Morrowe Commons",
+      "category": "place",
+      "keywords": [
+        "morrowe",
+        "commons",
+        "dining hall"
+      ],
+      "text": "The social heart of campus: four floors of lounges, eateries, music rooms and club space under an energetic-equilibrium ward that keeps aura pressure from making humans ill. Coffee, wood polish and the bakery that opens at six. The walk-in freezer behind the kitchen jams now and then.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "caldwell-fountain",
+      "title": "Caldwell Fountain Court",
+      "category": "place",
+      "keywords": [
+        "caldwell",
+        "fountain"
+      ],
+      "text": "A plaza round a fountain that amplifies magical surges in spring bloom, with water three degrees colder than the air. A faint glamour draws confessions out of stressed students; campus folklore says most breakups and hookups start here. Professors cross it quickly.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "old-observatory",
+      "title": "The Old Observatory",
+      "category": "place",
+      "keywords": [
+        "observatory"
+      ],
+      "text": "A stone relic from the founding, now a place to decompress. The roof is open to students and the lower levels are locked. The granite steps are worn smoothest on the lycan side. The Integration Society meets on the roof on Sunday afternoons.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "ridgewalk-chapel",
+      "title": "Ridgewalk Chapel",
+      "category": "place",
+      "keywords": [
+        "chapel",
+        "ridgewalk"
+      ],
+      "text": "A small white clapboard sanctuary on the western edge of campus: twelve pews, stained glass, always unlocked. A candle burns on the altar at all hours, tended by nobody anyone has seen.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "nexus-housing",
+      "title": "Nexus Housing",
+      "category": "place",
+      "keywords": [
+        "nexus"
+      ],
+      "text": "Upperclass apartment-style suites with kitchens and private bathrooms, built to keep juniors and seniors on campus. The foundation sits over a secondary ley node: magic works better and sleep is worse, with vivid dreams and a stronger libido. Nobody advertises it; residents work it out by week two. The third floor is a trefoil of three units round a shared common room.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "nexus-third-floor",
+      "title": "The Nexus third floor",
+      "category": "place",
+      "keywords": [
+        "third floor",
+        "unit a",
+        "unit b",
+        "unit c",
+        "common room"
+      ],
+      "text": "Three units round a 24-by-20-foot common room with octagonal seating and a long table, and a lobby, elevator and stairwell below. In 2009 it holds six sophomores on an exceptional placement: Piper and Jason in Unit A, Rina and Austin in Unit B, Kim and Michael in Unit C. Piper's suite rules are taped to the fridge (rule 4: no charm work in the common room; rule 7: knock even when the door is open).",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "north-dorm-ridge",
+      "title": "North Dorm Ridge",
+      "category": "place",
+      "keywords": [
+        "north dorm"
+      ],
+      "text": "Supernatural-majority housing: three brutalist seventies towers with reinforced doors, dampened plumbing and HVAC tuned for demon heat and vampire chill. Humans are told to take the stairs.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "east-residential-quad",
+      "title": "East Residential Quad",
+      "category": "place",
+      "keywords": [
+        "east quad"
+      ],
+      "text": "General housing by lottery: three brick dorms round a courtyard used for spell tests, frisbee and breakups, in that order through the day.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "alpha-gamma-house",
+      "title": "Alpha Gamma House",
+      "category": "place",
+      "keywords": [
+        "alpha gamma house"
+      ],
+      "text": "A grey three-storey Victorian with black trim on the north edge of campus. Full-moon ceremonies in the basement. The common-room couches hold so much lycan pheromone that human guests feel strange within five minutes.",
+      "refs": {
+        "settlement": "havenbrooke-campus",
+        "faction": "alpha-gamma"
+      }
+    },
+    {
+      "id": "sigma-theta-hex-house",
+      "title": "Sigma Theta Hex House",
+      "category": "place",
+      "keywords": [
+        "hex house"
+      ],
+      "text": "An ivy-covered federal mansion off Lantern Way with black shutters, sage and iron in the air, and the same door knocker since 1891. Everything above the grand staircase is sisters-only, and the ward marks anyone who forces it.",
+      "refs": {
+        "settlement": "havenbrooke-campus",
+        "faction": "sigma-theta-hex"
+      }
+    },
+    {
+      "id": "the-quad-and-lantern-way",
+      "title": "The Quad and Lantern Way",
+      "category": "place",
+      "keywords": [
+        "quad",
+        "lantern way",
+        "runway"
+      ],
+      "text": "Four acres of green under oaks older than the university, with grass that grows back unreasonably fast. Lantern Way runs from the front gates to Morrowe Commons under converted gas lamps that still flicker; students call it the runway, because everyone sees everyone there sooner or later.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "ironroot-woods",
+      "title": "Ironroot Woods",
+      "category": "place",
+      "keywords": [
+        "ironroot",
+        "woods"
+      ],
+      "text": "A mile of old-growth forest on the western edge of campus. Trails are kept by day and unmarked after dusk. A creek deadens sound for thirty feet, which is why lycans run here and witches gather here. Alpha Gamma's bonded-brothers ritual happens somewhere inside.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "old-cemetery",
+      "title": "The Old Cemetery",
+      "category": "place",
+      "keywords": [
+        "cemetery"
+      ],
+      "text": "Older than the university by forty years: granite stones behind an overgrown iron fence, one path mown weekly and one not. Some headstones move between visits, measurably. Couples come here because nobody follows.",
+      "refs": {
+        "settlement": "havenbrooke-campus"
+      }
+    },
+    {
+      "id": "haven",
+      "title": "Haven, New York",
+      "category": "place",
+      "keywords": [
+        "haven"
+      ],
+      "text": "A Finger Lakes city of about 35,000 on the Haven River, founded in the 1820s as a mill town. The paper mills closed in the seventies; now it lives on the university, tourism and the artisan studios in the old mills. Chapel Hill climbs the east side, working neighborhoods spread west, and the Crane family has held the northern ridge since 1819. Long winters, short wet summers.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "stag-and-thistle",
+      "title": "The Stag & Thistle",
+      "category": "place",
+      "keywords": [
+        "stag",
+        "thistle",
+        "pub"
+      ],
+      "text": "The off-campus pub on a Main Street corner, behind mullioned windows and a carved sign last painted in 1994. Scotch eggs, shepherd's pie, forty taps. Faculty take the back booths, students the front. The owner is a retired witch who has never been wrong about an ID.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "midnight-gas",
+      "title": "Midnight Gas",
+      "category": "place",
+      "keywords": [
+        "midnight gas",
+        "diner"
+      ],
+      "text": "The 24-hour diner on North Main: neon, cracked vinyl booths, coffee that has been on the burner too long, pancakes and cheeseburgers at 3 a.m. The cook nods at regulars and does not talk.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "pale-press",
+      "title": "Pale Press Coffee",
+      "category": "place",
+      "keywords": [
+        "pale press",
+        "coffee"
+      ],
+      "text": "A café in a converted print shop on Prescott Alley off Main: brick, big windows, espresso and old paper. Magic-neutral by house rule: no glamours, no charms, no spellwork. The owner asks you to leave once, politely, and then never again.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "drothes-bookery",
+      "title": "Drothe's Bookery",
+      "category": "place",
+      "keywords": [
+        "drothe",
+        "bookery",
+        "bookstore"
+      ],
+      "text": "A two-storey used bookshop on Bell Street with narrow stairs and deep shelves. Paperbacks for five dollars; occult texts upstairs for whatever Drothe decides that day; the interesting things behind the register.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "harpers",
+      "title": "Harper's",
+      "category": "place",
+      "keywords": [
+        "harper"
+      ],
+      "text": "The nice restaurant at Main and Chapel: white cloths, hurricane candles, a long wine list and the best bread in the Finger Lakes. Two months' notice for a table unless you know the maître d'.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "mill-district",
+      "title": "The Mill District",
+      "category": "place",
+      "keywords": [
+        "mill district",
+        "ironworks",
+        "foundry"
+      ],
+      "text": "The old industrial strip along the river south of downtown: warehouse conversions, loading docks turned into patios, gallery lights strung between buildings. The Ironworks Collective on Old Foundry Row rents bench space in eighteen artisan studios, charm infusion included.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "velvet-spire",
+      "title": "The Velvet Spire",
+      "category": "place",
+      "keywords": [
+        "velvet spire",
+        "club"
+      ],
+      "text": "The supernatural-friendly club in an unmarked three-storey warehouse on Riverside Warehouse Row. Steep cover for humans, waived for species with documented feeding needs. DJs on the main floor, private booths on the middle, and a members-only top floor that no undergraduate has credibly seen.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "arrow-and-ink",
+      "title": "Arrow & Ink",
+      "category": "place",
+      "keywords": [
+        "arrow",
+        "ink",
+        "tattoo"
+      ],
+      "text": "A tattoo and piercing shop on Foundry Lane: lamp-lit, vinyl seats worn smooth, green soap and iron. The owner does enchanted ink on the side for clients she trusts.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "west-haven",
+      "title": "West Haven student houses",
+      "category": "place",
+      "keywords": [
+        "west haven",
+        "elm street",
+        "birch street",
+        "sycamore"
+      ],
+      "text": "Run-down Victorians and Craftsmans on Elm, Birch and Sycamore, rented to four to eight students and handed down between friend groups. Cheaper than the dorms, looser rules, legendary parties, terrible plumbing. Delta Nu Iris and Delta Omicron Theta both have houses on Birch.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "saturday-market",
+      "title": "Haven Saturday Market",
+      "category": "place",
+      "keywords": [
+        "market",
+        "saturday market"
+      ],
+      "text": "A year-round farmers' market in the central plaza, outdoors May to October and in the old meeting hall in winter: produce, cheese, honey, enchanted preserves from a dryad co-op and a bakery that only sells on Saturdays. Opens at 7, packed by 9.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "riverwalk",
+      "title": "The Riverwalk",
+      "category": "place",
+      "keywords": [
+        "riverwalk",
+        "river"
+      ],
+      "text": "Three miles of paved path along the east bank of the Haven River, from downtown past the Mill District into the hills, with benches, lamps and small docks. In winter it ices over and nobody clears it.",
+      "refs": {
+        "settlement": "haven"
+      }
+    },
+    {
+      "id": "crane-hill",
+      "title": "Crane Hill",
+      "category": "place",
+      "keywords": [
+        "crane hill"
+      ],
+      "text": "A fenced, gated, wooded estate on the northern ridge above West Haven. The Crane family of vampires has lived there since 1819, employs townspeople and funds two scholarships a year. You can see the roofline from the Riverwalk if you know where to look.",
+      "refs": {
+        "settlement": "haven",
+        "faction": "crane-family"
+      }
+    },
+    {
+      "id": "sex-demons",
+      "title": "Incubi and succubi",
+      "category": "people",
+      "keywords": [
+        "incubus",
+        "succubus",
+        "demonkin",
+        "sex demon"
+      ],
+      "text": "Demonkin draw emotional and sexual vitality rather than blood, through intimacy, charged talk or held eye contact. They run warm, smell strong and dream vividly. Glamours soften them but leak heat, scent and microexpressions. Some dreamwalk, some partly shift (horns, wings, claws) under strain, and a rare few can fully shift and hide it. Feeding on anyone unconscious or unwilling is a federal felony, and most families raise children to dread it. Demon families have no national body; a line is its own law.",
+      "refs": {}
+    },
+    {
+      "id": "lycans-born",
+      "title": "Lycans (blood curse)",
+      "category": "people",
+      "keywords": [
+        "lycan",
+        "werewolf",
+        "wolf",
+        "blood curse",
+        "dual-seat"
+      ],
+      "text": "The hereditary curse wakes at the first big emotional event of puberty and brings controlled shifting, sharp senses and fast healing. Most born lycans feel the wolf as part of themselves. A dual-seat minority feel it as a separate personality with its own humour and grief; they tend to literal thinking, strong pair bonds and a dislike of dishonesty, and they often name their wolves. Silver hurts them.",
+      "refs": {}
+    },
+    {
+      "id": "lycans-bitten",
+      "title": "Lycans (bitten)",
+      "category": "people",
+      "keywords": [
+        "bitten",
+        "turned lycan"
+      ],
+      "text": "A bite scars the nervous system instead of growing into it, so a bitten lycan's first year is fever, pain and surges, with a louder, more territorial wolf. Many stabilize at Farrow House. Conversion is legal in most states after a sixty-day wait, a psychiatric evaluation and a willing adult carrier; underground bites cause the worst cases. Some packs still treat \"bitten\" as a class word.",
+      "refs": {}
+    },
+    {
+      "id": "vampires",
+      "title": "Vampires",
+      "category": "people",
+      "keywords": [
+        "vampire",
+        "turned",
+        "bloodline"
+      ],
+      "text": "Vampirism is a chosen transformation that stops ageing and runs the body on blood. Sunlight loosens the bindings, so day-walking takes enchanted jewellery or stored energy. They hear a pulse change during a lie. Some bloodlines also feed on emotion, a lighter feed that leaves no mark; old families think it unserious, and turned vampires sometimes find it by instinct. Turning requires a licensed specialist. Born families sit on the Council of Bloodlines; turned vampires are tolerated.",
+      "refs": {}
+    },
+    {
+      "id": "witches",
+      "title": "Witches",
+      "category": "people",
+      "keywords": [
+        "witch",
+        "coven",
+        "ritual tongue",
+        "mundie"
+      ],
+      "text": "A witch is a human who channels magic through words, diagrams, tools and rites; slower than a supernatural, more precise, and able to mimic or counter nearly anything if the working is built right. A shaking voice breaks an incantation. Witches train in ritual tongues (Old Church Latin, Enochian, Classical Sumerian, Goetic and others); five makes you accomplished. Covens keep private tongues. Legally and biologically, witches are human. Iron troubles some lineages.",
+      "refs": {}
+    },
+    {
+      "id": "mundane-humans",
+      "title": "Mundane humans",
+      "category": "people",
+      "keywords": [
+        "mundane",
+        "human",
+        "exposure fatigue"
+      ],
+      "text": "A non-magical human. Havenbrooke admits about 300 a year, mostly on scholarship. Consent law protects them, but living in high magical density causes exposure fatigue: unexplained tiredness, flattened mood, bad sleep. Evermere treats it. \"Mundie\" is casual slang that some mundane students find condescending.",
+      "refs": {}
+    },
+    {
+      "id": "fae",
+      "title": "The fae",
+      "category": "people",
+      "keywords": [
+        "fae",
+        "fairy",
+        "court",
+        "seelie",
+        "unseelie",
+        "iron"
+      ],
+      "text": "Long-lived beings tied to natural or elemental principles and bound by court law older than any human system. Most belong to a great court (Seelie and Unseelie in the European tradition); free fae pay a social price. Iron burns most of them to some degree. Betrothal, alliance and inheritance follow fae students onto campus, and many chose an American university because the courts cannot fully reach into its legal frame.",
+      "refs": {}
+    },
+    {
+      "id": "kitsune",
+      "title": "Kitsune",
+      "category": "people",
+      "keywords": [
+        "kitsune",
+        "fox",
+        "tail",
+        "bonded circle",
+        "tether"
+      ],
+      "text": "Fox fae of East Asian tradition who gain tails over centuries; North American kitsune have one or two. Their ears and tails show every feeling to anyone who has learned to read them. Their magic is charm, illusion and emotional tethering. The bonded circle, one kitsune holding several partners in a shared aura, is the highest relational achievement in their tradition. A half-kitsune will never grow a second tail.",
+      "refs": {}
+    },
+    {
+      "id": "dryads",
+      "title": "Dryads",
+      "category": "people",
+      "keywords": [
+        "dryad",
+        "anchor",
+        "vine",
+        "pheromone"
+      ],
+      "text": "Woodland fae: small, pale with a green undertone, sometimes bark-textured at pressure points. They grow vines and roots from their shoulders and forearms under stress or arousal and can braid them into rope or restraints, which exhausts them. They leak a pheromone drift they believe is unreadable and is not. Each is bonded to a tree or grove; long separation weakens them physically. Dryad students are often betrothed to someone they are trying not to marry.",
+      "refs": {}
+    },
+    {
+      "id": "sylphs",
+      "title": "Sylphs",
+      "category": "people",
+      "keywords": [
+        "sylph"
+      ],
+      "text": "Air fae from the oldest European courts: tall, pale, faintly luminous and nearly weightless in how they move. They work through breath, voice and wind, can compel truth with a word and are poor at touch magic. Nobles keep tether circles of three to seven partners at a distance and arrange marriages decades ahead. Havenbrooke has two.",
+      "refs": {}
+    },
+    {
+      "id": "selkies",
+      "title": "Selkies",
+      "category": "people",
+      "keywords": [
+        "selkie",
+        "sealskin"
+      ],
+      "text": "Coastal fae of the British Isles and the North Atlantic. A selkie's sealskin is part of her being, stored with great care in human form. Stealing or damaging one is a federal crime sentenced like attempted murder. Away from salt water too long, selkies sicken and sink into depression; the university grants them coastal leave.",
+      "refs": {}
+    },
+    {
+      "id": "leanan-sidhe",
+      "title": "Leanan sídhe",
+      "category": "people",
+      "keywords": [
+        "leanan",
+        "sidhe",
+        "muse"
+      ],
+      "text": "Irish muse fae who feed on creative partners and speed their art. Regulation ended the life-shortening bonds; modern partnerships feed lightly. They look unreal at first glance and struggle to hold glamours for long.",
+      "refs": {}
+    },
+    {
+      "id": "other-peoples",
+      "title": "Other peoples on campus",
+      "category": "people",
+      "keywords": [
+        "nephilim",
+        "valkyrie",
+        "tengu",
+        "naga",
+        "orc",
+        "siren",
+        "djinn",
+        "phoenix",
+        "dragonkin",
+        "godtouched",
+        "banshee",
+        "changeling",
+        "elf",
+        "therianthrope",
+        "beast-touched"
+      ],
+      "text": "Havenbrooke enrols every recognized people: nephilim, who feel cruelty and lies in the air; valkyries with death sight and battle radiance; tengu with feathers at the nape; venomous naga; orcs with work-song magic and copper-capped tusks; sirens whose voices charm on their own; water and fire djinn whose edges blur; phoenix-blooded students who will one day burn and wear fire wards; hoarding dragonkin; the godtouched; banshees who keen for the dying; changelings returned by the courts; elves who expect to live six hundred years; bear and other therianthropes; and beast-touched students with ears and tails.",
+      "refs": {}
+    },
+    {
+      "id": "glamours",
+      "title": "Glamours",
+      "category": "magic",
+      "keywords": [
+        "glamour"
+      ],
+      "text": "Illusion overlays that let supernaturals pass as human or soften their presence. No glamour is perfect: a demon's hand is still too warm, a vampire still has no pulse, a fae tail still shows in some photographs. Stress and arousal break glamours first. Holding a flawless one for six hours is top-tier SPI work.",
+      "refs": {}
+    },
+    {
+      "id": "feeding",
+      "title": "Aura and emotional feeding",
+      "category": "magic",
+      "keywords": [
+        "feeding",
+        "feed",
+        "draw",
+        "aura"
+      ],
+      "text": "Several peoples draw vitality from emotion. It leaves no mark: the person fed on feels tired, drained or a little confused. The law treats unconsented emotional feeding like blood feeding, though it is hard to prove. Consented feeding is legal and common in mixed couples, and many fold it into their intimate lives.",
+      "refs": {}
+    },
+    {
+      "id": "ley-lines",
+      "title": "Ley lines",
+      "category": "magic",
+      "keywords": [
+        "ley",
+        "node",
+        "junction"
+      ],
+      "text": "Conduits of magic in the earth, charted in the late nineteenth century and still being found. Work done on a line is stronger and lasts longer. Havenbrooke sits where three minor lines meet: Vespers Hall is over the strongest node and Nexus Housing over a secondary one. Witches and fae feel them; mundane humans cannot. Sigma Theta Hex studies and works the campus lines openly.",
+      "refs": {}
+    },
+    {
+      "id": "wards",
+      "title": "Wards",
+      "category": "magic",
+      "keywords": [
+        "ward",
+        "suppression field",
+        "equilibrium"
+      ],
+      "text": "Structured workings that change how a bounded space behaves, renewed monthly or seasonally. On campus: energetic equilibrium in Morrowe, a suppression field in Thornewall, aura stabilization in the library, sound dampening at Crestfall and Farrow, ritual containment in the Vespers rings, a sisters-only boundary at Hex House, surveillance at Warden Hall and consent detection in Evermere's feeding suites.",
+      "refs": {}
+    },
+    {
+      "id": "treaties",
+      "title": "The treaties",
+      "category": "law",
+      "keywords": [
+        "treaty",
+        "hartford accords",
+        "westphalian",
+        "esoteric development code"
+      ],
+      "text": "Supernatural citizenship in the US rests on the Hartford Accords (1787), the Westphalian Recognition (1819), the DED charter (1863), the Esoteric Recognition Acts (1867) and the Esoteric Development Code (1954, amended sixteen times). The public versions cover recognition, voting, property, consent and marriage; classified supplements cover military uses, containment and peoples the government has not acknowledged. Interspecies marriage has been legal since 1954. Selkies were the last people recognized, in 1998.",
+      "refs": {}
+    },
+    {
+      "id": "consent-law",
+      "title": "Consent law",
+      "category": "law",
+      "keywords": [
+        "consent",
+        "felony",
+        "prosecution"
+      ],
+      "text": "Any coercive use of an esoteric ability on a human without informed consent is a federal crime: feeding, glamour-assisted persuasion, aura pressure, uninvited dreamwalking, undisclosed exposure, and witch spellwork. Sentences run from probation and counselling to fifteen years. Cases between nonhumans usually go to their own peoples' law unless someone invokes federal jurisdiction. Havenbrooke reports through Evermere and the Dean of Student Life.",
+      "refs": {}
+    },
+    {
+      "id": "ded",
+      "title": "The Department of Esoteric Development",
+      "category": "law",
+      "keywords": [
+        "ded",
+        "department of esoteric development",
+        "haldane"
+      ],
+      "text": "The federal agency for magic, founded 1863 and headquartered at the Haldane Complex in Arlington. Its divisions license wards, enchantments, turnings, healers, forensic sensitives and feeding facilities, run field agents, and review every MTO syllabus. It is the largest single employer of Havenbrooke graduates.",
+      "refs": {
+        "faction": "ded"
+      }
+    },
+    {
+      "id": "federal-esoteric-court",
+      "title": "The Federal Esoteric Court",
+      "category": "law",
+      "keywords": [
+        "esoteric court",
+        "federal court"
+      ],
+      "text": "Seven judges for life, at least two supernatural and two human, in a converted Foggy Bottom townhouse. About 300 matters a year, 40 to full hearing. Closed sessions on classified and species-internal conflicts four times a year. Rulings appear in the Federal Esoteric Reporter.",
+      "refs": {
+        "faction": "federal-esoteric-court"
+      }
+    },
+    {
+      "id": "haven-pd",
+      "title": "Haven PD",
+      "category": "law",
+      "keywords": [
+        "police",
+        "haven pd",
+        "cops"
+      ],
+      "text": "Forty-two officers, three with esoteric-liaison certification (two mundane, one a witch), and a chief of twenty-two years. Unofficial policy: the university handles campus, the Crane family handles the ridge, unless someone calls 911.",
+      "refs": {
+        "faction": "haven-city"
+      }
+    },
+    {
+      "id": "species-bodies",
+      "title": "The species bodies",
+      "category": "law",
+      "keywords": [
+        "council of bloodlines",
+        "coven registry",
+        "lycan assembly",
+        "fae heritage council"
+      ],
+      "text": "The Council of Bloodlines (twelve vampire seats, quarterly, unannounced), the National Coven Registry (Salem, 1912, voluntary but expected), the Lycan Assembly (1952, born and bitten forever arguing) and the Fae Heritage Council (offices in Washington, New York and San Francisco). Demon families have none.",
+      "refs": {}
+    },
+    {
+      "id": "greek-life",
+      "title": "Greek life",
+      "category": "organization",
+      "keywords": [
+        "alpha gamma",
+        "phi sigma nox",
+        "sigma theta hex",
+        "delta nu iris",
+        "ember circle",
+        "omicron phi ember",
+        "kappa rho sigma",
+        "delta omicron theta",
+        "phi alpha mu",
+        "frat",
+        "sorority"
+      ],
+      "text": "Alpha Gamma (lycan-heavy, pack loyalty), Phi Sigma Nox (1874, Crane-founded, vampire, galas), Sigma Theta Hex (witches, private tongue, rites), Delta Nu Iris (fae, 1921, Birch Street), Omicron Phi Ember or the Ember Circle (demonkin and feeders, 1952, no house), Kappa Rho Sigma (mundane men, careerist, no witches), Delta Omicron Theta (mundane co-ed, 1976, better parties) and Phi Alpha Mu (integration, 1964).",
+      "refs": {}
+    },
+    {
+      "id": "harvest-howl",
+      "title": "The Harvest Howl",
+      "category": "event",
+      "keywords": [
+        "harvest howl",
+        "howl"
+      ],
+      "text": "The joint Alpha Gamma and Sigma Theta Hex party on Crestfall's north practice fields, forty years running, the Saturday nearest Halloween. More mixed-species relationships start here than anywhere else on campus.",
+      "refs": {}
+    },
+    {
+      "id": "equinox-rite",
+      "title": "The equinox rites",
+      "category": "event",
+      "keywords": [
+        "equinox",
+        "rite"
+      ],
+      "text": "Sigma Theta Hex holds rites at the equinoxes in Vespers Hall's largest chamber, presided over by a returning alumna. Prep happens in candlelit side chambers.",
+      "refs": {}
+    },
+    {
+      "id": "clubs",
+      "title": "Clubs and services",
+      "category": "organization",
+      "keywords": [
+        "hexenkreis",
+        "integration society",
+        "enchanters guild",
+        "night owls",
+        "debate union",
+        "creative collective",
+        "oracle",
+        "whav",
+        "after dark",
+        "senate",
+        "ambassadors"
+      ],
+      "text": "Hexenkreis (advanced witch practice), the Integration Society, the Student Enchanters' Guild, the Creative Collective, the CS Society, the Debate Union (rival of Cornell), the Fae Heritage Association, the Night Owls (10 p.m. onward), a 25-seat Student Senate by constituency, the weekly Oracle, WHAV-FM with its anonymous call-in show After Dark from midnight to 3, and the Integration Ambassadors who welcome human freshmen.",
+      "refs": {}
+    },
+    {
+      "id": "athletics",
+      "title": "The Crestfall Crows",
+      "category": "organization",
+      "keywords": [
+        "crows",
+        "rugby",
+        "aerial combat",
+        "fencing",
+        "nsac"
+      ],
+      "text": "Black and umber, in the fifteen-school Northeast Supernatural Athletic Conference. Lycan rugby has won nine NSAC titles in twelve years before crowds of four thousand. Fae aerial combat is televised on WESC. Track runs under suppression; mixed fencing is one of the few truly integrated sports.",
+      "refs": {}
+    },
+    {
+      "id": "peer-schools",
+      "title": "The Big Four",
+      "category": "world",
+      "keywords": [
+        "georgetown",
+        "chicago",
+        "stanford",
+        "big four"
+      ],
+      "text": "The four major supernatural programs: Havenbrooke, Georgetown's esoteric policy institute, Chicago's supernatural physiology program and Stanford's center for esoteric study. About 2.3 million Americans are registered supernatural; about 180,000 live in New York City.",
+      "refs": {}
+    },
+    {
+      "id": "supernatural-media",
+      "title": "Supernatural media",
+      "category": "world",
+      "keywords": [
+        "esoteric standard",
+        "the veil",
+        "wesc",
+        "thresholdnet"
+      ],
+      "text": "The Esoteric Standard (weekly, Washington, since 1923), The Veil (glossy monthly, New York, since 1987), WESC cable since 1996 with Esoteric Tonight at 10 p.m., and ThresholdNet, the forum network since 2001 where people under thirty ask what they cannot ask in a seminar.",
+      "refs": {}
+    },
+    {
+      "id": "esoteric-industry",
+      "title": "Where graduates go",
+      "category": "world",
+      "keywords": [
+        "llewellyn",
+        "voss & kincaid",
+        "whitfield crane",
+        "meridian",
+        "arclight",
+        "thorngate"
+      ],
+      "text": "The DED first, then supernatural medicine, esoteric law (Whitfield Crane & Associates is the biggest firm), integration consulting, enchantment (Llewellyn Enchantments for consumer charms, Voss & Kincaid for bespoke work), supernatural fashion in New York and Milan, technology firms such as Meridian Systems, Thorngate Digital and ArcLight, education and private security.",
+      "refs": {}
+    },
+    {
+      "id": "autumn-2009",
+      "title": "Autumn 2009",
+      "category": "world",
+      "keywords": [
+        "2009",
+        "recession",
+        "iphone",
+        "facebook",
+        "myspace"
+      ],
+      "text": "Unemployment near 10 percent and an ambient dread among parents. Phones are flip phones, slide-out keyboards and the iPhone 3GS ($199 on contract); texts cost 10 to 20 cents unless you pay $15 to $20 a month. Facebook is everything, MySpace is dying, Twitter is new. No iPad, Instagram, iMessage, Uber, Spotify or group chats yet. Not answering a text for hours is normal.",
+      "refs": {}
+    },
+    {
+      "id": "slang",
+      "title": "Slang and slurs",
+      "category": "world",
+      "keywords": [
+        "leech",
+        "mutt",
+        "thrall",
+        "straight-blood",
+        "half"
+      ],
+      "text": "Neutral: bloodline, pack, circle or coven, court, line, turned, bitten. Contested: mundie, straight-blood. \"Half\" is mostly accepted. Slurs that get a conduct review on campus: leech for a vampire, mutt for a bitten lycan, thrall for anyone in a feeding relationship, and witch as a verb for manipulation.",
+      "refs": {}
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting around",
+      "category": "world",
+      "keywords": [
+        "shuttle",
+        "greyhound",
+        "amtrak",
+        "bus"
+      ],
+      "text": "Haven is walkable, with a campus shuttle to Ithaca twice a day. A car makes you a valuable friend. New York is three hours by car, four or five by Greyhound or Trailways from Ithaca ($30 to $50), or four and a half by Amtrak from Syracuse ($50 to $70). Gas is about $2.50 a gallon.",
+      "refs": {}
+    }
+  ]
+}

@@ -1,0 +1,1028 @@
+{
+ "about": "Havenbrooke's Life Cards (dungeon/life/cards.py, docs/life-cards.md): events drawn into campus days, drives and bus rides, nights in the dorm and off-page beats for the people the player is not with. A first pass; the Companion modern everyday deck (world/data/life_deck.json) is the base for a fuller one. Fields as in the Vallarith deck.",
+ "world": "havenbrooke",
+ "chance": {
+  "town": [
+   20,
+   30,
+   45,
+   60
+  ],
+  "road": [
+   15,
+   25,
+   40,
+   55
+  ],
+  "rest": [
+   10,
+   15,
+   25,
+   35
+  ],
+  "beat": [
+   45,
+   55,
+   70,
+   85
+  ]
+ },
+ "repeat_days": 21,
+ "tables_weight": 0,
+ "cards": [
+  {
+   "id": "free-pizza",
+   "title": "Free pizza at the Senate meeting",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 10,
+   "truth": "The Student Senate over-ordered for a meeting nobody came to.",
+   "seen": "Twelve boxes of pizza on a table in Morrowe with a sign that says TAKE IT. People are taking it.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "food",
+     "shift": -50,
+     "days": 1
+    }
+   ]
+  },
+  {
+   "id": "textbook-buyback",
+   "title": "Buyback week",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "The campus bookstore is short on used copies and paying double for them.",
+   "seen": "The bookstore is buying textbooks back at real prices for once. The line goes out the door.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": 1
+    }
+   ]
+  },
+  {
+   "id": "good-hair-day",
+   "title": "A good morning",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "Nothing in particular. The light was good and nobody needed anything.",
+   "seen": "The coffee line is short, the Quad smells like cut grass and leaves, and {pc} has nowhere to be for an hour.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": -1
+    }
+   ]
+  },
+  {
+   "id": "study-group",
+   "title": "A study group that works",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "Three people from the same section all need the same notes.",
+   "seen": "Someone from class asks {pc} to join a study group in the library, and it turns out to be useful.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "npc",
+     "axis": "trust",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "saturday-market-day",
+   "title": "Market morning",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 6,
+   "truth": "The dryad co-op had a good harvest and is giving samples away.",
+   "seen": "The Saturday Market is packed. The dryad stall is handing out jars of preserves that taste like late summer.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "food",
+     "shift": -20,
+     "days": 2
+    }
+   ]
+  },
+  {
+   "id": "lost-and-found",
+   "title": "A twenty in a library book",
+   "scenes": [
+    "town"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 5,
+   "truth": "A professor used a twenty-dollar bill as a bookmark in 1998 and forgot it.",
+   "seen": "A twenty-dollar bill falls out of a library book, soft from years between the pages.",
+   "accuracy": "true",
+   "effects": []
+  },
+  {
+   "id": "parking-ticket",
+   "title": "A ticket",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "Haven PD writes tickets on Lantern Way in September to fund the overtime budget.",
+   "seen": "Campus security is writing tickets on every car on the Row, and a few people who are only walking past.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": -1
+    }
+   ]
+  },
+  {
+   "id": "flu-going-round",
+   "title": "Something going round",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "A stomach bug came back from a weekend at Seneca Lake with half a fraternity.",
+   "seen": "Half the lecture hall is coughing. Evermere has a line, and the pharmacy is out of the good cold medicine.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "market",
+     "goods": "medicine",
+     "shift": 30,
+     "days": 5
+    }
+   ]
+  },
+  {
+   "id": "laundry-gone",
+   "title": "The laundry vanishes",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 6,
+   "truth": "A freshman took the wrong load from the dryer, then got embarrassed and kept it.",
+   "seen": "Someone took {pc}'s laundry out of the dryer, every piece of it.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "ward-check",
+   "title": "The ward inspection",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 6,
+   "truth": "The DED is doing its annual review of the residence wards and running behind.",
+   "seen": "Facilities is testing the dorm wards all day. Every door hums, the elevator is off, and nobody can sleep.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    },
+    {
+     "kind": "time",
+     "hours": 2
+    }
+   ]
+  },
+  {
+   "id": "pop-quiz",
+   "title": "A pop quiz",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 7,
+   "truth": "The professor was told at a faculty meeting that attendance is down.",
+   "seen": "A pop quiz, ten questions, in a class {pc} did not do the reading for.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "phone-dies",
+   "title": "A dead phone",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 5,
+   "truth": "The charger cable frayed. Nothing more.",
+   "seen": "{pc}'s phone dies at noon with three missed texts on it, and the charger is in the other bag.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "facebook-photos",
+   "title": "Tagged",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 7,
+   "truth": "Someone posted forty photos from Friday, and three of them show more than anyone agreed to.",
+   "seen": "Facebook says {pc} has been tagged in a new album. The comments are already going.",
+   "accuracy": "partial",
+   "pressure": "{npc} wants to know who took the one by the stairs.",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "pc",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "oracle-story",
+   "title": "The Oracle runs a story",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "truth": "The Oracle has a source inside the {faction}, and the source is angry.",
+   "seen": "The new Oracle is on every table in Morrowe with a front-page story about the {faction}. Half of it is true.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "faction",
+     "true": true
+    },
+    {
+     "kind": "reputation",
+     "shift": -1
+    }
+   ]
+  },
+  {
+   "id": "house-party",
+   "title": "A party on Elm",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 8,
+   "truth": "Four juniors split a keg and invited everyone, and the house is two floors over code.",
+   "seen": "There is a party on Elm tonight. Everyone is going; the question is who {pc} goes with.",
+   "accuracy": "true",
+   "pressure": "{npc} asks {pc} to come, and makes it clear it is not as friends.",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "npc",
+     "axis": "desire",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "aura-spill",
+   "title": "An aura spill",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 6,
+   "truth": "A demonkin student skipped a feed for two weeks to make a point, and lost the point in a lecture hall.",
+   "seen": "The air in the lecture hall goes warm and heavy for a full minute, and every human in the room forgets what they were saying.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    },
+    {
+     "kind": "rumor",
+     "about": "place",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "conduct-review",
+   "title": "A conduct review",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 5,
+   "truth": "Someone filed a complaint about the {faction}, and the Dean's office has to be seen to act.",
+   "seen": "An email from the Dean of Student Life asks {pc} to come in Thursday to \"talk about the weekend.\"",
+   "accuracy": "partial",
+   "pressure": "{npc} begs {pc} not to mention their name.",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "faction",
+     "days": 4
+    },
+    {
+     "kind": "stress",
+     "amount": 2
+    }
+   ]
+  },
+  {
+   "id": "feeding-gone-wrong",
+   "title": "Too long a kiss",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 5,
+   "intensity": {
+    "sex": 2,
+    "violence": 1
+   },
+   "truth": "An incubus drew too hard at a party and a human girl went under for four minutes. He drove her to Evermere himself.",
+   "seen": "An ambulance outside a West Haven house at two in the morning, and a crowd that stops talking when anyone asks.",
+   "accuracy": "partial",
+   "pressure": "{npc} was there, and wants {pc} to say they were not.",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "npc",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "velvet-spire-night",
+   "title": "A night at the Velvet Spire",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 5,
+   "intensity": {
+    "sex": 3
+   },
+   "truth": "The Spire waived cover for a feeding-needs night, and the middle floor is full of people who came to be fed on.",
+   "seen": "The line at the Velvet Spire goes round the block. The bouncer is letting in pairs.",
+   "accuracy": "true",
+   "pressure": "{npc} hands {pc} a wristband for the middle floor and does not explain it.",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "npc",
+     "axis": "desire",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "drink-spiked",
+   "title": "Something in the cup",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 3,
+   "intensity": {
+    "drugs": 2,
+    "sex": 2
+   },
+   "topics": [
+    "sexual-violence"
+   ],
+   "truth": "Someone at the party is dosing cups with a fae euphoric that does not show on any test.",
+   "seen": "Two girls at the party are giggling at nothing and cannot stand up, and the guy who brought them drinks has left.",
+   "accuracy": "true",
+   "pressure": "One of them grabs {pc}'s sleeve and asks to be taken home, now.",
+   "effects": [
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 1
+    }
+   ]
+  },
+  {
+   "id": "bond-confession",
+   "title": "Three in the morning",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 4,
+   "needs": [
+    "bond"
+   ],
+   "truth": "Something has been sitting on {bond} for weeks, and tonight it comes out.",
+   "seen": "{bond} knocks at three in the morning, sits down on the end of the bed and says they need to tell {pc} something.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "bond",
+     "axis": "trust",
+     "shift": 2
+    }
+   ]
+  },
+  {
+   "id": "recession-letter",
+   "title": "A letter about money",
+   "scenes": [
+    "town"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 5,
+   "truth": "A parent lost a job in the summer layoffs and has not said so.",
+   "seen": "The financial aid office sends a letter: a scholarship has been \"restructured\" for spring.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 2
+    },
+    {
+     "kind": "coin",
+     "wages": -2
+    }
+   ]
+  },
+  {
+   "id": "glamour-slip",
+   "title": "A glamour slips",
+   "scenes": [
+    "town"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "horror": 1
+   },
+   "truth": "Someone on the floor is not what their glamour says, and tonight it slipped in front of {pc}.",
+   "seen": "For a second, across the common room, someone {pc} knows has the wrong eyes.",
+   "accuracy": "partial",
+   "pressure": "{npc} asks very quietly what {pc} thinks they saw.",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "npc",
+     "axis": "fear",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "shuttle-on-time",
+   "title": "The shuttle is on time",
+   "scenes": [
+    "road"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "The new driver takes the back road and does not stop for coffee.",
+   "seen": "The shuttle is early, warm, and nearly empty. Someone left a Sunday paper on the seat.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": -1
+    }
+   ]
+  },
+  {
+   "id": "foliage",
+   "title": "Peak color",
+   "scenes": [
+    "road"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 7,
+   "truth": "It is the second week of October.",
+   "seen": "The hills along the road are red and gold all the way to the lake.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": -1
+    }
+   ]
+  },
+  {
+   "id": "rest-stop-coffee",
+   "title": "A good rest stop",
+   "scenes": [
+    "road"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 5,
+   "truth": "The Stewart's at the halfway point just put in a new coffee machine.",
+   "seen": "The gas station halfway there has hot coffee, clean bathrooms and a cashier who calls everyone hon.",
+   "accuracy": "true",
+   "effects": []
+  },
+  {
+   "id": "flat-tire",
+   "title": "A flat",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 7,
+   "truth": "A nail from a roofing job on Route 13 has been in the tire since Haven.",
+   "seen": "The car pulls hard to the right, then thumps. A flat, and the spare is a doughnut.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "time",
+     "hours": 1
+    },
+    {
+     "kind": "coin",
+     "wages": -1
+    }
+   ]
+  },
+  {
+   "id": "bus-late",
+   "title": "The bus is late",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 7,
+   "truth": "The bus broke down in Binghamton and the company did not tell anyone.",
+   "seen": "The bus is ninety minutes late, then two hours, and the station has one working vending machine.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "time",
+     "hours": 2
+    },
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "lake-effect",
+   "title": "Lake-effect snow",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 1,
+   "weight": 5,
+   "truth": "A band of lake-effect snow came off Ontario an hour early.",
+   "seen": "The snow comes in sideways at the county line. Everyone slows to thirty and nobody can see the lines.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "time",
+     "hours": 2
+    },
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "state-trooper",
+   "title": "Pulled over",
+   "scenes": [
+    "road"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 5,
+   "truth": "The trooper is bored and the car has an expired inspection sticker.",
+   "seen": "Lights in the mirror. A state trooper takes a long look at the license and a longer look at the back seat.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "coin",
+     "wages": -1
+    },
+    {
+     "kind": "time",
+     "hours": 1
+    }
+   ]
+  },
+  {
+   "id": "hitchhiker",
+   "title": "Someone on the shoulder",
+   "scenes": [
+    "road"
+   ],
+   "tone": "grey",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "horror": 1
+   },
+   "truth": "The woman on the shoulder is a leanan sidhe walking home from a man she fed on for a year.",
+   "seen": "A woman in a thin coat is walking the shoulder in the cold with no bag, and she looks up as the car slows.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "npc",
+     "true": false
+    }
+   ]
+  },
+  {
+   "id": "deer-strike",
+   "title": "A deer",
+   "scenes": [
+    "road"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "violence": 1
+   },
+   "truth": "A buck came out of the trees at dusk, as they do every October.",
+   "seen": "A deer in the headlights, then the sound of it on the hood. The car is drivable. The deer is not.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 2
+    },
+    {
+     "kind": "time",
+     "hours": 1
+    }
+   ]
+  },
+  {
+   "id": "quiet-night",
+   "title": "A quiet night",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 10,
+   "truth": "Nothing happens. The floor is asleep.",
+   "seen": "The common room is dark and quiet, and for once {pc} sleeps all the way through.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": -1
+    }
+   ]
+  },
+  {
+   "id": "late-talk",
+   "title": "Talking until four",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 6,
+   "truth": "Neither of them could sleep, for different reasons.",
+   "seen": "Someone is still up in the common room at two, and the conversation goes until the windows turn gray.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "npc",
+     "axis": "affection",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "fire-alarm",
+   "title": "The fire alarm",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "A phoenix-blooded sophomore on two had a very good night.",
+   "seen": "The fire alarm goes at three in the morning. Everyone stands on the lawn in socks for forty minutes.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    },
+    {
+     "kind": "time",
+     "hours": 1
+    }
+   ]
+  },
+  {
+   "id": "noise-upstairs",
+   "title": "Noise through the wall",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 6,
+   "truth": "The couple in the next unit got back together tonight.",
+   "seen": "The wall is thin and the neighbors are not quiet. Sleep comes at about four.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "nexus-dream",
+   "title": "A Nexus dream",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "intensity": {
+    "sex": 2
+   },
+   "truth": "The ley node under the building pushes dreams into anyone sleeping lightly, and some of them belong to other people.",
+   "seen": "{pc} dreams something vivid and specific about someone on the floor, and wakes up not sure whose dream it was.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "npc",
+     "axis": "desire",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "dreamwalker",
+   "title": "Someone in the dream",
+   "scenes": [
+    "rest"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 3,
+   "intensity": {
+    "horror": 2,
+    "sex": 1
+   },
+   "truth": "A demonkin student on the floor below has been dreamwalking without asking.",
+   "seen": "The dream has a stranger in it who knows {pc}'s name and keeps asking what {pc} wants.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 2
+    },
+    {
+     "kind": "quest",
+     "from": "npc",
+     "days": 7
+    }
+   ]
+  },
+  {
+   "id": "beat-good-grade",
+   "title": "A good grade",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 8,
+   "truth": "{them} got an A on a paper they wrote in one night.",
+   "seen": "{them} is in a very good mood and will tell anyone why.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "feeling",
+     "who": "them",
+     "axis": "affection",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "beat-new-job",
+   "title": "A new job",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "good",
+   "drama": 0,
+   "weight": 6,
+   "truth": "{them} picked up shifts at the Stag & Thistle.",
+   "seen": "{them} has a new job and smells like fryer oil when they get home.",
+   "accuracy": "true",
+   "effects": []
+  },
+  {
+   "id": "beat-call-home",
+   "title": "A bad call home",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 8,
+   "truth": "{them} had a phone call with a parent that went the way they always go.",
+   "seen": "{them} comes back from a walk with red eyes and says it was the wind.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "stress",
+     "amount": 1
+    }
+   ]
+  },
+  {
+   "id": "beat-ex",
+   "title": "The ex comes back",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 0,
+   "weight": 6,
+   "truth": "{them} ran into an ex at Midnight Gas and stayed until four.",
+   "seen": "{them} has been checking their phone all day and putting it face down.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "them",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "beat-hookup",
+   "title": "A night out",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 6,
+   "intensity": {
+    "sex": 2
+   },
+   "truth": "{them} went home with someone from the Velvet Spire, and it was good, and it was complicated.",
+   "seen": "{them} comes in at nine in the morning in last night's clothes, very pleased and saying nothing.",
+   "accuracy": "true",
+   "effects": [
+    {
+     "kind": "rumor",
+     "about": "them",
+     "true": true
+    }
+   ]
+  },
+  {
+   "id": "beat-faction-pull",
+   "title": "A summons",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "grey",
+   "drama": 1,
+   "weight": 5,
+   "truth": "The {faction} called {them} in and asked for something they have not told anyone about.",
+   "seen": "{them} has a meeting they will not explain, and comes back from it quiet.",
+   "accuracy": "partial",
+   "effects": [
+    {
+     "kind": "clock",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "beat-hurt",
+   "title": "A bad night",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 4,
+   "intensity": {
+    "violence": 2
+   },
+   "truth": "{them} got into a fight at an Alpha Gamma party and lost.",
+   "seen": "{them} has a split lip and a story about a door.",
+   "accuracy": "false",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "wounded"
+    }
+   ]
+  },
+  {
+   "id": "beat-binge",
+   "title": "A lost weekend",
+   "scenes": [
+    "beat"
+   ],
+   "tone": "bad",
+   "drama": 2,
+   "weight": 3,
+   "intensity": {
+    "drugs": 2
+   },
+   "topics": [
+    "addiction"
+   ],
+   "truth": "{them} has been using a fae euphoric to sleep, and then to get up.",
+   "seen": "{them} missed two classes and says it was the flu.",
+   "accuracy": "false",
+   "effects": [
+    {
+     "kind": "fate",
+     "who": "them",
+     "state": "addicted"
+    }
+   ]
+  }
+ ],
+ "tables": {}
+}

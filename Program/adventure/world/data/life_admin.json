@@ -1,0 +1,5672 @@
+{
+ "schema_version": 1,
+ "source": {
+  "kind": "curated",
+  "title": "Life admin: appointments, deadlines, errands and paperwork written for Prospero Dungeon",
+  "license": "CC0-1.0",
+  "retrieved": "2026-10-13",
+  "note": "Calendars are keyed by holiday calendar id (world/data/holidays.json), with modern, industrial and old fallbacks. every_months repeats on a seeded phase; on is a yearly date (MM-DD); on_days are several yearly dates; lead plans it ahead of that date by the companion's habit. needs: car, horse, rent, glasses, work, business. regions / except_regions match the city's region."
+ },
+ "calendars": {
+  "us": [
+   {
+    "id": "dentist",
+    "title": "Dentist check-up",
+    "done": "went to the dentist for a check-up and cleaning",
+    "every_months": 6,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out"
+   },
+   {
+    "id": "lease",
+    "title": "Lease renewal",
+    "done": "signed the lease renewal for another year",
+    "every_months": 12,
+    "fixed": false,
+    "minutes": 45,
+    "cost": "",
+    "where": "home",
+    "needs": "rent"
+   },
+   {
+    "id": "physical",
+    "title": "Yearly physical",
+    "done": "went in for a yearly physical and some routine blood work",
+    "every_months": 12,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "",
+    "where": "out"
+   },
+   {
+    "id": "taxes",
+    "title": "File taxes",
+    "done": "filed the federal and state tax returns",
+    "on": "04-15",
+    "lead": true,
+    "fixed": false,
+    "minutes": 120,
+    "cost": "",
+    "where": "home",
+    "except_regions": [
+     "Florida",
+     "Nevada",
+     "Texas",
+     "Washington",
+     "Wyoming",
+     "South Dakota",
+     "Alaska",
+     "Tennessee",
+     "New Hampshire"
+    ]
+   },
+   {
+    "id": "taxes",
+    "title": "File taxes",
+    "done": "filed the federal tax return (no state income tax to file here)",
+    "on": "04-15",
+    "lead": true,
+    "fixed": false,
+    "minutes": 120,
+    "cost": "",
+    "where": "home",
+    "regions": [
+     "Florida",
+     "Nevada",
+     "Texas",
+     "Washington",
+     "Wyoming",
+     "South Dakota",
+     "Alaska",
+     "Tennessee",
+     "New Hampshire"
+    ]
+   },
+   {
+    "id": "car-registration",
+    "title": "Renew car registration",
+    "done": "renewed the car registration online and printed the new card",
+    "every_months": 12,
+    "fixed": false,
+    "minutes": 30,
+    "cost": "$$",
+    "where": "home",
+    "needs": "car"
+   },
+   {
+    "id": "car-inspection",
+    "title": "Car inspection",
+    "done": "got the yearly safety and emissions inspection sticker at the garage",
+    "every_months": 12,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "car",
+    "regions": [
+     "New York"
+    ]
+   },
+   {
+    "id": "car-inspection",
+    "title": "Car inspection",
+    "done": "got the yearly safety inspection sticker at the garage",
+    "every_months": 12,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "car",
+    "regions": [
+     "Maine",
+     "Pennsylvania",
+     "Virginia",
+     "Massachusetts",
+     "Texas"
+    ]
+   },
+   {
+    "id": "car-inspection",
+    "title": "Brake tag",
+    "done": "got a new brake tag for the car at the inspection station",
+    "every_months": 12,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "car",
+    "regions": [
+     "Louisiana"
+    ]
+   },
+   {
+    "id": "car-inspection",
+    "title": "Emissions test",
+    "done": "took the car for its emissions test at the state testing station",
+    "every_months": 24,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "car",
+    "regions": [
+     "Maryland",
+     "Illinois"
+    ]
+   },
+   {
+    "id": "car-inspection",
+    "title": "Smog check",
+    "done": "took the car in for its smog check",
+    "every_months": 24,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "car",
+    "regions": [
+     "California"
+    ]
+   },
+   {
+    "id": "car-inspection",
+    "title": "Smog check",
+    "done": "took the car in for its yearly smog check",
+    "every_months": 12,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "car",
+    "regions": [
+     "Nevada"
+    ]
+   }
+  ],
+  "us-1920s": [
+   {
+    "id": "dentist",
+    "title": "Dentist",
+    "done": "went to the dentist to have a sore tooth looked at",
+    "every_months": 12,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out"
+   },
+   {
+    "id": "taxes",
+    "title": "Income tax form",
+    "done": "filled in the income tax form and mailed it with a money order",
+    "on": "03-15",
+    "lead": true,
+    "fixed": false,
+    "minutes": 120,
+    "cost": "",
+    "where": "home"
+   },
+   {
+    "id": "plates",
+    "title": "Renew motorcar plates",
+    "done": "went down to renew the motorcar plates for the new year",
+    "on": "01-15",
+    "fixed": false,
+    "minutes": 90,
+    "cost": "$$",
+    "where": "out",
+    "needs": "car"
+   },
+   {
+    "id": "lease",
+    "title": "Renew the lease",
+    "done": "signed on for another year before Moving Day",
+    "on": "09-20",
+    "fixed": false,
+    "minutes": 45,
+    "cost": "",
+    "where": "home",
+    "needs": "rent"
+   },
+   {
+    "id": "farrier",
+    "title": "Farrier for the horse",
+    "done": "had the farrier out to reshoe the horse",
+    "every_months": 2,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "horse"
+   }
+  ],
+  "us-1880s": [
+   {
+    "id": "farrier",
+    "title": "Farrier for the horse",
+    "done": "had the farrier out to reshoe the horse",
+    "every_months": 2,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "horse"
+   },
+   {
+    "id": "store-account",
+    "title": "Settle the store account",
+    "done": "settled the month on the store account at the general store",
+    "on_days": [
+     "01-31",
+     "02-28",
+     "03-31",
+     "04-30",
+     "05-31",
+     "06-30",
+     "07-31",
+     "08-31",
+     "09-30",
+     "10-31",
+     "11-30",
+     "12-31"
+    ],
+    "fixed": false,
+    "minutes": 30,
+    "cost": "$",
+    "where": "market"
+   }
+  ],
+  "uk": [
+   {
+    "id": "dentist",
+    "title": "Dentist check-up",
+    "done": "went to the dentist for a check-up and cleaning",
+    "every_months": 6,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out"
+   },
+   {
+    "id": "lease",
+    "title": "Lease renewal",
+    "done": "signed the lease renewal for another year",
+    "every_months": 12,
+    "fixed": false,
+    "minutes": 45,
+    "cost": "",
+    "where": "home",
+    "needs": "rent"
+   },
+   {
+    "id": "tv-licence",
+    "title": "Renew TV licence",
+    "done": "renewed the TV licence online",
+    "every_months": 12,
+    "fixed": false,
+    "minutes": 15,
+    "cost": "$$",
+    "where": "home"
+   },
+   {
+    "id": "council-tax",
+    "title": "Check the council tax bill",
+    "done": "went through the new year's council tax bill and set up the direct debit",
+    "on": "03-10",
+    "fixed": false,
+    "minutes": 30,
+    "cost": "",
+    "where": "home"
+   },
+   {
+    "id": "mot",
+    "title": "MOT",
+    "done": "took the car in for its MOT",
+    "every_months": 12,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "car"
+   },
+   {
+    "id": "car-tax",
+    "title": "Renew car tax",
+    "done": "renewed the car tax online",
+    "every_months": 12,
+    "fixed": false,
+    "minutes": 15,
+    "cost": "$$",
+    "where": "home",
+    "needs": "car"
+   }
+  ],
+  "uk-victorian": [
+   {
+    "id": "quarter-rent",
+    "title": "Pay the quarter's rent",
+    "done": "paid the quarter's rent to the landlord's agent",
+    "on_days": [
+     "03-25",
+     "06-24",
+     "09-29",
+     "12-25"
+    ],
+    "fixed": false,
+    "minutes": 30,
+    "cost": "",
+    "where": "home",
+    "needs": "rent"
+   },
+   {
+    "id": "rates",
+    "title": "Pay the rates",
+    "done": "paid the half-year rates at the vestry office",
+    "on_days": [
+     "04-06",
+     "10-06"
+    ],
+    "fixed": false,
+    "minutes": 45,
+    "cost": "$",
+    "where": "out"
+   },
+   {
+    "id": "farrier",
+    "title": "Farrier for the horse",
+    "done": "had the farrier out to reshoe the horse",
+    "every_months": 2,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "horse"
+   }
+  ],
+  "medieval-england": [
+   {
+    "id": "quarter-rent",
+    "title": "Pay the quarter's rent",
+    "done": "paid the quarter's rent to the steward",
+    "on_days": [
+     "03-25",
+     "06-24",
+     "09-29",
+     "12-25"
+    ],
+    "fixed": false,
+    "minutes": 30,
+    "cost": "",
+    "where": "out",
+    "needs": "rent"
+   },
+   {
+    "id": "tithe",
+    "title": "Pay the tithe",
+    "done": "brought the year's tithe to the parish",
+    "on": "10-04",
+    "fixed": false,
+    "minutes": 60,
+    "cost": "$",
+    "where": "temple"
+   },
+   {
+    "id": "farrier",
+    "title": "Farrier for the horse",
+    "done": "had the farrier out to reshoe the horse",
+    "every_months": 2,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "horse"
+   }
+  ],
+  "japan": [
+   {
+    "id": "dentist",
+    "title": "Dentist check-up",
+    "done": "went to the dentist for a check-up and cleaning",
+    "every_months": 6,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out"
+   },
+   {
+    "id": "health-check",
+    "title": "Yearly health check",
+    "done": "went for the yearly health check from work",
+    "every_months": 12,
+    "fixed": true,
+    "minutes": 120,
+    "cost": "",
+    "where": "out",
+    "needs": "work"
+   },
+   {
+    "id": "residence-tax",
+    "title": "Check the residence tax notice",
+    "done": "went through the residence tax notice from the ward office",
+    "on": "06-10",
+    "fixed": false,
+    "minutes": 30,
+    "cost": "",
+    "where": "home"
+   },
+   {
+    "id": "year-end-adjustment",
+    "title": "Year-end tax adjustment forms",
+    "done": "filled in the year-end tax adjustment forms for work",
+    "on": "11-15",
+    "lead": true,
+    "fixed": false,
+    "minutes": 45,
+    "cost": "",
+    "where": "home",
+    "needs": "work"
+   },
+   {
+    "id": "lease",
+    "title": "Lease renewal",
+    "done": "paid the renewal fee and signed the lease for two more years",
+    "every_months": 24,
+    "fixed": false,
+    "minutes": 60,
+    "cost": "$$$",
+    "where": "home",
+    "needs": "rent"
+   },
+   {
+    "id": "car-inspection",
+    "title": "Shaken car inspection",
+    "done": "took the car in for its shaken inspection",
+    "every_months": 24,
+    "fixed": true,
+    "minutes": 120,
+    "cost": "$$$",
+    "where": "out",
+    "needs": "car"
+   }
+  ],
+  "south-korea": [
+   {
+    "id": "dentist",
+    "title": "Dentist check-up",
+    "done": "went to the dentist for a check-up and cleaning",
+    "every_months": 6,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out"
+   },
+   {
+    "id": "year-end-settlement",
+    "title": "Year-end tax settlement",
+    "done": "sent in the year-end tax settlement papers at work",
+    "on": "01-15",
+    "lead": true,
+    "fixed": false,
+    "minutes": 60,
+    "cost": "",
+    "where": "home",
+    "needs": "work"
+   },
+   {
+    "id": "health-screening",
+    "title": "Health screening",
+    "done": "went for the national health screening",
+    "every_months": 24,
+    "fixed": true,
+    "minutes": 120,
+    "cost": "",
+    "where": "out"
+   },
+   {
+    "id": "lease",
+    "title": "Lease renewal",
+    "done": "renewed the lease with the landlord for two more years",
+    "every_months": 24,
+    "fixed": false,
+    "minutes": 60,
+    "cost": "",
+    "where": "home",
+    "needs": "rent"
+   },
+   {
+    "id": "car-inspection",
+    "title": "Car inspection",
+    "done": "took the car in for its regular inspection",
+    "every_months": 24,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "car"
+   }
+  ],
+  "modern": [
+   {
+    "id": "dentist",
+    "title": "Dentist check-up",
+    "done": "went to the dentist for a check-up and cleaning",
+    "every_months": 6,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out"
+   },
+   {
+    "id": "lease",
+    "title": "Lease renewal",
+    "done": "signed the lease renewal for another year",
+    "every_months": 12,
+    "fixed": false,
+    "minutes": 45,
+    "cost": "",
+    "where": "home",
+    "needs": "rent"
+   }
+  ],
+  "industrial": [
+   {
+    "id": "farrier",
+    "title": "Farrier for the horse",
+    "done": "had the farrier out to reshoe the horse",
+    "every_months": 2,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "horse"
+   }
+  ],
+  "old": [
+   {
+    "id": "farrier",
+    "title": "Farrier for the horse",
+    "done": "had the farrier out to reshoe the horse",
+    "every_months": 2,
+    "fixed": true,
+    "minutes": 60,
+    "cost": "$",
+    "where": "out",
+    "needs": "horse"
+   }
+  ]
+ },
+ "errands": [
+  {
+   "id": "return-library-books",
+   "title": "Return library books",
+   "done": "returned three overdue library books and paid the small late fine",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "library",
+   "fixed": false
+  },
+  {
+   "id": "post-birthday-parcel",
+   "title": "Post a birthday parcel",
+   "done": "posted a birthday parcel and paid extra for tracked delivery",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "drop-phone-for-repair",
+   "title": "Drop phone for screen repair",
+   "done": "dropped the cracked phone at the repair counter and got a ticket number",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "pick-up-repaired-phone",
+   "title": "Pick up repaired phone",
+   "done": "picked up the phone with its new screen and tested the touch response",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "return-online-order",
+   "title": "Return an online order",
+   "done": "returned an ill-fitting jacket at a parcel drop point and kept the receipt",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "cut-spare-keys",
+   "title": "Cut spare keys",
+   "done": "had two spare door keys cut at the key counter",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "buy-stamps-envelopes",
+   "title": "Buy stamps and envelopes",
+   "done": "bought a book of stamps and a few padded envelopes at the post office",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "collect-held-parcel",
+   "title": "Collect a held parcel",
+   "done": "collected a parcel held at the post office counter after a missed delivery",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "renew-library-card-desk",
+   "title": "Renew library card",
+   "done": "renewed the library card at the desk and updated the address on file",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "library",
+   "fixed": false
+  },
+  {
+   "id": "drop-boots-at-cobbler",
+   "title": "Get boots resoled",
+   "done": "dropped off worn boots at the cobbler to have them resoled",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "pick-up-resoled-boots",
+   "title": "Pick up resoled boots",
+   "done": "picked up the resoled boots and bought a spare pair of laces",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "replace-watch-battery",
+   "title": "Replace watch battery",
+   "done": "had the watch battery replaced while waiting at the counter",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "pocket-watch-to-watchmaker",
+   "title": "Take watch to watchmaker",
+   "done": "left the pocket watch with the watchmaker to be cleaned and regulated",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "bike-tune-up-drop-off",
+   "title": "Bike tune-up drop-off",
+   "done": "dropped the bicycle off for a tune-up and new brake pads",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "pick-up-tuned-bicycle",
+   "title": "Pick up the bicycle",
+   "done": "picked up the tuned bicycle and test-rode it around the block",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "trousers-to-tailor",
+   "title": "Take trousers to the tailor",
+   "done": "took two pairs of trousers to the tailor to be hemmed",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "collect-altered-coat",
+   "title": "Collect altered coat",
+   "done": "collected the altered coat from the tailor and paid the balance",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "sharpen-kitchen-knives",
+   "title": "Get knives sharpened",
+   "done": "had the kitchen knives sharpened at the grinder's stall",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "drop-print-for-framing",
+   "title": "Drop off print for framing",
+   "done": "dropped off a print for framing and chose a simple oak frame",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "pick-up-framed-picture",
+   "title": "Pick up framed picture",
+   "done": "picked up the framed picture and carried it home wrapped in brown paper",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "recycle-old-electronics",
+   "title": "Recycle old electronics",
+   "done": "dropped a box of dead cables and an old laptop at the recycling depot",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "donate-old-clothes",
+   "title": "Donate old clothes",
+   "done": "dropped two bags of outgrown clothes at the charity shop",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "rummage-sale-donation",
+   "title": "Donate to the rummage sale",
+   "done": "carried a crate of old clothes and odd crockery to the rummage sale",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "temple",
+   "fixed": false
+  },
+  {
+   "id": "return-borrowed-ladder",
+   "title": "Return borrowed ladder",
+   "done": "carried the borrowed ladder back to the neighbor two streets over",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "deposit-a-check",
+   "title": "Deposit a check",
+   "done": "deposited a check at the bank counter and got a stamped slip",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "withdraw-weekly-cash",
+   "title": "Withdraw cash for the week",
+   "done": "withdrew the week's cash from the teller and counted it at the window",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "cash-for-market-stalls",
+   "title": "Get cash for the market",
+   "done": "withdrew cash at the machine for the cash-only stalls at the weekend market",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "exchange-travel-currency",
+   "title": "Exchange travel currency",
+   "done": "exchanged money for an upcoming trip at the bank counter",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "visit-the-moneychanger",
+   "title": "Visit the moneychanger",
+   "done": "swapped foreign coins for local silver at the moneychanger's table",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "send-registered-letter",
+   "title": "Send a registered letter",
+   "done": "sent a registered letter and kept the signed receipt in a folder",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "send-a-telegram",
+   "title": "Send a telegram",
+   "done": "sent a ten-word telegram and counted every word to keep it cheap",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "hire-letter-courier",
+   "title": "Hire a courier for a letter",
+   "done": "paid a courier to carry a sealed letter to the next town",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "notarize-a-signature",
+   "title": "Get a document notarized",
+   "done": "had a signature witnessed and stamped at the notary's office",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": true
+  },
+  {
+   "id": "passport-photos-taken",
+   "title": "Get passport photos taken",
+   "done": "had passport photos taken and checked them against the size rules",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "sit-for-identity-photo",
+   "title": "Sit for an identity photograph",
+   "done": "sat very still at the photographer's studio for an official card portrait",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "shopping",
+   "fixed": true
+  },
+  {
+   "id": "print-forms-at-library",
+   "title": "Print forms at the library",
+   "done": "printed and copied a stack of application forms at the library",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "library",
+   "fixed": false
+  },
+  {
+   "id": "collect-photo-prints",
+   "title": "Collect photo prints",
+   "done": "picked up a stack of printed holiday photos from the photo counter",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "return-rented-sander",
+   "title": "Return a rented tool",
+   "done": "returned the rented floor sander and got the deposit back",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "buy-tap-washer",
+   "title": "Buy a replacement tap washer",
+   "done": "bought a replacement washer for the dripping tap at the hardware store",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "visit-the-ironmonger",
+   "title": "Visit the ironmonger",
+   "done": "bought brass hinges and a bag of nails from the ironmonger",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "kettle-to-smithy",
+   "title": "Take a kettle to the smithy",
+   "done": "took a cracked iron kettle to the smithy to be mended",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "pot-to-the-tinker",
+   "title": "Have a pot mended",
+   "done": "had a leaking cooking pot soldered by the tinker at the market",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "umbrella-mended",
+   "title": "Get umbrella mended",
+   "done": "had the umbrella's bent rib replaced at the mender's stall",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "ring-resizing",
+   "title": "Drop a ring for resizing",
+   "done": "left a ring at the jeweler's counter to be sized up half a size",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "pay-guild-dues-in-person",
+   "title": "Pay guild dues at the hall",
+   "done": "paid the quarter's guild dues and had the payment entered in the roll",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false
+  },
+  {
+   "id": "car-oil-change",
+   "title": "Get the oil changed",
+   "done": "sat in the garage waiting room while the car got an oil change",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "workshop",
+   "needs": "car",
+   "fixed": false
+  },
+  {
+   "id": "patch-slow-tire",
+   "title": "Get a tire patched",
+   "done": "had a slowly leaking tire patched at the garage",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "workshop",
+   "needs": "car",
+   "fixed": false
+  },
+  {
+   "id": "car-safety-inspection",
+   "title": "Car safety inspection",
+   "done": "took the car in for its annual safety inspection and got the sticker",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "workshop",
+   "needs": "car",
+   "fixed": true
+  },
+  {
+   "id": "horse-to-farrier",
+   "title": "Take the horse to the farrier",
+   "done": "had the horse reshod at the farrier's and paid in coin",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "workshop",
+   "needs": "horse",
+   "fixed": false
+  },
+  {
+   "id": "buy-oats-for-horse",
+   "title": "Buy oats for the horse",
+   "done": "bought a sack of oats and arranged delivery to the stable",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "needs": "horse",
+   "fixed": false
+  },
+  {
+   "id": "pick-up-pet-food",
+   "title": "Pick up pet food order",
+   "done": "picked up a large bag of pet food and a new water bowl",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "shopping",
+   "needs": "pet",
+   "fixed": false
+  },
+  {
+   "id": "collect-box-office-tickets",
+   "title": "Collect tickets at box office",
+   "done": "collected two reserved tickets from the box office before it closed",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "sell-old-books",
+   "title": "Sell old books",
+   "done": "sold a box of old paperbacks to the secondhand dealer for pocket money",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "spare-key-to-landlord",
+   "title": "Drop spare key at landlord's",
+   "done": "dropped a spare key at the landlord's office for the plumber's visit",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "collect-certified-copy",
+   "title": "Pick up a certified copy",
+   "done": "picked up a certified copy of a birth certificate at city hall",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "report-lodging-to-reeve",
+   "title": "Report new lodging to the reeve",
+   "done": "reported a change of lodging to the reeve's clerk and had it written down",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false
+  },
+  {
+   "id": "pay-temple-tithe",
+   "title": "Pay the tithe at the temple",
+   "done": "paid the season's tithe at the temple and got a notched tally stick",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "temple",
+   "fixed": false
+  },
+  {
+   "id": "reserve-temple-hall",
+   "title": "Reserve the temple hall",
+   "done": "reserved the temple's side room for a family gathering next month",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "temple",
+   "fixed": false
+  },
+  {
+   "id": "crate-at-the-docks",
+   "title": "Collect a crate at the docks",
+   "done": "collected a crate from the shipping office after showing the bill of lading",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "docks",
+   "fixed": false
+  },
+  {
+   "id": "parcel-from-customs-depot",
+   "title": "Collect a parcel from customs",
+   "done": "collected an international parcel at the customs depot and paid the import fee",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "docks",
+   "fixed": false
+  },
+  {
+   "id": "order-ice-from-iceman",
+   "title": "Order ice from the iceman",
+   "done": "flagged down the iceman's wagon and ordered a block for the icebox",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "order-winter-coal",
+   "title": "Order coal for winter",
+   "done": "ordered a ton of coal at the coal yard for delivery next week",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "order-firewood",
+   "title": "Order firewood",
+   "done": "ordered a cart of split firewood from the woodcutter at market",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "gas-company-counter",
+   "title": "Pay at the gas company office",
+   "done": "paid the gas bill in person at the gas company counter",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "streetcar-ticket-book",
+   "title": "Buy a streetcar ticket book",
+   "done": "bought a book of streetcar tickets at the depot window",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "top-up-transit-card",
+   "title": "Top up transit card",
+   "done": "topped up the transit card at the station machine",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "buy-birthday-card",
+   "title": "Buy a birthday card",
+   "done": "chose a birthday card and a stamp for a friend's birthday",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "gift-wrapped-at-counter",
+   "title": "Get a gift wrapped",
+   "done": "had a present wrapped at the counter with proper ribbon",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "collect-business-cards",
+   "title": "Collect printed business cards",
+   "done": "picked up a box of freshly printed business cards from the print shop",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "order-calling-cards",
+   "title": "Order calling cards",
+   "done": "ordered a box of engraved calling cards from the stationer",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "buy-parchment-and-ink",
+   "title": "Buy parchment and ink",
+   "done": "bought parchment, a pot of ink and fresh quills from the stationer's stall",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "letter-by-scribe",
+   "title": "Have a scribe write a letter",
+   "done": "paid a scribe to write a formal letter to a distant cousin",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "seal-recut",
+   "title": "Have a seal re-cut",
+   "done": "took a worn wax seal to the engraver to be re-cut",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "return-faulty-kettle",
+   "title": "Return a faulty kettle",
+   "done": "returned a kettle that would not switch off and got a replacement",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "exchange-sweater-size",
+   "title": "Exchange a gift",
+   "done": "swapped a gifted sweater for the right size at the shop",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "laptop-warranty-repair",
+   "title": "Drop laptop for warranty repair",
+   "done": "dropped the laptop off for a warranty repair after backing up every file",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "sewing-machine-repair",
+   "title": "Take sewing machine for repair",
+   "done": "carried the sewing machine to the repair shop for a new drive belt",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "typewriter-serviced",
+   "title": "Get typewriter serviced",
+   "done": "had the typewriter cleaned, oiled and fitted with a new ribbon",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "lamp-rewired",
+   "title": "Get a lamp rewired",
+   "done": "dropped an old table lamp at the electrician's to be rewired",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "clock-to-clockmaker",
+   "title": "Take the clock to the clockmaker",
+   "done": "left the mantel clock with the clockmaker to fix its stuck chime",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "chair-reglued",
+   "title": "Get a chair repaired",
+   "done": "dropped a wobbly chair at the furniture mender to be re-glued and re-caned",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "buy-bulbs-and-fuses",
+   "title": "Buy bulbs and fuses",
+   "done": "bought replacement light bulbs and a spare fuse at the hardware store",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "candles-from-chandler",
+   "title": "Buy candles from the chandler",
+   "done": "bought a bundle of tallow candles from the chandler for the dark months",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "buy-lamp-oil",
+   "title": "Buy lamp oil",
+   "done": "had the lamp oil can refilled at the general store",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "return-deposit-bottles",
+   "title": "Return deposit bottles",
+   "done": "returned a crate of empty bottles and pocketed the deposit",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "station-lost-and-found",
+   "title": "Check the lost and found",
+   "done": "asked at the station lost-and-found and recovered a forgotten scarf",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "drop-off-ballot",
+   "title": "Drop off mail-in ballot",
+   "done": "dropped the mail-in ballot in the official drop box with a day to spare",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "vote-at-polling-station",
+   "title": "Vote at the polling station",
+   "done": "voted at the local polling station on the way to work",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "jury-selection",
+   "title": "Report for jury selection",
+   "done": "reported for jury selection and was dismissed by lunchtime",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 120,
+   "where": "out",
+   "fixed": true
+  },
+  {
+   "id": "safe-deposit-box",
+   "title": "Visit the safe deposit box",
+   "done": "stored the new lease and spare documents in the bank's safe deposit box",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "bank-adviser-meeting",
+   "title": "Bank account appointment",
+   "done": "met the bank adviser to open a savings account and signed the forms",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "out",
+   "fixed": true
+  },
+  {
+   "id": "new-mailbox-key",
+   "title": "Collect a new mailbox key",
+   "done": "picked up a new mailbox key from the building manager's office",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "library-hold-pickup",
+   "title": "Pick up a library hold",
+   "done": "picked up two reserved books from the library hold shelf",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "library",
+   "fixed": false
+  },
+  {
+   "id": "pay-damaged-book-fee",
+   "title": "Pay a library damage fee",
+   "done": "paid the library for a paperback with a coffee-stained cover",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "library",
+   "fixed": false
+  },
+  {
+   "id": "return-monastery-manuscript",
+   "title": "Return a borrowed manuscript",
+   "done": "returned a borrowed manuscript to the temple library and signed the ledger",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "library",
+   "fixed": false
+  },
+  {
+   "id": "collect-guild-tools",
+   "title": "Collect tools from the guild store",
+   "done": "collected a set of loaned tools from the guild storeroom and signed for them",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false
+  },
+  {
+   "id": "food-bank-drop-off",
+   "title": "Drop off at the food bank",
+   "done": "dropped two bags of tinned food at the food bank collection point",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "paint-sample-pots",
+   "title": "Pick up paint samples",
+   "done": "collected paint swatches and two sample pots for the hallway",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "visit-storage-unit",
+   "title": "Visit the storage unit",
+   "done": "checked the storage unit and brought the winter coats home",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "dump-run",
+   "title": "Take bulky trash to the dump",
+   "done": "hauled an old mattress to the municipal dump and paid the gate fee",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "out",
+   "needs": "car",
+   "fixed": false
+  },
+  {
+   "id": "replace-jacket-zipper",
+   "title": "Get a zipper replaced",
+   "done": "had a broken jacket zipper replaced at the alterations counter",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "hat-reblocked",
+   "title": "Have a hat reblocked",
+   "done": "had a felt hat steamed and reblocked at the hatter's",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "saddle-to-saddler",
+   "title": "Take the saddle to the saddler",
+   "done": "left a cracked saddle girth with the saddler for restitching",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "workshop",
+   "needs": "horse",
+   "fixed": false
+  },
+  {
+   "id": "cart-wheel-rimmed",
+   "title": "Get a cart wheel fixed",
+   "done": "had the wheelwright fit a new iron rim on the handcart wheel",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "buy-ferry-tickets",
+   "title": "Buy ferry tickets",
+   "done": "bought return ferry tickets at the dockside office for the weekend",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "docks",
+   "fixed": false
+  },
+  {
+   "id": "letters-at-the-inn",
+   "title": "Collect letters at the inn",
+   "done": "collected letters left at the inn by the passing courier",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "check-po-box",
+   "title": "Check the post office box",
+   "done": "emptied the post office box and tossed a fistful of flyers",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "freeze-gym-membership",
+   "title": "Freeze gym membership",
+   "done": "froze the gym membership at the front desk for two months",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "fitness",
+   "fixed": false
+  },
+  {
+   "id": "return-gym-locker-key",
+   "title": "Return gym locker key",
+   "done": "returned the locker key and collected the deposit at the front desk",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "fitness",
+   "fixed": false
+  },
+  {
+   "id": "athletic-club-dues",
+   "title": "Pay athletic club dues",
+   "done": "paid the athletic club's quarterly dues at the front desk",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "fitness",
+   "fixed": false
+  },
+  {
+   "id": "pick-up-cake-order",
+   "title": "Pick up a cake order",
+   "done": "collected the ordered cake from the bakery café for a friend's party",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "cafe",
+   "fixed": false
+  },
+  {
+   "id": "book-park-shelter",
+   "title": "Book a park shelter",
+   "done": "reserved the park picnic shelter at the park office for Saturday",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "park",
+   "fixed": false
+  },
+  {
+   "id": "garden-plot-fee",
+   "title": "Pay community garden fee",
+   "done": "paid the garden plot fee and picked up the gate key at the park office",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "park",
+   "fixed": false
+  },
+  {
+   "id": "settle-bakers-tally",
+   "title": "Settle the baker's tally",
+   "done": "settled a month's tally with the baker at the market",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "buy-shed-padlock",
+   "title": "Buy a new padlock",
+   "done": "bought a sturdy padlock for the shed at the hardware stall",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "parcel-locker-drop",
+   "title": "Ship a parcel from a locker",
+   "done": "printed the label and dropped the parcel in a self-service locker",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "new-sim-card",
+   "title": "Get a new SIM card",
+   "done": "swapped to a new SIM at the phone shop and kept the old number",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "return-old-router",
+   "title": "Return the old router",
+   "done": "returned the old router to the internet provider's store and got a receipt",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "program-building-fob",
+   "title": "Get a spare fob programmed",
+   "done": "had a spare building entry fob programmed at the key counter",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "collect-coffee-machine",
+   "title": "Collect repaired coffee machine",
+   "done": "collected the repaired coffee machine and paid for a new seal",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false
+  },
+  {
+   "id": "recycle-batteries",
+   "title": "Drop off old batteries",
+   "done": "dropped a jar of dead batteries at the recycling bin by the shop door",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "tax-office-queue",
+   "title": "Visit the tax office",
+   "done": "queued at the tax office to ask about a missing form",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "out",
+   "fixed": true
+  },
+  {
+   "id": "collect-new-id-card",
+   "title": "Pick up a new ID card",
+   "done": "collected the new ID card at city hall after a short wait",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "buy-fishing-license",
+   "title": "Buy a fishing license",
+   "done": "bought the season's fishing license at the bait shop counter",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "buy-postal-order",
+   "title": "Buy a postal order",
+   "done": "bought a postal order at the post office to send money to a cousin",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "friendly-society-penny",
+   "title": "Pay the friendly society",
+   "done": "paid the weekly dues to the friendly society and had the card stamped",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "holiday-savings-club",
+   "title": "Join the holiday savings club",
+   "done": "signed up for the bank's holiday savings club with a weekly deposit",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "settle-grocer-account",
+   "title": "Settle the grocer's account",
+   "done": "settled the month's account with the grocer by check",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "shopping",
+   "fixed": false
+  },
+  {
+   "id": "pay-the-miller",
+   "title": "Pay the miller",
+   "done": "paid the miller in coin for grinding the season's grain",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "record-loom-sale",
+   "title": "Record a sale with the clerk",
+   "done": "had the sale of an old loom recorded by the market clerk",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "well-fee-at-temple",
+   "title": "Pay the yearly well fee",
+   "done": "paid the yearly fee for the well and had it marked in the temple roll",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "temple",
+   "fixed": false
+  },
+  {
+   "id": "mail-forwarding-setup",
+   "title": "Set up mail forwarding",
+   "done": "set up mail forwarding at the post office counter for three months",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  },
+  {
+   "id": "book-steamship-passage",
+   "title": "Book steamship passage",
+   "done": "booked second-class steamship passage at the shipping office",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$$",
+   "minutes": 45,
+   "where": "docks",
+   "fixed": false
+  },
+  {
+   "id": "register-motorcar",
+   "title": "Register the motorcar",
+   "done": "registered the motorcar at the county office and collected the number plates",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 45,
+   "where": "out",
+   "needs": "car",
+   "fixed": false
+  },
+  {
+   "id": "building-society-payment",
+   "title": "Pay the building society",
+   "done": "paid the month's installment to the building society and had the book stamped",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false
+  }
+ ],
+ "paperwork": [
+  {
+   "id": "pay-electric-bill",
+   "title": "Pay the electric bill",
+   "done": "paid the electric bill online and saved the confirmation email",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "pay-gas-bill-by-mail",
+   "title": "Pay the gas bill",
+   "done": "paid the quarterly gas bill by mail with a money order",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "pay-water-bill",
+   "title": "Pay the water bill",
+   "done": "paid the water bill and noted the meter reading on the calendar",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "compare-internet-plans",
+   "title": "Compare internet plans",
+   "done": "compared three internet plans and switched to the cheaper one",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "renew-passport",
+   "title": "Renew passport",
+   "done": "filled in the passport renewal form and clipped on two new photos",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "renew-drivers-license",
+   "title": "Renew driver's license",
+   "done": "renewed the driver's license online and paid the fee",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "update-voter-registration",
+   "title": "Update voter registration",
+   "done": "filled in the voter registration change-of-address form",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "file-tax-return",
+   "title": "File the annual tax return",
+   "done": "finished the annual tax return and filed it two days early",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 120,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "sort-tax-receipts",
+   "title": "Sort receipts for taxes",
+   "done": "sorted a shoebox of receipts into deductible and not",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "monthly-budget",
+   "title": "Do the monthly budget",
+   "done": "balanced the month's budget and moved a little into savings",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "reconcile-bank-statement",
+   "title": "Reconcile bank statement",
+   "done": "reconciled the bank statement and found every penny accounted for",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "tally-household-ledger",
+   "title": "Tally the household ledger",
+   "done": "tallied the household ledger and counted the coin box twice",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "cancel-streaming-subscription",
+   "title": "Cancel a streaming subscription",
+   "done": "cancelled an unused streaming subscription before the next charge",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "review-all-subscriptions",
+   "title": "Review all subscriptions",
+   "done": "listed every recurring charge and cancelled two forgotten ones",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "renew-newspaper-subscription",
+   "title": "Renew newspaper subscription",
+   "done": "renewed the newspaper subscription for another half year by post",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "cancel-magazine",
+   "title": "Cancel a magazine subscription",
+   "done": "wrote to cancel a magazine subscription that kept renewing itself",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "renew-renters-insurance",
+   "title": "Renew renters insurance",
+   "done": "renewed renters insurance and raised the coverage for electronics",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "fire-insurance-premium",
+   "title": "Pay the fire insurance premium",
+   "done": "paid the fire insurance premium and filed the policy in the desk drawer",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "compare-insurance-quotes",
+   "title": "Compare insurance quotes",
+   "done": "compared four home insurance quotes side by side in a spreadsheet",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "renew-car-insurance",
+   "title": "Renew car insurance",
+   "done": "renewed car insurance and dropped an add-on that was never used",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "home",
+   "needs": "car",
+   "fixed": false
+  },
+  {
+   "id": "renew-car-registration",
+   "title": "Renew car registration",
+   "done": "renewed the car registration online and printed the confirmation",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "needs": "car",
+   "fixed": false
+  },
+  {
+   "id": "update-old-passwords",
+   "title": "Update account passwords",
+   "done": "changed the passwords on five old accounts and turned on two-step login",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "back-up-phone-photos",
+   "title": "Back up phone photos",
+   "done": "backed up two years of phone photos to an external drive",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "organize-downloads-folder",
+   "title": "Organize digital documents",
+   "done": "renamed and filed a messy downloads folder into proper folders",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "file-household-papers",
+   "title": "File household papers",
+   "done": "filed a month of loose papers into labeled folders",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "shred-old-statements",
+   "title": "Shred old statements",
+   "done": "shredded seven years of expired bank statements",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "burn-old-receipts",
+   "title": "Burn old receipts",
+   "done": "burned a stack of expired receipts in the stove after checking the dates",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "write-thank-you-notes",
+   "title": "Write thank-you notes",
+   "done": "wrote four thank-you notes for birthday gifts and sealed them",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "answer-landlord-letter",
+   "title": "Answer the landlord's letter",
+   "done": "wrote back to the landlord agreeing to the proposed inspection date",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "review-lease-renewal",
+   "title": "Review the lease renewal",
+   "done": "read the lease renewal line by line and signed it",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "sign-tenancy-roll",
+   "title": "Sign the tenancy roll",
+   "done": "made a mark on the steward's tenancy roll for another year",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false
+  },
+  {
+   "id": "update-bank-address",
+   "title": "Update address with the bank",
+   "done": "updated the mailing address with the bank and the pension office",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "update-emergency-contacts",
+   "title": "Update emergency contacts",
+   "done": "updated the emergency contact form for work with a new number",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "draft-simple-will",
+   "title": "Draft a simple will",
+   "done": "drafted a simple will and listed who gets the books",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 90,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "register-fridge-warranty",
+   "title": "Register a warranty",
+   "done": "registered the new fridge warranty and stapled the receipt to the manual",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "file-appliance-manuals",
+   "title": "File appliance manuals",
+   "done": "gathered every appliance manual into one labeled folder",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "photo-home-inventory",
+   "title": "Make a home inventory",
+   "done": "photographed valuables room by room for an insurance inventory",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "list-household-goods",
+   "title": "List household goods",
+   "done": "wrote out an inventory of the household goods for the records",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "raise-retirement-contribution",
+   "title": "Adjust retirement savings",
+   "done": "raised the retirement contribution by one percent",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "check-credit-report",
+   "title": "Check credit report",
+   "done": "pulled the free credit report and checked every line",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "choose-workplace-benefits",
+   "title": "Choose workplace benefits",
+   "done": "read the benefits booklet and picked a plan before the deadline",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "submit-expense-report",
+   "title": "Submit expense report",
+   "done": "submitted an expense report with scanned receipts for last month",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "send-freelance-invoices",
+   "title": "Send invoices",
+   "done": "sent three invoices for freelance work and logged them in a spreadsheet",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "handwrite-invoices",
+   "title": "Write out invoices",
+   "done": "wrote out invoices in a neat hand and posted them to customers",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "chase-overdue-invoice",
+   "title": "Chase an unpaid invoice",
+   "done": "wrote a polite follow-up about an invoice sixty days overdue",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "call-in-small-debt",
+   "title": "Call in a small debt",
+   "done": "sent word to a neighbor about the silver still owed from spring",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "log-charity-donations",
+   "title": "Log charity donations",
+   "done": "logged the year's donations and their receipts for tax time",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "automatic-savings-transfer",
+   "title": "Set up a savings transfer",
+   "done": "set up an automatic monthly transfer to the holiday savings account",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "switch-phone-plan",
+   "title": "Switch phone plan",
+   "done": "switched to a cheaper phone plan and kept the same number",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "arrange-telephone-line",
+   "title": "Arrange a telephone line",
+   "done": "wrote to the telephone company to arrange a line to the apartment",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "fill-in-census",
+   "title": "Fill in the census form",
+   "done": "filled in the census form for the household and posted it back",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "answer-household-count",
+   "title": "Answer the household count",
+   "done": "answered the reeve's clerk for the count of heads and hearths",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": true
+  },
+  {
+   "id": "juror-questionnaire",
+   "title": "Return the juror questionnaire",
+   "done": "completed and returned the juror questionnaire by the due date",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "property-tax-installment",
+   "title": "Pay property tax installment",
+   "done": "paid the property tax installment before the late date",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$$$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "pay-hearth-tax",
+   "title": "Pay the hearth tax",
+   "done": "counted out coins for the hearth tax and kept the tally",
+   "eras": [
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false
+  },
+  {
+   "id": "renew-guild-membership",
+   "title": "Renew guild membership",
+   "done": "renewed guild membership and had the seal pressed on the certificate",
+   "eras": [
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false
+  },
+  {
+   "id": "witness-apprentice-indenture",
+   "title": "Witness an apprentice contract",
+   "done": "signed as witness on a neighbor's apprentice indenture",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": true
+  },
+  {
+   "id": "renew-trading-license",
+   "title": "Renew trading license",
+   "done": "renewed the market trading license at the clerk's window",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "guildhall",
+   "fixed": false
+  },
+  {
+   "id": "file-business-registration",
+   "title": "File business registration",
+   "done": "filed the yearly registration for the side business online",
+   "eras": [
+    "modern"
+   ],
+   "needs": "business",
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "renew-pet-license",
+   "title": "Renew pet license",
+   "done": "renewed the pet license and ordered a new tag",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "needs": "pet",
+   "fixed": false
+  },
+  {
+   "id": "review-pet-insurance",
+   "title": "Review pet insurance",
+   "done": "compared pet insurance plans and switched to one with a lower excess",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "needs": "pet",
+   "fixed": false
+  },
+  {
+   "id": "update-microchip-details",
+   "title": "Update microchip details",
+   "done": "updated the pet's microchip registry with the new phone number",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "needs": "pet",
+   "fixed": false
+  },
+  {
+   "id": "apply-parking-permit",
+   "title": "Apply for a parking permit",
+   "done": "applied online for a resident parking permit and uploaded proof of address",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "needs": "car",
+   "fixed": false
+  },
+  {
+   "id": "letter-to-city-hall",
+   "title": "Write to city hall",
+   "done": "wrote to city hall about the broken streetlight on the corner",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "petition-town-council",
+   "title": "Petition the town council",
+   "done": "drafted a petition to the town council about the muddy lane",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "submit-meter-reading",
+   "title": "Submit meter reading",
+   "done": "read the gas meter and submitted the numbers online",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "mail-rebate-form",
+   "title": "Mail in a rebate form",
+   "done": "cut out the barcode and mailed in a rebate form for the blender",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "loan-payment",
+   "title": "Make a loan payment",
+   "done": "made the monthly loan payment and checked the remaining balance",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "gather-loan-documents",
+   "title": "Gather loan documents",
+   "done": "gathered pay slips and statements for a loan application",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "follow-up-insurance-claim",
+   "title": "Follow up insurance claim",
+   "done": "phoned the insurer to check the status of an open claim",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "address-holiday-cards",
+   "title": "Address holiday cards",
+   "done": "addressed and stamped twenty holiday cards at the kitchen table",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "update-address-book",
+   "title": "Update address book",
+   "done": "copied new addresses into the address book and crossed out old ones",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "plan-bill-calendar",
+   "title": "Plan the month's bills",
+   "done": "wrote every bill due date onto the month's wall calendar",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "bills-spreadsheet",
+   "title": "Set up a bills spreadsheet",
+   "done": "built a spreadsheet tracking every bill and its due date",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "set-up-autopay",
+   "title": "Set up autopay",
+   "done": "switched the water and power bills to autopay",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "paperless-statements",
+   "title": "Go paperless on statements",
+   "done": "turned on paperless statements for three accounts",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "unsubscribe-mailing-lists",
+   "title": "Unsubscribe from mailing lists",
+   "done": "unsubscribed from a dozen promotional email lists",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "opt-out-junk-mail",
+   "title": "Opt out of junk mail",
+   "done": "filled in a form to stop catalogs and junk mail arriving",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "clear-email-inbox",
+   "title": "Clear the email inbox",
+   "done": "worked through two hundred unread emails and answered the important ones",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "answer-weeks-letters",
+   "title": "Answer the week's letters",
+   "done": "answered the week's letters at the writing desk and sealed each one",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "read-gym-contract",
+   "title": "Read a service contract",
+   "done": "read the gym contract's small print before signing anything",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "tenants-meeting-minutes",
+   "title": "Read tenants' meeting minutes",
+   "done": "read the tenants' association minutes and voted by proxy",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "tenants-association-dues",
+   "title": "Pay tenants' association dues",
+   "done": "paid the yearly tenants' association dues by bank transfer",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "pay-the-rent",
+   "title": "Pay the rent",
+   "done": "paid the month's rent and filed the receipt",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$$$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "request-deposit-back",
+   "title": "Request deposit return",
+   "done": "wrote to the old landlord requesting the security deposit back",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "change-of-address-list",
+   "title": "Make a change-of-address list",
+   "done": "listed every account that still needs the new address",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "order-birth-certificate",
+   "title": "Order a birth certificate copy",
+   "done": "ordered a certified copy of a birth certificate by mail",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "copy-family-lineage",
+   "title": "Copy out the family lineage",
+   "done": "copied the family lineage neatly into the household book",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "apply-travel-visa",
+   "title": "Apply for a travel visa",
+   "done": "filled out a travel visa application and booked the interview",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 90,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "buy-travel-insurance",
+   "title": "Buy travel insurance",
+   "done": "bought travel insurance for the trip and saved the policy",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "letter-of-passage",
+   "title": "Get a letter of passage",
+   "done": "had a letter of passage sealed by the town clerk for the journey",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "guildhall",
+   "fixed": false
+  },
+  {
+   "id": "review-phone-bill",
+   "title": "Review the phone bill",
+   "done": "checked the phone bill line by line and queried a data charge",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "switch-energy-supplier",
+   "title": "Switch energy supplier",
+   "done": "switched to a cheaper energy supplier and recorded the meter reading",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "pay-estimated-tax",
+   "title": "Pay estimated tax",
+   "done": "calculated and paid the quarterly estimated tax",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "income-declaration",
+   "title": "Declare income to the tax office",
+   "done": "filled in the income declaration for the tax office by hand",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "check-pay-slips",
+   "title": "Check pay slips",
+   "done": "checked the month's pay slips for the right hours and deductions",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "write-iou",
+   "title": "Write up a loan agreement",
+   "done": "wrote up a simple IOU for a loan to a friend and both signed it",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "evening-class-registration",
+   "title": "Register for an evening class",
+   "done": "filled in the registration form for an evening class",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "renew-book-club",
+   "title": "Renew a club membership",
+   "done": "renewed the book club membership and updated contact details",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "monthly-library-donation",
+   "title": "Set up a monthly donation",
+   "done": "set up a small monthly donation to the local library fund",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "register-bicycle-serial",
+   "title": "Register a new bicycle",
+   "done": "registered the new bicycle's serial number with the dealer",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "record-loaned-tools",
+   "title": "Record loaned tools",
+   "done": "wrote down which neighbors had borrowed which tools",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "fill-budget-envelopes",
+   "title": "Fill the budget envelopes",
+   "done": "divided the pay packet into envelopes for rent, coal and food",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "divide-month-coin",
+   "title": "Divide the coin for the month",
+   "done": "counted the coins into pouches for rent, grain and the tithe",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "copy-sale-agreement",
+   "title": "Copy out a contract",
+   "done": "copied a sale agreement in a fair hand for both parties",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "typed-complaint-letter",
+   "title": "Type a complaint letter",
+   "done": "typed a formal complaint to the streetcar company about late service",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "complaint-email",
+   "title": "Write a complaint email",
+   "done": "wrote a firm but polite complaint about a cancelled delivery",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "query-bank-fees",
+   "title": "Query bank fees",
+   "done": "asked the bank to remove a monthly fee and succeeded",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "open-savings-online",
+   "title": "Open a savings account",
+   "done": "opened a high-interest savings account online and moved the emergency fund",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "consolidate-pensions",
+   "title": "Consolidate old pension accounts",
+   "done": "merged two old workplace pension pots into one account",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "update-beneficiaries",
+   "title": "Update account beneficiaries",
+   "done": "updated the beneficiaries on the savings and pension accounts",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "household-info-sheet",
+   "title": "Write a household info sheet",
+   "done": "wrote out where the fuse box, water shutoff and spare keys are",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "close-dormant-accounts",
+   "title": "Close old online accounts",
+   "done": "closed four dormant online accounts and deleted the stored data",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "write-to-gas-company",
+   "title": "Write to the gas company",
+   "done": "wrote to the gas company to request a meter inspection",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "update-savings-passbook",
+   "title": "Check the savings passbook",
+   "done": "checked the savings passbook against the interest notice from the bank",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "pay-insurance-collector",
+   "title": "Pay the insurance collector",
+   "done": "paid the weekly insurance penny to the collector at the door",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": true
+  },
+  {
+   "id": "passport-application-ind",
+   "title": "Apply for a passport",
+   "done": "filled in the passport application and found a witness to sign the photo",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "letter-to-cousin",
+   "title": "Write to a distant cousin",
+   "done": "wrote a long letter to a cousin and sealed it with wax",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "tithe-record-check",
+   "title": "Check the tithe record",
+   "done": "checked the household tithe tallies against the temple's record",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "temple",
+   "fixed": false
+  },
+  {
+   "id": "guild-apprentice-fees",
+   "title": "Pay apprentice fees",
+   "done": "paid the guild fee to register a new apprentice and signed the roll",
+   "eras": [
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false
+  },
+  {
+   "id": "market-stall-rent",
+   "title": "Pay market stall rent",
+   "done": "paid the season's rent for a market stall pitch to the warden",
+   "eras": [
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "dock-manifest-check",
+   "title": "Check a cargo manifest",
+   "done": "checked a cargo manifest at the docks against the order list",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "docks",
+   "fixed": false
+  },
+  {
+   "id": "receipts-spike",
+   "title": "Spike the week's receipts",
+   "done": "pinned the week's receipts onto the spike and totted up the sums",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "mend-account-book",
+   "title": "Rule a new account book",
+   "done": "ruled columns into a fresh account book for the new year",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "deed-copy-scribe",
+   "title": "Have a deed copied",
+   "done": "had the scribe make a fair copy of the house deed for safekeeping",
+   "eras": [
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "market",
+   "fixed": false
+  },
+  {
+   "id": "warranty-claim-form",
+   "title": "File a warranty claim",
+   "done": "filled in a warranty claim for a headphone set that stopped charging",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "membership-card-renewal",
+   "title": "Renew museum membership",
+   "done": "renewed the museum membership and printed the new card",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "tax-office-letter-ind",
+   "title": "Write to the tax office",
+   "done": "wrote to the tax office asking for the correct assessment form",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "lodger-agreement",
+   "title": "Draw up a lodger agreement",
+   "done": "drew up a simple agreement for a lodger renting the spare room",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "old-lodger-terms",
+   "title": "Agree terms with a lodger",
+   "done": "agreed the lodger's weekly rent in front of a witness and noted it down",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "utility-deposit-refund",
+   "title": "Claim a utility deposit refund",
+   "done": "filled in the form to claim back a utility deposit",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "sign-up-for-utilities",
+   "title": "Set up new utility accounts",
+   "done": "set up power and water accounts for the new apartment",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "gas-connection-request",
+   "title": "Request a gas connection",
+   "done": "wrote to the gas company requesting a connection at the new rooms",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false
+  },
+  {
+   "id": "vehicle-tax-ind",
+   "title": "Pay the motorcar tax",
+   "done": "paid the annual motorcar tax and pasted the disc in the windscreen",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "out",
+   "needs": "car",
+   "fixed": false
+  }
+ ],
+ "surprises": [
+  {
+   "id": "parking-ticket",
+   "title": "Pay parking ticket",
+   "done": "paid the parking ticket online before the late fee kicked in",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "needs": "car",
+   "fixed": false,
+   "line": "A parking ticket was tucked under the windshield wiper"
+  },
+  {
+   "id": "lost-library-book-bill",
+   "title": "Pay for a lost library book",
+   "done": "paid the replacement cost for a library book that never turned up",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "library",
+   "fixed": false,
+   "line": "A library notice says a borrowed book is now billed as lost"
+  },
+  {
+   "id": "high-electric-bill",
+   "title": "Query a high electric bill",
+   "done": "called the power company and found the bill used an estimated reading",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "The electric bill came in nearly double the usual amount"
+  },
+  {
+   "id": "high-gas-bill-ind",
+   "title": "Dispute the gas bill",
+   "done": "took the gas bill to the company office and had the meter re-read",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "out",
+   "fixed": false,
+   "line": "The gas bill arrived far higher than any month before"
+  },
+  {
+   "id": "lost-bank-card",
+   "title": "Replace a lost bank card",
+   "done": "froze the lost card and ordered a replacement through the bank app",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The bank card is nowhere to be found"
+  },
+  {
+   "id": "missing-package",
+   "title": "Chase a missing package",
+   "done": "filed a missing-parcel claim with the courier and got a refund promised",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "The tracking says delivered, but no package is at the door"
+  },
+  {
+   "id": "jury-summons-arrives",
+   "title": "Answer a jury summons",
+   "done": "confirmed attendance for jury duty and arranged the day off work",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "A jury summons arrived in the mail"
+  },
+  {
+   "id": "double-charge-bank",
+   "title": "Sort out a bank error",
+   "done": "spent an hour on the phone getting a double charge reversed",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false,
+   "line": "The bank statement shows the same payment taken twice"
+  },
+  {
+   "id": "passbook-error",
+   "title": "Correct a passbook error",
+   "done": "had the teller add a missing deposit to the passbook",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false,
+   "line": "The passbook is missing last week's deposit"
+  },
+  {
+   "id": "snapped-key-rekey",
+   "title": "Get the lock re-keyed",
+   "done": "had a locksmith re-key the front door after the key snapped",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "home",
+   "fixed": true,
+   "line": "The front door key snapped off in the lock"
+  },
+  {
+   "id": "lost-house-keys",
+   "title": "Replace lost house keys",
+   "done": "borrowed the landlord's spare and had three new keys cut",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "out",
+   "fixed": false,
+   "line": "The house keys are missing from every usual pocket"
+  },
+  {
+   "id": "big-overdue-fine",
+   "title": "Pay a library fine",
+   "done": "paid a surprisingly large fine for a book kept two months too long",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "library",
+   "fixed": false,
+   "line": "A library notice lists a book as eight weeks overdue"
+  },
+  {
+   "id": "tax-office-query",
+   "title": "Answer a tax office letter",
+   "done": "gathered receipts and replied to a tax office query about a deduction",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 90,
+   "where": "home",
+   "fixed": false,
+   "line": "A letter from the tax office asks for proof of a deduction"
+  },
+  {
+   "id": "tax-shortfall",
+   "title": "Pay a tax shortfall",
+   "done": "paid a small tax shortfall plus interest after checking the sums",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "The tax office says last year's return came up short"
+  },
+  {
+   "id": "tithe-shortfall",
+   "title": "Settle a tithe shortfall",
+   "done": "paid the missing tithe portion and had the temple record amended",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "temple",
+   "fixed": false,
+   "line": "The temple clerk claims last season's tithe was short"
+  },
+  {
+   "id": "reeve-summons",
+   "title": "Answer the reeve's summons",
+   "done": "appeared before the reeve to explain a late market fee",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "guildhall",
+   "fixed": true,
+   "line": "A summons from the reeve was nailed to the door"
+  },
+  {
+   "id": "guild-assembly-fine",
+   "title": "Pay a guild fine",
+   "done": "paid the guild's fine for missing the quarterly assembly",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false,
+   "line": "The guild has levied a fine for a missed assembly"
+  },
+  {
+   "id": "late-rent-fee",
+   "title": "Dispute a late rent fee",
+   "done": "showed the landlord the transfer date and got a late fee waived",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The landlord added a late fee to this month's rent"
+  },
+  {
+   "id": "rent-increase-letter",
+   "title": "Respond to a rent increase",
+   "done": "wrote to the landlord and negotiated a smaller rent increase",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "A letter from the landlord announces a rent increase"
+  },
+  {
+   "id": "passport-expiring",
+   "title": "Rush a passport renewal",
+   "done": "paid for an expedited passport renewal after spotting the expiry date",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "out",
+   "fixed": false,
+   "line": "The passport turns out to expire before the planned trip"
+  },
+  {
+   "id": "expired-card-autopay",
+   "title": "Update an expired card",
+   "done": "activated the new card and updated it on six subscriptions",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The bank card expired and every autopay just failed"
+  },
+  {
+   "id": "roaming-charges",
+   "title": "Dispute roaming charges",
+   "done": "got half the surprise roaming charges knocked off the phone bill",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "The phone bill shows a pile of roaming charges"
+  },
+  {
+   "id": "annual-auto-renewal",
+   "title": "Get an annual renewal refunded",
+   "done": "asked for a refund on an annual subscription that renewed unnoticed",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "An annual subscription just renewed at full price"
+  },
+  {
+   "id": "overdraft-fee",
+   "title": "Get an overdraft fee reversed",
+   "done": "moved money between accounts and asked the bank to waive an overdraft fee",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "An overdraft fee appeared after a bill went out early"
+  },
+  {
+   "id": "bounced-check",
+   "title": "Make good a bounced check",
+   "done": "covered a bounced check in cash and paid the returned-check fee",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 45,
+   "where": "out",
+   "fixed": false,
+   "line": "A check bounced and the payee wants the money"
+  },
+  {
+   "id": "speed-camera-fine",
+   "title": "Pay a speed camera fine",
+   "done": "paid the speed camera fine and noted the new limit on that road",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "home",
+   "needs": "car",
+   "fixed": false,
+   "line": "A speed camera fine arrived in the post"
+  },
+  {
+   "id": "towed-car",
+   "title": "Retrieve a towed car",
+   "done": "paid the release fee at the impound lot and drove the car home",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$$",
+   "minutes": 90,
+   "where": "out",
+   "needs": "car",
+   "fixed": false,
+   "line": "The car is gone from its spot and a sign says towed"
+  },
+  {
+   "id": "lapsed-registration",
+   "title": "Renew lapsed registration",
+   "done": "paid the late registration fee and printed a temporary permit",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "needs": "car",
+   "fixed": false,
+   "line": "The car registration lapsed last month without anyone noticing"
+  },
+  {
+   "id": "missed-delivery-card",
+   "title": "Rearrange a redelivery",
+   "done": "booked a redelivery for a parcel that needed a signature",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A missed-delivery card was pushed through the letterbox"
+  },
+  {
+   "id": "customs-charge",
+   "title": "Pay a customs charge",
+   "done": "paid an unexpected customs charge to release an overseas parcel",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A parcel is held until an import charge is paid"
+  },
+  {
+   "id": "wrong-item-delivered",
+   "title": "Return a wrong delivery",
+   "done": "boxed up the wrong item and arranged a free return pickup",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The delivered box holds someone else's order entirely"
+  },
+  {
+   "id": "crushed-parcel",
+   "title": "Claim for a damaged parcel",
+   "done": "noted the crushed parcel's damage and filed a claim with the shipper",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "A parcel arrived crushed with the contents rattling"
+  },
+  {
+   "id": "ceiling-stain",
+   "title": "Report a ceiling leak",
+   "done": "reported a ceiling drip to the landlord and set out a bucket",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "A brown stain is spreading across the ceiling"
+  },
+  {
+   "id": "heating-broke",
+   "title": "Book a heating repair",
+   "done": "booked a heating engineer and stayed home for the visit",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 120,
+   "where": "home",
+   "fixed": true,
+   "line": "The heating stopped working overnight"
+  },
+  {
+   "id": "internet-down",
+   "title": "Wait for a technician",
+   "done": "stayed home through the internet technician's four-hour appointment window",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 120,
+   "where": "home",
+   "fixed": true,
+   "line": "The internet has been down since morning"
+  },
+  {
+   "id": "telephone-line-dead",
+   "title": "Arrange a telephone repair",
+   "done": "had the telephone company send a lineman to fix the dead line",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": true,
+   "line": "The telephone line has gone dead"
+  },
+  {
+   "id": "iceman-skipped",
+   "title": "Fetch ice from the ice house",
+   "done": "walked to the ice house for a block after the iceman skipped the street",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 45,
+   "where": "out",
+   "fixed": false,
+   "line": "The iceman did not come and the icebox is warming"
+  },
+  {
+   "id": "short-coal-load",
+   "title": "Complain about short coal",
+   "done": "weighed the coal delivery and wrote to the yard about the short load",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The coal delivery looks well short of a full ton"
+  },
+  {
+   "id": "neighbor-noise-note",
+   "title": "Answer a noise complaint",
+   "done": "wrote a polite reply to a neighbor's noise complaint",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A note from a neighbor complains about late-night noise"
+  },
+  {
+   "id": "building-rules-notice",
+   "title": "Fix a building rules notice",
+   "done": "moved bikes out of the hallway after a building rules notice",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The building manager left a rules violation notice"
+  },
+  {
+   "id": "deposit-deduction",
+   "title": "Dispute a deposit deduction",
+   "done": "disputed a deposit deduction with photos from move-in day",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false,
+   "line": "The old landlord kept half the deposit for cleaning"
+  },
+  {
+   "id": "water-shutoff-notice",
+   "title": "Pay an overdue water bill",
+   "done": "paid an overdue water bill that had gone to the old address",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "A shut-off notice arrived for a water bill never received"
+  },
+  {
+   "id": "old-address-mail",
+   "title": "Redirect misaddressed mail",
+   "done": "contacted three companies still sending mail to the old address",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "More mail for the old address keeps arriving forwarded"
+  },
+  {
+   "id": "account-frozen-id-check",
+   "title": "Prove identity to the bank",
+   "done": "uploaded ID documents to unlock a frozen bank account",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The bank froze the account pending an identity check"
+  },
+  {
+   "id": "email-lockout",
+   "title": "Recover a locked account",
+   "done": "went through a long account recovery after too many wrong passwords",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "The email account is locked after failed sign-ins"
+  },
+  {
+   "id": "cracked-phone-screen",
+   "title": "Repair a cracked phone screen",
+   "done": "paid for a same-day screen replacement at the repair counter",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "shopping",
+   "fixed": false,
+   "line": "The phone slipped and the screen cracked across"
+  },
+  {
+   "id": "dead-laptop",
+   "title": "Recover files from a dead laptop",
+   "done": "took the dead laptop to a repair shop to get the files off",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "shopping",
+   "fixed": false,
+   "line": "The laptop will not turn on at all"
+  },
+  {
+   "id": "lost-id-card",
+   "title": "Replace a lost ID card",
+   "done": "filled out the lost-ID form and booked a new card at city hall",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "out",
+   "fixed": false,
+   "line": "The ID card is missing from the wallet"
+  },
+  {
+   "id": "lost-library-card",
+   "title": "Replace a library card",
+   "done": "paid a small fee for a replacement library card",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "library",
+   "fixed": false,
+   "line": "The library card has vanished"
+  },
+  {
+   "id": "lost-guild-token",
+   "title": "Replace a lost guild token",
+   "done": "paid the guild clerk for a new member's token",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false,
+   "line": "The guild membership token is missing"
+  },
+  {
+   "id": "lost-household-seal",
+   "title": "Recut a lost seal",
+   "done": "had a new seal cut and wrote to correspondents about the change",
+   "eras": [
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "workshop",
+   "fixed": false,
+   "line": "The household seal has gone missing"
+  },
+  {
+   "id": "lost-transit-card",
+   "title": "Replace a transit card",
+   "done": "reported the lost transit card and moved its balance to a new one",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false,
+   "line": "The transit card is gone with a full balance on it"
+  },
+  {
+   "id": "lost-streetcar-pass",
+   "title": "Replace a lost streetcar pass",
+   "done": "bought a new monthly streetcar pass after losing the old one",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false,
+   "line": "The monthly streetcar pass is lost"
+  },
+  {
+   "id": "inspection-notice",
+   "title": "Prepare for a landlord inspection",
+   "done": "moved furniture and cleared access for the landlord's inspection",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": true,
+   "line": "The landlord gave notice of an inspection tomorrow"
+  },
+  {
+   "id": "insurance-premium-jump",
+   "title": "Shop around after a premium hike",
+   "done": "found a cheaper policy after the insurance premium jumped",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false,
+   "line": "The insurance renewal came in a third higher"
+  },
+  {
+   "id": "declined-claim",
+   "title": "Appeal a declined claim",
+   "done": "wrote an appeal to the insurer with photos and receipts attached",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false,
+   "line": "The insurer declined a small claim on a technicality"
+  },
+  {
+   "id": "fridge-after-warranty",
+   "title": "Pay for a fridge repair",
+   "done": "paid for a fridge repair a week after the warranty ended",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "home",
+   "fixed": true,
+   "line": "The fridge stopped cooling a week after the warranty ended"
+  },
+  {
+   "id": "icebox-leak",
+   "title": "Have the icebox mended",
+   "done": "had a tinsmith reline the leaking icebox",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "home",
+   "fixed": true,
+   "line": "The icebox drip pan is overflowing onto the floor"
+  },
+  {
+   "id": "leaking-thatch",
+   "title": "Hire a thatcher",
+   "done": "hired a thatcher to patch the leaking roof before the rains",
+   "eras": [
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "home",
+   "fixed": true,
+   "line": "Rain is dripping through the thatch"
+  },
+  {
+   "id": "market-warden-fine",
+   "title": "Pay the market warden's fine",
+   "done": "paid the warden's fine for blocking the lane with a handcart",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "market",
+   "fixed": false,
+   "line": "The market warden issued a fine for a handcart left in the lane"
+  },
+  {
+   "id": "fence-complaint",
+   "title": "Answer a fence complaint",
+   "done": "had a neighbor's fence complaint heard and settled at the guildhall",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 90,
+   "where": "guildhall",
+   "fixed": true,
+   "line": "A neighbor lodged a complaint about the garden fence"
+  },
+  {
+   "id": "steward-letter",
+   "title": "Answer the steward's letter",
+   "done": "replied to the steward's letter about rent in kind running late",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The steward sent a letter about rent in kind being late"
+  },
+  {
+   "id": "clipped-coins",
+   "title": "Exchange underweight coins",
+   "done": "swapped underweight coins at the moneychanger at a small loss",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false,
+   "line": "The coins in the purse turn out to be clipped and light"
+  },
+  {
+   "id": "lost-courier-letter",
+   "title": "Resend a lost letter",
+   "done": "paid a second courier to resend a letter that never arrived",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false,
+   "line": "Word came that the courier's letter never arrived"
+  },
+  {
+   "id": "undeliverable-telegram",
+   "title": "Resend a telegram",
+   "done": "sent the telegram again after the first went to the wrong address",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false,
+   "line": "A telegram came back marked undeliverable"
+  },
+  {
+   "id": "postage-due",
+   "title": "Pay postage due",
+   "done": "paid postage due on an underpaid letter at the post office",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false,
+   "line": "A letter is held at the post office for postage due"
+  },
+  {
+   "id": "misspelled-certificate",
+   "title": "Correct a misspelled certificate",
+   "done": "asked the registry to correct a misspelled name on a certificate",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "out",
+   "fixed": false,
+   "line": "The new certificate has a name spelled wrong"
+  },
+  {
+   "id": "lapsed-dog-license",
+   "title": "Pay a lapsed dog license fine",
+   "done": "paid the dog license and a small fine after a warden's notice",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "needs": "pet",
+   "fixed": false,
+   "line": "A notice says the dog license has lapsed"
+  },
+  {
+   "id": "new-pet-deposit",
+   "title": "Pay a new pet deposit",
+   "done": "paid an extra pet deposit the landlord suddenly required",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 15,
+   "where": "home",
+   "needs": "pet",
+   "fixed": false,
+   "line": "The landlord now wants a pet deposit"
+  },
+  {
+   "id": "streetcar-fare-fine",
+   "title": "Pay a streetcar fine",
+   "done": "paid a fine for riding past the paid fare zone",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false,
+   "line": "The conductor wrote out a fine for an expired ticket"
+  },
+  {
+   "id": "penalty-fare",
+   "title": "Pay a penalty fare",
+   "done": "paid a penalty fare after a ticket failed to scan",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A penalty fare notice came for a ticket that did not scan"
+  },
+  {
+   "id": "missed-road-toll",
+   "title": "Pay a missed toll",
+   "done": "paid a missed road toll plus the admin fee online",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "needs": "car",
+   "fixed": false,
+   "line": "A letter demands payment for an unpaid road toll"
+  },
+  {
+   "id": "wrong-bin-fine",
+   "title": "Pay a wrong-bin fine",
+   "done": "paid a fine for putting recycling in the wrong bin",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A city notice fines the household for mixed recycling"
+  },
+  {
+   "id": "curb-sofa-notice",
+   "title": "Book a bulky waste pickup",
+   "done": "booked a bulky waste pickup for the old sofa on the curb",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A city notice says the sofa on the curb must be collected"
+  },
+  {
+   "id": "notary-cancelled",
+   "title": "Rebook a cancelled appointment",
+   "done": "rebooked a notary appointment the office had cancelled",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "The notary's office cancelled tomorrow's appointment"
+  },
+  {
+   "id": "collections-letter",
+   "title": "Settle a collections letter",
+   "done": "paid a forgotten small bill that had gone to a collection agency",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "A collection agency letter arrived about an old bill"
+  },
+  {
+   "id": "missed-installment",
+   "title": "Answer a creditor's letter",
+   "done": "arranged a payment plan with the furniture store for a missed installment",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 45,
+   "where": "shopping",
+   "fixed": false,
+   "line": "The furniture store wrote about a missed installment"
+  },
+  {
+   "id": "gym-still-charging",
+   "title": "Fight a gym charge",
+   "done": "got a gym charge refunded after proving the membership was cancelled",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "fitness",
+   "fixed": false,
+   "line": "The gym is still charging months after cancelling"
+  },
+  {
+   "id": "cafe-tab-mixup",
+   "title": "Sort out a café tab",
+   "done": "sorted out a café tab that had someone else's orders on it",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "cafe",
+   "fixed": false,
+   "line": "The café says there is an unpaid tab in this name"
+  },
+  {
+   "id": "dock-storage-fees",
+   "title": "Pay dock storage fees",
+   "done": "paid storage fees on a crate left too long at the dock warehouse",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "docks",
+   "fixed": false,
+   "line": "The dock warehouse is charging for a crate left too long"
+  },
+  {
+   "id": "held-shipment",
+   "title": "Release a held shipment",
+   "done": "filled in customs forms to release a held shipment at the port",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 90,
+   "where": "docks",
+   "fixed": false,
+   "line": "A shipment is held at the port pending paperwork"
+  },
+  {
+   "id": "park-shelter-fine",
+   "title": "Pay a park permit fine",
+   "done": "paid a fine for using the picnic shelter without a booking",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "park",
+   "fixed": false,
+   "line": "The park keeper left a fine for using the shelter unbooked"
+  },
+  {
+   "id": "missed-offering",
+   "title": "Make up a missed offering",
+   "done": "brought the missed festival offering to the temple with a little extra",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "temple",
+   "fixed": false,
+   "line": "The temple sent word that the festival offering was missed"
+  },
+  {
+   "id": "water-stained-book",
+   "title": "Pay for a water-stained book",
+   "done": "paid for a library book damaged by a leaky bag",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "library",
+   "fixed": false,
+   "line": "The library flagged a returned book as water-damaged"
+  },
+  {
+   "id": "repair-bill-doubled",
+   "title": "Query a doubled repair bill",
+   "done": "paid a repair bill twice the estimate after a long careful talk",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false,
+   "line": "The repair shop's final bill is double the estimate"
+  },
+  {
+   "id": "dead-car-battery",
+   "title": "Arrange a battery replacement",
+   "done": "had a mobile mechanic replace the dead car battery",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "home",
+   "needs": "car",
+   "fixed": true,
+   "line": "The car battery is completely dead"
+  },
+  {
+   "id": "livery-bill-doubled",
+   "title": "Pay the livery bill",
+   "done": "settled a livery stable bill that had quietly doubled",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "out",
+   "needs": "horse",
+   "fixed": false,
+   "line": "The livery stable's bill is far higher than agreed"
+  },
+  {
+   "id": "thrown-horseshoe",
+   "title": "Get the horse reshod",
+   "done": "led the horse to the farrier to replace a thrown shoe",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 60,
+   "where": "workshop",
+   "needs": "horse",
+   "fixed": false,
+   "line": "The horse threw a shoe on the cobbles"
+  },
+  {
+   "id": "cracked-cart-axle",
+   "title": "Replace a cracked cart axle",
+   "done": "paid the wheelwright to fit a new axle on the handcart",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 60,
+   "where": "workshop",
+   "fixed": false,
+   "line": "The handcart axle cracked under a heavy load"
+  },
+  {
+   "id": "ink-on-ledger",
+   "title": "Recopy a spoiled ledger page",
+   "done": "recopied a household ledger page ruined by spilled ink",
+   "eras": [
+    "industrial",
+    "old"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "Ink spilled across the household ledger"
+  },
+  {
+   "id": "jammed-typewriter",
+   "title": "Get the typewriter fixed",
+   "done": "took the jammed typewriter for repair before an important letter",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "workshop",
+   "fixed": false,
+   "line": "The typewriter's keys jammed solid"
+  },
+  {
+   "id": "printer-died",
+   "title": "Print forms elsewhere",
+   "done": "printed urgent forms at the library after the home printer died",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "library",
+   "fixed": false,
+   "line": "The printer died just before an urgent form was due"
+  },
+  {
+   "id": "rejected-application",
+   "title": "Resubmit a rejected form",
+   "done": "redid a rejected application because the signature was in the wrong box",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "An application came back rejected for a misplaced signature"
+  },
+  {
+   "id": "clerk-rejected-letter",
+   "title": "Redo a rejected letter",
+   "done": "paid the scribe to redo a letter the town clerk rejected for its wording",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false,
+   "line": "The town clerk returned a letter for its wording"
+  },
+  {
+   "id": "late-filing-penalty",
+   "title": "Pay a late filing penalty",
+   "done": "paid a late filing penalty and set a reminder for next year",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A notice says a form was filed late"
+  },
+  {
+   "id": "cancelled-direct-debit",
+   "title": "Fix a cancelled direct debit",
+   "done": "set up a new direct debit after the old one was cancelled",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A direct debit was cancelled and a bill went unpaid"
+  },
+  {
+   "id": "energy-price-rise",
+   "title": "Switch after a price rise",
+   "done": "switched to a cheaper energy tariff after a price rise letter",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "The energy company announced a steep price increase"
+  },
+  {
+   "id": "new-building-owner",
+   "title": "Sign a new lease",
+   "done": "read and signed a fresh lease from the building's new owner",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false,
+   "line": "The building has a new owner and a new lease to sign"
+  },
+  {
+   "id": "proof-of-tenancy",
+   "title": "Show proof of tenancy",
+   "done": "dug out the tenancy tally to show the new steward",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "guildhall",
+   "fixed": true,
+   "line": "A new steward wants proof of tenancy by week's end"
+  },
+  {
+   "id": "jury-clash",
+   "title": "Postpone jury duty",
+   "done": "requested a jury duty postponement with a letter from work",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The jury summons falls in the same week as a work trip"
+  },
+  {
+   "id": "small-claims-hearing",
+   "title": "Attend a small-claims hearing",
+   "done": "attended a small-claims hearing over an unrefunded deposit",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 120,
+   "where": "out",
+   "fixed": true,
+   "line": "A court date has been set for the deposit dispute"
+  },
+  {
+   "id": "shop-double-charge",
+   "title": "Get a shop double charge refunded",
+   "done": "went back to the shop with the receipt and got a double charge refunded",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "shopping",
+   "fixed": false,
+   "line": "The card was charged twice at the shop"
+  },
+  {
+   "id": "huge-water-reading",
+   "title": "Book a water meter check",
+   "done": "booked a water meter check after a strangely high reading",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The water bill shows enough use to fill a pool"
+  },
+  {
+   "id": "dormant-account-closed",
+   "title": "Reopen a dormant account",
+   "done": "visited the bank to reactivate an account closed for inactivity",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "out",
+   "fixed": false,
+   "line": "The bank closed a savings account for inactivity"
+  },
+  {
+   "id": "ballot-never-came",
+   "title": "Request a new ballot",
+   "done": "requested a replacement ballot after the first never arrived",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "The mail-in ballot never arrived"
+  },
+  {
+   "id": "parcel-with-neighbor",
+   "title": "Find a misdelivered parcel",
+   "done": "knocked on doors along the street until the misdelivered parcel turned up",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false,
+   "line": "The parcel was left with a neighbor, but which one is a mystery"
+  },
+  {
+   "id": "branch-blocks-gate",
+   "title": "Report a fallen branch",
+   "done": "reported a fallen branch blocking the front gate to city hall",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A fallen branch is blocking the front gate"
+  },
+  {
+   "id": "unpaid-bridge-toll",
+   "title": "Pay a missed bridge toll",
+   "done": "paid a bridge toll missed on the last crossing",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false,
+   "line": "The toll-keeper sent word of an unpaid crossing"
+  },
+  {
+   "id": "fallen-awning",
+   "title": "Pay for a merchant's awning",
+   "done": "paid a merchant for an awning knocked down by an unwieldy load",
+   "eras": [
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false,
+   "line": "A merchant's awning came down after a careless bump"
+  },
+  {
+   "id": "rental-car-scratch",
+   "title": "Dispute a rental scratch charge",
+   "done": "disputed a scratch charge on a returned rental car using pickup photos",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "home",
+   "fixed": false,
+   "line": "The rental company billed for a scratch that was already there"
+  },
+  {
+   "id": "hotel-minibar-charge",
+   "title": "Dispute a hotel charge",
+   "done": "disputed a minibar charge for drinks never touched",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "A hotel charged for minibar drinks never touched"
+  },
+  {
+   "id": "missing-refund",
+   "title": "Chase a missing refund",
+   "done": "chased a refund promised three weeks ago and got it processed",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The promised refund still has not arrived"
+  },
+  {
+   "id": "cracked-catalog-lamp",
+   "title": "Return a faulty mail-order item",
+   "done": "packed and posted back a cracked lamp ordered from the catalog",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false,
+   "line": "The mail-order lamp arrived cracked"
+  },
+  {
+   "id": "misspelled-plane-ticket",
+   "title": "Fix a name on a ticket",
+   "done": "paid a change fee to fix a misspelled name on a plane ticket",
+   "eras": [
+    "modern"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The plane ticket has a name spelled wrong"
+  },
+  {
+   "id": "steamship-wrong-week",
+   "title": "Fix a steamship booking",
+   "done": "sorted out a steamship booking listed under the wrong week",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 45,
+   "where": "docks",
+   "fixed": false,
+   "line": "The shipping office booked passage for the wrong week"
+  },
+  {
+   "id": "caravan-place-given-away",
+   "title": "Rebook a caravan place",
+   "done": "paid the caravan master again after the booked place was given away",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 30,
+   "where": "market",
+   "fixed": false,
+   "line": "The caravan master gave away a booked place"
+  },
+  {
+   "id": "disputed-old-debt",
+   "title": "Settle a disputed debt",
+   "done": "had the debt tallies compared before the guild master",
+   "eras": [
+    "old"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "guildhall",
+   "fixed": true,
+   "line": "A merchant claims an old debt was never paid"
+  },
+  {
+   "id": "swallowed-card",
+   "title": "Retrieve a swallowed card",
+   "done": "went into the branch to retrieve a card swallowed by the cash machine",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false,
+   "line": "The cash machine swallowed the bank card"
+  },
+  {
+   "id": "lost-borrowed-tool",
+   "title": "Pay for a lost borrowed tool",
+   "done": "paid a neighbor for a borrowed chisel that went missing",
+   "eras": [
+    "modern",
+    "industrial",
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false,
+   "line": "A borrowed tool is nowhere to be found"
+  },
+  {
+   "id": "gas-meter-wrong-flat",
+   "title": "Fix a mixed-up gas meter",
+   "done": "proved the gas company had been billing the neighbor's meter",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 60,
+   "where": "home",
+   "fixed": false,
+   "line": "The gas bill matches a meter that belongs to next door"
+  },
+  {
+   "id": "wrong-name-on-lease",
+   "title": "Correct a lease error",
+   "done": "had the landlord reprint the lease with the correct name and dates",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "home",
+   "fixed": false,
+   "line": "The new lease has the wrong move-in date on it"
+  },
+  {
+   "id": "subscription-price-hike",
+   "title": "Downgrade a pricier subscription",
+   "done": "downgraded a subscription after a price hike email",
+   "eras": [
+    "modern"
+   ],
+   "cost": "",
+   "minutes": 15,
+   "where": "home",
+   "fixed": false,
+   "line": "A subscription price went up without much warning"
+  },
+  {
+   "id": "library-book-recall",
+   "title": "Return a recalled book early",
+   "done": "rushed a recalled book back to the library before the deadline",
+   "eras": [
+    "modern",
+    "industrial"
+   ],
+   "cost": "",
+   "minutes": 30,
+   "where": "library",
+   "fixed": false,
+   "line": "The library recalled a book someone else has requested"
+  },
+  {
+   "id": "guild-dues-raised",
+   "title": "Pay raised guild dues",
+   "done": "paid the newly raised guild dues and grumbled to the clerk",
+   "eras": [
+    "old"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "guildhall",
+   "fixed": false,
+   "line": "The guild has raised the quarterly dues"
+  },
+  {
+   "id": "market-fee-rise",
+   "title": "Pay a higher market fee",
+   "done": "paid the raised market fee and had the receipt tally notched",
+   "eras": [
+    "old"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "market",
+   "fixed": false,
+   "line": "The market fee has gone up this season"
+  },
+  {
+   "id": "streetcar-fare-rise",
+   "title": "Buy tickets before a fare rise",
+   "done": "bought a stack of streetcar tickets before the fare rise",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$",
+   "minutes": 15,
+   "where": "out",
+   "fixed": false,
+   "line": "A notice says streetcar fares go up next week"
+  },
+  {
+   "id": "insurance-lapsed-ind",
+   "title": "Reinstate a lapsed policy",
+   "done": "paid the missed premiums to reinstate a lapsed fire policy",
+   "eras": [
+    "industrial"
+   ],
+   "cost": "$$",
+   "minutes": 30,
+   "where": "out",
+   "fixed": false,
+   "line": "The fire insurance lapsed over a missed payment"
+  }
+ ]
+}

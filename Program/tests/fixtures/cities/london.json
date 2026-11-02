@@ -1,0 +1,7499 @@
+{
+ "schema_version": 1,
+ "id": "london",
+ "name": "London",
+ "region": "Greater London",
+ "country": "United Kingdom",
+ "timezone": "Europe/London",
+ "aliases": [
+  "London, UK",
+  "London, England",
+  "London UK",
+  "Greater London",
+  "The Big Smoke"
+ ],
+ "summary": "The capital of the United Kingdom: a sprawl of villages grown together along the Thames, with the Square Mile's banks, West End theatres, free national museums, royal parks, a pub on every corner and the Tube underneath it all.",
+ "lat": 51.507,
+ "lon": -0.128,
+ "currency": {
+  "code": "GBP",
+  "symbol": "£",
+  "name": "pounds sterling"
+ },
+ "rent_period": "month",
+ "speeds": {
+  "walk": 4.5,
+  "car": 16,
+  "rideshare": 16,
+  "bus": 11,
+  "subway": 26,
+  "light-rail": 22,
+  "commuter-rail": 32,
+  "ferry": 20,
+  "bike-share": 13
+ },
+ "names": {
+  "mix": {
+   "anglo": 6,
+   "south-asian": 1.5,
+   "west-african": 1,
+   "caribbean": 0.8,
+   "slavic": 0.6,
+   "irish": 0.5,
+   "east-asian": 0.5,
+   "arabic": 0.4,
+   "jewish": 0.3,
+   "italian": 0.3
+  }
+ },
+ "sources": {
+  "curated-2026-10": {
+   "kind": "curated",
+   "title": "London places and neighbourhoods written for Prospero Dungeon",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Well-known public places, institutions and employers from general knowledge. Businesses open and close and rents move fast here: treat this as a snapshot for fiction. Rents are rounded estimates of typical asking ranges in pounds a month, not listings. Coordinates are approximate neighbourhood centres."
+  },
+  "curated-climate-2026-10": {
+   "kind": "curated",
+   "title": "Approximate monthly climate for London (Heathrow)",
+   "license": "CC0-1.0",
+   "retrieved": "2026-10-10",
+   "note": "Rounded values in line with Met Office 1991-2020 averages for Heathrow, converted to Fahrenheit; central London runs a degree or two warmer. Refresh with scripts/world when network access to the Met Office is available."
+  }
+ },
+ "neighborhoods": [
+  {
+   "id": "soho",
+   "name": "Soho",
+   "summary": "The heart of the West End: narrow streets of restaurants, late bars, jazz clubs and LGBTQ+ venues, between Oxford Street, Chinatown, Theatreland and Trafalgar Square.",
+   "vibe": [
+    "nightlife",
+    "food",
+    "theatre",
+    "lgbtq-friendly",
+    "central"
+   ],
+   "lat": 51.513,
+   "lon": -0.134,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1900,
+     2800
+    ],
+    "one_bedroom": [
+     2600,
+     4200
+    ],
+    "two_bedroom": [
+     3600,
+     6500
+    ]
+   },
+   "housing": [
+    "mansion-block",
+    "flat-above-shop",
+    "new-build"
+   ],
+   "walkability": "high",
+   "transit": [
+    "central",
+    "northern",
+    "victoria",
+    "piccadilly",
+    "elizabeth",
+    "national-rail",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "covent-garden",
+   "name": "Covent Garden",
+   "summary": "The old fruit-and-veg market turned piazza of street performers, shops and the Royal Opera House, running down to the Strand, Aldwych and the river.",
+   "vibe": [
+    "touristy",
+    "theatre",
+    "shopping",
+    "historic",
+    "central"
+   ],
+   "lat": 51.512,
+   "lon": -0.123,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1900,
+     2800
+    ],
+    "one_bedroom": [
+     2600,
+     4200
+    ],
+    "two_bedroom": [
+     3600,
+     6500
+    ]
+   },
+   "housing": [
+    "mansion-block",
+    "flat-above-shop",
+    "student-halls"
+   ],
+   "walkability": "high",
+   "transit": [
+    "piccadilly",
+    "northern",
+    "district",
+    "national-rail",
+    "london-buses",
+    "santander-cycles",
+    "thames-clippers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bloomsbury",
+   "name": "Bloomsbury",
+   "summary": "Georgian squares, the British Museum and the University of London campus, quietly literary and full of students.",
+   "vibe": [
+    "academic",
+    "literary",
+    "leafy",
+    "museums",
+    "students"
+   ],
+   "lat": 51.522,
+   "lon": -0.127,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "georgian-terrace",
+    "mansion-block",
+    "student-halls"
+   ],
+   "walkability": "high",
+   "transit": [
+    "piccadilly",
+    "northern",
+    "central",
+    "elizabeth",
+    "national-rail",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-of-london",
+   "name": "City of London",
+   "summary": "The Square Mile: Roman walls, Wren churches and St Paul's among the glass towers of banks and insurers; packed on weekdays, hushed at weekends.",
+   "vibe": [
+    "business",
+    "historic",
+    "finance",
+    "quiet-weekends"
+   ],
+   "lat": 51.515,
+   "lon": -0.09,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1900,
+     2800
+    ],
+    "one_bedroom": [
+     2600,
+     4200
+    ],
+    "two_bedroom": [
+     3600,
+     6500
+    ]
+   },
+   "housing": [
+    "new-build",
+    "barbican-flat",
+    "converted-office"
+   ],
+   "walkability": "high",
+   "transit": [
+    "central",
+    "northern",
+    "district",
+    "elizabeth",
+    "dlr",
+    "national-rail",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kings-cross",
+   "name": "King's Cross",
+   "summary": "Once railway lands and warehouses behind two great stations, now Granary Square, Coal Drops Yard, Google's offices, Central Saint Martins and the canal.",
+   "vibe": [
+    "regenerated",
+    "tech",
+    "canalside",
+    "students",
+    "transport-hub"
+   ],
+   "lat": 51.535,
+   "lon": -0.124,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "new-build",
+    "council-estate",
+    "victorian-conversion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "northern",
+    "victoria",
+    "piccadilly",
+    "national-rail",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "south-bank",
+   "name": "South Bank",
+   "summary": "The riverside arts strip from the London Eye past the Southbank Centre and National Theatre to Tate Modern, the Globe and Borough Market, with Waterloo and London Bridge stations at either end.",
+   "vibe": [
+    "arts",
+    "riverside",
+    "food",
+    "touristy"
+   ],
+   "lat": 51.506,
+   "lon": -0.105,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "new-build",
+    "council-estate",
+    "warehouse-conversion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "jubilee",
+    "northern",
+    "national-rail",
+    "london-buses",
+    "santander-cycles",
+    "thames-clippers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shoreditch",
+   "name": "Shoreditch",
+   "summary": "Street art, tech start-ups, cocktail bars and Sunday flower sellers around Hoxton Square, Old Street and the edge of the City.",
+   "vibe": [
+    "creative",
+    "nightlife",
+    "tech",
+    "street-art",
+    "young-professional"
+   ],
+   "lat": 51.526,
+   "lon": -0.079,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "warehouse-conversion",
+    "new-build",
+    "council-estate"
+   ],
+   "walkability": "high",
+   "transit": [
+    "overground",
+    "northern",
+    "central",
+    "elizabeth",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitechapel",
+   "name": "Whitechapel",
+   "summary": "The East End of Brick Lane's curry houses and Sunday markets, Spitalfields, the Royal London Hospital and the city's largest Bangladeshi community.",
+   "vibe": [
+    "diverse",
+    "food",
+    "markets",
+    "historic",
+    "bangladeshi"
+   ],
+   "lat": 51.518,
+   "lon": -0.065,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1250,
+     1650
+    ],
+    "one_bedroom": [
+     1650,
+     2300
+    ],
+    "two_bedroom": [
+     2100,
+     2900
+    ]
+   },
+   "housing": [
+    "council-estate",
+    "victorian-terrace",
+    "new-build",
+    "warehouse-conversion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "district",
+    "central",
+    "overground",
+    "elizabeth",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hackney",
+   "name": "Hackney",
+   "summary": "Victorian terraces around London Fields, Broadway Market and Victoria Park, running north to Dalston's Turkish grills, record shops and late clubs.",
+   "vibe": [
+    "creative",
+    "parks",
+    "food",
+    "nightlife",
+    "young-families"
+   ],
+   "lat": 51.543,
+   "lon": -0.062,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1250,
+     1650
+    ],
+    "one_bedroom": [
+     1650,
+     2300
+    ],
+    "two_bedroom": [
+     2100,
+     2900
+    ]
+   },
+   "housing": [
+    "victorian-terrace",
+    "council-estate",
+    "warehouse-conversion",
+    "houseboat"
+   ],
+   "walkability": "high",
+   "transit": [
+    "overground",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canary-wharf",
+   "name": "Canary Wharf",
+   "summary": "The Docklands business district of bank towers and malls on the Isle of Dogs, with old riverside pubs in Limehouse and Wapping nearby.",
+   "vibe": [
+    "business",
+    "finance",
+    "riverside",
+    "new-build"
+   ],
+   "lat": 51.505,
+   "lon": -0.02,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "new-build",
+    "warehouse-conversion"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "elizabeth",
+    "jubilee",
+    "dlr",
+    "london-buses",
+    "santander-cycles",
+    "thames-clippers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stratford",
+   "name": "Stratford",
+   "summary": "The 2012 Olympic Park, West Ham's stadium, Westfield and new towers, beside Hackney Wick's canal-side breweries; one of the best-connected stations in London.",
+   "vibe": [
+    "regenerated",
+    "sport",
+    "shopping",
+    "new-build",
+    "transport-hub"
+   ],
+   "lat": 51.541,
+   "lon": -0.003,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1250,
+     1650
+    ],
+    "one_bedroom": [
+     1650,
+     2300
+    ],
+    "two_bedroom": [
+     2100,
+     2900
+    ]
+   },
+   "housing": [
+    "apartment-tower",
+    "new-build",
+    "victorian-terrace"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "elizabeth",
+    "central",
+    "jubilee",
+    "dlr",
+    "overground",
+    "national-rail",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "walthamstow",
+   "name": "Walthamstow",
+   "summary": "A neighbourly north-east London district of terraced streets, a mile-long street market, Walthamstow Village and reservoirs turned wetlands.",
+   "vibe": [
+    "neighbourly",
+    "young-families",
+    "markets",
+    "nature"
+   ],
+   "lat": 51.583,
+   "lon": -0.02,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1250,
+     1650
+    ],
+    "one_bedroom": [
+     1650,
+     2300
+    ],
+    "two_bedroom": [
+     2100,
+     2900
+    ]
+   },
+   "housing": [
+    "victorian-terrace",
+    "edwardian-terrace",
+    "council-estate"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "victoria",
+    "overground",
+    "london-buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tottenham",
+   "name": "Tottenham",
+   "summary": "A diverse, hard-working corner of north London around the High Road, with Spurs' stadium, Caribbean, Turkish and West African shops and the Lee Valley marshes.",
+   "vibe": [
+    "diverse",
+    "football",
+    "affordable",
+    "changing"
+   ],
+   "lat": 51.597,
+   "lon": -0.07,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1050,
+     1400
+    ],
+    "one_bedroom": [
+     1400,
+     1800
+    ],
+    "two_bedroom": [
+     1750,
+     2300
+    ]
+   },
+   "housing": [
+    "victorian-terrace",
+    "council-estate",
+    "new-build"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "victoria",
+    "overground",
+    "national-rail",
+    "london-buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "camden",
+   "name": "Camden",
+   "summary": "Camden Market, the Lock, live-music pubs and punk history, between Regent's Park, Primrose Hill and the canal.",
+   "vibe": [
+    "music",
+    "markets",
+    "alternative",
+    "nightlife",
+    "touristy"
+   ],
+   "lat": 51.539,
+   "lon": -0.143,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "victorian-conversion",
+    "council-estate",
+    "mansion-block"
+   ],
+   "walkability": "high",
+   "transit": [
+    "northern",
+    "overground",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "islington",
+   "name": "Islington",
+   "summary": "Upper Street's restaurants and theatres, Georgian squares, antiques in Camden Passage and Arsenal's stadium up the road in Highbury.",
+   "vibe": [
+    "food",
+    "theatre",
+    "georgian",
+    "football",
+    "professional"
+   ],
+   "lat": 51.538,
+   "lon": -0.103,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "georgian-terrace",
+    "victorian-conversion",
+    "council-estate"
+   ],
+   "walkability": "high",
+   "transit": [
+    "northern",
+    "victoria",
+    "overground",
+    "piccadilly",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hampstead",
+   "name": "Hampstead",
+   "summary": "A hilltop village of Georgian lanes, old pubs and literary houses on the edge of Hampstead Heath, with its ponds, lido and views over the city.",
+   "vibe": [
+    "affluent",
+    "leafy",
+    "literary",
+    "village",
+    "nature"
+   ],
+   "lat": 51.556,
+   "lon": -0.178,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1600,
+     2300
+    ],
+    "one_bedroom": [
+     2200,
+     3300
+    ],
+    "two_bedroom": [
+     3200,
+     5200
+    ]
+   },
+   "housing": [
+    "georgian-terrace",
+    "mansion-block",
+    "detached-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "northern",
+    "overground",
+    "london-buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "notting-hill",
+   "name": "Notting Hill",
+   "summary": "Pastel terraces, Portobello Road's market and antiques, the Carnival every August, and Golborne Road's Portuguese and Moroccan cafes.",
+   "vibe": [
+    "photogenic",
+    "markets",
+    "affluent",
+    "carnival",
+    "diverse"
+   ],
+   "lat": 51.512,
+   "lon": -0.205,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1900,
+     2800
+    ],
+    "one_bedroom": [
+     2600,
+     4200
+    ],
+    "two_bedroom": [
+     3600,
+     6500
+    ]
+   },
+   "housing": [
+    "stucco-terrace",
+    "mews-house",
+    "council-estate",
+    "victorian-conversion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "central",
+    "district",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kensington",
+   "name": "Kensington",
+   "summary": "South Kensington's great museums and Imperial College, Hyde Park and the Royal Albert Hall, running down to Chelsea's King's Road and Stamford Bridge.",
+   "vibe": [
+    "museums",
+    "affluent",
+    "parks",
+    "students",
+    "grand"
+   ],
+   "lat": 51.496,
+   "lon": -0.174,
+   "rent_tier": "very-high",
+   "rent": {
+    "studio": [
+     1900,
+     2800
+    ],
+    "one_bedroom": [
+     2600,
+     4200
+    ],
+    "two_bedroom": [
+     3600,
+     6500
+    ]
+   },
+   "housing": [
+    "stucco-terrace",
+    "mansion-block",
+    "mews-house"
+   ],
+   "walkability": "high",
+   "transit": [
+    "piccadilly",
+    "district",
+    "overground",
+    "london-buses",
+    "santander-cycles"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southall",
+   "name": "Southall",
+   "summary": "West London's Little Punjab: sari shops, sweet centres and Punjabi grills along the Broadway and the largest Sikh gurdwara outside India, a short ride from Heathrow.",
+   "vibe": [
+    "south-asian",
+    "food",
+    "family",
+    "affordable"
+   ],
+   "lat": 51.511,
+   "lon": -0.377,
+   "rent_tier": "low",
+   "rent": {
+    "studio": [
+     1050,
+     1400
+    ],
+    "one_bedroom": [
+     1400,
+     1800
+    ],
+    "two_bedroom": [
+     1750,
+     2300
+    ]
+   },
+   "housing": [
+    "semi-detached",
+    "victorian-terrace",
+    "council-estate"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "elizabeth",
+    "national-rail",
+    "london-buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "richmond",
+   "name": "Richmond",
+   "summary": "A riverside town on London's south-western edge, with deer in Richmond Park, Kew Gardens next door and Twickenham's rugby up the road.",
+   "vibe": [
+    "leafy",
+    "riverside",
+    "affluent",
+    "family",
+    "nature"
+   ],
+   "lat": 51.461,
+   "lon": -0.303,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "victorian-terrace",
+    "georgian-terrace",
+    "detached-house"
+   ],
+   "walkability": "medium",
+   "transit": [
+    "district",
+    "overground",
+    "national-rail",
+    "london-buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brixton",
+   "name": "Brixton",
+   "summary": "The heart of Caribbean London since the Windrush years: a covered market of food stalls, a famous music venue, a lido and plenty of late-night life.",
+   "vibe": [
+    "caribbean",
+    "music",
+    "markets",
+    "nightlife",
+    "diverse"
+   ],
+   "lat": 51.462,
+   "lon": -0.115,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1250,
+     1650
+    ],
+    "one_bedroom": [
+     1650,
+     2300
+    ],
+    "two_bedroom": [
+     2100,
+     2900
+    ]
+   },
+   "housing": [
+    "victorian-conversion",
+    "council-estate",
+    "new-build"
+   ],
+   "walkability": "high",
+   "transit": [
+    "victoria",
+    "national-rail",
+    "london-buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peckham",
+   "name": "Peckham",
+   "summary": "Rye Lane's Nigerian and Ghanaian grocers, art-school bars on car-park rooftops and a creative crowd from nearby Goldsmiths and Camberwell.",
+   "vibe": [
+    "creative",
+    "diverse",
+    "nightlife",
+    "west-african",
+    "young-professional"
+   ],
+   "lat": 51.47,
+   "lon": -0.069,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1250,
+     1650
+    ],
+    "one_bedroom": [
+     1650,
+     2300
+    ],
+    "two_bedroom": [
+     2100,
+     2900
+    ]
+   },
+   "housing": [
+    "victorian-conversion",
+    "council-estate",
+    "warehouse-conversion"
+   ],
+   "walkability": "high",
+   "transit": [
+    "overground",
+    "national-rail",
+    "london-buses"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clapham",
+   "name": "Clapham",
+   "summary": "Clapham Common's young professionals and brunch spots, running west to Battersea Park and the restored Battersea Power Station on the river.",
+   "vibe": [
+    "young-professional",
+    "nightlife",
+    "parks",
+    "brunch"
+   ],
+   "lat": 51.465,
+   "lon": -0.145,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "victorian-conversion",
+    "mansion-block",
+    "new-build"
+   ],
+   "walkability": "high",
+   "transit": [
+    "northern",
+    "overground",
+    "national-rail",
+    "london-buses",
+    "santander-cycles",
+    "thames-clippers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bermondsey",
+   "name": "Bermondsey",
+   "summary": "Old warehouses and wharves south of Tower Bridge, now Bermondsey Street's restaurants, the weekend food market at Maltby Street and a beer mile under the railway arches.",
+   "vibe": [
+    "food",
+    "beer",
+    "warehouse",
+    "riverside"
+   ],
+   "lat": 51.498,
+   "lon": -0.078,
+   "rent_tier": "high",
+   "rent": {
+    "studio": [
+     1500,
+     2100
+    ],
+    "one_bedroom": [
+     2000,
+     2900
+    ],
+    "two_bedroom": [
+     2700,
+     4000
+    ]
+   },
+   "housing": [
+    "warehouse-conversion",
+    "council-estate",
+    "new-build"
+   ],
+   "walkability": "high",
+   "transit": [
+    "jubilee",
+    "overground",
+    "national-rail",
+    "london-buses",
+    "santander-cycles",
+    "thames-clippers"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "greenwich",
+   "name": "Greenwich",
+   "summary": "Maritime Greenwich: the Royal Observatory and the Prime Meridian, the Cutty Sark, a covered market and a big hilltop park, with the O2 across the peninsula.",
+   "vibe": [
+    "historic",
+    "riverside",
+    "parks",
+    "family",
+    "touristy"
+   ],
+   "lat": 51.481,
+   "lon": -0.005,
+   "rent_tier": "mid",
+   "rent": {
+    "studio": [
+     1300,
+     1750
+    ],
+    "one_bedroom": [
+     1750,
+     2400
+    ],
+    "two_bedroom": [
+     2200,
+     3100
+    ]
+   },
+   "housing": [
+    "georgian-terrace",
+    "new-build",
+    "victorian-terrace"
+   ],
+   "walkability": "high",
+   "transit": [
+    "dlr",
+    "jubilee",
+    "national-rail",
+    "london-buses",
+    "thames-clippers"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "transit": [
+  {
+   "id": "elizabeth",
+   "name": "Elizabeth line",
+   "kind": "commuter-rail",
+   "summary": "Fast, air-conditioned purple trains in deep tunnels from Reading and Heathrow through Paddington, Bond Street, Tottenham Court Road, Liverpool Street and Canary Wharf to Stratford, Abbey Wood and Shenfield.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "central",
+   "name": "Central line",
+   "kind": "subway",
+   "summary": "Red Tube line straight across London from Ealing and Notting Hill Gate through Oxford Circus, Holborn and Bank to Stratford and Essex; hot in summer.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "northern",
+   "name": "Northern line",
+   "kind": "subway",
+   "summary": "Black Tube line from Edgware and High Barnet through Camden, Euston and the City or the West End to Clapham, Morden and Battersea Power Station.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "victoria",
+   "name": "Victoria line",
+   "kind": "subway",
+   "summary": "Light-blue Tube line from Walthamstow and Tottenham through King's Cross, Oxford Circus and Victoria to Brixton, with trains every couple of minutes.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "piccadilly",
+   "name": "Piccadilly line",
+   "kind": "subway",
+   "summary": "Dark-blue Tube line from Heathrow through South Kensington, Piccadilly Circus, Covent Garden and King's Cross to Arsenal and Cockfosters.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jubilee",
+   "name": "Jubilee line",
+   "kind": "subway",
+   "summary": "Grey Tube line from Stanmore through Bond Street, Westminster, Waterloo and London Bridge to Canary Wharf, North Greenwich and Stratford.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "district",
+   "name": "District line",
+   "kind": "subway",
+   "summary": "Green, mostly sub-surface line from Richmond and Wimbledon through Earl's Court, South Kensington, Westminster and the City to Whitechapel and Upminster.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "overground",
+   "name": "London Overground",
+   "kind": "commuter-rail",
+   "summary": "Orbital orange rail lines (Liberty, Lioness, Mildmay, Suffragette, Weaver and Windrush) linking Richmond, Hampstead, Camden, Islington, Dalston, Shoreditch, Whitechapel, Peckham, Clapham Junction, Walthamstow and Stratford without going central.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dlr",
+   "name": "Docklands Light Railway",
+   "kind": "light-rail",
+   "summary": "Driverless trains from Bank and Tower Gateway through Canary Wharf to Greenwich, Lewisham, Stratford and the Royal Docks; sit at the front.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "national-rail",
+   "name": "National Rail suburban trains",
+   "kind": "commuter-rail",
+   "summary": "Thameslink, Southern, Southeastern, South Western and Greater Anglia trains from the main termini to the suburbs, all on the same contactless fares inside London.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-buses",
+   "name": "London buses",
+   "kind": "bus",
+   "summary": "Red buses, double-deckers on most routes, covering every corner of the city round the clock on night routes; tap in once with a card or phone, no cash.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "santander-cycles",
+   "name": "Santander Cycles",
+   "kind": "bike-share",
+   "summary": "Docking-station hire bikes and e-bikes across central and inner London, from Hammersmith to Stratford and Clapham to Camden.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "thames-clippers",
+   "name": "Uber Boat by Thames Clippers",
+   "kind": "ferry",
+   "summary": "River buses on the Thames from Battersea Power Station and Westminster past the South Bank and Tower Bridge to Canary Wharf, Greenwich and the O2.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "places": [
+  {
+   "id": "bar-italia",
+   "name": "Bar Italia",
+   "kind": "cafe",
+   "neighborhood": "soho",
+   "summary": "Frith Street espresso bar open since 1949, with a neon sign, a TV showing the football and tables out on the pavement until the small hours.",
+   "tags": [
+    "espresso",
+    "historic",
+    "late-night",
+    "people-watching"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "italian-cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maison-bertaux",
+   "name": "Maison Bertaux",
+   "kind": "cafe",
+   "neighborhood": "soho",
+   "summary": "Tiny Greek Street patisserie founded in 1871, all cream cakes, eclairs and mismatched chairs.",
+   "tags": [
+    "pastries",
+    "historic",
+    "cosy"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "french-patisserie",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kiln",
+   "name": "Kiln",
+   "kind": "restaurant",
+   "neighborhood": "soho",
+   "summary": "Counter seats facing clay pots and grills on Brewer Street, serving fiery northern-Thai and Burmese-influenced dishes.",
+   "tags": [
+    "thai",
+    "counter",
+    "spicy"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "thai",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "french-house",
+   "name": "The French House",
+   "kind": "bar",
+   "neighborhood": "soho",
+   "summary": "Dean Street pub that pours beer only by the half pint, has no music or phones, and was the Free French's wartime haunt.",
+   "tags": [
+    "pub",
+    "historic",
+    "no-phones",
+    "wine"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ronnie-scotts",
+   "name": "Ronnie Scott's",
+   "kind": "venue",
+   "neighborhood": "soho",
+   "summary": "Frith Street jazz club open since 1959, with two sets a night and a late show upstairs.",
+   "tags": [
+    "jazz",
+    "live-music",
+    "historic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chinatown",
+   "name": "Chinatown",
+   "kind": "attraction",
+   "neighborhood": "soho",
+   "summary": "Gerrard Street and Lisle Street under red lanterns: dim sum, roast duck in windows, bubble tea and bakeries.",
+   "tags": [
+    "food",
+    "lanterns",
+    "dim-sum"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "cantonese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "national-gallery",
+   "name": "National Gallery",
+   "kind": "museum",
+   "neighborhood": "soho",
+   "summary": "Free national collection of European paintings on Trafalgar Square, from Van Eyck to Van Gogh's Sunflowers.",
+   "tags": [
+    "art",
+    "free",
+    "iconic",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-end-theatres",
+   "name": "Theatreland",
+   "kind": "venue",
+   "neighborhood": "soho",
+   "summary": "The West End's Victorian and Edwardian theatres along Shaftesbury Avenue and around Leicester Square, with long-running musicals and new plays; the TKTS booth sells day-of seats.",
+   "tags": [
+    "theatre",
+    "musicals",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "heaven-nightclub",
+   "name": "Heaven",
+   "kind": "nightlife",
+   "neighborhood": "soho",
+   "summary": "Long-running LGBTQ+ nightclub in the arches under Charing Cross station, open since 1979.",
+   "tags": [
+    "lgbtq",
+    "club",
+    "dancing"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "covent-garden-piazza",
+   "name": "Covent Garden Piazza and Market",
+   "kind": "market",
+   "neighborhood": "covent-garden",
+   "summary": "The old market hall and piazza, with street performers outside St Paul's church and craft stalls in the Apple Market.",
+   "tags": [
+    "street-performers",
+    "shopping",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-opera-house",
+   "name": "Royal Opera House",
+   "kind": "venue",
+   "neighborhood": "covent-garden",
+   "summary": "Home of the Royal Opera and the Royal Ballet, with cheap standing places and a public rooftop terrace.",
+   "tags": [
+    "opera",
+    "ballet",
+    "classical"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dishoom-covent-garden",
+   "name": "Dishoom Covent Garden",
+   "kind": "restaurant",
+   "neighborhood": "covent-garden",
+   "summary": "The first of the Bombay-cafe-style restaurants, known for bacon naan rolls at breakfast and black daal; expect a queue.",
+   "tags": [
+    "bombay-cafe",
+    "breakfast",
+    "queue"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "indian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "monmouth-coffee",
+   "name": "Monmouth Coffee",
+   "kind": "cafe",
+   "neighborhood": "covent-garden",
+   "summary": "Monmouth Street coffee shop roasting its own beans since 1978, with a bench for four and a queue out the door.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "historic"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lamb-and-flag",
+   "name": "Lamb & Flag",
+   "kind": "bar",
+   "neighborhood": "covent-garden",
+   "summary": "Low-beamed pub in an alley off Rose Street, one of the oldest in the West End; drinkers spill into the courtyard.",
+   "tags": [
+    "pub",
+    "historic",
+    "real-ale"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rules-restaurant",
+   "name": "Rules",
+   "kind": "restaurant",
+   "neighborhood": "covent-garden",
+   "summary": "Opened in 1798 on Maiden Lane and said to be London's oldest restaurant: game, pies and puddings among red plush and paintings.",
+   "tags": [
+    "historic",
+    "british",
+    "special-occasion"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "british",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "oasis-sports-centre",
+   "name": "Oasis Sports Centre",
+   "kind": "fitness",
+   "neighborhood": "covent-garden",
+   "summary": "Council leisure centre on Endell Street with a heated outdoor pool open all year, a rare swim in the middle of the West End.",
+   "tags": [
+    "swimming",
+    "outdoor-pool",
+    "gym"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "british-museum",
+   "name": "British Museum",
+   "kind": "museum",
+   "neighborhood": "bloomsbury",
+   "summary": "Free world collection from the Rosetta Stone to the Parthenon sculptures under the Great Court's glass roof.",
+   "tags": [
+    "history",
+    "free",
+    "iconic",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "russell-square",
+   "name": "Russell Square",
+   "kind": "park",
+   "neighborhood": "bloomsbury",
+   "summary": "One of the largest Bloomsbury squares, with a fountain, plane trees and a cafe kiosk.",
+   "tags": [
+    "square",
+    "quiet",
+    "lunch-spot"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-lamb-bloomsbury",
+   "name": "The Lamb",
+   "kind": "bar",
+   "neighborhood": "bloomsbury",
+   "summary": "Victorian pub on Lamb's Conduit Street with etched-glass snob screens around the bar.",
+   "tags": [
+    "pub",
+    "victorian",
+    "real-ale"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-review-bookshop",
+   "name": "London Review Bookshop",
+   "kind": "shopping",
+   "neighborhood": "bloomsbury",
+   "summary": "Independent bookshop by the British Museum with a cake shop and evening author talks.",
+   "tags": [
+    "books",
+    "cake",
+    "talks"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ciao-bella",
+   "name": "Ciao Bella",
+   "kind": "restaurant",
+   "neighborhood": "bloomsbury",
+   "summary": "Old-school Italian trattoria on Lamb's Conduit Street since the 1980s, with a piano and big birthday tables.",
+   "tags": [
+    "trattoria",
+    "pasta",
+    "lively"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "italian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "charles-dickens-museum",
+   "name": "Charles Dickens Museum",
+   "kind": "museum",
+   "neighborhood": "bloomsbury",
+   "summary": "Dickens's family home on Doughty Street, where he wrote Oliver Twist, with a garden cafe.",
+   "tags": [
+    "literary",
+    "historic-house",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "st-pauls-cathedral",
+   "name": "St Paul's Cathedral",
+   "kind": "landmark",
+   "neighborhood": "city-of-london",
+   "summary": "Wren's domed cathedral, with the Whispering Gallery and a climb to the Golden Gallery for the view.",
+   "tags": [
+    "iconic",
+    "architecture",
+    "views"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tower-of-london",
+   "name": "Tower of London",
+   "kind": "attraction",
+   "neighborhood": "city-of-london",
+   "summary": "Norman fortress, royal prison and home of the Crown Jewels, with Yeoman Warders' tours and the ravens.",
+   "tags": [
+    "history",
+    "crown-jewels",
+    "iconic"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "family",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tower-bridge",
+   "name": "Tower Bridge",
+   "kind": "landmark",
+   "neighborhood": "city-of-london",
+   "summary": "The Victorian bascule bridge, with a glass-floored walkway between the towers and the bridge lifting for tall ships.",
+   "tags": [
+    "iconic",
+    "views",
+    "river"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "barbican-centre",
+   "name": "Barbican Centre",
+   "kind": "venue",
+   "neighborhood": "city-of-london",
+   "summary": "Brutalist arts centre in the Barbican Estate: the London Symphony Orchestra, theatre, cinema and galleries, with a lakeside terrace and a tropical conservatory open on some days.",
+   "tags": [
+    "concerts",
+    "brutalist",
+    "cinema",
+    "arts"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sky-garden",
+   "name": "Sky Garden",
+   "kind": "attraction",
+   "neighborhood": "city-of-london",
+   "summary": "Free (booked ahead) glasshouse garden and bars at the top of the \"Walkie-Talkie\" at 20 Fenchurch Street.",
+   "tags": [
+    "views",
+    "free",
+    "rooftop"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "leadenhall-market",
+   "name": "Leadenhall Market",
+   "kind": "market",
+   "neighborhood": "city-of-london",
+   "summary": "Ornate Victorian covered market of pubs, lunch spots and shops, busy with City workers at lunchtime.",
+   "tags": [
+    "victorian",
+    "lunch",
+    "architecture"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-blackfriar",
+   "name": "The Blackfriar",
+   "kind": "bar",
+   "neighborhood": "city-of-london",
+   "summary": "Wedge-shaped pub by Blackfriars Bridge with an Arts and Crafts interior of carved jolly friars in bronze and marble.",
+   "tags": [
+    "pub",
+    "historic",
+    "after-work"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sweetings",
+   "name": "Sweetings",
+   "kind": "restaurant",
+   "neighborhood": "city-of-london",
+   "summary": "Victorian fish restaurant on Queen Victoria Street, open for weekday lunch only, with counters, black velvet and no bookings.",
+   "tags": [
+    "seafood",
+    "historic",
+    "lunch"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "coworkers",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "british-seafood",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "british-library",
+   "name": "British Library",
+   "kind": "library",
+   "neighborhood": "kings-cross",
+   "summary": "The national library on Euston Road: free treasures gallery, a glass tower of the King's books and reading rooms for anyone with a reader pass.",
+   "tags": [
+    "study",
+    "free",
+    "treasures",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coal-drops-yard",
+   "name": "Coal Drops Yard",
+   "kind": "shopping",
+   "neighborhood": "kings-cross",
+   "summary": "Victorian coal sheds rebuilt with kissing rooflines, now independent shops, restaurants and bars.",
+   "tags": [
+    "shopping",
+    "design",
+    "regenerated"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "granary-square",
+   "name": "Granary Square",
+   "kind": "square",
+   "neighborhood": "kings-cross",
+   "summary": "Big public square on the Regent's Canal with dancing fountains, canal steps and the art school behind.",
+   "tags": [
+    "fountains",
+    "canal",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dishoom-kings-cross",
+   "name": "Dishoom King's Cross",
+   "kind": "restaurant",
+   "neighborhood": "kings-cross",
+   "summary": "Bombay-cafe-style restaurant in a former railway goods shed, with a basement bar.",
+   "tags": [
+    "bombay-cafe",
+    "breakfast",
+    "cocktails"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "indian",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wellcome-collection",
+   "name": "Wellcome Collection",
+   "kind": "museum",
+   "neighborhood": "kings-cross",
+   "summary": "Free museum of medicine, life and art on Euston Road, with an upstairs reading room full of cushions.",
+   "tags": [
+    "free",
+    "science",
+    "curious",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-lighterman",
+   "name": "The Lighterman",
+   "kind": "bar",
+   "neighborhood": "kings-cross",
+   "summary": "Three-floor pub and terrace on Granary Square overlooking the canal.",
+   "tags": [
+    "pub",
+    "terrace",
+    "canal",
+    "after-work"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "caravan-kings-cross",
+   "name": "Caravan King's Cross",
+   "kind": "cafe",
+   "neighborhood": "kings-cross",
+   "summary": "All-day restaurant and coffee roastery in the Granary Building, a weekend brunch fixture.",
+   "tags": [
+    "coffee",
+    "brunch",
+    "roaster"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tate-modern",
+   "name": "Tate Modern",
+   "kind": "museum",
+   "neighborhood": "south-bank",
+   "summary": "Free modern and contemporary art in the old Bankside power station, with the Turbine Hall and a view from the tenth floor.",
+   "tags": [
+    "art",
+    "free",
+    "iconic",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southbank-centre",
+   "name": "Southbank Centre",
+   "kind": "venue",
+   "neighborhood": "south-bank",
+   "summary": "The Royal Festival Hall, Queen Elizabeth Hall and Hayward Gallery, with free foyer music, a skate undercroft and a riverside book market.",
+   "tags": [
+    "concerts",
+    "skateboarding",
+    "free-events",
+    "riverside"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "national-theatre",
+   "name": "National Theatre",
+   "kind": "venue",
+   "neighborhood": "south-bank",
+   "summary": "Three stages in Denys Lasdun's concrete building by Waterloo Bridge, with cheap Friday Rush tickets.",
+   "tags": [
+    "theatre",
+    "brutalist",
+    "riverside"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shakespeares-globe",
+   "name": "Shakespeare's Globe",
+   "kind": "venue",
+   "neighborhood": "south-bank",
+   "summary": "Open-air reconstruction of Shakespeare's playhouse, with five-pound standing tickets in the yard; candlelit plays in the indoor playhouse in winter.",
+   "tags": [
+    "shakespeare",
+    "theatre",
+    "open-air"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer",
+    "fall"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bfi-southbank",
+   "name": "BFI Southbank",
+   "kind": "venue",
+   "neighborhood": "south-bank",
+   "summary": "The British Film Institute's cinemas under Waterloo Bridge, with seasons of classics and a free film archive viewing room.",
+   "tags": [
+    "cinema",
+    "classics",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-eye",
+   "name": "London Eye",
+   "kind": "attraction",
+   "neighborhood": "south-bank",
+   "summary": "Giant observation wheel opposite the Houses of Parliament; a half-hour turn in a glass pod.",
+   "tags": [
+    "views",
+    "iconic",
+    "touristy"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "borough-market",
+   "name": "Borough Market",
+   "kind": "market",
+   "neighborhood": "south-bank",
+   "summary": "London's best-known food market under the railway at London Bridge: cheese, bread, oysters and street food, packed at lunchtime.",
+   "tags": [
+    "food",
+    "market",
+    "street-food",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "george-inn",
+   "name": "The George Inn",
+   "kind": "bar",
+   "neighborhood": "south-bank",
+   "summary": "London's last galleried coaching inn, off Borough High Street, with a courtyard that fills on summer evenings.",
+   "tags": [
+    "pub",
+    "historic",
+    "courtyard"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "columbia-road-flower-market",
+   "name": "Columbia Road Flower Market",
+   "kind": "market",
+   "neighborhood": "shoreditch",
+   "summary": "Sunday-morning flower market on a Victorian street of tiny shops, with traders calling out bargains near closing.",
+   "tags": [
+    "flowers",
+    "sunday",
+    "photogenic"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boxpark-shoreditch",
+   "name": "Boxpark Shoreditch",
+   "kind": "market",
+   "neighborhood": "shoreditch",
+   "summary": "Shipping containers of street food, bars and pop-up shops by Shoreditch High Street station.",
+   "tags": [
+    "street-food",
+    "casual",
+    "football-screenings"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ozone-coffee",
+   "name": "Ozone Coffee Roasters",
+   "kind": "cafe",
+   "neighborhood": "shoreditch",
+   "summary": "Big roastery cafe on Leonard Street with a coffee bar and all-day brunch.",
+   "tags": [
+    "coffee",
+    "roaster",
+    "brunch",
+    "laptop-friendly"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "shoreditch-street-art",
+   "name": "Shoreditch street art",
+   "kind": "attraction",
+   "neighborhood": "shoreditch",
+   "summary": "Murals and paste-ups that change by the month around Brick Lane, Rivington Street and Great Eastern Street.",
+   "tags": [
+    "street-art",
+    "free",
+    "walk"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "village-underground",
+   "name": "Village Underground",
+   "kind": "venue",
+   "neighborhood": "shoreditch",
+   "summary": "Victorian warehouse venue for gigs and club nights, with old Tube carriages on the roof.",
+   "tags": [
+    "live-music",
+    "club",
+    "warehouse"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "museum-of-the-home",
+   "name": "Museum of the Home",
+   "kind": "museum",
+   "neighborhood": "shoreditch",
+   "summary": "Rooms of London homes through four centuries in old almshouses on Kingsland Road, with period gardens.",
+   "tags": [
+    "history",
+    "free",
+    "gardens",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "song-que",
+   "name": "Sông Quê Café",
+   "kind": "restaurant",
+   "neighborhood": "shoreditch",
+   "summary": "Long-running Vietnamese canteen on Kingsland Road's \"pho mile\".",
+   "tags": [
+    "pho",
+    "casual",
+    "cheap-eats"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "vietnamese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brick-lane-curry-houses",
+   "name": "Brick Lane curry houses",
+   "kind": "restaurant",
+   "neighborhood": "whitechapel",
+   "summary": "The row of Bangladeshi-run curry houses on Brick Lane, with touts outside and bring-your-own-beer at some.",
+   "tags": [
+    "curry",
+    "iconic",
+    "late"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "bangladeshi",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beigel-bake",
+   "name": "Beigel Bake",
+   "kind": "restaurant",
+   "neighborhood": "whitechapel",
+   "summary": "Twenty-four-hour bagel bakery on Brick Lane serving hot salt beef and mustard to a queue at any hour.",
+   "tags": [
+    "bagels",
+    "24-hour",
+    "salt-beef",
+    "cheap-eats"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "jewish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tayyabs",
+   "name": "Tayyabs",
+   "kind": "restaurant",
+   "neighborhood": "whitechapel",
+   "summary": "Huge, noisy Punjabi grill off Whitechapel Road, famous for sizzling lamb chops; bring your own drinks.",
+   "tags": [
+    "grill",
+    "byob",
+    "lamb-chops"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "family",
+    "coworkers"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "punjabi",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "whitechapel-gallery",
+   "name": "Whitechapel Gallery",
+   "kind": "museum",
+   "neighborhood": "whitechapel",
+   "summary": "Free contemporary art gallery on Whitechapel High Street that showed Picasso's Guernica in 1938.",
+   "tags": [
+    "art",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "old-spitalfields-market",
+   "name": "Old Spitalfields Market",
+   "kind": "market",
+   "neighborhood": "whitechapel",
+   "summary": "Victorian market hall of fashion, vinyl and street food, with antiques on Thursdays.",
+   "tags": [
+    "market",
+    "street-food",
+    "vintage"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "e-pellicci",
+   "name": "E. Pellicci",
+   "kind": "cafe",
+   "neighborhood": "whitechapel",
+   "summary": "Family-run cafe on Bethnal Green Road since 1900, with a listed Art Deco wood-panelled interior and full English breakfasts.",
+   "tags": [
+    "full-english",
+    "historic",
+    "family-run"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "british-cafe",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ten-bells",
+   "name": "The Ten Bells",
+   "kind": "bar",
+   "neighborhood": "whitechapel",
+   "summary": "Victorian corner pub opposite Spitalfields Market with old tiled walls.",
+   "tags": [
+    "pub",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "york-hall",
+   "name": "York Hall",
+   "kind": "fitness",
+   "neighborhood": "whitechapel",
+   "summary": "Bethnal Green leisure centre known for boxing nights, with a pool and a basement Turkish baths spa.",
+   "tags": [
+    "boxing",
+    "swimming",
+    "spa"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "broadway-market",
+   "name": "Broadway Market",
+   "kind": "market",
+   "neighborhood": "hackney",
+   "summary": "Saturday street market of bakers, coffee, street food and vintage between London Fields and the canal.",
+   "tags": [
+    "food",
+    "saturday",
+    "canal"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-fields-lido",
+   "name": "London Fields Lido",
+   "kind": "fitness",
+   "neighborhood": "hackney",
+   "summary": "Heated fifty-metre outdoor pool on London Fields, open all year.",
+   "tags": [
+    "swimming",
+    "lido",
+    "outdoor-pool"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "victoria-park",
+   "name": "Victoria Park",
+   "kind": "park",
+   "neighborhood": "hackney",
+   "summary": "East London's big Victorian park, with boating lakes, a Chinese pagoda, a Sunday market and summer music festivals.",
+   "tags": [
+    "lakes",
+    "running",
+    "festivals"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pavilion-cafe-victoria-park",
+   "name": "Pavilion Cafe",
+   "kind": "cafe",
+   "neighborhood": "hackney",
+   "summary": "Lakeside domed cafe in Victoria Park, busy with runners and buggies for breakfast.",
+   "tags": [
+    "breakfast",
+    "lakeside",
+    "park"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hackney-empire",
+   "name": "Hackney Empire",
+   "kind": "venue",
+   "neighborhood": "hackney",
+   "summary": "Frank Matcham's 1901 variety theatre on Mare Street, famous for comedy and its Christmas panto.",
+   "tags": [
+    "theatre",
+    "comedy",
+    "panto"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mangal-2",
+   "name": "Mangal 2",
+   "kind": "restaurant",
+   "neighborhood": "hackney",
+   "summary": "Family-run Turkish ocakbaşı grill on Stoke Newington Road, cooking over charcoal since 1994.",
+   "tags": [
+    "grill",
+    "kebab",
+    "family-run"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "turkish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cat-and-mutton",
+   "name": "The Cat & Mutton",
+   "kind": "bar",
+   "neighborhood": "hackney",
+   "summary": "Corner pub at the top of Broadway Market, spilling onto the pavement on Saturdays.",
+   "tags": [
+    "pub",
+    "sunday-roast",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "camden-market",
+   "name": "Camden Market",
+   "kind": "market",
+   "neighborhood": "camden",
+   "summary": "Rambling markets around Camden Lock and the Stables: street food, vintage, goth and punk stalls.",
+   "tags": [
+    "street-food",
+    "vintage",
+    "alternative",
+    "touristy"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "regents-canal-towpath",
+   "name": "Regent's Canal towpath",
+   "kind": "trail",
+   "neighborhood": "camden",
+   "summary": "Canal walk from Camden Lock past narrowboats to King's Cross, or west through the Zoo to Little Venice.",
+   "tags": [
+    "canal",
+    "walk",
+    "narrowboats"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "primrose-hill",
+   "name": "Primrose Hill",
+   "kind": "park",
+   "neighborhood": "camden",
+   "summary": "Grassy hill above Regent's Park with one of the best free views of the skyline.",
+   "tags": [
+    "views",
+    "picnic",
+    "sunset"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "roundhouse",
+   "name": "Roundhouse",
+   "kind": "venue",
+   "neighborhood": "camden",
+   "summary": "Victorian railway engine shed turned concert and circus venue on Chalk Farm Road.",
+   "tags": [
+    "live-music",
+    "historic",
+    "circus"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-zoo",
+   "name": "ZSL London Zoo",
+   "kind": "attraction",
+   "neighborhood": "camden",
+   "summary": "The world's oldest scientific zoo, on the north edge of Regent's Park.",
+   "tags": [
+    "animals",
+    "family",
+    "historic"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "family",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "regents-park-open-air-theatre",
+   "name": "Regent's Park Open Air Theatre",
+   "kind": "venue",
+   "neighborhood": "camden",
+   "summary": "Summer plays and musicals in a leafy amphitheatre in Regent's Park.",
+   "tags": [
+    "theatre",
+    "open-air",
+    "picnic"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hawley-arms",
+   "name": "The Hawley Arms",
+   "kind": "bar",
+   "neighborhood": "camden",
+   "summary": "Rock-and-roll pub by the Lock with a roof terrace, once a favourite of Amy Winehouse.",
+   "tags": [
+    "pub",
+    "music",
+    "terrace"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "poppies-camden",
+   "name": "Poppies Fish & Chips",
+   "kind": "restaurant",
+   "neighborhood": "camden",
+   "summary": "Retro 1950s-style chippy run by a fish-and-chips veteran, with cod in newspaper-print paper and mushy peas.",
+   "tags": [
+    "fish-and-chips",
+    "retro",
+    "casual"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "fish-and-chips",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "camden-passage",
+   "name": "Camden Passage",
+   "kind": "shopping",
+   "neighborhood": "islington",
+   "summary": "Narrow lane off Upper Street of antique stalls, vintage shops and cafes.",
+   "tags": [
+    "antiques",
+    "vintage",
+    "browsing"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "almeida-theatre",
+   "name": "Almeida Theatre",
+   "kind": "venue",
+   "neighborhood": "islington",
+   "summary": "Small, bold theatre off Upper Street whose productions often transfer to the West End.",
+   "tags": [
+    "theatre",
+    "new-writing"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sadlers-wells",
+   "name": "Sadler's Wells",
+   "kind": "venue",
+   "neighborhood": "islington",
+   "summary": "London's home of dance, from ballet to hip-hop, on Rosebery Avenue.",
+   "tags": [
+    "dance",
+    "performance"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "emirates-stadium",
+   "name": "Emirates Stadium",
+   "kind": "stadium",
+   "neighborhood": "islington",
+   "summary": "Arsenal's 60,000-seat home in Holloway, with stadium tours on non-match days.",
+   "tags": [
+    "football",
+    "arsenal",
+    "matchday"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ottolenghi-islington",
+   "name": "Ottolenghi Islington",
+   "kind": "restaurant",
+   "neighborhood": "islington",
+   "summary": "Upper Street deli and restaurant with salads piled in the window and big meringues.",
+   "tags": [
+    "deli",
+    "brunch",
+    "salads"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "middle-eastern",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "island-queen",
+   "name": "The Island Queen",
+   "kind": "bar",
+   "neighborhood": "islington",
+   "summary": "Victorian pub near the Regent's Canal with papier-mache figures hanging from the ceiling and a good Sunday roast.",
+   "tags": [
+    "pub",
+    "sunday-roast",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pophams-islington",
+   "name": "Pophams",
+   "kind": "cafe",
+   "neighborhood": "islington",
+   "summary": "Neighbourhood bakery near Essex Road with maple bacon pastries in the morning.",
+   "tags": [
+    "bakery",
+    "pastries",
+    "coffee"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brixton-village",
+   "name": "Brixton Village and Market Row",
+   "kind": "market",
+   "neighborhood": "brixton",
+   "summary": "Covered 1930s arcades of Caribbean, African and Latin American food stalls, plus Electric Avenue's street market outside.",
+   "tags": [
+    "street-food",
+    "caribbean",
+    "market",
+    "diverse"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brixton-academy",
+   "name": "O2 Academy Brixton",
+   "kind": "venue",
+   "neighborhood": "brixton",
+   "summary": "Art Deco former cinema with a sloping floor, one of London's best-loved gig venues.",
+   "tags": [
+    "live-music",
+    "art-deco"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ritzy-cinema",
+   "name": "Ritzy Picturehouse",
+   "kind": "venue",
+   "neighborhood": "brixton",
+   "summary": "Edwardian cinema on Windrush Square with a cafe-bar upstairs.",
+   "tags": [
+    "cinema",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "solo"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brockwell-park",
+   "name": "Brockwell Park",
+   "kind": "park",
+   "neighborhood": "brixton",
+   "summary": "Hilly park with views north to the City, a walled garden and summer festivals.",
+   "tags": [
+    "views",
+    "festivals",
+    "picnic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brockwell-lido",
+   "name": "Brockwell Lido",
+   "kind": "fitness",
+   "neighborhood": "brixton",
+   "summary": "Grade II-listed 1937 lido, unheated and open all year for hardy swimmers, with a cafe by the water.",
+   "tags": [
+    "swimming",
+    "lido",
+    "cold-water"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "black-cultural-archives",
+   "name": "Black Cultural Archives",
+   "kind": "museum",
+   "neighborhood": "brixton",
+   "summary": "National heritage centre for Black British history, on Windrush Square.",
+   "tags": [
+    "history",
+    "black-british",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fish-wings-and-tings",
+   "name": "Fish, Wings & Tings",
+   "kind": "restaurant",
+   "neighborhood": "brixton",
+   "summary": "Caribbean kitchen in Brixton Village: jerk chicken, saltfish fritters and rum punch.",
+   "tags": [
+    "caribbean",
+    "jerk",
+    "casual"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "caribbean",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "effra-hall-tavern",
+   "name": "The Effra Hall Tavern",
+   "kind": "bar",
+   "neighborhood": "brixton",
+   "summary": "Victorian pub with live jazz and a Caribbean kitchen at the back.",
+   "tags": [
+    "pub",
+    "jazz",
+    "caribbean"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "franks-cafe",
+   "name": "Frank's Cafe",
+   "kind": "bar",
+   "neighborhood": "peckham",
+   "summary": "Summer-only bar on the top of a multi-storey car park, with Campari, sunsets and a skyline view.",
+   "tags": [
+    "rooftop",
+    "sunset",
+    "views",
+    "seasonal"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peckham-library",
+   "name": "Peckham Library",
+   "kind": "library",
+   "neighborhood": "peckham",
+   "summary": "Prize-winning upside-down-L library with a copper skin and coloured glass.",
+   "tags": [
+    "architecture",
+    "free",
+    "study"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bussey-building",
+   "name": "Bussey Building",
+   "kind": "nightlife",
+   "neighborhood": "peckham",
+   "summary": "Old cricket-bat factory off Rye Lane with club nights, a rooftop and arts events.",
+   "tags": [
+    "club",
+    "warehouse",
+    "dancing"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends"
+   ],
+   "day_parts": [
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "peckham-rye-park",
+   "name": "Peckham Rye Park and Common",
+   "kind": "park",
+   "neighborhood": "peckham",
+   "summary": "Common and park with a Japanese garden, a lake and Sunday football.",
+   "tags": [
+    "park",
+    "gardens",
+    "football"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kudu",
+   "name": "Kudu",
+   "kind": "restaurant",
+   "neighborhood": "peckham",
+   "summary": "Neighbourhood restaurant on Queen's Road with South African-inspired cooking and skillet bread.",
+   "tags": [
+    "date-night",
+    "south-african",
+    "neighbourhood"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "south-african",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gowlett-arms",
+   "name": "The Gowlett Arms",
+   "kind": "bar",
+   "neighborhood": "peckham",
+   "summary": "Backstreet pub known for stone-baked pizzas and DJs on Sundays.",
+   "tags": [
+    "pub",
+    "pizza",
+    "local"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rye-lane",
+   "name": "Rye Lane",
+   "kind": "shopping",
+   "neighborhood": "peckham",
+   "summary": "Busy high street of Nigerian and Ghanaian grocers, fabric shops, hair salons and fried-fish counters.",
+   "tags": [
+    "african",
+    "groceries",
+    "busy"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clapham-common",
+   "name": "Clapham Common",
+   "kind": "park",
+   "neighborhood": "clapham",
+   "summary": "Big open common with ponds, a bandstand, running loops and summer festivals.",
+   "tags": [
+    "running",
+    "picnic",
+    "festivals"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "clapham-grand",
+   "name": "Clapham Grand",
+   "kind": "venue",
+   "neighborhood": "clapham",
+   "summary": "Victorian music hall with comedy, gigs and singalong club nights.",
+   "tags": [
+    "comedy",
+    "club",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "windmill-clapham",
+   "name": "The Windmill",
+   "kind": "bar",
+   "neighborhood": "clapham",
+   "summary": "Big pub on the edge of Clapham Common with a garden full on sunny afternoons.",
+   "tags": [
+    "pub",
+    "beer-garden",
+    "common"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "trinity-clapham",
+   "name": "Trinity",
+   "kind": "restaurant",
+   "neighborhood": "clapham",
+   "summary": "Michelin-starred neighbourhood restaurant in Clapham Old Town.",
+   "tags": [
+    "fine-dining",
+    "special-occasion"
+   ],
+   "cost": "$$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "modern-british",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "battersea-park",
+   "name": "Battersea Park",
+   "kind": "park",
+   "neighborhood": "clapham",
+   "summary": "Riverside Victorian park with a Peace Pagoda, boating lake, children's zoo and the Pump House Gallery.",
+   "tags": [
+    "river",
+    "running",
+    "family"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "battersea-power-station",
+   "name": "Battersea Power Station",
+   "kind": "shopping",
+   "neighborhood": "clapham",
+   "summary": "The four-chimneyed power station restored as shops, restaurants and a lift up a chimney.",
+   "tags": [
+    "shopping",
+    "architecture",
+    "river"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pear-tree-cafe",
+   "name": "Pear Tree Cafe",
+   "kind": "cafe",
+   "neighborhood": "clapham",
+   "summary": "Lakeside cafe in Battersea Park.",
+   "tags": [
+    "cafe",
+    "lakeside",
+    "brunch"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "portobello-road-market",
+   "name": "Portobello Road Market",
+   "kind": "market",
+   "neighborhood": "notting-hill",
+   "summary": "Long street market of antiques on Saturdays, fruit and veg in the week and vintage under the Westway.",
+   "tags": [
+    "antiques",
+    "vintage",
+    "saturday",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "electric-cinema",
+   "name": "Electric Cinema",
+   "kind": "venue",
+   "neighborhood": "notting-hill",
+   "summary": "One of Britain's oldest working cinemas, from 1910, with armchairs and sofas.",
+   "tags": [
+    "cinema",
+    "historic",
+    "date-night"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lisboa-patisserie",
+   "name": "Lisboa Patisserie",
+   "kind": "cafe",
+   "neighborhood": "notting-hill",
+   "summary": "Golborne Road Portuguese bakery known for custard tarts.",
+   "tags": [
+    "pasteis-de-nata",
+    "bakery",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "portuguese",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holland-park",
+   "name": "Holland Park",
+   "kind": "park",
+   "neighborhood": "notting-hill",
+   "summary": "Woodland park with peacocks, the Kyoto Garden's koi and summer opera.",
+   "tags": [
+    "gardens",
+    "peacocks",
+    "quiet"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "churchill-arms",
+   "name": "The Churchill Arms",
+   "kind": "bar",
+   "neighborhood": "notting-hill",
+   "summary": "Kensington Church Street pub covered in flowers outside, with a Thai kitchen in its conservatory.",
+   "tags": [
+    "pub",
+    "flowers",
+    "thai-food"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "thai",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "portobello-star",
+   "name": "Portobello Star",
+   "kind": "bar",
+   "neighborhood": "notting-hill",
+   "summary": "Narrow cocktail bar on Portobello Road, birthplace of a London gin.",
+   "tags": [
+    "cocktails",
+    "gin"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "natural-history-museum",
+   "name": "Natural History Museum",
+   "kind": "museum",
+   "neighborhood": "kensington",
+   "summary": "Free museum in a Romanesque cathedral of terracotta, with Hope the blue whale and the dinosaurs.",
+   "tags": [
+    "dinosaurs",
+    "free",
+    "family",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "science-museum",
+   "name": "Science Museum",
+   "kind": "museum",
+   "neighborhood": "kensington",
+   "summary": "Free museum of engines, spacecraft and medicine, with an interactive gallery for children and adults-only Lates.",
+   "tags": [
+    "science",
+    "free",
+    "family",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "v-and-a",
+   "name": "Victoria and Albert Museum",
+   "kind": "museum",
+   "neighborhood": "kensington",
+   "summary": "Free museum of art and design, from Raphael cartoons to fashion, with a courtyard garden and paddling pool.",
+   "tags": [
+    "design",
+    "fashion",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-albert-hall",
+   "name": "Royal Albert Hall",
+   "kind": "venue",
+   "neighborhood": "kensington",
+   "summary": "The great domed hall, home of the summer Proms with cheap standing tickets in the arena.",
+   "tags": [
+    "concerts",
+    "proms",
+    "iconic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hyde-park",
+   "name": "Hyde Park",
+   "kind": "park",
+   "neighborhood": "kensington",
+   "summary": "The great royal park, with the Serpentine's boats, Speakers' Corner and Kensington Gardens next door.",
+   "tags": [
+    "royal-park",
+    "boating",
+    "running"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "serpentine-lido",
+   "name": "Serpentine Lido",
+   "kind": "fitness",
+   "neighborhood": "kensington",
+   "summary": "Summer swimming in a roped-off stretch of the Serpentine lake in Hyde Park.",
+   "tags": [
+    "swimming",
+    "open-water",
+    "lake"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [
+    "summer"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stamford-bridge",
+   "name": "Stamford Bridge",
+   "kind": "stadium",
+   "neighborhood": "kensington",
+   "summary": "Chelsea FC's home on the Fulham Road since 1905.",
+   "tags": [
+    "football",
+    "chelsea",
+    "matchday"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "daquise",
+   "name": "Daquise",
+   "kind": "restaurant",
+   "neighborhood": "kensington",
+   "summary": "Polish restaurant by South Kensington station since 1947: pierogi, beetroot soup and vodka.",
+   "tags": [
+    "historic",
+    "pierogi",
+    "vodka"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "polish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "anglesea-arms",
+   "name": "The Anglesea Arms",
+   "kind": "bar",
+   "neighborhood": "kensington",
+   "summary": "Old South Kensington pub with a terrace on a quiet street.",
+   "tags": [
+    "pub",
+    "terrace",
+    "sunday-roast"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-observatory",
+   "name": "Royal Observatory",
+   "kind": "museum",
+   "neighborhood": "greenwich",
+   "summary": "Flamsteed House, the Prime Meridian line and a planetarium on top of Greenwich Park.",
+   "tags": [
+    "astronomy",
+    "history",
+    "views"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "national-maritime-museum",
+   "name": "National Maritime Museum",
+   "kind": "museum",
+   "neighborhood": "greenwich",
+   "summary": "Free museum of ships, navigation and exploration.",
+   "tags": [
+    "maritime",
+    "free",
+    "family",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cutty-sark",
+   "name": "Cutty Sark",
+   "kind": "attraction",
+   "neighborhood": "greenwich",
+   "summary": "Fastest of the tea clippers, raised above a glass-roofed dry dock.",
+   "tags": [
+    "ship",
+    "history",
+    "family"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "greenwich-park",
+   "name": "Greenwich Park",
+   "kind": "park",
+   "neighborhood": "greenwich",
+   "summary": "Royal park with the best view of Canary Wharf and the City from the Observatory hill, plus deer in a walled enclosure.",
+   "tags": [
+    "views",
+    "royal-park",
+    "picnic"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "greenwich-market",
+   "name": "Greenwich Market",
+   "kind": "market",
+   "neighborhood": "greenwich",
+   "summary": "Covered market of crafts, antiques and street food.",
+   "tags": [
+    "crafts",
+    "street-food",
+    "antiques"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "trafalgar-tavern",
+   "name": "Trafalgar Tavern",
+   "kind": "bar",
+   "neighborhood": "greenwich",
+   "summary": "Regency riverside pub where Dickens and Thackeray ate whitebait.",
+   "tags": [
+    "pub",
+    "river",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "goddards",
+   "name": "Goddards at Greenwich",
+   "kind": "restaurant",
+   "neighborhood": "greenwich",
+   "summary": "Pie and mash shop run by the same family since 1890, with liquor sauce and jellied eels.",
+   "tags": [
+    "pie-and-mash",
+    "historic",
+    "cheap-eats"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "pie-and-mash",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-o2",
+   "name": "The O2",
+   "kind": "venue",
+   "neighborhood": "greenwich",
+   "summary": "The arena in the old Millennium Dome on Greenwich Peninsula, for big concerts and sport, with a walk over the roof.",
+   "tags": [
+    "concerts",
+    "arena"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crossrail-place-roof-garden",
+   "name": "Crossrail Place Roof Garden",
+   "kind": "garden",
+   "neighborhood": "canary-wharf",
+   "summary": "Free garden under a timber lattice roof on top of the Elizabeth line station.",
+   "tags": [
+    "free",
+    "gardens",
+    "lunch-spot"
+   ],
+   "cost": "free",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-museum-docklands",
+   "name": "London Museum Docklands",
+   "kind": "museum",
+   "neighborhood": "canary-wharf",
+   "summary": "Free museum of the river, port and people in a Georgian sugar warehouse at West India Quay.",
+   "tags": [
+    "history",
+    "free",
+    "rainy-day"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-grapes-limehouse",
+   "name": "The Grapes",
+   "kind": "bar",
+   "neighborhood": "canary-wharf",
+   "summary": "Narrow 18th-century riverside pub on Narrow Street, Limehouse, with a tiny balcony on the Thames.",
+   "tags": [
+    "pub",
+    "river",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "prospect-of-whitby",
+   "name": "Prospect of Whitby",
+   "kind": "bar",
+   "neighborhood": "canary-wharf",
+   "summary": "Wapping pub claiming to be the oldest riverside tavern in London, with a flagstone floor and a gallows on the foreshore.",
+   "tags": [
+    "pub",
+    "river",
+    "historic"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mudchute-farm",
+   "name": "Mudchute Park and Farm",
+   "kind": "park",
+   "neighborhood": "canary-wharf",
+   "summary": "City farm and parkland on the Isle of Dogs, with llamas and a view of the towers.",
+   "tags": [
+    "farm",
+    "animals",
+    "family",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "third-space-canary-wharf",
+   "name": "Third Space Canary Wharf",
+   "kind": "fitness",
+   "neighborhood": "canary-wharf",
+   "summary": "Large luxury gym with a pool, climbing wall and classes for the towers' office workers.",
+   "tags": [
+    "gym",
+    "pool",
+    "classes"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "morning",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canary-wharf-ice-rink",
+   "name": "Canary Wharf ice rink",
+   "kind": "attraction",
+   "neighborhood": "canary-wharf",
+   "summary": "Winter ice rink among the towers.",
+   "tags": [
+    "ice-skating",
+    "christmas"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "winter"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "queen-elizabeth-olympic-park",
+   "name": "Queen Elizabeth Olympic Park",
+   "kind": "park",
+   "neighborhood": "stratford",
+   "summary": "The 2012 Olympic Park of rivers, wildflower meadows, playgrounds and sports venues.",
+   "tags": [
+    "olympics",
+    "running",
+    "family"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-stadium",
+   "name": "London Stadium",
+   "kind": "stadium",
+   "neighborhood": "stratford",
+   "summary": "The Olympic stadium, now home to West Ham United and summer concerts and athletics.",
+   "tags": [
+    "football",
+    "west-ham",
+    "concerts"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-aquatics-centre",
+   "name": "London Aquatics Centre",
+   "kind": "fitness",
+   "neighborhood": "stratford",
+   "summary": "Zaha Hadid's wave-roofed Olympic pool, open to the public at leisure-centre prices.",
+   "tags": [
+    "swimming",
+    "olympic",
+    "architecture"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "westfield-stratford",
+   "name": "Westfield Stratford City",
+   "kind": "shopping",
+   "neighborhood": "stratford",
+   "summary": "Huge shopping centre by the station, with a food court, cinema and bowling.",
+   "tags": [
+    "mall",
+    "cinema",
+    "food-court"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "theatre-royal-stratford-east",
+   "name": "Theatre Royal Stratford East",
+   "kind": "venue",
+   "neighborhood": "stratford",
+   "summary": "Victorian theatre with a long tradition of new, local and diverse work.",
+   "tags": [
+    "theatre",
+    "community"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "crate-brewery",
+   "name": "Crate Brewery",
+   "kind": "bar",
+   "neighborhood": "stratford",
+   "summary": "Canalside brewery and pizza bar in a Hackney Wick warehouse.",
+   "tags": [
+    "craft-beer",
+    "pizza",
+    "canal"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "walthamstow-market",
+   "name": "Walthamstow Market",
+   "kind": "market",
+   "neighborhood": "walthamstow",
+   "summary": "Street market running about a kilometre down the High Street, said to be the longest outdoor market in Europe.",
+   "tags": [
+    "market",
+    "cheap",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "william-morris-gallery",
+   "name": "William Morris Gallery",
+   "kind": "museum",
+   "neighborhood": "walthamstow",
+   "summary": "Free museum in Morris's family home in Lloyd Park, with his textiles and wallpapers.",
+   "tags": [
+    "design",
+    "free",
+    "arts-and-crafts"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lloyd-park",
+   "name": "Lloyd Park",
+   "kind": "park",
+   "neighborhood": "walthamstow",
+   "summary": "Family park behind the William Morris Gallery with a moat, a skate park and a cafe.",
+   "tags": [
+    "park",
+    "family",
+    "cafe"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "walthamstow-wetlands",
+   "name": "Walthamstow Wetlands",
+   "kind": "trail",
+   "neighborhood": "walthamstow",
+   "summary": "Working reservoirs opened as Europe's largest urban wetland, with birdwatching paths and a cafe in an old engine house.",
+   "tags": [
+    "birdwatching",
+    "walk",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gods-own-junkyard",
+   "name": "God's Own Junkyard",
+   "kind": "attraction",
+   "neighborhood": "walthamstow",
+   "summary": "Warehouse packed with neon signs, from film sets to old shopfronts, with a cafe; open at weekends.",
+   "tags": [
+    "neon",
+    "quirky",
+    "photogenic"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "signature-brew",
+   "name": "Signature Brew",
+   "kind": "bar",
+   "neighborhood": "walthamstow",
+   "summary": "Music-themed brewery taproom by Blackhorse Road on the \"Blackhorse Beer Mile\".",
+   "tags": [
+    "craft-beer",
+    "music",
+    "taproom"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "nags-head-walthamstow",
+   "name": "The Nag's Head",
+   "kind": "bar",
+   "neighborhood": "walthamstow",
+   "summary": "Walthamstow Village pub with a garden and resident cats.",
+   "tags": [
+    "pub",
+    "beer-garden",
+    "cats"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hampstead-heath",
+   "name": "Hampstead Heath",
+   "kind": "park",
+   "neighborhood": "hampstead",
+   "summary": "Eight hundred acres of meadow, woods and ponds, with the city spread out below Parliament Hill.",
+   "tags": [
+    "views",
+    "woods",
+    "wild",
+    "running"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "parliament-hill-lido",
+   "name": "Parliament Hill Lido",
+   "kind": "fitness",
+   "neighborhood": "hampstead",
+   "summary": "Unheated 1930s lido with a stainless-steel pool, open every day of the year.",
+   "tags": [
+    "swimming",
+    "lido",
+    "cold-water"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hampstead-heath-ponds",
+   "name": "Hampstead Heath swimming ponds",
+   "kind": "fitness",
+   "neighborhood": "hampstead",
+   "summary": "Three spring-fed bathing ponds, one mixed and two single-sex, swum all year by regulars.",
+   "tags": [
+    "wild-swimming",
+    "cold-water",
+    "nature"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kenwood-house",
+   "name": "Kenwood House",
+   "kind": "museum",
+   "neighborhood": "hampstead",
+   "summary": "Free neoclassical mansion on the Heath with a Rembrandt self-portrait and a Vermeer.",
+   "tags": [
+    "art",
+    "free",
+    "historic-house"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "holly-bush",
+   "name": "The Holly Bush",
+   "kind": "bar",
+   "neighborhood": "hampstead",
+   "summary": "Snug Georgian pub up a lane in Hampstead village, with a fire in winter.",
+   "tags": [
+    "pub",
+    "cosy",
+    "historic",
+    "sunday-roast"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spaniards-inn",
+   "name": "The Spaniards Inn",
+   "kind": "bar",
+   "neighborhood": "hampstead",
+   "summary": "Sixteenth-century inn on the edge of the Heath with a big garden, linked in legend to Dick Turpin.",
+   "tags": [
+    "pub",
+    "historic",
+    "beer-garden"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "la-creperie-de-hampstead",
+   "name": "La Creperie de Hampstead",
+   "kind": "restaurant",
+   "neighborhood": "hampstead",
+   "summary": "Street stall on the High Street selling crepes since 1980.",
+   "tags": [
+    "crepes",
+    "street-food",
+    "cheap-eats"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "french",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tottenham-hotspur-stadium",
+   "name": "Tottenham Hotspur Stadium",
+   "kind": "stadium",
+   "neighborhood": "tottenham",
+   "summary": "Spurs' 62,000-seat stadium on the High Road, with a single-tier south stand and NFL games too.",
+   "tags": [
+    "football",
+    "spurs",
+    "matchday"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bruce-castle-museum",
+   "name": "Bruce Castle Museum",
+   "kind": "museum",
+   "neighborhood": "tottenham",
+   "summary": "Free local museum in a Tudor manor house in a park.",
+   "tags": [
+    "history",
+    "free",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tottenham-marshes",
+   "name": "Tottenham Marshes",
+   "kind": "trail",
+   "neighborhood": "tottenham",
+   "summary": "Lee Valley marshes and towpaths with narrowboats, cyclists and herons.",
+   "tags": [
+    "nature",
+    "walk",
+    "cycling"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "antwerp-arms",
+   "name": "The Antwerp Arms",
+   "kind": "bar",
+   "neighborhood": "tottenham",
+   "summary": "Community-owned pub by Bruce Castle Park, saved by its neighbours.",
+   "tags": [
+    "pub",
+    "community",
+    "local"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tottenham-green-market",
+   "name": "Tottenham Green Market",
+   "kind": "market",
+   "neighborhood": "tottenham",
+   "summary": "Weekend market of street food, produce and crafts on Tottenham Green.",
+   "tags": [
+    "food",
+    "local",
+    "weekend"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bernie-grant-arts-centre",
+   "name": "Bernie Grant Arts Centre",
+   "kind": "venue",
+   "neighborhood": "tottenham",
+   "summary": "Arts centre named for the local MP, with theatre, music and a cafe.",
+   "tags": [
+    "arts",
+    "community",
+    "black-british"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gurdwara-sri-guru-singh-sabha",
+   "name": "Gurdwara Sri Guru Singh Sabha",
+   "kind": "temple",
+   "neighborhood": "southall",
+   "summary": "One of the largest Sikh temples outside India, where the langar kitchen serves free vegetarian meals to anyone.",
+   "tags": [
+    "sikh",
+    "langar",
+    "free"
+   ],
+   "cost": "free",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southall-broadway",
+   "name": "Southall Broadway",
+   "kind": "shopping",
+   "neighborhood": "southall",
+   "summary": "High street of sari and jewellery shops, sweet centres, grocers and Bollywood music.",
+   "tags": [
+    "south-asian",
+    "saris",
+    "sweets"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brilliant-southall",
+   "name": "Brilliant",
+   "kind": "restaurant",
+   "neighborhood": "southall",
+   "summary": "Family-run Punjabi restaurant since 1975, famous for butter chicken and big celebrations.",
+   "tags": [
+    "punjabi",
+    "family-run",
+    "celebrations"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "punjabi",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-asian-tandoori-centre",
+   "name": "New Asian Tandoori Centre",
+   "kind": "restaurant",
+   "neighborhood": "southall",
+   "summary": "Canteen-style Punjabi grill and sweet counter on the Green, open from breakfast to late.",
+   "tags": [
+    "punjabi",
+    "cheap-eats",
+    "tandoori"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "punjabi",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jalebi-junction",
+   "name": "Jalebi Junction",
+   "kind": "cafe",
+   "neighborhood": "southall",
+   "summary": "Broadway stall frying hot jalebi and serving masala chai.",
+   "tags": [
+    "chai",
+    "sweets",
+    "street-food"
+   ],
+   "cost": "$",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "indian-sweets",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "southall-park",
+   "name": "Southall Park",
+   "kind": "park",
+   "neighborhood": "southall",
+   "summary": "Local park with a playground and sports pitches just off the Broadway.",
+   "tags": [
+    "park",
+    "cricket",
+    "local"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "maltby-street-market",
+   "name": "Maltby Street Market",
+   "kind": "market",
+   "neighborhood": "bermondsey",
+   "summary": "Weekend food market squeezed into the Ropewalk under the railway arches.",
+   "tags": [
+    "street-food",
+    "weekend",
+    "arches"
+   ],
+   "cost": "$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fashion-and-textile-museum",
+   "name": "Fashion and Textile Museum",
+   "kind": "museum",
+   "neighborhood": "bermondsey",
+   "summary": "Bright pink and orange museum on Bermondsey Street founded by Zandra Rhodes.",
+   "tags": [
+    "fashion",
+    "design",
+    "rainy-day"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jose-tapas",
+   "name": "José",
+   "kind": "restaurant",
+   "neighborhood": "bermondsey",
+   "summary": "Standing-room sherry and tapas bar on Bermondsey Street.",
+   "tags": [
+    "tapas",
+    "sherry",
+    "small"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "spanish",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-garrison",
+   "name": "The Garrison",
+   "kind": "bar",
+   "neighborhood": "bermondsey",
+   "summary": "Gastropub on Bermondsey Street with a tiny basement cinema.",
+   "tags": [
+    "gastropub",
+    "sunday-roast"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bermondsey-beer-mile",
+   "name": "Bermondsey Beer Mile",
+   "kind": "bar",
+   "neighborhood": "bermondsey",
+   "summary": "Craft breweries and taprooms in railway arches, best walked on a Saturday.",
+   "tags": [
+    "craft-beer",
+    "arches",
+    "crawl"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "friends",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-watch-house",
+   "name": "The Watch House",
+   "kind": "cafe",
+   "neighborhood": "bermondsey",
+   "summary": "Coffee shop in a tiny 19th-century watch house built to guard the churchyard against body snatchers.",
+   "tags": [
+    "coffee",
+    "historic",
+    "tiny"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "manze-tower-bridge",
+   "name": "M. Manze",
+   "kind": "restaurant",
+   "neighborhood": "bermondsey",
+   "summary": "Tiled pie and mash shop on Tower Bridge Road since 1902, the oldest still trading.",
+   "tags": [
+    "pie-and-mash",
+    "historic",
+    "cheap-eats"
+   ],
+   "cost": "$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "pie-and-mash",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "richmond-park",
+   "name": "Richmond Park",
+   "kind": "park",
+   "neighborhood": "richmond",
+   "summary": "The largest royal park, with red and fallow deer, oak woods and a protected view of St Paul's from King Henry's Mound.",
+   "tags": [
+    "deer",
+    "cycling",
+    "views",
+    "royal-park"
+   ],
+   "cost": "free",
+   "setting": "outdoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kew-gardens",
+   "name": "Kew Gardens",
+   "kind": "garden",
+   "neighborhood": "richmond",
+   "summary": "The Royal Botanic Gardens, with Victorian glasshouses, a treetop walkway and winter light trails.",
+   "tags": [
+    "gardens",
+    "glasshouses",
+    "unesco"
+   ],
+   "cost": "$$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pools-on-the-park",
+   "name": "Pools on the Park",
+   "kind": "fitness",
+   "neighborhood": "richmond",
+   "summary": "Outdoor and indoor pools in Old Deer Park by the river.",
+   "tags": [
+    "swimming",
+    "outdoor-pool"
+   ],
+   "cost": "$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "family",
+    "friends"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "petersham-nurseries",
+   "name": "Petersham Nurseries",
+   "kind": "restaurant",
+   "neighborhood": "richmond",
+   "summary": "Garden centre with a glasshouse cafe and teahouse among the plants, reached across the riverside meadows.",
+   "tags": [
+    "garden",
+    "lunch",
+    "special-occasion"
+   ],
+   "cost": "$$$",
+   "setting": "indoor",
+   "good_for": [
+    "date",
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "seasonal",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "white-cross-richmond",
+   "name": "The White Cross",
+   "kind": "bar",
+   "neighborhood": "richmond",
+   "summary": "Riverside pub that floods at high tide; there is a door for when the water comes in.",
+   "tags": [
+    "pub",
+    "river",
+    "beer-garden"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "friends",
+    "date",
+    "solo",
+    "coworkers"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening",
+    "late"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "richmond-theatre",
+   "name": "Richmond Theatre",
+   "kind": "venue",
+   "neighborhood": "richmond",
+   "summary": "Frank Matcham's 1899 theatre on the Green, for touring plays and a big panto.",
+   "tags": [
+    "theatre",
+    "panto"
+   ],
+   "cost": "$$",
+   "setting": "indoor",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "evening"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "twickenham-stadium",
+   "name": "Twickenham Stadium",
+   "kind": "stadium",
+   "neighborhood": "richmond",
+   "summary": "The home of England rugby, packed for the Six Nations and autumn internationals.",
+   "tags": [
+    "rugby",
+    "matchday"
+   ],
+   "cost": "$$$",
+   "setting": "outdoor",
+   "good_for": [
+    "friends",
+    "family"
+   ],
+   "day_parts": [
+    "afternoon",
+    "evening"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pembroke-lodge",
+   "name": "Pembroke Lodge",
+   "kind": "cafe",
+   "neighborhood": "richmond",
+   "summary": "Georgian house and tearooms in Richmond Park with a view down the Thames valley.",
+   "tags": [
+    "tea",
+    "views",
+    "park"
+   ],
+   "cost": "$$",
+   "setting": "mixed",
+   "good_for": [
+    "solo",
+    "friends",
+    "date",
+    "family"
+   ],
+   "day_parts": [
+    "morning",
+    "afternoon"
+   ],
+   "seasons": [],
+   "cuisine": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "ucl",
+   "name": "University College London (UCL)",
+   "type": "research-university",
+   "neighborhood": "bloomsbury",
+   "size": "large",
+   "known_for": [
+    "medicine",
+    "engineering",
+    "architecture",
+    "law",
+    "research"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kings-college-london",
+   "name": "King's College London",
+   "type": "research-university",
+   "neighborhood": "covent-garden",
+   "size": "large",
+   "known_for": [
+    "medicine",
+    "nursing",
+    "war-studies",
+    "law",
+    "humanities"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lse",
+   "name": "London School of Economics",
+   "type": "research-university",
+   "neighborhood": "covent-garden",
+   "size": "large",
+   "known_for": [
+    "economics",
+    "politics",
+    "social-science",
+    "finance"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "imperial-college",
+   "name": "Imperial College London",
+   "type": "research-university",
+   "neighborhood": "kensington",
+   "size": "large",
+   "known_for": [
+    "engineering",
+    "medicine",
+    "science",
+    "business"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "queen-mary",
+   "name": "Queen Mary University of London",
+   "type": "research-university",
+   "neighborhood": "whitechapel",
+   "size": "large",
+   "known_for": [
+    "medicine",
+    "dentistry",
+    "law",
+    "engineering"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "goldsmiths",
+   "name": "Goldsmiths, University of London",
+   "type": "public-university",
+   "neighborhood": "peckham",
+   "size": "medium",
+   "known_for": [
+    "art",
+    "music",
+    "media",
+    "design"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "soas",
+   "name": "SOAS University of London",
+   "type": "public-university",
+   "neighborhood": "bloomsbury",
+   "size": "medium",
+   "known_for": [
+    "languages",
+    "area-studies",
+    "development",
+    "politics"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "city-st-georges",
+   "name": "City St George's, University of London",
+   "type": "public-university",
+   "neighborhood": "islington",
+   "size": "large",
+   "known_for": [
+    "journalism",
+    "business",
+    "nursing",
+    "health-sciences",
+    "law"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "central-saint-martins",
+   "name": "Central Saint Martins (University of the Arts London)",
+   "type": "art-school",
+   "neighborhood": "kings-cross",
+   "size": "large",
+   "known_for": [
+    "fashion-design",
+    "fine-art",
+    "graphic-design",
+    "performance"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "birkbeck",
+   "name": "Birkbeck, University of London",
+   "type": "public-university",
+   "neighborhood": "bloomsbury",
+   "size": "medium",
+   "known_for": [
+    "evening-study",
+    "adult-education",
+    "arts",
+    "management"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "royal-college-of-music",
+   "name": "Royal College of Music",
+   "type": "music-school",
+   "neighborhood": "kensington",
+   "size": "small",
+   "known_for": [
+    "classical-music",
+    "composition",
+    "performance"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "employers": [
+  {
+   "id": "barts-health",
+   "name": "Barts Health NHS Trust",
+   "sector": "healthcare",
+   "neighborhood": "whitechapel",
+   "size": "large",
+   "summary": "The NHS trust running the Royal London Hospital, with its helicopter on the roof, and St Bartholomew's in the City.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "guys-and-st-thomas",
+   "name": "Guy's and St Thomas' NHS Foundation Trust",
+   "sector": "healthcare",
+   "neighborhood": "south-bank",
+   "size": "large",
+   "summary": "Teaching hospitals at London Bridge and opposite Parliament, among the biggest NHS employers.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "pharmacist",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "uclh",
+   "name": "University College London Hospitals NHS Foundation Trust",
+   "sector": "healthcare",
+   "neighborhood": "bloomsbury",
+   "size": "large",
+   "summary": "UCH's tower on Euston Road and specialist hospitals around Bloomsbury.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "medical-researcher",
+    "pharmacist"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "kings-college-hospital",
+   "name": "King's College Hospital NHS Foundation Trust",
+   "sector": "healthcare",
+   "neighborhood": "peckham",
+   "size": "large",
+   "summary": "Major trauma and liver hospital on Denmark Hill between Brixton and Peckham.",
+   "careers": [
+    "registered-nurse",
+    "night-nurse",
+    "physician-resident",
+    "social-worker"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "francis-crick-institute",
+   "name": "Francis Crick Institute",
+   "sector": "biotech",
+   "neighborhood": "kings-cross",
+   "size": "large",
+   "summary": "Biomedical research institute behind the British Library.",
+   "careers": [
+    "medical-researcher",
+    "biotech-scientist",
+    "biologist",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tfl",
+   "name": "Transport for London",
+   "sector": "government",
+   "neighborhood": "south-bank",
+   "size": "large",
+   "summary": "Runs the Tube, buses, Overground, DLR, Elizabeth line and roads, with offices at Palestra in Southwark.",
+   "careers": [
+    "government-analyst",
+    "construction-trades",
+    "data-analyst",
+    "software-engineer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hsbc",
+   "name": "HSBC",
+   "sector": "finance",
+   "neighborhood": "canary-wharf",
+   "size": "large",
+   "summary": "Global bank with its headquarters at Canary Wharf.",
+   "careers": [
+    "finance-banker",
+    "financial-analyst",
+    "software-engineer",
+    "data-analyst",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jpmorgan-london",
+   "name": "J.P. Morgan",
+   "sector": "finance",
+   "neighborhood": "canary-wharf",
+   "size": "large",
+   "summary": "The bank's European headquarters at 25 Bank Street.",
+   "careers": [
+    "finance-banker",
+    "financial-analyst",
+    "software-engineer",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bank-of-england",
+   "name": "Bank of England",
+   "sector": "finance",
+   "neighborhood": "city-of-london",
+   "size": "large",
+   "summary": "The central bank on Threadneedle Street.",
+   "careers": [
+    "financial-analyst",
+    "government-analyst",
+    "data-analyst",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lloyds-of-london",
+   "name": "Lloyd's of London",
+   "sector": "finance",
+   "neighborhood": "city-of-london",
+   "size": "large",
+   "summary": "The insurance market in Richard Rogers's inside-out building on Lime Street.",
+   "careers": [
+    "financial-analyst",
+    "accountant",
+    "data-analyst",
+    "paralegal"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "linklaters",
+   "name": "Linklaters",
+   "sector": "legal",
+   "neighborhood": "city-of-london",
+   "size": "large",
+   "summary": "Magic Circle law firm on Silk Street by the Barbican.",
+   "careers": [
+    "paralegal",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bbc",
+   "name": "BBC",
+   "sector": "media",
+   "neighborhood": "soho",
+   "size": "large",
+   "summary": "The national broadcaster at Broadcasting House on Portland Place, just north of Oxford Circus.",
+   "careers": [
+    "journalist",
+    "graphic-designer",
+    "software-engineer",
+    "musician",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "google-kings-cross",
+   "name": "Google King's Cross",
+   "sector": "technology",
+   "neighborhood": "kings-cross",
+   "size": "large",
+   "summary": "Google's UK offices, including the long \"landscraper\" with a rooftop garden, and Google DeepMind next door.",
+   "careers": [
+    "software-engineer",
+    "ux-designer",
+    "data-analyst",
+    "marketing-coordinator"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-guardian",
+   "name": "The Guardian",
+   "sector": "media",
+   "neighborhood": "kings-cross",
+   "size": "medium",
+   "summary": "Newspaper and website at Kings Place by the canal.",
+   "careers": [
+    "journalist",
+    "graphic-designer",
+    "software-engineer",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "heathrow-airport",
+   "name": "Heathrow Airport",
+   "sector": "logistics",
+   "neighborhood": "southall",
+   "size": "large",
+   "summary": "The UK's busiest airport, a short Elizabeth line or bus ride west of Southall and a huge local employer.",
+   "careers": [
+    "port-logistics",
+    "hotel-front-desk",
+    "retail-associate",
+    "construction-trades",
+    "server"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hackney-council",
+   "name": "Hackney Council",
+   "sector": "government",
+   "neighborhood": "hackney",
+   "size": "large",
+   "summary": "The borough council at Hackney Town Hall, running housing, social care and schools.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "teacher",
+    "accountant"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "lambeth-council",
+   "name": "Lambeth Council",
+   "sector": "government",
+   "neighborhood": "brixton",
+   "size": "large",
+   "summary": "The borough council at Lambeth Town Hall in Brixton.",
+   "careers": [
+    "government-analyst",
+    "social-worker",
+    "teacher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "civil-service-whitehall",
+   "name": "The Civil Service (Whitehall)",
+   "sector": "government",
+   "neighborhood": "soho",
+   "size": "large",
+   "summary": "Government departments along Whitehall, from the Treasury to the Ministry of Defence.",
+   "careers": [
+    "government-analyst",
+    "data-analyst",
+    "accountant",
+    "paralegal",
+    "defense-engineer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "ucl-employer",
+   "name": "UCL",
+   "sector": "education",
+   "neighborhood": "bloomsbury",
+   "size": "large",
+   "summary": "Faculty, research and staff jobs across the Bloomsbury campus.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "medical-researcher",
+    "data-analyst"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "imperial-employer",
+   "name": "Imperial College London",
+   "sector": "education",
+   "neighborhood": "kensington",
+   "size": "large",
+   "summary": "Research and teaching in science, engineering and medicine in South Kensington.",
+   "careers": [
+    "professor",
+    "graduate-student",
+    "biotech-scientist",
+    "medical-researcher"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "the-savoy",
+   "name": "The Savoy",
+   "sector": "hospitality",
+   "neighborhood": "covent-garden",
+   "size": "large",
+   "summary": "Grand hotel on the Strand with the American Bar and a ballroom.",
+   "careers": [
+    "hotel-front-desk",
+    "server",
+    "line-cook",
+    "bartender",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "selfridges",
+   "name": "Selfridges",
+   "sector": "retail",
+   "neighborhood": "soho",
+   "size": "large",
+   "summary": "Oxford Street's flagship department store, famous for its window displays.",
+   "careers": [
+    "retail-associate",
+    "fashion-assistant",
+    "marketing-coordinator",
+    "graphic-designer"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "national-theatre-employer",
+   "name": "National Theatre",
+   "sector": "entertainment",
+   "neighborhood": "south-bank",
+   "size": "medium",
+   "summary": "Productions, workshops and front-of-house on the South Bank.",
+   "careers": [
+    "actor",
+    "performer",
+    "musician",
+    "event-planner",
+    "bartender"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "natural-history-museum-employer",
+   "name": "Natural History Museum",
+   "sector": "education",
+   "neighborhood": "kensington",
+   "size": "large",
+   "summary": "Scientists, curators and visitor teams at the museum and its research collections.",
+   "careers": [
+    "biologist",
+    "medical-researcher",
+    "tour-guide",
+    "event-planner"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "historic-royal-palaces",
+   "name": "Historic Royal Palaces",
+   "sector": "tourism",
+   "neighborhood": "city-of-london",
+   "size": "medium",
+   "summary": "The charity running the Tower of London, Hampton Court and Kensington Palace.",
+   "careers": [
+    "tour-guide",
+    "event-planner",
+    "retail-associate"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "hippodrome-casino",
+   "name": "The Hippodrome Casino",
+   "sector": "hospitality",
+   "neighborhood": "soho",
+   "size": "medium",
+   "summary": "Casino, cabaret and restaurants in the Victorian Hippodrome on Leicester Square.",
+   "careers": [
+    "casino-dealer",
+    "bartender",
+    "server",
+    "performer"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "career_hubs": [
+  {
+   "id": "square-mile",
+   "name": "The City (Square Mile)",
+   "neighborhoods": [
+    "city-of-london"
+   ],
+   "sectors": [
+    "finance",
+    "legal",
+    "business",
+    "insurance",
+    "real-estate"
+   ],
+   "summary": "Banks, insurers, the Bank of England, Lloyd's and the big law and accountancy firms, packed into the old City walls.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "canary-wharf-finance",
+   "name": "Canary Wharf",
+   "neighborhoods": [
+    "canary-wharf"
+   ],
+   "sectors": [
+    "finance",
+    "legal",
+    "media",
+    "technology",
+    "business"
+   ],
+   "summary": "Bank headquarters, regulators and newsrooms in the Docklands towers.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "knowledge-quarter",
+   "name": "King's Cross and the Knowledge Quarter",
+   "neighborhoods": [
+    "kings-cross",
+    "bloomsbury"
+   ],
+   "sectors": [
+    "technology",
+    "biotech",
+    "healthcare",
+    "education",
+    "media",
+    "creative"
+   ],
+   "summary": "Google, the Crick, the British Library, UCL and its hospitals within a mile of King's Cross.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tech-city",
+   "name": "Shoreditch tech and creative cluster",
+   "neighborhoods": [
+    "shoreditch",
+    "whitechapel"
+   ],
+   "sectors": [
+    "technology",
+    "creative",
+    "media",
+    "business",
+    "hospitality"
+   ],
+   "summary": "Start-ups, agencies, studios and bars around Old Street and Brick Lane.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-end-and-whitehall",
+   "name": "West End, Whitehall and the South Bank",
+   "neighborhoods": [
+    "soho",
+    "covent-garden",
+    "south-bank"
+   ],
+   "sectors": [
+    "entertainment",
+    "hospitality",
+    "tourism",
+    "retail",
+    "government",
+    "media",
+    "creative",
+    "food"
+   ],
+   "summary": "Theatres, hotels, restaurants, shops, broadcasters and government departments in the centre.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "climate": {
+  "summary": "Temperate oceanic: mild, damp and changeable all year, with grey drizzly winters that rarely freeze, long light summer evenings, occasional heatwaves and rain spread evenly through the year.",
+  "months": [
+   {
+    "high_f": 47,
+    "low_f": 37,
+    "rain_days": 11,
+    "note": "Coldest month: short grey days and drizzle; snow is rare and stops the city."
+   },
+   {
+    "high_f": 48,
+    "low_f": 36,
+    "rain_days": 9,
+    "note": "Cold and damp, with the first daffodils late in the month."
+   },
+   {
+    "high_f": 53,
+    "low_f": 40,
+    "rain_days": 9,
+    "note": "Changeable; blossom in the parks and clocks go forward at the end."
+   },
+   {
+    "high_f": 59,
+    "low_f": 43,
+    "rain_days": 9,
+    "note": "Showers and sunshine; magnolias and bluebells."
+   },
+   {
+    "high_f": 65,
+    "low_f": 48,
+    "rain_days": 8,
+    "note": "Mild and green; pub gardens fill up on sunny evenings."
+   },
+   {
+    "high_f": 71,
+    "low_f": 54,
+    "rain_days": 8,
+    "note": "Long light evenings until after nine; lidos busy."
+   },
+   {
+    "high_f": 75,
+    "low_f": 58,
+    "rain_days": 8,
+    "note": "Warmest month; heatwaves make the Tube stifling."
+   },
+   {
+    "high_f": 74,
+    "low_f": 57,
+    "rain_days": 8,
+    "note": "Warm; many locals away and the city quieter."
+   },
+   {
+    "high_f": 68,
+    "low_f": 53,
+    "rain_days": 8,
+    "note": "Often a warm, settled start; back to school and work."
+   },
+   {
+    "high_f": 60,
+    "low_f": 48,
+    "rain_days": 10,
+    "note": "Cooling and wetter; leaves turn, clocks go back at the end."
+   },
+   {
+    "high_f": 53,
+    "low_f": 41,
+    "rain_days": 10,
+    "note": "Damp and dark by half four; fireworks and Christmas lights."
+   },
+   {
+    "high_f": 48,
+    "low_f": 37,
+    "rain_days": 10,
+    "note": "Cold, grey and festive; the city empties between Christmas and New Year."
+   }
+  ],
+  "source": "curated-climate-2026-10"
+ },
+ "annual_events": [
+  {
+   "id": "lunar-new-year-chinatown",
+   "name": "Lunar New Year in Chinatown",
+   "months": [
+    1,
+    2
+   ],
+   "neighborhood": "soho",
+   "summary": "Lion dances, lanterns and a parade through Chinatown and Trafalgar Square on the Sunday after the new year.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "boat-race",
+   "name": "The Boat Race",
+   "months": [
+    3,
+    4
+   ],
+   "neighborhood": null,
+   "summary": "Oxford and Cambridge crews row from Putney to Mortlake, with crowds and picnics along the riverbank.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-marathon",
+   "name": "London Marathon",
+   "months": [
+    4
+   ],
+   "neighborhood": "greenwich",
+   "summary": "Runners start in Greenwich and Blackheath and finish on the Mall, cheered along the whole route.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chelsea-flower-show",
+   "name": "RHS Chelsea Flower Show",
+   "months": [
+    5
+   ],
+   "neighborhood": "kensington",
+   "summary": "Show gardens in the grounds of the Royal Hospital Chelsea in late May.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "trooping-the-colour",
+   "name": "Trooping the Colour",
+   "months": [
+    6
+   ],
+   "neighborhood": "soho",
+   "summary": "The King's official birthday parade on Horse Guards, with an RAF flypast over Buckingham Palace.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "wimbledon",
+   "name": "Wimbledon",
+   "months": [
+    6,
+    7
+   ],
+   "neighborhood": null,
+   "summary": "Two weeks of grass-court tennis in south-west London, with strawberries and cream and an overnight queue for tickets.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pride-in-london",
+   "name": "Pride in London",
+   "months": [
+    6,
+    7
+   ],
+   "neighborhood": "soho",
+   "summary": "The parade through the West End, with Soho's streets partying late.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bbc-proms",
+   "name": "The BBC Proms",
+   "months": [
+    7,
+    8,
+    9
+   ],
+   "neighborhood": "kensington",
+   "summary": "Eight weeks of nightly classical concerts at the Royal Albert Hall with cheap standing tickets, ending with the Last Night.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "notting-hill-carnival",
+   "name": "Notting Hill Carnival",
+   "months": [
+    8
+   ],
+   "neighborhood": "notting-hill",
+   "summary": "Europe's biggest street festival over the August bank holiday weekend: steel bands, sound systems, costumes and jerk chicken.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "open-house-festival",
+   "name": "Open House Festival",
+   "months": [
+    9
+   ],
+   "neighborhood": null,
+   "summary": "Buildings across London open their doors for free tours for two weeks in September.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "totally-thames",
+   "name": "Totally Thames",
+   "months": [
+    9
+   ],
+   "neighborhood": "south-bank",
+   "summary": "A month of river events, art and walks along the Thames.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "london-film-festival",
+   "name": "BFI London Film Festival",
+   "months": [
+    10
+   ],
+   "neighborhood": "south-bank",
+   "summary": "Premieres and screenings across the city, centred on BFI Southbank and the West End.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bonfire-night-fireworks",
+   "name": "Bonfire Night fireworks",
+   "months": [
+    11
+   ],
+   "neighborhood": null,
+   "summary": "Fireworks displays in parks across London around the fifth of November.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "christmas-lights",
+   "name": "Christmas lights on Oxford Street and Regent Street",
+   "months": [
+    11,
+    12
+   ],
+   "neighborhood": "soho",
+   "summary": "The West End's Christmas lights are switched on in November.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "winter-wonderland",
+   "name": "Hyde Park Winter Wonderland",
+   "months": [
+    11,
+    12,
+    1
+   ],
+   "neighborhood": "kensington",
+   "summary": "Christmas fair with rides, ice skating, mulled wine and a big wheel, from late November into early January.",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "new-years-eve-fireworks",
+   "name": "New Year's Eve fireworks on the Thames",
+   "months": [
+    12
+   ],
+   "neighborhood": "south-bank",
+   "summary": "The midnight fireworks around the London Eye, watched by ticketed crowds along the river.",
+   "source": "curated-2026-10"
+  }
+ ],
+ "local_color": [
+  {
+   "id": "sunday-roast",
+   "name": "Sunday roast",
+   "kind": "dish",
+   "summary": "Roast beef, chicken or lamb with roast potatoes, Yorkshire pudding, vegetables and gravy, eaten at the pub on Sunday afternoon.",
+   "places": [
+    "island-queen",
+    "holly-bush",
+    "the-garrison",
+    "anglesea-arms",
+    "cat-and-mutton"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "full-english",
+   "name": "Full English",
+   "kind": "dish",
+   "summary": "Fried breakfast of eggs, bacon, sausage, beans, mushrooms, tomato and toast, best at an old-fashioned \"caff\".",
+   "places": [
+    "e-pellicci"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pie-and-mash",
+   "name": "Pie and mash",
+   "kind": "dish",
+   "summary": "Minced beef pie with mashed potato and green parsley \"liquor\", the old East End and South London working lunch.",
+   "places": [
+    "manze-tower-bridge",
+    "goddards"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jellied-eels",
+   "name": "Jellied eels",
+   "kind": "dish",
+   "summary": "Chopped eels set in their own jelly with chilli vinegar, a Cockney classic now mostly found at pie and mash shops.",
+   "places": [
+    "manze-tower-bridge",
+    "goddards"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fish-and-chips",
+   "name": "Fish and chips",
+   "kind": "dish",
+   "summary": "Battered cod or haddock and thick chips from the chippy, with salt, vinegar and mushy peas.",
+   "places": [
+    "poppies-camden"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "brick-lane-curry",
+   "name": "A curry on Brick Lane",
+   "kind": "dish",
+   "summary": "The East End curry night, and the Punjabi grills of Whitechapel and Southall.",
+   "places": [
+    "brick-lane-curry-houses",
+    "tayyabs",
+    "new-asian-tandoori-centre"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "salt-beef-bagel",
+   "name": "Salt beef bagel",
+   "kind": "dish",
+   "summary": "Hot salt beef with mustard in a bagel from the twenty-four-hour bakery on Brick Lane, a late-night ritual.",
+   "places": [
+    "beigel-bake"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "jerk-chicken",
+   "name": "Jerk chicken",
+   "kind": "dish",
+   "summary": "Smoky Jamaican jerk from oil-drum grills and Caribbean kitchens, with rice and peas.",
+   "places": [
+    "fish-wings-and-tings",
+    "brixton-village"
+   ],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "builders-tea",
+   "name": "Builder's tea",
+   "kind": "drink",
+   "summary": "Strong black tea with milk and often two sugars; offering to \"put the kettle on\" is how many conversations start.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "a-pint",
+   "name": "A pint",
+   "kind": "drink",
+   "summary": "Lager, bitter or cask ale by the pint at the bar; there is no table service in most pubs.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "buying-rounds",
+   "name": "Buying rounds",
+   "kind": "custom",
+   "summary": "In a group at the pub, each person takes a turn buying drinks for everyone, and skipping your round is noticed.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "contactless",
+   "name": "Oyster and contactless",
+   "kind": "custom",
+   "summary": "Tap a bank card, phone or Oyster card on the yellow reader to get through the barriers and tap out at the end; caps keep the daily cost down. Buses take no cash.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "stand-on-the-right",
+   "name": "Stand on the right",
+   "kind": "custom",
+   "summary": "On Tube escalators, stand on the right and walk on the left, and never stop at the top of one.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "tube-etiquette",
+   "name": "Tube etiquette",
+   "kind": "custom",
+   "summary": "Let people off first, move down inside the carriage, take your backpack off, keep your voice down and avoid eye contact; talking to strangers is for emergencies.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "mind-the-gap",
+   "name": "\"Mind the gap\"",
+   "kind": "saying",
+   "summary": "The Underground's warning about the space between train and platform, so familiar it is printed on souvenir T-shirts.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "you-alright",
+   "name": "\"You alright?\"",
+   "kind": "saying",
+   "summary": "A greeting that means hello rather than a question about your health; \"Yeah, you?\" is the right answer.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheers",
+   "name": "\"Cheers\"",
+   "kind": "saying",
+   "summary": "Used for thanks, goodbye and raising a glass alike.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "rhyming-slang",
+   "name": "Cockney rhyming slang",
+   "kind": "saying",
+   "summary": "A few phrases survive in everyday use: \"use your loaf\" (head), \"telling porkies\" (pork pies, lies), \"have a butcher's\" (butcher's hook, look).",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "north-south-divide",
+   "name": "North or south of the river",
+   "kind": "saying",
+   "summary": "Londoners have strong loyalty to their side of the Thames, and \"I don't go south of the river\" is a running joke.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "queueing",
+   "name": "Queueing",
+   "kind": "custom",
+   "summary": "Orderly queues for buses, bars and sample sales; jumping one is a serious social offence, met with tutting.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "corner-shop",
+   "name": "The corner shop",
+   "kind": "shop",
+   "summary": "Off-licences and corner shops open late for milk, crisps, cans and a meal deal; the chicken shop is its after-dark partner.",
+   "places": [],
+   "seasons": [],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "arsenal",
+   "name": "Arsenal",
+   "kind": "team",
+   "summary": "The Gunners play in red at the Emirates in north London; their rivalry with Spurs is the north London derby.",
+   "places": [
+    "emirates-stadium"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "spurs",
+   "name": "Tottenham Hotspur",
+   "kind": "team",
+   "summary": "Spurs, in white, play at their own stadium on Tottenham High Road and loathe Arsenal.",
+   "places": [
+    "tottenham-hotspur-stadium"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "chelsea-fc",
+   "name": "Chelsea",
+   "kind": "team",
+   "summary": "The Blues play at Stamford Bridge in west London.",
+   "places": [
+    "stamford-bridge"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "west-ham",
+   "name": "West Ham United",
+   "kind": "team",
+   "summary": "The Hammers play in claret and blue at the London Stadium, with fans singing \"I'm Forever Blowing Bubbles\".",
+   "places": [
+    "london-stadium"
+   ],
+   "seasons": [
+    "fall",
+    "winter",
+    "spring"
+   ],
+   "source": "curated-2026-10"
+  }
+ ],
+ "prices": [
+  {
+   "id": "wage",
+   "item": "A day's take-home pay in a low-paid job",
+   "low": 100,
+   "high": 145,
+   "per": "a day, after tax",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "coffee",
+   "item": "Filter coffee",
+   "low": 2.6,
+   "high": 3.6,
+   "per": "a cup",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "latte",
+   "item": "Flat white or latte",
+   "low": 3.4,
+   "high": 4.6,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cheap-lunch",
+   "item": "Cheap lunch",
+   "low": 5,
+   "high": 12,
+   "per": "a meal deal to a cafe lunch",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "dinner",
+   "item": "Mid-range dinner",
+   "low": 30,
+   "high": 55,
+   "per": "for one",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "beer",
+   "item": "Pint of beer",
+   "low": 6,
+   "high": 8,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "cocktail",
+   "item": "Cocktail",
+   "low": 12,
+   "high": 16,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "sunday-roast",
+   "item": "Sunday roast at the pub",
+   "low": 18,
+   "high": 28,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "fish-and-chips",
+   "item": "Fish and chips",
+   "low": 11,
+   "high": 17,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "pie-and-mash",
+   "item": "Pie and mash",
+   "low": 5,
+   "high": 9,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "groceries",
+   "item": "Groceries",
+   "low": 55,
+   "high": 85,
+   "per": "a week, one person",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "transit",
+   "item": "Tube fare",
+   "low": 2.8,
+   "high": 3.1,
+   "per": "one way in central London, contactless",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bus-fare",
+   "item": "Bus fare",
+   "low": 1.75,
+   "high": 1.75,
+   "per": "any single journey",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "bike-hire",
+   "item": "Santander Cycles hire",
+   "low": 1.65,
+   "high": 3.3,
+   "per": "a ride of up to an hour",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "black-cab",
+   "item": "Black cab across central London",
+   "low": 15,
+   "high": 30,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "theatre",
+   "item": "West End theatre ticket",
+   "low": 30,
+   "high": 95,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "movie",
+   "item": "Cinema ticket",
+   "low": 12,
+   "high": 20,
+   "per": "",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "gym",
+   "item": "Gym membership",
+   "low": 25,
+   "high": 110,
+   "per": "a month",
+   "source": "curated-2026-10"
+  },
+  {
+   "id": "haircut",
+   "item": "Haircut",
+   "low": 20,
+   "high": 50,
+   "per": "",
+   "source": "curated-2026-10"
+  }
+ ],
+ "water": [
+  {
+   "kind": "river",
+   "name": "Thames",
+   "width_km": 0.3,
+   "points": [
+    [
+     51.452,
+     -0.32
+    ],
+    [
+     51.468,
+     -0.25
+    ],
+    [
+     51.475,
+     -0.215
+    ],
+    [
+     51.481,
+     -0.17
+    ],
+    [
+     51.486,
+     -0.126
+    ],
+    [
+     51.5,
+     -0.121
+    ],
+    [
+     51.509,
+     -0.1
+    ],
+    [
+     51.508,
+     -0.06
+    ],
+    [
+     51.504,
+     -0.035
+    ],
+    [
+     51.49,
+     -0.03
+    ],
+    [
+     51.487,
+     -0.01
+    ],
+    [
+     51.497,
+     0.002
+    ],
+    [
+     51.506,
+     0.03
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "about": "BABEL's tier track (dungeon/tiers.py): rank, as the System and the guilds count it, on the shared ladder (world/packages/babel/world.json maps Unranked to Ultra onto it); the arc and pace a campaign starts with unless the player picks others; and `start`, the tower morning the four from Halvorsen's come down on the Concourse (their Earth clock reads a quarter to ten at night).",
+ "track": "rank",
+ "name": "Rank",
+ "arc": "classic",
+ "pace": "steady",
+ "start": "2026-10-18T08:00:00",
+ "words": ["an E-rank nobody on the Concourse", "a name on the guild boards of the low floors", "a B-rank the Bazaar's brokers court", "an S-rank the whole tower talks about", "a name the System itself watches"]
+}

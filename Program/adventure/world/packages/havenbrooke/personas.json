@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "note": "Any of the nine leads is playable (Vanta's call), and every world allows a persona of the player's own: a freshman, a transfer, a townie, faculty, a Crane. Stats are Prospero (1 to 30, 10 an ordinary adult). The premades the game starts from, with their classes, are in world/data/premades/haven.json. Playing a lead means that lead's secrets are the player's to keep or spill; the other eight keep theirs.",
+  "custom_allowed": true,
+  "personas": [
+    {
+      "id": "piper-marsh",
+      "name": "Piper Aimi Marsh",
+      "era": "sophomore",
+      "eras": [
+        "freshman-summer",
+        "sophomore",
+        "junior",
+        "senior"
+      ],
+      "concept": "A half-kitsune charm-worker who wants a bonded circle and a shop of her own",
+      "species": "half-kitsune (one tail)",
+      "age": 20,
+      "major": "Interpersonal Dynamics, with a Mundane Studies business minor",
+      "stats": {
+        "Mind": 10,
+        "Allure": 12,
+        "Resolve": 7,
+        "Vitality": 9,
+        "Essence": 12,
+        "Luck": 10
+      },
+      "look": "Five foot five and soft all over, wide in the hips and thighs, with stretch marks she stopped hiding at eighteen. Auburn hair in a low bun that never holds, wire glasses sliding down her nose, layers of cardigan and wrap. One ember-red tail, thick at the root, and furred ears that give her away: they twitch when she lies, flatten when she is embarrassed and turn at her name across a room.",
+      "voice": "Warm and fluttery. Apologizes on reflex (\"oh, sorry, I didn't, sorry\") and then has to take it back. Soft fillers, sincere endearments (\"honey\", \"love\") that people mistake for flirting, and a little Japanese with her mother or under stress. Talks in loops when she is comfortable. Her compliments are quiet and exact.",
+      "worldview": "People are worth the trouble. Feelings are information, even the ones that are not yours.",
+      "connections": {
+        "jason-kessler": "partner of a year",
+        "kimberly-corwin": "her person since orientation",
+        "rina-aldwyn": "close; the quarter inch neither has mentioned",
+        "christine-kessler": "wary rival who is in love with her",
+        "hanae-ashikaga": "mother, mostly overseas",
+        "austin-hallward": "pinned his nickname on him"
+      },
+      "future": "Get the boutique open. Build the circle, if everyone in it chooses it.",
+      "cast": "piper-marsh",
+      "premade": "Program/dungeon/world/data/premades/haven.json",
+      "origin": "source"
+    },
+    {
+      "id": "jason-kessler",
+      "name": "Jason Kessler",
+      "era": "sophomore",
+      "eras": [
+        "freshman-summer",
+        "sophomore",
+        "junior",
+        "senior"
+      ],
+      "concept": "An incubus trying to deserve his girlfriend and build a support group for people like him",
+      "species": "incubus",
+      "age": 20,
+      "major": "Supernatural Physiology and Integration, with an Interpersonal Dynamics minor",
+      "stats": {
+        "Mind": 9,
+        "Allure": 11,
+        "Resolve": 8,
+        "Vitality": 12,
+        "Essence": 12,
+        "Luck": 8
+      },
+      "look": "Six foot three and about 245 pounds: broad, soft-bellied on purpose, thick forearms, chest hair he keeps because Piper likes it. Brown hair a week past a cut, a short untidy beard, hazel eyes that flush copper when the glamour slips. Slouches to make himself smaller. Shaking his hand is like holding a mug just off the burner.",
+      "voice": "Casual, warm, lightly profane. Sentences fade out instead of ending, unless he cuts one off clean, which means he nearly said something true. Gets quieter, never louder, when it matters. Apologizes by naming the exact thing. Hums while he thinks.",
+      "worldview": "Hunger is not a character flaw; what you do with it is.",
+      "connections": {
+        "piper-marsh": "partner of a year",
+        "austin-hallward": "best friend since they were ten",
+        "christine-kessler": "twin, five minutes older; rival in demonic control",
+        "deirdre-kessler": "mother",
+        "aurelio-marchant": "second cousin"
+      },
+      "future": "Found the group, keep his control, stop flinching when someone praises it.",
+      "cast": "jason-kessler",
+      "premade": "Program/dungeon/world/data/premades/haven.json",
+      "origin": "source"
+    },
+    {
+      "id": "austin-hallward",
+      "name": "Austin Hallward",
+      "era": "sophomore",
+      "eras": [
+        "freshman-summer",
+        "sophomore",
+        "junior",
+        "senior"
+      ],
+      "concept": "A born lycan who carries every room he walks into and wants to set it down",
+      "species": "lycan, born (blood curse), dual-seat",
+      "age": 20,
+      "major": "Military and Tactical Operations, paranormal security track",
+      "stats": {
+        "Mind": 8,
+        "Allure": 8,
+        "Resolve": 12,
+        "Vitality": 16,
+        "Essence": 8,
+        "Luck": 8
+      },
+      "look": "Five foot six and built like a fireplug, about 180 pounds of dense muscle with a thick neck and a low centre of gravity. Short dirty-blond hair, a scruffy beard he refuses to shape, dark hair on his chest, arms and thighs, amber eyes that brighten when he is angry or wants someone. Hands three or four degrees warmer than anyone else's. Old scars on his forearms. Grips forearms instead of shaking hands.",
+      "voice": "Spare and honest. Short declarative sentences that answer exactly what was asked. Misses sarcasm by ten seconds. Asks questions without lifting the end. The more something matters, the shorter he says it. Comfortable in silences that make other people talk.",
+      "worldview": "Say what is true. Protect your own. Do not lie, least of all to yourself.",
+      "connections": {
+        "rina-aldwyn": "partner of a year",
+        "jason-kessler": "best friend since ten",
+        "paula-mercer": "cousin; their parents were siblings",
+        "piper-marsh": "close friend",
+        "dorian-marek": "house vice-president"
+      },
+      "future": "The internship, stability for the bitten lycans after him, and someone to kneel to.",
+      "cast": "austin-hallward",
+      "premade": "Program/dungeon/world/data/premades/haven.json",
+      "origin": "source"
+    },
+    {
+      "id": "rina-aldwyn",
+      "name": "Rina Aldwyn",
+      "era": "sophomore",
+      "eras": [
+        "freshman-summer",
+        "sophomore",
+        "junior",
+        "senior"
+      ],
+      "concept": "A dryad unpicking her betrothal one forged signature at a time",
+      "species": "dryad",
+      "age": 20,
+      "major": "Esoteric Sciences, flora-resonance concentration",
+      "stats": {
+        "Mind": 10,
+        "Allure": 10,
+        "Resolve": 10,
+        "Vitality": 10,
+        "Essence": 13,
+        "Luck": 7
+      },
+      "look": "Four foot ten and about 95 pounds, narrow and deceptively strong. Pale skin with a green undertone that shows in sunlight across her ribs, faint green veins at the wrists, small pointed ears under long dark hair that usually has a leaf or seed pod in it. Pale green eyes whose pupils open slowly. Long sleeves even in summer, because she bruises where the vines come out. Plants in a room turn toward her over an hour.",
+      "voice": "Quiet, careful, built from a decade of fae-court drilling she is trying to unlearn. Whole sentences with internal commas; \"I find\", \"forgive me\", \"if I may\" as scaffolding. Gets softer, not louder, to make a point. Contractions loosen with Austin. A rare curse from her lands like a stone in still water.",
+      "worldview": "Every obligation someone else made for you is a debt you are allowed to refuse.",
+      "connections": {
+        "austin-hallward": "partner of a year",
+        "piper-marsh": "closest friend; the quarter inch",
+        "callum-ashveil": "betrothed by contract",
+        "amanda-rhodes": "a rivalry she barely acknowledges",
+        "paula-mercer": "quiet recognition"
+      },
+      "future": "Freedom from House Aelhwynn, and ground of her own to stand on.",
+      "cast": "rina-aldwyn",
+      "premade": "Program/dungeon/world/data/premades/haven.json",
+      "origin": "source"
+    },
+    {
+      "id": "kimberly-corwin",
+      "name": "Kimberly Corwin",
+      "era": "sophomore",
+      "eras": [
+        "freshman-summer",
+        "sophomore",
+        "junior",
+        "senior"
+      ],
+      "concept": "A Boston lineage witch who came here to build something nobody handed her",
+      "species": "human witch",
+      "age": 20,
+      "major": "Esoteric Sciences, incantation mechanics and ritual theory",
+      "stats": {
+        "Mind": 13,
+        "Allure": 9,
+        "Resolve": 10,
+        "Vitality": 9,
+        "Essence": 11,
+        "Luck": 8
+      },
+      "look": "Five foot nine, long-limbed, a runner six days a week with a muscled back that shows in low-cut dresses. Long near-black hair with auburn in the sun, brown eyes that darken when she concentrates, short nails stained blue or black with ink, a fading scar on her left forearm from a freshman misfire. High-waisted jeans, fitted sweaters, the same long wool coat since freshman year. Black coffee.",
+      "voice": "Measured and exact; she finishes thinking before she speaks, so her sentences arrive whole. Academic, a little older than twenty. Slips ritual Latin or Enochian endearments to Michael only. Dry jokes, mostly at her own expense. Under pressure she gets more precise, not less.",
+      "worldview": "Precision is a form of love. Control is how you keep from hurting people.",
+      "connections": {
+        "michael-reeves": "partner of a year",
+        "piper-marsh": "her person; the word pact",
+        "genevieve-corwin": "mother",
+        "christine-kessler": "mild, aesthetic rivalry",
+        "oriane-dupre": "the side chamber"
+      },
+      "future": "The ritual-leadership suite on her own terms, or no suite at all.",
+      "cast": "kimberly-corwin",
+      "premade": "Program/dungeon/world/data/premades/haven.json",
+      "origin": "source"
+    },
+    {
+      "id": "michael-reeves",
+      "name": "Michael Reeves",
+      "era": "sophomore",
+      "eras": [
+        "freshman-summer",
+        "sophomore",
+        "junior",
+        "senior"
+      ],
+      "concept": "A mundane CS student on scholarship who thinks he is lucky to be in the room",
+      "species": "mundane human",
+      "age": 20,
+      "major": "Mundane Studies, computer science concentration",
+      "stats": {
+        "Mind": 17,
+        "Allure": 10,
+        "Resolve": 8,
+        "Vitality": 10,
+        "Essence": 2,
+        "Luck": 13
+      },
+      "look": "Six foot one, lanky and a little soft in the middle from dining-hall shifts, long arms, hands bigger than the rest of him. Light brown hair he cuts himself every six weeks, green-grey eyes behind round tortoiseshell frames. Flannel over a plain tee, badly fitting jeans, high-school sneakers. A faded appendix scar and a small rib tattoo he got drunk freshman year and will not discuss. Slouches next to Kim because she is his height.",
+      "voice": "Soft and built to erase himself: \"I guess\", \"if you want\", \"no yeah, totally\", \"sorry, that was a lot\". With Amanda on Tuesday and Thursday afternoons he is quick, dry and funny and finishes his sentences. In a flat period he gets more agreeable, which everyone except Amanda takes for kindness.",
+      "worldview": "Make yourself useful and maybe nobody notices you do not belong.",
+      "connections": {
+        "kimberly-corwin": "partner of a year",
+        "amanda-rhodes": "the walk-in freezer; the one he tells real things",
+        "jason-kessler": "feels overshadowed by him"
+      },
+      "future": "Keep the scholarship, keep Kim, figure out who he is at thirty.",
+      "cast": "michael-reeves",
+      "premade": "Program/dungeon/world/data/premades/haven.json",
+      "origin": "source"
+    },
+    {
+      "id": "christine-kessler",
+      "name": "Christine Kessler",
+      "era": "sophomore",
+      "eras": [
+        "freshman-summer",
+        "sophomore",
+        "junior",
+        "senior"
+      ],
+      "concept": "A succubus model who is very good at being wanted and has forgotten how to want",
+      "species": "succubus",
+      "age": 20,
+      "major": "Interpersonal Dynamics, fashion and aesthetics concentration",
+      "stats": {
+        "Mind": 10,
+        "Allure": 14,
+        "Resolve": 6,
+        "Vitality": 10,
+        "Essence": 12,
+        "Luck": 8
+      },
+      "look": "Five foot six, a full hourglass with a narrow waist and hips that arrive first. Dyed platinum hair with the roots left dark on purpose, bright blue eyes that go nearly violet when she feeds. Tailored clothes, heels, red lipstick in three shades by mood. Other demons can see the glow under her skin through her clothes, and she lets them. She and Jason look alike around the eyes.",
+      "voice": "Polished, arch, untroubled on the surface; every line lands like a model hitting the end of the runway. A little French. Fashion words for moods (\"the wrong season\"). Cruelty uses full names; kindness uses short ones. Her telepathy with Jason is the only unperformed voice she has.",
+      "worldview": "Everyone performs. The trick is to be the best at it.",
+      "connections": {
+        "jason-kessler": "twin",
+        "piper-marsh": "rival; love",
+        "paula-mercer": "unexpected trust",
+        "deirdre-kessler": "mother",
+        "elena-marchetti": "brand liaison"
+      },
+      "future": "The runway, beating her brother, and one real feeling.",
+      "cast": "christine-kessler",
+      "premade": "Program/dungeon/world/data/premades/haven.json",
+      "origin": "source"
+    },
+    {
+      "id": "paula-mercer",
+      "name": "Paula Mercer",
+      "era": "sophomore",
+      "eras": [
+        "freshman-summer",
+        "sophomore",
+        "junior",
+        "senior"
+      ],
+      "concept": "A turned vampire fourteen months out of crisis, studying ethics",
+      "species": "vampire, turned by choice",
+      "age": 20,
+      "major": "Interpersonal Dynamics, ethics and supernatural diplomacy track",
+      "stats": {
+        "Mind": 11,
+        "Allure": 11,
+        "Resolve": 8,
+        "Vitality": 13,
+        "Essence": 10,
+        "Luck": 7
+      },
+      "look": "Five foot ten and slight, a dancer's long lines and hands a little too big for her arms. Pale and always cool, veins showing at the wrist, long hair nearly black in low light, dark brown eyes with a red cast in some light. Thin scars on the inside of her forearms from before the turning, which do not fade. Black clothes with exactly one colour somewhere. So still people forget she is in the room.",
+      "voice": "Low, an octave under what her frame suggests, and unhurried. Sardonic with real teeth; the cut takes twenty seconds to land. Answers more than she starts. Gallows jokes about herself (\"I try not to make plans past Thursday\") pitched so nobody can tell. Her straightest sentences are the ones she means least.",
+      "worldview": "Not dying is a practice. Some days it is the whole practice.",
+      "connections": {
+        "austin-hallward": "cousin; lifeline",
+        "jason-kessler": "trusted through Austin",
+        "rina-aldwyn": "mutual recognition",
+        "christine-kessler": "the closest thing to a sister"
+      },
+      "future": "Manage the hunger. Find a reason. Save someone.",
+      "cast": "paula-mercer",
+      "premade": "Program/dungeon/world/data/premades/haven.json",
+      "origin": "source"
+    },
+    {
+      "id": "amanda-rhodes",
+      "name": "Amanda Rhodes",
+      "era": "sophomore",
+      "eras": [
+        "freshman-summer",
+        "sophomore",
+        "junior",
+        "senior"
+      ],
+      "concept": "A mundane media student launching the account she came here to build",
+      "species": "mundane human",
+      "age": 20,
+      "major": "Mundane Studies, communications and media concentration",
+      "stats": {
+        "Mind": 13,
+        "Allure": 16,
+        "Resolve": 8,
+        "Vitality": 10,
+        "Essence": 1,
+        "Luck": 12
+      },
+      "look": "Five foot one and compact, a waist she is proud of and a soft belly she shows in crop tops to spite her own anxiety. Curly brown hair held up with whatever pen was nearest, oversized clear-frame glasses she knows look good, lipstick put on in moving cars. Tennis skirts and a sweater tied at the waist in case the light changes. Three chargers, no cash.",
+      "voice": "Loud, fast and pitched to carry, on purpose. MySpace-era diction: \"literally\", \"oh my GOD\", \"I'm dead\", \"obsessed\", \"lol\" said out loud. Interrupts when excited, swears casually, comments on her own speech. Alone her voice drops to a third of the volume, slower and drier; only Michael and her bathroom mirror have heard it.",
+      "worldview": "Be loud, be wanted, be first. Quiet is where you get left behind.",
+      "connections": {
+        "michael-reeves": "best friend; the freezer",
+        "piper-marsh": "wants her approval",
+        "rina-aldwyn": "one-sided rival",
+        "nessa-morikawa": "chapter president",
+        "kwame-adjei": "her editor"
+      },
+      "future": "Followers, the supernatural crowd, and one person who would not trade her for anyone.",
+      "cast": "amanda-rhodes",
+      "premade": "Program/dungeon/world/data/premades/haven.json",
+      "origin": "source"
+    }
+  ]
+}

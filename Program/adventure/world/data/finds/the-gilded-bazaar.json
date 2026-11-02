@@ -1,0 +1,234 @@
+{
+  "about": "What is inside things on the Gilded Bazaar, rolled the first time the player looks (dungeon/finds.py), in Talents.",
+  "containers": {
+    "chest": {
+      "words": [
+        "chest",
+        "strongbox",
+        "coffer",
+        "trunk",
+        "lockbox",
+        "box"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 4,
+          "coins": [
+            0.3,
+            3.0
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "charm-ring"
+        },
+        {
+          "weight": 1,
+          "item": "hush-bead"
+        },
+        {
+          "weight": 1,
+          "item": "minor-potion"
+        },
+        {
+          "weight": 2,
+          "note": "bills of sale tied with ribbon, each with a floor and a price"
+        },
+        {
+          "weight": 1,
+          "note": "a charm on the lock that burns whoever opens it",
+          "trap": true
+        }
+      ]
+    },
+    "drawer": {
+      "words": [
+        "drawer",
+        "desk",
+        "cupboard",
+        "cabinet",
+        "shelf",
+        "shelves"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 4,
+          "nothing": true
+        },
+        {
+          "weight": 3,
+          "coins": [
+            0.1,
+            0.8
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "floor-map"
+        },
+        {
+          "weight": 1,
+          "item": "chalk"
+        },
+        {
+          "weight": 2,
+          "note": "a Lantern Room bounty notice with a description that fits someone they know"
+        },
+        {
+          "weight": 1,
+          "note": "a lady's glove, copper-colored, and a key to a room at the Copper Scale"
+        }
+      ]
+    },
+    "crate": {
+      "words": [
+        "crate",
+        "barrel",
+        "sack",
+        "basket",
+        "cask",
+        "bin"
+      ],
+      "draws": 1,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 3,
+          "item": "dried-meat"
+        },
+        {
+          "weight": 1,
+          "item": "spice-meal"
+        },
+        {
+          "weight": 1,
+          "item": "rope"
+        },
+        {
+          "weight": 2,
+          "note": "pepper on top, and under the pepper something that is not spice"
+        }
+      ]
+    },
+    "body": {
+      "words": [
+        "body",
+        "corpse",
+        "dead man",
+        "dead woman",
+        "the dead"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 4,
+          "coins": [
+            0.2,
+            1.5
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "knife"
+        },
+        {
+          "weight": 1,
+          "item": "hush-bead"
+        },
+        {
+          "weight": 2,
+          "note": "a crane-crew tally chit for a cage that never went"
+        },
+        {
+          "weight": 1,
+          "note": "a copper ring on a chain at the throat, the kind that keeps a night from having consequences"
+        }
+      ]
+    },
+    "purse": {
+      "words": [
+        "purse",
+        "pocket",
+        "pockets",
+        "pouch",
+        "coin pouch",
+        "belt pouch"
+      ],
+      "draws": 1,
+      "table": [
+        {
+          "weight": 2,
+          "nothing": true
+        },
+        {
+          "weight": 6,
+          "coins": [
+            0.1,
+            1.5
+          ]
+        },
+        {
+          "weight": 1,
+          "item": "charm-ring"
+        },
+        {
+          "weight": 1,
+          "note": "a Lantern Room token for the Blue Room, unspent"
+        }
+      ]
+    },
+    "room": {
+      "words": [
+        "room",
+        "the place",
+        "the hut",
+        "the shed",
+        "the loft",
+        "the cellar"
+      ],
+      "draws": 2,
+      "table": [
+        {
+          "weight": 3,
+          "nothing": true
+        },
+        {
+          "weight": 2,
+          "coins": [
+            0.1,
+            0.8
+          ]
+        },
+        {
+          "weight": 2,
+          "item": "blanket"
+        },
+        {
+          "weight": 1,
+          "item": "lantern"
+        },
+        {
+          "weight": 2,
+          "note": "a wall thin enough that the neighbors' every word comes through"
+        },
+        {
+          "weight": 1,
+          "note": "a map pinned under the bed: the Stair, and an arrow pointing up"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "kind": "guild, church, house, tribe, salon, criminal, crew, order or power",
+    "tier": "the faction's reach on the shared ladder",
+    "clock_seeds": "starting clocks for the faction clocks: what they are racing toward and how many segments",
+    "secret": "hidden from the player character; an importer should mark it hidden",
+    "origin": "source or draft"
+  },
+  "factions": [
+    {
+      "id": "the-landing",
+      "name": "The Landing",
+      "kind": "guild",
+      "tier": "local",
+      "seat": "the-concourse",
+      "holds": ["the-concourse"],
+      "summary": "Darla Kinney's guild of veterans from before the Turning, living in a drained bathhouse at the end of the guild row. Small, poor, proud, and frightened that the new skin has wiped out everything they built.",
+      "goals": ["Get their people past Rank D under the new rules", "Get leverage on the Turning before the big guilds do", "Keep the Landing's dead and missing out of the conversation"],
+      "methods": ["deals for information", "escorts up the Stair", "paying other people's debts and keeping the tab"],
+      "rivals": [],
+      "allies": [],
+      "secret": "Three years ago Darla's people escorted a climber with white-ringed eyes named Teague up the Stair to Varrow, and Darla stood a season on the Reachwall beside him and then went up the Margrave's cellar stair with him. Only Darla came back. What happened up there is the hole in the middle of her guild.",
+      "clock_seeds": [
+        {"name": "Crack the Rank Trials", "segments": 6},
+        {"name": "Teague's eyes come back to the Landing", "segments": 4}
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-market-rows",
+      "name": "The market rows",
+      "kind": "criminal",
+      "tier": "local",
+      "seat": "the-concourse",
+      "holds": ["the-concourse"],
+      "summary": "Whoever controls the stall rents on the Concourse's market streets. Every cart owner owes them, and pays most on Fire Market day.",
+      "goals": ["Collect the stall rent", "Know every new arrival worth something"],
+      "methods": ["rent", "debt", "quiet men who stand near a cart until it pays"],
+      "rivals": [],
+      "allies": [],
+      "clock_seeds": [{"name": "A cart that can't pay its rent", "segments": 4}],
+      "origin": "draft"
+    },
+    {
+      "id": "the-close",
+      "name": "The Close of Saint Aurel",
+      "kind": "church",
+      "tier": "regional",
+      "seat": "saint-aurel",
+      "holds": ["saint-aurel", "hollin"],
+      "summary": "Varrow's church, run by the Lit: the Archdeacon over all of it, the Bishop on retreat these six years, vowed sisters, brothers, wardens in white tabards with the gold sun. It weighs the big on its Scales, bans the Marked beyond the ford, and keeps a giant on the Reachwall as its gift.",
+      "goals": ["Weigh every giant who comes up the Stair, and keep the ones it weighs", "Hold its compact with the Keep, on its own terms", "Never let another Wakeful pass unweighed"],
+      "methods": ["the Scales", "a Seraph's spoken word, obeyed", "vowed sisters bound to the gifts", "the Pens and the autumn weighing", "bounties on the Marked"],
+      "rivals": ["house-corve", "the-reach-giants"],
+      "allies": [],
+      "secret": "The Scales read a giant's Tether field. One who weighs empty reads as judgment, and the Close fills him: a vowed sister is bound to him, and through her his strength runs into the Close. That is what a gift is. Every autumn the Close also weighs Hollin; the wanting go to the Pens and down the cage in spring, sold, and the buyers pay the Archdeacon.",
+      "clock_seeds": [
+        {"name": "The autumn weighing of Hollin", "segments": 6},
+        {"name": "A new gift for the Wall", "segments": 4}
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "house-corve",
+      "name": "House Corve of Varrow Keep",
+      "kind": "house",
+      "tier": "local",
+      "seat": "varrow-keep",
+      "holds": ["varrow-keep", "hollin", "the-reachwall"],
+      "summary": "Lord Edmund Corve, Margrave of Varrow, and his household: the Keep, the valley, the Wall-work company under its captain, and the bone-cellar stair. He owns the valley and the Close owns his soul, as the Close puts it, and some days he resents the arrangement.",
+      "goals": ["Hold the Wall under his own banner", "Stop paying the Close in souls", "Never let another climber walk out with his stair and his debt"],
+      "methods": ["Wall wages and seasons", "passage on the cellar stair, sold both ways", "lunch, and questions"],
+      "rivals": ["the-close", "the-reach-giants"],
+      "allies": [],
+      "secret": "He has sold passage on his cellar stair for fourteen years: forty-one people sent down it, people the Scales would have taken, and three sent up. Teague was the third up, with Darla Kinney. The Bishop went down it six years ago, alone, and left a sealed letter for the Archdeacon to be handed over if he had not come back in five. It has been six; the Margrave still has it, unopened.",
+      "clock_seeds": [
+        {"name": "Patch the Wall before the cold", "segments": 6},
+        {"name": "Refuse the tithe at the first frost", "segments": 8}
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-reach-giants",
+      "name": "The Reach giants",
+      "kind": "tribe",
+      "tier": "regional",
+      "seat": "the-reach",
+      "holds": ["the-reach"],
+      "summary": "Giants of the brown hills past the valley head: gray, twice the height of a big man, long in the arm, heads set low. They light beacons along the ridges, speak a tongue nobody on the Wall understands, and come over when the cold comes.",
+      "goals": ["Climb out of the Reach", "Find the Wakeful who promised them the stair"],
+      "methods": ["beacons", "parley at the ditch", "counting stones", "coming over the Wall"],
+      "rivals": ["the-close", "house-corve"],
+      "allies": [],
+      "secret": "They are what a Nephil becomes with no Tether, no sister and no vows: grown past any lineage cap and gone feral, which is why the Close reads an empty field as judgment. Three winters ago Teague sat at their fire and promised to open the Margrave's stair so they could climb out and be whole again, as before the Confusion. He went up alone. They came over the Wall looking for him and killed twelve men.",
+      "clock_seeds": [
+        {"name": "The cold comes, and they come over", "segments": 8}
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-shut",
+      "name": "The Shut",
+      "kind": "order",
+      "tier": "local",
+      "seat": null,
+      "holds": [],
+      "summary": "A sisterhood with a Mother-house somewhere in the tower, which Sister Pia of the Landing belongs to. The Close respects its wards; the Archdeacon backed away from one rather than break it.",
+      "goals": ["Keep what it shelters"],
+      "methods": ["light-wards", "silence"],
+      "rivals": [],
+      "allies": [],
+      "clock_seeds": [],
+      "origin": "draft"
+    },
+    {
+      "id": "the-lantern-room",
+      "name": "The Lantern Room",
+      "kind": "salon",
+      "tier": "regional",
+      "seat": "the-gilded-bazaar",
+      "holds": ["the-gilded-bazaar"],
+      "summary": "Sabeen Oro's salon and house of girls on the Gilded Bazaar, and the people who owe it: hostesses, dancers, runners sent down the Stair to fetch things, and the Stair gate behind the Copper Steps. Sabeen prices people the way the Bazaar prices everything.",
+      "goals": ["Own the arrival who wrote the new rules before the Close, the Landing or anyone else does", "Collect every debt"],
+      "methods": ["chits that turn into contracts", "runners down the Stair", "bounty boards posted down the chain", "a third to the house"],
+      "rivals": ["the-night-cage"],
+      "allies": ["the-copper-steps"],
+      "secret": "Sabeen's runners include climbers from the old game who owe her more than they can earn. Whether she is Lilim is something nobody on the Bazaar will say out loud.",
+      "clock_seeds": [
+        {"name": "Fetch the engineer to the Lantern Room", "segments": 6}
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "the-copper-steps",
+      "name": "The Copper Steps",
+      "kind": "criminal",
+      "tier": "local",
+      "seat": "the-gilded-bazaar",
+      "holds": ["the-gilded-bazaar"],
+      "summary": "The fence rows and paper sellers under the Bazaar's Copper Steps: Pell the Wire, his cousins, Old Wick and his maps. They sell anything to anyone, information most of all.",
+      "goals": ["Buy every rumor about the Turning first", "Sell it to everyone"],
+      "methods": ["fencing", "paper", "Pell's cousin on the Stair gate"],
+      "rivals": [],
+      "allies": ["the-lantern-room"],
+      "clock_seeds": [],
+      "origin": "source"
+    },
+    {
+      "id": "the-night-cage",
+      "name": "The night cage",
+      "kind": "crew",
+      "tier": "local",
+      "seat": "the-gilded-bazaar",
+      "holds": [],
+      "summary": "A smugglers' crew running an unlicensed cargo cage down the chains from the Bazaar's freight wharf, outside Sabeen's gate, to the Marches and below. They take passengers when the price is everything the passengers have.",
+      "goals": ["Run the chains without Sabeen closing them"],
+      "methods": ["night runs", "a foreman who can smell copper"],
+      "rivals": ["the-lantern-room"],
+      "allies": [],
+      "clock_seeds": [],
+      "origin": "source"
+    }
+  ]
+}
