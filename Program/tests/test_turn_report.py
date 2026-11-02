@@ -55,7 +55,7 @@ async def write(turn):
         brief=Brief(beats=['The storm breaks.'], math=['The pick snaps: one fewer in the kit.'],
                     stop_point='Mara decides what to do with the ledger.'))
     turn.draft.post = POST
-    turn.draft.extra['w4'] = {'inventions': ['The counting house has a back stair.']}
+    turn.draft.extra['w4'] = {'inventions': [{'name': 'the back stair', 'text': 'The counting house has a back stair.'}]}
 
 
 def played(game):
@@ -98,7 +98,8 @@ def test_the_report_shows_what_the_mode_allows(game, steps):
     assert found['rolls'] == [{'actor': 'Mara', 'action': 'pick the lock', 'stat': 'Luck',
                                'result': 'succeeds, at a real cost'}]
     assert found['numbers'] == ['The pick snaps: one fewer in the kit.']
-    assert found['inventions'] == ['The counting house has a back stair.']
+    assert found['inventions'] == [{'name': 'the back stair', 'text': 'The counting house has a back stair.',
+                                   'struck': False}]
     assert found['checks']['cut'] == ['Suddenly the lock gave.']
     assert found['next'] == 'Mara decides what to do with the ledger.'
     # In Play the user sees only their own character's motive; the GM view shows everyone's.
