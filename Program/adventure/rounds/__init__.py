@@ -9,6 +9,7 @@
 - converse.py: the talk inside a turn: the Writer picks who asks whom, each asker's own agent writes the question
 - reply.py: the reply card, when someone addresses the user's character and the turn waits on their answer
 - writer.py: the Writer's calls, reading only the Writer's context for the mode
+- offpage.py: off-page beats in a round: code draws them, an offscreen agent writes its own lines, Commit writes them
 - queue.py: one writer per world, stale commands refused, Cancel at once
 - play.py: Next in Author and Watch, the reply card, re-asking an agent, picking up after a restart
 - author.py: the Author's nudges, the beat board, and whether each nudge took
@@ -18,6 +19,8 @@
 - solo.py: a player's line played as a turn of the loop (send, retry)
 - telling.py: today's turn as the loop's steps (Gather, Resolve, Write, Commit)
 - resolve.py: every character's risky acts rolled by code, the one question on ambiguity, the TurnResult and brief
+- house_rules.py: the campaign's house rulebook as data, and the user's rulings, applied from their turn forward
+- scan.py: the draft scan every Writer post passes before Commit, with the fixes code makes when a rewrite can't
 
 The API is adventure/round_routes.py, and adventure/mode_routes.py for Author, Watch and switching modes.
 """

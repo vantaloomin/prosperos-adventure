@@ -45,6 +45,9 @@ LOYALTY = {'slow': 0.5, 'steady': 1.0, 'fast': 1.5}
 DEFAULTS = {'preset': 'balanced', 'scheming': 1, 'loyalty': 'steady', 'session_cap': 0}
 # Rough sizes for the estimate: an agent's context before recall, each recalled memory, the Writer and Reviewer.
 CONTEXT_TOKENS, MEMORY_TOKENS, WRITER_TOKENS, REVIEWER_TOKENS = 900, 40, 6000, 4000
+# Rough speeds for the seconds: tokens written a second, a call's start-up, how long the Writer's post runs, and how
+# much of its room an agent's answer uses.
+SPEED, LATENCY, WRITER_OUT, ANSWER_SHARE = {'hosted': 60, 'local': 20}, 2, 800, 0.4
 
 
 def settings(connection) -> dict:
@@ -81,22 +84,29 @@ def change(connection, changes: dict, now: str) -> dict:
     return settings(connection)
 
 
-def estimate(preset: str, agents: int, converse_cap: int) -> dict:
-    """A plain estimate of one turn's model calls and tokens with this many agents."""
+def estimate(preset: str, agents: int, converse_cap: int, local: bool = False) -> dict:
+    """A plain estimate of one turn's model calls, tokens and seconds with this many agents. Agents declare and react
+    at once on a hosted model, one after another on a local one; Converse goes one exchange at a time."""
     shape = PRESETS[preset]
     per_call = CONTEXT_TOKENS + shape['recall'] * MEMORY_TOKENS + shape['tokens']
     reactions = agents if shape['react'] == 'all' else (agents + 1) // 2
-    calls = agents + reactions + (converse_cap if agents else 0) + 1 + int(shape['reviewer'])
-    tokens = (agents + reactions + (converse_cap if agents else 0)) * per_call + WRITER_TOKENS + \
-        (REVIEWER_TOKENS if shape['reviewer'] else 0)
+    talks = converse_cap if agents else 0
+    calls = agents + reactions + talks + 1 + int(shape['reviewer'])
+    tokens = (agents + reactions + talks) * per_call + WRITER_TOKENS + (REVIEWER_TOKENS if shape['reviewer'] else 0)
+    speed = SPEED['local' if local else 'hosted']
+    call, written = LATENCY + shape['tokens'] * ANSWER_SHARE / speed, LATENCY + WRITER_OUT / speed
+    rounds = (agents + reactions) if local else (bool(agents) + bool(reactions))
+    seconds = round(rounds * call + talks * call + written * (1 + int(shape['reviewer'])))
     people = 'agent' if agents == 1 else 'agents'
-    return {'calls': calls, 'tokens': tokens,
-            'text': f'About {calls} model calls and {tokens:,} tokens a turn with {agents} {people}.'}
+    return {'calls': calls, 'tokens': tokens, 'seconds': seconds,
+            'text': f'About {calls} model calls, {tokens:,} tokens and {seconds} seconds a turn with {agents} {people}.'}
 
 
 def view(connection, agents: int = 3, converse_cap: int = 4) -> dict:
     held = settings(connection)
-    return held | {'presets': [{'key': key, 'name': shape['name'], 'estimate': estimate(key, agents, converse_cap)}
+    config = text_models.config_for(connection, text_models.AGENTS)
+    local = bool(config) and pace.is_local(config)
+    return held | {'presets': [{'key': key, 'name': shape['name'], 'estimate': estimate(key, agents, converse_cap, local)}
                                for key, shape in PRESETS.items()]}
 
 

@@ -11,10 +11,9 @@ from typing import Literal
 from fastapi import APIRouter, Request
 from pydantic import Field
 
-from adventure.database import decode
 from adventure.errors import require
 from adventure.models import Input
-from adventure.rounds import overrides, play, queue, seats, turns
+from adventure.rounds import overrides, play, queue, seats, solo, turns
 from adventure.rounds.contract import Mind, Mode, plain
 from adventure.story_routes import streamed
 
@@ -29,13 +28,7 @@ def view(connection) -> dict:
             'under_way': turn_view(open_turn) if open_turn else None, 'head': queue.head(connection)}
 
 
-def turn_view(row: dict) -> dict:
-    """A turn's state and marks; what it holds is shown through the readers' own views, never raw here."""
-    draft = decode(row['draft']) or {}
-    waiting = draft.get('awaiting')
-    return {'id': row['id'], 'state': row['state'], 'mode': row['mode'], 'marks': decode(row['marks']) or [],
-            'reask_of': row['reask_of'], 'reask_seat': row['reask_seat'], 'error': row['error'],
-            'awaiting': {key: waiting[key] for key in ('seat', 'speaker', 'line', 'context')} if waiting else None}
+turn_view = turns.view
 
 
 @router.get('')
@@ -162,7 +155,10 @@ def cancel(request: Request, turn_id: str):
 
 
 async def done(state, playing) -> dict:
-    """What a stream ends with: the turn's row as it stands, and the table."""
+    """What a stream ends with: the turn's row as it stands, and the table; with the narrator's reply when the turn
+    was a player's line told through it (adventure/rounds/solo.py), as /api/story/messages ends."""
     row = await playing
     with state.database.connect() as connection:
-        return {'turn': turn_view(turns.get(connection, row['id']))} | view(connection)
+        row = turns.get(connection, row['id'])
+        told = solo.told_reply(row)
+        return {'turn': turn_view(row)} | ({'reply': told} if told else {}) | view(connection)

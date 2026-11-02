@@ -5,7 +5,7 @@ import { api } from '../../api'
 import type { Gear, Story as StoryData, StoryBack, StoryFight } from '../../types'
 import { HiddenValues } from '../settings/HiddenValues'
 import { clampWidth, GRID_WIDTH, PANEL_WIDTH, readLook, saveLook, useDeviceLook } from '../settings/deviceLook'
-import { StoryCast } from './StoryCast'
+import { StoryCast, type CastRound } from './StoryCast'
 import { StoryBranches } from './StoryBranches'
 import { StoryChapters } from './StoryChapters'
 import { StoryExport } from './StoryExport'
@@ -60,7 +60,7 @@ function tiledNow(widget: Widget): boolean {
   return onGrid(saved.layouts[saved.current], widget)
 }
 
-interface PanelProps { story: StoryData; change: (request: () => Promise<StoryData>) => Promise<void>; onTravel: (name: string) => void; onLine?: (text: string) => void; onBack: (data: StoryBack) => void }
+interface PanelProps { story: StoryData; change: (request: () => Promise<StoryData>) => Promise<void>; onTravel: (name: string) => void; onLine?: (text: string) => void; onBack: (data: StoryBack) => void; round?: CastRound }
 type PanelView = 'scene' | Widget
 
 /** Beside the story (requirements "Play screen and widgets"): the scene panel, which shows who's here
@@ -209,7 +209,7 @@ function SceneView({ picked, pins, onUnpin, ...props }: SceneProps) {
   // Who's here is always first, so the scene's own picks leave out the people here, and the journal it falls back to.
   const own = picked.filter((widget) => widget !== 'here' && !(widget === 'journal' && picked.length === 1))
   return (<>
-    <StoryCast story={props.story} onTrade={() => void client.invalidateQueries({ queryKey: STORY_KEY })} />
+    <StoryCast story={props.story} round={props.round} onTrade={() => void client.invalidateQueries({ queryKey: STORY_KEY })} />
     {own.map((widget) => <PanelWidget key={widget} widget={widget} {...props} />)}
     {!!pins.length && <h2 className="story-panel-heading">Pinned</h2>}
     {pins.map((widget) => <div key={widget} className="story-pinned">
