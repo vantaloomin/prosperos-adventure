@@ -26,7 +26,6 @@ export const SETTINGS_TABS: SettingsTabInfo[] = [
   },
   {
     id: 'models', label: 'Models', sections: [
-      { heading: 'hardware-heading', title: 'This computer', keywords: 'hardware graphics card gpu vram memory ram nvidia fit warning slow local' },
       { heading: 'models-heading', title: 'Models', keywords: 'model connection provider api key openai anthropic openrouter google local kobold codex claude profile story narrator referee continuity director recall temperature' },
       { heading: 'recall-profiles-heading', title: 'Recall', keywords: 'recall embedding embeddings semantic memory search ollama lm studio openai nomic qwen gemma profile' },
       { heading: 'turn-speed-heading', title: 'Turn speed', keywords: 'turn speed fast slow time budget seconds tokens cost cap check record rewrite' },

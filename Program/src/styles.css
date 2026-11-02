@@ -76,7 +76,7 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .icon-button:hover:not(:disabled) { background: var(--raised); color: var(--text); }
 .text-button { display: inline-flex; align-items: center; gap: 6px; padding: 6px 2px; color: var(--muted); font-size: 0.8125rem; }
 .text-button:hover { color: var(--accent); }
-.eyebrow { font-size: 0.6875rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+.eyebrow { font-size: 0.8125rem; color: var(--muted); font-weight: 500; }
 .subtle { color: var(--muted); font-size: 0.8125rem; line-height: 1.6; }
 .loading { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 40px; color: var(--muted); font-size: 0.875rem; }
 .loading svg { animation: spin 1s linear infinite; }
@@ -89,7 +89,6 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .notice-warning > svg { color: var(--accent); }
 .notice-success, .notice-success > svg { color: var(--accent); }
 .error-details { display: block; margin-top: 4px; font-size: 0.8rem; opacity: 0.85; }
-.hardware-summary { margin: 0; }
 
 .page { flex: 1; overflow-y: auto; padding: 32px 40px 48px; }
 /* Each block after the first starts at least --stack-gap below the one above. Margins collapse, so a block's own larger margin still wins; set only margin-bottom on page-level blocks so this top margin stays. Settings sections already part with a rule and padding. */

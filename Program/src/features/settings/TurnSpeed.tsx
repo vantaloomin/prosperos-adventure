@@ -25,10 +25,7 @@ export function TurnSpeed() {
   }
   return (
     <section className="settings-section form-stack" aria-labelledby="turn-speed-heading">
-      <div>
-        <h2 id="turn-speed-heading">Turn speed</h2>
-        <p className="subtle">The story streams as it is written, and the facts are noted after you can read it.</p>
-      </div>
+      <h2 id="turn-speed-heading">Turn speed</h2>
       <Field label="Time for each turn" hint="Past it, the polishing steps give way: the prose rewrite first, then the check against the record. Dice and the record are never skipped.">
         {(id, describedBy) => <select id={id} value={settings.data?.turn_budget ?? 0} disabled={!settings.data} aria-describedby={describedBy}
           onChange={(event) => void save({ turn_budget: Number(event.target.value) })}>

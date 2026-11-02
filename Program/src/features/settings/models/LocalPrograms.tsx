@@ -32,10 +32,7 @@ export function LocalPrograms() {
   const act = async (work: () => Promise<unknown>) => { setError(''); try { await work() } catch (failed) { setError(failure(failed)) } }
   const order = data.programs.map(item => item.label).join(', then ')
   return <section className="settings-section form-stack" aria-labelledby="local-programs-heading">
-    <div>
-      <h2 id="local-programs-heading">Local programs</h2>
-      <p className="subtle">Start the programs your local models run in, with the address, model and context size set above. They keep running after Adventure closes.</p>
-    </div>
+    <h2 id="local-programs-heading">Local programs</h2>
     <ul className="model-profiles">
       {data.programs.map(item => <ProgramRow key={item.program} item={item} act={act} launcher={launcher} examples={PLACEHOLDERS[data.system] ?? PLACEHOLDERS.windows} />)}
     </ul>
