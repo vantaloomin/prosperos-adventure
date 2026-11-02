@@ -38,7 +38,9 @@ def steps():
     before = {state: list(listed) for state, listed in engine.STEPS.items()}
     hooks = list(engine.COMMITS)
     for listed in engine.STEPS.values():
-        listed[:] = [(name, step) for name, step in listed if step is engine.pick]
+        listed[:] = []
+    # The agents' Gather step replaces the foundation's 'pick' under the same name; these tests use the default.
+    engine.STEPS[State.GATHERING][:] = [('pick', engine.pick)]
     yield
     for state, listed in before.items():
         engine.STEPS[state][:] = listed
