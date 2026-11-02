@@ -51,6 +51,9 @@ top of it, milestone by milestone, as set out in [the roadmap](https://github.co
 | `story_wounds`, `story_fight`, `story_rounds` | The character's wound level, the fight under way, and each line's decided round (`adventure/combat.py`) |
 | `story_clock`, `story_quests` | The story's own time, and its quests with their deadlines (`adventure/quests.py`) |
 | `authors_notes` | The user's note that rides along with every narrator turn |
+| `round_turns` | Each turn of the round loop: its state, the snapshot it was built from, its draft until commit, and marks such as a GM view left open (`adventure/rounds/turns.py`) |
+| `round_seats`, `round_settings` | Who sits at the table and how each decides (agent, Program mind or the human); the mode (Play, Author, Watch), the agent and conversation caps, and changes waiting for the next Idle (`adventure/rounds/seats.py`) |
+| `character_memories`, `character_memory_refreshes`, `character_feelings` | What each character remembers and how they feel toward everyone else, keyed by the turn that wrote it and read through the branch's ancestry (`adventure/rounds/memory.py`) |
 | `townsfolk_mix`, `townsfolk_personality`, `birth_dates`, `town_levels` | How the town is generated and how it ages |
 
 A database from before Milestone 0 is not upgraded: Adventure starts a fresh schema, and `upgrade.py` only handles
@@ -61,6 +64,7 @@ changes made from here on. New tables come from `schema.sql`; a column added to 
 
 | Engine | Where | What it does now |
 | --- | --- | --- |
+| Round loop | `rounds/` | The state machine every turn of agent play runs through, its step registry, the turn draft committed in one transaction, and per-character memory that follows branches |
 | Narrator | `story.py`, `narration/` | Builds the layered narrator prompt, checks the prose in code, and writes each story turn |
 | Odds and rolls | `consequences.py`, `life/chance.py` | Weighted outcomes and seeded rolls, the base for the Milestone 1 dice |
 | Life Cards | `life/deck.py` | The deck of life events, drawn by code |

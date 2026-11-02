@@ -1175,3 +1175,108 @@ CREATE TABLE IF NOT EXISTS politics_relations (
   updated_at TEXT NOT NULL,
   PRIMARY KEY (city_id, first, second)
 );
+
+-- W0 Foundation: rounds (adventure/rounds/). ------------------------------------------------------------------------
+
+-- Each turn of the round loop (adventure/rounds/turns.py): its state, the frozen snapshot every context is built
+-- from, and the draft nothing else reads until it is committed. `branch_id` and `seq` place it on the timeline
+-- (adventure/timeline.py): the turn's anchor is the story message it opens with. `number` counts the committed turns
+-- before it on its branch, which is what memory ages by.
+CREATE TABLE IF NOT EXISTS round_turns (
+  id TEXT PRIMARY KEY,
+  anchor_id TEXT,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  number INTEGER NOT NULL,
+  state TEXT NOT NULL CHECK (state IN ('idle', 'gathering', 'declaring', 'reacting', 'conversing', 'awaiting_user',
+                                       'resolving', 'writing', 'committing', 'committed', 'discarded')),
+  mode TEXT NOT NULL CHECK (mode IN ('play', 'author', 'watch')),
+  snapshot TEXT NOT NULL DEFAULT '{}',
+  draft TEXT NOT NULL DEFAULT '{}',
+  -- A re-asked turn: the turn it re-asks and the seat whose choice is asked again.
+  reask_of TEXT,
+  reask_seat TEXT,
+  -- What happened around the turn that the user should be able to see later: ["gm_view", "roll_override", ...].
+  marks TEXT NOT NULL DEFAULT '[]',
+  error TEXT,
+  created_at TEXT NOT NULL,
+  committed_at TEXT
+);
+
+CREATE INDEX IF NOT EXISTS round_turns_place ON round_turns (branch_id, seq);
+
+-- Who sits at the table and how each one decides (adventure/rounds/seats.py): an agent, a Program (code) mind, or
+-- the human. A choice made by the user, so it is not rewound with the story.
+CREATE TABLE IF NOT EXISTS round_seats (
+  key TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  mind TEXT NOT NULL CHECK (mind IN ('agent', 'program', 'human')),
+  seat_order INTEGER NOT NULL DEFAULT 0,
+  -- A model profile for this character alone, over the agents' role (adventure/text_models.py).
+  model_profile_id TEXT,
+  notes TEXT NOT NULL DEFAULT '',
+  promoted INTEGER NOT NULL DEFAULT 0 CHECK (promoted IN (0, 1)),
+  created_at TEXT NOT NULL
+);
+
+-- How rounds play in this campaign (adventure/rounds/seats.py): the mode, the caps, and changes waiting for the next
+-- Idle, since a turn under way finishes as it started.
+CREATE TABLE IF NOT EXISTS round_settings (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  mode TEXT NOT NULL DEFAULT 'play' CHECK (mode IN ('play', 'author', 'watch')),
+  agent_cap INTEGER NOT NULL DEFAULT 6 CHECK (agent_cap BETWEEN 1 AND 6),
+  converse_cap INTEGER NOT NULL DEFAULT 4 CHECK (converse_cap BETWEEN 1 AND 12),
+  queued TEXT NOT NULL DEFAULT '{}'
+);
+
+-- What each character remembers (adventure/rounds/memory.py), written only by a turn's commit and keyed by that
+-- turn's place on the timeline, so going back hides it and every branch reads its own past. Nothing here is ever
+-- rewritten: fading is worked out as it is read.
+CREATE TABLE IF NOT EXISTS character_memories (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  number INTEGER NOT NULL,
+  character_key TEXT NOT NULL,
+  kind TEXT NOT NULL CHECK (kind IN ('witnessed', 'heard', 'told', 'belief', 'tell', 'motive', 'whisper', 'fact')),
+  text TEXT NOT NULL,
+  -- Whom it is about, when it is about someone, and whose line or act it came from.
+  about TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  importance INTEGER NOT NULL DEFAULT 1 CHECK (importance BETWEEN 1 AND 3),
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS character_memories_of ON character_memories (character_key, branch_id, seq);
+
+-- A memory brought back to mind by a later turn: it is fresh again from that turn, on that turn's branch only.
+CREATE TABLE IF NOT EXISTS character_memory_refreshes (
+  memory_id TEXT NOT NULL,
+  turn_id TEXT,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  number INTEGER NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS character_memory_refreshes_of ON character_memory_refreshes (memory_id);
+
+-- How one character's feelings toward another moved in a turn (adventure/rounds/memory.py): each row a change, read
+-- in order through the branch's ancestry. Rows at seq 0 on the first branch are the campaign's starting feelings.
+CREATE TABLE IF NOT EXISTS character_feelings (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  from_key TEXT NOT NULL,
+  to_key TEXT NOT NULL,
+  trust INTEGER NOT NULL DEFAULT 0,
+  affection INTEGER NOT NULL DEFAULT 0,
+  respect INTEGER NOT NULL DEFAULT 0,
+  fear INTEGER NOT NULL DEFAULT 0,
+  desire INTEGER NOT NULL DEFAULT 0,
+  why TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS character_feelings_of ON character_feelings (from_key, branch_id, seq);
