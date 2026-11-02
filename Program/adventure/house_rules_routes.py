@@ -1,9 +1,12 @@
-"""The house rules API (adventure/rounds/house_rules.py): the campaign's rulebook at the Table, and its rulings."""
+"""The house rules API (adventure/rounds/house_rules.py): the campaign's rulebook at the Table and its rulings; and each
+round turn's report and the status line (adventure/rounds/report.py)."""
+from typing import Literal
+
 from fastapi import APIRouter, Request
 from pydantic import Field
 
 from adventure.models import Input
-from adventure.rounds import house_rules
+from adventure.rounds import house_rules, report
 
 router = APIRouter(prefix='/api/story')
 
@@ -20,6 +23,7 @@ class HouseRulesUpdate(Input):
     words: Entries = Field(None, max_length=house_rules.MOST['words'])
     phrases: Entries = Field(None, max_length=house_rules.MOST['phrases'])
     names: Entries = Field(None, max_length=house_rules.MOST['names'])
+    reviewer: Literal['on', 'off', 'preset'] | None = None
 
 
 class Ruling(Input):
@@ -54,3 +58,17 @@ def withdraw(request: Request, ruling_id: str):
     with database.connect(write=True) as connection:
         house_rules.withdraw(connection, ruling_id, database.now())
         return house_rules.view(connection)
+
+
+@router.get('/turns/{turn_id}/report')
+def turn_report(request: Request, turn_id: str):
+    """A committed turn's report as the mode shows it. The GM view's fuller one, which marks the turn, is read through
+    the GM view (adventure/gm.py)."""
+    with request.app.state.database.connect() as connection:
+        return report.report(connection, turn_id)
+
+
+@router.get('/status-line')
+def status_line(request: Request):
+    with request.app.state.database.connect() as connection:
+        return report.status(connection)
