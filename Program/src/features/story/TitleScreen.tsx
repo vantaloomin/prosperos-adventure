@@ -22,7 +22,7 @@ function remember(world: string | null) {
 }
 
 /** The title screen before a campaign starts (adventure/world_select.py): one row of worlds, most recently played
- * first, each tile its key art and name; the tile is the button. The world the story is in begins here; another
+ * first, each tile its key art and name, with the pitch in a card over the art on hover or focus; the tile is the button. The world the story is in begins here; another
  * world switches to the persona's world there, made when they have none, and the page starts afresh in it. The +
  * tile at the end opens the world packages on the Worlds page. With no worlds to show, it steps aside for the start
  * form. */
@@ -102,7 +102,10 @@ function WorldRow({ worlds, going, onGo, onNew }: RowProps) {
           <li key={world.id}>
             <button type="button" className={world.here ? 'title-world here' : 'title-world'} disabled={!!going} aria-busy={going === world.name} onClick={() => onGo(world)}>
               {world.art ? <img src={world.art} alt="" loading="lazy" width={1536} height={1024} /> : <span className="title-world-blank" aria-hidden="true" />}
-              <span className="title-world-name">{world.name}</span>
+              <span className="title-world-text">
+                <span className="title-world-name">{world.name}</span>
+                {world.pitch && <span className="title-world-pitch"><span>{world.pitch}</span></span>}
+              </span>
             </button>
           </li>
         ))}
