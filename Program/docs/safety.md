@@ -9,9 +9,7 @@ nothing is sent anywhere.
 
 ## The characters are AI
 
-- **On first start**, before anything else, the app shows a one-time notice that the characters are AI, that what
-  they say is written by an AI model and can be wrong, and that the app is for adults. It can't be dismissed without
-  ticking **I'm 18 or older**. Confirming is recorded once in your workspace.
+- **On first start**, before anything else, the app shows a one-time notice over the title art: **Everyone here is AI**, an **I'm 18 or older** box and a link to this page. Everything the narrator and the characters say is written by an AI model, not a person, and it can be wrong; the app is for adults. The notice can't be dismissed without ticking the box. Confirming is recorded once in your workspace.
 - **Under every message box** a small line says *Characters are AI and can make mistakes.* It shows under the story's
   message box, on a computer and on a phone, the whole time you are playing.
 - **The notices come from the app, never from a character.** The narrator never says it is an AI in the story; a

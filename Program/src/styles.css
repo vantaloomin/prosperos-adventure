@@ -30,7 +30,7 @@
 @font-face { font-family: 'OpenDyslexic'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/opendyslexic/OpenDyslexic-Bold.woff2') format('woff2'); }
 @font-face { font-family: 'OpenDyslexic'; font-style: italic; font-weight: 700; font-display: swap; src: url('/fonts/opendyslexic/OpenDyslexic-BoldItalic.woff2') format('woff2'); }
 :root { --ui-font: 'IBM Plex Sans', system-ui, sans-serif; --read-font: 'Literata', Georgia, serif; }
-:root { --panel-pad: 16px; --card-pad: 12px 14px; --card-gap: 12px; }
+:root { --ease: cubic-bezier(0.22, 1, 0.36, 1); --panel-pad: 16px; --card-pad: 12px 14px; --card-gap: 12px; }
 @media (max-width: 720px) { :root { --card-pad: 12px; } }
 :root[data-font='atkinson'] { --chosen-font: 'Atkinson Hyperlegible', system-ui, sans-serif; }
 :root[data-font='opendyslexic'] { --chosen-font: 'OpenDyslexic', system-ui, sans-serif; }
@@ -364,27 +364,39 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .story-add-form { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 8px; }
 .story-add-form textarea, .story-add-form input { width: 100%; min-width: 0; }
 .story-people textarea { width: 100%; }
-/* The title screen before a campaign starts (src/features/story/TitleScreen.tsx): key art, then a card per world. */
+/* The title screen before a campaign starts (src/features/story/TitleScreen.tsx): one sideways row of worlds. */
 /* The scene line waits until the campaign begins. */
 .story-main:has(> .title-screen) > .story-header { display: none; }
-.title-screen { flex: 1; overflow-y: auto; width: 100%; max-width: 1100px; margin: 0 auto; padding: 20px 32px 32px; display: flex; flex-direction: column; gap: 20px; }
-.title-hero, .title-worlds { flex-shrink: 0; }
-.title-hero { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); background: #0d0c0b; }
-.title-hero img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; max-height: 40vh; object-fit: cover; object-position: 50% 45%; }
-.title-words { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px 32px;
-  background: linear-gradient(to top, rgb(0 0 0 / .78), rgb(0 0 0 / .15) 55%, transparent); color: #f3ead9; }
-.title-words h2 { margin: 0; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; text-shadow: 0 2px 12px rgb(0 0 0 / .7); }
-.title-words p { margin: 6px 0 0; font-family: var(--read-font); font-size: 1.1rem; color: #e2d6c0; text-shadow: 0 1px 6px rgb(0 0 0 / .8); }
-.title-worlds { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-.title-world { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--surface); }
-.title-world.here { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
-.title-world img, .title-world-blank { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: var(--raised); }
-.title-world-text { flex: 1; display: flex; flex-direction: column; gap: 8px; padding: 14px 16px 16px; }
-.title-world-text h3 { margin: 0; font-size: 1.35rem; }
-.title-world-text p { margin: 0; line-height: 1.5; }
-.title-world-genre { color: var(--muted); font-size: .9rem; }
-.title-world-pitch { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; line-clamp: 5; overflow: hidden; }
-.title-world-text .button { margin-top: auto; align-self: flex-start; }
+.title-screen { flex: 1; min-height: 0; width: 100%; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+.title-screen > .notice { margin: 0 24px; }
+.title-worlds { position: relative; }
+.title-row { list-style: none; margin: 0; padding: 24px; display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 24px;
+  overscroll-behavior-x: contain; scrollbar-width: none; }
+.title-row::-webkit-scrollbar { display: none; }
+.title-row.more-after { mask-image: linear-gradient(to right, #000 85%, transparent); }
+.title-row.more-before { mask-image: linear-gradient(to right, transparent, #000 15%); }
+.title-row.more-before.more-after { mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent); }
+.title-row > li { flex: 0 0 clamp(180px, 28%, 260px); scroll-snap-align: start; }
+.title-world { position: relative; display: block; width: 100%; aspect-ratio: 3 / 4; border-radius: 12px; overflow: hidden; background: var(--raised); color: #f3ead9; text-align: left; }
+.title-world img, .title-world-blank { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.title-world::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgb(0 0 0 / .72), transparent 45%); transition: opacity 160ms var(--ease); }
+.title-world:hover:not(:disabled)::after { opacity: .7; }
+.title-world.here { box-shadow: 0 0 0 2px var(--accent); }
+.title-world:disabled { opacity: 1; }
+.title-world[aria-busy='true'] { animation: title-opening 1s var(--ease) infinite alternate; }
+@keyframes title-opening { to { opacity: .6; } }
+.title-world-name { position: absolute; z-index: 1; left: 16px; right: 16px; bottom: 16px; font-family: var(--read-font); font-size: 1.6rem; line-height: 1.1; text-shadow: 0 2px 12px rgb(0 0 0 / .65); }
+.title-new { display: grid; place-items: center; border: 1px dashed var(--border); background: var(--surface); color: var(--muted); }
+.title-new::after { content: none; }
+.title-new:hover:not(:disabled) { background: var(--raised); color: var(--text); }
+.title-new svg { width: 24px; height: 24px; }
+.title-step { position: absolute; z-index: 2; top: 50%; translate: 0 -50%; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); box-shadow: 0 1px 2px rgb(0 0 0 / .2); }
+.title-step:hover { background: var(--raised); }
+.title-step.before { left: 12px; }
+.title-step.after { right: 12px; }
+:root[data-motion='reduce'] .title-world[aria-busy='true'] { animation: none; opacity: .6; }
+@media (max-width: 640px) { .title-row > li { flex-basis: 72%; } .title-step { display: none; } }
 .story-start, .session-zero { flex: 1; overflow-y: auto; max-width: var(--story-width); width: 100%; margin: 0 auto; padding: 20px 32px; }
 .story-start h2, .session-zero h2 { margin: 0 0 6px; }
 .session-zero { display: flex; flex-direction: column; gap: 14px; }
@@ -868,9 +880,16 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .crisis-note .crisis-from { font-size: 0.75rem; font-weight: 600; letter-spacing: .02em; color: var(--muted); }
 .crisis-note a { color: inherit; text-decoration: underline; }
 .story-log .crisis-note { margin: 0 0 12px; max-width: none; }
-.ai-notice-adult { display: flex; align-items: center; gap: 10px; font-weight: 500; }
-.ai-notice-adult input { width: 1.1rem; height: 1.1rem; accent-color: var(--accent); }
-.ai-notice a { color: var(--accent); }
+/* The first-run notice (src/features/notice/AiNotice.tsx) sits on the game's key art. */
+.ai-notice { width: min(360px, calc(100vw - 32px)); padding: 28px; border-radius: 16px; box-shadow: 0 8px 24px rgb(0 0 0 / .35); }
+.ai-notice::backdrop { background: #191816 url('/title.webp') center / cover no-repeat; }
+.ai-notice form { display: grid; gap: 20px; }
+.ai-notice h2 { font-size: 1.35rem; line-height: 1.3; }
+.ai-notice-adult { display: flex; align-items: center; gap: 12px; font-weight: 500; }
+.ai-notice-adult input { width: 18px; height: 18px; accent-color: var(--accent); }
+.ai-notice-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.ai-notice-actions a { color: var(--muted); font-size: 0.875rem; }
+.ai-notice-actions a:hover { color: var(--text); }
 @media (max-width: 720px) {
   .composer:has(+ .ai-footer) { padding-bottom: 2px; }
   .ai-footer { padding: 0 12px max(6px, env(safe-area-inset-bottom)); font-size: 0.6875rem; }

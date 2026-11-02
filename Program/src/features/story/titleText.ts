@@ -1,8 +1,14 @@
-import type { TitleWorld } from '../../types'
+/** Which ends of the world row have more worlds past them, so the fade and the arrow show only on that side. A few
+ * pixels of slack keep a row scrolled to within rounding of its end from counting as more. */
+export function rowEdges(left: number, width: number, total: number): { before: boolean; after: boolean } {
+  return { before: left > 4, after: left + width < total - 4 }
+}
 
-/** What a title-screen card's button does: begin in the world the story is in, go back to one the persona has, or
- * go to a new one (adventure/world_select.py enter). */
-export function worldAction(world: Pick<TitleWorld, 'name' | 'here' | 'yours'>): string {
-  if (world.here) return `Begin in ${world.name}`
-  return world.yours ? `Return to ${world.name}` : `Go to ${world.name}`
+/** The tile to move to from `index` with an arrow key, staying inside the row. */
+export function nextTile(index: number, key: string, count: number): number {
+  if (key === 'ArrowRight') return Math.min(index + 1, count - 1)
+  if (key === 'ArrowLeft') return Math.max(index - 1, 0)
+  if (key === 'Home') return 0
+  if (key === 'End') return count - 1
+  return index
 }
