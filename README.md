@@ -82,6 +82,7 @@ Each script has a Mac twin in `Mac` with the same name ending in `.command`.
 ## Documentation
 
 - [Product spec](docs/spec.md)
+- [Style guide and UI requirements](docs/style-guide.md)
 - [Development](Program/docs/development.md)
 - [Backbone architecture](Program/docs/architecture.md)
 - [Models](Program/docs/models.md)
