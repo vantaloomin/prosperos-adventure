@@ -42,6 +42,14 @@ def test_going_to_a_world_makes_one_once_then_goes_back_to_it(client, app):
     assert client.post('/api/story/worlds/nowhere/enter').status_code == 404
 
 
+def test_the_worlds_come_most_recently_played_first(client):
+    ok(client.put('/api/story/scene', json={'city_id': 'kingswood'}))
+    ok(client.post('/api/story/worlds/babel/enter'))
+    ok(client.post('/api/story/worlds/havenbrooke/enter'))
+    ids = [world['id'] for world in ok(client.get('/api/story/worlds'))['worlds']]
+    assert ids[:3] == ['havenbrooke', 'babel', 'vallarith']
+
+
 def test_a_world_made_on_the_worlds_page_opens_in_its_own_town(client, app):
     """Playtest 2026-10-26: a Havenbrooke world made on the Worlds page had no scene there, so going to it left the
     story outside Havenbrooke and the title screen came back each time."""

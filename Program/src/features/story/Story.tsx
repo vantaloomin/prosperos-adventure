@@ -73,8 +73,7 @@ export function Story({ go }: { go: (view: View) => void }) {
     <section className={look.className} style={look.style} aria-labelledby="story-heading">
       <div className="story-main">
         <StoryHeader story={story.data} change={change} onDraft={(text) => setDraft({ text, at: Date.now() })} />
-        {!story.data.ready && <NoModel go={go} />}
-        {opening === 'title' ? <TitleScreen onBegin={() => setBegun(true)} />
+        {opening === 'title' ? <TitleScreen onBegin={() => setBegun(true)} onNew={toPackages} />
           : opening === 'start' ? <StoryStart onStarted={update} intensity={story.data.intensity} /> : <>
           <StoryStage turn={`${story.data.scene.city.id}/${story.data.scene.place.id}/${story.data.messages.length}`} />
           <StoryLog messages={story.data.messages} pending={story.data.messages.length > since ? null : pending} streamed={streamed} turn={turn} bands={story.data.bands}
@@ -84,7 +83,8 @@ export function Story({ go }: { go: (view: View) => void }) {
             onBack={story.data.campaign?.ironman ? undefined : (id) => void run(null, () => api<StoryBack>('/story/back', { message_id: id }).then((data) => { update(data); setDraft({ text: data.draft, at: Date.now() }) }))}
             onBookmark={(id, name) => change(() => api<StoryData>('/story/bookmarks', { message_id: id, name }))} />
           {error && <div className="story-notice"><Notice tone="error">{error}</Notice></div>}
-          <StoryComposer key={draft.at} busy={pending !== null} draft={draft.text} turn={story.data.messages.length} onSend={(text) => void send(text)} />
+          <StoryComposer key={draft.at} busy={pending !== null} draft={draft.text} turn={story.data.messages.length} onSend={(text) => void send(text)}
+            onAddModel={story.data.ready ? undefined : () => go('settings/models')} />
         </>}
         <NewStory empty={!story.data.messages.length} onClear={() => run(null, () => api<StoryData>('/story', undefined, 'DELETE').then((data) => { update(data); setBegun(false) }))} />
       </div>
@@ -102,9 +102,10 @@ function openingOf(story: StoryData, pending: string | null, begun: boolean): 't
   return begun ? 'start' : 'title'
 }
 
-function NoModel({ go }: { go: (view: View) => void }) {
-  return <div className="story-notice"><Notice action={<button type="button" className="text-button" onClick={() => go('settings/models')}>Open Models</button>}>
-    Add a text model in Settings &gt; Models to tell the story.</Notice></div>
+/** The + tile on the title screen: the Worlds page, at its world packages, where a new world is added. */
+function toPackages() {
+  window.history.pushState({ focus: 'world-packages' }, '', '#worlds')
+  window.dispatchEvent(new PopStateEvent('popstate'))
 }
 
 /** Where and when the story is, and the fight. The scene line is the header; the title is for screen readers. */
@@ -274,13 +275,15 @@ function BookmarkButton({ onSave }: { onSave: (name: string) => Promise<void> })
 }
 
 /** `draft` is a line taken back to send again; a new draft remounts the composer with it, which also drops any
- * ideas (./ideas.ts), as sending a line does. */
-function StoryComposer({ busy, draft, turn, onSend }: { busy: boolean; draft: string; turn: number; onSend: (text: string) => void }) {
+ * ideas (./ideas.ts), as sending a line does. With no text model yet, Send is `onAddModel`: it opens Settings > Models. */
+interface ComposerProps { busy: boolean; draft: string; turn: number; onSend: (text: string) => void; onAddModel?: () => void }
+
+function StoryComposer({ busy, draft, turn, onSend, onAddModel }: ComposerProps) {
   const [text, setText] = useState(draft)
   const [found, setFound] = useState<Ideas | null>(null)
   const [thinking, setThinking] = useState(false)
   const shown = freshIdeas(found, turn)
-  const submit = () => { if (text.trim() && !busy) { onSend(text.trim()); setText(''); setFound(null) } }
+  const submit = () => { if (text.trim() && !busy && !onAddModel) { onSend(text.trim()); setText(''); setFound(null) } }
   const askIdeas = () => {
     setThinking(true)
     api<Ideas>('/story/ideas', {}).then(setFound, () => setFound(null)).finally(() => setThinking(false))
@@ -299,7 +302,9 @@ function StoryComposer({ busy, draft, turn, onSend }: { busy: boolean; draft: st
         onChange={(event) => setText(event.target.value)} onKeyDown={onKeyDown} />
       <InfoTip id="story-tip" label="the story" above text={`Enter sends, Shift+Enter adds a new line. ${OUT_OF_STORY}`} />
       <button type="button" className="button story-ideas-button" disabled={busy || thinking} onClick={askIdeas} aria-label="Ideas" title="Two or three things you could do now. They are not kept."><Lightbulb aria-hidden="true" /><span className="label">{thinking ? 'Thinking…' : 'Ideas'}</span></button>
-      <button type="submit" className="button primary" disabled={busy || !text.trim()}><Send aria-hidden="true" />Send</button>
+      {onAddModel
+        ? <button type="button" className="button primary" onClick={onAddModel}>Add a model</button>
+        : <button type="submit" className="button primary" disabled={busy || !text.trim()}><Send aria-hidden="true" />Send</button>}
     </form>
     <AiFooter />
   </>)
