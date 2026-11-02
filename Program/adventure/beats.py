@@ -14,6 +14,10 @@ the world's beat scene (adventure/life/cards.py) happening to one of them, {them
   the card says) travels as word, and reaches them a day later on their next line in a town, into the journal as
   belief when it is not the whole truth. A card's rumor about the character or someone else travels the same way.
   With "meanwhile" cutaways on, the narrator also shows the player the beat as it happens.
+- **Offscreen agents speak in theirs.** In a round with agents, code draws the beats while the Writer writes (`draw`),
+  each offscreen agent writes the few lines it said in its own beat, and Commit writes it all (`apply`, with the lines
+  kept on the beat; adventure/rounds/offpage.py). A Program character's beat is code only. Today's turn draws and
+  writes at once (`fire`).
 
 `pressure` (a person's key) lets another system (the story director) ask for the next beat to land on someone.
 
@@ -101,13 +105,11 @@ def spread(connection, about: str, text: str, truth: str, heard_at: datetime, me
                        '?)', (about, text, truth, heard_at.isoformat(), message_id))
 
 
-def play(connection, person: dict, drawn: dict, town: str, now: datetime, logged: str, message_id: str) -> str:
+def play(connection, person: dict, drawn: dict, town: str, now: datetime, logged: str, message_id: str,
+         lines: list[str] | None = None) -> str:
     """A beat in play; returns what happened, for a cutaway."""
     card, faction = drawn['card'], drawn.get('faction')
-    persona = optional(connection, 'SELECT name FROM persona WHERE id=1')
-    names = {'them': person['name'], 'pc': (persona and persona['name']) or 'the character', 'npc': 'someone',
-             'town': town, 'faction': faction['name'] if faction else 'the powers'}
-    truth, seen = happenings.fill(card['truth'], names), happenings.fill(card['seen'], names)
+    truth, seen = told(connection, person, drawn, town)
     record.add(connection, 'fact', person['name'], truth, logged, truth='world')
     spread(connection, person['name'], seen[:1].upper() + seen[1:], 'both' if card['accuracy'] == 'true' else
            'belief', now + timedelta(days=WORD_DAYS), message_id)
@@ -118,39 +120,64 @@ def play(connection, person: dict, drawn: dict, town: str, now: datetime, logged
             feelings.change(connection, person['key'], {effect['axis']: effect['shift']}, card['title'])
         elif effect['kind'] == 'reputation' and faction:
             factions.shift(connection, faction, effect['shift'])
-    connection.execute('INSERT INTO story_beats (message_id, key, card_id, at) VALUES (?, ?, ?, ?)',
-                       (message_id, person['key'], card['id'], now.isoformat()))
+    connection.execute('INSERT INTO story_beats (message_id, key, card_id, at, lines) VALUES (?, ?, ?, ?, ?)',
+                       (message_id, person['key'], card['id'], now.isoformat(), encode(lines or [])))
     return truth[:1].upper() + truth[1:]
 
 
-def fire(connection, message_id: str, view: dict, level: dict, now: datetime, logged: str, rng=None,
-         pressure: str | None = None) -> list[str]:
-    """The beats a line brings, and the cutaways the narrator may show of them."""
+def draw(connection, message_id: str, view: dict, level: dict, now: datetime, rng=None,
+         pressure: str | None = None) -> dict:
+    """The beats a line brings, decided and not yet written: {'beats': [{'person', 'drawn'}], 'quiet', 'first'}.
+    A round stages this in its draft and writes it at Commit (`apply`); today's turn does both at once (`fire`).
+    Each person and card comes up at most once a line."""
     rng = rng or random.SystemRandom()
     clock = offpage(connection)
     if clock['checked_at'] is None:
-        keep_clock(connection, now.isoformat(), 0)
-        return []
+        return {'beats': [], 'quiet': 0, 'first': True}
     days, forced = due(connection, now)
     # One chance for each day passed; with no day passed, a long quiet brings one for sure.
     tries = [(f'{message_id}:day:{n}', False) for n in range(days)] or ([(f'{message_id}:quiet', True)] if forced
                                                                         else [])
     here = {person['sheet']['key'] for person in view['people']}
-    happened = []
+    chosen, cards = [], set()
     for seed, force in tries:
-        person = pick(connected(connection, here), pressure, rng)
+        person = pick(connected(connection, here | {beat['person']['key'] for beat in chosen}), pressure, rng)
         if person is None:
             break
         captive = {'captive'} if fates(connection).get(person['key'], {}).get('state') == 'captured' else set()
         drawn = happenings.draw(connection, 'beat', seed, view['city']['id'], view['place']['id'], view['data'],
-                                level, now.date(), has=captive, skip=recent(connection, now.date()), forced=force)
+                                level, now.date(), has=captive, skip=recent(connection, now.date()) | cards,
+                                forced=force)
         if drawn:
-            happened.append(play(connection, person, drawn, view['city']['name'], now, logged, message_id))
+            chosen.append({'person': person, 'drawn': drawn})
+            cards.add(drawn['card']['id'])
             pressure = None
-    keep_clock(connection, now.isoformat(), 0 if happened else clock['quiet'] + 1)
-    if not table.rule(connection, 'cutaways'):
-        return []
-    return happened
+    return {'beats': chosen, 'quiet': 0 if chosen else clock['quiet'] + 1, 'first': False}
+
+
+def apply(connection, message_id: str, drawn: dict, town: str, now: datetime, logged: str) -> list[str]:
+    """Write what `draw` decided; returns the cutaways the narrator may show (none unless the player turned them
+    on). Each beat's `lines` (what an offscreen agent said in it) are kept with it."""
+    happened = [play(connection, beat['person'], beat['drawn'], town, now, logged, message_id, beat.get('lines'))
+                for beat in drawn['beats']]
+    keep_clock(connection, now.isoformat(), drawn['quiet'])
+    return happened if table.rule(connection, 'cutaways') else []
+
+
+def fire(connection, message_id: str, view: dict, level: dict, now: datetime, logged: str, rng=None,
+         pressure: str | None = None) -> list[str]:
+    """The beats a line brings, written at once, and the cutaways the narrator may show of them."""
+    return apply(connection, message_id, draw(connection, message_id, view, level, now, rng, pressure),
+                 view['city']['name'], now, logged)
+
+
+def told(connection, person: dict, drawn: dict, town: str) -> tuple[str, str]:
+    """A beat's truth and what word of it says, with the names filled in."""
+    card, faction = drawn['card'], drawn.get('faction')
+    persona = optional(connection, 'SELECT name FROM persona WHERE id=1')
+    names = {'them': person['name'], 'pc': (persona and persona['name']) or 'the character', 'npc': 'someone',
+             'town': town, 'faction': faction['name'] if faction else 'the powers'}
+    return happenings.fill(card['truth'], names), happenings.fill(card['seen'], names)
 
 
 # Word reaching the character --------------------------------------------------------------------------

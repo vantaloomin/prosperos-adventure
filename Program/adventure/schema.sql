@@ -599,7 +599,9 @@ CREATE TABLE IF NOT EXISTS story_beats (
   message_id TEXT NOT NULL,
   key TEXT NOT NULL,
   card_id TEXT NOT NULL,
-  at TEXT NOT NULL
+  at TEXT NOT NULL,
+  -- What an offscreen agent said in the beat, as its own agent wrote it (adventure/rounds/offpage.py).
+  lines TEXT NOT NULL DEFAULT '[]'
 );
 
 CREATE TABLE IF NOT EXISTS story_word (
