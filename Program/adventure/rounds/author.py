@@ -22,9 +22,8 @@ anyone, and no agent ever reads one (adventure/rounds/context.py gives it to the
 from adventure import director, plotting
 from adventure.database import identifier, many, optional
 from adventure.errors import require
-from adventure.rounds import engine, queue
+from adventure.rounds import engine, queue, telling
 from adventure.rounds.contract import Mode, State
-from adventure.rounds.solo import SOLO
 
 MOST_BOX = 6
 MOST_BEAT_CHARS = 300
@@ -110,8 +109,8 @@ async def taken(turn: engine.Turn):
 # Commit -------------------------------------------------------------------------------------------------------------
 
 def posted(turn: engine.Turn) -> str:
-    """The turn's post: the round Writer's, or today's narrator's for a solo turn."""
-    reply = (turn.draft.extra.get(SOLO) or {}).get('reply') or {}
+    """The turn's post: the round Writer's, or today's narrator's (adventure/rounds/telling.py) once it is saved."""
+    reply = telling.reply_of(turn) or {}
     return turn.draft.post or str(reply.get('text') or '')
 
 

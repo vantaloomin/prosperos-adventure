@@ -15,7 +15,9 @@
 - watch.py: Watch's timer and the big moments that pause it
 - modes.py: who plays the user's character outside Play, and the motives missed in Play
 - steps.py: every module that registers steps, loaded once at startup (add yours there)
-- solo.py: today's single-player turn, run as one step of the loop until its pieces are steps of their own
+- solo.py: a player's line played as a turn of the loop (send, retry)
+- telling.py: today's turn as the loop's steps (Gather, Resolve, Write, Commit)
+- resolve.py: every character's risky acts rolled by code, the one question on ambiguity, the TurnResult and brief
 
 The API is adventure/round_routes.py, and adventure/mode_routes.py for Author, Watch and switching modes.
 """

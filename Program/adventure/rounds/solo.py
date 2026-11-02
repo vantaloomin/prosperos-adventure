@@ -1,34 +1,22 @@
 """Today's single-player turn, played as a turn of the round loop (docs/spec.md "Turn state and persistence").
 
-Until its pieces are registered as steps of their own, Dungeon's whole turn (adventure/story.py `answer`: the
-Referee, the rolls, the code systems and the narrator) runs as one Resolving step, 'solo'. It still writes the
-story as it always has; what the round loop adds around it is the turn row, the one-writer queue
-(adventure/rounds/queue.py) and the round timeline's events. A campaign with no agents plays exactly as before.
+A player's line opens a turn in Play; Dungeon's pieces run as its steps (adventure/rounds/telling.py: Gather,
+Resolve, Write and Commit), beside whatever the agents do in the same turn. What the round loop adds around them is
+the turn row, the one-writer queue (adventure/rounds/queue.py) and the round timeline's events. A campaign with no
+agents plays exactly as before.
 
 The player's line is the turn's anchor: its id is `snapshot.settings['message_id']` and its text
-`snapshot.settings['said']` (adventure/rounds/engine.py `opening`); this step keeps the whole row in
-`draft.extra['solo']['user']`, as story.answer wants it.
+`snapshot.settings['said']` (adventure/rounds/engine.py `opening`). `draft.extra['solo']` marks a turn opened on a
+player's line, which a restart leaves for the player's Retry (adventure/rounds/play.py `recover`).
 
 A line told again (Retry) replaces the turn that told it: that turn is retired and everything it wrote to anyone's
 memory goes with it.
 """
 from adventure import story
-from adventure.rounds import engine, memory, turns
-from adventure.rounds.contract import Mode, State
+from adventure.rounds import engine, memory, telling, turns
+from adventure.rounds.contract import Mode
 
-SOLO = 'solo'
-
-
-async def told(turn: engine.Turn):
-    """Resolving: the whole of today's turn for the player's line, its reply kept in the draft."""
-    held = turn.draft.extra.get(SOLO)
-    if not held or 'reply' in held:
-        return
-    reply = await story.answer(turn.app, held['user'], turn.on_text, turn.emit)
-    held['reply'] = reply
-
-
-engine.register(State.RESOLVING, SOLO, told)
+SOLO = telling.PLAYERS_LINE
 
 
 def retire(connection, anchor_id: str):
@@ -53,9 +41,9 @@ async def answered(app, user: dict, on_text=None, on_event=None) -> dict:
         retire(connection, user['id'])
     turn = await engine.begin(app, user['branch_id'], user['seq'], anchor_id=user['id'],
                               emit=todays_events(on_event), mode=Mode.PLAY, on_text=on_text)
-    turn.draft.extra[SOLO] = {'user': user}
+    turn.draft.extra[SOLO] = {'message_id': user['id']}
     await engine.run(turn)
-    return turn.draft.extra[SOLO]['reply']
+    return telling.reply_of(turn)
 
 
 async def send(app, text: str, client_id: str, on_text=None, on_event=None) -> dict:
