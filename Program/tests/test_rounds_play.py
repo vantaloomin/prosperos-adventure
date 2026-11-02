@@ -90,6 +90,34 @@ def test_a_solo_turns_stream_is_as_it_always_was(client, connected):
     assert rows(client, 'SELECT state FROM round_turns') == [{'state': 'committed'}]
 
 
+def test_with_agents_a_players_line_shows_the_round_and_can_stop_on_the_reply_card(client, connected, steps):
+    async def converse(turn):
+        if 'you' not in turn.draft.replies:
+            turn.draft.wait_for('you', 'mara', 'Who sent you?', [])
+    engine.register(State.CONVERSING, 'converse', converse)
+    seated(client, 'mara', human='you')
+    line = {'text': 'I ask Mara for the key.', 'client_id': 'client-five-1'}
+    events, end = streamed(client, '/api/story/messages/stream', line)
+    # The round timeline is in the story's stream, and the line ends on the card with no reply yet.
+    assert {'round': {'turn_id': end['done']['awaiting']['id'], 'state': 'declaring'}} in events
+    assert {'awaiting': {'seat': 'you', 'speaker': 'mara', 'line': 'Who sent you?', 'context': []}} in events
+    waiting = end['done']['awaiting']
+    assert end['done']['reply'] is None and waiting['state'] == 'awaiting_user'
+    # The same line sent again is shown the card again; a new line waits for the card.
+    assert tell(client, line['text'], line['client_id'])['awaiting']['id'] == waiting['id']
+    refused = client.post('/api/story/messages', json={'text': 'I leave.', 'client_id': 'client-five-2'})
+    assert (refused.status_code, refused.json()['code']) == (409, 'awaiting')
+    assert len(rows(client, "SELECT * FROM story_messages WHERE role='user'")) == 1
+    # Answered through the round loop, the line is told there, and that stream ends with the reply.
+    _, end = streamed(client, f"/api/rounds/turns/{waiting['id']}/reply/stream",
+                      {'seat': 'you', 'kind': 'reply', 'text': 'Nobody.', 'against': waiting['id']})
+    assert 'done' in end, end
+    assert end['done']['turn']['state'] == 'committed'
+    assert end['done']['reply']['status'] == 'complete'
+    assert [row['id'] for row in rows(client, "SELECT id FROM story_messages WHERE role='narrator'")] == [
+        end['done']['reply']['id']]
+
+
 def test_one_writer_at_a_time(client):
     state = client.app.state
     log = []
