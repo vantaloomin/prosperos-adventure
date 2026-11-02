@@ -3,7 +3,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { FileText } from 'lucide-react'
 import { api } from '../../api'
 import { saveNote } from './noteApi'
-import { NOTE_LIMIT, NOTE_SWITCH, noteKey, noteLook, type AuthorsNoteState, type Look } from './noteState'
+import { NOTE_LIMIT, NOTE_OPEN_EVENT, NOTE_SWITCH, noteKey, noteLook, type AuthorsNoteState, type Look } from './noteState'
 import { ErrorNotice } from '../../components/ErrorNotice'
 
 const COUNT_FROM = 800
@@ -13,8 +13,9 @@ const SPOKEN: Record<Look, string> = { off: 'empty', on: 'on', paused: 'off' }
 const RETRO: Record<Look, string> = { off: '[note]', on: '[note on]', paused: '[note off]' }
 
 /** The note button left of the message box, and the note itself: a tray pulled up over the bottom of the chat on a
- * computer, a sheet from the bottom of the screen on a phone. What is typed saves itself; nothing to confirm. */
-export function AuthorsNote({ chat, name, story = false }: { chat: string; name: string; story?: boolean }) {
+ * computer, a sheet from the bottom of the screen on a phone. What is typed saves itself; nothing to confirm. With
+ * `quiet`, the button shows only while there is a note, to say it is on or off; the menu opens an empty one. */
+export function AuthorsNote({ chat, name, story = false, quiet }: { chat: string; name: string; story?: boolean; quiet?: boolean }) {
   const note = useNote(chat)
   const dialog = useRef<HTMLDialogElement>(null)
   const button = useRef<HTMLButtonElement>(null)
@@ -30,6 +31,7 @@ export function AuthorsNote({ chat, name, story = false }: { chat: string; name:
     if (box) { box.focus({ preventScroll: true }); box.setSelectionRange(box.value.length, box.value.length) }
   }
   const close = () => { dialog.current?.close() }
+  useOpenFromElsewhere(chat, show)
   useEffect(() => {
     if (!open) return
     // The tray on a computer is not modal, so Escape is ours to handle.
@@ -46,7 +48,7 @@ export function AuthorsNote({ chat, name, story = false }: { chat: string; name:
   }, [note.text, open])
   const first = note.text.trim().split('\n')[0]
   return <>
-    <button ref={button} type="button" className="button composer-note" data-state={look} aria-expanded={open} aria-controls={`note-${chat}`}
+    <button ref={button} type="button" className="button composer-note" data-state={look} hidden={quiet && !shown(look, open)} aria-expanded={open} aria-controls={`note-${chat}`}
       aria-label={`Author's note, ${SPOKEN[look]}`} title={look === 'off' ? "Author's note" : `Author's note: ${first.slice(0, 60)}${first.length > 60 ? '…' : ''}`}
       onClick={() => (open ? close() : show())}>
       <FileText aria-hidden="true" /><span className="note-retro" aria-hidden="true">{RETRO[look]}</span>
@@ -74,6 +76,21 @@ export function AuthorsNote({ chat, name, story = false }: { chat: string; name:
       </div>
     </dialog>
   </>
+}
+
+/** Opens the note when the menu asks (noteState.ts openAuthorsNote). `show` reads only refs and a state setter, so
+ * the first one stays good. */
+function useOpenFromElsewhere(chat: string, show: () => void) {
+  useEffect(() => {
+    const asked = (event: Event) => { if ((event as CustomEvent<string>).detail === chat) show() }
+    window.addEventListener(NOTE_OPEN_EVENT, asked)
+    return () => window.removeEventListener(NOTE_OPEN_EVENT, asked)
+  }, [chat]) // eslint-disable-line react-hooks/exhaustive-deps
+}
+
+/** Whether a quiet note button shows: while there is a note to say is on or off, or while the note is open. */
+function shown(look: Look, open: boolean): boolean {
+  return look !== 'off' || open
 }
 
 /** The note as typed, saved a moment after typing stops (and at once for the switch, Clear and closing). */

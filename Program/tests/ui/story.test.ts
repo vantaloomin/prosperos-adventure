@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { actionLine, aroundText, diceFaces, diceNotation, tumbleFace, bandSpans, branchLine, journeyTo, markerAt, nearMiss, NO_TURN, turnAfter, reworded, sentences, foesText, zoneText, tallyText, statusItems, haggleText, paceText, intensityChoices, dramaChoices, gearLine, looksText, journalKind, moneyText, questState, slotsText, personLine, placeGroups, pointsLeft, pointsText, rollText, rollWhat, unrolled, fateFaces, fateLadder, challengeDice, brpCost, xpLine, spellLine, sceneTime, abilityLine, signed, arrayPlaced, skillChoices, skillId, startingStats, tierText, darkText, bondsText, bondLine, threadKind, otherTowns, receiptsByReply, institutionLine, todayLine, toggledVeil } from '../../src/features/story/storyText.ts'
+import { actionLine, aroundText, diceFaces, diceNotation, tumbleFace, bandSpans, branchLine, journeyTo, markerAt, nearMiss, NO_TURN, turnAfter, reworded, sentences, foesText, zoneText, tallyText, statusItems, sceneLine, haggleText, paceText, intensityChoices, dramaChoices, gearLine, looksText, journalKind, moneyText, questState, slotsText, personLine, placeGroups, pointsLeft, pointsText, rollText, rollWhat, unrolled, fateFaces, fateLadder, challengeDice, brpCost, xpLine, spellLine, sceneTime, abilityLine, signed, arrayPlaced, skillChoices, skillId, startingStats, tierText, darkText, bondsText, bondLine, threadKind, otherTowns, receiptsByReply, institutionLine, todayLine, toggledVeil } from '../../src/features/story/storyText.ts'
 import { sessionBody } from '../../src/features/story/campaignSession.ts'
 import { artLabel, artStatus, making, pictureChoices } from '../../src/features/story/artText.ts'
 
@@ -383,4 +383,12 @@ test("the cast page's start request carries the tone preset and only the campaig
   assert.deepEqual(sessionBody(preset, none, null), { table: preset.rules, ironman: false })
   assert.deepEqual(sessionBody(preset, { ...none, ironman: true, arc: 'epic' }, 'soft'), { table: preset.rules, arc: 'epic', hand: 'soft', ironman: true })
   assert.deepEqual(sessionBody(undefined, none, null), { table: {}, ironman: false })
+})
+
+test('the play header is one line: time, then how the character is', () => {
+  const fight = { condition: 'unhurt', hp: 10, max_hp: undefined, stress: 'shaken', injuries: [], captors: null, fight: null, dead: false }
+  assert.deepEqual(sceneLine({ local_time: '1290-05-01T18:15' }, fight as never), ['Monday, 6:15 pm', 'Unhurt'])
+  assert.deepEqual(sceneLine({ local_time: '1290-05-01T09:05' }, { ...fight, condition: 'hurt', injuries: ['a limp'], captors: 'the watch' } as never),
+    ['Monday, 9:05 am', 'Hurt', 'Lasting: a limp', 'Held by the watch'])
+  assert.deepEqual(sceneLine({ local_time: '1290-05-01T09:05' }, { ...fight, dead: true } as never), ['Monday, 9:05 am', 'Dead'])
 })

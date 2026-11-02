@@ -57,16 +57,17 @@ export function hasWidget(story: Story, widget: Widget): boolean {
   return shown[widget]
 }
 
-/** A widget asked for from elsewhere (a Settings search lands on Tone and rules), kept until the panel takes it. */
-let asked: Widget | null = null
+/** A widget asked for from elsewhere (a Settings search lands on Tone and rules, the story's menu opens any of them),
+ *  kept until the panel takes it. `scene` is the panel's own view: who's here and what the scene needs. */
+let asked: Widget | 'scene' | null = null
 export const ASK_EVENT = 'story-drawer'
 
-export function askForDrawer(widget: Widget) {
+export function askForDrawer(widget: Widget | 'scene') {
   asked = widget
   window.dispatchEvent(new Event(ASK_EVENT))
 }
 
-export function takeAsked(): Widget | null {
+export function takeAsked(): Widget | 'scene' | null {
   const widget = asked
   asked = null
   return widget
