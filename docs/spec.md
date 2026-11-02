@@ -174,12 +174,20 @@ Review follow-ups, decided 2026-11-02 (Vanta's cards, after the concurrency, pro
 - **Opening the GM view in Play asks first** and marks the turns where it was open.
 - **Switching out of Play asks once whether to reveal missed motives,** defaulting to hidden.
 
+Isekai Pipeline PRD follow-ups, decided 2026-11-02 (Vanta's cards; see "Writing rules, checks and corrections"):
+
+- **Roll overrides are allowed from the GM view in any mode,** logged and marked on the turn, and off in Ironman.
+- **Writer inventions are kept unless the user strikes them.**
+- **A separate Reviewer pass is on by default in "Rich and slow"** and a toggle elsewhere; the code scan always runs.
+- **In Play, the turn post can add beats beyond the user's own character, as nudges.**
+- **Offscreen agents: code rolls the outcome, the character's agent writes their lines.**
+
 The rest of the reviews' findings were engineering and design fixes that don't change what Vanta decided. They are
 folded into "The turn loop", "Agent output", "Who sees what", "Turn state and persistence" and "Waiting and pauses".
 
 ## Open questions
 
-*None open. 27 questions answered across four batches, plus 6 review follow-ups; the two topics under "Later batches" are still to cover.*
+*None open. 27 questions answered across four batches, plus 6 review follow-ups and 5 PRD follow-ups; the two topics under "Later batches" are still to cover.*
 
 ## The turn loop
 
@@ -213,15 +221,18 @@ leaks, UX). Steps marked *(Dungeon)* are carried over unchanged. The state each 
 7. **Resolve** `[Resolving]` *(Dungeon)*. Code first classifies intents into risky kinds where it can (attack, steal,
    deceive, persuade or threaten against someone's interest); the Referee rules on the rest, seeing the bare intent,
    not the speaker's pitch. Anything opposed, dangerous or uncertain is rolled by code. Life Cards may inject an
-   event. The output is an immutable **turn result**: intents, rolls, outcomes, and who saw and heard what.
+   event. The output is an immutable **turn result**: intents, rolls, outcomes, who saw and heard what, and the brief
+   with its stop point (see "The turn brief and the stop point").
 8. **Write** `[Writing]`. The Writer renders the turn result into the turn's post, from the mode's point of view,
    streamed as it is written, never contradicting a roll or the record. What the Writer may see depends on the mode
-   (see "Who sees what").
+   (see "Who sees what"). Code then scans the draft, and any Reviewer pass runs; a hard failure is rewritten before
+   commit (see "The draft scan and the Reviewer").
 9. **Commit** `[Committing]`. In one SQLite transaction, code writes the record from the turn result, folds each
    character's in-turn knowledge into their memory, moves feelings, and saves the branch point. Code, not a model,
    routes every memory by visibility: who was present, who a whisper was for, whose motive it is. Fact extraction
    only adds colour from the prose (descriptions, named objects) and never overrides an outcome or decides who
-   learns what. Then the turn is marked committed.
+   learns what. Off-page threads that ran alongside Write are committed in the same transaction. Then the turn is marked committed and
+   the turn report is written.
 10. **Pace** `[Idle]`. Queued mode, cap and model changes take effect now. In Watch, the next turn starts on the timer
     unless this turn hit a big moment or the session cap.
 
@@ -333,6 +344,142 @@ A round can take 20 or more model calls, so waiting is designed, not left blank.
   every control is keyboard reachable, and the timeline respects reduced motion.
 - **Branches read as questions.** A re-ask branch is labelled "What if Hesk had stayed?" with the character's
   portrait.
+
+## Writing rules, checks and corrections
+
+Added 2026-11-02 after checking the spec against Vanta's "Isekai Pipeline" PRD (a turn-based collaborative fiction
+workflow with a Director, a Writer, a Reviewer and dice). That PRD's Director maps to the user in Play; its Writer
+maps to Adventure's Writer plus code. Coverage, epic by epic, is in the table at the end of this section.
+
+### House rules and rulings
+
+- **House rules are campaign data, not prompt folklore.** Each campaign holds a house rulebook: POV and tense, content
+  scope (the intensity settings), dialogue rules, how thoughts are formatted, the **System pane** format, and lists
+  of forbidden punctuation, outlawed words and phrases, and outlawed names (starting from Worldsmith's list of names
+  that read as model-made). The world package supplies defaults; the user edits them at the Table. The Writer and
+  any Reviewer get them every turn, and the draft scan checks them in code.
+- **Rulings are recorded.** A ruling is a standing decision by the user ("Hesk's limp is permanent", "no one in town
+  knows the Tower has floors above twelve"). Each is stored with the turn it was made, goes to the Writer, Referee
+  and Reviewer as a house rule, and applies from that turn forward. Applying one backward is a correction (below).
+  The rulings list is a GM view page, so nothing gets re-argued later.
+
+### The turn brief and the stop point
+
+- **Ambiguity gets one question.** If the user's declared move is ambiguous on something pivotal (who they attack,
+  whether they hand over the key), the turn asks one focused question on the reply card before Resolve, instead of
+  guessing.
+- **Beats beyond the user's own character in Play** (decided 2026-11-02). Besides what their character does, says and
+  decides, the user's turn post can add beats they'd like to see (a storm, a stranger arriving). These go to the
+  director as nudges, exactly like Author nudges, with the same "Used / Not yet" feedback; other characters still
+  choose for themselves.
+- **Resolve produces a brief.** The turn result (step 7) carries the brief: when and where the turn happens, the
+  user-set beats, each uncertain outcome with its roll, any math the turn needs (damage, XP, costs), and the **stop
+  point**.
+- **The Writer renders every user-set beat in full** and adds no beat the user's move didn't open: it never compresses
+  or skips one for pacing.
+- **The stop point is fixed before prose.** In Play the turn ends before the user's character's next real decision,
+  never past it. In Author and Watch it ends at the scene's next natural break or the next big moment.
+
+### Numbers, System panes and who can see them
+
+- **Numbers live in panes.** Health, status, quests and loot appear on the page only in the house System pane format,
+  generated by code from the record, so every number on the page traces to a stats entry. Ordinary narration carries
+  no numbers and never mentions dice.
+- **Game knowledge is knowledge too.** Whether a character can see System panes or game numbers is a fact about them
+  (a world flag per people or per character: in BABEL, natives don't see them). Agents and the Writer only get the
+  numbers their reader is allowed to see, through the same context builders as every other secret.
+
+### Inventions
+
+- **The Writer may invent only where canon is silent,** and every new name or detail is listed in the turn report and
+  stored in the record as invented. **Inventions are kept unless the user strikes them** (decided 2026-11-02), so
+  Watch never stalls on approvals; striking takes one tap in the turn report.
+- Striking an invention rewrites the passage that used it and removes it from the record and from every character's
+  in-turn knowledge, before or after commit (after commit, as a correction).
+
+### The draft scan and the Reviewer
+
+- **Code scans every draft.** After Write, code checks the draft against the house rules: forbidden punctuation,
+  outlawed phrases and names, scene-closing tells, numbers outside panes, mention of dice, and beats past the stop
+  point. **Hard failures** must be fixed; **soft warnings** go in the turn report. It also reports word count and
+  a density read.
+- **A draft with a hard failure is never committed.** The prose still streams, so the user reads early; a passage
+  with a hard failure is rewritten (Dungeon's flagged passages and Rewrite) and re-scanned before step 9 commits.
+- **The Reviewer.** A separate model call that has not seen the Writer's working checks the draft against the hard
+  dialogue rules (no echoed phrases, no summarised speech, rationed verbal tics, questions present), formatting,
+  counting, continuity with earlier chapters, pane arithmetic, character voice and the stop point, and returns a
+  prioritised list of quote, problem and concrete fix. The Writer applies each or declines it with a reason, and the
+  result is scanned again. **The Reviewer is on by default in the "Rich and slow" preset** and a toggle in the others
+  (decided 2026-11-02). The code scan always runs.
+- **The user can flag anything missed** with Dungeon's flagged passages and Rewrite; the fix goes through the same
+  scan.
+
+### Rolls, overrides and the turn report
+
+- **Every uncertain beat maps to one roll,** labelled with who acts, what's at stake and the stat applied, and the dice
+  log records turn, label, stat, natural result, modifiers and band *(Dungeon)*. No re-roll without a recorded reason
+  (re-asking an agent and rewinding are recorded reasons).
+- **Overrides** (decided 2026-11-02). From the GM view, in any mode, the user can override a roll's result. The
+  override is logged with the turn and the reason, the turn is marked (like a turn where the GM view was open), and
+  the affected passage is rewritten; after commit it is a correction. Overrides are off in Ironman.
+- **The turn report.** After each turn, a report the user can open (and, in Play, a short recap under the post): what
+  the user set, each roll and what it produced in plain words (with the numbers, unless the user set rolls to hidden),
+  the numbers that changed, inventions, scan and Reviewer fixes, off-page beats that ran and when the next are due,
+  and open questions. Hidden truths and motives appear only where the mode or the GM view allows. It ends with the
+  user's next decision pending; nothing is decided for their character.
+- **The status line.** Always visible: the turn just played, what's pending, and when the next off-page beats are due.
+
+### Off-page threads
+
+- **Offscreen characters keep living** *(Dungeon's off-page beats and the director's threads)*: a list of active
+  offscreen threads, each advanced on its own cadence with its own roll, logged with what happened, how well it went,
+  a few lines of actual dialogue, and who was involved. Outcomes are recorded before they surface on the page, and a
+  thread can collide with the main scene (arrive, interrupt, catch up) when timing and rolls say so.
+- **For offscreen agents, code rolls and the agent writes the lines** (decided 2026-11-02). Code rolls the thread's
+  outcome as Dungeon's off-page beats do; the character's own agent then writes the few lines of what they said,
+  from its own knowledge and the rolled outcome, in one cheap call. Program characters' threads are code only.
+- Due threads run alongside Write (step 8), staged in the turn draft, and are committed in step 9 with the rest of the
+  turn, so a thread's result is in the record before the next turn's snapshot.
+
+### Corrections
+
+- **A correction is a turn-keyed patch.** From the GM view (or by striking an invention, or a ruling applied
+  backward), the user can correct a committed turn: a character knew something they couldn't, a number was wrong, a
+  mechanic was misapplied. Code writes the correction as an entry keyed to that turn, in one transaction across the
+  record, every affected character's memory and beliefs, feelings and stats, so every later read through the
+  branch's ancestry sees it. The affected passage is rewritten and re-scanned, and the correction is logged.
+- Later turns already played on that branch are not re-run; the turn report says which later turns referenced the
+  corrected fact, so the user can rewind if it matters.
+
+### Keeping records readable
+
+- **Nothing is deleted.** The record and per-character memory keep every row *(Dungeon)*; summaries are written on top,
+  never in place, so the "archive before squeezing" is built in.
+- **Compaction keeps what's live.** Old turns are folded into chapter and era summaries, keeping recent turns word for
+  word and, from older ones, every exact quote that might be needed later (promises, oaths, threats, confessions are
+  stored verbatim when they happen), every number, every name and every open thread.
+- **A check before a summary is used:** every open thread, hidden truth, ruling and live promise present before
+  compaction must still be reachable after it; a summary that drops one is rejected and redrafted.
+- **Character sheets are refreshed from the page.** At each chapter close, code drafts a "shown so far" update to
+  each main character's sheet (habits, injuries, what they've revealed); it applies after the user's review in the GM
+  view, or automatically in Watch.
+
+### Coverage of the Isekai Pipeline PRD
+
+| Epic | Where the spec covers it |
+| --- | --- |
+| 1. Setup and canon | World packages and cast sheets (What it builds on); house rules and rulings (above); "last updated through turn N" is built in, since every record and memory row is keyed by turn |
+| 2. Receive a turn | Turn loop steps 1 to 3; one question on ambiguity, the brief and the stop point (above) |
+| 3. Resolve uncertainty | Dice decide risky acts (Batch 1); turn loop step 7; dice log and overrides (above); roll visibility *(Dungeon)* |
+| 4. Off-screen threads | Off-page threads (above), Dungeon's off-page beats and the director's threads |
+| 5. Write the chapter | Turn loop step 8; every beat in full, stop point, System panes, inventions, game knowledge (above); Who sees what |
+| 6. Scan the draft | The draft scan (above) |
+| 7. Deliver and review | Streaming (Waiting and pauses); the Reviewer and flagging (above) |
+| 8. Record the turn | Turn loop step 9; the record, hidden truths and per-character memory (Batches 2 and 3, Turn state); turn report and status line (above) |
+| 9. Corrections and rulings | Corrections and rulings (above); striking inventions |
+| 10. Keep records readable | Keeping records readable (above); Dungeon's chapters and fading (Batch 3) |
+| 11. Reply to the Director | The turn report (above); the reply card and "nothing decided for your character" (Batch 2) |
+| Non-goals | Held: house rules shape prose without prescribing style; nothing automates the user's own choices in Play; dice are shown to the user unless they choose hidden rolls, never on the page |
 
 ## Later batches (planned)
 
