@@ -11,7 +11,7 @@ test('sizes read in the largest sensible unit', () => {
 })
 
 test('labels say what a backup holds and mark pre-upgrade copies', () => {
-  assert.equal(backupLabel({ name: 'dungeon-1.zip', bytes: 2048, kind: 'backup', readable: true, created_at: '2026-10-05T08:00:00Z' }, iso),
+  assert.equal(backupLabel({ name: 'adventure-1.zip', bytes: 2048, kind: 'backup', readable: true, created_at: '2026-10-05T08:00:00Z' }, iso),
     'Backup, 2026-10-05 (2 KB)')
   assert.equal(backupLabel({ name: 'pre-upgrade-1.zip', bytes: 2048, kind: 'pre-upgrade', readable: true, created_at: '2026-10-04T08:00:00Z' }, iso),
     'Before an upgrade, 2026-10-04 (2 KB)')

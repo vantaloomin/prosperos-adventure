@@ -41,7 +41,7 @@ def test_a_cli_without_app_server_falls_back_to_common_models(tmp_path, monkeypa
     assert [model['id'] for model in models] == list(codex.FALLBACK_MODELS)
 
 
-def test_a_reply_carries_only_dungeons_instructions():
+def test_a_reply_carries_only_adventures_instructions():
     arguments = codex.codex_arguments('codex', {'model': 'gpt-5.5', 'reasoning_effort': 'low'}, '/tmp/work',
                                       '/tmp/instructions.md')
     settings = [arguments[index + 1] for index, value in enumerate(arguments) if value == '-c']

@@ -10,7 +10,7 @@ from adventure.errors import DomainError
 def test_backup_round_trip_keeps_the_story_and_drops_saved_keys(client, app, told, tmp_path, clock):
     created = client.post('/api/backups').json()
     assert created['format'] == 'prospero-adventure-archive' and created['path'].endswith('.zip')
-    assert backup.Path(created['path']).name.startswith('dungeon-')
+    assert backup.Path(created['path']).name.startswith('adventure-')
     restored = backup.restore(backup.Path(created['path']), tmp_path / 'restored' / 'adventure.sqlite3', clock)
     with restored.connect() as connection:
         said = [row[0] for row in connection.execute("SELECT text FROM story_messages WHERE role='user'")]

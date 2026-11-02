@@ -92,7 +92,7 @@ def test_a_reply_streams_from_claude_p_with_tools_off_and_the_plan_login(stand_i
     assert seen['api_key'] is None  # a key set for the Anthropic provider never replaces the plan
 
 
-def test_only_dungeons_prompt_reaches_the_model(stand_in, monkeypatch):
+def test_only_adventures_prompt_reaches_the_model(stand_in, monkeypatch):
     """The harness's own context is off: settings files, MCP servers, CLAUDE.md, memory and a parent session."""
     monkeypatch.setenv('CLAUDECODE', '1')
     monkeypatch.setenv('CLAUDE_CODE_SESSION_ID', 'parent-session')
