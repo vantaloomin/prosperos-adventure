@@ -13,9 +13,13 @@ from adventure.rounds.contract import Declaration, Mind, Point, State
 
 @pytest.fixture
 def steps():
-    """Steps registered by a test are taken out again after it."""
+    """Each test starts from the foundation's own steps (picking seats, the solo turn) and hooks (memory), whatever
+    other parts of the loop registered; everything is put back after it."""
     before = {state: list(listed) for state, listed in engine.STEPS.items()}
     hooks = list(engine.COMMITS)
+    for listed in engine.STEPS.values():
+        listed[:] = [(name, step) for name, step in listed if step in (engine.pick, solo.told)]
+    engine.COMMITS[:] = [(name, hook) for name, hook in engine.COMMITS if hook is engine.committed_memory]
     yield
     for state, listed in before.items():
         engine.STEPS[state][:] = listed
