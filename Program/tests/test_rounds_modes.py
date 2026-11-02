@@ -204,7 +204,13 @@ def test_the_timer_runs_only_in_watch(client, steps):
 
 # Switching modes ------------------------------------------------------------------------------------------------------
 
+async def everyone(turn):
+    """Everyone at the table is in the scene, as a 'present' step before 'pick' would say."""
+    turn.snapshot.present = [seat.key for seat in turn.snapshot.seats]
+
+
 def test_outside_play_the_users_character_runs_on_the_mind_they_picked(client, steps):
+    engine.STEPS[State.GATHERING].insert(0, ('present', everyone))
     seated(client, 'mara', 'hesk', human='you')
     ok(client.put('/api/rounds/settings', json={'agent_cap': 2}))
     ok(client.put('/api/rounds/mode', json={'mode': 'watch'}))
