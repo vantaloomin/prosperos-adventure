@@ -3,10 +3,12 @@ party members plus key NPCs, up to 6 at once"; Batch 3: "Program characters run 
 
 - **Gather** (`pick`, replacing the foundation's default under the same name): who is present comes from the scene
   (the people at the place, the party and the user's character) unless an earlier step set it; the agents this turn
-  are the seats the user made agents who are present, up to the cap, picked party first, then nemeses and characters promoted by
-  hand, then those the turn's line names, ties by seat order. Anyone past the cap runs on their Program mind for the
-  turn, and is listed in `snapshot.settings['dropped']`. The human sits only in Play. The agents' settings and the
-  story's intensity are frozen into the snapshot (adventure/rounds/agents.py `frozen`).
+  are the seats the user made agents who are present, up to the cap, picked party first, then nemeses and characters
+  promoted by hand, then those the turn's line names, ties by seat order. The user's own character standing in on an
+  agent outside Play (`snapshot.settings['stand_in']['key']`, set by adventure/rounds/modes.py) comes before them all,
+  since the user asked for it. Anyone past the cap runs on their Program mind for the turn, and is listed in
+  `snapshot.settings['dropped']`. The human sits only in Play. The agents' settings and the story's intensity are
+  frozen into the snapshot (adventure/rounds/agents.py `frozen`).
 - **Declare** (`declare`): every agent at once, each from its own context, merged in seat order, not in the order the
   answers arrive. Program characters' moves come from code (`program`), with no model call. The human, in Play,
   declares the line they typed (`human`). A seat that already has a declaration keeps it: a re-ask arrives with
@@ -29,7 +31,7 @@ from adventure.rounds.engine import pick as engine_pick
 QUOTED = re.compile(r'"([^"]+)"|“([^”]+)”')
 # Party members this warm (trust and affection added up) stay close; colder, they hang back (adventure/party.py).
 HANG_BACK = 0
-PARTY, NEMESIS, NAMED, REST = range(4)
+STAND_IN, PARTY, NEMESIS, NAMED, REST = range(5)
 
 
 # Gather -------------------------------------------------------------------------------------------------------------
@@ -39,9 +41,11 @@ def named_in(name: str, text: str) -> bool:
                for part in {name, name.split(' ')[0]})
 
 
-def rank(seat, in_party: set[str], nemeses: set[str], said: str) -> tuple[int, int]:
+def rank(seat, in_party: set[str], nemeses: set[str], said: str, stand_in: str = '') -> tuple[int, int]:
     """Where a seat comes in the queue for the agent cap."""
-    if seat.key in in_party:
+    if seat.key == stand_in:
+        group = STAND_IN
+    elif seat.key in in_party:
         group = PARTY
     elif seat.promoted or seat.name.lower() in nemeses:
         group = NEMESIS
@@ -79,11 +83,13 @@ async def pick(turn: Turn):
         if seat.mind == Mind.HUMAN and snapshot.mode != Mode.PLAY:
             seat.mind = Mind.PROGRAM
     said = str(snapshot.settings.get('said') or snapshot.settings.get('nudge') or '')
+    stand_in = str((snapshot.settings.get('stand_in') or {}).get('key') or '')
     wanting = sorted((seat for seat in snapshot.seats if seat.mind == Mind.AGENT and seat.key in here),
-                     key=lambda seat: rank(seat, in_party, nemeses, said))
+                     key=lambda seat: rank(seat, in_party, nemeses, said, stand_in))
     for seat in wanting[snapshot.agent_cap:]:
         seat.mind = Mind.PROGRAM
-    snapshot.settings['dropped'] = [seat.key for seat in wanting[snapshot.agent_cap:]]
+    earlier = snapshot.settings.get('dropped') or []  # when a later Gathering step picks again
+    snapshot.settings['dropped'] = earlier + [seat.key for seat in wanting[snapshot.agent_cap:] if seat.key not in earlier]
 
 
 # Program minds and the human ----------------------------------------------------------------------------------------
