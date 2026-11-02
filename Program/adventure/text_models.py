@@ -34,9 +34,13 @@ from adventure.providers.urls import is_loopback, validate_compatible_url
 from adventure.providers.vault import credential_for
 
 CHAT = 'chat'
+AGENTS = 'agents'
 JOBS = [
     {'key': CHAT, 'name': 'Default', 'detail': 'Every job uses this profile unless you choose another.'},
     {'key': 'story', 'name': 'Story narrator', 'detail': 'Tells your story.'},
+    {'key': 'agents', 'name': 'Agents', 'detail': 'Decides for each character who runs as an agent: what they try, '
+     'say, want and hide. Uses the Default without a profile here. A character can have a model of its own on the cast '
+     'page.'},
     {'key': 'referee', 'name': 'Referee', 'detail': 'Splits what you do into actions and picks the stat and '
      'difficulty of each roll. Off unless you choose a profile here: without one, keyword rules decide, and the '
      'narrator\'s model is never asked. A small, fast model is plenty.'},
@@ -182,6 +186,15 @@ def config_for(connection, job: str) -> dict | None:
     if not ready_for(config, job):
         return None
     return {**config, 'credential_ref': row['credential_ref'], 'profile_id': row['id'], 'profile_name': row['name']}
+
+
+def character_config(connection, profile_id: str | None) -> dict | None:
+    """Settings for one agent character's calls: the model the user gave that character, while it is finished, else
+    the agents' job (which falls back to the Default)."""
+    row = optional(connection, 'SELECT * FROM model_profiles WHERE id=?', (profile_id,)) if profile_id else None
+    if row is not None and profile_ready(config := decode(row['config'])):
+        return {**config, 'credential_ref': row['credential_ref'], 'profile_id': row['id'], 'profile_name': row['name']}
+    return config_for(connection, AGENTS)
 
 
 def key_for(vault, config: dict) -> str | None:
@@ -490,5 +503,5 @@ def quick_save(database, vault, body) -> dict:
         return connection_summary(connection)
 
 
-__all__ = ['CHAT', 'reply_config', 'set_mix', 'DEFAULT_URLS', 'JOBS', 'split_recall', 'config_for', 'connection_summary', 'create', 'delete', 'duplicate',
+__all__ = ['AGENTS', 'CHAT', 'character_config', 'reply_config', 'set_mix', 'DEFAULT_URLS', 'JOBS', 'split_recall', 'config_for', 'connection_summary', 'create', 'delete', 'duplicate',
            'key_for', 'overview', 'probe_key', 'quick_save', 'set_route', 'update']
