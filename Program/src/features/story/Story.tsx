@@ -1,22 +1,24 @@
-import { Fragment, useEffect, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
+import { Fragment, useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
-import { ArrowDown, Bookmark, Lightbulb, MapPin, RotateCcw, Send, Timer, Undo2 } from 'lucide-react'
+import { ArrowDown, Bookmark, RotateCcw, Send, Timer, Undo2 } from 'lucide-react'
 import { api, newId, streamApi } from '../../api'
 import type { View } from '../../workspace'
 import type { BandStep, CitySummary, Story as StoryData, StoryBack, StoryMap as TravelMap, StoryMessage, StoryScene, TurnEvent, TurnSoFar } from '../../types'
 import { Loading, Notice } from '../../components/Feedback'
 import { ErrorNotice } from '../../components/ErrorNotice'
 import { ConfirmDialog } from '../../components/ConfirmDialog'
-import { InfoTip } from '../../components/InfoTip'
 import { LifeCard } from './StoryLifeCard'
 import { AiFooter, CrisisNote } from '../../components/Safety'
-import { aroundText, foesText, NO_TURN, otherTowns, paceText, placeGroups, receiptsByReply, spotsText, turnAfter, whereText } from './storyText'
+import { foesText, NO_TURN, otherTowns, paceText, placeGroups, receiptsByReply, sceneLine, turnAfter, whereText } from './storyText'
 import { TurnReceipt } from './StoryReceipt'
-import { StatusStrip } from './StoryStatus'
 import { RollCard, TurnLive } from './StoryTurn'
 import { StoryTown } from './StoryTown'
 import { StoryMap } from './StoryMap'
 import { AuthorsNote } from './AuthorsNote'
+import { openAuthorsNote } from './noteState'
+import { StoryMenu } from './StoryMenu'
+import { menuCommands, OUT_OF_STORY, type MenuCommand } from './menuText'
+import { askForDrawer } from './scene'
 import { StoryStart } from './StoryStart'
 import { TitleScreen } from './TitleScreen'
 import { StoryNarration } from './StoryNarration'
@@ -26,8 +28,6 @@ import { useWorldTheme } from './useWorldTheme'
 import { EntityHost } from './EntityCard'
 import { STORY_KEY } from './table'
 import { freshIdeas, withIdea, type Ideas } from './ideas'
-
-const OUT_OF_STORY = 'To step out of the story, start a message with OOC: or wrap it in ((double parentheses)).'
 
 /** The story: the user's own story around the cities, told by a narrator. */
 export function Story({ go }: { go: (view: View) => void }) {
@@ -44,6 +44,8 @@ export function Story({ go }: { go: (view: View) => void }) {
   const [draft, setDraft] = useState({ text: '', at: 0 })
   // Past the title screen (./TitleScreen.tsx), which shows before a campaign starts.
   const [begun, setBegun] = useState(false)
+  // "Start a new story…" from the menu, waiting to be confirmed.
+  const [clearing, setClearing] = useState(false)
   const look = useWorldTheme(story.data)
   if (story.isPending) return <Loading label="Opening your story" />
   if (story.isError) return <ErrorNotice error={story.error} />
@@ -84,9 +86,10 @@ export function Story({ go }: { go: (view: View) => void }) {
             onBookmark={(id, name) => change(() => api<StoryData>('/story/bookmarks', { message_id: id, name }))} />
           {error && <div className="story-notice"><Notice tone="error">{error}</Notice></div>}
           <StoryComposer key={draft.at} busy={pending !== null} draft={draft.text} turn={story.data.messages.length} onSend={(text) => void send(text)}
+            commands={menuCommands(story.data)} onNewStory={() => setClearing(true)}
             onAddModel={story.data.ready ? undefined : () => go('settings/models')} />
         </>}
-        <NewStory empty={!story.data.messages.length} onClear={() => run(null, () => api<StoryData>('/story', undefined, 'DELETE').then((data) => { update(data); setBegun(false) }))} />
+        <NewStory open={clearing} onClose={() => setClearing(false)} onClear={() => run(null, () => api<StoryData>('/story', undefined, 'DELETE').then((data) => { update(data); setBegun(false) }))} />
       </div>
       <StoryPanel story={story.data} change={change} onTravel={(name) => setDraft({ text: `I set out for ${name}.`, at: Date.now() })}
         onLine={(text) => setDraft({ text, at: Date.now() })}
@@ -108,7 +111,8 @@ function toPackages() {
   window.dispatchEvent(new PopStateEvent('popstate'))
 }
 
-/** Where and when the story is, and the fight. The scene line is the header; the title is for screen readers. */
+/** Where and when the story is, and the fight, in one line: the place (which opens the maps to go somewhere else),
+ *  the time, and how the character is. The title is for screen readers. */
 interface HeaderProps { story: StoryData; change: (request: () => Promise<StoryData>) => Promise<void>; onDraft: (text: string) => void }
 
 function StoryHeader({ story, change, onDraft }: HeaderProps) {
@@ -116,33 +120,35 @@ function StoryHeader({ story, change, onDraft }: HeaderProps) {
   return (
     <header className="story-header">
       <h1 id="story-heading" className="visually-hidden">Story</h1>
-      <SceneBar scene={story.scene} map={story.map ?? null} onDraft={onDraft}
-        onMove={(body) => change(() => api<StoryData>('/story/scene', body, 'PUT'))} status={<StatusStrip story={story} />} />
+      <SceneBar scene={story.scene} map={story.map ?? null} line={sceneLine(story.scene, story.fight)} onDraft={onDraft}
+        onMove={(body) => change(() => api<StoryData>('/story/scene', body, 'PUT'))} />
       {fight && <p className="story-fight" role="status">{fight}</p>}
     </header>
   )
 }
 
-interface SceneProps { scene: StoryScene; map: TravelMap | null; onDraft: (text: string) => void; onMove: (body: { city_id: string; place_id?: string }) => Promise<void>; status?: ReactNode }
+interface SceneProps { scene: StoryScene; map: TravelMap | null; onDraft: (text: string) => void; onMove: (body: { city_id: string; place_id?: string }) => Promise<void>; line?: string[] }
 
-function SceneBar({ scene, map, onDraft, onMove, status }: SceneProps) {
+function SceneBar({ scene, map, onDraft, onMove, line = [] }: SceneProps) {
   const [moving, setMoving] = useState(false)
   return (
     <div className="story-scene">
-      <div className="story-where">
-        <p><MapPin aria-hidden="true" /> <strong>{whereText(scene)}</strong></p>
-        <button type="button" className="text-button" aria-expanded={moving} onClick={() => setMoving(!moving)}>
-          {moving ? 'Stay here' : 'Go somewhere else…'}</button>
-      </div>
-      {status}
-      {!!scene.place.spots?.length && <p className="subtle">{spotsText(scene.place.spots)}</p>}
-      <p>{aroundText(scene.around)}</p>
+      <p className="story-where">
+        <button type="button" className="story-place" aria-expanded={moving} title={whereText(scene)} onClick={() => setMoving(!moving)}>
+          <span className="visually-hidden">{moving ? 'Stay at ' : 'Go somewhere else from '}</span>{capitalized(scene.place.name)}</button>
+        {line.map((item) => <span key={item}> · {item}</span>)}
+      </p>
       {moving && <GoElsewhere scene={scene} map={map} onDone={() => setMoving(false)} onDraft={onDraft} onMove={onMove} />}
     </div>
   )
 }
 
-interface GoProps extends Omit<SceneProps, 'scene' | 'status'> { scene: StoryScene; onDone: () => void }
+/** "the Felled Oak" leads the line as "The Felled Oak". */
+function capitalized(name: string): string {
+  return name.charAt(0).toUpperCase() + name.slice(1)
+}
+
+interface GoProps extends Omit<SceneProps, 'scene' | 'line'> { scene: StoryScene; onDone: () => void }
 
 /** Going somewhere else, on the maps. A place across town is picked on the street map (./StoryTown.tsx) and is a cut.
  *  Another town, a keep or a hex is picked on the travel map (./StoryMap.tsx) and is a journey: it writes "I set out
@@ -275,33 +281,40 @@ function BookmarkButton({ onSave }: { onSave: (name: string) => Promise<void> })
 }
 
 /** `draft` is a line taken back to send again; a new draft remounts the composer with it, which also drops any
- * ideas (./ideas.ts), as sending a line does. With no text model yet, Send is `onAddModel`: it opens Settings > Models. */
-interface ComposerProps { busy: boolean; draft: string; turn: number; onSend: (text: string) => void; onAddModel?: () => void }
+ * ideas (./ideas.ts), as sending a line does. One box and Send; the rest is in the menu (./StoryMenu.tsx, ⌘K). With no
+ * text model yet, Send is `onAddModel`: it opens Settings > Models. */
+interface ComposerProps {
+  busy: boolean; draft: string; turn: number; onSend: (text: string) => void; onAddModel?: () => void
+  commands: MenuCommand[]; onNewStory: () => void
+}
 
-function StoryComposer({ busy, draft, turn, onSend, onAddModel }: ComposerProps) {
+function StoryComposer({ busy, draft, turn, onSend, onAddModel, commands, onNewStory }: ComposerProps) {
   const [text, setText] = useState(draft)
   const [found, setFound] = useState<Ideas | null>(null)
-  const [thinking, setThinking] = useState(false)
+  const box = useRef<HTMLTextAreaElement>(null)
   const shown = freshIdeas(found, turn)
   const submit = () => { if (text.trim() && !busy && !onAddModel) { onSend(text.trim()); setText(''); setFound(null) } }
-  const askIdeas = () => {
-    setThinking(true)
-    api<Ideas>('/story/ideas', {}).then(setFound, () => setFound(null)).finally(() => setThinking(false))
-  }
+  const askIdeas = () => { if (!busy) api<Ideas>('/story/ideas', {}).then(setFound, () => setFound(null)) }
   const onKeyDown = (event: KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); submit() }
+  }
+  const run = (command: MenuCommand) => {
+    if (command.id === 'ideas') askIdeas()
+    else if (command.id === 'note') openAuthorsNote('story')
+    else if (command.id === 'step-out') { setText((before) => before.startsWith(OUT_OF_STORY) ? before : OUT_OF_STORY + before); box.current?.focus() }
+    else if (command.id === 'new-story') onNewStory()
+    else askForDrawer(command.id)
   }
   return (<>
     {shown.length > 0 && <div className="story-ideas" role="group" aria-label="Ideas">
       {shown.map((idea) => <button key={idea} type="button" className="receipt-chip" onClick={() => { setText((before) => withIdea(before, idea)); setFound(null) }}>{idea}</button>)}
     </div>}
     <form className="composer story-composer" onSubmit={(event) => { event.preventDefault(); submit() }}>
-      <AuthorsNote chat="story" name="The narrator" story />
+      <StoryMenu commands={commands} onRun={run} />
+      <AuthorsNote chat="story" name="The narrator" story quiet />
       <label className="visually-hidden" htmlFor="story-text">What you do or say</label>
-      <textarea id="story-text" rows={2} value={text} maxLength={40000} placeholder="What do you do or say?"
+      <textarea ref={box} id="story-text" rows={2} value={text} maxLength={40000} placeholder="What do you do or say?"
         onChange={(event) => setText(event.target.value)} onKeyDown={onKeyDown} />
-      <InfoTip id="story-tip" label="the story" above text={`Enter sends, Shift+Enter adds a new line. ${OUT_OF_STORY}`} />
-      <button type="button" className="button story-ideas-button" disabled={busy || thinking} onClick={askIdeas} aria-label="Ideas" title="Two or three things you could do now. They are not kept."><Lightbulb aria-hidden="true" /><span className="label">{thinking ? 'Thinking…' : 'Ideas'}</span></button>
       {onAddModel
         ? <button type="button" className="button primary" onClick={onAddModel}>Add a model</button>
         : <button type="submit" className="button primary" disabled={busy || !text.trim()}><Send aria-hidden="true" />Send</button>}
@@ -310,18 +323,14 @@ function StoryComposer({ busy, draft, turn, onSend, onAddModel }: ComposerProps)
   </>)
 }
 
-function NewStory({ empty, onClear }: { empty: boolean; onClear: () => Promise<void> }) {
-  const [asking, setAsking] = useState(false)
-  if (empty) return null
+function NewStory({ open, onClose, onClear }: { open: boolean; onClose: () => void; onClear: () => Promise<void> }) {
+  if (!open) return null
   return (
-    <div className="story-footer">
-      <button type="button" className="text-button" onClick={() => setAsking(true)}>Start a new story…</button>
-      {asking && <ConfirmDialog title="Start a new story?" onClose={() => setAsking(false)} actions={<>
-        <button type="button" className="button" onClick={() => setAsking(false)}>Cancel</button>
-        <button type="button" className="button primary" onClick={() => void onClear().then(() => setAsking(false))}>Start a new story</button>
-      </>}>
-        <p>The story so far and the people you&apos;ve met in it are cleared for good. You stay where you are.</p>
-      </ConfirmDialog>}
-    </div>
+    <ConfirmDialog title="Start a new story?" onClose={onClose} actions={<>
+      <button type="button" className="button" onClick={onClose}>Cancel</button>
+      <button type="button" className="button primary" onClick={() => void onClear().then(onClose)}>Start a new story</button>
+    </>}>
+      <p>The story so far and the people you&apos;ve met in it are cleared for good. You stay where you are.</p>
+    </ConfirmDialog>
   )
 }

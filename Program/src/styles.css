@@ -124,19 +124,10 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
   padding: 14px 16px 16px; background: var(--surface); border-top: 1px solid var(--border); box-shadow: 0 -8px 24px var(--shadow); }
 .story-panel-before .story-panel-body { position: static; max-height: 45dvh; box-shadow: none; border-top: 0; background: none; }
 .story-panel-close { position: absolute; top: 8px; right: 8px; }
-.story-panel-heading { margin: 0; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); }
+.story-panel-heading { margin: 0; font-size: 0.8125rem; font-weight: 500; color: var(--muted); font-family: var(--ui-font); }
 .story-panel-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-right: 36px; }
 .story-pinned { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
 .story-pinned > details { align-self: stretch; }
-.story-more { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
-.story-more .text-button { min-height: 40px; }
-.story-tabs { display: flex; gap: 4px; padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); }
-.story-tab { flex: 1; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 0; border-radius: 8px;
-  background: transparent; color: var(--muted); font: inherit; font-size: 0.85rem; cursor: pointer; }
-.story-tab:hover { color: var(--text); }
-.story-tab[aria-pressed='true'] { background: var(--accent-tint); color: var(--text); }
-.story-tab svg { width: 15px; height: 15px; }
-.story-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--danger); }
 /* The story column's width: a reading width on smaller screens, and more of the room on big ones, so the story is not
    a narrow strip with empty space either side. */
 :root { --story-width: 760px; }
@@ -152,9 +143,7 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
   .story-panel-resize:hover::after, .story-panel-resize:focus-visible::after, .story-panel-resize:active::after { background: var(--accent); }
   .story-panel-resize:focus-visible { outline: none; }
   .story-panel-body, .story-panel-before .story-panel-body { position: static; flex: 1; max-height: none; padding: 18px 20px; background: none; border-top: 0; box-shadow: none; }
-  .story-panel-title { padding-right: 0; }
   .story-panel .story-people ul { max-height: none; }
-  .story-tabs { border-top: 1px solid var(--border); padding: 8px 12px; }
   /* Reader (deviceLook.ts layout): the story keeps the width, and the panel opens over it from the tabs, as on a phone. */
   :root[data-layout='reader'] .story { flex-direction: column; }
   :root[data-layout='reader'] .story-main { display: contents; }
@@ -162,7 +151,6 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
   :root[data-layout='reader'] .story-panel-body { position: absolute; left: 0; right: 0; bottom: 100%; max-height: 70dvh; padding: 14px 16px 16px;
     background: var(--surface); border: 1px solid var(--border); border-bottom: 0; border-radius: 12px 12px 0 0; box-shadow: 0 -8px 24px var(--shadow); }
   :root[data-layout='reader'] .story-panel-before .story-panel-body { position: static; max-height: 45dvh; background: none; border: 0; box-shadow: none; }
-  :root[data-layout='reader'] .story-tabs { border-top: 0; padding: 6px 8px; }
   :root[data-layout='reader'] .story-panel-title { padding-right: 36px; }
   /* Custom (deviceLook.ts layout, StoryGrid.tsx): a wider panel holding the player's own grid of tiles. */
   :root[data-layout='custom'] .story-panel { flex-basis: var(--story-panel-width, 600px); max-width: max(440px, calc(100% - 480px)); }
@@ -207,12 +195,12 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .story-tile.flash { animation: tile-flash 1.6s ease-out; }
 @keyframes tile-flash { from { box-shadow: 0 0 0 3px var(--accent); } to { box-shadow: 0 0 0 3px transparent; } }
 :root[data-motion='reduce'] .story-tile.flash { animation: none; box-shadow: 0 0 0 3px var(--accent); }
-.story-layout { flex: none; align-self: center; }
-.story-layout svg { width: 16px; height: 16px; }
-.story-header { max-width: var(--story-width); width: 100%; margin: 0 auto; padding: 18px 32px 12px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid var(--border); }
-.story-where { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; }
-.story-where .text-button { padding: 0; }
-.story-scene { display: flex; flex-direction: column; gap: 4px; }
+.story-header { max-width: var(--story-width); width: 100%; margin: 0 auto; padding: 12px 32px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid var(--border); }
+/* The scene line: place · time · condition. The place opens the maps (Story.tsx SceneBar). */
+.story-where { font-size: 0.875rem; color: var(--muted); }
+.story-place { padding: 0; color: var(--text); font-weight: 500; border-radius: 4px; }
+.story-place:hover, .story-place[aria-expanded='true'] { color: var(--accent); }
+.story-scene { display: flex; flex-direction: column; gap: 8px; }
 .story-scene svg { width: 16px; height: 16px; vertical-align: -3px; color: var(--accent); }
 .story-scene .button { align-self: flex-start; margin-top: 6px; }
 .story-go { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px 20px; align-items: start; margin-top: 6px; }
@@ -833,6 +821,9 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
    bottom of the chat on a computer, so nothing in the chat moves, and comes up as a sheet on a phone. */
 .composer, .story-composer { position: relative; }
 .composer .composer-note { flex-shrink: 0; position: relative; color: var(--muted); }
+.composer .composer-note[hidden] { display: none; }
+.composer .composer-menu { flex-shrink: 0; width: 40px; padding: 0; color: var(--muted); }
+.composer .composer-menu svg { width: 18px; height: 18px; }
 .composer .composer-note svg { width: 18px; height: 18px; }
 .composer .composer-note[data-state='on'] { color: var(--accent); background: var(--accent-tint); border-color: var(--accent); }
 .composer .composer-note[data-state='on']::after { content: ''; position: absolute; top: 5px; right: 5px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
@@ -862,6 +853,7 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 @media (max-width: 720px) {
   .composer .composer-note { order: -1; width: 40px; height: 40px; min-height: 0; padding: 0; justify-content: center; border-radius: 50%; border-color: transparent; background: transparent; }
   .composer .composer-note svg { width: 22px; height: 22px; }
+  .composer .composer-menu { order: -2; height: 40px; min-height: 0; border-radius: 50%; border-color: transparent; background: transparent; }
   .note-tray[open] { position: fixed; inset: auto 0 0 0; margin: 0; width: 100%; max-width: 100vw; max-height: 100dvh; overflow-y: auto; border: 0; border-radius: 18px 18px 0 0;
     padding-bottom: env(safe-area-inset-bottom); box-shadow: 0 -10px 30px var(--shadow); animation: sheet-up .22s cubic-bezier(.2, .8, .2, 1); }
   .note-tray::backdrop { background: #05050459; }
@@ -975,12 +967,6 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .receipt-chip.gain svg { color: var(--accent); }
 .receipt-chip.loss svg { color: var(--danger); }
 
-/* The status strip (src/features/story/StoryStatus.tsx): how things stand, one quiet line under the scene. */
-.status-strip { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 2px 0 6px; padding: 0; font-size: 0.85rem; color: var(--muted); }
-.status-item { display: inline-flex; align-items: center; gap: 5px; }
-.status-item svg { width: 14px; height: 14px; flex: none; }
-.status-item.loss { color: var(--text); }
-.status-item.loss svg { color: var(--danger); }
 /* Entity cards (src/features/story/EntityCard.tsx): a name that opens one, in prose or a list, and the card. */
 .entity-link { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: inherit;
   text-decoration: underline dotted var(--accent); text-underline-offset: 4px; text-decoration-thickness: 1px; }
@@ -1075,3 +1061,22 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 @media (pointer: coarse) { .politics-issue .text-button, .politics-faction .text-button { min-height: 44px; } }
 .story-people .politics-detail .plain-list { max-height: none; gap: 2px; margin: 0; }
 .story-people .politics-detail .plain-list li { display: list-item; padding: 0; border: 0; border-radius: 0; }
+
+/* The story's menu (src/features/story/StoryMenu.tsx, ⌘K): a filter box over the commands. */
+.story-menu { width: min(440px, calc(100vw - 32px)); margin: 12vh auto auto; padding: 8px; }
+.story-menu-filter { width: 100%; border: 0; background: none; padding: 10px 12px; font-size: 1rem; }
+.story-menu-filter:focus-visible { outline: none; }
+.story-menu-list { list-style: none; margin: 4px 0 0; padding: 4px 0 0; border-top: 1px solid var(--border); max-height: 50dvh; overflow-y: auto; }
+.story-menu-list li { padding: 8px 12px; border-radius: 8px; cursor: pointer; font-size: 0.875rem; }
+.story-menu-list li[aria-selected='true'] { background: var(--raised); }
+
+/* Who's here (src/features/story/StoryCast.tsx), at the top of the scene panel. */
+.story-cast ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.story-cast-row { width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: center; padding: 8px; border-radius: 10px; text-align: left; }
+.story-cast-row:hover, .story-cast-row[aria-expanded='true'] { background: var(--raised); }
+.story-cast-row .portrait { width: 32px; height: 32px; font-size: 0.95rem; }
+.story-cast-text { display: grid; min-width: 0; }
+.story-cast-name { font-weight: 500; font-size: 0.875rem; line-height: 1.25; }
+.story-cast-state { font-size: 0.75rem; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.story-cast-more { margin: 4px 0 8px 52px; display: grid; gap: 8px; font-size: 0.8125rem; color: var(--muted); }
+.story-cast-around { margin-top: 12px; font-size: 0.8125rem; color: var(--faint); }

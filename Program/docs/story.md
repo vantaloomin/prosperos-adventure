@@ -1304,7 +1304,7 @@ what Grappled stops a creature doing.
 
 ## Ideas
 
-`adventure/ideas.py`, `src/features/story/ideas.ts`. **Ideas** beside Send asks for two or three things the
+`adventure/ideas.py`, `src/features/story/ideas.ts`. **Ideas** in the story's menu asks for two or three things the
 character could do now; they show as chips over the composer, and tapping one puts it in the composer (after
 anything already written). Nothing is sent until the player sends.
 
@@ -1344,33 +1344,13 @@ violence, sex, horror, cruelty and drugs, each from 0 (off the page: it happens 
 Four parts, from the requirements' "Play screen and widgets" (`src/features/story/Story.tsx`, `StoryPanel.tsx`); a
 free grid of widgets is an optional mode late in Milestone 6.
 
-- **The story column:** where the story is (place and city), then the status strip (`StoryStatus.tsx`): story time
-  and weather, the character's condition (hit points under 5E), nerve, lasting injuries, captivity and coin, as the
-  dice toggle allows. Then who is around, the fight line while there is a fight, the story text with each turn's
-  receipt, and the composer.
-- **The scene panel:** one or two widgets the scene needs, picked by code from the game state with no model call
-  (`src/features/story/scene.ts` `sceneWidgets`): a fight shows the foes, a shop the pack and its counter, the Road
-  the travel map, and people met who are at this very place "Here with you". With none of those it shows the journal.
-  Below them are the widgets the player pinned, kept whatever the scene (saved in this browser).
-- **The drawer:** tabs under the panel for the sheet, the pack and the journal, and More for the map, people met,
-  powers, chapters, other branches, the notebook, export, and Tone and rules. Each opens in the panel, unfolded, with
-  "Pin to the scene". Widgets with nothing to show are left out. A Settings search for a story setting opens Tone and
-  rules.
-- **Entity cards** (`EntityCard.tsx`, `entity.ts`): a person met, a place on the map, an item in the pack and a
-  faction open the same card, and so do the names of people met and factions known in the narration (whole names, and
-  a first name no one else shares). The card says what the character has seen of it, the journal's facts about it
-  (never hidden truth, even with the GM view on), and what they can do. Each action writes a line into the composer
-  ("I turn to Agnes Brill.", "I set out for Eriane.") for the turn loop to roll; only "Go to …" moves the story at once.
-- **Receipt chips** open their widget in the panel: coin and items the pack, wounds the sheet, quests and facts the
-  journal.
-- **Wide and narrow:** on a screen 1100 pixels wide or more the panel sits beside the story and scrolls on its own,
-  with the tabs at its foot. On a narrower one the tabs sit under the composer and open the panel as a sheet over the
-  story; a dot on the Scene tab says the scene changed (a fight started) while it was closed, so nothing opens over
-  the reading. Before the first line only people met and other branches show.
-- **Classic and Reader:** two layouts for a wide screen (`deviceLook.ts` `layout`, kept per device; Settings >
-  General > Appearance > Story layout, or the panel icon at the end of the tabs). Classic puts the panel beside the
-  story; Reader keeps the story column alone and the panel in tabs under it, opening over the story as on a phone.
-  A visual novel layout follows the Milestone 6 art.
+- **The story column:** one scene line, the place (which opens the maps to go somewhere else), the story time and how the character is (condition, hit points under 5E, lasting injuries, captivity, as the dice toggle allows), then the fight line while there is a fight, the story text with each turn's receipt, and the composer: the menu button, the author's note button while there is a note, the message box and Send.
+- **The menu** (`StoryMenu.tsx`, `menuText.ts`): the button left of the message box, or ⌘K (Ctrl+K). A filter box over Ideas, Author's note, Step out of the story (starts the line with `OOC:`), Who's here, every panel view the story has something for (the sheet, the pack, the journal, the map, people met, powers, chapters, other branches, the notebook, export, Tone and rules and the rest) and Start a new story. A panel view opens in the panel, unfolded, with "Pin to the scene" and a close that goes back to who's here. A Settings search for a story setting opens Tone and rules.
+- **The scene panel:** who's here first (`StoryCast.tsx`): your character, then the people met who are at this very place, each a row that opens to show more (yours how you stand, nerve and coin included, and your pack; theirs who they are to you), then who else is around and the weather. Under it, what the scene needs, picked by code from the game state with no model call (`src/features/story/scene.ts` `sceneWidgets`): a fight shows the foes, a shop the pack and its counter, an interior its rooms, the Road the travel map. Below them are the widgets the player pinned, kept whatever the scene (saved in this browser).
+- **Entity cards** (`EntityCard.tsx`, `entity.ts`): a person met, a place on the map, an item in the pack and a faction open the same card, and so do the names of people met and factions known in the narration (whole names, and a first name no one else shares). The card says what the character has seen of it, the journal's facts about it (never hidden truth, even with the GM view on), and what they can do. Each action writes a line into the composer ("I turn to Agnes Brill.", "I set out for Eriane.") for the turn loop to roll; only "Go to …" moves the story at once.
+- **Receipt chips** open their widget in the panel: coin and items the pack, wounds the sheet, quests and facts the journal.
+- **Wide and narrow:** on a screen 1100 pixels wide or more the panel sits beside the story and scrolls on its own. On a narrower one the menu opens the panel as a sheet over the story, so nothing opens over the reading unasked. Before the first line only people met and other branches show.
+- **Classic and Reader:** two layouts for a wide screen (`deviceLook.ts` `layout`, kept per device; Settings > General > Appearance > Story layout). Classic puts the panel beside the story; Reader keeps the story column alone and the menu opens the panel over it, as on a phone. A visual novel layout follows the Milestone 6 art.
 
 ## API
 
