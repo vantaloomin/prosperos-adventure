@@ -10,4 +10,10 @@
 - reply.py: the reply card, when someone addresses the user's character and the turn waits on their answer
 - writer.py: the Writer's calls, reading only the Writer's context for the mode
 - offpage.py: off-page beats in a round: code draws them, an offscreen agent writes its own lines, Commit writes them
+- queue.py: one writer per world, stale commands refused, Cancel at once
+- play.py: Next in Author and Watch, the reply card, re-asking an agent, picking up after a restart
+- steps.py: every module that registers steps, loaded once at startup (add yours there)
+- solo.py: today's single-player turn, run as one step of the loop until its pieces are steps of their own
+
+The API is adventure/round_routes.py.
 """

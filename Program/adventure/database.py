@@ -121,6 +121,8 @@ SINGLETONS = ('workspace_settings', 'builtin_recall')
 ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"),
                  # What an offscreen agent said in an off-page beat (adventure/rounds/offpage.py).
                  ('story_beats', 'lines', "TEXT NOT NULL DEFAULT '[]'"),
+                 # The mode a user line was sent in (adventure/rounds/play.py).
+                 ('story_messages', 'mode', "TEXT NOT NULL DEFAULT 'play'"),
                  # When a lore entry applies besides its keywords (adventure/lore_moments.py), as a JSON list of
                  # conditions; NULL until the player sets one, while the app reads one from its keywords.
                  ('lore_entries', 'moment', 'TEXT'),

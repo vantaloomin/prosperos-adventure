@@ -15,7 +15,8 @@ The people the scene has left behind keep living while a round is played, as Dun
   remembers it, and an agent its own lines. Commit writes the beats through `beats.apply` in the turn's one
   transaction, so the outcome is in the record before the next turn's snapshot.
 
-A turn with no agents leaves off-page beats to today's telling (adventure/story.py `beats_turn`), unchanged.
+A turn with no agents, or told by today's telling as one step, leaves off-page beats to it (adventure/story.py
+`beats_turn`), unchanged.
 """
 import asyncio
 from datetime import datetime
@@ -23,6 +24,7 @@ from datetime import datetime
 from adventure import beats, story, story_clock, table
 from adventure.rounds import engine
 from adventure.rounds.contract import Mind, State
+from adventure.rounds.solo import SOLO
 from adventure.rounds.writer import one_line
 
 KEY = 'offpage'
@@ -49,7 +51,8 @@ def agent(turn, key: str) -> bool:
 
 async def offpage(turn):
     """Draw this round's off-page beats, have each offscreen agent write its lines, and stage it all."""
-    if not turn.snapshot.agents() or KEY in turn.draft.extra:
+    # Today's whole telling, while it is one step (adventure/rounds/solo.py), fires the line's beats itself.
+    if not turn.snapshot.agents() or KEY in turn.draft.extra or SOLO in turn.draft.extra:
         return
     database = turn.database
     with database.connect() as connection:

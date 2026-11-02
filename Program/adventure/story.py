@@ -1775,6 +1775,12 @@ async def send(state, text: str, client_id: str, on_text=None, on_event=None) ->
 
 async def retry(state, on_text=None, on_event=None) -> dict:
     """Tell the last part again: a new reply to the user's latest message, replacing the one there."""
+    user = await retelling(state)
+    return {'message': user, 'reply': await answer(state, user, on_text, on_event)}
+
+
+async def retelling(state) -> dict:
+    """The user's latest message, with the reply it had and what that reply brought in taken away, to tell again."""
     await settled(state)
     with state.database.connect(write=True) as connection:
         where, values = timeline.visible(connection)
@@ -1789,7 +1795,7 @@ async def retry(state, on_text=None, on_event=None) -> dict:
         connection.execute('DELETE FROM story_messages WHERE reply_to=?', (user['id'],))
         # So are the meetings and feelings it moved; the kept rolls move them again.
         timeline.restore_at(connection, user['id'], ('story_people',))
-    return {'message': user, 'reply': await answer(state, user, on_text, on_event)}
+    return user
 
 
 # Rewrite -----------------------------------------------------------------------------------------

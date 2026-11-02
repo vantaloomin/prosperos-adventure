@@ -64,7 +64,7 @@ changes made from here on. New tables come from `schema.sql`; a column added to 
 
 | Engine | Where | What it does now |
 | --- | --- | --- |
-| Round loop | `rounds/` | The state machine every turn of agent play runs through, its step registry, the turn draft committed in one transaction, and per-character memory that follows branches |
+| Round loop | `rounds/`, `round_routes.py` | The state machine every turn runs through (today's single-player turn as one step of it), its step registry, the turn draft committed in one transaction, one writer at a time with stale commands refused, the reply card, re-asking an agent on a new branch, picking up after a restart, and per-character memory that follows branches |
 | Narrator | `story.py`, `narration/` | Builds the layered narrator prompt, checks the prose in code, and writes each story turn |
 | Odds and rolls | `consequences.py`, `life/chance.py` | Weighted outcomes and seeded rolls, the base for the Milestone 1 dice |
 | Life Cards | `life/deck.py` | The deck of life events, drawn by code |
