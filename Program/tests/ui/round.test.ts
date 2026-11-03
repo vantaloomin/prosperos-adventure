@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { asksMissed, beatMoves, beatStanding, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
-import { composerText, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
+import { asksMissed, beatMoves, beatStanding, reaskOf, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { composerText, whatIf, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
 const table = (seats: Seat[], under_way: RoundTable['under_way'] = null): RoundTable => ({
@@ -187,4 +187,14 @@ test('the beat board marks where a beat stands and which ways it can move', () =
   assert.deepEqual(beatMoves(0, 3), { up: false, down: true })
   assert.deepEqual(beatMoves(2, 3), { up: true, down: false })
   assert.deepEqual(beatMoves(0, 1), { up: false, down: false })
+})
+
+test('only agents who decided on the newest turn can be asked again, and only between turns', () => {
+  const row = (key: string, mind: Seat['mind'], status: 'decided' | 'waiting' | 'fallback' = 'decided') => ({ key, name: key, mind, status })
+  const minds = { turn: 't3', minds: [row('mara', 'agent'), row('hesk', 'agent', 'fallback'), row('you', 'human'), row('olaf', 'program')] }
+  assert.deepEqual(reaskOf(minds, false), { turn: 't3', seats: ['mara'] })
+  assert.equal(reaskOf(minds, true), null)
+  assert.equal(reaskOf({ turn: null, minds: [] }, false), null)
+  assert.equal(reaskOf({ turn: 't3', minds: [row('olaf', 'program')] }, false), null)
+  assert.equal(whatIf('Hesk'), 'What if Hesk had chosen otherwise?')
 })

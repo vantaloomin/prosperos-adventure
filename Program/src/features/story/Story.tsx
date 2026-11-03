@@ -87,6 +87,9 @@ export function Story({ go }: { go: (view: View) => void }) {
   const watch = useWatch({ on: mode.active === 'watch', busy: pending !== null, waiting: !!round.waiting, error, head: mode.head,
     next: () => void run('', () => streamApi('/rounds/watch/next/stream', { against: mode.head }, grow, note)), clear: () => setError(''), onError: setError })
   const marks = useLineMarks(round.cast.table)
+  // Ask one agent to decide again: the newest turn is played again on a new branch (POST /api/rounds/turns/{id}/reask/stream).
+  const asked = round.cast.reask
+  const reask = (seat: string) => { if (asked) void run('', () => streamApi(`/rounds/turns/${encodeURIComponent(asked.turn)}/reask/stream`, { seat, against: mode.head }, grow, note)) }
   if (story.isPending) return <Loading label="Opening your story" />
   if (story.isError) return <ErrorNotice error={story.error} />
   const draftLine = (text: string) => setDraft({ text, at: Date.now() })
@@ -121,7 +124,7 @@ export function Story({ go }: { go: (view: View) => void }) {
         </>}
         <NewStory open={clearing} onClose={() => setClearing(false)} onClear={() => run(null, () => api<StoryData>('/story', undefined, 'DELETE').then((data) => { update(data); setBegun(false) }))} />
       </div>
-      <StoryPanel story={story.data} change={change} round={round.cast} onTravel={(name) => setDraft({ text: `I set out for ${name}.`, at: Date.now() })}
+      <StoryPanel story={story.data} change={change} round={{ ...round.cast, onReask: pending === null ? reask : undefined }} onTravel={(name) => setDraft({ text: `I set out for ${name}.`, at: Date.now() })}
         onLine={(text) => setDraft({ text, at: Date.now() })}
         onBack={(data) => setDraft({ text: data.draft, at: Date.now() })} />
     </section>

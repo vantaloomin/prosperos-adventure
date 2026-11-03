@@ -245,6 +245,9 @@ def test_reasking_an_agent_keeps_everyone_elses_choice_on_a_new_branch(client, s
         assert [row['text'] for row in memory.recall(connection, 'mara', Point(timeline.ROOT, 10 ** 9))] == [
             'mara choice 1']
         assert queue.head(connection) == again['id']
+        # The new branch is labelled by who was asked again; the first branch by nothing.
+        labels = {item['id']: item['reask'] for item in timeline.branches(connection)}
+        assert labels == {branch: {'seat': 'mara', 'name': 'Mara'}, timeline.ROOT: None}
 
 
 def test_a_restart_throws_away_an_open_turn_and_plays_a_round_turn_again(client, steps):
