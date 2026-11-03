@@ -154,7 +154,9 @@ def end(connection, quest_id: str, status: str, outcome: str, stamp: str = '') -
 
 
 def prompt_text(connection, now: datetime) -> str:
-    """What is happening, for the narrator: every open quest with its hidden truth, and the ones that just ended."""
+    """What is happening, for the narrator: every open quest as it looks on the page, and the ones that just ended.
+    Never the truth behind one (docs/spec.md: the Writer gets signs, never hidden truths); that stays in the GM view.
+    """
     quests = rows(connection)
     if not quests:
         return ''
@@ -163,8 +165,7 @@ def prompt_text(connection, now: datetime) -> str:
         if quest['status'] == 'open':
             left = left_text(quest['due_at'], now)
             known = '' if quest['known'] else " (the player's character does not know of this yet)"
-            lines.append(f"- {quest['title']}{known}{f' ({left})' if left else ''}: {quest['hook']} "
-                         f"Behind it: {quest['truth']}")
+            lines.append(f"- {quest['title']}{known}{f' ({left})' if left else ''}: {quest['hook']}")
         else:
             lines.append(f"- {quest['title']} is over ({quest['status']}): {quest['outcome']}")
     return ('## What is happening (kept by the game; let it press on the scene, never end it yourself)\n'

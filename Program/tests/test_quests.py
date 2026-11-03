@@ -43,7 +43,8 @@ def test_a_quest_starts_with_the_story_and_its_deadline_lands_on_the_story_clock
     provider.replies = [reply('The factor counts coins.')]
     tell(client, 'I read the contract on the green.', 'story-0001')
     narrator = provider.requests[-1]['system']
-    assert '## What is happening' in narrator and 'Behind it: The Heartwood stands on a convergence' in narrator
+    # The narrator gets the quest as it looks on the page, never the truth behind it.
+    assert '## What is happening' in narrator and 'The Heartwood stands on a convergence' not in narrator
     assert "The wardens' eyes (the player's character does not know of this yet)" in narrator
 
     # The week runs out.
