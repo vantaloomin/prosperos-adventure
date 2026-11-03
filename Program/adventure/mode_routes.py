@@ -15,7 +15,7 @@ from adventure.errors import require
 from adventure.models import Input
 from adventure.round_routes import AGAINST, done
 from adventure.round_routes import view as table_view
-from adventure.rounds import author, modes, play, queue, turns, watch
+from adventure.rounds import author, modes, play, queue, travelling, turns, watch
 from adventure.rounds.contract import Mind, Mode
 from adventure.story_routes import streamed
 
@@ -24,7 +24,8 @@ router = APIRouter(prefix='/api/rounds')
 
 def modes_view(connection) -> dict:
     return {'settings': modes.settings(connection), 'coming': modes.coming(connection),
-            'switches': modes.asked(connection)}
+            'switches': modes.asked(connection), 'reveal_missed': modes.reveal_missed(connection),
+            'lead': travelling.leader(connection)}
 
 
 @router.get('/mode')
@@ -36,7 +37,7 @@ def read_mode(request: Request):
 class ModeSwitch(Input):
     mode: Mode
     stand_in: Mind | None = None
-    reveal: bool = False
+    reveal: bool | None = None
 
 
 @router.put('/mode')
@@ -49,6 +50,18 @@ def switch(request: Request, body: ModeSwitch):
         modes.switch(connection, body.mode, database.now(), turns.under_way(connection) is not None,
                      body.stand_in, body.reveal)
         return modes_view(connection) | {'table': table_view(connection)}
+
+
+class Reveal(Input):
+    reveal: bool
+
+
+@router.put('/mode/reveal')
+def answer_reveal(request: Request, body: Reveal):
+    """The answer to "Show the motives you missed?" after leaving Play (PL-11): Keep hidden (false) or Show."""
+    with request.app.state.database.connect(write=True) as connection:
+        modes.answer(connection, body.reveal)
+        return modes_view(connection)
 
 
 class ModeSettings(Input):
@@ -65,6 +78,19 @@ def change_settings(request: Request, body: ModeSettings):
 
 
 # Author -------------------------------------------------------------------------------------------------------------
+
+class Lead(Input):
+    seat_key: str | None = None
+
+
+@router.put('/lead')
+def choose_lead(request: Request, body: Lead):
+    """The party's leader in Author and Watch, who proposes where the party goes; None for the first seat."""
+    database = request.app.state.database
+    with database.connect(write=True) as connection:
+        travelling.set_leader(connection, body.seat_key, database.now())
+        return modes_view(connection)
+
 
 @router.get('/author')
 def read_author(request: Request):

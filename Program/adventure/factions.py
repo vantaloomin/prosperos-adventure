@@ -12,6 +12,10 @@ progress clocks.
   the number. Life Cards move it now; jobs for factions will too.
 - **The narrator is told the powers that hold the place**: who they are, what they want, how far their clocks have
   run and how they stand with the character. It acts through their people and never announces a clock.
+- **Factions give agents goals** (docs/spec.md "Factions and nemeses"). An agent who belongs to a faction (their cast
+  sheet's `faction`) gets what they know of it in their own context (`known_to`): its aims, what it is working
+  toward, its rivals and allies, and how it stands with the user's character, weighed with their own wants. What
+  filling a clock will bring, and anything else of the faction, stays out.
 
 Clocks and standing are game state, branched with the story (adventure/timeline.py SAVED).
 """
@@ -145,6 +149,36 @@ def prompt_text(connection, world: str, node_id: str) -> str:
                      f"{standing_word(standing(connection, faction['id']))} to them.")
     return ('## The powers here (kept by the game; act through their people, never announce a clock)\n'
             + '\n'.join(lines))
+
+
+def faction_of(snapshot, key: str) -> dict | None:
+    """The faction a character belongs to, from their cast sheet in the world's package (its `faction`)."""
+    world = snapshot.settings.get('world')
+    from adventure.rounds import context  # the seat's cast id, as the context builders read it
+    entry = world_data.person(world, context.package_id(snapshot, key)) or {}
+    return find(world, entry['faction']) if world and isinstance(entry.get('faction'), str) else None
+
+
+def known_to(connection, snapshot, key: str) -> list[str]:
+    """What an agent knows of the faction they belong to, for their own context (adventure/rounds/context.py
+    `agent`): its aims, what it is working on now (its first open clock, never what filling it will bring), who it
+    is set against and with, and how it stands with the user's character. Nothing else of the faction comes in."""
+    faction = faction_of(snapshot, key)
+    if faction is None:
+        return []
+    world = snapshot.settings['world']
+    lines = [f"You belong to {faction['name']} ({faction['kind']}): {faction['summary']}",
+             f"What it wants: {'; '.join(faction['goals'])}."]
+    if working := first_open(connection, faction):
+        lines.append(f"What it is working toward now: {working['name']}.")
+    for title, ids in (('Its rivals', faction.get('rivals') or []), ('Its allies', faction.get('allies') or [])):
+        names = [found['name'] for item in ids if (found := find(world, item))]
+        if names:
+            lines.append(f"{title}: {', '.join(names)}.")
+    human = snapshot.human()
+    if human is not None and human.key != key:
+        lines.append(f"{human.name} is {standing_word(standing(connection, faction['id']))} to it.")
+    return lines
 
 
 def view(connection, world: str, visited: set[str], shown: bool) -> list[dict]:

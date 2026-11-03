@@ -266,8 +266,8 @@ async def write(turn):
 
 
 def context_for(connection, turn, scene: str) -> str:
-    from adventure.rounds import context
-    return context.writer(connection, turn.snapshot, turn.draft, scene=scene)
+    from adventure.rounds import context, directing
+    return context.writer(connection, turn.snapshot, turn.draft, scene=scene, signs=directing.signs(turn))
 
 
 def committed(connection, turn):

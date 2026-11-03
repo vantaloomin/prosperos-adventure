@@ -63,17 +63,19 @@ def coming(connection) -> str:
 
 
 def switch(connection, mode: str, now: str, under_way: bool, stand_in: str | None = None,
-           reveal: bool = False) -> dict:
-    """Switch to `mode` (at the next Idle when a turn is under way). Leaving Play records whether the user chose to
-    see the motives they missed; `stand_in` sets who plays their character outside Play."""
+           reveal: bool | None = None) -> dict:
+    """Switch to `mode` (at the next Idle when a turn is under way). Leaving Play records the switch, with whether
+    the user chose to see the motives they missed when `reveal` answers it now (else `answer` does, from the banner);
+    `stand_in` sets who plays their character outside Play."""
     require(mode in tuple(Mode), 'The modes are Play, Author and Watch.', 422)
     before = coming(connection)
     if stand_in is not None:
         change(connection, {'stand_in': stand_in}, now)
     if before == Mode.PLAY and mode != Mode.PLAY:
         newest = optional(connection, 'SELECT MAX(rowid) AS n FROM round_turns')['n'] or 0
-        connection.execute('INSERT INTO mode_switches (id, from_mode, to_mode, reveal, through_turn, created_at) '
-                           'VALUES (?, ?, ?, ?, ?, ?)', (identifier(), before, mode, int(bool(reveal)), newest, now))
+        connection.execute('INSERT INTO mode_switches (id, from_mode, to_mode, reveal, answered, through_turn, '
+                           'created_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+                           (identifier(), before, mode, int(bool(reveal)), int(reveal is not None), newest, now))
     return seats.change(connection, {'mode': mode}, under_way)
 
 
@@ -86,10 +88,37 @@ def revealed(connection, row: dict) -> bool:
                                 's.through_turn >= t.rowid LIMIT 1', (row['id'],)) is not None
 
 
+def newest_switch(connection) -> dict | None:
+    return optional(connection, 'SELECT * FROM mode_switches ORDER BY created_at DESC, rowid DESC LIMIT 1')
+
+
+def reveal_missed(connection) -> bool | None:
+    """The answer to the newest switch out of Play's "Show the motives you missed?": None until the user answers."""
+    row = newest_switch(connection)
+    return bool(row['reveal']) if row and row['answered'] else None
+
+
+def answer(connection, reveal: bool) -> bool:
+    """The user answers the newest switch out of Play's question (Keep hidden or Show)."""
+    row = newest_switch(connection)
+    require(row is not None, 'There is no switch out of Play to answer for.', 409)
+    connection.execute('UPDATE mode_switches SET reveal=?, answered=1 WHERE id=?', (int(reveal), row['id']))
+    return reveal
+
+
 def asked(connection) -> list[dict]:
     """Every switch out of Play and what the user chose, newest first."""
-    return [{'from': row['from_mode'], 'to': row['to_mode'], 'reveal': bool(row['reveal']), 'at': row['created_at']}
+    return [{'from': row['from_mode'], 'to': row['to_mode'], 'reveal': bool(row['reveal']),
+             'answered': bool(row['answered']), 'at': row['created_at']}
             for row in many(connection, 'SELECT * FROM mode_switches ORDER BY created_at DESC, rowid DESC')]
+
+
+def users_character(connection, snapshot=None) -> str | None:
+    """The user's character's seat key in any mode: the human seat (which outside Play runs on another mind)."""
+    human = snapshot.human() if snapshot is not None else None
+    if human is not None:
+        return human.key
+    return next((seat.key for seat in seats.seats(connection) if seat.mind == Mind.HUMAN), None)
 
 
 # Gather: the user's character outside Play --------------------------------------------------------------------------
@@ -102,7 +131,7 @@ async def stand_in(turn: engine.Turn):
         return
     with turn.database.connect() as connection:
         picked = settings(connection)['stand_in']
-        human = next((seat.key for seat in seats.seats(connection) if seat.mind == Mind.HUMAN), None)
+        human = users_character(connection)
     seat = snapshot.seat(human) if human else None
     snapshot.settings['stand_in'] = {'key': human, 'mind': picked} if human else None
     if seat is None or picked != Mind.AGENT:

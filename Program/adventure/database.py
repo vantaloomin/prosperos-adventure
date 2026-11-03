@@ -211,7 +211,9 @@ ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"
                  ('story_inventory', 'condition',
                   "TEXT NOT NULL DEFAULT 'sound' CHECK (condition IN ('sound', 'damaged', 'broken'))"),
                  # A planned beat that reached the page (adventure/rounds/author.py), for the beat board.
-                 ('story_arc_beats', 'landed', 'INTEGER NOT NULL DEFAULT 0'))
+                 ('story_arc_beats', 'landed', 'INTEGER NOT NULL DEFAULT 0'),
+                 # Whether the user answered a switch out of Play's missed-motives question (adventure/rounds/modes.py).
+                 ('mode_switches', 'answered', 'INTEGER NOT NULL DEFAULT 0'))
 
 
 # Tables renamed since they were made: (old, new). Renamed before the schema runs, so their rows carry over.
