@@ -75,7 +75,7 @@ def test_the_narrator_hears_the_lie(client, connected, provider, app, monkeypatc
     begin(client)
     asked = []
 
-    def lying(connection, message_id, view, text, day, now, rng=None):
+    def lying(connection, message_id, view, text, day, now, rng=None, agents=frozenset()):
         asked.append(text)
         return ['Corin Ashby lies to keep hidden who pays him.']
 
@@ -93,3 +93,15 @@ def test_a_near_miss_leaves_the_character_uneasy(app, client):
         lines = lies.turn(connection, 'm1', view([MARR]), 'Who pays for the crews, Aldous?', DAY, NOW, Dice(45))
         assert "doesn't sit right" in lines[1] and 'without giving the lie away' in lines[1]
         assert any("didn't sit right" in text for text in entries(connection, 'fact'))
+
+
+def test_an_agent_lies_only_by_declaring_it(app, client):
+    # Agents lie for themselves (docs/spec.md): the code rule is for Program characters only.
+    begin(client)
+    with app.state.database.connect(write=True) as connection:
+        assert lies.turn(connection, 'm1', view([MARR]), 'I ask Aldous who is paying for the crews.', DAY, NOW,
+                         Dice(1), agents={'marr'}) == []
+        assert entries(connection, 'secret') == []
+        # The same reeve on a Program mind keeps Dungeon's rule.
+        assert lies.turn(connection, 'm2', view([MARR]), 'I ask Aldous who is paying for the crews.', DAY, NOW,
+                         Dice(1), agents={'ash'})[0].startswith('Aldous Marr lies')

@@ -39,6 +39,7 @@ from adventure import (
     inventory,
     jobs,
     judge,
+    judged,
     labour,
     leaving,
     library,
@@ -781,6 +782,7 @@ def clear(database) -> dict:
         politics.clear(connection)
         house_rules.clear(connection)
         corrections.clear(connection)
+        judged.clear(connection)
         shown.clear(connection)
         timeline.clear(connection)
         # Each character's memory and the round loop's turns (adventure/rounds/).
@@ -1312,16 +1314,16 @@ def labour_turn(state, user: dict) -> list[str]:
         return lines
 
 
-def lie_turn(state, user: dict) -> list[str]:
+def lie_turn(state, user: dict, agents: set[str] = frozenset()) -> list[str]:
     """Someone the line questions who has something to hide lies, and the character's insight is rolled
-    (adventure/lies.py), once for the line."""
+    (adventure/lies.py), once for the line. An agent (`agents`) lies only by declaring it."""
     database = state.database
     with database.connect(write=True) as connection:
         view = scene(connection, story_clock.now(connection, database.clock))
         if combat.fight(connection):
             return []
         return lies.turn(connection, user['id'], view, user['text'], view['local_time'][:10], database.now(),
-                         getattr(state, 'dice', None))
+                         getattr(state, 'dice', None), agents)
 
 
 def bond_turn(state, user: dict) -> list[str]:
@@ -1355,15 +1357,16 @@ def vow_turn(state, user: dict, rolls: list[dict]) -> list[str]:
         return lines
 
 
-def party_turn(state, user: dict) -> list[str]:
-    """Asking someone along, or parting ways (adventure/party.py), once for the line."""
+def party_turn(state, user: dict, agents: set[str] = frozenset()) -> list[str]:
+    """Asking someone along, or parting ways (adventure/party.py), once for the line. Souring never sends an agent
+    (`agents`) away: they leave by their own move."""
     database = state.database
     with database.connect(write=True) as connection:
         view = scene(connection, story_clock.now(connection, database.clock))
         if combat.fight(connection):
             return []
         return party.turn(connection, user['id'], view, user['text'], view['local_time'][:10], database.now(),
-                          getattr(state, 'dice', None))
+                          getattr(state, 'dice', None), agents)
 
 
 def counter_text(lines: list[str]) -> str:
@@ -1576,6 +1579,37 @@ async def anachronism_rewrite(text: str, later: list[dict], year: int, rewrite) 
     return text
 
 
+def judged_changes(state, connection, user: dict, reply: dict, answered: str, there: list[dict]):
+    """What the Continuity model judged, applied by code within its limits, each kept with an undo for the turn
+    report (adventure/judged.py): quests it ended, dark acts, oaths sworn, feelings moved."""
+    database = state.database
+    judging = judged.Judging(connection, reply['id'], database.now())
+    titles = {quest['id']: quest['title'] for quest in quests.rows(connection, 'open')}
+    for item in quests.endings(answered):
+        if item['id'] not in titles:
+            continue
+        ended = 'done' if item['status'] == 'done' else 'failed'
+        with judging.change('quest', f"{titles[item['id']]} is {ended}: {item['outcome'].strip()}"):
+            quests.end(connection, item['id'], item['status'], item['outcome'], database.now())
+            chapters.mark(connection, 'quest')
+    # What the character did that feeds a dark track (adventure/growth.py).
+    for track in growth.darkened(answered):
+        with judging.change('dark', f"The character grew darker ({growth.tracks()[track]['name']})"):
+            view = scene(connection, story_clock.now(connection, database.clock))
+            growth.darken(connection, track, 1, intensity(connection, view['data'])['levels'], database.now(),
+                          getattr(state, 'dice', None))
+    # An oath the character swore is an obligation, with its deadline, or a vow on a quest they already have
+    # (adventure/quests.py).
+    for oath in quests.oaths(answered):
+        with judging.change('oath', f"An oath{' to ' + oath['to'] if oath['to'] else ''}: {oath['text']}"):
+            quests.vow(connection, user['city_id'], user['text'], oath, story_clock.now(connection, database.clock))
+    names = {person['key']: person['name'] for person in there}
+    for key, moved, why in feelings.answered(answered, set(names)):
+        shifts = ', '.join(f'{axis} {amount:+d}' for axis, amount in moved.items())
+        with judging.change('feeling', f"{names[key]}'s feelings: {shifts}"):
+            feelings.change(connection, key, moved, why)
+
+
 async def afterwards(state, user: dict, reply: dict, packet: dict, steps: pace.Steps):
     """Fact extraction and the summary, once the reply is on screen; a failure here never loses the turn."""
     database = state.database
@@ -1590,19 +1624,7 @@ async def afterwards(state, user: dict, reply: dict, packet: dict, steps: pace.S
                      | growth.dark_schema() | plotting.ENGAGED_SCHEMA)
         answered = await record.extract(state, user['text'], reply, ask, extra)
         with database.connect(write=True) as connection:
-            for item in quests.endings(answered):
-                quests.end(connection, item['id'], item['status'], item['outcome'], database.now())
-                chapters.mark(connection, 'quest')
-            # What the character did that feeds a dark track (adventure/growth.py).
-            for track in growth.darkened(answered):
-                view = scene(connection, story_clock.now(connection, database.clock))
-                growth.darken(connection, track, 1, intensity(connection, view['data'])['levels'], database.now(),
-                              getattr(state, 'dice', None))
-            # An oath the character swore is an obligation, with its deadline, or a vow on a quest they already have
-            # (adventure/quests.py).
-            for oath in quests.oaths(answered):
-                quests.vow(connection, user['city_id'], user['text'], oath, story_clock.now(connection, database.clock))
-            feelings.from_answer(connection, answered, {person['key'] for person in there})
+            judged_changes(state, connection, user, reply, answered, there)
         # A detail the player took an interest in may be given a meaning; arc stages get their beats planned
         # (adventure/plotting.py).
         await plotting.adopt(state, plotting.engaged(answered), reply['id'], getattr(state, 'dice', None))
@@ -1646,6 +1668,9 @@ class Telling:
     rolls: list[dict] = field(default_factory=list)
     # The agent allies' declared moves this round, by key (adventure/allies.py), from the round's declarations.
     moves: dict[str, str] = field(default_factory=dict)
+    # Who runs on an agent this round, by key: they choose their own lies and whether to leave the party
+    # (adventure/lies.py, adventure/party.py).
+    agents: set[str] = field(default_factory=set)
     # Whether Resolve fires the lives off the page (adventure/beats.py), as today's turn does.
     offpage: bool = True
     # What Resolve decided, for the narrator: each system's lines, as `prompt` takes them.
@@ -1714,8 +1739,9 @@ async def resolved(telling: Telling):
     noted = director_turn(state, user) + recall_turn(state, rolls) + opening_turn(state, user)
     with state.database.connect() as connection:
         noted += [away_text(connection, user['id'])]
-    noted += [delved, labour.prompt_text(labour_turn(state, user)), lies.prompt_text(lie_turn(state, user)),
-              bonds.prompt_text(bond_turn(state, user)), party.prompt_text(party_turn(state, user)),
+    agents = telling.agents
+    noted += [delved, labour.prompt_text(labour_turn(state, user)), lies.prompt_text(lie_turn(state, user, agents)),
+              bonds.prompt_text(bond_turn(state, user)), party.prompt_text(party_turn(state, user, agents)),
               sworn.prompt_text(vow_turn(state, user, rolls)), leaving.prompt_text(leave_turn(state, user))]
     telling.fought, telling.traded, telling.tended, telling.looked, looks = in_scene(
         state, user, rolls, telling.travelled, telling.rested, telling.moves)

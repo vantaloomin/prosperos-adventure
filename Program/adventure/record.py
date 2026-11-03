@@ -6,6 +6,11 @@ the facts it decides; after each narration the Continuity model, when one is cho
 facts the narrator brought in, and code keeps those that do not contradict the record. The narrator is given the
 record every turn and never contradicts it.
 
+What is on the page is known (docs/spec.md, code and model boundary follow-ups): a post is written from the player's
+character's point of view, so a fact pulled from it is something they saw or were told. The model only says which
+(`KNOWN`: 'both', or 'belief' for what they were told and may be wrong); it never hides a fact. Hidden truth
+('world') comes only from code: a lie told, the director's truths, a world package's secrets.
+
 Extraction is schema-first: the model fills a JSON Schema of record entries (plus the other systems' questions,
 each with its own part of the schema), which the backend enforces where it can (adventure/providers/requests.py
 `structured`). A model that cannot fill it is asked again without it, and a weak one that still gives nothing
@@ -35,6 +40,8 @@ from adventure.text_models import config_for, key_for, routes
 JOB = 'continuity'
 KINDS = ('death', 'item', 'wound', 'promise', 'location', 'secret', 'relationship', 'fact')
 TRUTHS = ('world', 'belief', 'both')
+# The truths a fact pulled from the page can have: never hidden, since the character saw or heard it.
+KNOWN = ('both', 'belief')
 MOST_FACTS = 6
 # Entries the narrator is given each turn (adventure/remembering.py chooses them).
 IN_PROMPT = 40
@@ -60,8 +67,9 @@ character got only when the turn shows them being given it or buying it.
 - relationship: how two people stand toward each other changed. Not what the character noticed about someone.
 - fact: anything else worth remembering, such as a name, a scar, a rumour or something the character heard.
 
-Truth is "both" when the player's character saw or knows it, "world" when it is true but hidden from them, \
-"belief" when the character believes it but it may not be true (what someone told them is often a belief).
+Everything in the turn happened in front of the player's character, so they know every fact in it. Truth says how: \
+"both" when they saw it or it is plainly so, "belief" when they were only told it or believe it and it may not be \
+true (what someone told them is often a belief).
 
 Answer with JSON only, in this shape:
 {{"facts": [{{"kind": "wound", "subject": "the bouncer", "text": "The bouncer's nose is broken.", "truth": "both"}}]}}
@@ -80,15 +88,15 @@ and weather. Answer "none" when nothing lasting happened."""
 FIELDS = {
     'kind': f'For each numbered fact, give its kind, one word of: {", ".join(KINDS)}.',
     'subject': 'For each numbered fact, give who or what it is about, in a few words.',
-    'truth': 'For each numbered fact, answer "both" if the player\'s character saw or knows it, "world" if it is true '
-             'but hidden from them, or "belief" if they believe it but it may be wrong.',
+    'truth': 'For each numbered fact, answer "both" if the player\'s character saw it or it is plainly so, or "belief" '
+             'if they were only told it or believe it and it may be wrong.',
 }
 FIELD_SHAPE = ' Answer one line per fact, as "1. answer", and nothing else.'
 
 REGENERATE = f"""You keep the continuity of a tabletop roleplaying game. You never write story. A fact was pulled \
 from the turn below, and the game master wants it again: read the turn and restate that one fact as the turn \
 established it. Give its kind ({', '.join(KINDS)}), its subject in a few words, the fact in one short sentence, and \
-its truth ("both", "world" or "belief"). Answer with JSON only, in this shape:
+its truth ("both" if the player's character saw it, "belief" if they were only told it). Answer with JSON only, in this shape:
 {{"kind": "wound", "subject": "the bouncer", "text": "The bouncer's nose is broken.", "truth": "both"}}"""
 
 SUMMARIZE = f"""You keep the story so far of a tabletop roleplaying game. Rewrite the summary to take in the new \
@@ -105,7 +113,7 @@ def strict(properties: dict) -> dict:
 
 
 FACT = strict({'kind': {'type': 'string', 'enum': list(KINDS)}, 'subject': {'type': 'string'},
-               'text': {'type': 'string'}, 'truth': {'type': 'string', 'enum': list(TRUTHS)}})
+               'text': {'type': 'string'}, 'truth': {'type': 'string', 'enum': list(KNOWN)}})
 
 
 def schema(extra: dict | None = None) -> dict:
@@ -171,7 +179,7 @@ def correct(connection, entry_id: str, now: str, text: str | None = None) -> Non
 
 
 def prompt_text(connection, focus: str = '', limit: int = IN_PROMPT) -> str:
-    """The record for the narrator: what is true, including what the player's character does not know, chosen by
+    """The record for the narrator: what the player's character knows or believes, never a hidden truth, chosen by
     relevance to `focus` (adventure/remembering.py)."""
     return remembering.prompt_text(connection, focus, limit)
 
@@ -204,11 +212,13 @@ def unearned(connection, fact: dict) -> bool:
 
 
 def well_formed(item) -> dict | None:
+    """A fact the model pulled from the page, or None. Its truth is one of KNOWN: a model that answers 'world', or
+    nothing, gets 'both', since what is on the page the character saw."""
     if not (isinstance(item, dict) and item.get('kind') in KINDS and str(item.get('subject') or '').strip()
             and str(item.get('text') or '').strip()):
         return None
     return {'kind': item['kind'], 'subject': str(item['subject']), 'text': str(item['text']),
-            'truth': item.get('truth') if item.get('truth') in TRUTHS else 'both'}
+            'truth': item.get('truth') if item.get('truth') in KNOWN else 'both'}
 
 
 def read_json(answer: str):
@@ -351,8 +361,10 @@ async def regenerate(state, entry_id: str) -> None:
         if fact['kind'] != 'death' and fact['subject'].lower() in dead(connection):
             raise DomainError('The model gave back a fact that contradicts the record. Try again, or correct it '
                               'yourself.', 409)
+        # A fact kept hidden before this rule (or by hand in the GM view) stays hidden: asking again never shows it.
+        truth = row['truth'] if row['truth'] == 'world' else fact['truth']
         connection.execute("UPDATE record_entries SET kind=?, subject=?, text=?, truth=? WHERE id=?",
-                           (fact['kind'], fact['subject'][:120], fact['text'][:500], fact['truth'], entry_id))
+                           (fact['kind'], fact['subject'][:120], fact['text'][:500], truth, entry_id))
         connection.execute('INSERT INTO record_corrections (id, entry_id, before, after, created_at) VALUES (?, ?, ?, '
                            '?, ?)', (identifier(), entry_id, row['text'], fact['text'][:500], database.now()))
 

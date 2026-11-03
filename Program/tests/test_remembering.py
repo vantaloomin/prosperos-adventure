@@ -34,7 +34,7 @@ def test_small_things_fade_big_ones_and_strong_feelings_stay_and_mention_refresh
         monkeypatch.setattr(remembering, 'turn_now', lambda _connection: remembering.FADE[1] + 1)
         assert remembering.faded_ids(connection) == {bell['id']}
         assert 'brass bell. (faded: the character remembers this only vaguely' in record.prompt_text(connection)
-        assert 'co-op. (hidden' in record.prompt_text(connection) and hidden['id'] not in remembering.faded_ids(connection)
+        assert 'co-op' not in record.prompt_text(connection) and hidden['id'] not in remembering.faded_ids(connection)
         # Someone the character feels strongly about stays sharp.
         connection.execute("INSERT INTO story_people (key, city_id, name, first_met_at, last_met_at, last_day, "
                            "meetings, notes, fear) VALUES ('f', 'kingswood', 'Hob the ferryman', ?, ?, '1290-05-01', 1, "

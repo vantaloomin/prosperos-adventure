@@ -14,7 +14,9 @@ could see on the page, never the secret behind it: the Writer's context takes th
   own, or slipping away from the party, goes through only if a sign for them was placed on an earlier turn on this
   branch. Otherwise they hold back this turn: the attempt becomes a sign of it, their motive and lines stand, and
   the sign is placed now, so the betrayal can come next turn and is fair in hindsight. One that goes through is a big
-  moment Watch stops for (`draft.extra['moments']`).
+  moment Watch stops for (`draft.extra['moments']`), and a desertion that goes through takes them out of the party
+  at Commit. This is the only way an agent leaves on their own: souring feelings never send one away
+  (adventure/party.py).
 - **Kept by turn** (`betrayal_signs`): each sign placed, for whom and of what kind, read through its turn's place on
   the timeline, so going back forgets it with the turn and every branch reads its own.
 - **A nemesis becomes an agent** (`seat_nemesis`, called as the director promotes one) in a campaign that plays
@@ -157,6 +159,7 @@ async def signs_first(turn: engine.Turn):
         if key in signed:
             # Its signs came first: it goes through, and Watch stops for it (adventure/rounds/watch.py).
             draft.extra.setdefault('moments', []).append({'kind': 'betrayal', 'text': f'{seat.name} turned on the party.'})
+            draft.extra.setdefault('director', {}).setdefault('through', []).append({'key': key, 'kind': kind})
             continue
         draft.extra.setdefault('director', {}).setdefault('held', {})[key] = declared.intent
         # A new declaration in place of the old: what the character first declared stays as it was (draft.declared).
@@ -192,6 +195,10 @@ def committed(connection, turn: engine.Turn):
     staged = turn.draft.extra.get('director') or {}
     placed = staged.get('behind') if 'behind' in staged else (turn.snapshot.settings.get('director') or {}).get(
         'behind', [])
+    # A desertion its signs came before: they leave the party (adventure/party.py).
+    for item in staged.get('through') or []:
+        if item['kind'] == 'desert':
+            party.leave(connection, item['key'])
     for item in placed or []:
         connection.execute('INSERT INTO betrayal_signs (id, turn_id, character_key, kind, sign, created_at) VALUES '
                            '(?, ?, ?, ?, ?, ?)', (identifier(), turn.id, item['key'], item['kind'], item['sign'],

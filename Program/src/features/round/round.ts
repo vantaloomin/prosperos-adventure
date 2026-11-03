@@ -180,9 +180,12 @@ export interface TurnReport {
   rolls: ReportRoll[]; numbers: string[]
   inventions: (Record<string, unknown> & { name?: string; struck?: boolean })[]
   corrections: { id: string; kind: string; target: string; before: unknown; after: unknown; why: string }[]
+  /** What the fact extraction model judged once the post was up, each with an undo (adventure/judged.py). */
+  judged: JudgedChange[]
   checks: { scan: { words?: number; findings?: { kind: string; severity: string; text: string }[] }; cut: string[]; rewrites: number; review: { quote: string; problem: string; fix: string }[] }
   offpage: ReportItem[]; questions: ReportItem[]; motives: { seat: string; motive: string }[]; next: string
 }
+export interface JudgedChange { id: string; kind: 'quest' | 'oath' | 'feeling' | 'dark'; label: string; undone: boolean }
 export interface StatusLine { last: { turn_id: string; number: number } | null; pending: { turn_id: string; state: RoundState; seat: string | null } | null; offpage_within: number }
 
 /** The words of a free-form report item. */

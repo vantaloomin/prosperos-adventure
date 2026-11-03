@@ -34,6 +34,9 @@ export function TurnReport({ turnId, table }: { turnId: string; table?: RoundTab
   const strike = (invention: string) => api(`/story/turns/${encodeURIComponent(turnId)}/inventions/strike`, { name: invention })
     .then(() => Promise.all([client.invalidateQueries({ queryKey: key }), client.invalidateQueries({ queryKey: ['story'] })]),
       (failure: unknown) => setError(failure instanceof Error ? failure.message : 'Not struck'))
+  const undo = (changeId: string) => api(`/story/turns/${encodeURIComponent(turnId)}/judged/${encodeURIComponent(changeId)}/undo`, {})
+    .then(() => Promise.all([client.invalidateQueries({ queryKey: key }), client.invalidateQueries({ queryKey: ['story'] })]),
+      (failure: unknown) => setError(failure instanceof Error ? failure.message : 'Not undone'))
   const you = [data.set.intent, ...data.set.lines.map((line) => `“${line}”`), ...data.set.beats].filter(Boolean)
   return (
     <div className="turn-report" aria-label={turnName(data.number)}>
@@ -44,6 +47,9 @@ export function TurnReport({ turnId, table }: { turnId: string; table?: RoundTab
       <Part title={REPORT_NAMES.inventions} items={data.inventions.filter((item) => item.name).map((item) => item.struck
         ? <s key={item.name}>{item.name}</s>
         : <span key={item.name}>{item.name} <button type="button" className="text-button" onClick={() => void strike(String(item.name))}>{REPORT_NAMES.strike}</button></span>)} />
+      <Part title={REPORT_NAMES.judged} items={(data.judged ?? []).map((item) => item.undone
+        ? <><s>{item.label}</s> · {REPORT_NAMES.undone}</>
+        : <>{item.label} <button type="button" className="text-button" onClick={() => void undo(item.id)}>{REPORT_NAMES.undo}</button></>)} />
       <Part title={REPORT_NAMES.offpage} items={shown(data.offpage.map(itemText))} />
       <Part title={REPORT_NAMES.questions} items={shown(data.questions.map(itemText))} />
       <Part title={REPORT_NAMES.corrections} items={data.corrections.map((item) => item.why || item.target)} />

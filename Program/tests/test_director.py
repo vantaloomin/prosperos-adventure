@@ -98,7 +98,11 @@ def test_the_note_follows_the_tension_curve_and_plants_a_seed_once(client, app, 
         director.touch(connection, 'vallarith', 'The Heartwood.', 'quiet', 'm2', 'x')
         for n in range(3):
             director.touch(connection, 'vallarith', 'I wait.', 'quiet', f'q{n}', 'x')
-        assert 'Pressure: the story has gone slack. Bring' in note(connection, 'eventful')
+        pressing = note(connection, 'eventful')
+        assert 'Pressure: the story has gone slack. Bring' in pressing
+        # The hot thread is told as it looks on the page, never its hidden truth.
+        [hot] = [row for row in director.threads(connection) if f"Bring {row['title']} back" in pressing]
+        assert hot['seen'] in pressing and hot['truth'] not in pressing
         assert 'Pressure' not in note(connection, 'quiet')
         # The line the note pressed counts as pressure, so the next lines do not all ask again.
         pressed = note(connection, 'eventful')

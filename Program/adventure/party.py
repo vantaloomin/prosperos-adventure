@@ -13,6 +13,10 @@ told so. They leave when asked to ("go home, Hesk", "we part ways"), when their 
 adding up to SOUR or less), or when an off-page beat takes them (dead, taken, missing: adventure/beats.py). At most
 MOST travel with the character at once.
 
+A character running on an agent (docs/spec.md, code and model boundary follow-ups) joins by the same feelings check, so
+a wary one won't however they are asked, but souring never sends them away: they leave by their own declared move,
+and only after a warning sign (adventure/rounds/directing.py). Being told to go still parts them.
+
 The party is game state, branched with the story (story_party is in adventure/timeline.py SAVED); each line's asking
 and parting is kept with it (story_cards, scene 'party').
 """
@@ -91,11 +95,11 @@ def parted(connection, text: str) -> list[str]:
     return [f"{row['name']} leaves the character's company and goes back to their own life."]
 
 
-def soured(connection, known: dict) -> list[str]:
-    """Companions who have had enough of the character walk away."""
+def soured(connection, known: dict, agents: set[str] = frozenset()) -> list[str]:
+    """Companions who have had enough of the character walk away; an agent among them chooses for themselves."""
     lines = []
     for row in members(connection):
-        if warmth(known, row['key']) <= SOUR:
+        if row['key'] not in agents and warmth(known, row['key']) <= SOUR:
             leave(connection, row['key'])
             lines.append(f"{row['name']} has had enough of the character and leaves their company. Show them go.")
     return lines
@@ -105,12 +109,13 @@ def leave(connection, key: str):
     connection.execute('DELETE FROM story_party WHERE key=?', (key,))
 
 
-def turn(connection, message_id: str, view: dict, text: str, day: str, now: str, rng=None) -> list[str]:
+def turn(connection, message_id: str, view: dict, text: str, day: str, now: str, rng=None,
+         agents: set[str] = frozenset()) -> list[str]:
     """The line's asking along and parting, decided once."""
     kept = optional(connection, "SELECT lines FROM story_cards WHERE message_id=? AND scene='party'", (message_id,))
     if kept:
         return decode(kept['lines'])
-    lines = soured(connection, view['known'])
+    lines = soured(connection, view['known'], agents)
     if PART.search(text):
         lines += parted(connection, text)
     elif ASK.search(text):

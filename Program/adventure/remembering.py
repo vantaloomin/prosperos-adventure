@@ -88,8 +88,12 @@ def refresh(connection, text: str):
 
 
 def chosen(connection, focus: str, limit: int) -> list[dict]:
-    """The facts the narrator is given: every death and promise, then those the scene is about, then the newest."""
-    rows = many(connection, 'SELECT * FROM record_entries WHERE removed=0 ORDER BY created_at DESC, rowid DESC')
+    """The facts the narrator is given: every death and promise, then those the scene is about, then the newest.
+    Never a hidden truth (docs/spec.md: the Writer gets signs, never hidden truths, in every campaign): what the
+    character doesn't know reaches the narrator only as code decides it should show this turn (a lie being told, a
+    director's payoff), never as a fact to keep quiet about."""
+    rows = many(connection, "SELECT * FROM record_entries WHERE removed=0 AND truth != 'world' ORDER BY created_at "
+                            'DESC, rowid DESC')
     mentioned = words(focus)
     first = [row for row in rows if row['kind'] in ('death', 'promise')]
     relevant = [row for row in rows if row not in first and about(row, mentioned)]
@@ -102,16 +106,15 @@ HISTORY = 'Old accounts of what they did, long past:'
 
 
 def prompt_text(connection, focus: str = '', limit: int = 40) -> str:
-    """The record for the narrator: what is true, including what the player's character does not know, and what they
-    now remember only vaguely."""
+    """The record for the narrator: what the player's character knows or believes (never a hidden truth, `chosen`),
+    and what they now remember only vaguely."""
     rows = chosen(connection, focus, limit)
     if not rows:
         return ''
     now, sharp = turn_now(connection), strong(connection)
     lines = []
     for row in rows:
-        note = {'world': " (hidden: the player's character does not know)",
-                'belief': " (the player's character believes this; it may be wrong)", 'both': ''}[row['truth']]
+        note = {'belief': " (the player's character believes this; it may be wrong)", 'both': ''}[row['truth']]
         if HISTORY in row['text']:
             note += ' (history: retell it in the past tense, never word for word)'
         if faded(row, now, sharp):

@@ -156,18 +156,22 @@ def feelings_schema(people: list[dict]) -> dict:
         'changes': record.strict({axis: {'type': 'integer'} for axis in AXES}), 'why': {'type': 'string'}})}}
 
 
-def from_answer(connection, answer: str, keys: set[str]):
+def answered(answer: str, keys: set[str]) -> list[tuple[str, dict[str, int], str]]:
+    """The Continuity model's feelings answer: (key, the changes, why) for each of `keys` it moved."""
     match = re.search(r'\{.*\}', answer or '', re.S)
     try:
         data = json.loads(match.group(0)) if match else {}
     except json.JSONDecodeError:
-        return
+        return []
+    found = []
     for item in (data.get('feelings') if isinstance(data, dict) else None) or []:
         if isinstance(item, dict) and item.get('key') in keys and isinstance(item.get('changes'), dict):
             moved = {axis: amount for axis, amount in item['changes'].items()
-                     if axis in AXES and isinstance(amount, int) and amount}
+                     if axis in AXES and isinstance(amount, int) and not isinstance(amount, bool) and amount}
             if moved:
-                change(connection, item['key'], moved, str(item.get('why') or ''))
+                found.append((item['key'], moved, str(item.get('why') or '')))
+    return found
+
 
 
 

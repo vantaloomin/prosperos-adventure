@@ -41,23 +41,28 @@ def test_facts_the_narrator_brings_in_are_kept_unless_they_contradict_the_record
     assert provider.requests[-1]['system'].startswith(record.EXTRACT)
     assert "The narrator: Old Tom's stool" in provider.requests[-1]['messages'][0]['content']
     known = ok(client.get('/api/story/journal'))['entries']
-    # The dead stay dead, hidden truth stays out of the journal, and a made-up kind is dropped.
-    assert [(entry['kind'], entry['subject']) for entry in known] == [('wound', 'you'), ('death', 'Old Tom')]
+    # The dead stay dead, and a made-up kind is dropped. What is on the page is known: a fact the model calls hidden
+    # is kept as one the character saw, since only code hides a fact.
+    assert sorted((entry['kind'], entry['subject'], entry['truth']) for entry in known) == [
+        ('death', 'Old Tom', 'both'), ('secret', 'the bouncer', 'both'), ('wound', 'you', 'both')]
+    assert record.FACT['properties']['truth']['enum'] == ['both', 'belief'] and '"world"' not in record.EXTRACT
 
-    # The narrator is given the record, hidden truth marked as hidden.
+    # The narrator is given the record, but never a hidden truth: signs only, in every campaign.
+    with app.state.database.connect(write=True) as connection:
+        record.add(connection, 'secret', 'Gus', 'Gus is a fence.', app.state.database.now(), truth='world')
     provider.replies = [reply('You wipe the blood away.'), reply('{"facts": []}')]
     tell(client, 'I wipe my nose.', 'story-0003')
     narrator = provider.requests[-2]['system']
     assert '## The record (kept by the game; never contradict it)' in narrator
     assert '- death, Old Tom: Old Tom drowned off the pier.' in narrator.split('\n')[narrator.split('\n').index(
         '## The record (kept by the game; never contradict it)') + 1]
-    assert "- secret, the bouncer: The bouncer works for the co-op. (hidden: the player's character does not know)" \
-        in narrator
+    assert 'Gus is a fence' not in narrator
+    assert '- secret, the bouncer: The bouncer works for the co-op.\n' in narrator + '\n'
 
     # Telling it again takes the old reply's facts with it.
     provider.replies = [reply('You dab at your nose.'), reply('{"facts": []}')]
     ok(client.post('/api/story/retry'))
-    assert len(ok(client.get('/api/story/journal'))['entries']) == 2
+    assert len(ok(client.get('/api/story/journal'))['entries']) == 3
 
 
 def test_the_player_corrects_their_journal_and_it_is_logged(client, app):
@@ -161,7 +166,8 @@ def test_a_backend_that_refuses_the_schema_is_asked_without_it_and_a_weak_model_
     with app.state.database.connect() as connection:
         pulled = [(row['kind'], row['subject'], row['truth']) for row in record.entries(connection, known_only=False)
                   if row['source'] == 'narrator']
-    assert pulled[:2] == [('fact', 'the stranger in grey', 'world'), ('wound', 'Pell', 'both')]
+    # A 'world' answer is not a truth a fact from the page can have: the character saw it.
+    assert pulled[:2] == [('fact', 'the stranger in grey', 'both'), ('wound', 'Pell', 'both')]
 
 
 def test_the_gm_view_shows_everything_and_asks_again_for_or_clears_one_fact(client, connected, app, provider):
@@ -170,6 +176,9 @@ def test_the_gm_view_shows_everything_and_asks_again_for_or_clears_one_fact(clie
                         reply('{"facts": [{"kind": "secret", "subject": "the bouncer", "text": "He works for the '
                               'co-op.", "truth": "world"}]}')]
     tell(client, 'I watch the bouncer.', 'story-0001')
+    # A pulled fact kept hidden from before facts on the page were always known (or hidden by hand in the GM view).
+    with app.state.database.connect(write=True) as connection:
+        connection.execute("UPDATE record_entries SET truth='world' WHERE source='narrator'")
     assert ok(client.get('/api/story/journal')) | {'quests': [], 'institutions': [], 'threads': []} == {
         'entries': [], 'gm': False, 'quests': [], 'institutions': [], 'threads': [], 'summary': ''}
     with app.state.database.connect() as connection:
@@ -182,7 +191,8 @@ def test_the_gm_view_shows_everything_and_asks_again_for_or_clears_one_fact(clie
     provider.replies = [reply('{"kind": "secret", "subject": "the bouncer", "text": "He takes the co-op\'s pay.", '
                               '"truth": "world"}')]
     view = ok(client.post(f"/api/story/journal/{hidden['id']}/regenerate"))
-    assert view['entries'][0]['text'] == "He takes the co-op's pay."
+    # Asking again never shows a hidden fact.
+    assert view['entries'][0]['text'] == "He takes the co-op's pay." and view['entries'][0]['truth'] == 'world'
     assert provider.requests[-1]['system'] == record.REGENERATE
     assert provider.requests[-1]['config']['json_schema'] == record.FACT
     assert 'The fact as it was pulled: secret, the bouncer: He works for the co-op.' in \

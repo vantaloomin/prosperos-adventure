@@ -7,7 +7,8 @@ exactly as before and a round with agents rolls, fights and narrates the player'
   story_messages) and, for a player's line, `story.gathered`: there is a model, the last turn's after-work is done,
   the time budget is set.
 - **Resolving** ('line', after 'ambiguity'): `story.resolved` on the line as the player meant it (their answer to the
-  one question, adventure/rounds/resolve.py `meant`), with each agent ally's declared move for a fight. Its rolls
+  one question, adventure/rounds/resolve.py `meant`), with each agent ally's declared move for a fight, and who the
+  round's agents are, so code never lies or walks off for them (adventure/lies.py, adventure/party.py). Its rolls
   are staged for the party's Resolve ('resolve', next), labelled as the player's. In a round with agents the lives
   off the page are left to Writing (W4's 'offpage' step).
 - **Writing** ('write'): `story.written`, the narrator's packet and telling; the text is the draft's post. The
@@ -69,6 +70,7 @@ async def line(turn):
         return
     telling.user = telling.user | {'text': resolve.meant(telling.user['text'], turn)}
     telling.moves = resolve.ally_moves(turn)
+    telling.agents = {seat.key for seat in turn.snapshot.agents()}
     telling.offpage = not turn.snapshot.agents()
     await story.resolved(telling)
     human = turn.snapshot.human()

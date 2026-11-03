@@ -13,7 +13,9 @@ with the turn's draft.
 **The turn report** is read from the committed turn itself (its snapshot and draft in round_turns), so it needs no
 table of its own and always matches what was committed: what the user set, each roll and what it produced in plain
 words (with the numbers unless the Table hides rolls), the numbers that changed, the Writer's inventions, the scan
-and Reviewer fixes, the corrections made since, off-page beats, open questions, and the decision left to the user. Motives appear only where the
+and Reviewer fixes, the corrections made since, off-page beats, open questions, and the decision left to the user.
+Beside them, what the fact extraction model judged once the post was up (a quest's end, an oath, a feeling, a dark
+act), each with an undo (`judged`, adventure/judged.py). Motives appear only where the
 mode shows them (Author and Watch) or the GM view is open; in Play the user sees their own character's.
 
 **The status line** is always visible: the turn just played, what is pending, and when off-page beats are next due.
@@ -21,7 +23,7 @@ W6 draws both.
 """
 from dataclasses import fields
 
-from adventure import beats, table
+from adventure import beats, judged, table
 from adventure.database import decode, many
 from adventure.narration import prompt as narration_prompt
 from adventure.rounds import agents, corrections, engine, house_rules, modes, panes, reviewer, scan, turns
@@ -156,6 +158,15 @@ def motives(result: TurnResult, mode: str, gm_view: bool, own: str | None) -> li
     return [{'seat': item.seat, 'motive': item.motive} for item in shown]
 
 
+def reply_id(draft: Draft) -> str | None:
+    """The narrator's reply the turn kept: a player's line's (adventure/rounds/telling.py) or the round Writer's."""
+    for key in ('telling', 'w4'):
+        reply = (draft.extra.get(key) or {}).get('reply')
+        if isinstance(reply, dict) and reply.get('id'):
+            return reply['id']
+    return None
+
+
 def report(connection, turn_id: str, gm_view: bool = False) -> dict:
     """The report of a committed turn, from its own row."""
     row = turns.get(connection, turn_id)
@@ -178,6 +189,7 @@ def report(connection, turn_id: str, gm_view: bool = False) -> dict:
         'inventions': [item | {'struck': (item.get('name') or '').casefold() in struck}
                        for item in written.get('inventions') or [] if isinstance(item, dict)],
         'corrections': corrections.of_turn(connection, row['id']),
+        'judged': judged.of_reply(connection, reply_id(draft)),
         'checks': {'scan': staged.get('scan') or {}, 'cut': staged.get('cut') or [],
                    'rewrites': staged.get('rewrites', 0), 'review': staged.get('review') or []},
         'offpage': list(written.get('offpage') or []),

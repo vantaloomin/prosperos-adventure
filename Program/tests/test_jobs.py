@@ -27,8 +27,9 @@ def test_a_faction_holding_the_town_offers_work(client, connected, provider, app
     assert "Work is going: the reeve's men (The Kingdom of Cyrel) wants it done within 5 days, for 6.00 cr." in narrator
     quest = next(item for item in ok(client.get('/api/story/journal'))['quests'] if item['kind'] == 'job')
     assert quest['title'] == 'A deserter in the woods' and quest['left'].startswith('about 5 days')
-    # The truth reaches the narrator only; the job leaves its ties for the story director.
-    assert 'sold the company\'s winter boots' in narrator and 'sold the company' not in quest['hook']
+    # The truth behind the job stays in the GM view, from the narrator too (signs only); the job leaves its ties for
+    # the story director.
+    assert 'sold the company' not in narrator and 'sold the company' not in quest['hook']
     with app.state.database.connect() as connection:
         row = connection.execute("SELECT ties, reward, faction_id FROM story_quests WHERE kind='job'").fetchone()
     assert json.loads(row['ties'])[0] == {'kind': 'npc', 'ref': 'the deserter'} and row['reward'] == 600
