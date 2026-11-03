@@ -1312,16 +1312,16 @@ def labour_turn(state, user: dict) -> list[str]:
         return lines
 
 
-def lie_turn(state, user: dict) -> list[str]:
+def lie_turn(state, user: dict, agents: set[str] = frozenset()) -> list[str]:
     """Someone the line questions who has something to hide lies, and the character's insight is rolled
-    (adventure/lies.py), once for the line."""
+    (adventure/lies.py), once for the line. An agent (`agents`) lies only by declaring it."""
     database = state.database
     with database.connect(write=True) as connection:
         view = scene(connection, story_clock.now(connection, database.clock))
         if combat.fight(connection):
             return []
         return lies.turn(connection, user['id'], view, user['text'], view['local_time'][:10], database.now(),
-                         getattr(state, 'dice', None))
+                         getattr(state, 'dice', None), agents)
 
 
 def bond_turn(state, user: dict) -> list[str]:
@@ -1355,15 +1355,16 @@ def vow_turn(state, user: dict, rolls: list[dict]) -> list[str]:
         return lines
 
 
-def party_turn(state, user: dict) -> list[str]:
-    """Asking someone along, or parting ways (adventure/party.py), once for the line."""
+def party_turn(state, user: dict, agents: set[str] = frozenset()) -> list[str]:
+    """Asking someone along, or parting ways (adventure/party.py), once for the line. Souring never sends an agent
+    (`agents`) away: they leave by their own move."""
     database = state.database
     with database.connect(write=True) as connection:
         view = scene(connection, story_clock.now(connection, database.clock))
         if combat.fight(connection):
             return []
         return party.turn(connection, user['id'], view, user['text'], view['local_time'][:10], database.now(),
-                          getattr(state, 'dice', None))
+                          getattr(state, 'dice', None), agents)
 
 
 def counter_text(lines: list[str]) -> str:
@@ -1646,6 +1647,9 @@ class Telling:
     rolls: list[dict] = field(default_factory=list)
     # The agent allies' declared moves this round, by key (adventure/allies.py), from the round's declarations.
     moves: dict[str, str] = field(default_factory=dict)
+    # Who runs on an agent this round, by key: they choose their own lies and whether to leave the party
+    # (adventure/lies.py, adventure/party.py).
+    agents: set[str] = field(default_factory=set)
     # Whether Resolve fires the lives off the page (adventure/beats.py), as today's turn does.
     offpage: bool = True
     # What Resolve decided, for the narrator: each system's lines, as `prompt` takes them.
@@ -1714,8 +1718,9 @@ async def resolved(telling: Telling):
     noted = director_turn(state, user) + recall_turn(state, rolls) + opening_turn(state, user)
     with state.database.connect() as connection:
         noted += [away_text(connection, user['id'])]
-    noted += [delved, labour.prompt_text(labour_turn(state, user)), lies.prompt_text(lie_turn(state, user)),
-              bonds.prompt_text(bond_turn(state, user)), party.prompt_text(party_turn(state, user)),
+    agents = telling.agents
+    noted += [delved, labour.prompt_text(labour_turn(state, user)), lies.prompt_text(lie_turn(state, user, agents)),
+              bonds.prompt_text(bond_turn(state, user)), party.prompt_text(party_turn(state, user, agents)),
               sworn.prompt_text(vow_turn(state, user, rolls)), leaving.prompt_text(leave_turn(state, user))]
     telling.fought, telling.traded, telling.tended, telling.looked, looks = in_scene(
         state, user, rolls, telling.travelled, telling.rested, telling.moves)

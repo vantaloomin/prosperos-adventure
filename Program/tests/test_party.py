@@ -86,10 +86,29 @@ def test_the_party_is_in_every_scene_with_the_character(app, client):
 def test_the_narrator_hears_who_joins(client, connected, provider, monkeypatch):
     begin(client)
 
-    def joining(connection, message_id, view, text, day, now, rng=None):
+    def joining(connection, message_id, view, text, day, now, rng=None, agents=frozenset()):
         return ['Corin Ashby agrees to come along with the character, from now on, of their own will.']
 
     monkeypatch.setattr(party, 'turn', joining)
     provider.replies = [[Chunk('He shoulders his pack.'), Chunk('', 'stop')]]
     tell(client, 'Come with me, Corin.', 'story-0001')
     assert '## The party (decided by the game)\n- Corin Ashby agrees' in provider.requests[-1]['system']
+
+
+def test_souring_never_sends_an_agent_away_but_feelings_still_limit_who_joins(app, client):
+    # Agent chooses, feelings limit (docs/spec.md): an agent leaves by its own move, after a sign.
+    begin(client)
+    with app.state.database.connect(write=True) as connection:
+        met(connection)
+        feelings.change(connection, 'hesk', {'trust': -1})
+        assert "won't come along" in party.turn(connection, 'm1', view(connection, [HESK]), 'Join us, Hesk?', DAY,
+                                               NOW, Dice(100), agents={'hesk'})[0]
+        bonds.forge(connection, 'hesk', 'Hesk Aldane', 'sworn', NOW)
+        party.turn(connection, 'm2', view(connection, [HESK]), 'Come with me, Hesk.', DAY, NOW, agents={'hesk'})
+        assert party.keys(connection) == {'hesk'}
+        feelings.change(connection, 'hesk', {'trust': -2, 'affection': -2})
+        assert party.turn(connection, 'm3', view(connection, []), 'We walk on.', DAY, NOW, agents={'hesk'}) == []
+        assert party.keys(connection) == {'hesk'}
+        # Told to go, they still part; on a Program mind, souring sends them away as before.
+        assert party.turn(connection, 'm4', view(connection, []), 'We walk on.', DAY, NOW) != []
+        assert party.keys(connection) == set()

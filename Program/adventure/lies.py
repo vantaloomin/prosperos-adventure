@@ -12,6 +12,10 @@ TRUSTING or more) tells them the truth. Each person is read once a story day: th
 lie the character believed, or are known to be lying (story_cards, scene 'lie', card_id the person's key). A near
 miss (failure with an upside) leaves the character uneasy: the narrator shows a small wrong note, no more.
 
+Agents lie for themselves (docs/spec.md, code and model boundary follow-ups): the rule above is for Program
+characters only. Someone the line questions who runs on an agent this round (`agents`) answers through their own
+declaration, and lies only by declaring a lie.
+
 In rounds any speaker can lie, and every lie is declared as one (adventure/rounds/contract.py Deception): the roll is
 the same for every listener it reaches (`insight`: the listener's Mind against how practised the liar is), and how
 it reads (`read`: caught, uneasy or believed) is shared with today's turn. The listener never judges a lie itself;
@@ -79,14 +83,17 @@ def read_today(connection, key: str, day: str) -> dict | None:
     return {'lines': decode(row['lines'])} if row else None
 
 
-def turn(connection, message_id: str, view: dict, text: str, day: str, now: str, rng=None) -> list[str]:
-    """The line's lie, decided once: who lies, and whether the character sees through it."""
+def turn(connection, message_id: str, view: dict, text: str, day: str, now: str, rng=None,
+         agents: set[str] = frozenset()) -> list[str]:
+    """The line's lie, decided once: who lies, and whether the character sees through it. Never an agent's."""
     kept = many(connection, "SELECT lines FROM story_cards WHERE message_id=? AND scene='lie'", (message_id,))
     if kept:
         return decode(kept[0]['lines'])
     if not ASKED.search(text) or not (person := target(view['people'], text)):
         return []
     found = person['sheet']
+    if found['key'] in agents:
+        return []
     if feelings.of(view['known'].get(found['key']))['trust'] >= TRUSTING:
         return []
     what = hidden(connection, view['data'], person)

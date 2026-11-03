@@ -117,6 +117,12 @@ def test_slipping_away_is_held_too_and_mara_studying_the_map_is_not(client, step
     declarations = draft_of(client, turn['id'])['declarations']
     assert declarations['hesk']['intent'] == directing.HELD['desert'].format(name='Hesk')
     assert declarations['mara']['intent'] == 'studies the map'
+    assert {row['key'] for row in rows(client, 'SELECT key FROM story_party')} == {'hesk', 'mara'}
+    # Its sign placed, the desertion goes through next turn and Hesk leaves the party: the one way an agent leaves on
+    # their own (souring never sends one away, adventure/party.py).
+    second = played(client, against=turn['id'])['turn']
+    assert draft_of(client, second['id'])['declarations']['hesk']['intent'] == 'slips away in the night'
+    assert {row['key'] for row in rows(client, 'SELECT key FROM story_party')} == {'mara'}
 
 
 def test_a_nemesis_gets_an_agent_once_in_a_campaign_that_plays_with_agents(client):
