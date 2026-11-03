@@ -60,6 +60,15 @@ class LoreSwitch(Input):
     enabled: bool
 
 
+class LoreEntryNew(Input):
+    """A lore entry of the user's own (adventure/lore.py `add_entry`), public or GM only."""
+    title: str = Field('', max_length=200)
+    text: str = Field(min_length=1, max_length=4000)
+    keywords: list[str] = Field(default_factory=list, max_length=20)
+    always: bool = False
+    visibility: str = Field('public', max_length=10)
+
+
 class LoreVisibility(Input):
     """Who may read a lore entry (adventure/lore.py "Who may read it"): public, known (to `known_to`, character keys)
     or gm; checked there."""

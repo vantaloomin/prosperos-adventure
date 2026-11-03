@@ -58,6 +58,8 @@ JOBS = [
     {'key': 'importer', 'name': 'World importer', 'detail': 'Drafts the sections of a world package (its places, '
      'factions, people, hidden truths and planned arcs) from the documents you import, for you to review. Uses the '
      'Default without a profile here. A large, careful model is worth it.'},
+    {'key': 'assistant', 'name': 'Sidebar Assistant', 'detail': 'Answers you in the sidebar beside the story and '
+     'proposes changes you apply one by one. Uses the Default without a profile here.'},
     {'key': 'recall', 'name': 'Semantic recall', 'detail': 'Embeddings that find related parts of the story, from a '
      'recall profile (Settings > Models > Recall) or built-in recall when it is on. Without either, recall matches '
      'keywords only.'},

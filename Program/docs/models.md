@@ -51,6 +51,7 @@ A profile card shows credits or usage when its service reports them for free, wi
 | Story narrator | Narrator turns ([story.md](story.md)). |
 | Referee | Splits each story turn into actions and picks the stat and difficulty of each roll ([story.md](story.md#the-turn-loop)). Off unless a profile is chosen for it: the Default is never borrowed, so a turn costs one narrator call. Without one, keyword rules decide. A small, fast model fits. |
 | Continuity | After each story turn, lists the new facts the narrator brought in for the record ([story.md](story.md#the-record-and-the-story-so-far)); facts are only kept when a profile is chosen for it. Also folds older turns into the story so far, using the Default when it has none. A small, fast model fits. |
+| Sidebar Assistant | The chat beside the story that answers and proposes changes ([assistant.md](assistant.md)). Uses the Default without a profile here. |
 | Semantic recall | Embeddings, from a recall profile, or from built-in recall when it is on. Recall profiles (`purpose: recall`) have their own section, Settings > Models > Recall: an OpenAI, NanoGPT, local or compatible service and an `embedding_model`, with no text model. They do this job and no other, text profiles never do it, and the first one saved takes the job when recall has none. Without one, recall matches keywords only. |
 
 ### Mix narrator models

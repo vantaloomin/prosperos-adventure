@@ -20,6 +20,7 @@ import { openAuthorsNote } from './noteState'
 import { StoryMenu } from './StoryMenu'
 import { menuCommands, OUT_OF_STORY, type MenuCommand } from './menuText'
 import { askForDrawer } from './scene'
+import { assistant } from '../assistant/store'
 import { StoryStart } from './StoryStart'
 import { TitleScreen } from './TitleScreen'
 import { StoryNarration } from './StoryNarration'
@@ -382,6 +383,7 @@ function StoryComposer({ busy, draft, turn, onSend, onAddModel, commands, onNewS
     if (command.id === 'ideas') askIdeas()
     else if (command.id === 'note') openAuthorsNote('story')
     else if (command.id === 'step-out') { setText((before) => before.startsWith(OUT_OF_STORY) ? before : OUT_OF_STORY + before); box.current?.focus() }
+    else if (command.id === 'assistant') assistant.setOpen(true)
     else if (command.id === 'new-story') onNewStory()
     else askForDrawer(command.id)
   }

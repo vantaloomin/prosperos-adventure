@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useRef, useState, type ReactNode } from 'react'
-import { PenLine, Repeat } from 'lucide-react'
+import { Lightbulb, PenLine, Repeat } from 'lucide-react'
 import type { StoryMessage } from '../../types'
 import { InfoTip } from '../../components/InfoTip'
 import { inlineRuns, isBreak, plainText, runsBetween } from '../../components/inline'
@@ -9,6 +9,7 @@ import { linkText } from './entity'
 import { EntityName } from './EntityCard'
 import { useNameLinks } from './entityContext'
 import { IllustrateButton } from './StoryArt'
+import { assistant } from '../assistant/store'
 
 interface Props {
   message: StoryMessage
@@ -126,5 +127,7 @@ function NarrationActions({ message, busy, illustrate, onSwitch }: { message: St
     {message.previous && onSwitch && <button type="button" className="text-button story-back" disabled={busy} onClick={onSwitch}
       title="Switch between the wording before your last rewrite and the rewrite."><Repeat aria-hidden="true" />Switch wording</button>}
     {illustrate && <IllustrateButton messageId={message.id} />}
+    {illustrate && <button type="button" className="text-button story-back" disabled={busy} onClick={() => assistant.ask(message)}
+      title="Open the Sidebar Assistant on this passage, to ask about it or have it reworded."><Lightbulb aria-hidden="true" />Ask the assistant</button>}
   </>
 }

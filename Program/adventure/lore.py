@@ -32,7 +32,7 @@ from datetime import datetime
 from pathlib import Path
 
 from adventure import lore_moments as moments
-from adventure.database import decode, encode, identifier, many, one
+from adventure.database import decode, encode, identifier, many, one, optional
 from adventure.errors import require
 from adventure.imports import formats
 
@@ -232,6 +232,50 @@ def set_visibility(database, entry_id: str, visibility: str, known_to: list[str]
         visible_book(connection, entry['book_id'])
         connection.execute('UPDATE lore_entries SET visibility=?, known_to=? WHERE id=?',
                            (visibility, encode(known_to), entry_id))
+    return listing(database)
+
+
+# Entries the user writes one at a time (the Sidebar Assistant's proposals, adventure/assistant.py) go in one book of
+# their own, made the first time.
+OWN_FORMAT = 'Sidebar Assistant'
+OWN_BOOK = 'Written with the Sidebar Assistant'
+MAX_KEYWORDS = 20
+
+
+def own_book(connection, timestamp: str) -> str:
+    row = optional(connection, 'SELECT id FROM lore_books WHERE source_format=? AND city_id IS NULL ORDER BY created_at '
+                               'LIMIT 1', (OWN_FORMAT,))
+    if row is not None:
+        return row['id']
+    book_id = identifier()
+    connection.execute('INSERT INTO lore_books (id, name, description, source_format, created_at) VALUES (?, ?, ?, ?, ?)',
+                       (book_id, OWN_BOOK, 'Lore you added from the Sidebar Assistant.', OWN_FORMAT, timestamp))
+    return book_id
+
+
+def add_entry(database, title: str, text: str, keywords: list[str], always: bool, visibility: str) -> dict:
+    """One entry of the user's own, public or GM only; the listing comes back with the new entry's id as `added`."""
+    require(visibility in ('public', 'gm'), 'A new entry is public or GM only.', 422)
+    keywords = list(dict.fromkeys(word.strip()[:MAX_KEY] for word in keywords if word.strip()))[:MAX_KEYWORDS]
+    require(bool(text.strip()), 'Write the entry.', 422)
+    require(always or bool(keywords), 'Give the entry a keyword, or make it always on.', 422)
+    with database.connect(write=True) as connection:
+        book_id = own_book(connection, database.now())
+        position = one(connection, 'SELECT COUNT(*) AS n FROM lore_entries WHERE book_id=?', (book_id,))['n']
+        entry_id = identifier()
+        connection.execute('INSERT INTO lore_entries (id, book_id, position, title, text, keywords, always, visibility, '
+                           "known_to) VALUES (?, ?, ?, ?, ?, ?, ?, ?, '[]')",
+                           (entry_id, book_id, position, title.strip()[:200], text.strip(), encode(keywords),
+                            int(always), visibility))
+    return listing(database) | {'added': entry_id}
+
+
+def remove_entry(database, entry_id: str) -> dict:
+    with database.connect(write=True) as connection:
+        entry = one(connection, 'SELECT * FROM lore_entries WHERE id=?', (entry_id,))
+        visible_book(connection, entry['book_id'])
+        connection.execute('DELETE FROM lore_timers WHERE entry_id=?', (entry_id,))
+        connection.execute('DELETE FROM lore_entries WHERE id=?', (entry_id,))
     return listing(database)
 
 
