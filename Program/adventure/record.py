@@ -294,6 +294,10 @@ async def field_by_field(state, config: dict, text: str) -> list[dict]:
 
 
 def turn_text(user_text: str, reply_text: str) -> str:
+    """The turn as the Continuity model reads it. A round with no player's line (Author, Watch, Next) is its post
+    alone: the line it opened on holds the Author's hidden nudge or nothing, which is not on the page."""
+    if not (user_text or '').strip():
+        return f'The narrator: {reply_text}'
     return f'The player: {user_text}\n\nThe narrator: {reply_text}'
 
 
@@ -329,13 +333,15 @@ async def extract(state, user_text: str, reply: dict, ask: str = '', extra: dict
 
 
 def turn_of(connection, message_id: str) -> tuple[str, str] | None:
-    """The player's line and the narration a fact was pulled from."""
+    """The player's line and the narration a fact was pulled from; no line for a round opened in Author or Watch,
+    whose opening line is the Author's nudge or nothing."""
     reply = optional(connection, 'SELECT seq, text FROM story_messages WHERE id=?', (message_id,))
     if reply is None:
         return None
-    user = optional(connection, "SELECT text FROM story_messages WHERE role='user' AND seq < ? ORDER BY seq DESC "
-                                'LIMIT 1', (reply['seq'],))
-    return (user['text'] if user else ''), reply['text']
+    user = optional(connection, "SELECT text, mode FROM story_messages WHERE role='user' AND seq < ? ORDER BY seq "
+                                'DESC LIMIT 1', (reply['seq'],))
+    said = user['text'] if user and (user.get('mode') or 'play') == 'play' else ''
+    return said, reply['text']
 
 
 async def regenerate(state, entry_id: str) -> None:
@@ -388,9 +394,17 @@ def to_fold(rows: list[dict], through_seq: int) -> list[dict]:
 
 
 def transcript(rows: list[dict]) -> str:
+    """The story as the summaries read it. The line an Author or Watch round opened on is left out: it holds the
+    Author's hidden nudge or nothing, never what the player's character said (as the round Writer's history leaves
+    it out, adventure/rounds/writer.py)."""
     names = {'user': 'The player', 'narrator': 'The narrator', 'scene': 'Scene'}
     return '\n\n'.join(f"{names[row['role']]}: {row['text']}" for row in rows
-                       if row['role'] != 'narrator' or row['status'] == 'complete')
+                       if (row['role'] != 'narrator' or row['status'] == 'complete') and not opened_a_round(row))
+
+
+def opened_a_round(row: dict) -> bool:
+    """A user line that is not the player's: an Author or Watch round's, or Next's empty one."""
+    return row['role'] == 'user' and ((row.get('mode') or 'play') != 'play' or not str(row['text'] or '').strip())
 
 
 async def fold(state, rows: list[dict]):

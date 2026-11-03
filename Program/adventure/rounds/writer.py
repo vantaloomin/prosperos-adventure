@@ -20,8 +20,19 @@ the page. Text that came from a person or another model is fenced before it is s
 import re
 from dataclasses import replace
 
-from adventure import beats, in_character, prompt_library, story, story_clock, timeline, tone
-from adventure.database import many
+from adventure import (
+    beats,
+    director,
+    happenings,
+    in_character,
+    plotting,
+    prompt_library,
+    story,
+    story_clock,
+    timeline,
+    tone,
+)
+from adventure.database import many, optional
 from adventure.narration import prompt as narration_prompt
 from adventure.providers.scheduling import CONVERSATION
 from adventure.rounds import engine, telling  # telling's 'write' goes in first; the round Writer's replaces it
@@ -191,13 +202,35 @@ def cutaways(turn) -> list[str]:
 
 def scene_for(connection, turn, line: story.Telling | None) -> str:
     """The scene as today's narrator is given it: the place, its shop and the year; what code settled for the player's
-    line (the road, the counter, the fight, treatment, finds); and the cutaways to place."""
+    line (the road, the counter, the fight, treatment, finds, the director's note); and the cutaways to place. A round
+    with no player's line gets the director's note of its own (`noted`)."""
     view = story.scene(connection, story_clock.now(connection, turn.database.clock))
     parts = [story.place_prompt(connection, view, story.shop_view(connection, view))]
     if playing(turn) and (who := story.persona_text(connection)[0]):
         parts.append(f"The user's character:\n{fence('persona', who)}")
-    parts.append(story.settled_text(connection, line) if line is not None else beats.cutaway_text(cutaways(turn)))
+    if line is not None:
+        parts.append(story.settled_text(connection, line))
+    else:
+        parts += [beats.cutaway_text(cutaways(turn)), *noted(turn)]
     return '\n\n'.join(part for part in parts if part)
+
+
+def noted(turn) -> list[str]:
+    """The director's note for a round with no player's line, as `directed` kept it."""
+    return list((turn.draft.extra.get(KEY) or {}).get('noted') or [])
+
+
+def directed(turn):
+    """The director's hidden note for a round with no player's line (Author, Watch, Next in Play), as a player's line
+    gets it in Resolve (adventure/story.py `director_turn`): pressure when the story has gone slack, what is due, a
+    seed, who and what is near. Signs only, as the narrator's always is: a thread by how it looks on the page. Kept
+    with the turn's opening line, so a turn played again from the same line reads the same note."""
+    staged = turn.draft.extra.setdefault(KEY, {})
+    if 'noted' in staged:
+        return
+    with turn.database.connect() as connection:
+        opened = optional(connection, 'SELECT * FROM story_messages WHERE id=?', (turn.row.get('anchor_id'),))
+    staged['noted'] = story.director_turn(turn.app, opened) if opened else []
 
 
 def round_system(connection, turn, known: str, data: dict) -> str:
@@ -268,6 +301,8 @@ async def write(turn):
     if line is not None:
         line.meanwhile = cutaways(turn)
         story.packed(line)
+    else:
+        directed(turn)
     await turn.emit({'stage': 'writing'})
     with turn.database.connect() as connection:
         data = story.city_data(connection, story.scene_row(connection)['city_id'])
@@ -286,13 +321,33 @@ def context_for(connection, turn, scene: str) -> str:
 
 def committed(connection, turn):
     """A round with no player's line (Author, Watch, or Next in Play): its post saved as the narrator's reply to the
-    turn's opening line, in Commit's transaction. A player's line keeps its reply through today's telling."""
+    turn's opening line, in Commit's transaction, and then what a player's line does once its reply is kept: the
+    director's curve and threads hear the post (`touched`), and fact extraction follows once the post is up
+    (adventure/story.py `after_round`). A player's line keeps its reply through today's telling."""
     post, anchor = turn.draft.post, turn.row.get('anchor_id')
     if not post or not anchor or telling.reply_of(turn) or telling.line_of(turn) is not None:
         return
-    reply = story.add(connection, turn.database.now(), 'narrator', post, story.scene_row(connection),
-                      reply_to=anchor)
+    where = story.scene_row(connection)
+    reply = story.add(connection, turn.database.now(), 'narrator', post, where, reply_to=anchor)
     turn.draft.extra.setdefault(KEY, {})['reply'] = reply
+    people = story.scene(connection, story_clock.now(connection, turn.database.clock))['people']
+    touched(connection, turn, where, people, post, anchor)
+    opened = optional(connection, 'SELECT * FROM story_messages WHERE id=?', (anchor,))
+    if opened is not None:
+        story.after_round(turn.app, opened, reply, people)
+
+
+def touched(connection, turn, where: dict, people: list[dict], post: str, anchor: str):
+    """The director hears the round's post, as it hears a player's line (adventure/story.py `kept_telling`): the
+    threads it touched heat up, the curve notes the scene's kind (so a slack run of rounds brings pressure), and seeds
+    that reached the page are marked."""
+    found = happenings.where(where['city_id'], where['place_id'])
+    if not found:
+        return
+    rolls = turn.draft.result.rolls if turn.draft.result is not None else []
+    kind = director.scene_kind(rolls, [], people, noted(turn))
+    director.touch(connection, found['world'], post, kind, anchor, turn.database.now())
+    plotting.after_line(connection, post, anchor)
 
 
 engine.register(State.WRITING, 'write', write)
