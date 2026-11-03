@@ -54,6 +54,9 @@ top of it, milestone by milestone, as set out in [the roadmap](https://github.co
 | `round_turns` | Each turn of the round loop: its state, the snapshot it was built from, its draft until commit, and marks such as a GM view left open (`adventure/rounds/turns.py`) |
 | `round_seats`, `round_settings` | Who sits at the table and how each decides (agent, Program mind or the human); the mode (Play, Author, Watch), the agent and conversation caps, and changes waiting for the next Idle (`adventure/rounds/seats.py`) |
 | `character_memories`, `character_memory_refreshes`, `character_feelings` | What each character remembers and how they feel toward everyone else, keyed by the turn that wrote it and read through the branch's ancestry (`adventure/rounds/memory.py`) |
+| `mode_settings`, `mode_switches` | Who plays the user's character outside Play (an agent or its Program mind), Watch's timer, and each switch out of Play with whether the user chose to see the motives they missed (`adventure/rounds/modes.py`) |
+| `nudge_box`, `author_feedback` | Beats the user would like to see, waiting beside their line in Play, and whether each turn's nudges took, "Used" or "Not yet" (`adventure/rounds/author.py`) |
+| `watch_continued` | Watch turns the user went on from after a pause (`adventure/rounds/watch.py`) |
 | `townsfolk_mix`, `townsfolk_personality`, `birth_dates`, `town_levels` | How the town is generated and how it ages |
 
 A database from before Milestone 0 is not upgraded: Adventure starts a fresh schema, and `upgrade.py` only handles
@@ -64,7 +67,7 @@ changes made from here on. New tables come from `schema.sql`; a column added to 
 
 | Engine | Where | What it does now |
 | --- | --- | --- |
-| Round loop | `rounds/`, `round_routes.py` | The state machine every turn runs through (today's single-player turn as one step of it), its step registry, the turn draft committed in one transaction, one writer at a time with stale commands refused, the reply card, re-asking an agent on a new branch, picking up after a restart, and per-character memory that follows branches |
+| Round loop | `rounds/`, `round_routes.py`, `mode_routes.py` | The state machine every turn runs through (today's single-player turn as one step of it), its step registry, the turn draft committed in one transaction, one writer at a time with stale commands refused, the reply card, re-asking an agent on a new branch, picking up after a restart, and per-character memory that follows branches; the Author's nudges and beat board with their feedback, Watch's timer and its pauses at big moments, and switching modes |
 | Who sees what | `rounds/context.py`, `lore.py`, `package_lore.py` | One context builder per reader (each agent, the Writer by mode, the Referee, the minds panel, the GM view), so privacy is decided by what goes into a prompt; untrusted text arrives fenced; lore and package facts carry visibility tags. Leak tests seed sentinel secrets (`tests/test_rounds_privacy*.py`, `tests/leak_probes.py`), and `scripts/leak_probes.py` runs the probe set against a real model |
 | Narrator | `story.py`, `narration/` | Builds the layered narrator prompt, checks the prose in code, and writes each story turn |
 | Odds and rolls | `consequences.py`, `life/chance.py` | Weighted outcomes and seeded rolls, the base for the Milestone 1 dice |

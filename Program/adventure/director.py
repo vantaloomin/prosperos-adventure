@@ -15,8 +15,9 @@ does and never changes roll odds.
 - **The hand** (picked at campaign start): Soft, Guiding (the default) or Firm. Arcs move a stage on their own
   clocks (PACE in 100 a story day, twice that for the spine); under Soft that only changes the world's truth, under
   Guiding the arc's people come looking for the character, under Firm it shows in the scene wherever they are.
-- **The hidden GM note**, every turn: the pressure the scene is under (from the tension curve), a seed to plant if
-  it fits, the threads the people present carry, the antagonist near, and what of the arcs is due. A stage above
+- **The hidden GM note**, every turn: the beats the player asked to see (the nudge box, adventure/rounds/author.py),
+  the pressure the scene is under (from the tension curve), a seed to plant if it fits, the threads the people
+  present carry, the antagonist near, and what of the arcs is due. A stage above
   the character's tier only ever reaches them as a clue or a rumor, never its fight.
 - **The tension curve.** Each line is a quiet, social, pressure or crisis scene (from its rolls and fight). After
   SLACK quiet lines in a row (fewer the more eventful the drama setting), the note asks for pressure from the
@@ -374,14 +375,20 @@ def around(world: str, node_id: str, row: dict, rows: dict, hot: list[dict], peo
     return lines
 
 
+def asked(connection) -> list[str]:
+    """The beats the player asked to see beside their line (adventure/rounds/author.py, the nudge box)."""
+    return [f"Asked for by the player, if it fits (the characters still choose for themselves): {row['text']}"
+            for row in many(connection, 'SELECT text FROM nudge_box ORDER BY created_at, rowid')]
+
+
 def note(connection, world: str, node_id: str, people: list[dict], drama: str, now: datetime) -> str:
     """The hidden GM note for a line: pressure, a payoff due, what is due, a seed, and who and what is near."""
     row = state(connection)
     if row['world'] != world or not ACTIVE:
         return ''
     rows, hot = arcs(connection), threads(connection)
-    lines = (pressure(connection, world, row, rows, hot, drama, now) + plotting.payoff(connection, rows)
-             + due(connection, world, row, rows)
+    lines = (asked(connection) + pressure(connection, world, row, rows, hot, drama, now)
+             + plotting.payoff(connection, rows) + due(connection, world, row, rows)
              + seed(connection, world, row, rows) + around(world, node_id, row, rows, hot, people))
     if not lines:
         return ''
