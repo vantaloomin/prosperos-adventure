@@ -7,7 +7,8 @@ Each character's declared intent is split into acts (one a sentence, as the Refe
   Those always roll, and when aimed at someone present that someone resists with their own roll: when they do
   better, the act lands a step worse (as a shopkeeper holds firm on a haggle, adventure/inventory.py opposed).
 - **The Referee rules on the rest** (adventure/referee.py decide) seeing the bare intent only: never the
-  character's lines, motive, lies or whispers, so a good pitch or a hidden plan never moves the odds.
+  character's lines, motive, lies or whispers, so a good pitch or a hidden plan never moves the odds. Its model
+  reads the Referee's own context (adventure/rounds/context.py build_referee), fenced, with the part to rule on.
 - **Code rolls.** Everyone but the player's character rolls on the shared ladder with their stat
   (adventure/rules/marvel.py roll; the stat from character_stats, else the default); the player's own line is
   rolled by today's turn on their sheet in the campaign's ruleset (adventure/story.py resolved), so it is not
@@ -27,7 +28,7 @@ from dataclasses import dataclass
 
 from adventure import pace, referee, sheet
 from adventure.database import identifier, many
-from adventure.rounds import engine, reply
+from adventure.rounds import context, engine, reply
 from adventure.rounds.contract import Brief, Declaration, Mind, Mode, Seat, State, TurnResult
 from adventure.rules import ladder, marvel, narrative
 
@@ -109,16 +110,30 @@ def split(declaration: Declaration, seats: list[Seat]) -> tuple[list[Act], list[
     return acts, rest
 
 
-async def ruled(app, actor: str, rest: list[str], seats: list[Seat], models: tuple) -> list[Act]:
+RULE_ON_NOW = 'What to rule on now'  # the part's title, as adventure/referee.py RULE_ON names it
+
+
+def ruling(turn, actor: str, text: str) -> str:
+    """What the Referee's model reads for one character's part: W1's Referee context (the scene, who is here and
+    everyone's bare intent; adventure/rounds/context.py build_referee) and the part to rule on, all fenced but the
+    scene. Never lines, motives, lies or whispers."""
+    when, where = scene_of(turn)
+    built = context.build_referee(turn.snapshot, turn.draft, ', '.join(part for part in (when, where) if part))
+    built.add(RULE_ON_NOW, [f'{context.called(turn.snapshot, actor)}: {text}'])
+    return built.text()
+
+
+async def ruled(turn, actor: str, rest: list[str], models: tuple) -> list[Act]:
     """What the Referee rules uncertain among the parts code could not classify, from the bare intent alone."""
     text = '. '.join(rest)
     if not text.strip():
         return []
     splitter, decisions = models
     obvious = pace.obvious(text)
-    actions = await referee.decide(app, text, None if obvious else splitter, None if obvious else decisions)
+    actions = await referee.decide(turn.app, text, None if obvious else splitter, None if obvious else decisions,
+                                   context='' if obvious or splitter is None else ruling(turn, actor, text))
     return [Act(actor, action['action'], 'referee', action['stat'], action.get('difficulty', 'normal'),
-                target=aimed(action['action'], seats, actor)) for action in actions if action.get('roll')]
+                target=aimed(action['action'], turn.snapshot.seats, actor)) for action in actions if action.get('roll')]
 
 
 # Ambiguity ----------------------------------------------------------------------------------------------------------
@@ -309,7 +324,7 @@ async def acts_of(turn, declarations: list[Declaration]) -> list[Act]:
     acts = []
     for declaration in declarations:
         found, rest = split(declaration, turn.snapshot.seats)
-        acts += found + await ruled(turn.app, declaration.seat, rest, turn.snapshot.seats, models)
+        acts += found + await ruled(turn, declaration.seat, rest, models)
     return acts
 
 

@@ -2,6 +2,7 @@
 Referee sees only the bare intent, the one an act is aimed at resists, Narrative Only gives code's verdict, and the
 TurnResult, its brief and the dice log carry who acted, at whom and what was at stake."""
 import asyncio
+from contextlib import asynccontextmanager
 from types import SimpleNamespace
 
 import pytest
@@ -10,8 +11,8 @@ from conftest import START
 from adventure import referee, timeline
 from adventure.clock import FixedClock
 from adventure.database import Database
-from adventure.rounds import engine, resolve, seats
-from adventure.rounds.contract import Deception, Declaration, Line, Mind, Mode, State
+from adventure.rounds import context, engine, resolve, seats
+from adventure.rounds.contract import Deception, Declaration, Line, Mind, Mode, State, Whisper
 from adventure.rules import narrative
 
 
@@ -96,7 +97,7 @@ def test_the_target_doing_better_makes_the_act_land_a_step_worse(game):
 def test_the_referee_rules_on_the_rest_from_the_bare_intent(game, monkeypatch):
     asked = []
 
-    async def decide(state, text, config, decisions=None, fight=None):
+    async def decide(state, text, config, decisions=None, fight=None, context=''):
         asked.append(text)
         return [{'action': 'climb the wall', 'roll': True, 'stat': 'Vitality', 'difficulty': 'hard'}]
     monkeypatch.setattr(referee, 'decide', decide)
@@ -105,6 +106,43 @@ def test_the_referee_rules_on_the_rest_from_the_bare_intent(game, monkeypatch):
                                       lines=[Line('Trust me, I know a way in.', ['mara'])]))
     assert asked == ['I climb the wall']
     assert (turn.draft.result.rolls[0]['kind'], turn.draft.result.rolls[0]['difficulty']) == ('referee', 'hard')
+
+
+class Recorder:
+    """The Referee's model: records what it is asked and rules the climb hard."""
+
+    def __init__(self):
+        self.requests = []
+
+    async def stream(self, config, key, system, messages):
+        self.requests.append((system, messages[-1]['content']))
+        yield SimpleNamespace(text='{"actions": [{"action": "climb the wall", "roll": true, "stat": "Vitality", '
+                                   '"difficulty": "hard"}]}')
+
+
+class Scheduler:
+    @asynccontextmanager
+    async def reserve(self, config, work=None, wait_seconds=None):
+        yield
+
+
+def test_the_referee_model_reads_its_own_fenced_context_and_never_lines_motives_or_whispers(game, monkeypatch):
+    monkeypatch.setattr(referee, 'own_model', lambda connection: {'provider': 'test'})
+    monkeypatch.setattr(referee, 'decision_model', lambda connection: None)
+    monkeypatch.setattr(referee, 'key_for', lambda vault, config: None)
+    game.provider, game.scheduler, game.vault = Recorder(), Scheduler(), None
+    game.dice = Dice(50, 4)
+    turn = resolved(game, Declaration('hesk', intent='I climb the wall.', motive='Get to the vault before Mara.',
+                                      lines=[Line('Trust me, I know a way in.', ['mara'])],
+                                      whispers=[Whisper('Keep Wren busy.', ['mara'])]),
+                    Declaration('mara', intent='I wait by the gate.'))
+    (system, told), = game.provider.requests
+    assert context.FENCE_RULE in system and referee.RULE_ON in system
+    assert 'Evening, The Lantern, Kingswood' in told and 'Mara Quill: I wait by the gate.' in told
+    assert '[[in-fiction: What to rule on now]]\nHesk: I climb the wall\n' in told
+    for hidden in ('Get to the vault', 'Trust me', 'Keep Wren busy'):
+        assert hidden not in told
+    assert turn.draft.result.rolls[0]['difficulty'] == 'hard'
 
 
 def test_narrative_only_gives_codes_verdict_and_no_judge(game, monkeypatch):
