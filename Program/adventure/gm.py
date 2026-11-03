@@ -20,7 +20,7 @@ they spoiled. Author and Watch have no gate and mark nothing.
 from adventure import director, feelings, growth, plotting, quests, record, timeline, world_data
 from adventure.database import decode, many, optional
 from adventure.errors import DomainError, require
-from adventure.rounds import context, memory, modes, seats, shown, turns
+from adventure.rounds import context, memory, seats, shown, turns
 from adventure.rounds.contract import Mode, Point, Snapshot, plain
 from adventure.rounds.draft import Draft
 
@@ -139,6 +139,7 @@ def minds_panel(connection) -> dict:
     turn = watched_turn(connection)
     if turn is None:
         return {'turn': None, 'mode': seats.settings(connection)['mode'], 'minds': [], 'revealed': False}
+    from adventure.rounds import modes
     snapshot, revealed = Snapshot.of(decode(turn['snapshot'])), modes.revealed(connection, turn)
     return {'turn': turn['id'], 'mode': turn['mode'], 'revealed': revealed,
             'minds': context.minds(snapshot, Draft.of(decode(turn['draft'])), reveal=revealed)}
