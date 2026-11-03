@@ -166,7 +166,7 @@ def strike(connection, turn_id: str, name: str, now: str) -> dict:
     for row in many(connection, 'SELECT id, text FROM character_memories WHERE turn_id=?', (turn['id'],)):
         if pattern.search(row['text']):
             log(connection, turn, 'memory', row['id'], row['text'], None, f'Struck invention: {found["name"]}', now)
-    reply_id = ((draft.get('extra', {}).get('telling') or {}).get('reply') or {}).get('id')
+    reply_id = reply_of(draft)
     if reply_id:
         for row in many(connection, "SELECT id, text, subject FROM record_entries WHERE message_id=? AND removed=0",
                         (reply_id,)):
@@ -175,6 +175,17 @@ def strike(connection, turn_id: str, name: str, now: str) -> dict:
     struck = log(connection, turn, 'invention', found['name'], found, None, 'Struck by the user', now)
     return {'correction': struck, 'message_id': reply_id, 'passage': found.get('text') or '',
             'later': later(connection, turn, found['name'])}
+
+
+def reply_of(draft: dict) -> str | None:
+    """The committed narrator message's id: saved by today's telling on a player's line (adventure/rounds/telling.py),
+    or by the round Writer's 'writer' hook in a round with no player's line (W4, `draft.extra['w4']['reply']`)."""
+    extra = draft.get('extra', {})
+    for key in ('telling', 'w4'):
+        found = ((extra.get(key) or {}).get('reply') or {}).get('id')
+        if found:
+            return found
+    return None
 
 
 def clear(connection):
