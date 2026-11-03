@@ -8,7 +8,9 @@ when the player asks, through the image backends in Settings (adventure/images).
   injuries and what they carry; someone met reads who the town says they are, the notes the story kept about them,
   and their mood toward the character from the feeling axes. Nothing comes from a model.
 - **One reference per character.** The first portrait made of someone is their reference, sent with every later
-  picture of them to a backend that takes one, so they keep looking like themselves.
+  picture of them to a backend that takes one, so they keep looking like themselves. The player's own picture
+  (`own_portrait`, from Prospero's Companion #454) takes its place: it is their portrait at once and their reference
+  from then on, and never goes out of date.
 - **Out of date.** Each picture keeps a fingerprint of what it was built from. When that changes (a new wound, a
   change of heart, the hour moves on) the picture is marked out of date and one click makes it again. A passage
   never goes out of date.
@@ -196,6 +198,34 @@ def request(database, kind: str, subject: str) -> dict:
         return view_of(one(connection, 'SELECT * FROM story_art WHERE id=?', (art_id,)), None)
 
 
+OWN_BYTES = 15 * 1024 * 1024
+
+
+def own_portrait(database, subject: str, data: bytes) -> dict:
+    """The player's own picture of their character (`player`) or of someone met: their portrait at once, and the
+    reference every later portrait of them follows on a backend that takes one."""
+    require(0 < len(data) <= OWN_BYTES, 'Choose a PNG, JPEG or WebP picture of 15 MB or less.', 422)
+    try:
+        storage.sniff(data)
+    except AdapterError:
+        require(False, 'That is not a PNG, JPEG or WebP picture.', 422)
+    with database.connect(write=True) as connection:
+        prompt, kept = built(connection, database, 'portrait', subject)
+        art_id = f'art-{identifier()[:12]}'
+        try:
+            stored = storage.store(database, art_id, data)
+        except AdapterError:
+            require(False, 'That picture is too big to use: keep it under 8192 pixels on each side.', 422)
+        chapter = next((item for item in reversed(chapters.listing(connection)) if item['open']), None)
+        connection.execute("UPDATE story_art SET reference=0 WHERE kind='portrait' AND subject=?", (kept,))
+        connection.execute('INSERT INTO story_art (id, kind, subject, chapter_id, prompt, state, status, file, width, '
+                           "height, reference, own, created_at, done_at) VALUES (?, 'portrait', ?, ?, ?, ?, 'done', ?, "
+                           '?, ?, 1, 1, ?, ?)',
+                           (art_id, kept, chapter['id'] if chapter else None, prompt, fingerprint(prompt),
+                            stored['file'], stored['width'], stored['height'], database.now(), database.now()))
+        return view_of(one(connection, 'SELECT * FROM story_art WHERE id=?', (art_id,)), None)
+
+
 def reference_of(connection, database, kind: str, subject: str) -> bytes | None:
     if kind != 'portrait':
         return None
@@ -279,10 +309,10 @@ def start(state, art_id: str):
 
 def view_of(row: dict, current: str | None) -> dict:
     return {'id': row['id'], 'kind': row['kind'], 'subject': row['subject'], 'chapter_id': row['chapter_id'],
-            'status': row['status'], 'error': row['error'], 'reference': bool(row['reference']),
+            'status': row['status'], 'error': row['error'], 'reference': bool(row['reference']), 'own': bool(row['own']),
             'url': f"/api/story/art/{row['id']}/file" if row['file'] else None, 'width': row['width'],
             'height': row['height'], 'created_at': row['created_at'],
-            'stale': bool(current and row['status'] == 'done' and current != row['state'])}
+            'stale': bool(current and not row['own'] and row['status'] == 'done' and current != row['state'])}
 
 
 def current_state(connection, database, row: dict) -> str | None:

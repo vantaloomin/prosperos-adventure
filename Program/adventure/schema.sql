@@ -1125,6 +1125,8 @@ CREATE TABLE IF NOT EXISTS story_art (
   height INTEGER,
   backend_id TEXT,
   reference INTEGER NOT NULL DEFAULT 0 CHECK (reference IN (0, 1)),
+  -- The player's own picture, not made by a backend: never out of date (adventure/art.py own_portrait).
+  own INTEGER NOT NULL DEFAULT 0 CHECK (own IN (0, 1)),
   error TEXT,
   created_at TEXT NOT NULL,
   done_at TEXT

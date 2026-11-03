@@ -3,7 +3,7 @@ import asyncio
 import json
 from typing import Annotated, Literal
 
-from fastapi import APIRouter, BackgroundTasks, Request
+from fastapi import APIRouter, BackgroundTasks, Query, Request
 from fastapi.responses import FileResponse, Response, StreamingResponse
 from pydantic import Field
 
@@ -672,6 +672,14 @@ def gallery(request: Request):
 def theme(request: Request):
     """The colors of the world the story is in, when its package ships some (adventure/world_theme.py)."""
     return world_theme.current(request.app.state.database)
+
+
+@router.post('/art/own')
+async def own_art(request: Request, subject: str = Query(min_length=1, max_length=200)):
+    """The body is the player's own picture: a portrait of `subject` ('player' or someone met), and the likeness
+    later portraits of them follow (adventure/art.py own_portrait)."""
+    made = art.own_portrait(request.app.state.database, subject, await request.body())
+    return {'art': art.gallery(request.app.state.database), 'asked': made['id']}
 
 
 @router.get('/art/stage')

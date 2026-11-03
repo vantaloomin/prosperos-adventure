@@ -181,6 +181,7 @@ ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"
                  ('story_branches', 'ending', "TEXT NOT NULL DEFAULT ''"),
                  ('story_branches', 'label', "TEXT NOT NULL DEFAULT ''"),
                  ('story_branches', 'deleted_at', 'TEXT'),
+                 ('story_art', 'own', 'INTEGER NOT NULL DEFAULT 0 CHECK (own IN (0, 1))'),
                  ('story_chapter_ends', 'hook', "TEXT NOT NULL DEFAULT ''"),
                  ('story_chapter_break', 'summary', "TEXT NOT NULL DEFAULT ''"),
                  ('story_chapter_break', 'named', "TEXT NOT NULL DEFAULT ''"),

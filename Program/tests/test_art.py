@@ -292,3 +292,28 @@ def test_a_hosted_failure_reaches_a_local_comfyui_and_a_refusal_skips_safe_only_
     assert made(ask(client, 'place'))['status'] == 'done'
     # The OpenAI API takes safe requests only, so after a refusal the picture goes straight to the local ComfyUI.
     assert len(adapters['hosted'].requests) == 3 and len(adapters['comfyui'].requests) == 1
+
+
+def test_the_players_own_picture_is_the_portrait_and_the_likeness_later_ones_follow(client, adapters):
+    """From Prospero's Companion #454: a picture of the player's own is the portrait at once, never out of date, and
+    the reference sent with every later portrait of them to a backend that takes one."""
+    ok(client.post('/api/images/backends', json={'kind': 'codex', 'accept_disclosure': True}))
+    made_first = made(ask(client, 'portrait', 'player'))
+    assert made_first['reference']
+    mine = png(40, 60)
+    answer = ok(client.post('/api/story/art/own', params={'subject': 'player'}, content=mine,
+                            headers={'Content-Type': 'image/png'}))
+    own = made(answer)
+    assert own['own'] and own['reference'] and own['status'] == 'done' and (own['width'], own['height']) == (40, 60)
+    assert client.get(own['url']).content == mine
+    with client.app.state.database.connect(write=True) as connection:
+        assert art.reference_of(connection, client.app.state.database, 'portrait', 'player') == mine
+        combat.set_condition(connection, 3)
+    shown = next(item for item in ok(client.get('/api/story/art'))['art'] if item['id'] == own['id'])
+    assert not shown['stale']  # What the game tracks changed, but the player's own picture stays theirs.
+    ask(client, 'portrait', 'player')
+    assert adapters['codex'].requests[-1].reference == mine
+
+    assert client.post('/api/story/art/own', params={'subject': 'player'}, content=b'not a picture').status_code == 422
+    assert client.post('/api/story/art/own', params={'subject': 'player'}, content=b'').status_code == 422
+    assert client.post('/api/story/art/own', params={'subject': 'stranger'}, content=mine).status_code == 404
