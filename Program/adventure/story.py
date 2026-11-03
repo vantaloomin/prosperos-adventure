@@ -493,6 +493,12 @@ def with_rolls(connection, rows: list[dict]) -> list[dict]:
             if row['role'] == 'user' else row for row in rows]
 
 
+def with_turns(connection, rows: list[dict]) -> list[dict]:
+    """The round turn each line belongs to (`turn_id`), for its report and marks (adventure/rounds/turns.py)."""
+    found = rounds_turns.of_lines(connection, rows)
+    return [{**row, 'turn_id': found.get(row['id'])} for row in rows]
+
+
 def with_receipts(connection, rows: list[dict], currency: dict) -> list[dict]:
     """What each recent turn changed, under the player's line (adventure/receipt.py)."""
     found = receipt.receipts(connection, rows, currency)
@@ -502,7 +508,7 @@ def with_receipts(connection, rows: list[dict], currency: dict) -> list[dict]:
 def story(database) -> dict:
     with database.connect() as connection:
         view = scene(connection, story_clock.now(connection, database.clock))
-        rows = messages(connection)
+        rows = with_turns(connection, messages(connection))
         rows = happenings.with_cards(connection, rows, set(intensity(connection, view['data'])['veils']))
         return {'scene': scene_view(view), 'messages': with_receipts(connection, with_rolls(connection, rows),
                                                                      view['data']['currency']),
