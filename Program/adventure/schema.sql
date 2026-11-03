@@ -1445,6 +1445,8 @@ CREATE TABLE IF NOT EXISTS mode_switches (
   from_mode TEXT NOT NULL,
   to_mode TEXT NOT NULL,
   reveal INTEGER NOT NULL DEFAULT 0,
+  -- Whether the user has answered "Show the motives you missed?" yet (the banner asks after the switch).
+  answered INTEGER NOT NULL DEFAULT 0,
   -- The newest round turn when the switch was made (its rowid): the turns it covers.
   through_turn INTEGER NOT NULL DEFAULT 0,
   created_at TEXT NOT NULL
@@ -1476,3 +1478,43 @@ CREATE TABLE IF NOT EXISTS watch_continued (
   turn_id TEXT PRIMARY KEY,
   created_at TEXT NOT NULL
 );
+
+-- Each warning sign the director placed before a betrayal (adventure/rounds/directing.py): for whom and of what kind,
+-- read through its turn's place on the timeline like character memory, so going back forgets it.
+CREATE TABLE IF NOT EXISTS betrayal_signs (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  character_key TEXT NOT NULL,
+  kind TEXT NOT NULL,
+  sign TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS betrayal_signs_turn ON betrayal_signs (turn_id);
+
+-- Nemeses given an agent (adventure/rounds/directing.py), once each: the user's demoting one by hand stands.
+CREATE TABLE IF NOT EXISTS nemesis_seats (
+  name TEXT PRIMARY KEY,
+  seat_key TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+
+-- The party's leader in Author and Watch, who proposes where the party goes (adventure/rounds/travelling.py); none
+-- set: the first seat. A choice made by the user, so it is not rewound with the story.
+CREATE TABLE IF NOT EXISTS party_lead (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  seat_key TEXT,
+  updated_at TEXT NOT NULL DEFAULT ''
+);
+
+-- A character splitting off from the party, or rejoining it, and where (adventure/rounds/travelling.py): read through
+-- its turn's place on the timeline, so going back undoes it.
+CREATE TABLE IF NOT EXISTS split_off (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  character_key TEXT NOT NULL,
+  kind TEXT NOT NULL CHECK (kind IN ('left', 'rejoined')),
+  city_id TEXT NOT NULL,
+  place_id TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS split_off_turn ON split_off (turn_id);

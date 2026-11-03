@@ -596,11 +596,12 @@ def attachment(content: bytes, media_type: str, name: str) -> Response:
 
 
 @router.get('/export/book')
-def export_book(request: Request, format: Literal['md', 'epub', 'pdf'] = 'md'):  # noqa: A002 - the query's name
-    """The branch being played as a book."""
+def export_book(request: Request, format: Literal['md', 'epub', 'pdf'] = 'md',  # noqa: A002 - the query's name
+                hidden: bool = False):
+    """The branch being played as a book; `hidden` sets each turn's motives and whispers beside its post."""
     database = request.app.state.database
     with database.connect() as connection:
-        content, media_type = book.export(connection, format, database.now(), database=database)
+        content, media_type = book.export(connection, format, database.now(), database=database, hidden=hidden)
     return attachment(content, media_type, f'story-{database.now()[:10]}.{format}')
 
 

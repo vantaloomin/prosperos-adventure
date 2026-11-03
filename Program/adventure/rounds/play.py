@@ -16,7 +16,7 @@ through the branch's ancestry all work the same in every mode. Steps tell a mode
 - **After a restart** (`recover`): a turn waiting on the reply card stays waiting. Any other open turn is thrown away;
   a round turn is then played again from its snapshot, while a solo turn waits for the player's Retry as in Dungeon.
 """
-from adventure import story, timeline
+from adventure import chapters, story, timeline
 from adventure.database import decode, one
 from adventure.errors import require
 from adventure.rounds import engine, seats, solo, turns
@@ -29,6 +29,7 @@ def opening_line(connection, now: str, mode: str, text: str) -> dict:
     line = story.add(connection, now, 'user', text.strip(), story.scene_row(connection))
     connection.execute('UPDATE story_messages SET mode=? WHERE id=?', (mode, line['id']))
     timeline.save(connection, line['id'])
+    chapters.arrive(connection, line, now)  # W7: Author and Watch lines open chapters as the player's lines do.
     return line | {'mode': mode}
 
 

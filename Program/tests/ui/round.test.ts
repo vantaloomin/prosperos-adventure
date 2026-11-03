@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { decidedCount, itemText, hasAgents, modeOf, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
-import { mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
+import { asksMissed, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { composerText, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
 const table = (seats: Seat[], under_way: RoundTable['under_way'] = null): RoundTable => ({
@@ -128,4 +128,53 @@ test('the GM view reads each mind in full', () => {
     lines: [{ text: 'Where were you?', to: ['you'] }], whispers: [{ text: 'Watch her hands', to: 'hesk' }] }, names),
   ['asks where Ada was', '“Where were you?” to Ada', 'whispers “Watch her hands” to Hesk'])
   assert.deepEqual(mindLines({ key: 'bren', name: 'Bren', mind: 'program', status: 'waiting' }, names), [])
+})
+
+test('the switcher shows the mode chosen, even while it waits for the turn to end', () => {
+  assert.equal(modeChosen(null), 'play')
+  const waiting = { ...table([seat('mara', 'agent')]), settings: { mode: 'play' as const, agent_cap: 6, converse_cap: 4, queued: { mode: 'watch' as const } } }
+  assert.equal(modeChosen(waiting), 'watch')
+  assert.equal(modeChosen(table([])), 'play')
+})
+
+test('Watch plays on until paused, and says why when it stops by itself', () => {
+  const idle = { playing: true, busy: false, waiting: false, paused: null, error: '' }
+  assert.deepEqual(watchNext(idle), { go: true, pause: null })
+  assert.deepEqual(watchNext({ ...idle, playing: false }), { go: false, pause: null })
+  assert.deepEqual(watchNext({ ...idle, busy: true }), { go: false, pause: null })
+  assert.deepEqual(watchNext({ ...idle, waiting: true }), { go: false, pause: null })
+  const betrayed = { kind: 'betrayal', text: 'Mara betrayed the party.', turn_id: 't4' }
+  assert.deepEqual(watchNext({ ...idle, paused: betrayed }), { go: false, pause: betrayed })
+  assert.deepEqual(watchNext({ ...idle, playing: false, paused: betrayed }).pause, betrayed)
+  assert.deepEqual(watchNext({ ...idle, error: 'The model timed out.' }), { go: false, pause: { kind: 'error', text: 'The model timed out.' } })
+  assert.equal(pauseLine(betrayed), 'Paused: Mara betrayed the party')
+  assert.equal(pauseLine({ kind: 'cap', text: 'This session reached its cap.' }), 'Paused: This session reached its cap')
+  assert.equal(pauseLine({ kind: 'error', text: 'Paused: Mara died.' }), 'Paused: Mara died')
+  assert.deepEqual(watchOf(false, { seconds: 20, paused: betrayed }), { seconds: 20, paused: null })
+  assert.deepEqual(watchOf(true, undefined), { seconds: 0, paused: null })
+  assert.deepEqual(WATCH_SECONDS.map(secondsName), ['By hand', '10 s', '20 s', '40 s', '1 min'])
+})
+
+test('a turn opens on the player\'s line, the author\'s nudge, or nothing', () => {
+  assert.equal(openingKind({ role: 'user', text: 'I knock.', mode: 'play' }), 'line')
+  assert.equal(openingKind({ role: 'user', text: 'I knock.' }), 'line')
+  assert.equal(openingKind({ role: 'user', text: 'The storm comes early', mode: 'author' }), 'nudge')
+  assert.equal(openingKind({ role: 'user', text: '', mode: 'watch' }), 'none')
+  assert.equal(openingKind({ role: 'narrator', text: '' }), 'line')
+  assert.equal(composerText(false, true).placeholder, 'What do you do or say?')
+  assert.deepEqual([composerText(true, true).placeholder, composerText(true, true).send, composerText(true, false).send], ['Nudge the story', 'Next', 'Send'])
+})
+
+test('the open row shows a motive only where the minds panel gave one', () => {
+  assert.deepEqual(motivesOf(undefined), {})
+  assert.deepEqual(motivesOf([{ key: 'mara', name: 'Mara', mind: 'agent', status: 'decided', motive: 'thinks Ada sold her out' },
+    { key: 'hesk', name: 'Hesk', mind: 'agent', status: 'decided' }]), { mara: 'thinks Ada sold her out' })
+})
+
+test('leaving Play asks about missed motives once, and only from Play', () => {
+  assert.equal(asksMissed('play', 'watch', null), true)
+  assert.equal(asksMissed('play', 'author', false), false)
+  assert.equal(asksMissed('play', 'author', undefined), false)
+  assert.equal(asksMissed('author', 'watch', null), false)
+  assert.equal(asksMissed('watch', 'play', null), false)
 })

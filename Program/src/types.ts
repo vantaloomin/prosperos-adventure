@@ -236,6 +236,11 @@ export interface StoryMessage {
   receipt?: ReceiptChip[]
   /** On a player's line: the Life Cards the world drew on it (adventure/happenings.py with_cards). */
   cards?: LifeCardShown[]
+  /** The round turn this line belongs to (adventure/rounds/turns.py of_lines), for its report and GM marks; null
+   *  before the round loop or for a line told again. */
+  turn_id?: string | null
+  /** The mode a round turn's opening line was played in: an Author line is the nudge, a Watch line is empty. */
+  mode?: 'play' | 'author' | 'watch' | null
 }
 /** A drawn Life Card as the story shows it: title, tone and picture (or the card back), never its hidden truth. */
 export interface LifeCardShown { title: string; tone: 'good' | 'bad' | 'grey'; art: string | null; veiled: boolean }

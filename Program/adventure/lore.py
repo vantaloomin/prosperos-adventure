@@ -451,3 +451,32 @@ def timers_view(connection, line: int) -> dict:
         else:
             states[entry['id']] = {'state': 'ready', 'lines': 0}
     return states
+
+
+# Timing in agent play ------------------------------------------------------------------------------------------------
+
+def round_timing(connection, line: int, branch: str) -> dict:
+    """Which timed entries linger and which are held out on round `line` (docs/spec.md "Timing": lore timers count
+    rounds in every mode). Every round opens on a line of its own (adventure/rounds/play.py), so a round is a line
+    here, as a player's line is. Held out: resting, waiting for its line, or missing its chance on this line's dice."""
+    timers = {row['entry_id']: row for row in many(connection, 'SELECT * FROM lore_timers')}
+    lingering, held = [], []
+    for entry in many(connection, 'SELECT id, sticky, cooldown, delay, chance FROM lore_entries WHERE enabled=1 AND '
+                                  'always=0 AND (sticky>0 OR cooldown>0 OR delay>0 OR chance<100)'):
+        timer = timers.get(entry['id'])
+        if timer and line <= timer['active_until']:
+            lingering.append(entry['id'])
+        elif (timer and line <= timer['rest_until']) or line < entry['delay'] or (
+                entry['chance'] < 100 and dice(branch, line, entry['id']).randrange(100) >= entry['chance']):
+            held.append(entry['id'])
+    return {'line': line, 'lingering': lingering, 'held': held}
+
+
+def started_in(connection, text: str, timing: dict) -> list[dict]:
+    """The timed entries a round brought up (a keyword in its opening line or its post) that were free to fire: their
+    timers start, as a player's line starts them."""
+    scanned = text.casefold()
+    skip = set(timing.get('lingering', [])) | set(timing.get('held', []))
+    return [entry for entry in many(connection, 'SELECT * FROM lore_entries WHERE enabled=1 AND always=0 AND '
+                                                '(sticky>0 OR cooldown>0)')
+            if entry['id'] not in skip and any(mentioned(word, scanned) for word in decode(entry['keywords']))]
