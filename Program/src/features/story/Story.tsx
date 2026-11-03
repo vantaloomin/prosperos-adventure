@@ -35,6 +35,8 @@ import { ModeSwitch } from '../round/ModeSwitch'
 import { WatchBar } from '../round/WatchBar'
 import { MissedBanner } from '../round/MissedBanner'
 import { AuthorNotes } from '../round/AuthorNotes'
+import { BeatBoard } from '../round/BeatBoard'
+import { NudgeBox } from '../round/NudgeBox'
 import { LineTools } from '../round/LineTools'
 import { openingKind, type LineMarks, type Mode } from '../round/round'
 import { composerText, NUDGE } from '../round/roundText'
@@ -113,7 +115,7 @@ export function Story({ go }: { go: (view: View) => void }) {
               onPlay={watch.play} onPause={watch.stop} onNext={() => void nextTurn('')} onEvery={watch.every} onGoOn={watch.goOn}
               onAuthor={() => mode.change('author')} onRaise={() => go('settings/models')} onStop={watch.stop} />}
             compose={() => <StoryComposer key={draft.at} busy={pending !== null} draft={draft.text} turn={story.data.messages.length}
-              nudge={mode.active === 'author'} below={mode.active === 'author' && <AuthorNotes />} onSend={(text) => void (mode.active === 'author' ? nextTurn(text) : send(text))}
+              nudge={mode.active === 'author'} below={<ComposerBelow shown={mode.shown} active={mode.active} onError={setError} />} onSend={(text) => void (mode.active === 'author' ? nextTurn(text) : send(text))}
               commands={menuCommands(story.data)} onNewStory={() => setClearing(true)}
               onAddModel={story.data.ready ? undefined : () => go('settings/models')} />} />
         </>}
@@ -134,6 +136,13 @@ interface FootProps { waiting: boolean; active: Mode; reply: () => ReactNode; wa
 function StoryFoot({ waiting, active, reply, watch, compose }: FootProps) {
   if (waiting) return reply()
   return active === 'watch' ? watch() : compose()
+}
+
+/** Under the composer once anyone at the table thinks: in Author whether the last nudge took and the beat board; in
+ *  Play the beats the user would like to see. */
+function ComposerBelow({ shown, active, onError }: { shown: boolean; active: Mode; onError: (text: string) => void }) {
+  if (!shown) return null
+  return active === 'author' ? <><AuthorNotes /><BeatBoard onError={onError} /></> : <NudgeBox onError={onError} />
 }
 
 function StoryError({ error }: { error: string }) {

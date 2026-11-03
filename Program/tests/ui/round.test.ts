@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { asksMissed, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { asksMissed, beatMoves, beatStanding, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
 import { composerText, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
@@ -177,4 +177,14 @@ test('leaving Play asks about missed motives once, and only from Play', () => {
   assert.equal(asksMissed('play', 'author', undefined), false)
   assert.equal(asksMissed('author', 'watch', null), false)
   assert.equal(asksMissed('watch', 'play', null), false)
+})
+
+test('the beat board marks where a beat stands and which ways it can move', () => {
+  const beat = { id: 'b1', text: 'A storm', cut: false, used: false, landed: false, source: 'director' }
+  assert.equal(beatStanding(beat), null)
+  assert.equal(beatStanding({ ...beat, used: true }), 'used')
+  assert.equal(beatStanding({ ...beat, used: true, landed: true }), 'landed')
+  assert.deepEqual(beatMoves(0, 3), { up: false, down: true })
+  assert.deepEqual(beatMoves(2, 3), { up: true, down: false })
+  assert.deepEqual(beatMoves(0, 1), { up: false, down: false })
 })

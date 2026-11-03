@@ -9,7 +9,11 @@ export interface LoreEntry {
   timing: LoreTiming
   /** Where a timed entry stands now; null when it has no timing. */
   timer?: { state: 'lingering' | 'resting' | 'waiting' | 'ready'; lines: number } | null
+  /** Who may read it (adventure/lore.py "Who may read it"): everyone, the characters in `known_to` (by their keys), or
+   *  only the GM view. */
+  visibility: Visibility; known_to: string[]
 }
+export type Visibility = 'public' | 'known' | 'gm'
 export interface LoreTiming { sticky: number; cooldown: number; delay: number; chance: number; group_weight: number; group: string }
 export interface LoreBook { id: string; name: string; description: string; source_format: string; source_file: string; city_id: string | null; enabled: boolean; entries: LoreEntry[] }
 export type WhenKind = 'weather' | 'season' | 'time' | 'day' | 'holiday' | 'place'
@@ -68,4 +72,21 @@ export async function fileData(file: Blob): Promise<string> {
   let text = ''
   for (let start = 0; start < bytes.length; start += 0x8000) text += String.fromCharCode(...bytes.subarray(start, start + 0x8000))
   return btoa(text)
+}
+
+/** The choices for who knows an entry. Some characters is offered once there is someone to name, or while the entry
+ *  already names someone. */
+export function visibilityChoices(someone: boolean): [Visibility, string][] {
+  const all: [Visibility, string][] = [['public', 'Everyone'], ['known', 'Some characters'], ['gm', 'GM only']]
+  return someone ? all : all.filter(([key]) => key !== 'known')
+}
+
+/** The characters who know an entry after one is ticked or unticked, in the order they were named. */
+export function knowersAfter(known: string[], key: string, on: boolean): string[] {
+  return on ? (known.includes(key) ? known : [...known, key]) : known.filter((item) => item !== key)
+}
+
+/** Everyone the entry could name: the characters at the table, then any key it already names that has no seat. */
+export function knowerChoices(seats: { key: string; name: string }[], known: string[]): { key: string; name: string }[] {
+  return [...seats.map(({ key, name }) => ({ key, name })), ...known.filter((key) => !seats.some((seat) => seat.key === key)).map((key) => ({ key, name: key }))]
 }
