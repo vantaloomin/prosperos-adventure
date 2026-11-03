@@ -127,3 +127,18 @@ def test_gather_freezes_what_the_builders_read(game):
         return turn.snapshot
     frozen = asyncio.run(going())
     assert frozen.settings['city'] and 'world' in frozen.settings and 'game_knowledge' in frozen.settings
+
+
+def test_shown_so_far_reaches_its_character_and_waiting_drafts_only_the_gm(game):
+    applied, waiting = 'SENTINEL-SHOWN-limps-on-the-left', 'SENTINEL-DRAFTED-hums-when-lying'
+    with game.database.connect(write=True) as connection:
+        for status, text in (('applied', applied), ('drafted', waiting)):
+            connection.execute(
+                "INSERT INTO round_shown (id, seat_key, name, chapter_id, branch_id, seq, items, status, created_at) "
+                "VALUES (?, 'hesk', 'Hesk', 'c1', ?, 1, ?, ?, 'now')",
+                (status, timeline.ROOT, f'[{{"kind": "habit", "text": "{text}"}}]', status))
+    found = contexts(game)
+    assert f'- Habit: {applied}' in found['agent:hesk'] and waiting not in found['agent:hesk']
+    assert applied not in found['agent:mira'] and waiting not in found['agent:mira']
+    assert applied in found['gm'] and f'Waiting for review: {waiting}' in found['gm']
+    assert not any(waiting in text for reader, text in found.items() if reader != 'gm')

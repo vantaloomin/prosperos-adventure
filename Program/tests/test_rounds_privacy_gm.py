@@ -47,6 +47,7 @@ def test_in_play_it_asks_first_then_shows_everything_and_marks_the_turn(client, 
     assert {'holder': 'hesk', 'kind': 'motive', 'text': MOTIVE}.items() <= shown['knowledge'][0].items()
     assert MOTIVE in [row['text'] for row in shown['memories']['hesk']]
     assert shown['marked'] == [first]
+    assert shown['shown']['hesk'] == [] and shown['drafted'] == []
     # Not remembered: the next look asks again, and a turn played with it closed stays unmarked.
     second = play_turn(app, 2)
     assert client.post('/api/gm/round', json={}).status_code == 409

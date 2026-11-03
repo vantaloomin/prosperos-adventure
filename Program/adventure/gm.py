@@ -20,7 +20,7 @@ they spoiled. Author and Watch have no gate and mark nothing.
 from adventure import director, feelings, growth, plotting, quests, record, timeline, world_data
 from adventure.database import decode, many, optional
 from adventure.errors import DomainError, require
-from adventure.rounds import context, memory, seats, turns
+from adventure.rounds import context, memory, seats, shown, turns
 from adventure.rounds.contract import Mode, Point, Snapshot, plain
 from adventure.rounds.draft import Draft
 
@@ -162,4 +162,8 @@ def round_view(connection, turn: dict | None) -> dict:
             'memories': {seat.key: [{key: row[key] for key in ('kind', 'text', 'about', 'source', 'importance', 'faded')}
                                     for row in memory.recall(connection, seat.key, after)]
                          for seat in snapshot.seats},
+            'shown': {seat.key: shown.sheet(connection, seat.key, snapshot.point.branch) for seat in snapshot.seats},
+            # Sheet updates waiting for the user's review: only here, never in a character's own context.
+            'drafted': [update for update in shown.visible(connection, 'drafted', snapshot.point.branch)
+                        if update['seat'] in {seat.key for seat in snapshot.seats}],
             'facts': world_data.facts(world) if world else [], 'marked': marked(connection)}

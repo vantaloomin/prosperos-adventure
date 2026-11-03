@@ -4,8 +4,9 @@ Reviewer", "Rolls, overrides and the turn report").
 **Gathering** freezes the house rulebook into the snapshot (`settings['house_rules']`), with whether the Reviewer runs,
 so the Writer, the Reviewer, the scan and a re-ask all read the rules as they stood when the turn began.
 
-**Writing** ends with `checks`, straight after the Writer's step ('write'): the Reviewer when it is on (adventure/rounds/reviewer.py),
-then the scan (adventure/rounds/scan.py settle), which always runs. What is committed is the settled post, never a
+**Writing** ends with `checks`, straight after the Writer's step ('write'): any pane the Writer wrote is taken out, the
+Reviewer runs when it is on (adventure/rounds/reviewer.py), then the scan (adventure/rounds/scan.py settle), which
+always runs, and code adds its own System panes after the post (adventure/rounds/panes.py). What is committed is the settled post, never a
 draft with a hard failure in it. What the checks found and fixed is staged in `draft.extra['w5']` and committed
 with the turn's draft.
 
@@ -23,7 +24,7 @@ from dataclasses import fields
 from adventure import beats, table
 from adventure.database import decode, many
 from adventure.narration import prompt as narration_prompt
-from adventure.rounds import agents, context, corrections, engine, house_rules, reviewer, scan, turns
+from adventure.rounds import agents, context, corrections, engine, house_rules, panes, reviewer, scan, turns
 from adventure.rounds.contract import Mind, Mode, Snapshot, State, TurnResult, plain
 from adventure.rounds.draft import Draft
 from adventure.rounds.house_rules import Rulebook
@@ -47,7 +48,8 @@ def frozen(connection) -> dict:
     """What the checks need frozen at Gather: the book in force and whether the Reviewer runs."""
     chosen = house_rules.stored(connection).get('reviewer')
     return {'house_rules': plain(house_rules.now(connection)),
-            'reviewer': reviewer.enabled(agents.settings(connection) | {'reviewer': chosen})}
+            'reviewer': reviewer.enabled(agents.settings(connection) | {'reviewer': chosen}),
+            'panes': bool(table.rules(connection).get('show_odds'))}
 
 
 def solo(turn: engine.Turn) -> bool:
@@ -110,10 +112,11 @@ def model(turn: engine.Turn):
 
 
 async def checks(turn: engine.Turn):
-    """The post as it will be committed: reviewed when the Reviewer is on, then settled by the scan."""
-    post = turn.draft.post
-    if solo(turn) or not post.strip():
+    """The post as it will be committed: without any pane the Writer wrote, reviewed when the Reviewer is on, settled
+    by the scan, then with code's own panes after it (adventure/rounds/panes.py)."""
+    if solo(turn) or not turn.draft.post.strip():
         return
+    post = panes.stripped(turn.draft.post)
     book, settings = book_of(turn.snapshot.settings.get('house_rules')), turn.snapshot.settings
     complete = model(turn)
     with turn.database.connect() as connection:
@@ -124,7 +127,8 @@ async def checks(turn: engine.Turn):
         notes = await reviewer.review(complete, book, brief, post, earlier)
         post, notes = await reviewer.apply(complete, book, post, notes)
     settled = await scan.settle(post, book, complete, canon=known, stop=stop_for(turn))
-    turn.draft.post = settled.text
+    math = list(turn.draft.result.brief.math) if turn.draft.result and settings.get('panes') else []
+    turn.draft.post = panes.placed(settled.text, panes.rolls(book, math))
     turn.draft.extra['w5'] = {'scan': settled.scan.report(), 'cut': list(settled.cut), 'rewrites': settled.rewrites,
                               'review': notes}
 
