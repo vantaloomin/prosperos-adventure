@@ -3,6 +3,7 @@ import { api } from '../../api'
 import type { Story as StoryData, StoryBack, StoryCampaign, StoryChapter, StoryTreeBranch } from '../../types'
 import { Notice } from '../../components/Feedback'
 import { chapterLine, endingText } from './storyText'
+import { InlineText } from '../../components/InlineText'
 
 interface Props {
   campaign: StoryCampaign
@@ -63,11 +64,11 @@ function ChapterLine({ chapter, branchId }: { chapter: StoryChapter; branchId?: 
     <li>
       <p className="subtle">{chapterLine(chapter)}</p>
       <p><strong>{chapter.title}</strong></p>
-      {chapter.summary && <p>{chapter.summary}</p>}
-      {chapter.hook && <p className="story-note">Still open: {chapter.hook}</p>}
+      {chapter.summary && <p><InlineText text={chapter.summary} /></p>}
+      {chapter.hook && <p className="story-note">Still open: <InlineText text={chapter.hook} /></p>}
       {lines === null ? <button type="button" className="text-button" onClick={() => void read()}>Read it</button>
         : <div className="story-chapter-text">
-          {lines.map((line) => <p key={line.id} className={line.role === 'user' ? 'story-user' : undefined}>{line.text}</p>)}
+          {lines.map((line) => <p key={line.id} className={line.role === 'user' ? 'story-user' : undefined}><InlineText text={line.text} /></p>)}
           <button type="button" className="text-button" onClick={() => setLines(null)}>Close</button>
         </div>}
       {error && <Notice tone="error">{error}</Notice>}

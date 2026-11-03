@@ -92,3 +92,14 @@ def test_a_part_shared_with_another_branch_is_not_rewritten(client, connected, p
     ok(client.post('/api/story/back', json={'message_id': line['id']}))
     shared = client.post(f"/api/story/messages/{first['id']}/rewrite", json={'passage': 'The barman nods.'})
     assert shared.status_code == 409
+
+
+def test_a_selection_of_styled_text_finds_its_markers():
+    """The page shows *italics* without the asterisks, so the words the player selects still find the passage, and
+    the span keeps the markers so the rewrite sees them."""
+    text = 'Then, for Michael alone: "*Mea lux, observa.* Tell me afterward." He **nodded**.'
+    start, end = passages.span(text, 'Mea lux, observa. Tell me')
+    assert text[start:end] == '*Mea lux, observa.* Tell me'
+    start, end = passages.span(text, 'He nodded.')
+    assert text[start:end] == 'He **nodded**.'
+    assert passages.span(text, 'He waved.') is None
