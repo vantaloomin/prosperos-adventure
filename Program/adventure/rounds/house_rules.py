@@ -252,9 +252,10 @@ def text(book: Rulebook, scope: bool = True) -> str:
     view_ = narration_prompt.POINTS_OF_VIEW[book.pov]
     lines = ['## House rules', f'- Narration: {view_}, {book.tense} tense.',
              f'- Inner thoughts go {THOUGHTS[book.thoughts]}.',
-             f'- Numbers appear only in System panes: code blocks with a title line like '
-             f'"{filled(book.pane_title, title="Status")}" and one row per value like '
-             f'"{filled(book.pane_row, label="Health", value="12 of 20")}". Narration never mentions dice or rolls.']
+             f'- Numbers appear only in System panes, which the game adds after your text in the house format (a '
+             f'title line like "{filled(book.pane_title, title="Status")}" and one row per value like '
+             f'"{filled(book.pane_row, label="Health", value="12 of 20")}"). Never write a pane yourself and never '
+             'put a game number in the narration. Narration never mentions dice or rolls.']
     lines += [f'- {rule_}' for rule_ in book.dialogue]
     if book.punctuation:
         lines.append(f"- Never use {', '.join(marks(book))}.")
