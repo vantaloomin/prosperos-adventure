@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## v0.1.0 (2026-11-03): Characters Who Think
+
 - **Play, Author and Watch on the cast page.** Beside the place name on the cast page, pick the mode the story starts in. In Author and Watch no card is You: the character whose story it is gets Thinks or Rules like the rest, for who plays them while you author or watch.
 - **Your party on the cast page.** Once the game seats the other leads as your party at Begin, every lead but the one you play shows Thinks or Rules under their card (the card you play is marked You), and Begin sends how each one decides.
 - **Notes and a model for each thinking character.** A thinking character's open row in the cast list has your notes on them and, when you have a finished model, which model they think with (Agents' model by default).
