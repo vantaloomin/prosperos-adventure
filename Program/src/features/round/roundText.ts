@@ -1,6 +1,6 @@
 // The round loop's words on the play screen and in Settings (docs/style-guide.md "Copy"). Kept free of React, so
 // tests/ui can load it directly.
-import { decidedCount, rowStatus, seatName, stepAt, type AgentPace, type Awaiting, type Loyalty, type Mode, type PresetKey, type ReportRoll, type RoundLive, type RoundState, type RoundTable, type TurnReport } from './round.ts'
+import { decidedCount, rowStatus, seatName, stepAt, type AgentPace, type Awaiting, type Loyalty, type Mode, type PresetKey, type MindRow, type ReportRoll, type RoundLive, type RoundState, type RoundTable, type TurnReport } from './round.ts'
 
 export const STEP_NAMES = { declare: 'Declare', react: 'React', talk: 'Talk', roll: 'Roll', write: 'Write' } as const
 
@@ -98,4 +98,15 @@ export function checksLine(checks: TurnReport['checks']): string {
     checks.cut.length ? `${checks.cut.length} ${checks.cut.length === 1 ? 'sentence' : 'sentences'} cut` : '',
     checks.review.length ? `${checks.review.length} ${checks.review.length === 1 ? 'note' : 'notes'}` : '']
   return parts.filter(Boolean).join(' · ')
+}
+
+// The GM view in round play ------------------------------------------------------------------------------------------
+
+export const GM_NAMES = { remember: "Don't ask again in this story", open: 'Open', cancel: 'Cancel', turn: 'This turn', whisper: 'whispers' } as const
+
+/** A mind's row in the GM view: intent, each line said, each whisper, and the motive apart (shown in the warning tone). */
+export function mindLines(row: MindRow, name: (key: string) => string): string[] {
+  const to = (who: string[] | string | null) => (Array.isArray(who) ? who : who ? [who] : []).map(name).join(', ')
+  return [row.intent ?? '', ...(row.lines ?? []).map((line) => `“${line.text}”${to(line.to) ? ` to ${to(line.to)}` : ''}`),
+    ...(row.whispers ?? []).map((item) => `${GM_NAMES.whisper} “${item.text}”${to(item.to) ? ` to ${to(item.to)}` : ''}`)].filter(Boolean)
 }

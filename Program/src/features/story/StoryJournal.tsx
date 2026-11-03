@@ -7,6 +7,7 @@ import { Toggle } from '../../components/Fields'
 import { StoryGm } from './StoryGm'
 import { institutionLine, journalKind, questState, threadKind, todayLine } from './storyText'
 import { useTable } from './table'
+import { useGmGate } from '../round/useGmGate'
 
 const JOURNAL_KEY = ['story-journal']
 
@@ -16,6 +17,7 @@ export function StoryJournal({ open }: { open?: boolean }) {
   const client = useQueryClient()
   const journal = useQuery({ queryKey: JOURNAL_KEY, queryFn: () => api<Journal>('/story/journal') })
   const table = useTable()
+  const gate = useGmGate()
   const [error, setError] = useState('')
   const change = async (request: () => Promise<Journal>) => {
     setError('')
@@ -26,7 +28,7 @@ export function StoryJournal({ open }: { open?: boolean }) {
   const { entries, quests, institutions = [], threads = [], gm = false, summary = '' } = journal.data
   const setGm = async (checked: boolean) => {
     setError('')
-    try { await table.save({ gm_view: checked }) }
+    try { if (!checked || await gate.open()) await table.save({ gm_view: checked }) }
     catch (failure) { setError(failure instanceof Error ? failure.message : 'That setting was not saved.') }
   }
   return (
@@ -44,6 +46,7 @@ export function StoryJournal({ open }: { open?: boolean }) {
       </ul>
       <AddNote onAdd={(subject, text) => change(() => api<Journal>('/story/journal', { subject, text }))} />
       {error && <Notice tone="error">{error}</Notice>}
+      {gate.dialog}
     </details>
   )
 }

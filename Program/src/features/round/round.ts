@@ -173,3 +173,14 @@ export function itemText(item: ReportItem): string {
   const found = ['text', 'line', 'outcome', 'name', 'question'].map((key) => item[key]).find((value) => typeof value === 'string' && value)
   return typeof found === 'string' ? found : ''
 }
+
+// The GM view of a round (adventure/gm.py open_round, adventure/rounds/context.py minds). --------------------------
+
+export interface MindRow {
+  key: string; name: string; mind: Mind; status: 'decided' | 'waiting' | 'fallback'
+  intent?: string; motive?: string; lines?: { text: string; to: string[] | string | null }[]; whispers?: { text: string; to: string[] | string | null }[]
+}
+export interface GmRound { turn: { id: string; state: RoundState; mode: Mode; marks: unknown[] } | null; minds?: MindRow[]; marked: string[] }
+
+/** The code the GM view answers with in Play until the user has said yes. */
+export const ASKS_FIRST = 'gm_view_asks_first'
