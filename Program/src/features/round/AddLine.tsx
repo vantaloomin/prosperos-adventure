@@ -14,7 +14,7 @@ export function AddLine({ label, placeholder, autoFocus = false, onAdd }: Props)
     setBusy(false)
   }
   return <form className="add-line" onSubmit={(event) => { event.preventDefault(); void add() }}>
-    <input aria-label={label} autoFocus={autoFocus} placeholder={placeholder} value={text} maxLength={300} onChange={(event) => setText(event.target.value)} />
+    <input autoComplete="off" aria-label={label} autoFocus={autoFocus} placeholder={placeholder} value={text} maxLength={300} onChange={(event) => setText(event.target.value)} />
     <button type="submit" className="icon-button" aria-label="Add" disabled={!text.trim() || busy}><Plus aria-hidden="true" /></button>
   </form>
 }

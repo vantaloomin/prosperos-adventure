@@ -1190,3 +1190,9 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .seat-details textarea { font-size: 0.8125rem; min-height: 0; }
 .seat-details select { width: fit-content; font-size: 0.8125rem; min-height: 30px; }
 .cast-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* Settings > General > Updates: the link sits on the first line's right on wide windows, and on its own line under the text on a phone. */
+.update-check .notice > .text-button { align-self: flex-start; line-height: 1.55; }
+@media (min-width: 721px) { .update-check .notice > .text-button { padding-block: 0; } }
+@media (max-width: 720px) { .update-check .notice > .text-button { flex-basis: 100%; margin-left: 23px; justify-content: flex-start; } }
+.button .spin { animation: spin 1s linear infinite; }

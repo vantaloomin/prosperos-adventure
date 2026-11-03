@@ -76,7 +76,7 @@ function GridSave({ grids }: { grids: Grids }) {
   return (
     <form className="story-grid-save" onSubmit={(event) => { event.preventDefault(); if (name.trim()) { keep(withGrid(saved, grid, name)); setName('') } }}>
       <label><span className="visually-hidden">New layout name</span>
-        <input value={name} maxLength={40} placeholder="Save as…" onChange={(event) => setName(event.target.value)} /></label>
+        <input autoComplete="off" value={name} maxLength={40} placeholder="Save as…" onChange={(event) => setName(event.target.value)} /></label>
       <button type="submit" className="text-button" disabled={!name.trim()}>Save as new</button>
       <GridDelete grids={grids} />
     </form>

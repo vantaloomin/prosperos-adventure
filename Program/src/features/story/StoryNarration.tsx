@@ -109,7 +109,7 @@ export function StoryNarration({ message, onRewrite, onSwitch, draft }: Props) {
     {chosen && onRewrite && <form ref={form} className="story-rewrite" onSubmit={(event) => { event.preventDefault(); void act(() => onRewrite(message.id, chosen, note)) }}>
       <p className="subtle">Rewrite &ldquo;{shortened(chosen)}&rdquo; in new words. The dice and what happened stay the same.</p>
       <label>What to change (optional)
-        <input value={note} maxLength={300} placeholder="Less purple, she wouldn't say that…" onChange={(event) => setNote(event.target.value)} />
+        <input autoComplete="off" value={note} maxLength={300} placeholder="Less purple, she wouldn't say that…" onChange={(event) => setNote(event.target.value)} />
       </label>
       <div className="form-actions">
         <button type="submit" className="button primary" disabled={busy}><PenLine aria-hidden="true" />{busy ? 'Rewriting…' : 'Rewrite'}</button>

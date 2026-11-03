@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- **Check for updates.** Settings > General > Updates asks GitHub for the newest Adventure release (pre-releases count) when pressed, and says how to update this copy: the new installer, or update.bat / update.command for a folder copy. Nothing checks in the background, and nothing about you is sent. (Ported from Prospero's Companion #417.)
+- **ComfyUI says which file it lacks.** When ComfyUI refuses a workflow, the picture error names the node and, for a missing model, the file and the models folder it belongs in, instead of "Prompt outputs failed validation". (Ported from Prospero's Companion #446.)
+- **A saved model file stays in its list.** In Settings > Images, a model file, sampler, scheduler or style LoRA the ComfyUI server does not list yet stays pickable after you choose another, so you can go back to it without Use the default. (Ported from Prospero's Companion #468.)
+- **No browser suggestions in text boxes.** Text and search boxes no longer offer words typed into other boxes. (Ported from Prospero's Companion #433.)
 - **Italics and bold in the story.** Markdown the narrator writes (*italics*, **bold**, ~~struck~~, `code`) shows as styling instead of asterisks, in the story, the streaming narration, reply cards, turn reports and chapter text, and a line of *** or --- reads as a scene break. Names in bold or italics still link to their cards, and selecting styled text to Rewrite finds it. The reading and UI fonts now ship their italic and bold faces, so italic lines such as scene moves are italic too.
 
 ## v0.1.0 (2026-11-03): Characters Who Think
