@@ -62,8 +62,8 @@ async def answered(app, user: dict, on_text=None, on_event=None) -> dict:
     turn.draft.extra[SOLO] = {'message_id': user['id']}
     if await engine.run(turn) == State.AWAITING_USER:
         with app.database.connect() as connection:
-            return {'reply': None, 'awaiting': turns.view(turns.get(connection, turn.id))}
-    return {'reply': telling.reply_of(turn)}
+            return {'reply': None, 'turn_id': turn.id, 'awaiting': turns.view(turns.get(connection, turn.id))}
+    return {'reply': telling.reply_of(turn), 'turn_id': turn.id}
 
 
 def waiting(app, client_id: str) -> dict | None:
