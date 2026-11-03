@@ -3,7 +3,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../../api'
 import { Notice } from '../../components/Feedback'
 import { TextArea } from '../../components/Fields'
-import { groupPrompts, placeholderHint, type EditablePrompt } from './prompts'
+import { groupPrompts, promptHint, type EditablePrompt } from './prompts'
 import { SectionPending } from '../../components/SectionPending'
 
 const KEY = ['prompts']
@@ -50,7 +50,7 @@ function PromptEditor({ prompt }: { prompt: EditablePrompt }) {
     <details className="prompt-editor">
       <PromptSummary prompt={prompt} />
       <TextArea label={prompt.label} value={text} onChange={setText} rows={14} maxLength={20000}
-        hint={<>{prompt.description}{prompt.placeholders.length > 0 && <> {placeholderHint(prompt)}</>}</>} />
+        hint={promptHint(prompt)} />
       {result && <Notice tone={result.tone}>{result.text}</Notice>}
       <div className="form-actions">
         <button type="button" className="button primary" disabled={busy || !text.trim() || text === prompt.text} onClick={() => void save()}>Save</button>

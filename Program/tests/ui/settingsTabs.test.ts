@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { ELSEWHERE, SETTINGS_TABS, availableTabs, pickTab, searchSettings } from '../../src/features/settings/sections.ts'
-import { groupPrompts, placeholderHint } from '../../src/features/settings/prompts.ts'
+import { groupPrompts, placeholderHint, slotHint } from '../../src/features/settings/prompts.ts'
 
 test('a deep link opens its tab, an old one opens where its sections went, and an unknown one the first', () => {
   assert.equal(pickTab('images'), 'images')
@@ -47,4 +47,8 @@ test('prompts are grouped in order and their placeholders explained', () => {
   assert.deepEqual(groups.map(([group, items]) => [group, items.map((item) => item.name)]), [['Chat and life', ['a', 'c']], ['Character drafting', ['b']]])
   assert.equal(placeholderHint(prompt('x', 'g', ['name', 'reason'], { name: "the companion's name" })), "Must keep: {{name}} (the companion's name), {{reason}}.")
   assert.equal(placeholderHint(prompt('x', 'g')), '')
+  const slots = [{ name: 'RULES', tier: 0, tier_name: 'rules', help: 'the rules' },
+    { name: 'SHEET', tier: 2, tier_name: 'character', help: 'their sheet' }, { name: 'NOTES', tier: 2, tier_name: 'character', help: 'your notes' }]
+  assert.equal(slotHint({ slots }), 'Slots, slowest-changing first. Rules: {{RULES}} (the rules). Character: {{SHEET}} (their sheet), {{NOTES}} (your notes).')
+  assert.equal(slotHint({}), '')
 })

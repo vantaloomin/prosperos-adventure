@@ -56,6 +56,16 @@ def marked(content, api: str) -> list:
     return [*parts[:-1], {**parts[-1], 'cache_control': CACHED}] if parts else parts
 
 
+def system_marked(system: str, api: str) -> list:
+    """The system prompt with a cache mark at the end of each of its blocks: a laid-out prompt
+    (adventure/prompt_layout.py `Tiered`) gets one after its rules and story, its character and its scene, so a
+    change further down reuses everything above it; any other prompt gets one at its end."""
+    blocks = getattr(system, 'blocks', None)
+    if not blocks:
+        return marked(system, api)
+    return [{**PARTS[api]({'type': 'text', 'text': block}), 'cache_control': CACHED} for block in blocks]
+
+
 def cache_marks(turns: list[dict], api: str) -> list[dict]:
     """The turn before the latest one marked as the end of the cacheable part."""
     if len(turns) < 2:
@@ -102,12 +112,15 @@ def openai_request(config: dict, system: str, messages: list[dict]) -> tuple[str
         body['reasoning'] = {'effort': config['reasoning_effort']}
     if config.get('response_verbosity'):
         body['text'] = {'verbosity': config['response_verbosity']}
+    if getattr(system, 'cache_key', ''):
+        # OpenAI caches a shared prompt start on its own; the key sends calls for the same character to the same cache.
+        body['prompt_cache_key'] = system.cache_key
     return '/responses', body
 
 
 def anthropic_request(config: dict, system: str, messages: list[dict]) -> tuple[str, dict]:
     turns = [{**turn, 'content': content_for('anthropic', turn['content'])} for turn in alternating(messages)]
-    body = {'model': config['model'], 'system': marked(system, 'anthropic'),
+    body = {'model': config['model'], 'system': system_marked(system, 'anthropic'),
             'messages': cache_marks(turns, 'anthropic'),
             'max_tokens': config['max_output_tokens'], 'stream': True, **sampling(config)}
     mode = config.get('thinking_mode')
@@ -124,7 +137,7 @@ def chat_request(config: dict, system: str, messages: list[dict]) -> tuple[str, 
     turns = [{**message, 'content': content_for('chat', message['content'])} for message in messages]
     opening = {'role': 'system', 'content': system}
     if explicit_cache(config):
-        turns, opening = cache_marks(turns, 'chat'), {**opening, 'content': marked(system, 'chat')}
+        turns, opening = cache_marks(turns, 'chat'), {**opening, 'content': system_marked(system, 'chat')}
     body = {'model': config['model'], 'messages': [opening, *turns],
             config.get('output_token_parameter', 'max_tokens'): config['max_output_tokens'],
             'stream': True, **sampling(config)}
