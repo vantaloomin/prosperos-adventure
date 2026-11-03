@@ -15,6 +15,7 @@ import { FateBuild, type FateDraft } from './FateBuild'
 import { MindToggle } from '../round/MindToggle'
 import { joinsAsParty, partyBody, partyMind, type PartyMind } from '../round/round'
 import { THINKS_NAME } from '../round/roundText'
+import { ROUND_KEY } from '../round/useRound'
 
 /** The cast page: the campaign start (adventure/campaign.py) on one page. The town's people are a grid; tapping one
  * plays as them and shows who they are under the grid, and the + tile makes your own there instead. Rules (locked
@@ -45,7 +46,7 @@ function Cast({ choices, place, onStarted }: { choices: StartChoices; place: str
     setError('')
     try {
       onStarted(await api<StoryData>('/story/start', { ...who, ...party.body, ...session.body, ...(ruleset ? { ruleset } : {}) }))
-      await Promise.all([client.invalidateQueries({ queryKey: ['story-sheet'] }), client.invalidateQueries({ queryKey: WORLDS_KEY })])
+      await Promise.all([client.invalidateQueries({ queryKey: ['story-sheet'] }), client.invalidateQueries({ queryKey: WORLDS_KEY }), client.invalidateQueries({ queryKey: ROUND_KEY })])
     } catch (failure) { setError(failure instanceof Error ? failure.message : 'The story did not start. Try again.') }
     finally { setBusy(false) }
   }
