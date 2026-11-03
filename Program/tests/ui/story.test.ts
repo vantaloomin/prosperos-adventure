@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { actionLine, aroundText, diceFaces, diceNotation, tumbleFace, bandSpans, branchLine, journeyTo, markerAt, nearMiss, NO_TURN, turnAfter, reworded, sentences, foesText, zoneText, tallyText, statusItems, sceneLine, haggleText, paceText, intensityChoices, dramaChoices, gearLine, looksText, journalKind, moneyText, questState, slotsText, personLine, placeGroups, pointsLeft, pointsText, rollText, rollWhat, unrolled, fateFaces, fateLadder, challengeDice, brpCost, xpLine, spellLine, sceneTime, abilityLine, signed, arrayPlaced, skillChoices, skillId, startingStats, tierText, darkText, bondsText, bondLine, threadKind, otherTowns, receiptsByReply, institutionLine, todayLine, toggledVeil } from '../../src/features/story/storyText.ts'
+import { actionLine, aroundOthers, aroundText, diceFaces, diceNotation, tumbleFace, bandSpans, branchLine, journeyTo, markerAt, nearMiss, NO_TURN, turnAfter, reworded, sentences, foesText, zoneText, tallyText, statusItems, sceneLine, haggleText, paceText, intensityChoices, dramaChoices, gearLine, looksText, journalKind, moneyText, questState, slotsText, personLine, placeGroups, pointsLeft, pointsText, rollText, rollWhat, unrolled, fateFaces, fateLadder, challengeDice, brpCost, xpLine, spellLine, sceneTime, abilityLine, signed, arrayPlaced, skillChoices, skillId, startingStats, tierText, darkText, bondsText, bondLine, threadKind, otherTowns, receiptsByReply, institutionLine, todayLine, toggledVeil } from '../../src/features/story/storyText.ts'
 import { sessionBody } from '../../src/features/story/campaignSession.ts'
 import { artLabel, artStatus, making, pictureChoices } from '../../src/features/story/artText.ts'
 
@@ -12,6 +12,9 @@ test('the scene time is the city clock as written', () => {
 
 test('who is around reads as a sentence', () => {
   assert.equal(aroundText([]), 'Nobody you would notice is here.')
+  // A companion already listed by name in the cast list isn't repeated in the line.
+  assert.deepEqual(aroundOthers({ around: ['Tobin, travelling with you', 'a regular'], present: [{ key: 'tobin-pell', label: 'Tobin, travelling with you' }] }, ['tobin-pell']), ['a regular'])
+  assert.deepEqual(aroundOthers({ around: ['a regular'] }, ['tobin-pell']), ['a regular'])
   assert.equal(aroundText(['the barista']), 'The barista is here.')
   assert.equal(aroundText(['the barista', 'a regular', 'a neighbor']), 'The barista, a regular and a neighbor are here.')
 })

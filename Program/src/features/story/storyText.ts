@@ -40,6 +40,12 @@ export function grouped(around: string[]): string[] {
   })
 }
 
+/** Who else is around, leaving out anyone already listed by name in the cast list (a companion travelling with you). */
+export function aroundOthers(scene: { around: string[]; present?: { key: string; label: string }[] }, listed: string[]): string[] {
+  const named = new Set((scene.present ?? []).filter((item) => listed.includes(item.key)).map((item) => item.label))
+  return scene.around.filter((label) => !named.has(label))
+}
+
 /** "Nobody you would notice is here.", "The barista is here.", "A regular and two neighbors are here." */
 export function aroundText(around: string[]): string {
   if (!around.length) return 'Nobody you would notice is here.'

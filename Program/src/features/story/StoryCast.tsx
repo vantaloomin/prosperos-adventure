@@ -8,7 +8,7 @@ import { initial, personaName } from '../worlds/worldsText'
 import { EntityName } from './EntityCard'
 import { StoryGear } from './StoryGear'
 import { peopleHere } from './scene'
-import { aroundText, moneyText, personLine, statusItems } from './storyText'
+import { aroundOthers, aroundText, moneyText, personLine, statusItems } from './storyText'
 import { MindToggle } from '../round/MindToggle'
 import { SeatDetails } from '../round/SeatDetails'
 import { RoundTimeline } from '../round/RoundTimeline'
@@ -30,6 +30,8 @@ export function StoryCast({ story, round, onTrade }: { story: Story; round?: Cas
   const coin = gear.data ? moneyText(gear.data.coins, gear.data.currency) : null
   const you = statusItems(story.scene, story.fight, coin).filter((item) => item.kind !== 'time').map((item) => item.text).join(' · ')
   const toggle = (key: string) => setOpen(open === key ? null : key)
+  const here = peopleHere(story)
+  const around = aroundOthers(story.scene, here.map((person) => person.key))
   return (
     <section className="story-cast" aria-label="Who's here">
       {round && <CastTimeline round={round} />}
@@ -38,13 +40,13 @@ export function StoryCast({ story, round, onTrade }: { story: Story; round?: Cas
           <p>{you}</p>
           <StoryGear open onTrade={onTrade} />
         </CastRow>
-        {peopleHere(story).map((person) => round
+        {here.map((person) => round
           ? <CastPerson key={person.key} person={person} round={round} open={open === person.key} onToggle={toggle} />
           : <CastRow key={person.key} id={person.key} name={person.name} letter={person.name.charAt(0)} state={person.doing} open={open === person.key} onToggle={toggle}>
             <PersonMore person={person} />
           </CastRow>)}
       </ul>
-      {!!story.scene.around.length && <p className="story-cast-around">{aroundText(story.scene.around)}</p>}
+      {!!around.length && <p className="story-cast-around">{aroundText(around)}</p>}
       {story.scene.weather && <p className="story-cast-around">{story.scene.weather}</p>}
     </section>
   )
