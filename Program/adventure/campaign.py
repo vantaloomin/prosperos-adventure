@@ -29,6 +29,7 @@ from adventure import (
 from adventure.database import one
 from adventure.errors import require
 from adventure.models import PersonaInput
+from adventure.rounds import cast
 from adventure.rounds import context as rounds_context
 from adventure.rules import brp, fate, ironsworn, marvel, narrative, srd52
 
@@ -51,7 +52,9 @@ def view(database) -> dict:
         city_id = story.scene_row(connection)['city_id']
         rules = table.starting(connection)
     world = tiers.world_of(city_id)
-    return {'premades': premades(city_id), 'points': POINTS, 'range': list(START_RANGE),
+    # Each lead's mind if they join as the party (adventure/rounds/cast.py): agent (Thinks) or program (Rules).
+    leads = [lead | {'default_mind': str(cast.default_mind(world, lead))} for lead in premades(city_id)]
+    return {'premades': leads, 'points': POINTS, 'range': list(START_RANGE),
             'stat_names': list(marvel.STATS), 'meanings': marvel.MEANINGS,
             # The rulesets a campaign can be played in, the world's own first (adventure/sheet.py).
             'rulesets': [{'id': key, 'name': name} for key, name in sheet.RULESETS.items()],
@@ -151,10 +154,12 @@ def begin(database, premade_id: str | None = None, persona: PersonaInput | None 
           hand: str | None = None, ironman: bool = False, legacy_of: dict | None = None,
           ruleset: str | None = None, build: dict | None = None, iron: dict | None = None,
           rules: dict | None = None, percentile: dict | None = None, narrated: dict | None = None,
-          fated: dict | None = None) -> dict:
+          fated: dict | None = None, joining: dict | None = None) -> dict:
     """Start the story as a premade character or one the player made; only a story with nothing in it yet. The
     ruleset (the world's own by default) is chosen now and locked; under 5E a made character is `build` (class,
-    species, background, the standard array placed, the class's skills). `rules` are session zero's (adventure/table.py)."""
+    species, background, the standard array placed, the class's skills). `rules` are session zero's (adventure/table.py).
+    With `joining` (the cast page's {premade id: {mind, notes, model_profile_id}}), every other lead of the town
+    travels with the character as the party, each at the table with their own mind (adventure/rounds/cast.py)."""
     with database.connect() as connection:
         where, values = timeline.visible(connection)
         require(one(connection, f'SELECT COUNT(*) AS n FROM story_messages WHERE {where}', values)['n'] == 0,
@@ -236,6 +241,8 @@ def begin(database, premade_id: str | None = None, persona: PersonaInput | None 
             package_lore.bring(connection, database.root, world, database.now())
             # The school or guild the character starts in (adventure/institutions.py).
             institutions.begin(connection, world, chosen if premade_id else None, began)
+        # The other leads as the party, each with a round seat (adventure/rounds/cast.py).
+        cast.begin(connection, database, city_id, premades(city_id), premade_id, persona.name, joining)
         # An earlier campaign's character as this world's history (adventure/legacy.py).
         if earlier:
             legacy.bring(connection, earlier, legacy_of['role'], began)

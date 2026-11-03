@@ -263,6 +263,13 @@ class FateBuild(Input):
     stunts: list[str] = Field(default_factory=list, max_length=3)
 
 
+class Joining(Input):
+    """How a lead who joins as the party plays (adventure/rounds/cast.py): agent (Thinks) or program (Rules)."""
+    mind: Literal['agent', 'program'] | None = None
+    notes: str = Field('', max_length=600)
+    model_profile_id: str | None = Field(None, max_length=64)
+
+
 class StoryStart(Input):
     """A premade character by id, or one the player made: who they are and their bought stats."""
     premade_id: str | None = Field(None, min_length=1, max_length=80)
@@ -276,6 +283,8 @@ class StoryStart(Input):
     # Ironman (adventure/chapters.py): no going back for the whole campaign, so death is final.
     ironman: bool = False
     legacy: LegacyChoice | None = None
+    # The other leads join as the party, by premade id, each with how they play; left out, nobody joins.
+    party: dict[str, Joining] | None = None
     # The ruleset (adventure/sheet.py), locked for the campaign; the world's own when left out.
     ruleset: Literal['marvel', 'srd52', 'ironsworn', 'brp', 'narrative', 'fate'] | None = None
     build: Srd52Build | None = None
@@ -298,7 +307,8 @@ def start(request: Request, body: StoryStart):
                           body.pace, body.hand, body.ironman, body.legacy and body.legacy.model_dump(), body.ruleset,
                           body.build and body.build.model_dump(), body.ironsworn and body.ironsworn.model_dump(),
                           body.table and body.table.model_dump(exclude_none=True), body.brp and body.brp.model_dump(),
-                          body.narrative and body.narrative.model_dump(), body.fate and body.fate.model_dump())
+                          body.narrative and body.narrative.model_dump(), body.fate and body.fate.model_dump(),
+                          None if body.party is None else {key: value.model_dump() for key, value in body.party.items()})
 
 
 class StoryBack(Input):

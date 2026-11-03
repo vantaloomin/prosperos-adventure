@@ -351,7 +351,9 @@ def scene_view(view: dict) -> dict:
 def seen(person: dict, view: dict) -> str:
     """'the barista', or 'Dana, the barista' once the user has met her."""
     sheet = person['sheet']
-    said = who(sheet, {'id': view['place']['id']}, view['data'], person['doing']).removesuffix(' there')
+    # A companion is shown as one, whatever the narrator is told about them.
+    said = 'travelling with you' if person.get('party') else \
+        who(sheet, {'id': view['place']['id']}, view['data'], person['doing']).removesuffix(' there')
     return f"{sheet['name']}, {said}" if sheet['key'] in view['known'] else said
 
 
@@ -594,7 +596,9 @@ def bookmark_go(database, bookmark_id: str) -> dict:
 def people(connection, view: dict) -> list[dict]:
     """Everyone the user has met in the story, most recent first, with where their rules put them now; with the
     dice shown, how they feel about the character too."""
-    result, cities, shown, with_them = [], {}, dice_shown(connection), party.keys(connection)
+    result, cities, shown = [], {}, dice_shown(connection)
+    # A companion carries their own sheet (adventure/party.py): a lead who joined at Begin is no townsperson.
+    with_them = {row['key']: row['sheet'] for row in party.members(connection)}
     for row in view['known'].values():
         if row['city_id'] not in cities:
             try:
@@ -602,8 +606,8 @@ def people(connection, view: dict) -> list[dict]:
             except DomainError:
                 cities[row['city_id']] = None
         data = cities[row['city_id']]
-        sheet = townsfolk.find(data, row['key']) if data else None
-        if sheet is None:
+        sheet = (townsfolk.find(data, row['key']) if data else None) or with_them.get(row['key'])
+        if sheet is None or data is None:
             continue  # Their city is gone, or its townsfolk were seeded anew.
         now = {'doing': 'travelling with you', 'place': None} if row['key'] in with_them else \
             townsfolk.whereabouts(sheet, data, local_moment(data, view['now']))
