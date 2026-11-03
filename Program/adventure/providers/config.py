@@ -214,6 +214,10 @@ class MixUpdate(Input):
     enabled: bool = True
 
 
+class WorldModels(Input):
+    own: bool
+
+
 class RouteUpdate(Input):
     job: str = Field(min_length=1, max_length=40)
     profile_id: str | None = None

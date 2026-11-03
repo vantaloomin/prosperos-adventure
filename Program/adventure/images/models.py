@@ -73,3 +73,8 @@ class ModelProbe(Input):
 
 class BackendMove(Input):
     position: int = Field(ge=0, le=50)
+
+
+class WorldBackends(Input):
+    """The backends this world draws with, in no particular order (the user's order decides); null for all."""
+    backend_ids: list[str] | None = Field(default=None, max_length=50)

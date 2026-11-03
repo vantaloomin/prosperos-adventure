@@ -14,6 +14,7 @@ import random
 import sqlite3
 from urllib.parse import urlsplit
 
+from adventure import world_models
 from adventure.database import decode, encode, identifier, many, one, optional
 from adventure.errors import require
 from adventure.providers.builtin_recall import recall_config
@@ -78,14 +79,15 @@ def profile_view(row: dict, key_shared_with: list[str] | None = None) -> dict:
 
 
 def routes(connection) -> dict[str, str]:
-    return {row['job']: row['profile_id'] for row in many(connection, 'SELECT job, profile_id FROM model_routes')}
+    """Which profile does each job in this world (adventure/world_models.py)."""
+    return world_models.routes(connection)
 
 
 def overview(connection) -> dict:
     rows = many(connection, 'SELECT * FROM model_profiles ORDER BY name COLLATE NOCASE, created_at')
     return {'profiles': [profile_view(row, sharing(rows, row)) for row in rows], 'routes': routes(connection),
             'mix': {job: mix_view(connection, job) for job in MIX_JOBS},
-            'jobs': JOBS}
+            'jobs': JOBS, 'world': {'own': world_models.own(connection) is not None}}
 
 
 def sharing(rows: list[dict], row: dict) -> list[str]:
@@ -123,6 +125,8 @@ def mix_state(connection, job: str) -> dict:
 
 
 def mix_view(connection, job: str) -> dict:
+    if world_models.own(connection) is not None:
+        return {'enabled': False, 'mode': 'random', 'profile_ids': []}
     state = mix_state(connection, job)
     ids = [row['profile_id'] for row in many(connection, 'SELECT profile_id FROM model_mix WHERE job=? ORDER BY position',
                                              (job,))]
@@ -130,8 +134,9 @@ def mix_view(connection, job: str) -> dict:
 
 
 def mixed(connection, job: str) -> list[dict]:
-    """The finished profiles in a job's Mix while it is on and has at least two; otherwise none."""
-    if job not in MIX_JOBS or not mix_state(connection, job)['enabled']:
+    """The finished profiles in a job's Mix while it is on and has at least two; otherwise none. A world with models
+    of its own answers with its own profile."""
+    if job not in MIX_JOBS or not mix_state(connection, job)['enabled'] or world_models.own(connection) is not None:
         return []
     rows = many(connection, 'SELECT p.* FROM model_mix m JOIN model_profiles p ON p.id=m.profile_id WHERE m.job=? '
                 'ORDER BY m.position', (job,))
@@ -377,7 +382,8 @@ def release(database, vault, reference: str):
 def assign(connection, job: str, profile_id: str | None, timestamp: str):
     require(job in JOB_KEYS, 'Unknown model job.', 422)
     if profile_id is None:
-        connection.execute('DELETE FROM model_routes WHERE job=?', (job,))
+        if not world_models.assign(connection, job, None, timestamp):
+            connection.execute('DELETE FROM model_routes WHERE job=?', (job,))
         return
     row = profile_row(connection, profile_id)
     config = decode(row['config'])
@@ -388,9 +394,17 @@ def assign(connection, job: str, profile_id: str | None, timestamp: str):
                 'on a local or OpenAI-compatible server.', 409)
     else:
         require(profile_ready(config), 'Finish this profile: choose a model before giving it a job.', 409)
+    if world_models.assign(connection, job, profile_id, timestamp):
+        return
     connection.execute('INSERT INTO model_routes (job, profile_id, updated_at) VALUES (?, ?, ?) ON CONFLICT(job) '
                        'DO UPDATE SET profile_id=excluded.profile_id, updated_at=excluded.updated_at',
                        (job, profile_id, timestamp))
+
+
+def set_world(database, separate: bool) -> dict:
+    with database.connect(write=True) as connection:
+        world_models.choose(connection, separate, database.now())
+        return overview(connection)
 
 
 def set_route(database, job: str, profile_id: str | None) -> dict:

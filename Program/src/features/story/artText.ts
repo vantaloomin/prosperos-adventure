@@ -29,3 +29,8 @@ export function pictureChoices(people: Pick<StoryPerson, 'key' | 'name'>[], pres
   return [...present.map((item) => ({ key: item.key, label: `${item.label} (here)` })),
     ...people.filter((person) => !here.has(person.key)).map((person) => ({ key: person.key, label: person.name }))]
 }
+
+/** " · added by you · their likeness": a picture the player added, and the one later portraits of them follow. */
+export function artNotes(item: Pick<StoryArt, 'own' | 'reference'>): string {
+  return `${item.own ? ' · added by you' : ''}${item.reference ? ' · their likeness' : ''}`
+}

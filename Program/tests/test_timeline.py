@@ -81,3 +81,34 @@ def test_an_older_workspace_gains_the_branch_column(tmp_path):
     add_columns(connection)
     assert connection.execute('SELECT branch_id FROM story_messages').fetchall() == [('first',)]
     assert 'threat' in {row[1] for row in connection.execute('PRAGMA table_info(story_rolls)')}
+
+
+def test_branches_are_named_renamed_and_deleted_with_undo(client, provider):
+    """From Prospero's Companion #496: a new branch is named after the line it went back from, any other branch can
+    be renamed, and Delete takes it out of the list (and the chapter tree) without erasing it."""
+    ok(client.put('/api/connection', json={'base_url': 'http://127.0.0.1:1234/v1', 'model': 'local-model'}))
+    provider.replies = [[Chunk(f'Reply {number}.'), Chunk('', 'stop')] for number in range(1, 6)]
+    say(client, 'I look around.', 'story-0101')
+    second = say(client, 'I walk up to the long table where the merchants sit and ask for work.', 'story-0102')['message']
+    went = ok(client.post('/api/story/back', json={'message_id': second['id']}))
+    playing, old = went['branches']
+    assert playing['playing'] and playing['label'] == 'Instead of “I walk up to the long table where…”'
+    assert old['label'] == ''
+
+    renamed = ok(client.patch(f"/api/story/branches/{old['id']}", json={'label': '  The   merchants  '}))
+    assert next(b for b in renamed['branches'] if b['id'] == old['id'])['label'] == 'The merchants'
+    assert client.patch(f"/api/story/branches/{old['id']}", json={'label': '  '}).status_code == 422
+    # The branch being played stays: there must always be one to play.
+    assert client.patch(f"/api/story/branches/{playing['id']}", json={'label': 'Here'}).status_code == 409
+    assert client.delete(f"/api/story/branches/{playing['id']}").status_code == 409
+
+    gone = ok(client.delete(f"/api/story/branches/{old['id']}"))
+    assert [b['id'] for b in gone['branches']] == [playing['id']]
+    assert old['id'] not in [b['id'] for b in gone['campaign']['tree']]
+    assert client.post(f"/api/story/branches/{old['id']}/switch").status_code == 404
+    assert client.delete(f"/api/story/branches/{old['id']}").status_code == 404
+
+    back = ok(client.post(f"/api/story/branches/{old['id']}/restore"))
+    restored = next(b for b in back['branches'] if b['id'] == old['id'])
+    assert restored['label'] == 'The merchants' and restored['turns'] == 2
+    assert texts(ok(client.post(f"/api/story/branches/{old['id']}/switch")))[-1].startswith('I walk up')

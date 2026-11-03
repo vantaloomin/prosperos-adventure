@@ -1,5 +1,6 @@
 // Request helper adapted from prosperos-study src/api.ts at bbcbde4: Adventure's client header and error codes.
 import { ndjsonLines } from './ndjson.ts'
+import { followed } from './features/worlds/arrival.ts'
 
 export class ApiError extends Error {
   constructor(message: string, public status: number, public code?: string) { super(message) }
@@ -51,8 +52,8 @@ export async function upload<T>(path: string, file: Blob): Promise<T> {
 }
 
 /** A workspace switched in another tab reloads this one on the story. */
-function failure(status: number, data: { detail?: unknown; code?: string }): ApiError {
-  if (data.code === 'world_changed') { window.location.hash = '#story'; window.location.reload() }
+function failure(status: number, data: { detail?: unknown; code?: string; world?: string | null }): ApiError {
+  if (data.code === 'world_changed') { followed(data.world); window.location.hash = '#story'; window.location.reload() }
   return new ApiError(errorMessage(status, data), status, data.code)
 }
 

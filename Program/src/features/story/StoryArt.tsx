@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
-import { Image, MapPin, RefreshCw, User, Users } from 'lucide-react'
-import { api } from '../../api'
+import { Image, ImageUp, MapPin, RefreshCw, User, Users } from 'lucide-react'
+import { api, upload } from '../../api'
 import { Notice } from '../../components/Feedback'
 import type { ArtKind, ArtStage, StoryArt as Picture, StoryPerson } from '../../types'
 import { useDeviceLook } from '../settings/deviceLook'
-import { artLabel, artStatus, making, pictureChoices } from './artText'
+import { artLabel, artNotes, artStatus, making, pictureChoices } from './artText'
 import { askForDrawer } from './scene'
+import { PICTURE_TYPES, pictureCopy } from './ownPicture'
 
 const ART_KEY = ['story-art']
 // Passive art finishes after the turn, so the stage looks again now and then.
@@ -32,6 +33,16 @@ export function StoryArt({ people, present = [], place, open }: { people: StoryP
     try { client.setQueryData(ART_KEY, await api<{ art: Picture[] }>('/story/art', { kind, subject })) }
     catch (failure) { setError(failure instanceof Error ? failure.message : 'That picture was not asked for.') }
   }
+  // Your own picture of you or of someone chosen: their portrait now and the likeness later ones follow.
+  const file = useRef<HTMLInputElement>(null)
+  const [ownFor, setOwnFor] = useState('player')
+  const pickOwn = (subject: string) => { setOwnFor(subject); file.current?.click() }
+  const sendOwn = async (picked: File | undefined) => {
+    if (!picked) return
+    setError('')
+    try { client.setQueryData(ART_KEY, await upload<{ art: Picture[] }>(`/story/art/own?subject=${encodeURIComponent(ownFor)}`, await pictureCopy(picked))) }
+    catch (failure) { setError(failure instanceof Error ? failure.message : 'That picture could not be used.') }
+  }
   const items = gallery.data?.art ?? []
   const choices = pictureChoices(people, present)
   return (
@@ -41,6 +52,8 @@ export function StoryArt({ people, present = [], place, open }: { people: StoryP
         <button type="button" className="button" onClick={() => void ask('portrait', 'player')}><User aria-hidden="true" />Picture me</button>
         <button type="button" className="button" onClick={() => void ask('place')}><MapPin aria-hidden="true" />This place</button>
         <button type="button" className="button" onClick={() => void ask('scene')}><Image aria-hidden="true" />The scene</button>
+        <button type="button" className="button" onClick={() => pickOwn('player')} title="Use a picture of your own as your portrait. Later pictures of you follow it."><ImageUp aria-hidden="true" />Use my own picture</button>
+        <input ref={file} type="file" accept={PICTURE_TYPES} hidden aria-label="Your own picture" onChange={(event) => { const picked = event.target.files?.[0]; event.target.value = ''; void sendOwn(picked) }} />
       </div>
       {choices.length > 0 && <div className="form-actions">
         <select aria-label="Someone here or someone you met" value={who} onChange={(event) => setWho(event.target.value)}>
@@ -48,6 +61,7 @@ export function StoryArt({ people, present = [], place, open }: { people: StoryP
           {choices.map((choice) => <option key={choice.key} value={choice.key}>{choice.label}</option>)}
         </select>
         <button type="button" className="button" disabled={!who} onClick={() => void ask('portrait', who)}><Users aria-hidden="true" />Picture them</button>
+        <button type="button" className="button" disabled={!who} onClick={() => pickOwn(who)} title="Use a picture of your own as their portrait. Later pictures of them follow it."><ImageUp aria-hidden="true" />Use my own</button>
       </div>}
       {error && <Notice tone="error">{error}</Notice>}
       <ul className="art-gallery">
@@ -63,7 +77,7 @@ function ArtCard({ item, label, onAgain }: { item: Picture; label: string; onAga
   return (
     <li className="art-card">
       {item.url && <img src={item.url} alt={label} loading="lazy" width={item.width ?? undefined} height={item.height ?? undefined} />}
-      <p><strong>{label}</strong>{item.reference && <span className="subtle"> · their likeness</span>}</p>
+      <p><strong>{label}</strong>{artNotes(item) && <span className="subtle">{artNotes(item)}</span>}</p>
       {status && <p className={item.status === 'failed' || item.status === 'refused' ? 'hidden-warning' : 'subtle'}>{status}</p>}
       {(item.stale || item.status === 'failed') && <button type="button" className="text-button" onClick={onAgain}><RefreshCw aria-hidden="true" />Make it again</button>}
     </li>

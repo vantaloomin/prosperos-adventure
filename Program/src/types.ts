@@ -140,7 +140,13 @@ export interface ImageBackend {
   disclosure: string | null
   disclosure_accepted: boolean
   experimental: boolean
+  /** Whether this world draws with it (adventure/images/world_choice.py). */
+  in_world: boolean
 }
+/** Which backends this world draws with: all of them until the user picks some (`own`). `falls_back`: none of the
+ * picks is on, so every backend is used for now. `used`: the backends it draws with now, in the user's order. */
+export interface WorldImageBackends { own: boolean; picked: string[]; falls_back: boolean; used: string[] }
+export interface ImageBackendList { backends: ImageBackend[]; world: WorldImageBackends }
 
 export interface BackendCheck { ok: boolean; summary: string; details: string[]; install?: { id: string; label: string }[] }
 
@@ -390,7 +396,9 @@ export interface StoryTier { tier: string; words: string; track: string; arc: St
 export interface JournalEntry { id: string; kind: string; subject: string; text: string; truth: 'world' | 'belief' | 'both'; source: 'code' | 'narrator' | 'player'; pulled?: boolean; faded?: boolean; created_at: string }
 export interface JournalQuest { id: string; title: string; hook: string; status: 'open' | 'done' | 'failed' | 'missed'; outcome: string; left: string; kind?: 'authored' | 'job' | 'oath' | 'coursework' }
 export type ArtKind = 'portrait' | 'place' | 'scene' | 'passage'
-export interface StoryArt { id: string; kind: ArtKind; subject: string; chapter_id: string | null; status: 'queued' | 'running' | 'done' | 'failed' | 'refused'; error: string | null; reference: boolean; url: string | null; width: number | null; height: number | null; created_at: string; stale: boolean }
+export interface StoryArt { id: string; kind: ArtKind; subject: string; chapter_id: string | null; status: 'queued' | 'running' | 'done' | 'failed' | 'refused'; error: string | null; reference: boolean; url: string | null; width: number | null; height: number | null; created_at: string; stale: boolean
+  /** The player's own picture rather than one a backend made (adventure/art.py own_portrait). */
+  own?: boolean }
 export interface InstitutionGrades { average: number; letter: string; gpa: number; attended: number; missed: number }
 export interface JournalInstitution { id: string; name: string; term: string | null; classes: { id: string; name: string }[]; today: { id: string; name: string; at: string; place_id: string | null; soon: boolean }[]; grades: InstitutionGrades | null }
 /** A thread in the director's notebook the character has come across, as they understand it (adventure/director.py). */
@@ -415,11 +423,11 @@ export interface GmView {
 /** A chapter of a branch (adventure/chapters.py): `open` while it is still being played. */
 export interface StoryChapter { id: string; number: number; title: string; summary: string; hook?: string; open: boolean; turns: number; ended_by: 'place' | 'time' | 'fight' | 'quest' | 'player' | null; branch_id: string; seq: number }
 /** A branch in the tree: where it forked, how it ended if the character died or was lost, and its own chapters. */
-export interface StoryTreeBranch { id: string; parent_id: string | null; fork_seq: number | null; playing: boolean; ending: '' | 'death' | 'lost'; chapters: StoryChapter[] }
+export interface StoryTreeBranch { id: string; label: string; parent_id: string | null; fork_seq: number | null; playing: boolean; ending: '' | 'death' | 'lost'; chapters: StoryChapter[] }
 export interface StoryBookmark { id: string; name: string; message_id: string; branch_id: string; text: string; created_at: string }
 export interface StoryCampaign { chapters: StoryChapter[]; tree: StoryTreeBranch[]; bookmarks: StoryBookmark[]; ironman: boolean; pending: { reason: string; title: string } | null }
 export interface NotebookNote { id: string; text: string; created_at: string; updated_at: string }
-export interface StoryBranch { id: string; playing: boolean; turns: number; last_line: string; last_at: string; started_at: string
+export interface StoryBranch { id: string; label: string; playing: boolean; turns: number; last_line: string; last_at: string; started_at: string
   /** The character this branch asked to decide again (adventure/timeline.py `reasked`), for its label. */
   reask?: { seat: string; name: string } | null }
 export type Zone = 'engaged' | 'near' | 'far'

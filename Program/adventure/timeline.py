@@ -102,8 +102,10 @@ def leave(connection, now: str, ending: str = ''):
                        (branch, state(connection), now, ending))
 
 
-def back(connection, message_id: str, now: str, ending: str = '') -> dict:
-    """Go back to before one of the player's lines: a new branch from there, with the state the line found."""
+def back(connection, message_id: str, now: str, ending: str = '', label: bool = False) -> dict:
+    """Go back to before one of the player's lines: a new branch from there, with the state the line found. With
+    `label`, the branch is named after the line it goes back from (a branch that asks a character again is named by
+    its question instead)."""
     where, values = visible(connection)
     line = optional(connection, f"SELECT * FROM story_messages WHERE id=? AND role='user' AND {where}",
                     (message_id, *values))
@@ -112,8 +114,9 @@ def back(connection, message_id: str, now: str, ending: str = '') -> dict:
     require(saved is not None, 'That line was sent before the story kept save points.', 409)
     leave(connection, now, ending)
     branch = identifier()
-    connection.execute('INSERT INTO story_branches (id, parent_id, fork_seq, tip, created_at) VALUES (?, ?, ?, NULL, ?)',
-                       (branch, active(connection), line['seq'], now))
+    connection.execute('INSERT INTO story_branches (id, parent_id, fork_seq, tip, created_at, label) VALUES '
+                       '(?, ?, ?, NULL, ?, ?)', (branch, active(connection), line['seq'], now,
+                                                 auto_label(line['text']) if label else ''))
     set_active(connection, branch)
     restore(connection, saved['state'])
     return line
@@ -123,7 +126,7 @@ def switch(connection, branch_id: str, now: str, ending: str = ''):
     """Play on in another branch, where the player left it."""
     if branch_id == active(connection):
         return
-    row = optional(connection, 'SELECT tip FROM story_branches WHERE id=?', (branch_id,))
+    row = optional(connection, 'SELECT tip FROM story_branches WHERE id=? AND deleted_at IS NULL', (branch_id,))
     require(row is not None and row['tip'] is not None, 'That branch is not in this story.', 404)
     leave(connection, now, ending)
     restore(connection, row['tip'])
@@ -134,20 +137,63 @@ def switch(connection, branch_id: str, now: str, ending: str = ''):
 def branches(connection) -> list[dict]:
     """Every branch with its last line, the one being played first, then the newest."""
     playing = active(connection)
-    rows = many(connection, 'SELECT id, parent_id, fork_seq, created_at FROM story_branches')
+    rows = many(connection, 'SELECT id, parent_id, fork_seq, created_at, label FROM story_branches '
+                            'WHERE deleted_at IS NULL OR id=?', (playing,))
     if not any(row['id'] == playing for row in rows):
-        rows.append({'id': playing, 'parent_id': None, 'fork_seq': None, 'created_at': ''})
+        rows.append({'id': playing, 'parent_id': None, 'fork_seq': None, 'created_at': '', 'label': ''})
     result = []
     for row in rows:
         where, values = visible(connection, row['id'])
         last = optional(connection, f"SELECT text, created_at FROM story_messages WHERE role='user' AND {where} "
                                     'ORDER BY seq DESC LIMIT 1', values)
         turns = one(connection, f"SELECT COUNT(*) AS n FROM story_messages WHERE role='user' AND {where}", values)['n']
-        result.append({'id': row['id'], 'playing': row['id'] == playing, 'turns': turns,
+        result.append({'id': row['id'], 'label': row['label'] or '', 'playing': row['id'] == playing, 'turns': turns,
                        'last_line': last['text'] if last else '', 'last_at': last['created_at'] if last else '',
                        'started_at': row['created_at'], 'reask': reasked(connection, row['id'])})
     result.sort(key=lambda item: item['last_at'], reverse=True)
     return sorted(result, key=lambda item: not item['playing'])
+
+
+LABEL_LETTERS = 36
+
+
+def auto_label(text: str) -> str:
+    """A name for a branch the player did not name: the start of the line it went back from, cut at a word
+    (from Prospero's Companion #496)."""
+    words = ' '.join((text or '').split())
+    if not words:
+        return ''
+    if len(words) > LABEL_LETTERS:
+        cut = words[:LABEL_LETTERS].rsplit(' ', 1)[0] or words[:LABEL_LETTERS]
+        words = f'{cut.rstrip(",.;:!?")}…'
+    return f'Instead of “{words}”'
+
+
+def other_branch(connection, branch_id: str, deleted: bool = False) -> dict:
+    """A branch of this story that is not the one being played; a deleted one only when asked for (to bring it
+    back). The one being played is never renamed from the list or deleted: there must always be one to play."""
+    row = optional(connection, 'SELECT * FROM story_branches WHERE id=?', (branch_id,))
+    require(row is not None and (deleted or row['deleted_at'] is None), 'That branch is not in this story.', 404)
+    require(branch_id != active(connection), "You're playing this branch. Play another one before deleting it.", 409)
+    return row
+
+
+def rename(connection, branch_id: str, label: str):
+    require(bool(label.strip()), 'Give the branch a name.', 422)
+    other_branch(connection, branch_id)
+    connection.execute('UPDATE story_branches SET label=? WHERE id=?', (' '.join(label.split())[:80], branch_id))
+
+
+def delete(connection, branch_id: str, now: str):
+    """Take a branch out of the list. Nothing is erased, so Undo (`undelete`) brings it back as it was, and the
+    branches taken from it keep what happened there before they split off (`chain` still walks through it)."""
+    other_branch(connection, branch_id)
+    connection.execute('UPDATE story_branches SET deleted_at=? WHERE id=?', (now, branch_id))
+
+
+def undelete(connection, branch_id: str):
+    other_branch(connection, branch_id, deleted=True)
+    connection.execute('UPDATE story_branches SET deleted_at=NULL WHERE id=?', (branch_id,))
 
 
 def reasked(connection, branch_id: str) -> dict | None:

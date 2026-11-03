@@ -82,7 +82,7 @@ function BranchTree({ tree, onPlay }: { tree: StoryTreeBranch[]; onPlay?: (chapt
   const roots = tree.filter((branch) => !branch.parent_id || !tree.some((other) => other.id === branch.parent_id))
   const node = (branch: StoryTreeBranch): ReactElement => (
     <li key={branch.id}>
-      <p className="subtle">{branch.playing ? 'The branch you are playing' : 'Another branch'}{endingText(branch.ending)}</p>
+      <p className="subtle">{branch.playing ? 'The branch you are playing' : 'Another branch'}{branch.label && `: ${branch.label}`}{endingText(branch.ending)}</p>
       <ul>
         {branch.chapters.map((chapter) => <li key={chapter.id}>
           <p><strong>{chapter.title}</strong> <span className="subtle">{chapterLine(chapter)}</span></p>

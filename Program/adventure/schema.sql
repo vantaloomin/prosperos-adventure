@@ -316,7 +316,11 @@ CREATE TABLE IF NOT EXISTS story_branches (
   tip TEXT,
   created_at TEXT NOT NULL,
   -- How it ended, when the character died ('death') or was lost ('lost') there (adventure/chapters.py tree).
-  ending TEXT NOT NULL DEFAULT ''
+  ending TEXT NOT NULL DEFAULT '',
+  -- The player's name for it, else the line it went back from (adventure/timeline.py `auto_label`).
+  label TEXT NOT NULL DEFAULT '',
+  -- Taken out of the list (with Undo); nothing is erased, so branches taken from it keep what came before.
+  deleted_at TEXT
 );
 
 -- Which branch is being played.
@@ -1121,6 +1125,8 @@ CREATE TABLE IF NOT EXISTS story_art (
   height INTEGER,
   backend_id TEXT,
   reference INTEGER NOT NULL DEFAULT 0 CHECK (reference IN (0, 1)),
+  -- The player's own picture, not made by a backend: never out of date (adventure/art.py own_portrait).
+  own INTEGER NOT NULL DEFAULT 0 CHECK (own IN (0, 1)),
   error TEXT,
   created_at TEXT NOT NULL,
   done_at TEXT
@@ -1518,3 +1524,19 @@ CREATE TABLE IF NOT EXISTS split_off (
   created_at TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS split_off_turn ON split_off (turn_id);
+
+-- Which image backends this world draws with (adventure/images/world_choice.py). No row: every enabled backend, in
+-- the user's order. Backends follow the user from world to world; this row stays with its world.
+CREATE TABLE IF NOT EXISTS world_image_backends (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  backend_ids TEXT NOT NULL DEFAULT '[]',
+  updated_at TEXT NOT NULL
+);
+
+-- This world's own job assignments (adventure/world_models.py), in place of model_routes while the row is there:
+-- {job: profile_id}. No row: the user's usual ones. Profiles follow the user from world to world; this row stays.
+CREATE TABLE IF NOT EXISTS world_model_routes (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  routes TEXT NOT NULL DEFAULT '{}',
+  updated_at TEXT NOT NULL
+);

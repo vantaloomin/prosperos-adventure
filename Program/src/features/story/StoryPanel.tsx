@@ -196,7 +196,7 @@ function BeforeTheStory({ story, change }: PanelProps) {
     <aside className="story-panel story-panel-before" aria-label="Your other stories">
       <div className="story-panel-body">
         <StoryPeople people={story.people} onFind={(key) => void change(() => api<StoryData>('/story/find', { key }))} />
-        {others && <StoryBranches branches={story.branches} onSwitch={(id) => void change(() => api<StoryData>(`/story/branches/${encodeURIComponent(id)}/switch`, {}))} />}
+        {others && <StoryBranches branches={story.branches} change={change} />}
       </div>
     </aside>
   )
@@ -250,8 +250,7 @@ const WIDGETS: Record<Widget, (props: PanelProps, refresh: () => void) => ReactN
   powers: ({ story }) => <StoryPowers factions={story.factions ?? []} tier={story.tier} open />,
   talk: ({ story }) => <StoryPolitics where={`${story.scene.city.id}/${story.scene.local_time.slice(0, 10)}/${story.table?.politics ?? ''}/${story.dice_shown}`} gm={!!story.table?.gm_view} open />,
   chapters: ({ story, change, onBack }) => story.campaign && <StoryChapters campaign={story.campaign} change={change} onBack={onBack} open />,
-  branches: ({ story, change }) => <StoryBranches branches={story.branches} open
-    onSwitch={(id) => void change(() => api<StoryData>(`/story/branches/${encodeURIComponent(id)}/switch`, {}))} />,
+  branches: ({ story, change }) => <StoryBranches branches={story.branches} change={change} open />,
   notebook: () => <StoryNotebook open />,
   dice: () => <StoryDiceLog open />,
   art: ({ story }) => <StoryArt people={story.people} present={story.scene.present} place={{ key: `${story.scene.city.id}/${story.scene.place.id}`, name: story.scene.place.name }} open />,

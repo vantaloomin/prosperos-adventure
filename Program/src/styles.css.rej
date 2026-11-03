@@ -1,0 +1,10 @@
+diff a/Program/src/styles.css b/Program/src/styles.css	(rejected hunks)
+@@ -2782,3 +2782,8 @@ p.breakup-line { align-items: center; }
+ .notice .hardware-fix, .notice .hardware-after { display: block; margin-top: 8px; }
+ @media (min-width: 721px) { .update-check .notice > .text-button { padding-block: 0; } }
+ @media (max-width: 720px) { .update-check .notice > .text-button { flex-basis: 100%; margin-left: 23px; justify-content: flex-start; } }
++.world-image-divider { border-top: 1px solid var(--border); padding-top: 16px; margin: 8px 0 16px; }
++.world-image-pick { gap: 10px; }
++.world-image-pick legend { padding: 0; margin-bottom: 4px; font-weight: 600; }
++.world-image-list { display: flex; flex-direction: column; gap: 8px; padding-left: 12px; }
++.world-model-pick { border-bottom: 1px solid var(--border); padding-bottom: 16px; }

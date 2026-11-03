@@ -57,6 +57,10 @@ A profile card shows credits or usage when its service reports them for free, wi
 
 Settings > Models > Story narrator can **Mix narrator models**: tick two or more finished profiles and each narration comes from one of them, **At random** or **In turn**, each with its own model and settings (`text_models.reply_config`, ported from Prospero's Companion #441). Only the narrator mixes; the Referee, Continuity and recall keep one steady model, and rewrites and chapter openers use the narrator's own profile. With the Mix off, or fewer than two finished profiles in it, the narrator's profile answers as before. A profile in the Mix must keep a model, and deleting one drops it from the Mix. "Add another model" copies the narrator's profile so a second model can be set up beside it.
 
+### Models in each world
+
+Profiles and the usual role assignments belong to the user and follow them from world to world. Once there is more than one world, Roles opens with **Models in <world>**: **This world's own** gives the world role assignments of its own (`world_model_routes`, `adventure/world_models.py`), starting from a copy of the usual ones, and choosing a profile for a role there changes that world's alone. A profile deleted since is passed over: its role falls back to the Default, and a Default with none left uses the usual one. The narrator's Mix belongs to the usual setup, so a world with models of its own narrates with its own Story narrator profile. Ported from Prospero's Companion #448.
+
 There is no automatic fallback to another profile when a request fails; like the Study, a failed request reports its error, and OpenRouter requests forbid OpenRouter's own provider fallbacks. The one exception is a rate limit (HTTP 429) before any text arrives: hosted models answer it for a few seconds at busy times, so the same request is sent once more after its `Retry-After` wait (1 to 5 seconds). Image prompts are assembled without a model, and image backends (and their NSFW routing) have their own settings under Images.
 
 ## Prompt caching

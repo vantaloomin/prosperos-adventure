@@ -3,7 +3,7 @@ import asyncio
 import json
 from typing import Annotated, Literal
 
-from fastapi import APIRouter, BackgroundTasks, Request
+from fastapi import APIRouter, BackgroundTasks, Query, Request
 from fastapi.responses import FileResponse, Response, StreamingResponse
 from pydantic import Field
 
@@ -324,6 +324,26 @@ def back(request: Request, body: StoryBack):
 @router.post('/branches/{branch_id}/switch')
 def switch_branch(request: Request, branch_id: str):
     return story.switch_branch(request.app.state.database, branch_id)
+
+
+class BranchName(Input):
+    label: str = Field(max_length=80)
+
+
+@router.patch('/branches/{branch_id}')
+def rename_branch(request: Request, branch_id: str, body: BranchName):
+    return story.rename_branch(request.app.state.database, branch_id, body.label)
+
+
+@router.delete('/branches/{branch_id}')
+def delete_branch(request: Request, branch_id: str):
+    """Out of the list, with Undo; never the branch being played."""
+    return story.delete_branch(request.app.state.database, branch_id)
+
+
+@router.post('/branches/{branch_id}/restore')
+def undelete_branch(request: Request, branch_id: str):
+    return story.undelete_branch(request.app.state.database, branch_id)
 
 
 class ChapterClose(Input):
@@ -652,6 +672,14 @@ def gallery(request: Request):
 def theme(request: Request):
     """The colors of the world the story is in, when its package ships some (adventure/world_theme.py)."""
     return world_theme.current(request.app.state.database)
+
+
+@router.post('/art/own')
+async def own_art(request: Request, subject: str = Query(min_length=1, max_length=200)):
+    """The body is the player's own picture: a portrait of `subject` ('player' or someone met), and the likeness
+    later portraits of them follow (adventure/art.py own_portrait)."""
+    made = art.own_portrait(request.app.state.database, subject, await request.body())
+    return {'art': art.gallery(request.app.state.database), 'asked': made['id']}
 
 
 @router.get('/art/stage')

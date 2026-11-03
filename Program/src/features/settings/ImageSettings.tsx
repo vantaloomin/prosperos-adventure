@@ -4,7 +4,7 @@ import { ArrowDown, ArrowUp, RefreshCw, Trash2 } from 'lucide-react'
 import { api } from '../../api'
 import { SETTINGS_KEY, useWorkspaceSettings } from '../../workspace'
 import { useRefetchOnFocus } from '../../paths'
-import type { WorkspaceSettings, BackendCheck, BackendFiles, BackendKind, HostedProvider, ImageBackend, ImageFamily, ModelFiles, ModelLink, SamplerSettings, StyleLora } from '../../types'
+import type { WorkspaceSettings, BackendCheck, BackendFiles, BackendKind, HostedProvider, ImageBackend, ImageBackendList, ImageFamily, ModelFiles, ModelLink, SamplerSettings, StyleLora } from '../../types'
 import { Notice } from '../../components/Feedback'
 import { useReturnFocus } from '../../components/returnFocus'
 import { Field, TextArea, TextInput, Toggle } from '../../components/Fields'
@@ -18,6 +18,7 @@ import { LaunchFor } from './models/LocalPrograms'
 import { imageKeyFrom } from './models/discovery'
 import type { ModelsOverview } from './models/types'
 import { SliderNumber } from '../../components/NumberFields'
+import { WorldImagePick } from './WorldImagePick'
 
 const BACKENDS_KEY = ['image-backends']
 type Result = { tone: 'info' | 'error'; text: string } | null
@@ -27,7 +28,7 @@ const failure = (error: unknown, fallback: string) => error instanceof Error ? e
  *  on request; Passive art adds a few on its own (adventure/art.py). */
 export function ImageSettings() {
   const client = useQueryClient()
-  const backends = useQuery({ queryKey: BACKENDS_KEY, queryFn: () => api<{ backends: ImageBackend[] }>('/images/backends') })
+  const backends = useQuery({ queryKey: BACKENDS_KEY, queryFn: () => api<ImageBackendList>('/images/backends') })
   const [result, setResult] = useState<Result>(null)
   const refresh = () => Promise.all([client.invalidateQueries({ queryKey: BACKENDS_KEY }), client.invalidateQueries({ queryKey: HARDWARE_KEY })])
   if (!backends.data) return <SectionPending queries={[backends]} heading="images-heading" title="Images" />
@@ -42,6 +43,7 @@ export function ImageSettings() {
       {list.length === 0 && <p className="subtle">No image backend is set up yet.</p>}
       {list.length > 0 && !hasLocal && <p className="subtle">No enabled backend takes NSFW requests, so they will be refused.</p>}
       <Backends list={list} refresh={refresh} setResult={setResult} />
+      {backends.data && <WorldImagePick list={list} world={backends.data.world} refresh={refresh} setResult={setResult} />}
       <PassiveArt />
       {result && <Notice tone={result.tone}>{result.text}</Notice>}
     </section>
@@ -613,6 +615,7 @@ function BackendSummary({ backend }: { backend: ImageBackend }) {
       <strong>{backend.label}</strong>
       <span className="badge">{backend.accepts_nsfw ? (backend.local ? 'Local · safe and NSFW' : 'Safe and NSFW') : 'Safe only'}</span>
       {backend.experimental && <span className="badge">Experimental</span>}
+      {backend.enabled && !backend.in_world && <span className="badge">Not used in this world</span>}
     </div>
     <p className="subtle">{summaryLine(backend)}</p>
   </>

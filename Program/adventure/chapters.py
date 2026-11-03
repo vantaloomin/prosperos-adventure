@@ -205,13 +205,14 @@ def tree(connection) -> list[dict]:
     """Every branch, where it forked from its parent, how it ended if the character died or was lost there, and the
     chapters it began itself."""
     playing = timeline.active(connection)
-    rows = many(connection, 'SELECT id, parent_id, fork_seq, ending FROM story_branches')
+    rows = many(connection, 'SELECT id, parent_id, fork_seq, ending, label FROM story_branches '
+                            'WHERE deleted_at IS NULL OR id=?', (playing,))
     if not any(row['id'] == playing for row in rows):
-        rows.append({'id': playing, 'parent_id': None, 'fork_seq': None, 'ending': ''})
+        rows.append({'id': playing, 'parent_id': None, 'fork_seq': None, 'ending': '', 'label': ''})
     result = []
     for row in rows:
         own = [chapter for chapter in listing(connection, row['id']) if chapter['branch_id'] == row['id']]
-        result.append({'id': row['id'], 'parent_id': row['parent_id'], 'fork_seq': row['fork_seq'],
+        result.append({'id': row['id'], 'label': row['label'] or '', 'parent_id': row['parent_id'], 'fork_seq': row['fork_seq'],
                        'playing': row['id'] == playing, 'ending': row['ending'] or '', 'chapters': own})
     return result
 
