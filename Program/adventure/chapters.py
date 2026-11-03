@@ -6,7 +6,8 @@ management"; docs/story.md "Chapters and the branch tree").
   the next chapter. The chapter that ends is summarized as the break is made by the Continuity model, when one is
   chosen, which also names it unless the player did and says what it leaves open; the next chapter opens with a
   short "previously" from that, once the story has run a while since the last one (RECAP_TURNS of the player's
-  lines) or the player closed the chapter themselves. A line that goes somewhere opens the new chapter itself.
+  lines) or the player closed the chapter themselves. A line that goes somewhere opens the new chapter itself. The
+  summary keeps the chapter's names, numbers and pledges, checked in code (adventure/compaction.py).
 - **Chapters follow the branches.** A chapter starts at one of the player's lines and its end is recorded on the
   branch where it ended, so both are seen through adventure/timeline.py `visible` like the messages: a branch shares
   its parent's chapters up to where it forked, and an end on another branch is not this branch's.
@@ -17,7 +18,7 @@ management"; docs/story.md "Chapters and the branch tree").
   telling a line again with new dice, so death is final.
 - **The notebook** is the player's own, spans every branch, and no model ever reads it.
 """
-from adventure import record, timeline
+from adventure import compaction, record, timeline
 from adventure.database import identifier, many, optional
 from adventure.errors import require
 from adventure.text_models import config_for, routes
@@ -114,12 +115,22 @@ def listing(connection, branch_id: str | None = None) -> list[dict]:
 
 
 async def summed(state, config: dict, lines: list[dict]) -> dict:
-    """A chapter's title, summary and the hook it leaves, from its lines."""
-    answer = await record.schema_first(state, config, SUMMARIZE, record.transcript(lines), SHAPE,
-                                       lambda answer: isinstance(record.read_json(answer), dict))
-    data = record.read_json(answer) or {}
-    return {'summary': str(data.get('summary') or '').strip()[:1200] or answer.strip()[:1200],
-            'title': str(data.get('title') or '').strip().strip('"')[:80], 'hook': str(data.get('hook') or '').strip()[:300]}
+    """A chapter's title, summary and the hook it leaves, from its lines. The summary and hook keep every name,
+    number and pledge in the chapter (adventure/compaction.py); what both still drop is added after the summary."""
+    folded = record.transcript(lines)
+    with state.database.connect() as connection:
+        live = compaction.live(connection, '', folded)
+
+    async def draft(note: str) -> dict:
+        answer = await record.schema_first(state, config, SUMMARIZE + note, folded, SHAPE,
+                                           lambda answer: isinstance(record.read_json(answer), dict))
+        data = record.read_json(answer) or {}
+        return {'summary': str(data.get('summary') or '').strip()[:1200] or answer.strip()[:1200],
+                'title': str(data.get('title') or '').strip().strip('"')[:80],
+                'hook': str(data.get('hook') or '').strip()[:300]}
+
+    done, missing = await compaction.checked(draft, live, lambda done: f"{done['summary']}\n{done['hook']}")
+    return done | {'summary': compaction.also(done['summary'], missing)}
 
 
 async def summarize(state):
