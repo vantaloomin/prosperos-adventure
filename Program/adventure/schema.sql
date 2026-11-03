@@ -602,7 +602,9 @@ CREATE TABLE IF NOT EXISTS story_beats (
   message_id TEXT NOT NULL,
   key TEXT NOT NULL,
   card_id TEXT NOT NULL,
-  at TEXT NOT NULL
+  at TEXT NOT NULL,
+  -- What an offscreen agent said in the beat, as its own agent wrote it (adventure/rounds/offpage.py).
+  lines TEXT NOT NULL DEFAULT '[]'
 );
 
 CREATE TABLE IF NOT EXISTS story_word (
@@ -1360,5 +1362,27 @@ CREATE TABLE IF NOT EXISTS round_overrides (
   to_band TEXT NOT NULL,
   reason TEXT NOT NULL,
   after_commit INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL
+);
+
+-- W5 Writing rules and checks: house rules (adventure/rounds/house_rules.py). ----------------------------------
+
+-- The campaign's edits to its house rulebook (adventure/rounds/house_rules.py), as JSON: the choices it set, and for
+-- each list what it added to and removed from the world's. Not in timeline.SAVED: a rule changed stays changed.
+CREATE TABLE IF NOT EXISTS house_rules (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  edits TEXT NOT NULL DEFAULT '{}',
+  updated_at TEXT NOT NULL
+);
+
+-- The user's standing decisions, each with the turn it was made at (the branch, and the seq of the last line on it)
+-- and read through the branch's ancestry like lines are. A withdrawal names the ruling it ends, from its own turn on.
+CREATE TABLE IF NOT EXISTS house_rulings (
+  id TEXT PRIMARY KEY,
+  kind TEXT NOT NULL CHECK (kind IN ('ruling', 'withdrawal')),
+  text TEXT NOT NULL DEFAULT '',
+  ruling_id TEXT REFERENCES house_rulings(id),
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
   created_at TEXT NOT NULL
 );

@@ -119,6 +119,8 @@ SINGLETONS = ('workspace_settings', 'builtin_recall')
 # Columns added to a table after it shipped: (table, column, definition). CREATE TABLE IF NOT EXISTS leaves an
 # existing table as it was, so an upgraded workspace gains them here. schema.sql lists them too, for new workspaces.
 ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"),
+                 # What an offscreen agent said in an off-page beat (adventure/rounds/offpage.py).
+                 ('story_beats', 'lines', "TEXT NOT NULL DEFAULT '[]'"),
                  # The mode a user line was sent in (adventure/rounds/play.py).
                  ('story_messages', 'mode', "TEXT NOT NULL DEFAULT 'play'"),
                  # When a lore entry applies besides its keywords (adventure/lore_moments.py), as a JSON list of

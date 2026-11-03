@@ -6,7 +6,7 @@ import json
 import pytest
 from conftest import tell
 
-from adventure import timeline
+from adventure import story, timeline
 from adventure.rounds import engine, memory, play, queue, resolve, solo, telling, turns
 from adventure.rounds.contract import Declaration, Mind, Point, State
 
@@ -88,6 +88,50 @@ def test_a_solo_turns_stream_is_as_it_always_was(client, connected):
     assert 'done' in end
     assert not any({'round', 'seat', 'awaiting'} & event.keys() for event in events)
     assert rows(client, 'SELECT state FROM round_turns') == [{'state': 'committed'}]
+
+
+def test_with_agents_a_players_line_shows_the_round_and_can_stop_on_the_reply_card(client, connected, steps):
+    async def converse(turn):
+        if 'you' not in turn.draft.replies:
+            turn.draft.wait_for('you', 'mara', 'Who sent you?', [])
+    engine.register(State.CONVERSING, 'converse', converse)
+    seated(client, 'mara', human='you')
+    line = {'text': 'I ask Mara for the key.', 'client_id': 'client-five-1'}
+    events, end = streamed(client, '/api/story/messages/stream', line)
+    # The round timeline is in the story's stream, and the line ends on the card with no reply yet.
+    assert {'round': {'turn_id': end['done']['awaiting']['id'], 'state': 'declaring'}} in events
+    assert {'awaiting': {'seat': 'you', 'speaker': 'mara', 'line': 'Who sent you?', 'context': []}} in events
+    waiting = end['done']['awaiting']
+    assert end['done']['reply'] is None and waiting['state'] == 'awaiting_user'
+    # The same line sent again is shown the card again; a new line waits for the card.
+    assert tell(client, line['text'], line['client_id'])['awaiting']['id'] == waiting['id']
+    refused = client.post('/api/story/messages', json={'text': 'I leave.', 'client_id': 'client-five-2'})
+    assert (refused.status_code, refused.json()['code']) == (409, 'awaiting')
+    assert len(rows(client, "SELECT * FROM story_messages WHERE role='user'")) == 1
+    # Answered through the round loop, the line is told there, and that stream ends with the reply.
+    _, end = streamed(client, f"/api/rounds/turns/{waiting['id']}/reply/stream",
+                      {'seat': 'you', 'kind': 'reply', 'text': 'Nobody.', 'against': waiting['id']})
+    assert 'done' in end, end
+    assert end['done']['turn']['state'] == 'committed'
+    assert end['done']['reply']['status'] == 'complete'
+    assert [row['id'] for row in rows(client, "SELECT id FROM story_messages WHERE role='narrator'")] == [
+        end['done']['reply']['id']]
+
+
+def test_gather_seats_only_who_is_in_the_scene(client, steps, monkeypatch):
+    engine.STEPS[State.GATHERING][:] = [('present', engine.present), ('pick', engine.pick)]
+    scene = story.scene
+    monkeypatch.setattr(story, 'scene', lambda connection, now: scene(connection, now) | {
+        'people': [{'sheet': {'key': 'mara'}}, {'sheet': {'key': 'innkeeper'}}]})
+    seated(client, 'mara', 'elsewhere', human='you')
+    ok(client.put('/api/rounds/settings', json={'mode': 'watch'}))
+    _, end = streamed(client, '/api/rounds/turns/stream', {})
+    snapshot = json.loads(rows(client, 'SELECT snapshot FROM round_turns WHERE id=?', (end['done']['turn']['id'],))[0][
+        'snapshot'])
+    # The human's character is always in their own scene; an agent who is elsewhere sits this turn out.
+    assert snapshot['present'] == ['you', 'mara', 'innkeeper']
+    assert {seat['key']: seat['mind'] for seat in snapshot['seats']} == {
+        'mara': 'agent', 'elsewhere': 'program', 'you': 'program'}
 
 
 def test_one_writer_at_a_time(client):

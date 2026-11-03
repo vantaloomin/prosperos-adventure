@@ -170,6 +170,17 @@ def test_agents_are_picked_within_the_cap_party_first_then_nemeses_and_promoted_
     turn, _, _ = turn_of(game, mode=Mode.WATCH)
     assert turn.snapshot.seat('you').mind == Mind.PROGRAM
 
+    # Standing in on an agent outside Play, the user's own character comes first, ahead of the party.
+    async def stand_in(turn):
+        turn.snapshot.settings['stand_in'] = {'key': 'you'}
+        turn.snapshot.seat('you').mind, turn.snapshot.seat('you').promoted = Mind.AGENT, True
+    engine.register(State.GATHERING, 'stand_in', stand_in, after='pick')
+    engine.register(State.GATHERING, 'pick_again', declare.pick, after='stand_in')
+    turn, _, _ = turn_of(game, mode=Mode.WATCH)
+    assert [seat.key for seat in turn.snapshot.seats if seat.mind == Mind.AGENT] == ['you', 'cole', 'hesk']
+    # Picking again keeps those the first pick dropped.
+    assert turn.snapshot.settings['dropped'] == ['ilsa', 'bram', 'dov']
+
 
 # A whole round ------------------------------------------------------------------------------------------------------
 
@@ -357,7 +368,10 @@ def test_presets_and_dials_are_settings_with_a_plain_estimate(game):
             agents.change(connection, {'scheming': 5}, game.database.now())
     quick, rich = agents.estimate('quick', 4, 4), agents.estimate('rich', 4, 4)
     assert quick['calls'] < rich['calls'] and quick['tokens'] < rich['tokens']
-    assert rich['text'] == f"About {rich['calls']} model calls and {rich['tokens']:,} tokens a turn with 4 agents."
+    assert rich['text'] == (f"About {rich['calls']} model calls, {rich['tokens']:,} tokens and {rich['seconds']} "
+                            'seconds a turn with 4 agents.')
+    # A local model answers one call at a time, so the same turn takes longer.
+    assert quick['seconds'] < rich['seconds'] < agents.estimate('rich', 4, 4, local=True)['seconds']
 
 
 def test_a_character_with_its_own_model_uses_it_over_the_agents_job(game):
