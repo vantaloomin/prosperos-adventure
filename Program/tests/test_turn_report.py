@@ -14,7 +14,8 @@ from adventure.rounds import engine, house_rules, report, seats, turns
 from adventure.rounds.contract import Brief, Declaration, Line, Mind, Mode, State, TurnResult
 from adventure.rounds.draft import Draft
 
-POST = ('Mara worked the pick — slow. Suddenly the lock gave.\n\n"Hold the lamp steady," Mara said.\n\n'
+POST = ('Mara worked the pick — slow. Suddenly the lock gave.\n\n```\n[ Kit ]\nPicks: 3\n```\n\n'
+        '"Hold the lamp steady," Mara said.\n\n'
         '"And then we take the whole ledger and burn the counting house down," Mara added.')
 
 
@@ -78,7 +79,7 @@ def test_the_post_is_checked_after_the_writer_and_committed_settled(game, steps)
     assert snapshot['settings']['reviewer'] is False
     # No model, so no rewrite: code fixed the dash and cut the sentence with the outlawed word.
     assert '—' not in draft.post and 'Suddenly' not in draft.post
-    assert draft.post.startswith('Mara worked the pick, slow.')
+    assert draft.post.startswith('Mara worked the pick, slow.') and '```' not in draft.post
     staged = draft.extra['w5']
     assert staged['cut'] == ['Suddenly the lock gave.'] and staged['rewrites'] == 0
     kinds = {item['kind'] for item in staged['scan']['findings']}
@@ -120,6 +121,10 @@ def test_rolls_show_their_numbers_when_the_table_shows_odds(game, steps):
         found = report.report(connection, turn.id)
     assert found['rolls'][0]['natural'] == 14 and found['rolls'][0]['total'] == 16
     assert {item['seat'] for item in found['motives']} == {'mara', 'hesk'}
+    # Code adds the Rolls pane after the post, from the brief's math, in the house format.
+    with game.database.connect() as connection:
+        post = Draft.of(decode(turns.get(connection, turn.id)['draft'])).post
+    assert post.endswith('\n\n```\n[ Rolls ]\nThe pick snaps: one fewer in the kit\n```')
 
 
 def test_the_reviewer_runs_when_it_is_on(game, steps, monkeypatch):
