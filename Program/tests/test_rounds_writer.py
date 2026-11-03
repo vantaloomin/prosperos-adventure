@@ -10,6 +10,7 @@ from test_travel import reply
 from adventure import story, timeline
 from adventure.database import decode, many, one
 from adventure.narration import prompt as narration_prompt
+from adventure.providers.events import Chunk
 from adventure.rounds import engine, house_rules, play, resolve, seats, telling, writer
 from adventure.rounds.contract import Brief, Declaration, Line, Mind, Mode, Point, Seat, Snapshot, State, TurnResult
 from adventure.rounds.draft import Draft
@@ -46,6 +47,28 @@ def a_turn(app, mode=Mode.PLAY, seats=SEATS, result=True, seq=50):
     return turn, pieces
 
 
+def test_the_writers_request_starts_the_same_round_after_round_and_counts_what_was_cached(client, connected, provider,
+                                                                                         app, views):
+    """The system prompt holds only rules and settings, and the story so far follows it word for word, so the second
+    round's request starts with all of the first round's, up to its closing message."""
+    begin(client)
+    reply(provider, 'Ilsa told me to wait.')
+    tell(client, 'I wait by the gate.', 'story-0001')
+    reply(provider, 'Mara leans in.')
+    first = a_turn(app)[0]
+    asyncio.run(writer.write(first))
+    reply(provider, 'Hesk shrugs.')
+    tell(client, 'I ask about the mill.', 'story-0002')
+    provider.replies.append([Chunk('Hesk looks away.'), Chunk('', 'stop', usage={
+        'input_tokens': 100, 'cache_read_input_tokens': 900, 'cache_creation_input_tokens': 50})])
+    second = a_turn(app, seq=80)[0]
+    asyncio.run(writer.write(second))
+    before, after = provider.requests[-3], provider.requests[-1]
+    assert before['system'] == after['system'] and before['system'].blocks == after['system'].blocks
+    assert after['messages'][:len(before['messages']) - 1] == before['messages'][:-1]
+    assert second.draft.extra['cache'] == {'calls': 1, 'reported': 1, 'input': 1050, 'read': 900, 'written': 50}
+
+
 def test_the_round_is_written_close_on_the_users_character_in_play_and_streamed(client, connected, provider, app,
                                                                                 views):
     begin(client)
@@ -57,10 +80,12 @@ def test_the_round_is_written_close_on_the_users_character_in_play_and_streamed(
     asyncio.run(writer.write(turn))
     system, messages = provider.requests[-1]['system'], provider.requests[-1]['messages']
     assert system.startswith(writer.ROUND) and 'close on [[in-fiction: name]]\nIlsa' in system
-    assert 'Mara asks Hesk where he was.' in system and '## House rules' in system
-    assert 'a result may be named' not in system
-    # The story so far comes before the round, as the reader saw it.
-    assert messages[-1]['content'].startswith('Write the round') and len(messages) >= 3
+    assert '## House rules' in system and 'a result may be named' not in system
+    # The system prompt holds only what stays put: the round's context comes after the story so far, in the last
+    # message, so the next round's request starts the same and can be cached.
+    assert system.blocks and 'Mara asks Hesk where he was.' not in system
+    assert 'Mara asks Hesk where he was.' in messages[-1]['content'] and len(messages) >= 3
+    assert messages[-1]['content'].endswith(writer.WRITE)
     # The post streams as it comes, without the sentence that stepped out of the story.
     assert ''.join(pieces).strip() == turn.draft.post and 'AI' not in turn.draft.post
     assert turn.draft.post.endswith('Hesk looks away.')

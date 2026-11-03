@@ -81,6 +81,8 @@ def chat_event(data: dict) -> Chunk:
     choice = choices[0] if isinstance(choices[0], dict) else {}
     delta = choice.get('delta') or {}
     usage = dict(data.get('usage') or {})
+    if isinstance(data.get('timings'), dict):
+        usage['timings'] = data['timings']  # llama.cpp's server: how much of the prompt it reused (cache_n)
     reason = choice.get('finish_reason')
     if reason:
         reason = reason if reason in ALLOWED else 'unrecognized'

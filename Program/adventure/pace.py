@@ -171,3 +171,42 @@ def used_tokens(usage: dict | None) -> int | None:
                                            'promptTokenCount', 'candidatesTokenCount')]
     numbers = [count for count in counts if isinstance(count, int)]
     return sum(numbers) if numbers else None
+
+
+def number(value) -> int:
+    return value if isinstance(value, int) and not isinstance(value, bool) else 0
+
+
+def cache_counts(usage: dict | None) -> dict | None:
+    """How much of a call's prompt came from the service's cache, from the usage it reported in its own names:
+    {'input': prompt tokens in all, 'read': read from the cache, 'written': written to it}, or None when it said
+    nothing about caching. Claude counts the three apart; OpenAI, OpenRouter and Gemini count the cached part inside
+    the prompt; llama.cpp's server says how many it reused in its timings."""
+    usage = usage or {}
+    if any(name in usage for name in ('cache_read_input_tokens', 'cache_creation_input_tokens')):
+        read, written = number(usage.get('cache_read_input_tokens')), number(usage.get('cache_creation_input_tokens'))
+        return {'input': number(usage.get('input_tokens')) + read + written, 'read': read, 'written': written}
+    details = usage.get('input_tokens_details') or usage.get('prompt_tokens_details')
+    if isinstance(details, dict) and 'cached_tokens' in details:
+        total = number(usage.get('input_tokens')) or number(usage.get('prompt_tokens'))
+        return {'input': total, 'read': number(details['cached_tokens']),
+                'written': number(details.get('cache_write_tokens'))}
+    if 'cachedContentTokenCount' in usage:
+        return {'input': number(usage.get('promptTokenCount')), 'read': number(usage['cachedContentTokenCount']),
+                'written': 0}
+    timings = usage.get('timings')
+    if isinstance(timings, dict) and 'cache_n' in timings:
+        read = number(timings.get('cache_n'))
+        return {'input': read + number(timings.get('prompt_n')), 'read': read, 'written': 0}
+    return None
+
+
+def count_cache(extra: dict, usage: dict | None):
+    """Add one call's cache use to a turn's tally (`draft.extra['cache']`, shown in the turn report): calls, how many
+    of them said anything about caching, and their prompt tokens, cache reads and cache writes."""
+    tally = extra.setdefault('cache', {'calls': 0, 'reported': 0, 'input': 0, 'read': 0, 'written': 0})
+    tally['calls'] += 1
+    if (counts := cache_counts(usage)) is not None:
+        tally['reported'] += 1
+        for name, value in counts.items():
+            tally[name] += value
