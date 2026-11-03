@@ -52,6 +52,14 @@ def test_the_other_leads_join_as_the_party_with_their_minds(client):
     assert {'lirien-of-the-ford', 'tobin-pell'} <= set(here)
     tobin = here['tobin-pell']
     assert (tobin['full'], tobin['pronouns'], tobin['cast']) == ('Tobin Pell', 'he/him', 'tobin-pell')
+    assert tobin['role'] == 'A Timber Guild tally clerk who skims'  # the package's own concept for him
+    # The play screen lists them as the party, and shows them travelling with the player.
+    shown = ok(client.get('/api/story'))
+    listed = {person['key']: person for person in shown['people']}
+    assert listed['tobin-pell']['party'] and listed['tobin-pell']['doing'] == 'travelling with you'
+    assert listed['lirien-of-the-ford']['name'] == 'Lirien of the Ford'
+    labels = {item['key']: item['label'] for item in shown['scene']['present']}
+    assert labels['tobin-pell'] == 'Tobin, travelling with you'
 
 
 def test_a_party_lead_is_present_and_decides_in_the_first_turn(client, provider):

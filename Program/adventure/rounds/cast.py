@@ -48,7 +48,8 @@ def first_text(value) -> str:
 def sheet_for(data: dict, place_id: str, premade: dict, world: str | None) -> dict:
     """A lead's townsfolk sheet: drawn as a notable at the place the story opens, keyed by their premade id."""
     entry = world_data.person(world, premade['id']) or {}
-    role = first_text(entry.get('role')) or 'travelling companion'
+    # What they do, from the package (a cast entry's role, a persona's concept); a companion when it says neither.
+    role = first_text(entry.get('role')) or first_text(entry.get('concept')) or 'companion'
     notable = {'id': premade['id'], 'name': premade['name'], 'pronouns': PRONOUNS.get(premade.get('gender'), 'they/them'),
                'age': max(16, int(premade.get('age') or 30)), 'place': place_id, 'role': role[:ROLE_CHARS],
                'staff': False, 'about': premade.get('about', ''), 'wants': first_text(entry.get('wants'))[:WANTS_CHARS],
@@ -57,7 +58,10 @@ def sheet_for(data: dict, place_id: str, premade: dict, world: str | None) -> di
     held = data | {'notables': [*townsfolk.notables_at(data, place_id), notable]}
     index = townsfolk.everyone(held, place) - 1
     drawn = townsfolk.person(held, place, index)
-    return drawn | {'key': premade['id'], 'cast': premade['id']}
+    # Their own habit from the package, when it gives one, rather than a drawn one.
+    tell = first_text(entry.get('tells')).rstrip('.')
+    own = {'quirk': tell[:1].lower() + tell[1:]} if tell else {}
+    return drawn | own | {'key': premade['id'], 'cast': premade['id']}
 
 
 def checked(leads: list[dict], chosen_id: str | None, chosen: dict) -> dict[str, dict]:
