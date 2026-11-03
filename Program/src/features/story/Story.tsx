@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState, type KeyboardEvent } from 'react'
+import { Fragment, useEffect, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { ArrowDown, Bookmark, RotateCcw, Send, Timer, Undo2 } from 'lucide-react'
 import { api, newId, streamApi } from '../../api'
@@ -29,7 +29,13 @@ import { EntityHost } from './EntityCard'
 import { STORY_KEY } from './table'
 import { freshIdeas, withIdea, type Ideas } from './ideas'
 import { ReplyCard } from '../round/ReplyCard'
-import { ROUND_KEY, useRoundPlay } from '../round/useRound'
+import { PACE_KEY, ROUND_KEY, useRoundPlay } from '../round/useRound'
+import { useLineMarks, useMode, useWatch } from '../round/useModes'
+import { ModeSwitch } from '../round/ModeSwitch'
+import { WatchBar } from '../round/WatchBar'
+import { LineTools } from '../round/LineTools'
+import { openingKind, type LineMarks, type Mode } from '../round/round'
+import { composerText, NUDGE } from '../round/roundText'
 
 /** The story: the user's own story around the cities, told by a narrator. */
 export function Story({ go }: { go: (view: View) => void }) {
@@ -51,13 +57,11 @@ export function Story({ go }: { go: (view: View) => void }) {
   const look = useWorldTheme(story.data)
   // The round loop (src/features/round/): the timeline, the cast list's minds and the reply card.
   const round = useRoundPlay(setError)
-  if (story.isPending) return <Loading label="Opening your story" />
-  if (story.isError) return <ErrorNotice error={story.error} />
   const update = (data: StoryData) => client.setQueryData(STORY_KEY, data)
   // The turn stays on screen as streamed until the saved story has come back, so the narration never blinks out;
   // `streamed` is kept after the turn, as the draft the saved text is compared with (StoryNarration `draft`).
   const run = async (text: string | null, request: () => Promise<unknown>) => {
-    setSince(story.data.messages.length)
+    setSince(story.data?.messages.length ?? 0)
     setPending(text)
     setStreamed('')
     setTurn(NO_TURN)
@@ -65,7 +69,7 @@ export function Story({ go }: { go: (view: View) => void }) {
     setError('')
     try { await request() } catch (failure) { setError(failure instanceof Error ? failure.message : 'That did not work. Try again.') }
     finally {
-      await Promise.all([client.invalidateQueries({ queryKey: STORY_KEY }), client.invalidateQueries({ queryKey: ['story-journal'] }), client.invalidateQueries({ queryKey: ['story-gear'] }), client.invalidateQueries({ queryKey: ['story-sheet'] }), client.invalidateQueries({ queryKey: ['story-dice-log'] }), client.invalidateQueries({ queryKey: ROUND_KEY })])
+      await Promise.all([client.invalidateQueries({ queryKey: STORY_KEY }), client.invalidateQueries({ queryKey: ['story-journal'] }), client.invalidateQueries({ queryKey: ['story-gear'] }), client.invalidateQueries({ queryKey: ['story-sheet'] }), client.invalidateQueries({ queryKey: ['story-dice-log'] }), client.invalidateQueries({ queryKey: ROUND_KEY }), client.invalidateQueries({ queryKey: PACE_KEY })])
         .finally(() => setPending(null))
     }
   }
@@ -73,28 +77,41 @@ export function Story({ go }: { go: (view: View) => void }) {
   const note = (event: unknown) => { setTurn((before) => turnAfter(before, event as TurnEvent)); round.hear(event) }
   const send = (text: string) => run(text, () => streamApi('/story/messages/stream', { text, client_id: newId() }, grow, note))
   const change = (request: () => Promise<StoryData>) => run(null, () => request().then(update))
+  const mode = useMode(round.cast.table, setError)
+  // Author and Watch turns (POST /api/rounds/turns/stream): Next with the author's nudge, or with none in Watch.
+  const nextTurn = (nudge: string) => run(nudge, () => streamApi('/rounds/turns/stream', { nudge, against: mode.head }, grow, note))
+  const watch = useWatch({ on: mode.active === 'watch', busy: pending !== null, waiting: !!round.waiting, error,
+    next: () => void nextTurn(''), clear: () => setError('') })
+  const marks = useLineMarks(round.cast.table)
+  if (story.isPending) return <Loading label="Opening your story" />
+  if (story.isError) return <ErrorNotice error={story.error} />
   const draftLine = (text: string) => setDraft({ text, at: Date.now() })
   const opening = openingOf(story.data, pending, begun)
   return (
     <EntityHost story={story.data} onDraft={draftLine} onFind={(key) => void change(() => api<StoryData>('/story/find', { key }))}>
     <section className={look.className} style={look.style} aria-labelledby="story-heading">
       <div className="story-main">
-        <StoryHeader story={story.data} change={change} onDraft={(text) => setDraft({ text, at: Date.now() })} />
+        <StoryHeader story={story.data} change={change} onDraft={(text) => setDraft({ text, at: Date.now() })}
+          extra={<ModeSwitch shown={mode.shown} mode={mode.mode} onChange={mode.change} />} />
         {opening === 'title' ? <TitleScreen onBegin={() => setBegun(true)} onNew={toPackages} />
           : opening === 'start' ? <StoryStart onStarted={update} place={story.data.scene.city.name} /> : <>
           <StoryStage turn={`${story.data.scene.city.id}/${story.data.scene.place.id}/${story.data.messages.length}`} />
-          <StoryLog messages={story.data.messages} pending={story.data.messages.length > since ? null : pending} streamed={streamed} turn={turn} bands={story.data.bands}
+          <StoryLog marks={marks} messages={story.data.messages} pending={story.data.messages.length > since ? null : pending} streamed={streamed} turn={turn} bands={story.data.bands}
             onRetry={() => void run('', () => streamApi('/story/retry/stream', {}, grow, note))}
             onRewrite={(id, passage, note) => change(() => api<StoryData>(`/story/messages/${id}/rewrite`, { passage, note }))}
             onSwitch={(id) => change(() => api<StoryData>(`/story/messages/${id}/switch`, {}))}
             onBack={story.data.campaign?.ironman ? undefined : (id) => void run(null, () => api<StoryBack>('/story/back', { message_id: id }).then((data) => { update(data); setDraft({ text: data.draft, at: Date.now() }) }))}
             onBookmark={(id, name) => change(() => api<StoryData>('/story/bookmarks', { message_id: id, name }))} />
-          <StoryError error={round.shownError(error)} />
-          {round.waiting ? <ReplyCard waiting={round.waiting.awaiting} speaker={round.speaker} you={round.you} busy={pending !== null}
-            onAnswer={(kind, text) => void run(kind === 'reply' ? text.trim() : '', () => round.answer(kind, text, grow, note))} />
-          : <StoryComposer key={draft.at} busy={pending !== null} draft={draft.text} turn={story.data.messages.length} onSend={(text) => void send(text)}
-            commands={menuCommands(story.data)} onNewStory={() => setClearing(true)}
-            onAddModel={story.data.ready ? undefined : () => go('settings/models')} />}
+          <StoryError error={watch.hides(round.shownError(error))} />
+          <StoryFoot waiting={!!round.waiting} active={mode.active}
+            reply={() => round.waiting && <ReplyCard waiting={round.waiting.awaiting} speaker={round.speaker} you={round.you} busy={pending !== null}
+              onAnswer={(kind, text) => void run(kind === 'reply' ? text.trim() : '', () => round.answer(kind, text, grow, note))} />}
+            watch={() => <WatchBar playing={watch.playing} busy={pending !== null} pause={watch.pause}
+              onPlay={watch.play} onPause={watch.stop} onNext={() => void nextTurn('')} onRaise={() => go('settings/models')} onStop={watch.stop} />}
+            compose={() => <StoryComposer key={draft.at} busy={pending !== null} draft={draft.text} turn={story.data.messages.length}
+              nudge={mode.active === 'author'} onSend={(text) => void (mode.active === 'author' ? nextTurn(text) : send(text))}
+              commands={menuCommands(story.data)} onNewStory={() => setClearing(true)}
+              onAddModel={story.data.ready ? undefined : () => go('settings/models')} />} />
         </>}
         <NewStory open={clearing} onClose={() => setClearing(false)} onClear={() => run(null, () => api<StoryData>('/story', undefined, 'DELETE').then((data) => { update(data); setBegun(false) }))} />
       </div>
@@ -104,6 +121,15 @@ export function Story({ go }: { go: (view: View) => void }) {
     </section>
     </EntityHost>
   )
+}
+
+/** Under the story: the reply card while a character waits on the user, Watch's Play / Pause and Next in Watch, and
+ *  otherwise the composer. */
+interface FootProps { waiting: boolean; active: Mode; reply: () => ReactNode; watch: () => ReactNode; compose: () => ReactNode }
+
+function StoryFoot({ waiting, active, reply, watch, compose }: FootProps) {
+  if (waiting) return reply()
+  return active === 'watch' ? watch() : compose()
 }
 
 function StoryError({ error }: { error: string }) {
@@ -124,31 +150,34 @@ function toPackages() {
 
 /** Where and when the story is, and the fight, in one line: the place (which opens the maps to go somewhere else),
  *  the time, and how the character is. The title is for screen readers. */
-interface HeaderProps { story: StoryData; change: (request: () => Promise<StoryData>) => Promise<void>; onDraft: (text: string) => void }
+interface HeaderProps { story: StoryData; change: (request: () => Promise<StoryData>) => Promise<void>; onDraft: (text: string) => void; extra?: ReactNode }
 
-function StoryHeader({ story, change, onDraft }: HeaderProps) {
+function StoryHeader({ story, change, onDraft, extra }: HeaderProps) {
   const fight = foesText(story.fight)
   return (
     <header className="story-header">
       <h1 id="story-heading" className="visually-hidden">Story</h1>
-      <SceneBar scene={story.scene} map={story.map ?? null} line={sceneLine(story.scene, story.fight)} onDraft={onDraft}
+      <SceneBar scene={story.scene} map={story.map ?? null} line={sceneLine(story.scene, story.fight)} onDraft={onDraft} extra={extra}
         onMove={(body) => change(() => api<StoryData>('/story/scene', body, 'PUT'))} />
       {fight && <p className="story-fight" role="status">{fight}</p>}
     </header>
   )
 }
 
-interface SceneProps { scene: StoryScene; map: TravelMap | null; onDraft: (text: string) => void; onMove: (body: { city_id: string; place_id?: string }) => Promise<void>; line?: string[] }
+interface SceneProps { scene: StoryScene; map: TravelMap | null; onDraft: (text: string) => void; onMove: (body: { city_id: string; place_id?: string }) => Promise<void>; line?: string[]; extra?: ReactNode }
 
-function SceneBar({ scene, map, onDraft, onMove, line = [] }: SceneProps) {
+function SceneBar({ scene, map, onDraft, onMove, line = [], extra }: SceneProps) {
   const [moving, setMoving] = useState(false)
   return (
     <div className="story-scene">
+      <div className="story-scene-line">
       <p className="story-where">
         <button type="button" className="story-place" aria-expanded={moving} title={whereText(scene)} onClick={() => setMoving(!moving)}>
           <span className="visually-hidden">{moving ? 'Stay at ' : 'Go somewhere else from '}</span>{capitalized(scene.place.name)}</button>
         {line.map((item) => <span key={item}> · {item}</span>)}
       </p>
+      {extra}
+      </div>
       {moving && <GoElsewhere scene={scene} map={map} onDone={() => setMoving(false)} onDraft={onDraft} onMove={onMove} />}
     </div>
   )
@@ -159,7 +188,7 @@ function capitalized(name: string): string {
   return name.charAt(0).toUpperCase() + name.slice(1)
 }
 
-interface GoProps extends Omit<SceneProps, 'scene' | 'line'> { scene: StoryScene; onDone: () => void }
+interface GoProps extends Omit<SceneProps, 'scene' | 'line' | 'extra'> { scene: StoryScene; onDone: () => void }
 
 /** Going somewhere else, on the maps. A place across town is picked on the street map (./StoryTown.tsx) and is a cut.
  *  Another town, a keep or a hex is picked on the travel map (./StoryMap.tsx) and is a journey: it writes "I set out
@@ -207,7 +236,7 @@ function PlaceList({ places, onGo }: { places: StoryScene['places']; onGo: (id: 
 interface Rewrites { onRewrite: (id: string, passage: string, note: string) => Promise<void>; onSwitch: (id: string) => Promise<void> }
 interface LogProps extends Rewrites {
   messages: StoryMessage[]; pending: string | null; streamed: string; turn: TurnSoFar; bands?: BandStep[] | null
-  onRetry: () => void; onBack?: (id: string) => void; onBookmark: (id: string, name: string) => Promise<void>
+  marks: LineMarks | null; onRetry: () => void; onBack?: (id: string) => void; onBookmark: (id: string, name: string) => Promise<void>
 }
 
 /** How near the bottom (px) still counts as reading the newest text, so the log keeps following it. */
@@ -232,14 +261,14 @@ function useFollow(shown: string, pending: string | null) {
   return { log, end, onScroll, toEnd, behind: !atEnd && readTo !== shown }
 }
 
-function StoryLog({ messages, pending, streamed, turn, bands, onRetry, onBack, onBookmark, onRewrite, onSwitch }: LogProps) {
+function StoryLog({ messages, pending, streamed, turn, bands, marks, onRetry, onBack, onBookmark, onRewrite, onSwitch }: LogProps) {
   const { log, end, onScroll, toEnd, behind } = useFollow(`${messages.length}:${streamed.length}`, pending)
   const last = messages[messages.length - 1]
   const receipts = receiptsByReply(messages)
   return (
     <div className="story-log" aria-live="polite" ref={log} onScroll={onScroll}>
       {messages.map((message) => <Fragment key={message.id}>
-        <StoryLine message={message} bands={bands} onBack={pending ? undefined : onBack} onBookmark={pending ? undefined : onBookmark}
+        <StoryLine message={message} bands={bands} marks={marks} onBack={pending ? undefined : onBack} onBookmark={pending ? undefined : onBookmark}
           rewrites={pending === null ? { onRewrite, onSwitch } : undefined} draft={pending === null && message === last ? streamed : undefined} />
         <TurnReceipt chips={receipts.get(message.id)} />
       </Fragment>)}
@@ -255,12 +284,12 @@ function StoryLog({ messages, pending, streamed, turn, bands, onRetry, onBack, o
 
 /** `onBack` goes back to before a line of the player's, to send it again with new dice; `rewrites` rewords a
  *  narration (none while a turn is being told). */
-interface LineProps { message: StoryMessage; bands?: BandStep[] | null; onBack?: (id: string) => void; onBookmark?: (id: string, name: string) => Promise<void>; rewrites?: Rewrites; draft?: string }
+interface LineProps { message: StoryMessage; bands?: BandStep[] | null; marks?: LineMarks | null; onBack?: (id: string) => void; onBookmark?: (id: string, name: string) => Promise<void>; rewrites?: Rewrites; draft?: string }
 
-function StoryLine({ message, bands, onBack, onBookmark, rewrites, draft }: LineProps) {
+function StoryLine({ message, bands, marks, onBack, onBookmark, rewrites, draft }: LineProps) {
   if (message.role === 'scene') return <p className="story-move">{message.text}</p>
   if (message.role === 'user') return <>
-    <p className="story-user" id={`line-${message.id}`}>{message.text}</p>
+    <OpeningLine message={message} />
     <div className="story-turn">
       {message.cards?.map((card, index) => <LifeCard key={index} card={card} />)}
       {message.rolls?.map((roll, index) => <RollCard key={index} roll={roll} bands={bands} />)}
@@ -270,12 +299,21 @@ function StoryLine({ message, bands, onBack, onBookmark, rewrites, draft }: Line
         {onBack && <button type="button" className="text-button story-back" onClick={() => onBack(message.id)}
           title="Go back to before this line and send it again, with new dice. The story from here is kept as a branch."><Undo2 aria-hidden="true" />Go back here</button>}
         {onBookmark && <BookmarkButton onSave={(name) => onBookmark(message.id, name)} />}
+        <LineTools turnId={message.turn_id} marks={marks} />
       </div>
     </div>
     {message.crisis_help && <CrisisNote />}
   </>
   if (message.status === 'failed') return <Notice tone="error">The narrator could not go on: {message.error}</Notice>
   return <StoryNarration message={message} draft={draft} {...rewrites} />
+}
+
+/** A round turn's opening line: the player's own line, the author's nudge, or nothing for a Watch turn. */
+function OpeningLine({ message }: { message: StoryMessage }) {
+  const kind = openingKind(message)
+  if (kind === 'none') return <span id={`line-${message.id}`} />
+  return <p className={kind === 'nudge' ? 'story-user story-nudge' : 'story-user'} id={`line-${message.id}`}>
+    {kind === 'nudge' && <span className="visually-hidden">{NUDGE.label}: </span>}{message.text}</p>
 }
 
 /** Names this moment to find it again (adventure/chapters.py bookmarks). */
@@ -296,15 +334,19 @@ function BookmarkButton({ onSave }: { onSave: (name: string) => Promise<void> })
  * text model yet, Send is `onAddModel`: it opens Settings > Models. */
 interface ComposerProps {
   busy: boolean; draft: string; turn: number; onSend: (text: string) => void; onAddModel?: () => void
+  /** In Author the line is a nudge to the story (PL-4), and Next with none plays the next turn as it comes. */
+  nudge?: boolean
   commands: MenuCommand[]; onNewStory: () => void
 }
 
-function StoryComposer({ busy, draft, turn, onSend, onAddModel, commands, onNewStory }: ComposerProps) {
+function StoryComposer({ busy, draft, turn, onSend, onAddModel, commands, onNewStory, nudge = false }: ComposerProps) {
   const [text, setText] = useState(draft)
   const [found, setFound] = useState<Ideas | null>(null)
   const box = useRef<HTMLTextAreaElement>(null)
   const shown = freshIdeas(found, turn)
-  const submit = () => { if (text.trim() && !busy && !onAddModel) { onSend(text.trim()); setText(''); setFound(null) } }
+  const ready = !busy && (nudge || !!text.trim())
+  const words = composerText(nudge, !text.trim())
+  const submit = () => { if (ready && !onAddModel) { onSend(text.trim()); setText(''); setFound(null) } }
   const askIdeas = () => { if (!busy) api<Ideas>('/story/ideas', {}).then(setFound, () => setFound(null)) }
   const onKeyDown = (event: KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); submit() }
@@ -323,12 +365,12 @@ function StoryComposer({ busy, draft, turn, onSend, onAddModel, commands, onNewS
     <form className="composer story-composer" onSubmit={(event) => { event.preventDefault(); submit() }}>
       <StoryMenu commands={commands} onRun={run} />
       <AuthorsNote chat="story" name="The narrator" story quiet />
-      <label className="visually-hidden" htmlFor="story-text">What you do or say</label>
-      <textarea ref={box} id="story-text" rows={2} value={text} maxLength={40000} placeholder="What do you do or say?"
+      <label className="visually-hidden" htmlFor="story-text">{words.label}</label>
+      <textarea ref={box} id="story-text" rows={2} value={text} maxLength={words.max} placeholder={words.placeholder}
         onChange={(event) => setText(event.target.value)} onKeyDown={onKeyDown} />
       {onAddModel
         ? <button type="button" className="button primary" onClick={onAddModel}>Add a model</button>
-        : <button type="submit" className="button primary" disabled={busy || !text.trim()}><Send aria-hidden="true" />Send</button>}
+        : <button type="submit" className="button primary" disabled={!ready}><Send aria-hidden="true" />{words.send}</button>}
     </form>
     <AiFooter />
   </>)

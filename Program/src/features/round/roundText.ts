@@ -1,6 +1,6 @@
 // The round loop's words on the play screen and in Settings (docs/style-guide.md "Copy"). Kept free of React, so
 // tests/ui can load it directly.
-import { decidedCount, rowStatus, seatName, stepAt, type AgentPace, type Awaiting, type Loyalty, type Mode, type PresetKey, type MindRow, type ReportRoll, type RoundLive, type RoundState, type RoundTable, type TurnReport } from './round.ts'
+import { decidedCount, rowStatus, seatName, stepAt, type AgentPace, type Awaiting, type WatchPause, type Loyalty, type Mode, type PresetKey, type MindRow, type ReportRoll, type RoundLive, type RoundState, type RoundTable, type TurnReport } from './round.ts'
 
 export const STEP_NAMES = { declare: 'Declare', react: 'React', talk: 'Talk', roll: 'Roll', write: 'Write' } as const
 
@@ -110,3 +110,25 @@ export function mindLines(row: MindRow, name: (key: string) => string): string[]
   return [row.intent ?? '', ...(row.lines ?? []).map((line) => `“${line.text}”${to(line.to) ? ` to ${to(line.to)}` : ''}`),
     ...(row.whispers ?? []).map((item) => `${GM_NAMES.whisper} “${item.text}”${to(item.to) ? ` to ${to(item.to)}` : ''}`)].filter(Boolean)
 }
+
+// Modes ---------------------------------------------------------------------------------------------------------------
+
+export const MODE_NAMES = { play: 'Play', author: 'Author', watch: 'Watch' } as const
+export const MODE_LABEL = 'Mode'
+/** The composer in Author, where a line is the author's nudge to the story (PL-4). */
+export const NUDGE = { placeholder: 'Nudge the story', label: 'Your nudge', send: 'Next' } as const
+
+/** The composer's words: the player's line in Play, the author's nudge in Author, where Send with no nudge is Next. */
+export function composerText(nudge: boolean, empty: boolean) {
+  if (!nudge) return { label: 'What you do or say', placeholder: 'What do you do or say?', send: 'Send', max: 40000 }
+  return { label: NUDGE.label, placeholder: NUDGE.placeholder, send: empty ? NUDGE.send : 'Send', max: 4000 }
+}
+export const WATCH_NAMES = { play: 'Play', pause: 'Pause', next: 'Next', label: 'Watch', raise: 'Raise cap', stop: 'Stop here', retry: 'Try again' } as const
+
+/** The pause banner's line, always with the reason (PL-10). */
+export function pauseLine(pause: Exclude<WatchPause, null>): string {
+  return pause.reason === 'cap' ? 'Paused: this session reached its token cap' : `Paused: ${pause.text.replace(/\.$/, '')}`
+}
+
+/** On a story line whose turn had the GM view open: "GM view was open" (PL-12). */
+export const MARK_NAMES = { gm: 'GM view was open', report: 'Report' } as const

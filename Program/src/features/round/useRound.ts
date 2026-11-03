@@ -3,10 +3,12 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api, streamApi, type StreamNote } from '../../api'
 import { useWorlds } from '../worlds/useWorlds'
 import { personaName } from '../worlds/worldsText'
-import { NO_ROUND, replyBody, roundAfter, roundStarting, seatChanges, seatName, waitingOn, type CastRound, type Mind, type ReplyKind, type RoundTable } from './round'
+import { hasAgents, modeOf, motivesOf, NO_ROUND, replyBody, roundAfter, roundStarting, seatChanges, seatName, waitingOn, type CastRound, type Mind, type MindRow, type ReplyKind, type RoundTable } from './round'
 import { titleWhile } from './roundText'
 
 export const ROUND_KEY = ['rounds']
+/** The agents' pace and the session's spend (GET /api/agents). */
+export const PACE_KEY = ['agents']
 /** The user's own seat at the table, as the human, in Play. */
 const YOU = 'you'
 
@@ -42,8 +44,10 @@ export function useRoundPlay(onError: (text: string) => void) {
   const you = personaName(useWorlds().data?.persona)
   const waiting = waitingOn(live, table.data)
   useTitleWhile(!!waiting)
+  const minds = useQuery({ queryKey: [...ROUND_KEY, 'minds'], queryFn: () => api<{ minds: MindRow[] }>('/minds'),
+    enabled: hasAgents(table.data) && modeOf(table.data) !== 'play' })
   const cast: CastRound = {
-    live, table: table.data, waiting: waiting?.awaiting ?? null,
+    live, table: table.data, waiting: waiting?.awaiting ?? null, motives: motivesOf(minds.data?.minds),
     onMind: (person, mind) => void seat(seatChanges(table.data, person, mind, { key: YOU, name: you || 'You' }))
       .catch((failure: unknown) => onError(failure instanceof Error ? failure.message : 'Not changed.')),
   }
