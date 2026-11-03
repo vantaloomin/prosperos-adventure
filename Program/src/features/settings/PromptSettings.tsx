@@ -16,7 +16,7 @@ export function PromptSettings() {
     <section className="settings-section form-stack" aria-labelledby="prompts-heading">
       <div>
         <h2 id="prompts-heading">Prompts</h2>
-        <p className="subtle">The instructions your models are given. Changes apply to the next request, and Reset to default brings back the shipped wording. Words in double braces, such as {'{{name}}'}, are filled in by the app and must stay. Staying in character, OOC answers and the picture safety check are handled by the app too, so they keep working whatever a prompt says.</p>
+        <p className="subtle">The instructions your models are given. Changes apply to the next request, and Reset to default brings back the shipped wording. Words in double braces, such as {'{{name}}'}, are filled in by the app and must stay. Staying in character, OOC answers, what each character may know and the picture safety check are handled by the app too, so they keep working whatever a prompt says.</p>
       </div>
       {groupPrompts(prompts.data).map(([group, items]) => (
         <div key={group} className="form-stack">

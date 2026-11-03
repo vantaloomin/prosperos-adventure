@@ -1,4 +1,5 @@
-"""The core prompts a power user may reword in Settings > Developer (docs/prompts.md).
+"""The core prompts a power user may reword in Settings > Developer (docs/prompts.md): the Story's narrator and round
+Writer, and the Characters' minds (adventure/rounds/agents.py).
 
 Each prompt's default lives where it is used, a module constant written for `str.format`. Here they are shown and
 stored in one form,
@@ -28,9 +29,13 @@ def from_format(text: str) -> str:
     return FORMAT_TOKEN.sub(lambda match: '{{' + match[1] + '}}' if match[1] else match[0][0], text)
 
 
-def constant(module: str, name: str):
-    """A module constant read when needed, so an update to the code is the new default at once."""
-    return lambda: from_format(getattr(import_module(module), name))
+def constant(module: str, name: str, key: str | None = None):
+    """A module constant read when needed, so an update to the code is the new default at once; `key` picks one entry
+    of a dict constant."""
+    def read() -> str:
+        value = getattr(import_module(module), name)
+        return from_format(value[key] if key is not None else value)
+    return read
 
 
 @dataclass(frozen=True)
@@ -43,23 +48,60 @@ class Prompt:
     placeholders: dict[str, str] = field(default_factory=dict)
 
 
-CHAT = 'Story'
+CHAT, CHARACTERS = 'Story', 'Characters'
+AGENTS = 'adventure.rounds.agents'
 PROMPTS = {prompt.name: prompt for prompt in (
     Prompt('story-narrator', CHAT, 'The Story narrator',
-           'Opens every reply in the story: who the narrator is and its contract with the game (the facts are '
-           "fixed, the player's words are expanded, everyone else lives their own life). The scene, the "
-           'narration format and the intensity follow it, and the app decides them. OOC answers are also '
-           'enforced by the app.',
+           'Opens every reply in the story: who the narrator is and its contract with the game (what wins when '
+           "instructions disagree, the facts are fixed, the player's words are expanded, everyone else lives their "
+           'own life, the content rules). The scene, the narration format and the intensity follow it, and the app '
+           'decides them. OOC answers are also enforced by the app.',
            constant('adventure.narration.prompt', 'CORE')),
     Prompt('narrator-craft', CHAT, "The narrator's writing rules",
-           'Follows the Story narrator: how to write, the dialogue rules and the phrases never to use. Models '
-           'with a small context window get a short version instead. Em dashes and the strongest tells are '
-           'also checked by the app after every reply, and rewritten before you see them.',
+           'Follows the Story narrator and the round Writer: the hard rules (em dashes and the dialogue rules), then '
+           'how to write. Models with a small context window get a short version instead. Em dashes, stock phrases '
+           'and the strongest tells are checked by the app after every reply, and rewritten before you see them, so '
+           'they are not listed here.',
            constant('adventure.narration.prompt', 'CRAFT')),
+    Prompt('round-writer', CHAT, 'The round Writer',
+           'Opens every round the Writer tells when other characters think for themselves (a party in Play, Author '
+           'and Watch), in place of the Story narrator: its contract with the game, what wins when instructions '
+           'disagree, the brief and the content rules. The writing rules, the house rules, the point of view, the '
+           'intensity and what the Writer may know follow it, and the app decides them.',
+           constant('adventure.rounds.writer', 'ROUND')),
     Prompt('authors-note', CHAT, "Author's note",
            "Goes right before your author's note, the last thing the model reads before your message while "
            'the note is switched on. Your note follows this line.',
            constant('adventure.authors_note', 'HEADER')),
+    Prompt('character-mind', CHARACTERS, "A character's mind",
+           'Opens every call to a character who thinks for themselves: whom they play, that they decide only from '
+           'inside their own head, that their sheet is canon, how they speak, and the content rules. What the '
+           "character may know, the shape of their answer, the intensity and the scheming dial are added by the app, "
+           "so no wording here can show a character someone else's secrets.",
+           constant(AGENTS, 'MIND'), {'character': "the character's name"}),
+    Prompt('character-declare', CHARACTERS, 'Deciding a move',
+           'Follows the character\'s mind when everyone decides at once at the start of a round.',
+           constant(AGENTS, 'PURPOSES', 'declare')),
+    Prompt('character-react', CHARACTERS, 'Reacting to the others',
+           'Follows the character\'s mind once everyone has declared, when a character may change their move once. '
+           'How they say whether it changed is added by the app.',
+           constant(AGENTS, 'PURPOSES', 'react')),
+    Prompt('character-ask', CHARACTERS, 'Speaking up',
+           'Follows the character\'s mind in the talk inside a round, when a character is chosen to say something to '
+           'someone. The app names whom.',
+           constant(AGENTS, 'PURPOSES', 'ask')),
+    Prompt('character-answer', CHARACTERS, 'Answering',
+           'Follows the character\'s mind in the talk inside a round, when someone has just spoken to a character. '
+           'The app adds the line they answer.',
+           constant(AGENTS, 'PURPOSES', 'answer')),
+    Prompt('character-offpage', CHARACTERS, 'Off the page',
+           'Follows the character\'s mind when something happened away from the main scene and the character says a '
+           'few lines in it. The app adds what happened and who was there.',
+           constant(AGENTS, 'PURPOSES', 'offpage')),
+    Prompt('character-turning', CHARACTERS, 'Turning on someone',
+           'What a character may do once they turn against someone, and what turns them. How they stand with each '
+           'person present follows it, worked out by the app from their feelings.',
+           constant(AGENTS, 'TURNING')),
 )}
 
 

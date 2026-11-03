@@ -49,7 +49,7 @@ export const SETTINGS_TABS: SettingsTabInfo[] = [
     id: 'developer', label: 'Developer', sections: [
       { heading: 'model-calls-heading', title: 'Record model calls', keywords: 'log logs logging record recording requests responses raw sent strange reply support troubleshoot' },
       { heading: 'debug-heading', title: 'Debug time', keywords: 'debug test testing time travel jump skip ahead days fast forward speed accelerate spoof date clock' },
-      { heading: 'prompts-heading', title: 'Prompts', keywords: 'prompt prompts system instructions wording narrator story craft writing rules authors note power user advanced' },
+      { heading: 'prompts-heading', title: 'Prompts', keywords: 'prompt prompts system instructions wording narrator story craft writing rules round writer authors note characters character agent agents mind minds scheming react power user advanced' },
     ],
   },
 ]

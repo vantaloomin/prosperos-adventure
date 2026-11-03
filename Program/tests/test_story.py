@@ -64,7 +64,7 @@ def test_the_narrator_is_given_the_scene(client, clock, provider):
     say(client, 'I order a coffee and the secret password is plum.', 'story-0001')
     request = provider.requests[-1]
     assert 'You are the narrator of a tabletop roleplaying game for adults' in request['system']
-    assert 'Never write:' in request['system'] and 'second person' in request['system']
+    assert 'Hard rules' in request['system'] and 'second person' in request['system']
     assert f"Place: {place['name']}" in request['system'] and 'Weather:' in request['system']
     # Named spots inside the place are detail for the narrator and the screen (adventure/world/inside.py).
     spots = moved['scene']['place']['spots']
