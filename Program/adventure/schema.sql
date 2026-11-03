@@ -1063,7 +1063,7 @@ CREATE TABLE IF NOT EXISTS story_seeds (
 );
 
 -- Each arc stage's planned beats (adventure/plotting.py): drafted by the director model or the world's own, in order;
--- the GM view can cut and reorder them.
+-- the GM view can cut and reorder them, and the Author can add to them too (adventure/rounds/author.py).
 CREATE TABLE IF NOT EXISTS story_arc_beats (
   id TEXT PRIMARY KEY,
   arc_id TEXT NOT NULL,
@@ -1072,7 +1072,9 @@ CREATE TABLE IF NOT EXISTS story_arc_beats (
   position INTEGER NOT NULL DEFAULT 0,
   cut INTEGER NOT NULL DEFAULT 0,
   used INTEGER NOT NULL DEFAULT 0,
-  source TEXT NOT NULL DEFAULT 'world'
+  source TEXT NOT NULL DEFAULT 'world',
+  -- Reached the page (adventure/rounds/author.py): the beat board shows which beats have landed.
+  landed INTEGER NOT NULL DEFAULT 0
 );
 
 -- The institutions the character belongs to and the classes they take (adventure/institutions.py).
@@ -1422,4 +1424,55 @@ CREATE TABLE IF NOT EXISTS round_shown (
   status TEXT NOT NULL CHECK (status IN ('drafted', 'applied', 'dismissed')),
   created_at TEXT NOT NULL,
   decided_at TEXT
+);
+
+-- W7 Author, Watch and the Dungeon systems in agent play (adventure/rounds/author.py, watch.py, modes.py). ---------
+
+-- How the modes play in this campaign (adventure/rounds/modes.py): who stands in for the user's character outside
+-- Play (an agent or its Program mind), and Watch's timer in seconds (0: by hand only). A choice made by the user, so
+-- it is not rewound with the story.
+CREATE TABLE IF NOT EXISTS mode_settings (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  stand_in TEXT NOT NULL DEFAULT 'program' CHECK (stand_in IN ('agent', 'program')),
+  watch_seconds INTEGER NOT NULL DEFAULT 20 CHECK (watch_seconds BETWEEN 0 AND 3600),
+  updated_at TEXT NOT NULL DEFAULT ''
+);
+
+-- Each switch out of Play (adventure/rounds/modes.py): whether the user chose to see the motives they missed in the
+-- turns played before it.
+CREATE TABLE IF NOT EXISTS mode_switches (
+  id TEXT PRIMARY KEY,
+  from_mode TEXT NOT NULL,
+  to_mode TEXT NOT NULL,
+  reveal INTEGER NOT NULL DEFAULT 0,
+  -- The newest round turn when the switch was made (its rowid): the turns it covers.
+  through_turn INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL
+);
+
+-- Beats the user would like to see, written in Play beside their line (adventure/rounds/author.py): waiting for the
+-- next turn, which takes them at Gather and lets them go at Commit.
+CREATE TABLE IF NOT EXISTS nudge_box (
+  id TEXT PRIMARY KEY,
+  text TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+
+-- Whether a turn's nudges took (adventure/rounds/author.py): "Used" or "Not yet", and why. Keyed by the turn, so
+-- going back shows the feedback of the turn now newest.
+CREATE TABLE IF NOT EXISTS author_feedback (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  position INTEGER NOT NULL DEFAULT 0,
+  nudge TEXT NOT NULL,
+  status TEXT NOT NULL CHECK (status IN ('used', 'not_yet')),
+  why TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS author_feedback_turn ON author_feedback (turn_id, position);
+
+-- Watch turns the user chose to go on from after a pause (adventure/rounds/watch.py).
+CREATE TABLE IF NOT EXISTS watch_continued (
+  turn_id TEXT PRIMARY KEY,
+  created_at TEXT NOT NULL
 );
