@@ -68,6 +68,7 @@ Each script has a Mac twin in `Mac` with the same name ending in `.command`.
 - [Product spec](docs/spec.md)
 - [Style guide and UI requirements](docs/style-guide.md)
 - [Development](Program/docs/development.md)
+- [End-to-end user flow testing](Program/docs/e2e-testing.md)
 - [Backbone architecture](Program/docs/architecture.md)
 - [Models](Program/docs/models.md)
 - [The story](Program/docs/story.md)
