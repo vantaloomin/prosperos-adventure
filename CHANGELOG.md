@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Play, Author and Watch on the cast page.** Beside the place name on the cast page, pick the mode the story starts in. In Author and Watch no card is You: the character whose story it is gets Thinks or Rules like the rest, for who plays them while you author or watch.
 - **Your party on the cast page.** Once the game seats the other leads as your party at Begin, every lead but the one you play shows Thinks or Rules under their card (the card you play is marked You), and Begin sends how each one decides.
 - **Notes and a model for each thinking character.** A thinking character's open row in the cast list has your notes on them and, when you have a finished model, which model they think with (Agents' model by default).
 - **Ask a character again.** Open a thinking character's row in the cast list after a turn and Ask them again: the turn plays again on a new branch with only their choice made afresh. Under Branches, a branch made this way reads as a question with their portrait: "What if Hesk had chosen otherwise?"

@@ -36,6 +36,22 @@ export function useMode(table: RoundTable | undefined, onError: (text: string) =
   return { shown, mode: modeChosen(table), active, change: (mode: Mode) => void change(mode), head: table?.head ?? null, asking: asking && active !== 'play', answer }
 }
 
+/** The cast page's Play, Author and Watch (CA-6), before the story begins: the mode the first turn plays in and, outside
+ *  Play, who stands in for the user's character (PUT /api/rounds/mode, /api/rounds/mode/settings). With no story yet
+ *  there are no motives to miss, so leaving Play answers that question as Keep hidden. */
+export function useCastMode(on: boolean, onError: (text: string) => void) {
+  const client = useQueryClient()
+  const view = useQuery({ queryKey: MODE_KEY, queryFn: () => api<ModeView & { coming?: Mode }>('/rounds/mode'), enabled: on })
+  const put = (path: string, body: object) => void api(path, body, 'PUT')
+    .then(() => client.invalidateQueries({ queryKey: ROUND_KEY }), (failure: unknown) => onError(failure instanceof Error ? failure.message : 'Not changed'))
+  return {
+    mode: view.data?.coming ?? 'play',
+    standIn: view.data?.settings.stand_in === 'agent' ? 'agent' as const : 'program' as const,
+    change: (mode: Mode) => put('/rounds/mode', { mode, reveal: false }),
+    setStandIn: (mind: 'agent' | 'program') => put('/rounds/mode/settings', { stand_in: mind }),
+  }
+}
+
 /** `next` plays the timer's turn (POST /api/rounds/watch/next/stream); `clear` puts away the last turn's error. */
 interface WatchProps {
   on: boolean; busy: boolean; waiting: boolean; error: string; head: string | null
