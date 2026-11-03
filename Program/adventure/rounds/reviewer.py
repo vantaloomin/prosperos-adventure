@@ -11,7 +11,7 @@ note only when its quote is really in the draft, at most MOST_NOTES of them. The
 declines it with a reason, in one rewrite; a note whose quote is still on the page counts as declined. The result
 goes on to the scan (adventure/rounds/scan.py settle), which always runs.
 
-On by default in the "Rich and slow" preset, a toggle in the others (`enabled`). A Reviewer that fails, times out
+On by default in the "Rich" preset, a toggle in the others (`enabled`). A Reviewer that fails, times out
 or answers with something code can't read leaves the draft as it was: it never loses a turn.
 """
 import json
@@ -48,7 +48,7 @@ Reply with JSON only: {"text": "the whole revised turn", "declined": [{"quote": 
 
 def enabled(settings: dict) -> bool:
     """Whether the Reviewer runs: the user's own choice, else what the agents' preset says (adventure/rounds/agents.py
-    PRESETS: on only in "Rich and slow")."""
+    PRESETS: on only in "Rich")."""
     from adventure.rounds import agents
     chosen = settings.get('reviewer')
     if chosen is not None:
