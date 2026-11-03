@@ -97,12 +97,13 @@ export function serverFiles(data: BackendFiles | undefined, failed: string | nul
 }
 
 /** The choices for one slot: the server's files (only the family's when `familyOnly` and it has any), with the
- * current value first when the list leaves it out. */
-export function fileChoices(options: string[], current: string, matching: string[] = [], familyOnly = false, same?: string): { value: string; label: string }[] {
+ * current value and the one the dropdown opened on (`start`, the saved choice or default) first when the list
+ * leaves them out, so picking another file never loses the way back. */
+export function fileChoices(options: string[], current: string, matching: string[] = [], familyOnly = false, same?: string, start = ''): { value: string; label: string }[] {
   const shown = familyOnly && matching.length > 0 ? matching : options
   const listed = [...(same ? [{ value: '', label: same }] : []), ...shown.map(value => ({ value, label: value }))]
-  if (!current || shown.includes(current)) return listed
-  return [{ value: current, label: current }, ...listed]
+  const kept = [...new Set([current, start])].filter(value => value && !shown.includes(value))
+  return [...kept.map(value => ({ value, label: value })), ...listed]
 }
 
 /** Whether a server that listed files lacks this one, said on its own line under the dropdown (Iris). */

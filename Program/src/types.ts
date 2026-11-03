@@ -636,3 +636,12 @@ export interface TownPolitics {
   relations: PoliticsRelation[]
   people: PoliticsPerson[]
 }
+
+/** Settings > General > Updates (adventure/updates.py). */
+export interface UpdateCheck {
+  status: 'newer' | 'current' | 'unavailable'
+  current: string; latest: string | null; title: string | null; published: string | null
+  /** The release's page on GitHub, or the releases page when the check failed. */
+  page: string
+  install: 'installer' | 'folder'; system: 'windows' | 'mac' | 'other'
+}

@@ -89,7 +89,7 @@ function ZonePicker({ value, saved, pc, hint, onChange }: { value: string; saved
   const here = pc ? zones.find((item) => item.id === pc) : undefined
   return <>
     <Field label="Find a time zone">{(id) => (
-      <input id={id} type="search" value={query} placeholder="A city, a zone name or an offset, like Tokyo, Pacific or +05:30" onChange={(event) => setQuery(event.target.value)} />
+      <input autoComplete="off" id={id} type="search" value={query} placeholder="A city, a zone name or an offset, like Tokyo, Pacific or +05:30" onChange={(event) => setQuery(event.target.value)} />
     )}</Field>
     <Field label="Your timezone" hint={hint}>{(id, describedBy) => (
       <select id={id} aria-describedby={describedBy} value={value} onChange={(event) => onChange(event.target.value)}>

@@ -167,7 +167,7 @@ function WorldRow({ world, run, store, onSwitch }: { world: World; run: Run; sto
       {renaming
         ? <form className="world-rename" onSubmit={(event) => { event.preventDefault(); void rename() }}>
             <label className="visually-hidden" htmlFor={`world-name-${world.id}`}>World name</label>
-            <input id={`world-name-${world.id}`} value={name} maxLength={80} required onChange={(event) => setName(event.target.value)} />
+            <input autoComplete="off" id={`world-name-${world.id}`} value={name} maxLength={80} required onChange={(event) => setName(event.target.value)} />
             <button type="submit" className="button">Save</button>
             <button type="button" className="text-button" onClick={() => { setRenaming(false); setName(world.name) }}>Cancel</button>
           </form>

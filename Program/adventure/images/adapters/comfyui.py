@@ -381,6 +381,42 @@ def worded(config, request, styles) -> tuple[str, str]:
     return triggered(prompt, request.lora, styles), negative
 
 
+# Where ComfyUI looks for the file each loader input names, for a rejection that says which file is missing.
+MODEL_FOLDERS = {'unet_name': 'diffusion_models', 'ckpt_name': 'checkpoints', 'vae_name': 'vae', 'lora_name': 'loras',
+                 'clip_name': 'text_encoders', 'clip_name1': 'text_encoders', 'clip_name2': 'text_encoders',
+                 'clip_name3': 'text_encoders', 'clip_name4': 'text_encoders'}
+
+
+def rejection_text(body: dict) -> str:
+    """Why ComfyUI refused the workflow, naming the node and the file or setting at fault (its `node_errors`), and
+    what to do about it. Its own top line ("Prompt outputs failed validation") says only that something is wrong."""
+    for node_id, found in (body.get('node_errors') or {}).items():
+        if text := node_rejection(node_id, found or {}):
+            return text
+    error = body.get('error') if isinstance(body.get('error'), dict) else {}
+    if error.get('type') == 'missing_node_type':
+        return (f"ComfyUI is missing a node the workflow uses: {error.get('message') or 'unknown node'}. Run the "
+                'compatibility check in Settings > Images to see what to install.')
+    return f"ComfyUI rejected the workflow: {error.get('message') or 'invalid workflow'}. " \
+        'Run the compatibility check in Settings.'
+
+
+def node_rejection(node_id: str, found: dict) -> str:
+    """One refused node's first error: a model file ComfyUI does not have is named with the folder it goes in."""
+    node = found.get('class_type') or f'node {node_id}'
+    for error in found.get('errors') or []:
+        extra = error.get('extra_info') or {}
+        name, value = extra.get('input_name'), extra.get('received_value')
+        if error.get('type') == 'value_not_in_list' and name in MODEL_FOLDERS and isinstance(value, str):
+            return (f"ComfyUI does not have {value}, which the workflow's {node} node loads. Put it in ComfyUI's "
+                    f"models/{MODEL_FOLDERS[name]} folder and restart ComfyUI, or choose a model it has in "
+                    'Settings > Images.')
+        detail = str(error.get('details') or error.get('message') or 'invalid input')
+        detail = re.sub(r'\s+not in \[.*', ' is not one it offers', detail, flags=re.DOTALL)[:200]  # not every option
+        return f"ComfyUI rejected the workflow's {node} node: {detail}. Run the compatibility check in Settings."
+    return ''
+
+
 def failure_text(entry) -> str:
     for message in (entry.get('status') or {}).get('messages', []):
         if isinstance(message, list) and message and message[0] == 'execution_error':
@@ -475,9 +511,7 @@ class ComfyAdapter:
         response = await self.call(client, 'POST', '/prompt', json={'prompt': graph, 'client_id': uuid4().hex})
         body = response.json() if response.headers.get('content-type', '').startswith('application/json') else {}
         if response.status_code == 400 or body.get('node_errors'):
-            error = (body.get('error') or {}).get('message') if isinstance(body.get('error'), dict) else None
-            raise AdapterError('incompatible', f"ComfyUI rejected the workflow: {error or 'invalid workflow'}. "
-                               'Run the compatibility check in Settings.')
+            raise AdapterError('incompatible', rejection_text(body))
         if not response.is_success or 'prompt_id' not in body:
             raise AdapterError('failed', f'ComfyUI did not accept the request (HTTP {response.status_code}).')
         return body['prompt_id']

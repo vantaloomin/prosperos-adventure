@@ -325,7 +325,7 @@ function ModelFilePicker({ backend, saved, save }: { backend: ImageBackend; save
         {server.error && <Notice tone="error">{server.error} Type the file names instead.</Notice>}
         {hasMatching(server.matching) && <Toggle label={`Only ${family.short} files`} checked={familyOnly} onChange={setFamilyOnly}
           hint={`Files whose name or folder says ${family.looks}. Turn off to see every file.`} />}
-        {server.answered && <FileSlots slots={family.slots} server={server} familyOnly={familyOnly} shown={shown} onChange={(key, value) => setDraft({ ...draft, [key]: value })} />}
+        {server.answered && <FileSlots slots={family.slots} server={server} familyOnly={familyOnly} shown={shown} start={shownFiles(family.slots, {}, saved, server.defaults)} onChange={(key, value) => setDraft({ ...draft, [key]: value })} />}
         <FileActions changed={Object.keys(draft).length > 0} chosen={isChosen(saved)} busy={files.isFetching}
           save={() => void store(filesBody(family.slots, shown, server.defaults))} cancel={() => setDraft({})} reset={() => void store(noChoice(family.slots))} refresh={() => void files.refetch()} />
         <ModelLinks links={links.data?.links ?? []} family={backend.family} />
@@ -336,10 +336,10 @@ function ModelFilePicker({ backend, saved, save }: { backend: ImageBackend; save
 
 type ServerFiles = ReturnType<typeof serverFiles>
 
-function FileSlots({ slots, server, familyOnly, shown, onChange }: { slots: FileSlot[]; server: ServerFiles; familyOnly: boolean; shown: ModelFiles; onChange: (key: FileSlot['key'], value: string) => void }) {
+function FileSlots({ slots, server, familyOnly, shown, start, onChange }: { slots: FileSlot[]; server: ServerFiles; familyOnly: boolean; shown: ModelFiles; start: ModelFiles; onChange: (key: FileSlot['key'], value: string) => void }) {
   return <div className="form-grid">
     {slots.map((slot) => <FileField key={slot.key} slot={slot} options={server.options[slot.key]} matching={familyOnly ? server.matching[slot.key] : []}
-      value={shown[slot.key] ?? ''} fallback={server.defaults[slot.key] ?? ''} onChange={(value) => onChange(slot.key, value)} />)}
+      value={shown[slot.key] ?? ''} start={start[slot.key] ?? ''} fallback={server.defaults[slot.key] ?? ''} onChange={(value) => onChange(slot.key, value)} />)}
   </div>
 }
 
@@ -387,8 +387,8 @@ function SamplerPicker({ backend, saved, save }: { backend: ImageBackend; saved:
         <div className="form-grid">
           <SliderNumber label="Steps" value={shown.steps} min={1} max={100} step={1} hint={family.steps} onChange={(steps) => setDraft({ ...draft, steps })} />
           <SliderNumber label="CFG" value={shown.cfg} min={0} max={30} step={0.5} hint="At 1 the negative prompt is ignored." onChange={(cfg) => setDraft({ ...draft, cfg })} />
-          <FileField slot={slot('Sampler', 'From ComfyUI\'s KSampler.')} options={server.options.sampler_name} matching={[]} value={shown.sampler_name} fallback={defaults.sampler_name ?? ''} onChange={(value) => setDraft({ ...draft, sampler_name: value })} />
-          <FileField slot={slot('Scheduler', 'From ComfyUI\'s KSampler.')} options={server.options.scheduler} matching={[]} value={shown.scheduler} fallback={defaults.scheduler ?? ''} onChange={(value) => setDraft({ ...draft, scheduler: value })} />
+          <FileField slot={slot('Sampler', 'From ComfyUI\'s KSampler.')} options={server.options.sampler_name} matching={[]} value={shown.sampler_name} start={shownSampler({}, saved, defaults).sampler_name} fallback={defaults.sampler_name ?? ''} onChange={(value) => setDraft({ ...draft, sampler_name: value })} />
+          <FileField slot={slot('Scheduler', 'From ComfyUI\'s KSampler.')} options={server.options.scheduler} matching={[]} value={shown.scheduler} start={shownSampler({}, saved, defaults).scheduler} fallback={defaults.scheduler ?? ''} onChange={(value) => setDraft({ ...draft, scheduler: value })} />
         </div>
         <FileActions changed={Object.keys(draft).length > 0} chosen={isTuned(saved)} busy={files.isFetching}
           save={() => void store(shown)} cancel={() => setDraft({})} reset={() => void store(defaults)} refresh={() => void files.refetch()} />
@@ -406,13 +406,14 @@ function useBackendFiles(backend: ImageBackend, open: boolean) {
   return files
 }
 
-/** A dropdown of the server's files (only `matching` when given), or a text box when it listed none. */
-function FileField({ slot, options, matching, value, fallback, onChange }: { slot: FileSlot; options: string[]; matching: string[]; value: string; fallback: string; onChange: (value: string) => void }) {
+/** A dropdown of the server's files (only `matching` when given), or a text box when it listed none. `start` is
+ * the value it opened on, kept in the list after another file is picked even when the server lacks it. */
+function FileField({ slot, options, matching, value, start = '', fallback, onChange }: { slot: FileSlot; options: string[]; matching: string[]; value: string; start?: string; fallback: string; onChange: (value: string) => void }) {
   const { label, hint, tip, same } = slot
   if (options.length === 0) return <TextInput label={label} value={value} maxLength={300} placeholder={fallback || same} hint={hint} tip={tip} onChange={onChange} />
   return <Field label={label} hint={hint} tip={tip}>{(id, describedBy) => <>
     <select id={id} aria-describedby={describedBy} value={value} onChange={(event) => onChange(event.target.value)}>
-      {fileChoices(options, value, matching, matching.length > 0, same).map(choice => <option key={choice.value} value={choice.value}>{choice.label}</option>)}
+      {fileChoices(options, value, matching, matching.length > 0, same, start).map(choice => <option key={choice.value} value={choice.value}>{choice.label}</option>)}
     </select>
     {/* On its own line, so the file name in the box is never cut short by it (Iris). */}
     {missingFrom(options, value) && <p className="subtle field-missing">{MISSING}</p>}
@@ -434,7 +435,7 @@ function StyleLoraPicker({ backend, saved, save }: { backend: ImageBackend; save
         <p className="subtle">Extra LoRAs for the look of every picture from this server, such as a phone-photo or realism LoRA. They apply in this order.</p>
         {open && !server.answered && <p className="subtle">Asking ComfyUI for its LoRAs…</p>}
         {server.error && <Notice tone="error">{server.error} Type the file names instead.</Notice>}
-        {server.answered && <StyleLoraRows rows={draft ?? saved} options={server.options.lora} matching={server.matching.lora} short={familyOf(backend.family).short} looks={familyOf(backend.family).looks} setRows={setDraft} />}
+        {server.answered && <StyleLoraRows rows={draft ?? saved} saved={saved} options={server.options.lora} matching={server.matching.lora} short={familyOf(backend.family).short} looks={familyOf(backend.family).looks} setRows={setDraft} />}
         {draft && <FileActions changed chosen={false} busy={files.isFetching} save={() => void store(draft)} cancel={() => setDraft(null)} reset={() => undefined} refresh={() => void files.refetch()} />}
       </div>
     </details>
@@ -443,13 +444,13 @@ function StyleLoraPicker({ backend, saved, save }: { backend: ImageBackend; save
 
 const LORA_SLOT: FileSlot = { key: 'unet_name', label: 'LoRA', role: null, hint: 'From ComfyUI\'s models/loras folder.' }
 
-function StyleLoraRows({ rows, options, matching, short, looks, setRows }: { rows: StyleLora[]; options: string[]; matching: string[]; short: string; looks: string; setRows: (rows: StyleLora[]) => void }) {
+function StyleLoraRows({ rows, saved, options, matching, short, looks, setRows }: { rows: StyleLora[]; saved: StyleLora[]; options: string[]; matching: string[]; short: string; looks: string; setRows: (rows: StyleLora[]) => void }) {
   const [familyOnly, setFamilyOnly] = useState(true)
   const edit = (index: number, change: Partial<StyleLora>) => setRows(rows.map((row, at) => at === index ? { ...row, ...change } : row))
   return <>
     {matching.length > 0 && <Toggle label={`Only ${short} LoRAs`} checked={familyOnly} onChange={setFamilyOnly} hint={`LoRAs whose name or folder says ${looks}. Turn off to see every LoRA.`} />}
     {rows.map((row, index) => <div key={index} className="form-grid">
-      <FileField slot={{ ...LORA_SLOT, label: `LoRA ${index + 1}` }} options={options} matching={familyOnly ? matching : []} value={row.name} fallback="" onChange={(name) => edit(index, { name })} />
+      <FileField slot={{ ...LORA_SLOT, label: `LoRA ${index + 1}` }} options={options} matching={familyOnly ? matching : []} value={row.name} start={saved[index]?.name ?? ''} fallback="" onChange={(name) => edit(index, { name })} />
       <SliderNumber label="Strength" value={row.strength} min={-2} max={2} step={0.05} hint="0.6 to 0.8 suits most style LoRAs." onChange={(strength) => edit(index, { strength })} />
       <TextInput label="Trigger words" value={row.trigger} maxLength={200} hint="Put in front of the prompt when the LoRA needs them." onChange={(trigger) => edit(index, { trigger })} />
       <button type="button" className="text-button" onClick={() => setRows(rows.filter((_, at) => at !== index))}><Trash2 aria-hidden="true" />Remove</button>

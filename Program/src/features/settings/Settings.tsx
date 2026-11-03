@@ -9,6 +9,7 @@ import { DebugSettings } from './DebugSettings'
 import { ImageSettings } from './ImageSettings'
 import { PromptSettings } from './PromptSettings'
 import { TimezoneSettings } from './WorkspaceSettings'
+import { UpdateCheck } from './UpdateCheck'
 import { BuiltinRecall } from './models/BuiltinRecall'
 import { HardwareCheck } from './models/HardwareCheck'
 import { LocalPrograms } from './models/LocalPrograms'
@@ -91,7 +92,7 @@ function focusOn(heading: HTMLElement) {
 
 function TabContent({ tab }: { tab: SettingsTab }) {
   const content: Record<SettingsTab, ReactNode> = {
-    general: <><TimezoneSettings /><AppearanceSettings /></>,
+    general: <><TimezoneSettings /><AppearanceSettings /><UpdateCheck /></>,
     models: <><HardwareCheck /><Pace /><ModelSettings /><TurnSpeed /><LocalPrograms /><BuiltinRecall /></>,
     images: <ImageSettings />,
     data: <><DataFolder /><Backups /></>,
@@ -153,7 +154,7 @@ function SettingsSearch({ onPick }: { onPick: (match: SettingsMatch) => void }) 
       <label className="visually-hidden" htmlFor="settings-search">Find a setting</label>
       <div className="search-field">
         <Search aria-hidden="true" />
-        <input id="settings-search" type="search" placeholder="Find a setting" value={query} onChange={(event) => setQuery(event.target.value)}
+        <input autoComplete="off" id="settings-search" type="search" placeholder="Find a setting" value={query} onChange={(event) => setQuery(event.target.value)}
           onKeyDown={(event) => { if (event.key === 'Escape') setQuery('') }} aria-describedby="settings-search-count" />
       </div>
       <p id="settings-search-count" className="visually-hidden" aria-live="polite">{searching ? `${matches.length} ${matches.length === 1 ? 'setting' : 'settings'} found` : ''}</p>

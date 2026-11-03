@@ -83,7 +83,7 @@ function LoreBookCard({ book, choices, change }: { book: LoreBook; choices: Lore
         <summary>Entries ({book.entries.length})</summary>
         {book.entries.length > 8 && <label className="search-field lore-search"><Search aria-hidden="true" />
           <span className="visually-hidden">Find an entry</span>
-          <input type="search" placeholder="Find an entry" value={query} onChange={(event) => setQuery(event.target.value)} /></label>}
+          <input autoComplete="off" type="search" placeholder="Find an entry" value={query} onChange={(event) => setQuery(event.target.value)} /></label>}
         <ul className="lore-entries">
           {shown.map((entry) => <LoreEntryRow key={entry.id} entry={entry} choices={choices} off={!book.enabled} change={change} />)}
         </ul>
@@ -142,7 +142,7 @@ function TimingFields({ timing, onSave }: { timing: LoreTiming; onSave: (timing:
             onChange={(event) => setDraft({ ...draft, [key]: Math.min(max, Math.max(min, Number(event.target.value) || 0)) })} />
         </label>)}
         <label title="Entries with the same group: only one of them comes up at a time">Group
-          <input type="text" maxLength={80} value={draft.group} onChange={(event) => setDraft({ ...draft, group: event.target.value })} />
+          <input autoComplete="off" type="text" maxLength={80} value={draft.group} onChange={(event) => setDraft({ ...draft, group: event.target.value })} />
         </label>
       </div>
       <p className="subtle">Counted in your lines. Going back in the story rewinds them.</p>
@@ -223,7 +223,7 @@ function LookInside({ book }: { book: LibraryBook }) {
       <summary>Look inside</summary>
       <form className="lore-search-form" onSubmit={(event) => { event.preventDefault(); setAsked(query.trim()) }}>
         <label className="search-field"><Search aria-hidden="true" /><span className="visually-hidden">Find passages</span>
-          <input type="search" placeholder="Find passages, as the narrator would" value={query} onChange={(event) => setQuery(event.target.value)} /></label>
+          <input autoComplete="off" type="search" placeholder="Find passages, as the narrator would" value={query} onChange={(event) => setQuery(event.target.value)} /></label>
         <button type="submit" className="button">Find</button>
       </form>
       {passages.data && <ul className="lore-entries">

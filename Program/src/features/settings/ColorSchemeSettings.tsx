@@ -78,7 +78,7 @@ function ColorControl({ name, value, onChange }: { name: keyof Palette; value: s
       <input type="color" aria-label={`${label} color`} value={validHex(value) ? value : defaultPalette[name]} onChange={(event) => onChange(event.target.value)} />
       <div className="field">
         <label htmlFor={id}>{label} hex</label>
-        <input id={id} spellCheck={false} value={value} maxLength={7} aria-invalid={!validHex(value)} onChange={(event) => onChange(event.target.value)} />
+        <input autoComplete="off" id={id} spellCheck={false} value={value} maxLength={7} aria-invalid={!validHex(value)} onChange={(event) => onChange(event.target.value)} />
       </div>
     </div>
   )
