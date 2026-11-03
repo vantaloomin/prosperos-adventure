@@ -166,6 +166,8 @@ def test_agents_are_picked_within_the_cap_party_first_then_nemeses_and_promoted_
     assert [key for key, mind in minds.items() if mind == Mind.AGENT] == ['cole', 'dov', 'hesk']
     assert turn.snapshot.settings['dropped'] == ['bram', 'ilsa']
     assert turn.snapshot.settings['agents']['preset'] == 'balanced'
+    # The preset's recall depth is frozen too: the context builder recalls that many memories.
+    assert turn.snapshot.settings['agents']['recall'] == agents.PRESETS['balanced']['recall']
     # Outside Play the human's character runs on its Program mind.
     turn, _, _ = turn_of(game, mode=Mode.WATCH)
     assert turn.snapshot.seat('you').mind == Mind.PROGRAM
