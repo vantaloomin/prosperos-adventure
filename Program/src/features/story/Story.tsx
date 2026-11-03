@@ -5,6 +5,7 @@ import { api, newId, streamApi } from '../../api'
 import type { View } from '../../workspace'
 import type { BandStep, CitySummary, Story as StoryData, StoryBack, StoryMap as TravelMap, StoryMessage, StoryScene, TurnEvent, TurnSoFar } from '../../types'
 import { Loading, Notice } from '../../components/Feedback'
+import { takeArrival } from '../worlds/arrival'
 import { ErrorNotice } from '../../components/ErrorNotice'
 import { ConfirmDialog } from '../../components/ConfirmDialog'
 import { LifeCard } from './StoryLifeCard'
@@ -109,6 +110,7 @@ export function Story({ go }: { go: (view: View) => void }) {
             onSwitch={(id) => change(() => api<StoryData>(`/story/messages/${id}/switch`, {}))}
             onBack={story.data.campaign?.ironman ? undefined : (id) => void run(null, () => api<StoryBack>('/story/back', { message_id: id }).then((data) => { update(data); setDraft({ text: data.draft, at: Date.now() }) }))}
             onBookmark={(id, name) => change(() => api<StoryData>('/story/bookmarks', { message_id: id, name }))} />
+          <ArrivalLine />
           <StoryError error={watch.hides(round.shownError(error))} />
           <MissedBanner asking={mode.asking} onAnswer={mode.answer} />
           <StoryFoot waiting={!!round.waiting} active={mode.active}
@@ -146,6 +148,12 @@ function StoryFoot({ waiting, active, reply, watch, compose }: FootProps) {
 function ComposerBelow({ shown, active, onError }: { shown: boolean; active: Mode; onError: (text: string) => void }) {
   if (!shown) return null
   return active === 'author' ? <><AuthorNotes /><BeatBoard onError={onError} /></> : <NudgeBox onError={onError} />
+}
+
+/** Once, after this page followed a world switch made elsewhere: where it went (../worlds/arrival.ts). */
+function ArrivalLine() {
+  const [line, setLine] = useState(takeArrival)
+  return line ? <div className="story-notice"><Notice action={<button type="button" className="text-button" onClick={() => setLine(null)}>Dismiss</button>}>{line}</Notice></div> : null
 }
 
 function StoryError({ error }: { error: string }) {

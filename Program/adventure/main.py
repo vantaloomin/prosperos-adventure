@@ -74,12 +74,14 @@ async def guard_writes(request: Request, call_next):
 async def stay_in_world(request: Request, call_next):
     """A request, and everything it starts, reads and writes the world open when it arrived
     (adventure/database.py PINNED). A page opened in another world (another tab, when this one switched) is told
-    so instead of changing this one; it reloads into the world now open (src/api.ts)."""
+    so instead of changing this one; it reloads into the world now open, named so it can say where (src/api.ts)."""
     database = request.app.state.database
     opened = request.headers.get(WORLD_HEADER)
     if opened and database.world and opened != database.world:
+        data = worlds.load(database.root)
+        world = data and worlds.find(data['worlds'], database.world)
         return JSONResponse({'detail': 'You moved to another world on another screen. Opening it here too.',
-                             'code': 'world_changed'}, status_code=409)
+                             'code': 'world_changed', 'world': world['name'] if world else None}, status_code=409)
     with database.pin():
         return await call_next(request)
 

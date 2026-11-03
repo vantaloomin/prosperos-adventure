@@ -132,3 +132,16 @@ def test_somewhere_new_is_a_town_of_the_picked_world_never_a_road(client):
     world = listing(client)['world']
     choices = ok(client.get(f"/api/worlds/{world['id']}/home"))
     assert not {'vallarith-road', 'havenbrooke-road', 'babel-floors'} & {city['id'] for city in choices['cities']}
+
+
+def test_a_page_left_in_another_world_is_told_where_the_app_went(client):
+    """A page opened in one world, after another tab switched, is told the name of the world now open so it can
+    follow and say where (src/api.ts, from Prospero's Companion #431)."""
+    from adventure.identity import WORLD_HEADER
+    first = listing(client)['active_world_id']
+    made = ok(client.post('/api/worlds', json={'name': 'Somewhere else'}))
+    ok(client.post(f"/api/worlds/{made['id']}/switch"))
+    stale = client.get('/api/story', headers={WORLD_HEADER: first})
+    assert stale.status_code == 409
+    assert stale.json()['code'] == 'world_changed' and stale.json()['world'] == 'Somewhere else'
+    assert client.get('/api/story', headers={WORLD_HEADER: made['id']}).status_code == 200
