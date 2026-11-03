@@ -840,12 +840,8 @@ def prompt(connection, now: datetime, config: dict, latest: dict, outcomes: list
                                          rules=ruled if rules_kept else '')
         if len(system) <= (window - config['max_output_tokens']) * CHARS_PER_TOKEN // 2:
             break
-    for extra in (travel.prompt_text(travelled or []), rest.prompt_text(rested or []),
-                  injuries.treatment_text(tended or []), happenings.prompt_text(carded or []),
-                  beats.cutaway_text(meanwhile or []), *(noted or []), combat.prompt_text(fought or [], connection),
-                  counter_text(traded or []), finds.prompt_text(looked or [])):
-        if extra:
-            system += '\n\n' + extra
+    if extras := resolved_text(connection, fought, traded, looked, travelled, rested, tended, carded, meanwhile, noted):
+        system += '\n\n' + extras
     if in_character.out_of_character(latest['text']):
         system += '\n\n' + OUT_OF_CHARACTER.format(model=default_name(config)) + map_text(connection, view)
     budget = (window - config['max_output_tokens']) * CHARS_PER_TOKEN - len(system)
@@ -856,6 +852,26 @@ def prompt(connection, now: datetime, config: dict, latest: dict, outcomes: list
     return {'system': system, 'messages': chat, 'people': view['people'], 'library': passages_given,
             'city_id': view['city']['id'], 'day': moment.date(), 'year': decades.year_of(view['data'], moment),
             'lore': lore_started, 'line': line_number(connection, latest)}
+
+
+def resolved_text(connection, fought: list[str] | None = None, traded: list[str] | None = None,
+                  looked: list[str] | None = None, travelled: list[str] | None = None,
+                  rested: list[str] | None = None, tended: list[str] | None = None,
+                  carded: list[str] | None = None, meanwhile: list[str] | None = None,
+                  noted: list[str] | None = None) -> str:
+    """What Resolve decided, as the narrator is told it: the road, rest, treatment, the town's cards, the lives off
+    the page, the director's note, the fight, the counter and finds."""
+    parts = (travel.prompt_text(travelled or []), rest.prompt_text(rested or []),
+             injuries.treatment_text(tended or []), happenings.prompt_text(carded or []),
+             beats.cutaway_text(meanwhile or []), *(noted or []), combat.prompt_text(fought or [], connection),
+             counter_text(traded or []), finds.prompt_text(looked or []))
+    return '\n\n'.join(part for part in parts if part)
+
+
+def settled_text(connection, telling: 'Telling') -> str:
+    """What Resolve decided for a player's line (`resolved_text`), from its Telling."""
+    return resolved_text(connection, telling.fought, telling.traded, telling.looked, telling.travelled,
+                         telling.rested, telling.tended, telling.carded, telling.meanwhile, telling.noted)
 
 
 def place_prompt(connection, view: dict, shop: dict | None) -> str:
@@ -1687,8 +1703,17 @@ async def announce(telling: Telling):
 
 async def written(telling: Telling):
     """Write: the narrator's packet from the scene and everything Resolve decided, then the telling itself."""
-    state, user, in_story = telling.state, telling.user, telling.in_story
-    database = state.database
+    packed(telling)
+    await telling.emit({'stage': 'writing'})
+    telling.text, telling.error, telling.flagged = await told(telling.state, telling.packet, telling.config,
+                                                              telling.in_story, telling.steps, telling.on_text)
+
+
+def packed(telling: Telling):
+    """The narrator's packet from the scene and everything Resolve decided, which Commit's writes read too (the round
+    Writer, adventure/rounds/writer.py, writes a round with agents from it without today's narrator)."""
+    user, in_story = telling.user, telling.in_story
+    database = telling.state.database
     with database.connect() as connection:
         # The rule text that fits what the turn resolved (adventure/rules/passages.py).
         ruled = rule_passages.text(ruleset_of(connection), telling.rolls, user['text'], telling.fought,
@@ -1698,9 +1723,6 @@ async def written(telling: Telling):
                                 turn.outcomes(telling.rolls) if in_story else None, telling.fought, telling.traded,
                                 telling.looked, telling.travelled, telling.rested, telling.tended, telling.carded,
                                 telling.meanwhile, telling.noted, ruled)
-    await telling.emit({'stage': 'writing'})
-    telling.text, telling.error, telling.flagged = await told(state, telling.packet, telling.config, in_story,
-                                                              telling.steps, telling.on_text)
 
 
 def committed(telling: Telling) -> dict:
