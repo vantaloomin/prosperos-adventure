@@ -27,7 +27,6 @@ from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from typing import Any
 
-from adventure import story, story_clock
 from adventure.database import decode, optional
 from adventure.rounds import memory, seats, turns
 from adventure.rounds.contract import (
@@ -262,6 +261,7 @@ async def present(turn: Turn):
     """Who is in the scene as the turn starts: everyone the story puts there (the townsfolk rules, the party) and the
     human's character, whose scene it is. Seats whose character is elsewhere sit this turn out; 'pick' and the agents
     read `snapshot.present`."""
+    from adventure import story, story_clock  # story reads the rounds (gm, modes): imported when it is needed
     database = turn.database
     with database.connect() as connection:
         view = story.scene(connection, story_clock.now(connection, database.clock))
