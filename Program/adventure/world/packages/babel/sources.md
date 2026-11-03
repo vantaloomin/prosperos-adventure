@@ -1,10 +1,6 @@
 # Sources
 
-Vanta's Mabry Curve roleplay archive, `mabry_curve_reset_archive_2026-10-19.zip` in the project
-files (52 files in 7 folders, extracted 2026-10-22). The originals are not copied into this public repo. Every
-entry here is rewritten in fresh prose; short phrases that are the world's own (MIND THE STAIR, NO
-MARKED BEYOND THE FORD BY ORDER OF THE CLOSE, OUT IS NOT DOWN, "Up one. Varrow. Mind how you go.")
-are kept as canon. The explicit off-page record of Bri and Chase is summarized, not carried over.
+Vanta's Mabry Curve roleplay archive, `mabry_curve_reset_archive_2026-10-19.zip` in the project files (52 files in 7 folders, extracted 2026-10-22). The originals are not copied into this public repo. Every entry here is rewritten in fresh prose; short phrases that are the world's own (MIND THE STAIR, NO MARKED BEYOND THE FORD BY ORDER OF THE CLOSE, OUT IS NOT DOWN, "Up one. Varrow. Mind how you go.") are kept as canon. The explicit off-page record of Bri and Chase is summarized, not carried over.
 
 | File | What it is | Used for | SHA-256 |
 | --- | --- | --- | --- |
@@ -21,17 +17,8 @@ are kept as canon. The explicit off-page record of Bri and Chase is summarized, 
 
 ## Not in the archive
 
-The README's folder map lists five canon files the archive does not contain:
-`world_building_qa.md` (every design ruling, Rounds 1 to 36), `tower_character_bible.md` (full
-character sheets, voices and punctuation profiles), `babel_game_bible.md` (Nth Floor, the game, the
-deviation table), `babel_skill_compendium.md` (the full skill library) and `lineages.md` (bodies,
-tells, Long House names, breeding, Advanced lineages), plus `rng/rng_rules.md` and `rng/roll.py`.
-This package is built from what the README, the tracker and the story establish about them; see
-[open-questions.md](open-questions.md).
+The README's folder map lists five canon files the archive does not contain: `world_building_qa.md` (every design ruling, Rounds 1 to 36), `tower_character_bible.md` (full character sheets, voices and punctuation profiles), `babel_game_bible.md` (Nth Floor, the game, the deviation table), `babel_skill_compendium.md` (the full skill library) and `lineages.md` (bodies, tells, Long House names, breeding, Advanced lineages), plus `rng/rng_rules.md` and `rng/roll.py`. This package is built from what the README, the tracker and the story establish about them; see [open-questions.md](open-questions.md).
 
 ## Which source wins
 
-Mabry Curve's own precedence: the Q&A rulings, then the bibles, then the compendium, then the
-Ledger; anything written in play is canon unless it contradicts something already set. Here, with
-those files missing, the order is: the README, the hidden files, the side cast, the story turns
-(later turns win), then the tracker.
+Mabry Curve's own precedence: the Q&A rulings, then the bibles, then the compendium, then the Ledger; anything written in play is canon unless it contradicts something already set. Here, with those files missing, the order is: the README, the hidden files, the side cast, the story turns (later turns win), then the tracker.
