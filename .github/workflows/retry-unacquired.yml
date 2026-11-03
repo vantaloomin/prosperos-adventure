@@ -1,0 +1,35 @@
+name: Retry jobs that never started
+
+# GitHub's hosted macOS arm64 runners (macos-latest) are sometimes short. A job that waits too long is cancelled
+# with "The job was not acquired by Runner of type hosted even after multiple attempts" before it starts, and
+# the CI run fails although nothing failed. This re-runs those jobs, up to the third attempt of a run, when
+# they are the only thing wrong (.github/scripts/retry-unacquired.sh). Real failures are left for a person.
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+
+permissions:
+  contents: read
+
+jobs:
+  retry:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      actions: write
+    steps:
+      # The script comes from the default branch, never from the pull request whose run is retried.
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/scripts
+      - name: Re-run the jobs that never got a runner
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          EVENT: ${{ github.event.workflow_run.event }}
+        run: .github/scripts/retry-unacquired.sh
