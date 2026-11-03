@@ -19,6 +19,10 @@ does and never changes roll odds.
   the pressure the scene is under (from the tension curve), a seed to plant if it fits, the threads the people
   present carry, the antagonist near, and what of the arcs is due. A stage above
   the character's tier only ever reaches them as a clue or a rumor, never its fight.
+- **Signs, never hidden truths** (docs/spec.md, code and model boundary follow-ups). The note gives the narrator what
+  a thread looks like on the page (its `seen`), never the truth behind it, so pressure from a hot thread and a thread
+  someone carries are told as signs. A truth reaches the note only when code decides it comes out now: an arc stage
+  due to reach the character, or a seed's payoff. Everything else stays in the GM view.
 - **The tension curve.** Each line is a quiet, social, pressure or crisis scene (from its rolls and fight). After
   SLACK quiet lines in a row (fewer the more eventful the drama setting), the note asks for pressure from the
   hottest thread or the arc due; after a crisis it lets the next scene breathe.
@@ -325,7 +329,7 @@ def pressure(connection, world: str, row: dict, rows: dict, hot: list[dict], dra
         return [f"Pressure: {nemesis['name']} comes back, with a plan. They remember how the character fights (their "
                 f"{nemesis['remembers']}) and have prepared for it. {nemesis['grudge']}"]
     if hot and hot[0]['heat'] > 0:
-        return [f"Pressure: the story has gone slack. Bring {hot[0]['title']} back into it: {hot[0]['truth']}"]
+        return [f"Pressure: the story has gone slack. Bring {hot[0]['title']} back into it: {hot[0]['seen']}"]
     if row['spine_id'] and (stage := stage_of(world, rows[row['spine_id']])):
         return [f"Pressure: the story has gone slack. Let the spine of the story press in: {stage['word']}"]
     return []
@@ -370,7 +374,7 @@ def around(world: str, node_id: str, row: dict, rows: dict, hot: list[dict], peo
     for person in people:
         name = person['sheet'].get('full') or person['sheet'].get('name') or ''
         if name and (carried := next((thread for thread in hot if touched(thread, name)), None)):
-            lines.append(f"{name} carries a thread ({carried['title']}): {carried['truth']}")
+            lines.append(f"{name} carries a thread ({carried['title']}): {carried['seen']}")
     for arc_id, item in rows.items():
         found = arc(world, arc_id)
         if found and node_id in found['antagonist']['where'] and (arc_id == row['spine_id'] or item['bite']):
