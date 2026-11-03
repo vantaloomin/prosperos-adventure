@@ -63,6 +63,24 @@ def test_each_category_has_its_own_level_veils_fade_to_black_and_a_preset_resets
     assert client.put('/api/story/table', json={'levels': {'sex': 4}}).status_code == 422
 
 
+def test_a_genre_at_the_table_adds_its_module_and_the_users_wording_of_it(client, connected, provider):
+    ok(client.put('/api/story/scene', json={'city_id': 'kingswood', 'place_id': 'felled-oak'}))
+    ok(client.delete('/api/story'))
+    ok(client.post('/api/story/start', json={'premade_id': 'agna-holt'}))
+    found = ok(client.get('/api/story'))['intensity']
+    assert (found['genre'], found['genre_chosen'], found['genre_world']) == ('none', 'world', 'none')
+    assert 'Genre:' not in narrator_after(client, provider, 'story-0001')
+    ok(client.put('/api/story/table', json={'genre': 'adventure'}))
+    assert ok(client.get('/api/story'))['intensity']['genre'] == 'adventure'
+    narrator = narrator_after(client, provider, 'story-0002')
+    assert narrator.index('Intensity:') < narrator.index('Genre: adventure.') and 'Travel costs time' in narrator
+    ok(client.put('/api/prompts/genre-adventure', json={'text': 'Genre: SENTINEL-GENRE.'}))
+    assert 'Genre: SENTINEL-GENRE.' in narrator_after(client, provider, 'story-0003')
+    assert client.put('/api/story/table', json={'genre': 'cozy'}).status_code == 422
+    ok(client.put('/api/story/table', json={'genre': 'none'}))
+    assert 'SENTINEL-GENRE' not in narrator_after(client, provider, 'story-0004')
+
+
 def test_low_violence_leaves_maiming_out_of_the_lasting_injuries(client, app):
     from datetime import datetime
 

@@ -29,6 +29,16 @@ Every call to a character who thinks for themselves (an agent) opens with **A ch
 
 These stay code, between and after the editable parts: the fence rule that keeps story text from reading as instructions, the answer's JSON shape (`CONTRACT`, and `REACT_CONTRACT` for a reaction), the intensity, the scheming dial (`SCHEMING`), and how the character stands with each person present. What a character may know is built by the context builder (`adventure/rounds/context.py`), so no rewording can show a character someone else's secrets. Code still validates every answer (claims cut back to attempts, audiences kept to who is present, the intensity kept in every field).
 
+### Genres
+
+The Table's Genre (Story, More, Tone and rules) adds one of these after the intensity in the narrator's and the round Writer's prompt, or none. How explicit or how violent the page gets stays with the intensity settings.
+
+| Prompt | Used for | Default lives in |
+| --- | --- | --- |
+| Dark romantasy | Romance as the spine, fantasy as the pressure on it, power that shifts | `GENRES['dark-romantasy']` in `adventure/narration/prompt.py` |
+| Adventure | Something always moving, competence through technique, travel that costs | `GENRES['adventure']` |
+| Graphic violence | Violence with physical specificity and consequence, never a how-to | `GENRES['graphic-violence']` |
+
 `adventure/prompt_library.py` is the list, in the order shown. Defaults are read from the constants above when needed, so changing one in code is the new default at once. The constants are written for `str.format`; the library shows and fills them in the `{{placeholder}}` form.
 
 ## Storage and updates

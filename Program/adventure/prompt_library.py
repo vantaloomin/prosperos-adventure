@@ -48,7 +48,7 @@ class Prompt:
     placeholders: dict[str, str] = field(default_factory=dict)
 
 
-CHAT, CHARACTERS = 'Story', 'Characters'
+CHAT, CHARACTERS, GENRES = 'Story', 'Characters', 'Genres'
 AGENTS = 'adventure.rounds.agents'
 PROMPTS = {prompt.name: prompt for prompt in (
     Prompt('story-narrator', CHAT, 'The Story narrator',
@@ -102,6 +102,18 @@ PROMPTS = {prompt.name: prompt for prompt in (
            'What a character may do once they turn against someone, and what turns them. How they stand with each '
            'person present follows it, worked out by the app from their feelings.',
            constant(AGENTS, 'TURNING')),
+    Prompt('genre-dark-romantasy', GENRES, 'Dark romantasy',
+           'Follows the intensity in the narrator\'s and the round Writer\'s prompt when the Table\'s Genre is Dark '
+           'romantasy. How explicit the page gets stays with the intensity.',
+           constant('adventure.narration.prompt', 'GENRES', 'dark-romantasy')),
+    Prompt('genre-adventure', GENRES, 'Adventure',
+           'Follows the intensity in the narrator\'s and the round Writer\'s prompt when the Table\'s Genre is '
+           'Adventure.',
+           constant('adventure.narration.prompt', 'GENRES', 'adventure')),
+    Prompt('genre-graphic-violence', GENRES, 'Graphic violence',
+           'Follows the intensity in the narrator\'s and the round Writer\'s prompt when the Table\'s Genre is '
+           'Graphic violence. How violent the page gets stays with the intensity.',
+           constant('adventure.narration.prompt', 'GENRES', 'graphic-violence')),
 )}
 
 

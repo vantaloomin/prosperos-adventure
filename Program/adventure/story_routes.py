@@ -230,6 +230,8 @@ class TableUpdate(Input):
     veils: list[Literal['execution', 'slavery', 'mutilation', 'disease', 'self-harm', 'addiction', 'torture',
                         'sexual-violence', 'sacrifice', 'child-harm']] | None = Field(default=None, max_length=10)
     voice: Literal['world', 'grim', 'wry', 'romantic', 'hopeful', 'lyrical', 'plain'] | None = None
+    # A genre module for the narrator and the round Writer (adventure/tone.py GENRES).
+    genre: Literal['world', 'none', 'dark-romantasy', 'adventure', 'graphic-violence'] | None = None
     # The narration format (adventure/narration/prompt.py Format).
     pov: Literal['first', 'second', 'third'] | None = None
     tense: Literal['past', 'present'] | None = None

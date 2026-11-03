@@ -5,8 +5,9 @@ def test_every_prompt_is_listed_with_its_default_and_placeholder_help(client):
     listed = {item['name']: item for item in client.get('/api/prompts').json()}
     assert set(listed) == set(prompt_library.PROMPTS) == {
         'story-narrator', 'narrator-craft', 'round-writer', 'authors-note', 'character-mind', 'character-declare',
-        'character-react', 'character-ask', 'character-answer', 'character-offpage', 'character-turning'}
-    assert {item['group'] for item in listed.values()} == {'Story', 'Characters'}
+        'character-react', 'character-ask', 'character-answer', 'character-offpage', 'character-turning',
+        'genre-dark-romantasy', 'genre-adventure', 'genre-graphic-violence'}
+    assert {item['group'] for item in listed.values()} == {'Story', 'Characters', 'Genres'}
     assert listed['character-mind']['placeholders'] == ['character']
     narrator = listed['story-narrator']
     assert narrator['group'] == 'Story' and not narrator['customized'] and not narrator['outdated']

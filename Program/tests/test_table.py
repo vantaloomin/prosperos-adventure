@@ -19,7 +19,7 @@ def test_a_new_campaign_takes_the_worlds_tone_and_the_players_last_taste(client)
     assert rules == {'intensity': 'world', 'drama': 'world', 'injury_persistence': 'permanent', 'defeat': 'as_written',
                      'show_odds': False,
                      'roll_dice': False, 'show_adult_side': False, 'gm_view': False, 'cutaways': False,
-                     'levels': None, 'veils': None, 'voice': 'world',
+                     'levels': None, 'veils': None, 'voice': 'world', 'genre': 'world',
                      'pov': 'second', 'tense': 'present', 'length': 'short', 'shop_cash': 'finite',
                      'carry_limit': 'slots', 'clock': 'world', 'rule_text': 'on',
                      'leaving': 'anyone', 'politics': 'true_to_life'}

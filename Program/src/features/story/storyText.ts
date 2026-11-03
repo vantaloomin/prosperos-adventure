@@ -1,4 +1,4 @@
-import type { BandStep, DiceLog, DramaLevel, Gear, HiddenRoll, IntensityPreset, JournalEntry, JournalInstitution, JournalQuest, JournalThread, LegacyRole, Looks, NarrationLength, NarrationPov, NarrationTense, ReceiptChip, SheetBonds, SheetGrowth, Srd52Spells, StoryArc, StoryBranch, StoryChapter, StoryFight, StoryHand, StoryMessage, StoryPace, StoryPerson, StoryPlace, StoryRoll, StoryScene, StoryStart, StoryTier, ToneCategory, ToneVoice, TurnAction, TurnEvent, TurnPace, TurnSoFar, VeilTopic, Zone } from '../../types'
+import type { BandStep, DiceLog, DramaLevel, Gear, HiddenRoll, IntensityPreset, JournalEntry, JournalInstitution, JournalQuest, JournalThread, LegacyRole, Looks, NarrationLength, NarrationPov, NarrationTense, ReceiptChip, SheetBonds, SheetGrowth, Srd52Spells, StoryArc, StoryBranch, StoryChapter, StoryFight, StoryHand, StoryMessage, StoryPace, StoryPerson, StoryPlace, StoryRoll, StoryScene, StoryStart, StoryTier, ToneCategory, ToneGenre, ToneVoice, TurnAction, TurnEvent, TurnPace, TurnSoFar, VeilTopic, Zone } from '../../types'
 import { whatIf } from '../round/roundText.ts'
 
 /** "Tuesday, 9:40 am" from the scene's local time, which is the city's own clock with no offset. */
@@ -279,6 +279,9 @@ export const LENGTHS: [NarrationLength, string][] = [['short', 'Short (about 200
 
 export const VOICES: [ToneVoice, string][] = [['grim', 'Grim'], ['wry', 'Wry'], ['romantic', 'Romantic'], ['hopeful', 'Hopeful'],
   ['lyrical', 'Lyrical'], ['plain', 'Plain']]
+/** The genre modules (adventure/tone.py GENRES), each an editable prompt under Settings > Developer > Prompts. */
+export const GENRES: [Exclude<ToneGenre, 'world'>, string][] = [['none', 'None'], ['dark-romantasy', 'Dark romantasy'],
+  ['adventure', 'Adventure'], ['graphic-violence', 'Graphic violence']]
 
 /** The veils with one topic added or taken away, in the list's own order. */
 export function toggledVeil(veils: VeilTopic[], topic: VeilTopic, on: boolean): VeilTopic[] {
