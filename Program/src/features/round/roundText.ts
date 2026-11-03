@@ -123,12 +123,18 @@ export function composerText(nudge: boolean, empty: boolean) {
   if (!nudge) return { label: 'What you do or say', placeholder: 'What do you do or say?', send: 'Send', max: 40000 }
   return { label: NUDGE.label, placeholder: NUDGE.placeholder, send: empty ? NUDGE.send : 'Send', max: 4000 }
 }
-export const WATCH_NAMES = { play: 'Play', pause: 'Pause', next: 'Next', label: 'Watch', raise: 'Raise cap', stop: 'Stop here', retry: 'Try again' } as const
+export const WATCH_NAMES = {
+  play: 'Play', pause: 'Pause', next: 'Next', label: 'Watch', raise: 'Raise cap', stop: 'Stop here', retry: 'Try again',
+  go: 'Continue', author: 'Switch to Author', every: 'Every',
+} as const
 
-/** The pause banner's line, always with the reason (PL-10). */
+/** The pause banner's line, always with the reason (PL-10): "Paused: Mara betrayed the party". */
 export function pauseLine(pause: Exclude<WatchPause, null>): string {
-  return pause.reason === 'cap' ? 'Paused: this session reached its token cap' : `Paused: ${pause.text.replace(/\.$/, '')}`
+  return `Paused: ${pause.text.replace(/^Paused: /, '').replace(/\.$/, '')}`
 }
+
+/** A timer choice: "20 s", "1 min", or "By hand". */
+export const secondsName = (seconds: number) => !seconds ? 'By hand' : seconds % 60 ? `${seconds} s` : `${seconds / 60} min`
 
 /** On a story line whose turn had the GM view open: "GM view was open" (PL-12). */
 export const MARK_NAMES = { gm: 'GM view was open', report: 'Report' } as const

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { asksMissed, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
-import { composerText, pauseLine, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
+import { asksMissed, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { composerText, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
 const table = (seats: Seat[], under_way: RoundTable['under_way'] = null): RoundTable => ({
@@ -138,15 +138,21 @@ test('the switcher shows the mode chosen, even while it waits for the turn to en
 })
 
 test('Watch plays on until paused, and says why when it stops by itself', () => {
-  const idle = { playing: true, busy: false, waiting: false, capped: false, error: '' }
+  const idle = { playing: true, busy: false, waiting: false, paused: null, error: '' }
   assert.deepEqual(watchNext(idle), { go: true, pause: null })
   assert.deepEqual(watchNext({ ...idle, playing: false }), { go: false, pause: null })
   assert.deepEqual(watchNext({ ...idle, busy: true }), { go: false, pause: null })
   assert.deepEqual(watchNext({ ...idle, waiting: true }), { go: false, pause: null })
-  assert.deepEqual(watchNext({ ...idle, capped: true }), { go: false, pause: { reason: 'cap' } })
-  assert.deepEqual(watchNext({ ...idle, error: 'The model timed out.' }), { go: false, pause: { reason: 'error', text: 'The model timed out.' } })
-  assert.equal(pauseLine({ reason: 'cap' }), 'Paused: this session reached its token cap')
-  assert.equal(pauseLine({ reason: 'error', text: 'The model timed out.' }), 'Paused: The model timed out')
+  const betrayed = { kind: 'betrayal', text: 'Mara betrayed the party.', turn_id: 't4' }
+  assert.deepEqual(watchNext({ ...idle, paused: betrayed }), { go: false, pause: betrayed })
+  assert.deepEqual(watchNext({ ...idle, playing: false, paused: betrayed }).pause, betrayed)
+  assert.deepEqual(watchNext({ ...idle, error: 'The model timed out.' }), { go: false, pause: { kind: 'error', text: 'The model timed out.' } })
+  assert.equal(pauseLine(betrayed), 'Paused: Mara betrayed the party')
+  assert.equal(pauseLine({ kind: 'cap', text: 'This session reached its cap.' }), 'Paused: This session reached its cap')
+  assert.equal(pauseLine({ kind: 'error', text: 'Paused: Mara died.' }), 'Paused: Mara died')
+  assert.deepEqual(watchOf(false, { seconds: 20, paused: betrayed }), { seconds: 20, paused: null })
+  assert.deepEqual(watchOf(true, undefined), { seconds: 0, paused: null })
+  assert.deepEqual(WATCH_SECONDS.map(secondsName), ['By hand', '10 s', '20 s', '40 s', '1 min'])
 })
 
 test('a turn opens on the player\'s line, the author\'s nudge, or nothing', () => {

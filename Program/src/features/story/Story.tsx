@@ -34,6 +34,7 @@ import { useLineMarks, useMode, useWatch } from '../round/useModes'
 import { ModeSwitch } from '../round/ModeSwitch'
 import { WatchBar } from '../round/WatchBar'
 import { MissedBanner } from '../round/MissedBanner'
+import { AuthorNotes } from '../round/AuthorNotes'
 import { LineTools } from '../round/LineTools'
 import { openingKind, type LineMarks, type Mode } from '../round/round'
 import { composerText, NUDGE } from '../round/roundText'
@@ -78,11 +79,11 @@ export function Story({ go }: { go: (view: View) => void }) {
   const note = (event: unknown) => { setTurn((before) => turnAfter(before, event as TurnEvent)); round.hear(event) }
   const send = (text: string) => run(text, () => streamApi('/story/messages/stream', { text, client_id: newId() }, grow, note))
   const change = (request: () => Promise<StoryData>) => run(null, () => request().then(update))
-  const mode = useMode(round.cast.table, round.revealMissed, setError)
+  const mode = useMode(round.cast.table, setError)
   // Author and Watch turns (POST /api/rounds/turns/stream): Next with the author's nudge, or with none in Watch.
   const nextTurn = (nudge: string) => run(nudge, () => streamApi('/rounds/turns/stream', { nudge, against: mode.head }, grow, note))
-  const watch = useWatch({ on: mode.active === 'watch', busy: pending !== null, waiting: !!round.waiting, error,
-    next: () => void nextTurn(''), clear: () => setError('') })
+  const watch = useWatch({ on: mode.active === 'watch', busy: pending !== null, waiting: !!round.waiting, error, head: mode.head,
+    next: () => void run('', () => streamApi('/rounds/watch/next/stream', { against: mode.head }, grow, note)), clear: () => setError(''), onError: setError })
   const marks = useLineMarks(round.cast.table)
   if (story.isPending) return <Loading label="Opening your story" />
   if (story.isError) return <ErrorNotice error={story.error} />
@@ -108,10 +109,11 @@ export function Story({ go }: { go: (view: View) => void }) {
           <StoryFoot waiting={!!round.waiting} active={mode.active}
             reply={() => round.waiting && <ReplyCard waiting={round.waiting.awaiting} speaker={round.speaker} you={round.you} busy={pending !== null}
               onAnswer={(kind, text) => void run(kind === 'reply' ? text.trim() : '', () => round.answer(kind, text, grow, note))} />}
-            watch={() => <WatchBar playing={watch.playing} busy={pending !== null} pause={watch.pause}
-              onPlay={watch.play} onPause={watch.stop} onNext={() => void nextTurn('')} onRaise={() => go('settings/models')} onStop={watch.stop} />}
+            watch={() => <WatchBar playing={watch.playing} busy={pending !== null} pause={watch.pause} seconds={watch.seconds}
+              onPlay={watch.play} onPause={watch.stop} onNext={() => void nextTurn('')} onEvery={watch.every} onGoOn={watch.goOn}
+              onAuthor={() => mode.change('author')} onRaise={() => go('settings/models')} onStop={watch.stop} />}
             compose={() => <StoryComposer key={draft.at} busy={pending !== null} draft={draft.text} turn={story.data.messages.length}
-              nudge={mode.active === 'author'} onSend={(text) => void (mode.active === 'author' ? nextTurn(text) : send(text))}
+              nudge={mode.active === 'author'} below={mode.active === 'author' && <AuthorNotes />} onSend={(text) => void (mode.active === 'author' ? nextTurn(text) : send(text))}
               commands={menuCommands(story.data)} onNewStory={() => setClearing(true)}
               onAddModel={story.data.ready ? undefined : () => go('settings/models')} />} />
         </>}
@@ -336,12 +338,13 @@ function BookmarkButton({ onSave }: { onSave: (name: string) => Promise<void> })
  * text model yet, Send is `onAddModel`: it opens Settings > Models. */
 interface ComposerProps {
   busy: boolean; draft: string; turn: number; onSend: (text: string) => void; onAddModel?: () => void
-  /** In Author the line is a nudge to the story (PL-4), and Next with none plays the next turn as it comes. */
-  nudge?: boolean
+  /** In Author the line is a nudge to the story (PL-4), and Next with none plays the next turn as it comes; `below`
+   *  says under the box whether the last nudge took. */
+  nudge?: boolean; below?: ReactNode
   commands: MenuCommand[]; onNewStory: () => void
 }
 
-function StoryComposer({ busy, draft, turn, onSend, onAddModel, commands, onNewStory, nudge = false }: ComposerProps) {
+function StoryComposer({ busy, draft, turn, onSend, onAddModel, commands, onNewStory, nudge = false, below }: ComposerProps) {
   const [text, setText] = useState(draft)
   const [found, setFound] = useState<Ideas | null>(null)
   const box = useRef<HTMLTextAreaElement>(null)
@@ -374,6 +377,7 @@ function StoryComposer({ busy, draft, turn, onSend, onAddModel, commands, onNewS
         ? <button type="button" className="button primary" onClick={onAddModel}>Add a model</button>
         : <button type="submit" className="button primary" disabled={!ready}><Send aria-hidden="true" />{words.send}</button>}
     </form>
+    {below}
     <AiFooter />
   </>)
 }

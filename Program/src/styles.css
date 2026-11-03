@@ -1141,3 +1141,7 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .line-mark { display: inline-flex; color: var(--muted); }
 .line-mark svg { width: 14px; height: 14px; }
 .story-turn-actions .turn-report { flex-basis: 100%; text-align: left; }
+.author-notes { max-width: var(--story-width); width: 100%; margin: -16px auto 8px; padding: 0 32px; font-size: 0.8125rem; color: var(--muted); }
+.author-notes p { margin: 0; }
+.watch-every { display: inline-flex; align-items: center; gap: 8px; margin-right: auto; font-size: 0.8125rem; color: var(--muted); }
+.watch-every select { min-height: 32px; font-size: 0.8125rem; }
