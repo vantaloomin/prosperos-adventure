@@ -51,10 +51,12 @@ def view(database) -> dict:
     with database.connect() as connection:
         city_id = story.scene_row(connection)['city_id']
         rules = table.starting(connection)
+        size = cast.party_size(connection)
     world = tiers.world_of(city_id)
     # Each lead's mind if they join as the party (adventure/rounds/cast.py): agent (Thinks) or program (Rules).
     leads = [lead | {'default_mind': str(cast.default_mind(world, lead))} for lead in premades(city_id)]
-    return {'premades': leads, 'points': POINTS, 'range': list(START_RANGE),
+    # How many of them join by default; the rest start in the bank (adventure/rounds/bank.py).
+    return {'premades': leads, 'party_size': size, 'points': POINTS, 'range': list(START_RANGE),
             'stat_names': list(marvel.STATS), 'meanings': marvel.MEANINGS,
             # The rulesets a campaign can be played in, the world's own first (adventure/sheet.py).
             'rulesets': [{'id': key, 'name': name} for key, name in sheet.RULESETS.items()],
@@ -158,8 +160,9 @@ def begin(database, premade_id: str | None = None, persona: PersonaInput | None 
     """Start the story as a premade character or one the player made; only a story with nothing in it yet. The
     ruleset (the world's own by default) is chosen now and locked; under 5E a made character is `build` (class,
     species, background, the standard array placed, the class's skills). `rules` are session zero's (adventure/table.py).
-    With `joining` (the cast page's {premade id: {mind, notes, model_profile_id}}), every other lead of the town
-    travels with the character as the party, each at the table with their own mind (adventure/rounds/cast.py)."""
+    With `joining` (the cast page's {premade id: {mind, notes, model_profile_id}}), the leads it names travel with
+    the character as the party, each at the table with their own mind, and the town's other leads stay in the bank
+    as background characters (adventure/rounds/cast.py)."""
     with database.connect() as connection:
         where, values = timeline.visible(connection)
         require(one(connection, f'SELECT COUNT(*) AS n FROM story_messages WHERE {where}', values)['n'] == 0,

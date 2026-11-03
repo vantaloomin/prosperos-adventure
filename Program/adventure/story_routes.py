@@ -298,7 +298,8 @@ class StoryStart(Input):
     # Ironman (adventure/chapters.py): no going back for the whole campaign, so death is final.
     ironman: bool = False
     legacy: LegacyChoice | None = None
-    # The other leads join as the party, by premade id, each with how they play; left out, nobody joins.
+    # The leads who join as the party, by premade id, each with how they play; the town's other leads stay in the
+    # bank as background characters (adventure/rounds/bank.py). Left out, nobody joins and nobody is banked.
     party: dict[str, Joining] | None = None
     # The ruleset (adventure/sheet.py), locked for the campaign; the world's own when left out.
     ruleset: Literal['marvel', 'srd52', 'ironsworn', 'brp', 'narrative', 'fate'] | None = None

@@ -1,10 +1,13 @@
 """The other leads join as the party at Begin (adventure/rounds/cast.py): each travels with the character from the
-first line and sits at the round table with the mind the cast page gave them."""
+first line and sits at the round table with the mind the cast page gave them. The leads left out stay in the bank and
+live in town as background characters (adventure/rounds/bank.py)."""
 import json
 
 from conftest import Chunk
 
-from adventure import story, story_clock
+from adventure import story, story_clock, tiers
+from adventure.rounds import context
+from adventure.world import townsfolk
 
 
 def ok(response):
@@ -39,7 +42,7 @@ def test_the_other_leads_join_as_the_party_with_their_minds(client):
     assert refused.status_code == 422  # The player's own character cannot also join.
     assert client.post('/api/story/start', json={'premade_id': 'agna-holt', 'party': {'nobody': {}}}).status_code == 422
     ok(client.post('/api/story/start', json={'premade_id': 'agna-holt', 'party': {
-        'tobin-pell': {'mind': 'program', 'notes': 'Gruff, but fair.'}}}))
+        'lirien-of-the-ford': {}, 'tobin-pell': {'mind': 'program', 'notes': 'Gruff, but fair.'}}}))
     seated = {row['key']: (row['name'], row['mind'], row['notes']) for row in rows(client, 'SELECT * FROM round_seats')}
     assert seated == {'you': ('Agna Holt', 'human', ''), 'lirien-of-the-ford': ('Lirien of the Ford', 'agent', ''),
                       'tobin-pell': ('Tobin Pell', 'program', 'Gruff, but fair.')}
@@ -75,3 +78,53 @@ def test_a_party_lead_is_present_and_decides_in_the_first_turn(client, provider)
     snapshot = json.loads(played[0]['snapshot'])
     assert {'you', 'lirien-of-the-ford', 'tobin-pell'} <= set(snapshot['present'])
     assert {seat['key'] for seat in snapshot['seats']} == {'you', 'lirien-of-the-ford', 'tobin-pell'}
+
+
+def test_the_cast_page_fills_the_party_up_to_the_agent_cap(client):
+    kingswood(client)
+    assert ok(client.get('/api/story/start'))['party_size'] == 6
+    ok(client.put('/api/rounds/settings', json={'agent_cap': 2}))
+    assert ok(client.get('/api/story/start'))['party_size'] == 2
+
+
+def test_a_lead_left_in_the_bank_lives_in_town(client):
+    kingswood(client)
+    ok(client.post('/api/story/start', json={'premade_id': 'agna-holt', 'party': {'tobin-pell': {'mind': 'program'}}}))
+    # Only the lead the cast page named joins; Lirien stays in the bank, seated nowhere and not in the party.
+    assert {row['key'] for row in rows(client, 'SELECT key FROM round_seats')} == {'you', 'tobin-pell'}
+    assert {row['key'] for row in rows(client, 'SELECT key FROM story_party')} == {'tobin-pell'}
+    assert [row['key'] for row in rows(client, 'SELECT key FROM story_bank')] == ['lirien-of-the-ford']
+    database = client.app.state.database
+    with database.connect() as connection:
+        data = story.city_data(connection, 'kingswood')
+        lirien = next(item for item in data['notables'] if item['id'] == 'lirien-of-the-ford')
+        # At their own home in town, a regular there, after the city's own notables.
+        assert (lirien['place'], lirien['staff'], lirien['pronouns']) == ('the-ford', False, 'they/them')
+        assert data['notables'][-1] is lirien
+        found = [sheet for sheet in townsfolk.at_place(data, 'the-ford')
+                 if sheet.get('notable') == 'lirien-of-the-ford']
+        assert [sheet['full'] for sheet in found] == ['Lirien of the Ford']
+        # Met in the story, what the package says they know still reaches them.
+        met = found[0]
+        connection.execute("INSERT INTO story_people (key, city_id, name, first_met_at, last_met_at, last_day, "
+                           "meetings, notes) VALUES (?, 'kingswood', ?, '', '', '', 1, '[]')", (met['key'], met['full']))
+        assert context.cast_of(connection, tiers.world_of('kingswood'), met['key']) == 'lirien-of-the-ford'
+    # A new story forgets the bank, and Begin without a party banks nobody.
+    ok(client.delete('/api/story'))
+    assert rows(client, 'SELECT * FROM story_bank') == []
+    ok(client.post('/api/story/start', json={'premade_id': 'agna-holt'}))
+    assert rows(client, 'SELECT * FROM story_bank') == []
+
+
+def test_havenbrooke_banks_the_leads_past_the_cap_at_their_haunts(client):
+    ok(client.put('/api/story/scene', json={'city_id': 'haven', 'place_id': 'commons-coffee'}))
+    ok(client.delete('/api/story'))
+    choices = ok(client.get('/api/story/start'))
+    leads = [lead['id'] for lead in choices['premades']]
+    assert len(leads) - 1 > choices['party_size']
+    others = [key for key in leads if key != 'piper-marsh']
+    joining = others[:choices['party_size']]
+    ok(client.post('/api/story/start', json={'premade_id': 'piper-marsh', 'party': {key: {} for key in joining}}))
+    assert {row['key'] for row in rows(client, 'SELECT key FROM story_party')} == set(joining)
+    banked = {row['key']: json.loads(row['entry'])['place'] for row in rows(client, 'SELECT * FROM story_bank')}
+    assert banked == {'paula-mercer': 'chancellor-wynne-library', 'amanda-rhodes': 'mirren-studio'}

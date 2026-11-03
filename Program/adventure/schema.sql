@@ -1329,6 +1329,14 @@ CREATE TABLE IF NOT EXISTS story_persona (
   package_id TEXT
 );
 
+-- The bank (adventure/rounds/bank.py): the leads the cast page left out of the party, each living in their town as a
+-- background character, as a city notable (`entry`, schema.Notable). Written once at Begin; a new story forgets it.
+CREATE TABLE IF NOT EXISTS story_bank (
+  key TEXT PRIMARY KEY,
+  city_id TEXT NOT NULL,
+  entry TEXT NOT NULL
+);
+
 -- W3 Resolve for a party
 -- The other characters' rolls in a round (adventure/rounds/resolve.py), written at the turn's commit, beside the
 -- story line the turn played on, for the dice log. The player's own line keeps its rolls in story_rolls.
