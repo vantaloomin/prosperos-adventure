@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { decidedCount, hasAgents, modeOf, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
-import { estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
+import { decidedCount, itemText, hasAgents, modeOf, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
 const table = (seats: Seat[], under_way: RoundTable['under_way'] = null): RoundTable => ({
@@ -108,4 +108,24 @@ test('the pace reads plainly', () => {
   assert.equal(estimateLine({ calls: 14, tokens: 9400, seconds: 43.4 }), '~43 s · 14 calls')
   assert.equal(spendLine({ spent: 12400, held: 0, cap: 200000 }), '12k of 200k tokens this session')
   assert.equal(spendLine({ spent: 0, held: 0, cap: 0 }), '0 tokens this session')
+})
+
+test('the turn report reads plainly', () => {
+  assert.equal(turnName(12), 'Turn 12')
+  const names = (key: string) => ({ hesk: 'Hesk' })[key] ?? key
+  assert.equal(rollLine({ actor: 'hesk', action: 'picks the lock', stat: 'Deft', result: 'success' }, names), 'Hesk · picks the lock · Deft · success')
+  assert.equal(rollLine({ actor: 'hesk', action: 'picks the lock', stat: 'Deft', result: 'success', total: 16 }, names), 'Hesk · picks the lock · Deft · success, 16')
+  assert.equal(checksLine({ scan: {}, cut: [], rewrites: 0, review: [] }), '')
+  assert.equal(checksLine({ scan: {}, cut: ['A line.'], rewrites: 2, review: [{ quote: 'q', problem: 'p', fix: 'f' }] }), '2 rewrites · 1 sentence cut · 1 note')
+  assert.equal(itemText('The bridge burns'), 'The bridge burns')
+  assert.equal(itemText({ who: 'tobin', text: 'Tobin sold the map' }), 'Tobin sold the map')
+  assert.equal(itemText({ who: 'tobin' }), '')
+})
+
+test('the GM view reads each mind in full', () => {
+  const names = (key: string) => ({ you: 'Ada', hesk: 'Hesk' })[key] ?? key
+  assert.deepEqual(mindLines({ key: 'mara', name: 'Mara', mind: 'agent', status: 'decided', intent: 'asks where Ada was', motive: 'thinks Ada sold her out',
+    lines: [{ text: 'Where were you?', to: ['you'] }], whispers: [{ text: 'Watch her hands', to: 'hesk' }] }, names),
+  ['asks where Ada was', '“Where were you?” to Ada', 'whispers “Watch her hands” to Hesk'])
+  assert.deepEqual(mindLines({ key: 'bren', name: 'Bren', mind: 'program', status: 'waiting' }, names), [])
 })

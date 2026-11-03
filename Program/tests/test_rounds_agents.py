@@ -388,7 +388,7 @@ def test_a_character_with_its_own_model_uses_it_over_the_agents_job(game):
 def test_the_agents_settings_api_shows_each_preset_with_its_estimate(client):
     shown = client.get('/api/agents').json()
     assert shown['preset'] == 'balanced' and [item['name'] for item in shown['presets']] == [
-        'Quick and cheap', 'Balanced', 'Rich and slow']
+        'Quick', 'Balanced', 'Rich']
     assert shown['spend'] == {'spent': 0, 'held': 0, 'cap': 0} and shown['capped'] is False
     changed = client.put('/api/agents', json={'preset': 'quick', 'loyalty': 'slow', 'session_cap': 50000}).json()
     assert (changed['preset'], changed['loyalty'], changed['spend']['cap']) == ('quick', 'slow', 50000)

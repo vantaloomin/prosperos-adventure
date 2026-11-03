@@ -3,6 +3,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../../api'
 import type { FeelingAxis, GmView } from '../../types'
 import { Notice } from '../../components/Feedback'
+import { GmRoundMinds } from '../round/GmGate'
 
 const GM_KEY = ['story-gm']
 const AXES: FeelingAxis[] = ['trust', 'affection', 'respect', 'fear', 'desire']
@@ -64,6 +65,7 @@ export function StoryGm() {
   return (
     <details className="story-gm">
       <summary>Behind the story</summary>
+      <GmRoundMinds />
       <Section label="Quests and their truths" title="Quests" shown={!!quests.length}>
         {quests.map((quest) => <li key={quest.id}><p><strong>{quest.title}</strong> <span className="subtle">{quest.status}{quest.known ? '' : ' · not yet known'}</span></p>
           {quest.truth && <p className="story-note">{quest.truth}</p>}</li>)}
