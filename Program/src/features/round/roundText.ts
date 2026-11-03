@@ -132,3 +132,6 @@ export function pauseLine(pause: Exclude<WatchPause, null>): string {
 
 /** On a story line whose turn had the GM view open: "GM view was open" (PL-12). */
 export const MARK_NAMES = { gm: 'GM view was open', report: 'Report' } as const
+
+/** The one question on leaving Play (PL-11); Keep hidden is the default. */
+export const MISSED = { question: 'Show the motives you missed?', hide: 'Keep hidden', show: 'Show' } as const

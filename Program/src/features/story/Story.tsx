@@ -33,6 +33,7 @@ import { PACE_KEY, ROUND_KEY, useRoundPlay } from '../round/useRound'
 import { useLineMarks, useMode, useWatch } from '../round/useModes'
 import { ModeSwitch } from '../round/ModeSwitch'
 import { WatchBar } from '../round/WatchBar'
+import { MissedBanner } from '../round/MissedBanner'
 import { LineTools } from '../round/LineTools'
 import { openingKind, type LineMarks, type Mode } from '../round/round'
 import { composerText, NUDGE } from '../round/roundText'
@@ -77,7 +78,7 @@ export function Story({ go }: { go: (view: View) => void }) {
   const note = (event: unknown) => { setTurn((before) => turnAfter(before, event as TurnEvent)); round.hear(event) }
   const send = (text: string) => run(text, () => streamApi('/story/messages/stream', { text, client_id: newId() }, grow, note))
   const change = (request: () => Promise<StoryData>) => run(null, () => request().then(update))
-  const mode = useMode(round.cast.table, setError)
+  const mode = useMode(round.cast.table, round.revealMissed, setError)
   // Author and Watch turns (POST /api/rounds/turns/stream): Next with the author's nudge, or with none in Watch.
   const nextTurn = (nudge: string) => run(nudge, () => streamApi('/rounds/turns/stream', { nudge, against: mode.head }, grow, note))
   const watch = useWatch({ on: mode.active === 'watch', busy: pending !== null, waiting: !!round.waiting, error,
@@ -103,6 +104,7 @@ export function Story({ go }: { go: (view: View) => void }) {
             onBack={story.data.campaign?.ironman ? undefined : (id) => void run(null, () => api<StoryBack>('/story/back', { message_id: id }).then((data) => { update(data); setDraft({ text: data.draft, at: Date.now() }) }))}
             onBookmark={(id, name) => change(() => api<StoryData>('/story/bookmarks', { message_id: id, name }))} />
           <StoryError error={watch.hides(round.shownError(error))} />
+          <MissedBanner asking={mode.asking} onAnswer={mode.answer} />
           <StoryFoot waiting={!!round.waiting} active={mode.active}
             reply={() => round.waiting && <ReplyCard waiting={round.waiting.awaiting} speaker={round.speaker} you={round.you} busy={pending !== null}
               onAnswer={(kind, text) => void run(kind === 'reply' ? text.trim() : '', () => round.answer(kind, text, grow, note))} />}

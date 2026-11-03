@@ -1,19 +1,27 @@
 import { useEffect, useState } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../../api'
-import { hasAgents, modeChosen, watchNext, type AgentPace, type LineMarks, type Mode, type RoundTable, type WatchPause } from './round'
+import { asksMissed, hasAgents, modeChosen, watchNext, type AgentPace, type LineMarks, type Mode, type RoundTable, type WatchPause } from './round'
 import { PACE_KEY, ROUND_KEY } from './useRound'
 
 /** The mode switcher's part: shown only once anyone at the table thinks, so a campaign without agents is Dungeon's. */
-export function useMode(table: RoundTable | undefined, onError: (text: string) => void) {
+export function useMode(table: RoundTable | undefined, revealMissed: boolean | null | undefined, onError: (text: string) => void) {
   const client = useQueryClient()
-  const change = (mode: Mode) => void api<RoundTable>('/rounds/settings', { mode }, 'PUT')
-    .then((data) => client.setQueryData(ROUND_KEY, data),
-      (failure: unknown) => onError(failure instanceof Error ? failure.message : 'Not changed'))
+  // Leaving Play for the first time asks once, in the banner, whether to show the motives missed (PL-11).
+  const [asking, setAsking] = useState(false)
+  const failed = (failure: unknown) => onError(failure instanceof Error ? failure.message : 'Not changed')
+  const change = (mode: Mode) => {
+    setAsking(asksMissed(modeChosen(table), mode, revealMissed))
+    void api<RoundTable>('/rounds/settings', { mode }, 'PUT').then((data) => client.setQueryData(ROUND_KEY, data), failed)
+  }
+  const answer = (reveal: boolean) => {
+    setAsking(false)
+    void api('/minds/reveal_missed', { reveal }, 'PUT').then(() => client.invalidateQueries({ queryKey: ROUND_KEY }), failed)
+  }
   const shown = hasAgents(table)
   // The mode turns are played in now; without agents, always Play.
   const active: Mode = shown ? table?.settings.mode ?? 'play' : 'play'
-  return { shown, mode: modeChosen(table), active, change, head: table?.head ?? null }
+  return { shown, mode: modeChosen(table), active, change, head: table?.head ?? null, asking: asking && active !== 'play', answer }
 }
 
 /** `clear` puts away the last turn's error before playing again. The turn runner reads the pace again as each turn

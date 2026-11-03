@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { asksMissed, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
 import { composerText, pauseLine, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
@@ -163,4 +163,12 @@ test('the open row shows a motive only where the minds panel gave one', () => {
   assert.deepEqual(motivesOf(undefined), {})
   assert.deepEqual(motivesOf([{ key: 'mara', name: 'Mara', mind: 'agent', status: 'decided', motive: 'thinks Ada sold her out' },
     { key: 'hesk', name: 'Hesk', mind: 'agent', status: 'decided' }]), { mara: 'thinks Ada sold her out' })
+})
+
+test('leaving Play asks about missed motives once, and only from Play', () => {
+  assert.equal(asksMissed('play', 'watch', null), true)
+  assert.equal(asksMissed('play', 'author', false), false)
+  assert.equal(asksMissed('play', 'author', undefined), false)
+  assert.equal(asksMissed('author', 'watch', null), false)
+  assert.equal(asksMissed('watch', 'play', null), false)
 })

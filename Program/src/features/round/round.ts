@@ -222,3 +222,9 @@ export function openingKind(message: { role: string; text: string; mode?: Mode |
 export function motivesOf(rows: MindRow[] | undefined): Record<string, string> {
   return Object.fromEntries((rows ?? []).filter((row) => row.motive).map((row) => [row.key, row.motive!]))
 }
+
+/** Whether leaving Play asks "Show the motives you missed?": only from Play, and only while the campaign has no answer
+ *  yet (GET /api/minds `reveal_missed` is null; a backend without it never asks). */
+export function asksMissed(from: Mode, to: Mode, reveal: boolean | null | undefined): boolean {
+  return from === 'play' && to !== 'play' && reveal === null
+}

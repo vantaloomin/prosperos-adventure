@@ -44,15 +44,16 @@ export function useRoundPlay(onError: (text: string) => void) {
   const you = personaName(useWorlds().data?.persona)
   const waiting = waitingOn(live, table.data)
   useTitleWhile(!!waiting)
-  const minds = useQuery({ queryKey: [...ROUND_KEY, 'minds'], queryFn: () => api<{ minds: MindRow[] }>('/minds'),
-    enabled: hasAgents(table.data) && modeOf(table.data) !== 'play' })
+  // The minds panel: motives outside Play, and whether the user has answered "Show the motives you missed?".
+  const minds = useQuery({ queryKey: [...ROUND_KEY, 'minds'], queryFn: () => api<{ minds: MindRow[]; reveal_missed?: boolean | null }>('/minds'),
+    enabled: hasAgents(table.data) })
   const cast: CastRound = {
-    live, table: table.data, waiting: waiting?.awaiting ?? null, motives: motivesOf(minds.data?.minds),
+    live, table: table.data, waiting: waiting?.awaiting ?? null, motives: modeOf(table.data) === 'play' ? {} : motivesOf(minds.data?.minds),
     onMind: (person, mind) => void seat(seatChanges(table.data, person, mind, { key: YOU, name: you || 'You' }))
       .catch((failure: unknown) => onError(failure instanceof Error ? failure.message : 'Not changed.')),
   }
   return {
-    waiting, you, cast,
+    waiting, you, cast, revealMissed: minds.data?.reveal_missed,
     speaker: waiting ? seatName(table.data, waiting.awaiting.speaker) : '',
     start: () => setLive(roundStarting),
     hear: (event: unknown) => setLive((before) => roundAfter(before, event)),
