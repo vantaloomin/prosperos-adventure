@@ -25,7 +25,7 @@ does and never changes roll odds.
 - **Side quests leave a mark.** A job offered may link straight into an active arc (LINK in 100), with one of its
   seeds as a tie.
 - **Nemeses.** A foe who got away from the character, or beat them, may be promoted (NEMESIS in 100): a grudge, what
-  they remember of how the character fights, and a thread. After NEMESIS_DAYS they come back with a plan, through
+  they remember of how the character fights, and a thread, and in agent play an agent of their own. After NEMESIS_DAYS they come back with a plan, through
   the note. One the character kills on the page stays dead.
 
 Seeds and payoffs, adopted details and the arcs' planned beats are adventure/plotting.py.
@@ -285,6 +285,9 @@ def promote(connection, who: str, event: str, now: datetime, logged: str):
                        "(?, ?, ?, ?, 'alive', ?, ?)", (f'nemesis-{identifier()[:12]}', name, grudge, remembers,
                                                       now.isoformat(), thread_id))
     record.add(connection, 'fact', name, grudge, logged, truth='world')
+    # In agent play a nemesis runs on an agent of its own (adventure/rounds/directing.py).
+    from adventure.rounds.directing import seat_nemesis
+    seat_nemesis(connection, name, logged)
 
 
 def pursue(connection, grudge: str, days: int, now: datetime, logged: str):

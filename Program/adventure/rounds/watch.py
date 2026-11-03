@@ -22,6 +22,7 @@ from adventure.database import decode, many, optional
 from adventure.errors import DomainError
 from adventure.rounds import engine, queue, turns
 from adventure.rounds.contract import Mode, Snapshot, State, TurnResult
+from adventure.rounds.modes import users_character
 from adventure.rules import ladder
 
 # The risky kinds that turn on one's own side (adventure/rounds/resolve.py KINDS).
@@ -57,8 +58,8 @@ def betrayals(connection, snapshot: Snapshot, result: TurnResult | None) -> list
     """A party member's attack or theft that landed against one of their own: the party or the user's character."""
     if result is None:
         return []
-    human = snapshot.human()
-    own = party.keys(connection) | ({human.key} if human else set())
+    human = users_character(connection, snapshot)
+    own = party.keys(connection) | ({human} if human else set())
     names = {seat.key: seat.name for seat in snapshot.seats}
     found = []
     for roll in result.rolls:

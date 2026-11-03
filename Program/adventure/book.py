@@ -2,7 +2,10 @@
 in Markdown, EPUB or PDF"; docs/story.md "Export and legacy").
 
 The branch being played, chapter by chapter (adventure/chapters.py), with each chapter's title and the player's lines
-set apart from the narration. Nothing hidden goes in: no GM notes, no record, no rolls. EPUB and PDF are written
+set apart from the narration. Nothing hidden goes in: no GM notes, no record, no rolls. In agent play the export has
+one switch for hidden material (docs/spec.md "Book export"): the story only (the default), or the story with each
+turn's motives and whispers set beside the Writer's post (`hidden`), marked "Unseen". The posts themselves are as
+written either way, and hidden truths nobody learned never go in; the GM view is the place for those. EPUB and PDF are written
 here with the standard library alone: an EPUB 3 zip, and a PDF in the built-in Helvetica faces. The EPUB carries the
 pictures made in each chapter (adventure/art.py): a passage's picture after that passage, the rest where the chapter
 opens.
@@ -43,18 +46,52 @@ def pictures(connection, database, chapter_id: str, ends: dict[str, int]) -> lis
     return found
 
 
-def contents(connection, title: str = '', database=None) -> dict:
-    """The book: its title, who it is about, and each chapter's paragraphs as (who, text), 'user' for the player's,
-    with its pictures when the database is given."""
+def unseen(connection) -> dict[str, list[str]]:
+    """Each committed round turn's motives and whispers, by the id of the line it opened on."""
+    from adventure.database import decode
+    found = {}
+    for row in many(connection, "SELECT anchor_id, snapshot, draft FROM round_turns WHERE state='committed' AND "
+                                'anchor_id IS NOT NULL'):
+        snapshot, draft = decode(row['snapshot']) or {}, decode(row['draft']) or {}
+        names = {seat['key']: seat['name'] for seat in snapshot.get('seats', [])}
+        lines = []
+        for key, declared in (draft.get('declarations') or {}).items():
+            who = names.get(key, key)
+            if declared.get('motive'):
+                lines.append(f"{who}'s motive: {declared['motive']}")
+            for whisper in declared.get('whispers') or []:
+                to = ', '.join(names.get(item, item) for item in whisper.get('to') or []) or 'someone'
+                lines.append(f"{who} whispers to {to}: {whisper.get('text', '')}")
+        if lines:
+            found[row['anchor_id']] = lines
+    return found
+
+
+def chapter_lines(connection, chapter_id: str, hidden: dict[str, list[str]]) -> tuple[list, dict[str, int]]:
+    """A chapter's paragraphs as (who, text), and where each line ends; a turn's unseen material follows its post."""
+    body, ends, waiting = [], {}, []
+    for line in chapters.read(connection, chapter_id):
+        if line['role'] == 'user':
+            body += [('unseen', text) for text in waiting]
+            waiting = list(hidden.get(line['id'], []))
+        if line['role'] in ('user', 'narrator'):
+            body += [(line['role'], part) for part in paragraphs(line['text'])]
+            ends[line['id']] = len(body)
+        if line['role'] == 'narrator':
+            body += [('unseen', text) for text in waiting]
+            waiting = []
+    return body + [('unseen', text) for text in waiting], ends
+
+
+def contents(connection, title: str = '', database=None, hidden: bool = False) -> dict:
+    """The book: its title, who it is about, and each chapter's paragraphs as (who, text), 'user' for the player's
+    and 'unseen' for a turn's motives and whispers when `hidden`, with its pictures when the database is given."""
     persona = optional(connection, 'SELECT name FROM persona WHERE id=1')
     name = (persona and persona['name']) or ''
+    held = unseen(connection) if hidden else {}
     result = []
     for chapter in chapters.listing(connection):
-        body, ends = [], {}
-        for line in chapters.read(connection, chapter['id']):
-            if line['role'] in ('user', 'narrator'):
-                body += [(line['role'], part) for part in paragraphs(line['text'])]
-                ends[line['id']] = len(body)
+        body, ends = chapter_lines(connection, chapter['id'], held)
         if body:
             result.append({'title': chapter['title'], 'number': chapter['number'], 'paragraphs': body,
                            'pictures': pictures(connection, database, chapter['id'], ends)})
@@ -79,7 +116,7 @@ def markdown(book: dict) -> bytes:
     for chapter in book['chapters']:
         parts += [f'## {heading(chapter)}', '']
         for role, text in chapter['paragraphs']:
-            parts += [f'> {text}' if role == 'user' else text, '']
+            parts += [f'> {text}' if role == 'user' else f'*Unseen: {text}*' if role == 'unseen' else text, '']
     return '\n'.join(parts).encode('utf-8')
 
 
@@ -93,6 +130,7 @@ STYLE = """body { font-family: serif; line-height: 1.5; margin: 0 5%; }
 h1, h2 { font-family: sans-serif; text-align: center; margin: 2em 0 1em; }
 p { margin: 0 0 0.8em; text-indent: 0; }
 p.player { font-style: italic; margin-left: 1.5em; }
+p.unseen { font-family: sans-serif; font-size: 0.85em; font-style: italic; margin-left: 3em; color: #555; }
 figure { margin: 1em 0; text-align: center; }
 figure img { max-width: 100%; height: auto; }"""
 
@@ -119,7 +157,9 @@ def chapter_body(chapter: dict) -> str:
                        for picture in chapter.get('pictures', []) if picture['after'] == after)
     parts = [figures(0)]
     for number, (role, text) in enumerate(chapter['paragraphs'], 1):
-        parts.append(f'<p class="player">{inline(text)}</p>' if role == 'user' else f'<p>{inline(text)}</p>')
+        parts.append(f'<p class="player">{inline(text)}</p>' if role == 'user' else
+                     f'<p class="unseen">Unseen: {html.escape(text, quote=False)}</p>' if role == 'unseen' else
+                     f'<p>{inline(text)}</p>')
         parts.append(figures(number))
     return ''.join(parts)
 
@@ -225,6 +265,9 @@ def laid_out(book: dict) -> list[list[tuple[str, float, float, float, str]]]:
         put(heading(chapter), 'heading', 14, MARGIN, 20, 24)
         y -= 12
         for role, text in chapter['paragraphs']:
+            if role == 'unseen':
+                put(f'Unseen: {text}', 'player', SIZE - 1.5, MARGIN + 36, LEADING - 2, 6)
+                continue
             player = role == 'user'
             put(plain(text), 'player' if player else 'body', SIZE, MARGIN + (18 if player else 0), LEADING, 6)
     return pages
@@ -263,8 +306,8 @@ def pdf(book: dict) -> bytes:
     return out.getvalue()
 
 
-def export(connection, kind: str, now: str, title: str = '', database=None) -> tuple[bytes, str]:
+def export(connection, kind: str, now: str, title: str = '', database=None, hidden: bool = False) -> tuple[bytes, str]:
     require(kind in FORMATS, 'A book exports as md, epub or pdf.', 422)
-    book = contents(connection, title, database if kind == 'epub' else None)
+    book = contents(connection, title, database if kind == 'epub' else None, hidden)
     data = markdown(book) if kind == 'md' else epub(book, now) if kind == 'epub' else pdf(book)
     return data, FORMATS[kind]
