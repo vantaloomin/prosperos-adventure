@@ -10,7 +10,8 @@ import { peopleHere } from './scene'
 import { aroundText, moneyText, personLine, statusItems } from './storyText'
 import { MindToggle } from '../round/MindToggle'
 import { RoundTimeline } from '../round/RoundTimeline'
-import { hasAgents, modeOf, rowStatus, seatOf, type CastRound, type RowStatus } from '../round/round'
+import { LastTurn } from '../round/TurnReport'
+import { hasAgents, modeOf, rowStatus, underWay, seatOf, type CastRound, type RowStatus } from '../round/round'
 import { liveSummary, rowText, THINKS_NAME } from '../round/roundText'
 
 export type { CastRound }
@@ -47,10 +48,14 @@ export function StoryCast({ story, round, onTrade }: { story: Story; round?: Cas
   )
 }
 
-/** Once anyone at the table thinks for themselves: the round timeline, with its summary for screen readers. */
+/** Once anyone at the table thinks for themselves: the round timeline, with its summary for screen readers, and between
+ *  turns the last one, which opens its report. */
 function CastTimeline({ round }: { round: CastRound }) {
   if (!hasAgents(round.table)) return null
-  return <RoundTimeline state={round.live.state ?? round.table?.under_way?.state ?? null} live={round.live} summary={liveSummary(round.live, round.table, round.waiting)} />
+  return <>
+    <RoundTimeline state={round.live.state ?? round.table?.under_way?.state ?? null} live={round.live} summary={liveSummary(round.live, round.table, round.waiting)} />
+    {!underWay(round.live, round.table) && <LastTurn table={round.table} />}
+  </>
 }
 
 /** A character here as the round loop sees them: how they're getting on this turn in place of what they're doing, the

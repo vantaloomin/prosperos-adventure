@@ -10,7 +10,7 @@ moved their feelings (docs/spec.md "The turn loop" step 5; Batch 1: "declare at 
   lies_heard.py).
 - **React** (`react`): each agent may react once, in parallel: step in, object, change course, or let its move
   stand. A changed move replaces its declaration (the first is kept for the minds panel and re-asking); what is new
-  in it is shared and its new lies rolled as heard. In "Quick and cheap" only agents someone spoke to, whispered
+  in it is shared and its new lies rolled as heard. In "Quick" only agents someone spoke to, whispered
   to, lied to or named get to react. An agent whose call fails keeps its move.
 - **Feelings** (`felt`, after Resolve): every roll one character aimed at another moves the target's feelings toward
   the one who acted (adventure/feelings.py `between`), slower or faster by the loyalty dial. The user's own
