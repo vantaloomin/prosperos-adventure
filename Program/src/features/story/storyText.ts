@@ -1,4 +1,5 @@
 import type { BandStep, DiceLog, DramaLevel, Gear, HiddenRoll, IntensityPreset, JournalEntry, JournalInstitution, JournalQuest, JournalThread, LegacyRole, Looks, NarrationLength, NarrationPov, NarrationTense, ReceiptChip, SheetBonds, SheetGrowth, Srd52Spells, StoryArc, StoryBranch, StoryChapter, StoryFight, StoryHand, StoryMessage, StoryPace, StoryPerson, StoryPlace, StoryRoll, StoryScene, StoryStart, StoryTier, ToneCategory, ToneVoice, TurnAction, TurnEvent, TurnPace, TurnSoFar, VeilTopic, Zone } from '../../types'
+import { whatIf } from '../round/roundText.ts'
 
 /** "Tuesday, 9:40 am" from the scene's local time, which is the city's own clock with no offset. */
 export function sceneTime(localTime: string): string {
@@ -140,6 +141,12 @@ export function pointsLeft(stats: Record<string, number>, points: number): numbe
 }
 
 /** "3 turns, last played Tue 21 Oct" for a branch the player is not in. */
+/** What a branch is called: the player's name for it or the line it went back from, else the character it asked
+ * again ("What if Hesk had chosen otherwise?"), else nothing. */
+export function branchName(branch: Pick<StoryBranch, 'label' | 'reask'>): string {
+  return branch.label || (branch.reask ? whatIf(branch.reask.name) : '')
+}
+
 export function branchLine(branch: Pick<StoryBranch, 'turns' | 'last_at'>): string {
   const turns = `${branch.turns} ${branch.turns === 1 ? 'turn' : 'turns'}`
   if (!branch.last_at) return turns

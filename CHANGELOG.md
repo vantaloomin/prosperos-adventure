@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Name and delete story branches.** Under Other branches, each branch has Rename and Delete. Delete takes it out of the list and the chapter tree with Undo right there; nothing is erased, so branches taken from it keep what came before. The branch you are playing cannot be deleted. A new branch you go back to is named after the line it replaces (Instead of “I punch the bouncer”), and a branch that asked a character again keeps its question until you rename it. (Ported from Prospero's Companion #496.)
 - **Check for updates.** Settings > General > Updates asks GitHub for the newest Adventure release (pre-releases count) when pressed, and says how to update this copy: the new installer, or update.bat / update.command for a folder copy. Nothing checks in the background, and nothing about you is sent. (Ported from Prospero's Companion #417.)
 - **ComfyUI says which file it lacks.** When ComfyUI refuses a workflow, the picture error names the node and, for a missing model, the file and the models folder it belongs in, instead of "Prompt outputs failed validation". (Ported from Prospero's Companion #446.)
 - **A saved model file stays in its list.** In Settings > Images, a model file, sampler, scheduler or style LoRA the ComfyUI server does not list yet stays pickable after you choose another, so you can go back to it without Use the default. (Ported from Prospero's Companion #468.)

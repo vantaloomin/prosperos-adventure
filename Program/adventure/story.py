@@ -556,8 +556,26 @@ def back(database, message_id: str) -> dict:
     """Go back to before one of the player's lines; the line comes back as a draft to send again, with new dice."""
     with database.connect(write=True) as connection:
         chapters.no_going_back(connection)
-        line = timeline.back(connection, message_id, database.now(), ending(connection))
+        line = timeline.back(connection, message_id, database.now(), ending(connection), label=True)
     return story(database) | {'draft': line['text']}
+
+
+def rename_branch(database, branch_id: str, label: str) -> dict:
+    with database.connect(write=True) as connection:
+        timeline.rename(connection, branch_id, label)
+    return story(database)
+
+
+def delete_branch(database, branch_id: str) -> dict:
+    with database.connect(write=True) as connection:
+        timeline.delete(connection, branch_id, database.now())
+    return story(database)
+
+
+def undelete_branch(database, branch_id: str) -> dict:
+    with database.connect(write=True) as connection:
+        timeline.undelete(connection, branch_id)
+    return story(database)
 
 
 def switch_branch(database, branch_id: str) -> dict:

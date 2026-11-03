@@ -326,6 +326,26 @@ def switch_branch(request: Request, branch_id: str):
     return story.switch_branch(request.app.state.database, branch_id)
 
 
+class BranchName(Input):
+    label: str = Field(max_length=80)
+
+
+@router.patch('/branches/{branch_id}')
+def rename_branch(request: Request, branch_id: str, body: BranchName):
+    return story.rename_branch(request.app.state.database, branch_id, body.label)
+
+
+@router.delete('/branches/{branch_id}')
+def delete_branch(request: Request, branch_id: str):
+    """Out of the list, with Undo; never the branch being played."""
+    return story.delete_branch(request.app.state.database, branch_id)
+
+
+@router.post('/branches/{branch_id}/restore')
+def undelete_branch(request: Request, branch_id: str):
+    return story.undelete_branch(request.app.state.database, branch_id)
+
+
 class ChapterClose(Input):
     title: str = Field('', max_length=80)
 

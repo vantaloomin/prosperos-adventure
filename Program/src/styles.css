@@ -1190,3 +1190,8 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 @media (min-width: 721px) { .update-check .notice > .text-button { padding-block: 0; } }
 @media (max-width: 720px) { .update-check .notice > .text-button { flex-basis: 100%; margin-left: 23px; justify-content: flex-start; } }
 .button .spin { animation: spin 1s linear infinite; }
+
+/* Story branches: a branch's name, and renaming it in place (from Prospero's Companion #496). */
+.branch-name { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.branch-rename { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.branch-rename input { flex: 1 1 160px; min-width: 0; }

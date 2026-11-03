@@ -415,11 +415,11 @@ export interface GmView {
 /** A chapter of a branch (adventure/chapters.py): `open` while it is still being played. */
 export interface StoryChapter { id: string; number: number; title: string; summary: string; hook?: string; open: boolean; turns: number; ended_by: 'place' | 'time' | 'fight' | 'quest' | 'player' | null; branch_id: string; seq: number }
 /** A branch in the tree: where it forked, how it ended if the character died or was lost, and its own chapters. */
-export interface StoryTreeBranch { id: string; parent_id: string | null; fork_seq: number | null; playing: boolean; ending: '' | 'death' | 'lost'; chapters: StoryChapter[] }
+export interface StoryTreeBranch { id: string; label: string; parent_id: string | null; fork_seq: number | null; playing: boolean; ending: '' | 'death' | 'lost'; chapters: StoryChapter[] }
 export interface StoryBookmark { id: string; name: string; message_id: string; branch_id: string; text: string; created_at: string }
 export interface StoryCampaign { chapters: StoryChapter[]; tree: StoryTreeBranch[]; bookmarks: StoryBookmark[]; ironman: boolean; pending: { reason: string; title: string } | null }
 export interface NotebookNote { id: string; text: string; created_at: string; updated_at: string }
-export interface StoryBranch { id: string; playing: boolean; turns: number; last_line: string; last_at: string; started_at: string
+export interface StoryBranch { id: string; label: string; playing: boolean; turns: number; last_line: string; last_at: string; started_at: string
   /** The character this branch asked to decide again (adventure/timeline.py `reasked`), for its label. */
   reask?: { seat: string; name: string } | null }
 export type Zone = 'engaged' | 'near' | 'far'

@@ -316,7 +316,11 @@ CREATE TABLE IF NOT EXISTS story_branches (
   tip TEXT,
   created_at TEXT NOT NULL,
   -- How it ended, when the character died ('death') or was lost ('lost') there (adventure/chapters.py tree).
-  ending TEXT NOT NULL DEFAULT ''
+  ending TEXT NOT NULL DEFAULT '',
+  -- The player's name for it, else the line it went back from (adventure/timeline.py `auto_label`).
+  label TEXT NOT NULL DEFAULT '',
+  -- Taken out of the list (with Undo); nothing is erased, so branches taken from it keep what came before.
+  deleted_at TEXT
 );
 
 -- Which branch is being played.
