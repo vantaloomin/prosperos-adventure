@@ -145,3 +145,10 @@ export const MISSED = { question: 'Show the motives you missed?', hide: 'Keep hi
 // The Author's hand --------------------------------------------------------------------------------------------------
 
 export const BEAT_MARKS = { landed: 'On the page', used: 'Used' } as const
+
+// Asking again -------------------------------------------------------------------------------------------------------
+
+/** A branch started by asking a character to decide again reads as a question (docs/spec.md "Branches read as
+ *  questions"). It never says what they chose, which in Play stays theirs. */
+export const whatIf = (name: string) => `What if ${name} had chosen otherwise?`
+export const askAgain = (name: string) => `Ask ${name} again`

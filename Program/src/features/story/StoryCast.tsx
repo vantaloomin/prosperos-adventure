@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import { useQuery } from '@tanstack/react-query'
+import { RotateCcw } from 'lucide-react'
 import { api } from '../../api'
 import type { Gear, Story, StoryPerson } from '../../types'
 import { useWorlds } from '../worlds/useWorlds'
@@ -12,7 +13,7 @@ import { MindToggle } from '../round/MindToggle'
 import { RoundTimeline } from '../round/RoundTimeline'
 import { LastTurn } from '../round/TurnReport'
 import { hasAgents, modeOf, rowStatus, underWay, seatOf, type CastRound, type RowStatus } from '../round/round'
-import { liveSummary, rowText, THINKS_NAME } from '../round/roundText'
+import { askAgain, liveSummary, rowText, THINKS_NAME } from '../round/roundText'
 
 export type { CastRound }
 
@@ -69,8 +70,16 @@ function CastPerson({ person, round, open, onToggle }: { person: StoryPerson; ro
       <PersonMore person={person} />
       {round.motives[person.key] && <p className="gm-motive">{round.motives[person.key]}</p>}
       <MindToggle id={person.key} name={person.name} mind={mind} onChange={(next) => round.onMind(person, next)} />
+      <AskAgain seat={person.key} name={person.name} round={round} />
     </CastRow>
   )
+}
+
+/** On an agent who decided on the newest turn: play that turn again on a new branch with only their choice asked again. */
+function AskAgain({ seat, name, round }: { seat: string; name: string; round: CastRound }) {
+  if (!round.onReask || !round.reask?.seats.includes(seat)) return null
+  const ask = round.onReask
+  return <button type="button" className="text-button" onClick={() => ask(seat)}><RotateCcw aria-hidden="true" />{askAgain(name)}</button>
 }
 
 /** `thinks` puts the accent dot on the portrait; `status` rings it while the character is thinking or waiting. */

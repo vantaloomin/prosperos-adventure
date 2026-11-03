@@ -417,7 +417,9 @@ export interface StoryTreeBranch { id: string; parent_id: string | null; fork_se
 export interface StoryBookmark { id: string; name: string; message_id: string; branch_id: string; text: string; created_at: string }
 export interface StoryCampaign { chapters: StoryChapter[]; tree: StoryTreeBranch[]; bookmarks: StoryBookmark[]; ironman: boolean; pending: { reason: string; title: string } | null }
 export interface NotebookNote { id: string; text: string; created_at: string; updated_at: string }
-export interface StoryBranch { id: string; playing: boolean; turns: number; last_line: string; last_at: string; started_at: string }
+export interface StoryBranch { id: string; playing: boolean; turns: number; last_line: string; last_at: string; started_at: string
+  /** The character this branch asked to decide again (adventure/timeline.py `reasked`), for its label. */
+  reask?: { seat: string; name: string } | null }
 export type Zone = 'engaged' | 'near' | 'far'
 /** The fight and the character's wounds (adventure/combat.py); a foe's `wound` level (and 5E hit points) only with the dice shown. */
 export interface StoryFight {

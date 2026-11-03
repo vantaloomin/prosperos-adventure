@@ -1,5 +1,6 @@
 import type { StoryBranch } from '../../types'
 import { branchLine } from './storyText'
+import { whatIf } from '../round/roundText'
 
 interface Props { branches: StoryBranch[]; onSwitch: (id: string) => void; open?: boolean }
 
@@ -13,6 +14,7 @@ export function StoryBranches({ branches, onSwitch, open }: Props) {
       <ul>
         {others.map((branch) => (
           <li key={branch.id}>
+            {branch.reask && <p className="branch-question"><span className="portrait" aria-hidden="true">{branch.reask.name.charAt(0)}</span>{whatIf(branch.reask.name)}</p>}
             <p className="subtle">{branchLine(branch)}</p>
             {branch.last_line && <p className="story-note">{branch.last_line}</p>}
             <div className="form-actions">

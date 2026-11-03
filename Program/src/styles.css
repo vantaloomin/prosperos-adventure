@@ -1170,3 +1170,6 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .nudge-box .receipt-chip button svg { width: 12px; height: 12px; }
 .nudge-box .text-button svg { width: 14px; height: 14px; }
 @media (max-width: 720px) { .beat-board, .nudge-box { padding: 0 12px; } }
+/* A branch started by asking a character again (src/features/story/StoryBranches.tsx): the question with their portrait. */
+.branch-question { display: flex; align-items: center; gap: 8px; margin: 0; font-weight: 600; }
+.branch-question .portrait { width: 26px; height: 26px; font-size: 0.875rem; }

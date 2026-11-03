@@ -122,6 +122,18 @@ export interface CastRound {
   /** Each character's motive on the watched turn, in Author and Watch only (GET /api/minds); shown in the open row. */
   motives: Record<string, string>
   onMind: (person: { key: string; name: string }, mind: 'agent' | 'program') => void
+  /** The newest turn and the agents in it who can be asked to decide again (POST /api/rounds/turns/{id}/reask/stream). */
+  reask: Reask | null
+  onReask?: (seat: string) => void
+}
+
+export interface Reask { turn: string; seats: string[] }
+
+/** Who can be asked to decide again: the agents who decided on the newest turn, once no turn is under way. */
+export function reaskOf(minds: { turn: string | null; minds: MindRow[] } | undefined, busy: boolean): Reask | null {
+  if (busy || !minds?.turn) return null
+  const seats = minds.minds.filter((row) => row.mind === 'agent' && row.status === 'decided').map((row) => row.key)
+  return seats.length ? { turn: minds.turn, seats } : null
 }
 
 /** The mode a row is read in: the turn's own while one is under way, else the campaign's. */

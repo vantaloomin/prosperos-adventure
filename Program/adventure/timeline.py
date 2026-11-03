@@ -145,9 +145,21 @@ def branches(connection) -> list[dict]:
         turns = one(connection, f"SELECT COUNT(*) AS n FROM story_messages WHERE role='user' AND {where}", values)['n']
         result.append({'id': row['id'], 'playing': row['id'] == playing, 'turns': turns,
                        'last_line': last['text'] if last else '', 'last_at': last['created_at'] if last else '',
-                       'started_at': row['created_at']})
+                       'started_at': row['created_at'], 'reask': reasked(connection, row['id'])})
     result.sort(key=lambda item: item['last_at'], reverse=True)
     return sorted(result, key=lambda item: not item['playing'])
+
+
+def reasked(connection, branch_id: str) -> dict | None:
+    """The character a branch asked to decide again (adventure/rounds/play.py `reask`), for its label ("What if Hesk had
+    chosen otherwise?"): their seat key and name as the turn saw them. None for a branch started any other way."""
+    row = optional(connection, 'SELECT reask_seat, snapshot FROM round_turns WHERE branch_id=? AND reask_seat IS NOT NULL '
+                               'ORDER BY created_at, rowid LIMIT 1', (branch_id,))
+    if row is None:
+        return None
+    seats = json.loads(row['snapshot'] or '{}').get('seats', [])
+    name = next((seat.get('name') for seat in seats if seat.get('key') == row['reask_seat']), None)
+    return {'seat': row['reask_seat'], 'name': name or row['reask_seat']}
 
 
 def clear(connection):
