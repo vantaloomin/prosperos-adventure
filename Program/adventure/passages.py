@@ -31,11 +31,14 @@ def paragraphs(text: str) -> list[str]:
 
 
 def span(text: str, passage: str) -> tuple[int, int] | None:
-    """Where a passage the player selected sits in the narration; the browser's line breaks may differ."""
+    """Where a passage the player selected sits in the narration; the browser's line breaks may differ, and the page
+    shows *italics* and **bold** without their markers, so markers anywhere in a word still match (and are kept)."""
     words = passage.split()
     if not words:
         return None
-    match = re.search(r'\s+'.join(re.escape(word) for word in words), text)
+    marks = r'[*_~`]*'
+    match = re.search(marks + (marks + r'\s+' + marks).join(marks.join(map(re.escape, word)) for word in words) + marks,
+                      text)
     return match.span() if match else None
 
 

@@ -358,14 +358,15 @@ export function sentences(paragraph: string): string[] {
   return paragraph.match(/[^.!?…]+(?:[.!?…]+["'”’)]*\s*|$)/g) ?? [paragraph]
 }
 
-const words = (text: string) => (text.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []).join(' ')
+/** A sentence's words alone, lowercased: punctuation and Markdown markers don't count when comparing wordings. */
+export const wordsOf = (text: string) => (text.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []).join(' ')
 
 /** The sentences of `saved` whose words are not in `draft`: what the checks reworded after the narration streamed
  *  (adventure/pace.py). Punctuation alone doesn't count, so the always-on em dash fix marks nothing. */
 export function reworded(draft: string, saved: string): Set<string> {
-  const before = ` ${words(draft)} `
+  const before = ` ${wordsOf(draft)} `
   return new Set(saved.split(/\n{2,}/).flatMap(sentences).filter((sentence) => {
-    const said = words(sentence)
+    const said = wordsOf(sentence)
     return said && !before.includes(` ${said} `)
   }))
 }

@@ -3,6 +3,7 @@ import { Send } from 'lucide-react'
 import { AiFooter } from '../../components/Safety'
 import type { Awaiting, ReplyKind } from './round'
 import { replyText } from './roundText'
+import { InlineText } from '../../components/InlineText'
 
 /** `you` is the user's character's name, empty when they have none yet. */
 interface Props { waiting: Awaiting; speaker: string; you: string; busy: boolean; onAnswer: (kind: ReplyKind, text: string) => void }
@@ -21,10 +22,10 @@ export function ReplyCard({ waiting, speaker, you, busy, onAnswer }: Props) {
   }
   return (<>
     <section className="reply-card" aria-labelledby="reply-card-line">
-      {waiting.context.map((line, index) => <p key={index} className="reply-context">{line}</p>)}
+      {waiting.context.map((line, index) => <p key={index} className="reply-context"><InlineText text={line} /></p>)}
       <div className="reply-speaker">
         <span className="portrait" aria-hidden="true">{speaker.charAt(0)}</span>
-        <p className="reply-line" id="reply-card-line"><span className="reply-name">{speaker}</span> {waiting.line}</p>
+        <p className="reply-line" id="reply-card-line"><span className="reply-name">{speaker}</span> <InlineText text={waiting.line} /></p>
       </div>
       <form className="reply-form" onSubmit={(event) => { event.preventDefault(); reply() }}>
         <label className="visually-hidden" htmlFor="reply-text">{words.label}</label>

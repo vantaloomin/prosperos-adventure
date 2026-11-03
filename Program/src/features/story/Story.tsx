@@ -41,6 +41,8 @@ import { NudgeBox } from '../round/NudgeBox'
 import { LineTools } from '../round/LineTools'
 import { openingKind, type LineMarks, type Mode } from '../round/round'
 import { composerText, NUDGE } from '../round/roundText'
+import { InlineText } from '../../components/InlineText'
+import { isBreak } from '../../components/inline'
 
 /** The story: the user's own story around the cities, told by a narrator. */
 export function Story({ go }: { go: (view: View) => void }) {
@@ -298,7 +300,7 @@ function StoryLog({ messages, pending, streamed, turn, bands, marks, onRetry, on
       </Fragment>)}
       {pending && <p className="story-user">{pending}</p>}
       {pending !== null && <TurnLive turn={turn} writing={!!streamed} />}
-      {pending !== null && !!streamed && <div className="story-narration">{streamed.split(/\n{2,}/).map((part, index) => <p key={index}>{part}</p>)}</div>}
+      {pending !== null && !!streamed && <div className="story-narration">{streamed.split(/\n{2,}/).map((part, index) => isBreak(part) ? <hr key={index} className="story-break" /> : <p key={index}><InlineText text={part} /></p>)}</div>}
       {last?.status === 'failed' && !pending && <button type="button" className="text-button" onClick={onRetry}><RotateCcw aria-hidden="true" />Try again</button>}
       <div ref={end} />
       {behind && <button type="button" className="button story-newer" onClick={toEnd}><ArrowDown aria-hidden="true" />New text below</button>}
@@ -311,7 +313,7 @@ function StoryLog({ messages, pending, streamed, turn, bands, marks, onRetry, on
 interface LineProps { message: StoryMessage; bands?: BandStep[] | null; marks?: LineMarks | null; onBack?: (id: string) => void; onBookmark?: (id: string, name: string) => Promise<void>; rewrites?: Rewrites; draft?: string }
 
 function StoryLine({ message, bands, marks, onBack, onBookmark, rewrites, draft }: LineProps) {
-  if (message.role === 'scene') return <p className="story-move">{message.text}</p>
+  if (message.role === 'scene') return <p className="story-move"><InlineText text={message.text} /></p>
   if (message.role === 'user') return <>
     <OpeningLine message={message} />
     <div className="story-turn">
@@ -337,7 +339,7 @@ function OpeningLine({ message }: { message: StoryMessage }) {
   const kind = openingKind(message)
   if (kind === 'none') return <span id={`line-${message.id}`} />
   return <p className={kind === 'nudge' ? 'story-user story-nudge' : 'story-user'} id={`line-${message.id}`}>
-    {kind === 'nudge' && <span className="visually-hidden">{NUDGE.label}: </span>}{message.text}</p>
+    {kind === 'nudge' && <span className="visually-hidden">{NUDGE.label}: </span>}<InlineText text={message.text} /></p>
 }
 
 /** Names this moment to find it again (adventure/chapters.py bookmarks). */
