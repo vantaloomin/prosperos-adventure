@@ -241,3 +241,27 @@ export function motivesOf(rows: MindRow[] | undefined): Record<string, string> {
 export function asksMissed(from: Mode, to: Mode, reveal: boolean | null | undefined): boolean {
   return from === 'play' && to !== 'play' && reveal === null
 }
+
+// The Author's hand (GET /api/rounds/author) -----------------------------------------------------------------------------
+
+/** A planned beat on the beat board: cut, given to the director's note (`used`), or on the page (`landed`). */
+export interface BoardBeat { id: string; text: string; cut: boolean; used: boolean; landed: boolean; source: string }
+/** One arc's beats for its stage, the spine first. */
+export interface BoardArc { arc_id: string; name: string; stage: number; spine: boolean; beats: BoardBeat[] }
+/** A beat the user would like to see, waiting in the nudge box for the next Play turn. */
+export interface BoxBeat { id: string; text: string; created_at: string }
+export interface AuthorView { board: BoardArc[]; box: BoxBeat[]; editable: boolean; feedback: { nudge: string; status: 'used' | 'not_yet'; why: string }[] }
+
+/** The nudge box holds this many beats at a time (adventure/rounds/author.py MOST_BOX). */
+export const MOST_BOX = 6
+
+/** Where a planned beat stands, for its mark on the board: on the page, used, or nothing yet. */
+export function beatStanding(beat: BoardBeat): 'landed' | 'used' | null {
+  if (beat.landed) return 'landed'
+  return beat.used ? 'used' : null
+}
+
+/** Whether a beat can move up or down its arc's plan. */
+export function beatMoves(index: number, count: number): { up: boolean; down: boolean } {
+  return { up: index > 0, down: index < count - 1 }
+}

@@ -141,3 +141,7 @@ export const MARK_NAMES = { gm: 'GM view was open', report: 'Report' } as const
 
 /** The one question on leaving Play (PL-11); Keep hidden is the default. */
 export const MISSED = { question: 'Show the motives you missed?', hide: 'Keep hidden', show: 'Show' } as const
+
+// The Author's hand --------------------------------------------------------------------------------------------------
+
+export const BEAT_MARKS = { landed: 'On the page', used: 'Used' } as const

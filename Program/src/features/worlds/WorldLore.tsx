@@ -6,6 +6,7 @@ import { Loading, Notice } from '../../components/Feedback'
 import { ErrorNotice } from '../../components/ErrorNotice'
 import { Toggle } from '../../components/Fields'
 import { ConfirmDialog } from '../../components/ConfirmDialog'
+import { LoreVisibility } from './LoreVisibility'
 import { bookLine, entryHow, fileData, findEntries, LIBRARY_TYPES, timerLine, timingLine, WHEN_KINDS, type LibraryBook, type Lore, type LoreBook, type LoreEntry, type LoreTiming, type Passages, type WhenChoice, type WhenKind } from './loreText'
 
 const LORE_KEY = ['lore']
@@ -102,6 +103,7 @@ function LoreEntryRow({ entry, choices, off, change }: { entry: LoreEntry; choic
       <Toggle label="On" checked={entry.enabled} disabled={entry.pattern && !entry.enabled}
         hint={entry.pattern ? 'It finds its moment with a search pattern, which Adventure does not run.' : undefined}
         onChange={(enabled) => void change(`/lore/entries/${entry.id}`, { enabled })} />
+      <LoreVisibility entry={entry} onSave={(visibility, known_to) => change(`/lore/entries/${entry.id}/visibility`, { visibility, known_to })} />
       {!entry.always && <WhenPicker when={entry.when} choices={choices} onSave={setWhen} />}
       {!entry.always && <TimingFields timing={entry.timing} onSave={(timing) => change(`/lore/entries/${entry.id}/timing`, timing)} />}
     </li>

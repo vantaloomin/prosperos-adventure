@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { bookLine, entryHow, fileData, findEntries, timerLine, timingLine, type LoreBook, type LoreEntry } from '../../src/features/worlds/loreText.ts'
+import { bookLine, entryHow, fileData, findEntries, knowerChoices, knowersAfter, timerLine, timingLine, visibilityChoices, type LoreBook, type LoreEntry } from '../../src/features/worlds/loreText.ts'
 
 const entry = (changes: Partial<LoreEntry> = {}): LoreEntry => ({
   id: 'e', title: 'The Heartwood', text: 'An old forest the Guild wants felled.', keywords: ['heartwood', 'forest'], always: false, pattern: false,
   enabled: true, when: [], when_guessed: false, fits_now: false,
-  timing: { sticky: 0, cooldown: 0, delay: 0, chance: 100, group_weight: 100, group: '' }, ...changes,
+  timing: { sticky: 0, cooldown: 0, delay: 0, chance: 100, group_weight: 100, group: '' }, visibility: 'public', known_to: [], ...changes,
 })
 
 test('an entry says how it comes into the story', () => {
@@ -40,4 +40,13 @@ test('an entry says its timing and where its timer stands', () => {
   assert.equal(timerLine({ state: 'ready', lines: 0 }), '')
   assert.equal(timerLine({ state: 'resting', lines: 1 }), 'Resting for 1 more line')
   assert.equal(timerLine({ state: 'lingering', lines: 2 }), 'Lingering for 2 more lines')
+})
+
+test('who knows an entry: everyone, some characters, or the GM only', () => {
+  assert.deepEqual(visibilityChoices(true).map(([key]) => key), ['public', 'known', 'gm'])
+  assert.deepEqual(visibilityChoices(false).map(([key]) => key), ['public', 'gm'])
+  assert.deepEqual(knowersAfter(['mara'], 'hesk', true), ['mara', 'hesk'])
+  assert.deepEqual(knowersAfter(['mara', 'hesk'], 'mara', false), ['hesk'])
+  assert.deepEqual(knowersAfter(['mara'], 'mara', true), ['mara'])
+  assert.deepEqual(knowerChoices([{ key: 'mara', name: 'Mara' }], ['mara', 'old-tam']), [{ key: 'mara', name: 'Mara' }, { key: 'old-tam', name: 'old-tam' }])
 })

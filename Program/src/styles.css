@@ -1145,3 +1145,28 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .author-notes p { margin: 0; }
 .watch-every { display: inline-flex; align-items: center; gap: 8px; margin-right: auto; font-size: 0.8125rem; color: var(--muted); }
 .watch-every select { min-height: 32px; font-size: 0.8125rem; }
+.lore-who { display: grid; gap: 4px; }
+.lore-who select { width: fit-content; }
+.lore-knowers { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.8125rem; }
+.lore-knowers label { display: inline-flex; align-items: center; gap: 8px; }
+/* The Author's hand (src/features/round/BeatBoard.tsx, NudgeBox.tsx): the beat board in Author, wished-for beats in Play. */
+.beat-board, .nudge-box { max-width: var(--story-width); width: 100%; margin: -8px auto 8px; padding: 0 32px; font-size: 0.8125rem; }
+.beat-board summary { cursor: pointer; color: var(--muted); width: fit-content; }
+.beat-board section { margin: 8px 0 12px; }
+.beat-board h4 { margin: 0 0 4px; font-size: 0.8125rem; }
+.beat-board ol { margin: 0 0 4px; padding-left: 20px; display: grid; gap: 2px; }
+.beat-board li { display: flex; align-items: center; gap: 8px; }
+.beat-board .beat-text { flex: 1; }
+.beat-board .beat-cut .beat-text { color: var(--muted); }
+.beat-board .beat-mark { color: var(--muted); white-space: nowrap; }
+.beat-board .beat-tools { display: inline-flex; align-items: center; gap: 2px; }
+.beat-board .icon-button { width: 28px; height: 28px; }
+.beat-board .icon-button svg, .add-line .icon-button svg { width: 15px; height: 15px; }
+.add-line { display: flex; align-items: center; gap: 4px; max-width: 420px; }
+.add-line input { flex: 1; min-height: 30px; font-size: 0.8125rem; }
+.nudge-box { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.nudge-box .receipt-chip { cursor: default; }
+.nudge-box .receipt-chip button { display: inline-flex; color: inherit; }
+.nudge-box .receipt-chip button svg { width: 12px; height: 12px; }
+.nudge-box .text-button svg { width: 14px; height: 14px; }
+@media (max-width: 720px) { .beat-board, .nudge-box { padding: 0 12px; } }
