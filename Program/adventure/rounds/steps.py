@@ -10,4 +10,5 @@ from adventure.rounds import (
     offpage,  # noqa: F401 - off-page beats in a round with agents, and their commit
     report,  # noqa: F401 - the house rules frozen at Gather, the Reviewer and the scan after the Writer
     telling,  # noqa: F401 - today's turn as steps, and the party's Resolve (resolve.py)
+    writer,  # noqa: F401 - the round Writer, in place of today's 'write' in a turn with agents
 )

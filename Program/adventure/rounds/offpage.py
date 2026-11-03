@@ -27,6 +27,8 @@ from adventure.rounds.contract import Mind, State
 from adventure.rounds.writer import one_line
 
 KEY = 'offpage'
+# The Writer's part of the turn report (adventure/rounds/writer.py KEY).
+REPORT = 'w4'
 MOST_LINES = 4
 
 
@@ -71,6 +73,11 @@ async def offpage(turn):
             turn.draft.learn(key, 'told', f'{name}, off the page: "{line}"', source=key)
     turn.draft.extra[KEY] = {'message_id': anchor(turn), 'town': town, 'now': now.isoformat(), 'drawn': drawn,
                              'cutaways': [truth[:1].upper() + truth[1:] for truth in truths] if cutaways else []}
+    # The turn report's off-page threads (adventure/rounds/report.py), as the user may see them after the turn.
+    turn.draft.extra.setdefault(REPORT, {})[KEY] = [
+        {'key': beat['person']['key'], 'name': beat['person']['name'], 'card_id': beat['drawn']['card']['id'],
+         'truth': truth[:1].upper() + truth[1:], 'lines': beat['lines']}
+        for beat, truth in zip(drawn['beats'], truths)]
 
 
 async def none() -> list[str]:

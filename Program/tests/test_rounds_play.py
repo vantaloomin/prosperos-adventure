@@ -23,6 +23,8 @@ def steps():
             engine.pick, telling.gather, telling.line, telling.write, resolve.ambiguity, resolve.resolve)]
     # Another part may have replaced 'pick' under its name: the foundation's own is put back for these tests.
     engine.STEPS[State.GATHERING][:] = [('pick', engine.pick), ('line', telling.gather)]
+    # Today's telling writes, in place of the round Writer (adventure/rounds/writer.py), which has tests of its own.
+    engine.STEPS[State.WRITING][:] = [('write', telling.write)]
     engine.COMMITS[:] = [(name, hook) for name, hook in engine.COMMITS
                          if hook in (engine.committed_memory, telling.committed, resolve.kept_rolls)]
     yield
