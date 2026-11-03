@@ -1408,6 +1408,24 @@ CREATE TABLE IF NOT EXISTS round_corrections (
 
 CREATE INDEX IF NOT EXISTS round_corrections_of ON round_corrections (turn_id);
 
+-- W5 Writing rules and checks: character sheets refreshed from the page (adventure/rounds/shown.py). ---------------
+
+-- A "shown so far" update to a seated character's sheet, drafted by code when a chapter closes and keyed to the
+-- chapter's end on its branch (`seq`), so it is read through the branch's ancestry. `items` is JSON
+-- [{kind: injury|revealed|habit, text}]; it applies when the user reviews it, or at once in Watch.
+CREATE TABLE IF NOT EXISTS round_shown (
+  id TEXT PRIMARY KEY,
+  seat_key TEXT NOT NULL,
+  name TEXT NOT NULL,
+  chapter_id TEXT NOT NULL,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  items TEXT NOT NULL DEFAULT '[]',
+  status TEXT NOT NULL CHECK (status IN ('drafted', 'applied', 'dismissed')),
+  created_at TEXT NOT NULL,
+  decided_at TEXT
+);
+
 -- W7 Author, Watch and the Dungeon systems in agent play (adventure/rounds/author.py, watch.py, modes.py). ---------
 
 -- How the modes play in this campaign (adventure/rounds/modes.py): who stands in for the user's character outside

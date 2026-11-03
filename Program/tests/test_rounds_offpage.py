@@ -93,6 +93,10 @@ def test_an_offscreen_agent_writes_its_lines_and_the_beat_lands_at_commit(client
     assert remembered['witnessed'][0].isupper()
     # Cutaways are off, so the Writer has none to place.
     assert stored['extra']['offpage']['cutaways'] == []
+    # The turn report lists the thread, with what code decided and what the agent said.
+    assert stored['extra']['w4']['offpage'] == [{'key': 'corin', 'name': 'Corin Ashby', 'card_id': 'beat-boots',
+                                                 'truth': remembered['witnessed'],
+                                                 'lines': ['Tell my sister the boots were never mine.']}]
 
 
 def test_a_cancelled_round_leaves_no_beat_behind(client, app, dealt, rounds):  # noqa: F811

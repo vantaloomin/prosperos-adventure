@@ -169,7 +169,8 @@ def knowledge_lines(snapshot: Snapshot, items: list[Knowledge], who: str | None 
 
 
 def recalled(connection, snapshot: Snapshot, key: str, focus: str) -> list[str]:
-    rows = memory.recall(connection, key, snapshot.point, focus, RECALLED)
+    depth = (snapshot.settings.get('agents') or {}).get('recall') or RECALLED  # the agents' preset (rounds/agents.py)
+    rows = memory.recall(connection, key, snapshot.point, focus, depth)
     return [item_line(snapshot, row['kind'], row['text'], row['source'], row['faded']) for row in rows]
 
 

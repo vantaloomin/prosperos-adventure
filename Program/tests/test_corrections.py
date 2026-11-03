@@ -119,3 +119,9 @@ def test_corrections_need_the_gm_view_over_the_api(client, app, steps):
     assert len(done['corrections']) == 1 and done['later'] == []
     assert ok(client.get(f'/api/story/turns/{turn.id}/corrections'))[0]['after'] == 12
     assert client.get('/api/story/turns/nope/corrections').status_code == 404
+
+
+def test_the_committed_reply_is_found_where_either_writer_left_it():
+    assert corrections.reply_of({'extra': {'telling': {'reply': {'id': 'm1'}}}}) == 'm1'
+    assert corrections.reply_of({'extra': {'w4': {'reply': {'id': 'm2'}, 'inventions': []}}}) == 'm2'
+    assert corrections.reply_of({'extra': {}}) is None

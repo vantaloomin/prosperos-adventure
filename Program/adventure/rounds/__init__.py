@@ -23,7 +23,9 @@
 - scan.py: the draft scan every Writer post passes before Commit, with the fixes code makes when a rewrite can't
 - reviewer.py: a second reader's notes on the draft, applied or declined by the Writer
 - report.py: the checks at the end of Writing, the turn report and the status line
+- panes.py: the System panes code writes after the post, so every number on the page traces to the game
 - corrections.py: turn-keyed patches to a committed turn, and struck inventions
+- shown.py: each seated character's "shown so far", drafted by code at a chapter's close
 
 The API is adventure/round_routes.py, and adventure/mode_routes.py for Author, Watch and switching modes.
 """

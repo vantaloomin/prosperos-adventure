@@ -23,6 +23,8 @@ def steps():
             engine.pick, telling.gather, telling.line, telling.write, resolve.ambiguity, resolve.resolve)]
     # Another part may have replaced 'pick' under its name: the foundation's own is put back for these tests.
     engine.STEPS[State.GATHERING][:] = [('pick', engine.pick), ('line', telling.gather)]
+    # Today's telling writes, in place of the round Writer (adventure/rounds/writer.py), which has tests of its own.
+    engine.STEPS[State.WRITING][:] = [('write', telling.write)]
     engine.COMMITS[:] = [(name, hook) for name, hook in engine.COMMITS
                          if hook in (engine.committed_memory, telling.committed, resolve.kept_rolls)]
     yield
@@ -74,6 +76,10 @@ def test_a_players_line_is_a_turn_of_the_round_loop(client, connected):
     played = rows(client, 'SELECT * FROM round_turns')
     assert [(row['anchor_id'], row['state'], row['mode']) for row in played] == [
         (first['message']['id'], 'committed', 'play')]
+    # Each line says which turn it belongs to, for its report.
+    assert first['turn_id'] == played[0]['id']
+    lines = {row['id']: row['turn_id'] for row in ok(client.get('/api/story'))['messages']}
+    assert lines[first['message']['id']] == lines[first['reply']['id']] == played[0]['id']
     # The same line sent again (a retried request) is answered from what was kept, with no second turn.
     assert tell(client, 'I look around the market.', 'client-one-1')['reply']['id'] == first['reply']['id']
     assert len(rows(client, 'SELECT * FROM round_turns')) == 1
@@ -81,6 +87,8 @@ def test_a_players_line_is_a_turn_of_the_round_loop(client, connected):
     ok(client.post('/api/story/retry'))
     assert [row['state'] for row in rows(client, 'SELECT * FROM round_turns ORDER BY created_at, rowid')] == [
         'discarded', 'committed']
+    told_again = rows(client, "SELECT id FROM round_turns WHERE state='committed'")[0]['id']
+    assert {row['turn_id'] for row in ok(client.get('/api/story'))['messages']} == {told_again}
 
 
 def test_a_solo_turns_stream_is_as_it_always_was(client, connected):

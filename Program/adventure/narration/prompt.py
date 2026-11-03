@@ -108,7 +108,9 @@ a smile that reached the eyes), scene-closers (and in that moment, and just like
 
 COMPACT_BELOW_TOKENS = 16_000
 
-POINTS_OF_VIEW = {'first': 'first person', 'second': 'second person', 'third': 'close third person'}
+POINTS_OF_VIEW = {'first': 'first person', 'second': 'second person', 'third': 'close third person',
+                  # The round Writer's in Author and Watch (adventure/rounds/writer.py).
+                  'roving': 'third person, roving across the cast'}
 TENSES = ('past', 'present')
 LENGTHS = {'short': 'about 150 to 250 words', 'medium': 'about 300 to 500 words',
            'long': 'about 800 to 1,500 words, rendering each beat in full'}

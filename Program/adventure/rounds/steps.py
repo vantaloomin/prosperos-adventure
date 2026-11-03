@@ -13,4 +13,5 @@ from adventure.rounds import (
     report,  # noqa: F401 - the house rules frozen at Gather, the Reviewer and the scan after the Writer
     telling,  # noqa: F401 - today's turn as steps, and the party's Resolve (resolve.py)
     watch,  # noqa: F401 - what Watch's big moments are found against
+    writer,  # noqa: F401 - the round Writer, in place of today's 'write' in a turn with agents
 )

@@ -51,6 +51,21 @@ def view(row: dict) -> dict:
             'awaiting': {key: waiting[key] for key in ('seat', 'speaker', 'line', 'context')} if waiting else None}
 
 
+def of_lines(connection, rows: list[dict]) -> dict[str, str]:
+    """The round turn each story line belongs to, by message id: a user line is the anchor its turn opens on, and the
+    narrator's reply belongs to the turn of the line it answers. Lines with no turn kept (from before the round loop,
+    or whose turn was thrown away) are left out."""
+    anchors = {row['id'] if row['role'] == 'user' else row.get('reply_to') for row in rows} - {None}
+    if not anchors:
+        return {}
+    marks = ', '.join('?' * len(anchors))
+    held = {row['anchor_id']: row['id'] for row in many(
+        connection, f"SELECT id, anchor_id FROM round_turns WHERE anchor_id IN ({marks}) AND state != ? "
+                    'ORDER BY created_at, rowid', (*anchors, str(State.DISCARDED)))}
+    found = {row['id']: held.get(row['id'] if row['role'] == 'user' else row.get('reply_to')) for row in rows}
+    return {key: value for key, value in found.items() if value}
+
+
 def set_state(connection, turn_id: str, state: State, now: str = ''):
     connection.execute('UPDATE round_turns SET state=?, committed_at=CASE WHEN ?=? THEN ? ELSE committed_at END '
                        'WHERE id=?', (str(state), str(state), str(State.COMMITTED), now, turn_id))
