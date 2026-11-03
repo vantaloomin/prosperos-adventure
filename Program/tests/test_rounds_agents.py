@@ -267,6 +267,21 @@ def test_what_an_agent_reads_holds_only_what_it_could_see_and_hear(game, steps):
     assert 'The bridge is empty' not in reacts['Hesk'] + reacts['Ilsa']
 
 
+def test_the_users_wording_of_a_characters_mind_reaches_every_call_and_the_contract_stays(game, steps):
+    from adventure import prompt_library
+    prompt_library.save(game.database, 'character-mind', 'SENTINEL-MIND. You are {{character}} and nobody else.')
+    prompt_library.save(game.database, 'character-react', 'SENTINEL-REACT. You may react once.')
+    seat_up(game, ('mara', 'Mara', Mind.AGENT), ('hesk', 'Hesk', Mind.AGENT))
+    scripted(game, {'Mara': [{'intent': 'waits'}, {'change': False}], 'Hesk': [{'intent': 'waits'}, {'change': False}]})
+    turn_of(game)
+    systems = [request['system'] for request in game.provider.requests]
+    assert systems and all(system.startswith('SENTINEL-MIND. You are [[in-fiction: your character]]')
+                           for system in systems)
+    assert all(agents.CONTRACT in system and agents.FENCE_RULE in system for system in systems)
+    reacts = [system for system in systems if 'SENTINEL-REACT' in system]
+    assert len(reacts) == 2 and all(agents.REACT_CONTRACT in system for system in reacts)
+
+
 # Failures -----------------------------------------------------------------------------------------------------------
 
 def test_broken_output_is_asked_again_once_with_what_was_wrong(game, steps):

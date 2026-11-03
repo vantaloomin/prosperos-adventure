@@ -9,7 +9,7 @@ def test_the_prompt_is_layered_with_the_turn_last():
                          persona='Kael, a debt collector with a bad knee.', persona_name='Kael',
                          outcomes=[{'actor': 'Kael', 'action': 'taunt the demon', 'band': 'success_cost',
                                     'detail': 'He loses his footing; the code marked a sprained wrist.'}])
-    order = [text.index(part) for part in ('tabletop roleplaying game for adults', 'Never write:',
+    order = [text.index(part) for part in ('tabletop roleplaying game for adults', 'Hard rules',
                                            'close third person on Kael, past tense', 'Intensity:',
                                            "## The player's character", '## Scene', '## This turn')]
     assert order == sorted(order)
