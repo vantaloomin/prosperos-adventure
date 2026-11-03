@@ -1304,6 +1304,23 @@ CREATE TABLE IF NOT EXISTS agent_settings (
   updated_at TEXT NOT NULL DEFAULT ''
 );
 
+-- W1 Privacy and context builders (adventure/rounds/context.py, adventure/gm.py). ----------------------------------
+
+-- The user's answer to the GM view's warning in Play, remembered for this campaign (adventure/gm.py `open_round`).
+-- A choice, not story: going back keeps it; a new story forgets it.
+CREATE TABLE IF NOT EXISTS gm_view_consent (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  remembered INTEGER NOT NULL DEFAULT 0 CHECK (remembered IN (0, 1)),
+  created_at TEXT NOT NULL
+);
+
+-- Who the player's character is in the world package: the persona (premade) taken at the campaign's start, NULL for a
+-- character of their own (adventure/rounds/context.py `remember_persona`), so what that persona knows reaches them.
+CREATE TABLE IF NOT EXISTS story_persona (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  package_id TEXT
+);
+
 -- W3 Resolve for a party
 -- The other characters' rolls in a round (adventure/rounds/resolve.py), written at the turn's commit, beside the
 -- story line the turn played on, for the dice log. The player's own line keeps its rolls in story_rolls.
@@ -1369,3 +1386,22 @@ CREATE TABLE IF NOT EXISTS house_rulings (
   seq INTEGER NOT NULL,
   created_at TEXT NOT NULL
 );
+
+-- W5 Writing rules and checks: corrections (adventure/rounds/corrections.py). --------------------------------------
+
+-- A patch to a committed turn, keyed to that turn's place on the timeline (its branch and seq) so every later read
+-- through the branch's ancestry sees it. `before` and `after` are JSON; `after` is NULL for something struck.
+CREATE TABLE IF NOT EXISTS round_corrections (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  kind TEXT NOT NULL CHECK (kind IN ('memory', 'feeling', 'record', 'stat', 'invention')),
+  target TEXT NOT NULL,
+  before TEXT,
+  after TEXT,
+  why TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS round_corrections_of ON round_corrections (turn_id);

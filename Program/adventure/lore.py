@@ -101,8 +101,11 @@ def tagged(entry: dict) -> tuple[str, list[str]]:
 
 
 def visibility_of(row: dict) -> dict:
-    """A stored entry's tag; a row from before tags existed is public."""
-    return {'visibility': row.get('visibility') or 'public', 'known_to': decode(row.get('known_to') or '[]')}
+    """A stored entry's tag (or a package fact's, whose known_to is already a list); a row from before tags existed
+    is public."""
+    known_to = row.get('known_to') or []
+    return {'visibility': row.get('visibility') or 'public',
+            'known_to': decode(known_to) if isinstance(known_to, str) else list(known_to)}
 
 
 def readable(row: dict, knowers: frozenset[str] | None) -> bool:
@@ -202,6 +205,21 @@ def set_timing(database, entry_id: str, timing: dict) -> dict:
         connection.execute('UPDATE lore_entries SET sticky=?, cooldown=?, delay=?, chance=?, group_weight=?, '
                            'lore_group=? WHERE id=?', (*values.values(), group, entry_id))
     return listing(database)
+
+
+def for_reader(connection, city_id: str | None, knowers: frozenset[str] | None, focus: str,
+               limit: int = MAX_TRIGGERED) -> list[dict]:
+    """The lore a reader's context gets (adventure/rounds/context.py): entries switched on that the reader may read,
+    always-on ones and those whose keyword is in `focus`, at most `limit` of the keyword ones. No timer or chance
+    runs: those are the narrator's game state."""
+    rows = [row for row in many(
+        connection, 'SELECT e.* FROM lore_entries e JOIN lore_books b ON b.id=e.book_id WHERE e.enabled=1 AND '
+        'b.enabled=1 AND (b.city_id IS NULL OR b.city_id=?) ORDER BY b.created_at, e.position', (city_id,))
+        if readable(row, knowers)]
+    scanned = focus.casefold()
+    named = [row for row in rows if not row['always'] and any(mentioned(word, scanned)
+                                                                for word in decode(row['keywords']))]
+    return [row for row in rows if row['always']] + named[:limit]
 
 
 def set_visibility(database, entry_id: str, visibility: str, known_to: list[str]) -> dict:
