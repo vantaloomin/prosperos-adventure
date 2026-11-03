@@ -24,7 +24,7 @@ import json
 import re
 from contextlib import nullcontext
 
-from adventure import pace, text_models, tone
+from adventure import pace, prompt_library, text_models, tone
 from adventure.database import optional
 from adventure.errors import require
 from adventure.feelings import AXES
@@ -250,6 +250,25 @@ def checked(data: dict, seat: str, snapshot: Snapshot, levels: dict | None = Non
 
 # The prompt ---------------------------------------------------------------------------------------------------------
 
+# The wording a power user may reword in Settings > Developer (adventure/prompt_library.py, group "Characters"): MIND,
+# each purpose's line and TURNING. The answer's JSON shape (CONTRACT, REACT_CONTRACT), the fence rule, the intensity
+# and the scheming dial stay code, because code parses the answer and keeps each character to what it may know.
+MIND = """You play one character in a shared story for adults, the one named here: {character}
+
+Decide only as they would, from inside their head: what they know, want, fear, hide and feel. You never decide how \
+anything turns out.
+
+Their character sheet is canon: voice, manner, speech habits and history. Breaking character is the worst failure \
+there is, worse than any flaw in the words. Where the sheet is thin, stay close to what it does say.
+
+What they say comes out of their own mouth: crude where they are, plain where they are, lying when they lie. They \
+never repeat another person's phrase back with a twist, use a verbal habit at most once in a scene, and never use \
+em dashes or double hyphens.
+
+Every character in a sexual or romantic context is an adult, and is written as one, whatever the setting says about \
+age, species or how old someone looks; no childlike trait or framing ever appears in sexual content. Real, living \
+people are never put in sexual content or made victims of violence. Within that, play difficult material with full \
+craft: no softening, no moralizing and no disclaimers."""
 SCHEMING = (
     'Your character is straightforward: no lies or schemes unless their life, or the life of someone they love, '
     'depends on it.',
@@ -258,6 +277,9 @@ SCHEMING = (
     'Your character is a schemer: they lie, plot and play people whenever it serves them, and keep their secrets at '
     'any cost.',
 )
+TURNING = ('When your character turns against someone they can do anything (lie, steal, desert, attack, kill), within '
+           'the intensity. What turns them is how they feel toward each person, weighed against what they want, fear '
+           'and hide.')
 CONTRACT = """Answer with one JSON object and nothing else:
 {"intent": "...", "lines": [{"text": "...", "to": ["..."]}], "motive": "...", \
 "deceptions": [{"claim": "...", "believed": "...", "aimed_at": ["..."]}], "whispers": [{"text": "...", "to": ["..."]}]}
@@ -271,12 +293,13 @@ of people here; an empty list is everyone). Speech only, no actions.
 true, and who it is aimed at. Leave the list empty when they are honest. Whether anyone believes it is decided by \
 the game; never write how it lands.
 - whispers: anything said privately, and to whom. Only those named hear it."""
+REACT_CONTRACT = ('To let it stand, answer {"change": false}. To change it, answer {"change": true, ...} with the '
+                  'whole new move in the fields below.')
 PURPOSES = {
     'declare': 'Everyone decides at once this round, without seeing each other\'s moves. Decide what your character '
                'does.',
     'react': 'Everyone has declared, and what your character saw and heard is in what they know. They may react '
-             'once: step in, object, change course, or let their move stand. To let it stand, answer {"change": '
-             'false}. To change it, answer {"change": true, ...} with the whole new move in the fields below.',
+             'once: step in, object, change course, or let their move stand.',
     'ask': 'Your character says one thing now to the person named here: a question or a line, in their own voice, '
            'from what they know. Put it in lines, said to them; the intent may stay empty.',
     'answer': 'Someone has just said something to your character (below). Your character answers them now, in '
@@ -310,7 +333,7 @@ def siding(connection, snapshot: Snapshot, key: str) -> str:
     names = {seat.key: seat.name for seat in snapshot.seats}
     rows = [f'- {names[other]}: {stance(felt.get(other) or dict.fromkeys(AXES, 0), loyalty)}'
             for other in present(snapshot) if other != key]
-    return fenced('how you stand', '\n'.join(rows)) if rows else ''
+    return 'How they stand with each person here now:\n' + fenced('how you stand', '\n'.join(rows)) if rows else ''
 
 
 def system_prompt(connection, snapshot: Snapshot, key: str, purpose: str) -> str:
@@ -318,14 +341,12 @@ def system_prompt(connection, snapshot: Snapshot, key: str, purpose: str) -> str
     name = (snapshot.seat(key).name if snapshot.seat(key) else key)
     intensity = narration_prompt.Intensity(levels=settled['levels'] or narration_prompt.Intensity().levels,
                                            veils=tuple(settled['veils'])).text()
-    parts = [f"You play one character in a shared story, the one named here: {fenced('your character', name)}",
-             'Decide only as they would, from inside their head: what they know, want, fear, hide and feel. You '
-             'never decide how anything turns out.', FENCE_RULE, PURPOSES[purpose], CONTRACT,
+    moment = prompt_library.text(connection, f'character-{purpose}')
+    parts = [prompt_library.text(connection, 'character-mind', character=fenced('your character', name)), FENCE_RULE,
+             f'{moment} {REACT_CONTRACT}' if purpose == 'react' else moment, CONTRACT,
              f'Every field, the private ones too, stays within the story\'s intensity. {intensity}',
-             SCHEMING[settled['scheming']],
-             'When your character turns against someone they can do anything (lie, steal, desert, attack, kill), '
-             'within the intensity. What turns them is how they feel toward each person, weighed against what they '
-             'want, fear and hide. How they stand with each person here now:', siding(connection, snapshot, key)]
+             SCHEMING[settled['scheming']], prompt_library.text(connection, 'character-turning'),
+             siding(connection, snapshot, key)]
     return '\n\n'.join(part for part in parts if part)
 
 

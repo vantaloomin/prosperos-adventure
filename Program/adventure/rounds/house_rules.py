@@ -40,10 +40,12 @@ NAMED_MARKS = {'em dash': 'em dashes or double hyphens, in any form'}
 DIALOGUE = (
     "Nobody repeats another character's phrase back with a twist; answer with new content, a question, an action or "
     'silence. Greetings and ritual lines are fine.',
-    'No reported speech: if someone said it, quote the words.',
-    "A character's catchphrase or verbal habit appears once per scene at most.",
-    'Any scene with dialogue has at least one question asked aloud.',
-    'No more than three lines of back-and-forth without an action beat or a tag.',
+    'No reported speech: if someone said it, quote the words, unless the point of view character could not hear it.',
+    "A character's catchphrase or verbal habit appears once per scene at most, and never in back-to-back lines.",
+    # Tendencies, not quotas: a quota is met the same way every time and becomes a tell of its own. The Reviewer
+    # treats a scene of dialogue with no question as a place to look (adventure/rounds/reviewer.py).
+    'People ask each other questions aloud, and do not always get answers.',
+    'After about three untagged lines of back-and-forth, ground the reader with an action beat or a tag.',
     'People do not count or keep score; System panes can count, people cannot.',
 )
 # The lists a user edits by adding and removing entries.

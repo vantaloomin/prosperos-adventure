@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- **Character prompts in Settings.** Settings > Developer > Prompts has a Characters group: a character's mind, each moment they are asked (deciding a move, reacting, speaking up, answering, off the page) and turning on someone, each with Reset to default. The round Writer, which tells rounds when other characters think for themselves, joins the Story group. What each character may know and the shape of their answer stay with the app, so a rewording can't show anyone a secret.
+- **Sharper prompts for adult fiction.** The narrator, the round Writer and every character now share one order of what wins when instructions disagree and one content scope: adults written as adults with no childlike framing, real people never in sexual content or harmed, and dark material written with full craft and no moralizing. The writing rules keep only checkable hard rules and state the rest as tendencies; the list of stock phrases moved out of the prompt into the checks that run after each reply, so it no longer primes the model. The Reviewer now checks over-explanation, repeated moves, questions and concrete detail as well, and reads a familiar phrase as a place to look rather than an automatic cut.
+
 ## v0.1.0 (2026-11-03): Characters Who Think
 
 - **Play, Author and Watch on the cast page.** Beside the place name on the cast page, pick the mode the story starts in. In Author and Watch no card is You: the character whose story it is gets Thinks or Rules like the rest, for who plays them while you author or watch.
