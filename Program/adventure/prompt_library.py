@@ -93,8 +93,9 @@ PROMPTS = {prompt.name: prompt for prompt in (
            'the note is switched on. Your note follows this line.',
            constant('adventure.authors_note', 'HEADER')),
     Prompt('character-mind', CHARACTERS, "A character's mind",
-           'Opens every call to a character who thinks for themselves: whom they play, that they decide only from '
-           'inside their own head, that their sheet is canon, how they speak, and the content rules. What the '
+           'Opens every call to a character who thinks for themselves, spoken to them as themselves ("You are..."): '
+           'that their sheet is who they are, that they want what they want rather than helping, that they know only '
+           'what they know, how they speak, and the content rules. What the '
            "character may know, the shape of their answer, the intensity and the scheming dial are added by the app, "
            "so no wording here can show a character someone else's secrets.",
            constant(AGENTS, 'MIND'),
@@ -124,6 +125,19 @@ PROMPTS = {prompt.name: prompt for prompt in (
            'What a character may do once they turn against someone, and what turns them. How they stand with each '
            'person present follows it, worked out by the app from their feelings.',
            constant(AGENTS, 'TURNING')),
+    Prompt('character-genre-dark-romantasy', CHARACTERS, 'Dark romantasy, for characters',
+           "Follows the intensity in every character's prompt when the Table's Genre is Dark romantasy: what wanting "
+           "someone does to what a character risks, hides and betrays. The narration's own module is under Genres.",
+           constant(AGENTS, 'GENRES', 'dark-romantasy')),
+    Prompt('character-genre-adventure', CHARACTERS, 'Adventure, for characters',
+           "Follows the intensity in every character's prompt when the Table's Genre is Adventure: their own reason "
+           "for being here, and a view on whose fault it is. The narration's own module is under Genres.",
+           constant(AGENTS, 'GENRES', 'adventure')),
+    Prompt('character-genre-graphic-violence', CHARACTERS, 'Graphic violence, for characters',
+           "Follows the intensity in every character's prompt when the Table's Genre is Graphic violence: what a "
+           "character will and won't do to someone, and what it costs them. The narration's own module is under "
+           'Genres.',
+           constant(AGENTS, 'GENRES', 'graphic-violence')),
     Prompt('character-layout', CHARACTERS, "A character's prompt, laid out",
            'Where each part of a character call goes. Slots are filled by the app from what that character may know, '
            "and fenced, so moving one never shows a character anything new. Parts that change least come first so "

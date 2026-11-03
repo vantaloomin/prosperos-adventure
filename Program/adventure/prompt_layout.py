@@ -54,6 +54,9 @@ class Slot:
     # The fence label code puts round this slot's content; None when code wrote all of it (an instruction) or fenced
     # it already (the cue).
     fence: str | None
+    # The kind of fence, when the reader tells kinds apart (a character's own sheet is `who-you-are`); None for the
+    # fence function's default.
+    kind: str | None = None
 
 
 SEPARATOR = '\n\n'
@@ -145,7 +148,9 @@ def fence_text(slot: Slot, value, fence) -> str:
     if not lines:
         return ''
     body = '\n'.join(lines)
-    return fence(slot.fence, body) if slot.fence is not None else body
+    if slot.fence is None:
+        return body
+    return fence(slot.fence, body, slot.kind) if slot.kind else fence(slot.fence, body)
 
 
 def render(layout: str, slots: dict[str, Slot], values: dict, fence) -> Rendered:
