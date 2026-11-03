@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Italics and bold in the story.** Markdown the narrator writes (*italics*, **bold**, ~~struck~~, `code`) shows as styling instead of asterisks, in the story, the streaming narration, reply cards, turn reports and chapter text, and a line of *** or --- reads as a scene break. Names in bold or italics still link to their cards, and selecting styled text to Rewrite finds it. The reading and UI fonts now ship their italic and bold faces, so italic lines such as scene moves are italic too.
+
 ## v0.1.0 (2026-11-03): Characters Who Think
 
 - **Play, Author and Watch on the cast page.** Beside the place name on the cast page, pick the mode the story starts in. In Author and Watch no card is You: the character whose story it is gets Thinks or Rules like the rest, for who plays them while you author or watch.

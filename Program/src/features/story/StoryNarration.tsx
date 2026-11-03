@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef, useState, type ReactNode } from 'react'
 import { PenLine, Repeat } from 'lucide-react'
 import type { StoryMessage } from '../../types'
 import { InfoTip } from '../../components/InfoTip'
-import { reworded, sentences } from './storyText'
+import { inlineRuns, isBreak, plainText, runsBetween } from '../../components/inline'
+import { Runs } from '../../components/InlineText'
+import { reworded, sentences, wordsOf } from './storyText'
 import { linkText } from './entity'
 import { EntityName } from './EntityCard'
 import { useNameLinks } from './entityContext'
@@ -28,22 +30,32 @@ function chipAt(range: Range, box: HTMLElement): { top: number; left: number } {
 
 const REWORDED = 'The prose and continuity checks reworded the marked sentences after they were written. The dice and what happened are the same.'
 
-const rewordedIn = (text: string, draft?: string) => new Set(draft ? [...reworded(draft, text)].map((sentence) => sentence.trim()) : [])
+const rewordedIn = (text: string, draft?: string) => new Set(draft ? [...reworded(draft, text)].map(wordsOf) : [])
 
-/** Text with the names of people met and factions known as links to their cards (rule 2). */
-function Linked({ text }: { text: string }) {
-  const parts = linkText(text, useNameLinks())
-  return <>{parts.map((part, index) => typeof part === 'string' ? part : <EntityName key={index} entity={part.entity}>{part.name}</EntityName>)}</>
+/** Plain text with the names of people met and factions known as links to their cards (rule 2). */
+function useLinkedWords(): (text: string) => ReactNode {
+  const links = useNameLinks()
+  return (text) => linkText(text, links).map((part, index) => typeof part === 'string' ? part : <EntityName key={index} entity={part.entity}>{part.name}</EntityName>)
 }
 
-/** A paragraph, with the sentences in `changed` marked; the mark fades in so the swap reads as an edit. */
+/** A paragraph, its Markdown italics and bold shown as such, with the sentences in `changed` (their words, as
+ *  ./storyText.ts wordsOf gives them) marked; the mark fades in so the swap reads as an edit. */
 function Paragraph({ text, changed }: { text: string; changed: Set<string> }) {
-  if (!changed.size) return <p><Linked text={text} /></p>
-  return <p>{sentences(text).map((sentence, index) => changed.has(sentence.trim())
-    ? <mark key={index} className="story-reworded"><Linked text={sentence} /></mark> : <Linked key={index} text={sentence} />)}</p>
+  const words = useLinkedWords()
+  if (isBreak(text)) return <hr className="story-break" />
+  const runs = inlineRuns(text)
+  if (!changed.size) return <p><Runs runs={runs} words={words} /></p>
+  const plain = runs.map((run) => run.text).join('')
+  const cut = sentences(plain)
+  const starts: number[] = []
+  for (const sentence of cut) starts.push(plain.indexOf(sentence, starts.length ? starts[starts.length - 1] + cut[starts.length - 1].length : 0))
+  return <p>{cut.map((sentence, index) => {
+    const part = <Runs runs={runsBetween(runs, starts[index], starts[index] + sentence.length)} words={words} />
+    return changed.has(wordsOf(sentence)) ? <mark key={index} className="story-reworded">{part}</mark> : <Fragment key={index}>{part}</Fragment>
+  })}</p>
 }
 
-const shortened = (text: string) => text.length > 120 ? `${text.slice(0, 117).trimEnd()}…` : text
+const shortened = (passage: string) => { const text = plainText(passage); return text.length > 120 ? `${text.slice(0, 117).trimEnd()}…` : text }
 
 /** A narration: its flagged paragraphs marked with why and a Rewrite button. Selecting a passage shows a small
  *  Rewrite chip beside it, and only the chip opens the form, so selecting text to copy it costs nothing. */

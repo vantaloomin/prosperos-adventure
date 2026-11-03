@@ -273,6 +273,12 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .tone-veils { border: 0; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 2px 12px; }
 .tone-veils legend, .tone-veils p { grid-column: 1 / -1; margin: 0; }
 .story-narration p { white-space: pre-wrap; margin-bottom: 1em; }
+/* Inline Markdown in model text (src/components/InlineText.tsx): italics inside an already italic line read upright. */
+.story-move em, .story-note em { font-style: normal; }
+.story-narration code, .reply-card code, .turn-report code, .story-chapter-text code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9em; }
+/* A scene break the narrator wrote as "***" or "---". */
+.story-break { border: 0; margin: 0 0 1em; text-align: center; color: var(--muted); }
+.story-break::after { content: '* * *'; letter-spacing: 0.5em; }
 .story-flagged { margin: 0 -8px 1em; padding: 4px 8px; border-radius: 6px; background: var(--accent-tint); }
 .story-flagged p { margin-bottom: 0.25em; }
 .story-flag { display: flex; align-items: center; justify-content: flex-start; gap: 6px; font-family: var(--ui-font, inherit); font-size: 0.8125rem; }
