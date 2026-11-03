@@ -22,6 +22,7 @@ export const SETTINGS_TABS: SettingsTabInfo[] = [
     id: 'general', label: 'General', sections: [
       { heading: 'time-heading', title: 'Your time', keywords: 'timezone time zone clock date pc' },
       { heading: 'appearance-heading', title: 'Appearance', keywords: 'appearance look colors colours theme dark light paper ink palette text size font motion layout reader classic custom grid arrange visual novel vn portraits story panel world colors pictures' },
+      { heading: 'updates-heading', title: 'Updates', keywords: 'update updates upgrade check for updates new version latest release download github about' },
     ],
   },
   {

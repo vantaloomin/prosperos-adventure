@@ -767,3 +767,22 @@ def test_an_image_api_with_no_key_uses_the_key_saved_for_its_text_service(client
     with app.state.database.connect() as connection:
         saved = backends.get(connection, borrowing['id'])
     assert backends.backend_key(app.state.database, app.state.vault, saved) == 'or-key'
+
+
+def test_a_comfyui_rejection_names_the_node_and_file_at_fault():
+    from adventure.images.adapters.comfyui import rejection_text
+    missing = {'error': {'type': 'prompt_outputs_failed_validation', 'message': 'Prompt outputs failed validation'},
+               'node_errors': {'1': {'class_type': 'UNETLoader', 'errors': [{
+                   'type': 'value_not_in_list', 'message': 'Value not in list',
+                   'details': "unet_name: 'krea2_turbo_fp8_scaled.safetensors' not in ['flux1-dev.safetensors']",
+                   'extra_info': {'input_name': 'unet_name', 'received_value': 'krea2_turbo_fp8_scaled.safetensors'}}]}}}
+    text = rejection_text(missing)
+    assert 'krea2_turbo_fp8_scaled.safetensors' in text and 'UNETLoader' in text
+    assert 'models/diffusion_models' in text and 'failed validation' not in text
+    sampler = {'node_errors': {'3': {'class_type': 'KSampler', 'errors': [{
+        'type': 'value_not_in_list', 'details': "sampler_name: 'odd' not in ['euler', 'dpmpp_2m']",
+        'extra_info': {'input_name': 'sampler_name', 'received_value': 'odd'}}]}}}
+    assert rejection_text(sampler) == ("ComfyUI rejected the workflow's KSampler node: sampler_name: 'odd' is not one "
+                                       'it offers. Run the compatibility check in Settings.')
+    assert 'missing a node' in rejection_text({'error': {'type': 'missing_node_type', 'message': 'Node X not found'}})
+    assert rejection_text({}).startswith('ComfyUI rejected the workflow: invalid workflow.')

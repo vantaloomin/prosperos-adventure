@@ -58,6 +58,7 @@ from adventure.rounds import queue as rounds_queue
 from adventure.rounds import steps as rounds_steps  # noqa: F401 - every step plugged into the round loop
 from adventure.routes import router
 from adventure.text_model_routes import router as model_router
+from adventure.updates import router as updates_router
 from adventure.world import routes as world_routes
 
 # The built interface (`npm run build`), served beside the API as prosperos-study server/main.py does.
@@ -163,7 +164,7 @@ def create_app(database_path: str | Path | None = None, *, clock=None, vault=Non
     for item in (router, model_router, launcher_router, recall_router, hardware_router, ready_router, world_routes.router,
                  image_routes.router, politics_routes.router, story_routes.router, authors_note_routes.router, file_routes.router,
                  debug_router, worlds_routes.router, calls_router, mix_router, packages_router,
-                 agent_routes.router, round_router, house_rules_routes.router, gm_router, mode_router):
+                 agent_routes.router, round_router, house_rules_routes.router, gm_router, mode_router, updates_router):
         app.include_router(item)
     if FRONTEND.exists():
         app.mount('/', StaticFiles(directory=FRONTEND, html=True), name='frontend')

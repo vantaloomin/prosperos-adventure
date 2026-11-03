@@ -31,7 +31,7 @@ export function StoryChapters({ campaign, change, onBack, open }: Props) {
       </ol>
       {pending ? <p className="subtle">This chapter ends here; your next line starts the next one.</p>
         : <form className="story-add-form" onSubmit={(event) => { event.preventDefault(); void close() }}>
-          <input aria-label="Name the chapter that ends here" placeholder="Name it (or leave it to the story)" maxLength={80} value={title} onChange={(event) => setTitle(event.target.value)} />
+          <input autoComplete="off" aria-label="Name the chapter that ends here" placeholder="Name it (or leave it to the story)" maxLength={80} value={title} onChange={(event) => setTitle(event.target.value)} />
           <button type="submit" className="button">End the chapter</button>
         </form>}
       {tree.length > 1 && <BranchTree tree={tree} onPlay={ironman ? undefined : (chapter) => void playFrom(chapter)} />}

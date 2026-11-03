@@ -40,7 +40,7 @@ function MenuList({ commands, onRun }: { commands: MenuCommand[]; onRun: (comman
     if (event.key === 'Enter' && shown[at]) { event.preventDefault(); onRun(shown[at]) }
   }
   return <>
-    <input className="story-menu-filter" aria-label="Find a command" placeholder="Search" aria-controls="story-menu-list" aria-activedescendant={shown[at] ? `story-menu-${shown[at].id}` : undefined}
+    <input autoComplete="off" className="story-menu-filter" aria-label="Find a command" placeholder="Search" aria-controls="story-menu-list" aria-activedescendant={shown[at] ? `story-menu-${shown[at].id}` : undefined}
       role="combobox" aria-expanded="true" autoFocus value={typed} onChange={(event) => { setTyped(event.target.value); setActive(0) }} onKeyDown={onKeyDown} />
     <ul id="story-menu-list" role="listbox" aria-label="Commands" className="story-menu-list">
       {shown.map((command, index) => (

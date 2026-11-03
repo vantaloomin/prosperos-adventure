@@ -20,6 +20,18 @@ test('each dropdown preselects the saved choice, else the default, and keeps a v
   assert.ok(missingFrom([MUSE], krea) && !missingFrom([MUSE], MUSE) && !missingFrom([], krea))
 })
 
+test('a file the server lacks stays pickable after another one is chosen', () => {
+  const krea = DEFAULTS.unet_name ?? ''
+  const other = 'Krea 2\\krea2_turbo_fp8.safetensors'
+  // Switching away from it keeps it listed, so it can be picked again without going back to the default.
+  assert.deepEqual(fileChoices([MUSE, other], MUSE, [], false, undefined, krea).map(choice => choice.value), [krea, MUSE, other])
+  assert.deepEqual(fileChoices([MUSE, other], other, [MUSE, other], true, undefined, krea).map(choice => choice.value), [krea, MUSE, other])
+  // Picked from its own entry, it is listed once.
+  assert.deepEqual(fileChoices([MUSE], krea, [], false, undefined, krea).map(choice => choice.value), [krea, MUSE])
+  // A first choice of "same as" adds nothing.
+  assert.deepEqual(fileChoices([MUSE], MUSE, [], false, 'Same as the Model', '').map(choice => choice.value), ['', MUSE])
+})
+
 test('saving stores only what differs from the default, exactly as named', () => {
   assert.deepEqual(filesBody(SLOTS, { ...DEFAULTS, unet_name: MUSE }, DEFAULTS), { ...NONE, unet_name: MUSE })
   assert.deepEqual(filesBody(SLOTS, DEFAULTS, DEFAULTS), NONE)
