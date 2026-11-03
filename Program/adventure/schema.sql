@@ -1405,3 +1405,13 @@ CREATE TABLE IF NOT EXISTS round_corrections (
 );
 
 CREATE INDEX IF NOT EXISTS round_corrections_of ON round_corrections (turn_id);
+
+-- W1 Privacy and context builders, part 2 (adventure/rounds/context.py `reveal_missed`). ------------------------------
+
+-- The user's answer, on leaving Play, to "Show the motives you missed?": no row until asked. A choice, not story:
+-- going back keeps it; a new story forgets it.
+CREATE TABLE IF NOT EXISTS missed_motives (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  reveal INTEGER NOT NULL CHECK (reveal IN (0, 1)),
+  created_at TEXT NOT NULL
+);

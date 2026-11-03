@@ -399,6 +399,26 @@ def minds(snapshot: Snapshot, draft: Draft, reveal: bool = False) -> list[dict]:
     return rows
 
 
+def reveal_missed(connection) -> bool | None:
+    """The user's answer, on leaving Play, to "Show the motives you missed?": None until asked, then True or False.
+    Kept for the campaign; a new story asks again (adventure/gm.py `forget_consent`)."""
+    row = optional(connection, 'SELECT reveal FROM missed_motives WHERE id=1')
+    return None if row is None else bool(row['reveal'])
+
+
+def set_reveal_missed(connection, reveal: bool, now: str):
+    connection.execute('INSERT INTO missed_motives (id, reveal, created_at) VALUES (1, ?, ?) ON CONFLICT(id) DO '
+                       'UPDATE SET reveal=excluded.reveal', (int(bool(reveal)), now))
+
+
+def missed_shown(connection, turn_mode: str) -> bool:
+    """A turn played in Play keeps Play's visibility, unless the user is out of Play now and chose to see what they
+    missed (docs/spec.md "Waiting and pauses")."""
+    from adventure.rounds import seats
+    return (turn_mode == Mode.PLAY and seats.settings(connection)['mode'] != Mode.PLAY
+            and reveal_missed(connection) is True)
+
+
 # The GM view --------------------------------------------------------------------------------------------------------
 
 def build_gm(connection, snapshot: Snapshot, draft: Draft, note: str = '') -> Context:

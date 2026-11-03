@@ -4,8 +4,14 @@ from fastapi import APIRouter, Request
 
 from adventure import gm
 from adventure.models import Input
+from adventure.rounds import context
 
 router = APIRouter()
+
+
+class Missed(Input):
+    # The answer to "Show the motives you missed?" on leaving Play: Show (true) or Keep hidden (false).
+    reveal: bool
 
 
 class Opening(Input):
@@ -32,4 +38,13 @@ def marks(request: Request):
 def minds(request: Request):
     """Each character's mind and status on the watched turn; intents and motives only where the mode shows them."""
     with request.app.state.database.connect() as connection:
+        return gm.minds_panel(connection)
+
+
+@router.put('/api/minds/reveal_missed')
+def reveal_missed(request: Request, body: Missed):
+    """Kept for the campaign: GET /api/minds then shows `reveal_missed` as this, not null, so it is asked only once."""
+    database = request.app.state.database
+    with database.connect(write=True) as connection:
+        context.set_reveal_missed(connection, body.reveal, database.now())
         return gm.minds_panel(connection)

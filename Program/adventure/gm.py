@@ -92,8 +92,9 @@ def remembered(connection) -> bool:
 
 
 def forget_consent(connection):
-    """A new story asks again."""
+    """A new story asks again, here and about the motives missed in Play."""
     connection.execute('DELETE FROM gm_view_consent')
+    connection.execute('DELETE FROM missed_motives')
 
 
 def watched_turn(connection) -> dict | None:
@@ -133,13 +134,15 @@ def marked(connection) -> list[str]:
 
 def minds_panel(connection) -> dict:
     """The minds panel, not the GM view: who is deciding on the watched turn, and in Author and Watch (or for the
-    user's own character) what each means and why; in Play the others show only whether they have decided."""
-    turn = watched_turn(connection)
+    user's own character) what each means and why; in Play the others show only whether they have decided. A turn
+    played in Play stays that way after leaving Play unless the user chose to see what they missed."""
+    turn, asked = watched_turn(connection), context.reveal_missed(connection)
     if turn is None:
-        return {'turn': None, 'mode': seats.settings(connection)['mode'], 'minds': []}
+        return {'turn': None, 'mode': seats.settings(connection)['mode'], 'minds': [], 'reveal_missed': asked}
     snapshot = Snapshot.of(decode(turn['snapshot']))
-    return {'turn': turn['id'], 'mode': turn['mode'],
-            'minds': context.minds(snapshot, Draft.of(decode(turn['draft'])))}
+    return {'turn': turn['id'], 'mode': turn['mode'], 'reveal_missed': asked,
+            'minds': context.minds(snapshot, Draft.of(decode(turn['draft'])),
+                                   reveal=context.missed_shown(connection, turn['mode']))}
 
 
 def round_view(connection, turn: dict | None) -> dict:
