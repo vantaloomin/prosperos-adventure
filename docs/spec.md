@@ -317,7 +317,8 @@ any other reader's context.
 
 ## Waiting and pauses
 
-A round can take 20 or more model calls, so waiting is designed, not left blank.
+A round can take 20 or more model calls, so waiting is designed, not left blank. How these look and read follows
+`docs/style-guide.md`.
 
 - **The round timeline.** Above the minds panel: Declare · React · Converse · Resolve · Write, with the current step
   lit. Each character's row moves through thinking, declared, reacting, done. In Play a row says only "Hesk has
@@ -330,8 +331,8 @@ A round can take 20 or more model calls, so waiting is designed, not left blank.
 - **Every pause says why and what next.** One banner: "Paused: Hesk betrayed the party. [Continue] [Switch to
   Author]", or "Paused: this session reached its $2.00 cap. [Raise cap] [Stop here]". A dropped optional step and a
   fallback to a Program mind are noted too.
-- **Agent or Program is visible.** A badge (icon and text) on each character in the minds panel and party list, never
-  in the story text.
+- **Agent or Program is visible.** A small accent dot, with an accessible name, on the portrait of each character who
+  thinks for themself, in the cast list and on the Cast page; never in the story text (see `docs/style-guide.md`).
 - **Author nudges get feedback.** After the turn, a line under the nudge box: "Used: the director moved the storm
   forward" or "Not yet: no character chose to go north." The beat board shows which beats have landed.
 - **The GM view asks first in Play.** Opening it during Play shows a warning ("This shows every secret and motive.
@@ -343,9 +344,9 @@ A round can take 20 or more model calls, so waiting is designed, not left blank.
 - **Lies read as story.** Beliefs use belief language on sheets and in memories ("Ilsa *believes* the bridge is
   guarded"). An uncovered lie gets a short moment in the prose and a strike-through in memory; a caught tell gets the
   same treatment.
-- **Settings have three presets.** "Quick", "Balanced" and "Rich" set the agent cap, conversation
-  cap and models together, with a plain estimate ("about 25 seconds and 14 calls per turn"). Everything else is under
-  Advanced, and every slider has one sentence on what it changes in play.
+- **Settings have three paces.** Quick, Balanced and Rich set the agent cap, conversation cap and models together,
+  each showing its time and call count per turn as data ("~25 s · 14 calls"). Everything else is under Advanced, with
+  labels and values and no explanatory sentences (see `docs/style-guide.md`, SE-2 to SE-5).
 - **Behind-the-scenes names stay behind the scenes.** The play screen names only the Writer. The director, Referee
   and GM view are named in settings and the GM view.
 - **Accessibility.** A polite live region announces status changes in summary ("3 of 5 characters have decided"),
