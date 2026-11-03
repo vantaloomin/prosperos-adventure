@@ -38,6 +38,7 @@ function useTitleWhile(waiting: boolean) {
 /** The round loop on the play screen: the table, what the stream has said of the turn under way (`hear` each event,
  *  `start` each stream), the reply card if one is up and how to answer it, and the cast list's part. */
 export function useRoundPlay(onError: (text: string) => void) {
+  const client = useQueryClient()
   const table = useRoundTable()
   const [live, setLive] = useState(NO_ROUND)
   const seat = useSeats()
@@ -50,6 +51,8 @@ export function useRoundPlay(onError: (text: string) => void) {
   const cast: CastRound = {
     live, table: table.data, waiting: waiting?.awaiting ?? null, motives: modeOf(table.data) === 'play' ? {} : motivesOf(minds.data?.minds),
     reask: reaskOf(minds.data, underWay(live, table.data)),
+    onSeat: (current, edit) => void api<RoundTable>(`/rounds/seats/${encodeURIComponent(current.key)}`, { name: current.name, ...edit }, 'PUT')
+      .then((data) => client.setQueryData(ROUND_KEY, data), (failure: unknown) => onError(failure instanceof Error ? failure.message : 'Not changed.')),
     onMind: (person, mind) => void seat(seatChanges(table.data, person, mind, { key: YOU, name: you || 'You' }))
       .catch((failure: unknown) => onError(failure instanceof Error ? failure.message : 'Not changed.')),
   }

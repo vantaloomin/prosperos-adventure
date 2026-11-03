@@ -365,7 +365,9 @@ export interface Gear {
   looks?: Looks
 }
 /** A character a town ships to play as (adventure/campaign.py). */
-export interface Premade { id: string; name: string; gender: PersonaGender; age: number | null; about: string; stats: Record<string, number> }
+export interface Premade { id: string; name: string; gender: PersonaGender; age: number | null; about: string; stats: Record<string, number>
+  /** How this lead decides when they join your party: Thinks (an agent) or Rules (adventure/agents.py default_mind). */
+  default_mind?: 'agent' | 'program' }
 /** Campaign start: the town's premades and the point-buy for making your own. */
 export type StoryArc = 'grounded' | 'classic' | 'epic'
 export type StoryPace = 'slow' | 'steady' | 'fast'

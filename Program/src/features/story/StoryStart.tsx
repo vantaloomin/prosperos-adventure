@@ -12,6 +12,9 @@ import { arrayPlaced, brpCost, skillChoices, skillId, pointsLeft, pointsText, st
 import { CampaignOptions } from './CampaignOptions'
 import { useSession } from './campaignSession'
 import { FateBuild, type FateDraft } from './FateBuild'
+import { MindToggle } from '../round/MindToggle'
+import { joinsAsParty, partyBody, partyMind, type PartyMind } from '../round/round'
+import { THINKS_NAME } from '../round/roundText'
 
 /** The cast page: the campaign start (adventure/campaign.py) on one page. The town's people are a grid; tapping one
  * plays as them and shows who they are under the grid, and the + tile makes your own there instead. Rules (locked
@@ -34,13 +37,14 @@ function Cast({ choices, place, onStarted }: { choices: StartChoices; place: str
   const [error, setError] = useState('')
   const [ruleset, setRuleset] = useState<Ruleset | null>(null)
   const session = useSession(choices)
+  const party = useParty(premades, seat)
   const who = seat === OWN ? made : { premade_id: seat }
   const begin = async () => {
     if (!who) return
     setBusy(true)
     setError('')
     try {
-      onStarted(await api<StoryData>('/story/start', { ...who, ...session.body, ...(ruleset ? { ruleset } : {}) }))
+      onStarted(await api<StoryData>('/story/start', { ...who, ...party.body, ...session.body, ...(ruleset ? { ruleset } : {}) }))
       await Promise.all([client.invalidateQueries({ queryKey: ['story-sheet'] }), client.invalidateQueries({ queryKey: WORLDS_KEY })])
     } catch (failure) { setError(failure instanceof Error ? failure.message : 'The story did not start. Try again.') }
     finally { setBusy(false) }
@@ -50,14 +54,8 @@ function Cast({ choices, place, onStarted }: { choices: StartChoices; place: str
     <form className="cast-setup" aria-labelledby="cast-heading" onSubmit={(event) => { event.preventDefault(); void begin() }}>
       <h2 id="cast-heading">{place}</h2>
       <ul className="cast-grid" aria-label="Who you play">
-        {premades.map((premade) => (
-          <li key={premade.id}>
-            <button type="button" className="cast-card" aria-pressed={seat === premade.id} onClick={() => setSeat(premade.id)}>
-              <span className="portrait" aria-hidden="true">{premade.name.charAt(0)}</span>
-              <span className="cast-name">{premade.name}</span>
-            </button>
-          </li>
-        ))}
+        {premades.map((premade) => <CastCard key={premade.id} premade={premade} you={seat === premade.id}
+          mind={party.mindOf(premade)} onPick={() => setSeat(premade.id)} onMind={(mind) => party.set(premade.id, mind)} />)}
         <li><button type="button" className="cast-card cast-own" aria-pressed={seat === OWN} aria-label="Make your own character" onClick={() => setSeat(OWN)}><Plus aria-hidden="true" /></button></li>
       </ul>
       {looking ? <p className="cast-bio" aria-live="polite">{looking.about}</p>
@@ -72,6 +70,35 @@ function Cast({ choices, place, onStarted }: { choices: StartChoices; place: str
         <button type="submit" className="button primary" disabled={busy || !who}>{busy ? 'Beginning…' : 'Begin'}</button>
       </div>
     </form>
+  )
+}
+
+/** The other leads join as your party (CA-7), each Thinks or Rules; a backend without party seating gets no `party`. */
+function useParty(premades: StartChoices['premades'], seat: string) {
+  const [minds, setMinds] = useState<Record<string, PartyMind>>({})
+  const joins = joinsAsParty(premades)
+  return {
+    body: joins ? { party: partyBody(premades, seat, minds) } : {},
+    mindOf: (premade: StartChoices['premades'][number]) => joins ? partyMind(premade, minds) : null,
+    set: (id: string, mind: PartyMind) => setMinds((before) => ({ ...before, [id]: mind })),
+  }
+}
+
+interface CardProps { premade: StartChoices['premades'][number]; you: boolean; mind: PartyMind | null; onPick: () => void; onMind: (mind: PartyMind) => void }
+
+/** A lead on the cast page: tap to play as them (marked You); every other lead joins your party, with the accent dot
+ *  when they think for themself and their Thinks or Rules toggle under the card (CA-2, CA-7). */
+function CastCard({ premade, you, mind, onPick, onMind }: CardProps) {
+  const party = mind && !you
+  return (
+    <li className="cast-seat">
+      <button type="button" className="cast-card" aria-pressed={you} onClick={onPick}>
+        <span className="portrait" aria-hidden="true" data-thinks={party && mind === 'agent' ? true : undefined}>{premade.name.charAt(0)}</span>
+        <span className="cast-name">{premade.name}{party && mind === 'agent' && <span className="visually-hidden">, {THINKS_NAME}</span>}</span>
+        {you && mind && <span className="cast-you">You</span>}
+      </button>
+      {party && <MindToggle id={`cast-${premade.id}`} name={premade.name} mind={mind} onChange={onMind} />}
+    </li>
   )
 }
 

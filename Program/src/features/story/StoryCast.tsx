@@ -10,6 +10,7 @@ import { StoryGear } from './StoryGear'
 import { peopleHere } from './scene'
 import { aroundText, moneyText, personLine, statusItems } from './storyText'
 import { MindToggle } from '../round/MindToggle'
+import { SeatDetails } from '../round/SeatDetails'
 import { RoundTimeline } from '../round/RoundTimeline'
 import { LastTurn } from '../round/TurnReport'
 import { hasAgents, modeOf, rowStatus, underWay, seatOf, type CastRound, type RowStatus } from '../round/round'
@@ -62,7 +63,8 @@ function CastTimeline({ round }: { round: CastRound }) {
 /** A character here as the round loop sees them: how they're getting on this turn in place of what they're doing, the
  *  accent dot on the portrait of one who thinks for themself, and the Thinks or Rules choice when the row is open. */
 function CastPerson({ person, round, open, onToggle }: { person: StoryPerson; round: CastRound; open: boolean; onToggle: (id: string) => void }) {
-  const mind = seatOf(round.table, person.key)?.mind ?? 'program'
+  const seat = seatOf(round.table, person.key)
+  const mind = seat?.mind ?? 'program'
   const now = rowText(person.key, round.live, modeOf(round.table), round.waiting)
   return (
     <CastRow id={person.key} name={person.name} letter={person.name.charAt(0)} state={now ?? person.doing}
@@ -70,6 +72,7 @@ function CastPerson({ person, round, open, onToggle }: { person: StoryPerson; ro
       <PersonMore person={person} />
       {round.motives[person.key] && <p className="gm-motive">{round.motives[person.key]}</p>}
       <MindToggle id={person.key} name={person.name} mind={mind} onChange={(next) => round.onMind(person, next)} />
+      {seat?.mind === 'agent' && <SeatDetails key={seat.key} seat={seat} onSave={(edit) => round.onSeat(seat, edit)} />}
       <AskAgain seat={person.key} name={person.name} round={round} />
     </CastRow>
   )
