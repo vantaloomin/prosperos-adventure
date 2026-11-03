@@ -10,7 +10,9 @@ started with `--slot-save-path`). So before the model reads a different prompt s
 one it holds is saved, and the one it is about to read is loaded if it was saved before. Nothing is saved while
 the same companion keeps talking, so a steady chat costs nothing extra. Prompts are told apart by their first
 section (the character, or a group's shared part) and the model, so a changed character simply starts afresh, and
-a short prompt (a background job's rules) is not worth a file.
+a short prompt (a background job's rules) is not worth a file. A laid-out prompt (a character in a round,
+adventure/prompt_layout.py) is told apart by its whole system prompt, which holds only what changes no faster than
+the scene, so each character's file survives from one turn to the next.
 
 It turns itself on for a server that answers like llama.cpp's and accepts a save, and off for one that does not;
 any failure here only means the model reads the prompt again, never that a reply fails. The files live in the
@@ -48,6 +50,10 @@ def root(base_url: str) -> str:
 
 
 def start_of(system: str) -> str:
+    """The part of a prompt that stays put: all of a laid-out one (adventure/prompt_layout.py `Tiered`), whose system
+    prompt holds only what changes no faster than the scene, else everything before its first section."""
+    if getattr(system, 'blocks', None):
+        return str(system)
     return system.split('\n## ', 1)[0]
 
 

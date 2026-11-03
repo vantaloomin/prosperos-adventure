@@ -6,10 +6,11 @@ inside its own knowledge (docs/spec.md "Agent output", Batch 2 "agent minds", "F
   attempt ("as my blade finds his heart" goes), stage directions leave the lines, names become seat keys, audiences
   are kept to who is present, and anything over the story's intensity is cut from every field, hidden ones included.
   Whether a lie is believed, a blow lands or a plea works is never the agent's to say.
-- **What it reads** is built by the agent context builder (adventure/rounds/context.py `agent`) from the frozen
-  snapshot and the turn draft, so it holds only what that character may know. This module adds the instructions:
-  the output contract, the intensity, the scheming dial, and how the character stands with each person here, worked
-  out in code from its own feelings toward them (`siding`).
+- **What it reads** is built by the agent context builder (adventure/rounds/context.py `agent_slots`) from the
+  frozen snapshot and the turn draft, so it holds only what that character may know. This module adds the
+  instructions (the output contract, the intensity, the scheming dial) and how the character stands with each person
+  here, worked out in code from its own feelings toward them (`siding`), and lays it all out in tiers, slowest-
+  changing first, so model services can cache the start (`LAYOUT`, adventure/prompt_layout.py).
 - **Failures fall back.** Each call has a deadline inside the turn budget, counted from when the model service takes
   it, so local models that answer one call at a time don't time out the agents queued behind. A broken answer is
   asked again once, with what was wrong; a failure is tried once more; a refusal is not. After that the character
@@ -24,7 +25,7 @@ import json
 import re
 from contextlib import nullcontext
 
-from adventure import pace, prompt_library, text_models, tone
+from adventure import pace, prompt_layout, prompt_library, text_models, tone
 from adventure.database import optional
 from adventure.errors import require
 from adventure.feelings import AXES
@@ -32,6 +33,7 @@ from adventure.narration import prompt as narration_prompt
 from adventure.providers.scheduling import CONVERSATION
 from adventure.rounds import context, memory
 from adventure.rounds.contract import Deception, Declaration, Line, Snapshot, Whisper
+from adventure.rounds.draft import Draft
 
 # Settings -----------------------------------------------------------------------------------------------------------
 
@@ -251,9 +253,11 @@ def checked(data: dict, seat: str, snapshot: Snapshot, levels: dict | None = Non
 # The prompt ---------------------------------------------------------------------------------------------------------
 
 # The wording a power user may reword in Settings > Developer (adventure/prompt_library.py, group "Characters"): MIND,
-# each purpose's line and TURNING. The answer's JSON shape (CONTRACT, REACT_CONTRACT), the fence rule, the intensity
-# and the scheming dial stay code, because code parses the answer and keeps each character to what it may know.
-MIND = """You play one character in a shared story for adults, the one named here: {character}
+# each purpose's line, TURNING and the LAYOUT. The answer's JSON shape (CONTRACT, CONTRACTS), the fence rule, the
+# intensity and the scheming dial stay code, because code parses the answer and keeps each character to what it may
+# know. MIND names nobody, so every character in a story shares the cached start of the prompt; the name comes with
+# the sheet.
+MIND = """You play one character in a shared story for adults: the one whose sheet follows.
 
 Decide only as they would, from inside their head: what they know, want, fear, hide and feel. You never decide how \
 anything turns out.
@@ -294,7 +298,7 @@ true, and who it is aimed at. Leave the list empty when they are honest. Whether
 the game; never write how it lands.
 - whispers: anything said privately, and to whom. Only those named hear it."""
 REACT_CONTRACT = ('To let it stand, answer {"change": false}. To change it, answer {"change": true, ...} with the '
-                  'whole new move in the fields below.')
+                  'whole new move in the answer\'s usual fields.')
 PURPOSES = {
     'declare': 'Everyone decides at once this round, without seeing each other\'s moves. Decide what your character '
                'does.',
@@ -314,6 +318,8 @@ PURPOSES = {
 # How a character answers being asked along: the app reads this flag, so it stays code.
 INVITE_CONTRACT = ('Say whether they go by adding "joins": true (they come along) or "joins": false (they turn the '
                    'offer down) to the object below; the intent may stay empty.')
+# The purposes whose answer carries a flag beyond the declaration, and the line that asks for it.
+CONTRACTS = {'react': REACT_CONTRACT, 'invite': INVITE_CONTRACT}
 
 
 # Untrusted text goes in the context builder's labelled blocks, read by the rule that comes with them.
@@ -333,37 +339,13 @@ def stance(felt: dict, loyalty: str) -> str:
     return 'wary of them' if warmth < 0 else 'unsure of them'
 
 
-def siding(connection, snapshot: Snapshot, key: str) -> str:
+def siding(connection, snapshot: Snapshot, key: str) -> list[str]:
     """How the character stands with each person here, worked out in code from its own feelings toward them."""
     felt = memory.feelings(connection, key, snapshot.point)
     loyalty = held(snapshot)['loyalty']
     names = {seat.key: seat.name for seat in snapshot.seats}
-    rows = [f'- {names[other]}: {stance(felt.get(other) or dict.fromkeys(AXES, 0), loyalty)}'
+    return [f'Where you stand with {names[other]} now: {stance(felt.get(other) or dict.fromkeys(AXES, 0), loyalty)}'
             for other in present(snapshot) if other != key]
-    return 'How they stand with each person here now:\n' + fenced('how you stand', '\n'.join(rows)) if rows else ''
-
-
-# The purposes whose answer carries a flag beyond the declaration, and the line that asks for it.
-CONTRACTS = {'react': REACT_CONTRACT, 'invite': INVITE_CONTRACT}
-
-
-def system_prompt(connection, snapshot: Snapshot, key: str, purpose: str) -> str:
-    settled = held(snapshot)
-    name = (snapshot.seat(key).name if snapshot.seat(key) else key)
-    intensity = narration_prompt.Intensity(levels=settled['levels'] or narration_prompt.Intensity().levels,
-                                           veils=tuple(settled['veils'])).text()
-    moment = prompt_library.text(connection, f'character-{purpose}')
-    parts = [prompt_library.text(connection, 'character-mind', character=fenced('your character', name)), FENCE_RULE,
-             f'{moment} {CONTRACTS[purpose]}' if purpose in CONTRACTS else moment, CONTRACT,
-             f'Every field, the private ones too, stays within the story\'s intensity. {intensity}',
-             SCHEMING[settled['scheming']], prompt_library.text(connection, 'character-turning'),
-             siding(connection, snapshot, key)]
-    return '\n\n'.join(part for part in parts if part)
-
-
-def context_for(connection, turn, key: str, focus: str = '') -> str:
-    """What the character may know this turn, and nothing else (adventure/rounds/context.py `agent`)."""
-    return context.agent(connection, turn.snapshot, turn.draft, key, focus=focus)
 
 
 def cue_text(snapshot: Snapshot, cue: dict | None) -> str:
@@ -381,6 +363,107 @@ def cue_text(snapshot: Snapshot, cue: dict | None) -> str:
         return fenced('what happened', str(cue.get('outcome') or '')) + '\n\n' + fenced(
             'with you', ', '.join(name.get(key, key) for key in cue.get('with') or []))
     return ''
+
+
+# The layout: where each part goes, slowest-changing first (adventure/prompt_layout.py). Rules and story are shared
+# by every character in a story; the character's own parts follow, then the scene; what changes every turn and every
+# call goes last, in the user message. A power user may rearrange it in Settings > Developer; the order rule keeps
+# any layout cache-friendly, and code fills and fences every slot from the character's own context builder.
+Slot = prompt_layout.Slot
+TITLES = dict(context.AGENT_PARTS)
+SLOTS = {slot.name: slot for slot in (
+    Slot('RULES', 0, "the character's mind, the fence rule, the answer's shape and turning on someone", None),
+    Slot('STORY', 1, "the story's intensity and the scheming dial", None),
+    Slot('CHARACTER', 2, "the character's name", 'your character'),
+    Slot('SHEET', 2, 'their character sheet', TITLES['SHEET']),
+    Slot('NOTES', 2, 'your notes on the character', TITLES['NOTES']),
+    Slot('SHOWN', 2, 'what the story has shown of them so far', TITLES['SHOWN']),
+    Slot('FACTIONS', 2, 'the factions they know of', TITLES['FACTIONS']),
+    Slot('HERE', 3, 'who else is in the scene', TITLES['HERE']),
+    Slot('LORE', 3, 'lore and facts they know that are always there', TITLES['LORE']),
+    Slot('MENTIONED', 4, 'lore they know that what was just said brings up', TITLES['MENTIONED']),
+    Slot('MEM', 4, 'the memories recalled for this turn', TITLES['MEM']),
+    Slot('FEELINGS', 4, 'how they feel about each person, and where they stand with them', TITLES['FEELINGS']),
+    Slot('TURN', 4, 'what they saw, heard and were told this turn', TITLES['TURN']),
+    Slot('DECLARED', 5, 'their own move this turn, when they react', TITLES['DECLARED']),
+    Slot('MOMENT', 5, 'which moment this call is for (deciding, reacting, speaking up...)', None),
+    Slot('CUE', 5, 'whom to speak to, the line to answer, or what happened off the page', None),
+)}
+LAYOUT = """{{RULES}}
+
+{{STORY}}
+
+## Who you are
+You are {{CHARACTER}}
+{{SHEET}}
+
+## Notes from the person at the table
+{{NOTES}}
+
+## Shown so far
+{{SHOWN}}
+
+## Your factions
+{{FACTIONS}}
+
+## Who is here
+{{HERE}}
+
+## What you know of the world
+{{LORE}}
+
+## What this brings to mind
+{{MENTIONED}}
+
+## What you remember
+{{MEM}}
+
+## How you feel
+{{FEELINGS}}
+
+## This turn so far
+{{TURN}}
+
+## What you declared this turn
+{{DECLARED}}
+
+{{MOMENT}}
+
+{{CUE}}"""
+
+
+def rules(connection, name: str) -> str:
+    """Tier 0: the same for every character. A mind reworded before the name moved to the sheet still gets it."""
+    return '\n\n'.join([prompt_library.text(connection, 'character-mind', character=fenced('your character', name)),
+                         FENCE_RULE, CONTRACT, prompt_library.text(connection, 'character-turning')])
+
+
+def story(snapshot: Snapshot) -> str:
+    """Tier 1: the story's intensity and the scheming dial, as frozen for the turn."""
+    settled = held(snapshot)
+    intensity = narration_prompt.Intensity(levels=settled['levels'] or narration_prompt.Intensity().levels,
+                                           veils=tuple(settled['veils'])).text()
+    return '\n\n'.join([f'Every field, the private ones too, stays within the story\'s intensity. {intensity}',
+                         SCHEMING[settled['scheming']]])
+
+
+def moment(connection, purpose: str) -> str:
+    """Tier 5: which moment this call is for."""
+    line = prompt_library.text(connection, f'character-{purpose}')
+    return f'{line} {CONTRACTS[purpose]}' if purpose in CONTRACTS else line
+
+
+def composed(connection, snapshot: Snapshot, draft: Draft, key: str, purpose: str, cue: dict | None = None,
+             focus: str = '') -> prompt_layout.Rendered:
+    """One agent call's prompt: the system prompt in cache blocks (rules, story, the character, the scene) and the
+    user message (this turn and this call), laid out by the user's layout or the default."""
+    name = snapshot.seat(key).name if snapshot.seat(key) else key
+    values = context.agent_slots(connection, snapshot, draft, key, focus) | {
+        'RULES': rules(connection, name), 'STORY': story(snapshot),
+        'MOMENT': moment(connection, purpose), 'CUE': cue_text(snapshot, cue)}
+    values['FEELINGS'] = [*values['FEELINGS'], *siding(connection, snapshot, key)]
+    layout = prompt_library.text(connection, 'character-layout')
+    return prompt_layout.render(layout, SLOTS, values, fenced)
 
 
 # The call -----------------------------------------------------------------------------------------------------------
@@ -435,14 +518,12 @@ def prepared(turn, key: str, purpose: str, cue: dict | None) -> tuple[dict, str,
         config = text_models.character_config(connection, seat.model_profile_id if seat else None)
         if config is None:
             raise Failed('no model')
-        system = system_prompt(connection, snapshot, key, purpose)
         focus = ' '.join([str(snapshot.settings.get('said') or ''), str((cue or {}).get('line') or '')])
-        known = context_for(connection, turn, key, focus)
+        made = composed(connection, snapshot, turn.draft, key, purpose, cue, focus)
         budget = pace.budget_for(connection, config)
     tokens = PRESETS[held(snapshot)['preset']]['tokens']
     config = config | {'max_output_tokens': min(config.get('max_output_tokens') or tokens, tokens)}
-    user = '\n\n'.join(part for part in (known, cue_text(snapshot, cue)) if part)
-    return config, system, user, max(FLOOR, budget * SHARE[purpose]), held(snapshot)['session_cap']
+    return config, made.system, made.user, max(FLOOR, budget * SHARE[purpose]), held(snapshot)['session_cap']
 
 
 async def ask(turn, key: str, purpose: str = 'declare', cue: dict | None = None) -> dict:
