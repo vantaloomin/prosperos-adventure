@@ -338,7 +338,7 @@ function BookmarkButton({ onSave }: { onSave: (name: string) => Promise<void> })
   if (name === null) return <button type="button" className="text-button" onClick={() => setName('')}><Bookmark aria-hidden="true" />Bookmark</button>
   return (
     <form className="story-bookmark" onSubmit={(event) => { event.preventDefault(); if (name.trim()) void onSave(name.trim()).then(() => setName(null)) }}>
-      <input aria-label="Name this moment" placeholder="Name this moment" maxLength={80} value={name} onChange={(event) => setName(event.target.value)} autoFocus />
+      <input autoComplete="off" aria-label="Name this moment" placeholder="Name this moment" maxLength={80} value={name} onChange={(event) => setName(event.target.value)} autoFocus />
       <button type="submit" className="text-button" disabled={!name.trim()}>Save</button>
       <button type="button" className="text-button" onClick={() => setName(null)}>Cancel</button>
     </form>

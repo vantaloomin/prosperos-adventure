@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- **Check for updates.** Settings > General > Updates asks GitHub for the newest Adventure release (pre-releases count) when pressed, and says how to update this copy: the new installer, or update.bat / update.command for a folder copy. Nothing checks in the background, and nothing about you is sent. (Ported from Prospero's Companion #417.)
+- **ComfyUI says which file it lacks.** When ComfyUI refuses a workflow, the picture error names the node and, for a missing model, the file and the models folder it belongs in, instead of "Prompt outputs failed validation". (Ported from Prospero's Companion #446.)
+- **A saved model file stays in its list.** In Settings > Images, a model file, sampler, scheduler or style LoRA the ComfyUI server does not list yet stays pickable after you choose another, so you can go back to it without Use the default. (Ported from Prospero's Companion #468.)
+- **No browser suggestions in text boxes.** Text and search boxes no longer offer words typed into other boxes. (Ported from Prospero's Companion #433.)
+
 ## v0.1.0 (2026-11-03): Characters Who Think
 
 - **Play, Author and Watch on the cast page.** Beside the place name on the cast page, pick the mode the story starts in. In Author and Watch no card is You: the character whose story it is gets Thinks or Rules like the rest, for who plays them while you author or watch.

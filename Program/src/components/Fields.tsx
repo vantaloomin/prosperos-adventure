@@ -33,10 +33,11 @@ export function TextArea({ label, hint, tip, value, onChange, onBlur, rows = 3, 
 
 interface TextInputProps extends Help { label: string; value: string; onChange: (value: string) => void; required?: boolean; maxLength?: number; list?: string; type?: string; placeholder?: string; min?: number; max?: number; step?: number }
 
-/** With `min` or `max`, a number box keeps what is typed inside that range. */
+/** With `min` or `max`, a number box keeps what is typed inside that range. Text boxes keep the browser's memory of
+ * past entries out: a page's ids repeat across screens, so it offers words typed somewhere else. */
 export function TextInput({ label, hint, tip, value, onChange, required, maxLength, list, type = 'text', placeholder, min, max, step }: TextInputProps) {
   const leave = () => { const fixed = bounded(value, min, max, true); if (fixed !== value) onChange(fixed) }
-  return <Field label={label} hint={hint} tip={tip}>{(id, describedBy) => <input id={id} type={type} value={value} required={required} maxLength={maxLength} list={list} placeholder={placeholder} min={min} max={max} step={step} aria-describedby={describedBy} onChange={(event) => onChange(bounded(event.target.value, min, max))} onBlur={leave} />}</Field>
+  return <Field label={label} hint={hint} tip={tip}>{(id, describedBy) => <input id={id} type={type} value={value} required={required} maxLength={maxLength} list={list} placeholder={placeholder} autoComplete={type === 'password' ? undefined : 'off'} min={min} max={max} step={step} aria-describedby={describedBy} onChange={(event) => onChange(bounded(event.target.value, min, max))} onBlur={leave} />}</Field>
 }
 
 interface ToggleProps extends Help { label: string; checked: boolean; onChange: (checked: boolean) => void; disabled?: boolean }

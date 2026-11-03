@@ -137,8 +137,8 @@ function AddNote({ onAdd }: { onAdd: (subject: string, text: string) => Promise<
   const ready = !!subject.trim() && !!text.trim()
   return (
     <form className="story-note-form" onSubmit={(event) => { event.preventDefault(); if (ready) void onAdd(subject.trim(), text.trim()).then(() => { setSubject(''); setText('') }) }}>
-      <input aria-label="About" placeholder="About whom or what" maxLength={120} value={subject} onChange={(event) => setSubject(event.target.value)} />
-      <input aria-label="What you know" placeholder="What you know" maxLength={500} value={text} onChange={(event) => setText(event.target.value)} />
+      <input autoComplete="off" aria-label="About" placeholder="About whom or what" maxLength={120} value={subject} onChange={(event) => setSubject(event.target.value)} />
+      <input autoComplete="off" aria-label="What you know" placeholder="What you know" maxLength={500} value={text} onChange={(event) => setText(event.target.value)} />
       <button type="submit" className="button" disabled={!ready}>Add</button>
     </form>
   )
