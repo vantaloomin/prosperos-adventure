@@ -81,6 +81,7 @@ export function spendLine(spend: AgentPace['spend']): string {
 export const REPORT_NAMES = {
   you: 'You', rolls: 'Rolls', motives: 'Motives', numbers: 'Numbers', inventions: 'Made up this turn', strike: 'Strike',
   struck: 'Struck', checks: 'Checks', offpage: 'Elsewhere', questions: 'Open questions', next: 'Next', corrections: 'Corrections',
+  judged: 'Read from the story', undo: 'Undo', undone: 'Undone',
 } as const
 
 /** "Turn 12", the status line's link to the last turn's report. */

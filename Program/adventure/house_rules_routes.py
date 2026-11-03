@@ -1,5 +1,6 @@
 """The house rules API (adventure/rounds/house_rules.py): the campaign's rulebook at the Table and its rulings; and each
-round turn's report and the status line (adventure/rounds/report.py); corrections to a committed turn and struck
+round turn's report and the status line (adventure/rounds/report.py), with an undo for what the fact extraction
+model judged (adventure/judged.py); corrections to a committed turn and struck
 inventions (adventure/rounds/corrections.py); and the "shown so far" sheet updates drafted at a chapter's close
 (adventure/rounds/shown.py)."""
 from typing import Literal
@@ -7,10 +8,12 @@ from typing import Literal
 from fastapi import APIRouter, Request
 from pydantic import Field
 
-from adventure import record, story
+from adventure import judged, record, story
+from adventure.database import decode
 from adventure.errors import DomainError, require
 from adventure.models import Input
-from adventure.rounds import corrections, house_rules, report, shown
+from adventure.rounds import corrections, house_rules, report, shown, turns
+from adventure.rounds.draft import Draft
 
 router = APIRouter(prefix='/api/story')
 
@@ -118,6 +121,21 @@ async def strike(request: Request, turn_id: str, body: Strike):
         except DomainError as failure:
             struck |= {'not_rewritten': failure.message}
     return struck | {'rewritten': rewritten}
+
+
+@router.post('/turns/{turn_id}/judged/{change_id}/undo')
+async def undo_judged(request: Request, turn_id: str, change_id: str):
+    """Undo one change the fact extraction model judged after a turn (adventure/judged.py), once its after-work is
+    done."""
+    state = request.app.state
+    await story.settled(state)
+    database = state.database
+    with database.connect(write=True) as connection:
+        row = turns.get(connection, turn_id)
+        draft = Draft.of(decode(row['draft']))
+        message_id = report.reply_id(draft)
+        require(message_id is not None, 'That turn has no story text to undo a change of.', 404)
+        return judged.undo(connection, message_id, change_id, database.now())
 
 
 class ShownReview(Input):

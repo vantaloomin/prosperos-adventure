@@ -1414,6 +1414,20 @@ CREATE TABLE IF NOT EXISTS round_corrections (
 
 CREATE INDEX IF NOT EXISTS round_corrections_of ON round_corrections (turn_id);
 
+-- What the fact extraction model judged after a reply (adventure/judged.py): a quest's ending, an oath, a feeling, a
+-- dark act. `changes` is JSON, what that one change did to the saved game state, so it can be undone on its own.
+CREATE TABLE IF NOT EXISTS judged_changes (
+  id TEXT PRIMARY KEY,
+  message_id TEXT NOT NULL,
+  kind TEXT NOT NULL CHECK (kind IN ('quest', 'oath', 'feeling', 'dark')),
+  label TEXT NOT NULL,
+  changes TEXT NOT NULL,
+  undone_at TEXT,
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS judged_changes_of ON judged_changes (message_id);
+
 -- W5 Writing rules and checks: character sheets refreshed from the page (adventure/rounds/shown.py). ---------------
 
 -- A "shown so far" update to a seated character's sheet, drafted by code when a chapter closes and keyed to the
