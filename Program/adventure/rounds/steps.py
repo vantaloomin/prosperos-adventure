@@ -8,10 +8,13 @@ from adventure.rounds import (
     converse,  # noqa: F401 - Converse and the reply card
     corrections,  # noqa: F401 - corrected and struck memories, read through recall (memory.amend)
     declare,  # noqa: F401 - the agents: pick, declare, lies heard, react, feelings
+    directing,  # noqa: F401 - the director's warning signs, and signs before a betrayal
     modes,  # noqa: F401 - who plays the user's character outside Play
     offpage,  # noqa: F401 - off-page beats in a round with agents, and their commit
     report,  # noqa: F401 - the house rules frozen at Gather, the Reviewer and the scan after the Writer
     telling,  # noqa: F401 - today's turn as steps, and the party's Resolve (resolve.py)
+    timing,  # noqa: F401 - lore timers counted in rounds
+    travelling,  # noqa: F401 - the lead's travel line, and who splits off
     watch,  # noqa: F401 - what Watch's big moments are found against
     writer,  # noqa: F401 - the round Writer, in place of today's 'write' in a turn with agents
 )

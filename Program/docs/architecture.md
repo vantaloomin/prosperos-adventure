@@ -57,6 +57,8 @@ top of it, milestone by milestone, as set out in [the roadmap](https://github.co
 | `mode_settings`, `mode_switches` | Who plays the user's character outside Play (an agent or its Program mind), Watch's timer, and each switch out of Play with whether the user chose to see the motives they missed (`adventure/rounds/modes.py`) |
 | `nudge_box`, `author_feedback` | Beats the user would like to see, waiting beside their line in Play, and whether each turn's nudges took, "Used" or "Not yet" (`adventure/rounds/author.py`) |
 | `watch_continued` | Watch turns the user went on from after a pause (`adventure/rounds/watch.py`) |
+| `betrayal_signs`, `nemesis_seats` | Each warning sign the director placed before a betrayal, read through its turn's place on the timeline, and the nemeses given an agent (`adventure/rounds/directing.py`) |
+| `party_lead`, `split_off` | The party's leader in Author and Watch, and who split off from the party or rejoined it, by turn, read through the turn's place on the timeline (`adventure/rounds/travelling.py`) |
 | `townsfolk_mix`, `townsfolk_personality`, `birth_dates`, `town_levels` | How the town is generated and how it ages |
 
 A database from before Milestone 0 is not upgraded: Adventure starts a fresh schema, and `upgrade.py` only handles

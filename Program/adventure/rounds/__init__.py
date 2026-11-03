@@ -14,7 +14,10 @@
 - play.py: Next in Author and Watch, the reply card, re-asking an agent, picking up after a restart
 - author.py: the Author's nudges, the beat board, and whether each nudge took
 - watch.py: Watch's timer and the big moments that pause it
+- directing.py: the director in a round: warning signs before a betrayal, signs first, nemeses as agents
 - modes.py: who plays the user's character outside Play, and the motives missed in Play
+- travelling.py: who leads where the party goes, and who splits off until they meet again
+- timing.py: lore timers counted in rounds, in every mode
 - steps.py: every module that registers steps, loaded once at startup (add yours there)
 - solo.py: a player's line played as a turn of the loop (send, retry)
 - telling.py: today's turn as the loop's steps (Gather, Resolve, Write, Commit)

@@ -237,17 +237,27 @@ def test_leaving_play_asks_whether_to_see_the_motives_missed(client, app, steps)
     play_turn = asyncio.run(play.next_turn(app.state))
     with app.state.database.connect() as connection:
         assert not modes.revealed(connection, play_turn)
-    # Hidden by default.
+    # Hidden by default, and not yet answered: the banner asks after the switch (PL-11).
+    assert client.put('/api/rounds/mode/reveal', json={'reveal': True}).status_code == 409
     view = ok(client.put('/api/rounds/mode', json={'mode': 'author'}))
-    assert view['switches'][0] == {'from': 'play', 'to': 'author', 'reveal': False, 'at': view['switches'][0]['at']}
+    assert view['switches'][0] == {'from': 'play', 'to': 'author', 'reveal': False, 'answered': False,
+                                   'at': view['switches'][0]['at']}
+    assert view['reveal_missed'] is None
+    assert ok(client.put('/api/rounds/mode/reveal', json={'reveal': False}))['reveal_missed'] is False
     author_turn = played(client, nudge='', against=play_turn['id'])['turn']
     with app.state.database.connect() as connection:
         assert not modes.revealed(connection, play_turn)
         assert modes.revealed(connection, {'id': author_turn['id'], 'mode': 'author'})
     ok(client.put('/api/rounds/mode', json={'mode': 'play'}))
-    ok(client.put('/api/rounds/mode', json={'mode': 'watch', 'reveal': True}))
+    ok(client.put('/api/rounds/mode', json={'mode': 'watch'}))
+    with app.state.database.connect() as connection:
+        assert not modes.revealed(connection, play_turn)
+    assert ok(client.put('/api/rounds/mode/reveal', json={'reveal': True}))['reveal_missed'] is True
     with app.state.database.connect() as connection:
         assert modes.revealed(connection, play_turn)
+    # Answered with the switch itself, as before.
+    ok(client.put('/api/rounds/mode', json={'mode': 'play'}))
+    assert ok(client.put('/api/rounds/mode', json={'mode': 'author', 'reveal': False}))['reveal_missed'] is False
 
 
 def test_a_switch_asked_for_during_a_turn_waits_for_idle(client, steps):
