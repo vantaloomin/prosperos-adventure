@@ -12,6 +12,9 @@
 - offpage.py: off-page beats in a round: code draws them, an offscreen agent writes its own lines, Commit writes them
 - queue.py: one writer per world, stale commands refused, Cancel at once
 - play.py: Next in Author and Watch, the reply card, re-asking an agent, picking up after a restart
+- author.py: the Author's nudges, the beat board, and whether each nudge took
+- watch.py: Watch's timer and the big moments that pause it
+- modes.py: who plays the user's character outside Play, and the motives missed in Play
 - steps.py: every module that registers steps, loaded once at startup (add yours there)
 - solo.py: a player's line played as a turn of the loop (send, retry)
 - telling.py: today's turn as the loop's steps (Gather, Resolve, Write, Commit)
@@ -24,5 +27,5 @@
 - corrections.py: turn-keyed patches to a committed turn, and struck inventions
 - shown.py: each seated character's "shown so far", drafted by code at a chapter's close
 
-The API is adventure/round_routes.py.
+The API is adventure/round_routes.py, and adventure/mode_routes.py for Author, Watch and switching modes.
 """

@@ -15,7 +15,7 @@ inside its own knowledge (docs/spec.md "Agent output", Batch 2 "agent minds", "F
   asked again once, with what was wrong; a failure is tried once more; a refusal is not. After that the character
   runs on its Program mind for the turn (adventure/rounds/declare.py `program`). Each call reserves its estimated
   tokens against the session cap first (adventure/pace.py `Spend`) and settles after.
-- **Settings** (`agent_settings`): the preset ("Quick and cheap", "Balanced", "Rich and slow") trades depth against
+- **Settings** (`agent_settings`): the preset ("Quick", "Balanced", "Rich") trades depth against
   cost and wait; the scheming dial (0 to 3) and how fast loyalties shift; the session cap. They are frozen into the
   snapshot at Gather (`frozen`), so a turn and its re-ask play by the same ones.
 """
@@ -36,9 +36,9 @@ from adventure.rounds.contract import Deception, Declaration, Line, Snapshot, Wh
 # Settings -----------------------------------------------------------------------------------------------------------
 
 PRESETS = {
-    'quick': {'name': 'Quick and cheap', 'tokens': 400, 'recall': 20, 'react': 'addressed', 'reviewer': False},
+    'quick': {'name': 'Quick', 'tokens': 400, 'recall': 20, 'react': 'addressed', 'reviewer': False},
     'balanced': {'name': 'Balanced', 'tokens': 700, 'recall': 40, 'react': 'all', 'reviewer': False},
-    'rich': {'name': 'Rich and slow', 'tokens': 1200, 'recall': 60, 'react': 'all', 'reviewer': True},
+    'rich': {'name': 'Rich', 'tokens': 1200, 'recall': 60, 'react': 'all', 'reviewer': True},
 }
 LOYALTY = {'slow': 0.5, 'steady': 1.0, 'fast': 1.5}
 DEFAULTS = {'preset': 'balanced', 'scheming': 1, 'loyalty': 'steady', 'session_cap': 0}
@@ -57,7 +57,7 @@ def settings(connection) -> dict:
 def checked_settings(changes: dict) -> dict:
     result = {}
     if 'preset' in changes:
-        require(changes['preset'] in PRESETS, 'The presets are Quick and cheap, Balanced and Rich and slow.', 422)
+        require(changes['preset'] in PRESETS, 'The presets are Quick, Balanced and Rich.', 422)
         result['preset'] = changes['preset']
     if 'scheming' in changes:
         require(changes['scheming'] in range(4), 'Scheming runs from 0 to 3.', 422)

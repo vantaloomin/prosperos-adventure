@@ -104,26 +104,20 @@ def test_the_minds_panel_shows_motives_in_watch_and_only_status_in_play(client, 
     assert hesk['motive'] == MOTIVE and hesk['intent'] == 'Lead the way.'
 
 
-def test_leaving_play_asks_once_and_missed_motives_stay_hidden_until_shown(client, app):
+def test_motives_missed_in_play_stay_hidden_until_a_switch_out_of_play_says_show(client, app):
     sit(app)
     turn = play_turn(app, 1)
-    assert ok(client.get('/api/minds'))['reveal_missed'] is None
-    sit(app, 'author')
 
     def hesk():
         return next(row for row in ok(client.get('/api/minds'))['minds'] if row['key'] == 'hesk')
 
     def reported():
         return [item['motive'] for item in ok(client.get(f'/api/story/turns/{turn}/report'))['motives']]
-    # Not answered, or Keep hidden: the Play turn keeps Play's visibility in the panel and the turn report.
+    assert ok(client.get('/api/minds'))['revealed'] is False and 'motive' not in hesk()
+    # Keep hidden (adventure/rounds/modes.py `switch`): the Play turn keeps Play's visibility in the panel and report.
+    ok(client.put('/api/rounds/mode', json={'mode': 'author', 'reveal': False}))
     assert 'motive' not in hesk() and MOTIVE not in reported()
-    shown = ok(client.put('/api/minds/reveal_missed', json={'reveal': False}))
-    assert shown['reveal_missed'] is False and 'motive' not in hesk() and MOTIVE not in reported()
-    ok(client.put('/api/minds/reveal_missed', json={'reveal': True}))
+    ok(client.put('/api/rounds/mode', json={'mode': 'play'}))
+    ok(client.put('/api/rounds/mode', json={'mode': 'author', 'reveal': True}))
+    assert ok(client.get('/api/minds'))['revealed'] is True
     assert hesk()['motive'] == MOTIVE and MOTIVE in reported()
-    # Back in Play, Play's own rules hold again; a new story asks again.
-    sit(app)
-    assert 'motive' not in hesk()
-    from adventure import story
-    story.clear(app.state.database)
-    assert ok(client.get('/api/minds'))['reveal_missed'] is None

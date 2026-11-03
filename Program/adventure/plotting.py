@@ -15,7 +15,9 @@ director"; docs/story.md "The director: seeds, adopted details and planned beats
   director model (job `director`, off unless chosen) drafts BEATS candidate beats from the stage's truth, the hottest
   threads and the world's own beats; code keeps those that name none of the dead and stay within the stage, and
   falls back to the stage's own seed and word. The plan is hidden; with the GM view on, the player can cut and
-  reorder it. When the arc is due, the note gives the next beat.
+  reorder it, and in Author the Author adds to it, cuts and reorders it as the beat board
+  (adventure/rounds/author.py). When the arc is due, the note gives the next beat; once its words reach the page it
+  has landed.
 
 All of it is game state, branched with the story (adventure/timeline.py SAVED).
 """
@@ -270,9 +272,10 @@ def next_beat(connection, arc_id: str, stage: int) -> str:
     return row['text']
 
 
-def change_beat(connection, beat_id: str, cut: bool | None = None, position: int | None = None):
-    """The GM view cuts a drafted beat, brings it back, or moves it in the order."""
-    require(record.gm_view(connection), 'Turn on the GM view to plan the story.', 409)
+def change_beat(connection, beat_id: str, cut: bool | None = None, position: int | None = None, gated: bool = True):
+    """The GM view cuts a drafted beat, brings it back, or moves it in the order; the Author does too, with no gate
+    (`gated` False, adventure/rounds/author.py)."""
+    require(not gated or record.gm_view(connection), 'Turn on the GM view to plan the story.', 409)
     row = optional(connection, 'SELECT * FROM story_arc_beats WHERE id=?', (beat_id,))
     require(row is not None, 'That beat is not there.', 404)
     if cut is not None:
@@ -284,13 +287,37 @@ def change_beat(connection, beat_id: str, cut: bool | None = None, position: int
             connection.execute('UPDATE story_arc_beats SET position=? WHERE id=?', (index, item['id']))
 
 
+def add_beat(connection, arc_id: str, text: str, source: str = 'author') -> str:
+    """A beat of the user's own at the end of an arc's plan for its stage."""
+    row = director.arcs(connection).get(arc_id)
+    require(row is not None, 'That arc is not in this story.', 404)
+    text = ' '.join(str(text).split())[:300]
+    require(text, 'Write the beat.', 422)
+    beat_id = f'beat-{identifier()[:12]}'
+    connection.execute('INSERT INTO story_arc_beats (id, arc_id, stage, text, position, cut, used, source) VALUES '
+                       '(?, ?, ?, ?, ?, 0, 0, ?)', (beat_id, arc_id, row['stage'], text,
+                                                   len(beats(connection, arc_id, row['stage'])), source))
+    return beat_id
+
+
+def landed_beats(connection, text: str) -> list[str]:
+    """Beats given to the director's note that reached the page in `text`, marked landed for the beat board."""
+    found = []
+    for row in many(connection, 'SELECT * FROM story_arc_beats WHERE used=1 AND landed=0 AND cut=0'):
+        if landed(sorted(words_of(row['text'])), text):
+            connection.execute('UPDATE story_arc_beats SET landed=1 WHERE id=?', (row['id'],))
+            found.append(row['id'])
+    return found
+
+
 def view(connection) -> dict:
     """For the GM view: the Chekhov list and each arc's planned beats for its stage."""
     planned = []
     for arc_id, row in director.arcs(connection).items():
         planned.append({'arc_id': arc_id, 'stage': row['stage'],
                         'beats': [{'id': item['id'], 'text': item['text'], 'cut': bool(item['cut']),
-                                   'used': bool(item['used']), 'source': item['source']}
+                                   'used': bool(item['used']), 'landed': bool(item.get('landed')),
+                                   'source': item['source']}
                                   for item in beats(connection, arc_id, row['stage'])]})
     return {'seeds': [{'id': row['id'], 'text': row['text'], 'truth': row['truth'], 'status': row['status'],
                        'arc_id': row['arc_id']} for row in seeds(connection)],

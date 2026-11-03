@@ -24,7 +24,7 @@ from dataclasses import fields
 from adventure import beats, table
 from adventure.database import decode, many
 from adventure.narration import prompt as narration_prompt
-from adventure.rounds import agents, context, corrections, engine, house_rules, panes, reviewer, scan, turns
+from adventure.rounds import agents, corrections, engine, house_rules, modes, panes, reviewer, scan, turns
 from adventure.rounds.contract import Mind, Mode, Snapshot, State, TurnResult, plain
 from adventure.rounds.draft import Draft
 from adventure.rounds.house_rules import Rulebook
@@ -182,7 +182,7 @@ def report(connection, turn_id: str, gm_view: bool = False) -> dict:
                    'rewrites': staged.get('rewrites', 0), 'review': staged.get('review') or []},
         'offpage': list(written.get('offpage') or []),
         'questions': list((draft.extra.get('w3') or {}).get('questions') or []),
-        'motives': motives(result, row['mode'], gm_view or context.missed_shown(connection, row['mode']), own),
+        'motives': motives(result, row['mode'], gm_view or modes.revealed(connection, row), own),
         'next': result.brief.stop_point,
     }
 

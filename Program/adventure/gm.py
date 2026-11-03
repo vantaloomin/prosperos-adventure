@@ -20,7 +20,7 @@ they spoiled. Author and Watch have no gate and mark nothing.
 from adventure import director, feelings, growth, plotting, quests, record, timeline, world_data
 from adventure.database import decode, many, optional
 from adventure.errors import DomainError, require
-from adventure.rounds import context, memory, seats, shown, turns
+from adventure.rounds import context, memory, modes, seats, shown, turns
 from adventure.rounds.contract import Mode, Point, Snapshot, plain
 from adventure.rounds.draft import Draft
 
@@ -92,9 +92,8 @@ def remembered(connection) -> bool:
 
 
 def forget_consent(connection):
-    """A new story asks again, here and about the motives missed in Play."""
+    """A new story asks again."""
     connection.execute('DELETE FROM gm_view_consent')
-    connection.execute('DELETE FROM missed_motives')
 
 
 def watched_turn(connection) -> dict | None:
@@ -135,14 +134,14 @@ def marked(connection) -> list[str]:
 def minds_panel(connection) -> dict:
     """The minds panel, not the GM view: who is deciding on the watched turn, and in Author and Watch (or for the
     user's own character) what each means and why; in Play the others show only whether they have decided. A turn
-    played in Play stays that way after leaving Play unless the user chose to see what they missed."""
-    turn, asked = watched_turn(connection), context.reveal_missed(connection)
+    played in Play stays that way unless a later switch out of Play was answered Show (adventure/rounds/modes.py
+    `revealed`)."""
+    turn = watched_turn(connection)
     if turn is None:
-        return {'turn': None, 'mode': seats.settings(connection)['mode'], 'minds': [], 'reveal_missed': asked}
-    snapshot = Snapshot.of(decode(turn['snapshot']))
-    return {'turn': turn['id'], 'mode': turn['mode'], 'reveal_missed': asked,
-            'minds': context.minds(snapshot, Draft.of(decode(turn['draft'])),
-                                   reveal=context.missed_shown(connection, turn['mode']))}
+        return {'turn': None, 'mode': seats.settings(connection)['mode'], 'minds': [], 'revealed': False}
+    snapshot, revealed = Snapshot.of(decode(turn['snapshot'])), modes.revealed(connection, turn)
+    return {'turn': turn['id'], 'mode': turn['mode'], 'revealed': revealed,
+            'minds': context.minds(snapshot, Draft.of(decode(turn['draft'])), reveal=revealed)}
 
 
 def round_view(connection, turn: dict | None) -> dict:
