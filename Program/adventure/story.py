@@ -2008,6 +2008,27 @@ async def rewritten(state, message_id: str, passage: str, note: str = '') -> dic
     return story(database)
 
 
+async def replaced(state, message_id: str, text: str, expected: str | None = None) -> dict:
+    """A narration in the user's own new words, from a change they applied in the Sidebar Assistant
+    (adventure/assistant.py). Like a rewrite, it keeps the wording before so Switch wording undoes it, and the record's
+    facts are taken again from the new words. `expected` is the wording it was proposed against: a narration that has
+    changed since stays as it is."""
+    await settled(state)
+    text = text.strip()
+    require(bool(text), 'Write the new wording.', 422)
+    database = state.database
+    with database.connect(write=True) as connection:
+        row = narration(connection, message_id)
+        require(expected is None or row['text'].strip() == expected.strip(),
+                'That part of the story changed since this was proposed, so it stays as it is. Ask again.', 409)
+        flagged = decode(row['flags'])
+        dead, kept = passages.still_dead(flagged, text)
+        later = passages.later_reasons(text, story_year(connection, database))
+        reworded(state, connection, row, text, passages.flags(text, dead, kept, later),
+                 {'text': row['text'], 'flags': flagged})
+    return story(database)
+
+
 async def switched(state, message_id: str) -> dict:
     """A rewritten narration back to its wording before the rewrite; switching again brings the rewrite back."""
     await settled(state)

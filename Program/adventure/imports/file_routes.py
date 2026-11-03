@@ -7,7 +7,7 @@ from fastapi import APIRouter, Request
 
 from adventure import library, lore
 from adventure.errors import DomainError
-from adventure.models import LibraryFile, LoreFile, LoreSwitch, LoreTiming, LoreVisibility, LoreWhen
+from adventure.models import LibraryFile, LoreEntryNew, LoreFile, LoreSwitch, LoreTiming, LoreVisibility, LoreWhen
 
 router = APIRouter(prefix='/api')
 
@@ -35,6 +35,17 @@ def switch_book(request: Request, book_id: str, body: LoreSwitch):
 @router.delete('/lore/books/{book_id}')
 def delete_book(request: Request, book_id: str):
     return lore.remove_book(db(request), book_id)
+
+
+@router.post('/lore/entries')
+def add_entry(request: Request, body: LoreEntryNew):
+    """One entry of the user's own, in its own book (the Sidebar Assistant's lore proposals)."""
+    return lore.add_entry(db(request), body.title, body.text, body.keywords, body.always, body.visibility)
+
+
+@router.delete('/lore/entries/{entry_id}')
+def delete_entry(request: Request, entry_id: str):
+    return lore.remove_entry(db(request), entry_id)
 
 
 @router.put('/lore/entries/{entry_id}')

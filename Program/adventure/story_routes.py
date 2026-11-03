@@ -104,6 +104,19 @@ async def rewrite(request: Request, message_id: str, body: StoryRewrite, backgro
     return result
 
 
+class StoryReword(Input):
+    text: str = Field(min_length=1, max_length=20000)
+    expected: str | None = Field(None, max_length=20000)
+
+
+@router.post('/messages/{message_id}/reword')
+async def reword(request: Request, message_id: str, body: StoryReword, background: BackgroundTasks):
+    """A narration in new words the user wrote or applied from the Sidebar Assistant; Switch wording undoes it."""
+    result = await story.replaced(request.app.state, message_id, body.text, body.expected)
+    background.add_task(story.settled, request.app.state)
+    return result
+
+
 @router.post('/messages/{message_id}/switch')
 async def switch_wording(request: Request, message_id: str, background: BackgroundTasks):
     result = await story.switched(request.app.state, message_id)
@@ -587,6 +600,27 @@ def cash_in_seed(request: Request, seed_id: str):
 def retire_seed(request: Request, seed_id: str):
     with request.app.state.database.connect(write=True) as connection:
         plotting.retire(connection, seed_id)
+        return gm_view(connection)
+
+
+class NewBeat(Input):
+    arc_id: str = Field(min_length=1, max_length=120)
+    text: str = Field(min_length=1, max_length=300)
+
+
+@router.post('/gm/beats')
+def add_planned_beat(request: Request, body: NewBeat):
+    """A beat of the user's own at the end of an arc's plan, from the GM view (the Sidebar Assistant's proposals)."""
+    with request.app.state.database.connect(write=True) as connection:
+        require(record.gm_view(connection), 'Turn on the GM view to plan the story.', 409)
+        added = plotting.add_beat(connection, body.arc_id, body.text, 'assistant')
+        return gm_view(connection) | {'added': added}
+
+
+@router.delete('/gm/beats/{beat_id}')
+def remove_planned_beat(request: Request, beat_id: str):
+    with request.app.state.database.connect(write=True) as connection:
+        plotting.remove_beat(connection, beat_id)
         return gm_view(connection)
 
 

@@ -36,6 +36,8 @@ CLOSING = 5
 REACHED = 2
 ADOPT = 50
 BEATS = 3
+# Beats the user wrote: in Author, or applied from the Sidebar Assistant (adventure/assistant.py).
+OWN_BEATS = ('author', 'assistant')
 WORD = re.compile(r"[a-z][a-z'-]{3,}")
 COMMON = {'the', 'and', 'with', 'from', 'that', 'this', 'into', 'their', 'there', 'about', 'someone', 'something', 'they', 'them', 'what', 'when', 'where', 'which', 'will', 'were', 'have', 'been', 'over',
                             'under', 'than', 'then', 'into', 'onto', 'your', 'very', 'just', 'like'}
@@ -298,6 +300,17 @@ def add_beat(connection, arc_id: str, text: str, source: str = 'author') -> str:
                        '(?, ?, ?, ?, ?, 0, 0, ?)', (beat_id, arc_id, row['stage'], text,
                                                    len(beats(connection, arc_id, row['stage'])), source))
     return beat_id
+
+
+def remove_beat(connection, beat_id: str):
+    """A beat the user added (in Author, the GM view or the Sidebar Assistant) taken out again before it is used; the
+    world's and the director's beats are cut instead, so they can come back."""
+    require(record.gm_view(connection), 'Turn on the GM view to plan the story.', 409)
+    row = optional(connection, 'SELECT * FROM story_arc_beats WHERE id=?', (beat_id,))
+    require(row is not None, 'That beat is not there.', 404)
+    require(row['source'] in OWN_BEATS and not row['used'], 'Only a beat you added and the story has not used yet can '
+            'be taken out. Cut it instead.', 409)
+    connection.execute('DELETE FROM story_arc_beats WHERE id=?', (beat_id,))
 
 
 def landed_beats(connection, text: str) -> list[str]:

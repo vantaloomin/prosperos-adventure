@@ -477,6 +477,7 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
   .download-progress .text-button { min-height: 44px; padding-inline: 8px; }
   .app-nav button:last-child { margin-top: 0; }
   .app-nav .nav-story { order: 3; }
+  .app-nav .nav-assistant { order: 3; }
   .app-nav .nav-settings { order: 4; }
   .page { padding: 22px 16px 32px; }
   .page-header { flex-wrap: wrap; }
@@ -667,6 +668,34 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .sidecar h2 svg { width: 17px; height: 17px; color: var(--accent); }
 .sidecar > header .subtle { margin: 4px 0 0; font-size: 0.75rem; }
 .sidecar .icon-button svg { width: 17px; height: 17px; }
+.sidecar-header-actions { display: flex; gap: 2px; }
+.sidecar-transcript { flex: 1; min-height: 120px; overflow-y: auto; overscroll-behavior: contain; padding: 16px; display: flex; flex-direction: column; gap: 22px; }
+.sidecar-welcome p { margin: 0 0 10px; font-size: 0.875rem; line-height: 1.65; }
+.sidecar-turn { display: flex; flex-direction: column; gap: 10px; overflow-wrap: anywhere; }
+.sidecar-turn > .button { align-self: flex-start; }
+.sidecar-message { align-self: flex-end; max-width: 92%; background: var(--accent-tint); border-radius: 9px 9px 2px 9px; padding: 10px 12px; font-size: 0.8125rem; line-height: 1.6; white-space: pre-wrap; }
+.sidecar-reply { margin: 0; font-size: 0.875rem; line-height: 1.65; white-space: pre-wrap; }
+.sidecar-proposal { display: flex; flex-direction: column; gap: 6px; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--canvas); font-size: 0.875rem; }
+.sidecar-proposal .eyebrow { margin: 0; }
+.sidecar-proposal .subtle { margin: 0; font-size: 0.8125rem; }
+.sidecar-proposal.dismissed { opacity: .65; }
+.sidecar-proposal.applied { border-color: var(--accent); }
+.sidecar-proposal summary { cursor: pointer; color: var(--muted); font-size: 0.8125rem; padding: 4px 0; }
+.sidecar-proposal details .eyebrow { margin-top: 6px; }
+.sidecar-value { margin: 0; padding: 8px 10px; border-left: 2px solid var(--border); font-size: 0.8125rem; line-height: 1.6; white-space: pre-wrap; }
+.sidecar-actions { display: flex; align-items: center; gap: 12px; }
+.sidecar-actions .button { min-height: 34px; padding: 6px 13px; }
+.sidecar-actions .text-button svg { width: 14px; height: 14px; }
+.sidecar-composer { border-top: 1px solid var(--border); padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.sidecar-composer textarea { width: 100%; min-height: 76px; max-height: 200px; font-size: 0.875rem; resize: vertical; }
+.sidecar-composer .ai-footer { margin: 0; }
+.sidecar-focus { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0; padding: 6px 8px 6px 10px; border-radius: 7px; background: var(--accent-tint); font-size: 0.8125rem; line-height: 1.5; }
+.sidecar-send { display: flex; align-items: center; justify-content: space-between; }
+.sidecar-send > .subtle { font-size: 0.75rem; }
+.sidecar-send .send-button { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; margin-left: auto; border-radius: 50%; background: var(--accent); color: var(--on-accent); }
+.sidecar-send .send-button:disabled { opacity: .45; }
+.sidecar-send .send-button svg { width: 18px; height: 18px; }
+.app-nav .nav-assistant[aria-pressed='true'] { color: var(--accent); }
 @media (max-width: 1100px) { .sidecar { width: 330px; flex-basis: 330px; } }
 @media (max-width: 720px) {
   .sidecar { position: fixed; inset: 0 0 58px 0; z-index: 40; width: auto; border-left: 0; }

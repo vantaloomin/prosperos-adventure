@@ -9,10 +9,12 @@ import { AppNav } from './features/nav/AppNav'
 import { isView } from './features/nav/navText'
 import { useAppColors } from './features/settings/useAppColors'
 import { Story } from './features/story/Story'
+import { useAssistantOpen } from './features/assistant/store'
 
 // The story opens first, so it ships in the main bundle; the other views load the first time they are opened.
 const Settings = lazy(() => import('./features/settings/Settings').then((m) => ({ default: m.Settings })))
 const Worlds = lazy(() => import('./features/worlds/Worlds').then((m) => ({ default: m.Worlds })))
+const Assistant = lazy(() => import('./features/assistant/Assistant').then((m) => ({ default: m.Assistant })))
 
 function viewFromHash(): View {
   const id = window.location.hash.slice(1)
@@ -32,6 +34,7 @@ export default function App() {
   const openTab = useCallback((tab: SettingsTab) => { window.history.replaceState(null, '', `#settings/${tab}`); setView(`settings/${tab}`) }, [])
   useFocusOnViewChange(view)
   useAppColors()
+  const assistantOpen = useAssistantOpen()
   return (
     <div className="app-shell">
       <a className="skip-link" href="#main">Skip to content</a>
@@ -41,6 +44,7 @@ export default function App() {
         <ReadyNotice openModels={() => go('settings/models')} />
         <Suspense fallback={<Loading label="Opening" />}><CurrentView view={view} go={go} openTab={openTab} /></Suspense>
       </main>
+      {assistantOpen && <Suspense fallback={null}><Assistant view={view} go={go} /></Suspense>}
       <AiNotice />
     </div>
   )

@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
-import { BookOpen, Settings as SettingsIcon } from 'lucide-react'
+import { Fragment, useEffect } from 'react'
+import { BookOpen, Lightbulb, Settings as SettingsIcon } from 'lucide-react'
 import type { View } from '../../workspace'
 import { WorldButton } from '../worlds/WorldButton'
 import { navCurrent } from './navText'
 import { isActive, navLabel, percent, type ReadyView } from '../ready/readyText'
 import { useReady, useReadyActions } from '../ready/useReady'
+import { assistant, useAssistantOpen } from '../assistant/store'
 
 /** The views: the world (persona and worlds), the story and Settings. */
 const VIEWS: { id: View; label: string; icon: typeof BookOpen }[] = [
@@ -17,16 +18,27 @@ export function AppNav({ view, go }: { view: View; go: (view: View) => void }) {
   return (
     <nav className="app-nav" aria-label="Views">
       <WorldButton current={view === 'worlds'} onOpen={() => go('worlds')} />
-      {VIEWS.map(({ id, label, icon: Icon }) => (
-        <button key={id} type="button" className={`nav-${id}`} aria-current={navCurrent(id, view) ? 'page' : undefined} onClick={() => go(id)}
+      {VIEWS.map(({ id, label, icon: Icon }) => (<Fragment key={id}>
+        {id === 'settings' && <AssistantButton />}
+        <button type="button" className={`nav-${id}`} aria-current={navCurrent(id, view) ? 'page' : undefined} onClick={() => go(id)}
           aria-label={id === 'settings' ? navLabel(ready) : undefined}>
           <Icon aria-hidden="true" />
           {id === 'settings' && <SettingsMark view={ready} />}
           <span>{label}</span>
         </button>
-      ))}
+      </Fragment>))}
     </nav>
   )
+}
+
+/** Opens and closes the Sidebar Assistant beside whatever view is showing. */
+function AssistantButton() {
+  const open = useAssistantOpen()
+  return <button type="button" className="nav-assistant" aria-pressed={open} onClick={assistant.toggle}
+    title={open ? 'Close the Sidebar Assistant' : 'Open the Sidebar Assistant'}>
+    <Lightbulb aria-hidden="true" />
+    <span>Assistant</span>
+  </button>
 }
 
 /** "Set it up for me" as the Settings tab shows it; opening Settings once clears the done dot. */
