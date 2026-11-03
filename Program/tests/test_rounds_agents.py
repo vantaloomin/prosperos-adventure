@@ -170,6 +170,17 @@ def test_agents_are_picked_within_the_cap_party_first_then_nemeses_and_promoted_
     turn, _, _ = turn_of(game, mode=Mode.WATCH)
     assert turn.snapshot.seat('you').mind == Mind.PROGRAM
 
+    # Standing in on an agent outside Play, the user's own character comes first, ahead of the party.
+    async def stand_in(turn):
+        turn.snapshot.settings['stand_in'] = {'key': 'you'}
+        turn.snapshot.seat('you').mind, turn.snapshot.seat('you').promoted = Mind.AGENT, True
+    engine.register(State.GATHERING, 'stand_in', stand_in, after='pick')
+    engine.register(State.GATHERING, 'pick_again', declare.pick, after='stand_in')
+    turn, _, _ = turn_of(game, mode=Mode.WATCH)
+    assert [seat.key for seat in turn.snapshot.seats if seat.mind == Mind.AGENT] == ['you', 'cole', 'hesk']
+    # Picking again keeps those the first pick dropped.
+    assert turn.snapshot.settings['dropped'] == ['ilsa', 'bram', 'dov']
+
 
 # A whole round ------------------------------------------------------------------------------------------------------
 

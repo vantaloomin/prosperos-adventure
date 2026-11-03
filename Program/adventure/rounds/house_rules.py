@@ -50,6 +50,9 @@ DIALOGUE = (
 LISTS = ('dialogue', 'punctuation', 'words', 'phrases', 'names')
 # The choices a user sets outright.
 CHOICES = ('thoughts', 'pane_title', 'pane_row')
+# The Reviewer's toggle as the Table sends it, and as it is kept (None: whatever the preset says).
+REVIEWER = {'on': True, 'off': False, 'preset': None}
+REVIEWER_CHOSEN = {True: 'on', False: 'off', None: 'preset'}
 MOST = {'dialogue': 40, 'punctuation': 20, 'words': 400, 'phrases': 400, 'names': 1000}
 LONGEST = {'dialogue': 300, 'punctuation': 8, 'words': 40, 'phrases': 120, 'names': 60, 'pane_title': 60,
            'pane_row': 60}
@@ -135,11 +138,15 @@ def now(connection) -> Rulebook:
 
 
 def view(connection) -> dict:
-    """The book as the Table shows it, with each ruling in force and the turn it was made at."""
-    book = now(connection)
+    """The book as the Table shows it, with each ruling in force and the turn it was made at, and whether the
+    Reviewer runs (adventure/rounds/reviewer.py): 'on' or 'off' as the user chose, or 'preset' to follow the preset."""
+    from adventure.rounds import agents, reviewer
+    book, chosen = now(connection), stored(connection).get('reviewer')
     return {item.name: list(value) if isinstance(value := getattr(book, item.name), tuple) else value
-            for item in fields(book) if item.name != 'rulings'} | {'rulings': rulings(connection),
-                                                                  'thought_styles': list(THOUGHTS)}
+            for item in fields(book) if item.name != 'rulings'} | {
+        'rulings': rulings(connection), 'thought_styles': list(THOUGHTS),
+        'reviewer': {'chosen': REVIEWER_CHOSEN[chosen], 'on': reviewer.enabled(agents.settings(connection)
+                                                                              | {'reviewer': chosen})}}
 
 
 def change(connection, changes: dict, now: str):
@@ -163,7 +170,11 @@ def change(connection, changes: dict, now: str):
             value = ' '.join(str(changes[key] or '').split())
             check_choice(key, value)
             edits[key] = None if value == getattr(base, key) else value or None
-    edits = {key: value for key, value in edits.items() if value and (key in CHOICES or any(value.values()))}
+    if 'reviewer' in changes:
+        require(changes['reviewer'] in REVIEWER, 'The Reviewer is on, off, or as the preset has it.')
+        edits['reviewer'] = REVIEWER[changes['reviewer']]
+    edits = {key: value for key, value in edits.items()
+             if value is not None and (key == 'reviewer' or (value and (key in CHOICES or any(value.values()))))}
     connection.execute('INSERT INTO house_rules (id, edits, updated_at) VALUES (1, ?, ?) ON CONFLICT(id) DO UPDATE '
                        'SET edits=excluded.edits, updated_at=excluded.updated_at', (encode(edits), now))
 

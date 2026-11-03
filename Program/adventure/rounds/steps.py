@@ -5,9 +5,11 @@ module here, one line each, so nothing depends on which module happened to be im
 from adventure.rounds import (
     author,  # noqa: F401 - the Author's nudges, the beat board and their feedback
     converse,  # noqa: F401 - Converse and the reply card
+    corrections,  # noqa: F401 - corrected and struck memories, read through recall (memory.amend)
     declare,  # noqa: F401 - the agents: pick, declare, lies heard, react, feelings
     modes,  # noqa: F401 - who plays the user's character outside Play
     offpage,  # noqa: F401 - off-page beats in a round with agents, and their commit
+    report,  # noqa: F401 - the house rules frozen at Gather, the Reviewer and the scan after the Writer
     telling,  # noqa: F401 - today's turn as steps, and the party's Resolve (resolve.py)
     watch,  # noqa: F401 - what Watch's big moments are found against
 )

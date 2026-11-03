@@ -1371,6 +1371,26 @@ CREATE TABLE IF NOT EXISTS house_rulings (
   seq INTEGER NOT NULL,
   created_at TEXT NOT NULL
 );
+
+-- W5 Writing rules and checks: corrections (adventure/rounds/corrections.py). --------------------------------------
+
+-- A patch to a committed turn, keyed to that turn's place on the timeline (its branch and seq) so every later read
+-- through the branch's ancestry sees it. `before` and `after` are JSON; `after` is NULL for something struck.
+CREATE TABLE IF NOT EXISTS round_corrections (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  kind TEXT NOT NULL CHECK (kind IN ('memory', 'feeling', 'record', 'stat', 'invention')),
+  target TEXT NOT NULL,
+  before TEXT,
+  after TEXT,
+  why TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS round_corrections_of ON round_corrections (turn_id);
+
 -- W7 Author, Watch and the Dungeon systems in agent play (adventure/rounds/author.py, watch.py, modes.py). ---------
 
 -- How the modes play in this campaign (adventure/rounds/modes.py): who stands in for the user's character outside
