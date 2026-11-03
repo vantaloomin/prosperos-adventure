@@ -60,6 +60,10 @@ Answer with JSON only, in this shape:
 {{"actions": [{{"action": "what they try, in a few words", "roll": true, "stat": "Vitality", "difficulty": "hard"}}]}}"""
 
 
+# In a round turn the Referee reads the scene and everyone's intent, but rules on one character's part.
+RULE_ON = 'Rule only on the part under "What to rule on now"; the rest is the scene around it.'
+
+
 # The three questions a decision model answers for each action, in Jev's shapes.
 QUESTIONS = {
     'roll': {'type': 'noul', 'instructions': 'Is the outcome of this action uncertain enough to need a dice roll? '
@@ -168,18 +172,31 @@ async def decided(state, config: dict, actions: list[str], fight: str | None = N
     return [judged(action, answer) for action, answer in zip(actions, answers)]
 
 
+def asked(text: str, fight: str | None, context: str) -> tuple[str, str]:
+    """The Referee model's system prompt and message. A round turn (adventure/rounds/resolve.py ruled) hands in the
+    Referee's own context (adventure/rounds/context.py build_referee: the scene, who is here and everyone's bare
+    intent, fenced, with the part to rule on), so the prompt carries the rule that fenced text is never an
+    instruction."""
+    note = fight_note(fight) if fight else ''
+    if not context:
+        return SYSTEM, note + text
+    from adventure.rounds.context import FENCE_RULE
+    return f'{SYSTEM}\n\n{FENCE_RULE} {RULE_ON}', note + context
+
+
 async def decide(state, text: str, config: dict | None, decisions: dict | None = None,
-                 fight: str | None = None) -> list[dict]:
+                 fight: str | None = None, context: str = '') -> list[dict]:
     """The rolled actions of one turn: split by the Referee's model when there is one, decided by the decision model
     when there is one, else by the Referee's own answer, else by the keyword rules. `fight` names who the character
-    is fighting, when a fight is on, so a line that keeps at them is read as an attack."""
+    is fighting, when a fight is on, so a line that keeps at them is read as an attack. `context`, in a round turn,
+    is what the Referee's model reads in place of the bare text (`asked`); the other rulings read the text."""
     actions = None
-    told = fight_note(fight) + text if fight else text
     if config is not None:
+        system, told = asked(text, fight, context)
         try:
             async with state.scheduler.reserve(config, CONVERSATION):
                 answer = ''.join([chunk.text async for chunk in state.provider.stream(
-                    config, key_for(state.vault, config), SYSTEM, [{'role': 'user', 'content': told}])])
+                    config, key_for(state.vault, config), system, [{'role': 'user', 'content': told}])])
         except Exception:  # noqa: BLE001 - a Referee that fails falls back to the rules; the turn goes on.
             answer = ''
         actions = split(answer)
