@@ -5,6 +5,7 @@
       "name": "Agna Holt",
       "gender": "woman",
       "age": 29,
+      "home": "bunkhouses",
       "about": "A Cyrel soldier who walked away from Bastion after the night her company was left outside the gate. Deserters hang, so she calls herself a logger now and keeps her sword wrapped in sacking under the bunk. Good in a fight, bad at being told what to do, worse at sleeping.",
       "stats": {
         "Mind": 9,
@@ -25,6 +26,7 @@
       "name": "Lirien of the Ford",
       "gender": "nonbinary",
       "age": 61,
+      "home": "the-ford",
       "about": "Half-elf, born at Low Ford to a mother who never named the father. Too human for Brynwyr, too elven for Kingswood, so they run whatever needs carrying across the stones at night: salt one way, herbs and worse the other. They know the warden paths and owe the wrong people on both sides.",
       "stats": {
         "Mind": 11,
@@ -45,6 +47,7 @@
       "name": "Tobin Pell",
       "gender": "man",
       "age": 36,
+      "home": "tally-hut",
       "about": "Tally clerk for the Timber Guild and the storekeeper's useless son. He has skimmed a board in twenty for four years and the factor has started counting behind him. Clever, soft-handed, charming when frightened, and lately very frightened.",
       "stats": {
         "Mind": 15,

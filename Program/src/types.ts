@@ -381,7 +381,7 @@ export type StoryHand = 'soft' | 'guiding' | 'firm'
 /** Another world's story that can come into a new campaign as history (adventure/legacy.py). */
 export interface LegacyCandidate { world_id: string; world: string; name: string; dead: boolean; chapters: number }
 export type LegacyRole = 'legend' | 'villain' | 'corpse'
-export interface StoryStart { rulesets?: { id: Ruleset; name: string }[]; ruleset?: Ruleset; srd52?: Srd52Choices; ironsworn?: IronswornChoices; brp?: BrpChoices; narrative?: { hint: string }; fate?: FateChoices; legacy?: LegacyCandidate[]; presets?: TablePreset[]; table?: TableRules; premades: Premade[]; points: number; range: [number, number]; stat_names: string[]; meanings: Record<string, string>; arc?: { arc: StoryArc; pace: StoryPace; hand?: StoryHand } | null }
+export interface StoryStart { rulesets?: { id: Ruleset; name: string }[]; ruleset?: Ruleset; srd52?: Srd52Choices; ironsworn?: IronswornChoices; brp?: BrpChoices; narrative?: { hint: string }; fate?: FateChoices; legacy?: LegacyCandidate[]; presets?: TablePreset[]; table?: TableRules; premades: Premade[]; party_size?: number; points: number; range: [number, number]; stat_names: string[]; meanings: Record<string, string>; arc?: { arc: StoryArc; pace: StoryPace; hand?: StoryHand } | null }
 /** The character's tier on the shared ladder and its track (adventure/tiers.py); the numbers only with the dice shown. */
 /** Growth by use and the dark tracks (adventure/growth.py); points only with the dice shown. */
 export interface SheetGrowth {

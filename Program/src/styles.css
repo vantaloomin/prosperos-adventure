@@ -401,6 +401,8 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 /* The cast page (src/features/story/StoryStart.tsx): who you play, then rules, tone and Begin at the foot. */
 .cast-setup { flex: 1; overflow-y: auto; max-width: 880px; width: 100%; margin: 0 auto; padding: 24px 32px; display: flex; flex-direction: column; gap: 20px; }
 .cast-setup h2 { font-size: 1.35rem; }
+/* Its rows keep their height and the page scrolls, so a long cast and bank never squeeze the bio under Options. */
+.cast-setup > * { flex-shrink: 0; }
 .cast-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
 .cast-card { width: 100%; height: 100%; min-height: 128px; display: grid; justify-items: center; align-content: center; gap: 8px; padding: 16px 12px 12px; border: 1px solid var(--border);
   border-radius: 12px; background: var(--surface); text-align: center; transition: border-color 160ms var(--ease); }
@@ -1210,7 +1212,14 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .branch-question { display: flex; align-items: center; gap: 8px; margin: 0; font-weight: 600; }
 .branch-question .portrait { width: 26px; height: 26px; font-size: 0.875rem; }
 /* The cast page's party (src/features/story/StoryStart.tsx CastCard): You on your card, Thinks or Rules under the others. */
-.cast-seat { display: grid; gap: 6px; justify-items: center; align-content: start; }
+.cast-seat { position: relative; display: grid; gap: 6px; justify-items: center; align-content: start; }
+/* The bank (CA-8): the leads who don't join, under the grid; a corner − or + moves a card between the two rows. */
+.cast-move { position: absolute; top: 6px; right: 6px; width: 26px; height: 26px; border-radius: 50%; }
+.cast-move svg { width: 14px; height: 14px; }
+.cast-bank { display: grid; gap: 10px; }
+.cast-bank h3 { font-size: 0.875rem; font-weight: 600; color: var(--muted); }
+.cast-bank .cast-card { min-height: 104px; }
+.cast-bank .portrait { opacity: 0.7; }
 .cast-seat .portrait[data-thinks] { position: relative; }
 .cast-seat .portrait[data-thinks]::after { content: ''; position: absolute; right: 0; bottom: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); }
 .cast-you { font-size: 0.75rem; color: var(--accent); font-weight: 600; }

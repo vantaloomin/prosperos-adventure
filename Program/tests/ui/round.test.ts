@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { asksMissed, castSeat, joinsAsParty, partyBody, partyMind, beatMoves, beatStanding, reaskOf, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { asksMissed, castSeat, joinsAsParty, partyBody, partyMind, partyOf, beatMoves, beatStanding, reaskOf, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
 import { composerText, whatIf, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
@@ -208,6 +208,20 @@ test('the cast page sends every other lead as your party, with how each decides'
   assert.deepEqual(partyBody(leads, 'ada', { mara: 'program' }), { hesk: { mind: 'program' }, mara: { mind: 'program' } })
   // Making your own: everyone joins.
   assert.deepEqual(Object.keys(partyBody(leads, '', {})), ['ada', 'hesk', 'mara'])
+  // Only the leads who join, when the bank holds the rest.
+  assert.deepEqual(partyBody(leads, 'ada', {}, new Set(['mara'])), { mara: { mind: 'agent' } })
+})
+
+test('the party fills up to the agent cap in the town order, and the rest wait in the bank (CA-8)', () => {
+  const leads = [{ id: 'ada' }, { id: 'hesk' }, { id: 'mara' }, { id: 'olaf' }]
+  assert.deepEqual([...partyOf(leads, 'ada', 2, {})], ['hesk', 'mara'])
+  assert.deepEqual([...partyOf(leads, 'hesk', 2, {})], ['ada', 'mara'])
+  // Moved by hand: out to the bank, or in past the cap.
+  assert.deepEqual([...partyOf(leads, 'ada', 2, { hesk: false, olaf: true })], ['mara', 'olaf'])
+  // A backend that gives no size: everyone joins.
+  assert.deepEqual([...partyOf(leads, 'ada', undefined, {})], ['hesk', 'mara', 'olaf'])
+  assert.equal(castSeat(false, true, 'play', true), 'bank')
+  assert.equal(castSeat(true, true, 'play', true), 'you')
 })
 
 test('the cast page marks You only in Play; outside Play your character gets a stand-in toggle', () => {

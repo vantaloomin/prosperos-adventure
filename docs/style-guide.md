@@ -135,6 +135,7 @@ IDs are stable so PRs and tests can cite them. "Loop" marks requirements that sh
 - **CA-5** Begin posts one campaign record `{world, seat, agents[], mode, rules, tone}`, the same record the turn loop's Setup step reads.
 - **CA-6** *Loop.* Play / Author / Watch sits at the top right. In Author and Watch no card is "You".
 - **CA-7** *Loop.* Every character except yours has a Thinks / Rules toggle (agent or Program), default from the world package.
+- **CA-8** *Loop.* When a town has more leads than the agent cap, the grid holds you and your party (filled up to the cap) and a Bank row under it holds the rest. A small − on a party card sends them to the bank and a + on a bank card brings them in; tapping any portrait still plays as them. Whoever is in the bank at Begin lives in town as a background character.
 
 ### Play
 

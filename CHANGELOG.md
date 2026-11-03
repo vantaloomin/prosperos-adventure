@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **A bank of characters for each world.** When a town has more leads than the table seats thinking characters (Havenbrooke's nine), they no longer all follow you. The cast page fills your party up to Thinking characters at once (6 by default) and puts the rest in a Bank row under it; a − on a party card sends them to the bank and a + brings one in. Whoever is still in the bank at Begin lives in town as a background character at their usual haunt (Piper at the Verdant Grove, Austin at Alpha Gamma House), and you can meet them and ask them along like anyone else.
 - **Undo what the story's record keeper decided.** When the Continuity model reads a turn and decides a quest is over, an oath was sworn, someone's feelings shifted or your character did something dark, each one now shows in that turn's report under Read from the story, with Undo. Undo takes back only that change: an ended quest reopens with what it paid or settled, and a feeling moves back by what it moved, keeping what later turns did.
 - **What you read, your character knows.** Facts the record keeper takes from a turn are always ones your character saw or was told, so they show in your journal. Only the game itself keeps secrets from you now.
 - **The narrator gets signs, never secrets.** In every campaign, the narrator no longer gets the hidden truth behind a quest, a thread or someone carrying one, or facts hidden from you, except a lie it is telling this turn. It gets what each looks like on the page, and the truths stay in the GM view.

@@ -299,15 +299,24 @@ export function partyMind(premade: { id: string; default_mind?: PartyMind }, cho
   return chosen[premade.id] ?? premade.default_mind ?? 'agent'
 }
 
-/** Begin's `party`: every lead but the one you play, with how each decides. */
-export function partyBody(premades: { id: string; default_mind?: PartyMind }[], you: string, chosen: Record<string, PartyMind>): Record<string, { mind: PartyMind }> {
-  return Object.fromEntries(premades.filter((premade) => premade.id !== you).map((premade) => [premade.id, { mind: partyMind(premade, chosen) }]))
+/** Who joins your party (CA-8): the other leads in the town's order, the first `size` of them unless you moved them
+ *  (`placed`: true in the party, false in the bank). With no size from the backend, everyone joins. */
+export function partyOf(premades: { id: string }[], you: string, size: number | undefined, placed: Record<string, boolean>): Set<string> {
+  const others = premades.filter((premade) => premade.id !== you)
+  return new Set(others.filter((premade, index) => placed[premade.id] ?? index < (size ?? Infinity)).map((premade) => premade.id))
+}
+
+/** Begin's `party`: the leads who join (every lead but the one you play when `joined` is left out), with how each
+ *  decides. The rest stay in the bank and live in town (adventure/rounds/bank.py). */
+export function partyBody(premades: { id: string; default_mind?: PartyMind }[], you: string, chosen: Record<string, PartyMind>, joined?: Set<string>): Record<string, { mind: PartyMind }> {
+  return Object.fromEntries(premades.filter((premade) => premade.id !== you && (!joined || joined.has(premade.id))).map((premade) => [premade.id, { mind: partyMind(premade, chosen) }]))
 }
 
 /** What a lead's card on the cast page offers (CA-6, CA-7): the one you play is You in Play; outside Play no card is
- *  You, and that character's toggle says who stands in for them; every other lead joins the party with their own. */
-export function castSeat(picked: boolean, joins: boolean, mode: Mode): 'you' | 'stand-in' | 'party' | 'none' {
+ *  You, and that character's toggle says who stands in for them; every other lead joins the party with their own,
+ *  or waits in the bank (CA-8). */
+export function castSeat(picked: boolean, joins: boolean, mode: Mode, banked = false): 'you' | 'stand-in' | 'party' | 'bank' | 'none' {
   if (!joins) return 'none'
-  if (!picked) return 'party'
+  if (!picked) return banked ? 'bank' : 'party'
   return mode === 'play' ? 'you' : 'stand-in'
 }

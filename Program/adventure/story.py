@@ -79,7 +79,7 @@ from adventure.narration import prompt as narration_prompt
 from adventure.narration import prose
 from adventure.providers.chat import INCOMPLETE
 from adventure.providers.scheduling import CONVERSATION
-from adventure.rounds import corrections, house_rules, shown
+from adventure.rounds import bank, corrections, house_rules, shown
 from adventure.rounds import memory as rounds_memory
 from adventure.rounds import turns as rounds_turns
 from adventure.rules import brp, fate, ironsworn, marvel, narrative, srd52
@@ -138,8 +138,9 @@ def no_model() -> DomainError:
 # The scene ----------------------------------------------------------------------------------------
 
 def city_data(connection, city_id: str) -> dict:
-    """The city as the story has it, in this world's town."""
-    return city_for(connection, city_id, town_seed(connection))
+    """The city as the story has it, in this world's town, with the leads banked at Begin living in it
+    (adventure/rounds/bank.py)."""
+    return bank.with_bank(connection, city_for(connection, city_id, town_seed(connection)))
 
 
 def town_seed(connection) -> str:
@@ -777,7 +778,7 @@ def clear(database) -> dict:
                       'story_offpage', 'story_tier', 'story_marks', 'story_dark',
                       'story_director', 'story_arcs', 'story_threads', 'story_nemeses', 'story_seeds',
                       'story_arc_beats', 'story_sheet', 'story_enrollment', 'story_attendance', 'story_grades', 'story_art',
-                      'lore_timers'):
+                      'story_bank', 'lore_timers'):
             connection.execute(f'DELETE FROM {name}')
         politics.clear(connection)
         house_rules.clear(connection)

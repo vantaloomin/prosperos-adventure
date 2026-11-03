@@ -154,6 +154,11 @@ export const BEAT_MARKS = { landed: 'On the page', used: 'Used' } as const
 export const whatIf = (name: string) => `What if ${name} had chosen otherwise?`
 export const askAgain = (name: string) => `Ask ${name} again`
 
+/** The cast page's bank (CA-8): the leads who don't join your party, and the buttons that move them. */
+export const BANK_NAMES = {
+  title: 'Bank', add: (name: string) => `Add ${name} to your party`, remove: (name: string) => `Move ${name} to the bank`,
+} as const
+
 /** A thinking character's notes and model, in their open row. */
 export const SEAT_NAMES = {
   notes: (name: string) => `Your notes on ${name}`, notesHint: 'Notes', model: (name: string) => `Model for ${name}`, agentsModel: "Agents' model",

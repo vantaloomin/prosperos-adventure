@@ -5,6 +5,7 @@
    "name": "Piper Marsh",
    "gender": "woman",
    "age": 20,
+   "home": "verdant-grove",
    "about": "A half-kitsune sophomore in Interpersonal Dynamics who sells charms out of the Verdant Grove and apologizes for everything. One red tail that tells the truth when she doesn't. She wants a bonded circle and a shop with her name on it, and she has not told anyone the first part yet. No car: the shuttle, the bus, or a ride from Austin.",
    "stats": {
     "Mind": 10,
@@ -37,6 +38,7 @@
    "name": "Jason Kessler",
    "gender": "man",
    "age": 20,
+   "home": "ember-house",
    "about": "An incubus sophomore in Supernatural Physiology, a year into the best relationship of his life and still afraid of what he is. He has spent eleven months drafting a support group for people who have to feed. He has a secret from freshman year he has never said out loud. No car: the shuttle, the bus, or a ride from Austin.",
    "stats": {
     "Mind": 9,
@@ -69,6 +71,7 @@
    "name": "Austin Hallward",
    "gender": "man",
    "age": 20,
+   "home": "alpha-gamma-house",
    "about": "A born lycan in Military and Tactical Operations, president of Alpha Gamma for about another month. Big, quiet, asks short questions and means them. Everybody leans on him. He shares a unit with a dryad who is lying to her family, and he has noticed. He drives an old pickup and is the floor's ride anywhere.",
    "stats": {
     "Mind": 8,
@@ -100,6 +103,7 @@
    "name": "Rina Aldwyn",
    "gender": "woman",
    "age": 20,
+   "home": "verdant-grove",
    "about": "A dryad in Esoteric Sciences, anchored to a three-hundred-year-old oak her family owns, and betrothed to a sylph diplomat she has met four times. She has been forging her family's correspondence since August. She closes at the Grove four nights a week. No car: the shuttle, the bus, or a ride from Austin.",
    "stats": {
     "Mind": 10,
@@ -131,6 +135,7 @@
    "name": "Kimberly Corwin",
    "gender": "woman",
    "age": 20,
+   "home": "hex-house",
    "about": "A Boston lineage witch in Esoteric Sciences who turned down Salem to build something nobody handed her. Precise, funny when she is tired, and more exact the worse things get. Her mother has a plan for her. So does Sigma Theta Hex. No car: the shuttle, the bus, or a ride from Austin.",
    "stats": {
     "Mind": 13,
@@ -162,6 +167,7 @@
    "name": "Michael Reeves",
    "gender": "man",
    "age": 20,
+   "home": "morrowe-commons",
    "about": "A mundane human from Cleveland on a full scholarship in computer science, sharing Unit C with a witch who outranks him in every room but this one. He thinks he is lucky to be here. Exposure fatigue is making him tired in a way he has not mentioned. No car: the shuttle, the bus, or a ride from Austin.",
    "stats": {
     "Mind": 17,
@@ -193,6 +199,7 @@
    "name": "Christine Kessler",
    "gender": "woman",
    "age": 20,
+   "home": "stitch-hall",
    "about": "Jason's twin, a succubus model in the Interpersonal Dynamics fashion track with a brand liaison and forty percent of the floor's attention at any time. Very good at being wanted. She woke up in a Philadelphia hospital at seventeen with three days missing. She drives a black Audi and lends it to nobody.",
    "stats": {
     "Mind": 10,
@@ -224,6 +231,7 @@
    "name": "Paula Mercer",
    "gender": "woman",
    "age": 20,
+   "home": "chancellor-wynne-library",
    "about": "A vampire, turned by choice, fourteen months out of the worst year of her life and studying ethics in Interpersonal Dynamics. Dry, careful, kind on purpose. She counts things to stay steady, and her parents in Harrisburg do not call. No car: the shuttle, the bus, or a ride from Austin.",
    "stats": {
     "Mind": 11,
@@ -256,6 +264,7 @@
    "name": "Amanda Rhodes",
    "gender": "woman",
    "age": 20,
+   "home": "mirren-studio",
    "about": "A mundane media student from Columbus who came to Havenbrooke to start an account about the people in it, and is about to. Loud, quick and generous, and quieter when it is real. She has a list of everyone on the floor she plans to pitch, and one name is missing from it. No car: the shuttle, the bus, or a ride from Austin.",
    "stats": {
     "Mind": 13,

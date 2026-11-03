@@ -1,10 +1,12 @@
-"""The other leads join as the party at Begin (the cast page's "Join as your party").
+"""The other leads join as the party at Begin (the cast page's "Join as your party"), or stay in the bank.
 
 A city's premade characters (adventure/campaign.py `premades`) are its leads. When the story begins with a `party`,
-every lead the player did not choose travels with their character from the first line (adventure/party.py), is met
+every lead it names travels with the player's character from the first line (adventure/party.py), is met
 (adventure/story_people.py), and takes a round seat (adventure/rounds/seats.py) with the mind the cast page set:
-'agent' (Thinks) or 'program' (Rules). The player's own character is the human seat, `HUMAN`. Begun without a
-party, the story plays exactly as before.
+'agent' (Thinks) or 'program' (Rules). The player's own character is the human seat, `HUMAN`. The leads it leaves
+out are the bank (adventure/rounds/bank.py): they live in town as background characters. The cast page fills the
+party up to the agent cap by default (`party_size`), so a town with more leads than that (Havenbrooke) does not send
+them all after the character. Begun without a party, the story plays exactly as before.
 
 Each lead's seat key is their premade id, which is also their id in the world package, so what the package says
 they know reaches them (adventure/rounds/context.py `package_ids`). Their sheet is drawn the way a package's notable
@@ -15,7 +17,7 @@ from datetime import date
 from adventure import story_people, world_data
 from adventure.database import encode
 from adventure.errors import require
-from adventure.rounds import seats
+from adventure.rounds import bank, seats
 from adventure.rounds.contract import Mind
 from adventure.world import catalog, townsfolk
 
@@ -64,20 +66,38 @@ def sheet_for(data: dict, place_id: str, premade: dict, world: str | None) -> di
     return drawn | own | {'key': premade['id'], 'cast': premade['id']}
 
 
+def party_size(connection) -> int:
+    """How many leads the cast page puts in the party before the player changes it: the agent cap."""
+    return seats.settings(connection)['agent_cap']
+
+
 def checked(leads: list[dict], chosen_id: str | None, chosen: dict) -> dict[str, dict]:
-    """The cast page's choices, each lead's own: every lead but the player's, with a known mind."""
-    others = {lead['id'] for lead in leads if lead['id'] != chosen_id}
-    unknown = set(chosen) - others
+    """The cast page's choices, each lead's own: the leads it names (never the player's), with a known mind."""
+    others = [lead['id'] for lead in leads if lead['id'] != chosen_id]
+    unknown = set(chosen) - set(others)
     require(not unknown, f"Not a lead who can join: {', '.join(sorted(unknown))}.", 422)
     for choice in chosen.values():
         require(choice.get('mind') in (None, Mind.AGENT, Mind.PROGRAM), 'A lead thinks (agent) or rules (program).',
                 422)
-    return {key: chosen.get(key) or {} for key in sorted(others, key=[lead['id'] for lead in leads].index)}
+    return {key: chosen[key] or {} for key in others if key in chosen}
+
+
+def banked(data: dict, place_id: str, lead: dict, world: str | None) -> dict:
+    """A lead left in the bank as a city notable (adventure/world/schema.py Notable): at their own `home` in town,
+    else where the story opens, a regular there rather than staff, with the package's role and wants."""
+    entry = world_data.person(world, lead['id']) or {}
+    home = lead.get('home') if lead.get('home') and catalog.find(data, lead['home']) else place_id
+    role = first_text(entry.get('role')) or first_text(entry.get('concept')) or 'local'
+    return {'id': lead['id'], 'name': lead['name'], 'given': lead['name'].split(' ')[0][:60],
+            'pronouns': PRONOUNS.get(lead.get('gender'), 'they/them'), 'age': max(16, int(lead.get('age') or 30)),
+            'place': home, 'role': role[:ROLE_CHARS], 'staff': False, 'about': lead.get('about', ''),
+            'wants': first_text(entry.get('wants'))[:WANTS_CHARS], 'source': world or data['id']}
 
 
 def join(connection, data: dict, place_id: str, leads: list[dict], chosen_id: str | None, player: str,
          chosen: dict, world: str | None, now: str, day: date):
-    """Every lead but the player's joins the party and the table; the player sits as the human."""
+    """The leads the cast page named join the party and the table, and the rest stay in town as the bank; the
+    player sits as the human."""
     choices = checked(leads, chosen_id, chosen)
     by_id = {lead['id']: lead for lead in leads}
     seats.set_seat(connection, HUMAN, player, now, mind=Mind.HUMAN)
@@ -89,6 +109,8 @@ def join(connection, data: dict, place_id: str, leads: list[dict], chosen_id: st
                            '(?, ?, ?, ?, ?)', (key, sheet['full'], data['id'], encode(sheet), now))
         seats.set_seat(connection, key, sheet['full'], now, mind=choice.get('mind') or default_mind(world, lead),
                        notes=choice.get('notes') or '', model_profile_id=choice.get('model_profile_id'))
+    bank.keep(connection, data['id'], [banked(data, place_id, lead, world) for lead in leads
+                                       if lead['id'] != chosen_id and lead['id'] not in choices])
 
 
 def begin(connection, database, city_id: str, leads: list[dict], chosen_id: str | None, player: str,

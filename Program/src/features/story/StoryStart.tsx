@@ -1,5 +1,5 @@
-import { useEffect, useState, type ReactNode } from 'react'
-import { Plus } from 'lucide-react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { Minus, Plus } from 'lucide-react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../../api'
 import type { BrpChoices, IronswornChoices, PersonaGender, Ruleset, Srd52Choices, Story as StoryData, StoryStart as StartChoices } from '../../types'
@@ -13,10 +13,10 @@ import { CampaignOptions } from './CampaignOptions'
 import { useSession } from './campaignSession'
 import { FateBuild, type FateDraft } from './FateBuild'
 import { MindToggle } from '../round/MindToggle'
-import { castSeat, joinsAsParty, partyBody, partyMind, type PartyMind } from '../round/round'
+import { castSeat, joinsAsParty, partyBody, partyMind, partyOf, type PartyMind } from '../round/round'
 import { ModeSwitch } from '../round/ModeSwitch'
 import { useCastMode } from '../round/useModes'
-import { THINKS_NAME } from '../round/roundText'
+import { BANK_NAMES, THINKS_NAME } from '../round/roundText'
 import { ROUND_KEY } from '../round/useRound'
 
 /** The cast page: the campaign start (adventure/campaign.py) on one page. The town's people are a grid; tapping one
@@ -40,7 +40,7 @@ function Cast({ choices, place, onStarted }: { choices: StartChoices; place: str
   const [error, setError] = useState('')
   const [ruleset, setRuleset] = useState<Ruleset | null>(null)
   const session = useSession(choices)
-  const party = useParty(premades, seat, setError)
+  const party = useParty(premades, choices.party_size, seat, setError)
   const who = seat === OWN ? made : { premade_id: seat }
   const begin = async () => {
     if (!who) return
@@ -57,9 +57,10 @@ function Cast({ choices, place, onStarted }: { choices: StartChoices; place: str
     <form className="cast-setup" aria-labelledby="cast-heading" onSubmit={(event) => { event.preventDefault(); void begin() }}>
       <div className="cast-head"><h2 id="cast-heading">{place}</h2><ModeSwitch shown={party.joins} mode={party.mode.mode} onChange={party.mode.change} /></div>
       <ul className="cast-grid" aria-label="Who you play">
-        {premades.map((premade) => <CastCard key={premade.id} premade={premade} picked={seat === premade.id} card={party.card(premade)} onPick={() => setSeat(premade.id)} />)}
+        {premades.filter((premade) => !party.banked(premade)).map((premade) => <CastCard key={premade.id} premade={premade} picked={seat === premade.id} card={party.card(premade)} onPick={() => setSeat(premade.id)} />)}
         <li><button type="button" className="cast-card cast-own" aria-pressed={seat === OWN} aria-label="Make your own character" onClick={() => setSeat(OWN)}><Plus aria-hidden="true" /></button></li>
       </ul>
+      <Bank leads={premades.filter(party.banked)} card={party.card} onPick={setSeat} />
       {looking ? <p className="cast-bio" aria-live="polite">{looking.about}</p>
         : <MakeYourOwn choices={choices} ruleset={ruleset ?? choices.ruleset} onChange={setMade} />}
       <CampaignOptions choices={choices} session={session} />
@@ -75,28 +76,55 @@ function Cast({ choices, place, onStarted }: { choices: StartChoices; place: str
   )
 }
 
-/** The other leads join as your party (CA-7), each Thinks or Rules; a backend without party seating gets no `party`. */
-function useParty(premades: StartChoices['premades'], seat: string, onError: (text: string) => void) {
+/** The other leads join as your party (CA-7), each Thinks or Rules, up to the agent cap; the rest wait in the bank and
+ *  live in town (CA-8). A backend without party seating gets no `party`. */
+function useParty(premades: StartChoices['premades'], size: number | undefined, seat: string, onError: (text: string) => void) {
   const [minds, setMinds] = useState<Record<string, PartyMind>>({})
+  const [placed, setPlaced] = useState<Record<string, boolean>>({})
+  // The card just moved between the party and the bank, so its button keeps focus in its new row.
+  const [moved, setMoved] = useState('')
   const joins = joinsAsParty(premades)
   const mode = useCastMode(joins, onError)
+  const joined = partyOf(premades, seat, size, placed)
+  const banked = (premade: { id: string }) => joins && premade.id !== seat && !joined.has(premade.id)
+  const move = (id: string, into: boolean) => { setPlaced((before) => ({ ...before, [id]: into })); setMoved(id) }
   const card = (premade: StartChoices['premades'][number]): Card => {
-    const kind = castSeat(seat === premade.id, joins, mode.mode)
-    if (kind === 'party') return { kind, mind: partyMind(premade, minds), onMind: (mind) => setMinds((before) => ({ ...before, [premade.id]: mind })) }
+    const kind = castSeat(seat === premade.id, joins, mode.mode, banked(premade))
+    const focus = moved === premade.id
+    if (kind === 'party') return { kind, focus, mind: partyMind(premade, minds), onMind: (mind) => setMinds((before) => ({ ...before, [premade.id]: mind })), onMove: () => move(premade.id, false) }
+    if (kind === 'bank') return { kind, focus, mind: null, onMove: () => move(premade.id, true) }
     return kind === 'stand-in' ? { kind, mind: mode.standIn, onMind: mode.setStandIn } : { kind, mind: null }
   }
-  return { body: joins ? { party: partyBody(premades, seat, minds) } : {}, joins, mode, card }
+  return { body: joins ? { party: partyBody(premades, seat, minds, joined) } : {}, joins, mode, card, banked }
 }
 
-/** A card's part in the party: its kind (./round.ts castSeat) and, for a toggle, the mind and how to change it. */
-interface Card { kind: ReturnType<typeof castSeat>; mind: PartyMind | null; onMind?: (mind: PartyMind) => void }
+/** The bank (CA-8): the leads who don't join your party, under the grid; shown only while it holds someone. */
+function Bank({ leads, card, onPick }: { leads: StartChoices['premades']; card: (premade: StartChoices['premades'][number]) => Card; onPick: (id: string) => void }) {
+  if (!leads.length) return null
+  return (
+    <section className="cast-bank" aria-labelledby="bank-heading">
+      <h3 id="bank-heading">{BANK_NAMES.title}</h3>
+      <ul className="cast-grid">
+        {leads.map((premade) => <CastCard key={premade.id} premade={premade} picked={false} card={card(premade)} onPick={() => onPick(premade.id)} />)}
+      </ul>
+    </section>
+  )
+}
+
+/** A card's part in the party: its kind (./round.ts castSeat); for a toggle, the mind and how to change it; for a
+ *  party or bank card, the button that moves it to the other row. */
+interface Card { kind: ReturnType<typeof castSeat>; mind: PartyMind | null; onMind?: (mind: PartyMind) => void; onMove?: () => void; focus?: boolean }
 
 interface CardProps { premade: StartChoices['premades'][number]; picked: boolean; card: Card; onPick: () => void }
 
 /** A lead on the cast page: tap to play as them (marked You); every other lead joins your party, with the accent dot
- *  when they think for themself and their Thinks or Rules toggle under the card (CA-2, CA-7). */
+ *  when they think for themself and their Thinks or Rules toggle under the card (CA-2, CA-7), or waits in the bank.
+ *  The corner − sends a party card to the bank and + brings a bank card in (CA-8). */
 function CastCard({ premade, picked, card, onPick }: CardProps) {
   const thinks = card.mind === 'agent'
+  const moveRef = useRef<HTMLButtonElement>(null)
+  useEffect(() => { if (card.focus) moveRef.current?.focus() }, [card.focus, card.kind])
+  const adds = card.kind === 'bank'
   return (
     <li className="cast-seat">
       <button type="button" className="cast-card" aria-pressed={picked} onClick={onPick}>
@@ -104,6 +132,9 @@ function CastCard({ premade, picked, card, onPick }: CardProps) {
         <span className="cast-name">{premade.name}{thinks && <span className="visually-hidden">, {THINKS_NAME}</span>}</span>
         {card.kind === 'you' && <span className="cast-you">You</span>}
       </button>
+      {card.onMove && <button ref={moveRef} type="button" className="icon-button cast-move" aria-label={adds ? BANK_NAMES.add(premade.name) : BANK_NAMES.remove(premade.name)} title={adds ? BANK_NAMES.add(premade.name) : BANK_NAMES.remove(premade.name)} onClick={card.onMove}>
+        {adds ? <Plus aria-hidden="true" /> : <Minus aria-hidden="true" />}
+      </button>}
       {card.mind && card.onMind && <MindToggle id={`cast-${premade.id}`} name={premade.name} mind={card.mind} onChange={card.onMind} />}
     </li>
   )
