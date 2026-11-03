@@ -1,6 +1,7 @@
 """The house rules API (adventure/rounds/house_rules.py): the campaign's rulebook at the Table and its rulings; and each
 round turn's report and the status line (adventure/rounds/report.py); corrections to a committed turn and struck
-inventions (adventure/rounds/corrections.py)."""
+inventions (adventure/rounds/corrections.py); and the "shown so far" sheet updates drafted at a chapter's close
+(adventure/rounds/shown.py)."""
 from typing import Literal
 
 from fastapi import APIRouter, Request
@@ -9,7 +10,7 @@ from pydantic import Field
 from adventure import record, story
 from adventure.errors import DomainError, require
 from adventure.models import Input
-from adventure.rounds import corrections, house_rules, report
+from adventure.rounds import corrections, house_rules, report, shown
 
 router = APIRouter(prefix='/api/story')
 
@@ -117,3 +118,24 @@ async def strike(request: Request, turn_id: str, body: Strike):
         except DomainError as failure:
             struck |= {'not_rewritten': failure.message}
     return struck | {'rewritten': rewritten}
+
+
+class ShownReview(Input):
+    apply: bool
+    items: list[dict] | None = Field(None, max_length=shown.MOST)
+
+
+@router.get('/shown')
+def shown_updates(request: Request):
+    """The sheet updates on this branch: drafts waiting for review, and those applied or dismissed."""
+    with request.app.state.database.connect() as connection:
+        return {'updates': shown.visible(connection)}
+
+
+@router.post('/shown/{update_id}')
+def review_shown(request: Request, update_id: str, body: ShownReview):
+    """A draft is reviewed in the GM view: applied as it stands or as edited, or dismissed."""
+    database = request.app.state.database
+    with database.connect(write=True) as connection:
+        require(record.gm_view(connection), 'Open the GM view to review a sheet update.', 403)
+        return shown.decide(connection, update_id, body.apply, database.now(), body.items)

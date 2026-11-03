@@ -7,7 +7,8 @@ management"; docs/story.md "Chapters and the branch tree").
   chosen, which also names it unless the player did and says what it leaves open; the next chapter opens with a
   short "previously" from that, once the story has run a while since the last one (RECAP_TURNS of the player's
   lines) or the player closed the chapter themselves. A line that goes somewhere opens the new chapter itself. The
-  summary keeps the chapter's names, numbers and pledges, checked in code (adventure/compaction.py).
+  summary keeps the chapter's names, numbers and pledges, checked in code (adventure/compaction.py), and each
+  seated character's sheet gets a "shown so far" draft from it (adventure/rounds/shown.py).
 - **Chapters follow the branches.** A chapter starts at one of the player's lines and its end is recorded on the
   branch where it ended, so both are seen through adventure/timeline.py `visible` like the messages: a branch shares
   its parent's chapters up to where it forked, and an end on another branch is not this branch's.
@@ -21,6 +22,7 @@ management"; docs/story.md "Chapters and the branch tree").
 from adventure import compaction, record, timeline
 from adventure.database import identifier, many, optional
 from adventure.errors import require
+from adventure.rounds import shown
 from adventure.text_models import config_for, routes
 
 REASONS = ('place', 'time', 'fight', 'quest', 'player')
@@ -78,6 +80,8 @@ def arrive(connection, line: dict, now: str):
                            'created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
                            (opened[-1]['id'], line['branch_id'], line['seq'], waiting['reason'],
                             waiting['title'] or waiting['named'], waiting['summary'], waiting['hook'], now))
+        # Each seated character's sheet gets a "shown so far" draft from the chapter (adventure/rounds/shown.py).
+        shown.close(connection, opened[-1]['id'], line['branch_id'], opened[-1]['seq'], line['seq'], now)
     connection.execute('INSERT INTO story_chapters (id, branch_id, seq, created_at) VALUES (?, ?, ?, ?)',
                        (identifier(), line['branch_id'], line['seq'], now))
     connection.execute('DELETE FROM story_chapter_break')

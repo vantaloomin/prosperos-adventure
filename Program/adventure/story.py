@@ -77,7 +77,7 @@ from adventure.narration import prompt as narration_prompt
 from adventure.narration import prose
 from adventure.providers.chat import INCOMPLETE
 from adventure.providers.scheduling import CONVERSATION
-from adventure.rounds import corrections, house_rules
+from adventure.rounds import corrections, house_rules, shown
 from adventure.rounds import memory as rounds_memory
 from adventure.rounds import turns as rounds_turns
 from adventure.rules import brp, fate, ironsworn, marvel, narrative, srd52
@@ -752,6 +752,7 @@ def clear(database) -> dict:
         politics.clear(connection)
         house_rules.clear(connection)
         corrections.clear(connection)
+        shown.clear(connection)
         timeline.clear(connection)
         # Each character's memory and the round loop's turns (adventure/rounds/).
         rounds_memory.clear(connection)
