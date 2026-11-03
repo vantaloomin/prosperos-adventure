@@ -47,6 +47,7 @@ def test_in_play_it_asks_first_then_shows_everything_and_marks_the_turn(client, 
     assert {'holder': 'hesk', 'kind': 'motive', 'text': MOTIVE}.items() <= shown['knowledge'][0].items()
     assert MOTIVE in [row['text'] for row in shown['memories']['hesk']]
     assert shown['marked'] == [first]
+    assert shown['shown']['hesk'] == [] and shown['drafted'] == []
     # Not remembered: the next look asks again, and a turn played with it closed stays unmarked.
     second = play_turn(app, 2)
     assert client.post('/api/gm/round', json={}).status_code == 409
@@ -101,3 +102,22 @@ def test_the_minds_panel_shows_motives_in_watch_and_only_status_in_play(client, 
     play_turn(app, 2)
     hesk = next(row for row in ok(client.get('/api/minds'))['minds'] if row['key'] == 'hesk')
     assert hesk['motive'] == MOTIVE and hesk['intent'] == 'Lead the way.'
+
+
+def test_motives_missed_in_play_stay_hidden_until_a_switch_out_of_play_says_show(client, app):
+    sit(app)
+    turn = play_turn(app, 1)
+
+    def hesk():
+        return next(row for row in ok(client.get('/api/minds'))['minds'] if row['key'] == 'hesk')
+
+    def reported():
+        return [item['motive'] for item in ok(client.get(f'/api/story/turns/{turn}/report'))['motives']]
+    assert ok(client.get('/api/minds'))['revealed'] is False and 'motive' not in hesk()
+    # Keep hidden (adventure/rounds/modes.py `switch`): the Play turn keeps Play's visibility in the panel and report.
+    ok(client.put('/api/rounds/mode', json={'mode': 'author', 'reveal': False}))
+    assert 'motive' not in hesk() and MOTIVE not in reported()
+    ok(client.put('/api/rounds/mode', json={'mode': 'play'}))
+    ok(client.put('/api/rounds/mode', json={'mode': 'author', 'reveal': True}))
+    assert ok(client.get('/api/minds'))['revealed'] is True
+    assert hesk()['motive'] == MOTIVE and MOTIVE in reported()

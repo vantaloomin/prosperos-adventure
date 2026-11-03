@@ -20,7 +20,7 @@ they spoiled. Author and Watch have no gate and mark nothing.
 from adventure import director, feelings, growth, plotting, quests, record, timeline, world_data
 from adventure.database import decode, many, optional
 from adventure.errors import DomainError, require
-from adventure.rounds import context, memory, seats, turns
+from adventure.rounds import context, memory, modes, seats, shown, turns
 from adventure.rounds.contract import Mode, Point, Snapshot, plain
 from adventure.rounds.draft import Draft
 
@@ -133,13 +133,15 @@ def marked(connection) -> list[str]:
 
 def minds_panel(connection) -> dict:
     """The minds panel, not the GM view: who is deciding on the watched turn, and in Author and Watch (or for the
-    user's own character) what each means and why; in Play the others show only whether they have decided."""
+    user's own character) what each means and why; in Play the others show only whether they have decided. A turn
+    played in Play stays that way unless a later switch out of Play was answered Show (adventure/rounds/modes.py
+    `revealed`)."""
     turn = watched_turn(connection)
     if turn is None:
-        return {'turn': None, 'mode': seats.settings(connection)['mode'], 'minds': []}
-    snapshot = Snapshot.of(decode(turn['snapshot']))
-    return {'turn': turn['id'], 'mode': turn['mode'],
-            'minds': context.minds(snapshot, Draft.of(decode(turn['draft'])))}
+        return {'turn': None, 'mode': seats.settings(connection)['mode'], 'minds': [], 'revealed': False}
+    snapshot, revealed = Snapshot.of(decode(turn['snapshot'])), modes.revealed(connection, turn)
+    return {'turn': turn['id'], 'mode': turn['mode'], 'revealed': revealed,
+            'minds': context.minds(snapshot, Draft.of(decode(turn['draft'])), reveal=revealed)}
 
 
 def round_view(connection, turn: dict | None) -> dict:
@@ -159,4 +161,8 @@ def round_view(connection, turn: dict | None) -> dict:
             'memories': {seat.key: [{key: row[key] for key in ('kind', 'text', 'about', 'source', 'importance', 'faded')}
                                     for row in memory.recall(connection, seat.key, after)]
                          for seat in snapshot.seats},
+            'shown': {seat.key: shown.sheet(connection, seat.key, snapshot.point.branch) for seat in snapshot.seats},
+            # Sheet updates waiting for the user's review: only here, never in a character's own context.
+            'drafted': [update for update in shown.visible(connection, 'drafted', snapshot.point.branch)
+                        if update['seat'] in {seat.key for seat in snapshot.seats}],
             'facts': world_data.facts(world) if world else [], 'marked': marked(connection)}

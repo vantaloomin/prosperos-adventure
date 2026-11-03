@@ -40,7 +40,7 @@ from dataclasses import dataclass, field
 from adventure import lore, packages, world_data
 from adventure.database import optional
 from adventure.feelings import AXES
-from adventure.rounds import memory
+from adventure.rounds import memory, shown
 from adventure.rounds.contract import KNOWLEDGE_KINDS, Declaration, Knowledge, Mind, Mode, Snapshot, State
 from adventure.rounds.draft import Draft
 
@@ -301,6 +301,19 @@ def sheet_lines(snapshot: Snapshot, key: str) -> list[str]:
     return [f"{name.replace('_', ' ').capitalize()}: {plain(entry[name])}" for name in shown if entry.get(name)]
 
 
+def shown_lines(connection, snapshot: Snapshot, key: str) -> list[str]:
+    """The character's "shown so far" (adventure/rounds/shown.py): only what the page showed, so no tag to check."""
+    return [line for line in shown.text(connection, key, snapshot.point.branch).splitlines() if line]
+
+
+def waiting_lines(connection, snapshot: Snapshot, key: str) -> list[str]:
+    """Sheet updates drafted at a chapter's close and not yet reviewed: the GM view's alone until the user applies
+    them."""
+    return [f"- Waiting for review: {item['text']} ({item['kind']})"
+            for update in shown.visible(connection, 'drafted', snapshot.point.branch) if update['seat'] == key
+            for item in update['items']]
+
+
 def build_agent(connection, snapshot: Snapshot, draft: Draft, key: str, focus: str = '') -> Context:
     """Everything the character `key` may know this turn, and nothing else."""
     seat = snapshot.seat(key)
@@ -308,6 +321,7 @@ def build_agent(connection, snapshot: Snapshot, draft: Draft, key: str, focus: s
     context = Context(f'agent:{key}')
     context.add('Who you are', [f'You are {called(snapshot, key)}.', *sheet_lines(snapshot, key)])
     context.add('Notes from the person at the table', [str(seat.notes)[:NOTE_CHARS] if seat else ''])
+    context.add('Shown so far', shown_lines(connection, snapshot, key))
     context.add('Who is here', [called(snapshot, other) for other in present(snapshot) if other != key])
     context.add('What you remember', recalled(connection, snapshot, key, focus))
     context.add('What you know of the world', [*lore_lines(connection, snapshot, knowers, focus),
@@ -410,7 +424,8 @@ def build_gm(connection, snapshot: Snapshot, draft: Draft, note: str = '') -> Co
         declared = draft.declarations.get(seat.key)
         lines = [*(declaration_lines(snapshot, declared, private=True) if declared else []),
                  *knowledge_lines(snapshot, draft.known_to(seat.key)), *recalled(connection, snapshot, seat.key, ''),
-                 *feelings_lines(connection, snapshot, seat.key)]
+                 *feelings_lines(connection, snapshot, seat.key), *shown_lines(connection, snapshot, seat.key),
+                 *waiting_lines(connection, snapshot, seat.key)]
         context.add(f'A character ({seat.mind})', [f'Who: {called(snapshot, seat.key)}', *lines])
     context.add('Exchanges this turn', exchange_lines(snapshot, draft))
     context.add('All lore and facts', [*lore_lines(connection, snapshot, None, ''), *fact_lines(snapshot, None)])
