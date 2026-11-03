@@ -1084,12 +1084,13 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 
 /* Who's here (src/features/story/StoryCast.tsx), at the top of the scene panel. */
 .story-cast ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
-.story-cast-row { width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: center; padding: 8px; border-radius: 10px; text-align: left; }
+.story-cast-row { width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; padding: 8px; border-radius: 10px; text-align: left; }
 .story-cast-row:hover, .story-cast-row[aria-expanded='true'] { background: var(--raised); }
 .story-cast-row .portrait { width: 32px; height: 32px; font-size: 0.95rem; }
 .story-cast-text { display: grid; min-width: 0; }
 .story-cast-name { font-weight: 500; font-size: 0.875rem; line-height: 1.25; }
-.story-cast-state { font-size: 0.75rem; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* The state wraps in full: an intent is one sentence, and cutting it off hid the part worth reading. */
+.story-cast-state { font-size: 0.75rem; line-height: 1.4; color: var(--faint); overflow-wrap: anywhere; text-wrap: pretty; }
 .story-cast-more { margin: 4px 0 8px 52px; display: grid; gap: 8px; font-size: 0.8125rem; color: var(--muted); }
 .story-cast-around { margin-top: 12px; font-size: 0.8125rem; color: var(--faint); }
 /* The round loop (src/features/round/, docs/style-guide.md PL-7 to PL-9): the timeline above who's here, the accent dot
