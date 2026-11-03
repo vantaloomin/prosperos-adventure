@@ -3,6 +3,7 @@
 module here, one line each, so nothing depends on which module happened to be imported first.
 """
 from adventure.rounds import (
+    context,  # noqa: F401 - who sees what: the 'privacy' Gathering step
     converse,  # noqa: F401 - Converse and the reply card
     corrections,  # noqa: F401 - corrected and struck memories, read through recall (memory.amend)
     declare,  # noqa: F401 - the agents: pick, declare, lies heard, react, feelings

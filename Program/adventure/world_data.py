@@ -10,7 +10,14 @@ Reads are cheap: a package's engine part is read once and again only when the fi
 its own copy, as reading the file did. `memo` caches a loader's work the same way.
 
 A world's package facts (`facts`: its hidden truths and secrets, each with its visibility tag, adventure/package_lore.py)
-are read the same way, for the context builders to route (adventure/rounds/context.py).
+are read the same way, for the context builders to route (adventure/rounds/context.py), and so is a character's
+sheet (`person`: its cast or persona entry) and whether they see the game's numbers (`game_knowledge`).
+
+**Game knowledge** (spec "Numbers, System panes and who can see them"): whether a character sees System panes and
+game numbers is a fact about them. `world.json` may say so as `game_knowledge`: `{"default": true|false, "people":
+{"<field>": {"<value>": true|false}}, "characters": {"<id>": true|false}}`, and a cast or persona entry may carry
+its own `game_knowledge`, which wins. "people" matches an entry's field by value, ignoring case ("lineage":
+{"native": false}). With no flag at all everyone sees them, as in Dungeon.
 """
 import functools
 import json
@@ -139,31 +146,86 @@ def memo(function):
 def facts(world: str) -> list[dict]:
     """The world's hidden truths and secrets with their visibility tags (adventure/package_lore.py facts), from the
     first package of that world in use, else the built-in world's own folder; [] for a world with neither."""
+    return package_lore.facts({'sections': sections(world, tuple(packages.SECTIONS))})
+
+
+def sections(world: str, names: tuple[str, ...]) -> dict[str, dict]:
+    """Some sections of the world's package in use (else its shipped folder), as {name: {key: entries}}."""
     for path, stamp in version():
         if _assets(path, stamp)[0] == world:
-            return [dict(fact) for fact in _facts(path, stamp)]
-    if world in packages.builtin_ids():
-        return [dict(fact) for fact in _shipped_facts(world)]
-    return []
-
-
-@functools.lru_cache(maxsize=32)
-def _facts(path: str, stamp: int) -> tuple[dict, ...]:
-    try:
-        with closing(packages.connect(Path(path))) as connection:
-            sections: dict[str, dict] = {}
-            for row in connection.execute('SELECT section, data FROM entries ORDER BY section, position'):
-                if row['section'] in packages.SECTIONS:
-                    sections.setdefault(row['section'], {packages.SECTIONS[row['section']]: []})[
-                        packages.SECTIONS[row['section']]].append(json.loads(row['data']))
-    except sqlite3.Error:
-        return ()
-    return tuple(package_lore.facts({'sections': sections}))
+            return {name: data for name, data in _sections(path, stamp).items() if name in names}
+    return _shipped(world, names) if world in packages.builtin_ids() else {}
 
 
 @functools.cache
-def _shipped_facts(world: str) -> tuple[dict, ...]:
+def _shipped(world: str, names: tuple[str, ...]) -> dict[str, dict]:
     folder = packages.BUILTIN / world
-    sections = {name: packages.read_json(folder / f'{name}.json') for name in packages.SECTIONS
-                if (folder / f'{name}.json').is_file()}
-    return tuple(package_lore.facts({'sections': sections}))
+    return {name: packages.read_json(folder / f'{name}.json') for name in names if (folder / f'{name}.json').is_file()}
+
+
+@functools.lru_cache(maxsize=32)
+def _sections(path: str, stamp: int) -> dict[str, dict]:
+    found: dict[str, dict] = {}
+    try:
+        with closing(packages.connect(Path(path))) as connection:
+            for row in connection.execute('SELECT section, data FROM entries ORDER BY section, position'):
+                if row['section'] in packages.SECTIONS:
+                    found.setdefault(row['section'], {packages.SECTIONS[row['section']]: []})[
+                        packages.SECTIONS[row['section']]].append(json.loads(row['data']))
+    except sqlite3.Error:
+        return {}
+    return found
+
+
+def person(world: str | None, key: str) -> dict | None:
+    """A character's cast or persona entry in the world's package (a copy), or None."""
+    if not world:
+        return None
+    held = sections(world, package_lore.CHARACTERS)
+    for name in package_lore.CHARACTERS:
+        for entry in (held.get(name) or {}).get(packages.SECTIONS[name]) or []:
+            if isinstance(entry, dict) and entry.get('id') == key:
+                return json.loads(json.dumps(entry))
+    return None
+
+
+def world_file(world: str | None) -> dict:
+    """The world's world.json, from its package in use, else its shipped folder; {} for none."""
+    if not world:
+        return {}
+    for path, stamp in version():
+        held, _names = _assets(path, stamp)
+        if held == world:
+            return dict(_world(path, stamp))
+    shipped = packages.BUILTIN / world / 'world.json'
+    return packages.read_json(shipped) if world in packages.builtin_ids() and shipped.is_file() else {}
+
+
+@functools.lru_cache(maxsize=32)
+def _world(path: str, stamp: int) -> dict:
+    try:
+        with closing(packages.connect(Path(path))) as connection:
+            return json.loads(connection.execute("SELECT value FROM meta WHERE key='world'").fetchone()['value'])
+    except (sqlite3.Error, TypeError):
+        return {}
+
+
+def game_knowledge(world: str | None, key: str, entry: dict | None = None) -> bool:
+    """Whether the character `key` sees System panes and game numbers (see "Game knowledge" above)."""
+    entry = entry if entry is not None else person(world, key) or {}
+    if isinstance(entry.get('game_knowledge'), bool):
+        return entry['game_knowledge']
+    flag = world_file(world).get('game_knowledge')
+    if not isinstance(flag, dict):
+        return True
+    characters = flag.get('characters') if isinstance(flag.get('characters'), dict) else {}
+    if isinstance(characters.get(key), bool):
+        return characters[key]
+    people = flag.get('people') if isinstance(flag.get('people'), dict) else {}
+    for field, values in people.items():
+        value = entry.get(field)
+        if isinstance(values, dict) and isinstance(value, str):
+            found = {str(name).casefold(): seen for name, seen in values.items() if isinstance(seen, bool)}
+            if value.casefold() in found:
+                return found[value.casefold()]
+    return flag.get('default') is not False
