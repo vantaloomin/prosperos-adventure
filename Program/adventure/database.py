@@ -210,6 +210,8 @@ ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"
                  ('story_campaign', 'rule_text', "TEXT CHECK (rule_text IN ('on', 'off'))"),
                  ('story_campaign', 'leaving', "TEXT CHECK (leaving IN ('anyone', 'fights', 'nobody'))"),
                  ('story_campaign', 'politics', "TEXT CHECK (politics IN ('off', 'quiet', 'true_to_life', 'lively'))"),
+                 ('story_campaign', 'genre', "TEXT CHECK (genre IN ('world', 'none', 'dark-romantasy', 'adventure', "
+                                             "'graphic-violence'))"),
                  ('story_inventory', 'stolen', 'INTEGER NOT NULL DEFAULT 0 CHECK (stolen IN (0, 1))'),
                  ('story_inventory', 'condition',
                   "TEXT NOT NULL DEFAULT 'sound' CHECK (condition IN ('sound', 'damaged', 'broken'))"),

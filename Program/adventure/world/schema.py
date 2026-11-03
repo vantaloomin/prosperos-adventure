@@ -406,6 +406,8 @@ class Intensity(Record):
     "Intensity and tone")."""
     preset: Literal['restrained', 'mature', 'unflinching'] = 'unflinching'
     voice: str = Field(default='', max_length=300)
+    # A genre module its stories start with (adventure/tone.py GENRES); the player can change it at the Table.
+    genre: Literal['none', 'dark-romantasy', 'adventure', 'graphic-violence'] = 'none'
     # How eventful its stories are by default: how often Life Cards turn up, and which (adventure/happenings.py).
     drama: Literal['quiet', 'uneasy', 'eventful', 'merciless'] = 'uneasy'
 

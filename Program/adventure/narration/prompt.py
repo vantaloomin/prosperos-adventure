@@ -8,7 +8,7 @@
    a list of phrases never to write puts them in front of the model every turn. prose.py finds them after every
    turn instead, and the round's draft scan and Reviewer do the same (adventure/rounds/scan.py, reviewer.py).
 3. Settings the player chooses: narration format (point of view, tense, length), intensity per category
-   with veils, and the tone's voice.
+   with veils, the tone's voice, and a genre module (GENRES) when the campaign plays one.
 4. The turn: the persona, what the game remembers (the story so far and the record), the scene and the outcomes
    the code decided, written last so they sit nearest the player's words.
 
@@ -115,6 +115,33 @@ CRAFT_COMPACT = """How to write:
 - Trust the reader. End on an action, an image or a line of dialogue, never on what the scene meant.
 - Plenty of dialogue, with questions in it; after about three untagged lines, an action beat or a tag."""
 
+# The genre modules a campaign may add at the Table (adventure/tone.py GENRES): one at a time, after the intensity. Each
+# is the default of an editable prompt (adventure/prompt_library.py, group "Genres"). How explicit or how violent the
+# page gets stays with the intensity settings, which come first.
+GENRES = {
+    'dark-romantasy': """Genre: dark romantasy.
+The romance is the spine and the fantasy is the pressure on it. Desire and danger come from the same source: the \
+politics, the magic, or what the lovers are to each other. Attraction is earned on the page, through what each \
+character sees in the other that no one else does, and it has a cost the story actually collects. Power between them \
+is unequal and shifts, and the shifts are the plot. Sex is on the page as far as the intensity allows, and each scene \
+of it changes something between the characters; if nothing would change, summarize or cut. Worldbuilding enters \
+through what characters touch, fear and want, never through lectures.""",
+    'adventure': """Genre: adventure.
+Something is always moving: a pursuit, a deadline, a debt, a map with a missing piece. Every scene ends with the \
+situation changed, often for the worse. Competence is shown through specific technique (how a lock is picked, how a \
+river is read), and plans fail in ways that come from the world, not from luck alone. Keep the company's frictions \
+alive under the action: who is carrying whom, who is lying about the injury, who wants the treasure for a reason no \
+one else knows. Travel costs time, money and skin. Place is concrete: weather, footing, smell and distance.""",
+    'graphic-violence': """Genre: graphic violence.
+Violence is rendered with physical specificity and real consequence, as far as the intensity allows. Bodies behave \
+like bodies: they fail, slip, bleed, go into shock, and keep the damage afterward. Fights are short, confused and \
+decided by position, weight and mistakes, not choreography. The point of view character's perception narrows, \
+misses things and misreads them. Gore is precise rather than piled up; one exact wound outweighs a catalogue. \
+Aftermath gets its own space: the shake, the smell, the cleanup, and who is changed. Cruelty, when it appears, \
+belongs to a character with reasons, and the narration neither endorses it nor apologizes for it. Never write \
+violence as a how-to: no real weapon construction or real methods of harm in usable detail.""",
+}
+
 COMPACT_BELOW_TOKENS = 16_000
 
 POINTS_OF_VIEW = {'first': 'first person', 'second': 'second person', 'third': 'close third person',
@@ -167,6 +194,8 @@ class Intensity:
     levels: dict = field(default_factory=lambda: dict.fromkeys(CATEGORIES, PRESETS['unflinching']))
     veils: tuple = ()
     voice: str = ''
+    # The genre module's wording, when the campaign plays one (GENRES; the user's own when they reworded it).
+    genre: str = ''
 
     @classmethod
     def preset(cls, name: str, voice: str = '') -> 'Intensity':
@@ -179,6 +208,8 @@ class Intensity:
             lines.append(f"- Veiled: {', '.join(self.veils)}. These can happen, but the page fades to black.")
         if self.voice:
             lines.append(f'Voice: {self.voice}.')
+        if self.genre:
+            lines += ['', self.genre.strip()]
         return '\n'.join(lines)
 
 

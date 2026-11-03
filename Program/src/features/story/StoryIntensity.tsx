@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import type { DramaLevel, IntensityPreset, StoryIntensity as Intensity, TableRules, ToneVoice } from '../../types'
+import type { DramaLevel, IntensityPreset, StoryIntensity as Intensity, TableRules, ToneGenre, ToneVoice } from '../../types'
 import { Field, Toggle } from '../../components/Fields'
 import { Notice } from '../../components/Feedback'
-import { dramaChoices, intensityChoices, LEVEL_NAMES, TONE_CATEGORIES, toggledVeil, VEIL_TOPICS, VOICES } from './storyText'
+import { dramaChoices, GENRES, intensityChoices, LEVEL_NAMES, TONE_CATEGORIES, toggledVeil, VEIL_TOPICS, VOICES } from './storyText'
 import { NarrationFormat } from './NarrationFormat'
 import { useTable } from './table'
 import { POLITICS_LEVELS } from './politicsText'
@@ -87,8 +87,8 @@ function PoliticsRule({ rules, save }: { rules?: TableRules | null; save: (chang
   </Field>
 }
 
-/** Each category on its own slider, the veils, and the narrator's voice (adventure/tone.py). A preset above sets every
- *  category again; the veils and the voice stay. */
+/** Each category on its own slider, the veils, the narrator's voice and the genre (adventure/tone.py). A preset above
+ *  sets every category again; the veils, the voice and the genre stay. */
 function ToneDetails({ intensity, save }: { intensity: Intensity; save: (change: Partial<TableRules>) => void }) {
   const levels = intensity.levels
   const veils = intensity.veils ?? []
@@ -113,6 +113,13 @@ function ToneDetails({ intensity, save }: { intensity: Intensity; save: (change:
           onChange={(event) => save({ voice: event.target.value as ToneVoice })}>
           <option value="world">The world's own</option>
           {VOICES.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+        </select>}
+      </Field>
+      <Field label="Genre">
+        {(id) => <select id={id} value={intensity.genre_chosen ?? 'world'}
+          onChange={(event) => save({ genre: event.target.value as ToneGenre })}>
+          <option value="world">The world's own ({GENRES.find(([value]) => value === (intensity.genre_world ?? 'none'))?.[1]})</option>
+          {GENRES.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
         </select>}
       </Field>
     </details>

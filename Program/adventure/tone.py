@@ -7,12 +7,14 @@
   with a veiled topic is still drawn, and the narrator is told to keep it off the page.
 - **Lower levels change what can happen.** Cards (`cards.allowed`), corruption, and the lasting-injury table
   (`injuries.roll`, entries with an `intensity`) leave out what the levels do not allow.
-- **Voice** is how the narrator writes: the world's own, or one the player picks (VOICES). Drama is its own dial
-  (adventure/happenings.py). Neither changes the dice.
+- **Voice** is how the narrator writes: the world's own, or one the player picks (VOICES). **Genre** adds one genre
+  module to the narrator's and the round Writer's prompt (GENRES: dark romantasy, adventure, graphic violence), or
+  none; the world's own is none unless its intensity names one. Drama is its own dial (adventure/happenings.py). None
+  of them changes the dice, and the intensity still decides how far the page goes.
 - **Worlds set the default** (a city's `intensity`: `preset`, optional `levels` and `veils`, `voice`, `drama`); the
   player can change any of it at any time, and the next line follows it.
 """
-from adventure import happenings, table
+from adventure import happenings, prompt_library, table
 from adventure.life import cards
 from adventure.narration import prompt as narration_prompt
 from adventure.sheet import ruleset as ruleset_of
@@ -27,6 +29,8 @@ VOICES = {
     'lyrical': 'lyrical: rich, sensory prose with an eye for beauty in hard places',
     'plain': 'plain and direct: clear, quick prose that keeps out of the way',
 }
+# The genre modules (adventure/narration/prompt.py GENRES): 'none', or one module, each an editable prompt.
+GENRES = ('none', *narration_prompt.GENRES)
 
 
 def levels_for(preset: str, *overrides: dict) -> dict[str, int]:
@@ -50,8 +54,13 @@ def of(connection, data: dict) -> dict:
              if topic in TOPICS]
     world_voice = world.get('voice') or ''
     voice = world_voice if rules['voice'] == 'world' else VOICES.get(rules['voice'], world_voice)
+    world_genre = world.get('genre') or 'none'
+    genre = world_genre if rules['genre'] == 'world' else rules['genre']
+    genre = genre if genre in GENRES else 'none'
     drama, world_drama = rules['drama'], world.get('drama') or happenings.DEFAULT_DRAMA
-    return {'preset': preset, 'chosen': chosen, 'world': world_preset, 'levels': levels,
+    return {'genre': genre, 'genre_chosen': rules['genre'], 'genre_world': world_genre,
+            'genre_text': '' if genre == 'none' else prompt_library.text(connection, f'genre-{genre}'),
+            'preset': preset, 'chosen': chosen, 'world': world_preset, 'levels': levels,
             'custom': bool(rules['levels']), 'veils': veils, 'voice': voice, 'voice_chosen': rules['voice'],
             'voice_world': world_voice, 'drama': world_drama if drama == 'world' else drama, 'drama_chosen': drama,
             'drama_world': world_drama, 'cutaways': rules['cutaways'], 'defeat': rules['defeat'],
@@ -70,4 +79,5 @@ def now(connection) -> dict:
 
 def narration(found: dict) -> narration_prompt.Intensity:
     """What the narrator is told (adventure/narration/prompt.py Intensity)."""
-    return narration_prompt.Intensity(levels=found['levels'], veils=tuple(found['veils']), voice=found['voice'])
+    return narration_prompt.Intensity(levels=found['levels'], veils=tuple(found['veils']), voice=found['voice'],
+                                      genre=found.get('genre_text') or '')

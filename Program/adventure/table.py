@@ -4,8 +4,8 @@ Settings follow the user from world to world (adventure/restore.py KEPT_SETTINGS
 dice on in one campaign and they were on in every other. The Table keeps them with the campaign (story_campaign), so
 each world's campaign plays by its own.
 
-- **Tone** (intensity, drama, injury_persistence, defeat, levels, veils, voice) is the world's at the start of every
-  campaign: 'world' for the dials and the voice, no categories moved off the preset, the world's veils, permanent
+- **Tone** (intensity, drama, injury_persistence, defeat, levels, veils, voice, genre) is the world's at the start of
+  every campaign: 'world' for the dials, the voice and the genre, no categories moved off the preset, the world's veils, permanent
   injuries, a 5E defeat as written (death saves), shopkeepers with finite cash, carrying limited by slots, and the
   world's own clock (story time, or real time for a world that lives that way), rule text for the narrator
   (adventure/rules/passages.py), anyone with a reason able to stop the character leaving (adventure/leaving.py), and local politics true to life
@@ -24,7 +24,7 @@ stays changed.
 from adventure.database import decode, encode, optional, settings
 
 TONE = {'intensity': 'world', 'drama': 'world', 'injury_persistence': 'permanent', 'defeat': 'as_written',
-        'levels': None, 'veils': None, 'voice': 'world', 'shop_cash': 'finite',
+        'levels': None, 'veils': None, 'voice': 'world', 'genre': 'world', 'shop_cash': 'finite',
         'carry_limit': 'slots', 'clock': 'world', 'rule_text': 'on', 'leaving': 'anyone',
         'politics': 'true_to_life'}
 # Kept as JSON: the categories the player moved off the preset (adventure/tone.py), and the veiled topics (None: the
