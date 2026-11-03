@@ -178,7 +178,7 @@ Isekai Pipeline PRD follow-ups, decided 2026-11-02 (Vanta's cards; see "Writing 
 
 - **Roll overrides are allowed from the GM view in any mode,** logged and marked on the turn, and off in Ironman.
 - **Writer inventions are kept unless the user strikes them.**
-- **A separate Reviewer pass is on by default in "Rich and slow"** and a toggle elsewhere; the code scan always runs.
+- **A separate Reviewer pass is on by default in "Rich"** and a toggle elsewhere; the code scan always runs.
 - **In Play, the turn post can add beats beyond the user's own character, as nudges.**
 - **Offscreen agents: code rolls the outcome, the character's agent writes their lines.**
 
@@ -343,7 +343,7 @@ A round can take 20 or more model calls, so waiting is designed, not left blank.
 - **Lies read as story.** Beliefs use belief language on sheets and in memories ("Ilsa *believes* the bridge is
   guarded"). An uncovered lie gets a short moment in the prose and a strike-through in memory; a caught tell gets the
   same treatment.
-- **Settings have three presets.** "Quick and cheap", "Balanced" and "Rich and slow" set the agent cap, conversation
+- **Settings have three presets.** "Quick", "Balanced" and "Rich" set the agent cap, conversation
   cap and models together, with a plain estimate ("about 25 seconds and 14 calls per turn"). Everything else is under
   Advanced, and every slider has one sentence on what it changes in play.
 - **Behind-the-scenes names stay behind the scenes.** The play screen names only the Writer. The director, Referee
@@ -417,7 +417,7 @@ maps to Adventure's Writer plus code. Coverage, epic by epic, is in the table at
   dialogue rules (no echoed phrases, no summarised speech, rationed verbal tics, questions present), formatting,
   counting, continuity with earlier chapters, pane arithmetic, character voice and the stop point, and returns a
   prioritised list of quote, problem and concrete fix. The Writer applies each or declines it with a reason, and the
-  result is scanned again. **The Reviewer is on by default in the "Rich and slow" preset** and a toggle in the others
+  result is scanned again. **The Reviewer is on by default in the "Rich" preset** and a toggle in the others
   (decided 2026-11-02). The code scan always runs.
 - **The user can flag anything missed** with Dungeon's flagged passages and Rewrite; the fix goes through the same
   scan.
