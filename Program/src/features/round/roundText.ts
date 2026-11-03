@@ -1,6 +1,6 @@
 // The round loop's words on the play screen and in Settings (docs/style-guide.md "Copy"). Kept free of React, so
 // tests/ui can load it directly.
-import { decidedCount, rowStatus, seatName, stepAt, type AgentPace, type Awaiting, type Loyalty, type Mode, type PresetKey, type RoundLive, type RoundState, type RoundTable } from './round.ts'
+import { decidedCount, rowStatus, seatName, stepAt, type AgentPace, type Awaiting, type Loyalty, type Mode, type PresetKey, type ReportRoll, type RoundLive, type RoundState, type RoundTable, type TurnReport } from './round.ts'
 
 export const STEP_NAMES = { declare: 'Declare', react: 'React', talk: 'Talk', roll: 'Roll', write: 'Write' } as const
 
@@ -74,4 +74,28 @@ export function estimateLine(estimate: { calls: number; tokens: number; seconds?
 /** "12k of 200k tokens this session", or with no cap "12k tokens this session". */
 export function spendLine(spend: AgentPace['spend']): string {
   return spend.cap ? `${rounded(spend.spent)} of ${rounded(spend.cap)} tokens this session` : `${rounded(spend.spent)} tokens this session`
+}
+
+// The turn report ------------------------------------------------------------------------------------------------------
+
+export const REPORT_NAMES = {
+  you: 'You', rolls: 'Rolls', motives: 'Motives', numbers: 'Numbers', inventions: 'Made up this turn', strike: 'Strike',
+  struck: 'Struck', checks: 'Checks', offpage: 'Elsewhere', questions: 'Open questions', next: 'Next', corrections: 'Corrections',
+} as const
+
+/** "Turn 12", the status line's link to the last turn's report. */
+export const turnName = (number: number) => `Turn ${number}`
+
+/** "Hesk · picks the lock · Deft · success, 16". */
+export function rollLine(roll: ReportRoll, name: (key: string) => string): string {
+  const result = roll.total === undefined ? roll.result : `${roll.result}, ${roll.total}`
+  return [name(roll.actor), roll.action, roll.stat, result].filter(Boolean).join(' · ')
+}
+
+/** "2 rewrites · 1 sentence cut", or '' when the checks changed nothing. */
+export function checksLine(checks: TurnReport['checks']): string {
+  const parts = [checks.rewrites ? `${checks.rewrites} ${checks.rewrites === 1 ? 'rewrite' : 'rewrites'}` : '',
+    checks.cut.length ? `${checks.cut.length} ${checks.cut.length === 1 ? 'sentence' : 'sentences'} cut` : '',
+    checks.review.length ? `${checks.review.length} ${checks.review.length === 1 ? 'note' : 'notes'}` : '']
+  return parts.filter(Boolean).join(' · ')
 }

@@ -1110,6 +1110,12 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .reply-form textarea { min-height: 52px; max-height: 40dvh; }
 .reply-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
 @media (max-width: 640px) { .reply-card { width: calc(100% - 32px); padding: 12px; } }
+.story-cast .round-last { display: block; margin: -4px 0 8px; padding: 0; min-height: 0; font-size: 0.75rem; color: var(--muted); }
+.turn-report { display: grid; gap: 12px; margin: 4px 0 12px; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); font-size: 0.8125rem; }
+.turn-report-part h3 { margin: 0 0 4px; font-family: var(--ui-font); font-size: 0.75rem; font-weight: 500; color: var(--faint); }
+.turn-report-part .text-button { margin-left: 8px; padding: 0; min-height: 0; font-size: 0.75rem; }
+.turn-report-part ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; color: var(--muted); }
+.turn-report-part s { color: var(--faint); }
 .pace-presets { border: 0; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
 .pace-preset { display: flex; gap: 12px; align-items: flex-start; padding: 12px 16px; border: 1px solid var(--border); border-radius: 12px; cursor: pointer; transition: border-color 160ms var(--ease), background 160ms var(--ease); }
 .pace-preset:has(input:checked) { border-color: var(--accent); background: var(--accent-tint); }

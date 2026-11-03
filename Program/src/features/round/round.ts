@@ -150,3 +150,26 @@ export interface AgentPace {
   presets: { key: PresetKey; name: string; estimate: { calls: number; tokens: number; seconds?: number } }[]
   spend: { spent: number; held: number; cap: number }; capped: boolean
 }
+
+// The turn report and the status line (adventure/rounds/report.py). ------------------------------------------------
+
+/** One of the report's free-form items (an invention, an off-page beat, a question): text, or an object carrying it. */
+export type ReportItem = string | Record<string, unknown>
+export interface ReportRoll { actor: string; action: string; stat: string; result: string; total?: number; difficulty?: number | string }
+export interface TurnReport {
+  turn_id: string; number: number; mode: Mode; state: RoundState; marks: unknown[]
+  set: { intent: string; lines: string[]; beats: string[] }
+  rolls: ReportRoll[]; numbers: string[]
+  inventions: (Record<string, unknown> & { name?: string; struck?: boolean })[]
+  corrections: { id: string; kind: string; target: string; before: unknown; after: unknown; why: string }[]
+  checks: { scan: { words?: number; findings?: { kind: string; severity: string; text: string }[] }; cut: string[]; rewrites: number; review: { quote: string; problem: string; fix: string }[] }
+  offpage: ReportItem[]; questions: ReportItem[]; motives: { seat: string; motive: string }[]; next: string
+}
+export interface StatusLine { last: { turn_id: string; number: number } | null; pending: { turn_id: string; state: RoundState; seat: string | null } | null; offpage_within: number }
+
+/** The words of a free-form report item. */
+export function itemText(item: ReportItem): string {
+  if (typeof item === 'string') return item
+  const found = ['text', 'line', 'outcome', 'name', 'question'].map((key) => item[key]).find((value) => typeof value === 'string' && value)
+  return typeof found === 'string' ? found : ''
+}
