@@ -29,9 +29,10 @@ def fenced(text: str, at: int) -> bool:
 
 
 def sent(connection, sheet, turn, key: str, purpose: str, cue: dict | None = None) -> str:
-    """Everything one agent call sends: the system prompt, what the character knows, and the cue."""
-    known = agents.context_for(connection, SimpleNamespace(snapshot=sheet, draft=turn), key)
-    return '\n\n'.join((agents.system_prompt(connection, sheet, key, purpose), known, agents.cue_text(sheet, cue)))
+    """Everything one agent call sends, as its layout fills it: the system prompt's blocks and the user message."""
+    made = agents.composed(connection, sheet, turn, key, purpose, cue, str((cue or {}).get('line') or ''))
+    assert str(made.system) == '\n\n'.join(made.system.blocks)
+    return '\n\n'.join((made.system, made.user))
 
 
 def contained(text: str, canary: str):

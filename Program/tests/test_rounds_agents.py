@@ -258,7 +258,7 @@ def test_what_an_agent_reads_holds_only_what_it_could_see_and_hear(game, steps):
     })
     turn_of(game, mode=Mode.AUTHOR)
     reacts = {playing(request['system']): request['messages'][0]['content']
-              for request in game.provider.requests if 'may react once' in request['system']}
+              for request in game.provider.requests if 'may react once' in request['messages'][0]['content']}
     assert 'Keep Vanta busy' in reacts['Ilsa'] and 'Keep Vanta busy' not in reacts['Hesk']
     # Hesk's motive is his alone; Mara's covert act is seen by nobody (whether it is noticed is Resolve's roll).
     assert 'SENTINEL-MOTIVE-HESK' in reacts['Hesk']
@@ -269,17 +269,39 @@ def test_what_an_agent_reads_holds_only_what_it_could_see_and_hear(game, steps):
 
 def test_the_users_wording_of_a_characters_mind_reaches_every_call_and_the_contract_stays(game, steps):
     from adventure import prompt_library
-    prompt_library.save(game.database, 'character-mind', 'SENTINEL-MIND. You are {{character}} and nobody else.')
+    prompt_library.save(game.database, 'character-mind', 'SENTINEL-MIND. You play the one whose sheet follows.')
     prompt_library.save(game.database, 'character-react', 'SENTINEL-REACT. You may react once.')
     seat_up(game, ('mara', 'Mara', Mind.AGENT), ('hesk', 'Hesk', Mind.AGENT))
     scripted(game, {'Mara': [{'intent': 'waits'}, {'change': False}], 'Hesk': [{'intent': 'waits'}, {'change': False}]})
     turn_of(game)
     systems = [request['system'] for request in game.provider.requests]
-    assert systems and all(system.startswith('SENTINEL-MIND. You are [[in-fiction: your character]]')
+    assert systems and all(system.startswith('SENTINEL-MIND. You play the one whose sheet follows.')
                            for system in systems)
     assert all(agents.CONTRACT in system and agents.FENCE_RULE in system for system in systems)
-    reacts = [system for system in systems if 'SENTINEL-REACT' in system]
-    assert len(reacts) == 2 and all(agents.REACT_CONTRACT in system for system in reacts)
+    # Every character shares the rules and the story: the first cache block is the same in every call.
+    assert len({system.blocks[0] for system in systems}) == 1
+    # Which moment a call is for comes last, in the message, so deciding and reacting share the whole system prompt.
+    asked = [request['messages'][0]['content'] for request in game.provider.requests]
+    reacts = [text for text in asked if 'SENTINEL-REACT' in text]
+    assert len(reacts) == 2 and all(text.endswith(f'SENTINEL-REACT. You may react once. {agents.REACT_CONTRACT}')
+                                    for text in reacts)
+    assert not any('SENTINEL-REACT' in system for system in systems)
+    for name in ('Mara', 'Hesk'):
+        assert len({system for system in systems if playing(system) == name}) == 1
+
+
+def test_a_mind_reworded_before_the_name_moved_still_gets_the_name(game, steps):
+    from adventure import prompt_library
+    with game.database.connect(write=True) as connection:
+        connection.execute("INSERT INTO prompt_overrides (name, text, default_text, updated_at) VALUES "
+                           "('character-mind', 'OLD-MIND. You are {{character}}.', '', '')")
+    seat_up(game, ('mara', 'Mara', Mind.AGENT))
+    scripted(game, {'Mara': [{'intent': 'waits'}, {'change': False}]})
+    turn_of(game)
+    assert game.provider.requests[0]['system'].startswith('OLD-MIND. You are [[in-fiction: your character]]\nMara\n')
+    refused = prompt_library.problems(prompt_library.PROMPTS['character-mind'].default(), 'You are {{character}}.',
+                                      prompt_library.PROMPTS['character-mind'].retired)
+    assert refused and '{{CHARACTER}}' in refused
 
 
 # Failures -----------------------------------------------------------------------------------------------------------

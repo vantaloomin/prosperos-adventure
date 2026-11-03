@@ -198,11 +198,15 @@ def feelings_lines(connection, snapshot: Snapshot, key: str) -> list[str]:
     return lines
 
 
-def lore_lines(connection, snapshot: Snapshot, knowers: frozenset[str] | None, focus: str) -> list[str]:
+def lore_lines(connection, snapshot: Snapshot, knowers: frozenset[str] | None, focus: str,
+               always: bool | None = None) -> list[str]:
+    """Lore the reader may read: always-on entries and those `focus` names; with `always`, only the always-on ones
+    (True) or only the named ones (False)."""
     if not snapshot.settings.get('city'):
         return []
     rows = lore.for_reader(connection, snapshot.settings['city'], knowers, focus)
-    return [f"{row['title']}: {row['text']}" if row['title'] else row['text'] for row in rows]
+    return [f"{row['title']}: {row['text']}" if row['title'] else row['text'] for row in rows
+            if always is None or bool(row['always']) == always]
 
 
 def fact_lines(snapshot: Snapshot, knowers: frozenset[str] | None) -> list[str]:
@@ -314,24 +318,46 @@ def waiting_lines(connection, snapshot: Snapshot, key: str) -> list[str]:
             for item in update['items']]
 
 
-def build_agent(connection, snapshot: Snapshot, draft: Draft, key: str, focus: str = '') -> Context:
-    """Everything the character `key` may know this turn, and nothing else."""
+# Each part of an agent's context: the slot it fills in a layout (adventure/prompt_layout.py), and the heading and
+# fence label it has. The tiers and the default layout are in adventure/rounds/agents.py.
+AGENT_PARTS = (
+    ('CHARACTER', 'Your character'), ('SHEET', 'Who you are'), ('NOTES', 'Notes from the person at the table'),
+    ('SHOWN', 'Shown so far'), ('FACTIONS', 'Your factions'), ('HERE', 'Who is here'),
+    ('LORE', 'What you know of the world'), ('MENTIONED', 'What this brings to mind'),
+    ('MEM', 'What you remember'), ('FEELINGS', 'How you feel'), ('TURN', 'This turn so far'),
+    ('DECLARED', 'What you declared this turn'),
+)
+
+
+def agent_slots(connection, snapshot: Snapshot, draft: Draft, key: str, focus: str = '') -> dict[str, list[str]]:
+    """Everything the character `key` may know this turn, and nothing else, by the slot each part fills. Lore and
+    facts that are always there are kept apart from lore `focus` brings up, so the first can stay cached."""
     seat = snapshot.seat(key)
     knowers = knowers_of(snapshot, [key])
-    context = Context(f'agent:{key}')
-    context.add('Who you are', [f'You are {called(snapshot, key)}.', *sheet_lines(snapshot, key)])
-    context.add('Notes from the person at the table', [str(seat.notes)[:NOTE_CHARS] if seat else ''])
-    context.add('Shown so far', shown_lines(connection, snapshot, key))
-    context.add('Who is here', [called(snapshot, other) for other in present(snapshot) if other != key])
-    context.add('What you remember', recalled(connection, snapshot, key, focus))
-    context.add('What you know of the world', [*lore_lines(connection, snapshot, knowers, focus),
-                                               *fact_lines(snapshot, knowers)])
-    context.add('How you feel', feelings_lines(connection, snapshot, key))
-    context.add('Your factions', faction_lines(connection, snapshot, key))
-    context.add('This turn so far', knowledge_lines(snapshot, draft.known_to(key)))
     own = draft.declarations.get(key)
-    if own is not None:
-        context.add('What you declared this turn', declaration_lines(snapshot, own, private=True))
+    return {
+        'CHARACTER': [called(snapshot, key)],
+        'SHEET': sheet_lines(snapshot, key),
+        'NOTES': [str(seat.notes)[:NOTE_CHARS] if seat else ''],
+        'SHOWN': shown_lines(connection, snapshot, key),
+        'FACTIONS': faction_lines(connection, snapshot, key),
+        'HERE': [called(snapshot, other) for other in present(snapshot) if other != key],
+        'LORE': [*lore_lines(connection, snapshot, knowers, '', always=True), *fact_lines(snapshot, knowers)],
+        'MENTIONED': lore_lines(connection, snapshot, knowers, focus, always=False),
+        'MEM': recalled(connection, snapshot, key, focus),
+        'FEELINGS': feelings_lines(connection, snapshot, key),
+        'TURN': knowledge_lines(snapshot, draft.known_to(key)),
+        'DECLARED': declaration_lines(snapshot, own, private=True) if own is not None else [],
+    }
+
+
+def build_agent(connection, snapshot: Snapshot, draft: Draft, key: str, focus: str = '') -> Context:
+    """Everything the character `key` may know this turn, as one context with a heading for each part. Agent calls
+    lay the same parts out in tiers (adventure/rounds/agents.py `composed`)."""
+    slots = agent_slots(connection, snapshot, draft, key, focus)
+    context = Context(f'agent:{key}')
+    for name, title in AGENT_PARTS:
+        context.add(title, slots[name])
     return context
 
 
