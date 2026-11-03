@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { asksMissed, joinsAsParty, partyBody, partyMind, beatMoves, beatStanding, reaskOf, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { asksMissed, castSeat, joinsAsParty, partyBody, partyMind, beatMoves, beatStanding, reaskOf, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
 import { composerText, whatIf, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
@@ -208,4 +208,11 @@ test('the cast page sends every other lead as your party, with how each decides'
   assert.deepEqual(partyBody(leads, 'ada', { mara: 'program' }), { hesk: { mind: 'program' }, mara: { mind: 'program' } })
   // Making your own: everyone joins.
   assert.deepEqual(Object.keys(partyBody(leads, '', {})), ['ada', 'hesk', 'mara'])
+})
+
+test('the cast page marks You only in Play; outside Play your character gets a stand-in toggle', () => {
+  assert.equal(castSeat(true, true, 'play'), 'you')
+  assert.equal(castSeat(true, true, 'author'), 'stand-in')
+  assert.equal(castSeat(false, true, 'watch'), 'party')
+  assert.equal(castSeat(true, false, 'author'), 'none')
 })

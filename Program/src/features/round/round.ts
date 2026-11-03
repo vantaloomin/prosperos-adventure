@@ -300,3 +300,11 @@ export function partyMind(premade: { id: string; default_mind?: PartyMind }, cho
 export function partyBody(premades: { id: string; default_mind?: PartyMind }[], you: string, chosen: Record<string, PartyMind>): Record<string, { mind: PartyMind }> {
   return Object.fromEntries(premades.filter((premade) => premade.id !== you).map((premade) => [premade.id, { mind: partyMind(premade, chosen) }]))
 }
+
+/** What a lead's card on the cast page offers (CA-6, CA-7): the one you play is You in Play; outside Play no card is
+ *  You, and that character's toggle says who stands in for them; every other lead joins the party with their own. */
+export function castSeat(picked: boolean, joins: boolean, mode: Mode): 'you' | 'stand-in' | 'party' | 'none' {
+  if (!joins) return 'none'
+  if (!picked) return 'party'
+  return mode === 'play' ? 'you' : 'stand-in'
+}

@@ -1182,3 +1182,4 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .seat-details { display: grid; gap: 6px; margin-top: 6px; }
 .seat-details textarea { font-size: 0.8125rem; min-height: 0; }
 .seat-details select { width: fit-content; font-size: 0.8125rem; min-height: 30px; }
+.cast-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
