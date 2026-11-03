@@ -119,6 +119,8 @@ export function decidedCount(live: RoundLive): { decided: number; of: number } {
  *  the Thinks or Rules choice for a character. */
 export interface CastRound {
   live: RoundLive; table?: RoundTable; waiting: Awaiting | null
+  /** Each character's motive on the watched turn, in Author and Watch only (GET /api/minds); shown in the open row. */
+  motives: Record<string, string>
   onMind: (person: { key: string; name: string }, mind: 'agent' | 'program') => void
 }
 
@@ -184,3 +186,58 @@ export interface GmRound { turn: { id: string; state: RoundState; mode: Mode; ma
 
 /** The code the GM view answers with in Play until the user has said yes. */
 export const ASKS_FIRST = 'gm_view_asks_first'
+
+// Modes (docs/spec.md "Modes"): Play, Author and Watch, and Watch's own play and pause. ----------------------------
+
+export const MODES: Mode[] = ['play', 'author', 'watch']
+
+/** What a story line needs for its round tools: the table (for names) and the turns the GM view was open on. */
+export interface LineMarks { table?: RoundTable; marked: string[] }
+
+/** The mode the switcher shows: a change made while a turn is under way waits for Idle, and shows as made. */
+export const modeChosen = (table?: RoundTable | null): Mode => table?.settings.queued.mode ?? table?.settings.mode ?? 'play'
+
+/** Why Watch is paused (GET /api/rounds/watch `paused`): the session cap ('cap'), a big moment of the newest turn
+ *  (death, betrayal, nemesis, chapter, or whatever a step flagged), or, on the screen only, a turn that failed
+ *  ('error'). `turn_id` is the turn to go on from. */
+export interface WatchPaused { kind: string; text: string; turn_id?: string | null }
+export type WatchPause = WatchPaused | null
+/** GET /api/rounds/watch: the timer between Watch turns in seconds (0 is by hand only), and why it is paused. */
+export interface WatchState { seconds: number; paused: WatchPaused | null }
+
+/** Whether Watch may start the next turn by itself now, and if not, why it pauses: the backend's reason first, then a
+ *  turn that failed. Waiting on a reply card or a turn still being played holds without a banner. */
+export function watchNext(state: { playing: boolean; busy: boolean; waiting: boolean; paused: WatchPause; error: string }):
+  { go: boolean; pause: WatchPause } {
+  if (state.paused) return { go: false, pause: state.paused }
+  if (!state.playing || state.busy || state.waiting) return { go: false, pause: null }
+  if (state.error) return { go: false, pause: { kind: 'error', text: state.error } }
+  return { go: true, pause: null }
+}
+
+/** Watch as the screen reads it: the timer, and the backend's pause only while in Watch. */
+export function watchOf(on: boolean, data?: WatchState): WatchState {
+  return { seconds: data?.seconds ?? 0, paused: on ? data?.paused ?? null : null }
+}
+
+/** The timer choices in Watch, in seconds; 0 plays by hand only (Next). */
+export const WATCH_SECONDS = [0, 10, 20, 40, 60]
+
+/** How a story line opening a round turn reads: a player's line, the author's nudge, or nothing (a Watch turn and an
+ *  Author turn with no nudge open on an empty line). */
+export function openingKind(message: { role: string; text: string; mode?: Mode | null }): 'line' | 'nudge' | 'none' {
+  if (message.role !== 'user') return 'line'
+  if (!message.text.trim()) return 'none'
+  return message.mode === 'author' ? 'nudge' : 'line'
+}
+
+/** The motives the minds panel may show (GET /api/minds gives them only in Author and Watch), by character. */
+export function motivesOf(rows: MindRow[] | undefined): Record<string, string> {
+  return Object.fromEntries((rows ?? []).filter((row) => row.motive).map((row) => [row.key, row.motive!]))
+}
+
+/** Whether leaving Play asks "Show the motives you missed?": only from Play, and only while the campaign has no answer
+ *  yet (GET /api/minds `reveal_missed` is null; a backend without it never asks). */
+export function asksMissed(from: Mode, to: Mode, reveal: boolean | null | undefined): boolean {
+  return from === 'play' && to !== 'play' && reveal === null
+}

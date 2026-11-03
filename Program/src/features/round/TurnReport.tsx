@@ -21,7 +21,7 @@ export function LastTurn({ table }: { table?: RoundTable }) {
   </>)
 }
 
-function TurnReport({ turnId, table }: { turnId: string; table?: RoundTable }) {
+export function TurnReport({ turnId, table }: { turnId: string; table?: RoundTable }) {
   const key = [...ROUND_KEY, 'report', turnId]
   const report = useQuery({ queryKey: key, queryFn: () => api<Report>(`/story/turns/${encodeURIComponent(turnId)}/report`) })
   const client = useQueryClient()

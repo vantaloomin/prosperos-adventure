@@ -67,6 +67,7 @@ function CastPerson({ person, round, open, onToggle }: { person: StoryPerson; ro
     <CastRow id={person.key} name={person.name} letter={person.name.charAt(0)} state={now ?? person.doing}
       thinks={mind === 'agent'} status={rowStatus(person.key, round.live, round.waiting)} open={open} onToggle={onToggle}>
       <PersonMore person={person} />
+      {round.motives[person.key] && <p className="gm-motive">{round.motives[person.key]}</p>}
       <MindToggle id={person.key} name={person.name} mind={mind} onChange={(next) => round.onMind(person, next)} />
     </CastRow>
   )

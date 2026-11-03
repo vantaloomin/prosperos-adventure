@@ -2,11 +2,11 @@ import { useId, useState, type ReactNode } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../../api'
 import { Notice } from '../../components/Feedback'
-import { ROUND_KEY, useRoundTable } from './useRound'
+import { PACE_KEY, ROUND_KEY, useRoundTable } from './useRound'
 import type { AgentPace, RoundTable } from './round'
 import { estimateLine, LOYALTY, PACE_LABELS, PRESET_NAMES, SCHEMING, spendLine } from './roundText'
 
-const PACE_KEY = ['agents']
+
 
 /** Settings > Models: how the characters who think for themselves are paced in this campaign (adventure/agent_routes.py,
  *  adventure/round_routes.py). The preset with its estimate; under Advanced, how many think at once, how many exchanges
