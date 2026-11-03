@@ -1,0 +1,26 @@
+diff a/Program/src/features/settings/models/ModelSettings.tsx b/Program/src/features/settings/models/ModelSettings.tsx	(rejected hunks)
+@@ -10,6 +10,7 @@ import { ModelUsage } from './ModelUsage'
+ import { useModelUsage } from './usage'
+ import { ProfileEditor } from './ProfileEditor'
+ import { ModelMix } from './ModelMix'
++import { WorldModelPick } from './WorldModelPick'
+ import { ReadyCard, UseBuiltin } from '../../ready/ReadyCard'
+ import { isActive } from '../../ready/readyText'
+ import { useReady } from '../../ready/useReady'
+@@ -167,6 +168,7 @@ function JobAssignments({ overview, onChanged, setResult }: { overview: ModelsOv
+     } catch (error) { setResult({ tone: 'error', text: failure(error, 'Not changed.') }) }
+   }
+   return <fieldset className="model-routes form-stack"><legend>Which profile does each job</legend>
++    <WorldModelPick overview={overview} onChanged={onChanged} onError={text => setResult({ tone: 'error', text })} />
+     {overview.jobs.filter(job => job.key !== 'recall').map(job => {
+       const choice = jobChoice(overview, job.key)
+       const options = ready
+@@ -177,7 +179,7 @@ function JobAssignments({ overview, onChanged, setResult }: { overview: ModelsOv
+           {options.map(profile => <option key={profile.id} value={profile.id}>{profile.name}</option>)}
+         </select>
+         <small id={`model-job-${job.key}-hint`}>{jobHint(overview, job)}</small>
+-        {job.key === 'chat' && <ModelMix overview={overview} onChanged={onChanged} onError={text => setResult({ tone: 'error', text })} />}
++        {job.key === 'chat' && !overview.world?.own && <ModelMix overview={overview} onChanged={onChanged} onError={text => setResult({ tone: 'error', text })} />}
+       </div>
+     })}
+   </fieldset>

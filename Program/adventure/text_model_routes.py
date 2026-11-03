@@ -7,7 +7,14 @@ from fastapi import APIRouter, Request
 from adventure import text_models
 from adventure.database import decode
 from adventure.providers import balance, cli_accounts
-from adventure.providers.config import ConnectionProbe, MixUpdate, ProfileCreate, ProfileUpdate, RouteUpdate
+from adventure.providers.config import (
+    ConnectionProbe,
+    MixUpdate,
+    ProfileCreate,
+    ProfileUpdate,
+    RouteUpdate,
+    WorldModels,
+)
 
 router = APIRouter(prefix='/api/models')
 
@@ -82,6 +89,12 @@ async def profile_usage(profile_id: str, request: Request, fresh: bool = False):
 @router.put('/routes')
 def set_route(body: RouteUpdate, request: Request):
     return text_models.set_route(db(request), body.job, body.profile_id)
+
+
+@router.put('/world')
+def set_world(body: WorldModels, request: Request):
+    """Whether this world has job assignments of its own (adventure/world_models.py)."""
+    return text_models.set_world(db(request), body.own)
 
 
 @router.put('/mix')

@@ -1195,3 +1195,10 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 .branch-name { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
 .branch-rename { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .branch-rename input { flex: 1 1 160px; min-width: 0; }
+
+/* Settings > Images "Pictures in <world>" and Settings > Models "Models in <world>" (from Prospero's Companion #448). */
+.world-image-divider { border-top: 1px solid var(--border); padding-top: 16px; margin: 8px 0 16px; }
+.world-image-pick { gap: 10px; }
+.world-image-pick legend { padding: 0; margin-bottom: 4px; font-weight: 600; }
+.world-image-list { display: flex; flex-direction: column; gap: 8px; padding-left: 12px; }
+.world-model-pick { border-bottom: 1px solid var(--border); padding-bottom: 16px; }

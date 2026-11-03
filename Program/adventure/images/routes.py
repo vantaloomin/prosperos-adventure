@@ -23,7 +23,7 @@ from adventure.images.adapters.comfyui import (
     family_of,
 )
 from adventure.images.adapters.hosted import api_base
-from adventure.images.models import BackendCreate, BackendFields, BackendMove, ModelProbe
+from adventure.images.models import BackendCreate, BackendFields, BackendMove, ModelProbe, WorldBackends
 from adventure.providers.urls import is_loopback, validate_compatible_url
 
 router = APIRouter(prefix='/api/images')
@@ -55,7 +55,13 @@ def fitted_view(request: Request, backend_id: str) -> dict:
 
 @router.get('/backends')
 def list_backends(request: Request):
-    return {'backends': backends.listing(db(request))}
+    return backends.listing(db(request))
+
+
+@router.put('/world')
+def choose_for_world(request: Request, body: WorldBackends):
+    """Which backends this world draws with; null for all of them (adventure/images/world_choice.py)."""
+    return backends.choose_for_world(db(request), body.backend_ids)
 
 
 @router.post('/backends')
@@ -83,12 +89,12 @@ def backend_workflows(request: Request, backend_id: str):
 
 @router.post('/backends/{backend_id}/move')
 def move_backend(request: Request, backend_id: str, body: BackendMove):
-    return {'backends': backends.move(db(request), backend_id, body.position)}
+    return backends.move(db(request), backend_id, body.position)
 
 
 @router.delete('/backends/{backend_id}')
 def delete_backend(request: Request, backend_id: str):
-    return {'backends': backends.delete(db(request), backend_id)}
+    return backends.delete(db(request), backend_id)
 
 
 @router.post('/backends/{backend_id}/check')

@@ -10,6 +10,7 @@ import { ModelUsage } from './ModelUsage'
 import { useModelUsage } from './usage'
 import { ProfileEditor } from './ProfileEditor'
 import { ModelMix } from './ModelMix'
+import { WorldModelPick } from './WorldModelPick'
 import { ReadyCard, UseBuiltin } from '../../ready/ReadyCard'
 import { jobChoice } from './routing'
 import { isDecisions, isRecall, isText, type ModelJob, type ModelProfile, type ModelsOverview } from './types'
@@ -170,6 +171,7 @@ function JobAssignments({ overview, onChanged, setResult }: { overview: ModelsOv
     } catch (error) { setResult({ tone: 'error', text: failure(error, 'Not changed.') }) }
   }
   return <fieldset className="model-routes form-stack"><legend>Roles</legend>
+    <WorldModelPick overview={overview} onChanged={onChanged} onError={text => setResult({ tone: 'error', text })} />
     {overview.jobs.filter(job => job.key !== 'recall').map(job => {
       const choice = jobChoice(overview, job.key)
       // Referee decisions take a decisions profile, or a text profile whose server can score answers; never the default.
@@ -183,7 +185,7 @@ function JobAssignments({ overview, onChanged, setResult }: { overview: ModelsOv
           {options.map(profile => <option key={profile.id} value={profile.id}>{profile.name}</option>)}
         </select>
         {hint && <small id={`model-job-${job.key}-hint`}>{hint}</small>}
-        {job.key === 'story' && <ModelMix overview={overview} onChanged={onChanged} onError={text => setResult({ tone: 'error', text })} />}
+        {job.key === 'story' && !overview.world?.own && <ModelMix overview={overview} onChanged={onChanged} onError={text => setResult({ tone: 'error', text })} />}
       </div>
     })}
   </fieldset>

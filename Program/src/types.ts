@@ -140,7 +140,13 @@ export interface ImageBackend {
   disclosure: string | null
   disclosure_accepted: boolean
   experimental: boolean
+  /** Whether this world draws with it (adventure/images/world_choice.py). */
+  in_world: boolean
 }
+/** Which backends this world draws with: all of them until the user picks some (`own`). `falls_back`: none of the
+ * picks is on, so every backend is used for now. `used`: the backends it draws with now, in the user's order. */
+export interface WorldImageBackends { own: boolean; picked: string[]; falls_back: boolean; used: string[] }
+export interface ImageBackendList { backends: ImageBackend[]; world: WorldImageBackends }
 
 export interface BackendCheck { ok: boolean; summary: string; details: string[]; install?: { id: string; label: string }[] }
 

@@ -36,7 +36,8 @@ export interface ProfileConfig {
 export interface ModelProfile { id: string; name: string; revision: number; config: ProfileConfig; provider_name: string; has_saved_key: boolean; key_shared_with?: string[]; ready: boolean; recall_ready?: boolean; decisions_ready?: boolean; updated_at?: string }
 export interface ModelJob { key: string; name: string; detail: string }
 export interface ModelMix { enabled: boolean; mode: 'random' | 'in_turn'; profile_ids: string[] }
-export interface ModelsOverview { profiles: ModelProfile[]; routes: Record<string, string>; jobs: ModelJob[]; mix?: Record<string, ModelMix> }
+/** `world.own`: this world has job assignments of its own (adventure/world_models.py), and `routes` are its. */
+export interface ModelsOverview { profiles: ModelProfile[]; routes: Record<string, string>; jobs: ModelJob[]; mix?: Record<string, ModelMix>; world?: { own: boolean } }
 
 export const providers: Record<Provider, { name: string; url: string; description: string }> = {
   openai: { name: 'OpenAI', url: 'https://api.openai.com/v1', description: 'Connect with an OpenAI API key.' },
