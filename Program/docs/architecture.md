@@ -2,24 +2,14 @@
 
 [Back to the README](../../README.md)
 
-This is what the code in `Program` holds after Milestone 0: the engines kept from Prospero's Companion, with
-the companion itself removed. The game systems in [the requirements](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/requirements.md) are built on
-top of it, milestone by milestone, as set out in [the roadmap](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/roadmap.md).
+This is what the code in `Program` holds after Milestone 0: the engines kept from Prospero's Companion, with the companion itself removed. The game systems in [the requirements](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/requirements.md) are built on top of it, milestone by milestone, as set out in [the roadmap](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/roadmap.md).
 
 ## Shape
 
-- **Backend:** Python and FastAPI in `adventure/`, started by `python -m adventure` on http://127.0.0.1:8805.
-  `adventure/main.py` `create_app` wires the routers and keeps the shared services on `app.state`: the database,
-  the credential vault, the model provider, the scheduler that queues model work, the embedder, the built-in
-  recall and chat models, the launcher for local programs, the hardware check, "Set it up for me", and the
-  image adapters.
-- **Interface:** React, Vite and TypeScript in `src/`. The app opens on the Story; Worlds and Settings load the
-  first time they are opened. `src/workspace.ts` names the views the address can hold (`#story`, `#worlds`,
-  `#settings/<tab>`).
-- **Storage:** one SQLite database per world, created from `adventure/schema.sql`. Worlds and personas are listed
-  in a small registry beside them (`adventure/worlds.py`).
-- **Code decides, the model narrates.** Odds, rolls, draws and the state of the town live in code. The model is
-  given the outcome and writes the prose.
+- **Backend:** Python and FastAPI in `adventure/`, started by `python -m adventure` on http://127.0.0.1:8805. `adventure/main.py` `create_app` wires the routers and keeps the shared services on `app.state`: the database, the credential vault, the model provider, the scheduler that queues model work, the embedder, the built-in recall and chat models, the launcher for local programs, the hardware check, "Set it up for me", and the image adapters.
+- **Interface:** React, Vite and TypeScript in `src/`. The app opens on the Story; Worlds and Settings load the first time they are opened. `src/workspace.ts` names the views the address can hold (`#story`, `#worlds`, `#settings/<tab>`).
+- **Storage:** one SQLite database per world, created from `adventure/schema.sql`. Worlds and personas are listed in a small registry beside them (`adventure/worlds.py`).
+- **Code decides, the model narrates.** Odds, rolls, draws and the state of the town live in code. The model is given the outcome and writes the prose.
 
 ## Tables
 
@@ -61,9 +51,7 @@ top of it, milestone by milestone, as set out in [the roadmap](https://github.co
 | `party_lead`, `split_off` | The party's leader in Author and Watch, and who split off from the party or rejoined it, by turn, read through the turn's place on the timeline (`adventure/rounds/travelling.py`) |
 | `townsfolk_mix`, `townsfolk_personality`, `birth_dates`, `town_levels` | How the town is generated and how it ages |
 
-A database from before Milestone 0 is not upgraded: Adventure starts a fresh schema, and `upgrade.py` only handles
-changes made from here on. New tables come from `schema.sql`; a column added to an existing table is listed in
-`database.ADDED_COLUMNS` as well.
+A database from before Milestone 0 is not upgraded: Adventure starts a fresh schema, and `upgrade.py` only handles changes made from here on. New tables come from `schema.sql`; a column added to an existing table is listed in `database.ADDED_COLUMNS` as well.
 
 ## Engines kept
 
@@ -84,6 +72,4 @@ changes made from here on. New tables come from `schema.sql`; a column added to 
 
 ## What was removed
 
-The focal companion, its chat and phone, its daily life and chores, memory extraction from chat, relationship
-arcs, the sidecar, the Study importer, LoRA training, voice notes and chat photos. Their tables, routes, screens
-and tests are gone; the wording banks they drew on stay in `world/data/`.
+The focal companion, its chat and phone, its daily life and chores, memory extraction from chat, relationship arcs, the sidecar, the Study importer, LoRA training, voice notes and chat photos. Their tables, routes, screens and tests are gone; the wording banks they drew on stay in `world/data/`.

@@ -2,27 +2,20 @@
 
 ## Decided by Vanta (2026-10-21)
 
-- **Three campaign eras** in one package: Pre-Reform (about 2750 AOM), the Brotherhood Years
-  (3001 to 3135 BOM) and Post-Reform (about 300 RFM). See [canon/eras.md](canon/eras.md).
-- **D&D-coined names are renamed,** and Vanta approved all the replacements in
-  [canon/names.md](canon/names.md).
-- **Vanta's own names:** Forgrimmorithal, Vymnommyth, Zaraxas, Ghondiir, Iseullaryax, Tatsuyaraga,
-  Himo Xiloscient, Ohgnu, Unguruk, Dramogon and Kadragar are all original.
+- **Three campaign eras** in one package: Pre-Reform (about 2750 AOM), the Brotherhood Years (3001 to 3135 BOM) and Post-Reform (about 300 RFM). See [canon/eras.md](canon/eras.md).
+- **D&D-coined names are renamed,** and Vanta approved all the replacements in [canon/names.md](canon/names.md).
+- **Vanta's own names:** Forgrimmorithal, Vymnommyth, Zaraxas, Ghondiir, Iseullaryax, Tatsuyaraga, Himo Xiloscient, Ohgnu, Unguruk, Dramogon and Kadragar are all original.
 - **Kingswood is Post-Reform,** agreed with the Milestone 1 thread.
 - **The Black Citadel's throne is vacant** after the Reformation.
 - **The dragon of Petrakyra is a ninth Eternal.**
-- **The Gor'gel Deception:** Gor'gel, pretending to be another god, duped the elf druid Himo
-  Xiloscient into opening the first portal for the 251 AOD invasion; Himo then made his stand to
-  stop the gnolls and demons coming through.
+- **The Gor'gel Deception:** Gor'gel, pretending to be another god, duped the elf druid Himo Xiloscient into opening the first portal for the 251 AOD invasion; Himo then made his stand to stop the gnolls and demons coming through.
 - **Adlmyr fell before the Brotherhood** was founded.
 - **Nicana trained at the Benzaiten Monastery.**
 - **Why the Eternals can't breed** is tied to Ghondiir's death, well before the Brotherhood.
 - **The "pair of women" behind the fey courts** is dropped.
 - **Draft content stays and gets filled in.**
-- **Under the Heartwood** lies an arm of Asmodeus, held down by the roots; the Timber Guild's buyer,
-  Gannet & Pryce, is a Mammon cult front.
-- **The Source Font** is in a pocket realm the Arbiter made after the Reformation, with a
-  deliberate leak that keeps the world's Ley flowing. This draft puts the leak above Loch Torogh.
+- **Under the Heartwood** lies an arm of Asmodeus, held down by the roots; the Timber Guild's buyer, Gannet & Pryce, is a Mammon cult front.
+- **The Source Font** is in a pocket realm the Arbiter made after the Reformation, with a deliberate leak that keeps the world's Ley flowing. This draft puts the leak above Loch Torogh.
 
 ## Extrapolated in this draft, for Vanta to keep or change
 

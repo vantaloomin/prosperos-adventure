@@ -1,53 +1,37 @@
 # Prospero's Adventure
 
-A local-first AI tabletop RPG where every party member can think for themselves. It keeps
-[Prospero's Dungeon](https://github.com/vantaloomin/prosperos-dungeon)'s game underneath, and gives each
-character in the party their own agent that decides what that character wants to do each round.
+A local-first AI tabletop RPG where every party member can think for themselves. It keeps [Prospero's Dungeon](https://github.com/vantaloomin/prosperos-dungeon)'s game underneath, and gives each character in the party their own agent that decides what that character wants to do each round.
 
-It builds on Prospero's Dungeon, [Prospero's Companion](https://github.com/vantaloomin/prosperos-companion) and
-[Prospero's Study](https://github.com/vantaloomin/prosperos-study), and plays worlds made in
-[Prospero's Worldsmith](https://github.com/vantaloomin/prosperos-worldsmith).
+It builds on Prospero's Dungeon, [Prospero's Companion](https://github.com/vantaloomin/prosperos-companion) and [Prospero's Study](https://github.com/vantaloomin/prosperos-study), and plays worlds made in [Prospero's Worldsmith](https://github.com/vantaloomin/prosperos-worldsmith).
 
 ## Status
 
-The code in `Program` is a clean copy of Prospero's Dungeon (main at `a4663f1`, 2026-11-02), renamed to Adventure
-so it runs beside Dungeon. It plays exactly like Dungeon for now: none of Adventure's own features (character
-agents, the Writer, Play, Author and Watch) are built yet. The product spec is in [docs/spec.md](docs/spec.md).
+The code in `Program` is a clean copy of Prospero's Dungeon (main at `a4663f1`, 2026-11-02), renamed to Adventure so it runs beside Dungeon. It plays exactly like Dungeon for now: none of Adventure's own features (character agents, the Writer, Play, Author and Watch) are built yet. The product spec is in [docs/spec.md](docs/spec.md).
 
-It runs on your computer and talks to whichever model you choose: a hosted API (OpenAI, Anthropic, Google,
-OpenRouter, any OpenAI-compatible service, your Codex login) or a local model through LM Studio, Kobold or any
-OpenAI-compatible server.
+It runs on your computer and talks to whichever model you choose: a hosted API (OpenAI, Anthropic, Google, OpenRouter, any OpenAI-compatible service, your Codex login) or a local model through LM Studio, Kobold or any OpenAI-compatible server.
 
 ## Getting started
 
 ### Windows
 
 1. Install [Git](https://git-scm.com/download/win) and clone this repository.
-2. Open the `Windows` folder and double-click **`install.bat`**. It finds or installs Python 3.12+ and
-   Node.js 22.13+, installs the locked dependencies and builds the interface.
-3. Double-click **`launch.bat`**. Adventure opens in your browser at http://127.0.0.1:8805. Keep its window
-   open while you use it.
+2. Open the `Windows` folder and double-click **`install.bat`**. It finds or installs Python 3.12+ and Node.js 22.13+, installs the locked dependencies and builds the interface.
+3. Double-click **`launch.bat`**. Adventure opens in your browser at http://127.0.0.1:8805. Keep its window open while you use it.
 4. Add a model in **Settings > Models**.
 
 ### Mac
 
-Clone the repository, open the `Mac` folder and double-click **`install.command`**, then **`launch.command`**.
-[Installing on a Mac](Program/docs/macos.md) walks through it.
+Clone the repository, open the `Mac` folder and double-click **`install.command`**, then **`launch.command`**. [Installing on a Mac](Program/docs/macos.md) walks through it.
 
 ### Linux
 
-There are no helper scripts yet; [Development](Program/docs/development.md) shows how to run it from the
-`Program` folder.
+There are no helper scripts yet; [Development](Program/docs/development.md) shows how to run it from the `Program` folder.
 
-Data lives outside the program folder: `%LOCALAPPDATA%\ProsperoAdventure` on Windows,
-`~/Library/Application Support/ProsperoAdventure` on a Mac and `~/.local/share/prospero-adventure` on Linux.
-**Settings > Data** shows where it is and can move it into a portable `Data` folder beside `Windows`, `Mac`
-and `Program`.
+Data lives outside the program folder: `%LOCALAPPDATA%\ProsperoAdventure` on Windows, `~/Library/Application Support/ProsperoAdventure` on a Mac and `~/.local/share/prospero-adventure` on Linux. **Settings > Data** shows where it is and can move it into a portable `Data` folder beside `Windows`, `Mac` and `Program`.
 
 ## Running beside the other Prospero apps
 
-Each app keeps its own port, data folder, credential store entry and backup format, so none of them can open
-the others' data by mistake:
+Each app keeps its own port, data folder, credential store entry and backup format, so none of them can open the others' data by mistake:
 
 | App | App port | Dev interface | Data folder (Windows) |
 | --- | --- | --- | --- |
@@ -95,5 +79,4 @@ Each script has a Mac twin in `Mac` with the same name ending in `.command`.
 
 ## License
 
-Licensed under the [GNU Affero General Public License v3.0](LICENSE), matching the Prospero's Dungeon, Study and
-Companion code it reuses.
+Licensed under the [GNU Affero General Public License v3.0](LICENSE), matching the Prospero's Dungeon, Study and Companion code it reuses.
