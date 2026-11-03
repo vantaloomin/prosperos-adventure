@@ -6,7 +6,7 @@ It builds on Prospero's Dungeon, [Prospero's Companion](https://github.com/vanta
 
 ## Status
 
-The code in `Program` is a clean copy of Prospero's Dungeon (main at `a4663f1`, 2026-11-02), renamed to Adventure so it runs beside Dungeon. It plays exactly like Dungeon for now: none of Adventure's own features (character agents, the Writer, Play, Author and Watch) are built yet. The product spec is in [docs/spec.md](docs/spec.md).
+v0.1.0 is the first release, a pre-release for playtesting: characters who think for themselves, the round Writer, and Play, Author and Watch are all in. It started as a clean copy of Prospero's Dungeon (main at `a4663f1`, 2026-11-02), renamed to Adventure so it runs beside Dungeon. The product spec is in [docs/spec.md](docs/spec.md), and what each release brings is in the [Changelog](CHANGELOG.md) and on the [Releases](https://github.com/vantaloomin/prosperos-adventure/releases) page.
 
 It runs on your computer and talks to whichever model you choose: a hosted API (OpenAI, Anthropic, Google, OpenRouter, any OpenAI-compatible service, your Codex login) or a local model through LM Studio, Kobold or any OpenAI-compatible server.
 
