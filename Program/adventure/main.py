@@ -31,6 +31,7 @@ from adventure.database import Database
 from adventure.debug_routes import calls_router, mix_router
 from adventure.debug_routes import router as debug_router
 from adventure.errors import DomainError
+from adventure.gm_routes import router as gm_router
 from adventure.hardware import Hardware
 from adventure.hardware_routes import router as hardware_router
 from adventure.identity import APP_NAME, CLIENT_HEADER, VERSION, WORLD_HEADER
@@ -162,7 +163,7 @@ def create_app(database_path: str | Path | None = None, *, clock=None, vault=Non
     for item in (router, model_router, launcher_router, recall_router, hardware_router, ready_router, world_routes.router,
                  image_routes.router, politics_routes.router, story_routes.router, authors_note_routes.router, file_routes.router,
                  debug_router, worlds_routes.router, calls_router, mix_router, packages_router,
-                 agent_routes.router, round_router, house_rules_routes.router, mode_router):
+                 agent_routes.router, round_router, house_rules_routes.router, gm_router, mode_router):
         app.include_router(item)
     if FRONTEND.exists():
         app.mount('/', StaticFiles(directory=FRONTEND, html=True), name='frontend')
