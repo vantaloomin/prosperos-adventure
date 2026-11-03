@@ -60,6 +60,13 @@ class LoreSwitch(Input):
     enabled: bool
 
 
+class LoreVisibility(Input):
+    """Who may read a lore entry (adventure/lore.py "Who may read it"): public, known (to `known_to`, character keys)
+    or gm; checked there."""
+    visibility: str = Field(max_length=10)
+    known_to: list[str] = Field(default_factory=list, max_length=40)
+
+
 class LoreTiming(Input):
     """A lore entry's timing (adventure/lore.py TIMING), in story lines; the ranges are checked there."""
     sticky: int | None = None

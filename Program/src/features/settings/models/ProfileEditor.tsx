@@ -5,6 +5,7 @@ import { Check, PlugZap } from 'lucide-react'
 import { api } from '../../../api'
 import { Notice } from '../../../components/Feedback'
 import { TextInput } from '../../../components/Fields'
+import { CliAccountPicker } from './CliAccountPicker'
 import { GenerationSettings } from './GenerationSettings'
 import { ModelCombobox } from './ModelCombobox'
 import { applyDiscovered, decisionsReady, discoveredSettings, profileReady, recallReady, reusableKey, savedKeyApplies, typedModelSettings, type Discovery } from './discovery'
@@ -64,7 +65,7 @@ function useProfileForm(profile: ModelProfile | undefined, kind: ProfileKind, ot
   const [key, setKey] = useState('')
   const [shareKey, setShareKey] = useState(true)
   const discovery = useDiscovery(profile)
-  const patch: Patch = (change) => { if (change.base_url !== undefined) discovery.reset(); setConfig(current => ({ ...current, ...change })) }
+  const patch: Patch = (change) => { if (change.base_url !== undefined || change.cli_account_dir !== undefined || change.cli_path !== undefined) discovery.reset(); setConfig(current => ({ ...current, ...change })) }
   const changeProvider = (provider: Provider) => { discovery.reset(); setConfig(fresh(provider)); setKey('') }
   const changeKey = (value: string) => { discovery.reset(); setKey(value) }
   const test = () => { void discovery.connect(config, key, result => setConfig(current => isText(current) ? applyDiscovered(result, current) : current)) }
@@ -136,7 +137,7 @@ type KeyEntry = { saved: boolean; reused?: string; sharedWith: string[]; value: 
 
 function ConnectionFields({ config, patch, keyEntry, found }: { config: ProfileConfig; patch: Patch; keyEntry: KeyEntry; found?: string }) {
   const local = config.provider === 'local' || config.provider === 'kobold'
-  if (config.provider === 'codex') return <p className="subtle">Uses the Codex CLI’s own login; no key is entered here. Codex runs in an empty temporary folder with its shell, plugins, web search and tools turned off.</p>
+  if (config.provider === 'codex') return <CodexFields config={config} patch={patch} found={found} />
   if (config.provider === 'claude_code') return <ClaudeCodeFields config={config} patch={patch} found={found} />
   return <>
     {(local || config.provider === 'compatible') && <TextInput label="Server address" value={config.base_url} onChange={value => patch({ base_url: value })} maxLength={500} hint={local ? 'An address on this computer. LM Studio and Ollama usually end in /v1.' : 'The API base URL, without /models or /chat/completions.'} />}
@@ -147,9 +148,20 @@ function ConnectionFields({ config, patch, keyEntry, found }: { config: ProfileC
 function ClaudeCodeFields({ config, patch, found }: { config: ProfileConfig; patch: Patch; found?: string }) {
   return <>
     <Notice>Claude follows Anthropic’s usage policy, so it won’t write the adult side of life. Use it for everyday chat and the other non-explicit jobs, and give adult scenes a different profile.</Notice>
+    <CliAccountPicker provider="claude_code" value={config.cli_account_dir} onPick={folder => patch({ cli_account_dir: folder })} />
     <TextInput label="Claude Code location (optional)" value={config.cli_path ?? ''} onChange={value => patch({ cli_path: value })} maxLength={500} placeholder={found ? shownPath(found) : undefined} hint="Leave empty to use the Claude Code found on this computer." />
     <TextInput label="Claude account folder (optional)" value={config.cli_account_dir ?? ''} onChange={value => patch({ cli_account_dir: value })} maxLength={500} placeholder="C:\Users\you\.claude-second"
       hint="For a second Claude account: a folder of its own that keeps that account's sign-in. Test connection says how to sign in to it. Leave empty for the account Claude Code usually uses." />
+  </>
+}
+
+function CodexFields({ config, patch, found }: { config: ProfileConfig; patch: Patch; found?: string }) {
+  return <>
+    <p className="subtle">Uses the Codex CLI’s own login; no key is entered here. Codex runs in an empty temporary folder with its shell, plugins, web search and tools turned off.</p>
+    <CliAccountPicker provider="codex" value={config.cli_account_dir} onPick={folder => patch({ cli_account_dir: folder })} />
+    <TextInput label="Codex location (optional)" value={config.cli_path ?? ''} onChange={value => patch({ cli_path: value })} maxLength={500} placeholder={found ? shownPath(found) : undefined} hint="Leave empty to use the Codex found on this computer." />
+    <TextInput label="ChatGPT account folder (optional)" value={config.cli_account_dir ?? ''} onChange={value => patch({ cli_account_dir: value })} maxLength={500} placeholder="C:\Users\you\.codex-second"
+      hint="For a second ChatGPT account: a folder of its own (CODEX_HOME) that keeps that account's sign-in. Leave empty for the account Codex usually uses." />
   </>
 }
 

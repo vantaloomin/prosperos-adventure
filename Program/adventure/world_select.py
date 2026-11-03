@@ -1,5 +1,5 @@
-"""The title screen's worlds (src/features/story/TitleScreen.tsx): every world with a travel map to play on, with its
-pitch and key art, and going to one. Going to a world is going to the persona's own world there, the one they were in
+"""The title screen's worlds (src/features/story/TitleScreen.tsx): every world with a travel map to play on, most
+recently played first, with its key art, and going to one. Going to a world is going to the persona's own world there, the one they were in
 last, else a new world for them in the town the world's campaign starts in (adventure/worlds.py). The key art is the
 package's assets/keyart.webp, made with scripts/art/keyart.py.
 """
@@ -56,15 +56,21 @@ def here(database) -> str | None:
 
 
 def choices(database) -> dict:
-    """The worlds to pick from, the one the story is in marked `here`."""
+    """The worlds to pick from, most recently played first: the one the story is in (marked `here`), then the persona's
+    other worlds by when they were last in them, then the rest in `playable` order."""
     current = here(database)
-    found = []
+    found, played = [], {}
     for world_id in playable():
         world = settings(database.root, world_id)
+        mine = theirs(database, world_id)
+        played[world_id] = mine['used_at'] if mine else ''
         found.append({'id': world_id, 'name': world.get('name') or world_id.title(), 'genre': world.get('genre', ''),
                       'pitch': world.get('pitch', ''), 'here': world_id == current,
-                      'yours': world_id != current and theirs(database, world_id) is not None,
+                      'yours': world_id != current and mine is not None,
                       'art': f'/api/story/art/keyart/{world_id}' if world_data.asset(world_id, KEYART) else None})
+    # Both sorts are stable, so worlds never played keep `playable` order behind the played ones.
+    found.sort(key=lambda world: played[world['id']], reverse=True)
+    found.sort(key=lambda world: not world['here'])
     return {'worlds': found, 'here': current}
 
 

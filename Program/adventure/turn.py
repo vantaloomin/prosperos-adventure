@@ -1,4 +1,4 @@
-"""One turn's rolls (docs/requirements.md "Turn loop"): the Referee splits the player's intent into actions, code
+"""One turn's rolls (Dungeon's docs/requirements.md "Turn loop"): the Referee splits the player's intent into actions, code
 rolls each uncertain one on the persona's stats, and the narrator is handed the results to write. A message is
 rolled once; retelling it keeps the dice."""
 import random

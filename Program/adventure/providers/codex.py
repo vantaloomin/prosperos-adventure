@@ -15,9 +15,14 @@ Checked against Codex CLI 0.163.0 by capturing its request: what remains is the 
 `$CODEX_HOME/AGENTS.md` (Codex always loads it and has no switch; the prompt below tells the model to
 ignore it) and two tools Codex always registers, `apply_patch` and `request_user_input`, which can do
 nothing in a read-only folder with approvals off.
+
+A profile can name its own account folder (CODEX_HOME), so two ChatGPT accounts can each have a profile, and its
+own Codex location when Codex is not on PATH. The user signs in to that folder once in a terminal; the app only
+passes the folder on (adventure/providers/cli_accounts.py finds the folders a `codex2` command sets).
 """
 import asyncio
 import json
+import os
 import shutil
 import tempfile
 from pathlib import Path
@@ -72,10 +77,48 @@ def codex_arguments(executable: str, config: dict, directory: str, instructions_
     return [*arguments, '-']
 
 
-def executable_path() -> str:
+def executable_path(config: dict | None = None) -> str:
+    """The profile's Codex location, else `codex` on PATH."""
+    if location := ((config or {}).get('cli_path') or '').strip():
+        require(Path(location).is_file(), 'Codex was not found at the location set in this profile.', 409)
+        return location
     executable = shutil.which('codex')
     require(bool(executable), 'Codex CLI was not found. Install it and sign in with codex login.', 409)
     return executable
+
+
+def account_dir(config: dict | None) -> str:
+    return ((config or {}).get('cli_account_dir') or '').strip()
+
+
+def cli_environment(config: dict | None = None) -> dict | None:
+    """The user's own environment, with the profile's account folder as CODEX_HOME when it names one; None (the
+    environment as it is) otherwise."""
+    if not (folder := account_dir(config)):
+        return None
+    return {**os.environ, 'CODEX_HOME': folder}
+
+
+def login_step(config: dict | None = None) -> str:
+    folder = account_dir(config)
+    if not folder:
+        return 'Codex is not signed in. Run codex login in your terminal.'
+    command = f'$env:CODEX_HOME="{folder}"; codex login' if os.name == 'nt' else f'CODEX_HOME="{folder}" codex login'
+    return (f'The ChatGPT account for this profile is not signed in. In a terminal on this computer run {command} '
+            'and sign in with that account, then test again.')
+
+
+async def login_state(executable: str, config: dict | None = None):
+    """`codex login status`: only whether the account is signed in."""
+    process = await subprocesses.start(executable, 'login', 'status', stdout=asyncio.subprocess.DEVNULL,
+                                       stderr=asyncio.subprocess.DEVNULL, env=cli_environment(config))
+    try:
+        code = await asyncio.wait_for(process.wait(), 15)
+    except TimeoutError as error:
+        process.kill()
+        await process.wait()
+        raise DomainError('The Codex login check timed out.', 504) from error
+    require(code == 0, login_step(config), 409)
 
 
 def codex_event(data: dict) -> Chunk:
@@ -119,12 +162,12 @@ def listed_model(item: dict) -> dict | None:
     return {**detail, 'supported_efforts': [effort for effort in EFFORTS if effort in efforts]} if efforts else detail
 
 
-async def app_server(command: list[str], work, seconds: float = 20):
+async def app_server(command: list[str], work, seconds: float = 20, env: dict | None = None):
     """Run `work(result)` against `codex app-server` (JSON-RPC lines on stdio) after its handshake."""
     with tempfile.TemporaryDirectory(prefix='adventure-codex-') as directory:
         process = await subprocesses.start(
             *command, stdin=asyncio.subprocess.PIPE, stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.DEVNULL, cwd=directory, limit=2_000_000)
+            stderr=asyncio.subprocess.DEVNULL, cwd=directory, env=env, limit=2_000_000)
 
         def send(message: dict):
             process.stdin.write((json.dumps(message) + '\n').encode())
@@ -153,7 +196,7 @@ async def app_server(command: list[str], work, seconds: float = 20):
                 await process.wait()
 
 
-async def app_server_models(command: list[str], seconds: float = 20) -> list[dict]:
+async def app_server_models(command: list[str], seconds: float = 20, env: dict | None = None) -> list[dict]:
     """The models the current login can use, from `model/list` page by page."""
     async def listing(result):
         models, cursor = [], None
@@ -163,20 +206,20 @@ async def app_server_models(command: list[str], seconds: float = 20) -> list[dic
             if not (cursor := data.get('nextCursor')):
                 break
         return models
-    return await app_server(command, listing, seconds)
+    return await app_server(command, listing, seconds, env)
 
 
-async def app_server_limits(command: list[str], seconds: float = 20) -> dict:
+async def app_server_limits(command: list[str], seconds: float = 20, env: dict | None = None) -> dict:
     """The ChatGPT plan's usage limits from `account/rateLimits/read`: a usage read, no model is called."""
     async def limits(result):
         return (await result(2, 'account/rateLimits/read', {}))['rateLimits']
-    return await app_server(command, limits, seconds)
+    return await app_server(command, limits, seconds, env)
 
 
-async def codex_models(executable: str) -> tuple[list[dict], bool]:
+async def codex_models(executable: str, env: dict | None = None) -> tuple[list[dict], bool]:
     """The login's models, or the fallback list (and False) when the CLI cannot report them."""
     try:
-        models = await app_server_models([executable, '-c', 'mcp_servers={}', 'app-server'])
+        models = await app_server_models([executable, '-c', 'mcp_servers={}', 'app-server'], env=env)
         if models:
             return models, True
     except (DomainError, TimeoutError, OSError, ValueError, KeyError, TypeError, AttributeError):
@@ -187,7 +230,7 @@ async def codex_models(executable: str) -> tuple[list[dict], bool]:
 
 class CodexProvider:
     async def stream(self, config: dict, _key: str | None, system: str, messages: list[dict]):
-        executable = executable_path()
+        executable = executable_path(config)
         with tempfile.TemporaryDirectory(prefix='adventure-codex-') as directory:
             instructions = Path(directory) / 'instructions.md'
             instructions.write_text(system + AGENTS_NOTE, encoding='utf-8')
@@ -201,7 +244,7 @@ class CodexProvider:
                 *codex_arguments(executable, config, str(work), str(instructions),
                                  str(schema_file) if schema_file else None), stdin=asyncio.subprocess.PIPE,
                 stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.DEVNULL, cwd=str(work),
-                limit=2_000_000)
+                env=cli_environment(config), limit=2_000_000)
             try:
                 async with asyncio.timeout(config['timeout_seconds']):
                     process.stdin.write(transcript('', messages).lstrip().encode())
@@ -218,24 +261,16 @@ class CodexProvider:
                     process.kill()
                     await process.wait()
 
-    async def usage(self) -> dict:
-        return await app_server_limits([executable_path(), '-c', 'mcp_servers={}', 'app-server'])
+    async def usage(self, config: dict | None = None) -> dict:
+        return await app_server_limits([executable_path(config), '-c', 'mcp_servers={}', 'app-server'],
+                                       env=cli_environment(config))
 
-    async def check(self, _config: dict, _key: str | None) -> dict:
-        executable = executable_path()
-        process = await subprocesses.start(executable, 'login', 'status',
-                                           stdout=asyncio.subprocess.DEVNULL,
-                                           stderr=asyncio.subprocess.DEVNULL)
-        try:
-            code = await asyncio.wait_for(process.wait(), 15)
-            require(code == 0, 'Codex is not signed in. Run codex login in your terminal.', 409)
-        except TimeoutError as error:
-            process.kill()
-            await process.wait()
-            raise DomainError('The Codex login check timed out.', 504) from error
-        models, reported = await codex_models(executable)
+    async def check(self, config: dict, _key: str | None) -> dict:
+        executable = executable_path(config)
+        await login_state(executable, config)
+        models, reported = await codex_models(executable, cli_environment(config))
         note = ('The models your ChatGPT login can use, as the Codex CLI lists them.' if reported else
                 'This Codex CLI did not list its models, so these are common Codex models; your plan may not '
                 'include all of them. Model access is checked when you send a message.')
         return {'available': True, 'models': [model['id'] for model in models], 'model_details': models,
-                'generated': False, 'note': note}
+                'generated': False, 'note': note, 'location': executable}

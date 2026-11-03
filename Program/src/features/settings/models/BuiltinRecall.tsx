@@ -48,7 +48,7 @@ export function BuiltinRecall() {
   return <section className="settings-section form-stack" aria-labelledby="recall-heading">
     <div>
       <h2 id="recall-heading">Built-in recall</h2>
-      <p className="subtle">Recall finds related parts of the story even when the words differ. Adventure can run a small embedding model for this itself, on this PC's processor, apart from LM Studio, Kobold or Ollama. You download the model file, so you accept its license. While this is on, it does Semantic recall instead of the profile chosen above.</p>
+      <p className="subtle">You download the model file, so you accept its license.</p>
     </div>
     <RuntimeStep data={data} busy={busy} run={run} onChange={update} />
     <ModelStep data={data} chosen={chosen} busy={busy} run={run} setPath={setPath} checking={query.isFetching} refresh={() => void query.refetch()} />

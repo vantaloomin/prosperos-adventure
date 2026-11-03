@@ -1,6 +1,9 @@
 # Sources
 
-Vanta's Vallarith material, from `Vallarith.zip` in the project files (2026-10-21). The originals are not copied into this public repo. Every entry here is rewritten, and the D&D-derived Hell material in the deity document (which reads close to wiki text) was summarized in fresh words rather than carried over.
+Vanta's Vallarith material, from `Vallarith.zip` in the project files (2026-10-21). The originals
+are not copied into this public repo. Every entry here is rewritten, and the D&D-derived Hell
+material in the deity document (which reads close to wiki text) was summarized in fresh words
+rather than carried over.
 
 | File | What it is | Used for | SHA-256 |
 | --- | --- | --- | --- |
@@ -14,8 +17,12 @@ Vanta's Vallarith material, from `Vallarith.zip` in the project files (2026-10-2
 | `KnownWorld082022.png` | The Known World map, full sheet | Not copied (same map as Vallarith.png) | `ddbf51a4439324d4e0b0c07a83b8951a04b62da55e10b3ef56530386f5061a9b` |
 | `unknown.png` | The Known World map, teal sea variant | Not copied | `6d59498c098dc8ffd7b335f1c348ebfa99c19aa7ba29ed553ea353f61c543ab1` |
 
-Also used: the Kingswood town from the Milestone 1 slice (`Program/dungeon/world/data/cities/kingswood.json`, by the "Companion code fork" thread), which is the authority for Kingswood.
+Also used: the Kingswood town from the Milestone 1 slice
+(`Program/dungeon/world/data/cities/kingswood.json`, by the "Companion code fork" thread), which is
+the authority for Kingswood.
 
 ## Which source wins
 
-When the files disagree, this draft prefers, in order: the ley document, the New Gods profiles, the deity powers document, the timeline, then the lorebook (the oldest). Each call is listed in [open-questions.md](open-questions.md).
+When the files disagree, this draft prefers, in order: the ley document, the New Gods profiles,
+the deity powers document, the timeline, then the lorebook (the oldest). Each call is listed in
+[open-questions.md](open-questions.md).

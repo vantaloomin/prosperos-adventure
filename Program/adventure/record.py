@@ -17,6 +17,8 @@ and edits everything and can ask again for, or clear, a single fact the model ex
 
 The story so far: the narrator reads the most recent messages word for word and, before them, one rolling summary.
 When enough older messages pile up, they are folded into the summary by the Continuity model (or the Default one).
+A summary that drops a name, number or pledge it folds in is asked again once, and what it still drops is added
+after it word for word (adventure/compaction.py).
 
 Both are game state, kept per branch (adventure/timeline.py SAVED).
 """
@@ -24,7 +26,7 @@ import asyncio
 import json
 import re
 
-from adventure import remembering, table
+from adventure import compaction, remembering, table
 from adventure.database import identifier, many, one, optional
 from adventure.errors import DomainError, require
 from adventure.providers.scheduling import CONVERSATION
@@ -392,9 +394,18 @@ async def fold(state, rows: list[dict]):
              'player" or "the party".') if found and found['name'] else ''
     if not chunk or config is None:
         return
+    folded = transcript(chunk)
+    with database.connect() as connection:
+        live = compaction.live(connection, before['text'], folded)
+    question = f"The summary so far:\n{before['text'] or '(none yet)'}\n\nThe new turns:\n{folded}"
+
+    async def draft(note: str) -> str:
+        return (await asked(state, config, SUMMARIZE + named + note, question)).strip()
+
     try:
-        text = (await asked(state, config, SUMMARIZE + named, f"The summary so far:\n{before['text'] or '(none yet)'}\n\n"
-                                                    f'The new turns:\n{transcript(chunk)}')).strip()
+        # The summary keeps every name, number and pledge it folds in (adventure/compaction.py).
+        text, missing = await compaction.checked(draft, live)
+        text = compaction.also(text, missing) if text else ''
     except Exception:  # noqa: BLE001 - the turns stay word for word until the next try.
         return
     if text:

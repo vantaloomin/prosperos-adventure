@@ -1,4 +1,4 @@
-"""BRP (docs/requirements.md "Rulesets"; content in adventure/rules/packs/brp, from Chaosium's Basic Roleplaying ORC
+"""BRP (Dungeon's docs/requirements.md "Rulesets"; content in adventure/rules/packs/brp, from Chaosium's Basic Roleplaying ORC
 Content Document, under the ORC License).
 
 - **The sheet.** Seven characteristics (STR, CON, SIZ, INT, POW, DEX, CHA), bought point-based as written: all start

@@ -18,6 +18,12 @@ as it always was.
   picked by weight on the same dice; while one lingers, the rest of its group stays out.
 Timers are game state (`lore_timers`, in adventure/timeline.py SAVED), so going back rewinds them. Lingering entries
 come before newly fired ones and count toward MAX_TRIGGERED.
+
+**Who may read it** (spec "Who sees what"): each entry carries a visibility tag, `public`, `known` (to the characters
+in its `known_to`, by their keys: a world package's cast or persona id, or a seat's key) or `gm` (only the GM view).
+Privacy is enforced by leaving an entry out of a reader's context (`readable`), never by asking a model to keep it
+quiet. An entry with no tag counts as public, as the spec decided; a tag that cannot be read counts as GM only, and
+so does `known` listing nobody, so a typo in a file never leaks a secret.
 """
 import random
 import re
@@ -42,6 +48,9 @@ MAX_GROUP = 80
 # A Marinara world map's lorebook (adventure/world/marinara.py) and the source title its city carries.
 MAP_FORMAT = 'Marinara world map'
 MAP_TITLE = 'Marinara world map: '
+# An entry's visibility tags (see "Who may read it" above), and how long a character key in `known_to` may be.
+VISIBILITY = ('public', 'known', 'gm')
+MAX_KNOWERS, MAX_KEY = 40, 80
 
 
 def books(connection) -> list[dict]:
@@ -64,7 +73,50 @@ def entry_view(row: dict, scene: dict) -> dict:
             'always': bool(row['always']), 'pattern': bool(row['pattern']), 'enabled': bool(row['enabled']),
             'when': [{'key': key, 'label': moments.label(key, scene['city'])} for key in when],
             'when_guessed': guessed, 'fits_now': bool(row['enabled']) and moments.matches(when, scene['now']),
-            'timing': timing_of(row)}
+            'timing': timing_of(row), **visibility_of(row)}
+
+
+# Who may read an entry ------------------------------------------------------------------------------------
+
+def keys_of(value) -> list[str]:
+    """Character keys as a list of distinct trimmed strings; anything else in the list is dropped."""
+    found: list[str] = []
+    for key in value if isinstance(value, list) else []:
+        key = key.strip()[:MAX_KEY] if isinstance(key, str) else ''
+        if key and key not in found:
+            found.append(key)
+    return found[:MAX_KNOWERS]
+
+
+def tagged(entry: dict) -> tuple[str, list[str]]:
+    """The visibility tag of an entry read from a file (a lorebook, a world package's lore): untagged is public, a
+    `known_to` with no tag means known, and an unreadable tag or `known` listing nobody is GM only."""
+    known_to = keys_of(entry.get('known_to'))
+    visibility = entry.get('visibility')
+    if visibility is None:
+        visibility = 'known' if known_to else 'public'
+    if visibility not in VISIBILITY or (visibility == 'known' and not known_to):
+        return 'gm', []
+    return visibility, known_to if visibility == 'known' else []
+
+
+def visibility_of(row: dict) -> dict:
+    """A stored entry's tag (or a package fact's, whose known_to is already a list); a row from before tags existed
+    is public."""
+    known_to = row.get('known_to') or []
+    return {'visibility': row.get('visibility') or 'public',
+            'known_to': decode(known_to) if isinstance(known_to, str) else list(known_to)}
+
+
+def readable(row: dict, knowers: frozenset[str] | None) -> bool:
+    """Whether a reader may have the entry in its context. `knowers` are the keys of the characters the reader reads
+    for (an agent: itself; the Writer in Play: the user's character); None is the GM view, which reads everything."""
+    if knowers is None:
+        return True
+    tag = visibility_of(row)
+    if tag['visibility'] == 'public':
+        return True
+    return tag['visibility'] == 'known' and not knowers.isdisjoint(tag['known_to'])
 
 
 def timing_of(row: dict) -> dict:
@@ -155,6 +207,34 @@ def set_timing(database, entry_id: str, timing: dict) -> dict:
     return listing(database)
 
 
+def for_reader(connection, city_id: str | None, knowers: frozenset[str] | None, focus: str,
+               limit: int = MAX_TRIGGERED) -> list[dict]:
+    """The lore a reader's context gets (adventure/rounds/context.py): entries switched on that the reader may read,
+    always-on ones and those whose keyword is in `focus`, at most `limit` of the keyword ones. No timer or chance
+    runs: those are the narrator's game state."""
+    rows = [row for row in many(
+        connection, 'SELECT e.* FROM lore_entries e JOIN lore_books b ON b.id=e.book_id WHERE e.enabled=1 AND '
+        'b.enabled=1 AND (b.city_id IS NULL OR b.city_id=?) ORDER BY b.created_at, e.position', (city_id,))
+        if readable(row, knowers)]
+    scanned = focus.casefold()
+    named = [row for row in rows if not row['always'] and any(mentioned(word, scanned)
+                                                                for word in decode(row['keywords']))]
+    return [row for row in rows if row['always']] + named[:limit]
+
+
+def set_visibility(database, entry_id: str, visibility: str, known_to: list[str]) -> dict:
+    """Who may read an entry, from the Lore screen: public, known to the listed characters, or GM only."""
+    require(visibility in VISIBILITY, 'An entry is public, known to some characters, or GM only.', 422)
+    known_to = keys_of(known_to) if visibility == 'known' else []
+    require(visibility != 'known' or bool(known_to), 'Name at least one character who knows this.', 422)
+    with database.connect(write=True) as connection:
+        entry = one(connection, 'SELECT * FROM lore_entries WHERE id=?', (entry_id,))
+        visible_book(connection, entry['book_id'])
+        connection.execute('UPDATE lore_entries SET visibility=?, known_to=? WHERE id=?',
+                           (visibility, encode(known_to), entry_id))
+    return listing(database)
+
+
 def remove_book(database, book_id: str) -> dict:
     with database.connect(write=True) as connection:
         visible_book(connection, book_id)
@@ -163,19 +243,21 @@ def remove_book(database, book_id: str) -> dict:
 
 
 def add_book(connection, timestamp: str, book: dict, filename: str, city_id: str | None = None) -> dict:
-    """A lorebook read by adventure/imports/formats.py, saved with its entries."""
+    """A lorebook read by adventure/imports/formats.py, or a world package's lore, saved with its entries and their
+    visibility tags (`tagged`)."""
     book_id = identifier()
     connection.execute('INSERT INTO lore_books (id, name, description, source_format, source_file, created_at, '
                        'city_id) VALUES (?, ?, ?, ?, ?, ?, ?)',
                        (book_id, book['name'], book['description'], book['format'], filename[:260], timestamp, city_id))
     for position, entry in enumerate(book['entries']):
         timing = clamped(entry.get('timing') or {})
+        visibility, known_to = tagged(entry)
         connection.execute('INSERT INTO lore_entries (id, book_id, position, title, text, keywords, always, pattern, '
-                           'enabled, sticky, cooldown, delay, chance, group_weight, lore_group) '
-                           'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+                           'enabled, sticky, cooldown, delay, chance, group_weight, lore_group, visibility, known_to) '
+                           'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
                            (identifier(), book_id, position, entry['title'], entry['text'], encode(entry['keywords']),
                             int(entry['always']), int(entry['pattern']), int(entry['enabled']),
-                            *(timing[key] for key in TIMING), timing['group']))
+                            *(timing[key] for key in TIMING), timing['group'], visibility, encode(known_to)))
     return {'id': book_id, 'name': book['name'], 'entries': len(book['entries']),
             'off': sum(not entry['enabled'] for entry in book['entries'])}
 
@@ -232,9 +314,9 @@ def carry_city_lore(target: Path, source: Path, city: dict) -> None:
                 'created_at, ? FROM kept.lore_books WHERE id=?', (new_id, city['id'], book_id))
             connection.execute(
                 'INSERT INTO main.lore_entries (id, book_id, position, title, text, keywords, always, pattern, enabled, '
-                'moment, sticky, cooldown, delay, chance, lore_group, group_weight) '
+                'moment, sticky, cooldown, delay, chance, lore_group, group_weight, visibility, known_to) '
                 'SELECT lower(hex(randomblob(16))), ?, position, title, text, keywords, always, pattern, enabled, '
-                'moment, sticky, cooldown, delay, chance, lore_group, group_weight '
+                'moment, sticky, cooldown, delay, chance, lore_group, group_weight, visibility, known_to '
                 'FROM kept.lore_entries WHERE book_id=?', (new_id, book_id))
         connection.execute('COMMIT')
     except BaseException:
@@ -273,11 +355,12 @@ def mentioned(keyword: str, text: str) -> bool:
 
 
 def prompt_text(connection, city: dict, place_id: str, local: datetime, recent: list[str], user: str = '',
-                line: int = 0, branch: str = '') -> str:
+                line: int = 0, branch: str = '', knowers: frozenset[str] | None = frozenset()) -> str:
     """The lore for this turn: always-on entries, then lingering ones, then entries whose keywords are in the last
     few messages, then those whose "when" fits the scene, at most MAX_TRIGGERED besides the always-on. '' with no
-    lore switched on. `line` is the story line being told (0 leaves timing out) and `branch` the branch it is on."""
-    return chosen(connection, city, place_id, local, recent, user, line, branch)[0]
+    lore switched on. `line` is the story line being told (0 leaves timing out) and `branch` the branch it is on.
+    Only entries the reader may read come in (`readable`); by default, public ones."""
+    return chosen(connection, city, place_id, local, recent, user, line, branch, knowers)[0]
 
 
 def dice(branch: str, line: int, what: str) -> random.Random:
@@ -286,11 +369,12 @@ def dice(branch: str, line: int, what: str) -> random.Random:
 
 
 def chosen(connection, city: dict, place_id: str, local: datetime, recent: list[str], user: str = '',
-           line: int = 0, branch: str = '') -> tuple[str, list[dict]]:
+           line: int = 0, branch: str = '', knowers: frozenset[str] | None = frozenset()) -> tuple[str, list[dict]]:
     """prompt_text, and the entries that fired anew on this line with a timer to start (for `remember`)."""
-    entries = many(connection, 'SELECT e.* FROM lore_entries e JOIN lore_books b ON b.id=e.book_id WHERE e.enabled=1 '
-                   'AND b.enabled=1 AND (b.city_id IS NULL OR b.city_id=?) ORDER BY b.created_at, e.position',
-                   (city['id'],))
+    entries = [entry for entry in many(
+        connection, 'SELECT e.* FROM lore_entries e JOIN lore_books b ON b.id=e.book_id WHERE e.enabled=1 '
+        'AND b.enabled=1 AND (b.city_id IS NULL OR b.city_id=?) ORDER BY b.created_at, e.position', (city['id'],))
+        if readable(entry, knowers)]
     if not entries:
         return '', []
     timers = {row['entry_id']: row for row in many(connection, 'SELECT * FROM lore_timers')} if line else {}
@@ -367,3 +451,32 @@ def timers_view(connection, line: int) -> dict:
         else:
             states[entry['id']] = {'state': 'ready', 'lines': 0}
     return states
+
+
+# Timing in agent play ------------------------------------------------------------------------------------------------
+
+def round_timing(connection, line: int, branch: str) -> dict:
+    """Which timed entries linger and which are held out on round `line` (docs/spec.md "Timing": lore timers count
+    rounds in every mode). Every round opens on a line of its own (adventure/rounds/play.py), so a round is a line
+    here, as a player's line is. Held out: resting, waiting for its line, or missing its chance on this line's dice."""
+    timers = {row['entry_id']: row for row in many(connection, 'SELECT * FROM lore_timers')}
+    lingering, held = [], []
+    for entry in many(connection, 'SELECT id, sticky, cooldown, delay, chance FROM lore_entries WHERE enabled=1 AND '
+                                  'always=0 AND (sticky>0 OR cooldown>0 OR delay>0 OR chance<100)'):
+        timer = timers.get(entry['id'])
+        if timer and line <= timer['active_until']:
+            lingering.append(entry['id'])
+        elif (timer and line <= timer['rest_until']) or line < entry['delay'] or (
+                entry['chance'] < 100 and dice(branch, line, entry['id']).randrange(100) >= entry['chance']):
+            held.append(entry['id'])
+    return {'line': line, 'lingering': lingering, 'held': held}
+
+
+def started_in(connection, text: str, timing: dict) -> list[dict]:
+    """The timed entries a round brought up (a keyword in its opening line or its post) that were free to fire: their
+    timers start, as a player's line starts them."""
+    scanned = text.casefold()
+    skip = set(timing.get('lingering', [])) | set(timing.get('held', []))
+    return [entry for entry in many(connection, 'SELECT * FROM lore_entries WHERE enabled=1 AND always=0 AND '
+                                                '(sticky>0 OR cooldown>0)')
+            if entry['id'] not in skip and any(mentioned(word, scanned) for word in decode(entry['keywords']))]

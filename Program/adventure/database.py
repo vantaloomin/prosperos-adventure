@@ -119,6 +119,10 @@ SINGLETONS = ('workspace_settings', 'builtin_recall')
 # Columns added to a table after it shipped: (table, column, definition). CREATE TABLE IF NOT EXISTS leaves an
 # existing table as it was, so an upgraded workspace gains them here. schema.sql lists them too, for new workspaces.
 ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"),
+                 # What an offscreen agent said in an off-page beat (adventure/rounds/offpage.py).
+                 ('story_beats', 'lines', "TEXT NOT NULL DEFAULT '[]'"),
+                 # The mode a user line was sent in (adventure/rounds/play.py).
+                 ('story_messages', 'mode', "TEXT NOT NULL DEFAULT 'play'"),
                  # When a lore entry applies besides its keywords (adventure/lore_moments.py), as a JSON list of
                  # conditions; NULL until the player sets one, while the app reads one from its keywords.
                  ('lore_entries', 'moment', 'TEXT'),
@@ -129,6 +133,10 @@ ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"
                  ('lore_entries', 'chance', 'INTEGER NOT NULL DEFAULT 100'),
                  ('lore_entries', 'lore_group', "TEXT NOT NULL DEFAULT ''"),
                  ('lore_entries', 'group_weight', 'INTEGER NOT NULL DEFAULT 100'),
+                 # Who may read a lore entry (adventure/lore.py "Who may read it"); entries from before are public.
+                 ('lore_entries', 'visibility', "TEXT NOT NULL DEFAULT 'public' CHECK (visibility IN ('public', "
+                                                "'known', 'gm'))"),
+                 ('lore_entries', 'known_to', "TEXT NOT NULL DEFAULT '[]'"),
                  ('story_messages', 'flags', "TEXT NOT NULL DEFAULT '[]'"), ('story_messages', 'previous', 'TEXT'),
                  ('story_rolls', 'threat', 'TEXT'), ('story_wounds', 'rested', 'INTEGER NOT NULL DEFAULT 0'),
                  ('story_wounds', 'treated', 'INTEGER NOT NULL DEFAULT 0'),
@@ -201,7 +209,11 @@ ADDED_COLUMNS = (('story_messages', 'branch_id', "TEXT NOT NULL DEFAULT 'first'"
                  ('story_campaign', 'politics', "TEXT CHECK (politics IN ('off', 'quiet', 'true_to_life', 'lively'))"),
                  ('story_inventory', 'stolen', 'INTEGER NOT NULL DEFAULT 0 CHECK (stolen IN (0, 1))'),
                  ('story_inventory', 'condition',
-                  "TEXT NOT NULL DEFAULT 'sound' CHECK (condition IN ('sound', 'damaged', 'broken'))"))
+                  "TEXT NOT NULL DEFAULT 'sound' CHECK (condition IN ('sound', 'damaged', 'broken'))"),
+                 # A planned beat that reached the page (adventure/rounds/author.py), for the beat board.
+                 ('story_arc_beats', 'landed', 'INTEGER NOT NULL DEFAULT 0'),
+                 # Whether the user answered a switch out of Play's missed-motives question (adventure/rounds/modes.py).
+                 ('mode_switches', 'answered', 'INTEGER NOT NULL DEFAULT 0'))
 
 
 # Tables renamed since they were made: (old, new). Renamed before the schema runs, so their rows carry over.
@@ -233,8 +245,6 @@ def initialize(connection, timestamp: str):
     table.adopt(connection)
     from adventure.life import ages
     ages.start_town(connection, timestamp)
-    from adventure.world import retired
-    retired.keep(connection, timestamp)
     connection.executemany('INSERT OR REPLACE INTO app_identity (key, value) VALUES (?, ?)',
                            (('schema_version', str(SCHEMA_VERSION)), ('schema_digest', schema_digest()),
                             ('app_version', VERSION)))

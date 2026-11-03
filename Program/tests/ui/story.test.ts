@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { actionLine, aroundText, diceFaces, diceNotation, tumbleFace, bandSpans, branchLine, journeyTo, markerAt, nearMiss, NO_TURN, turnAfter, reworded, sentences, foesText, zoneText, tallyText, statusItems, haggleText, paceText, intensityChoices, dramaChoices, gearLine, looksText, journalKind, moneyText, questState, slotsText, personLine, placeGroups, pointsLeft, pointsText, premadeLine, rollText, rollWhat, unrolled, fateFaces, fateLadder, challengeDice, brpCost, xpLine, spellLine, sceneTime, abilityLine, signed, arrayPlaced, skillChoices, skillId, startingStats, tierText, darkText, bondsText, bondLine, threadKind, otherTowns, receiptsByReply, institutionLine, todayLine, toggledVeil } from '../../src/features/story/storyText.ts'
+import { actionLine, aroundText, diceFaces, diceNotation, tumbleFace, bandSpans, branchLine, journeyTo, markerAt, nearMiss, NO_TURN, turnAfter, reworded, sentences, foesText, zoneText, tallyText, statusItems, sceneLine, haggleText, paceText, intensityChoices, dramaChoices, gearLine, looksText, journalKind, moneyText, questState, slotsText, personLine, placeGroups, pointsLeft, pointsText, rollText, rollWhat, unrolled, fateFaces, fateLadder, challengeDice, brpCost, xpLine, spellLine, sceneTime, abilityLine, signed, arrayPlaced, skillChoices, skillId, startingStats, tierText, darkText, bondsText, bondLine, threadKind, otherTowns, receiptsByReply, institutionLine, todayLine, toggledVeil } from '../../src/features/story/storyText.ts'
+import { sessionBody } from '../../src/features/story/campaignSession.ts'
 import { artLabel, artStatus, making, pictureChoices } from '../../src/features/story/artText.ts'
 
 test('the scene time is the city clock as written', () => {
@@ -57,9 +58,6 @@ test('a made character starts even and counts the points it has left', () => {
   assert.equal(pointsLeft({ ...stats, Mind: 13 }, 60), -3)
   assert.equal(pointsText(-1, 60), '1 point over of 60')
   assert.equal(pointsText(4, 60), '4 points left of 60')
-  assert.equal(premadeLine({ gender: 'woman', age: 41 }), 'a woman, 41')
-  assert.equal(premadeLine({ gender: 'nonbinary', age: null }), 'nonbinary')
-  assert.equal(premadeLine({ gender: '', age: null }), '')
 })
 
 test('a branch says how long it ran', () => {
@@ -207,6 +205,8 @@ test('turnAfter builds a turn from its stream events in order', () => {
   let turn = turnAfter(NO_TURN, { stage: 'reading' })
   turn = turnAfter(turn, { actions: [{ action: 'win her over', stat: 'Allure', difficulty: 'hard' }], bands: [...BANDS] })
   turn = turnAfter(turn, { roll: { ...ROLL } })
+  // The round loop's events leave the turn as it was.
+  turn = turnAfter(turn, { round: { turn_id: 't1', state: 'writing' } })
   turn = turnAfter(turn, { stage: 'writing' })
   assert.equal(turn.stage, 'writing')
   assert.equal(turn.bands?.length, 5)
@@ -377,4 +377,20 @@ test('otherTowns offers only this world\'s towns off the travel map, never a roa
   assert.deepEqual(otherTowns(cities, 'kingswood', ['Hollin']).map((city) => city.id), ['eriane'])
   assert.deepEqual(otherTowns(cities, 'haddon', []).map((city) => city.id), [])
   assert.deepEqual(otherTowns(cities, 'nowhere', []), [])
+})
+
+test("the cast page's start request carries the tone preset and only the campaign choices made", () => {
+  const preset = { id: 'gentler', name: 'Gentler', hand: 'soft' as const, rules: { intensity: 'restrained' as const, drama: 'quiet' as const, injury_persistence: 'temporary' as const } }
+  const none = { arc: null, pace: null, ironman: false, legacy: null }
+  assert.deepEqual(sessionBody(preset, none, null), { table: preset.rules, ironman: false })
+  assert.deepEqual(sessionBody(preset, { ...none, ironman: true, arc: 'epic' }, 'soft'), { table: preset.rules, arc: 'epic', hand: 'soft', ironman: true })
+  assert.deepEqual(sessionBody(undefined, none, null), { table: {}, ironman: false })
+})
+
+test('the play header is one line: time, then how the character is', () => {
+  const fight = { condition: 'unhurt', hp: 10, max_hp: undefined, stress: 'shaken', injuries: [], captors: null, fight: null, dead: false }
+  assert.deepEqual(sceneLine({ local_time: '1290-05-01T18:15' }, fight as never), ['Monday, 6:15 pm', 'Unhurt'])
+  assert.deepEqual(sceneLine({ local_time: '1290-05-01T09:05' }, { ...fight, condition: 'hurt', injuries: ['a limp'], captors: 'the watch' } as never),
+    ['Monday, 9:05 am', 'Hurt', 'Lasting: a limp', 'Held by the watch'])
+  assert.deepEqual(sceneLine({ local_time: '1290-05-01T09:05' }, { ...fight, dead: true } as never), ['Monday, 9:05 am', 'Dead'])
 })

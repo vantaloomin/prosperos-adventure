@@ -2,8 +2,8 @@
 
 The Companion Life deck (deck.py, world/data/life_deck.json) drew small everyday moments for one companion. Adventure
 worlds keep the same idea and the same seeded dice (chance.py), with what the requirements add on top
-(docs/requirements.md: "Intensity and tone", "Off-page beats", "NPC minds", "Time and travel"); the schema is
-written up in docs/life-cards.md.
+(Dungeon's docs/requirements.md: "Intensity and tone", "Off-page beats", "NPC minds", "Time and travel"); the schema is
+written up in Dungeon's docs/life-cards.md.
 
 - A card belongs to one or more **scenes**: a day in town, a stretch of road, a rest outside safety, or an
   off-page beat for an absent character ({them}).

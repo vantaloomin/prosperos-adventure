@@ -141,7 +141,10 @@ def broken_references(section: str, entries: list, field: str, target: str, know
 
 
 def hidden(section: str, entry: dict) -> bool:
-    return section in HIDDEN_SECTIONS or any(entry.get(field) for field in HIDDEN_FIELDS)
+    """Whether an entry hides a truth: its section, a hidden field, or a visibility tag other than public (an entry
+    of lore known to some or GM only, adventure/lore.py "Who may read it")."""
+    return section in HIDDEN_SECTIONS or any(entry.get(field) for field in HIDDEN_FIELDS) or \
+        entry.get('visibility', 'public') != 'public' or bool(entry.get('known_to'))
 
 
 # The package file ---------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-"""The judge of Narrative Only (adventure/rules/narrative.py; docs/requirements.md "Narrative Only").
+"""The judge of Narrative Only (adventure/rules/narrative.py; Dungeon's docs/requirements.md "Narrative Only").
 
 Under Narrative Only each of a turn's actions gets a verdict instead of a roll: No, No, but, Yes, but or Yes, with a
 one-line reason. The judge is a model (the Referee's own, else the narrator's), asked once per turn about all of the

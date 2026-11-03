@@ -1,10 +1,11 @@
-import { Fragment, useEffect, useRef, useState, useSyncExternalStore, type CSSProperties, type KeyboardEvent, type PointerEvent, type ReactNode } from 'react'
+import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties, type KeyboardEvent, type PointerEvent, type ReactNode } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
-import { BookOpenText, Ellipsis, PanelRight, Pin, PinOff, Swords, X } from 'lucide-react'
+import { Pin, PinOff, X } from 'lucide-react'
 import { api } from '../../api'
 import type { Gear, Story as StoryData, StoryBack, StoryFight } from '../../types'
 import { HiddenValues } from '../settings/HiddenValues'
 import { clampWidth, GRID_WIDTH, PANEL_WIDTH, readLook, saveLook, useDeviceLook } from '../settings/deviceLook'
+import { StoryCast, type CastRound } from './StoryCast'
 import { StoryBranches } from './StoryBranches'
 import { StoryChapters } from './StoryChapters'
 import { StoryExport } from './StoryExport'
@@ -26,7 +27,7 @@ import { loadGrids, onGrid, useGrids, type Flash } from './grid'
 import { StoryGrid } from './StoryGrid'
 import { foeNumbers, zoneText } from './storyText'
 import { BattleMap } from './BattleMap'
-import { ASK_EVENT, hasWidget, loadPins, MORE, partyOf, peopleHere, savePins, sceneWidgets, TABS, takeAsked, WIDGET_NAMES, type Widget } from './scene'
+import { ASK_EVENT, hasWidget, loadPins, partyOf, peopleHere, savePins, sceneWidgets, takeAsked, WIDGET_NAMES, type Widget } from './scene'
 import { STORY_KEY } from './table'
 
 /** Matches the stylesheet's breakpoint for the side panel. */
@@ -59,13 +60,13 @@ function tiledNow(widget: Widget): boolean {
   return onGrid(saved.layouts[saved.current], widget)
 }
 
-interface PanelProps { story: StoryData; change: (request: () => Promise<StoryData>) => Promise<void>; onTravel: (name: string) => void; onLine?: (text: string) => void; onBack: (data: StoryBack) => void }
-type PanelView = 'scene' | 'more' | Widget
+interface PanelProps { story: StoryData; change: (request: () => Promise<StoryData>) => Promise<void>; onTravel: (name: string) => void; onLine?: (text: string) => void; onBack: (data: StoryBack) => void; round?: CastRound }
+type PanelView = 'scene' | Widget
 
-/** Beside the story (requirements "Play screen and widgets"): the scene panel, which shows what the scene needs and
- *  what the player pinned, and the drawer's tabs for everything else. On a wide screen it is a column beside the
- *  story; on a narrow one the tabs sit under the composer and open it as a sheet, and the Scene tab gets a dot when
- *  the scene changes (a fight starts), so nothing opens over the reading. */
+/** Beside the story (requirements "Play screen and widgets"): the scene panel, which shows who's here
+ *  (./StoryCast.tsx), what the scene needs and what the player pinned; the story's menu (./StoryMenu.tsx, ⌘K) opens
+ *  everything else in it. On a wide screen it is a column beside the story; on a narrow one, or in Reader, the menu
+ *  opens it as a sheet over the bottom of the story. */
 export function StoryPanel(props: PanelProps) {
   const panel = usePanel(props.story)
   const width = usePanelWidth(panel.custom)
@@ -74,7 +75,6 @@ export function StoryPanel(props: PanelProps) {
     <aside className={`story-panel${panel.open ? ' open' : ''}${panel.custom ? ' custom' : ''}`} aria-label="The scene and your character"
       style={panel.wide ? { '--story-panel-width': `${width.shown}px` } as CSSProperties : undefined}>
       {panel.showing && <PanelBody {...props} panel={panel} />}
-      <PanelTabs story={props.story} panel={panel} />
       {panel.wide && <PanelResize width={width} />}
     </aside>
   )
@@ -135,7 +135,6 @@ function PanelResize({ width }: { width: ReturnType<typeof usePanelWidth> }) {
 
 function usePanel(story: StoryData) {
   const { wide, custom } = useBeside()
-  const roomy = useWide()
   const grids = useGrids()
   const gear = useQuery({ queryKey: ['story-gear'], queryFn: () => api<Gear>('/story/gear'), enabled: story.messages.length > 0 })
   const [view, setView] = useState<PanelView>('scene')
@@ -147,7 +146,7 @@ function usePanel(story: StoryData) {
     const take = () => {
       const widget = takeAsked()
       if (!widget) return
-      if (tiledNow(widget)) { setView('scene'); setFlash({ widget, at: Date.now() }) } else { setView(widget); setOpen(true) }
+      if (widget !== 'scene' && tiledNow(widget)) { setView('scene'); setFlash({ widget, at: Date.now() }) } else { setView(widget); setOpen(true) }
     }
     take()
     window.addEventListener(ASK_EVENT, take)
@@ -161,9 +160,6 @@ function usePanel(story: StoryData) {
   const [pins, setPins] = useState(loadPins)
   const picked = sceneWidgets(story, !!gear.data?.shop)
   const showing = wide || open
-  // The scene the player last looked at; a different one since puts the dot on the Scene tab.
-  const [seen, setSeen] = useState(picked.join())
-  if (showing && view === 'scene' && seen !== picked.join()) setSeen(picked.join())
   const pick = (next: PanelView) => {
     if (!wide && open && view === next) setOpen(false)
     else { setView(next); setOpen(true) }
@@ -173,7 +169,9 @@ function usePanel(story: StoryData) {
     setPins(next)
     savePins(next)
   }
-  return { wide, custom, grids, flash, roomy, view, open, close: () => setOpen(false), pins, picked, showing, changed: seen !== picked.join(), pick, pin }
+  // Closing a view beside the story goes back to the scene; over the story, it closes the sheet.
+  const close = () => { if (wide) setView('scene'); else setOpen(false) }
+  return { wide, custom, grids, flash, view, open, close, pins, picked, showing, pick, pin }
 }
 
 function PanelBody({ panel, ...props }: PanelProps & { panel: Panel }) {
@@ -181,36 +179,13 @@ function PanelBody({ panel, ...props }: PanelProps & { panel: Panel }) {
   const { view, pins, picked, pin } = panel
   return (
     <div className="story-panel-body">
-      {!panel.wide && <button type="button" className="icon-button story-panel-close" aria-label="Close" onClick={panel.close}><X aria-hidden="true" /></button>}
+      {(!panel.wide || view !== 'scene') && <button type="button" className="icon-button story-panel-close" aria-label={panel.wide ? "Back to who's here" : 'Close'} onClick={panel.close}><X aria-hidden="true" /></button>}
       {view === 'scene' && panel.custom && <StoryGrid story={story} grids={panel.grids} picked={picked} flash={panel.flash}
         render={(widget) => <PanelWidget widget={widget} {...props} />} />}
       {view === 'scene' && !panel.custom && <SceneView {...props} picked={picked} pins={pins.filter((item) => !picked.includes(item) && hasWidget(story, item))} onUnpin={pin} />}
-      {view === 'more' && <MoreList story={story} onPick={panel.pick} />}
-      {view !== 'scene' && view !== 'more' && <DrawerView {...props} widget={view} pinned={pins.includes(view)} onPin={() => pin(view)} />}
+      {view !== 'scene' && <DrawerView {...props} widget={view} pinned={pins.includes(view)} onPin={() => pin(view)} />}
     </div>
   )
-}
-
-function PanelTabs({ story, panel }: { story: StoryData; panel: Panel }) {
-  const tab = (name: PanelView, label: ReactNode) => (
-    <button type="button" className="story-tab" aria-pressed={panel.showing && panel.view === name} onClick={() => panel.pick(name)}>{label}</button>)
-  return (
-    <nav className="story-tabs" aria-label="Scene and drawer">
-      {tab('scene', <>{panel.changed && <span className="story-dot" aria-label="The scene changed" />}{panel.picked.includes('fight') && <Swords aria-hidden="true" />}Scene</>)}
-      {TABS.filter((item) => hasWidget(story, item)).map((item) => <Fragment key={item}>{tab(item, WIDGET_NAMES[item])}</Fragment>)}
-      {tab('more', <><Ellipsis aria-hidden="true" />More</>)}
-      {panel.roomy && <LayoutSwitch reader={!panel.wide} />}
-    </nav>
-  )
-}
-
-/** Reader, or back to the layout with the panel beside the story (Classic, Custom or Visual novel), from the tabs on a wide screen
- *  (Settings > General > Appearance keeps it too). */
-function LayoutSwitch({ reader }: { reader: boolean }) {
-  const { lastBeside } = useDeviceLook()
-  const label = reader ? 'Show the scene panel beside the story' : 'Reader layout: give the story the room'
-  return <button type="button" className="icon-button story-layout" aria-label={label} title={label}
-    onClick={() => saveLook({ layout: reader ? lastBeside : 'reader' })}>{reader ? <PanelRight aria-hidden="true" /> : <BookOpenText aria-hidden="true" />}</button>
 }
 
 /** Before the first line there is no scene yet; only the ways back into other stories are worth showing. */
@@ -230,25 +205,17 @@ function BeforeTheStory({ story, change }: PanelProps) {
 interface SceneProps extends PanelProps { picked: Widget[]; pins: Widget[]; onUnpin: (widget: Widget) => void }
 
 function SceneView({ picked, pins, onUnpin, ...props }: SceneProps) {
+  const client = useQueryClient()
+  // Who's here is always first, so the scene's own picks leave out the people here, and the journal it falls back to.
+  const own = picked.filter((widget) => widget !== 'here' && !(widget === 'journal' && picked.length === 1))
   return (<>
-    <h2 className="story-panel-heading">This scene</h2>
-    {picked.map((widget) => <PanelWidget key={widget} widget={widget} {...props} />)}
+    <StoryCast story={props.story} round={props.round} onTrade={() => void client.invalidateQueries({ queryKey: STORY_KEY })} />
+    {own.map((widget) => <PanelWidget key={widget} widget={widget} {...props} />)}
     {!!pins.length && <h2 className="story-panel-heading">Pinned</h2>}
     {pins.map((widget) => <div key={widget} className="story-pinned">
       <PanelWidget widget={widget} {...props} />
       <button type="button" className="text-button" onClick={() => onUnpin(widget)}><PinOff aria-hidden="true" />Unpin {WIDGET_NAMES[widget].toLowerCase()}</button>
     </div>)}
-  </>)
-}
-
-function MoreList({ story, onPick }: { story: StoryData; onPick: (widget: Widget) => void }) {
-  return (<>
-    <h2 className="story-panel-heading">More</h2>
-    <ul className="story-more">
-      {MORE.filter((widget) => hasWidget(story, widget)).map((widget) => <li key={widget}>
-        <button type="button" className="text-button" onClick={() => onPick(widget)}>{WIDGET_NAMES[widget]}</button>
-      </li>)}
-    </ul>
   </>)
 }
 

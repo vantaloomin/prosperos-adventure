@@ -410,6 +410,19 @@ class Intensity(Record):
     drama: Literal['quiet', 'uneasy', 'eventful', 'merciless'] = 'uneasy'
 
 
+class HouseRules(Record):
+    """What a world adds to the house rulebook every campaign starts from (adventure/rounds/house_rules.py): entries
+    for each list, and its own ways to set thoughts and System panes. The user edits the result at the Table."""
+    dialogue: list[Annotated[str, Field(min_length=1, max_length=300)]] = Field(default_factory=list, max_length=40)
+    punctuation: list[Annotated[str, Field(min_length=1, max_length=8)]] = Field(default_factory=list, max_length=20)
+    words: list[Annotated[str, Field(min_length=1, max_length=40)]] = Field(default_factory=list, max_length=400)
+    phrases: list[Annotated[str, Field(min_length=1, max_length=120)]] = Field(default_factory=list, max_length=400)
+    names: list[Annotated[str, Field(min_length=1, max_length=60)]] = Field(default_factory=list, max_length=1000)
+    thoughts: Literal['quoted-italics', 'italics', 'plain'] | None = None
+    pane_title: str | None = Field(default=None, max_length=60, pattern=r'\{title\}')
+    pane_row: str | None = Field(default=None, max_length=60, pattern=r'\{label\}.*\{value\}|\{value\}.*\{label\}')
+
+
 class TownMap(Record):
     """How the town's street map is drawn (adventure/townmap.py): its look, left out to let the era decide ('none' for a
     city that is a world's roads or wilds, not a town), and whether a wall rings it."""
@@ -462,6 +475,8 @@ class City(Record):
     names: CityNames | None = None
     # The world's default intensity and narrator voice; left out, every category is unflinching with no voice.
     intensity: Intensity | None = None
+    # What the world adds to the house rulebook (adventure/rounds/house_rules.py); left out, the defaults alone.
+    house_rules: HouseRules | None = None
     local_color: list[LocalColor] = Field(default_factory=list, max_length=100)
     prices: list[Price] = Field(default_factory=list, max_length=60)
     # A shared holiday calendar ('none' for no shared one); by default chosen from the era and country.

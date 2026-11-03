@@ -10,8 +10,15 @@ summary, so each turn has a time budget and every step is timed and logged with 
   no extra call.
 - Over budget, the optional steps give way: the prose rewrite first, then the contradiction rewrite (logged as
   skipped). Dice and the record are never skipped. The em dash fix always runs; it costs nothing.
+
+Rounds with agents (docs/spec.md "Budgets hold across parallel calls") also spend against a session cap, in tokens
+(`Spend`): each call reserves its estimated cost before it starts and settles to what it used after, under one lock,
+so agents calling at once can't all slip under the cap together. A call that would cross the cap is refused unless
+the turn needs it (an agent then runs on its Program mind); the cap stops play only at Idle (`capped`), so a turn
+that has started finishes. A session is this run of the app.
 """
 import re
+import threading
 import time
 from urllib.parse import urlsplit
 
@@ -109,3 +116,58 @@ async def contradiction(text: str, names: list[str], complete) -> str:
     except Exception:  # noqa: BLE001 - the draft stands; a failed check never loses a turn
         return text
     return revised if prose.acceptable(text, revised) else text
+
+
+# The session's spend -------------------------------------------------------------------------------------------------
+
+class Spend:
+    """Tokens spent this session against its cap (0: no cap), with what calls under way have reserved."""
+
+    def __init__(self):
+        self.lock = threading.Lock()
+        self.spent = 0
+        self.held: dict[int, int] = {}
+        self.next = 0
+
+    def reserve(self, estimate: int, cap: int, required: bool = False) -> int | None:
+        """Hold `estimate` tokens for one call; None when that would cross the cap and the call can give way."""
+        with self.lock:
+            if cap and not required and self.spent + sum(self.held.values()) + estimate > cap:
+                return None
+            self.next += 1
+            self.held[self.next] = max(0, estimate)
+            return self.next
+
+    def settle(self, ticket: int | None, used: int | None):
+        """The call is over: it cost what it used (its estimate when the service didn't say), nothing if it never ran."""
+        with self.lock:
+            estimate = self.held.pop(ticket, 0) if ticket is not None else 0
+            self.spent += estimate if used is None else max(0, used)
+
+    def view(self, cap: int) -> dict:
+        with self.lock:
+            return {'spent': self.spent, 'held': sum(self.held.values()), 'cap': cap}
+
+
+SPENDS: dict[str, Spend] = {}
+SPENDS_LOCK = threading.Lock()
+
+
+def spend_for(database) -> Spend:
+    """The session's spend for one campaign's database."""
+    with SPENDS_LOCK:
+        return SPENDS.setdefault(str(database.path), Spend())
+
+
+def capped(database, cap: int) -> bool:
+    """Checked at Idle: the session has spent its cap, so Watch pauses and no new turn starts by itself."""
+    return bool(cap) and spend_for(database).spent >= cap
+
+
+def used_tokens(usage: dict | None) -> int | None:
+    """Tokens a call used, from the usage its service reported in any provider's names, or None."""
+    usage = usage or {}
+    counts = [usage.get(name) for name in ('input_tokens', 'output_tokens', 'prompt_tokens', 'completion_tokens',
+                                           'promptTokenCount', 'candidatesTokenCount')]
+    numbers = [count for count in counts if isinstance(count, int)]
+    return sum(numbers) if numbers else None

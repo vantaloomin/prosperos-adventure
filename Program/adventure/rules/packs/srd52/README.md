@@ -1,19 +1,25 @@
 # 5E SRD 5.2.1 content pack
 
-The full content of the System Reference Document 5.2.1 as structured data, for the 5e ruleset module (Milestone 4). It is 5E compatible.
+The full content of the System Reference Document 5.2.1 as structured data, for the 5e ruleset module (Milestone 4).
+It is 5E compatible.
 
 ## Attribution
 
-This work includes material from the System Reference Document 5.2.1 ("SRD 5.2.1") by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.
+This work includes material from the System Reference Document 5.2.1 ("SRD 5.2.1") by Wizards of the Coast LLC,
+available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0
+International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.
 
-The app shows this attribution wherever the pack's content is credited. `pack.json` holds the same sentence under `license.attribution`, and the test checks it word for word.
+The app shows this attribution wherever the pack's content is credited. `pack.json` holds the same sentence under
+`license.attribution`, and the test checks it word for word.
 
 ## Changes from the source
 
 - Converted from the PDF to JSON. The rules text is kept as Markdown, unchanged apart from the items below.
 - The publisher's game trademark is removed from one sentence in Playing the Game.
-- Fields that are not in the source are added: ids, parsed numbers (prices in copper, weights, dice, attacks and saves), `shop_types`, `legality`, magic item `value_cp`, and the wage classes in `economy.json`.
-- One printing error is corrected (Young White Dragon's Intelligence save). `pack.json` lists it under `corrections`, and lists the source's other errors, left as printed, under `source_notes`.
+- Fields that are not in the source are added: ids, parsed numbers (prices in copper, weights, dice, attacks and
+  saves), `shop_types`, `legality`, magic item `value_cp`, and the wage classes in `economy.json`.
+- One printing error is corrected (Young White Dragon's Intelligence save). `pack.json` lists it under
+  `corrections`, and lists the source's other errors, left as printed, under `source_notes`.
 
 ## Files
 
@@ -33,7 +39,9 @@ The app shows this attribution wherever the pack's content is credited. `pack.js
 
 ## How a d20 lands on the outcome ladder
 
-Pass/fail as written. A test that meets the DC is `success`, otherwise `failure`. A natural 20 or 1 is `critical_success` or `critical_failure` only on attack rolls and death saving throws. The middle bands (`failure_upside`, `success_cost`) are not used by this ruleset.
+Pass/fail as written. A test that meets the DC is `success`, otherwise `failure`. A natural 20 or 1 is
+`critical_success` or `critical_failure` only on attack rolls and death saving throws. The middle bands
+(`failure_upside`, `success_cost`) are not used by this ruleset.
 
 ## Regenerating
 

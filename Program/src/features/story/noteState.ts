@@ -10,3 +10,10 @@ export type Look = 'off' | 'on' | 'paused'
 export function noteLook(text: string, enabled: boolean): Look {
   return !text.trim() ? 'off' : enabled ? 'on' : 'paused'
 }
+
+/** The event that opens a chat's note from elsewhere (the story's menu): its detail is the chat. */
+export const NOTE_OPEN_EVENT = 'authors-note-open'
+
+export function openAuthorsNote(chat: string) {
+  window.dispatchEvent(new CustomEvent(NOTE_OPEN_EVENT, { detail: chat }))
+}

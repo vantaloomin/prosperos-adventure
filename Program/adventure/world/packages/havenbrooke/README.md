@@ -1,10 +1,18 @@
 # Havenbrooke world package (draft)
 
-Havenbrooke is modern fantasy set in autumn 2009. Supernatural peoples have been legally recognized in America since 1867, and Havenbrooke University in Haven, New York, is the one campus where every kind of them studies together. The story follows nine sophomores sharing the third floor of the Nexus dorm, and the families, courts, covens and fraternities that each claim some part of them. It is adult, frank about sex, and willing to let things go badly.
+Havenbrooke is modern fantasy set in autumn 2009. Supernatural peoples have been legally
+recognized in America since 1867, and Havenbrooke University in Haven, New York, is the one
+campus where every kind of them studies together. The story follows nine sophomores sharing the
+third floor of the Nexus dorm, and the families, courts, covens and fraternities that each claim
+some part of them. It is adult, frank about sex, and willing to let things go badly.
 
-This folder is Havenbrooke's world package in its Markdown and JSON form (see "World packages" in `docs/requirements.md`). The app builds it, with Havenbrooke's engine data, into the world's SQLite file on first use and rebuilds it when anything here changes (`dungeon/packages.py`, `docs/packages.md`).
+This folder is Havenbrooke's world package in its Markdown and JSON form (see "World packages" in
+`docs/requirements.md`). The app builds it, with Havenbrooke's engine data, into the world's
+SQLite file on first use and rebuilds it when anything here changes (`dungeon/packages.py`,
+`docs/packages.md`).
 
-Built from Vanta's Havenbrooke source material (see [sources.md](sources.md)). Every entry is rewritten in fresh prose; nothing is copied from the source files.
+Built from Vanta's Havenbrooke source material (see [sources.md](sources.md)). Every entry is
+rewritten in fresh prose; nothing is copied from the source files.
 
 ## Layout
 
@@ -38,17 +46,23 @@ The engine data that sits outside the package, in the shipped `world/data` folde
 
 ## Eras
 
-Four times to start a campaign: the summer before sophomore year (the prequel), sophomore year (the default, Fall 2009), junior year and senior year. Entries carry `eras` where they only exist in some of them. See [canon/eras.md](canon/eras.md).
+Four times to start a campaign: the summer before sophomore year (the prequel), sophomore year
+(the default, Fall 2009), junior year and senior year. Entries carry `eras` where they only exist
+in some of them. See [canon/eras.md](canon/eras.md).
 
 ## Conventions
 
 - **Ids** are lowercase kebab-case and unique within their file. Cross-references use ids.
-- **`origin`** on an entry says where it comes from: `source` (Vanta's material) or `draft` (invented here to fill a gap, for Vanta to approve or cut).
-- **Tiers** use the shared ladder from "Scaling and tiers": `local`, `regional`, `realm`, `world`, `mythic`. Most of this world is local and regional.
+- **`origin`** on an entry says where it comes from: `source` (Vanta's material) or `draft`
+  (invented here to fill a gap, for Vanta to approve or cut).
+- **Tiers** use the shared ladder from "Scaling and tiers": `local`, `regional`, `realm`, `world`,
+  `mythic`. Most of this world is local and regional.
 - **Prospero stats** run 1 to 30 with 10 as an ordinary adult. A mundane human's Essence is 1 to 3.
 - **Money** is US dollars at real 2009 prices.
-- **Hidden truths** live in `hidden-truths.json` and in `secret` fields, so an importer can mark them as hidden. `lore.json` holds only what a student could know or hear.
-- **Adults only.** Every character is an adult. The freshmen in the cast are kept out of sexual content.
+- **Hidden truths** live in `hidden-truths.json` and in `secret` fields, so an importer can mark
+  them as hidden. `lore.json` holds only what a student could know or hear.
+- **Adults only.** Every character is an adult. The freshmen in the cast are kept out of sexual
+  content.
 
 ## Status
 

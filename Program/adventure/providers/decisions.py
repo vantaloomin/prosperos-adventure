@@ -1,4 +1,4 @@
-"""Decision models: typed questions answered with probabilities, never with text (docs/requirements.md "Referee model").
+"""Decision models: typed questions answered with probabilities, never with text (Dungeon's docs/requirements.md "Referee model").
 
 Three kinds of question, as Jev asks them: `noul` (how likely a statement is true), `choice` (one of named options)
 and `score` (a level on an ordered scale, lowest first). Every backend answers in one shape:

@@ -11,8 +11,6 @@ import { useModelUsage } from './usage'
 import { ProfileEditor } from './ProfileEditor'
 import { ModelMix } from './ModelMix'
 import { ReadyCard, UseBuiltin } from '../../ready/ReadyCard'
-import { isActive } from '../../ready/readyText'
-import { useReady } from '../../ready/useReady'
 import { jobChoice } from './routing'
 import { isDecisions, isRecall, isText, type ModelJob, type ModelProfile, type ModelsOverview } from './types'
 
@@ -46,19 +44,12 @@ function TextProfiles({ overview, editing, setEditing, refresh, result, setResul
   const addButton = useReturnFocus<HTMLButtonElement>(editing === 'new')
   const profiles = overview.profiles.filter(profile => isText(profile.config))
   const done = finish(setEditing, setResult, refresh)
-  // While "Set it up for me" downloads, its card stands in for the "No model yet" line.
-  const ready = useReady().data
-  const builtinComing = isActive(ready) || ready?.status === 'ready'
   return <section className="settings-section form-stack" aria-labelledby="models-heading">
-    <div>
-      <h2 id="models-heading">Models</h2>
-      <p className="subtle">A profile is one provider, model and key: hosted services, your Codex login, or a model running on this computer. The default profile does every job until you give a job its own. Saving never contacts the service.</p>
-    </div>
+    <h2 id="models-heading">Models</h2>
     <ReadyCard hasProfiles={profiles.length > 0} />
-    {profiles.length === 0 && editing !== 'new' && !builtinComing && <p className="subtle">No model yet. Until you add one, what you write is saved and the narrator waits.</p>}
     <ProfileList profiles={profiles} overview={overview} editing={editing} setEditing={setEditing} done={done} refresh={refresh} setResult={setResult} />
     {editing === 'new' ? <ProfileEditor others={overview.profiles} onDone={done} />
-      : <div className="form-actions"><button ref={addButton} type="button" className="button" onClick={() => { setResult(null); setEditing('new') }}>Add a model profile</button></div>}
+      : <div className="form-actions"><button ref={addButton} type="button" className="button" onClick={() => { setResult(null); setEditing('new') }}>Add a model</button></div>}
     {profiles.some(profile => profile.ready) && <JobAssignments overview={overview} onChanged={refresh} setResult={setResult} />}
     {result && !OTHER_FORMS.has(String(editing)) && <Notice tone={result.tone}>{result.text}</Notice>}
   </section>
@@ -70,13 +61,10 @@ function DecisionProfiles({ overview, editing, setEditing, refresh, setResult }:
   const profiles = overview.profiles.filter(profile => isDecisions(profile.config))
   const done = finish(setEditing, setResult, refresh)
   return <section className="settings-section form-stack" aria-labelledby="decision-profiles-heading">
-    <div>
-      <h2 id="decision-profiles-heading">Decisions</h2>
-      <p className="subtle">A decision model gives the odds of each answer instead of writing: whether an action needs a roll, which stat and how hard. Use Jev through OpenRouter, OpenAI Decisions, or a small model on this computer. A text profile on a local server can decide too, so the narrator’s own model can. Choose one for Referee decisions above.</p>
-    </div>
+    <h2 id="decision-profiles-heading">Decisions</h2>
     <ProfileList profiles={profiles} overview={overview} editing={editing} setEditing={setEditing} done={done} refresh={refresh} setResult={setResult} />
     {editing === 'new-decisions' ? <ProfileEditor kind="decisions" others={overview.profiles} onDone={done} />
-      : <div className="form-actions"><button ref={addButton} type="button" className="button" onClick={() => { setResult(null); setEditing('new-decisions') }}>Add a decisions profile</button></div>}
+      : <div className="form-actions"><button ref={addButton} type="button" className="button" onClick={() => { setResult(null); setEditing('new-decisions') }}>Add a decision model</button></div>}
   </section>
 }
 
@@ -86,13 +74,10 @@ function RecallProfiles({ overview, editing, setEditing, refresh, setResult }: S
   const profiles = overview.profiles.filter(profile => isRecall(profile.config))
   const done = finish(setEditing, setResult, refresh)
   return <section className="settings-section form-stack" aria-labelledby="recall-profiles-heading">
-    <div>
-      <h2 id="recall-profiles-heading">Recall</h2>
-      <p className="subtle">Semantic recall finds related parts of the story even when the words differ, using an embedding model. It can use a different service from your text model: an embeddings model in Ollama or LM Studio, OpenAI, or an OpenAI-compatible service. Or let Built-in recall below run one on this PC. Without either, recall matches keywords only.</p>
-    </div>
+    <h2 id="recall-profiles-heading">Recall</h2>
     <ProfileList profiles={profiles} overview={overview} editing={editing} setEditing={setEditing} done={done} refresh={refresh} setResult={setResult} />
     {editing === 'new-recall' ? <ProfileEditor kind="recall" others={overview.profiles} onDone={done} />
-      : <div className="form-actions"><button ref={addButton} type="button" className="button" onClick={() => { setResult(null); setEditing('new-recall') }}>Add a recall profile</button></div>}
+      : <div className="form-actions"><button ref={addButton} type="button" className="button" onClick={() => { setResult(null); setEditing('new-recall') }}>Add a recall model</button></div>}
     {profiles.length > 0 && <RecallChoice overview={overview} profiles={profiles} onChanged={refresh} setResult={setResult} />}
   </section>
 }
@@ -119,11 +104,10 @@ function RecallChoice({ overview, profiles, onChanged, setResult }: { overview: 
   }
   return <div className="field">
     <label htmlFor="model-job-recall">Which profile does recall</label>
-    <select id="model-job-recall" value={overview.routes.recall ?? ''} aria-describedby="model-job-recall-hint" onChange={event => void change(event.target.value)}>
+    <select id="model-job-recall" value={overview.routes.recall ?? ''} onChange={event => void change(event.target.value)}>
       <option value="">Keywords only</option>
       {profiles.filter(profile => profile.recall_ready).map(profile => <option key={profile.id} value={profile.id}>{profile.name}</option>)}
     </select>
-    <small id="model-job-recall-hint">Built-in recall, when it is on, does recall instead.</small>
   </div>
 }
 
@@ -168,12 +152,13 @@ function ProfileCard({ profile, jobs, onEdit, onCopied, onChanged, setResult }: 
   </li>
 }
 
-/** While the Mix tells the story, the narrator's own profile is one of several (and does nothing else). */
+/** While the Mix tells the story, the narrator's own profile is one of several (and does nothing else); that is the
+ *  one role that needs a line under it, since its pick alone no longer says who tells the story. */
 function jobHint(overview: ModelsOverview, job: ModelJob) {
   const mix = overview.mix?.story
   const ready = new Set(overview.profiles.filter(profile => profile.ready).map(profile => profile.id))
   const count = mix?.enabled ? mix.profile_ids.filter(id => ready.has(id)).length : 0
-  return job.key === 'story' && count > 1 ? `Mix is on, so turns are told by ${count} profiles.` : job.detail
+  return job.key === 'story' && count > 1 ? `Mix is on, so turns are told by ${count} profiles` : ''
 }
 
 function JobAssignments({ overview, onChanged, setResult }: { overview: ModelsOverview; onChanged: (data?: ModelsOverview) => void; setResult: (result: Result) => void }) {
@@ -184,19 +169,20 @@ function JobAssignments({ overview, onChanged, setResult }: { overview: ModelsOv
       setResult({ tone: 'info', text: `${job.name} updated.` })
     } catch (error) { setResult({ tone: 'error', text: failure(error, 'Not changed.') }) }
   }
-  return <fieldset className="model-routes form-stack"><legend>Which profile does each job</legend>
+  return <fieldset className="model-routes form-stack"><legend>Roles</legend>
     {overview.jobs.filter(job => job.key !== 'recall').map(job => {
       const choice = jobChoice(overview, job.key)
       // Referee decisions take a decisions profile, or a text profile whose server can score answers; never the default.
       const decides = job.key === 'decisions'
       const options = decides ? overview.profiles.filter(profile => profile.decisions_ready) : ready
+      const hint = jobHint(overview, job)
       return <div className="field" key={job.key}>
         <label htmlFor={`model-job-${job.key}`}>{job.name}</label>
-        <select id={`model-job-${job.key}`} value={choice.value} aria-describedby={`model-job-${job.key}-hint`} onChange={event => void change(job, event.target.value)}>
+        <select id={`model-job-${job.key}`} value={choice.value} aria-describedby={hint ? `model-job-${job.key}-hint` : undefined} onChange={event => void change(job, event.target.value)}>
           <option value="">{job.key === 'chat' || decides ? 'None' : `Same as conversation${choice.inherited ? ` (${choice.inherited})` : ''}`}</option>
           {options.map(profile => <option key={profile.id} value={profile.id}>{profile.name}</option>)}
         </select>
-        <small id={`model-job-${job.key}-hint`}>{jobHint(overview, job)}</small>
+        {hint && <small id={`model-job-${job.key}-hint`}>{hint}</small>}
         {job.key === 'story' && <ModelMix overview={overview} onChanged={onChanged} onError={text => setResult({ tone: 'error', text })} />}
       </div>
     })}

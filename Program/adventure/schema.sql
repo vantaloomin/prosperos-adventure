@@ -232,7 +232,11 @@ CREATE TABLE IF NOT EXISTS lore_entries (
   delay INTEGER NOT NULL DEFAULT 0,
   chance INTEGER NOT NULL DEFAULT 100,
   lore_group TEXT NOT NULL DEFAULT '',
-  group_weight INTEGER NOT NULL DEFAULT 100
+  group_weight INTEGER NOT NULL DEFAULT 100,
+  -- Who may read it (adventure/lore.py "Who may read it"): public, known to the character keys in `known_to` (a JSON
+  -- list), or gm (the GM view only).
+  visibility TEXT NOT NULL DEFAULT 'public' CHECK (visibility IN ('public', 'known', 'gm')),
+  known_to TEXT NOT NULL DEFAULT '[]'
 );
 
 CREATE INDEX IF NOT EXISTS lore_entries_book ON lore_entries(book_id, position);
@@ -297,7 +301,10 @@ CREATE TABLE IF NOT EXISTS story_messages (
   -- A narration's paragraphs with a problem the checks left in them, and its wording before the player's last
   -- rewrite as {text, flags} (adventure/passages.py).
   flags TEXT NOT NULL DEFAULT '[]',
-  previous TEXT
+  previous TEXT,
+  -- The mode a user line was sent in (adventure/rounds/play.py): a player's line in Play, the Author's nudge (or
+  -- nothing) opening a turn in Author or Watch.
+  mode TEXT NOT NULL DEFAULT 'play'
 );
 
 -- Branches of the story (adventure/timeline.py). A branch shows its parent's messages before `fork_seq`, then its
@@ -595,7 +602,9 @@ CREATE TABLE IF NOT EXISTS story_beats (
   message_id TEXT NOT NULL,
   key TEXT NOT NULL,
   card_id TEXT NOT NULL,
-  at TEXT NOT NULL
+  at TEXT NOT NULL,
+  -- What an offscreen agent said in the beat, as its own agent wrote it (adventure/rounds/offpage.py).
+  lines TEXT NOT NULL DEFAULT '[]'
 );
 
 CREATE TABLE IF NOT EXISTS story_word (
@@ -1054,7 +1063,7 @@ CREATE TABLE IF NOT EXISTS story_seeds (
 );
 
 -- Each arc stage's planned beats (adventure/plotting.py): drafted by the director model or the world's own, in order;
--- the GM view can cut and reorder them.
+-- the GM view can cut and reorder them, and the Author can add to them too (adventure/rounds/author.py).
 CREATE TABLE IF NOT EXISTS story_arc_beats (
   id TEXT PRIMARY KEY,
   arc_id TEXT NOT NULL,
@@ -1063,7 +1072,9 @@ CREATE TABLE IF NOT EXISTS story_arc_beats (
   position INTEGER NOT NULL DEFAULT 0,
   cut INTEGER NOT NULL DEFAULT 0,
   used INTEGER NOT NULL DEFAULT 0,
-  source TEXT NOT NULL DEFAULT 'world'
+  source TEXT NOT NULL DEFAULT 'world',
+  -- Reached the page (adventure/rounds/author.py): the beat board shows which beats have landed.
+  landed INTEGER NOT NULL DEFAULT 0
 );
 
 -- The institutions the character belongs to and the classes they take (adventure/institutions.py).
@@ -1175,3 +1186,335 @@ CREATE TABLE IF NOT EXISTS politics_relations (
   updated_at TEXT NOT NULL,
   PRIMARY KEY (city_id, first, second)
 );
+
+-- W0 Foundation: rounds (adventure/rounds/). ------------------------------------------------------------------------
+
+-- Each turn of the round loop (adventure/rounds/turns.py): its state, the frozen snapshot every context is built
+-- from, and the draft nothing else reads until it is committed. `branch_id` and `seq` place it on the timeline
+-- (adventure/timeline.py): the turn's anchor is the story message it opens with. `number` counts the committed turns
+-- before it on its branch, which is what memory ages by.
+CREATE TABLE IF NOT EXISTS round_turns (
+  id TEXT PRIMARY KEY,
+  anchor_id TEXT,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  number INTEGER NOT NULL,
+  state TEXT NOT NULL CHECK (state IN ('idle', 'gathering', 'declaring', 'reacting', 'conversing', 'awaiting_user',
+                                       'resolving', 'writing', 'committing', 'committed', 'discarded')),
+  mode TEXT NOT NULL CHECK (mode IN ('play', 'author', 'watch')),
+  snapshot TEXT NOT NULL DEFAULT '{}',
+  draft TEXT NOT NULL DEFAULT '{}',
+  -- A re-asked turn: the turn it re-asks and the seat whose choice is asked again.
+  reask_of TEXT,
+  reask_seat TEXT,
+  -- What happened around the turn that the user should be able to see later: ["gm_view", "roll_override", ...].
+  marks TEXT NOT NULL DEFAULT '[]',
+  error TEXT,
+  created_at TEXT NOT NULL,
+  committed_at TEXT
+);
+
+CREATE INDEX IF NOT EXISTS round_turns_place ON round_turns (branch_id, seq);
+
+-- Who sits at the table and how each one decides (adventure/rounds/seats.py): an agent, a Program (code) mind, or
+-- the human. A choice made by the user, so it is not rewound with the story.
+CREATE TABLE IF NOT EXISTS round_seats (
+  key TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  mind TEXT NOT NULL CHECK (mind IN ('agent', 'program', 'human')),
+  seat_order INTEGER NOT NULL DEFAULT 0,
+  -- A model profile for this character alone, over the agents' role (adventure/text_models.py).
+  model_profile_id TEXT,
+  notes TEXT NOT NULL DEFAULT '',
+  promoted INTEGER NOT NULL DEFAULT 0 CHECK (promoted IN (0, 1)),
+  created_at TEXT NOT NULL
+);
+
+-- How rounds play in this campaign (adventure/rounds/seats.py): the mode, the caps, and changes waiting for the next
+-- Idle, since a turn under way finishes as it started.
+CREATE TABLE IF NOT EXISTS round_settings (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  mode TEXT NOT NULL DEFAULT 'play' CHECK (mode IN ('play', 'author', 'watch')),
+  agent_cap INTEGER NOT NULL DEFAULT 6 CHECK (agent_cap BETWEEN 1 AND 6),
+  converse_cap INTEGER NOT NULL DEFAULT 4 CHECK (converse_cap BETWEEN 1 AND 12),
+  queued TEXT NOT NULL DEFAULT '{}'
+);
+
+-- What each character remembers (adventure/rounds/memory.py), written only by a turn's commit and keyed by that
+-- turn's place on the timeline, so going back hides it and every branch reads its own past. Nothing here is ever
+-- rewritten: fading is worked out as it is read.
+CREATE TABLE IF NOT EXISTS character_memories (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  number INTEGER NOT NULL,
+  character_key TEXT NOT NULL,
+  kind TEXT NOT NULL CHECK (kind IN ('witnessed', 'heard', 'told', 'belief', 'tell', 'motive', 'whisper', 'fact')),
+  text TEXT NOT NULL,
+  -- Whom it is about, when it is about someone, and whose line or act it came from.
+  about TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  importance INTEGER NOT NULL DEFAULT 1 CHECK (importance BETWEEN 1 AND 3),
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS character_memories_of ON character_memories (character_key, branch_id, seq);
+
+-- A memory brought back to mind by a later turn: it is fresh again from that turn, on that turn's branch only.
+CREATE TABLE IF NOT EXISTS character_memory_refreshes (
+  memory_id TEXT NOT NULL,
+  turn_id TEXT,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  number INTEGER NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS character_memory_refreshes_of ON character_memory_refreshes (memory_id);
+
+-- How one character's feelings toward another moved in a turn (adventure/rounds/memory.py): each row a change, read
+-- in order through the branch's ancestry. Rows at seq 0 on the first branch are the campaign's starting feelings.
+CREATE TABLE IF NOT EXISTS character_feelings (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  from_key TEXT NOT NULL,
+  to_key TEXT NOT NULL,
+  trust INTEGER NOT NULL DEFAULT 0,
+  affection INTEGER NOT NULL DEFAULT 0,
+  respect INTEGER NOT NULL DEFAULT 0,
+  fear INTEGER NOT NULL DEFAULT 0,
+  desire INTEGER NOT NULL DEFAULT 0,
+  why TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS character_feelings_of ON character_feelings (from_key, branch_id, seq);
+
+-- W2 Agent minds (adventure/rounds/agents.py). -----------------------------------------------------------------------
+
+-- How the agents play in this campaign (adventure/rounds/agents.py SETTINGS): the preset that trades depth against
+-- cost and wait, how much they scheme (0 to 3), how fast their loyalties shift, and the session's spend cap in tokens
+-- (0: none). A choice made by the user, so it is not rewound with the story.
+CREATE TABLE IF NOT EXISTS agent_settings (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  preset TEXT NOT NULL DEFAULT 'balanced' CHECK (preset IN ('quick', 'balanced', 'rich')),
+  scheming INTEGER NOT NULL DEFAULT 1 CHECK (scheming BETWEEN 0 AND 3),
+  loyalty TEXT NOT NULL DEFAULT 'steady' CHECK (loyalty IN ('slow', 'steady', 'fast')),
+  session_cap INTEGER NOT NULL DEFAULT 0 CHECK (session_cap >= 0),
+  updated_at TEXT NOT NULL DEFAULT ''
+);
+
+-- W1 Privacy and context builders (adventure/rounds/context.py, adventure/gm.py). ----------------------------------
+
+-- The user's answer to the GM view's warning in Play, remembered for this campaign (adventure/gm.py `open_round`).
+-- A choice, not story: going back keeps it; a new story forgets it.
+CREATE TABLE IF NOT EXISTS gm_view_consent (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  remembered INTEGER NOT NULL DEFAULT 0 CHECK (remembered IN (0, 1)),
+  created_at TEXT NOT NULL
+);
+
+-- Who the player's character is in the world package: the persona (premade) taken at the campaign's start, NULL for a
+-- character of their own (adventure/rounds/context.py `remember_persona`), so what that persona knows reaches them.
+CREATE TABLE IF NOT EXISTS story_persona (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  package_id TEXT
+);
+
+-- W3 Resolve for a party
+-- The other characters' rolls in a round (adventure/rounds/resolve.py), written at the turn's commit, beside the
+-- story line the turn played on, for the dice log. The player's own line keeps its rolls in story_rolls.
+CREATE TABLE IF NOT EXISTS round_rolls (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  message_id TEXT,
+  position INTEGER NOT NULL,
+  actor TEXT NOT NULL,
+  target TEXT NOT NULL DEFAULT '',
+  kind TEXT NOT NULL,
+  stake TEXT NOT NULL DEFAULT '',
+  action TEXT NOT NULL,
+  stat TEXT NOT NULL,
+  difficulty TEXT NOT NULL,
+  die INTEGER,
+  natural INTEGER NOT NULL,
+  bonus INTEGER NOT NULL,
+  shift INTEGER NOT NULL,
+  total INTEGER NOT NULL,
+  band TEXT NOT NULL,
+  ruleset TEXT NOT NULL,
+  -- The band the one it was aimed at rolled to resist, when it was opposed.
+  against TEXT,
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS round_rolls_of ON round_rolls (message_id);
+
+-- Rolls overridden from the GM view (adventure/rounds/overrides.py): which roll of which turn, from and to which
+-- band, why, and whether the turn was already committed (then the passage is a correction).
+CREATE TABLE IF NOT EXISTS round_overrides (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  position INTEGER NOT NULL,
+  actor TEXT NOT NULL,
+  action TEXT NOT NULL,
+  from_band TEXT NOT NULL,
+  to_band TEXT NOT NULL,
+  reason TEXT NOT NULL,
+  after_commit INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL
+);
+
+-- W5 Writing rules and checks: house rules (adventure/rounds/house_rules.py). ----------------------------------
+
+-- The campaign's edits to its house rulebook (adventure/rounds/house_rules.py), as JSON: the choices it set, and for
+-- each list what it added to and removed from the world's. Not in timeline.SAVED: a rule changed stays changed.
+CREATE TABLE IF NOT EXISTS house_rules (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  edits TEXT NOT NULL DEFAULT '{}',
+  updated_at TEXT NOT NULL
+);
+
+-- The user's standing decisions, each with the turn it was made at (the branch, and the seq of the last line on it)
+-- and read through the branch's ancestry like lines are. A withdrawal names the ruling it ends, from its own turn on.
+CREATE TABLE IF NOT EXISTS house_rulings (
+  id TEXT PRIMARY KEY,
+  kind TEXT NOT NULL CHECK (kind IN ('ruling', 'withdrawal')),
+  text TEXT NOT NULL DEFAULT '',
+  ruling_id TEXT REFERENCES house_rulings(id),
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  created_at TEXT NOT NULL
+);
+
+-- W5 Writing rules and checks: corrections (adventure/rounds/corrections.py). --------------------------------------
+
+-- A patch to a committed turn, keyed to that turn's place on the timeline (its branch and seq) so every later read
+-- through the branch's ancestry sees it. `before` and `after` are JSON; `after` is NULL for something struck.
+CREATE TABLE IF NOT EXISTS round_corrections (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  kind TEXT NOT NULL CHECK (kind IN ('memory', 'feeling', 'record', 'stat', 'invention')),
+  target TEXT NOT NULL,
+  before TEXT,
+  after TEXT,
+  why TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS round_corrections_of ON round_corrections (turn_id);
+
+-- W5 Writing rules and checks: character sheets refreshed from the page (adventure/rounds/shown.py). ---------------
+
+-- A "shown so far" update to a seated character's sheet, drafted by code when a chapter closes and keyed to the
+-- chapter's end on its branch (`seq`), so it is read through the branch's ancestry. `items` is JSON
+-- [{kind: injury|revealed|habit, text}]; it applies when the user reviews it, or at once in Watch.
+CREATE TABLE IF NOT EXISTS round_shown (
+  id TEXT PRIMARY KEY,
+  seat_key TEXT NOT NULL,
+  name TEXT NOT NULL,
+  chapter_id TEXT NOT NULL,
+  branch_id TEXT NOT NULL,
+  seq INTEGER NOT NULL,
+  items TEXT NOT NULL DEFAULT '[]',
+  status TEXT NOT NULL CHECK (status IN ('drafted', 'applied', 'dismissed')),
+  created_at TEXT NOT NULL,
+  decided_at TEXT
+);
+
+-- W7 Author, Watch and the Dungeon systems in agent play (adventure/rounds/author.py, watch.py, modes.py). ---------
+
+-- How the modes play in this campaign (adventure/rounds/modes.py): who stands in for the user's character outside
+-- Play (an agent or its Program mind), and Watch's timer in seconds (0: by hand only). A choice made by the user, so
+-- it is not rewound with the story.
+CREATE TABLE IF NOT EXISTS mode_settings (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  stand_in TEXT NOT NULL DEFAULT 'program' CHECK (stand_in IN ('agent', 'program')),
+  watch_seconds INTEGER NOT NULL DEFAULT 20 CHECK (watch_seconds BETWEEN 0 AND 3600),
+  updated_at TEXT NOT NULL DEFAULT ''
+);
+
+-- Each switch out of Play (adventure/rounds/modes.py): whether the user chose to see the motives they missed in the
+-- turns played before it.
+CREATE TABLE IF NOT EXISTS mode_switches (
+  id TEXT PRIMARY KEY,
+  from_mode TEXT NOT NULL,
+  to_mode TEXT NOT NULL,
+  reveal INTEGER NOT NULL DEFAULT 0,
+  -- Whether the user has answered "Show the motives you missed?" yet (the banner asks after the switch).
+  answered INTEGER NOT NULL DEFAULT 0,
+  -- The newest round turn when the switch was made (its rowid): the turns it covers.
+  through_turn INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL
+);
+
+-- Beats the user would like to see, written in Play beside their line (adventure/rounds/author.py): waiting for the
+-- next turn, which takes them at Gather and lets them go at Commit.
+CREATE TABLE IF NOT EXISTS nudge_box (
+  id TEXT PRIMARY KEY,
+  text TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+
+-- Whether a turn's nudges took (adventure/rounds/author.py): "Used" or "Not yet", and why. Keyed by the turn, so
+-- going back shows the feedback of the turn now newest.
+CREATE TABLE IF NOT EXISTS author_feedback (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  position INTEGER NOT NULL DEFAULT 0,
+  nudge TEXT NOT NULL,
+  status TEXT NOT NULL CHECK (status IN ('used', 'not_yet')),
+  why TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS author_feedback_turn ON author_feedback (turn_id, position);
+
+-- Watch turns the user chose to go on from after a pause (adventure/rounds/watch.py).
+CREATE TABLE IF NOT EXISTS watch_continued (
+  turn_id TEXT PRIMARY KEY,
+  created_at TEXT NOT NULL
+);
+
+-- Each warning sign the director placed before a betrayal (adventure/rounds/directing.py): for whom and of what kind,
+-- read through its turn's place on the timeline like character memory, so going back forgets it.
+CREATE TABLE IF NOT EXISTS betrayal_signs (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  character_key TEXT NOT NULL,
+  kind TEXT NOT NULL,
+  sign TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS betrayal_signs_turn ON betrayal_signs (turn_id);
+
+-- Nemeses given an agent (adventure/rounds/directing.py), once each: the user's demoting one by hand stands.
+CREATE TABLE IF NOT EXISTS nemesis_seats (
+  name TEXT PRIMARY KEY,
+  seat_key TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+
+-- The party's leader in Author and Watch, who proposes where the party goes (adventure/rounds/travelling.py); none
+-- set: the first seat. A choice made by the user, so it is not rewound with the story.
+CREATE TABLE IF NOT EXISTS party_lead (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  seat_key TEXT,
+  updated_at TEXT NOT NULL DEFAULT ''
+);
+
+-- A character splitting off from the party, or rejoining it, and where (adventure/rounds/travelling.py): read through
+-- its turn's place on the timeline, so going back undoes it.
+CREATE TABLE IF NOT EXISTS split_off (
+  id TEXT PRIMARY KEY,
+  turn_id TEXT NOT NULL,
+  character_key TEXT NOT NULL,
+  kind TEXT NOT NULL CHECK (kind IN ('left', 'rejoined')),
+  city_id TEXT NOT NULL,
+  place_id TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS split_off_turn ON split_off (turn_id);

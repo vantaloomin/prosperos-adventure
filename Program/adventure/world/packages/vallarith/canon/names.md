@@ -1,8 +1,11 @@
 # Name changes for public release
 
-Vanta chose (2026-10-21) to rename names coined by Wizards of the Coast for D&D now, and keep names from myth and folklore. **Vanta approved every rename below on 2026-10-21.** The rest of the package uses the new names. Changing one later is a find-and-replace across this folder.
+Vanta chose (2026-10-21) to rename names coined by Wizards of the Coast for D&D now, and keep names
+from myth and folklore. **Vanta approved every rename below on 2026-10-21.** The rest of the
+package uses the new names. Changing one later is a find-and-replace across this folder.
 
-Rule of thumb used here: where demonology or myth has a fitting figure, use it (those names are centuries old and free). Where it doesn't, use a plain descriptive title or a new name.
+Rule of thumb used here: where demonology or myth has a fitting figure, use it (those names are
+centuries old and free). Where it doesn't, use a plain descriptive title or a new name.
 
 ## Renamed
 
@@ -45,12 +48,20 @@ Rule of thumb used here: where demonology or myth has a fitting figure, use it (
 
 ## Kept
 
-- **From myth, folklore and literature:** Asmodeus, Mephistopheles, Mammon, Belial, Dispater, Bel, Beherit, Geryon, Bensozia, Lilith, Tiamat, Baphomet, Orcus, Demogorgon, Thanatos, Titania, Mab, the Leanan Sídhe, the Erlking and the Wild Hunt, Seelie and Unseelie, Morrigan, Hel, Oghma, Skadi, Hermod, the Dagda, Freya, Odur, the Nine Hells, Avernus, Dis, Phlegethos, Stygia, Nessus, the Abyss, naga.
-- **Plain words:** the Blood War, the Ruby Rod, the Gaping Maw, the Endless Maze, the Infinite Layers, the Reckoning, pit fiend, gnoll, goblin, lizardfolk.
-- **In the SRD 5.2 (CC-BY-4.0, usable with the attribution the 5e pack already carries):** tiefling, pit fiend, ice devil.
+- **From myth, folklore and literature:** Asmodeus, Mephistopheles, Mammon, Belial, Dispater, Bel,
+  Beherit, Geryon, Bensozia, Lilith, Tiamat, Baphomet, Orcus, Demogorgon, Thanatos, Titania, Mab,
+  the Leanan Sídhe, the Erlking and the Wild Hunt, Seelie and Unseelie, Morrigan, Hel, Oghma,
+  Skadi, Hermod, the Dagda, Freya, Odur, the Nine Hells, Avernus, Dis, Phlegethos, Stygia, Nessus,
+  the Abyss, naga.
+- **Plain words:** the Blood War, the Ruby Rod, the Gaping Maw, the Endless Maze, the Infinite
+  Layers, the Reckoning, pit fiend, gnoll, goblin, lizardfolk.
+- **In the SRD 5.2 (CC-BY-4.0, usable with the attribution the 5e pack already carries):**
+  tiefling, pit fiend, ice devil.
 
 ## Vanta's own
 
-Confirmed original by Vanta (2026-10-21): **Forgrimmorithal**, **Vymnommyth**, **Zaraxas**, **Ghondiir**, **Iseullaryax**, **Tatsuyaraga**, **Himo Xiloscient**, **Ohgnu**, and the tribe names **Unguruk**, **Dramogon** and **Kadragar**.
+Confirmed original by Vanta (2026-10-21): **Forgrimmorithal**, **Vymnommyth**, **Zaraxas**,
+**Ghondiir**, **Iseullaryax**, **Tatsuyaraga**, **Himo Xiloscient**, **Ohgnu**, and the tribe
+names **Unguruk**, **Dramogon** and **Kadragar**.
 
 New in this draft: **Yllevantharyx** (the ninth Eternal Dragon) and her guise **Old Mother Yllen**.

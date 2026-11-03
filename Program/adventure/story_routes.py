@@ -35,6 +35,7 @@ from adventure import (
 )
 from adventure.errors import DomainError, require
 from adventure.models import Input, PersonaInput
+from adventure.rounds import queue, solo
 
 router = APIRouter(prefix='/api/story')
 
@@ -70,14 +71,17 @@ def find(request: Request, body: StoryPerson):
 
 @router.post('/messages')
 async def send(request: Request, body: StoryMessage, background: BackgroundTasks):
-    result = await story.send(request.app.state, body.text, body.client_id)
+    state = request.app.state
+    # One writer at a time, through the round loop (adventure/rounds/queue.py, adventure/rounds/solo.py).
+    result = await queue.play(state, lambda: solo.send(state, body.text, body.client_id))
     background.add_task(story.settled, request.app.state)
     return result
 
 
 @router.post('/retry')
 async def retry(request: Request, background: BackgroundTasks):
-    result = await story.retry(request.app.state)
+    state = request.app.state
+    result = await queue.play(state, lambda: solo.retry(state))
     background.add_task(story.settled, request.app.state)
     return result
 
@@ -138,13 +142,14 @@ def streamed(state, start) -> StreamingResponse:
 @router.post('/messages/stream')
 async def send_streamed(request: Request, body: StoryMessage):
     state = request.app.state
-    return streamed(state, lambda on_text, on_event: story.send(state, body.text, body.client_id, on_text, on_event))
+    return streamed(state, lambda on_text, on_event: queue.play(
+        state, lambda: solo.send(state, body.text, body.client_id, on_text, on_event)))
 
 
 @router.post('/retry/stream')
 async def retry_streamed(request: Request):
     state = request.app.state
-    return streamed(state, lambda on_text, on_event: story.retry(state, on_text, on_event))
+    return streamed(state, lambda on_text, on_event: queue.play(state, lambda: solo.retry(state, on_text, on_event)))
 
 
 class SheetChange(Input):
@@ -591,11 +596,12 @@ def attachment(content: bytes, media_type: str, name: str) -> Response:
 
 
 @router.get('/export/book')
-def export_book(request: Request, format: Literal['md', 'epub', 'pdf'] = 'md'):  # noqa: A002 - the query's name
-    """The branch being played as a book."""
+def export_book(request: Request, format: Literal['md', 'epub', 'pdf'] = 'md',  # noqa: A002 - the query's name
+                hidden: bool = False):
+    """The branch being played as a book; `hidden` sets each turn's motives and whispers beside its post."""
     database = request.app.state.database
     with database.connect() as connection:
-        content, media_type = book.export(connection, format, database.now(), database=database)
+        content, media_type = book.export(connection, format, database.now(), database=database, hidden=hidden)
     return attachment(content, media_type, f'story-{database.now()[:10]}.{format}')
 
 

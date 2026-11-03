@@ -1,6 +1,9 @@
 # Sources
 
-Vanta's Havenbrooke material, from `Havenbrooke.7z` in the project files (SHA-256 `6ade5dc1ae81a6c6c74a39d18e0f32a1187963bf80a755941f9147047c0d4720`). The originals are adult and explicit and are not copied into this public repo. Every entry here is rewritten in fresh prose.
+Vanta's Havenbrooke material, from `Havenbrooke.7z` in the project files (SHA-256
+`6ade5dc1ae81a6c6c74a39d18e0f32a1187963bf80a755941f9147047c0d4720`). The originals are adult
+and explicit and are not copied into this public repo. Every entry here is rewritten in fresh
+prose.
 
 | File | What it is | Used for | SHA-256 |
 | --- | --- | --- | --- |
@@ -35,8 +38,12 @@ Vanta's Havenbrooke material, from `Havenbrooke.7z` in the project files (SHA-25
 | `World_Species_Power_Structures.md` | Councils, covens, courts and families | factions.json, canon/peoples.md | `3ecddb4b4b21ddfc9e63dc901cdf9d24542cced48b828f15946f038de2c22a97` |
 | `_README.md` | Index of the source set and reading order | README, sources.md | `174d301ce1255cc4650b2f8173a20f5a8d31c4110db497c62ec2bbfa96f22f52` |
 
-Also used: real 2009 prices and dates (gas, phones, transit, the academic calendar), checked against general knowledge of the period, and the Companion modern Life deck as the base for Havenbrooke's Life Cards.
+Also used: real 2009 prices and dates (gas, phones, transit, the academic calendar), checked
+against general knowledge of the period, and the Companion modern Life deck as the base for
+Havenbrooke's Life Cards.
 
 ## Which source wins
 
-When the files disagree, this draft prefers, in order: the lead bibles (`Character_*.md`), the housing document and floor plan, the season story beats, the university documents, then the world documents. Each call is listed in [open-questions.md](open-questions.md).
+When the files disagree, this draft prefers, in order: the lead bibles (`Character_*.md`), the
+housing document and floor plan, the season story beats, the university documents, then the world
+documents. Each call is listed in [open-questions.md](open-questions.md).

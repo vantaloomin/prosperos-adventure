@@ -1,4 +1,4 @@
-import type { BandStep, DiceLog, DramaLevel, Gear, HiddenRoll, IntensityPreset, JournalEntry, JournalInstitution, JournalQuest, JournalThread, LegacyRole, Looks, NarrationLength, NarrationPov, NarrationTense, Premade, ReceiptChip, SheetBonds, SheetGrowth, Srd52Spells, StoryArc, StoryBranch, StoryChapter, StoryFight, StoryHand, StoryMessage, StoryPace, StoryPerson, StoryPlace, StoryRoll, StoryScene, StoryStart, StoryTier, ToneCategory, ToneVoice, TurnAction, TurnEvent, TurnPace, TurnSoFar, VeilTopic, Zone } from '../../types'
+import type { BandStep, DiceLog, DramaLevel, Gear, HiddenRoll, IntensityPreset, JournalEntry, JournalInstitution, JournalQuest, JournalThread, LegacyRole, Looks, NarrationLength, NarrationPov, NarrationTense, ReceiptChip, SheetBonds, SheetGrowth, Srd52Spells, StoryArc, StoryBranch, StoryChapter, StoryFight, StoryHand, StoryMessage, StoryPace, StoryPerson, StoryPlace, StoryRoll, StoryScene, StoryStart, StoryTier, ToneCategory, ToneVoice, TurnAction, TurnEvent, TurnPace, TurnSoFar, VeilTopic, Zone } from '../../types'
 
 /** "Tuesday, 9:40 am" from the scene's local time, which is the city's own clock with no offset. */
 export function sceneTime(localTime: string): string {
@@ -59,11 +59,6 @@ export function whereText(scene: StoryScene): string {
   return `${scene.place.name}, ${scene.place.neighborhood}, ${scene.city.name}`
 }
 
-/** "Inside: the back patio, the bar seats" */
-export function spotsText(spots: string[]): string {
-  return `Inside: ${spots.join(', ')}`
-}
-
 /** "Met once · now working as the barista at The Daily Grind" */
 export function personLine(person: StoryPerson): string {
   const times = person.meetings === 1 ? 'once' : person.meetings === 2 ? 'twice' : `${person.meetings} times`
@@ -119,12 +114,6 @@ function dicedText(roll: StoryRoll): string {
   const sum = roll.die ? `${roll.natural} + ${roll.bonus}` : `${roll.natural}`
   const shift = roll.shift ? `, ${roll.difficulty.replace('_', ' ')} (${roll.shift > 0 ? '-' : '+'}${Math.abs(roll.shift)})` : ''
   return `${roll.stat}${die}: ${sum}${shift} = ${roll.total}, ${roll.label}`
-}
-
-/** "a woman, 41" under a premade's name. */
-export function premadeLine(premade: Pick<Premade, 'gender' | 'age'>): string {
-  const gender = premade.gender === 'nonbinary' ? 'nonbinary' : premade.gender ? `a ${premade.gender}` : ''
-  return [gender, premade.age ? String(premade.age) : ''].filter(Boolean).join(', ')
 }
 
 /** A made character starts with every stat as even as the points allow. */
@@ -232,6 +221,13 @@ export function statusItems(scene: Pick<StoryScene, 'local_time' | 'weather'>, f
     !!fight.captors && { kind: 'held', tone: 'loss', text: `Held by ${fight.captors}` },
     coin !== null && { kind: 'coin', tone: 'neutral', text: coin }]
   return items.filter((item): item is StatusItem => !!item)
+}
+
+/** The play screen's one header line after the place: the time, then how the character is (condition, lasting
+ *  injuries, captivity). Nerve, coin and the weather are in the cast panel (./StoryCast.tsx). */
+export function sceneLine(scene: Pick<StoryScene, 'local_time'>, fight: StoryFight): string[] {
+  return statusItems({ local_time: scene.local_time, weather: '' }, fight, null)
+    .filter((item) => item.kind !== 'nerve').map((item) => item.text)
 }
 
 const PRESET_NAMES: Record<Exclude<IntensityPreset, 'world'>, string> = {
@@ -368,7 +364,9 @@ export const NO_TURN: TurnSoFar = { stage: null, actions: [], bands: null, rolls
 export function turnAfter(turn: TurnSoFar, event: TurnEvent): TurnSoFar {
   if ('stage' in event) return { ...turn, stage: event.stage }
   if ('actions' in event) return { ...turn, actions: event.actions, bands: event.bands ?? null }
-  return { ...turn, rolls: [...turn.rolls, event.roll] }
+  if ('roll' in event) return { ...turn, rolls: [...turn.rolls, event.roll] }
+  // The round loop's own events (adventure/rounds/contract.py: round, seat, awaiting) are for the round timeline.
+  return turn
 }
 
 export const isShown = (roll: StoryRoll | HiddenRoll): roll is StoryRoll => 'band' in roll

@@ -236,6 +236,11 @@ export interface StoryMessage {
   receipt?: ReceiptChip[]
   /** On a player's line: the Life Cards the world drew on it (adventure/happenings.py with_cards). */
   cards?: LifeCardShown[]
+  /** The round turn this line belongs to (adventure/rounds/turns.py of_lines), for its report and GM marks; null
+   *  before the round loop or for a line told again. */
+  turn_id?: string | null
+  /** The mode a round turn's opening line was played in: an Author line is the nudge, a Watch line is empty. */
+  mode?: 'play' | 'author' | 'watch' | null
 }
 /** A drawn Life Card as the story shows it: title, tone and picture (or the card back), never its hidden truth. */
 export interface LifeCardShown { title: string; tone: 'good' | 'bad' | 'grey'; art: string | null; veiled: boolean }
@@ -266,6 +271,7 @@ export interface BandStep { band: Band; label: string; ceiling: number | null }
 export interface TurnAction { action: string; stat: string; difficulty?: string }
 /** A turn's stages as the stream tells them, before and around the narration (adventure/story.py answer). */
 export type TurnEvent = { stage: 'reading' | 'writing' } | { actions: TurnAction[]; bands?: BandStep[] } | { roll: StoryRoll | HiddenRoll }
+  | { round: { turn_id: string; state: string } }
 /** What a turn under way has shown so far. */
 export interface TurnSoFar { stage: 'reading' | 'writing' | null; actions: TurnAction[]; bands: BandStep[] | null; rolls: (StoryRoll | HiddenRoll)[] }
 /** The persona's Prospero stats (adventure/sheet.py) and the die each one rolls; or their 5E sheet (Srd52Sheet). */
@@ -448,7 +454,7 @@ export interface StoryIntensity {
 export type DefeatRule = 'as_written' | 'by_aim'
 export type DramaLevel = 'world' | 'quiet' | 'uneasy' | 'eventful' | 'merciless'
 /** A session zero preset (adventure/table.py PRESETS): the tone it sets and the director's hand (null: the world's). */
-export interface TablePreset { id: string; name: string; about: string; hand: StoryHand | null; rules: Pick<TableRules, 'intensity' | 'drama' | 'injury_persistence'> }
+export interface TablePreset { id: string; name: string; hand: StoryHand | null; rules: Pick<TableRules, 'intensity' | 'drama' | 'injury_persistence'> }
 /** The Table (adventure/table.py): this campaign's rules. Tone starts as the world's; what is shown, as you last left it. */
 export interface TableRules {
   intensity: IntensityPreset; drama: DramaLevel; injury_persistence: InjuryPersistence

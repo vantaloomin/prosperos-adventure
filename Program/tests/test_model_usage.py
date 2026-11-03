@@ -108,7 +108,7 @@ def test_codex_shows_the_chatgpt_plan_limits(tmp_path):
     script.write_text(textwrap.dedent(FAKE_SERVER))
 
     class FakeCodex:
-        async def usage(self):
+        async def usage(self, _config=None):
             return await codex.app_server_limits([sys.executable, str(script)])
     result = asyncio.run(balance.lookup({'provider': 'codex', 'base_url': ''}, None, codex=FakeCodex()))
     assert result['plan'] == 'Plus'

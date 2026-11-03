@@ -1,4 +1,4 @@
-"""Fights under Ironsworn (docs/requirements.md "Combat": "Ironsworn keeps Health and harm"; docs/story.md "Fights
+"""Fights under Ironsworn (Dungeon's docs/requirements.md "Combat": "Ironsworn keeps Health and harm"; docs/story.md "Fights
 under Ironsworn").
 
 The fight runs as adventure/combat.py does (one player line is one round, the defeat table by what the foes want),

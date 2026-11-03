@@ -33,7 +33,12 @@ export function Worlds() {
   const switchTo = (path: string, label: string) => { setBusy(label); return run(async () => { await api(path, {}); enter() }) }
   const store = (data: WorldsData) => client.setQueryData(WORLDS_KEY, data)
   const loaded = !!worlds.data
-  useEffect(() => { if (loaded && window.history.state?.focus === 'persona-home') toHomeCity() }, [loaded])
+  useEffect(() => {
+    if (!loaded) return
+    const focus = window.history.state?.focus
+    if (focus === 'persona-home') toHomeCity()
+    if (focus === 'world-packages') document.getElementById('world-packages-heading')?.scrollIntoView({ block: 'start' })
+  }, [loaded])
   if (worlds.isPending) return <Loading label="Loading your worlds" />
   if (worlds.isError) return <ErrorNotice error={worlds.error} />
   const data = worlds.data

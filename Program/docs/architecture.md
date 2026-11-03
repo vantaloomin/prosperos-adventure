@@ -2,14 +2,24 @@
 
 [Back to the README](../../README.md)
 
-This is what the code in `Program` holds after Milestone 0: the engines kept from Prospero's Companion, with the companion itself removed. The game systems in [the requirements](../../docs/requirements.md) are built on top of it, milestone by milestone, as set out in [the roadmap](../../docs/roadmap.md).
+This is what the code in `Program` holds after Milestone 0: the engines kept from Prospero's Companion, with
+the companion itself removed. The game systems in [the requirements](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/requirements.md) are built on
+top of it, milestone by milestone, as set out in [the roadmap](https://github.com/vantaloomin/prosperos-dungeon/blob/main/docs/roadmap.md).
 
 ## Shape
 
-- **Backend:** Python and FastAPI in `adventure/`, started by `python -m adventure` on http://127.0.0.1:8805. `adventure/main.py` `create_app` wires the routers and keeps the shared services on `app.state`: the database, the credential vault, the model provider, the scheduler that queues model work, the embedder, the built-in recall and chat models, the launcher for local programs, the hardware check, "Set it up for me", and the image adapters.
-- **Interface:** React, Vite and TypeScript in `src/`. The app opens on the Story; Worlds and Settings load the first time they are opened. `src/workspace.ts` names the views the address can hold (`#story`, `#worlds`, `#settings/<tab>`).
-- **Storage:** one SQLite database per world, created from `adventure/schema.sql`. Worlds and personas are listed in a small registry beside them (`adventure/worlds.py`).
-- **Code decides, the model narrates.** Odds, rolls, draws and the state of the town live in code. The model is given the outcome and writes the prose.
+- **Backend:** Python and FastAPI in `adventure/`, started by `python -m adventure` on http://127.0.0.1:8805.
+  `adventure/main.py` `create_app` wires the routers and keeps the shared services on `app.state`: the database,
+  the credential vault, the model provider, the scheduler that queues model work, the embedder, the built-in
+  recall and chat models, the launcher for local programs, the hardware check, "Set it up for me", and the
+  image adapters.
+- **Interface:** React, Vite and TypeScript in `src/`. The app opens on the Story; Worlds and Settings load the
+  first time they are opened. `src/workspace.ts` names the views the address can hold (`#story`, `#worlds`,
+  `#settings/<tab>`).
+- **Storage:** one SQLite database per world, created from `adventure/schema.sql`. Worlds and personas are listed
+  in a small registry beside them (`adventure/worlds.py`).
+- **Code decides, the model narrates.** Odds, rolls, draws and the state of the town live in code. The model is
+  given the outcome and writes the prose.
 
 ## Tables
 
@@ -41,14 +51,26 @@ This is what the code in `Program` holds after Milestone 0: the engines kept fro
 | `story_wounds`, `story_fight`, `story_rounds` | The character's wound level, the fight under way, and each line's decided round (`adventure/combat.py`) |
 | `story_clock`, `story_quests` | The story's own time, and its quests with their deadlines (`adventure/quests.py`) |
 | `authors_notes` | The user's note that rides along with every narrator turn |
+| `round_turns` | Each turn of the round loop: its state, the snapshot it was built from, its draft until commit, and marks such as a GM view left open (`adventure/rounds/turns.py`) |
+| `round_seats`, `round_settings` | Who sits at the table and how each decides (agent, Program mind or the human); the mode (Play, Author, Watch), the agent and conversation caps, and changes waiting for the next Idle (`adventure/rounds/seats.py`) |
+| `character_memories`, `character_memory_refreshes`, `character_feelings` | What each character remembers and how they feel toward everyone else, keyed by the turn that wrote it and read through the branch's ancestry (`adventure/rounds/memory.py`) |
+| `mode_settings`, `mode_switches` | Who plays the user's character outside Play (an agent or its Program mind), Watch's timer, and each switch out of Play with whether the user chose to see the motives they missed (`adventure/rounds/modes.py`) |
+| `nudge_box`, `author_feedback` | Beats the user would like to see, waiting beside their line in Play, and whether each turn's nudges took, "Used" or "Not yet" (`adventure/rounds/author.py`) |
+| `watch_continued` | Watch turns the user went on from after a pause (`adventure/rounds/watch.py`) |
+| `betrayal_signs`, `nemesis_seats` | Each warning sign the director placed before a betrayal, read through its turn's place on the timeline, and the nemeses given an agent (`adventure/rounds/directing.py`) |
+| `party_lead`, `split_off` | The party's leader in Author and Watch, and who split off from the party or rejoined it, by turn, read through the turn's place on the timeline (`adventure/rounds/travelling.py`) |
 | `townsfolk_mix`, `townsfolk_personality`, `birth_dates`, `town_levels` | How the town is generated and how it ages |
 
-A database from before Milestone 0 is not upgraded: Adventure starts a fresh schema, and `upgrade.py` only handles changes made from here on. New tables come from `schema.sql`; a column added to an existing table is listed in `database.ADDED_COLUMNS` as well.
+A database from before Milestone 0 is not upgraded: Adventure starts a fresh schema, and `upgrade.py` only handles
+changes made from here on. New tables come from `schema.sql`; a column added to an existing table is listed in
+`database.ADDED_COLUMNS` as well.
 
 ## Engines kept
 
 | Engine | Where | What it does now |
 | --- | --- | --- |
+| Round loop | `rounds/`, `round_routes.py`, `mode_routes.py` | The state machine every turn runs through (today's single-player turn as one step of it), its step registry, the turn draft committed in one transaction, one writer at a time with stale commands refused, the reply card, re-asking an agent on a new branch, picking up after a restart, and per-character memory that follows branches; the Author's nudges and beat board with their feedback, Watch's timer and its pauses at big moments, and switching modes |
+| Who sees what | `rounds/context.py`, `lore.py`, `package_lore.py` | One context builder per reader (each agent, the Writer by mode, the Referee, the minds panel, the GM view), so privacy is decided by what goes into a prompt; untrusted text arrives fenced; lore and package facts carry visibility tags. Leak tests seed sentinel secrets (`tests/test_rounds_privacy*.py`, `tests/leak_probes.py`), and `scripts/leak_probes.py` runs the probe set against a real model |
 | Narrator | `story.py`, `narration/` | Builds the layered narrator prompt, checks the prose in code, and writes each story turn |
 | Odds and rolls | `consequences.py`, `life/chance.py` | Weighted outcomes and seeded rolls, the base for the Milestone 1 dice |
 | Life Cards | `life/deck.py` | The deck of life events, drawn by code |
@@ -62,4 +84,6 @@ A database from before Milestone 0 is not upgraded: Adventure starts a fresh sch
 
 ## What was removed
 
-The focal companion, its chat and phone, its daily life and chores, memory extraction from chat, relationship arcs, the sidecar, the Study importer, LoRA training, voice notes and chat photos. Their tables, routes, screens and tests are gone; the wording banks they drew on stay in `world/data/`.
+The focal companion, its chat and phone, its daily life and chores, memory extraction from chat, relationship
+arcs, the sidecar, the Study importer, LoRA training, voice notes and chat photos. Their tables, routes, screens
+and tests are gone; the wording banks they drew on stay in `world/data/`.

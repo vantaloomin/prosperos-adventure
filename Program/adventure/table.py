@@ -37,17 +37,17 @@ NEW_FORMAT = {'pov': 'third', 'tense': 'past', 'length': 'short'}
 TASTE = ('show_odds', 'roll_dice', 'show_adult_side', 'gm_view', 'cutaways')
 RULES = (*TONE, *FORMAT, *TASTE)
 
-# Session zero's presets: each sets the tone and the director's hand ('world' and None are the world's own). The world's
-# own comes first and is picked unless the player picks another; a world bible may name its own presets later.
+# Session zero's presets, the cast page's Tone (src/features/story/StoryStart.tsx): As written keeps the world's tone and
+# trouble with lasting wounds; Gentler puts less on the page, fewer troubles, wounds that fade and a story that waits;
+# Harsher holds nothing back, with trouble often and at its worst and a story on schedule. Each sets the tone and the
+# director's hand ('world' and None are the world's own). The world's own comes first and is picked unless the player
+# picks another; a world bible may name its own presets later.
 PRESETS = (
-    {'id': 'as-written', 'name': 'As the world is written', 'hand': None,
-     'about': "The world's own tone and trouble. Wounds can last.",
+    {'id': 'as-written', 'name': 'As written', 'hand': None,
      'rules': {'intensity': 'world', 'drama': 'world', 'injury_persistence': 'permanent'}},
     {'id': 'gentler', 'name': 'Gentler', 'hand': 'soft',
-     'about': 'Less on the page, fewer troubles, and wounds that fade. The story waits for you.',
      'rules': {'intensity': 'restrained', 'drama': 'quiet', 'injury_persistence': 'temporary'}},
     {'id': 'harsher', 'name': 'Harsher', 'hand': 'firm',
-     'about': 'Nothing held back, trouble often and at its worst, and wounds that stay. The story moves on schedule.',
      'rules': {'intensity': 'unflinching', 'drama': 'merciless', 'injury_persistence': 'permanent'}},
 )
 FLAGS = set(TASTE)
