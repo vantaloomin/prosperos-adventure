@@ -1173,3 +1173,12 @@ img.avatar, img.portrait { object-fit: cover; object-position: center top; paddi
 /* A branch started by asking a character again (src/features/story/StoryBranches.tsx): the question with their portrait. */
 .branch-question { display: flex; align-items: center; gap: 8px; margin: 0; font-weight: 600; }
 .branch-question .portrait { width: 26px; height: 26px; font-size: 0.875rem; }
+/* The cast page's party (src/features/story/StoryStart.tsx CastCard): You on your card, Thinks or Rules under the others. */
+.cast-seat { display: grid; gap: 6px; justify-items: center; align-content: start; }
+.cast-seat .portrait[data-thinks] { position: relative; }
+.cast-seat .portrait[data-thinks]::after { content: ''; position: absolute; right: 0; bottom: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); }
+.cast-you { font-size: 0.75rem; color: var(--accent); font-weight: 600; }
+.cast-seat .mind-toggle label > span { min-height: 28px; padding: 2px 10px; font-size: 0.75rem; }
+.seat-details { display: grid; gap: 6px; margin-top: 6px; }
+.seat-details textarea { font-size: 0.8125rem; min-height: 0; }
+.seat-details select { width: fit-content; font-size: 0.8125rem; min-height: 30px; }

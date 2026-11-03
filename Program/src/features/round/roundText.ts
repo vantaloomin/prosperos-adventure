@@ -152,3 +152,8 @@ export const BEAT_MARKS = { landed: 'On the page', used: 'Used' } as const
  *  questions"). It never says what they chose, which in Play stays theirs. */
 export const whatIf = (name: string) => `What if ${name} had chosen otherwise?`
 export const askAgain = (name: string) => `Ask ${name} again`
+
+/** A thinking character's notes and model, in their open row. */
+export const SEAT_NAMES = {
+  notes: (name: string) => `Your notes on ${name}`, notesHint: 'Notes', model: (name: string) => `Model for ${name}`, agentsModel: "Agents' model",
+} as const

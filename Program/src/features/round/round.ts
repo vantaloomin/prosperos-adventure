@@ -125,7 +125,11 @@ export interface CastRound {
   /** The newest turn and the agents in it who can be asked to decide again (POST /api/rounds/turns/{id}/reask/stream). */
   reask: Reask | null
   onReask?: (seat: string) => void
+  /** The user's notes on a character and the model they think with. */
+  onSeat: (seat: Seat, edit: SeatEdit) => void
 }
+
+export interface SeatEdit { notes?: string; model_profile_id?: string }
 
 export interface Reask { turn: string; seats: string[] }
 
@@ -276,4 +280,23 @@ export function beatStanding(beat: BoardBeat): 'landed' | 'used' | null {
 /** Whether a beat can move up or down its arc's plan. */
 export function beatMoves(index: number, count: number): { up: boolean; down: boolean } {
   return { up: index > 0, down: index < count - 1 }
+}
+
+// The cast page's party (POST /api/story/start `party`) ----------------------------------------------------------------
+
+export type PartyMind = 'agent' | 'program'
+
+/** Whether the backend seats the other leads as your party at Begin: it says how each one decides by default. */
+export function joinsAsParty(premades: { default_mind?: PartyMind }[]): boolean {
+  return premades.some((premade) => premade.default_mind)
+}
+
+/** How a lead decides: the user's choice on the cast page, else the world's default, else Thinks. */
+export function partyMind(premade: { id: string; default_mind?: PartyMind }, chosen: Record<string, PartyMind>): PartyMind {
+  return chosen[premade.id] ?? premade.default_mind ?? 'agent'
+}
+
+/** Begin's `party`: every lead but the one you play, with how each decides. */
+export function partyBody(premades: { id: string; default_mind?: PartyMind }[], you: string, chosen: Record<string, PartyMind>): Record<string, { mind: PartyMind }> {
+  return Object.fromEntries(premades.filter((premade) => premade.id !== you).map((premade) => [premade.id, { mind: partyMind(premade, chosen) }]))
 }

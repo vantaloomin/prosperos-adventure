@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { asksMissed, beatMoves, beatStanding, reaskOf, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
+import { asksMissed, joinsAsParty, partyBody, partyMind, beatMoves, beatStanding, reaskOf, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
 import { composerText, whatIf, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
@@ -197,4 +197,15 @@ test('only agents who decided on the newest turn can be asked again, and only be
   assert.equal(reaskOf({ turn: null, minds: [] }, false), null)
   assert.equal(reaskOf({ turn: 't3', minds: [row('olaf', 'program')] }, false), null)
   assert.equal(whatIf('Hesk'), 'What if Hesk had chosen otherwise?')
+})
+
+test('the cast page sends every other lead as your party, with how each decides', () => {
+  const leads = [{ id: 'ada', default_mind: 'agent' as const }, { id: 'hesk', default_mind: 'program' as const }, { id: 'mara' }]
+  assert.equal(joinsAsParty([{}]), false)
+  assert.equal(joinsAsParty(leads), true)
+  assert.equal(partyMind(leads[1], {}), 'program')
+  assert.equal(partyMind(leads[2], {}), 'agent')
+  assert.deepEqual(partyBody(leads, 'ada', { mara: 'program' }), { hesk: { mind: 'program' }, mara: { mind: 'program' } })
+  // Making your own: everyone joins.
+  assert.deepEqual(Object.keys(partyBody(leads, '', {})), ['ada', 'hesk', 'mara'])
 })
