@@ -12,7 +12,9 @@ a secret to it). Its calls in a round:
   user's character in Play, roving across the cast in Author and Watch), streamed, every user-set beat in full, never
   a die, ending at the stop point. The names it brought in are listed for the turn report (`draft.extra['w4']`), and a
   round with no player's line saves its post as the narrator's reply at Commit ('writer'). A player's line in a
-  campaign with no agents is told as today (adventure/rounds/telling.py).
+  campaign with no agents is told as today (adventure/rounds/telling.py). Its system prompt holds only its rules and
+  the story's settings; what it may know this round comes after the story so far, in the closing message, so each
+  round's request starts like the last and the model service can reuse it (adventure/prompt_layout.py).
 
 Every reply from it goes through adventure/in_character.py, so a sentence that steps out of the story never reaches
 the page. Text that came from a person or another model is fenced before it is shown to the Writer.
@@ -20,7 +22,7 @@ the page. Text that came from a person or another model is fenced before it is s
 import re
 from dataclasses import replace
 
-from adventure import beats, in_character, prompt_library, story, story_clock, timeline, tone
+from adventure import beats, in_character, pace, prompt_layout, prompt_library, story, story_clock, timeline, tone
 from adventure.database import many
 from adventure.narration import prompt as narration_prompt
 from adventure.providers.scheduling import CONVERSATION
@@ -200,14 +202,31 @@ def scene_for(connection, turn, line: story.Telling | None) -> str:
     return '\n\n'.join(part for part in parts if part)
 
 
-def round_system(connection, turn, known: str, data: dict) -> str:
+def round_system(connection, turn, data: dict) -> prompt_layout.Tiered:
+    """The Writer's system prompt, which holds only what stays put from round to round, so it and the story so far
+    after it can be cached (adventure/prompt_layout.py): its rules, then the story's settings. What it may know this
+    round goes after the story so far, in the closing message (`asked`)."""
     chosen = story.narration_format(connection)
     craft = narration_prompt.craft_for(config(connection).get('context_tokens'),
                                        prompt_library.text(connection, 'narrator-craft'))
-    layers = (prompt_library.text(connection, 'round-writer'), craft, f'Length: {narration_prompt.LENGTHS[chosen.length]} per round.',
-              tone.narration(story.intensity(connection, data)).text(), rules_text(connection, turn, data),
-              focus(connection, turn), fence_rule(), known)
+    rules = (prompt_library.text(connection, 'round-writer'), craft, fence_rule())
+    settings = (f'Length: {narration_prompt.LENGTHS[chosen.length]} per round.',
+                tone.narration(story.intensity(connection, data)).text(), rules_text(connection, turn, data),
+                focus(connection, turn))
+    return prompt_layout.stable(joined(rules), joined(settings))
+
+
+def joined(layers) -> str:
     return '\n\n'.join(layer.strip() for layer in layers if layer and layer.strip())
+
+
+WRITE = 'Write the round, ending at the stop point.'
+
+
+def asked(known: str) -> dict:
+    """The closing message: what the Writer may know this round, then the ask. It comes after the story so far, so a
+    new round changes only the end of the request."""
+    return {'role': 'user', 'content': joined((known, WRITE))}
 
 
 def history(connection, turn) -> list[dict]:
@@ -246,10 +265,13 @@ async def streamed(turn, system: str, messages: list[dict]) -> str:
                 await turn.on_text(piece)
     with app.database.connect() as connection:
         settings = config(connection)
+    usage = {}
     async with app.scheduler.reserve(settings, CONVERSATION):
         async for chunk in app.provider.stream(settings, key_for(app.vault, settings), system, messages):
+            usage |= chunk.usage or {}
             await sent(guard.feed(chunk.text))
     await sent(guard.flush())
+    pace.count_cache(turn.draft.extra, usage)
     return ''.join(pieces).strip()
 
 
@@ -272,8 +294,8 @@ async def write(turn):
     with turn.database.connect() as connection:
         data = story.city_data(connection, story.scene_row(connection)['city_id'])
         known = context_for(connection, turn, scene_for(connection, turn, line))
-        system, messages = round_system(connection, turn, known, data), history(connection, turn)
-    messages = [*messages, {'role': 'user', 'content': 'Write the round, ending at the stop point.'}]
+        system, messages = round_system(connection, turn, data), history(connection, turn)
+    messages = [*messages, asked(known)]
     turn.draft.post = await streamed(turn, system, messages)
     canon = naming.allowed_words(data, known, *(message['content'] for message in messages))
     turn.draft.extra.setdefault(KEY, {})['inventions'] = inventions(turn.draft.post, canon)

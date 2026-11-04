@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { asksMissed, castSeat, joinsAsParty, partyBody, partyMind, partyOf, beatMoves, beatStanding, reaskOf, decidedCount, itemText, hasAgents, modeChosen, modeOf, motivesOf, openingKind, watchNext, watchOf, WATCH_SECONDS, NO_ROUND, replyBody, roundAfter, roundStarting, rowStatus, seatChanges, stepAt, STEPS, underWay, waitingOn, type RoundLive, type RoundTable, type Seat } from '../../src/features/round/round.ts'
-import { composerText, whatIf, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
+import { cacheLine, composerText, whatIf, pauseLine, secondsName, mindLines, checksLine, rollLine, turnName, estimateLine, liveSummary, replyText, rowText, spendLine, STEP_NAMES, stepLine, titleWhile } from '../../src/features/round/roundText.ts'
 
 const seat = (key: string, mind: Seat['mind']): Seat => ({ key, name: key.charAt(0).toUpperCase() + key.slice(1), mind, order: 0, model_profile_id: null, notes: '', promoted: false })
 const table = (seats: Seat[], under_way: RoundTable['under_way'] = null): RoundTable => ({
@@ -117,6 +117,10 @@ test('the turn report reads plainly', () => {
   assert.equal(rollLine({ actor: 'hesk', action: 'picks the lock', stat: 'Deft', result: 'success', total: 16 }, names), 'Hesk · picks the lock · Deft · success, 16')
   assert.equal(checksLine({ scan: {}, cut: [], rewrites: 0, review: [] }), '')
   assert.equal(checksLine({ scan: {}, cut: ['A line.'], rewrites: 2, review: [{ quote: 'q', problem: 'p', fix: 'f' }] }), '2 rewrites · 1 sentence cut · 1 note')
+  assert.equal(cacheLine(undefined), '')
+  assert.equal(cacheLine({ calls: 3, reported: 0, input: 0 }), '3 calls; the model service did not say what it cached')
+  assert.equal(cacheLine({ calls: 7, reported: 7, input: 12400, read: 7936, written: 3100 }), '64% of 12,400 prompt tokens read from cache · 7 calls · 3,100 written')
+  assert.equal(cacheLine({ calls: 1, reported: 1, input: 900, read: 0, written: 0 }), '0% of 900 prompt tokens read from cache · 1 call')
   assert.equal(itemText('The bridge burns'), 'The bridge burns')
   assert.equal(itemText({ who: 'tobin', text: 'Tobin sold the map' }), 'Tobin sold the map')
   assert.equal(itemText({ who: 'tobin' }), '')

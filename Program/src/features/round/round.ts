@@ -184,7 +184,10 @@ export interface TurnReport {
   judged: JudgedChange[]
   checks: { scan: { words?: number; findings?: { kind: string; severity: string; text: string }[] }; cut: string[]; rewrites: number; review: { quote: string; problem: string; fix: string }[] }
   offpage: ReportItem[]; questions: ReportItem[]; motives: { seat: string; motive: string }[]; next: string
+  /** How much of the turn's prompts came from the model services' caches (adventure/rounds/report.py cache_line). */
+  cache?: ReportCache
 }
+export interface ReportCache { calls?: number; reported?: number; input?: number; read?: number; written?: number; share?: number }
 export interface JudgedChange { id: string; kind: 'quest' | 'oath' | 'feeling' | 'dark'; label: string; undone: boolean }
 export interface StatusLine { last: { turn_id: string; number: number } | null; pending: { turn_id: string; state: RoundState; seat: string | null } | null; offpage_within: number }
 
