@@ -429,6 +429,10 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .make-paste { padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
 .make-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .make-filled { margin: 0; color: var(--muted); font-size: 0.8125rem; }
+.make-card { display: flex; gap: 12px; align-items: center; margin: 0; padding: 12px; border: 1px solid var(--border); border-radius: 8px; min-width: 0; }
+.make-card > legend { padding: 0 4px; font-size: 0.875rem; }
+.make-card-picture { width: 48px; height: 64px; object-fit: cover; border-radius: 4px; flex-shrink: 0; }
+.make-card-ticks { display: grid; gap: 4px; min-width: 0; }
 .make-more { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; border-top: 1px solid var(--border); padding-top: 12px; }
 .make-more > summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; font-size: 0.875rem; }
 .make-more:not([open]) > summary { color: var(--muted); }

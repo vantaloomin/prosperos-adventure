@@ -209,10 +209,19 @@ class MadeLooks(Input):
     feature: str = Field('', max_length=200)
 
 
+class MadeCard(Input):
+    """A character card the person opened for a made character, and what they ticked to keep from it at Begin: its
+    lorebook, and its picture as the character's portrait (adventure/making.py `cards_of`)."""
+    filename: str = Field(min_length=1, max_length=260)
+    data: str = Field(min_length=1, max_length=14_000_000)
+    lorebook: bool = False
+    picture: bool = False
+
+
 class MadeCharacter(Input):
     """A character the player makes on the cast page (adventure/making.py), beyond the persona's name, gender, age and
     About you: their look, voice, wants and fears, personality sliders, Looks and how they come across. `seed` rolls
-    whatever is left open, so the form and Begin roll the same."""
+    whatever is left open, so the form and Begin roll the same. `card` is a character card they opened, kept as ticked."""
     seed: str = Field('', max_length=80, pattern=r'^[A-Za-z0-9-]*$')
     look: str = Field('', max_length=600)
     voice: str = Field('', max_length=600)
@@ -222,6 +231,7 @@ class MadeCharacter(Input):
     looks: MadeLooks | None = None
     seen_as: str = Field('', max_length=400)
     sees_self: str = Field('', max_length=1200)
+    card: MadeCard | None = None
 
 
 class MadeForm(MadeCharacter):

@@ -204,21 +204,30 @@ def request(database, kind: str, subject: str) -> dict:
 OWN_BYTES = 15 * 1024 * 1024
 
 
+def checked_picture(data: bytes):
+    """A picture the player gives: PNG, JPEG or WebP, and 15 MB or less."""
+    require(0 < len(data) <= OWN_BYTES, 'Choose a PNG, JPEG or WebP picture of 15 MB or less.', 422)
+    try:
+        _, width, height = storage.sniff(data)
+    except AdapterError:
+        require(False, 'That is not a PNG, JPEG or WebP picture.', 422)
+    require(0 < width <= 8192 and 0 < height <= 8192, TOO_BIG, 422)
+
+
+TOO_BIG = 'That picture is too big to use: keep it under 8192 pixels on each side.'
+
+
 def own_portrait(database, subject: str, data: bytes) -> dict:
     """The player's own picture of their character (`player`) or of someone met: their portrait at once, and the
     reference every later portrait of them follows on a backend that takes one."""
-    require(0 < len(data) <= OWN_BYTES, 'Choose a PNG, JPEG or WebP picture of 15 MB or less.', 422)
-    try:
-        storage.sniff(data)
-    except AdapterError:
-        require(False, 'That is not a PNG, JPEG or WebP picture.', 422)
+    checked_picture(data)
     with database.connect(write=True) as connection:
         prompt, kept = built(connection, database, 'portrait', subject)
         art_id = f'art-{identifier()[:12]}'
         try:
             stored = storage.store(database, art_id, data)
         except AdapterError:
-            require(False, 'That picture is too big to use: keep it under 8192 pixels on each side.', 422)
+            require(False, TOO_BIG, 422)
         chapter = next((item for item in reversed(chapters.listing(connection)) if item['open']), None)
         connection.execute("UPDATE story_art SET reference=0 WHERE kind='portrait' AND subject=?", (kept,))
         connection.execute('INSERT INTO story_art (id, kind, subject, chapter_id, prompt, state, status, file, width, '

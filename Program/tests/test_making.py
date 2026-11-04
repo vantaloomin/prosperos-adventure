@@ -3,6 +3,7 @@ roll without one, and Begin keeps the whole sheet for the narrator, portraits an
 import asyncio
 import base64
 import json
+import struct
 
 from test_bring_characters import as_json, png_with
 from test_pace import ok, reply
@@ -197,3 +198,36 @@ def test_a_party_member_is_drafted_and_split_as_someone_else_plays_them(client, 
     assert provider.requests[-1]['messages'][0]['content'].startswith('Draft a party member.\n' + making.COMPANION)
     ok(client.post('/api/story/make/split', json={'text': 'Tamsin keeps the lock.', 'party': True}))
     assert provider.requests[-1]['messages'][0]['content'].startswith(making.COMPANION + '\n[[pasted: their character]]')
+
+
+def card_png(card):
+    header = struct.pack('>IIBBBBB', 2, 3, 8, 6, 0, 0, 0)
+    return png_with([(b'IHDR', header), (b'tEXt', b'chara\x00' + base64.b64encode(json.dumps(card).encode()))])
+
+
+MIRA = {'spec': 'chara_card_v2', 'data': {'name': 'Mira', 'description': 'Mira keeps bees.', 'character_book': {
+    'name': 'Apiary', 'entries': [{'keys': ['hive'], 'content': 'The hives stand on the south wall.', 'enabled': True}]}}}
+
+
+def test_a_card_offers_its_lorebook_and_picture_and_begin_keeps_what_was_ticked(client, app):
+    png = base64.b64encode(card_png(MIRA)).decode()
+    found = ok(client.post('/api/story/make/card', json={'filename': 'mira.png', 'data': png}))
+    assert found['book'] == {'name': 'Apiary', 'entries': 1} and found['picture'].startswith('data:image/png;base64,')
+    plain = ok(client.post('/api/story/make/card', json={'filename': 'mira.json', 'data': as_json(MIRA)}))
+    assert plain['picture'] is None and plain['book']['entries'] == 1
+
+    person = {'name': 'Mira', 'gender': 'woman', 'age': 30, 'about': 'Keeps bees.'}
+    card = {'filename': 'mira.png', 'data': png, 'lorebook': True, 'picture': True}
+    friend = {'name': 'Tamsin Reed', 'card': {**card, 'lorebook': False}}
+    bad = {'filename': 'x.png', 'data': base64.b64encode(b'not a card').decode(), 'picture': True}
+    refused = client.post('/api/story/start', json={'persona': person, 'stats': STATS, 'made': {'card': bad}})
+    assert refused.status_code == 422 and rows(app, 'story_made') == []  # Nothing began.
+    ok(client.post('/api/story/start', json={'persona': person, 'stats': STATS, 'made': {'card': card},
+                                             'made_party': [friend]}))
+    books = rows(app, 'lore_books')
+    assert [book['name'] for book in books] == ['Apiary']
+    portraits = {row['subject']: row for row in rows(app, 'story_art') if row['kind'] == 'portrait'}
+    assert set(portraits) == {'player', 'made-1'}
+    assert all(row['own'] and row['reference'] and row['status'] == 'done' for row in portraits.values())
+    # The card itself is never kept with the sheet.
+    assert all('card' not in json.loads(row['sheet']) for row in rows(app, 'story_made'))

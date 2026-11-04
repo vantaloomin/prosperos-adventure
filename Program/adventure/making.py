@@ -20,6 +20,7 @@ every picture shows the same person.
 The prompts are editable in Settings > Developer > Prompts (adventure/prompt_library.py); the answer's shape, the
 fields' limits and the adults-only check stay code.
 """
+import base64
 import json
 import re
 
@@ -239,7 +240,58 @@ def card_text(filename: str, data: str) -> dict:
                                                                        ('appearance', 'Appearance'))
              if isinstance(character.get(key), str) and character[key].strip()]
     whole = '\n\n'.join([text['text'], *extra])
-    return {'name': text['name'], 'text': whole[:PASTED_CHARS], 'truncated': len(whole) > PASTED_CHARS}
+    book, picture = found.get('book'), found.get('picture')
+    return {'name': text['name'], 'text': whole[:PASTED_CHARS], 'truncated': len(whole) > PASTED_CHARS,
+            # What else the card holds, for the person to tick to keep at Begin (`cards_of`).
+            'book': {'name': book['name'], 'entries': len(book['entries'])} if book else None,
+            'picture': picture_url(picture)}
+
+
+def picture_url(picture: bytes | None) -> str | None:
+    """A card's picture for the cast page to show, when it is one the app can keep as a portrait."""
+    from adventure.images import storage
+    from adventure.images.adapters.base import AdapterError
+    if not picture:
+        return None
+    try:
+        kind = storage.sniff(picture)[0]
+    except AdapterError:
+        return None
+    return f"data:image/{'jpeg' if kind == 'jpg' else kind};base64,{base64.b64encode(picture).decode()}"
+
+
+def card_of(form: dict | None) -> dict | None:
+    """A card opened for a made character, read again for Begin: the lorebook and picture the person ticked."""
+    card = (form or {}).get('card')
+    if not card or not (card.get('lorebook') or card.get('picture')):
+        return None
+    found = formats.read(card['filename'], card['data'])
+    return {'filename': card['filename'], 'book': found.get('book') if card.get('lorebook') else None,
+            'picture': found.get('picture') if card.get('picture') else None}
+
+
+def cards_of(made: dict | None, party: list[dict]) -> list[tuple[str, dict]]:
+    """Before Begin: each made character's card (yours is the portrait subject `player`, a party member's their seat
+    key), read and its picture checked, so a file that cannot be kept stops Begin before anything is saved."""
+    from adventure import art
+    forms = [('player', made), *((f'made-{number}', form) for number, form in enumerate(party, start=1))]
+    found = [(subject, card) for subject, form in forms if (card := card_of(form))]
+    for _, card in found:
+        if card['picture']:
+            art.checked_picture(card['picture'])
+    return found
+
+
+def bring_cards(database, found: list[tuple[str, dict]]):
+    """After Begin: each ticked lorebook joins the lore (adventure/lore.py), and each ticked picture is that
+    character's portrait and the likeness later ones follow (adventure/art.py own_portrait)."""
+    from adventure import art, lore
+    for subject, card in found:
+        if card['book']:
+            with database.connect(write=True) as connection:
+                lore.add_book(connection, database.now(), card['book'], card['filename'])
+        if card['picture']:
+            art.own_portrait(database, subject, card['picture'])
 
 
 # The sheet's extras -----------------------------------------------------------------------------------------------
