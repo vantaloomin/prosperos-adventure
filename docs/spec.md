@@ -153,12 +153,12 @@ Put together from the decisions above and revised after the 2026-11-02 reviews (
 
 ## Agent output
 
-Each agent returns a structured object that code validates:
+Each agent returns a structured object that code validates. The prompt speaks to the character as themselves ("You are Mara") and asks for the fields in the order a person thinks them, so the lines come out of the motive instead of the motive being made up to explain the lines:
 
+- **motive:** their private reason, in their own head, first person. Goes only to their own memory, the minds panel where the mode allows, and the GM view.
+- **deceptions:** each lie as a field: what they claim, what they believe is true, and who it is aimed at. Code rolls only these. A line with no declared deception is honest as far as the speaker knows. A claim the character never says in their lines or whispers is dropped, since nobody heard it.
 - **intent:** what the character *attempts*, never a result. An intent or line that claims an outcome ("as my blade finds his heart") is cut back to the attempt before anyone else sees it.
 - **lines:** what they say aloud, and to whom.
-- **motive:** their private reason. Goes only to their own memory, the minds panel where the mode allows, and the GM view.
-- **deceptions:** each lie as a field: what they claim, what they believe is true, and who it is aimed at. Code rolls only these. A line with no declared deception is honest as far as the speaker knows.
 - **whispers:** private lines and their audience.
 
 Veils and intensity apply to every field, hidden ones included. The agent's prompt says so, and code filters motives, whispers and memories the same way it filters the post.
@@ -178,7 +178,7 @@ Privacy is enforced by building context, not by asking a model to keep quiet. **
 
 **World lore carries a visibility tag:** public, known to listed characters, or GM only. **Untagged lore counts as public.** A world package's hidden truths and its cast's secrets count as marked GM only (or known to the characters they belong to), so they never reach an agent untagged. Anything else secret has to be marked; see "Later batches" for Worldsmith's part in catching what wasn't.
 
-**Untrusted text is fenced.** The player's typed action, the Author's nudge, the user's character notes, cast sheets from world packages (which may come from other people), character names and other agents' lines all arrive in labelled blocks the prompt treats as in-fiction content, never as instructions.
+**Untrusted text is fenced.** The player's typed action, the Author's nudge, the user's character notes, cast sheets from world packages (which may come from other people), character names and other agents' lines all arrive in labelled blocks the prompt treats as in-fiction content, never as instructions. An agent's own sheet, name and the user's notes on it come in a second kind of block that it reads as who it is, so they shape how it speaks and decides; neither kind can change the game's rules, the answer's shape or what it knows.
 
 Each context builder has tests that seed a sentinel motive, whisper and GM-only fact and assert they never appear in any other reader's context.
 

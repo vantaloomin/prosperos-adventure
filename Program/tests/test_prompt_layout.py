@@ -91,7 +91,7 @@ def test_the_cached_part_is_the_same_byte_for_byte_from_turn_to_turn_and_call_to
     # The sheet is cached; the memories, the feelings and the moment are not.
     assert 'Ferryman' in system.blocks[1] and 'Ferryman' not in made[0].user
     assert 'How you feel' in mira.user and 'How you feel' not in mira.system
-    assert agents.CONTRACT in system.blocks[0] and 'Everyone decides at once' in made[0].user
+    assert agents.CONTRACT in system.blocks[0] and 'Everyone moves at once' in made[0].user
 
 
 def test_a_users_layout_moves_content_but_never_adds_any(game):
@@ -103,9 +103,43 @@ def test_a_users_layout_moves_content_but_never_adds_any(game):
         mine = agents.composed(connection, sheet, turn, 'mira', 'declare')
         connection.execute("DELETE FROM prompt_overrides WHERE name='character-layout'")
     # The headings went with the default layout; every fenced part is still there, and nothing else.
-    fences = lambda text: sorted(re.findall(r'\[\[in-fiction: [^\]]*\]\]', text))  # noqa: E731
+    fences = lambda text: sorted(re.findall(r'\[\[(?:in-fiction|who-you-are): [^\]]*\]\]', text))  # noqa: E731
     assert fences(mine.system + mine.user) == fences(default.system + default.user)
     assert '## ' not in mine.system + mine.user
+
+
+def test_a_character_reads_its_own_sheet_and_notes_as_itself_and_the_story_as_story(game):
+    """Two kinds of fence: who the character is shapes how it speaks; what happened is story. The rule for both is in
+    the shared rules, and neither kind is ever outside a fence."""
+    sheet, turn = snapshot(), draft()
+    with game.database.connect() as connection:
+        made = agents.composed(connection, sheet, turn, 'hesk', 'declare')
+    system = made.system
+    assert context.AGENT_FENCE_RULE in system.blocks[0] and context.FENCE_RULE not in system
+    assert 'You are [[who-you-are: your name]]\nHesk\n[[end: your name]]' in system.blocks[1]
+    assert '[[who-you-are: Who you are]]' in system and '[[who-you-are: Notes from the person at the table]]' in system
+    assert 'How you sound: "Penny first, then the bridge." / "River waits for nobody."' in system.blocks[1]
+    assert '[[in-fiction: What you remember]]' in made.user and '[[who-you-are:' not in made.user
+    # Nobody else's prompt names the other kind: the narrator and the Referee keep the one rule they had.
+    assert 'who-you-are' not in context.FENCE_RULE
+
+
+def test_the_tables_genre_reaches_every_character_in_its_own_words(game):
+    sheet, turn = snapshot(), draft()
+    with game.database.connect() as connection:
+        plain = agents.composed(connection, sheet, turn, 'hesk', 'declare').system.blocks[0]
+        sheet.settings['agents'] = {'genre': 'adventure'}
+        adventure = agents.composed(connection, sheet, turn, 'hesk', 'declare').system
+        connection.execute("INSERT INTO prompt_overrides (name, text, default_text, updated_at) VALUES "
+                           "('character-genre-adventure', 'SENTINEL-CHARACTER-GENRE', '', '')")
+        mine = agents.composed(connection, sheet, turn, 'hesk', 'declare').system.blocks[0]
+        connection.execute("DELETE FROM prompt_overrides WHERE name='character-genre-adventure'")
+    overlay = agents.GENRES['adventure']
+    assert overlay not in plain and 'Genre: adventure' not in adventure
+    # After the intensity, before the scheming dial, in the block every character in the story shares.
+    first = adventure.blocks[0]
+    assert first.index('Intensity:') < first.index(overlay) < first.index(agents.SCHEMING[1])
+    assert 'SENTINEL-CHARACTER-GENRE' in mine and overlay not in mine
 
 
 # Providers ---------------------------------------------------------------------------------------------------------
