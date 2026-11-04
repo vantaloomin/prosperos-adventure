@@ -76,7 +76,7 @@ def test_the_narrator_reads_lore_that_is_always_on_named_lately_or_fits_the_mome
 
     provider.replies = [[Chunk('The bell tolls.'), Chunk('', 'stop')]]
     ok(client.post('/api/story/messages', json={'text': 'I ask after Pellam.', 'client_id': 'lore-0001'}))
-    system = provider.requests[-1]['system']
+    system = provider.requests[-1]['prompt']
     assert '## Lore' in system and 'The harbour bell rings for the drowned.' in system
     assert 'Pellam owes money to the tide-wardens.' in system and 'Gulls cry over the slate roofs.' in system
     assert 'lamplighters' not in system
@@ -85,7 +85,7 @@ def test_the_narrator_reads_lore_that_is_always_on_named_lately_or_fits_the_mome
     ok(client.put(f"/api/lore/entries/{entries[2]['id']}/when", json={'when': []}))
     provider.replies = [[Chunk('Quiet.'), Chunk('', 'stop')]]
     ok(client.post('/api/story/messages', json={'text': 'I wait for the lanterns.', 'client_id': 'lore-0002'}))
-    system = provider.requests[-1]['system']
+    system = provider.requests[-1]['prompt']
     assert 'Gulls cry' not in system and 'lamplighters work double shifts' in system
 
 

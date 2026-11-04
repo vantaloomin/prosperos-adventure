@@ -98,8 +98,8 @@ def test_someone_there_stops_the_menu_and_the_line_that_walks_off(client, connec
     told = ok(client.post('/api/story/messages', json={'text': 'I go to the shrine.', 'client_id': 'story-0001'}))
     view_now = ok(client.get('/api/story'))
     assert view_now['scene']['place']['id'] == 'felled-oak'
-    system = [request for request in provider.requests if 'Leaving (decided by the game)' in request['system']]
-    assert system and 'goes nowhere this line' in system[-1]['system']
+    system = [request for request in provider.requests if 'Leaving (decided by the game)' in request['prompt']]
+    assert system and 'goes nowhere this line' in system[-1]['prompt']
     with app.state.database.connect() as connection:
         cards = connection.execute('SELECT action FROM story_rolls WHERE message_id=?',
                                    (told['message']['id'],)).fetchall()

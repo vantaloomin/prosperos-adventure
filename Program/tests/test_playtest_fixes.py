@@ -34,7 +34,7 @@ def test_a_shut_shop_tells_the_narrator_nobody_is_behind_the_counter(client, clo
     begin_when(client, clock, open_now=False)
     provider.replies = [reply('The door is barred.')]
     tell(client, 'I buy two loaves of bread.', 'story-0001')
-    assert 'The shop is shut: nobody is behind the counter' in provider.requests[-1]['system']
+    assert 'The shop is shut: nobody is behind the counter' in provider.requests[-1]['prompt']
 
 
 def test_shoplifting_takes_from_the_stock_or_gets_caught(client, app):

@@ -44,15 +44,15 @@ def test_a_scene_break_opens_the_next_chapter_and_the_one_that_ended_is_summariz
     # A rest is time passing: the chapter is summarized as the break is made, and the next line opens chapter 2.
     tell(client, 'I go to bed and sleep.', 'story-0002')
     assert campaign(client)['pending'] == {'reason': 'time', 'title': ''}
-    asked = next(request for request in reversed(provider.requests) if request['system'] == chapters.SUMMARIZE)
+    asked = next(request for request in reversed(provider.requests) if request['prompt'] == chapters.SUMMARIZE)
     assert 'The player: I pay Pell.' in asked['messages'][0]['content']
     tell(client, 'I get up.', 'story-0003')
     # Two lines are too few for a "previously": the player has just read them.
-    assert chapters.PREVIOUSLY not in narrator(provider)['system']
+    assert chapters.PREVIOUSLY not in narrator(provider)['prompt']
     # With enough lines it opens with one, from the chapter that ended and the hook it left (told again here).
     monkeypatch.setattr(chapters, 'RECAP_TURNS', 2)
     ok(client.post('/api/story/retry'))
-    opened = narrator(provider)['system']
+    opened = narrator(provider)['prompt']
     assert chapters.PREVIOUSLY in opened and 'You paid Pell and slept in the back room.' in opened
     assert 'Still open: The bill.' in opened
     first, second = campaign(client)['chapters']

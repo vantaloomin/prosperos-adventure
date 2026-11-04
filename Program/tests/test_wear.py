@@ -114,10 +114,10 @@ def test_a_fight_won_leaves_a_body_to_search_and_rob(client, connected, provider
     app.state.dice = Dice(95)
     provider.replies = [reply('He drops.'), reply('You kneel.'), reply('Coins.')]
     tell(client, 'I run the bandit through with my sword.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'the fight is won' in narrator and 'The fallen lie where they fell (bandit)' in narrator
     tell(client, 'I search the body.', 'story-0002')
-    assert 'Inside the body at the Felled Oak: 3.00 cr.; Belt knife.' in provider.requests[-1]['system']
+    assert 'Inside the body at the Felled Oak: 3.00 cr.; Belt knife.' in provider.requests[-1]['prompt']
     tell(client, 'I take the coins and the knife.', 'story-0003')
     items = [row for row in ok(client.get('/api/story/gear'))['items'] if row['item_id'] == 'knife']
     # What a body gives is not stolen.

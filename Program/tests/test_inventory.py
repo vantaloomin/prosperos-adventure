@@ -53,7 +53,7 @@ def test_a_premade_starts_with_their_kit_and_the_narrator_knows_it(client, conne
     assert gear['slots']['max'] == 5 + 16 / 2 and gear['slots']['used'] == 1 + 0.25 + 1 + 1 + 0.1
     provider.replies = [[Chunk('The bell over the door rings.'), Chunk('', 'stop')]]
     tell(client, 'I look at the shelves.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'Carrying (kept by the game' in narrator and 'Plain sword' in narrator and 'Purse: 3.40 cr.' in narrator
     assert '## The shop here' in narrator
     # The symbol is how the game writes money; the narrator is told what it is called ("crowns", not "credits").
@@ -155,7 +155,7 @@ def test_haggling_and_buying_in_the_story(client, connected, clock, provider, ap
     app.state.dice = Charming()
     provider.replies = [[Chunk('Pell sighs and names a better figure.'), Chunk('', 'stop')]] * 3
     tell(client, 'I haggle with the storekeeper over the price of rope.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert "## At the counter (decided by the game)\n- The haggle settles today's prices: 15% off today." in narrator
     assert "Today's prices after haggling: 15% off today." in narrator
     shop = ok(client.get('/api/story/gear'))['shop']
@@ -163,9 +163,9 @@ def test_haggling_and_buying_in_the_story(client, connected, clock, provider, ap
 
     # Telling it again keeps the haggle, and a second haggle the same day gets nowhere.
     ok(client.post('/api/story/retry'))
-    assert provider.requests[-1]['system'].count('## At the counter') == 1
+    assert provider.requests[-1]['prompt'].count('## At the counter') == 1
     tell(client, 'I buy two ropes, and I haggle for a better price again.', 'story-0002')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'will not move on price again' in narrator
     assert "buys 2 × Rope, fifty feet for 1.28 cr.; it is in their pack" in narrator
     gear = ok(client.get('/api/story/gear'))
@@ -177,7 +177,7 @@ def test_buying_more_than_the_purse_holds_in_the_story_is_refused(client, connec
     begin_when(client, clock)
     provider.replies = [[Chunk('Pell shakes his head.'), Chunk('', 'stop')]]
     tell(client, 'I buy two hooded lanterns.', 'story-0001')
-    assert "No sale of Hooded lantern: You can't afford that." in provider.requests[-1]['system']
+    assert "No sale of Hooded lantern: You can't afford that." in provider.requests[-1]['prompt']
     assert ok(client.get('/api/story/gear'))['coins'] == 340
 
 
@@ -185,7 +185,7 @@ def test_selling_in_the_story(client, connected, clock, provider):
     begin_when(client, clock)
     provider.replies = [[Chunk('Pell weighs the blanket.'), Chunk('', 'stop')]]
     tell(client, 'I sell my blanket and my sword to the storekeeper.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert "The player's character sells Wool blanket for" in narrator
     assert "No sale of Plain sword: This shop doesn't buy that." in narrator
     gear = ok(client.get('/api/story/gear'))

@@ -92,7 +92,7 @@ def test_the_narrator_hears_who_joins(client, connected, provider, monkeypatch):
     monkeypatch.setattr(party, 'turn', joining)
     provider.replies = [[Chunk('He shoulders his pack.'), Chunk('', 'stop')]]
     tell(client, 'Come with me, Corin.', 'story-0001')
-    assert '## The party (decided by the game)\n- Corin Ashby agrees' in provider.requests[-1]['system']
+    assert '## The party (decided by the game)\n- Corin Ashby agrees' in provider.requests[-1]['prompt']
 
 
 def test_souring_never_sends_an_agent_away_but_feelings_still_limit_who_joins(app, client):

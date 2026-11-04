@@ -4,6 +4,7 @@ from datetime import timedelta
 from conftest import Chunk
 
 from adventure import story
+from adventure.authors_note import NOTE_CLOSE
 from adventure.narration import prose
 
 
@@ -63,15 +64,35 @@ def test_the_narrator_is_given_the_scene(client, clock, provider):
     provider.replies = [[Chunk('The door chimes behind you.'), Chunk('', 'stop')]]
     say(client, 'I order a coffee and the secret password is plum.', 'story-0001')
     request = provider.requests[-1]
-    assert 'You are the narrator of a tabletop roleplaying game for adults' in request['system']
-    assert 'Hard rules' in request['system'] and 'second person' in request['system']
-    assert f"Place: {place['name']}" in request['system'] and 'Weather:' in request['system']
+    assert 'You are the narrator of a tabletop roleplaying game for adults' in request['prompt']
+    assert 'Hard rules' in request['prompt'] and 'second person' in request['prompt']
+    assert f"Place: {place['name']}" in request['prompt'] and 'Weather:' in request['prompt']
     # Named spots inside the place are detail for the narrator and the screen (adventure/world/inside.py).
     spots = moved['scene']['place']['spots']
-    assert spots and f"Spots here, for detail only (nobody moves between them): {', '.join(spots)}." in request['system']
-    assert all(person['sheet']['full'] in request['system'] for person in people)
-    assert request['messages'][0]['content'].startswith('[You arrive at')
+    assert spots and f"Spots here, for detail only (nobody moves between them): {', '.join(spots)}." in request['prompt']
+    assert all(person['sheet']['full'] in request['prompt'] for person in people)
+    # The turn's layer goes with the player's words, before them; the story so far opens on the arrival.
+    assert request['messages'][0]['content'].split(NOTE_CLOSE)[-1].lstrip().startswith('[You arrive at')
     assert 'secret password is plum' in request['messages'][-1]['content']
+
+
+def test_the_narrators_request_starts_the_same_way_turn_after_turn(client, clock, provider):
+    """The system prompt holds only the rules and the player's settings; the turn's layer goes with the player's
+    words, after the story so far, before the author's note. So the next turn's request starts with all of this
+    one's but its last message, and a model service can read that back from its cache."""
+    connect(client)
+    ok(client.put('/api/authors-notes/story', json={'text': 'Keep it short tonight.', 'enabled': True}))
+    say(client, 'I order a coffee.', 'story-0001')
+    say(client, 'I ask the barista about the harbor.', 'story-0002')
+    say(client, 'I pay and leave a tip.', 'story-0003')
+    first, second = provider.requests[-2], provider.requests[-1]
+    assert first['system'] == second['system'] and second['system'].blocks
+    assert 'Weather:' not in second['system'] and 'Place:' not in second['system']
+    assert len(first['messages']) >= 3 and second['messages'][:len(first['messages']) - 1] == first['messages'][:-1]
+    notes, line = second['messages'][-1]['content'].split(NOTE_CLOSE)
+    assert notes.startswith(story.TURN_NOTES) and 'Place:' in notes
+    assert notes.index('Place:') < notes.index('Keep it short tonight.') and line.strip() == \
+        'I pay and leave a tip.'
 
 
 def test_moving_to_another_city_and_unknown_places(client, clock):
@@ -98,7 +119,7 @@ def test_the_narrator_stays_in_the_story_unless_the_user_steps_out(client, clock
     provider.replies = [[Chunk("I'm an AI language model writing the narrator."), Chunk('', 'stop')]]
     honest = say(client, 'OOC: what are you?', 'story-0002')
     assert 'AI language model' in honest['reply']['text']
-    system = provider.requests[-1]['system']
+    system = provider.requests[-1]['prompt']
     assert 'out of character' in system and 'question for the game master' in system
     # It answers as the game master and names the model only if asked.
     assert 'Only if they ask what you are' in system
@@ -139,8 +160,8 @@ def test_people_named_in_the_story_are_met_and_remembered(client, clock, provide
     # Next time they are in the scene, the narrator remembers; another mention the same day is not another meeting.
     provider.replies = [[Chunk(f'{them["name"]} nods.'), Chunk('', 'stop')]]
     say(client, f'I wave at {them["name"]}.', 'story-0003')
-    assert 'The user has met them once and knows their name' in provider.requests[-1]['system']
-    assert 'From before: "I\'m' in provider.requests[-1]['system']
+    assert 'The user has met them once and knows their name' in provider.requests[-1]['prompt']
+    assert 'From before: "I\'m' in provider.requests[-1]['prompt']
     assert ok(client.get('/api/story'))['people'][0]['meetings'] == 1
 
     cleared = ok(client.delete('/api/story'))
@@ -188,7 +209,7 @@ def test_the_narration_is_checked_and_rewritten_before_it_is_saved(client, clock
                                'dice.'), Chunk('', 'stop')]]
     reply = say(client, 'I walk in.', 'story-0001')['reply']
     assert reply['status'] == 'complete' and reply['text'].startswith('The door chimes softly. Two dockhands')
-    assert provider.requests[-1]['system'] == prose.REWRITE
+    assert provider.requests[-1]['prompt'] == prose.REWRITE
     assert 'shiver' in provider.requests[-1]['messages'][0]['content']
 
 
@@ -218,7 +239,7 @@ def test_an_ooc_question_gets_the_map_as_the_character_knows_it(client, clock, p
     ok(client.post('/api/story/start', json={'premade_id': 'agna-holt'}))
     provider.replies = [[Chunk('Convila, Eriane or the keep.'), Chunk('', 'stop')]]
     say(client, 'OOC: where can I travel from here?', 'story-0001')
-    system = provider.requests[-1]['system']
+    system = provider.requests[-1]['prompt']
     assert 'Places in Kingswood, reached by going there: the Green, the Felled Oak' in system
     assert '- Kingswood to Convila: 8 hours by the forest road, low danger' in system
 

@@ -101,11 +101,11 @@ def test_cutaways_show_the_player_the_beat_once(client, connected, provider, app
     for n in range(4):
         reply(provider, 'The shop is quiet.')
         tell(client, 'I wait.', f'story-000{n}')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert '## Meanwhile' in narrator and 'Corin Ashby took a knife in a tavern brawl' in narrator
     assert ok(client.get('/api/story'))['intensity']['cutaways'] is True
     # Telling the line again brings the same beat, not another.
     ok(client.post('/api/story/retry'))
-    assert '## Meanwhile' in provider.requests[-1]['system']
+    assert '## Meanwhile' in provider.requests[-1]['prompt']
     with app.state.database.connect() as connection:
         assert connection.execute('SELECT COUNT(*) FROM story_beats').fetchone()[0] == 1

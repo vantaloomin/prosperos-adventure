@@ -68,7 +68,7 @@ def test_a_critical_hit_in_a_fight_leaves_a_lasting_injury(client, connected, pr
     tell(client, 'I stand there.', 'story-0001')
     story = ok(client.get('/api/story'))
     assert len(story['fight']['injuries']) == 1 and story['fight']['fight'] is not None
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'It leaves a lasting injury:' in narrator and "lasting injuries (kept by the game" in narrator
     with app.state.database.connect() as connection:
         assert 'hurt_by' not in combat.fight(connection)
@@ -87,7 +87,7 @@ def test_bandages_from_the_pack_treat_a_wound_once(client, connected, provider, 
     tell(client, 'I clean the wound and bandage it.', 'story-0001')
     story = ok(client.get('/api/story'))
     assert story['fight']['condition'] == 'hurt'
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert '## The treatment' in narrator and 'from wounded to hurt' in narrator
     with app.state.database.connect() as connection:
         assert connection.execute("SELECT qty FROM story_inventory WHERE id='b'").fetchone()[0] == 0
@@ -95,7 +95,7 @@ def test_bandages_from_the_pack_treat_a_wound_once(client, connected, provider, 
                                   ).fetchone()) == ('Mind', 'hard')
     reply(provider, 'Again.')
     tell(client, 'I bandage it again.', 'story-0002')
-    assert 'treated already' in provider.requests[-1]['system']
+    assert 'treated already' in provider.requests[-1]['prompt']
 
 
 def test_a_healer_treats_for_a_fee_and_a_bad_treatment_goes_bad(app):
@@ -123,7 +123,7 @@ def test_treating_a_wound_the_character_does_not_have_rolls_nothing(client, conn
     begin(client)
     reply(provider, 'Nothing to bind.')
     tell(client, 'I bind my wounds.', 'story-0001')
-    assert 'The character has no wound to treat.' in provider.requests[-1]['system']
+    assert 'The character has no wound to treat.' in provider.requests[-1]['prompt']
     with app.state.database.connect() as connection:
         assert connection.execute('SELECT COUNT(*) FROM story_rolls').fetchone()[0] == 0
     assert injuries.untreated([{'action': 'bind my wounds'}, {'action': 'look around'}]) == [{'action': 'look around'}]

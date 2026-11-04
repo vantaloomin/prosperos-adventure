@@ -84,7 +84,7 @@ def test_the_narrator_hears_the_lie(client, connected, provider, app, monkeypatc
     tell(client, 'Who is buying the Heartwood timber?', 'story-0001')
     assert asked == ['Who is buying the Heartwood timber?']
     assert '## A lie (decided by the game; never say outright that it is a lie)\n- Corin Ashby lies' in \
-        provider.requests[-1]['system']
+        provider.requests[-1]['prompt']
 
 
 def test_a_near_miss_leaves_the_character_uneasy(app, client):

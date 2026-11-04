@@ -40,7 +40,7 @@ def say(client, provider, text, client_id) -> str:
     provider.replies = [[Chunk('The tide turns.'), Chunk('', 'stop')]]
     response = client.post('/api/story/messages', json={'text': text, 'client_id': client_id})
     assert response.status_code == 200, response.text
-    return provider.requests[-1]['system']
+    return provider.requests[-1]['prompt']
 
 
 def tiddlywiki(tiddlers, title='Harbor Wiki') -> bytes:

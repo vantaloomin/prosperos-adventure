@@ -75,7 +75,7 @@ def test_the_narrator_and_the_pack_are_told_how_the_character_looks(client, conn
     begin(client, 'the-green')
     provider.replies = [[Chunk('The road is long.'), Chunk('', 'stop')]] * 2
     tell(client, 'I spend the day chopping wood.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert '## How the character looks (changed this turn, by the game)\n- The character is worn (sweat, sawdust) now.' \
         in narrator
     assert 'How the character looks right now (kept by the game' in narrator and 'on show: Plain sword, Belt knife' in narrator

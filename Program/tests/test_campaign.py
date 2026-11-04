@@ -33,7 +33,7 @@ def test_starting_as_a_premade_character(client, provider):
     ok(client.put('/api/connection', json={'base_url': 'http://127.0.0.1:1234/v1', 'model': 'local-model'}))
     provider.replies = [[Chunk('The fog sits on the river.'), Chunk('', 'stop')]]
     ok(client.post('/api/story/messages', json={'text': 'I look at the logs.', 'client_id': 'story-0001'}))
-    system = provider.requests[-1]['system']
+    system = provider.requests[-1]['prompt']
     assert "## The player's character\nAgna Holt (woman, 29)." in system and "walked away from Bastion" in system
     character = system.split("## The player's character")[1].split('##')[0]
     assert 'Good at: strength, speed, fighting, endurance.' in character

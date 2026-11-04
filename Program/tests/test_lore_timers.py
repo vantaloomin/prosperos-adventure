@@ -29,7 +29,7 @@ def said(client, provider, text: str, number: int) -> str:
     """One line told; the narrator's system prompt for it."""
     provider.replies = [[Chunk('The tide turns.'), Chunk('', 'stop')]]
     ok(client.post('/api/story/messages', json={'text': text, 'client_id': f'timer-{number:04d}'}))
-    return next(request['system'] for request in reversed(provider.requests) if '## Scene' in request['system'])
+    return next(request['prompt'] for request in reversed(provider.requests) if '## Scene' in request['prompt'])
 
 
 def test_an_entry_with_no_timing_fires_as_before(client, provider):

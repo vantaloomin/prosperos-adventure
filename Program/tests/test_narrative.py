@@ -31,7 +31,7 @@ def test_the_judge_decides_each_action_from_who_the_character_is(client, connect
         ('narrative', 'Narrative', ['old games'], ['talking to women'])
     judging(provider, [{'verdict': 'no_but', 'reason': 'he opens with her looks; she does laugh at the joke'}])
     tell(client, 'I try to seduce the shopkeeper with my best line.', 'story-0001')
-    asked = next(request for request in provider.requests if request['system'] == judge.SYSTEM)
+    asked = next(request for request in provider.requests if request['prompt'] == judge.SYSTEM)
     told = asked['messages'][-1]['content']
     assert 'overweight' in told and 'bad at talking to women' in told and 'seduce the shopkeeper' in told
     assert '## Scene' in told
@@ -39,7 +39,7 @@ def test_the_judge_decides_each_action_from_who_the_character_is(client, connect
         row = connection.execute('SELECT band, die, natural, ruleset, skill FROM story_rolls').fetchone()
     assert tuple(row) == ('failure_upside', 0, 0, 'narrative',
                           'No, but: he opens with her looks; she does laugh at the joke')
-    narrator = [request for request in provider.requests if request['system'] != judge.SYSTEM][-1]['system']
+    narrator = [request for request in provider.requests if request['prompt'] != judge.SYSTEM][-1]['prompt']
     assert 'fails, but something useful comes out of the attempt. Why: he opens with her looks' in narrator
 
 
@@ -68,11 +68,11 @@ def test_with_the_adult_side_on_the_judge_knows_who_the_people_here_are_drawn_to
     player(client)
     judging(provider, [{'verdict': 'no', 'reason': 'not her type'}])
     tell(client, 'I try to seduce the shopkeeper with my best line.', 'story-0001')
-    told = [request for request in provider.requests if request['system'] == judge.SYSTEM][-1]['messages'][-1]['content']
+    told = [request for request in provider.requests if request['prompt'] == judge.SYSTEM][-1]['messages'][-1]['content']
     assert 'drawn to' not in told
     ok(client.put('/api/settings', json={'adult_side': True}))
     tell(client, 'I try to seduce the shopkeeper again, with a joke this time.', 'story-0002')
-    told = [request for request in provider.requests if request['system'] == judge.SYSTEM][-1]['messages'][-1]['content']
+    told = [request for request in provider.requests if request['prompt'] == judge.SYSTEM][-1]['messages'][-1]['content']
     with app.state.database.connect() as connection:
         people = story.scene(connection, story_clock.now(connection, app.state.database.clock))['people']
         expected = judge.attractions(connection, people)
@@ -81,7 +81,7 @@ def test_with_the_adult_side_on_the_judge_knows_who_the_people_here_are_drawn_to
     if adults:
         assert expected in told and adults[0]['sheet']['full'] in expected
     # Shown to nobody: not on the screen, and not in the narrator's prompt.
-    narrator = [request for request in provider.requests if request['system'] != judge.SYSTEM][-1]['system']
+    narrator = [request for request in provider.requests if request['prompt'] != judge.SYSTEM][-1]['prompt']
     assert 'are drawn to' not in narrator
 
 

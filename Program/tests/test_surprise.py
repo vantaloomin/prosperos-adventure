@@ -81,7 +81,7 @@ def test_a_fight_on_a_plan_plays_on_to_a_turning_point(client, connected, provid
     app.state.dice = Dice(*[60] * 40)
     provider.replies = [[Chunk('Steel on steel.'), Chunk('', 'stop')]]
     tell(client, 'I cut at the bandit with my sword and fight on until he is down.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert "- Round 3, fighting on the player's plan:\n- The player's character hits bandit: now down." in narrator
     assert "The fight on the player's plan stops here: the fight is over." in narrator
     with app.state.database.connect() as connection:

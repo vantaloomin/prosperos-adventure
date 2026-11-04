@@ -814,6 +814,21 @@ def model_messages(rows: list[dict], budget_chars: int) -> list[dict]:
     return chat
 
 
+# Opens what the game says with the player's words this turn (`with_turn`); NOTE_CLOSE ends it.
+TURN_NOTES = '[Notes for this turn, from the game:]'
+
+
+def with_turn(system: str, chat: list[dict], now_text: str, steer: str) -> tuple[str, list[dict]]:
+    """The narrator's request with this turn's layer (narration/prompt.py `turn`) sent with the player's words, after
+    the story so far, so the system prompt and the story before it stay as the last turn sent them and a model service
+    can reuse them from its cache. The author's note follows it. Without a player's line to carry it, the layer ends
+    the system prompt instead."""
+    if not chat or chat[-1]['role'] != 'user':
+        return '\n\n'.join(part for part in (system, now_text) if part), steered(chat, steer)
+    notes = '\n\n'.join(part for part in (f'{TURN_NOTES}\n{now_text}' if now_text else '', steer) if part)
+    return system, steered(chat, notes)
+
+
 def steered(chat: list[dict], steer: str) -> list[dict]:
     """The story's author's note (adventure/authors_note.py) right before the user's latest words."""
     if not steer or not chat or chat[-1]['role'] != 'user':
@@ -870,22 +885,21 @@ def prompt(connection, now: datetime, config: dict, latest: dict, outcomes: list
                                                  found and tiers.prompt_text(connection, found), lore_text,
                                                  shelf)
                              if part)
-        system = narration_prompt.system(prompt_library.text(connection, 'story-narrator'), craft, scene=place_text,
-                                         persona=who_text, persona_name=name, memory=memory, narration=narration_format(connection),
-                                         intensity=tone.narration(level),
-                                         outcomes=outcomes, rolls_shown=dice_shown(connection),
-                                         rules=ruled if rules_kept else '')
-        if len(system) <= (window - config['max_output_tokens']) * CHARS_PER_TOKEN // 2:
+        system = narration_prompt.stable(prompt_library.text(connection, 'story-narrator'), craft, persona_name=name,
+                                         narration=narration_format(connection), intensity=tone.narration(level))
+        now_text = narration_prompt.turn(scene=place_text, persona=who_text, memory=memory, outcomes=outcomes,
+                                         rolls_shown=dice_shown(connection), rules=ruled if rules_kept else '')
+        if len(system) + len(now_text) <= (window - config['max_output_tokens']) * CHARS_PER_TOKEN // 2:
             break
     if extras := resolved_text(connection, fought, traded, looked, travelled, rested, tended, carded, meanwhile, noted):
-        system += '\n\n' + extras
-    if in_character.out_of_character(latest['text']):
-        system += '\n\n' + OUT_OF_CHARACTER.format(model=default_name(config)) + map_text(connection, view)
-    budget = (window - config['max_output_tokens']) * CHARS_PER_TOKEN - len(system)
+        now_text += '\n\n' + extras
+    ooc = in_character.out_of_character(latest['text'])
+    if ooc:
+        now_text += '\n\n' + OUT_OF_CHARACTER.format(model=default_name(config)) + map_text(connection, view)
+    budget = (window - config['max_output_tokens']) * CHARS_PER_TOKEN - len(system) - len(now_text)
     # Older messages are in the summary; the narrator reads the rest word for word.
     chat = model_messages(rows, max(budget, 2000))
-    if not in_character.out_of_character(latest['text']):
-        chat = steered(chat, authors_note.prompt_text(connection, 'story'))
+    system, chat = with_turn(system, chat, now_text, '' if ooc else authors_note.prompt_text(connection, 'story'))
     return {'system': system, 'messages': chat, 'people': view['people'], 'library': passages_given,
             'city_id': view['city']['id'], 'day': moment.date(), 'year': decades.year_of(view['data'], moment),
             'lore': lore_started, 'line': line_number(connection, latest)}

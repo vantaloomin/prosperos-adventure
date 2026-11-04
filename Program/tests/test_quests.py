@@ -42,7 +42,7 @@ def test_a_quest_starts_with_the_story_and_its_deadline_lands_on_the_story_clock
                                                                                  'about 7 days left')]
     provider.replies = [reply('The factor counts coins.')]
     tell(client, 'I read the contract on the green.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     # The narrator gets the quest as it looks on the page, never the truth behind it.
     assert '## What is happening' in narrator and 'The Heartwood stands on a convergence' not in narrator
     assert "The wardens' eyes (the player's character does not know of this yet)" in narrator
@@ -56,7 +56,7 @@ def test_a_quest_starts_with_the_story_and_its_deadline_lands_on_the_story_clock
     journal = ok(client.get('/api/story/journal'))
     assert journal['quests'][0]['status'] == 'missed' and 'burned Cutters\' Camp' in journal['quests'][0]['outcome']
     assert journal['entries'][0]['subject'] == 'The Heartwood contract'
-    assert 'The Heartwood contract is over (missed)' in provider.requests[-1]['system']
+    assert 'The Heartwood contract is over (missed)' in provider.requests[-1]['prompt']
 
 
 def test_the_continuity_model_says_when_a_turn_ended_a_quest(client, connected, app, provider):
@@ -69,7 +69,7 @@ def test_the_continuity_model_says_when_a_turn_ended_a_quest(client, connected, 
                               '"outcome": "x"}]}')]
     tell(client, 'I show the factor the warden arrow.', 'story-0001')
     # A quest settled is a scene break too, so the chapter's summary is asked for after it.
-    asked = next(request for request in reversed(provider.requests) if request['system'].startswith(record.EXTRACT))
+    asked = next(request for request in reversed(provider.requests) if request['prompt'].startswith(record.EXTRACT))
     assert 'These quests are open:' in asked['system']
     quest = ok(client.get('/api/story/journal'))['quests'][0]
     assert (quest['status'], quest['outcome'], quest['left']) == ('done', 'The Guild withdrew the contract.', '')
@@ -91,7 +91,7 @@ def test_a_dangerous_place_rolls_every_turn_and_a_failure_brings_its_threat(clie
     provider.replies = [reply('The trees lean in.')]
     sent = tell(client, 'I look around.', 'story-0001')
     rolls = sent['message']['rolls'] if 'rolls' in sent['message'] else None
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'come through the Heartwood unharmed' in narrator
     assert 'The ground hums, and for a moment they cannot remember which way the stones are.' in narrator
     assert rolls is None or rolls[-1]['stat'] == 'Luck'
