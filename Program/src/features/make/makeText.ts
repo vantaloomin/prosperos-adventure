@@ -20,14 +20,21 @@ export interface PerceptionView { automatic: { seen_as: string; sees_self: strin
 export const DRAFTED = ['name', 'gender', 'age', 'about', 'look', 'voice', 'wants', 'fears'] as const
 export interface Drafted { name: string; gender: PersonaGender; age: number | null; about: string; look: string; voice: string; wants: string; fears: string }
 
-/** The whole form: who they are, how they look and talk, and the extras rolled from `seed` until set. */
+/** A character card opened into the paste box (/story/make/card), and what the person ticked to keep from it at
+ * Begin: its lorebook, and its picture as the portrait. `data` is the file, sent again at Begin. */
+export interface OpenedCard {
+  filename: string; data: string; name: string; book: { name: string; entries: number } | null; picture: string | null
+  lorebook: boolean; usePicture: boolean
+}
+
+/** The whole form: who they are, how they look and talk, the extras rolled from `seed` until set, and a card opened. */
 export interface MadeForm {
   seed: string; name: string; gender: PersonaGender; age: string; about: string; look: string; voice: string; wants: string; fears: string
-  personality_sliders: PersonalitySliders | null; looks: Looks; seen_as: string; sees_self: string
+  personality_sliders: PersonalitySliders | null; looks: Looks; seen_as: string; sees_self: string; card: OpenedCard | null
 }
 
 export function emptyForm(seed: string): MadeForm {
-  return { seed, name: '', gender: '', age: '', about: '', look: '', voice: '', wants: '', fears: '', personality_sliders: null, looks: {}, seen_as: '', sees_self: '' }
+  return { seed, name: '', gender: '', age: '', about: '', look: '', voice: '', wants: '', fears: '', personality_sliders: null, looks: {}, seen_as: '', sees_self: '', card: null }
 }
 
 /** A seed for a new form, so every new character rolls its own sliders, Looks and lines. */
@@ -51,13 +58,24 @@ export function setLooks(looks: Looks): Looks {
   return Object.fromEntries(Object.entries(looks).filter(([, value]) => value !== '' && value !== null && value !== undefined)) as Looks
 }
 
-/** The form as the sheet's rolls read it (sliders, Looks, perception), for /story/make/*. */
+/** The form as the sheet's rolls read it (sliders, Looks, perception), for /story/make/*: never the card. */
 export function sheetBody(form: MadeForm) {
-  return { ...madeBody(form), name: form.name.trim(), gender: form.gender, about: form.about.trim(), ...(form.age ? { age: Number(form.age) } : {}) }
+  return { ...sheetFields(form), name: form.name.trim(), gender: form.gender, about: form.about.trim(), ...(form.age ? { age: Number(form.age) } : {}) }
 }
 
-/** What Begin sends besides the persona (adventure/models.py MadeCharacter). */
+/** What Begin sends besides the persona (adventure/models.py MadeCharacter), with the card when something is ticked. */
 export function madeBody(form: MadeForm) {
+  return { ...sheetFields(form), ...cardBody(form.card) }
+}
+
+/** The card's part of Begin: the file and what to keep from it, or nothing when nothing it holds is ticked. */
+export function cardBody(card: OpenedCard | null) {
+  const lorebook = !!(card?.lorebook && card.book)
+  const picture = !!(card?.usePicture && card.picture)
+  return card && (lorebook || picture) ? { card: { filename: card.filename, data: card.data, lorebook, picture } } : {}
+}
+
+function sheetFields(form: MadeForm) {
   return { seed: form.seed, look: form.look.trim(), voice: form.voice.trim(), wants: form.wants.trim(), fears: form.fears.trim(),
     ...(form.personality_sliders ? { personality_sliders: form.personality_sliders } : {}), looks: setLooks(form.looks),
     seen_as: form.seen_as.trim(), sees_self: form.sees_self.trim() }
@@ -178,4 +196,7 @@ export const MAKE_TEXT = {
   unnamed: 'New party member',
   removeMember: (name: string) => `Remove ${name} from your party`,
   failed: 'That did not work. Try again.',
+  cardOf: (name: string) => name ? `${name}'s card` : 'The card',
+  usePicture: 'Use its picture',
+  addBook: (name: string, entries: number) => `Add its lorebook, ${name} (${entries} ${entries === 1 ? 'entry' : 'entries'})`,
 }

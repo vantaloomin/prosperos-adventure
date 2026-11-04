@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { emptyForm, filledLine, madeBody, memberBody, memberReady, moved, newMember, newSeed, picksOf, released, sameSliders, setLooks, sheetBody, withDraft } from '../../src/features/make/makeText.ts'
+import { cardBody, emptyForm, filledLine, madeBody, memberBody, memberReady, moved, newMember, newSeed, picksOf, released, sameSliders, setLooks, sheetBody, withDraft } from '../../src/features/make/makeText.ts'
 
 const draft = { name: 'Wren Ashdown', gender: 'woman' as const, age: 34, about: 'A barge pilot.', look: 'Rope-burned wrist.', voice: 'Short.', wants: 'Clear her debt.', fears: 'Losing the barge.' }
 
@@ -61,4 +61,14 @@ test('a party member you make needs a name, an adult age or none, and says how t
   assert.equal(body.mind, 'program')
   assert.equal(body.seed, member.form.seed)
   assert.equal('age' in memberBody(named), false)
+})
+
+test('a card goes to Begin only with something ticked, and never to the sheet rolls', () => {
+  const card = { filename: 'mira.png', data: 'AAAA', name: 'Mira', book: { name: 'Apiary', entries: 1 }, picture: 'data:image/png;base64,AA', lorebook: true, usePicture: false }
+  assert.deepEqual(cardBody(card), { card: { filename: 'mira.png', data: 'AAAA', lorebook: true, picture: false } })
+  assert.deepEqual(cardBody({ ...card, lorebook: false }), {})
+  assert.deepEqual(cardBody({ ...card, book: null, usePicture: true }), { card: { filename: 'mira.png', data: 'AAAA', lorebook: false, picture: true } })
+  const form = { ...emptyForm('s'), card }
+  assert.equal('card' in madeBody(form), true)
+  assert.equal('card' in sheetBody(form), false)
 })

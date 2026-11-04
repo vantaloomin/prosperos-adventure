@@ -307,11 +307,12 @@ def add_book(connection, timestamp: str, book: dict, filename: str, city_id: str
 
 
 def bring(database, filename: str, encoded: str) -> dict:
-    """Import one lorebook file straight away. Character cards wait for the game's own characters."""
+    """Import one lorebook file straight away. A character card is opened on the cast page instead, where its
+    lorebook can be kept with the character (adventure/making.py)."""
     found = formats.read(filename, encoded)
     require(found['character'] is None and found['book'] is not None,
-            'Only lorebooks can be imported for now. Character cards come back when the game has characters of its '
-            'own.', 422)
+            'This is a character card. Open it on the cast page, under Paste a character, to make someone from it '
+            'and keep its lorebook.', 422)
     with database.connect(write=True) as connection:
         book = add_book(connection, database.now(), found['book'], filename)
     return {'format': found['format'], 'book': book}

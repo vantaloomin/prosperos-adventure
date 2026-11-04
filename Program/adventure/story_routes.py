@@ -317,6 +317,10 @@ class StoryStart(Input):
     made_party: list[MadeLead] = Field(default_factory=list, max_length=8)
 
 
+def without_card(form: dict) -> dict:
+    return {key: value for key, value in form.items() if key != 'card'}
+
+
 @router.get('/start')
 def start_choices(request: Request):
     return campaign.view(request.app.state.database)
@@ -324,14 +328,19 @@ def start_choices(request: Request):
 
 @router.post('/start')
 def start(request: Request, body: StoryStart):
-    return campaign.begin(request.app.state.database, body.premade_id, body.persona, body.stats, body.arc,
+    # Cards opened for made characters are read first, so one that cannot be kept stops Begin before it starts.
+    made = body.made and body.made.model_dump(exclude_none=True)
+    party = [lead.model_dump(exclude_none=True) for lead in body.made_party]
+    cards = making.cards_of(made, party)
+    begun = campaign.begin(request.app.state.database, body.premade_id, body.persona, body.stats, body.arc,
                           body.pace, body.hand, body.ironman, body.legacy and body.legacy.model_dump(), body.ruleset,
                           body.build and body.build.model_dump(), body.ironsworn and body.ironsworn.model_dump(),
                           body.table and body.table.model_dump(exclude_none=True), body.brp and body.brp.model_dump(),
                           body.narrative and body.narrative.model_dump(), body.fate and body.fate.model_dump(),
                           None if body.party is None else {key: value.model_dump() for key, value in body.party.items()},
-                          body.made and body.made.model_dump(exclude_none=True),
-                          [lead.model_dump(exclude_none=True) for lead in body.made_party])
+                          made and without_card(made), [without_card(form) for form in party])
+    making.bring_cards(request.app.state.database, cards)
+    return begun
 
 
 # Making your own character (adventure/making.py): the model drafts or splits; the rest rolls without one. Nothing is

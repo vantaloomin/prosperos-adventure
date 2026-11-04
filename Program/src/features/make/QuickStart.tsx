@@ -3,7 +3,7 @@ import { api } from '../../api'
 import { TextArea } from '../../components/Fields'
 import { Notice } from '../../components/Feedback'
 import { fileData } from '../worlds/loreText'
-import { MAKE_TEXT, filledLine, picksOf, withDraft, type Drafted, type MadeForm } from './makeText'
+import { MAKE_TEXT, filledLine, picksOf, withDraft, type Drafted, type MadeForm, type OpenedCard } from './makeText'
 
 interface Props {
   form: MadeForm
@@ -47,24 +47,30 @@ export function QuickStart({ form, onDraft, onAddModel, party }: Props) {
           : <button type="button" className="button" disabled={busy} onClick={() => void write()}>{busy && !pasting ? MAKE_TEXT.writing : MAKE_TEXT.write}</button>}
         <button type="button" className="button quiet" aria-expanded={pasting} onClick={() => setPasting(!pasting)}>{MAKE_TEXT.paste}</button>
       </div>
-      {pasting && <PasteBox busy={busy} disabled={!!onAddModel} onSplit={split} onError={setError} />}
+      {pasting && <PasteBox busy={busy} disabled={!!onAddModel} onSplit={split} onError={setError} onCard={(card) => onDraft({ ...form, card })} />}
+      {form.card && <CardTicks card={form.card} onChange={(card) => onDraft({ ...form, card })} />}
       {error && <Notice tone="error">{error}</Notice>}
       {filled && <p className="make-filled" role="status">{filled}</p>}
     </div>
   )
 }
 
-interface PasteProps { busy: boolean; disabled: boolean; onSplit: (text: string) => void; onError: (text: string) => void }
+interface PasteProps { busy: boolean; disabled: boolean; onSplit: (text: string) => void; onError: (text: string) => void; onCard: (card: OpenedCard) => void }
+
+type CardFound = Pick<OpenedCard, 'name' | 'book' | 'picture'> & { text: string }
 
 /** A character the person already has: pasted, or a card's text opened into the box to read first. */
-function PasteBox({ busy, disabled, onSplit, onError }: PasteProps) {
+function PasteBox({ busy, disabled, onSplit, onError, onCard }: PasteProps) {
   const [text, setText] = useState('')
   const picker = useRef<HTMLInputElement>(null)
   const open = async (file: File | undefined) => {
     if (!file) return
     try {
-      const found = await api<{ text: string }>('/story/make/card', { filename: file.name, data: await fileData(file) })
+      const data = await fileData(file)
+      const found = await api<CardFound>('/story/make/card', { filename: file.name, data })
       setText(found.text)
+      // What else it holds is kept by default, for the person to untick.
+      onCard({ filename: file.name, data, name: found.name, book: found.book, picture: found.picture, lorebook: true, usePicture: true })
     } catch (failure) { onError(failure instanceof Error ? failure.message : MAKE_TEXT.failed) }
     if (picker.current) picker.current.value = ''
   }
@@ -77,5 +83,21 @@ function PasteBox({ busy, disabled, onSplit, onError }: PasteProps) {
         <input ref={picker} type="file" hidden accept=".png,.json,.charx,.byaf" onChange={(event) => void open(event.target.files?.[0])} />
       </div>
     </div>
+  )
+}
+
+/** What a card holds besides the character, ticked to keep at Begin: its picture as the portrait, and its lorebook
+ * added to the lore. Shown only when the card holds either. */
+function CardTicks({ card, onChange }: { card: OpenedCard; onChange: (card: OpenedCard) => void }) {
+  if (!card.book && !card.picture) return null
+  return (
+    <fieldset className="make-card">
+      <legend>{MAKE_TEXT.cardOf(card.name)}</legend>
+      {card.picture && <img className="make-card-picture" src={card.picture} alt="" />}
+      <div className="make-card-ticks">
+        {card.picture && <label className="checkbox-row"><input type="checkbox" checked={card.usePicture} onChange={(event) => onChange({ ...card, usePicture: event.target.checked })} />{MAKE_TEXT.usePicture}</label>}
+        {card.book && <label className="checkbox-row"><input type="checkbox" checked={card.lorebook} onChange={(event) => onChange({ ...card, lorebook: event.target.checked })} />{MAKE_TEXT.addBook(card.book.name, card.book.entries)}</label>}
+      </div>
+    </fieldset>
   )
 }
