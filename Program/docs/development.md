@@ -89,7 +89,7 @@ npm test           # pure UI logic in tests/ui, run with Node's test runner
 npm run build
 ```
 
-Views live in `src/features/<view>/`. Logic that can be tested without a browser (turn grouping, draft handling) sits in plain `.ts` modules beside the components that use it.
+Views live in `src/features/<view>/`. Logic that can be tested without a browser (turn grouping, draft handling) sits in plain `.ts` modules beside the components that use it. Flows that need a browser are planned in [End-to-end user flow testing](e2e-testing.md).
 
 Settings is split into tabs listed in `src/features/settings/sections.ts`, with the section headings and keywords its search box looks through. A new settings section goes in that list and in `TabContent` in `Settings.tsx`. Tabs are deep-linkable: `go('settings/models')` from any view, or `#settings/<tab>` in the address; an unknown tab opens the first tab available.
 
