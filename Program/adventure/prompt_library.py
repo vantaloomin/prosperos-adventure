@@ -67,7 +67,7 @@ def agent_slots() -> dict:
     return import_module('adventure.rounds.agents').SLOTS
 
 
-CHAT, CHARACTERS, GENRES = 'Story', 'Characters', 'Genres'
+CHAT, CHARACTERS, MAKING, GENRES = 'Story', 'Characters', 'Making a character', 'Genres'
 AGENTS = 'adventure.rounds.agents'
 PROMPTS = {prompt.name: prompt for prompt in (
     Prompt('story-narrator', CHAT, 'The Story narrator',
@@ -150,6 +150,18 @@ PROMPTS = {prompt.name: prompt for prompt in (
            'leave out goes back at the end of its group; a paragraph whose slots are all empty is left out, so keep '
            'a heading in the same paragraph as its slot.',
            literal(AGENTS, 'LAYOUT'), layout=agent_slots, reader='a character'),
+    Prompt('character-draft', MAKING, 'Drafting a character',
+           'Write it on the cast page: the story\'s model drafts the character you will play from your idea and '
+           'picks, for you to review before Begin. The answer\'s shape and the adults-only check are added by the '
+           'app.',
+           constant('adventure.making', 'DRAFT'), placeholders={'world': 'The world, where the story opens and the '
+                                                                       'content limits'}),
+    Prompt('character-split', MAKING, 'Reading a pasted character',
+           'Paste a character on the cast page: a character you already have (notes, a bio or a card) split into '
+           'the fields, with what it said nothing about filled in and marked. The pasted text, its fence and the '
+           'answer\'s shape are added by the app.',
+           constant('adventure.making', 'SPLIT'), placeholders={'world': 'The world, where the story opens and the '
+                                                                       'content limits'}),
     Prompt('genre-dark-romantasy', GENRES, 'Dark romantasy',
            'Follows the intensity in the narrator\'s and the round Writer\'s prompt when the Table\'s Genre is Dark '
            'romantasy. How explicit the page gets stays with the intensity.',

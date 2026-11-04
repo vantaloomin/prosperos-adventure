@@ -374,6 +374,12 @@ def persona_text(connection) -> tuple[str, str | None]:
     lines = [f"{row['name']}" + (f' ({details})' if details else '') + '.']
     if row['about']:
         lines.append(row['about'].strip())
+    # A character made on the cast page: how they look and talk (adventure/making.py).
+    from adventure import making
+    made = making.made(connection, making.YOU) or {}
+    for label, part in (('Looks', 'look'), ('Voice', 'voice')):
+        if made.get(part):
+            lines.append(f'{label}: {made[part]}')
     played = ruleset_of(connection)
     native = native_sheet(connection) if played != marvel.ID else None
     if native:
@@ -778,7 +784,7 @@ def clear(database) -> dict:
                       'story_offpage', 'story_tier', 'story_marks', 'story_dark',
                       'story_director', 'story_arcs', 'story_threads', 'story_nemeses', 'story_seeds',
                       'story_arc_beats', 'story_sheet', 'story_enrollment', 'story_attendance', 'story_grades', 'story_art',
-                      'story_bank', 'lore_timers'):
+                      'story_bank', 'story_made', 'lore_timers'):
             connection.execute(f'DELETE FROM {name}')
         politics.clear(connection)
         house_rules.clear(connection)

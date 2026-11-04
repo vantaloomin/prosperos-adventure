@@ -71,7 +71,7 @@ SAID = {'witnessed': 'You saw', 'heard': 'You heard', 'told': 'You said', 'belie
 AGAINST = {'trust': 'distrust', 'affection': 'dislike', 'respect': 'contempt'}
 # A sheet's fields an agent reads about itself; stats only with game knowledge. Hidden fields come only as facts.
 SHEET = ('role', 'look', 'voice', 'sample_lines', 'pronouns', 'age', 'wants', 'fears', 'desires', 'relationships',
-         'tells', 'lineage', 'species', 'concept', 'background')
+         'tells', 'lineage', 'species', 'concept', 'background', 'manner', 'seen_as', 'sees_self')
 NUMBERS = ('stats', 'rank', 'tier', 'class', 'abilities')
 
 
@@ -314,8 +314,11 @@ def faction_lines(connection, snapshot: Snapshot, key: str) -> list[str]:
 
 
 def sheet_lines(snapshot: Snapshot, key: str) -> list[str]:
+    """Who the character is: their world package entry, else the sheet the player made for them on the cast page
+    (adventure/making.py, frozen at Gather as `made`)."""
     found = package_id(snapshot, key)
-    entry = (world_data.person(world_of(snapshot), found) if found else None) or {}
+    entry = (world_data.person(world_of(snapshot), found) if found else None) or \
+        (snapshot.settings.get('made') or {}).get(key) or {}
     shown = SHEET + (NUMBERS if sees_numbers(snapshot, key) else ())
     return [f"{SHEET_LABELS.get(name) or name.replace('_', ' ').capitalize()}: {sheet_value(name, entry[name])}"
             for name in shown if entry.get(name)]
@@ -323,7 +326,9 @@ def sheet_lines(snapshot: Snapshot, key: str) -> list[str]:
 
 # A cast sheet's `sample_lines`: two or three lines in the character's own mouth, the strongest guard against
 # characters who share a model drifting into one voice.
-SHEET_LABELS = {'sample_lines': 'How you sound'}
+SHEET_LABELS = {'sample_lines': 'How you sound', 'concept': 'Who you are', 'manner': 'How you tend to act',
+                'seen_as': 'How others see you (whether or not you agree)',
+                'sees_self': 'How you see yourself (your own view; never recite it, let it shape how you react)'}
 
 
 def sheet_value(name: str, value) -> str:
@@ -536,13 +541,23 @@ def package_ids(connection, snapshot: Snapshot, world: str | None) -> dict[str, 
     return found
 
 
+def made_sheets(connection, snapshot: Snapshot, ids: dict) -> dict[str, dict]:
+    """The sheets of the seats the player made on the cast page and the package does not know (adventure/making.py)."""
+    from adventure import making
+    found = {}
+    for seat in snapshot.seats:
+        if not ids.get(seat.key) and (sheet := making.made(connection, seat.key)):
+            found[seat.key] = making.prompt_sheet(sheet)
+    return found
+
+
 def frozen_settings(connection, snapshot: Snapshot) -> dict:
     """The story's world and town, each seat's package id, and which seats see the game's numbers, as of this turn."""
     from adventure import story, tiers
     city = story.scene_row(connection)['city_id']
     world = tiers.world_of(city)
     ids = package_ids(connection, snapshot, world)
-    return {'world': world, 'city': city, 'package_ids': ids,
+    return {'world': world, 'city': city, 'package_ids': ids, 'made': made_sheets(connection, snapshot, ids),
             'game_knowledge': {seat.key: world_data.game_knowledge(world, ids.get(seat.key) or seat.key)
                                for seat in snapshot.seats}}
 

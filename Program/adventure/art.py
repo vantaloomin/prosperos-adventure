@@ -49,6 +49,7 @@ from adventure import (
     hexes,
     injuries,
     inventory,
+    making,
     story,
     story_clock,
     tiers,
@@ -114,7 +115,8 @@ def player_prompt(connection, view: dict) -> str:
             if str(item.get('category', '')).lower() in GEAR][:4]
     return ' '.join(part for part in (
         f"Portrait of {row.get('name') or 'the traveller'}" + (f' ({details})' if details else '') + '.',
-        (row.get('about') or '').strip(), hurt, marks, f"Carrying: {', '.join(gear)}." if gear else '',
+        # A character made on the cast page: their Looks, so every picture shows the same person (adventure/making.py).
+        making.look_line(connection), (row.get('about') or '').strip(), hurt, marks, f"Carrying: {', '.join(gear)}." if gear else '',
         f"In {view['place']['name']}, {view['city']['name']}, {hour_text(datetime.fromisoformat(view['local_time']))}.")
         if part)
 

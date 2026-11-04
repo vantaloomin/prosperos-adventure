@@ -1337,6 +1337,14 @@ CREATE TABLE IF NOT EXISTS story_bank (
   entry TEXT NOT NULL
 );
 
+-- A character the player made on the cast page (adventure/making.py), by seat key: who they are, how they look and
+-- talk, their personality sliders and how they come across, settled at Begin. Their own agent reads it as their
+-- sheet, the narrator as their look and voice, and portraits as their Looks. A new story forgets it.
+CREATE TABLE IF NOT EXISTS story_made (
+  key TEXT PRIMARY KEY,
+  sheet TEXT NOT NULL
+);
+
 -- W3 Resolve for a party
 -- The other characters' rolls in a round (adventure/rounds/resolve.py), written at the turn's commit, beside the
 -- story line the turn played on, for the dice log. The player's own line keeps its rolls in story_rolls.

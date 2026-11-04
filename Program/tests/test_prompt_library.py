@@ -8,8 +8,9 @@ def test_every_prompt_is_listed_with_its_default_and_placeholder_help(client):
         'character-react', 'character-ask', 'character-answer', 'character-offpage', 'character-invite',
         'character-turning', 'character-genre-dark-romantasy', 'character-genre-adventure',
         'character-genre-graphic-violence',
-        'character-layout', 'genre-dark-romantasy', 'genre-adventure', 'genre-graphic-violence'}
-    assert {item['group'] for item in listed.values()} == {'Story', 'Characters', 'Genres'}
+        'character-layout', 'character-draft', 'character-split', 'genre-dark-romantasy', 'genre-adventure',
+        'genre-graphic-violence'}
+    assert {item['group'] for item in listed.values()} == {'Story', 'Characters', 'Making a character', 'Genres'}
     # The mind names nobody now, so every character shares it; the name is the layout's {{CHARACTER}} slot.
     assert listed['character-mind']['placeholders'] == []
     layout = listed['character-layout']
