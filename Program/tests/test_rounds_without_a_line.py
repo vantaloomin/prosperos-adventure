@@ -66,7 +66,7 @@ def test_a_round_with_no_players_line_gets_the_directors_note_and_moves_its_curv
         lines = director.state(connection)['lines']
     reply(provider, 'The shop is quiet; the Heartwood notice curls in the damp.')
     row = asyncio.run(play.next_turn(state))
-    system = provider.requests[0]['system']
+    system = seen(provider.requests[0])
     assert "The game master's note" in system and 'let this scene breathe' in system
     assert 'Seed, if it fits the scene:' in system
     with state.database.connect() as connection:
@@ -100,5 +100,10 @@ def test_a_players_line_in_a_round_with_agents_keeps_the_directors_note(client, 
         director.touch(connection, 'vallarith', 'A fight.', 'crisis', 'earlier', 'x')
     reply(provider, 'The shop is quiet, and Agna waits.')
     tell(client, 'I wait.', 'story-0001')
-    [system] = [request['system'] for request in provider.requests if request['system'].startswith(writer.ROUND)]
+    [system] = [seen(request) for request in provider.requests if request['system'].startswith(writer.ROUND)]
     assert "The game master's note" in system and 'let this scene breathe' in system
+
+
+def seen(request) -> str:
+    """All the Writer was given: its system prompt, the story so far and the closing message with what it may know."""
+    return '\n\n'.join([str(request['system']), *(str(message['content']) for message in request['messages'])])

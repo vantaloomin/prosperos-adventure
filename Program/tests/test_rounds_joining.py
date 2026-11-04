@@ -52,7 +52,7 @@ def test_an_agent_asked_along_can_turn_the_character_down(client, connected, pro
     tell(client, f'"Come with me, {first}."', 'story-0001')
     [(key, purpose, cue)] = [call for call in held if call[1] == 'invite']
     assert key == found['key'] and first in cue['line']
-    [system] = [request['system'] for request in provider.requests if request['system'].startswith(writer.ROUND)]
+    [system] = [seen(request) for request in provider.requests if request['system'].startswith(writer.ROUND)]
     assert f"{found['full']} turns the character down, by their own choice" in system
     assert 'Not this road, friend.' in system
     draft = last_draft(app)
@@ -90,5 +90,10 @@ def test_a_wary_agent_is_never_asked_and_won_t_come(client, connected, provider,
     reply(provider, 'They look away.')
     tell(client, f"\"Come with me, {found['name'] or found['full'].split(' ')[0]}.\"", 'story-0001')
     assert not [call for call in held if call[1] == 'invite']
-    [system] = [request['system'] for request in provider.requests if request['system'].startswith(writer.ROUND)][-1:]
+    [system] = [seen(request) for request in provider.requests if request['system'].startswith(writer.ROUND)][-1:]
     assert "won't come along" in system
+
+
+def seen(request) -> str:
+    """All the Writer was given: its system prompt, the story so far and the closing message with what it may know."""
+    return '\n\n'.join([str(request['system']), *(str(message['content']) for message in request['messages'])])

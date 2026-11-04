@@ -90,7 +90,9 @@ Editing a layout, in Settings > Developer > Prompts:
 - **Left-out slots come back** at the end of their tier, so content never silently disappears. Each slot may appear once.
 - **Paragraphs.** A layout is read in paragraphs split by blank lines. A paragraph whose slots are all empty this call is left out, so keep a heading in the same paragraph as its slot. A paragraph with no slot stays with the tier of the paragraph before it.
 
-The narrator, the round Writer and the Referee are not laid out this way yet.
+The **round Writer** follows the same order without slots: its system prompt holds only its rules (the round Writer prompt, the writing rules, the fence rule) and the story's settings (length, intensity, house rules, whose eyes), as two cache blocks. The story so far follows, word for word, and what the Writer may know this round comes last, in the closing message with the ask. So each round's request starts with all of the last one's except its closing message, and Claude's mark on the last message of the story so far lets the next round read it back. The **Referee**'s system prompt was already the same every call, with the scene and intents in its message. The Story narrator is not laid out this way yet.
+
+**Cache use in the turn report.** Each agent and Writer call adds what its model service said about caching to the turn (`draft.extra['cache']`, adventure/pace.py `count_cache`), from each service's own usage fields: Claude's cache reads and writes, OpenAI's, OpenRouter's and Gemini's cached tokens, and llama.cpp's reused tokens (`timings.cache_n`). The turn report shows it as **Model cache**: the share of prompt tokens read from cache, the calls, and what was written, or that the service did not say.
 
 ## How the defaults are written
 
