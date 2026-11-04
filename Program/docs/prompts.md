@@ -25,10 +25,11 @@ Every call to a character who thinks for themselves (an agent) is laid out by **
 | Speaking up | The talk inside a round: a character says something to someone | `PURPOSES['ask']` |
 | Answering | The talk inside a round: a character answers a line said to them | `PURPOSES['answer']` |
 | Off the page | A few lines a character said away from the main scene | `PURPOSES['offpage']` |
+| Being asked along | The player asks them to come along and their feelings leave it to them: they say yes or no | `PURPOSES['invite']` |
 | Turning on someone | What a character may do once they turn on someone, and what turns them | `TURNING` in `adventure/rounds/agents.py` |
 | A character's prompt, laid out | Where each part of a character call goes, as slots | `LAYOUT` in `adventure/rounds/agents.py` |
 
-These stay code: the fence rule that keeps story text from reading as instructions, the answer's JSON shape (`CONTRACT`, and `REACT_CONTRACT` for a reaction), the intensity, the scheming dial (`SCHEMING`), and how the character stands with each person present (`siding`). What a character may know is built by the context builder (`adventure/rounds/context.py` `agent_slots`), so no rewording or layout can show a character someone else's secrets. Code still validates every answer (claims cut back to attempts, audiences kept to who is present, the intensity kept in every field).
+These stay code: the fence rule that keeps story text from reading as instructions, the answer's JSON shape (`CONTRACT`, `REACT_CONTRACT` for a reaction and `INVITE_CONTRACT` for being asked along), the intensity, the scheming dial (`SCHEMING`), and how the character stands with each person present (`siding`). What a character may know is built by the context builder (`adventure/rounds/context.py` `agent_slots`), so no rewording or layout can show a character someone else's secrets. Code still validates every answer (claims cut back to attempts, audiences kept to who is present, the intensity kept in every field).
 
 A mind reworded before the name moved to the sheet keeps working: its `{{character}}` is still filled with the name. Saving a mind with `{{character}}` in it is refused with a note to take it out, because a name there stops the characters sharing the cached start.
 
