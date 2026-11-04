@@ -26,7 +26,7 @@ def narrated(client, provider, text: str, number: int) -> str:
     provider.respond = lambda system, messages: reply('{"facts": []}') if system.startswith(record.EXTRACT) \
         else reply('You climb.')
     tell(client, text, f'rules-{number:04d}')
-    return next(request['system'] for request in reversed(provider.requests) if '## Scene' in request['system'])
+    return next(request['prompt'] for request in reversed(provider.requests) if '## Scene' in request['prompt'])
 
 
 def roll(skill: str, band: str = 'success', ruleset: str = 'srd52') -> dict:

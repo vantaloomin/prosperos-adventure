@@ -86,13 +86,13 @@ def test_the_party_is_in_every_scene_with_the_character(app, client):
 def test_the_narrator_hears_who_joins(client, connected, provider, monkeypatch):
     begin(client)
 
-    def joining(connection, message_id, view, text, day, now, rng=None, agents=frozenset()):
+    def joining(connection, message_id, view, text, day, now, rng=None, agents=frozenset(), choices=None):
         return ['Corin Ashby agrees to come along with the character, from now on, of their own will.']
 
     monkeypatch.setattr(party, 'turn', joining)
     provider.replies = [[Chunk('He shoulders his pack.'), Chunk('', 'stop')]]
     tell(client, 'Come with me, Corin.', 'story-0001')
-    assert '## The party (decided by the game)\n- Corin Ashby agrees' in provider.requests[-1]['system']
+    assert '## The party (decided by the game)\n- Corin Ashby agrees' in provider.requests[-1]['prompt']
 
 
 def test_souring_never_sends_an_agent_away_but_feelings_still_limit_who_joins(app, client):
@@ -112,3 +112,33 @@ def test_souring_never_sends_an_agent_away_but_feelings_still_limit_who_joins(ap
         # Told to go, they still part; on a Program mind, souring sends them away as before.
         assert party.turn(connection, 'm4', view(connection, []), 'We walk on.', DAY, NOW) != []
         assert party.keys(connection) == set()
+
+
+def test_an_agent_asked_along_answers_for_themselves_within_what_feelings_allow(app, client):
+    # Agent chooses, feelings limit (docs/spec.md): their answer replaces the bond, warmth and roll.
+    begin(client)
+    with app.state.database.connect(write=True) as connection:
+        met(connection)
+        # In two minds and the roll would fail: their yes stands.
+        assert party.askable(connection, view(connection, [HESK]), 'Come with me, Hesk.')['sheet']['key'] == 'hesk'
+        lines = party.turn(connection, 'm1', view(connection, [HESK]), 'Come with me, Hesk.', DAY, NOW, Dice(1),
+                           agents={'hesk'}, choices={'hesk': True})
+        assert lines == ['Hesk Aldane agrees to come along with the character, from now on, of their own will.']
+        party.leave(connection, 'hesk')
+        # Bonded, so a Program mind would come: their no stands.
+        bonds.forge(connection, 'hesk', 'Hesk Aldane', 'sworn', NOW)
+        assert 'by their own choice' in party.turn(connection, 'm2', view(connection, [HESK]), 'Join us, Hesk?', DAY,
+                                                   NOW, Dice(100), agents={'hesk'}, choices={'hesk': False})[0]
+        assert party.keys(connection) == set()
+        # No answer (the agent failed): Dungeon's rule decides, and the bond brings them.
+        party.turn(connection, 'm3', view(connection, [HESK]), 'Join us, Hesk?', DAY, NOW, Dice(1), agents={'hesk'})
+        assert party.keys(connection) == {'hesk'}
+        party.leave(connection, 'hesk')
+        # Wary and unbonded, nobody asks them: they won't, whatever they would have said.
+        met(connection, 'ilse', 'Ilse Brand')
+        feelings.change(connection, 'ilse', {'trust': -1})
+        assert party.askable(connection, view(connection, [ILSE]), 'Come with me, Ilse.') is None
+        assert "won't come along" in party.turn(connection, 'm4', view(connection, [ILSE]), 'Come with me, Ilse.',
+                                               DAY, NOW, Dice(100), agents={'ilse'}, choices={'ilse': True})[0]
+        # Parting is not asking.
+        assert party.askable(connection, view(connection, [HESK]), 'Go home, Hesk.') is None

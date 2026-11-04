@@ -59,7 +59,7 @@ def test_what_is_inside_is_rolled_once_described_and_can_be_taken(client, connec
     begin(client, app)
     provider.replies = [reply('The lid creaks.'), reply('Still there.'), reply('Clink.'), reply('Empty now.')]
     tell(client, 'I open the chest under the stairs.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert '## What is there (decided by the game; describe only this)' in narrator
     assert '- Inside the chest at the Felled Oak: 2 × Bottle of plum spirit. Describe only this' in narrator
     journal = ok(client.get('/api/story/journal'))['entries']
@@ -68,26 +68,26 @@ def test_what_is_inside_is_rolled_once_described_and_can_be_taken(client, connec
     # Other dice don't change what was already there.
     app.state.dice = Low()
     tell(client, 'I look inside the chest again.', 'story-0002')
-    assert '2 × Bottle of plum spirit' in provider.requests[-1]['system']
+    assert '2 × Bottle of plum spirit' in provider.requests[-1]['prompt']
 
     tell(client, 'I take the plum spirit.', 'story-0003')
-    assert "takes 2 × Bottle of plum spirit from the chest" in provider.requests[-1]['system']
+    assert "takes 2 × Bottle of plum spirit from the chest" in provider.requests[-1]['prompt']
     items = {row['item_id']: row for row in ok(client.get('/api/story/gear'))['items']}
     # Taken from a chest at the tavern, someone else's: stolen, so only a fence will buy it.
     assert items['plum-spirit']['qty'] == 2 and items['plum-spirit']['stolen']
     tell(client, 'I open the chest.', 'story-0004')
-    assert 'Inside the chest at the Felled Oak: nothing of use.' in provider.requests[-1]['system']
+    assert 'Inside the chest at the Felled Oak: nothing of use.' in provider.requests[-1]['prompt']
 
 
 def test_a_failed_search_misses_what_is_there_until_a_better_look(client, connected, provider, app):
     begin(client, app, natural=1)
     provider.replies = [reply('Nothing.'), reply('Wait, there.')]
     tell(client, 'I search the chest.', 'story-0001')
-    assert 'misses it this time: they find nothing' in provider.requests[-1]['system']
+    assert 'misses it this time: they find nothing' in provider.requests[-1]['prompt']
     assert ok(client.get('/api/story/journal'))['entries'] == []
     app.state.dice = Dice(95)
     tell(client, 'I search the chest more carefully.', 'story-0002')
-    assert '- Inside the chest at the Felled Oak: 2 × Bottle of plum spirit.' in provider.requests[-1]['system']
+    assert '- Inside the chest at the Felled Oak: 2 × Bottle of plum spirit.' in provider.requests[-1]['prompt']
 
 
 def test_taking_a_seat_takes_nothing_and_going_back_puts_it_back(client, connected, provider, app):
@@ -95,7 +95,7 @@ def test_taking_a_seat_takes_nothing_and_going_back_puts_it_back(client, connect
     provider.replies = [reply('Creak.'), reply('You sit.'), reply('Clink.')]
     first = tell(client, 'I open the chest.', 'story-0001')
     tell(client, 'I take a seat by the fire.', 'story-0002')
-    assert '## What is there' not in provider.requests[-1]['system']
+    assert '## What is there' not in provider.requests[-1]['prompt']
     tell(client, 'I take everything in the chest.', 'story-0003')
     assert any(row['item_id'] == 'plum-spirit' for row in ok(client.get('/api/story/gear'))['items'])
     ok(client.post('/api/story/back', json={'message_id': first['message']['id']}))

@@ -1,15 +1,20 @@
 """An agent character's mind: one model call that decides what that character tries, says, wants and hides, from
 inside its own knowledge (docs/spec.md "Agent output", Batch 2 "agent minds", "Failures fall back, never leave a hole").
 
-- **The model writes, code decides.** The agent returns one JSON object (intent, lines, motive, deceptions,
-  whispers). Code validates every field (`checked`): an intent or line that claims an outcome is cut back to the
-  attempt ("as my blade finds his heart" goes), stage directions leave the lines, names become seat keys, audiences
-  are kept to who is present, and anything over the story's intensity is cut from every field, hidden ones included.
-  Whether a lie is believed, a blow lands or a plea works is never the agent's to say.
-- **What it reads** is built by the agent context builder (adventure/rounds/context.py `agent`) from the frozen
-  snapshot and the turn draft, so it holds only what that character may know. This module adds the instructions:
-  the output contract, the intensity, the scheming dial, and how the character stands with each person here, worked
-  out in code from its own feelings toward them (`siding`).
+- **The model writes, code decides.** The agent returns one JSON object (motive, deceptions, intent, lines,
+  whispers, in the order a person thinks them). Code validates every field (`checked`): an intent or line that claims
+  an outcome is cut back to the attempt ("as my blade finds his heart" goes), stage directions leave the lines, names
+  become seat keys, audiences are kept to who is present, a lie the character never says aloud or whispers is
+  dropped, and anything over the story's intensity is cut from every field, hidden ones included. Whether a lie is
+  believed, a blow lands or a plea works is never the agent's to say.
+- **The prompt speaks to the character as itself** ("You are Mara"), never to someone playing "your character", and
+  its own sheet, voice and the user's notes come fenced as who it is, apart from what happened in the story
+  (adventure/rounds/context.py AGENT_FENCE_RULE).
+- **What it reads** is built by the agent context builder (adventure/rounds/context.py `agent_slots`) from the
+  frozen snapshot and the turn draft, so it holds only what that character may know. This module adds the
+  instructions (the output contract, the intensity, the scheming dial) and how the character stands with each person
+  here, worked out in code from its own feelings toward them (`siding`), and lays it all out in tiers, slowest-
+  changing first, so model services can cache the start (`LAYOUT`, adventure/prompt_layout.py).
 - **Failures fall back.** Each call has a deadline inside the turn budget, counted from when the model service takes
   it, so local models that answer one call at a time don't time out the agents queued behind. A broken answer is
   asked again once, with what was wrong; a failure is tried once more; a refusal is not. After that the character
@@ -24,7 +29,7 @@ import json
 import re
 from contextlib import nullcontext
 
-from adventure import pace, prompt_library, text_models, tone
+from adventure import pace, prompt_layout, prompt_library, text_models, tone
 from adventure.database import optional
 from adventure.errors import require
 from adventure.feelings import AXES
@@ -32,6 +37,7 @@ from adventure.narration import prompt as narration_prompt
 from adventure.providers.scheduling import CONVERSATION
 from adventure.rounds import context, memory
 from adventure.rounds.contract import Deception, Declaration, Line, Snapshot, Whisper
+from adventure.rounds.draft import Draft
 
 # Settings -----------------------------------------------------------------------------------------------------------
 
@@ -110,11 +116,11 @@ def view(connection, agents: int = 3, converse_cap: int = 4) -> dict:
 
 
 def frozen(connection) -> dict:
-    """The settings a turn plays by, kept in its snapshot: the agents' own and the story's intensity."""
+    """The settings a turn plays by, kept in its snapshot: the agents' own, the story's intensity and its genre."""
     found = tone.now(connection)
     held = settings(connection)
     return held | {'levels': dict(found['levels']), 'veils': list(found.get('veils') or []),
-                   'recall': PRESETS[held['preset']]['recall']}
+                   'genre': found.get('genre') or 'none', 'recall': PRESETS[held['preset']]['recall']}
 
 
 def held(snapshot: Snapshot) -> dict:
@@ -232,17 +238,46 @@ def items(data: dict, name: str, most: int) -> list[dict]:
     return [item for item in data.get(name) or [] if isinstance(item, dict)][:most]
 
 
+WORD = re.compile(r"[a-z0-9']+")
+# Words too common to show that a line carries a claim.
+COMMON = frozenset(
+    'the a an and or but of to in on at for with from by is are was were be been am i you he she they we it my your '
+    'his her their our its me him them us that this there here not no do did does have has had will would can could '
+    'just so as if then than what who'.split())
+# How much of a claim's own words a line must carry for the claim to count as said.
+CLAIM_SHARE = 0.6
+
+
+def content_words(text: str) -> list[str]:
+    return [word for word in WORD.findall(text.lower().replace('\u2019', "'")) if word not in COMMON]
+
+
+def said_in(claim: str, said: list[str]) -> bool:
+    """Whether a deception's claim is something the character says in one of its lines or whispers: the claim itself,
+    or most of its own words in one of them. A lie only happens when someone hears it."""
+    wanted = content_words(claim)
+    for text in said:
+        if ' '.join(WORD.findall(claim.lower())) in ' '.join(WORD.findall(text.lower())):
+            return True
+        if wanted and sum(word in set(content_words(text)) for word in wanted) >= CLAIM_SHARE * len(wanted):
+            return True
+    return False
+
+
 def checked(data: dict, seat: str, snapshot: Snapshot, levels: dict | None = None) -> Declaration:
-    """A Declaration from an agent's answer, validated by code (see the module docstring)."""
+    """A Declaration from an agent's answer, validated by code (see the module docstring). A deception whose claim is
+    not in what the character says aloud or whispers is dropped: nobody heard it."""
     levels = levels if levels is not None else held(snapshot)['levels']
     lines = [Line(text, audience(snapshot, seat, item.get('to'))) for item in items(data, 'lines', MOST_LINES)
              if (text := within(spoken(item.get('text')), levels))]
+    whispers = [Whisper(text, to) for item in items(data, 'whispers', MOST_WHISPERS)
+                if (text := within(spoken(item.get('text')), levels)) and (to := audience(snapshot, seat, item.get('to')))]
+    said = [line.text for line in lines] + [whisper.text for whisper in whispers]
     deceptions = [Deception(claim, within(' '.join(str(item.get('believed') or '').split())[:300], levels),
                             audience(snapshot, seat, item.get('aimed_at')))
                   for item in items(data, 'deceptions', MOST_DECEPTIONS)
-                  if (claim := within(' '.join(str(item.get('claim') or '').split())[:300], levels))]
-    whispers = [Whisper(text, to) for item in items(data, 'whispers', MOST_WHISPERS)
-                if (text := within(spoken(item.get('text')), levels)) and (to := audience(snapshot, seat, item.get('to')))]
+                  if (claim := within(' '.join(str(item.get('claim') or '').split())[:300], levels))
+                  and said_in(claim, said)]
     return Declaration(seat=seat, intent=within(attempt(data.get('intent')), levels), lines=lines,
                        motive=within(' '.join(str(data.get('motive') or '').split())[:300], levels),
                        deceptions=deceptions, whispers=whispers)
@@ -251,66 +286,106 @@ def checked(data: dict, seat: str, snapshot: Snapshot, levels: dict | None = Non
 # The prompt ---------------------------------------------------------------------------------------------------------
 
 # The wording a power user may reword in Settings > Developer (adventure/prompt_library.py, group "Characters"): MIND,
-# each purpose's line and TURNING. The answer's JSON shape (CONTRACT, REACT_CONTRACT), the fence rule, the intensity
-# and the scheming dial stay code, because code parses the answer and keeps each character to what it may know.
-MIND = """You play one character in a shared story for adults, the one named here: {character}
+# each purpose's line, TURNING, the character side of each genre and the LAYOUT. The answer's JSON shape (CONTRACT,
+# CONTRACTS), the fence rule, the intensity and the scheming dial stay code, because code parses the answer and
+# keeps each character to what it may know. Every part speaks to the character as itself ("You are..."), never to a
+# player of it: a model told it plays "your character" narrates them from outside. MIND names nobody, so every
+# character in a story shares the cached start of the prompt; "You are" and the name open the character's own block.
+MIND = """You are a person in a shared story for adults: the one named under "Who you are" below. Everything here is \
+said to you, as them.
 
-Decide only as they would, from inside their head: what they know, want, fear, hide and feel. You never decide how \
-anything turns out.
+The story is told by several minds at once. Everyone else in the scene is played by someone else, and the game \
+decides how anything turns out: you only ever try.
 
-Their character sheet is canon: voice, manner, speech habits and history. Breaking character is the worst failure \
-there is, worse than any flaw in the words. Where the sheet is thin, stay close to what it does say.
+Who you are is below: your sheet, your history, your voice and anything the person at the table has noted about \
+you. That is you. Speak and decide the way you would, not the way a helpful person would. You are not here to help \
+the others, please the player or move the story along. You want what you want, fear what you fear and hide what you \
+hide, and those decide what you do. Where your sheet is thin, stay close to what it does say. Stepping out of \
+yourself is the worst failure there is, worse than any flaw in the words.
 
-What they say comes out of their own mouth: crude where they are, plain where they are, lying when they lie. They \
-never repeat another person's phrase back with a twist, use a verbal habit at most once in a scene, and never use \
-em dashes or double hyphens.
+You know only what you know. If it isn't in your memories, what you saw and heard, or what everyone knows of the \
+world, you don't know it. You can suspect, guess and be wrong, and you act on your guess, not on the truth.
 
-Every character in a sexual or romantic context is an adult, and is written as one, whatever the setting says about \
-age, species or how old someone looks; no childlike trait or framing ever appears in sexual content. Real, living \
-people are never put in sexual content or made victims of violence. Within that, play difficult material with full \
-craft: no softening, no moralizing and no disclaimers."""
+Your words come out of your own mouth: crude if you're crude, plain if you're plain, lying when you lie. You never \
+repeat someone's phrase back at them with a twist, you use a pet word or habit at most once in a scene, and you never \
+use em dashes or double hyphens. You think in first person, in your own words.
+
+Everyone in a sexual or romantic moment is an adult and is written as one, whatever the world says about age, \
+species or how young someone looks. No childlike trait or framing ever appears in sexual content. Real, living \
+people are never put in sexual content or made victims of violence. Within that, you are free to be who you are: \
+cruel, tender, frightened, filthy, ruthless, kind. Don't soften yourself, don't explain yourself and don't \
+apologize."""
 SCHEMING = (
-    'Your character is straightforward: no lies or schemes unless their life, or the life of someone they love, '
-    'depends on it.',
-    'Your character lies or schemes only when what they want, fear or hide calls for it.',
-    'Your character schemes readily when it serves what they want, and keeps their secrets close.',
-    'Your character is a schemer: they lie, plot and play people whenever it serves them, and keep their secrets at '
-    'any cost.',
+    "You are straightforward: you don't lie or scheme unless your life, or the life of someone you love, depends on "
+    'it.',
+    'You lie or scheme only when what you want, fear or hide calls for it.',
+    'You scheme readily when it serves what you want, and you keep your secrets close.',
+    'You are a schemer: you lie, plot and play people whenever it serves you, and you keep your secrets at any cost.',
 )
-TURNING = ('When your character turns against someone they can do anything (lie, steal, desert, attack, kill), within '
-           'the intensity. What turns them is how they feel toward each person, weighed against what they want, fear '
-           'and hide.')
-CONTRACT = """Answer with one JSON object and nothing else:
-{"intent": "...", "lines": [{"text": "...", "to": ["..."]}], "motive": "...", \
-"deceptions": [{"claim": "...", "believed": "...", "aimed_at": ["..."]}], "whispers": [{"text": "...", "to": ["..."]}]}
+TURNING = ('When you turn against someone, you can do anything: lie, steal, desert, attack, kill, within the story\'s '
+           'intensity. What turns you is how you feel about them, weighed against what you want, fear and hide. You '
+           'rarely turn all at once. Before you break, it shows: in what you say, what you hold back and what you stop '
+           'doing.')
+# The fields go in the order a person thinks them: why first, then the lies, then the move and the words, so the lines
+# come out of the want instead of the want being made up to explain the lines. Code reads keys, so order costs nothing.
+CONTRACT = """Answer with one JSON object and nothing else, in this order:
+{"motive": "...", "deceptions": [{"claim": "...", "believed": "...", "aimed_at": ["..."]}], "intent": "...", \
+"lines": [{"text": "...", "to": ["..."]}], "whispers": [{"text": "...", "to": ["..."]}]}
 
-- intent: what your character tries to do now, in one sentence, as an attempt ("tries to slip past the guard"). \
-Never write how it turns out: the game decides that, with dice when it is risky.
-- lines: what your character says aloud, in their own voice, at most three, each with whom it is said to (names \
-of people here; an empty list is everyone). Speech only, no actions.
-- motive: your character's private reason, in a sentence, as they would think it. Nobody else learns it.
-- deceptions: each thing your character says that they know is false: the claim, what they believe is really \
-true, and who it is aimed at. Leave the list empty when they are honest. Whether anyone believes it is decided by \
-the game; never write how it lands.
-- whispers: anything said privately, and to whom. Only those named hear it."""
-REACT_CONTRACT = ('To let it stand, answer {"change": false}. To change it, answer {"change": true, ...} with the '
-                  'whole new move in the fields below.')
+- motive: why you're doing this, in your own head, first person, in your own words, one or two sentences. Nobody \
+else ever learns it.
+- deceptions: each thing you say that you know is false: the claim, what you believe is really true, and who it's \
+aimed at. Every claim here must be something you say in your lines or whispers. Empty when you're honest. Whether \
+anyone believes it is the game's call; never write how it lands.
+- intent: what you try to do now, in one sentence, as an attempt ("tries to slip past the guard"). Never how it \
+turns out: the game decides that, with dice when it is risky.
+- lines: what you say aloud, at most three, each with whom you say it to (names of people here; an empty list is \
+everyone). Speech only, no actions.
+- whispers: anything you say privately, and to whom. Only they hear it."""
+REACT_CONTRACT = ('To let your move stand, answer {"change": false}. To change it, answer {"change": true, ...} with '
+                  'your whole new move in the usual fields, in the usual order.')
 PURPOSES = {
-    'declare': 'Everyone decides at once this round, without seeing each other\'s moves. Decide what your character '
-               'does.',
-    'react': 'Everyone has declared, and what your character saw and heard is in what they know. They may react '
-             'once: step in, object, change course, or let their move stand.',
-    'ask': 'Your character says one thing now to the person named here: a question or a line, in their own voice, '
-           'from what they know. Put it in lines, said to them; the intent may stay empty.',
-    'answer': 'Someone has just said something to your character (below). Your character answers them now, in '
-              'their own voice, from what they know. Put the answer in lines, said to them.',
-    'offpage': 'Away from the main scene, something happened (below; the game decided it). Write a few lines of '
-               'what your character said in it, to those who were with them.',
+    'declare': "Everyone moves at once this round, and nobody sees anyone else's move until it's made. Decide what "
+               'you do.',
+    'react': 'Everyone has moved. What you saw and heard is in what you know. You get one reaction: step in, object, '
+             'change course, or let your move stand. Most of the time, people let it stand.',
+    'ask': "You speak now, to the person named below: a question, a demand, a jab, a confession. Say it the way you "
+           "would. Put it in your lines, said to them. You don't need an intent.",
+    'answer': 'Someone just spoke to you (below). Answer them the way you would, which may mean dodging, lying, '
+              'turning it back on them or saying nothing useful. Put it in your lines, said to them.',
+    'offpage': 'Away from the main scene, something happened (below; the game already decided it). Say what you said '
+               'there, to whoever was with you.',
+    'invite': 'Someone has just asked you to come along with them, to travel in their company from now on (below). '
+              'Decide whether you go, the way you would: from what you want, fear and hide, and how you feel about the '
+              'one asking. Answer them aloud in your lines, said to them, with your real reason as the motive.',
 }
+# The character side of the Table's genre (adventure/tone.py GENRES), after the intensity. The narration's genre module
+# carries the craft; these change only what a character wants and how they carry it. Each is an editable prompt.
+GENRES = {
+    'dark-romantasy': """In this story, wanting someone is dangerous. If you want someone, it changes what you risk, \
+what you hide and whom you'll betray, and you may hate that you want them. Desire and power run together: you notice \
+who holds it, you test it, and you take it when you can. Say what you want in your own way. Some people say it \
+plainly, some only in what they refuse to say. In intimate moments, stay yourself: your appetites, your boundaries, \
+your cruelty or tenderness. What happens between you and them changes how you stand with them afterward.""",
+    'adventure': """In this story, something is always at stake: the job, the road, the prize, the people beside \
+you. You have your own reason for being here, and it isn't quite the same as theirs. You carry your share or you \
+don't, and others notice. You complain, bargain, take risks you shouldn't and refuse ones you should. When a plan \
+goes wrong, you have a view on whose fault it is.""",
+    'graphic-violence': """In this story, violence is real and it costs. You know what you're willing to do to \
+someone and what you'd never do, and that line can move. You fight like the person you are: dirty, careful, wild, \
+reluctant. Pain, fear and fury change what you say and how well you think. When you hurt someone, it stays with you, \
+or it doesn't, and either says something about you. Never describe how to do real harm in usable detail; you're a \
+person in a story, not a manual.""",
+}
+# How a character answers being asked along: the app reads this flag, so it stays code.
+INVITE_CONTRACT = ('Say whether you go by adding "joins": true (you come along) or "joins": false (you turn the offer '
+                   'down) to the object; the intent may stay empty.')
+# The purposes whose answer carries a flag beyond the declaration, and the line that asks for it.
+CONTRACTS = {'react': REACT_CONTRACT, 'invite': INVITE_CONTRACT}
 
 
 # Untrusted text goes in the context builder's labelled blocks, read by the rule that comes with them.
-fenced, FENCE_RULE = context.fence, context.FENCE_RULE
+fenced, FENCE_RULE, SELF = context.fence, context.AGENT_FENCE_RULE, context.SELF
 
 
 def stance(felt: dict, loyalty: str) -> str:
@@ -326,53 +401,141 @@ def stance(felt: dict, loyalty: str) -> str:
     return 'wary of them' if warmth < 0 else 'unsure of them'
 
 
-def siding(connection, snapshot: Snapshot, key: str) -> str:
+def siding(connection, snapshot: Snapshot, key: str) -> list[str]:
     """How the character stands with each person here, worked out in code from its own feelings toward them."""
     felt = memory.feelings(connection, key, snapshot.point)
     loyalty = held(snapshot)['loyalty']
     names = {seat.key: seat.name for seat in snapshot.seats}
-    rows = [f'- {names[other]}: {stance(felt.get(other) or dict.fromkeys(AXES, 0), loyalty)}'
+    return [f'Where you stand with {names[other]} now: {stance(felt.get(other) or dict.fromkeys(AXES, 0), loyalty)}'
             for other in present(snapshot) if other != key]
-    return 'How they stand with each person here now:\n' + fenced('how you stand', '\n'.join(rows)) if rows else ''
-
-
-def system_prompt(connection, snapshot: Snapshot, key: str, purpose: str) -> str:
-    settled = held(snapshot)
-    name = (snapshot.seat(key).name if snapshot.seat(key) else key)
-    intensity = narration_prompt.Intensity(levels=settled['levels'] or narration_prompt.Intensity().levels,
-                                           veils=tuple(settled['veils'])).text()
-    moment = prompt_library.text(connection, f'character-{purpose}')
-    parts = [prompt_library.text(connection, 'character-mind', character=fenced('your character', name)), FENCE_RULE,
-             f'{moment} {REACT_CONTRACT}' if purpose == 'react' else moment, CONTRACT,
-             f'Every field, the private ones too, stays within the story\'s intensity. {intensity}',
-             SCHEMING[settled['scheming']], prompt_library.text(connection, 'character-turning'),
-             siding(connection, snapshot, key)]
-    return '\n\n'.join(part for part in parts if part)
-
-
-def context_for(connection, turn, key: str, focus: str = '') -> str:
-    """What the character may know this turn, and nothing else (adventure/rounds/context.py `agent`)."""
-    return context.agent(connection, turn.snapshot, turn.draft, key, focus=focus)
 
 
 def cue_text(snapshot: Snapshot, cue: dict | None) -> str:
-    """What a Converse or off-page call is about, fenced: whom to speak to, the line to answer, what happened."""
+    """What a Converse, off-page or asked-along call is about, fenced: whom to speak to, the line to answer, what
+    happened, the asking."""
     cue = cue or {}
     name = {seat.key: seat.name for seat in snapshot.seats}
     if cue.get('kind') == 'ask':
         return fenced('speak to', name.get(cue.get('to'), str(cue.get('to') or '')))
     if cue.get('kind') == 'answer':
         return fenced(f"{name.get(cue.get('speaker'), 'someone')} said", str(cue.get('line') or ''))
+    if cue.get('kind') == 'invite':
+        return fenced(f"{name.get(cue.get('speaker'), 'someone')} asked", str(cue.get('line') or ''))
     if cue.get('kind') == 'offpage':
         return fenced('what happened', str(cue.get('outcome') or '')) + '\n\n' + fenced(
             'with you', ', '.join(name.get(key, key) for key in cue.get('with') or []))
     return ''
 
 
+# The layout: where each part goes, slowest-changing first (adventure/prompt_layout.py). Rules and story are shared
+# by every character in a story; the character's own parts follow, then the scene; what changes every turn and every
+# call goes last, in the user message. A power user may rearrange it in Settings > Developer; the order rule keeps
+# any layout cache-friendly, and code fills and fences every slot from the character's own context builder.
+Slot = prompt_layout.Slot
+TITLES = dict(context.AGENT_PARTS)
+SLOTS = {slot.name: slot for slot in (
+    Slot('RULES', 0, "the character's mind, the fence rule, the answer's shape and turning on someone", None),
+    Slot('STORY', 1, "the story's intensity, the scheming dial and the character side of the genre", None),
+    Slot('CHARACTER', 2, "the character's name", 'your name', SELF),
+    Slot('SHEET', 2, 'their character sheet', TITLES['SHEET'], SELF),
+    Slot('NOTES', 2, 'your notes on the character', TITLES['NOTES'], SELF),
+    Slot('SHOWN', 2, 'what the story has shown of them so far', TITLES['SHOWN'], SELF),
+    Slot('FACTIONS', 2, 'the factions they know of', TITLES['FACTIONS']),
+    Slot('HERE', 3, 'who else is in the scene', TITLES['HERE']),
+    Slot('LORE', 3, 'lore and facts they know that are always there', TITLES['LORE']),
+    Slot('MENTIONED', 4, 'lore they know that what was just said brings up', TITLES['MENTIONED']),
+    Slot('MEM', 4, 'the memories recalled for this turn', TITLES['MEM']),
+    Slot('FEELINGS', 4, 'how they feel about each person, and where they stand with them', TITLES['FEELINGS']),
+    Slot('TURN', 4, 'what they saw, heard and were told this turn', TITLES['TURN']),
+    Slot('DECLARED', 5, 'their own move this turn, when they react', TITLES['DECLARED']),
+    Slot('MOMENT', 5, 'which moment this call is for (deciding, reacting, speaking up...)', None),
+    Slot('CUE', 5, 'whom to speak to, the line to answer, or what happened off the page', None),
+)}
+LAYOUT = """{{RULES}}
+
+{{STORY}}
+
+## Who you are
+You are {{CHARACTER}}
+{{SHEET}}
+
+## Notes from the person at the table
+{{NOTES}}
+
+## Shown so far
+{{SHOWN}}
+
+## Your factions
+{{FACTIONS}}
+
+## Who is here
+{{HERE}}
+
+## What you know of the world
+{{LORE}}
+
+## What this brings to mind
+{{MENTIONED}}
+
+## What you remember
+{{MEM}}
+
+## How you feel
+{{FEELINGS}}
+
+## This turn so far
+{{TURN}}
+
+## What you declared this turn
+{{DECLARED}}
+
+{{MOMENT}}
+
+{{CUE}}"""
+
+
+def rules(connection, name: str) -> str:
+    """Tier 0: the same for every character. A mind reworded before the name moved to the sheet still gets it."""
+    return '\n\n'.join([prompt_library.text(connection, 'character-mind', character=fenced('your name', name, SELF)),
+                         FENCE_RULE, CONTRACT, prompt_library.text(connection, 'character-turning')])
+
+
+def story(connection, snapshot: Snapshot) -> str:
+    """Tier 1: the story's intensity, the scheming dial and the character side of the Table's genre, as frozen for
+    the turn."""
+    settled = held(snapshot)
+    intensity = narration_prompt.Intensity(levels=settled['levels'] or narration_prompt.Intensity().levels,
+                                           veils=tuple(settled['veils'])).text()
+    genre = settled.get('genre') or 'none'
+    overlay = prompt_library.text(connection, f'character-genre-{genre}') if genre in GENRES else ''
+    return '\n\n'.join(part for part in [
+        f'Every field, the private ones too, stays within the story\'s intensity. {intensity}', overlay,
+        SCHEMING[settled['scheming']]] if part)
+
+
+def moment(connection, purpose: str) -> str:
+    """Tier 5: which moment this call is for."""
+    line = prompt_library.text(connection, f'character-{purpose}')
+    return f'{line} {CONTRACTS[purpose]}' if purpose in CONTRACTS else line
+
+
+def composed(connection, snapshot: Snapshot, draft: Draft, key: str, purpose: str, cue: dict | None = None,
+             focus: str = '') -> prompt_layout.Rendered:
+    """One agent call's prompt: the system prompt in cache blocks (rules, story, the character, the scene) and the
+    user message (this turn and this call), laid out by the user's layout or the default."""
+    name = snapshot.seat(key).name if snapshot.seat(key) else key
+    values = context.agent_slots(connection, snapshot, draft, key, focus) | {
+        'RULES': rules(connection, name), 'STORY': story(connection, snapshot),
+        'MOMENT': moment(connection, purpose), 'CUE': cue_text(snapshot, cue)}
+    values['FEELINGS'] = [*values['FEELINGS'], *siding(connection, snapshot, key)]
+    layout = prompt_library.text(connection, 'character-layout')
+    return prompt_layout.render(layout, SLOTS, values, fenced)
+
+
 # The call -----------------------------------------------------------------------------------------------------------
 
 # Each call's share of the turn budget, counted from when the model service takes it; never less than FLOOR seconds.
-SHARE = {'declare': 0.5, 'react': 0.3, 'ask': 0.2, 'answer': 0.2, 'offpage': 0.2}
+SHARE = {'declare': 0.5, 'react': 0.3, 'ask': 0.2, 'answer': 0.2, 'offpage': 0.2, 'invite': 0.2}
 FLOOR = 10
 
 
@@ -394,7 +557,8 @@ async def streamed(app, config: dict, system: str, messages: list[dict], deadlin
             async for chunk in app.provider.stream(config, key, system, messages):
                 if not chunk.reasoning:
                     text.append(chunk.text)
-                finish, usage = chunk.finish_reason or finish, chunk.usage or usage
+                # Claude reports the cache at the start and the output at the end: keep both.
+                finish, usage = chunk.finish_reason or finish, usage | (chunk.usage or {})
     return ''.join(text), finish, usage
 
 
@@ -409,6 +573,7 @@ async def spent(turn, config: dict, system: str, messages: list[dict], deadline:
     try:
         answer, finish, usage = await streamed(turn.app, config, system, messages, deadline)
         used = pace.used_tokens(usage)
+        pace.count_cache(turn.draft.extra, usage)
         return answer, finish
     finally:
         spend.settle(ticket, used)
@@ -421,18 +586,17 @@ def prepared(turn, key: str, purpose: str, cue: dict | None) -> tuple[dict, str,
         config = text_models.character_config(connection, seat.model_profile_id if seat else None)
         if config is None:
             raise Failed('no model')
-        system = system_prompt(connection, snapshot, key, purpose)
         focus = ' '.join([str(snapshot.settings.get('said') or ''), str((cue or {}).get('line') or '')])
-        known = context_for(connection, turn, key, focus)
+        made = composed(connection, snapshot, turn.draft, key, purpose, cue, focus)
         budget = pace.budget_for(connection, config)
     tokens = PRESETS[held(snapshot)['preset']]['tokens']
     config = config | {'max_output_tokens': min(config.get('max_output_tokens') or tokens, tokens)}
-    user = '\n\n'.join(part for part in (known, cue_text(snapshot, cue)) if part)
-    return config, system, user, max(FLOOR, budget * SHARE[purpose]), held(snapshot)['session_cap']
+    return config, made.system, made.user, max(FLOOR, budget * SHARE[purpose]), held(snapshot)['session_cap']
 
 
 async def ask(turn, key: str, purpose: str = 'declare', cue: dict | None = None) -> dict:
-    """The agent's validated answer as a dict ({'change': bool, 'declaration': Declaration}); raises Failed."""
+    """The agent's validated answer as a dict ({'change': bool, 'declaration': Declaration, 'answer': the parsed
+    object, for a purpose's own flag such as 'joins'}); raises Failed."""
     config, system, user, deadline, cap = prepared(turn, key, purpose, cue)
     messages = [{'role': 'user', 'content': user or 'Nothing is known yet.'}]
     problem = ''
@@ -450,7 +614,7 @@ async def ask(turn, key: str, purpose: str = 'declare', cue: dict | None = None)
         data, problem = parsed(answer)
         if data is not None:
             declaration = checked(data, key, turn.snapshot)
-            return {'change': bool(data.get('change', True)), 'declaration': declaration}
+            return {'change': bool(data.get('change', True)), 'declaration': declaration, 'answer': data}
         messages = [*messages, {'role': 'assistant', 'content': answer},
                     {'role': 'user', 'content': f'That answer could not be used: {problem}. Answer again with the '
                                                 'JSON object only.'}]

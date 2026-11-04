@@ -211,7 +211,7 @@ def test_the_narrator_hears_what_the_town_argues_about(client, provider):
     issues = ok(client.get('/api/story/politics'))['issues']
     reply(provider, 'The talk in the shop is all of one thing.')
     tell(client, 'I listen to the talk.', 'politics-1')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert '## Talk of the town' in narrator and 'never decide how an open issue ends' in narrator
     assert all(issue['title'] in narrator for issue in issues)
     assert 'Backing ' in narrator
@@ -223,4 +223,4 @@ def test_the_narrator_hears_nothing_with_politics_off(client, provider):
     ok(client.put('/api/story/table', json={'politics': 'off'}))
     reply(provider, 'Quiet today.')
     tell(client, 'I listen to the talk.', 'politics-2')
-    assert '## Talk of the town' not in provider.requests[-1]['system']
+    assert '## Talk of the town' not in provider.requests[-1]['prompt']

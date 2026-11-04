@@ -39,7 +39,7 @@ def test_a_day_in_town_draws_once_and_plays_the_card(client, connected, provider
         before = inventory.purse(connection)
     reply(provider, 'Soldiers at the doors.')
     tell(client, 'I look out of the window.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert '## What the world brings' in narrator and 'war tithe, a month early' in narrator
     assert 'It puts a choice to the player: A widow on your street' in narrator
     # Two of a logger's day wages (1.50 cr. each).
@@ -54,7 +54,7 @@ def test_a_day_in_town_draws_once_and_plays_the_card(client, connected, provider
     # The same day draws no more.
     reply(provider, 'Still raining.')
     tell(client, 'I sit down again.', 'story-0002')
-    assert len(dealt.calls) == 1 and '## What the world brings' not in provider.requests[-1]['system']
+    assert len(dealt.calls) == 1 and '## What the world brings' not in provider.requests[-1]['prompt']
 
 
 def test_the_drama_setting_and_intensity_decide_what_can_turn_up(client, connected, provider, dealt):
@@ -78,7 +78,7 @@ def test_a_road_card_can_bring_a_fight(client, connected, provider, app, dealt):
     story = ok(client.get('/api/story'))
     assert story['scene']['place']['id'] == 'eriane' and story['fight']['fight']['foes'][0]['name'] == 'deserter 1'
     assert dealt.calls[-1]['scene'] == 'road' and 'It comes to a fight: deserters close in.' in \
-        provider.requests[-1]['system']
+        provider.requests[-1]['prompt']
 
 
 def test_a_rest_card_with_foes_ends_the_rest(client, connected, provider, app, dealt):
@@ -87,7 +87,7 @@ def test_a_rest_card_with_foes_ends_the_rest(client, connected, provider, app, d
     app.state.dice = Road(99)
     reply(provider, 'Eyes in the dark.')
     tell(client, 'I make camp and keep watch.', 'story-0001')
-    narrator = provider.requests[-1]['system'].split('## The rest')[1]
+    narrator = provider.requests[-1]['prompt'].split('## The rest')[1]
     assert 'starving wolves close in' in narrator and 'The rest ends here' in narrator
     assert [call['scene'] for call in dealt.calls] == ['rest']
 

@@ -81,7 +81,7 @@ export function spendLine(spend: AgentPace['spend']): string {
 export const REPORT_NAMES = {
   you: 'You', rolls: 'Rolls', motives: 'Motives', numbers: 'Numbers', inventions: 'Made up this turn', strike: 'Strike',
   struck: 'Struck', checks: 'Checks', offpage: 'Elsewhere', questions: 'Open questions', next: 'Next', corrections: 'Corrections',
-  judged: 'Read from the story', undo: 'Undo', undone: 'Undone',
+  judged: 'Read from the story', undo: 'Undo', undone: 'Undone', cache: 'Model cache',
 } as const
 
 /** "Turn 12", the status line's link to the last turn's report. */
@@ -99,6 +99,18 @@ export function checksLine(checks: TurnReport['checks']): string {
     checks.cut.length ? `${checks.cut.length} ${checks.cut.length === 1 ? 'sentence' : 'sentences'} cut` : '',
     checks.review.length ? `${checks.review.length} ${checks.review.length === 1 ? 'note' : 'notes'}` : '']
   return parts.filter(Boolean).join(' · ')
+}
+
+/** "64% of 12,400 prompt tokens read from cache · 7 calls · 3,100 written", "7 calls; the model service did not say
+ *  what it cached", or '' for a turn with no model calls. */
+export function cacheLine(cache: TurnReport['cache']): string {
+  const calls = cache?.calls ?? 0
+  if (!calls) return ''
+  const callText = `${calls} ${calls === 1 ? 'call' : 'calls'}`
+  if (!cache?.reported || !cache.input) return `${callText}; the model service did not say what it cached`
+  const share = Math.round((cache.read ?? 0) / cache.input * 100)
+  return [`${share}% of ${cache.input.toLocaleString('en-US')} prompt tokens read from cache`, callText,
+    cache.written ? `${cache.written.toLocaleString('en-US')} written` : ''].filter(Boolean).join(' · ')
 }
 
 // The GM view in round play ------------------------------------------------------------------------------------------

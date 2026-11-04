@@ -8,6 +8,10 @@ with the default it replaced, so an update that changes the default can say so w
 their text. Wording is checked before it is saved: every placeholder the default uses must stay,
 and no unknown one may be added, so a typo cannot break replies.
 
+A layout (`Prompt.layout`) is checked differently: it places slots (adventure/prompt_layout.py), any of which may be
+left out, and is refused when it puts a slot ahead of one that changes more slowly, so every layout stays
+cache-friendly.
+
 Only the wording is editable. The in-character filter, OOC handling, the NSFW check and every
 reply's validation are code (adventure/in_character.py and the callers) and run whatever it says.
 """
@@ -15,6 +19,7 @@ import re
 from dataclasses import dataclass, field
 from importlib import import_module
 
+from adventure import prompt_layout
 from adventure.database import optional
 from adventure.errors import DomainError
 
@@ -38,6 +43,11 @@ def constant(module: str, name: str, key: str | None = None):
     return read
 
 
+def literal(module: str, name: str):
+    """A module constant written in the `{{slot}}` form already (a layout), read when needed."""
+    return lambda: getattr(import_module(module), name)
+
+
 @dataclass(frozen=True)
 class Prompt:
     name: str
@@ -46,9 +56,18 @@ class Prompt:
     description: str
     default: object  # () -> str
     placeholders: dict[str, str] = field(default_factory=dict)
+    # Placeholders an older default had, with why they went: still filled in a user's older wording, refused on save.
+    retired: dict[str, str] = field(default_factory=dict)
+    # For a layout: () -> {name: prompt_layout.Slot}, the slots its reader's context builder fills.
+    layout: object = None
+    reader: str = ''
 
 
-CHAT, CHARACTERS, GENRES = 'Story', 'Characters', 'Genres'
+def agent_slots() -> dict:
+    return import_module('adventure.rounds.agents').SLOTS
+
+
+CHAT, CHARACTERS, MAKING, GENRES = 'Story', 'Characters', 'Making a character', 'Genres'
 AGENTS = 'adventure.rounds.agents'
 PROMPTS = {prompt.name: prompt for prompt in (
     Prompt('story-narrator', CHAT, 'The Story narrator',
@@ -74,11 +93,15 @@ PROMPTS = {prompt.name: prompt for prompt in (
            'the note is switched on. Your note follows this line.',
            constant('adventure.authors_note', 'HEADER')),
     Prompt('character-mind', CHARACTERS, "A character's mind",
-           'Opens every call to a character who thinks for themselves: whom they play, that they decide only from '
-           'inside their own head, that their sheet is canon, how they speak, and the content rules. What the '
+           'Opens every call to a character who thinks for themselves, spoken to them as themselves ("You are..."): '
+           'that their sheet is who they are, that they want what they want rather than helping, that they know only '
+           'what they know, how they speak, and the content rules. What the '
            "character may know, the shape of their answer, the intensity and the scheming dial are added by the app, "
            "so no wording here can show a character someone else's secrets.",
-           constant(AGENTS, 'MIND'), {'character': "the character's name"}),
+           constant(AGENTS, 'MIND'),
+           retired={'character': "The character's name now comes with their sheet, further down the prompt, so every "
+                                 'character in a story can share the cached start. Take {{character}} out; to place '
+                                 "the name, edit the layout's {{CHARACTER}}."}),
     Prompt('character-declare', CHARACTERS, 'Deciding a move',
            'Follows the character\'s mind when everyone decides at once at the start of a round.',
            constant(AGENTS, 'PURPOSES', 'declare')),
@@ -98,10 +121,47 @@ PROMPTS = {prompt.name: prompt for prompt in (
            'Follows the character\'s mind when something happened away from the main scene and the character says a '
            'few lines in it. The app adds what happened and who was there.',
            constant(AGENTS, 'PURPOSES', 'offpage')),
+    Prompt('character-invite', CHARACTERS, 'Being asked along',
+           'Follows the character\'s mind when the player asks them to come along and their feelings leave it to them '
+           '(a wary character refuses before anyone asks). The app adds the line that asked and how they say yes or '
+           'no, and their answer decides whether they join.',
+           constant(AGENTS, 'PURPOSES', 'invite')),
     Prompt('character-turning', CHARACTERS, 'Turning on someone',
            'What a character may do once they turn against someone, and what turns them. How they stand with each '
            'person present follows it, worked out by the app from their feelings.',
            constant(AGENTS, 'TURNING')),
+    Prompt('character-genre-dark-romantasy', CHARACTERS, 'Dark romantasy, for characters',
+           "Follows the intensity in every character's prompt when the Table's Genre is Dark romantasy: what wanting "
+           "someone does to what a character risks, hides and betrays. The narration's own module is under Genres.",
+           constant(AGENTS, 'GENRES', 'dark-romantasy')),
+    Prompt('character-genre-adventure', CHARACTERS, 'Adventure, for characters',
+           "Follows the intensity in every character's prompt when the Table's Genre is Adventure: their own reason "
+           "for being here, and a view on whose fault it is. The narration's own module is under Genres.",
+           constant(AGENTS, 'GENRES', 'adventure')),
+    Prompt('character-genre-graphic-violence', CHARACTERS, 'Graphic violence, for characters',
+           "Follows the intensity in every character's prompt when the Table's Genre is Graphic violence: what a "
+           "character will and won't do to someone, and what it costs them. The narration's own module is under "
+           'Genres.',
+           constant(AGENTS, 'GENRES', 'graphic-violence')),
+    Prompt('character-layout', CHARACTERS, "A character's prompt, laid out",
+           'Where each part of a character call goes. Slots are filled by the app from what that character may know, '
+           "and fenced, so moving one never shows a character anything new. Parts that change least come first so "
+           "the model service can cache them: a slot can't come before one that changes more slowly. A slot you "
+           'leave out goes back at the end of its group; a paragraph whose slots are all empty is left out, so keep '
+           'a heading in the same paragraph as its slot.',
+           literal(AGENTS, 'LAYOUT'), layout=agent_slots, reader='a character'),
+    Prompt('character-draft', MAKING, 'Drafting a character',
+           'Write it on the cast page: the story\'s model drafts the character you will play from your idea and '
+           'picks, for you to review before Begin. The answer\'s shape and the adults-only check are added by the '
+           'app.',
+           constant('adventure.making', 'DRAFT'), placeholders={'world': 'The world, where the story opens and the '
+                                                                       'content limits'}),
+    Prompt('character-split', MAKING, 'Reading a pasted character',
+           'Paste a character on the cast page: a character you already have (notes, a bio or a card) split into '
+           'the fields, with what it said nothing about filled in and marked. The pasted text, its fence and the '
+           'answer\'s shape are added by the app.',
+           constant('adventure.making', 'SPLIT'), placeholders={'world': 'The world, where the story opens and the '
+                                                                       'content limits'}),
     Prompt('genre-dark-romantasy', GENRES, 'Dark romantasy',
            'Follows the intensity in the narrator\'s and the round Writer\'s prompt when the Table\'s Genre is Dark '
            'romantasy. How explicit the page gets stays with the intensity.',
@@ -146,13 +206,14 @@ def text(connection, name: str, /, **values: str) -> str:
 def view(connection, name: str) -> dict:
     prompt = PROMPTS[name]
     default, row = prompt.default(), override(connection, name)
-    keys = placeholders(default)
+    keys = [] if prompt.layout else placeholders(default)
     return {'name': name, 'group': prompt.group, 'label': prompt.label, 'description': prompt.description,
             'text': row['text'] if row else default, 'default': default, 'customized': row is not None,
             # Saved against an older default: the user's wording stays, with a note that a newer one exists.
             'outdated': bool(row and row['default_text'] is not None and row['default_text'] != default),
             'placeholders': keys,
-            'placeholder_help': {key: prompt.placeholders.get(key, '') for key in keys}}
+            'placeholder_help': {key: prompt.placeholders.get(key, '') for key in keys},
+            'slots': prompt_layout.described(prompt.layout()) if prompt.layout else []}
 
 
 def views(database) -> list[dict]:
@@ -160,8 +221,11 @@ def views(database) -> list[dict]:
         return [view(connection, name) for name in PROMPTS]
 
 
-def problems(default: str, wording: str) -> str | None:
+def problems(default: str, wording: str, retired: dict[str, str] | None = None) -> str | None:
     """Why the wording would break the prompt, in words the user can act on, or None."""
+    gone = [key for key in placeholders(wording) if key in (retired or {})]
+    if gone:
+        return (retired or {})[gone[0]]
     allowed = set(placeholders(default))
     missing = [key for key in sorted(allowed) if '{{' + key + '}}' not in wording]
     unknown = [key for key in placeholders(wording) if key not in allowed]
@@ -179,9 +243,12 @@ def problems(default: str, wording: str) -> str | None:
 
 def save(database, name: str, wording: str) -> dict:
     require(name)
-    default = PROMPTS[name].default()
-    if problem := problems(default, wording):
-        raise DomainError(problem, 422, 'prompt_placeholders')
+    prompt = PROMPTS[name]
+    default = prompt.default()
+    problem = prompt_layout.problems(wording, prompt.layout(), prompt.reader) if prompt.layout else \
+        problems(default, wording, prompt.retired)
+    if problem:
+        raise DomainError(problem, 422, 'prompt_layout' if prompt.layout else 'prompt_placeholders')
     with database.connect(write=True) as connection:
         if wording == default:
             connection.execute('DELETE FROM prompt_overrides WHERE name=?', (name,))

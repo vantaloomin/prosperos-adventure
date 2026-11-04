@@ -43,7 +43,7 @@ def test_a_night_in_town_is_safe_and_passes_the_night(client, connected, provide
     reply(provider, 'Morning.')
     tell(client, 'I go to bed.', 'story-0001')
     assert (clock_at(app) - before).total_seconds() == rest.first_night(local) * 60
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert '## The rest' in narrator and 'rests for the night, somewhere safe' in narrator
     assert ok(client.get('/api/story'))['fight']['fight'] is None
 
@@ -71,13 +71,13 @@ def test_raiders_in_the_night_start_a_fight_and_end_the_rest(client, connected, 
     story = ok(client.get('/api/story'))
     assert {foe['name'] for foe in story['fight']['fight']['foes']} <= {f'Unguruk raider {n}' for n in (1, 2, 3)}
     assert (clock_at(app) - before).total_seconds() == rest.CUT_SHORT_MINUTES * 60
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'Unguruk raiders ride down' in narrator and 'The rest ends here' in narrator
     assert 'with no precautions' in narrator and 'mend' not in narrator.split('## The rest')[1]
     # No rest with a fight on.
     reply(provider, 'No sleep.')
     tell(client, 'I lie down and sleep.', 'story-0002')
-    assert 'cannot rest with a fight on' in last_narration(provider)['system']
+    assert 'cannot rest with a fight on' in last_narration(provider)['prompt']
 
 
 def test_days_out_in_the_open_eat_from_the_pack_and_hunger_slows_mending(client, connected, provider, app):
@@ -90,7 +90,7 @@ def test_days_out_in_the_open_eat_from_the_pack_and_hunger_slows_mending(client,
     reply(provider, 'Three cold days.')
     tell(client, 'I lie up in the keep and rest for three days, keeping watch.', 'story-0001')
     assert (clock_at(app) - before).total_seconds() == (2 * rest.DAY_MINUTES + rest.first_night(local)) * 60
-    narrator = provider.requests[-1]['system'].split('## The rest')[1]
+    narrator = provider.requests[-1]['prompt'].split('## The rest')[1]
     assert 'for 3 nights out in the open, keeping watch' in narrator and '1 hungry day' in narrator
     # Three nights, one of them hungry: two count toward Wounded's four.
     assert 'still wounded: 2 more nights' in narrator

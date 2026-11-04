@@ -98,15 +98,15 @@ def test_attacking_someone_starts_a_brawl_the_narrator_writes(client, connected,
     app.state.dice = Dice(95)
     provider.replies = [reply('Teeth on the floorboards.')]
     tell(client, f"I hit {name} in the mouth with the haft of my axe.", 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert '## The fight (decided by the game' in narrator and f"hits {name}" in narrator
     assert 'the fight is won' in narrator and ok(client.get('/api/story'))['fight']['fight'] is None
 
     # Telling it again keeps the round.
     provider.replies = [reply('Teeth again.')]
     ok(client.post('/api/story/retry'))
-    assert provider.requests[-1]['system'].count('## The fight') == 1 and f"hits {name}" in \
-        provider.requests[-1]['system']
+    assert provider.requests[-1]['prompt'].count('## The fight') == 1 and f"hits {name}" in \
+        provider.requests[-1]['prompt']
 
 
 def test_a_danger_brings_a_foe_and_a_dead_character_plays_no_more(client, connected, provider, app):
@@ -166,10 +166,10 @@ def test_wounds_mend_with_nights_of_rest(client, connected, provider, app):
     # Gritty Prospero healing: Wounded takes four nights to mend to Hurt.
     tell(client, 'I go to bed and sleep.', 'story-0001')
     assert ok(client.get('/api/story'))['fight']['condition'] == 'wounded'
-    assert 'still wounded: 3 more nights of rest to mend' in provider.requests[-1]['system']
+    assert 'still wounded: 3 more nights of rest to mend' in provider.requests[-1]['prompt']
     tell(client, 'I rest for three days.', 'story-0002')
     assert ok(client.get('/api/story'))['fight']['condition'] == 'hurt'
-    assert "is hurt (kept by the game" in narrator(provider)['system']
+    assert "is hurt (kept by the game" in narrator(provider)['prompt']
     # A new wound starts the count again.
     with app.state.database.connect(write=True) as connection:
         combat.set_condition(connection, 1)
@@ -209,17 +209,17 @@ def test_a_stand_in_who_is_beaten_does_not_come_back_fresh(client, connected, pr
     app.state.dice = Dice(95)
     provider.replies = [reply('He goes down.'), reply('Nobody there.'), reply('He swings back.')]
     tell(client, 'I punch him in the jaw as hard as I can.', 'story-0001')
-    assert 'their opponent' in provider.requests[-1]['system']
+    assert 'their opponent' in provider.requests[-1]['prompt']
     # The fight ends on that line (beaten, fled or given up: here, simply over).
     with app.state.database.connect(write=True) as connection:
         combat.save_fight(connection, None)
     # Straight after, "him" is the one already beaten: no fresh opponent.
     tell(client, 'I hit him again.', 'story-0002')
-    assert '## The fight' not in provider.requests[-1]['system']
+    assert '## The fight' not in provider.requests[-1]['prompt']
     assert ok(client.get('/api/story'))['fight']['fight'] is None
     # A line later the player can pick a new fight.
     tell(client, 'I punch him.', 'story-0003')
-    assert '## The fight' in provider.requests[-1]['system']
+    assert '## The fight' in provider.requests[-1]['prompt']
 
 def test_only_foes_who_would_kill_leave_a_lasting_injury():
     brawl, killers = {'wants': 'drive_off', 'hurt_by': 'the logger'}, {'wants': 'kill', 'hurt_by': 'the logger'}

@@ -105,7 +105,7 @@ export function Story({ go }: { go: (view: View) => void }) {
         <StoryHeader story={story.data} change={change} onDraft={(text) => setDraft({ text, at: Date.now() })}
           extra={<ModeSwitch shown={mode.shown} mode={mode.mode} onChange={mode.change} />} />
         {opening === 'title' ? <TitleScreen onBegin={() => setBegun(true)} onNew={toPackages} />
-          : opening === 'start' ? <StoryStart onStarted={update} place={story.data.scene.city.name} /> : <>
+          : opening === 'start' ? <StoryStart onStarted={update} place={story.data.scene.city.name} onAddModel={story.data.ready ? undefined : () => go('settings/models')} /> : <>
           <StoryStage turn={`${story.data.scene.city.id}/${story.data.scene.place.id}/${story.data.messages.length}`} />
           <StoryLog marks={marks} messages={story.data.messages} pending={story.data.messages.length > since ? null : pending} streamed={streamed} turn={turn} bands={story.data.bands}
             onRetry={() => void run('', () => streamApi('/story/retry/stream', {}, grow, note))}

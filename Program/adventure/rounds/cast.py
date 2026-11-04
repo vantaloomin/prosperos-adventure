@@ -114,12 +114,33 @@ def join(connection, data: dict, place_id: str, leads: list[dict], chosen_id: st
 
 
 def begin(connection, database, city_id: str, leads: list[dict], chosen_id: str | None, player: str,
-          chosen: dict | None):
-    """At Begin (adventure/campaign.py): the party joins when the cast page sent one; with none, nothing changes."""
+          chosen: dict | None, made: list[dict] = ()):
+    """At Begin (adventure/campaign.py): the party joins when the cast page sent one, with the party members the
+    player made; with none, nothing changes."""
     from adventure import story, story_clock, tiers
     if chosen is None:
         return
     data = story.city_data(connection, city_id)
     day = story.local_moment(data, story_clock.now(connection, database.clock)).date()
-    join(connection, data, story.scene_row(connection)['place_id'], leads, chosen_id, player, chosen,
-         tiers.world_of(city_id), database.now(), day)
+    place, world = story.scene_row(connection)['place_id'], tiers.world_of(city_id)
+    join(connection, data, place, leads, chosen_id, player, chosen, world, database.now(), day)
+    join_made(connection, data, place, made, world, database.now(), day)
+
+
+def join_made(connection, data: dict, place_id: str, made: list, world: str | None, now: str, day: date):
+    """The party members the player made on the cast page: each drawn as a lead would be, at the place the story
+    opens, keyed `made-1`, `made-2` and so on, with the sheet they were given kept for their own agent
+    (adventure/making.py), so what they want, fear and look like is the player's, not the town's."""
+    from adventure import making
+    for number, form in enumerate(made, start=1):
+        key = f'made-{number}'
+        lead = {'id': key, 'name': form['name'], 'gender': form.get('gender') or '', 'age': form.get('age'),
+                'about': form.get('about') or ''}
+        sheet = sheet_for(data, place_id, lead, world) | ({'wants': form['wants'][:WANTS_CHARS]} if form.get('wants')
+                                                          else {})
+        story_people.meet(connection, sheet, data['id'], now, day)
+        connection.execute('INSERT OR REPLACE INTO story_party (key, name, city_id, sheet, joined) VALUES '
+                           '(?, ?, ?, ?, ?)', (key, sheet['full'], data['id'], encode(sheet), now))
+        seats.set_seat(connection, key, sheet['full'], now, mind=form.get('mind') or Mind.AGENT,
+                       notes=form.get('notes') or '')
+        making.keep(connection, key, making.sheet(form, form.get('seed') or key, data))

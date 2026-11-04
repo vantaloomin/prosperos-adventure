@@ -41,11 +41,12 @@ class FakeProvider:
         self.delay = 0
 
     async def stream(self, config, key, system, messages):
-        # `prompt` is what the reply is told besides the conversation: the system prompt and this reply's notes.
+        # `prompt` is what the reply is told besides the conversation: the system prompt and this reply's notes (the
+        # narrator's turn layer and the author's note, sent before the player's words; adventure/story.py with_turn).
         latest = messages[-1]['content'] if messages and isinstance(messages[-1]['content'], str) else ''
         notes = latest.split(NOTE_CLOSE)[0] if NOTE_CLOSE in latest else ''
         self.requests.append({'config': config, 'key': key, 'system': system, 'messages': messages,
-                              'prompt': f'{system}\n\n{notes}'})
+                              'prompt': '\n\n'.join(part for part in (system, notes) if part)})
         if self.delay:
             await asyncio.sleep(self.delay)
         if self.error:

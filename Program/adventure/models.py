@@ -186,6 +186,97 @@ class PersonaInput(Input):
         return value
 
 
+class MadeSlider(Input):
+    """One personality slider (adventure/world/personality.py): its stop and who set it."""
+    level: int = Field(ge=0, le=2)
+    source: Literal['rolled', 'idea', 'you'] = 'you'
+
+
+class MadeLooks(Input):
+    """Looks (adventure/world/looks.py): each field optional, a blank one drawn for them."""
+    age: int | None = Field(None, ge=18, le=PERSONA_AGES[1])
+    height_cm: int | None = Field(None, ge=100, le=250)
+    weight_kg: int | None = Field(None, ge=30, le=300)
+    build: str = Field('', max_length=120)
+    skin: str = Field('', max_length=120)
+    face: str = Field('', max_length=120)
+    jaw: str = Field('', max_length=120)
+    nose: str = Field('', max_length=120)
+    eyes: str = Field('', max_length=120)
+    eye_shape: str = Field('', max_length=120)
+    hair: str = Field('', max_length=200)
+    facial_hair: str = Field('', max_length=120)
+    feature: str = Field('', max_length=200)
+
+
+class MadeCard(Input):
+    """A character card the person opened for a made character, and what they ticked to keep from it at Begin: its
+    lorebook, and its picture as the character's portrait (adventure/making.py `cards_of`)."""
+    filename: str = Field(min_length=1, max_length=260)
+    data: str = Field(min_length=1, max_length=14_000_000)
+    lorebook: bool = False
+    picture: bool = False
+
+
+class MadeCharacter(Input):
+    """A character the player makes on the cast page (adventure/making.py), beyond the persona's name, gender, age and
+    About you: their look, voice, wants and fears, personality sliders, Looks and how they come across. `seed` rolls
+    whatever is left open, so the form and Begin roll the same. `card` is a character card they opened, kept as ticked."""
+    seed: str = Field('', max_length=80, pattern=r'^[A-Za-z0-9-]*$')
+    look: str = Field('', max_length=600)
+    voice: str = Field('', max_length=600)
+    wants: str = Field('', max_length=300)
+    fears: str = Field('', max_length=300)
+    personality_sliders: dict[Literal['social', 'warmth', 'order', 'curiosity', 'stress'], MadeSlider] | None = None
+    looks: MadeLooks | None = None
+    seen_as: str = Field('', max_length=400)
+    sees_self: str = Field('', max_length=1200)
+    card: MadeCard | None = None
+
+
+class MadeForm(MadeCharacter):
+    """The cast page's form as it stands, for the sliders, Looks and perception it rolls; `roll` rolls the Rolled
+    sliders again."""
+    name: str = Field('', max_length=80)
+    gender: Gender = ''
+    age: int | None = Field(None, ge=18, le=PERSONA_AGES[1])
+    about: str = Field('', max_length=2000)
+    roll: int | None = Field(None, ge=1, le=1_000_000)
+
+
+class MadeLead(MadeCharacter):
+    """A party member the player made on the cast page (adventure/rounds/cast.py `join_made`): who they are, the
+    sheet's extras, and how they play."""
+    name: str = Field(min_length=1, max_length=80)
+    gender: Gender = ''
+    age: int | None = Field(None, ge=18, le=PERSONA_AGES[1])
+    about: str = Field('', max_length=2000)
+    mind: Literal['agent', 'program'] = 'agent'
+    notes: str = Field('', max_length=600)
+
+
+class MadePicks(Input):
+    """What the quick start sends the model to draft from (adventure/making.py `draft`): anything left open is
+    the model's to choose."""
+    name: str = Field('', max_length=80)
+    gender: Gender = ''
+    age: int | None = Field(None, ge=18, le=PERSONA_AGES[0])
+    idea: str = Field('', max_length=2000)
+    party: bool = False  # a party member the player makes, not the character they play
+
+
+class MadePaste(Input):
+    """A character the player already has, pasted whole, for the model to split into the fields."""
+    text: str = Field(min_length=1, max_length=40000)
+    party: bool = False
+
+
+class CharacterFile(Input):
+    """A character file from another app, base64 encoded (adventure/imports/formats.py)."""
+    filename: str = Field(min_length=1, max_length=260)
+    data: str = Field(min_length=1, max_length=14_000_000)
+
+
 class NewPersona(PersonaInput):
     """A new persona, and the city their world is in: the current one unless the user picks another, or
     `somewhere-new` for the app to pick, or `somewhere-new:<world>` for it to pick in that world (adventure/worlds.py)."""

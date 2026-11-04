@@ -24,18 +24,28 @@ def game(tmp_path_factory):
     world_data.use(None)
 
 
+OPENINGS = ('[[in-fiction: ', '[[who-you-are: ')
+
+
+def opened(text: str, before: int) -> int:
+    """Where the last fence of either kind opens before `before` (a character's own sheet and notes come in a
+    who-you-are fence, story material in an in-fiction one)."""
+    return max(text.rfind(opening, 0, before) for opening in OPENINGS)
+
+
 def fenced(text: str, at: int) -> bool:
-    return text.rfind('[[in-fiction: ', 0, at) > text.rfind('[[end: ', 0, at) and text.find('[[end: ', at) > at
+    return opened(text, at) > text.rfind('[[end: ', 0, at) and text.find('[[end: ', at) > at
 
 
 def sent(connection, sheet, turn, key: str, purpose: str, cue: dict | None = None) -> str:
-    """Everything one agent call sends: the system prompt, what the character knows, and the cue."""
-    known = agents.context_for(connection, SimpleNamespace(snapshot=sheet, draft=turn), key)
-    return '\n\n'.join((agents.system_prompt(connection, sheet, key, purpose), known, agents.cue_text(sheet, cue)))
+    """Everything one agent call sends, as its layout fills it: the system prompt's blocks and the user message."""
+    made = agents.composed(connection, sheet, turn, key, purpose, cue, str((cue or {}).get('line') or ''))
+    assert str(made.system) == '\n\n'.join(made.system.blocks)
+    return '\n\n'.join((made.system, made.user))
 
 
 def contained(text: str, canary: str):
-    assert text.count('[[in-fiction: ') == text.count('[[end: ')
+    assert sum(text.count(opening) for opening in OPENINGS) == text.count('[[end: ')
     places = [index for index in range(len(text)) if text.startswith(canary, index)]
     assert places, f'{canary}: the attack never reached the prompt'
     assert all(fenced(text, index) for index in places)

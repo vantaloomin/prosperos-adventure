@@ -152,7 +152,7 @@ def test_every_turn_carries_the_hidden_note_and_touches_the_notebook(client, con
     start(client, 'firm')
     reply(provider, 'Pell talks about the Heartwood.')
     tell(client, 'I ask Pell about the Heartwood contract.', 'story-0001')
-    assert "## The game master's note (hidden" in provider.requests[-1]['system']
+    assert "## The game master's note (hidden" in provider.requests[-1]['prompt']
     with app.state.database.connect() as connection:
         assert director.state(connection)['hand'] == 'firm'
         assert director.arcs(connection)['the-eight-pieces']['bite'] == 1

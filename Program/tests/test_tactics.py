@@ -77,6 +77,6 @@ def test_paying_robbers_off_in_the_story_ends_the_fight(client, connected, provi
         combat.save_fight(connection, {'round': 1, 'wants': 'rob', 'foes': [foe()]})
     provider.replies = [[Chunk('He weighs the purse.'), Chunk('', 'stop')]]
     tell(client, 'I toss him my purse and back away.', 'story-0001')
-    assert 'hands over their purse' in provider.requests[-1]['system']
+    assert 'hands over their purse' in provider.requests[-1]['prompt']
     with app.state.database.connect() as connection:
         assert combat.fight(connection) is None and inventory.purse(connection) == 0

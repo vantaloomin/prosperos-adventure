@@ -158,7 +158,7 @@ def test_a_players_line_with_an_offscreen_agent_brings_one_beat_with_its_lines(c
         reply(provider, 'The shop is quiet.')
         tell(client, 'I wait.', f'story-000{n}')
     # Today's telling left the beat to the round, and the Writer was given it to cut away to.
-    assert 'Corin Ashby took a knife in a tavern brawl' in provider.requests[-1]['system']
+    assert 'Corin Ashby took a knife in a tavern brawl' in provider.requests[-1]['messages'][-1]['content']
     with app.state.database.connect() as connection:
         rows = connection.execute('SELECT key, lines FROM story_beats').fetchall()
     assert [(row['key'], decode(row['lines'])) for row in rows] == [('corin', ['Not my blood, mostly.'])]

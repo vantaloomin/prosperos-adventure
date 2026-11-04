@@ -30,7 +30,7 @@ def test_a_day_hauling_pays_the_wage_once(client, connected, provider, app):
     wage = happenings.wage(catalog.city('kingswood'))
     provider.replies = [[Chunk('You haul.'), Chunk('', 'stop')]]
     tell(client, 'I spend the day hauling logs for the yard.', 'story-0001')
-    assert '## Work for hire (decided by the game)' in provider.requests[-1]['system']
+    assert '## Work for hire (decided by the game)' in provider.requests[-1]['prompt']
     # Paid for the day as long as it ran, to the evening (adventure/story_clock.py day_left).
     line = next(item for item in ok(client.get('/api/story'))['messages'] if item['role'] == 'user')
     with app.state.database.connect() as connection:

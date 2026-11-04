@@ -40,8 +40,9 @@ GUIDES = {
     'deities': 'Gods, patrons, spirits and other powers: id, name, group, domain (a list), status, nature, boons, '
                'price, secret (only what is hidden).',
     'cast': 'Named people: id, name, role, settlement (a settlement id), faction (a faction id), tier, look, voice, '
-            'wants (a list), fears (a list), relationships (an object of person id to a line), secret (only what is '
-            'hidden from the player character).',
+            'sample_lines (a list of two or three things they would say, in their own words), wants (a list), '
+            'fears (a list), relationships (an object of person id to a line), secret (only what is hidden from the '
+            'player character).',
     'personas': 'Characters a player could play: id, name, concept, look, background.',
     'hidden-truths': 'What is really so that the player character does not know: id, truth, believed (what most '
                      'people think instead), known_by (a list: the cast id of each person who knows it, or a plain '

@@ -10,12 +10,16 @@
 3. Settings the player chooses: narration format (point of view, tense, length), intensity per category
    with veils, the tone's voice, and a genre module (GENRES) when the campaign plays one.
 4. The turn: the persona, what the game remembers (the story so far and the record), the scene and the outcomes
-   the code decided, written last so they sit nearest the player's words.
+   the code decided. They change every turn, so they are not in the system prompt: they go with the player's words,
+   after the story so far (adventure/story.py `prompt`), where they sit nearest those words and leave the system
+   prompt and the story before them unchanged for a model service to reuse from its cache.
 
 CORE and CRAFT are the defaults of the 'story-narrator' and 'narrator-craft' prompts a power user may
 reword (adventure/prompt_library.py). They hold no braces, so they read the same in either form.
 """
 from dataclasses import dataclass, field
+
+from adventure import prompt_layout
 
 CORE = """You are the narrator of a tabletop roleplaying game for adults. The player controls one character, \
 their persona. You write everything else: the world, every other character, and how the persona's actions land.
@@ -232,15 +236,32 @@ def outcomes_text(outcomes: list[dict], rolls_shown: bool = False) -> str:
     return '\n'.join(['## This turn (decided by the game)', *map(outcome_line, outcomes), dice])
 
 
+def joined(layers) -> str:
+    return '\n\n'.join(layer.strip() for layer in layers if layer and layer.strip())
+
+
+def stable(core: str, craft: str, *, persona_name: str | None = None, narration: Format = Format(),
+           intensity: Intensity = Intensity()) -> prompt_layout.Tiered:
+    """Layers 1 to 3, which stay put from turn to turn: the system prompt, as two cache blocks (the narrator's rules,
+    then the player's settings), so a model service can reuse it and the story after it (adventure/prompt_layout.py)."""
+    return prompt_layout.stable(joined((core, craft)), joined((narration.text(persona_name), intensity.text())))
+
+
+def turn(*, scene: str = '', persona: str = '', memory: str = '', outcomes: list[dict] | None = None,
+         rolls_shown: bool = False, rules: str = '') -> str:
+    """Layer 4, which changes every turn: sent with the player's words, after the story so far. `rules` is the rule
+    text that fits the turn (adventure/rules/passages.py), between the scene and the outcomes it helps describe."""
+    return joined((f'## The player\'s character\n{persona}' if persona else '', memory, scene, rules,
+                   outcomes_text(outcomes or [], rolls_shown)))
+
+
 def system(core: str, craft: str, *, scene: str = '', persona: str = '', persona_name: str | None = None,
            memory: str = '', narration: Format = Format(), intensity: Intensity = Intensity(), outcomes: list[dict] | None = None,
            rolls_shown: bool = False, rules: str = '') -> str:
-    """The whole system prompt, layer by layer; empty layers are left out. `rules` is the rule text that fits the turn
-    (adventure/rules/passages.py), between the scene and the outcomes it helps describe."""
-    layers = [core, craft, narration.text(persona_name), intensity.text(),
-              f'## The player\'s character\n{persona}' if persona else '', memory, scene, rules,
-              outcomes_text(outcomes or [], rolls_shown)]
-    return '\n\n'.join(layer.strip() for layer in layers if layer and layer.strip())
+    """All four layers as one text; empty layers are left out. A turn sends them apart (`stable`, `turn`)."""
+    return joined((stable(core, craft, persona_name=persona_name, narration=narration, intensity=intensity),
+                   turn(scene=scene, persona=persona, memory=memory, outcomes=outcomes, rolls_shown=rolls_shown,
+                        rules=rules)))
 
 
 def craft_for(context_tokens: int | None, full: str = CRAFT) -> str:

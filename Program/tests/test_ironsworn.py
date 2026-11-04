@@ -284,7 +284,7 @@ def test_a_vow_milestone_reaches_the_narrator(client, connected, provider, app):
     app.state.dice = Always(6)
     tell(client, 'I climb the mill wall to look for Tamsin\'s brother.', 'story-0001')
     assert any('## Vows (decided by the game)\n- Reach a Milestone on the vow An oath to Tamsin: progress 2 of 10.'
-               in request['system'] for request in provider.requests)
+               in request['prompt'] for request in provider.requests)
 
 def test_a_line_swears_an_iron_vow_pursues_it_by_its_words_and_calls_it_kept(client, connected, provider, app):
     # E2E vows pass: an iron vow sworn in so many words made no quest, and "The vow is done" did nothing.
@@ -301,9 +301,9 @@ def test_a_line_swears_an_iron_vow_pursues_it_by_its_words_and_calls_it_kept(cli
             'name': vow['title'], 'rank': 'dangerous', 'ticks': 0, 'boxes': 0, 'of': 10}
     tell(client, 'I climb into the saw pit and look for tool marks.', 'story-0003')
     assert any('Reach a Milestone on the vow Vow: find whoever is breaking the saws at the mill: progress 2 of 10.'
-               in request['system'] for request in provider.requests)
+               in request['prompt'] for request in provider.requests)
     tell(client, 'The vow is done.', 'story-0005')
-    assert any('Fulfill Your Vow, dangerous (Vow: find whoever is breaking the saws at the mill)' in request['system']
+    assert any('Fulfill Your Vow, dangerous (Vow: find whoever is breaking the saws at the mill)' in request['prompt']
                for request in provider.requests)
     with app.state.database.connect() as connection:
         assert not [quest for quest in quests.rows(connection, 'open') if quest['kind'] == 'oath']

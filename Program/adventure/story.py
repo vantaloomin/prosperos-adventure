@@ -374,6 +374,12 @@ def persona_text(connection) -> tuple[str, str | None]:
     lines = [f"{row['name']}" + (f' ({details})' if details else '') + '.']
     if row['about']:
         lines.append(row['about'].strip())
+    # A character made on the cast page: how they look and talk (adventure/making.py).
+    from adventure import making
+    made = making.made(connection, making.YOU) or {}
+    for label, part in (('Looks', 'look'), ('Voice', 'voice')):
+        if made.get(part):
+            lines.append(f'{label}: {made[part]}')
     played = ruleset_of(connection)
     native = native_sheet(connection) if played != marvel.ID else None
     if native:
@@ -466,7 +472,7 @@ def add(connection, now: str, role: str, text: str, where: dict, **extra) -> dic
 def messages(connection, limit: int = HISTORY_LIMIT) -> list[dict]:
     where, values = timeline.visible(connection)
     rows = many(connection, 'SELECT id, seq, role, text, reply_to, status, error, city_id, place_id, created_at, '
-                f'flags, previous FROM story_messages WHERE {where} ORDER BY seq DESC LIMIT ?', (*values, limit))
+                f'flags, previous, mode FROM story_messages WHERE {where} ORDER BY seq DESC LIMIT ?', (*values, limit))
     # The app's crisis note under a user's line that sounds like self-harm (adventure/safety.py), and a narration's
     # flagged passages, and whether it can switch back to its wording before a rewrite (adventure/passages.py).
     return [{**row, 'crisis_help': row['role'] == 'user' and safety.crisis(row['text']),
@@ -778,7 +784,7 @@ def clear(database) -> dict:
                       'story_offpage', 'story_tier', 'story_marks', 'story_dark',
                       'story_director', 'story_arcs', 'story_threads', 'story_nemeses', 'story_seeds',
                       'story_arc_beats', 'story_sheet', 'story_enrollment', 'story_attendance', 'story_grades', 'story_art',
-                      'story_bank', 'lore_timers'):
+                      'story_bank', 'story_made', 'lore_timers'):
             connection.execute(f'DELETE FROM {name}')
         politics.clear(connection)
         house_rules.clear(connection)
@@ -812,6 +818,21 @@ def model_messages(rows: list[dict], budget_chars: int) -> list[dict]:
         else:
             chat.insert(0, {'role': role, 'content': text})
     return chat
+
+
+# Opens what the game says with the player's words this turn (`with_turn`); NOTE_CLOSE ends it.
+TURN_NOTES = '[Notes for this turn, from the game:]'
+
+
+def with_turn(system: str, chat: list[dict], now_text: str, steer: str) -> tuple[str, list[dict]]:
+    """The narrator's request with this turn's layer (narration/prompt.py `turn`) sent with the player's words, after
+    the story so far, so the system prompt and the story before it stay as the last turn sent them and a model service
+    can reuse them from its cache. The author's note follows it. Without a player's line to carry it, the layer ends
+    the system prompt instead."""
+    if not chat or chat[-1]['role'] != 'user':
+        return '\n\n'.join(part for part in (system, now_text) if part), steered(chat, steer)
+    notes = '\n\n'.join(part for part in (f'{TURN_NOTES}\n{now_text}' if now_text else '', steer) if part)
+    return system, steered(chat, notes)
 
 
 def steered(chat: list[dict], steer: str) -> list[dict]:
@@ -870,22 +891,21 @@ def prompt(connection, now: datetime, config: dict, latest: dict, outcomes: list
                                                  found and tiers.prompt_text(connection, found), lore_text,
                                                  shelf)
                              if part)
-        system = narration_prompt.system(prompt_library.text(connection, 'story-narrator'), craft, scene=place_text,
-                                         persona=who_text, persona_name=name, memory=memory, narration=narration_format(connection),
-                                         intensity=tone.narration(level),
-                                         outcomes=outcomes, rolls_shown=dice_shown(connection),
-                                         rules=ruled if rules_kept else '')
-        if len(system) <= (window - config['max_output_tokens']) * CHARS_PER_TOKEN // 2:
+        system = narration_prompt.stable(prompt_library.text(connection, 'story-narrator'), craft, persona_name=name,
+                                         narration=narration_format(connection), intensity=tone.narration(level))
+        now_text = narration_prompt.turn(scene=place_text, persona=who_text, memory=memory, outcomes=outcomes,
+                                         rolls_shown=dice_shown(connection), rules=ruled if rules_kept else '')
+        if len(system) + len(now_text) <= (window - config['max_output_tokens']) * CHARS_PER_TOKEN // 2:
             break
     if extras := resolved_text(connection, fought, traded, looked, travelled, rested, tended, carded, meanwhile, noted):
-        system += '\n\n' + extras
-    if in_character.out_of_character(latest['text']):
-        system += '\n\n' + OUT_OF_CHARACTER.format(model=default_name(config)) + map_text(connection, view)
-    budget = (window - config['max_output_tokens']) * CHARS_PER_TOKEN - len(system)
+        now_text += '\n\n' + extras
+    ooc = in_character.out_of_character(latest['text'])
+    if ooc:
+        now_text += '\n\n' + OUT_OF_CHARACTER.format(model=default_name(config)) + map_text(connection, view)
+    budget = (window - config['max_output_tokens']) * CHARS_PER_TOKEN - len(system) - len(now_text)
     # Older messages are in the summary; the narrator reads the rest word for word.
     chat = model_messages(rows, max(budget, 2000))
-    if not in_character.out_of_character(latest['text']):
-        chat = steered(chat, authors_note.prompt_text(connection, 'story'))
+    system, chat = with_turn(system, chat, now_text, '' if ooc else authors_note.prompt_text(connection, 'story'))
     return {'system': system, 'messages': chat, 'people': view['people'], 'library': passages_given,
             'city_id': view['city']['id'], 'day': moment.date(), 'year': decades.year_of(view['data'], moment),
             'lore': lore_started, 'line': line_number(connection, latest)}
@@ -1358,16 +1378,16 @@ def vow_turn(state, user: dict, rolls: list[dict]) -> list[str]:
         return lines
 
 
-def party_turn(state, user: dict, agents: set[str] = frozenset()) -> list[str]:
+def party_turn(state, user: dict, agents: set[str] = frozenset(), choices: dict[str, bool] | None = None) -> list[str]:
     """Asking someone along, or parting ways (adventure/party.py), once for the line. Souring never sends an agent
-    (`agents`) away: they leave by their own move."""
+    (`agents`) away: they leave by their own move; an agent asked along answered for themselves (`choices`)."""
     database = state.database
     with database.connect(write=True) as connection:
         view = scene(connection, story_clock.now(connection, database.clock))
         if combat.fight(connection):
             return []
         return party.turn(connection, user['id'], view, user['text'], view['local_time'][:10], database.now(),
-                          getattr(state, 'dice', None), agents)
+                          getattr(state, 'dice', None), agents, choices)
 
 
 def counter_text(lines: list[str]) -> str:
@@ -1672,6 +1692,9 @@ class Telling:
     # Who runs on an agent this round, by key: they choose their own lies and whether to leave the party
     # (adventure/lies.py, adventure/party.py).
     agents: set[str] = field(default_factory=set)
+    # What each agent asked along this round answered, by key: True to come, False to turn the character down
+    # (adventure/rounds/joining.py).
+    joining: dict[str, bool] = field(default_factory=dict)
     # Whether Resolve fires the lives off the page (adventure/beats.py), as today's turn does.
     offpage: bool = True
     # What Resolve decided, for the narrator: each system's lines, as `prompt` takes them.
@@ -1742,7 +1765,7 @@ async def resolved(telling: Telling):
         noted += [away_text(connection, user['id'])]
     agents = telling.agents
     noted += [delved, labour.prompt_text(labour_turn(state, user)), lies.prompt_text(lie_turn(state, user, agents)),
-              bonds.prompt_text(bond_turn(state, user)), party.prompt_text(party_turn(state, user, agents)),
+              bonds.prompt_text(bond_turn(state, user)), party.prompt_text(party_turn(state, user, agents, telling.joining)),
               sworn.prompt_text(vow_turn(state, user, rolls)), leaving.prompt_text(leave_turn(state, user))]
     telling.fought, telling.traded, telling.tended, telling.looked, looks = in_scene(
         state, user, rolls, telling.travelled, telling.rested, telling.moves)
@@ -1815,6 +1838,23 @@ def after_telling(telling: Telling, reply: dict) -> dict:
         state, user, packet = telling.state, telling.user, telling.packet
         state.after_turn = After(lambda: afterwards(state, user, reply, packet, telling.steps))
     return reply
+
+
+def after_round(state, line: dict, reply: dict, people: list[dict]):
+    """A round with no player's line (Author, Watch, Next in Play), once its post is kept as the narrator's reply to
+    the line it opened on: the same after-work as a player's line (`afterwards`), so quests can end, oaths and feelings
+    move and the summary keeps up, each judged change with its undo in the turn report. It reads the post alone,
+    since the opening line holds the Author's hidden nudge or nothing. Like a line's, it waits for `state.after_turn`
+    and is finished before the next turn starts."""
+    opened = line | {'text': ''}
+
+    async def work():
+        with state.database.connect() as connection:
+            config = config_for(connection, JOB)
+            budget = pace.budget_for(connection, config) if config else 0
+        steps = pace.Steps(budget, getattr(state, 'pace_clock', None) or time.monotonic)
+        await afterwards(state, opened, reply, {'people': people}, steps)
+    state.after_turn = After(work)
 
 
 def kept_telling(connection, telling: Telling):

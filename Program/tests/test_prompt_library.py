@@ -5,10 +5,18 @@ def test_every_prompt_is_listed_with_its_default_and_placeholder_help(client):
     listed = {item['name']: item for item in client.get('/api/prompts').json()}
     assert set(listed) == set(prompt_library.PROMPTS) == {
         'story-narrator', 'narrator-craft', 'round-writer', 'authors-note', 'character-mind', 'character-declare',
-        'character-react', 'character-ask', 'character-answer', 'character-offpage', 'character-turning',
-        'genre-dark-romantasy', 'genre-adventure', 'genre-graphic-violence'}
-    assert {item['group'] for item in listed.values()} == {'Story', 'Characters', 'Genres'}
-    assert listed['character-mind']['placeholders'] == ['character']
+        'character-react', 'character-ask', 'character-answer', 'character-offpage', 'character-invite',
+        'character-turning', 'character-genre-dark-romantasy', 'character-genre-adventure',
+        'character-genre-graphic-violence',
+        'character-layout', 'character-draft', 'character-split', 'genre-dark-romantasy', 'genre-adventure',
+        'genre-graphic-violence'}
+    assert {item['group'] for item in listed.values()} == {'Story', 'Characters', 'Making a character', 'Genres'}
+    # The mind names nobody now, so every character shares it; the name is the layout's {{CHARACTER}} slot.
+    assert listed['character-mind']['placeholders'] == []
+    layout = listed['character-layout']
+    assert layout['placeholders'] == [] and [slot['tier'] for slot in layout['slots']] == sorted(
+        slot['tier'] for slot in layout['slots'])
+    assert {'SHEET', 'LORE', 'MEM', 'FEELINGS', 'MOMENT'} <= {slot['name'] for slot in layout['slots']}
     narrator = listed['story-narrator']
     assert narrator['group'] == 'Story' and not narrator['customized'] and not narrator['outdated']
     assert narrator['text'] == narrator['default'] and 'narrator' in narrator['default']
@@ -46,10 +54,34 @@ def test_every_agent_purpose_has_its_own_editable_prompt():
 def test_the_round_writer_and_the_characters_use_the_users_wording(client):
     from adventure.rounds import writer
     assert prompt_library.PROMPTS['round-writer'].default() == writer.ROUND
-    refused = client.put('/api/prompts/character-mind', json={'text': 'You are a character.'})
-    assert refused.status_code == 422 and '{{character}}' in refused.json()['detail']
-    saved = client.put('/api/prompts/character-mind', json={'text': 'You are {{character}}, and nobody else.'})
+    refused = client.put('/api/prompts/character-mind', json={'text': 'You are {{character}}.'})
+    assert refused.status_code == 422 and '{{CHARACTER}}' in refused.json()['detail']
+    saved = client.put('/api/prompts/character-mind', json={'text': 'You are a character, and nobody else.'})
     assert saved.json()['customized']
     with client.app.state.database.connect() as connection:
-        assert prompt_library.text(connection, 'character-mind', character='Hesk') == 'You are Hesk, and nobody else.'
+        assert prompt_library.text(connection, 'character-mind') == 'You are a character, and nobody else.'
     client.delete('/api/prompts/character-mind')
+
+
+def test_a_layout_that_puts_a_faster_changing_slot_first_is_refused(client):
+    from adventure.rounds import agents
+    early = agents.LAYOUT.replace('{{MEM}}', '').replace('{{SHEET}}', '{{MEM}}\n{{SHEET}}')
+    refused = client.put('/api/prompts/character-layout', json={'text': early})
+    assert refused.status_code == 422 and refused.json()['code'] == 'prompt_layout'
+    assert 'Put {{SHEET}} before {{MEM}}' in refused.json()['detail']
+    unknown = client.put('/api/prompts/character-layout', json={'text': agents.LAYOUT + '\n\n{{SIGNS}}'})
+    assert unknown.status_code == 422 and 'does not fill {{SIGNS}}' in unknown.json()['detail']
+    twice = client.put('/api/prompts/character-layout', json={'text': agents.LAYOUT + '\n\n{{CUE}}'})
+    assert twice.status_code == 422 and 'once' in twice.json()['detail']
+    # Leaving slots out is allowed: the app puts them back at the end of their tier.
+    saved = client.put('/api/prompts/character-layout', json={'text': '{{SHEET}}\n\nNow decide.\n\n{{MOMENT}}'})
+    assert saved.status_code == 200 and saved.json()['customized']
+    client.delete('/api/prompts/character-layout')
+
+
+def test_every_default_layout_keeps_the_tier_order():
+    from adventure import prompt_layout
+    for prompt in prompt_library.PROMPTS.values():
+        if prompt.layout:
+            assert prompt_layout.problems(prompt.default(), prompt.layout(), prompt.reader) is None, prompt.name
+            assert set(prompt_layout.slots_in(prompt.default())) == set(prompt.layout()), prompt.name

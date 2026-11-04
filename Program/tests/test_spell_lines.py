@@ -6,6 +6,7 @@ from test_rulesets import reply
 from test_srd52_subclasses import begin
 
 from adventure import combat, combat5e, combat_brp, record, referee, sheet
+from adventure.authors_note import NOTE_CLOSE
 from adventure.rules import srd52
 
 
@@ -16,11 +17,13 @@ def referee_says(monkeypatch, actions):
 
 
 def narrated(provider):
-    """The narrator's system prompts, as the turn sent them."""
+    """What the narrator was told besides the conversation, as the turn sent it: the system prompt and the notes
+    before the player's words."""
     systems = []
 
     def respond(system, messages):
-        systems.append(system)
+        latest = messages[-1]['content'] if messages and isinstance(messages[-1]['content'], str) else ''
+        systems.append(system + '\n\n' + latest.split(NOTE_CLOSE)[0] if NOTE_CLOSE in latest else system)
         return reply('{"facts": []}' if system.startswith(record.EXTRACT) else 'It is done.')
     provider.respond = respond
     return systems

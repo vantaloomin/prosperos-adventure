@@ -61,7 +61,7 @@ def test_a_journey_takes_the_road_its_hours_and_the_food_in_the_pack(client, con
     # Twelve hours on foot is two days: a night camped between them, and a day's food each.
     hours = (clock_at(app) - before).total_seconds() / 3600
     assert hours >= 12 + travel.NIGHT_HOURS
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert '## The journey' in narrator and 'from Kingswood to Eriane on foot by the Cyrel road: 13 hours' in narrator
     assert 'black bread' in narrator.split('## The journey')[1] and 'go hungry' in narrator
     seen = {place['id']: place for place in story['map']['places']}
@@ -79,7 +79,7 @@ def test_a_place_not_on_any_known_road_is_not_reached(client, connected, provide
     reply(provider)
     tell(client, 'I head for Bastion.', 'story-0001')
     assert ok(client.get('/api/story'))['scene']['city']['id'] == 'kingswood'
-    assert 'does not know the way to Bastion' in provider.requests[-1]['system']
+    assert 'does not know the way to Bastion' in provider.requests[-1]['prompt']
 
 
 def test_bandits_on_the_road_stop_the_journey_where_they_strike(client, connected, provider, app, monkeypatch):
@@ -93,7 +93,7 @@ def test_bandits_on_the_road_stop_the_journey_where_they_strike(client, connecte
     story = ok(client.get('/api/story'))
     assert story['scene']['place']['id'] == 'eriane'
     assert {foe['name'] for foe in story['fight']['fight']['foes']} <= {'road bandit 1', 'road bandit 2'}
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'Bandits come out of the ditch' in narrator and 'The journey stops here' in narrator
 
 

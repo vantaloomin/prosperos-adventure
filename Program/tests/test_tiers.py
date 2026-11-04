@@ -117,4 +117,4 @@ def test_the_narrator_knows_the_characters_standing(client, connected, provider)
     reply(provider, 'Pell nods.')
     tell(client, 'I nod back.', 'story-0001')
     assert ("## The character's standing (kept by the game)\n- Renown: Local, known on their own street."
-            in provider.requests[-1]['system'])
+            in provider.requests[-1]['prompt'])

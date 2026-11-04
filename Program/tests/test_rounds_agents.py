@@ -66,7 +66,7 @@ def answer(data) -> list[Chunk]:
 
 def playing(system: str) -> str:
     """Which character a call is for, from the fenced name in its system prompt."""
-    return system.split('[[in-fiction: your character]]\n', 1)[1].split('\n', 1)[0]
+    return system.split('[[who-you-are: your name]]\n', 1)[1].split('\n', 1)[0]
 
 
 def scripted(game, script: dict):
@@ -107,15 +107,16 @@ def test_claims_are_cut_back_to_attempts_and_audiences_kept_to_who_is_here():
     made = agents.checked({
         'intent': 'draws steel and lunges at Hesk as my blade finds his heart, and he falls',
         'lines': [{'text': '*grins* You should have run. (quietly)', 'to': ['Hesk', 'Nobody']},
-                  {'text': 'Stay back, Vanta.', 'to': ['vanta']}, {'text': '*only an action*', 'to': []}],
+                  {'text': 'Stay back, Vanta. I was at the shrine all night.', 'to': ['vanta']},
+                  {'text': '*only an action*', 'to': []}],
         'motive': 'He sold my brother to the wardens.',
         'deceptions': [{'claim': 'I was at the shrine all night.', 'believed': 'I was at the docks.',
                         'aimed_at': ['Mara Quill', 'you']}, {'claim': '', 'believed': 'x'}],
         'whispers': [{'text': 'Now.', 'to': []}, {'text': 'Take the left door.', 'to': ['you']}]},
         'mara', shot)
     assert made.intent == 'draws steel and lunges at Hesk'
-    assert [(line.text, line.to) for line in made.lines] == [('You should have run.', ['hesk']),
-                                                             ('Stay back, Vanta.', ['you'])]
+    assert [(line.text, line.to) for line in made.lines] == [
+        ('You should have run.', ['hesk']), ('Stay back, Vanta. I was at the shrine all night.', ['you'])]
     # Never aimed at the speaker herself; a whisper with nobody to hear it is dropped.
     assert [(item.claim, item.aimed_at) for item in made.deceptions] == [('I was at the shrine all night.', ['you'])]
     assert [(item.text, item.to) for item in made.whispers] == [('Take the left door.', ['you'])]
@@ -123,6 +124,22 @@ def test_claims_are_cut_back_to_attempts_and_audiences_kept_to_who_is_here():
     assert agents.attempt('manages to pick the lock before the guard notices') == 'tries to pick the lock before the ' \
                                                                                'guard notices'
     assert agents.attempt('I kill the guard') == 'tries to kill the guard'
+
+
+def test_a_lie_counts_only_when_the_character_says_it_aloud_or_whispers_it():
+    shot = snapshot(('mara', 'Mara', Mind.AGENT), ('hesk', 'Hesk', Mind.AGENT))
+    shot.present = ['mara', 'hesk']
+    lie = lambda claim: {'claim': claim, 'believed': 'the truth', 'aimed_at': ['Hesk']}  # noqa: E731
+    made = agents.checked({
+        'motive': 'If he finds the letter, I hang.', 'intent': 'tries to steer Hesk away from the desk',
+        'lines': [{'text': "I've never seen that seal in my life, Hesk.", 'to': ['Hesk']}],
+        'whispers': [{'text': 'The captain paid you nothing.', 'to': ['hesk']}],
+        'deceptions': [lie('I have never seen the seal'), lie('the captain paid him nothing'),
+                       lie('The letter was burned at the docks.')]}, 'mara', shot)
+    # Said in other words still counts; a lie listed but never told is dropped, since nobody heard it.
+    assert [item.claim for item in made.deceptions] == ['I have never seen the seal', 'the captain paid him nothing']
+    assert agents.said_in('I was at the shrine all night.', ['Ask anyone: I was at the shrine all night!'])
+    assert not agents.said_in('I was at the shrine all night.', [])
 
 
 def test_what_the_story_keeps_off_the_page_is_cut_from_every_field_hidden_ones_too():
@@ -258,7 +275,7 @@ def test_what_an_agent_reads_holds_only_what_it_could_see_and_hear(game, steps):
     })
     turn_of(game, mode=Mode.AUTHOR)
     reacts = {playing(request['system']): request['messages'][0]['content']
-              for request in game.provider.requests if 'may react once' in request['system']}
+              for request in game.provider.requests if 'You get one reaction' in request['messages'][0]['content']}
     assert 'Keep Vanta busy' in reacts['Ilsa'] and 'Keep Vanta busy' not in reacts['Hesk']
     # Hesk's motive is his alone; Mara's covert act is seen by nobody (whether it is noticed is Resolve's roll).
     assert 'SENTINEL-MOTIVE-HESK' in reacts['Hesk']
@@ -269,17 +286,39 @@ def test_what_an_agent_reads_holds_only_what_it_could_see_and_hear(game, steps):
 
 def test_the_users_wording_of_a_characters_mind_reaches_every_call_and_the_contract_stays(game, steps):
     from adventure import prompt_library
-    prompt_library.save(game.database, 'character-mind', 'SENTINEL-MIND. You are {{character}} and nobody else.')
+    prompt_library.save(game.database, 'character-mind', 'SENTINEL-MIND. You play the one whose sheet follows.')
     prompt_library.save(game.database, 'character-react', 'SENTINEL-REACT. You may react once.')
     seat_up(game, ('mara', 'Mara', Mind.AGENT), ('hesk', 'Hesk', Mind.AGENT))
     scripted(game, {'Mara': [{'intent': 'waits'}, {'change': False}], 'Hesk': [{'intent': 'waits'}, {'change': False}]})
     turn_of(game)
     systems = [request['system'] for request in game.provider.requests]
-    assert systems and all(system.startswith('SENTINEL-MIND. You are [[in-fiction: your character]]')
+    assert systems and all(system.startswith('SENTINEL-MIND. You play the one whose sheet follows.')
                            for system in systems)
     assert all(agents.CONTRACT in system and agents.FENCE_RULE in system for system in systems)
-    reacts = [system for system in systems if 'SENTINEL-REACT' in system]
-    assert len(reacts) == 2 and all(agents.REACT_CONTRACT in system for system in reacts)
+    # Every character shares the rules and the story: the first cache block is the same in every call.
+    assert len({system.blocks[0] for system in systems}) == 1
+    # Which moment a call is for comes last, in the message, so deciding and reacting share the whole system prompt.
+    asked = [request['messages'][0]['content'] for request in game.provider.requests]
+    reacts = [text for text in asked if 'SENTINEL-REACT' in text]
+    assert len(reacts) == 2 and all(text.endswith(f'SENTINEL-REACT. You may react once. {agents.REACT_CONTRACT}')
+                                    for text in reacts)
+    assert not any('SENTINEL-REACT' in system for system in systems)
+    for name in ('Mara', 'Hesk'):
+        assert len({system for system in systems if playing(system) == name}) == 1
+
+
+def test_a_mind_reworded_before_the_name_moved_still_gets_the_name(game, steps):
+    from adventure import prompt_library
+    with game.database.connect(write=True) as connection:
+        connection.execute("INSERT INTO prompt_overrides (name, text, default_text, updated_at) VALUES "
+                           "('character-mind', 'OLD-MIND. You are {{character}}.', '', '')")
+    seat_up(game, ('mara', 'Mara', Mind.AGENT))
+    scripted(game, {'Mara': [{'intent': 'waits'}, {'change': False}]})
+    turn_of(game)
+    assert game.provider.requests[0]['system'].startswith('OLD-MIND. You are [[who-you-are: your name]]\nMara\n')
+    refused = prompt_library.problems(prompt_library.PROMPTS['character-mind'].default(), 'You are {{character}}.',
+                                      prompt_library.PROMPTS['character-mind'].retired)
+    assert refused and '{{CHARACTER}}' in refused
 
 
 # Failures -----------------------------------------------------------------------------------------------------------

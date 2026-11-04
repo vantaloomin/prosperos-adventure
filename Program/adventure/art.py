@@ -49,6 +49,7 @@ from adventure import (
     hexes,
     injuries,
     inventory,
+    making,
     story,
     story_clock,
     tiers,
@@ -114,7 +115,8 @@ def player_prompt(connection, view: dict) -> str:
             if str(item.get('category', '')).lower() in GEAR][:4]
     return ' '.join(part for part in (
         f"Portrait of {row.get('name') or 'the traveller'}" + (f' ({details})' if details else '') + '.',
-        (row.get('about') or '').strip(), hurt, marks, f"Carrying: {', '.join(gear)}." if gear else '',
+        # A character made on the cast page: their Looks, so every picture shows the same person (adventure/making.py).
+        making.look_line(connection), (row.get('about') or '').strip(), hurt, marks, f"Carrying: {', '.join(gear)}." if gear else '',
         f"In {view['place']['name']}, {view['city']['name']}, {hour_text(datetime.fromisoformat(view['local_time']))}.")
         if part)
 
@@ -129,7 +131,8 @@ def person_prompt(connection, view: dict, key: str) -> str:
     name = row['name'] if row else sheet.get('name', 'someone')
     who = ', '.join(str(part) for part in (sheet.get('pronouns'), sheet.get('age') and f"{sheet['age']} years old",
                                            sheet.get('occupation') or sheet.get('role')) if part)
-    looks = townsfolk.first_impression(sheet) if sheet.get('seed') else ''
+    # Someone the player made on the cast page looks as they were made (adventure/making.py).
+    looks = making.look_line(connection, key) or (townsfolk.first_impression(sheet) if sheet.get('seed') else '')
     notes = ' '.join(decode(row['notes'])[-2:]) if row else ''
     return ' '.join(part for part in (
         f"Portrait of {name}" + (f' ({who})' if who else '') + f", in {data['name']}.",
@@ -201,21 +204,30 @@ def request(database, kind: str, subject: str) -> dict:
 OWN_BYTES = 15 * 1024 * 1024
 
 
+def checked_picture(data: bytes):
+    """A picture the player gives: PNG, JPEG or WebP, and 15 MB or less."""
+    require(0 < len(data) <= OWN_BYTES, 'Choose a PNG, JPEG or WebP picture of 15 MB or less.', 422)
+    try:
+        _, width, height = storage.sniff(data)
+    except AdapterError:
+        require(False, 'That is not a PNG, JPEG or WebP picture.', 422)
+    require(0 < width <= 8192 and 0 < height <= 8192, TOO_BIG, 422)
+
+
+TOO_BIG = 'That picture is too big to use: keep it under 8192 pixels on each side.'
+
+
 def own_portrait(database, subject: str, data: bytes) -> dict:
     """The player's own picture of their character (`player`) or of someone met: their portrait at once, and the
     reference every later portrait of them follows on a backend that takes one."""
-    require(0 < len(data) <= OWN_BYTES, 'Choose a PNG, JPEG or WebP picture of 15 MB or less.', 422)
-    try:
-        storage.sniff(data)
-    except AdapterError:
-        require(False, 'That is not a PNG, JPEG or WebP picture.', 422)
+    checked_picture(data)
     with database.connect(write=True) as connection:
         prompt, kept = built(connection, database, 'portrait', subject)
         art_id = f'art-{identifier()[:12]}'
         try:
             stored = storage.store(database, art_id, data)
         except AdapterError:
-            require(False, 'That picture is too big to use: keep it under 8192 pixels on each side.', 422)
+            require(False, TOO_BIG, 422)
         chapter = next((item for item in reversed(chapters.listing(connection)) if item['open']), None)
         connection.execute("UPDATE story_art SET reference=0 WHERE kind='portrait' AND subject=?", (kept,))
         connection.execute('INSERT INTO story_art (id, kind, subject, chapter_id, prompt, state, status, file, width, '

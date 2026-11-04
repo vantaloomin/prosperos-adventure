@@ -412,6 +412,7 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
 .cast-name { font-weight: 500; font-size: 0.875rem; line-height: 1.3; }
 .cast-own { border-style: dashed; color: var(--muted); }
 .cast-own svg { width: 24px; height: 24px; }
+.cast-name[data-unnamed] { color: var(--muted); font-weight: 400; }
 .cast-bio { font-family: var(--read-font); color: var(--muted); max-width: 62ch; min-height: 3.2em; font-size: 0.95rem; line-height: 1.6; }
 .cast-options { display: flex; flex-direction: column; gap: 12px; }
 .cast-options > summary { cursor: pointer; color: var(--muted); font-size: 0.875rem; width: fit-content; }
@@ -420,8 +421,37 @@ textarea.grows { resize: none; field-sizing: content; min-height: calc(2lh + 22p
   border-top: 1px solid var(--border); background: var(--canvas); }
 .cast-foot select { padding: 8px 10px; font-size: 0.875rem; background: var(--surface); }
 .cast-foot .button { margin-left: auto; }
-@media (max-width: 720px) { .cast-foot select { flex: 1 1 40%; min-width: 0; } .cast-foot .button { flex-basis: 100%; } }
-.story-make { display: grid; gap: 12px; max-width: var(--story-width); }
+@media (max-width: 720px) { .cast-foot select { flex: 1 1 40%; min-width: 0; } .cast-foot .button { flex-basis: 100%; }
+  .cast-foot { margin-inline: -16px; padding-inline: 16px; } }
+.story-make { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; max-width: var(--story-width); }
+/* Making your own (src/features/make/): the idea and the paste box above the fields, the extras folded under them. */
+.make-quick, .make-paste { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+.make-paste { padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+.make-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.make-filled { margin: 0; color: var(--muted); font-size: 0.8125rem; }
+.make-card { display: flex; gap: 12px; align-items: center; margin: 0; padding: 12px; border: 1px solid var(--border); border-radius: 8px; min-width: 0; }
+.make-card > legend { padding: 0 4px; font-size: 0.875rem; }
+.make-card-picture { width: 48px; height: 64px; object-fit: cover; border-radius: 4px; flex-shrink: 0; }
+.make-card-ticks { display: grid; gap: 4px; min-width: 0; }
+.make-more { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; border-top: 1px solid var(--border); padding-top: 12px; }
+.make-more > summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; font-size: 0.875rem; }
+.make-more:not([open]) > summary { color: var(--muted); }
+.make-more > summary:hover { color: var(--text); }
+.make-value { color: var(--faint); font-size: 0.8125rem; }
+.make-sliders { display: grid; gap: 12px; }
+.make-slider { display: grid; gap: 4px; }
+.make-slider-top { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; font-size: 0.875rem; }
+.make-slider-value { color: var(--muted); }
+.make-slider input[type='range'] { width: 100%; accent-color: var(--accent); }
+.make-tag { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; padding: 0 8px; min-height: 24px; border-radius: 4px;
+  background: var(--raised); color: var(--faint); font-size: 0.75rem; }
+.make-tag-reset { display: inline-flex; padding: 2px; color: var(--muted); }
+.make-tag-reset svg { width: 12px; height: 12px; }
+.make-roll { justify-self: start; display: inline-flex; align-items: center; gap: 8px; }
+.make-roll svg { width: 16px; height: 16px; }
+.make-looks { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px 16px; }
+.make-pickable { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+.make-pickable select { width: 100%; min-width: 0; text-overflow: ellipsis; }
 .story-points { margin: 4px 0 0; color: var(--muted); }
 .story-points.over { color: var(--danger); }
 .story-sheet summary { cursor: pointer; color: var(--muted); }

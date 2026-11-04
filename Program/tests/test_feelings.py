@@ -91,7 +91,7 @@ def test_charming_someone_warms_them_and_the_narrator_and_player_hear_of_it(clie
     provider.replies = [reply(f'{them["name"]} laughs.'), reply(f'{them["name"]} pours another.')]
     say(client, f'I charm {them["name"]} with a story about the harbour.', 'story-0002')
     say(client, f'I ask {them["name"]} about the town.', 'story-0003')
-    assert "Toward the player's character: trusts them a little, likes them." in provider.requests[-1]['system']
+    assert "Toward the player's character: trusts them a little, likes them." in provider.requests[-1]['prompt']
     # The player sees it only with the dice shown.
     assert ok(client.get('/api/story'))['people'][0]['feelings'] == ''
     ok(client.put('/api/settings', json={'show_odds': True}))
@@ -112,10 +112,10 @@ def test_the_continuity_model_says_how_a_turn_left_someone_feeling(client, clock
                               '"why": "Slammed the table at me."}, {"key": "stranger", "changes": {"fear": 2}}]}'
                               % them['key'])]
     say(client, f'I tell {them["name"]} to talk.', 'story-0002')
-    assert f"- {them['key']}: {them['full']}" in provider.requests[-1]['system']
+    assert f"- {them['key']}: {them['full']}" in provider.requests[-1]['prompt']
     provider.replies = [reply('Silence.'), reply('{"facts": []}')]
     say(client, f'I wait for {them["name"]}.', 'story-0003')
-    narrator = provider.requests[-2]['system']
+    narrator = provider.requests[-2]['prompt']
     assert 'is wary of them, is uneasy around them' in narrator
     assert 'Their impressions of the character: Slammed the table at me.' in narrator
 
