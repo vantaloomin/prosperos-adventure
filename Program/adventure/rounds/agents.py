@@ -546,7 +546,8 @@ async def streamed(app, config: dict, system: str, messages: list[dict], deadlin
             async for chunk in app.provider.stream(config, key, system, messages):
                 if not chunk.reasoning:
                     text.append(chunk.text)
-                finish, usage = chunk.finish_reason or finish, chunk.usage or usage
+                # Claude reports the cache at the start and the output at the end: keep both.
+                finish, usage = chunk.finish_reason or finish, usage | (chunk.usage or {})
     return ''.join(text), finish, usage
 
 
@@ -561,6 +562,7 @@ async def spent(turn, config: dict, system: str, messages: list[dict], deadline:
     try:
         answer, finish, usage = await streamed(turn.app, config, system, messages, deadline)
         used = pace.used_tokens(usage)
+        pace.count_cache(turn.draft.extra, usage)
         return answer, finish
     finally:
         spend.settle(ticket, used)

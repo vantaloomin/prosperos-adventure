@@ -196,7 +196,17 @@ def report(connection, turn_id: str, gm_view: bool = False) -> dict:
         'questions': list((draft.extra.get('w3') or {}).get('questions') or []),
         'motives': motives(result, row['mode'], gm_view or modes.revealed(connection, row), own),
         'next': result.brief.stop_point,
+        'cache': cache_line(draft.extra.get('cache')),
     }
+
+
+def cache_line(tally: dict | None) -> dict:
+    """How much of this turn's prompts the model services read from their caches (adventure/pace.py `count_cache`):
+    the agents' calls and the Writer's, with the share read, when any of them said."""
+    tally = dict(tally or {})
+    if tally.get('input'):
+        tally['share'] = round(tally.get('read', 0) / tally['input'], 2)
+    return tally
 
 
 def status(connection) -> dict:

@@ -192,3 +192,36 @@ def test_llama_keeps_one_file_per_character_that_survives_the_turn():
     restored = [name for action, name in calls if action == 'restore']
     saved = [name for action, name in calls if action == 'save']
     assert restored == [saved[0]]  # Hesk's file, saved when Mira took the model, is put back for Hesk.
+
+
+# What each call read from the cache ---------------------------------------------------------------------------------
+
+def test_cache_use_is_read_from_each_services_own_usage_names():
+    from adventure import pace
+    from adventure.providers.events import chat_event
+    from adventure.rounds import report
+    assert pace.cache_counts({'input_tokens': 10, 'cache_read_input_tokens': 900, 'cache_creation_input_tokens': 90,
+                              'output_tokens': 40}) == {'input': 1000, 'read': 900, 'written': 90}
+    assert pace.cache_counts({'input_tokens': 2000, 'input_tokens_details': {'cached_tokens': 1536}}) == \
+        {'input': 2000, 'read': 1536, 'written': 0}
+    assert pace.cache_counts({'prompt_tokens': 3000, 'prompt_tokens_details': {'cached_tokens': 2048,
+                                                                               'cache_write_tokens': 12}}) == \
+        {'input': 3000, 'read': 2048, 'written': 12}
+    assert pace.cache_counts({'promptTokenCount': 4000, 'cachedContentTokenCount': 3000}) == \
+        {'input': 4000, 'read': 3000, 'written': 0}
+    # llama.cpp's server says how much of the prompt it reused in its timings, which the stream now keeps.
+    last = chat_event({'choices': [{'delta': {}, 'finish_reason': 'stop'}], 'timings': {'cache_n': 700, 'prompt_n': 50}})
+    assert pace.cache_counts(last.usage) == {'input': 750, 'read': 700, 'written': 0}
+    assert pace.cache_counts({'prompt_tokens': 10}) is None and pace.cache_counts(None) is None
+    extra = {}
+    pace.count_cache(extra, {'input_tokens': 100, 'cache_read_input_tokens': 300, 'cache_creation_input_tokens': 0})
+    pace.count_cache(extra, {'prompt_tokens': 10})
+    assert extra['cache'] == {'calls': 2, 'reported': 1, 'input': 400, 'read': 300, 'written': 0}
+    assert report.cache_line(extra['cache'])['share'] == 0.75 and report.cache_line(None) == {}
+
+
+def test_the_referees_system_prompt_never_changes_with_the_turn():
+    from adventure import referee
+    first = referee.asked('I pick the lock.', None, '[[in-fiction: x]]\nHesk means to pick the lock.\n[[end: x]]')
+    second = referee.asked('I run.', 'the guard', '[[in-fiction: x]]\nMira means to run.\n[[end: x]]')
+    assert first[0] == second[0] and 'Hesk' not in first[0] and 'Mira' not in second[0]

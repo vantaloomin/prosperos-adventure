@@ -5,7 +5,7 @@ import { Notice } from '../../components/Feedback'
 import { InlineText } from '../../components/InlineText'
 import { ROUND_KEY } from './useRound'
 import { itemText, seatName, type RoundTable, type StatusLine, type TurnReport as Report } from './round'
-import { checksLine, REPORT_NAMES, rollLine, turnName } from './roundText'
+import { cacheLine, checksLine, REPORT_NAMES, rollLine, turnName } from './roundText'
 
 const STATUS_KEY = [...ROUND_KEY, 'status']
 
@@ -55,6 +55,7 @@ export function TurnReport({ turnId, table }: { turnId: string; table?: RoundTab
       <Part title={REPORT_NAMES.corrections} items={data.corrections.map((item) => item.why || item.target)} />
       <Part title={REPORT_NAMES.checks} items={[checksLine(data.checks)].filter(Boolean)} />
       <Part title={REPORT_NAMES.next} items={shown([data.next])} />
+      <Part title={REPORT_NAMES.cache} items={[cacheLine(data.cache)].filter(Boolean)} />
       {error && <Notice tone="error">{error}</Notice>}
     </div>
   )

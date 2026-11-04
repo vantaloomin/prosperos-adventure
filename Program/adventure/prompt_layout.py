@@ -181,3 +181,10 @@ def described(slots: dict[str, Slot]) -> list[dict]:
     """The slots as Settings lists them, slowest-changing first."""
     return [{'name': slot.name, 'tier': slot.tier, 'tier_name': TIERS[slot.tier], 'help': slot.help}
             for slot in sorted(slots.values(), key=lambda slot: slot.tier)]
+
+
+def stable(*blocks: str) -> Tiered:
+    """A system prompt made only of parts that stay put (a Writer's or narrator's rules and the story's settings), one
+    cache block each, keyed by all of them."""
+    whole = SEPARATOR.join(block for block in blocks if block)
+    return Tiered(blocks, 'prospero-' + hashlib.sha256(whole.encode()).hexdigest()[:24] if whole else '')
