@@ -134,7 +134,7 @@ def test_striking_out_ends_the_day_out_in_the_wild(client, connected, provider, 
     story = ok(client.get('/api/story'))
     assert story['scene']['place']['id'] == 'the-wilds'
     assert [message['text'] for message in story['messages'] if message['role'] == 'scene'][-1].startswith('You stop in')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert f'strikes out {direction} from Kingswood' in narrator and '## Out in the wild' in narrator
     assert 'The nearest place they know of' in narrator
     board = hexes.Grid(vallarith(), 'fixed')
@@ -161,7 +161,7 @@ def test_losing_the_way_drifts_off_course_and_the_map_shows_where_they_think_the
     tell(client, f'I set out {direction}.', 'story-0001')
     story = ok(client.get('/api/story'))
     assert story['map']['at']['lost']
-    assert 'lost their bearings' in provider.requests[-1]['system']
+    assert 'lost their bearings' in provider.requests[-1]['prompt']
     # Playtest: walking on the next day while still lost, with no new check that day, crashed on the missing check.
     monkeypatch.setattr(travel, 'strayed', lambda plan_, rolls: False)
     provider.replies = [[Chunk('More trees.'), Chunk('', 'stop')]]
@@ -217,7 +217,7 @@ def test_searching_a_hex_turns_up_what_is_hidden_there(client, connected, provid
     app.state.dice = Road()
     provider.replies = [[Chunk('Found it.'), Chunk('', 'stop')]]
     tell(client, 'I search the area carefully.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert f"finds {board.site(at)['name']}" in narrator
     cells = {(cell['q'], cell['r']): cell for cell in ok(client.get('/api/story'))['map']['hexes']}
     assert cells[at]['site'] == board.site(at)['name']
@@ -228,7 +228,7 @@ def test_searching_a_hex_turns_up_what_is_hidden_there(client, connected, provid
     tell(client, f"I head back to {board.site(at)['name']}.", 'story-0003')
     story = ok(client.get('/api/story'))
     assert story['scene']['place']['id'] == 'the-wilds' and (story['map']['at']['q'], story['map']['at']['r']) == at
-    assert f"Here: {board.site(at)['name']}" in provider.requests[-1]['system']
+    assert f"Here: {board.site(at)['name']}" in provider.requests[-1]['prompt']
 
 
 def test_lower_intensity_leaves_out_sites_it_does_not_allow_and_a_found_site_stays_as_found(app):
@@ -265,7 +265,7 @@ def test_a_hamlet_found_out_in_the_wild_is_a_place_of_its_own_on_the_road(client
     place = story['scene']['place']
     assert place['id'] == hexes.hamlet_id(at) and place['name'] == hamlet['name']
     assert (story['map']['at']['q'], story['map']['at']['r']) == at
-    assert f"Here: {hamlet['name']}" in provider.requests[-1]['system']
+    assert f"Here: {hamlet['name']}" in provider.requests[-1]['prompt']
     # Playtest: somebody lives there.
     assert story['scene']['around']
     # It is somewhere one can leave again by road or across country.

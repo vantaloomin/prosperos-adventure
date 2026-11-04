@@ -23,7 +23,7 @@ def test_a_faction_holding_the_town_offers_work(client, connected, provider, app
     app.state.dice = Road(1)
     reply(provider, 'A notice on the door.')
     tell(client, 'I read the notices.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert "Work is going: the reeve's men (The Kingdom of Cyrel) wants it done within 5 days, for 6.00 cr." in narrator
     quest = next(item for item in ok(client.get('/api/story/journal'))['quests'] if item['kind'] == 'job')
     assert quest['title'] == 'A deserter in the woods' and quest['left'].startswith('about 5 days')

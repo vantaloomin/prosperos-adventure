@@ -60,22 +60,22 @@ def test_going_in_moving_by_a_way_out_and_back_and_coming_out(client, connected,
     app.state.dice = GOOD
     say(client, provider, 'I go inside the keep.', 'delve-0001')
     assert where(app)['room'] == 'broken-gate'
-    told = provider.requests[-1]['system']
+    told = provider.requests[-1]['prompt']
     assert 'The character goes into The Abandoned Keep.' in told and 'They are in the broken gate' in told
     assert 'Ways out they can see: a low door in the gate passage; an open way; the way back outside.' in told
     # The gatehouse's gnolls roll to notice the character as they come in; a good roll and they have not.
     say(client, provider, 'I take the low door.', 'delve-0002')
     assert where(app)['room'] == 'gatehouse'
-    assert "The 2 Haggoth's gnolls here have not seen the character." in provider.requests[-1]['system']
+    assert "The 2 Haggoth's gnolls here have not seen the character." in provider.requests[-1]['prompt']
     say(client, provider, 'I go back the way I came.', 'delve-0003')
     assert where(app)['room'] == 'broken-gate'
-    assert 'a low door in the gate passage to the gatehouse' in provider.requests[-1]['system']
+    assert 'a low door in the gate passage to the gatehouse' in provider.requests[-1]['prompt']
     shown = ok(client.get('/api/story'))['interior']
     assert [(room['id'], room['here']) for room in shown['rooms']] == [('broken-gate', True), ('gatehouse', False)]
     assert {'between': ['broken-gate', 'gatehouse'], 'kind': 'door', 'to_known': True} in shown['passages']
     say(client, provider, 'I walk back outside.', 'delve-0004')
     assert where(app) is None
-    assert 'comes back out of The Abandoned Keep' in provider.requests[-1]['system']
+    assert 'comes back out of The Abandoned Keep' in provider.requests[-1]['prompt']
     assert ok(client.get('/api/story'))['interior'] is None
 
 
@@ -105,7 +105,7 @@ def test_a_locked_way_wants_a_roll_and_a_failed_one_leaves_the_character_where_t
     app.state.dice = BAD
     say(client, provider, 'I go down the worn steps behind the hearth.', 'delve-0001')
     assert where(app)['room'] == 'cold-hall'
-    assert 'is locked, and stays locked' in provider.requests[-1]['system']
+    assert 'is locked, and stays locked' in provider.requests[-1]['prompt']
     app.state.dice = GOOD
     say(client, provider, 'I try the steps again.', 'delve-0002')
     assert where(app)['room'] == 'cellars'
@@ -118,7 +118,7 @@ def test_searching_finds_the_hidden_way_and_what_is_lying_there(client, connecte
     put_in(app, 'cellars')
     app.state.dice = GOOD
     say(client, provider, 'I search the cellars for anything hidden.', 'delve-0001')
-    told = provider.requests[-1]['system']
+    told = provider.requests[-1]['prompt']
     assert 'They find a hidden way out: a cistern wall that is a door.' in told
     assert 'They find and take:' in told
     assert 'a cistern wall that is a door' in told.split('Ways out they can see:')[1]
@@ -128,7 +128,7 @@ def test_searching_finds_the_hidden_way_and_what_is_lying_there(client, connecte
     app.state.dice = GOOD
     say(client, provider, 'I go through the cistern door.', 'delve-0002')
     assert where(app)['room'] == 'ley-vault'
-    told = provider.requests[-1]['system']
+    told = provider.requests[-1]['prompt']
     assert 'gets past it' in told and 'touch the seam without being taken by it' in told
 
 
@@ -180,10 +180,10 @@ def test_a_found_ruin_out_in_the_wild_can_be_gone_into(client, connected, provid
     say(client, provider, 'I go in through the doorway.', 'delve-0001')
     inside = where(app)
     assert inside and inside['room'] == 'way-in' and inside['site']['q'] == at[0]
-    assert 'They are in the broken doorway' in provider.requests[-1]['system']
+    assert 'They are in the broken doorway' in provider.requests[-1]['prompt']
     # And searching inside searches the room, not the hex.
     say(client, provider, 'I search the place.', 'delve-0002')
-    assert 'The character searches the broken doorway' in provider.requests[-1]['system']
+    assert 'The character searches the broken doorway' in provider.requests[-1]['prompt']
 
 
 @pytest.mark.parametrize('text, moving', [('I take the stairs down', True), ('I search the room', True),

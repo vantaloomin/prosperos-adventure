@@ -49,7 +49,7 @@ def test_a_trip_goes_by_car_or_bus_and_eats_nothing_from_the_pack(client, connec
     story = ok(client.get('/api/story'))
     assert (story['scene']['city']['id'], story['scene']['place']['id']) == ('havenbrooke-road', 'ithaca')
     assert (clock_at(app) - before).total_seconds() >= 42 * 60
-    journey = provider.requests[-1]['system'].split('## The journey')[1]
+    journey = provider.requests[-1]['prompt'].split('## The journey')[1]
     assert 'from Haven to Ithaca by car or bus on Route 34B along the lake: 42 minutes on the road' in journey
     assert 'hungry' not in journey and 'on foot' not in journey
     assert travel.duration(1) == 'an hour' and travel.duration(4.5) == '4.5 hours'
@@ -113,14 +113,14 @@ def test_from_ironroot_a_walk_goes_into_the_woods_and_a_drive_still_takes_the_ro
     tell(client, 'I set out west into the trees.', 'story-0001')
     story = ok(client.get('/api/story'))
     # A ramble into the woods, not a day's march, and the line's own time is the walk's (playtest).
-    walked = provider.requests[-1]['system'].split('on foot by ')[1].split(' hours of walking')[0].split(': ')[-1]
+    walked = provider.requests[-1]['prompt'].split('on foot by ')[1].split(' hours of walking')[0].split(': ')[-1]
     assert (clock_at(app) - before).total_seconds() / 3600 <= float(walked) + 0.6 <= 3
     # No late bus in the woods: the roads' cards keep to the roads.
     with app.state.database.connect() as connection:
         assert not connection.execute("SELECT card_id FROM story_cards WHERE scene='road' AND card_id IS NOT NULL"
                                       ).fetchall()
     assert story['scene']['place']['id'] == 'the-back-woods' and story['map']['hexes']
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'strikes out west from Ironroot Woods' in narrator and '## Out in the wild' in narrator
     reply(provider, 'The truck starts on the second try.')
     tell(client, 'I walk back out and drive to Ithaca.', 'story-0002')
@@ -134,7 +134,7 @@ def test_the_narrator_keeps_to_2009_and_a_later_thing_is_flagged(client, connect
     app.state.pace_clock = Slow()
     reply(provider, 'The lounge is half empty.\n\nAcross the room, a girl scrolls Instagram on her phone.')
     tell(client, 'I look around the lounge.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     year = narrator.split('## The year: 2009')[1]
     assert 'flip' in year and 'Not yet invented' in year and 'Instagram' in year
     flags = ok(client.get('/api/story'))['messages'][-1]['flags']

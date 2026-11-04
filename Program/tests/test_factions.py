@@ -55,7 +55,7 @@ def test_the_town_hears_the_news_and_the_narrator_knows_the_powers(client, conne
                       factions.find('vallarith', 'brynwyr-high-elves')['clocks'][0], 6, DAY, '2026-10-22')
     reply(provider, 'The village talks of nothing else.')
     tell(client, 'I listen to the talk.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'News reaches town: The wardens of Brynwyr move the border stones' in narrator
     assert '## The powers here' in narrator and 'Move the border stones 6 of 6' in narrator
     assert 'War levy 0 of 4' in narrator
@@ -65,7 +65,7 @@ def test_the_town_hears_the_news_and_the_narrator_knows_the_powers(client, conne
     # Told once.
     reply(provider, 'Quiet.')
     tell(client, 'I finish my drink.', 'story-0002')
-    assert 'News reaches town' not in provider.requests[-1]['system']
+    assert 'News reaches town' not in provider.requests[-1]['prompt']
 
 
 def test_a_card_moves_a_local_factions_clock(client, connected, provider, app, dealt):  # noqa: F811

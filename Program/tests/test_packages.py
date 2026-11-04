@@ -110,7 +110,7 @@ def test_a_campaign_in_vallarith_reads_the_packages_lore_by_keyword(client, conn
     assert titles == {entry['title'] for entry in lore if not entry.get('eras') or 'post-reform' in entry['eras']}
     provider.replies = [reply('Smoke over the mountains.')]
     tell(client, 'I ask about Dun Aldun.', 'story-0001')
-    assert "The Dwarven Empire's capital" in provider.requests[-1]['system']
+    assert "The Dwarven Empire's capital" in provider.requests[-1]['prompt']
     # A second start keeps the one book; changed lore replaces it.
     with app.state.database.connect(write=True) as connection:
         assert package_lore.bring(connection, app.state.database.root, 'vallarith', 'now') is None

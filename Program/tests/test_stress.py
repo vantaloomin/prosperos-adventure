@@ -44,7 +44,7 @@ def test_something_dreadful_in_the_night_frays_the_nerve(client, connected, prov
     app.state.dice = Road(10, 15)
     reply(provider, 'Shale moves.')
     tell(client, 'I make camp.', 'story-0001')
-    assert 'Facing ward-ghoul weighs on the character' in provider.requests[-1]['system']
+    assert 'Facing ward-ghoul weighs on the character' in provider.requests[-1]['prompt']
     assert ok(client.get('/api/story'))['fight']['stress'] == 'shaken'
 
 
@@ -55,5 +55,5 @@ def test_rest_eases_the_strain(client, connected, provider, app):
     app.state.dice = Road(1)
     reply(provider, 'Morning.')
     tell(client, 'I go to bed.', 'story-0001')
-    assert 'Rest eases the strain: the character is shaken, 2 of 12.' in provider.requests[-1]['system']
-    assert "is shaken (stress 2 of 12" in provider.requests[-1]['system']
+    assert 'Rest eases the strain: the character is shaken, 2 of 12.' in provider.requests[-1]['prompt']
+    assert "is shaken (stress 2 of 12" in provider.requests[-1]['prompt']

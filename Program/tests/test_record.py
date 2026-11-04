@@ -2,6 +2,7 @@
 from conftest import Chunk, tell
 
 from adventure import record
+from adventure.authors_note import NOTE_CLOSE
 from adventure.errors import DomainError
 
 
@@ -37,8 +38,8 @@ def test_facts_the_narrator_brings_in_are_kept_unless_they_contradict_the_record
               ' {"kind": "secret", "subject": "the bouncer", "text": "The bouncer works for the co-op.",'
               ' "truth": "world"}, {"kind": "mood", "subject": "you", "text": "You feel sad."}]}')]
     tell(client, 'I shove past the bouncer.', 'story-0002')
-    assert 'The record says these people are dead: old tom.' in provider.requests[-2]['system']
-    assert provider.requests[-1]['system'].startswith(record.EXTRACT)
+    assert 'The record says these people are dead: old tom.' in provider.requests[-2]['prompt']
+    assert provider.requests[-1]['prompt'].startswith(record.EXTRACT)
     assert "The narrator: Old Tom's stool" in provider.requests[-1]['messages'][0]['content']
     known = ok(client.get('/api/story/journal'))['entries']
     # The dead stay dead, and a made-up kind is dropped. What is on the page is known: a fact the model calls hidden
@@ -52,7 +53,7 @@ def test_facts_the_narrator_brings_in_are_kept_unless_they_contradict_the_record
         record.add(connection, 'secret', 'Gus', 'Gus is a fence.', app.state.database.now(), truth='world')
     provider.replies = [reply('You wipe the blood away.'), reply('{"facts": []}')]
     tell(client, 'I wipe my nose.', 'story-0003')
-    narrator = provider.requests[-2]['system']
+    narrator = provider.requests[-2]['prompt']
     assert '## The record (kept by the game; never contradict it)' in narrator
     assert '- death, Old Tom: Old Tom drowned off the pier.' in narrator.split('\n')[narrator.split('\n').index(
         '## The record (kept by the game; never contradict it)') + 1]
@@ -90,7 +91,7 @@ def test_older_turns_fold_into_the_story_so_far(client, connected, app, provider
     for number in range(1, 4):
         tell(client, f'Turn {number}.', f'story-000{number}')
     # Six messages: four recent plus two to fold, so the third reply folds the first two.
-    assert provider.requests[-1]['system'].startswith(record.SUMMARIZE)
+    assert provider.requests[-1]['prompt'].startswith(record.SUMMARIZE)
     assert 'The player: Turn 1.\n\nThe narrator: Narration 1.' in provider.requests[-1]['messages'][0]['content']
     assert 'Turn 2.' not in provider.requests[-1]['messages'][0]['content']
 
@@ -99,8 +100,10 @@ def test_older_turns_fold_into_the_story_so_far(client, connected, app, provider
     # The next two waiting messages fold in after this turn, on top of the summary so far.
     assert 'The summary so far:\nYou arrived and asked about Turn 1.' in provider.requests[-1]['messages'][0]['content']
     narrator = provider.requests[-2]
-    assert '## The story so far (older turns, summarized)\nYou arrived and asked about Turn 1.' in narrator['system']
-    assert 'Turn 1.' not in str(narrator['messages']) and 'Turn 2.' in str(narrator['messages'])
+    assert '## The story so far (older turns, summarized)\nYou arrived and asked about Turn 1.' in narrator['prompt']
+    # The story itself, word for word: the messages, without the turn's notes sent before the player's words.
+    story_so_far = str([*narrator['messages'][:-1], narrator['messages'][-1]['content'].split(NOTE_CLOSE)[-1]])
+    assert 'Turn 1.' not in story_so_far and 'Turn 2.' in story_so_far
 
 
 def test_an_older_workspace_keeps_its_facts_under_the_new_name(tmp_path):
@@ -161,7 +164,7 @@ def test_a_backend_that_refuses_the_schema_is_asked_without_it_and_a_weak_model_
                         reply('1. Pell has a split lip.\n2. A stranger in grey watches the shop.'),
                         reply('1. wound\n2. fact'), reply('1. Pell\n2. the stranger in grey'), reply('1. both\n2. world')]
     tell(client, 'I punch Pell.', 'story-0002')
-    assert provider.requests[-4]['system'] == record.LINES
+    assert provider.requests[-4]['prompt'] == record.LINES
     assert '1. Pell has a split lip.' in provider.requests[-1]['messages'][0]['content']
     with app.state.database.connect() as connection:
         pulled = [(row['kind'], row['subject'], row['truth']) for row in record.entries(connection, known_only=False)
@@ -193,7 +196,7 @@ def test_the_gm_view_shows_everything_and_asks_again_for_or_clears_one_fact(clie
     view = ok(client.post(f"/api/story/journal/{hidden['id']}/regenerate"))
     # Asking again never shows a hidden fact.
     assert view['entries'][0]['text'] == "He takes the co-op's pay." and view['entries'][0]['truth'] == 'world'
-    assert provider.requests[-1]['system'] == record.REGENERATE
+    assert provider.requests[-1]['prompt'] == record.REGENERATE
     assert provider.requests[-1]['config']['json_schema'] == record.FACT
     assert 'The fact as it was pulled: secret, the bouncer: He works for the co-op.' in \
         provider.requests[-1]['messages'][0]['content']
@@ -217,6 +220,6 @@ def test_repeats_and_items_the_pack_never_got_are_not_recorded(client, connected
     assert 'Already in the record:\n- fact, the crew boss: The crew boss runs the felling gang.' in \
         provider.requests[-1]['messages'][0]['content']
     assert 'A demand, threat or ultimatum someone else made of the character is not their oath.' in \
-        provider.requests[-1]['system']
+        provider.requests[-1]['prompt']
     texts = {entry['text'] for entry in ok(client.get('/api/story/journal'))['entries']}
     assert texts == {'Pell keeps a brass bell.', 'The crew boss runs the felling gang.'}

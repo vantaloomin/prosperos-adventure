@@ -88,4 +88,4 @@ def test_the_narrator_hears_a_sworn_bond(client, connected, provider, monkeypatc
     provider.replies = [[Chunk('He nods.'), Chunk('', 'stop')]]
     tell(client, 'I swear to stand by you, Corin.', 'story-0001')
     assert sworn == ['I swear to stand by you, Corin.']
-    assert '## A bond (decided by the game)\n- The player' in provider.requests[-1]['system']
+    assert '## A bond (decided by the game)\n- The player' in provider.requests[-1]['prompt']

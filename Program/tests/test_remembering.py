@@ -54,7 +54,7 @@ def test_a_roll_brings_a_faded_detail_back(client, connected, provider, app, mon
     app.state.dice = Road(95)
     reply(provider, 'It comes back to you: the bell.')
     tell(client, 'I try to remember the ferryman.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'The character remembers what they knew of the ferryman clearly again.' in narrator
     with app.state.database.connect() as connection:
         roll = connection.execute('SELECT action, stat FROM story_rolls').fetchone()

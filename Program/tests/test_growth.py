@@ -31,7 +31,7 @@ def test_a_nights_rest_turns_use_into_growth(client, connected, provider, app):
     app.state.dice = Road(20, 31)
     reply(provider, 'Morning.')
     tell(client, 'I go to bed.', 'story-0001')
-    narrator = provider.requests[-1]['system']
+    narrator = provider.requests[-1]['prompt']
     assert 'Vitality grows from 10 to 11' in narrator and 'Mind grows' not in narrator
     with app.state.database.connect() as connection:
         assert sheet.stats(connection)['Vitality'] == 11 and growth.marked(connection) == []

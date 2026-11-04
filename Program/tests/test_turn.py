@@ -16,7 +16,7 @@ def ok(response):
 def test_an_uncertain_action_is_rolled_once_and_the_narrator_is_told(client, connected, provider, app):
     app.state.dice = random.Random(5)
     sent = tell(client, 'I try to persuade the barista to give me a free coffee.', 'turn-0001')
-    prompt = provider.requests[-1]['system']
+    prompt = provider.requests[-1]['prompt']
     assert '## This turn (decided by the game)' in prompt
     assert 'The player\'s character, on "I try to persuade the barista to give me a free coffee"' in prompt
     assert 'Rolls are hidden' in prompt
@@ -36,7 +36,7 @@ def test_an_uncertain_action_is_rolled_once_and_the_narrator_is_told(client, con
 def test_shown_dice_come_with_the_players_line(client, connected, provider, app):
     ok(client.put('/api/settings', json={'show_odds': True}))
     tell(client, 'I attack the man at the bar.', 'turn-0002')
-    assert 'Rolls are shown to the player' in provider.requests[-1]['system']
+    assert 'Rolls are shown to the player' in provider.requests[-1]['prompt']
     line = ok(client.get('/api/story'))['messages'][0]
     roll = line['rolls'][0]
     assert roll['stat'] == 'Vitality' and roll['label'] and roll['total'] == roll['natural'] + roll['bonus'] - roll['shift']
@@ -57,8 +57,8 @@ def test_the_referee_model_is_asked_only_when_chosen(client, connected, provider
                '"difficulty": "hard"}]}'), Chunk('', 'stop')],
         [Chunk('The guard lowers his spear.'), Chunk('', 'stop')]]
     tell(client, 'I tell the guard to stand aside.', 'turn-0005')
-    assert len(provider.requests) == 2 and 'You are the Referee' in provider.requests[0]['system']
-    assert "The player's character tries to talk the guard down:" in provider.requests[1]['system']
+    assert len(provider.requests) == 2 and 'You are the Referee' in provider.requests[0]['prompt']
+    assert "The player's character tries to talk the guard down:" in provider.requests[1]['prompt']
     with app.state.database.connect() as connection:
         row = connection.execute('SELECT stat, difficulty, shift FROM story_rolls').fetchone()
     assert tuple(row) == ('Resolve', 'hard', 10)
