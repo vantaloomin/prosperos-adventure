@@ -40,6 +40,12 @@ SKILL.md
 .github/copilot-instructions.md
 .github/instructions/
 
+# Reviewer persona prompts (the principal engineer, UX and prompt red-team reviewers) are local agent
+# instructions, never committed. They sit in docs/personas/ beside the spec they read.
+**/personas/
+persona-*.md
+persona.md
+
 # Private environment settings and credentials (safe templates may be committed)
 .env
 .env.*
