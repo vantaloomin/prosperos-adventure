@@ -466,7 +466,7 @@ def add(connection, now: str, role: str, text: str, where: dict, **extra) -> dic
 def messages(connection, limit: int = HISTORY_LIMIT) -> list[dict]:
     where, values = timeline.visible(connection)
     rows = many(connection, 'SELECT id, seq, role, text, reply_to, status, error, city_id, place_id, created_at, '
-                f'flags, previous FROM story_messages WHERE {where} ORDER BY seq DESC LIMIT ?', (*values, limit))
+                f'flags, previous, mode FROM story_messages WHERE {where} ORDER BY seq DESC LIMIT ?', (*values, limit))
     # The app's crisis note under a user's line that sounds like self-harm (adventure/safety.py), and a narration's
     # flagged passages, and whether it can switch back to its wording before a rewrite (adventure/passages.py).
     return [{**row, 'crisis_help': row['role'] == 'user' and safety.crisis(row['text']),
@@ -1358,16 +1358,16 @@ def vow_turn(state, user: dict, rolls: list[dict]) -> list[str]:
         return lines
 
 
-def party_turn(state, user: dict, agents: set[str] = frozenset()) -> list[str]:
+def party_turn(state, user: dict, agents: set[str] = frozenset(), choices: dict[str, bool] | None = None) -> list[str]:
     """Asking someone along, or parting ways (adventure/party.py), once for the line. Souring never sends an agent
-    (`agents`) away: they leave by their own move."""
+    (`agents`) away: they leave by their own move; an agent asked along answered for themselves (`choices`)."""
     database = state.database
     with database.connect(write=True) as connection:
         view = scene(connection, story_clock.now(connection, database.clock))
         if combat.fight(connection):
             return []
         return party.turn(connection, user['id'], view, user['text'], view['local_time'][:10], database.now(),
-                          getattr(state, 'dice', None), agents)
+                          getattr(state, 'dice', None), agents, choices)
 
 
 def counter_text(lines: list[str]) -> str:
@@ -1672,6 +1672,9 @@ class Telling:
     # Who runs on an agent this round, by key: they choose their own lies and whether to leave the party
     # (adventure/lies.py, adventure/party.py).
     agents: set[str] = field(default_factory=set)
+    # What each agent asked along this round answered, by key: True to come, False to turn the character down
+    # (adventure/rounds/joining.py).
+    joining: dict[str, bool] = field(default_factory=dict)
     # Whether Resolve fires the lives off the page (adventure/beats.py), as today's turn does.
     offpage: bool = True
     # What Resolve decided, for the narrator: each system's lines, as `prompt` takes them.
@@ -1742,7 +1745,7 @@ async def resolved(telling: Telling):
         noted += [away_text(connection, user['id'])]
     agents = telling.agents
     noted += [delved, labour.prompt_text(labour_turn(state, user)), lies.prompt_text(lie_turn(state, user, agents)),
-              bonds.prompt_text(bond_turn(state, user)), party.prompt_text(party_turn(state, user, agents)),
+              bonds.prompt_text(bond_turn(state, user)), party.prompt_text(party_turn(state, user, agents, telling.joining)),
               sworn.prompt_text(vow_turn(state, user, rolls)), leaving.prompt_text(leave_turn(state, user))]
     telling.fought, telling.traded, telling.tended, telling.looked, looks = in_scene(
         state, user, rolls, telling.travelled, telling.rested, telling.moves)
@@ -1815,6 +1818,23 @@ def after_telling(telling: Telling, reply: dict) -> dict:
         state, user, packet = telling.state, telling.user, telling.packet
         state.after_turn = After(lambda: afterwards(state, user, reply, packet, telling.steps))
     return reply
+
+
+def after_round(state, line: dict, reply: dict, people: list[dict]):
+    """A round with no player's line (Author, Watch, Next in Play), once its post is kept as the narrator's reply to
+    the line it opened on: the same after-work as a player's line (`afterwards`), so quests can end, oaths and feelings
+    move and the summary keeps up, each judged change with its undo in the turn report. It reads the post alone,
+    since the opening line holds the Author's hidden nudge or nothing. Like a line's, it waits for `state.after_turn`
+    and is finished before the next turn starts."""
+    opened = line | {'text': ''}
+
+    async def work():
+        with state.database.connect() as connection:
+            config = config_for(connection, JOB)
+            budget = pace.budget_for(connection, config) if config else 0
+        steps = pace.Steps(budget, getattr(state, 'pace_clock', None) or time.monotonic)
+        await afterwards(state, opened, reply, {'people': people}, steps)
+    state.after_turn = After(work)
 
 
 def kept_telling(connection, telling: Telling):

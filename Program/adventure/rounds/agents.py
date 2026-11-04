@@ -253,7 +253,7 @@ def checked(data: dict, seat: str, snapshot: Snapshot, levels: dict | None = Non
 # The prompt ---------------------------------------------------------------------------------------------------------
 
 # The wording a power user may reword in Settings > Developer (adventure/prompt_library.py, group "Characters"): MIND,
-# each purpose's line, TURNING and the LAYOUT. The answer's JSON shape (CONTRACT, REACT_CONTRACT), the fence rule, the
+# each purpose's line, TURNING and the LAYOUT. The answer's JSON shape (CONTRACT, CONTRACTS), the fence rule, the
 # intensity and the scheming dial stay code, because code parses the answer and keeps each character to what it may
 # know. MIND names nobody, so every character in a story shares the cached start of the prompt; the name comes with
 # the sheet.
@@ -310,7 +310,16 @@ PURPOSES = {
               'their own voice, from what they know. Put the answer in lines, said to them.',
     'offpage': 'Away from the main scene, something happened (below; the game decided it). Write a few lines of '
                'what your character said in it, to those who were with them.',
+    'invite': 'Someone has just asked your character to come along with them, to travel in their company from now on '
+              '(below). Decide whether your character goes, only as they would: from what they want, fear and hide, '
+              'and how they feel about the one asking. Answer them aloud in lines, said to them, and give your '
+              'character\'s private reason as the motive.',
 }
+# How a character answers being asked along: the app reads this flag, so it stays code.
+INVITE_CONTRACT = ('Say whether they go by adding "joins": true (they come along) or "joins": false (they turn the '
+                   'offer down) to the object below; the intent may stay empty.')
+# The purposes whose answer carries a flag beyond the declaration, and the line that asks for it.
+CONTRACTS = {'react': REACT_CONTRACT, 'invite': INVITE_CONTRACT}
 
 
 # Untrusted text goes in the context builder's labelled blocks, read by the rule that comes with them.
@@ -340,13 +349,16 @@ def siding(connection, snapshot: Snapshot, key: str) -> list[str]:
 
 
 def cue_text(snapshot: Snapshot, cue: dict | None) -> str:
-    """What a Converse or off-page call is about, fenced: whom to speak to, the line to answer, what happened."""
+    """What a Converse, off-page or asked-along call is about, fenced: whom to speak to, the line to answer, what
+    happened, the asking."""
     cue = cue or {}
     name = {seat.key: seat.name for seat in snapshot.seats}
     if cue.get('kind') == 'ask':
         return fenced('speak to', name.get(cue.get('to'), str(cue.get('to') or '')))
     if cue.get('kind') == 'answer':
         return fenced(f"{name.get(cue.get('speaker'), 'someone')} said", str(cue.get('line') or ''))
+    if cue.get('kind') == 'invite':
+        return fenced(f"{name.get(cue.get('speaker'), 'someone')} asked", str(cue.get('line') or ''))
     if cue.get('kind') == 'offpage':
         return fenced('what happened', str(cue.get('outcome') or '')) + '\n\n' + fenced(
             'with you', ', '.join(name.get(key, key) for key in cue.get('with') or []))
@@ -438,7 +450,7 @@ def story(snapshot: Snapshot) -> str:
 def moment(connection, purpose: str) -> str:
     """Tier 5: which moment this call is for."""
     line = prompt_library.text(connection, f'character-{purpose}')
-    return f'{line} {REACT_CONTRACT}' if purpose == 'react' else line
+    return f'{line} {CONTRACTS[purpose]}' if purpose in CONTRACTS else line
 
 
 def composed(connection, snapshot: Snapshot, draft: Draft, key: str, purpose: str, cue: dict | None = None,
@@ -457,7 +469,7 @@ def composed(connection, snapshot: Snapshot, draft: Draft, key: str, purpose: st
 # The call -----------------------------------------------------------------------------------------------------------
 
 # Each call's share of the turn budget, counted from when the model service takes it; never less than FLOOR seconds.
-SHARE = {'declare': 0.5, 'react': 0.3, 'ask': 0.2, 'answer': 0.2, 'offpage': 0.2}
+SHARE = {'declare': 0.5, 'react': 0.3, 'ask': 0.2, 'answer': 0.2, 'offpage': 0.2, 'invite': 0.2}
 FLOOR = 10
 
 
@@ -517,7 +529,8 @@ def prepared(turn, key: str, purpose: str, cue: dict | None) -> tuple[dict, str,
 
 
 async def ask(turn, key: str, purpose: str = 'declare', cue: dict | None = None) -> dict:
-    """The agent's validated answer as a dict ({'change': bool, 'declaration': Declaration}); raises Failed."""
+    """The agent's validated answer as a dict ({'change': bool, 'declaration': Declaration, 'answer': the parsed
+    object, for a purpose's own flag such as 'joins'}); raises Failed."""
     config, system, user, deadline, cap = prepared(turn, key, purpose, cue)
     messages = [{'role': 'user', 'content': user or 'Nothing is known yet.'}]
     problem = ''
@@ -535,7 +548,7 @@ async def ask(turn, key: str, purpose: str = 'declare', cue: dict | None = None)
         data, problem = parsed(answer)
         if data is not None:
             declaration = checked(data, key, turn.snapshot)
-            return {'change': bool(data.get('change', True)), 'declaration': declaration}
+            return {'change': bool(data.get('change', True)), 'declaration': declaration, 'answer': data}
         messages = [*messages, {'role': 'assistant', 'content': answer},
                     {'role': 'user', 'content': f'That answer could not be used: {problem}. Answer again with the '
                                                 'JSON object only.'}]
