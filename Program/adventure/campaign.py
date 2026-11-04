@@ -157,14 +157,16 @@ def begin(database, premade_id: str | None = None, persona: PersonaInput | None 
           hand: str | None = None, ironman: bool = False, legacy_of: dict | None = None,
           ruleset: str | None = None, build: dict | None = None, iron: dict | None = None,
           rules: dict | None = None, percentile: dict | None = None, narrated: dict | None = None,
-          fated: dict | None = None, joining: dict | None = None, made: dict | None = None) -> dict:
+          fated: dict | None = None, joining: dict | None = None, made: dict | None = None,
+          made_party: list[dict] | None = None) -> dict:
     """Start the story as a premade character or one the player made; only a story with nothing in it yet. The
     ruleset (the world's own by default) is chosen now and locked; under 5E a made character is `build` (class,
     species, background, the standard array placed, the class's skills). `rules` are session zero's (adventure/table.py).
     With `joining` (the cast page's {premade id: {mind, notes, model_profile_id}}), the leads it names travel with
     the character as the party, each at the table with their own mind, and the town's other leads stay in the bank
     as background characters (adventure/rounds/cast.py). A made character's `made` (adventure/making.py: look, voice,
-    wants, fears, sliders, Looks, how they come across) is settled and kept as their sheet."""
+    wants, fears, sliders, Looks, how they come across) is settled and kept as their sheet; `made_party` are party
+    members the player made, who join beside the leads with sheets of their own."""
     with database.connect() as connection:
         where, values = timeline.visible(connection)
         require(one(connection, f'SELECT COUNT(*) AS n FROM story_messages WHERE {where}', values)['n'] == 0,
@@ -250,7 +252,8 @@ def begin(database, premade_id: str | None = None, persona: PersonaInput | None 
             # The school or guild the character starts in (adventure/institutions.py).
             institutions.begin(connection, world, chosen if premade_id else None, began)
         # The other leads as the party, each with a round seat (adventure/rounds/cast.py).
-        cast.begin(connection, database, city_id, premades(city_id), premade_id, persona.name, joining)
+        cast.begin(connection, database, city_id, premades(city_id), premade_id, persona.name,
+                   {} if joining is None and made_party else joining, made_party or [])
         # An earlier campaign's character as this world's history (adventure/legacy.py).
         if earlier:
             legacy.bring(connection, earlier, legacy_of['role'], began)

@@ -10,11 +10,13 @@ interface Props {
   onDraft: (form: MadeForm) => void
   /** With no text model yet, Write it becomes Add a model and opens Settings > Models (SH-3). */
   onAddModel?: () => void
+  /** A party member the player makes, not the character they play. */
+  party?: boolean
 }
 
 /** Above the fields: an idea the story's model drafts the whole character from, or a character the person already
  * has, pasted or opened from a card and split into the fields (adventure/making.py). Nothing is saved. */
-export function QuickStart({ form, onDraft, onAddModel }: Props) {
+export function QuickStart({ form, onDraft, onAddModel, party }: Props) {
   const [idea, setIdea] = useState('')
   const [pasting, setPasting] = useState(false)
   const [busy, setBusy] = useState(false)
@@ -26,12 +28,12 @@ export function QuickStart({ form, onDraft, onAddModel }: Props) {
     try { await work() } catch (failure) { setError(failure instanceof Error ? failure.message : MAKE_TEXT.failed) } finally { setBusy(false) }
   }
   const write = () => run(async () => {
-    const found = await api<{ draft: Drafted }>('/story/make/draft', picksOf(form, idea))
+    const found = await api<{ draft: Drafted }>('/story/make/draft', picksOf(form, idea, party))
     onDraft(withDraft(form, found.draft))
     setFilled('')
   })
   const split = (text: string) => run(async () => {
-    const found = await api<{ draft: Drafted; filled_in: string[] }>('/story/make/split', { text })
+    const found = await api<{ draft: Drafted; filled_in: string[] }>('/story/make/split', { text, ...(party ? { party } : {}) })
     onDraft(withDraft(form, found.draft))
     setFilled(filledLine(found.filled_in))
     setPasting(false)

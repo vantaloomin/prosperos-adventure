@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import { Minus, Plus } from 'lucide-react'
+import { Minus, Plus, UserPlus } from 'lucide-react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../../api'
-import type { BrpChoices, IronswornChoices, PersonaGender, Ruleset, Srd52Choices, Story as StoryData, StoryStart as StartChoices } from '../../types'
-import { Field, TextArea, TextInput } from '../../components/Fields'
+import type { BrpChoices, IronswornChoices, Ruleset, Srd52Choices, Story as StoryData, StoryStart as StartChoices } from '../../types'
+import { Field, TextInput } from '../../components/Fields'
 import { Stepper } from '../../components/NumberFields'
 import { Loading, Notice } from '../../components/Feedback'
-import { GENDERS } from '../worlds/worldsText'
 import { WORLDS_KEY } from '../worlds/useWorlds'
 import { arrayPlaced, brpCost, skillChoices, skillId, pointsLeft, pointsText, startingStats } from './storyText'
 import { CampaignOptions } from './CampaignOptions'
@@ -18,12 +17,12 @@ import { ModeSwitch } from '../round/ModeSwitch'
 import { useCastMode } from '../round/useModes'
 import { BANK_NAMES, THINKS_NAME } from '../round/roundText'
 import { ROUND_KEY } from '../round/useRound'
-import { QuickStart } from '../make/QuickStart'
-import { SheetExtras } from '../make/SheetExtras'
-import { MAKE_TEXT, emptyForm, madeBody, newSeed, type MadeForm } from '../make/makeText'
+import { MadeFields } from '../make/MadeFields'
+import { MAKE_TEXT, emptyForm, madeBody, memberBody, memberReady, newMember, newSeed, type MadeForm, type MadeMember } from '../make/makeText'
 
 /** The cast page: the campaign start (adventure/campaign.py) on one page. The town's people are a grid; tapping one
- * plays as them and shows who they are under the grid, and the + tile makes your own there instead. Rules (locked
+ * plays as them and shows who they are under the grid, and the + tile makes your own there instead. The party tile
+ * makes a party member from scratch, whose form opens under the grid while their card is picked. Rules (locked
  * once the campaign begins), the tone preset and Begin sit together at the foot. */
 export function StoryStart({ onStarted, place, onAddModel }: { onStarted: (data: StoryData) => void; place: string; onAddModel?: () => void }) {
   const choices = useQuery({ queryKey: ['story-start'], queryFn: () => api<StartChoices>('/story/start') })
@@ -43,29 +42,36 @@ function Cast({ choices, place, onStarted, onAddModel }: { choices: StartChoices
   const [error, setError] = useState('')
   const [ruleset, setRuleset] = useState<Ruleset | null>(null)
   const session = useSession(choices)
-  const party = useParty(premades, choices.party_size, seat, setError)
+  const members = useMembers()
+  // Party members you make count toward the agent cap, so fewer of the town's leads join by default.
+  const party = useParty(premades, leadsJoining(choices.party_size, members.list.length), seat, setError)
   const who = seat === OWN ? made : { premade_id: seat }
+  const pick = (id: string) => { setSeat(id); members.edit('') }
   const begin = async () => {
     if (!who) return
     setBusy(true)
     setError('')
     try {
-      onStarted(await api<StoryData>('/story/start', { ...who, ...party.body, ...session.body, ...(ruleset ? { ruleset } : {}) }))
+      onStarted(await api<StoryData>('/story/start', { ...who, ...party.body, ...members.body, ...session.body, ...(ruleset ? { ruleset } : {}) }))
       await Promise.all([client.invalidateQueries({ queryKey: ['story-sheet'] }), client.invalidateQueries({ queryKey: WORLDS_KEY }), client.invalidateQueries({ queryKey: ROUND_KEY })])
     } catch (failure) { setError(failure instanceof Error ? failure.message : 'The story did not start. Try again.') }
     finally { setBusy(false) }
   }
   const looking = premades.find((premade) => premade.id === seat)
+  const editing = members.list.find((member) => member.key === members.editing)
   return (
     <form className="cast-setup" aria-labelledby="cast-heading" onSubmit={(event) => { event.preventDefault(); void begin() }}>
       <div className="cast-head"><h2 id="cast-heading">{place}</h2><ModeSwitch shown={party.joins} mode={party.mode.mode} onChange={party.mode.change} /></div>
       <ul className="cast-grid" aria-label="Who you play">
-        {premades.filter((premade) => !party.banked(premade)).map((premade) => <CastCard key={premade.id} premade={premade} picked={seat === premade.id} card={party.card(premade)} onPick={() => setSeat(premade.id)} />)}
-        <li><button type="button" className="cast-card cast-own" aria-pressed={seat === OWN} aria-label="Make your own character" onClick={() => setSeat(OWN)}><Plus aria-hidden="true" /></button></li>
+        {premades.filter((premade) => !party.banked(premade)).map((premade) => <CastCard key={premade.id} premade={premade} picked={seat === premade.id} card={party.card(premade)} onPick={() => pick(premade.id)} />)}
+        <MadeCards members={members} makes={choices.party_size !== undefined}>
+          <OwnTile picked={seat === OWN} editing={editing} onPick={() => pick(OWN)} />
+        </MadeCards>
       </ul>
-      <Bank leads={premades.filter(party.banked)} card={party.card} onPick={setSeat} />
-      {looking ? <p className="cast-bio" aria-live="polite">{looking.about}</p>
-        : <MakeYourOwn choices={choices} ruleset={ruleset ?? choices.ruleset} onChange={setMade} onAddModel={onAddModel} />}
+      <Bank leads={premades.filter(party.banked)} card={party.card} onPick={pick} />
+      <UnderGrid looking={looking} editing={editing} members={members} onAddModel={onAddModel}>
+        <MakeYourOwn choices={choices} ruleset={ruleset ?? choices.ruleset} onChange={setMade} onAddModel={onAddModel} hidden={!!editing} />
+      </UnderGrid>
       <CampaignOptions choices={choices} session={session} />
       {error && <Notice tone="error">{error}</Notice>}
       <div className="cast-foot">
@@ -73,10 +79,35 @@ function Cast({ choices, place, onStarted, onAddModel }: { choices: StartChoices
         {session.presets.length > 1 && <select aria-label="Tone" value={session.presetId} onChange={(event) => session.pick(event.target.value)}>
           {session.presets.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}
         </select>}
-        <button type="submit" className="button primary" disabled={busy || !who}>{busy ? 'Beginning…' : 'Begin'}</button>
+        <button type="submit" className="button primary" disabled={busy || !(who && members.ready)}>{busy ? 'Beginning…' : 'Begin'}</button>
       </div>
     </form>
   )
+}
+
+/** Begin takes at most this many party members you made (adventure/story_routes.py StoryStart). */
+const MADE_MOST = 8
+
+/** How many of the town's leads join by default: the agent cap, less the party members you made. */
+function leadsJoining(size: number | undefined, made: number): number | undefined {
+  return size === undefined ? undefined : Math.max(0, size - made)
+}
+
+/** The party members you make from scratch: each a card in the grid and, while picked, a form under it. */
+function useMembers() {
+  const [list, setList] = useState<MadeMember[]>([])
+  const [editing, edit] = useState('')
+  const count = useRef(0)
+  const add = () => {
+    count.current += 1
+    const member = newMember(`made-${count.current}`)
+    setList((before) => [...before, member])
+    edit(member.key)
+  }
+  const change = (key: string, update: Partial<MadeMember>) => setList((before) => before.map((member) => member.key === key ? { ...member, ...update } : member))
+  const remove = (key: string) => { setList((before) => before.filter((member) => member.key !== key)); edit((before) => before === key ? '' : before) }
+  const body = list.length ? { made_party: list.map(memberBody) } : {}
+  return { list, editing, edit, add, change, remove, body, ready: list.every(memberReady) }
 }
 
 /** The other leads join as your party (CA-7), each Thinks or Rules, up to the agent cap; the rest wait in the bank and
@@ -143,14 +174,61 @@ function CastCard({ premade, picked, card, onPick }: CardProps) {
   )
 }
 
-interface MakeProps { choices: StartChoices; ruleset?: Ruleset; onChange: (body: object | null) => void; onAddModel?: () => void }
+/** The + tile (CA-2): your own character, pressed while their form is the one open under the grid. */
+function OwnTile({ picked, editing, onPick }: { picked: boolean; editing?: MadeMember; onPick: () => void }) {
+  return <li><button type="button" className="cast-card cast-own" aria-pressed={picked && !editing} aria-label="Make your own character" onClick={onPick}><Plus aria-hidden="true" /></button></li>
+}
+
+interface UnderGridProps { looking?: StartChoices['premades'][number]; editing?: MadeMember; members: ReturnType<typeof useMembers>; onAddModel?: () => void; children: ReactNode }
+
+/** Under the grid: the picked party member's form, else the lead you play's bio, else your own character's form
+ *  (`children`), which stays mounted while a party member's form is open so nothing typed there is lost. */
+function UnderGrid({ looking, editing, members, onAddModel, children }: UnderGridProps) {
+  return <>
+    {editing ? <div key={editing.key} className="story-make"><MadeFields form={editing.form} onChange={(form) => members.change(editing.key, { form })} onAddModel={onAddModel} party /></div>
+      : looking && <p className="cast-bio" aria-live="polite">{looking.about}</p>}
+    {!looking && children}
+  </>
+}
+
+/** Your party members' cards, your own + tile (`children`), then the tile that makes another party member; a backend
+ *  without party seating gets only the + tile. */
+function MadeCards({ members, makes, children }: { members: ReturnType<typeof useMembers>; makes: boolean; children: ReactNode }) {
+  if (!makes) return children
+  return <>
+    {members.list.map((member) => <MadeCard key={member.key} member={member} picked={members.editing === member.key} onPick={() => members.edit(member.key)} onMind={(mind) => members.change(member.key, { mind })} onRemove={() => members.remove(member.key)} />)}
+    {children}
+    {members.list.length < MADE_MOST && <li><button type="button" className="cast-card cast-own" aria-label={MAKE_TEXT.member} title={MAKE_TEXT.member} onClick={members.add}><UserPlus aria-hidden="true" /></button></li>}
+  </>
+}
+
+interface MadeCardProps { member: MadeMember; picked: boolean; onPick: () => void; onMind: (mind: PartyMind) => void; onRemove: () => void }
+
+/** A party member you made: tap to open their form under the grid, − to leave them out, and their Thinks or Rules
+ *  toggle, as a lead's (CA-7). Until named they are a new party member. */
+function MadeCard({ member, picked, onPick, onMind, onRemove }: MadeCardProps) {
+  const named = member.form.name.trim()
+  const name = named || MAKE_TEXT.unnamed
+  const thinks = member.mind === 'agent'
+  return (
+    <li className="cast-seat">
+      <button type="button" className="cast-card" aria-pressed={picked} onClick={onPick}>
+        <span className="portrait" aria-hidden="true" data-thinks={thinks || undefined}>{named.charAt(0)}</span>
+        <span className="cast-name" data-unnamed={!named || undefined}>{name}{thinks && <span className="visually-hidden">, {THINKS_NAME}</span>}</span>
+      </button>
+      <button type="button" className="icon-button cast-move" aria-label={MAKE_TEXT.removeMember(name)} title={MAKE_TEXT.removeMember(name)} onClick={onRemove}><Minus aria-hidden="true" /></button>
+      <MindToggle id={`cast-${member.key}`} name={name} mind={member.mind} onChange={onMind} />
+    </li>
+  )
+}
+
+interface MakeProps { choices: StartChoices; ruleset?: Ruleset; onChange: (body: object | null) => void; onAddModel?: () => void; hidden?: boolean }
 
 /** Your own character, under the grid (adventure/making.py): an idea or a pasted character the model fills the fields
  * from, who they are, how they look and talk, what they want and fear, then personality, Looks and how they come
  * across, folded. It reports the start body as it changes, or null while it isn't ready. */
-function MakeYourOwn({ choices, ruleset, onChange, onAddModel }: MakeProps) {
+function MakeYourOwn({ choices, ruleset, onChange, onAddModel, hidden }: MakeProps) {
   const [form, setForm] = useState<MadeForm>(() => emptyForm(newSeed()))
-  const set = (change: Partial<MadeForm>) => setForm((before) => ({ ...before, ...change }))
   const [stats, setStats] = useState(() => startingStats(choices))
   const [build, setBuild] = useState<Build | null>(null)
   const [iron, setIron] = useState<IronBuild | null>(null)
@@ -167,21 +245,8 @@ function MakeYourOwn({ choices, ruleset, onChange, onAddModel }: MakeProps) {
   // eslint-disable-next-line react-hooks/exhaustive-deps -- `report` is `body`, compared by value
   useEffect(() => onChange(body), [report, onChange])
   return (
-    <div className="story-make">
-      <QuickStart form={form} onDraft={setForm} onAddModel={onAddModel} />
-      <TextInput label="Name" value={form.name} onChange={(name) => set({ name })} required maxLength={80} />
-      <label className="field">Gender
-        <select value={form.gender} onChange={(event) => set({ gender: event.target.value as PersonaGender })}>
-          {GENDERS.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
-        </select>
-      </label>
-      <TextInput label="Age" type="number" value={form.age} onChange={(age) => set({ age })} min={18} max={120} />
-      <TextArea label="About you" value={form.about} onChange={(about) => set({ about })} rows={4} maxLength={2000} />
-      <TextArea label={MAKE_TEXT.look} value={form.look} onChange={(look) => set({ look })} grows maxLength={600} />
-      <TextArea label={MAKE_TEXT.voice} value={form.voice} onChange={(voice) => set({ voice })} grows maxLength={600} />
-      <TextInput label={MAKE_TEXT.wants} value={form.wants} onChange={(wants) => set({ wants })} maxLength={300} />
-      <TextInput label={MAKE_TEXT.fears} value={form.fears} onChange={(fears) => set({ fears })} maxLength={300} />
-      <SheetExtras form={form} set={set} />
+    <div className="story-make" hidden={hidden}>
+      <MadeFields form={form} onChange={setForm} onAddModel={onAddModel} />
       <RulesBuild choices={choices} kind={kind} stats={stats} percent={percent} narrated={narrated} onStats={setStats} onBuild={setBuild} onIron={setIron} onPercent={setPercent} onNarrated={setNarrated} onFate={setFate} />
     </div>
   )

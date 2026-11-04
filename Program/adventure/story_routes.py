@@ -35,7 +35,7 @@ from adventure import (
     world_theme,
 )
 from adventure.errors import DomainError, require
-from adventure.models import CharacterFile, Input, MadeCharacter, MadeForm, MadePaste, MadePicks, PersonaInput
+from adventure.models import CharacterFile, Input, MadeCharacter, MadeForm, MadeLead, MadePaste, MadePicks, PersonaInput
 from adventure.rounds import queue, solo
 
 router = APIRouter(prefix='/api/story')
@@ -313,6 +313,8 @@ class StoryStart(Input):
     fate: FateBuild | None = None
     # A made character's look, voice, wants and fears, sliders, Looks and how they come across (adventure/making.py).
     made: MadeCharacter | None = None
+    # Party members the player made on the cast page, each joining as Thinks or Rules (adventure/rounds/cast.py).
+    made_party: list[MadeLead] = Field(default_factory=list, max_length=8)
 
 
 @router.get('/start')
@@ -328,7 +330,8 @@ def start(request: Request, body: StoryStart):
                           body.table and body.table.model_dump(exclude_none=True), body.brp and body.brp.model_dump(),
                           body.narrative and body.narrative.model_dump(), body.fate and body.fate.model_dump(),
                           None if body.party is None else {key: value.model_dump() for key, value in body.party.items()},
-                          body.made and body.made.model_dump(exclude_none=True))
+                          body.made and body.made.model_dump(exclude_none=True),
+                          [lead.model_dump(exclude_none=True) for lead in body.made_party])
 
 
 # Making your own character (adventure/making.py): the model drafts or splits; the rest rolls without one. Nothing is
@@ -343,7 +346,7 @@ async def make_draft(request: Request, body: MadePicks):
 @router.post('/make/split')
 async def make_split(request: Request, body: MadePaste):
     """A pasted character in the cast page's fields; nothing is saved."""
-    return await making.split(request.app.state, body.text)
+    return await making.split(request.app.state, body.text, body.party)
 
 
 @router.post('/make/card')

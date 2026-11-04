@@ -154,3 +154,46 @@ def test_the_drafting_prompt_can_be_reworded_in_settings(client, connected, prov
     provider.replies = [drafted()]
     ok(client.post('/api/story/make/draft', json={}))
     assert provider.requests[-1]['system'].startswith('Make a scoundrel for ')
+
+
+def test_party_members_made_on_the_cast_page_join_with_their_own_sheets(client, connected, provider, app):
+    person = {'name': 'Wren Ashdown', 'gender': 'woman', 'age': 34, 'about': 'A barge pilot.'}
+    tamsin = {'name': 'Tamsin Reed', 'gender': 'woman', 'age': 41, 'about': 'A lock-keeper who lets Wren through.',
+              'seed': 'tam', 'look': 'Ink-stained cuffs.', 'wants': 'To retire before the lock fails.',
+              'fears': 'The canal board.', 'looks': {'hair': 'grey braid'}, 'mind': 'program', 'notes': 'Dry.'}
+    refused = client.post('/api/story/start', json={'persona': person, 'stats': STATS, 'made_party': [{'name': ''}]})
+    assert refused.status_code == 422  # A made party member needs a name.
+    ok(client.post('/api/story/start', json={'persona': person, 'stats': STATS, 'made_party': [tamsin, {'name': 'Ob'}],
+                                             'party': {}}))
+    seated = {row['key']: (row['name'], row['mind'], row['notes']) for row in rows(app, 'round_seats')}
+    assert seated['made-1'] == ('Tamsin Reed', 'program', 'Dry.') and seated['made-2'] == ('Ob', 'agent', '')
+    assert {row['key'] for row in rows(app, 'story_party')} == {'made-1', 'made-2'}
+    with app.state.database.connect() as connection:
+        kept = making.made(connection, 'made-1')
+        party = {row['key']: json.loads(row['sheet']) for row in connection.execute('SELECT * FROM story_party')}
+        portrait = art.person_prompt(connection, story.scene(connection, app.state.database.clock.now()), 'made-1')
+    assert kept['wants'] == 'To retire before the lock fails.' and kept['looks']['hair'] == 'grey braid'
+    assert party['made-1']['wants'] == 'To retire before the lock fails.' and party['made-1']['full'] == 'Tamsin Reed'
+    assert 'grey braid' in portrait and 'Ink-stained cuffs.' in portrait
+    # Ob was given only a name: the app rolls the rest of their sheet from their key.
+    assert {row['key'] for row in rows(app, 'story_made')} == {'you', 'made-1', 'made-2'}
+
+    # Their own agent reads the sheet the player made as who they are.
+    async def gathered():
+        turn = await engine.begin(app.state, timeline.ROOT, 1)
+        await engine.steps_of(turn, engine.State.GATHERING)
+        return turn
+    turn = asyncio.run(gathered())
+    with app.state.database.connect() as connection:
+        own = context.agent(connection, turn.snapshot, turn.draft, 'made-1')
+    assert 'Wants: To retire before the lock fails.' in own and 'grey braid' in own
+    ok(client.delete('/api/story'))
+    assert rows(app, 'story_made') == []
+
+
+def test_a_party_member_is_drafted_and_split_as_someone_else_plays_them(client, connected, provider):
+    provider.replies = [drafted(), reply(json.dumps(DRAFTED | {'filled_in': []}))]
+    ok(client.post('/api/story/make/draft', json={'idea': 'A lock-keeper', 'party': True}))
+    assert provider.requests[-1]['messages'][0]['content'].startswith('Draft a party member.\n' + making.COMPANION)
+    ok(client.post('/api/story/make/split', json={'text': 'Tamsin keeps the lock.', 'party': True}))
+    assert provider.requests[-1]['messages'][0]['content'].startswith(making.COMPANION + '\n[[pasted: their character]]')
