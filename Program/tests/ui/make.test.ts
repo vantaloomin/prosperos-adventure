@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { emptyForm, filledLine, madeBody, moved, newSeed, picksOf, released, sameSliders, setLooks, sheetBody, withDraft } from '../../src/features/make/makeText.ts'
+import { emptyForm, filledLine, madeBody, memberBody, memberReady, moved, newMember, newSeed, picksOf, released, sameSliders, setLooks, sheetBody, withDraft } from '../../src/features/make/makeText.ts'
 
 const draft = { name: 'Wren Ashdown', gender: 'woman' as const, age: 34, about: 'A barge pilot.', look: 'Rope-burned wrist.', voice: 'Short.', wants: 'Clear her debt.', fears: 'Losing the barge.' }
 
@@ -20,6 +20,7 @@ test('a draft fills the fields and keeps the rolled extras', () => {
 test('the quick start sends what the form already says, and the idea', () => {
   assert.deepEqual(picksOf({ ...emptyForm('s'), name: ' Wren ', age: '34' }, ' barge pilot '), { name: 'Wren', gender: '', age: 34, idea: 'barge pilot' })
   assert.deepEqual(picksOf(emptyForm('s'), ''), { name: '', gender: '', idea: '' })
+  assert.deepEqual(picksOf(emptyForm('s'), '', true), { name: '', gender: '', idea: '', party: true })
 })
 
 test('Begin sends only the Looks the person set, and the seed the form rolled with', () => {
@@ -44,4 +45,20 @@ test('a split names the fields it wrote, and seeds are short and plain', () => {
   assert.equal(filledLine(['fears', 'voice', 'nonsense']), 'Written for you: Fears, Voice')
   assert.equal(filledLine([]), '')
   assert.match(newSeed(), /^[a-z0-9]{12}$/)
+})
+
+test('a party member you make needs a name, an adult age or none, and says how they decide', () => {
+  const member = newMember('made-1')
+  assert.equal(member.mind, 'agent')
+  assert.equal(memberReady(member), false)
+  const named = { ...member, form: { ...member.form, name: ' Tamsin ', about: ' Keeps the lock. ' }, mind: 'program' as const }
+  assert.equal(memberReady(named), true)
+  assert.equal(memberReady({ ...named, form: { ...named.form, age: '16' } }), false)
+  const body = memberBody({ ...named, form: { ...named.form, age: '41' } })
+  assert.equal(body.name, 'Tamsin')
+  assert.equal(body.age, 41)
+  assert.equal(body.about, 'Keeps the lock.')
+  assert.equal(body.mind, 'program')
+  assert.equal(body.seed, member.form.seed)
+  assert.equal('age' in memberBody(named), false)
 })

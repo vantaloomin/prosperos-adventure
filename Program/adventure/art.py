@@ -131,7 +131,8 @@ def person_prompt(connection, view: dict, key: str) -> str:
     name = row['name'] if row else sheet.get('name', 'someone')
     who = ', '.join(str(part) for part in (sheet.get('pronouns'), sheet.get('age') and f"{sheet['age']} years old",
                                            sheet.get('occupation') or sheet.get('role')) if part)
-    looks = townsfolk.first_impression(sheet) if sheet.get('seed') else ''
+    # Someone the player made on the cast page looks as they were made (adventure/making.py).
+    looks = making.look_line(connection, key) or (townsfolk.first_impression(sheet) if sheet.get('seed') else '')
     notes = ' '.join(decode(row['notes'])[-2:]) if row else ''
     return ' '.join(part for part in (
         f"Portrait of {name}" + (f' ({who})' if who else '') + f", in {data['name']}.",

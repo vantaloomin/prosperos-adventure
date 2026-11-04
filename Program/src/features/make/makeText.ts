@@ -1,6 +1,7 @@
 /** Making your own character on the cast page (adventure/making.py): the form's state, what it sends, and the words it
  * shows. From Prospero's Companion's quick start, paste box and character form, cut to what the cast page needs. */
 import type { PersonaGender } from '../../types'
+import type { PartyMind } from '../round/round'
 
 export type PersonalityKey = 'social' | 'warmth' | 'order' | 'curiosity' | 'stress'
 export interface PersonalitySlider { level: 0 | 1 | 2; source: 'rolled' | 'idea' | 'you' }
@@ -41,8 +42,8 @@ export function withDraft(form: MadeForm, draft: Drafted): MadeForm {
 }
 
 /** The quick start's picks: whatever the form already says, and the idea. */
-export function picksOf(form: MadeForm, idea: string) {
-  return { name: form.name.trim(), gender: form.gender, ...(form.age ? { age: Number(form.age) } : {}), idea: idea.trim() }
+export function picksOf(form: MadeForm, idea: string, party = false) {
+  return { name: form.name.trim(), gender: form.gender, ...(form.age ? { age: Number(form.age) } : {}), idea: idea.trim(), ...(party ? { party } : {}) }
 }
 
 /** Looks the person set, without the empty ones. */
@@ -60,6 +61,25 @@ export function madeBody(form: MadeForm) {
   return { seed: form.seed, look: form.look.trim(), voice: form.voice.trim(), wants: form.wants.trim(), fears: form.fears.trim(),
     ...(form.personality_sliders ? { personality_sliders: form.personality_sliders } : {}), looks: setLooks(form.looks),
     seen_as: form.seen_as.trim(), sees_self: form.sees_self.trim() }
+}
+
+/** A party member the player makes on the cast page (adventure/rounds/cast.py `join_made`): their form, and whether
+ * they think for themselves or run on the rules. `key` is the page's own, for the card and the form under the grid. */
+export interface MadeMember { key: string; form: MadeForm; mind: PartyMind }
+
+export function newMember(key: string): MadeMember {
+  return { key, form: emptyForm(newSeed()), mind: 'agent' }
+}
+
+/** Ready for Begin: a name, and an adult age or none. */
+export function memberReady(member: MadeMember): boolean {
+  const years = member.form.age ? Number(member.form.age) : null
+  return !!member.form.name.trim() && (years === null || (Number.isInteger(years) && years >= 18 && years <= 120))
+}
+
+/** One of Begin's `made_party`: who they are, the sheet's extras, and how they decide. */
+export function memberBody({ form, mind }: MadeMember) {
+  return { name: form.name.trim(), gender: form.gender, ...(form.age ? { age: Number(form.age) } : {}), about: form.about.trim(), ...madeBody(form), mind }
 }
 
 /** The fields a split filled in because the pasted text said nothing about them, by their labels. */
@@ -150,10 +170,12 @@ export const MAKE_TEXT = {
   handBack: (trait: string) => `Roll ${trait.toLowerCase()} again`,
   looks: 'Looks',
   inLook: 'As your look says',
-  seen: 'How you come across',
-  seenAs: 'How others see you',
-  seesSelf: 'How you see yourself',
-  pickSeenAs: 'Pick how others see you',
-  pickSeesSelf: 'Pick how you see yourself',
+  you: { seen: 'How you come across', seenAs: 'How others see you', seesSelf: 'How you see yourself', pickSeenAs: 'Pick how others see you', pickSeesSelf: 'Pick how you see yourself' },
+  them: { seen: 'How they come across', seenAs: 'How others see them', seesSelf: 'How they see themself', pickSeenAs: 'Pick how others see them', pickSeesSelf: 'Pick how they see themself' },
+  about: 'About them',
+  aboutYou: 'About you',
+  member: 'Make a party member',
+  unnamed: 'New party member',
+  removeMember: (name: string) => `Remove ${name} from your party`,
   failed: 'That did not work. Try again.',
 }

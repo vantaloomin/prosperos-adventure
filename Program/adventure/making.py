@@ -89,6 +89,9 @@ If their text makes the character younger than 18, reply with only {"under_18": 
 
 REPAIR = 'That reply could not be used: {problem} Reply again with the JSON object only, keeping everything else.'
 UNREADABLE = "The model's answer could not be read as a character. Try again, or fill in the fields yourself."
+# Said to the model when the character is a party member rather than the player's own (the cast page's party +).
+COMPANION = ('This character is not the one they play: they travel with the player\'s character as a member of the '
+             'party, and another mind plays them.')
 ADULTS = 'Characters here are adults. Make them 18 or older.'
 
 
@@ -193,7 +196,8 @@ def picks_text(picks: dict) -> str:
              if picks.get(key)]
     idea = (picks.get('idea') or '').strip()
     lines.append(fenced('their idea', idea) if idea else 'Their idea: none given; surprise them.')
-    return 'Draft my character.\n' + '\n'.join(lines)
+    head = 'Draft a party member.\n' + COMPANION if picks.get('party') else 'Draft my character.'
+    return head + '\n' + '\n'.join(lines)
 
 
 async def draft(state, picks: dict) -> dict:
@@ -213,12 +217,14 @@ def split_shape(raw: dict, final: bool) -> dict:
             if isinstance(filled, list) else []}
 
 
-async def split(state, pasted: str) -> dict:
-    """A pasted character in the form's fields, and which ones their text said nothing about."""
+async def split(state, pasted: str, party: bool = False) -> dict:
+    """A pasted character in the form's fields, and which ones their text said nothing about; as a party member,
+    the model is told so."""
     text = pasted.strip()[:PASTED_CHARS]
     require(bool(text), 'Paste the character first.', 422)
     system = system_for(state, 'character-split', SPLIT_SHAPE)
-    return await ask(state, system, fenced('their character', text), split_shape)
+    message = fenced('their character', text)
+    return await ask(state, system, f'{COMPANION}\n{message}' if party else message, split_shape)
 
 
 def card_text(filename: str, data: str) -> dict:
@@ -335,7 +341,7 @@ def prompt_sheet(found: dict) -> dict:
 
 def begin(connection, form: dict | None, seed: str, data: dict):
     """At Begin with a character of the player's own (adventure/campaign.py): their whole sheet, kept for the story;
-    a premade keeps none."""
+    a premade keeps none. Party members the player made are kept after this (adventure/rounds/cast.py)."""
     connection.execute('DELETE FROM story_made')
     if form is not None:
         keep(connection, YOU, sheet(form, seed or 'you', data))

@@ -10,7 +10,7 @@ import {
   type PersonalityTrait, type PersonalityView,
 } from './makeText'
 
-interface Props { form: MadeForm; set: (change: Partial<MadeForm>) => void }
+interface Props { form: MadeForm; set: (change: Partial<MadeForm>) => void; party?: boolean }
 
 /** The form once typing pauses, so the rolls follow it without a request per keystroke. */
 function useSettled<T>(value: T, delay = 600): T {
@@ -25,11 +25,11 @@ function useSettled<T>(value: T, delay = 600): T {
 
 /** Under About you: personality, Looks and how they come across, each folded, each rolled from the form's seed and
  * kept where the person sets it (adventure/making.py). Nothing here needs a model. */
-export function SheetExtras({ form, set }: Props) {
+export function SheetExtras({ form, set, party }: Props) {
   return <>
     <Personality form={form} set={set} />
     <LooksFields form={form} set={set} />
-    <Perception form={form} set={set} />
+    <Perception form={form} set={set} words={party ? MAKE_TEXT.them : MAKE_TEXT.you} />
   </>
 }
 
@@ -126,7 +126,8 @@ function LooksFields({ form, set }: Props) {
   )
 }
 
-function Perception({ form, set }: Props) {
+/** How they come across, in the words of whoever is being made: you, or a party member. */
+function Perception({ form, set, words }: Props & { words: typeof MAKE_TEXT.you }) {
   const body = useSettled({ ...sheetBody(form), seen_as: '', sees_self: '' })
   const found = useQuery({
     queryKey: ['make-perception', body],
@@ -137,10 +138,10 @@ function Perception({ form, set }: Props) {
   const automatic = found.data?.automatic
   return (
     <details className="make-more">
-      <summary>{MAKE_TEXT.seen}</summary>
-      <Pickable label={MAKE_TEXT.seenAs} pick={MAKE_TEXT.pickSeenAs} value={form.seen_as} rows={2} maxLength={400}
+      <summary>{words.seen}</summary>
+      <Pickable label={words.seenAs} pick={words.pickSeenAs} value={form.seen_as} rows={2} maxLength={400}
         placeholder={automatic?.seen_as ?? ''} options={found.data?.seen_as ?? []} onChange={(seen_as) => set({ seen_as })} />
-      <Pickable label={MAKE_TEXT.seesSelf} pick={MAKE_TEXT.pickSeesSelf} value={form.sees_self} rows={4} maxLength={1200}
+      <Pickable label={words.seesSelf} pick={words.pickSeesSelf} value={form.sees_self} rows={4} maxLength={1200}
         placeholder={automatic?.sees_self ?? ''} options={found.data?.sees_self ?? []} onChange={(sees_self) => set({ sees_self })} />
     </details>
   )

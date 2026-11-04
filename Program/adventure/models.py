@@ -234,6 +234,17 @@ class MadeForm(MadeCharacter):
     roll: int | None = Field(None, ge=1, le=1_000_000)
 
 
+class MadeLead(MadeCharacter):
+    """A party member the player made on the cast page (adventure/rounds/cast.py `join_made`): who they are, the
+    sheet's extras, and how they play."""
+    name: str = Field(min_length=1, max_length=80)
+    gender: Gender = ''
+    age: int | None = Field(None, ge=18, le=PERSONA_AGES[1])
+    about: str = Field('', max_length=2000)
+    mind: Literal['agent', 'program'] = 'agent'
+    notes: str = Field('', max_length=600)
+
+
 class MadePicks(Input):
     """What the quick start sends the model to draft from (adventure/making.py `draft`): anything left open is
     the model's to choose."""
@@ -241,11 +252,13 @@ class MadePicks(Input):
     gender: Gender = ''
     age: int | None = Field(None, ge=18, le=PERSONA_AGES[0])
     idea: str = Field('', max_length=2000)
+    party: bool = False  # a party member the player makes, not the character they play
 
 
 class MadePaste(Input):
     """A character the player already has, pasted whole, for the model to split into the fields."""
     text: str = Field(min_length=1, max_length=40000)
+    party: bool = False
 
 
 class CharacterFile(Input):
