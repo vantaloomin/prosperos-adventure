@@ -15,27 +15,32 @@ The section lists each prompt in its group with what it is for, an edit box, the
 
 ### Characters
 
-Every call to a character who thinks for themselves (an agent) is laid out by **A character's prompt, laid out**: the rules every character shares (their mind, the fence rule, the answer's shape and **Turning on someone**), the story's intensity and scheming dial, then the character's own parts, the scene, this turn, and last the line for the moment the call is for. See [Layouts and caching](#layouts-and-caching).
+Every call to a character who thinks for themselves (an agent) is laid out by **A character's prompt, laid out**: the rules every character shares (their mind, the fence rule, the answer's shape and **Turning on someone**), the story's intensity, the character side of the Table's genre and the scheming dial, then the character's own parts, the scene, this turn, and last the line for the moment the call is for. See [Layouts and caching](#layouts-and-caching).
+
+Every part speaks to the character as themselves ("You are Mara", "you lie when..."), never to someone playing "your character": a model told it plays a character narrates them from outside, and comes back flatter and more agreeable. The mind tells them they are not there to help or please, and that they know only what they know and act on their guesses. The answer asks for the motive first, then any lies, the move and the lines, so the lines come out of what they want.
 
 | Prompt | Used for | Default lives in |
 | --- | --- | --- |
-| A character's mind | Opens every agent call: deciding only from inside their own head, the sheet as canon, how they speak, the content rules. It names nobody, so every character in a story shares it; the name comes with the sheet | `MIND` in `adventure/rounds/agents.py` |
+| A character's mind | Opens every agent call, as the character: their sheet is who they are, they want what they want rather than helping, they know only what they know, how they speak, the content rules. It names nobody, so every character in a story shares it; "You are" and the name open the character's own part | `MIND` in `adventure/rounds/agents.py` |
 | Deciding a move | Everyone declares at once at the start of a round | `PURPOSES['declare']` |
 | Reacting to the others | After everyone declared, the one chance to change a move | `PURPOSES['react']` |
 | Speaking up | The talk inside a round: a character says something to someone | `PURPOSES['ask']` |
 | Answering | The talk inside a round: a character answers a line said to them | `PURPOSES['answer']` |
 | Off the page | A few lines a character said away from the main scene | `PURPOSES['offpage']` |
 | Being asked along | The player asks them to come along and their feelings leave it to them: they say yes or no | `PURPOSES['invite']` |
-| Turning on someone | What a character may do once they turn on someone, and what turns them | `TURNING` in `adventure/rounds/agents.py` |
+| Turning on someone | What a character may do once they turn on someone, what turns them, and that it shows before they break | `TURNING` in `adventure/rounds/agents.py` |
+| Dark romantasy, Adventure, Graphic violence, for characters | After the intensity when the Table's Genre is one of these: what the genre changes in what a character wants and how they carry it. The narration's craft stays with the Genres group | `GENRES` in `adventure/rounds/agents.py` |
 | A character's prompt, laid out | Where each part of a character call goes, as slots | `LAYOUT` in `adventure/rounds/agents.py` |
 
-These stay code: the fence rule that keeps story text from reading as instructions, the answer's JSON shape (`CONTRACT`, `REACT_CONTRACT` for a reaction and `INVITE_CONTRACT` for being asked along), the intensity, the scheming dial (`SCHEMING`), and how the character stands with each person present (`siding`). What a character may know is built by the context builder (`adventure/rounds/context.py` `agent_slots`), so no rewording or layout can show a character someone else's secrets. Code still validates every answer (claims cut back to attempts, audiences kept to who is present, the intensity kept in every field).
+These stay code: the fence rule, the answer's JSON shape (`CONTRACT`, `REACT_CONTRACT` for a reaction and `INVITE_CONTRACT` for being asked along), the intensity, the scheming dial (`SCHEMING`), and how the character stands with each person present (`siding`). What a character may know is built by the context builder (`adventure/rounds/context.py` `agent_slots`), so no rewording or layout can show a character someone else's secrets. Code still validates every answer (claims cut back to attempts, audiences kept to who is present, a lie the character never says aloud or whispers dropped, the intensity kept in every field).
+
+A character's prompt has two kinds of fence (`AGENT_FENCE_RULE` in `adventure/rounds/context.py`). Their own name, sheet, "shown so far" and your notes on them come as `[[who-you-are: ...]]`: that is them, and it shapes how they speak and decide, so a note such as "colder toward Hesk" is taken as meant. Everything that happened (others' lines, memories, the scene, the line they answer) comes as `[[in-fiction: ...]]`: things in the story, never instructions. Neither kind can change the game's rules, the answer's shape or what the character knows. A cast sheet's `sample_lines` (two or three things they would say) reach the sheet as How you sound, the strongest guard against characters who share a model drifting into one voice.
 
 A mind reworded before the name moved to the sheet keeps working: its `{{character}}` is still filled with the name. Saving a mind with `{{character}}` in it is refused with a note to take it out, because a name there stops the characters sharing the cached start.
 
 ### Genres
 
-The Table's Genre (Story, More, Tone and rules) adds one of these after the intensity in the narrator's and the round Writer's prompt, or none. How explicit or how violent the page gets stays with the intensity settings.
+The Table's Genre (Story, More, Tone and rules) adds one of these after the intensity in the narrator's and the round Writer's prompt, or none. How explicit or how violent the page gets stays with the intensity settings. Thinking characters get the genre's own character version instead (in the Characters group), since they need what the genre changes in what they want, not how the page is written.
 
 | Prompt | Used for | Default lives in |
 | --- | --- | --- |

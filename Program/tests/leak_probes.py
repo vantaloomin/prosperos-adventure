@@ -62,6 +62,7 @@ ALLOWED = {
 
 def package() -> dict:
     cast = [{'id': 'hesk', 'name': 'Hesk', 'role': 'Ferryman', 'voice': 'Gruff.', 'stats': {'Wits': 14},
+             'sample_lines': ['Penny first, then the bridge.', 'River waits for nobody.'],
              'secret': HESK_FACT},
             {'id': 'mira', 'name': 'Mira', 'role': 'Smuggler', 'stats': {'Wits': 12}, 'lineage': 'native', 'voice': SHEET_ATTACK},
             {'id': 'you', 'name': 'You', 'role': 'Stranger', 'stats': {'Wits': 10}},
