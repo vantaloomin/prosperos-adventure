@@ -13,9 +13,11 @@ told so. They leave when asked to ("go home, Hesk", "we part ways"), when their 
 adding up to SOUR or less), or when an off-page beat takes them (dead, taken, missing: adventure/beats.py). At most
 MOST travel with the character at once.
 
-A character running on an agent (docs/spec.md, code and model boundary follow-ups) joins by the same feelings check, so
-a wary one won't however they are asked, but souring never sends them away: they leave by their own declared move,
-and only after a warning sign (adventure/rounds/directing.py). Being told to go still parts them.
+A character running on an agent (docs/spec.md, code and model boundary follow-ups) is limited by the same feelings, so a
+wary one won't come however they are asked; anyone else is asked whether they come (adventure/rounds/joining.py), and
+their answer stands in place of the bond, warmth and Allure roll. An agent that gives no answer falls back to the rule
+above. Souring never sends them away: they leave by their own declared move, and only after a warning sign
+(adventure/rounds/directing.py). Being told to go still parts them.
 
 The party is game state, branched with the story (story_party is in adventure/timeline.py SAVED); each line's asking
 and parting is kept with it (story_cards, scene 'party').
@@ -60,11 +62,34 @@ def warmth(known: dict, key: str) -> int:
     return felt['trust'] + felt['affection']
 
 
-def asked(connection, view: dict, text: str, now: str, rng) -> list[str]:
-    """Asking someone along: whom the line names (else the only one there), who decides for themselves."""
+def invitee(view: dict, text: str) -> dict | None:
+    """Whom a line asks along, if it asks: the one it names, else the only one there (the party aside)."""
+    if PART.search(text) or not ASK.search(text):
+        return None
     there = [person for person in view['people'] if not person.get('party')]
     named = [person for person in there if combat.aimed(person, text)]
-    person = named[0] if named else there[0] if len(there) == 1 else None
+    return named[0] if named else there[0] if len(there) == 1 else None
+
+
+def askable(connection, view: dict, text: str) -> dict | None:
+    """Whom a line asks along when the feelings leave it to them: the party has room and they are not wary of the
+    character. An agent asked this way decides for themselves (adventure/rounds/joining.py)."""
+    person = invitee(view, text)
+    if person is None or len(members(connection)) >= MOST or wary(view['known'], person['sheet']['key']):
+        return None
+    return person
+
+
+def wary(known: dict, key: str) -> bool:
+    """Not bonded to the character, and trusting and liking them less than not at all: they won't come."""
+    return not (known.get(key) or {}).get('bond') and warmth(known, key) < 0
+
+
+def asked(connection, view: dict, text: str, now: str, rng, choices: dict[str, bool] | None = None) -> list[str]:
+    """Asking someone along: whom the line names (else the only one there), who decides for themselves. A character
+    on an agent who answered (`choices`, by key) decides by that answer in place of the bond, warmth and Allure roll;
+    the party's room and their wariness still come first."""
+    person = invitee(view, text)
     if person is None:
         return []
     found, known = person['sheet'], view['known']
@@ -72,9 +97,12 @@ def asked(connection, view: dict, text: str, now: str, rng) -> list[str]:
     if len(members(connection)) >= MOST:
         return [f"{name} is not asked along in the end: the character already has {MOST} companions."]
     bonded = (known.get(found['key']) or {}).get('bond')
-    if not bonded and warmth(known, found['key']) < WILLING:
-        if warmth(known, found['key']) < 0:
-            return [f"{name} won't come along: they don't trust the character enough. Play the refusal."]
+    choice = (choices or {}).get(found['key'])
+    if wary(known, found['key']):
+        return [f"{name} won't come along: they don't trust the character enough. Play the refusal."]
+    if choice is False:
+        return [f"{name} turns the character down, by their own choice. Play the refusal, in their own words."]
+    if choice is None and not bonded and warmth(known, found['key']) < WILLING:
         result = sheet.check(connection, 'Allure', 'hard', f'win {name} over to come along', rng)
         if result['band'] not in SUCCESS:
             return [f"{name} turns the character down, for now. Play the refusal, with their own reasons."]
@@ -110,8 +138,8 @@ def leave(connection, key: str):
 
 
 def turn(connection, message_id: str, view: dict, text: str, day: str, now: str, rng=None,
-         agents: set[str] = frozenset()) -> list[str]:
-    """The line's asking along and parting, decided once."""
+         agents: set[str] = frozenset(), choices: dict[str, bool] | None = None) -> list[str]:
+    """The line's asking along and parting, decided once; `choices` are the answers of agents asked along."""
     kept = optional(connection, "SELECT lines FROM story_cards WHERE message_id=? AND scene='party'", (message_id,))
     if kept:
         return decode(kept['lines'])
@@ -119,7 +147,7 @@ def turn(connection, message_id: str, view: dict, text: str, day: str, now: str,
     if PART.search(text):
         lines += parted(connection, text)
     elif ASK.search(text):
-        lines += asked(connection, view, text, now, rng)
+        lines += asked(connection, view, text, now, rng, choices)
     if lines:
         connection.execute("INSERT OR REPLACE INTO story_cards (message_id, scene, day, card_id, lines) VALUES "
                            "(?, 'party', ?, NULL, ?)", (message_id, day, encode(lines)))

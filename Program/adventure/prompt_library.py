@@ -121,6 +121,11 @@ PROMPTS = {prompt.name: prompt for prompt in (
            'Follows the character\'s mind when something happened away from the main scene and the character says a '
            'few lines in it. The app adds what happened and who was there.',
            constant(AGENTS, 'PURPOSES', 'offpage')),
+    Prompt('character-invite', CHARACTERS, 'Being asked along',
+           'Follows the character\'s mind when the player asks them to come along and their feelings leave it to them '
+           '(a wary character refuses before anyone asks). The app adds the line that asked and how they say yes or '
+           'no, and their answer decides whether they join.',
+           constant(AGENTS, 'PURPOSES', 'invite')),
     Prompt('character-turning', CHARACTERS, 'Turning on someone',
            'What a character may do once they turn against someone, and what turns them. How they stand with each '
            'person present follows it, worked out by the app from their feelings.',

@@ -9,6 +9,7 @@ from adventure.rounds import (
     corrections,  # noqa: F401 - corrected and struck memories, read through recall (memory.amend)
     declare,  # noqa: F401 - the agents: pick, declare, lies heard, react, feelings
     directing,  # noqa: F401 - the director's warning signs, and signs before a betrayal
+    joining,  # noqa: F401 - an agent asked along answers for themselves
     modes,  # noqa: F401 - who plays the user's character outside Play
     offpage,  # noqa: F401 - off-page beats in a round with agents, and their commit
     report,  # noqa: F401 - the house rules frozen at Gather, the Reviewer and the scan after the Writer
