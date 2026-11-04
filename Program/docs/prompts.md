@@ -38,6 +38,17 @@ A character's prompt has two kinds of fence (`AGENT_FENCE_RULE` in `adventure/ro
 
 A mind reworded before the name moved to the sheet keeps working: its `{{character}}` is still filled with the name. Saving a mind with `{{character}}` in it is refused with a note to take it out, because a name there stops the characters sharing the cached start.
 
+### Making a character
+
+The cast page's Write it and Paste a character (`adventure/making.py`, see [story.md](story.md#making-your-own)).
+
+| Prompt | Used for | Default lives in |
+| --- | --- | --- |
+| Drafting a character | Write it: the story's model drafts the character the player will play from their idea and picks, for the world the story is in | `DRAFT` in `adventure/making.py` |
+| Reading a pasted character | Paste a character: a character the player already has, split into the fields, with what it said nothing about filled in and listed | `SPLIT` in `adventure/making.py` |
+
+These stay code: the answer's JSON shape (`SHAPE`, `SPLIT_SHAPE`), the fence around the pasted text and the idea, the fields' limits, the one retry with the problem named, and the adults-only check.
+
 ### Genres
 
 The Table's Genre (Story, More, Tone and rules) adds one of these after the intensity in the narrator's and the round Writer's prompt, or none. How explicit or how violent the page gets stays with the intensity settings. Thinking characters get the genre's own character version instead (in the Characters group), since they need what the genre changes in what they want, not how the page is written.

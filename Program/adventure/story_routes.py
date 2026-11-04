@@ -21,6 +21,7 @@ from adventure import (
     ideas,
     institutions,
     legacy,
+    making,
     plotting,
     quests,
     record,
@@ -34,7 +35,7 @@ from adventure import (
     world_theme,
 )
 from adventure.errors import DomainError, require
-from adventure.models import Input, PersonaInput
+from adventure.models import CharacterFile, Input, MadeCharacter, MadeForm, MadePaste, MadePicks, PersonaInput
 from adventure.rounds import queue, solo
 
 router = APIRouter(prefix='/api/story')
@@ -310,6 +311,8 @@ class StoryStart(Input):
     brp: BrpBuild | None = None
     narrative: NarrativeBuild | None = None
     fate: FateBuild | None = None
+    # A made character's look, voice, wants and fears, sliders, Looks and how they come across (adventure/making.py).
+    made: MadeCharacter | None = None
 
 
 @router.get('/start')
@@ -324,7 +327,49 @@ def start(request: Request, body: StoryStart):
                           body.build and body.build.model_dump(), body.ironsworn and body.ironsworn.model_dump(),
                           body.table and body.table.model_dump(exclude_none=True), body.brp and body.brp.model_dump(),
                           body.narrative and body.narrative.model_dump(), body.fate and body.fate.model_dump(),
-                          None if body.party is None else {key: value.model_dump() for key, value in body.party.items()})
+                          None if body.party is None else {key: value.model_dump() for key, value in body.party.items()},
+                          body.made and body.made.model_dump(exclude_none=True))
+
+
+# Making your own character (adventure/making.py): the model drafts or splits; the rest rolls without one. Nothing is
+# saved until Begin.
+
+@router.post('/make/draft')
+async def make_draft(request: Request, body: MadePicks):
+    """A whole character from the idea and picks, for the cast page to show; nothing is saved."""
+    return await making.draft(request.app.state, body.model_dump(exclude_none=True))
+
+
+@router.post('/make/split')
+async def make_split(request: Request, body: MadePaste):
+    """A pasted character in the cast page's fields; nothing is saved."""
+    return await making.split(request.app.state, body.text)
+
+
+@router.post('/make/card')
+def make_card(body: CharacterFile):
+    """A character file's text for the paste box; nothing is saved and no model is asked."""
+    return making.card_text(body.filename, body.data)
+
+
+@router.post('/make/personality')
+def make_personality(body: MadeForm):
+    """The form's five sliders: what it set, what its words settle, the rest rolled from its seed."""
+    form = body.model_dump(exclude_none=True)
+    return making.sliders(form, body.seed or 'you', body.roll)
+
+
+@router.post('/make/looks')
+def make_looks(request: Request, body: MadeForm):
+    """What each empty Looks field uses, and suggestions for the word fields."""
+    return making.looks_view(body.model_dump(exclude_none=True), body.seed or 'you', making.city_of(request.app.state.database))
+
+
+@router.post('/make/perception')
+def make_perception(request: Request, body: MadeForm):
+    """Picks for How others see you and How you see yourself; the first of each is what an empty field uses."""
+    return making.perception_view(body.model_dump(exclude_none=True), body.seed or 'you',
+                                  making.city_of(request.app.state.database))
 
 
 class StoryBack(Input):

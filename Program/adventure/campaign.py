@@ -15,6 +15,7 @@ from adventure import (
     institutions,
     inventory,
     legacy,
+    making,
     package_lore,
     quests,
     sheet,
@@ -156,13 +157,14 @@ def begin(database, premade_id: str | None = None, persona: PersonaInput | None 
           hand: str | None = None, ironman: bool = False, legacy_of: dict | None = None,
           ruleset: str | None = None, build: dict | None = None, iron: dict | None = None,
           rules: dict | None = None, percentile: dict | None = None, narrated: dict | None = None,
-          fated: dict | None = None, joining: dict | None = None) -> dict:
+          fated: dict | None = None, joining: dict | None = None, made: dict | None = None) -> dict:
     """Start the story as a premade character or one the player made; only a story with nothing in it yet. The
     ruleset (the world's own by default) is chosen now and locked; under 5E a made character is `build` (class,
     species, background, the standard array placed, the class's skills). `rules` are session zero's (adventure/table.py).
     With `joining` (the cast page's {premade id: {mind, notes, model_profile_id}}), the leads it names travel with
     the character as the party, each at the table with their own mind, and the town's other leads stay in the bank
-    as background characters (adventure/rounds/cast.py)."""
+    as background characters (adventure/rounds/cast.py). A made character's `made` (adventure/making.py: look, voice,
+    wants, fears, sliders, Looks, how they come across) is settled and kept as their sheet."""
     with database.connect() as connection:
         where, values = timeline.visible(connection)
         require(one(connection, f'SELECT COUNT(*) AS n FROM story_messages WHERE {where}', values)['n'] == 0,
@@ -233,6 +235,9 @@ def begin(database, premade_id: str | None = None, persona: PersonaInput | None 
         inventory.give_kit(connection, city_id, premade_id)
         # Who the character is in the world package, so what that persona knows reaches them (adventure/rounds/context.py).
         rounds_context.remember_persona(connection, premade_id)
+        # A character of their own keeps their whole sheet (adventure/making.py); a premade's is the package's.
+        making.begin(connection, None if premade_id else {**persona.model_dump(), **(made or {})},
+                     (made or {}).get('seed') or '', story.city_data(connection, city_id))
         # A made Percentile character carries their profession's weapons (adventure/combat_brp.py).
         combat_brp.arm(connection, city_id, None if premade_id or ruleset != brp.ID else native)
         # How far and how fast the character can rise (adventure/tiers.py).

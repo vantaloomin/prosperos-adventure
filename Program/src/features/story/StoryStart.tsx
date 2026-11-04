@@ -18,20 +18,23 @@ import { ModeSwitch } from '../round/ModeSwitch'
 import { useCastMode } from '../round/useModes'
 import { BANK_NAMES, THINKS_NAME } from '../round/roundText'
 import { ROUND_KEY } from '../round/useRound'
+import { QuickStart } from '../make/QuickStart'
+import { SheetExtras } from '../make/SheetExtras'
+import { MAKE_TEXT, emptyForm, madeBody, newSeed, type MadeForm } from '../make/makeText'
 
 /** The cast page: the campaign start (adventure/campaign.py) on one page. The town's people are a grid; tapping one
  * plays as them and shows who they are under the grid, and the + tile makes your own there instead. Rules (locked
  * once the campaign begins), the tone preset and Begin sit together at the foot. */
-export function StoryStart({ onStarted, place }: { onStarted: (data: StoryData) => void; place: string }) {
+export function StoryStart({ onStarted, place, onAddModel }: { onStarted: (data: StoryData) => void; place: string; onAddModel?: () => void }) {
   const choices = useQuery({ queryKey: ['story-start'], queryFn: () => api<StartChoices>('/story/start') })
   if (!choices.data) return <Loading label="Finding who you could be" />
-  return <Cast choices={choices.data} place={place} onStarted={onStarted} />
+  return <Cast choices={choices.data} place={place} onStarted={onStarted} onAddModel={onAddModel} />
 }
 
 /** The + tile's seat: a character of your own. */
 const OWN = ''
 
-function Cast({ choices, place, onStarted }: { choices: StartChoices; place: string; onStarted: (data: StoryData) => void }) {
+function Cast({ choices, place, onStarted, onAddModel }: { choices: StartChoices; place: string; onStarted: (data: StoryData) => void; onAddModel?: () => void }) {
   const client = useQueryClient()
   const { premades } = choices
   const [seat, setSeat] = useState(premades[0]?.id ?? OWN)
@@ -62,7 +65,7 @@ function Cast({ choices, place, onStarted }: { choices: StartChoices; place: str
       </ul>
       <Bank leads={premades.filter(party.banked)} card={party.card} onPick={setSeat} />
       {looking ? <p className="cast-bio" aria-live="polite">{looking.about}</p>
-        : <MakeYourOwn choices={choices} ruleset={ruleset ?? choices.ruleset} onChange={setMade} />}
+        : <MakeYourOwn choices={choices} ruleset={ruleset ?? choices.ruleset} onChange={setMade} onAddModel={onAddModel} />}
       <CampaignOptions choices={choices} session={session} />
       {error && <Notice tone="error">{error}</Notice>}
       <div className="cast-foot">
@@ -140,39 +143,45 @@ function CastCard({ premade, picked, card, onPick }: CardProps) {
   )
 }
 
-interface MakeProps { choices: StartChoices; ruleset?: Ruleset; onChange: (body: object | null) => void }
+interface MakeProps { choices: StartChoices; ruleset?: Ruleset; onChange: (body: object | null) => void; onAddModel?: () => void }
 
-/** Your own character, under the grid. It reports the start body as it changes, or null while it isn't ready. */
-function MakeYourOwn({ choices, ruleset, onChange }: MakeProps) {
-  const [name, setName] = useState('')
-  const [gender, setGender] = useState<PersonaGender>('')
-  const [age, setAge] = useState('')
-  const [about, setAbout] = useState('')
+/** Your own character, under the grid (adventure/making.py): an idea or a pasted character the model fills the fields
+ * from, who they are, how they look and talk, what they want and fear, then personality, Looks and how they come
+ * across, folded. It reports the start body as it changes, or null while it isn't ready. */
+function MakeYourOwn({ choices, ruleset, onChange, onAddModel }: MakeProps) {
+  const [form, setForm] = useState<MadeForm>(() => emptyForm(newSeed()))
+  const set = (change: Partial<MadeForm>) => setForm((before) => ({ ...before, ...change }))
   const [stats, setStats] = useState(() => startingStats(choices))
   const [build, setBuild] = useState<Build | null>(null)
   const [iron, setIron] = useState<IronBuild | null>(null)
   const [percent, setPercent] = useState<PercentBuild | null>(() => choices.brp ? startingPercent(choices.brp) : null)
-  const years = age ? Number(age) : null
+  const years = form.age ? Number(form.age) : null
   const kind = rulesKind(ruleset, choices)
   const [narrated, setNarrated] = useState({ good_at: '', bad_at: '' })
   const [fate, setFate] = useState<FateDraft | null>(null)
   const native = { srd52: build, ironsworn: iron, brp: percentReady(percent, choices.brp), narrative: listed(narrated), fate, marvel: true }[kind]
-  const valid = !!name.trim() && builtFor(native, pointsLeft(stats, choices.points)) && adultAge(years)
+  const valid = !!form.name.trim() && builtFor(native, pointsLeft(stats, choices.points)) && adultAge(years)
   const sheetPart = kind === 'marvel' ? { stats } : { [BODY_KEYS[kind]]: native }
-  const body = valid ? { persona: { name: name.trim(), gender, age: years, about: about.trim() }, ...sheetPart } : null
+  const body = valid ? { persona: { name: form.name.trim(), gender: form.gender, age: years, about: form.about.trim() }, made: madeBody(form), ...sheetPart } : null
   const report = JSON.stringify(body)
   // eslint-disable-next-line react-hooks/exhaustive-deps -- `report` is `body`, compared by value
   useEffect(() => onChange(body), [report, onChange])
   return (
     <div className="story-make">
-      <TextInput label="Name" value={name} onChange={setName} required maxLength={80} />
+      <QuickStart form={form} onDraft={setForm} onAddModel={onAddModel} />
+      <TextInput label="Name" value={form.name} onChange={(name) => set({ name })} required maxLength={80} />
       <label className="field">Gender
-        <select value={gender} onChange={(event) => setGender(event.target.value as PersonaGender)}>
+        <select value={form.gender} onChange={(event) => set({ gender: event.target.value as PersonaGender })}>
           {GENDERS.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
         </select>
       </label>
-      <TextInput label="Age" type="number" value={age} onChange={setAge} min={18} max={120} />
-      <TextArea label="About you" value={about} onChange={setAbout} rows={4} maxLength={2000} />
+      <TextInput label="Age" type="number" value={form.age} onChange={(age) => set({ age })} min={18} max={120} />
+      <TextArea label="About you" value={form.about} onChange={(about) => set({ about })} rows={4} maxLength={2000} />
+      <TextArea label={MAKE_TEXT.look} value={form.look} onChange={(look) => set({ look })} grows maxLength={600} />
+      <TextArea label={MAKE_TEXT.voice} value={form.voice} onChange={(voice) => set({ voice })} grows maxLength={600} />
+      <TextInput label={MAKE_TEXT.wants} value={form.wants} onChange={(wants) => set({ wants })} maxLength={300} />
+      <TextInput label={MAKE_TEXT.fears} value={form.fears} onChange={(fears) => set({ fears })} maxLength={300} />
+      <SheetExtras form={form} set={set} />
       <RulesBuild choices={choices} kind={kind} stats={stats} percent={percent} narrated={narrated} onStats={setStats} onBuild={setBuild} onIron={setIron} onPercent={setPercent} onNarrated={setNarrated} onFate={setFate} />
     </div>
   )
