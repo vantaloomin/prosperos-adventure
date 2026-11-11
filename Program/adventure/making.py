@@ -28,6 +28,7 @@ from adventure import story, tiers, tone, world_select
 from adventure.database import decode, encode, optional
 from adventure.errors import DomainError, require
 from adventure.imports import cards, formats
+from adventure.models import MadeForm
 from adventure.text_models import config_for
 from adventure.world import looks, perception, personality
 
@@ -244,7 +245,24 @@ def card_text(filename: str, data: str) -> dict:
     return {'name': text['name'], 'text': whole[:PASTED_CHARS], 'truncated': len(whole) > PASTED_CHARS,
             # What else the card holds, for the person to tick to keep at Begin (`cards_of`).
             'book': {'name': book['name'], 'entries': len(book['entries'])} if book else None,
-            'picture': picture_url(picture)}
+            'picture': picture_url(picture),
+            # A card made in Prospero's Dramatis carries the form already written: it opens as it is, with no split.
+            'form': dramatis_form(found.get('prospero'))}
+
+
+def dramatis_form(prospero: dict | None) -> dict | None:
+    """The cast page's form from a Dramatis card's Adventure shape ({persona, made}), or None when it has none that
+    fits the form now (an older export, or one made without Adventure)."""
+    shape = ((prospero or {}).get('apps') or {}).get('adventure')
+    if not isinstance(shape, dict) or not isinstance(shape.get('persona'), dict) or not isinstance(shape.get('made'), dict):
+        return None
+    person = {key: shape['persona'].get(key) for key in ('name', 'gender', 'age', 'about')}
+    made = {key: value for key, value in shape['made'].items() if key not in ('seed', 'card')}
+    try:
+        form = MadeForm.model_validate({**made, **{key: value for key, value in person.items() if value is not None}})
+    except ValueError:
+        return None
+    return form.model_dump(exclude={'seed', 'card', 'roll'})
 
 
 def picture_url(picture: bytes | None) -> str | None:

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { cardBody, emptyForm, filledLine, madeBody, memberBody, memberReady, moved, newMember, newSeed, picksOf, released, sameSliders, setLooks, sheetBody, withDraft } from '../../src/features/make/makeText.ts'
+import { cardBody, emptyForm, filledLine, madeBody, memberBody, memberReady, moved, newMember, newSeed, picksOf, released, sameSliders, setLooks, sheetBody, withDraft, withMade } from '../../src/features/make/makeText.ts'
 
 const draft = { name: 'Wren Ashdown', gender: 'woman' as const, age: 34, about: 'A barge pilot.', look: 'Rope-burned wrist.', voice: 'Short.', wants: 'Clear her debt.', fears: 'Losing the barge.' }
 
@@ -71,4 +71,18 @@ test('a card goes to Begin only with something ticked, and never to the sheet ro
   const form = { ...emptyForm('s'), card }
   assert.equal('card' in madeBody(form), true)
   assert.equal('card' in sheetBody(form), false)
+})
+
+test('a Dramatis card replaces the whole form as made, keeping only the seed and the card', () => {
+  const before = { ...emptyForm('seed1'), name: 'Old', look: 'old look', looks: { hair: 'red' } }
+  const made = { ...draft, personality_sliders: { social: { level: 0 as const, source: 'idea' as const } },
+    looks: { age: 34, height_cm: 148, hair: 'black', facial_hair: '' }, seen_as: 'Curt.', sees_self: 'Tired.' }
+  const after = withMade(before, made)
+  assert.equal(after.seed, 'seed1')
+  assert.equal(after.name, 'Wren Ashdown')
+  assert.equal(after.age, '34')
+  assert.equal(after.look, 'Rope-burned wrist.')
+  assert.equal(after.card, null)
+  assert.deepEqual(after.looks, { height_cm: 148, hair: 'black' })
+  assert.deepEqual(after.personality_sliders, made.personality_sliders)
 })

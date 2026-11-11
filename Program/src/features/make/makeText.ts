@@ -48,6 +48,19 @@ export function withDraft(form: MadeForm, draft: Drafted): MadeForm {
     about: draft.about, look: draft.look, voice: draft.voice, wants: draft.wants, fears: draft.fears }
 }
 
+/** A card made in Prospero's Dramatis, as the form (/story/make/card `form`): already written for Adventure, so it
+ * replaces the whole form but its seed and the card. */
+export interface DramatisForm extends Drafted {
+  personality_sliders: PersonalitySliders | null; looks: (Looks & { age?: number | null }) | null; seen_as: string; sees_self: string
+}
+
+export function withMade(form: MadeForm, made: DramatisForm): MadeForm {
+  // Their age is the form's own field; Looks keep only what the form shows.
+  const looks = Object.fromEntries(Object.entries(made.looks ?? {}).filter(([key]) => key !== 'age')) as Looks
+  return { ...withDraft(form, made), name: made.name, gender: made.gender, age: made.age ? String(made.age) : '',
+    personality_sliders: made.personality_sliders, looks: setLooks(looks), seen_as: made.seen_as, sees_self: made.sees_self }
+}
+
 /** The quick start's picks: whatever the form already says, and the idea. */
 export function picksOf(form: MadeForm, idea: string, party = false) {
   return { name: form.name.trim(), gender: form.gender, ...(form.age ? { age: Number(form.age) } : {}), idea: idea.trim(), ...(party ? { party } : {}) }
@@ -175,6 +188,7 @@ export const MAKE_TEXT = {
   split: 'Fill in the fields',
   splitting: 'Filling in…',
   filledIn: 'Written for you',
+  fromDramatis: (name: string) => `${name || 'They'} came in as made in Dramatis.`,
   look: 'Look',
   voice: 'Voice',
   wants: 'Wants',
