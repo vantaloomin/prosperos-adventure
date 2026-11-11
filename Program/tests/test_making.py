@@ -4,6 +4,7 @@ import asyncio
 import base64
 import json
 import struct
+from pathlib import Path
 
 from test_bring_characters import as_json, png_with
 from test_pace import ok, reply
@@ -231,3 +232,20 @@ def test_a_card_offers_its_lorebook_and_picture_and_begin_keeps_what_was_ticked(
     assert all(row['own'] and row['reference'] and row['status'] == 'done' for row in portraits.values())
     # The card itself is never kept with the sheet.
     assert all('card' not in json.loads(row['sheet']) for row in rows(app, 'story_made'))
+
+
+def test_a_dramatis_card_opens_as_written_with_no_split(client):
+    """A card exported from Prospero's Dramatis carries Adventure's own shape of them (extensions.prospero.apps)."""
+    card = (Path(__file__).parent / 'data' / 'dramatis-card.json').read_text(encoding='utf-8')
+    found = ok(client.post('/api/story/make/card', json={'filename': 'dana.json',
+                                                         'data': base64.b64encode(card.encode()).decode()}))
+    form = found['form']
+    assert form['name'] == 'Dana Okafor' and form['gender'] == 'woman' and form['age'] == 38
+    assert form['voice'].startswith('Short sentences') and form['looks']['height_cm'] == 148
+    assert form['personality_sliders']['social'] == {'level': 0, 'source': 'idea'}
+    assert 'Dana Okafor' in found['text']  # The text is still there for the paste box.
+    shape = json.loads(card)
+    shape['data']['extensions']['prospero']['apps']['adventure']['made']['look'] = 'x' * 5000
+    unfit = ok(client.post('/api/story/make/card', json={'filename': 'dana.json', 'data': as_json(shape)}))
+    assert unfit['form'] is None  # One that doesn't fit the form now goes to the split, as any card does.
+    assert ok(client.post('/api/story/make/card', json={'filename': 'mira.json', 'data': as_json(MIRA)}))['form'] is None

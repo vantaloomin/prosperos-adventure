@@ -3,7 +3,7 @@ import { api } from '../../api'
 import { TextArea } from '../../components/Fields'
 import { Notice } from '../../components/Feedback'
 import { fileData } from '../worlds/loreText'
-import { MAKE_TEXT, filledLine, picksOf, withDraft, type Drafted, type MadeForm, type OpenedCard } from './makeText'
+import { MAKE_TEXT, filledLine, picksOf, withDraft, withMade, type DramatisForm, type Drafted, type MadeForm, type OpenedCard } from './makeText'
 
 interface Props {
   form: MadeForm
@@ -38,6 +38,13 @@ export function QuickStart({ form, onDraft, onAddModel, party }: Props) {
     setFilled(filledLine(found.filled_in))
     setPasting(false)
   })
+  // A Dramatis card fills the form as it was made; any other card's text waits in the box for the split.
+  const opened = (card: OpenedCard, made: DramatisForm | null) => {
+    onDraft(made ? { ...withMade(form, made), card } : { ...form, card })
+    if (!made) return
+    setFilled(MAKE_TEXT.fromDramatis(made.name))
+    setPasting(false)
+  }
   return (
     <div className="make-quick">
       <TextArea label={MAKE_TEXT.idea} value={idea} onChange={setIdea} maxLength={2000} grows placeholder={MAKE_TEXT.ideaPlaceholder} />
@@ -47,7 +54,7 @@ export function QuickStart({ form, onDraft, onAddModel, party }: Props) {
           : <button type="button" className="button" disabled={busy} onClick={() => void write()}>{busy && !pasting ? MAKE_TEXT.writing : MAKE_TEXT.write}</button>}
         <button type="button" className="button quiet" aria-expanded={pasting} onClick={() => setPasting(!pasting)}>{MAKE_TEXT.paste}</button>
       </div>
-      {pasting && <PasteBox busy={busy} disabled={!!onAddModel} onSplit={split} onError={setError} onCard={(card) => onDraft({ ...form, card })} />}
+      {pasting && <PasteBox busy={busy} disabled={!!onAddModel} onSplit={split} onError={setError} onCard={opened} />}
       {form.card && <CardTicks card={form.card} onChange={(card) => onDraft({ ...form, card })} />}
       {error && <Notice tone="error">{error}</Notice>}
       {filled && <p className="make-filled" role="status">{filled}</p>}
@@ -55,9 +62,9 @@ export function QuickStart({ form, onDraft, onAddModel, party }: Props) {
   )
 }
 
-interface PasteProps { busy: boolean; disabled: boolean; onSplit: (text: string) => void; onError: (text: string) => void; onCard: (card: OpenedCard) => void }
+interface PasteProps { busy: boolean; disabled: boolean; onSplit: (text: string) => void; onError: (text: string) => void; onCard: (card: OpenedCard, made: DramatisForm | null) => void }
 
-type CardFound = Pick<OpenedCard, 'name' | 'book' | 'picture'> & { text: string }
+type CardFound = Pick<OpenedCard, 'name' | 'book' | 'picture'> & { text: string; form: DramatisForm | null }
 
 /** A character the person already has: pasted, or a card's text opened into the box to read first. */
 function PasteBox({ busy, disabled, onSplit, onError, onCard }: PasteProps) {
@@ -70,7 +77,7 @@ function PasteBox({ busy, disabled, onSplit, onError, onCard }: PasteProps) {
       const found = await api<CardFound>('/story/make/card', { filename: file.name, data })
       setText(found.text)
       // What else it holds is kept by default, for the person to untick.
-      onCard({ filename: file.name, data, name: found.name, book: found.book, picture: found.picture, lorebook: true, usePicture: true })
+      onCard({ filename: file.name, data, name: found.name, book: found.book, picture: found.picture, lorebook: true, usePicture: true }, found.form)
     } catch (failure) { onError(failure instanceof Error ? failure.message : MAKE_TEXT.failed) }
     if (picker.current) picker.current.value = ''
   }

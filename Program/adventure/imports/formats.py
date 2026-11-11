@@ -108,8 +108,21 @@ def card(value: dict) -> dict:
     character = {key: text(data, key) for key in (*FIELDS, 'creator_notes')}
     if not character['name'].strip() and not character['description'].strip():
         raise problem('This character card has no name or description.')
-    return {'format': f'Character Card {version}', 'character': character, 'book': card_book(data, character),
-            'picture': None}
+    found = {'format': f'Character Card {version}', 'character': character, 'book': card_book(data, character),
+             'picture': None}
+    made = prospero(data)
+    return found | {'prospero': made, 'format': f"Prospero's Dramatis character ({found['format']})"} if made else found
+
+
+def prospero(data: dict) -> dict | None:
+    """What a card made in Prospero's Dramatis carries for the Prospero apps (`extensions.prospero`): the whole
+    character and each app's own shape of them, already checked against that app's models when it was exported.
+    None for any other card."""
+    extensions = data.get('extensions')
+    found = extensions.get('prospero') if isinstance(extensions, dict) else None
+    if not isinstance(found, dict) or found.get('format') != 'prospero-character' or not isinstance(found.get('apps'), dict):
+        return None
+    return found
 
 
 def marinara(value: dict, stem: str) -> dict:
